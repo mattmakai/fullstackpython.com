@@ -1,1 +1,3 @@
-See the [gh-pages](https://github.com/makaimc/fullstackpython.github.com/tree/gh-pages) branch for source code.
+Code for statically generated site 
+[Full Stack Python](http://www.fullstackpython.com) hosted on
+Github pages.
