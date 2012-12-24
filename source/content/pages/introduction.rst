@@ -16,8 +16,8 @@ if you have not already.
     
 This guide has a different focus from the Hitchhiker's Guide. This site 
 describes the myriad ways of setting up a Python *web application*
-stack from a bare-bones server, VPS, Amazon Web Services instance, or 
-Platform-as-a-Service provider up through the JavaScript running on 
-users' browsers on your website.
+stack from a "bare metal" server, virtual private server (VPS), Amazon Web 
+Services (AWS) instance, or Platform-as-a-Service (PaaS) provider up 
+through the JavaScript running on users' browsers on your website.
 
 
