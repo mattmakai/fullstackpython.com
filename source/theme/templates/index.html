@@ -13,7 +13,7 @@
         </div>
         <div class="span9">
             {% for page in pages|sort(attribute='sort-order') %}
-                <section id="{{ page.slug }}">
+                <section id="{{ page.slug }}" class="tech-section">
                     <h2>{{ page.title }}</h2>
                     {{ page.content }}
                 </section>
