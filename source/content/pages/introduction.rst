@@ -20,4 +20,22 @@ stack from a "bare metal" server, virtual private server (VPS), Amazon Web
 Services (AWS) instance, or Platform-as-a-Service (PaaS) provider up 
 through the JavaScript running on users' browsers on your website.
 
+About the Author
+----------------
+I'm `Matt Makai <http://www.mattmakai.com/>`_ and I develop software in
+Washington, DC. I currently work most often in Python and occasionally in
+the Java Virtual Machine (JVM) stack.
 
+In 2013 I will be traveling to 30 cities in the United States to visit with
+tech companies, speak at tech meetups, and blog from an experienced
+software developer's perspective about the current state of technology in the
+United States. If you're reading this guide, I'd love to meet with you
+during my trip from March through August, so send me an email at
+matthew.makai@gmail.com or 
+`message me on Twitter <https://twitter.com/makaimc>`_. Read more about
+my upcoming trip at 
+`Coding Across America <http://www.codingacrossamerica.com/about.html>`_.
+
+If there are typos, inaccurate statements, or general areas for improvement
+that you see in this guide, please issue a 
+`pull request on this website's Github repository <https://github.com/makaimc/fullstackpython.github.com/pull/new/gh-pages>`_. Thank you!
