@@ -6,13 +6,13 @@
     <div class="row">
         <div class="span3" id="fsp-side-nav">
             <ul class="nav nav-list fsp-side-nav-ul affix"> 
-                {% for page in pages %}
+                {% for page in pages|sort(attribute='sort-order') %}
                     <li><a href="#{{ page.slug }}">{{ page.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
         <div class="span9">
-            {% for page in pages %}
+            {% for page in pages|sort(attribute='sort-order') %}
                 <section id="{{ page.slug }}">
                     <h2>{{ page.title }}</h2>
                     {{ page.content }}

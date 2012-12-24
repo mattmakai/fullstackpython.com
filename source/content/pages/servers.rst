@@ -3,6 +3,7 @@ Servers
 
 :category: page
 :slug: servers
+:sort-order: 2
 
 Lorem ipsum servers.
 

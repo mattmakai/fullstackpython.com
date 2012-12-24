@@ -3,8 +3,8 @@ Operating System
 
 :category: page
 :slug: operating-system
+:sort-order: 3
 
-Lorem ipsum operating system.
 
 Vice fingerstache pickled pour-over high life nihil, cliche enim placeat aliquip laborum artisan pitchfork lomo. Do dreamcatcher nihil gastropub non, 90's fashion axe small batch sed echo park selfies art party single-origin coffee esse. Adipisicing mlkshk craft beer laboris, mumblecore cosby sweater elit mixtape street art DIY art party pickled put a bird on it. Flexitarian fixie pug, sartorial culpa sustainable nisi hoodie. Blue bottle put a bird on it meh terry richardson cardigan. American apparel exercitation velit echo park beard aute you probably haven't heard of them letterpress, esse excepteur williamsburg nesciunt food truck in lo-fi. Dolore ullamco meh high life, raw denim flexitarian Austin consectetur non sed irure banksy salvia.
 
