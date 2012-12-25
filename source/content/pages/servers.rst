@@ -18,9 +18,18 @@ web application:
 
 Bare metal
 ----------
-The most control and also the highest maintenance. Buy actual hardware 
-from a vendor either pre-built or as a collection of components that 
-you assemble yourself.
+The term *bare metal* refers to purchasing the actual hardware and hooking 
+it up to the Internet either through a business-class internet service 
+provider (ISP) or 
+`co-locating the server <http://webdesign.about.com/od/colocation/a/what_colocation.htm>`_ with other servers. 
+
+The bare metal option offers the most control over the server configuration,
+usually has the highest performance for the price, but also is the most 
+expensive upfront option and the highest ongoing maintenance. With bare
+metal servers the ongoing operating cost is the electricity the server(s) 
+use as well as handling repairs when server components malfunction.
+
+Buy actual hardware from a vendor either pre-built or as a collection of components that you assemble yourself.
 
 
 Virtualized servers
@@ -40,7 +49,18 @@ The primary disadvantage of virtualized servers is that there is resource
 overhead in the virtualization process. In addition, physical constraints
 such as heavy I/O operations by a single virtualized instance on persistent 
 storage can cause performance bottlenecks for other virtualized instances on
-the shared server.
+the shared server. Choosing virtualized server hosting should be based on
+your needs for urgency of service ticket requests and the frequency you
+require for ongoing maintenance such as persistent storage backups.
+
+
+Infrastructure-as-a-service
+---------------------------
+
+
+Platform-as-a-service
+---------------------
+
 
 Server Monitoring
 -----------------

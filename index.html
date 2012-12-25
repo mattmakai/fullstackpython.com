@@ -43,7 +43,7 @@
             </div>
         </div>
             <div class="row">
-        <div class="span3" id="fsp-side-nav">
+        <div class="span2" id="fsp-side-nav">
             <ul class="nav nav-list fsp-side-nav-ul affix"> 
                                     <li><a href="#introduction">Introduction</a></li>
                                     <li><a href="#servers">Servers</a></li>
@@ -52,7 +52,7 @@
                                     <li><a href="#wsgi-server">WSGI Server</a></li>
                             </ul>
         </div>
-        <div class="span9">
+        <div class="span9 offset1">
                             <section id="introduction" class="tech-section">
                     <h1>Introduction</h1>
                     <p>You're knee deep in learning the <a class="reference external" href="http://www.python.org/">Python</a>
@@ -100,9 +100,16 @@ web application:</p>
 </ol>
 <div class="section" id="bare-metal">
 <h2>Bare metal</h2>
-<p>The most control and also the highest maintenance. Buy actual hardware
-from a vendor either pre-built or as a collection of components that
-you assemble yourself.</p>
+<p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking
+it up to the Internet either through a business-class internet service
+provider (ISP) or
+<a class="reference external" href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a> with other servers.</p>
+<p>The bare metal option offers the most control over the server configuration,
+usually has the highest performance for the price, but also is the most
+expensive upfront option and the highest ongoing maintenance. With bare
+metal servers the ongoing operating cost is the electricity the server(s)
+use as well as handling repairs when server components malfunction.</p>
+<p>Buy actual hardware from a vendor either pre-built or as a collection of components that you assemble yourself.</p>
 </div>
 <div class="section" id="virtualized-servers">
 <h2>Virtualized servers</h2>
@@ -120,7 +127,15 @@ memory.</p>
 overhead in the virtualization process. In addition, physical constraints
 such as heavy I/O operations by a single virtualized instance on persistent
 storage can cause performance bottlenecks for other virtualized instances on
-the shared server.</p>
+the shared server. Choosing virtualized server hosting should be based on
+your needs for urgency of service ticket requests and the frequency you
+require for ongoing maintenance such as persistent storage backups.</p>
+</div>
+<div class="section" id="infrastructure-as-a-service">
+<h2>Infrastructure-as-a-service</h2>
+</div>
+<div class="section" id="platform-as-a-service">
+<h2>Platform-as-a-service</h2>
 </div>
 <div class="section" id="server-monitoring">
 <h2>Server Monitoring</h2>
