@@ -10,11 +10,12 @@ programming language. The syntax is beginning to make sense. The first
 few "AHA!" moments are hitting you. Now you are excited for direction to learn
 more.
 
-Now what? Definitely read Kenneth Reitz's 
+So now what? Definitely read Kenneth Reitz's 
 `The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_
-if you have not already. 
+if you have not already. If you're not coming from a development background,
+I wrote a `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ blog post.
     
-This guide has a different focus from the Hitchhiker's Guide. This site 
+This guide has a different focus from the above resources. This site 
 describes the myriad ways of setting up a Python *web application*
 stack from a "bare metal" server, virtual private server (VPS), Amazon Web 
 Services (AWS) instance, or Platform-as-a-Service (PaaS) provider up 

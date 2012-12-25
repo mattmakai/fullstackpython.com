@@ -44,8 +44,9 @@ the shared server.
 
 Server Monitoring
 -----------------
-There are several important resources to monitor the server level of a web 
-stack:
+There are several important resources to monitor on the server level of a web 
+stack. Technically some of these cross into the operating system level (next
+section) but they are listed here:
 
 1. Server uptime
 2. CPU utilization
@@ -53,6 +54,9 @@ stack:
 4. Persistence storage consumed versus free
 5. Network bandwidth and latency
 
-Resources
----------
+Further Server Resources
+------------------------
+`How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
+
+`Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
 
