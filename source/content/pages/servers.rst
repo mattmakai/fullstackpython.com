@@ -69,7 +69,15 @@ the expense of greater complexity in the dynamically scaled infrastructure.
 
 Platform-as-a-service
 ---------------------
-Platform-as-a-service (PaaS) 
+Platform-as-a-service (PaaS) refers to a class of services that will host
+an application with a layer between the server and the application. The
+layer defines how the application accesses resources such as computing
+time, files, and external services. The tradeoff to PaaS is usually
+ease of deployment to a specific architecture as long as you do things
+"their way."  
+
+If you go the PaaS route, you can skip over the operating system and web
+server sections because they are baked into PaaS offerings.
 
 
 Server Monitoring
@@ -86,9 +94,10 @@ section) but they are listed here:
 
 Further Server Resources
 ------------------------
-`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_
-
 `How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
 
 `Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
+
+`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
+(Joe's Blog)
 
