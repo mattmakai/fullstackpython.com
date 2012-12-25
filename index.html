@@ -61,8 +61,10 @@ few &quot;AHA!&quot; moments are hitting you. Now you are excited for direction 
 more.</p>
 <p>So now what? Definitely read Kenneth Reitz's
 <a class="reference external" href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python</a>
-if you have not already. If you're not coming from a development background,
-I wrote a <a class="reference external" href="http://www.mattmakai.com/learning-python-for-non-developers.html">Learning Python</a> blog post.</p>
+if you have not already. If you're not coming from a non-development
+background, I wrote a
+<a class="reference external" href="http://www.mattmakai.com/learning-python-for-non-developers.html">Learning Python</a>
+blog post you may find useful.</p>
 <p>This guide has a different focus from the above resources. This site
 describes the myriad ways of setting up a Python <em>web application</em>
 stack from a &quot;bare metal&quot; server, virtual private server (VPS), Amazon Web
@@ -133,9 +135,19 @@ require for ongoing maintenance such as persistent storage backups.</p>
 </div>
 <div class="section" id="infrastructure-as-a-service">
 <h2>Infrastructure-as-a-service</h2>
+<p>Infrastructure-as-a-service (IaaS) overlaps with virtualized servers
+because the resources are often presented in the same way. The
+difference between virtualized servers and IaaS is the granularity of the
+billing cycle. IaaS generally encourages a finer granularity based on minutes
+or hours of server usage instead of on monthly billing cycles.</p>
+<p>IaaS can be used in combination with virtualized servers to provide
+dynamic upscaling for heavy traffic. When traffic is low then virtualized
+servers can solely be used. This combination of resources reduces cost at
+the expense of greater complexity in the dynamically scaled infrastructure.</p>
 </div>
 <div class="section" id="platform-as-a-service">
 <h2>Platform-as-a-service</h2>
+<p>Platform-as-a-service (PaaS)</p>
 </div>
 <div class="section" id="server-monitoring">
 <h2>Server Monitoring</h2>
@@ -152,6 +164,7 @@ section) but they are listed here:</p>
 </div>
 <div class="section" id="further-server-resources">
 <h2>Further Server Resources</h2>
+<p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a></p>
 <p><a class="reference external" href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a> (Ars Technica)</p>
 <p><a class="reference external" href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> (Patrick McKenzie)</p>
 </div>

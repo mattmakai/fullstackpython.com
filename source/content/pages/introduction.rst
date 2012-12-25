@@ -12,8 +12,10 @@ more.
 
 So now what? Definitely read Kenneth Reitz's 
 `The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_
-if you have not already. If you're not coming from a development background,
-I wrote a `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ blog post.
+if you have not already. If you're not coming from a non-development 
+background, I wrote a 
+`Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
+blog post you may find useful.
     
 This guide has a different focus from the above resources. This site 
 describes the myriad ways of setting up a Python *web application*
@@ -40,3 +42,4 @@ my upcoming trip at
 If there are typos, inaccurate statements, or general areas for improvement
 that you see in this guide, please issue a 
 `pull request on this website's Github repository <https://github.com/makaimc/fullstackpython.github.com/pull/new/gh-pages>`_. Thank you!
+

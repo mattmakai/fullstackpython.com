@@ -56,10 +56,20 @@ require for ongoing maintenance such as persistent storage backups.
 
 Infrastructure-as-a-service
 ---------------------------
+Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
+because the resources are often presented in the same way. The 
+difference between virtualized servers and IaaS is the granularity of the
+billing cycle. IaaS generally encourages a finer granularity based on minutes
+or hours of server usage instead of on monthly billing cycles.
 
+IaaS can be used in combination with virtualized servers to provide 
+dynamic upscaling for heavy traffic. When traffic is low then virtualized
+servers can solely be used. This combination of resources reduces cost at
+the expense of greater complexity in the dynamically scaled infrastructure. 
 
 Platform-as-a-service
 ---------------------
+Platform-as-a-service (PaaS) 
 
 
 Server Monitoring
@@ -76,6 +86,8 @@ section) but they are listed here:
 
 Further Server Resources
 ------------------------
+`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_
+
 `How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
 
 `Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
