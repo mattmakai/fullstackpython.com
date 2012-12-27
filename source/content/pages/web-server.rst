@@ -5,10 +5,22 @@ Web Server
 :slug: web-server
 :sort-order: 4
 
-Web server lorem ipsum.
+A web server handles Hypertext Transfer Protocol (HTTP) requests from
+clients. The client is usually a browser such as Internet Explorer, Firefox,
+and Chrome, but it can also be a headless browser like 
+`phantomjs <http://phantomjs.org/>`_ (commonly used for testing), a
+commandline utility like wget or curl, or a web crawler. The web server
+processes the request and sends a status code and depending on the
+status code a content response as well.
 
-Vice fingerstache pickled pour-over high life nihil, cliche enim placeat aliquip laborum artisan pitchfork lomo. Do dreamcatcher nihil gastropub non, 90's fashion axe small batch sed echo park selfies art party single-origin coffee esse. Adipisicing mlkshk craft beer laboris, mumblecore cosby sweater elit mixtape street art DIY art party pickled put a bird on it. Flexitarian fixie pug, sartorial culpa sustainable nisi hoodie. Blue bottle put a bird on it meh terry richardson cardigan. American apparel exercitation velit echo park beard aute you probably haven't heard of them letterpress, esse excepteur williamsburg nesciunt food truck in lo-fi. Dolore ullamco meh high life, raw denim flexitarian Austin consectetur non sed irure banksy salvia.
+In a simple case, the client will request a static asset such as a picture
+or JavaScript file. The file sits on the file system in a location the
+web server is authorized to access and the web server sends the file
+to the clinet with a 200 status code. If the client already requested the
+file and the file has not changed, the web server will pass back a 304 
+"Not modified" response indicating the client already has the latest version
+of that file.
 
-Occaecat before they sold out squid ut disrupt. Et elit exercitation small batch quis, letterpress dolor chillwave flannel jean shorts swag. Consectetur chambray ex magna, eu bicycle rights next level proident placeat. Cliche marfa fugiat, fixie bespoke echo park odd future thundercats chambray intelligentsia officia cillum exercitation. Enim YOLO pug swag. Cardigan id ullamco, fingerstache do nihil culpa narwhal intelligentsia leggings. Skateboard cillum DIY tousled velit fap.
-
-Hashtag dolor fashion axe ea mustache jean shorts. Banksy ennui tumblr wolf trust fund four loko, sunt 3 wolf moon fixie fugiat cardigan. Fap single-origin coffee plaid, blue bottle cillum commodo scenester semiotics assumenda quinoa. Craft beer gastropub truffaut, quis vegan gentrify quinoa lomo enim sartorial salvia messenger bag incididunt odio sunt. Magna letterpress officia, retro trust fund narwhal sint put a bird on it mixtape occupy minim you probably haven't heard of them american apparel next level. Williamsburg wayfarers quinoa keytar commodo fingerstache 8-bit street art. Do art party four loko raw denim, food truck vice fanny pack excepteur occaecat enim tumblr leggings plaid.
+Sending static assets can eat up a large amount of bandwidth which is why
+using a Content Delivery Network (CDN) is important when possible (see the
+content delivery network section for a more detailed explanation).

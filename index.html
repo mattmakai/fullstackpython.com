@@ -50,7 +50,10 @@
                                     <li><a href="#operating-system">Operating System</a></li>
                                     <li><a href="#web-server">Web Server</a></li>
                                     <li><a href="#database">Database</a></li>
+                                    <li><a href="#web-framework">Web Framework</a></li>
                                     <li><a href="#wsgi-server">WSGI Server</a></li>
+                                    <li><a href="#content-delivery-network">Content Delivery Network</a></li>
+                                    <li><a href="#change-log">Change Log</a></li>
                             </ul>
         </div>
         <div class="span9 offset1">
@@ -207,10 +210,23 @@ difference is that CentOS is an open source free derivative of RHEL.</p>
                 </section>
                             <section id="web-server" class="tech-section">
                     <h1>Web Server</h1>
-                    <p>Web server lorem ipsum.</p>
-<p>Vice fingerstache pickled pour-over high life nihil, cliche enim placeat aliquip laborum artisan pitchfork lomo. Do dreamcatcher nihil gastropub non, 90's fashion axe small batch sed echo park selfies art party single-origin coffee esse. Adipisicing mlkshk craft beer laboris, mumblecore cosby sweater elit mixtape street art DIY art party pickled put a bird on it. Flexitarian fixie pug, sartorial culpa sustainable nisi hoodie. Blue bottle put a bird on it meh terry richardson cardigan. American apparel exercitation velit echo park beard aute you probably haven't heard of them letterpress, esse excepteur williamsburg nesciunt food truck in lo-fi. Dolore ullamco meh high life, raw denim flexitarian Austin consectetur non sed irure banksy salvia.</p>
-<p>Occaecat before they sold out squid ut disrupt. Et elit exercitation small batch quis, letterpress dolor chillwave flannel jean shorts swag. Consectetur chambray ex magna, eu bicycle rights next level proident placeat. Cliche marfa fugiat, fixie bespoke echo park odd future thundercats chambray intelligentsia officia cillum exercitation. Enim YOLO pug swag. Cardigan id ullamco, fingerstache do nihil culpa narwhal intelligentsia leggings. Skateboard cillum DIY tousled velit fap.</p>
-<p>Hashtag dolor fashion axe ea mustache jean shorts. Banksy ennui tumblr wolf trust fund four loko, sunt 3 wolf moon fixie fugiat cardigan. Fap single-origin coffee plaid, blue bottle cillum commodo scenester semiotics assumenda quinoa. Craft beer gastropub truffaut, quis vegan gentrify quinoa lomo enim sartorial salvia messenger bag incididunt odio sunt. Magna letterpress officia, retro trust fund narwhal sint put a bird on it mixtape occupy minim you probably haven't heard of them american apparel next level. Williamsburg wayfarers quinoa keytar commodo fingerstache 8-bit street art. Do art party four loko raw denim, food truck vice fanny pack excepteur occaecat enim tumblr leggings plaid.</p>
+                    <p>A web server handles Hypertext Transfer Protocol (HTTP) requests from
+clients. The client is usually a browser such as Internet Explorer, Firefox,
+and Chrome, but it can also be a headless browser like
+<a class="reference external" href="http://phantomjs.org/">phantomjs</a> (commonly used for testing), a
+commandline utility like wget or curl, or a web crawler. The web server
+processes the request and sends a status code and depending on the
+status code a content response as well.</p>
+<p>In a simple case, the client will request a static asset such as a picture
+or JavaScript file. The file sits on the file system in a location the
+web server is authorized to access and the web server sends the file
+to the clinet with a 200 status code. If the client already requested the
+file and the file has not changed, the web server will pass back a 304
+&quot;Not modified&quot; response indicating the client already has the latest version
+of that file.</p>
+<p>Sending static assets can eat up a large amount of bandwidth which is why
+using a Content Delivery Network (CDN) is important when possible (see the
+content delivery network section for a more detailed explanation).</p>
 
                 </section>
                             <section id="database" class="tech-section">
@@ -221,12 +237,47 @@ difference is that CentOS is an open source free derivative of RHEL.</p>
 <p>Hashtag dolor fashion axe ea mustache jean shorts. Banksy ennui tumblr wolf trust fund four loko, sunt 3 wolf moon fixie fugiat cardigan. Fap single-origin coffee plaid, blue bottle cillum commodo scenester semiotics assumenda quinoa. Craft beer gastropub truffaut, quis vegan gentrify quinoa lomo enim sartorial salvia messenger bag incididunt odio sunt. Magna letterpress officia, retro trust fund narwhal sint put a bird on it mixtape occupy minim you probably haven't heard of them american apparel next level. Williamsburg wayfarers quinoa keytar commodo fingerstache 8-bit street art. Do art party four loko raw denim, food truck vice fanny pack excepteur occaecat enim tumblr leggings plaid.</p>
 
                 </section>
+                            <section id="web-framework" class="tech-section">
+                    <h1>Web Framework</h1>
+                    <p>A web application framework is a collection of libraries that
+provide functionality to accomplish common operations for the web. These
+common operations include:</p>
+<ol class="arabic simple">
+<li>URL routing</li>
+<li>HTML, XML, JSON, and other output templating</li>
+<li>Database manipulation</li>
+<li>Cross-site request forgery (CSRF) and Cross-site scripting (XSS) protection</li>
+</ol>
+<p>Not all web frameworks include functionality for all of the above
+functionality. Frameworks must balance between &quot;being all things to all
+people but very complicated&quot; or doing only certain things well without
+prescription for how to do other functions.</p>
+<p>For example, the Django web application framework includes an
+Object-Relational Mapping (ORM) layer that abstracts relational database
+read, write, query, and delete operations. However, the ORM layer in Django
+does not work (without modification) on non-relational databases such
+<a class="reference external" href="http://www.mongodb.org/">MongoDB</a> and <a class="reference external" href="http://docs.basho.com/">Riak</a>.
+Other web frameworks such as Flask and Pyramid are generally easier to
+use with non-relational databases by incorporating external Python libraries.</p>
+
+                </section>
                             <section id="wsgi-server" class="tech-section">
                     <h1>WSGI Server</h1>
                     <p>WSGI server lorem ipsum.</p>
 <p>Vice fingerstache pickled pour-over high life nihil, cliche enim placeat aliquip laborum artisan pitchfork lomo. Do dreamcatcher nihil gastropub non, 90's fashion axe small batch sed echo park selfies art party single-origin coffee esse. Adipisicing mlkshk craft beer laboris, mumblecore cosby sweater elit mixtape street art DIY art party pickled put a bird on it. Flexitarian fixie pug, sartorial culpa sustainable nisi hoodie. Blue bottle put a bird on it meh terry richardson cardigan. American apparel exercitation velit echo park beard aute you probably haven't heard of them letterpress, esse excepteur williamsburg nesciunt food truck in lo-fi. Dolore ullamco meh high life, raw denim flexitarian Austin consectetur non sed irure banksy salvia.</p>
 <p>Occaecat before they sold out squid ut disrupt. Et elit exercitation small batch quis, letterpress dolor chillwave flannel jean shorts swag. Consectetur chambray ex magna, eu bicycle rights next level proident placeat. Cliche marfa fugiat, fixie bespoke echo park odd future thundercats chambray intelligentsia officia cillum exercitation. Enim YOLO pug swag. Cardigan id ullamco, fingerstache do nihil culpa narwhal intelligentsia leggings. Skateboard cillum DIY tousled velit fap.</p>
 <p>Hashtag dolor fashion axe ea mustache jean shorts. Banksy ennui tumblr wolf trust fund four loko, sunt 3 wolf moon fixie fugiat cardigan. Fap single-origin coffee plaid, blue bottle cillum commodo scenester semiotics assumenda quinoa. Craft beer gastropub truffaut, quis vegan gentrify quinoa lomo enim sartorial salvia messenger bag incididunt odio sunt. Magna letterpress officia, retro trust fund narwhal sint put a bird on it mixtape occupy minim you probably haven't heard of them american apparel next level. Williamsburg wayfarers quinoa keytar commodo fingerstache 8-bit street art. Do art party four loko raw denim, food truck vice fanny pack excepteur occaecat enim tumblr leggings plaid.</p>
+
+                </section>
+                            <section id="content-delivery-network" class="tech-section">
+                    <h1>Content Delivery Network</h1>
+                    <p>CDN lorem ipsum.</p>
+
+                </section>
+                            <section id="change-log" class="tech-section">
+                    <h1>Change Log</h1>
+                    <p>2012.12.27: Added beginning of section on Python web frameworks. Added stub for content delivery network.</p>
+<p>2012.12.25: Initial incomplete release on fullstackpython.com.</p>
 
                 </section>
                     </div>

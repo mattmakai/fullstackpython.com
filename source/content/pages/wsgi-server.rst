@@ -3,7 +3,7 @@ WSGI Server
 
 :category: page
 :slug: wsgi-server
-:sort-order: 6
+:sort-order: 7
 
 WSGI server lorem ipsum.
 

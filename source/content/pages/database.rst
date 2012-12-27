@@ -3,7 +3,7 @@ Database
 
 :category: page
 :slug: database
-:sort-order: 5
+:sort-order: 6
 
 Database lorem ipsum.
 
