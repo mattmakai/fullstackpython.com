@@ -12,7 +12,7 @@ more.
 
 So now what? Definitely read Kenneth Reitz's 
 `The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_
-if you have not already. If you're not coming from a non-development 
+if you have not already. If you're not coming from a non development 
 background, I wrote a 
 `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
 blog post you may find useful.
@@ -25,9 +25,9 @@ through the JavaScript running on users' browsers on your website.
 
 About the Author
 ----------------
-I'm `Matt Makai <http://www.mattmakai.com/>`_ and I develop software in
-Washington, DC. I currently work most often in Python and occasionally in
-the Java Virtual Machine (JVM) stack.
+I'm `Matt Makai <http://www.mattmakai.com/>`_ and I solve problems by 
+developing software. I most often use Python and occasionally work with 
+languages in the Java Virtual Machine (JVM) stack.
 
 In 2013 I will be traveling to 30 cities in the United States to visit with
 tech companies, speak at tech meetups, and blog from an experienced
