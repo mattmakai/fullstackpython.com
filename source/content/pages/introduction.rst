@@ -17,11 +17,10 @@ background, I wrote a
 `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
 blog post you may find useful.
     
-This guide has a different focus from the above resources. This site 
-describes the myriad ways of setting up a Python *web application*
-stack from a "bare metal" server, virtual private server (VPS), Amazon Web 
-Services (AWS) instance, or Platform-as-a-Service (PaaS) provider up 
-through the JavaScript running on users' browsers on your website.
+This guide has a different focus from the above resources. Here I 
+focus on explaining several ways of setting up a Python *web application*
+stack from server infrastructure through JavaScript execution on a user's
+browser.
 
 About the Author
 ----------------
