@@ -13,3 +13,14 @@ WSGI v1.0 is superseded by
 `PEP 3333 <http://www.python.org/dev/peps/pep-3333/>`_, which defines the
 v1.0.1 WSGI standard.
 
+WSGI Resources
+--------------
+`PEP 0333 WSGI v1.0 <http://www.python.org/dev/peps/pep-0333/>`_ 
+and
+`PEP 3333 WSGI v1.0.1 <http://www.python.org/dev/peps/pep-3333/>`_ 
+specifications.
+
+`Green Unicorn <http://gunicorn.org/>`_, 
+`mod_wsgi <http://code.google.com/p/modwsgi/>`_,
+`uWSGI <https://github.com/unbit/uwsgi-docs>`_, and
+`gvent <http://www.gevent.org/>`_ are common WSGI server implementations.
