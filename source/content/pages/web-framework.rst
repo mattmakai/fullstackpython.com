@@ -27,4 +27,12 @@ does not work (without modification) on non-relational databases such
 Other web frameworks such as Flask and Pyramid are generally easier to
 use with non-relational databases by incorporating external Python libraries.
 
+Web Framework Resources
+-----------------------
+`Django <http://www.djangoproject.com/>`_
 
+`Flask <http://flask.pocoo.org/>`_
+
+`Bottle <http://bottlepy.org/docs/dev/>`_
+
+`Pyramid <http://www.pylonsproject.org/>`_

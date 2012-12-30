@@ -5,7 +5,7 @@ Servers
 :slug: servers
 :sort-order: 2
 
-There are several options for setting up infrastructure to serve your
+There are several options for setting up infrastructure to serve a
 web application:
 
 1. "Bare metal" servers
@@ -92,8 +92,8 @@ section) but they are listed here:
 4. Persistence storage consumed versus free
 5. Network bandwidth and latency
 
-Further Server Resources
-------------------------
+Server Resources
+----------------
 `How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
 
 `Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)

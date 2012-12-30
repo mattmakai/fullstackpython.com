@@ -45,7 +45,24 @@
             <h1>Content Delivery Network</h1>
         
 
-    <p>CDN lorem ipsum.</p>
+    <p>A content delivery network (CDN) serves static file assets.
+<a class="reference external" href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
+<a class="reference external" href="http://www.akamai.com/">Akamai</a>, and
+<a class="reference external" href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a>
+are examples of CDNs. The purpose of a CDN is to remove the load of static
+file requests from web servers that are handling dynamic web content. For
+example, if you have an nginx server that handles both static files and
+acts as a front for a Green Unicorn WSGI server on a 512 megabyte
+virtual private server, the nginx server will run into resource
+constraints under heavy traffic. A CDN can remove the need to serve static
+assets from that nginx server so it can purely act as a pass through for
+requests to the Green Unicorn WSGI server.</p>
+<p>CDNs distribute request load globally by using data centers in different
+locations.</p>
+<div class="section" id="cdn-resources">
+<h2>CDN Resources</h2>
+<p><a class="reference external" href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
+</div>
 
         <hr/>
         <div class="footer pull-right">
