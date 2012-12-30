@@ -50,9 +50,10 @@
                                     <li><a href="#operating-system">Operating System</a></li>
                                     <li><a href="#web-server">Web Server</a></li>
                                     <li><a href="#database">Database</a></li>
-                                    <li><a href="#web-framework">Web Framework</a></li>
                                     <li><a href="#wsgi-server">WSGI Server</a></li>
-                                    <li><a href="#content-delivery-network">Content Delivery Network</a></li>
+                                    <li><a href="#web-framework">Web Framework</a></li>
+                                    <li><a href="#content-delivery-network">CDN</a></li>
+                                    <li><a href="#web-analytics">Web Analytics</a></li>
                                     <li><a href="#change-log">Change Log</a></li>
                             </ul>
         </div>
@@ -178,6 +179,8 @@ section) but they are listed here:</p>
 <p><a class="reference external" href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> (Patrick McKenzie)</p>
 <p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a>
 (Joe's Blog)</p>
+<p><a class="reference external" href="http://rdegges.com/devops-django-part-4-choosing-heroku">Choosing Heroku</a>
+(Randall Degges)</p>
 </div>
 
                 </section>
@@ -226,6 +229,10 @@ of that file.</p>
 <p>Sending static assets can eat up a large amount of bandwidth which is why
 using a Content Delivery Network (CDN) is important when possible (see the
 content delivery network section for a more detailed explanation).</p>
+<div class="section" id="web-server-resources">
+<h2>Web Server Resources</h2>
+<p><a class="reference external" href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
+</div>
 
                 </section>
                             <section id="database" class="tech-section">
@@ -244,6 +251,28 @@ databases.</p>
 <p><a class="reference external" href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time.</p>
+</div>
+
+                </section>
+                            <section id="wsgi-server" class="tech-section">
+                    <h1>WSGI Server</h1>
+                    <p>A <a class="reference external" href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
+(WSGI) server implements the web server side of the WSGI interface for
+running Python web applications. The WSGI standard v1.0 is specified in
+<a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333</a>. As of September 2010,
+WSGI v1.0 is superseded by
+<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>, which defines the
+v1.0.1 WSGI standard.</p>
+<div class="section" id="wsgi-resources">
+<h2>WSGI Resources</h2>
+<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333 WSGI v1.0</a>
+and
+<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333 WSGI v1.0.1</a>
+specifications.</p>
+<p><a class="reference external" href="http://gunicorn.org/">Green Unicorn</a>,
+<a class="reference external" href="http://code.google.com/p/modwsgi/">mod_wsgi</a>,
+<a class="reference external" href="https://github.com/unbit/uwsgi-docs">uWSGI</a>, and
+<a class="reference external" href="http://www.gevent.org/">gvent</a> are common WSGI server implementations.</p>
 </div>
 
                 </section>
@@ -279,30 +308,8 @@ use with non-relational databases by incorporating external Python libraries.</p
 </div>
 
                 </section>
-                            <section id="wsgi-server" class="tech-section">
-                    <h1>WSGI Server</h1>
-                    <p>A <a class="reference external" href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
-(WSGI) server implements the web server side of the WSGI interface for
-running Python web applications. The WSGI standard v1.0 is specified in
-<a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333</a>. As of September 2010,
-WSGI v1.0 is superseded by
-<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>, which defines the
-v1.0.1 WSGI standard.</p>
-<div class="section" id="wsgi-resources">
-<h2>WSGI Resources</h2>
-<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333 WSGI v1.0</a>
-and
-<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333 WSGI v1.0.1</a>
-specifications.</p>
-<p><a class="reference external" href="http://gunicorn.org/">Green Unicorn</a>,
-<a class="reference external" href="http://code.google.com/p/modwsgi/">mod_wsgi</a>,
-<a class="reference external" href="https://github.com/unbit/uwsgi-docs">uWSGI</a>, and
-<a class="reference external" href="http://www.gevent.org/">gvent</a> are common WSGI server implementations.</p>
-</div>
-
-                </section>
                             <section id="content-delivery-network" class="tech-section">
-                    <h1>Content Delivery Network</h1>
+                    <h1>CDN</h1>
                     <p>A content delivery network (CDN) serves static file assets.
 <a class="reference external" href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
 <a class="reference external" href="http://www.akamai.com/">Akamai</a>, and
@@ -320,6 +327,16 @@ locations.</p>
 <div class="section" id="cdn-resources">
 <h2>CDN Resources</h2>
 <p><a class="reference external" href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
+</div>
+
+                </section>
+                            <section id="web-analytics" class="tech-section">
+                    <h1>Web Analytics</h1>
+                    <p>Web analytics involves a mix of collecting and analyzing data generated
+by visitors to a website.</p>
+<div class="section" id="web-analytics-resources">
+<h2>Web Analytics Resources</h2>
+<p><a class="reference external" href="http://blog.arkency.com/2012/12/google-analytics-for-developers/">Google Analytics for Developers</a></p>
 </div>
 
                 </section>

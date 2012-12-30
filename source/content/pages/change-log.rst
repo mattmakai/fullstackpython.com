@@ -3,7 +3,7 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 9
+:sort-order: 10
 
 2012.12.30: Updated introduction with improved wording. Working on CDN section. Added very basic database content and removed stub from that section. 
 

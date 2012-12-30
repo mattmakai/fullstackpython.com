@@ -3,7 +3,7 @@ Servers
 
 :category: page
 :slug: servers
-:sort-order: 2
+:sort-order: 02
 
 There are several options for setting up infrastructure to serve a
 web application:
@@ -101,3 +101,5 @@ Server Resources
 `Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
 (Joe's Blog)
 
+`Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_
+(Randall Degges)

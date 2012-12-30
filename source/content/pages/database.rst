@@ -3,7 +3,7 @@ Database
 
 :category: page
 :slug: database
-:sort-order: 6
+:sort-order: 05
 
 A database provides an abstraction on top of a file system for creating,
 reading, updating, and deleting persistent data. The abstraction most

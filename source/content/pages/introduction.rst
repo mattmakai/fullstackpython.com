@@ -3,7 +3,7 @@ Introduction
 
 :category: page
 :slug: introduction
-:sort-order: 1
+:sort-order: 01
 
 You're knee deep in learning the `Python <http://www.python.org/>`_
 programming language. The syntax is beginning to make sense. The first

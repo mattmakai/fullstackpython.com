@@ -3,7 +3,7 @@ Web Server
 
 :category: page
 :slug: web-server
-:sort-order: 4
+:sort-order: 04
 
 A web server handles Hypertext Transfer Protocol (HTTP) requests from
 clients. The client is usually a browser such as Internet Explorer, Firefox,
@@ -24,3 +24,9 @@ of that file.
 Sending static assets can eat up a large amount of bandwidth which is why
 using a Content Delivery Network (CDN) is important when possible (see the
 content delivery network section for a more detailed explanation).
+
+
+Web Server Resources
+--------------------
+`Apache and mod_wsgi on Ubuntu 10.04 <http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid>`_
+

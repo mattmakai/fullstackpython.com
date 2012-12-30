@@ -1,9 +1,9 @@
-Content Delivery Network
-========================
+CDN
+===
 
 :category: page
 :slug: content-delivery-network
-:sort-order: 8
+:sort-order: 08
 
 A content delivery network (CDN) serves static file assets. 
 `Amazon CloudFront <http://aws.amazon.com/cloudfront/>`_,

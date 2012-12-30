@@ -3,7 +3,7 @@ WSGI Server
 
 :category: page
 :slug: wsgi-server
-:sort-order: 7
+:sort-order: 06
 
 A `Web Server Gateway Interface <http://wsgi.readthedocs.org/en/latest/>`_ 
 (WSGI) server implements the web server side of the WSGI interface for 
