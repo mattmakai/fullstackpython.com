@@ -5,8 +5,8 @@ Operating System
 :slug: operating-system
 :sort-order: 03
 
-The operating system sits directly on top of the server or virtual server
-and provides access to computing resources. The only operating
+The operating system runs on top of the server or virtual server
+and controls access to computing resources. The only operating
 system I can recommend for production Python web stack deployments is
 a flavor of Linux. Ubuntu Long Term Support (LTS) releases, Red Hat 
 Enterprise Linux, and CentOS are all viable options. 
@@ -26,7 +26,13 @@ is added to the distribution to provide a user interface.
 
 Red Hat and CentOS
 ------------------
-Red Hat Enterprise Linux (RHEL) and Community enterprise Operating 
+`Red Hat Enterprise Linux <http://www.redhat.com/products/enterprise-linux/>`_ 
+(RHEL) and Community enterprise Operating 
 System (CentOS) are essentially the same distribution. The key 
 difference is that CentOS is an open source free derivative of RHEL.
 
+RHEL and CentOS use a different package manager and command-line interface 
+from Debian-based Linux distributions: RPM Package Manager (RPM) and the 
+Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
+to handle the packaging and installation of libraries and applications. YUM
+provides a command-line interface for interacting with the RPM system.

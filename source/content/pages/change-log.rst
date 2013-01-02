@@ -5,6 +5,8 @@ Change Log
 :slug: change-log
 :sort-order: 10
 
+2013.01.02: Minor updates to OS section.
+
 2012.12.30: Updated introduction with improved wording. Working on CDN section. Added very basic database content and removed stub from that section. 
 
 2012.12.27: Added beginning of section on Python web frameworks. Added stub for content delivery network.
