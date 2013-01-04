@@ -37,6 +37,7 @@ Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
 to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.
 
+
 Monitoring
 ----------
 There are several important resources to monitor on the operating system 
@@ -46,4 +47,10 @@ and network level of a web stack.
 2. Memory utilization
 3. Persistence storage consumed versus free
 4. Network bandwidth and latency
+
+
+Operating System Resources
+--------------------------
+`Securing an Ubuntu Server <http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/>`_
+
 

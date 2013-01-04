@@ -5,6 +5,8 @@ Change Log
 :slug: change-log
 :sort-order: 10
 
+2013.01.04: Added initial trial of a WSGI server -> web server -> browser diagram. Updated web server and OS sections.
+
 2013.01.02: Minor updates to OS section.
 
 2012.12.30: Updated introduction with improved wording. Working on CDN section. Added very basic database content and removed stub from that section. 
