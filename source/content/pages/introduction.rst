@@ -12,8 +12,7 @@ more.
 
 Now what? Definitely read Kenneth Reitz's 
 `The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_
-if you have not already. If you're not coming from a development 
-background, you may find this post on 
+If you're not coming from a development background, you may find this post on 
 `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
 useful.
     
