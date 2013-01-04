@@ -162,19 +162,19 @@ server sections because they are baked into PaaS offerings.</p>
 </div>
 <div class="section" id="server-monitoring">
 <h2>Server Monitoring</h2>
-<p>There are several important resources to monitor on the server level of a web
-stack. Technically some of these cross into the operating system level (next
-section) but they are listed here:</p>
-<ol class="arabic simple">
-<li>Server uptime</li>
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Persistence storage consumed versus free</li>
-<li>Network bandwidth and latency</li>
-</ol>
+<p>Server uptime, that the server is powered and reachable over the network,
+must be monitored on this level. That means an outside host must perform
+the monitoring to ensure availablity. Other attributes of the server such
+as CPU and memory utilization are grouped under the &quot;Operating System&quot;
+section.</p>
 </div>
 <div class="section" id="server-resources">
 <h2>Server Resources</h2>
+<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
+<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
+<a class="reference external" href="https://gondor.io/">Gondor</a>, and
+<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
+platforms-as-a-service that support Python web applications.</p>
 <p><a class="reference external" href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a> (Ars Technica)</p>
 <p><a class="reference external" href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> (Patrick McKenzie)</p>
 <p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a>
@@ -213,6 +213,17 @@ from Debian-based Linux distributions: RPM Package Manager (RPM) and the
 Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
 to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.</p>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring</h2>
+<p>There are several important resources to monitor on the operating system
+and network level of a web stack.</p>
+<ol class="arabic simple">
+<li>CPU utilization</li>
+<li>Memory utilization</li>
+<li>Persistence storage consumed versus free</li>
+<li>Network bandwidth and latency</li>
+</ol>
 </div>
 
                 </section>
@@ -271,9 +282,11 @@ WSGI v1.0 is superseded by
 v1.0.1 WSGI standard.</p>
 <hr class="docutils" />
 <img alt="WSGI Server &lt;-&gt; Web server &lt;-&gt; Browser" src="../img/wsgi-server-browser.png" />
-<p>Requests from the browser that are not for static assets are passed to the
-WSGI server. Once the request is processed by the WSGI server, the request
-is passed back through the web server and onto the browser.</p>
+<p>Requests from the browser that are not for static assets (this is specified
+in the web server's configuration which requests are for static assets and
+which are not) are passed to the WSGI server. Once the request is
+processed by the WSGI server, the request is passed back through the
+web server and onto the browser.</p>
 <hr class="docutils" />
 <div class="section" id="wsgi-resources">
 <h2>WSGI Resources</h2>
@@ -310,6 +323,21 @@ does not work (without modification) on non-relational databases such
 <a class="reference external" href="http://www.mongodb.org/">MongoDB</a> and <a class="reference external" href="http://docs.basho.com/">Riak</a>.
 Other web frameworks such as Flask and Pyramid are generally easier to
 use with non-relational databases by incorporating external Python libraries.</p>
+<div class="section" id="monitoring">
+<h2>Monitoring</h2>
+<p>Logging is a common mechanism for monitoring web applications written with a
+web framework. Runtime exceptions that prevent code from running are
+important to log to investigate and fix the source of the problems.
+Informational and debugging logging also helps to understand how the
+application is performing even if code is working as intended.</p>
+<p>Logging is often grouped into several categories:</p>
+<ol class="arabic simple">
+<li>Information</li>
+<li>Debug</li>
+<li>Warning</li>
+<li>Error</li>
+</ol>
+</div>
 <div class="section" id="web-framework-resources">
 <h2>Web Framework Resources</h2>
 <p><a class="reference external" href="http://www.djangoproject.com/">Django</a>,

@@ -111,19 +111,19 @@ server sections because they are baked into PaaS offerings.</p>
 </div>
 <div class="section" id="server-monitoring">
 <h2>Server Monitoring</h2>
-<p>There are several important resources to monitor on the server level of a web
-stack. Technically some of these cross into the operating system level (next
-section) but they are listed here:</p>
-<ol class="arabic simple">
-<li>Server uptime</li>
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Persistence storage consumed versus free</li>
-<li>Network bandwidth and latency</li>
-</ol>
+<p>Server uptime, that the server is powered and reachable over the network,
+must be monitored on this level. That means an outside host must perform
+the monitoring to ensure availablity. Other attributes of the server such
+as CPU and memory utilization are grouped under the &quot;Operating System&quot;
+section.</p>
 </div>
 <div class="section" id="server-resources">
 <h2>Server Resources</h2>
+<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
+<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
+<a class="reference external" href="https://gondor.io/">Gondor</a>, and
+<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
+platforms-as-a-service that support Python web applications.</p>
 <p><a class="reference external" href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a> (Ars Technica)</p>
 <p><a class="reference external" href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> (Patrick McKenzie)</p>
 <p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a>

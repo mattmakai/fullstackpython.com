@@ -27,6 +27,23 @@ does not work (without modification) on non-relational databases such
 Other web frameworks such as Flask and Pyramid are generally easier to
 use with non-relational databases by incorporating external Python libraries.
 
+
+Monitoring
+----------
+Logging is a common mechanism for monitoring web applications written with a
+web framework. Runtime exceptions that prevent code from running are 
+important to log to investigate and fix the source of the problems. 
+Informational and debugging logging also helps to understand how the 
+application is performing even if code is working as intended.
+
+Logging is often grouped into several categories:
+
+1. Information
+2. Debug
+3. Warning
+4. Error
+
+
 Web Framework Resources
 -----------------------
 `Django <http://www.djangoproject.com/>`_, 

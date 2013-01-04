@@ -19,9 +19,11 @@ v1.0.1 WSGI standard.
 .. image:: ../img/wsgi-server-browser.png
   :alt: WSGI Server <-> Web server <-> Browser
 
-Requests from the browser that are not for static assets are passed to the
-WSGI server. Once the request is processed by the WSGI server, the request
-is passed back through the web server and onto the browser.
+Requests from the browser that are not for static assets (this is specified
+in the web server's configuration which requests are for static assets and
+which are not) are passed to the WSGI server. Once the request is 
+processed by the WSGI server, the request is passed back through the 
+web server and onto the browser.
 
 ----
 

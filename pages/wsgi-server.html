@@ -54,9 +54,11 @@ WSGI v1.0 is superseded by
 v1.0.1 WSGI standard.</p>
 <hr class="docutils" />
 <img alt="WSGI Server &lt;-&gt; Web server &lt;-&gt; Browser" src="../img/wsgi-server-browser.png" />
-<p>Requests from the browser that are not for static assets are passed to the
-WSGI server. Once the request is processed by the WSGI server, the request
-is passed back through the web server and onto the browser.</p>
+<p>Requests from the browser that are not for static assets (this is specified
+in the web server's configuration which requests are for static assets and
+which are not) are passed to the WSGI server. Once the request is
+processed by the WSGI server, the request is passed back through the
+web server and onto the browser.</p>
 <hr class="docutils" />
 <div class="section" id="wsgi-resources">
 <h2>WSGI Resources</h2>

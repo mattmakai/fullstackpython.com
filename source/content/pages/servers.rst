@@ -82,18 +82,21 @@ server sections because they are baked into PaaS offerings.
 
 Server Monitoring
 -----------------
-There are several important resources to monitor on the server level of a web 
-stack. Technically some of these cross into the operating system level (next
-section) but they are listed here:
+Server uptime, that the server is powered and reachable over the network,
+must be monitored on this level. That means an outside host must perform
+the monitoring to ensure availablity. Other attributes of the server such
+as CPU and memory utilization are grouped under the "Operating System"
+section.
 
-1. Server uptime
-2. CPU utilization
-3. Memory utilization
-4. Persistence storage consumed versus free
-5. Network bandwidth and latency
 
 Server Resources
 ----------------
+`Heroku <http://www.heroku.com/>`_, 
+`Google App Engine <https://developers.google.com/appengine/>`_,
+`Gondor <https://gondor.io/>`_, and
+`OpenShift <https://openshift.redhat.com/community/get-started/python>`_ are
+platforms-as-a-service that support Python web applications.
+
 `How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
 
 `Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
