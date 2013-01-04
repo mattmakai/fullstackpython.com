@@ -13,6 +13,18 @@ WSGI v1.0 is superseded by
 `PEP 3333 <http://www.python.org/dev/peps/pep-3333/>`_, which defines the
 v1.0.1 WSGI standard.
 
+----
+
+
+.. image:: ../img/wsgi-server-browser.png
+  :alt: WSGI Server <-> Web server <-> Browser
+
+Requests from the browser that are not for static assets are passed to the
+WSGI server. Once the request is processed by the WSGI server, the request
+is passed back through the web server and onto the browser.
+
+----
+
 WSGI Resources
 --------------
 `PEP 0333 WSGI v1.0 <http://www.python.org/dev/peps/pep-0333/>`_ 
@@ -23,4 +35,4 @@ specifications.
 `Green Unicorn <http://gunicorn.org/>`_, 
 `mod_wsgi <http://code.google.com/p/modwsgi/>`_,
 `uWSGI <https://github.com/unbit/uwsgi-docs>`_, and
-`gvent <http://www.gevent.org/>`_ are common WSGI server implementations.
+`gevent <http://www.gevent.org/>`_ are common WSGI server implementations.
