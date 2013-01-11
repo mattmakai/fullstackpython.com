@@ -5,7 +5,7 @@ Servers
 :slug: servers
 :sort-order: 02
 
-There are several options for setting up infrastructure to serve a
+There are four options for setting up infrastructure to serve a
 web application:
 
 1. "Bare metal" servers
@@ -21,15 +21,27 @@ Bare metal
 The term *bare metal* refers to purchasing the actual hardware and hooking 
 it up to the Internet either through a business-class internet service 
 provider (ISP) or 
-`co-locating the server <http://webdesign.about.com/od/colocation/a/what_colocation.htm>`_ with other servers. 
+`co-locating the server <http://webdesign.about.com/od/colocation/a/what_colocation.htm>`_ with other servers. A "business-class" ISP is necessary because
+most residential Internet service agreements prohibt and will eventually
+block traffic to web servers. You may be able to get away with low traffic
+volume but if your site serves a lot of traffic it will catch an ISPs
+filters.
 
 The bare metal option offers the most control over the server configuration,
 usually has the highest performance for the price, but also is the most 
 expensive upfront option and the highest ongoing maintenance. With bare
 metal servers the ongoing operating cost is the electricity the server(s) 
-use as well as handling repairs when server components malfunction.
+use as well as handling repairs when server components malfunction. You're
+taking on manual labor working with hardware as well as the rest of the
+software stack.
 
-Buy actual hardware from a vendor either pre-built or as a collection of components that you assemble yourself.
+Buy actual hardware from a vendor either pre-built or as a collection of 
+components that you assemble yourself. Here is an 
+`example of a server buildout <http://duartes.org/gustavo/blog/post/building-a-quad-core-server>`_. The post is a couple of years old but those are the
+rough components you need to put together your own server. You can also buy 
+pre-configured servers from Dell or HP. Those servers tend to be in
+smaller case form factors (called "blades") but are correspondingly more 
+expensive than putting off-the-shelf components together yourself.
 
 
 Virtualized servers
@@ -67,17 +79,44 @@ dynamic upscaling for heavy traffic. When traffic is low then virtualized
 servers can solely be used. This combination of resources reduces cost at
 the expense of greater complexity in the dynamically scaled infrastructure. 
 
+The most common IaaS platforms are 
+`Amazon Web Services <http://aws.amazon.com/>`_ and 
+`Rackspace Cloud <http://www.rackspace.com/cloud/>`_.
+
+The disadvantage to IaaS platforms is the lock-in if you have to write
+custom code to deploy, dynamically scale, and generally understand your
+infrastructure. Every platform has its quirks. For example, 
+Amazon's standard `Elastic Block Store <http://aws.amazon.com/ebs/>`_ storage
+infrastructure has at least an order of magnitude worse I/O throughput 
+than working with your local disk. Your application's database queries may 
+work great locally but then when you deploy the performance is inadequate.
+Amazon has `higher throughput EBS instances <http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/>`_ 
+but you will pay correspondingly more for them. EBS throughput is just 
+one of many quirks you need to understand before committing to an 
+IaaS platform.
+
+
 Platform-as-a-service
 ---------------------
-Platform-as-a-service (PaaS) refers to a class of services that will host
-an application with a layer between the server and the application. The
-layer defines how the application accesses resources such as computing
-time, files, and external services. The tradeoff to PaaS is usually
-ease of deployment to a specific architecture as long as you do things
-"their way."  
+A platform-as-a-service (PaaS) provides infrastructure and a software layer
+on which a web application is deployed. The PaaS layer defines how the 
+application accesses resources such as computing time, files, and 
+external services. The PaaS provides a higher-level abstraction for working
+with computing resources than deploying an application to a server or IaaS.
+
+A PaaS makes deployment and operations easier because it forces the developer
+to conform applications to the PaaS architecture.
+
+`Heroku <http://www.heroku.com/>`_, 
+`Google App Engine <https://developers.google.com/appengine/>`_,
+`Gondor <https://gondor.io/>`_, and
+`OpenShift <https://openshift.redhat.com/community/get-started/python>`_ are
+platform-as-services that support Python web applications. Each one requires
+varying tradeoffs to deploy to their respective platforms.
 
 If you go the PaaS route, you can skip over the operating system and web
-server sections because they are baked into PaaS offerings.
+server sections because they are baked into PaaS offerings. PaaS offerings
+generally start at the WSGI server layer.
 
 
 Server Monitoring
@@ -91,18 +130,14 @@ section.
 
 Server Resources
 ----------------
-`Heroku <http://www.heroku.com/>`_, 
-`Google App Engine <https://developers.google.com/appengine/>`_,
-`Gondor <https://gondor.io/>`_, and
-`OpenShift <https://openshift.redhat.com/community/get-started/python>`_ are
-platforms-as-a-service that support Python web applications.
-
 `How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
 
 `Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
 
-`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
-(Joe's Blog)
-
 `Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_
 (Randall Degges)
+
+`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
+
+`boto <https://github.com/boto/boto>`_ is an amazing Python library for
+working with Amazon Web Services

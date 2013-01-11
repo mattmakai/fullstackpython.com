@@ -38,3 +38,6 @@ specifications.
 `mod_wsgi <http://code.google.com/p/modwsgi/>`_,
 `uWSGI <https://github.com/unbit/uwsgi-docs>`_, and
 `gevent <http://www.gevent.org/>`_ are common WSGI server implementations.
+
+`Complete single server Django stack tutorial <http://www.apreche.net/complete-single-server-django-stack-tutorial/>`_ is thorough and informative for
+non-paas hosting choices.

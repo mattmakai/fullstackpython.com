@@ -3,7 +3,9 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 10
+:sort-order: 12
+
+2013.01.11: Fleshing out server section, particularly IaaS and PaaS.
 
 2013.01.04: Added initial trial of a WSGI server -> web server -> browser diagram. Updated web server and OS sections.
 

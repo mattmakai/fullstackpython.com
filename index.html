@@ -54,6 +54,7 @@
                                     <li><a href="#web-framework">Web Framework</a></li>
                                     <li><a href="#content-delivery-network">CDN</a></li>
                                     <li><a href="#web-analytics">Web Analytics</a></li>
+                                    <li><a href="#caching">Caching</a></li>
                                     <li><a href="#change-log">Change Log</a></li>
                             </ul>
         </div>
@@ -95,7 +96,7 @@ that you see in this guide, please issue a
                 </section>
                             <section id="servers" class="tech-section">
                     <h1>Servers</h1>
-                    <p>There are several options for setting up infrastructure to serve a
+                    <p>There are four options for setting up infrastructure to serve a
 web application:</p>
 <ol class="arabic simple">
 <li>&quot;Bare metal&quot; servers</li>
@@ -108,13 +109,25 @@ web application:</p>
 <p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking
 it up to the Internet either through a business-class internet service
 provider (ISP) or
-<a class="reference external" href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a> with other servers.</p>
+<a class="reference external" href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a> with other servers. A &quot;business-class&quot; ISP is necessary because
+most residential Internet service agreements prohibt and will eventually
+block traffic to web servers. You may be able to get away with low traffic
+volume but if your site serves a lot of traffic it will catch an ISPs
+filters.</p>
 <p>The bare metal option offers the most control over the server configuration,
 usually has the highest performance for the price, but also is the most
 expensive upfront option and the highest ongoing maintenance. With bare
 metal servers the ongoing operating cost is the electricity the server(s)
-use as well as handling repairs when server components malfunction.</p>
-<p>Buy actual hardware from a vendor either pre-built or as a collection of components that you assemble yourself.</p>
+use as well as handling repairs when server components malfunction. You're
+taking on manual labor working with hardware as well as the rest of the
+software stack.</p>
+<p>Buy actual hardware from a vendor either pre-built or as a collection of
+components that you assemble yourself. Here is an
+<a class="reference external" href="http://duartes.org/gustavo/blog/post/building-a-quad-core-server">example of a server buildout</a>. The post is a couple of years old but those are the
+rough components you need to put together your own server. You can also buy
+pre-configured servers from Dell or HP. Those servers tend to be in
+smaller case form factors (called &quot;blades&quot;) but are correspondingly more
+expensive than putting off-the-shelf components together yourself.</p>
 </div>
 <div class="section" id="virtualized-servers">
 <h2>Virtualized servers</h2>
@@ -147,17 +160,39 @@ or hours of server usage instead of on monthly billing cycles.</p>
 dynamic upscaling for heavy traffic. When traffic is low then virtualized
 servers can solely be used. This combination of resources reduces cost at
 the expense of greater complexity in the dynamically scaled infrastructure.</p>
+<p>The most common IaaS platforms are
+<a class="reference external" href="http://aws.amazon.com/">Amazon Web Services</a> and
+<a class="reference external" href="http://www.rackspace.com/cloud/">Rackspace Cloud</a>.</p>
+<p>The disadvantage to IaaS platforms is the lock-in if you have to write
+custom code to deploy, dynamically scale, and generally understand your
+infrastructure. Every platform has its quirks. For example,
+Amazon's standard <a class="reference external" href="http://aws.amazon.com/ebs/">Elastic Block Store</a> storage
+infrastructure has at least an order of magnitude worse I/O throughput
+than working with your local disk. Your application's database queries may
+work great locally but then when you deploy the performance is inadequate.
+Amazon has <a class="reference external" href="http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/">higher throughput EBS instances</a>
+but you will pay correspondingly more for them. EBS throughput is just
+one of many quirks you need to understand before committing to an
+IaaS platform.</p>
 </div>
 <div class="section" id="platform-as-a-service">
 <h2>Platform-as-a-service</h2>
-<p>Platform-as-a-service (PaaS) refers to a class of services that will host
-an application with a layer between the server and the application. The
-layer defines how the application accesses resources such as computing
-time, files, and external services. The tradeoff to PaaS is usually
-ease of deployment to a specific architecture as long as you do things
-&quot;their way.&quot;</p>
+<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
+on which a web application is deployed. The PaaS layer defines how the
+application accesses resources such as computing time, files, and
+external services. The PaaS provides a higher-level abstraction for working
+with computing resources than deploying an application to a server or IaaS.</p>
+<p>A PaaS makes deployment and operations easier because it forces the developer
+to conform applications to the PaaS architecture.</p>
+<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
+<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
+<a class="reference external" href="https://gondor.io/">Gondor</a>, and
+<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
+platform-as-services that support Python web applications. Each one requires
+varying tradeoffs to deploy to their respective platforms.</p>
 <p>If you go the PaaS route, you can skip over the operating system and web
-server sections because they are baked into PaaS offerings.</p>
+server sections because they are baked into PaaS offerings. PaaS offerings
+generally start at the WSGI server layer.</p>
 </div>
 <div class="section" id="server-monitoring">
 <h2>Server Monitoring</h2>
@@ -169,17 +204,13 @@ section.</p>
 </div>
 <div class="section" id="server-resources">
 <h2>Server Resources</h2>
-<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
-<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
-<a class="reference external" href="https://gondor.io/">Gondor</a>, and
-<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
-platforms-as-a-service that support Python web applications.</p>
 <p><a class="reference external" href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a> (Ars Technica)</p>
 <p><a class="reference external" href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> (Patrick McKenzie)</p>
-<p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a>
-(Joe's Blog)</p>
 <p><a class="reference external" href="http://rdegges.com/devops-django-part-4-choosing-heroku">Choosing Heroku</a>
 (Randall Degges)</p>
+<p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a></p>
+<p><a class="reference external" href="https://github.com/boto/boto">boto</a> is an amazing Python library for
+working with Amazon Web Services</p>
 </div>
 
                 </section>
@@ -309,6 +340,8 @@ specifications.</p>
 <a class="reference external" href="http://code.google.com/p/modwsgi/">mod_wsgi</a>,
 <a class="reference external" href="https://github.com/unbit/uwsgi-docs">uWSGI</a>, and
 <a class="reference external" href="http://www.gevent.org/">gevent</a> are common WSGI server implementations.</p>
+<p><a class="reference external" href="http://www.apreche.net/complete-single-server-django-stack-tutorial/">Complete single server Django stack tutorial</a> is thorough and informative for
+non-paas hosting choices.</p>
 </div>
 
                 </section>
@@ -391,9 +424,19 @@ by visitors to a website.</p>
 </div>
 
                 </section>
+                            <section id="caching" class="tech-section">
+                    <h1>Caching</h1>
+                    <p>Caching can reduce load on servers by storing the results of common
+operations and serving the precomputed answers to clients.</p>
+<div class="section" id="caching-resources">
+<h2>Caching Resources</h2>
+</div>
+
+                </section>
                             <section id="change-log" class="tech-section">
                     <h1>Change Log</h1>
-                    <p>2013.01.04: Added initial trial of a WSGI server -&gt; web server -&gt; browser diagram. Updated web server and OS sections.</p>
+                    <p>2013.01.11: Fleshing out server section, particularly IaaS and PaaS.</p>
+<p>2013.01.04: Added initial trial of a WSGI server -&gt; web server -&gt; browser diagram. Updated web server and OS sections.</p>
 <p>2013.01.02: Minor updates to OS section.</p>
 <p>2012.12.30: Updated introduction with improved wording. Working on CDN section. Added very basic database content and removed stub from that section.</p>
 <p>2012.12.27: Added beginning of section on Python web frameworks. Added stub for content delivery network.</p>
