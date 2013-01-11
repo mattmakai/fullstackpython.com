@@ -10,4 +10,5 @@ operations and serving the precomputed answers to clients.
 
 Caching Resources
 -----------------
+`memcached <http://memcached.org/>`_ is a common in-memory caching system.
 

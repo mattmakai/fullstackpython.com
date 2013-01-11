@@ -23,13 +23,20 @@ manager <http://wiki.debian.org/Apt>`_. For desktop versions of Ubuntu,
 GNOME (until the 11.04 release) or Unity (11.10 through current)
 is added to the distribution to provide a user interface.
 
+Ubuntu `Long Term Support (LTS) <https://wiki.ubuntu.com/LTS>`_ releases
+are the recommended versions to use for deployments. LTS versions receive
+five years of post-release updates from Canonical. Every two years, Canonical 
+creates a new LTS release, which allows for an easy upgrade path as well 
+as flexibility in skipping every other LTS release if necessary.
+
 
 Red Hat and CentOS
 ------------------
 `Red Hat Enterprise Linux <http://www.redhat.com/products/enterprise-linux/>`_ 
-(RHEL) and Community enterprise Operating 
-System (CentOS) are essentially the same distribution. The key 
-difference is that CentOS is an open source free derivative of RHEL.
+(RHEL) and `Community ENTerprise Operating System <http://www.centos.org/>`_ 
+(CentOS) are the same distribution. The only difference between the two 
+(other than the name) is that CentOS is an open source, liberally 
+licensed free derivative of RHEL.
 
 RHEL and CentOS use a different package manager and command-line interface 
 from Debian-based Linux distributions: RPM Package Manager (RPM) and the 
