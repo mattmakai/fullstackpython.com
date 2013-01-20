@@ -60,4 +60,6 @@ Operating System Resources
 --------------------------
 `Securing an Ubuntu Server <http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/>`_
 
+`Securing Ubuntu <http://joshrendek.com/2013/01/securing-ubuntu/>`_
+
 
