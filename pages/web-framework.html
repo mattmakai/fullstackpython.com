@@ -53,17 +53,17 @@ provide functionality to accomplish common operations for the web. These
 common operations include:</p>
 <ol class="arabic simple">
 <li>URL routing</li>
-<li>HTML, XML, JSON, and other output templating</li>
+<li>HTML, XML, JSON, and other output format templating</li>
 <li>Database manipulation</li>
-<li>Cross-site request forgery (CSRF) and Cross-site scripting (XSS) protection</li>
+<li>Security against Cross-site request forgery (CSRF) and other attacks</li>
 </ol>
 <p>Not all web frameworks include functionality for all of the above
-functionality. Frameworks must balance between &quot;being all things to all
-people but very complicated&quot; or doing only certain things well without
-prescription for how to do other functions.</p>
+functionality. Frameworks fall somewhere between simply executing a
+single use case and attempting to be everything to every developer with
+increased complexity.</p>
 <p>For example, the Django web application framework includes an
 Object-Relational Mapping (ORM) layer that abstracts relational database
-read, write, query, and delete operations. However, the ORM layer in Django
+read, write, query, and delete operations. However, Django's ORM
 does not work (without modification) on non-relational databases such
 <a class="reference external" href="http://www.mongodb.org/">MongoDB</a> and <a class="reference external" href="http://docs.basho.com/">Riak</a>.
 Other web frameworks such as Flask and Pyramid are generally easier to
@@ -82,6 +82,16 @@ application is performing even if code is working as intended.</p>
 <li>Warning</li>
 <li>Error</li>
 </ol>
+<p>Logging errors that occur while a web framework is running is crucial to
+understanding how your application is performing.
+<a class="reference external" href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
+<a class="reference external" href="https://github.com/getsentry/sentry">Sentry</a> exception logging and
+aggregation application. Raven provides the way to send exceptions to
+Sentry, which should be deployed on a separate server from your production
+infrastructure. Raven can also be used by Python scripts to send other
+log data to Sentry for aggregation. Sentry provides a clean web application
+interface for viewing the exceptions. Sentry can also be configured with a
+mail plugin to send emails when exceptions occur.</p>
 </div>
 <div class="section" id="web-framework-resources">
 <h2>Web Framework Resources</h2>
