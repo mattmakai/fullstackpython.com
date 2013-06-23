@@ -3,7 +3,9 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 12
+:sort-order: 13
+
+2013.06.23: Updating styling, adding new content, switching around sections.
 
 2013.01.11: Fleshing out server section, particularly IaaS and PaaS.
 
