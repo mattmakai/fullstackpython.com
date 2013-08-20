@@ -41,4 +41,8 @@ Web Server Resources
 --------------------
 `Apache and mod_wsgi on Ubuntu 10.04 <http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid>`_
 
+`Nginx web server tutorials <http://articles.slicehost.com/nginx>`_
+
 `HTTP Status Codes <http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>`_
+
+

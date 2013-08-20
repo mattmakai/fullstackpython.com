@@ -28,3 +28,7 @@ CDN Resources
 
 `CDNs fail, but your scripts don't have to <http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx>`_
 
+`django-storages <http://django-storages.readthedocs.org/en/latest/>`_ is 
+a Django library for managing static and media files on services such as
+Amazon S3 and other content delivery networks.
+
