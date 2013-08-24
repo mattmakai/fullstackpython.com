@@ -15,9 +15,17 @@ Now what? Definitely read Kenneth Reitz's
 If you're not coming from a development background, you may find this post on 
 `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
 useful.
-    
+
 This guide has a different focus from the above resources. Here I 
 focus on explaining several ways of setting up a Python *web application*
 stack from server infrastructure through JavaScript execution on a user's
 browser.
 
+People learning Python generally have at least one of the three following
+goals:
+
+1. Build web applications
+2. Perform data analysis
+3. Script server administration
+
+This guide will be most useful to people in the first and third categories.
