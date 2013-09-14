@@ -63,3 +63,5 @@ Operating System Resources
 `Securing Ubuntu <http://joshrendek.com/2013/01/securing-ubuntu/>`_
 
 `First 5 Minutes on a Server <http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers>`_
+
+`Securing a Linux Server <http://spenserj.com/blog/2013/07/15/securing-a-linux-server/>`_
