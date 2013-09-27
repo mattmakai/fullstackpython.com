@@ -45,6 +45,7 @@ Web Server Resources
 
 `Nginx for Developers: An Introduction <http://carrot.is/coding/nginx_introduction>`_
 
-`HTTP Status Codes <http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>`_
+`Nginx security configuration example <http://tautt.com/best-nginx-configuration-for-security/>`_
 
+`HTTP Status Codes <http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>`_
 
