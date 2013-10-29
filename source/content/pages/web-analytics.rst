@@ -3,7 +3,7 @@ Web Analytics
 
 :category: page
 :slug: web-analytics
-:sort-order: 09
+:sort-order: 10
 
 Web analytics involves a mix of collecting and analyzing data generated
 by visitors to a website.

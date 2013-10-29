@@ -45,16 +45,6 @@ to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.
 
 
-Monitoring
-----------
-There are several important resources to monitor on the operating system 
-and network level of a web stack.
-
-1. CPU utilization
-2. Memory utilization
-3. Persistence storage consumed versus free
-4. Network bandwidth and latency
-
 
 Operating System Resources
 --------------------------

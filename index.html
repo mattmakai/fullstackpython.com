@@ -57,8 +57,9 @@
                                     <li><a href="#web-framework">Web Framework</a></li>
                                     <li><a href="#content-delivery-network">CDN</a></li>
                                     <li><a href="#website-security">Website Security</a></li>
-                                    <li><a href="#web-analytics">Web Analytics</a></li>
                                     <li><a href="#caching">Caching</a></li>
+                                    <li><a href="#web-analytics">Web Analytics</a></li>
+                                    <li><a href="#monitoring">Monitoring</a></li>
                                     <li><a href="#about-author">About</a></li>
                                     <li><a href="#change-log">Change Log</a></li>
                             </ul>
@@ -244,17 +245,6 @@ from Debian-based Linux distributions: RPM Package Manager (RPM) and the
 Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
 to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.</p>
-</div>
-<div class="section" id="monitoring">
-<h2>Monitoring</h2>
-<p>There are several important resources to monitor on the operating system
-and network level of a web stack.</p>
-<ol class="arabic simple">
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Persistence storage consumed versus free</li>
-<li>Network bandwidth and latency</li>
-</ol>
 </div>
 <div class="section" id="operating-system-resources">
 <h2>Operating System Resources</h2>
@@ -443,16 +433,6 @@ Amazon S3 and other content delivery networks.</p>
 </div>
 
                 </section>
-                            <section id="web-analytics" class="tech-section">
-                    <h1>Web Analytics</h1>
-                    <p>Web analytics involves a mix of collecting and analyzing data generated
-by visitors to a website.</p>
-<div class="section" id="web-analytics-resources">
-<h2>Web Analytics Resources</h2>
-<p><a class="reference external" href="http://blog.arkency.com/2012/12/google-analytics-for-developers/">Google Analytics for Developers</a></p>
-</div>
-
-                </section>
                             <section id="caching" class="tech-section">
                     <h1>Caching</h1>
                     <p>Caching can reduce load on servers by storing the results of common
@@ -465,6 +445,48 @@ operations and serving the precomputed answers to clients.</p>
 easily be configured for caching with libraries such as
 <a class="reference external" href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</li>
 </ul>
+</div>
+
+                </section>
+                            <section id="web-analytics" class="tech-section">
+                    <h1>Web Analytics</h1>
+                    <p>Web analytics involves a mix of collecting and analyzing data generated
+by visitors to a website.</p>
+<div class="section" id="web-analytics-resources">
+<h2>Web Analytics Resources</h2>
+<p><a class="reference external" href="http://blog.arkency.com/2012/12/google-analytics-for-developers/">Google Analytics for Developers</a></p>
+</div>
+
+                </section>
+                            <section id="monitoring" class="tech-section">
+                    <h1>Monitoring</h1>
+                    <p>Capturing and analyzing data about your production environment is critical
+to proactively deal with stability, performance, and errors in a web
+application.</p>
+<p>There are several important resources to monitor on the operating system
+and network level of a web stack.</p>
+<ol class="arabic simple">
+<li>CPU utilization</li>
+<li>Memory utilization</li>
+<li>Persistence storage consumed versus free</li>
+<li>Network bandwidth and latency</li>
+</ol>
+<p>Application level monitoring encompasses several aspects. The amount of time
+and resources dedicated to each aspect will vary based on whether an
+application is read-heavy, write-heavy, or subject to rapid swings in traffic.</p>
+<ol class="arabic simple">
+<li>Application warnings and errors (500-level HTTP errors)</li>
+<li>Application code performance</li>
+<li>Template rendering time</li>
+<li>Browser rendering time for the application</li>
+<li>Database querying performance</li>
+</ol>
+<div class="section" id="monitoring-resources">
+<h2>Monitoring Resources</h2>
+<p><a class="reference external" href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
+well as plug ins for capturing and analyzing additional data about tools in
+your stack.</p>
+<p><a class="reference external" href="http://copperegg.com/">CopperEgg</a>. Server and infrastructure monitoring.</p>
 </div>
 
                 </section>
