@@ -481,12 +481,30 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.</
 <li>Browser rendering time for the application</li>
 <li>Database querying performance</li>
 </ol>
-<div class="section" id="monitoring-resources">
-<h2>Monitoring Resources</h2>
+<div class="section" id="monitoring-third-party-services">
+<h2>Monitoring Third Party Services</h2>
 <p><a class="reference external" href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
 well as plug ins for capturing and analyzing additional data about tools in
 your stack.</p>
-<p><a class="reference external" href="http://copperegg.com/">CopperEgg</a>. Server and infrastructure monitoring.</p>
+<p><a class="reference external" href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and
+infrastructure. It's popular with DevOps shops that are making changes to
+their production environments and want immediate feedback on the results
+of those modifications.</p>
+<p><a class="reference external" href="http://status.io/">Status.io</a> focuses on uptime and response metrics
+transparency for your users.</p>
+</div>
+<div class="section" id="open-source-projects">
+<h2>Open Source Projects</h2>
+<p><a class="reference external" href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
+listens for metrics and aggregates them for transfer into another service
+such as Graphite.</p>
+<p><a class="reference external" href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
+time-series data and displays them in graphs through a web application.</p>
+</div>
+<div class="section" id="monitoring-resources">
+<h2>Monitoring Resources</h2>
+<p><a class="reference external" href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
+<p><a class="reference external" href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
 </div>
 
                 </section>
@@ -511,7 +529,8 @@ that you see in this guide, please issue a
                 </section>
                             <section id="change-log" class="tech-section">
                     <h1>Change Log</h1>
-                    <p>2013.08.20: Adding more resources for web servers and other categories.</p>
+                    <p>2013.10.29: Creating separate monitoring section.</p>
+<p>2013.08.20: Adding more resources for web servers and other categories.</p>
 <p>2013.06.23: Updating styling, adding new content, switching around sections.</p>
 <p>2013.01.11: Fleshing out server section, particularly IaaS and PaaS.</p>
 <p>2013.01.04: Added initial trial of a WSGI server -&gt; web server -&gt; browser diagram. Updated web server and OS sections.</p>
