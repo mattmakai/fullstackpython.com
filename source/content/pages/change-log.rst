@@ -5,6 +5,8 @@ Change Log
 :slug: change-log
 :sort-order: 13
 
+2013.11.03: Updating monitoring section with third party services.
+
 2013.10.29: Creating separate monitoring section.
 
 2013.08.20: Adding more resources for web servers and other categories.
