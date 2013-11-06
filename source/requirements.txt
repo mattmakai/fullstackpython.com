@@ -1,1 +1,1 @@
-Pelican
+Pelican==3.1.1
