@@ -55,3 +55,6 @@ Operating System Resources
 `First 5 Minutes on a Server <http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers>`_
 
 `Securing a Linux Server <http://spenserj.com/blog/2013/07/15/securing-a-linux-server/>`_
+
+`quick-secure scripts <https://github.com/marshyski/quick-secure>`_ for 
+securing RedHat flavors of Linux on boot.
