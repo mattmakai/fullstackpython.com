@@ -5,15 +5,13 @@ Change Log
 :slug: change-log
 :sort-order: 13
 
-2013.11.02: Updated about section and color scheme.
+Nov 2013: Updated color scheme, caching section.
 
-2013.11.03: Updating monitoring section with third party services.
+Oct 2013: Creating separate monitoring section.
 
-2013.10.29: Creating separate monitoring section.
+Aug 2013: Adding more resources for web servers and other categories.
 
-2013.08.20: Adding more resources for web servers and other categories.
-
-2013.06.23: Updating styling, adding new content, switching around sections.
+Jun 2013: Updating styling, adding new content, switching around sections.
 
 Jan 2013: Fleshed out web server, OS, and server sections, particularly IaaS 
 and PaaS topics, added initial "hand drawn" diagram placeholders for better 
