@@ -11,8 +11,8 @@ few "AHA!" moments are hitting you. Now you are excited for continued
 direction to accelerate your learning.
 
 This guide explains each piece of a Python web stack. If you want to deploy
-a web application built with Django, Flask, Pyramid, or another 
-WSGI-compatible frameworks, you've come to the right place.
+a web application built with Django, Flask, Pyramid, or another
+Python-based web framework, you've come to the right place.
 
 There are a few other fantastic Python guides that you may want to read if
 you're not yet ready to deploy your application.
