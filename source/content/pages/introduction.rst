@@ -20,8 +20,8 @@ you're not yet ready to deploy your application.
 For general Python learning, read Kenneth Reitz's 
 `The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_.
 
-To deploy a Python web application to the platform-as-a-service (described
-below in this guide), check out 
+To deploy a Python web application to the Heroku platform-as-a-service 
+(described below in this guide), check out 
 `Deploying Django <http://www.deploydjango.com/>`_.
 
 If you're not coming in with any software development background, 
