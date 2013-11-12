@@ -7,12 +7,25 @@ Introduction
 
 You're knee deep in learning the `Python <http://www.python.org/>`_
 programming language. The syntax is beginning to make sense. The first
-few "AHA!" moments are hitting you. Now you are excited for direction to learn
-more.
+few "AHA!" moments are hitting you. Now you are excited for continued 
+direction to accelerate your learning.
 
-Now what? Definitely read Kenneth Reitz's 
-`The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_
-If you're not coming from a development background, you may find this post on 
+This guide explains each piece of a Python web stack. If you want to deploy
+a web application built with Django, Flask, Pyramid, or another 
+WSGI-compatible frameworks, you've come to the right place.
+
+There are a few other fantastic Python guides that you may want to read if
+you're not yet ready to deploy your application.
+
+For general Python learning, read Kenneth Reitz's 
+`The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_.
+
+To deploy a Python web application to the platform-as-a-service (described
+below in this guide), check out 
+`Deploying Django <http://www.deploydjango.com/>`_.
+
+If you're not coming in with any software development background, 
+you may find my post on 
 `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
 useful.
 
