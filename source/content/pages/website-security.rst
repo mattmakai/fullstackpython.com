@@ -10,6 +10,12 @@ stack. However, I include a separate section here for topics that deserve
 a comprehensive review such as firewalls, SSL certificates, and public key
 authorization.
 
+Key Terms
+---------
+*Authorization* - specifying access rights and permissions to server and 
+application resources. For example, a non-logged in user can view a landing
+page but only a logged in user can access an application's "account" screen.
+
 
 Website Security Resources
 --------------------------

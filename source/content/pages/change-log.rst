@@ -5,7 +5,7 @@ Change Log
 :slug: change-log
 :sort-order: 13
 
-Nov 2013: Updated color scheme, caching section.
+Nov 2013: Modified color scheme. Updated caching and introduction section.
 
 Oct 2013: Creating separate monitoring section.
 
