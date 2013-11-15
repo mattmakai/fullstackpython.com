@@ -119,15 +119,6 @@ server sections because they are baked into PaaS offerings. PaaS offerings
 generally start at the WSGI server layer.
 
 
-Server Monitoring
------------------
-Server uptime, that the server is powered and reachable over the network,
-must be monitored on this level. That means an outside host must perform
-the monitoring to ensure availablity. Other attributes of the server such
-as CPU and memory utilization are grouped under the "Operating System"
-section.
-
-
 Server Resources
 ----------------
 `How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
