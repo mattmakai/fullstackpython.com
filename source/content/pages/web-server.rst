@@ -49,3 +49,4 @@ Web Server Resources
 
 `HTTP Status Codes <http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>`_
 
+`Battle ready Nginx - an optimization guide <http://blog.zachorr.com/nginx-setup/>`_
