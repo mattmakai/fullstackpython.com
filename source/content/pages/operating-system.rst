@@ -11,8 +11,9 @@ system I can recommend for production Python web stack deployments is
 a flavor of Linux. Ubuntu Long Term Support (LTS) releases, Red Hat 
 Enterprise Linux, and CentOS are all viable options. 
 
-*Side note*: Mac OS X is fine for development activities but not for 
-test/production deployments.
+*Side note*: Mac OS X is fine for development activities. Windows and Mac 
+OS X are not appropriate for most test and production deployments unless
+there is a specific reason why you must use them in lieu of Linux.
 
 Ubuntu
 ------
