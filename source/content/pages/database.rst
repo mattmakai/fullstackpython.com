@@ -19,6 +19,9 @@ coupled with the operating system after installation.
 
 Database resources
 ------------------
+`DB-Engines <http://db-engines.com/en/ranking>`_ ranks the most popular
+database management systems.
+
 `PostgreSQL <http://www.postgresql.org/>`_ and 
 `MySQL <http://www.mysql.com/>`_ are two of the most common open source
 databases.
