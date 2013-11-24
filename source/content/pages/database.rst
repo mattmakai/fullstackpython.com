@@ -12,6 +12,11 @@ relational database management system (RDBMS). Alternative abstractions
 include graph databases where data is stored in both nodes and edges of a 
 graph.
 
+Storage schemes for databases vary in complexity. SQLite, a database 
+included with Python, creates a single file for all data per database. More 
+complicated databases such as Oracle, PostgreSQL, and MySQL are more tightly
+coupled with the operating system after installation.
+
 Database resources
 ------------------
 `PostgreSQL <http://www.postgresql.org/>`_ and 
