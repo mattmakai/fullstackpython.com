@@ -5,17 +5,18 @@ Database
 :slug: database
 :sort-order: 05
 
-A database provides an abstraction on top of a file system for creating,
-reading, updating, and deleting persistent data. The abstraction most
-commonly represented is a set of relational tables, known as a 
-relational database management system (RDBMS). Alternative abstractions
-include graph databases where data is stored in both nodes and edges of a 
-graph.
+A database is an abstraction on top of an operating system's file system to 
+ease creating, reading, updating, and deleting persistent data. The 
+abstraction is most commonly represented as a set of relational tables.
+Alternative abstractions include graph databases where data is stored in 
+both nodes and edges of a graph, as well as key-value pair data stores based
+on `hash map <http://en.wikipedia.org/wiki/Hash_table>`_ data structures.
 
 Storage schemes for databases vary in complexity. SQLite, a database 
 included with Python, creates a single file for all data per database. More 
 complicated databases such as Oracle, PostgreSQL, and MySQL are more tightly
 coupled with the operating system after installation.
+
 
 Database resources
 ------------------
