@@ -304,10 +304,15 @@ abstraction is most commonly represented as a set of relational tables.
 Alternative abstractions include graph databases where data is stored in
 both nodes and edges of a graph, as well as key-value pair data stores based
 on <a class="reference external" href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structures.</p>
-<p>Storage schemes for databases vary in complexity. SQLite, a database
+<div class="section" id="relational-databases">
+<h2>Relational Databases</h2>
+<p>Relational databases store all data in a series of tables. Interconnections
+between the tables are specified as <em>foreign keys</em>.</p>
+<p>Databases storage implementations vary in complexity. SQLite, a database
 included with Python, creates a single file for all data per database. More
 complicated databases such as Oracle, PostgreSQL, and MySQL are more tightly
 coupled with the operating system after installation.</p>
+</div>
 <div class="section" id="database-resources">
 <h2>Database resources</h2>
 <p><a class="reference external" href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular

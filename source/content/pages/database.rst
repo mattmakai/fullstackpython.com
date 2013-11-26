@@ -12,7 +12,12 @@ Alternative abstractions include graph databases where data is stored in
 both nodes and edges of a graph, as well as key-value pair data stores based
 on `hash map <http://en.wikipedia.org/wiki/Hash_table>`_ data structures.
 
-Storage schemes for databases vary in complexity. SQLite, a database 
+Relational Databases
+--------------------
+Relational databases store all data in a series of tables. Interconnections
+between the tables are specified as *foreign keys*.
+
+Databases storage implementations vary in complexity. SQLite, a database 
 included with Python, creates a single file for all data per database. More 
 complicated databases such as Oracle, PostgreSQL, and MySQL are more tightly
 coupled with the operating system after installation.
