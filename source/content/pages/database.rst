@@ -23,6 +23,21 @@ complicated databases such as Oracle, PostgreSQL, and MySQL are more tightly
 coupled with the operating system after installation.
 
 
+Graph Databases
+---------------
+A graph database represent and store data in three aspects: nodes, edges,
+and properties. 
+
+A *node* is an entity, such as a person or business. 
+
+An *edge* is the relationship between two entities. For example, an 
+edge could represent that a node for a person entity is an employee of a 
+business entity. 
+
+A *property* represents information about nodes. For example, an entity 
+representing a person could have a property of "female" or "male".
+
+
 Database resources
 ------------------
 `DB-Engines <http://db-engines.com/en/ranking>`_ ranks the most popular
