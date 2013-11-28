@@ -22,6 +22,15 @@ included with Python, creates a single file for all data per database. More
 complicated databases such as Oracle, PostgreSQL, and MySQL are more tightly
 coupled with the operating system after installation.
 
+`PostgreSQL <http://www.postgresql.org/>`_ and 
+`MySQL <http://www.mysql.com/>`_ are two of the most common open source
+databases.
+
+`SQLite <http://www.sqlite.org/>`_ is a database that is stored in a single
+file on disk. SQLite is built into Python but is only built for access
+by a single connection at a time.
+
+
 
 Graph Databases
 ---------------
@@ -37,17 +46,12 @@ business entity.
 A *property* represents information about nodes. For example, an entity 
 representing a person could have a property of "female" or "male".
 
+`Neo4j <http://www.neo4j.org/>`_ is one of the most widely used graph 
+databases and runs on the Java Virtual Machine stack.
+
 
 Database resources
 ------------------
 `DB-Engines <http://db-engines.com/en/ranking>`_ ranks the most popular
 database management systems.
-
-`PostgreSQL <http://www.postgresql.org/>`_ and 
-`MySQL <http://www.mysql.com/>`_ are two of the most common open source
-databases.
-
-`SQLite <http://www.sqlite.org/>`_ is a database that is stored in a single
-file on disk. SQLite is built into Python but is only built for access
-by a single connection at a time.
 
