@@ -47,3 +47,11 @@ representing a person could have a property of "female" or "male".
 `Neo4j <http://www.neo4j.org/>`_ is one of the most widely used graph 
 databases and runs on the Java Virtual Machine stack.
 
+NoSQL data stores resources
+---------------------------
+`NoSQL Weekly <http://www.nosqlweekly.com/>`_ is a free curated email 
+newsletter that aggregates articles, tutorials, and videos about 
+non-relational data stores.
+
+
+
