@@ -3,7 +3,7 @@ About
 
 :category: page
 :slug: about-author
-:sort-order: 12
+:sort-order: 13
 
 I'm `Matt Makai <http://www.mattmakai.com/>`_ and I solve problems by 
 developing software. I often use Python and occasionally work with 

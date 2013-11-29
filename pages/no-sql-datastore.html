@@ -45,20 +45,43 @@
                 </div>
             </div>
         </div>
-            <h1>Change Log</h1>
+            <h1>NoSQL Data Stores</h1>
         
 
-    <p>Nov 2013: Modified color scheme. Updated caching and introduction section,
-added section on NoSQL data stores.</p>
-<p>Oct 2013: Creating separate monitoring section.</p>
-<p>Aug 2013: Adding more resources for web servers and other categories.</p>
-<p>Jun 2013: Updating styling, adding new content, switching around sections.</p>
-<p>Jan 2013: Fleshed out web server, OS, and server sections, particularly IaaS
-and PaaS topics, added initial &quot;hand drawn&quot; diagram placeholders for better
-diagrams later.</p>
-<p>Dec 2012: Initial incomplete release on fullstackpython.com, created
-introduction, CDN, web frameworks, and database sections with stubs for
-other areas.</p>
+    <p>Relational databases store the vast majority of web application
+persistent data. However, there are several alternative classifications of
+storage representations.</p>
+<ol class="arabic simple">
+<li>Key-value pair</li>
+<li>Document-oriented</li>
+<li>Column-family table</li>
+<li>Graph</li>
+</ol>
+<p>These persistent data storage representations are commonly used to augment,
+rather than completely replace, relational databases.</p>
+<div class="section" id="document-oriented">
+<h2>Document-Oriented</h2>
+<p>A document-oriented database provides a semi-structured representation for
+nested data.</p>
+</div>
+<div class="section" id="key-value-pair">
+<h2>Key-Value Pair</h2>
+<p>Key-value pair data stores are based
+on <a class="reference external" href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structures.</p>
+</div>
+<div class="section" id="graph">
+<h2>Graph</h2>
+<p>A graph database represent and store data in three aspects: nodes, edges,
+and properties.</p>
+<p>A <em>node</em> is an entity, such as a person or business.</p>
+<p>An <em>edge</em> is the relationship between two entities. For example, an
+edge could represent that a node for a person entity is an employee of a
+business entity.</p>
+<p>A <em>property</em> represents information about nodes. For example, an entity
+representing a person could have a property of &quot;female&quot; or &quot;male&quot;.</p>
+<p><a class="reference external" href="http://www.neo4j.org/">Neo4j</a> is one of the most widely used graph
+databases and runs on the Java Virtual Machine stack.</p>
+</div>
 
         <hr/>
         <div class="footer pull-right">

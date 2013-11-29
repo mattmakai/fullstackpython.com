@@ -3,9 +3,10 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 13
+:sort-order: 14
 
-Nov 2013: Modified color scheme. Updated caching and introduction section.
+Nov 2013: Modified color scheme. Updated caching and introduction section,
+added section on NoSQL data stores.
 
 Oct 2013: Creating separate monitoring section.
 
