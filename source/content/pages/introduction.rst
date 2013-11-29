@@ -38,7 +38,7 @@ People learning Python generally have at least one of the three following
 goals:
 
 1. Build web applications
-2. Perform data analysis
+2. Process, analyze, and visualize data
 3. Script server administration
 
 This guide will be most useful to people in the first and third categories.
