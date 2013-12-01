@@ -7,7 +7,8 @@ Database
 
 A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. The 
-abstraction is most commonly represented as a set of relational tables.
+database storage abstraction most commonly used in Python web development is
+sets of relational tables.
 
 Relational Databases
 --------------------
