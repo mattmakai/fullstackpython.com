@@ -41,4 +41,5 @@ goals:
 2. Process, analyze, and visualize data
 3. Script server administration
 
-This guide will be most useful to people in the first and third categories.
+This guide will be most useful to people building web applications and 
+scripting server administration.
