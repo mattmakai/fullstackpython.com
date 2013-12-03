@@ -55,7 +55,7 @@
                                     <li><a href="#database">Database</a></li>
                                     <li><a href="#wsgi-server">WSGI Server</a></li>
                                     <li><a href="#web-framework">Web Framework</a></li>
-                                    <li><a href="#content-delivery-network">CDN</a></li>
+                                    <li><a href="#static-content">Static Content</a></li>
                                     <li><a href="#website-security">Website Security</a></li>
                                     <li><a href="#caching">Caching</a></li>
                                     <li><a href="#web-analytics">Web Analytics</a></li>
@@ -415,9 +415,12 @@ mail plugin to send emails when exceptions occur.</p>
 </div>
 
                 </section>
-                            <section id="content-delivery-network" class="tech-section">
-                    <h1>CDN</h1>
-                    <p>A content delivery network (CDN) serves static file assets.
+                            <section id="static-content" class="tech-section">
+                    <h1>Static Content</h1>
+                    <p>Some content on a website does not change and therefore should be served
+up either directly through the web server or a content delivery network (CDN).
+Examples include JavaScript, image, and CSS files.</p>
+<p>A CDN is a third party that serves your static files.
 <a class="reference external" href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
 <a class="reference external" href="http://www.akamai.com/">Akamai</a>, and
 <a class="reference external" href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a>
@@ -431,8 +434,8 @@ assets from that nginx server so it can purely act as a pass through for
 requests to the Green Unicorn WSGI server.</p>
 <p>CDNs distribute request load globally by using data centers in different
 locations.</p>
-<div class="section" id="cdn-resources">
-<h2>CDN Resources</h2>
+<div class="section" id="static-content-resources">
+<h2>Static Content Resources</h2>
 <p><a class="reference external" href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
 <p><a class="reference external" href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx">CDNs fail, but your scripts don't have to</a></p>
 <p><a class="reference external" href="http://django-storages.readthedocs.org/en/latest/">django-storages</a> is

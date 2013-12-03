@@ -1,11 +1,15 @@
-CDN
-===
+Static Content
+==============
 
 :category: page
-:slug: content-delivery-network
+:slug: static-content
 :sort-order: 08
 
-A content delivery network (CDN) serves static file assets. 
+Some content on a website does not change and therefore should be served
+up either directly through the web server or a content delivery network (CDN).
+Examples include JavaScript, image, and CSS files.
+
+A CDN is a third party that serves your static files.
 `Amazon CloudFront <http://aws.amazon.com/cloudfront/>`_,
 `Akamai <http://www.akamai.com/>`_, and 
 `Rackspace Cloud Files <http://www.rackspace.com/cloud/public/files/>`_ 
@@ -22,8 +26,8 @@ CDNs distribute request load globally by using data centers in different
 locations.
 
 
-CDN Resources
--------------
+Static Content Resources
+------------------------
 `Using Amazon S3 to host your Django static files <http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/>`_
 
 `CDNs fail, but your scripts don't have to <http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx>`_
