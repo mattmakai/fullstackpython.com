@@ -22,11 +22,13 @@ file and the file has not changed, the web server will pass back a 304
 of that file.
 
 
-.. image:: ../img/web-server-web-browser.jpg
+.. image:: ../img/web-browser-server-requests.png
   :alt: Web server and web browser request-response cycles
+  :class: technical-diagram
 
 A web server sends files to a web browser based on the web browser's 
-request. In the first request, the browser accessed the "www.example.com"
+request. In the first request, the browser accessed the 
+"www.fullstackpython.com"
 address and the server responded with the index.html HTML-formatted file. 
 That HTML file contained references to other files, such as style.css and 
 script.js that the browser then requested from the server.

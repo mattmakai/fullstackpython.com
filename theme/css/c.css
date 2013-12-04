@@ -888,7 +888,7 @@ legend{border-bottom:2px solid #eeeeee;font-family:"News Cycle","Arial Narrow Bo
 .modal-header{border-bottom:none;}
 .modal-footer{border-top:none;background:transparent;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 .close,.close:hover{border-bottom:none;}
-@media (max-width:768px){div.subnav{height:auto;}div.subnav .nav>li.active>a{border-top:none;} div.subnav .nav>li:hover>a,div.subnav .nav>li:first-child:hover>a,div.subnav .nav>li.active:hover>a,div.subnav .nav>li.dropdown.open .dropdown-toggle,div.subnav .nav>li.dropdown.open .dropdown-toggle:hover{background-color:#eeeeee;} .nav-tabs .open .dropdown-toggle,.nav-pills .open .dropdown-toggle,.nav>li.dropdown.open.active>a:hover{border-color:#e5e5e5;}}body{background:#fafafa;}
+@media (max-width:768px){div.subnav{height:auto;}div.subnav .nav>li.active>a{border-top:none;} div.subnav .nav>li:hover>a,div.subnav .nav>li:first-child:hover>a,div.subnav .nav>li.active:hover>a,div.subnav .nav>li.dropdown.open .dropdown-toggle,div.subnav .nav>li.dropdown.open .dropdown-toggle:hover{background-color:#eeeeee;} .nav-tabs .open .dropdown-toggle,.nav-pills .open .dropdown-toggle,.nav>li.dropdown.open.active>a:hover{border-color:#e5e5e5;}}body{background:#fff;}
 .underline{text-decoration:underline;}
 h1,h2,h3,h4,h5,h6{color:#222;}
 .logo-header-section{margin:35px 0 30px 0;}
@@ -903,3 +903,4 @@ p{color:#333;font-size:18px;line-height:24px;}
 .footer{margin-bottom:15px;}
 img{border:1px solid #222;}
 .logo-image{vertical-align:top;padding-bottom:15px;border:none;}
+.technical-diagram{padding:20px;border:none;}

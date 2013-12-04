@@ -62,9 +62,10 @@ to the clinet with a 200 status code. If the client already requested the
 file and the file has not changed, the web server will pass back a 304
 &quot;Not modified&quot; response indicating the client already has the latest version
 of that file.</p>
-<img alt="Web server and web browser request-response cycles" src="../img/web-server-web-browser.jpg" />
+<img alt="Web server and web browser request-response cycles" class="technical-diagram" src="../img/web-browser-server-requests.png" />
 <p>A web server sends files to a web browser based on the web browser's
-request. In the first request, the browser accessed the &quot;www.example.com&quot;
+request. In the first request, the browser accessed the
+&quot;www.fullstackpython.com&quot;
 address and the server responded with the index.html HTML-formatted file.
 That HTML file contained references to other files, such as style.css and
 script.js that the browser then requested from the server.</p>
