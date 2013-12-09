@@ -29,6 +29,16 @@ file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time.
 
 
+Database third-party services
+-----------------------------
+Numerous companies run scalable database servers as a hosted service. 
+
+`Amazon Relational Database Service (RDS) <http://aws.amazon.com/rds/>`_ 
+provides pre-configured MySQL and PostgreSQL instances. The instances can
+be scaled to larger or smaller configurations based on storage and performance
+needs.
+
+
 Database resources
 ------------------
 `DB-Engines <http://db-engines.com/en/ranking>`_ ranks the most popular
