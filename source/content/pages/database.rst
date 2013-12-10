@@ -32,6 +32,12 @@ by a single connection at a time.
 Database third-party services
 -----------------------------
 Numerous companies run scalable database servers as a hosted service. 
+Depending on the provider, there can be several advantages to using a 
+hosted database third-party service:
+
+1. automated backups and recovery
+2. tightened security configurations
+3. easy vertical scaling
 
 `Amazon Relational Database Service (RDS) <http://aws.amazon.com/rds/>`_ 
 provides pre-configured MySQL and PostgreSQL instances. The instances can
