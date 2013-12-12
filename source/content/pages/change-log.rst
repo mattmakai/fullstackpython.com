@@ -8,7 +8,8 @@ Change Log
 2013
 ----
 Dec: Changed CDN section to static content. Transitioning diagrams from
-Paper app drawings to Balsamiq mockups exported to PNG files.
+Paper app drawings to Balsamiq mockups exported to PNG files. Added Python
+database connectors to database section.
 
 Nov: Modified color scheme. Updated caching and introduction section,
 added section on NoSQL data stores.
