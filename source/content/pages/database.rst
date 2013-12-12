@@ -45,6 +45,19 @@ be scaled to larger or smaller configurations based on storage and performance
 needs.
 
 
+Database connections with Python
+--------------------------------
+To work with a relational database using Python, you need to use a code 
+library. The most common libraries for relational databases are:
+
+* `psycopg2 <http://initd.org/psycopg/>`_ for PostgreSQL
+* `MySQLdb <https://pypi.python.org/pypi/MySQL-python/1.2.4>`_ for MySQL
+* `cx_Oracle <http://cx-oracle.sourceforge.net/>`_ for Oracle
+
+SQLite support is built into Python 2.7+ and therefore a separate library
+is not necessary.
+
+
 Database resources
 ------------------
 `DB-Engines <http://db-engines.com/en/ranking>`_ ranks the most popular
@@ -52,4 +65,5 @@ database management systems.
 
 `PostgreSQL Weekly <http://postgresweekly.com/>`_ is a weekly newsletter of
 PostgreSQL content from around the web.
+
 
