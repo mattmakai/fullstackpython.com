@@ -47,6 +47,13 @@ representing a person could have a property of "female" or "male".
 `Neo4j <http://www.neo4j.org/>`_ is one of the most widely used graph 
 databases and runs on the Java Virtual Machine stack.
 
+
+NoSQL third-party services
+--------------------------
+`MongoHQ <http://www.mongohq.com/home>`_ provides MongoDB as a service. It's
+easy to set up with either a standard LAMP stack or on Heroku.
+
+
 NoSQL data stores resources
 ---------------------------
 `NoSQL Weekly <http://www.nosqlweekly.com/>`_ is a free curated email 
