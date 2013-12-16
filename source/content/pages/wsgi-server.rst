@@ -37,5 +37,8 @@ specifications.
 `uWSGI <https://github.com/unbit/uwsgi-docs>`_, and
 `gevent <http://www.gevent.org/>`_ are common WSGI server implementations.
 
+This `Basics of WSGI <http://agiliq.com/blog/2013/07/basics-wsgi/>`_ post
+contains a simple example of how a WSGI-compatible application works.
+
 `Complete single server Django stack tutorial <http://www.apreche.net/complete-single-server-django-stack-tutorial/>`_ is thorough and informative for
 non-paas hosting choices.
