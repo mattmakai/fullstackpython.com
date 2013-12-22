@@ -19,6 +19,8 @@ page but only a logged in user can access an application's "account" screen.
 
 Website Security Resources
 --------------------------
+`When and How to Deploy HTTPS <http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/>`_
+
 `Securing a Linux Server <http://spenserj.com/blog/2013/07/15/securing-a-linux-server/>`_ 
 
 `Securing Your Website <http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/>`_
