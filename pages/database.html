@@ -66,6 +66,17 @@ databases.</p>
 <p><a class="reference external" href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time.</p>
+<div class="section" id="database-connections-with-python">
+<h2>Database connections with Python</h2>
+<p>To work with a relational database using Python, you need to use a code
+library. The most common libraries for relational databases are:</p>
+<p><a class="reference external" href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
+<p><a class="reference external" href="https://pypi.python.org/pypi/MySQL-python/1.2.4">MySQLdb</a> for MySQL</p>
+<p><a class="reference external" href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
+<p>SQLite support is built into Python 2.7+ and therefore a separate library
+is not necessary. Simply &quot;import sqlite3&quot; to begin interfacing with the
+single file-based database.</p>
+</div>
 <div class="section" id="database-third-party-services">
 <h2>Database third-party services</h2>
 <p>Numerous companies run scalable database servers as a hosted service.
@@ -80,16 +91,6 @@ hosted database third-party service:</p>
 provides pre-configured MySQL and PostgreSQL instances. The instances can
 be scaled to larger or smaller configurations based on storage and performance
 needs.</p>
-</div>
-<div class="section" id="database-connections-with-python">
-<h2>Database connections with Python</h2>
-<p>To work with a relational database using Python, you need to use a code
-library. The most common libraries for relational databases are:</p>
-<p><a class="reference external" href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
-<p><a class="reference external" href="https://pypi.python.org/pypi/MySQL-python/1.2.4">MySQLdb</a> for MySQL</p>
-<p><a class="reference external" href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
-<p>SQLite support is built into Python 2.7+ and therefore a separate library
-is not necessary.</p>
 </div>
 <div class="section" id="database-resources">
 <h2>Database resources</h2>

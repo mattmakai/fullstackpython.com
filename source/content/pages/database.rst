@@ -29,6 +29,22 @@ file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time.
 
 
+Database connections with Python
+--------------------------------
+To work with a relational database using Python, you need to use a code 
+library. The most common libraries for relational databases are:
+
+`psycopg2 <http://initd.org/psycopg/>`_ for PostgreSQL
+
+`MySQLdb <https://pypi.python.org/pypi/MySQL-python/1.2.4>`_ for MySQL
+
+`cx_Oracle <http://cx-oracle.sourceforge.net/>`_ for Oracle
+
+SQLite support is built into Python 2.7+ and therefore a separate library
+is not necessary. Simply "import sqlite3" to begin interfacing with the 
+single file-based database.
+
+
 Database third-party services
 -----------------------------
 Numerous companies run scalable database servers as a hosted service. 
@@ -43,21 +59,6 @@ hosted database third-party service:
 provides pre-configured MySQL and PostgreSQL instances. The instances can
 be scaled to larger or smaller configurations based on storage and performance
 needs.
-
-
-Database connections with Python
---------------------------------
-To work with a relational database using Python, you need to use a code 
-library. The most common libraries for relational databases are:
-
-`psycopg2 <http://initd.org/psycopg/>`_ for PostgreSQL
-
-`MySQLdb <https://pypi.python.org/pypi/MySQL-python/1.2.4>`_ for MySQL
-
-`cx_Oracle <http://cx-oracle.sourceforge.net/>`_ for Oracle
-
-SQLite support is built into Python 2.7+ and therefore a separate library
-is not necessary.
 
 
 Database resources

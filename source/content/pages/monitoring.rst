@@ -45,6 +45,7 @@ transparency for your users.
 `PagerDuty <http://www.pagerduty.com/>`_ alerts a designated person or group
 if there are stability, performance, or uptime issues with an application.
 
+
 Open Source Projects
 --------------------
 `statsd <https://github.com/etsy/statsd/>`_ is a node.js network daemon that
@@ -53,6 +54,7 @@ such as Graphite.
 
 `Graphite <https://graphite.readthedocs.org/en/latest/overview.html>`_ stores
 time-series data and displays them in graphs through a web application.
+
 
 Monitoring Resources
 --------------------
