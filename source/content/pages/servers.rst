@@ -127,8 +127,6 @@ generally start at the WSGI server layer.
 
 Server Resources
 ----------------
-`How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ (Ars Technica)
-
 `Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
 
 `Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_

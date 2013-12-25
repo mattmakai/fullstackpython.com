@@ -41,6 +41,8 @@ section for a more detailed explanation).
 
 Web Server Resources
 --------------------
+`How to set up a safe and secure Web server <http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/>`_ 
+
 `Apache and mod_wsgi on Ubuntu 10.04 <http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid>`_
 
 `Nginx web server tutorials <http://articles.slicehost.com/nginx>`_
@@ -52,3 +54,5 @@ Web Server Resources
 `HTTP Status Codes <http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>`_
 
 `Battle ready Nginx - an optimization guide <http://blog.zachorr.com/nginx-setup/>`_
+
+`A faster Web server: ripping out Apache for Nginx <http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/>`_
