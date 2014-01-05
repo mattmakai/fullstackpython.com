@@ -66,6 +66,12 @@ your needs for urgency of service ticket requests and the frequency you
 require for ongoing maintenance such as persistent storage backups.
 
 
+Virtualized servers resources
+-----------------------------
+`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
+
+
+
 Infrastructure-as-a-service
 ---------------------------
 Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
@@ -94,6 +100,14 @@ Amazon has `higher throughput EBS instances <http://aws.amazon.com/about-aws/wha
 but you will pay correspondingly more for them. EBS throughput is just 
 one of many quirks you need to understand before committing to an 
 IaaS platform.
+
+Infrastructure-as-a-service Resources
+-------------------------------------
+`Amazon Web Services official documentation for Python <http://aws.amazon.com/python/>`_ 
+
+`boto <https://github.com/boto/boto>`_ is an amazing Python library for
+working with Amazon Web Services
+
 
 
 Platform-as-a-service
@@ -124,15 +138,9 @@ If you go the PaaS route, you can skip over the operating system and web
 server sections because they are baked into PaaS offerings. PaaS offerings
 generally start at the WSGI server layer.
 
-
-Server Resources
-----------------
-`Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You <http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/>`_ (Patrick McKenzie)
-
+Platform-as-a-service resources
+-------------------------------
 `Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_
 (Randall Degges)
 
-`Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
 
-`boto <https://github.com/boto/boto>`_ is an amazing Python library for
-working with Amazon Web Services
