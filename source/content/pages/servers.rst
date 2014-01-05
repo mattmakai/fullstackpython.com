@@ -101,6 +101,7 @@ but you will pay correspondingly more for them. EBS throughput is just
 one of many quirks you need to understand before committing to an 
 IaaS platform.
 
+
 Infrastructure-as-a-service Resources
 -------------------------------------
 `Amazon Web Services official documentation for Python <http://aws.amazon.com/python/>`_ 
@@ -108,6 +109,7 @@ Infrastructure-as-a-service Resources
 `boto <https://github.com/boto/boto>`_ is an amazing Python library for
 working with Amazon Web Services
 
+`Rackspace official documentation for Python <http://docs.rackspace.com/sdks/guide/content/python.html>`_
 
 
 Platform-as-a-service
