@@ -3,7 +3,11 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 14
+:sort-order: 16
+
+2014
+----
+Jan: Adding configuration management and source control sections.
 
 2013
 ----

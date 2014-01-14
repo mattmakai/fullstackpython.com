@@ -3,7 +3,7 @@ NoSQL Data Stores
 
 :category: page
 :slug: no-sql-datastore
-:sort-order: 12
+:sort-order: 14
 
 
 Relational databases store the vast majority of web application 
