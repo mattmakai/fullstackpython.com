@@ -29,6 +29,8 @@ from PyCon UK 2013
 
 `Red Badger on Ansible <http://red-badger.com/blog/2013/06/29/ansible/>`_
 
+`Getting Started with Ansible <http://lowendbox.com/blog/getting-started-with-ansible/>`_
+
 `Ansible and Linode <http://softwareas.com/ansible-and-linode-what-i-learned-about-controlling-linodes-from-ansible>`_
 
 `Multi-factor SSH authentication with Ansible and Duo Security <http://jlafon.io/ansible-duo-security.html>`_
