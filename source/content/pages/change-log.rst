@@ -3,11 +3,13 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 16
+:sort-order: 17
 
 2014
 ----
-Jan: Adding configuration management and source control sections.
+Jan: Adding configuration management, application dependencies, and source 
+control sections. Also updating about section.
+
 
 2013
 ----
@@ -27,6 +29,7 @@ Jun: Updating styling, adding new content, switching around sections.
 Jan: Fleshed out web server, OS, and server sections, particularly IaaS 
 and PaaS topics, added initial "hand drawn" diagram placeholders for better 
 diagrams later.
+
 
 2012
 ----

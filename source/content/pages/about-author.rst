@@ -3,23 +3,22 @@ About
 
 :category: page
 :slug: about-author
-:sort-order: 15
+:sort-order: 16
 
-I'm `Matt Makai <http://www.mattmakai.com/>`_ and I solve problems by 
-developing software. I often use Python and occasionally work with 
-languages in the Java Virtual Machine (JVM) stack.
+This website was written and built by 
+`Matt Makai <http://www.mattmakai.com/>`_, currently a 
+`Developer Evangelist <http://thenextweb.com/dd/2012/06/03/a-day-in-the-life-of-a-developer-evangelist/>`_
+at `Twilio <https://www.twilio.com/>`_.
 
-In 2013 I traveled to 30 cities in the United States to visit with
-tech companies, attend and speak at tech meetups, and blog from an experienced
-software developer's perspective about the current state of technology in the
-United States. 
+Other projects by Matt include 
+`Coding Across America <http://www.codingacrossamerica.com/>`_ 
+and
+`Underwear <https://github.com/makaimc/underwear/>`_. You can reach him by 
+email at matthew.makai@gmail.com or send him a 
+`direct message on Twitter <https://twitter.com/makaimc>`_. 
 
-Read more about my trip on my 
-`Coding Across America <http://www.codingacrossamerica.com/>`_ website.
 
-If there are typos, inaccurate statements, or general areas for improvement
-that you see in this guide, please issue a 
-`pull request on this website's Github repository <https://github.com/makaimc/fullstackpython.github.com/pull/new/gh-pages>`_. Thank you!
+Typos, inaccurate statements, or general areas for improvement can be handled
+through a 
+`pull request on GitHub <https://github.com/makaimc/fullstackpython.github.com/pull/new/gh-pages>`_.
 
-You can reach me by email at matthew.makai@gmail.com or send me a
-`message me on Twitter <https://twitter.com/makaimc>`_. 

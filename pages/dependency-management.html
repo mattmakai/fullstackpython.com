@@ -32,7 +32,7 @@
     </script>
 </head>
 
-<body{% block body_attributes %}{% endblock %}>
+<body>
     <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
     </a>
@@ -45,7 +45,17 @@
                 </div>
             </div>
         </div>
-        {% block content %}{% endblock %}
+            <h1>Application Dependencies</h1>
+        
+
+    <p>Application dependencies are specific Python libraries and their versions
+required for the application to work properly. These dependencies are
+installed separately from system-level packages.</p>
+<p>The most common way to install Python library dependencies is with
+the <a class="reference external" href="http://www.pip-installer.org/en/latest/">pip install</a> combined
+with <a class="reference external" href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate the
+dependencies of individual applications from each other.</p>
+
         <hr/>
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2014
