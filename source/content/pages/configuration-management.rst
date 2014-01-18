@@ -7,13 +7,15 @@ Configuration Management
 
 Configuration management involves modifying servers from an existing state to 
 a desired state. Numerous tools exist to modify the state in a controlled 
-way, including Puppet, Chef, Salt, and Ansible.
+way, including `Puppet <http://puppetlabs.com/puppet/what-is-puppet>`_, 
+`Chef <http://www.getchef.com/chef/>`_, 
+`SaltStack <http://www.saltstack.com/>`_, and Ansible.
 
 
 Ansible
 -------
 `Ansible <http://www.ansibleworks.com/>`_ is an open source configuration
-management and application deployment tool built in Python. 
+management and application deployment tool built in Python.
 
 
 Ansible Resources
