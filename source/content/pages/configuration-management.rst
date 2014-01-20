@@ -9,7 +9,8 @@ Configuration management involves modifying servers from an existing state to
 a desired state. Numerous tools exist to modify the state in a controlled 
 way, including `Puppet <http://puppetlabs.com/puppet/what-is-puppet>`_, 
 `Chef <http://www.getchef.com/chef/>`_, 
-`SaltStack <http://www.saltstack.com/>`_, and Ansible.
+`SaltStack <http://www.saltstack.com/>`_, and Ansible. Puppet and Chef are
+written in Ruby, while SaltStack and Ansible are written in Python.
 
 
 Ansible
