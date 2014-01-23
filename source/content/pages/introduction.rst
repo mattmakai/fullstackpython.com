@@ -20,12 +20,15 @@ you're not yet ready to deploy your application.
 For general Python learning, read Kenneth Reitz's 
 `The Hitchhiker’s Guide to Python <http://docs.python-guide.org/en/latest/>`_.
 
+To get an introduction to both Python and Django at the same time, purchase
+`Real Python <http://www.realpython.com/>`_ by Fletcher, Michael, and Jeremy.
+
 To deploy a Python web application to the Heroku platform-as-a-service 
 (described below in this guide), check out 
-`Deploying Django <http://www.deploydjango.com/>`_.
+`Deploying Django <http://www.deploydjango.com/>`_ by Randall Degges.
 
 If you're not coming in with any software development background, 
-you may find my post on 
+you may also find my post on 
 `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 
 useful.
 
