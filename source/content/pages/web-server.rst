@@ -56,3 +56,5 @@ Web Server Resources
 `Battle ready Nginx - an optimization guide <http://blog.zachorr.com/nginx-setup/>`_
 
 `A faster Web server: ripping out Apache for Nginx <http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/>`_
+
+`4 HTTP Security Headers You Should Always Be Using <http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using>`_
