@@ -5,8 +5,8 @@ Source Control
 :slug: source-control
 :sort-order: 11
 
-Source control systems (also known as version control systems) store code
-and other files, such as images, with a history of the changes made to
+Source control systems, also known as version control systems, store code
+and other static files, such as images, with a history of the changes made to
 those files.
 
 
@@ -14,6 +14,9 @@ Source Control Systems
 ----------------------
 `Git <http://git-scm.com/>`_ is a free and open source distributed version
 control system.
+
+`Mercurial <http://mercurial.selenic.com/>`_ is similar to Git, also a free
+and open source distributed version control system.
 
 
 Source Control Third Party Services
