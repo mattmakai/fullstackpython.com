@@ -14,8 +14,9 @@ WSGI v1.0 is superseded by
 v1.0.1 WSGI standard.
 
 
-.. image:: ../img/web-browser-server-wsgi.png
+.. image:: theme/img/web-browser-server-wsgi.png
   :alt: WSGI Server <-> Web server <-> Browser
+  :width: 100%
   :class: technical-diagram
 
 Requests from the browser that are not for static assets (this is specified

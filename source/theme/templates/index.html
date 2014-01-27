@@ -1,23 +1,32 @@
 {% extends "base.html" %}
 
-{% block body_attributes %} data-spy="scroll" data-target="#fsp-side-nav" {% endblock %}
-
 {% block content %}
-    <div class="row">
-        <div class="span2" id="fsp-side-nav">
-            <ul class="nav nav-list fsp-side-nav-ul affix"> 
-                {% for page in pages|sort(attribute='sort-order') %}
-                    <li><a href="#{{ page.slug }}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="span9 offset1">
-            {% for page in pages|sort(attribute='sort-order') %}
-                <section id="{{ page.slug }}" class="tech-section">
-                    <h1>{{ page.title }}</h1>
-                    {{ page.content }}
-                </section>
-            {% endfor %}
-        </div>
+<div class="row">
+    <div class="col-md-8">
+        {% for page in pages|sort(attribute='sort-order') %}
+          {% if loop.first %}
+          <h1>{{ page.title }}</h1>
+          {{ page.content }}
+          {% for p in pages|sort(attribute='sort-order') %}
+            {% if next_up %}
+                <br/>
+                Next read about 
+                <a href="/{{ p.slug }}.html">{{ p.title|lower }}</a>.
+                {% set next_up = False %}    
+            {% endif %}
+            {% if p.slug == page.slug %}
+                {% set next_up = True %}
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+        {% endfor %}
     </div>
+    <div class="col-md-offset-1 col-md-3" id="sidebar">
+      <div class="list-group">
+        {% for p in pages|sort(attribute='sort-order') %}
+          <a href="/{{ p.slug }}.html" class="list-group-item {% if p.slug == 'introduction' %}active{% endif %}">{{ p.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+</div>
 {% endblock %}

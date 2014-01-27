@@ -22,8 +22,9 @@ file and the file has not changed, the web server will pass back a 304
 of that file.
 
 
-.. image:: ../img/web-browser-server-requests.png
+.. image:: theme/img/web-browser-server-requests.png
   :alt: Web server and web browser request-response cycles
+  :width: 100%
   :class: technical-diagram
 
 A web server sends files to a web browser based on the web browser's 

@@ -131,7 +131,7 @@ platform-as-services that support Python web applications. Each one requires
 varying tradeoffs to deploy to their respective platforms.
 
 
-.. image:: ../img/servers-versus-paas.png
+.. image:: theme/img/servers-versus-paas.png
   :alt: Traditional LAMP server stack versus a Platform-as-a-Service stack
   :class: technical-diagram
 

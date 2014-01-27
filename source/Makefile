@@ -1,9 +1,9 @@
 run:
 	mkdir ./output
-	mkdir ./output/static/
-	cp -R theme/static/css theme/static/js theme/static/img output/
 	cp -R static-html/* output/
 	pelican -t theme -s settings.py content
+	cp output/pages/* output/
+	rm -rf output/pages/
 	cp -R output/* ..
 	rm -rf output/
 

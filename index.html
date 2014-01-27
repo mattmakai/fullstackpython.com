@@ -1,26 +1,49 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js" lang="en"> <!--<![endif]-->
-
-<head>
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta name="language" content="English" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <title>Full Stack Python</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full stack Python shows how an entire Python web application is built, from the server to the front end JavaScript.">
     <meta name="author" content="Matt Makai">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/css/c.css" />
-    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
-    <script src="/js/modernizr-2.0.6.min.js"></script>
-    <script type="text/javascript">
+    <link rel="shortcut icon" href="theme/img/full-stack-python-logo-bw.png">
+    <title>Full Stack Python</title>
+    <!-- Bootstrap core CSS -->
+    <link href="theme/css/fsp.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    html,
+    body {
+      font-size: 18px;
+      color: #222;
+      background: #fefefe;
+    }
+    body {
+      padding-top: 30px;
+    }
+    .footer {
+      padding: 20px 0 30px 0;
+    }
+    a, a:hover {border-bottom: 1px dotted; color: #444;}
+    a:hover {text-decoration: none; color: #000;}
+   .logo-title {font-size: 56px; color: #403072; padding-top: 80px;
+                font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+                font-weight: bold; line-height: 30px; margin-left: 5px;}
+    .logo-title a, .logo-title a:hover {color: #000; text-decoration: none;
+                                        border-bottom: none;}
+    .logo-title a:hover {color: gray;}
+    .logo-image {vertical-align: top; border: none;}
+    a.list-group-item.active {background: #444; border: 1px solid #222;}
+    a.list-group-item.active:hover {background: #444; border: 1px solid #222;}
+    #sidebar {margin-top: 30px;}
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19910497-7']);
+    </style>
+        
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19910497-7']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -28,50 +51,25 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
     </script>
-</head>
+  </head>
 
-<body data-spy="scroll" data-target="#fsp-side-nav" >
+<body>
     <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
     </a>
     <div class="container">
         <div class="row">
-            <div class="span12">
-                <div class="logo-header-section">
-                    <a href="/"><img src="../img/full-stack-python-logo-bw.png" height="42" width="42" class="logo-image" /></a>
-                    <span class="logo-title"><a href="/">Full Stack Python</a></span>
-                </div>
-            </div>
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/"><img src="theme/img/full-stack-python-logo-bw.png" height="42" width="42" class="logo-image" /></a>
+            <span class="logo-title"><a href="/">Full Stack Python</a></span>
         </div>
-            <div class="row">
-        <div class="span2" id="fsp-side-nav">
-            <ul class="nav nav-list fsp-side-nav-ul affix"> 
-                                    <li><a href="#introduction">Introduction</a></li>
-                                    <li><a href="#servers">Servers</a></li>
-                                    <li><a href="#operating-system">Operating System</a></li>
-                                    <li><a href="#web-server">Web Server</a></li>
-                                    <li><a href="#database">Database</a></li>
-                                    <li><a href="#wsgi-server">WSGI Server</a></li>
-                                    <li><a href="#web-framework">Web Framework</a></li>
-                                    <li><a href="#static-content">Static Content</a></li>
-                                    <li><a href="#website-security">Website Security</a></li>
-                                    <li><a href="#caching">Caching</a></li>
-                                    <li><a href="#web-analytics">Web Analytics</a></li>
-                                    <li><a href="#monitoring">Monitoring</a></li>
-                                    <li><a href="#source-control">Source Control</a></li>
-                                    <li><a href="#configuration-management">Configuration Management</a></li>
-                                    <li><a href="#dependency-management">Application Dependencies</a></li>
-                                    <li><a href="#no-sql-datastore">NoSQL Data Stores</a></li>
-                                    <li><a href="#about-author">About</a></li>
-                                    <li><a href="#change-log">Change Log</a></li>
-                            </ul>
-        </div>
-        <div class="span9 offset1">
-                            <section id="introduction" class="tech-section">
-                    <h1>Introduction</h1>
-                    <p>You're knee deep in learning the <a class="reference external" href="http://www.python.org/">Python</a>
+    </div>
+</div>        <div class="row">
+    <div class="col-md-8">
+                            <h1>Introduction</h1>
+          <p>You're knee deep in learning the <a class="reference external" href="http://www.python.org/">Python</a>
 programming language. The syntax is beginning to make sense. The first
 few &quot;AHA!&quot; moments are hitting you. Now you are excited for continued
 direction to accelerate your learning.</p>
@@ -105,684 +103,41 @@ goals:</p>
 <p>This guide will be most useful to people building web applications and
 scripting server administration.</p>
 
-                </section>
-                            <section id="servers" class="tech-section">
-                    <h1>Servers</h1>
-                    <p>There are four options for setting up infrastructure to serve a
-web application:</p>
-<ol class="arabic simple">
-<li>&quot;Bare metal&quot; servers</li>
-<li>Virtualized servers</li>
-<li>Infrastructure-as-a-service</li>
-<li>Platform-as-a-service</li>
-</ol>
-<div class="section" id="bare-metal">
-<h2>Bare metal</h2>
-<p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking
-it up to the Internet either through a business-class internet service
-provider (ISP) or
-<a class="reference external" href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a> with other servers. A &quot;business-class&quot; ISP is necessary because
-most residential Internet service agreements prohibt and will eventually
-block traffic to web servers. You may be able to get away with low traffic
-volume but if your site serves a lot of traffic it will catch an ISPs
-filters.</p>
-<p>The bare metal option offers the most control over the server configuration,
-usually has the highest performance for the price, but also is the most
-expensive upfront option and the highest ongoing maintenance. With bare
-metal servers the ongoing operating cost is the electricity the server(s)
-use as well as handling repairs when server components malfunction. You're
-taking on manual labor working with hardware as well as the rest of the
-software stack.</p>
-<p>Buy actual hardware from a vendor either pre-built or as a collection of
-components that you assemble yourself. Here is an
-<a class="reference external" href="http://duartes.org/gustavo/blog/post/building-a-quad-core-server">example of a server buildout</a>. The post is a couple of years old but those are the
-rough components you need to put together your own server. You can also buy
-pre-configured servers from Dell or HP. Those servers tend to be in
-smaller case form factors (called &quot;blades&quot;) but are correspondingly more
-expensive than putting off-the-shelf components together yourself.</p>
-</div>
-<div class="section" id="virtualized-servers">
-<h2>Virtualized servers</h2>
-<p>Virtual private servers (VPSs) are slices of hardware on top of a larger
-bare metal server. Virtualization software such as
-<a class="reference external" href="http://www.xen.org/">Xen</a> and
-<a class="reference external" href="http://www.vmware.com/virtualization/what-is-virtualization.html">VMWare</a>
-allow providers such as <a class="reference external" href="http://www.linode.com/">Linode</a> and
-<a class="reference external" href="http://prgmr.com/xen/">prgmr</a> (as well as a many others) to provide
-fractions of a full server that appear as their own instances. For example,
-a server with an 8-core Xeon processor and 16 gigabytes of memory can be
-sliced into 8 pieces with the equivalent of 1-core and 2 gigabytes of
-memory.</p>
-<p>The primary disadvantage of virtualized servers is that there is resource
-overhead in the virtualization process. In addition, physical constraints
-such as heavy I/O operations by a single virtualized instance on persistent
-storage can cause performance bottlenecks for other virtualized instances on
-the shared server. Choosing virtualized server hosting should be based on
-your needs for urgency of service ticket requests and the frequency you
-require for ongoing maintenance such as persistent storage backups.</p>
-</div>
-<div class="section" id="virtualized-servers-resources">
-<h2>Virtualized servers resources</h2>
-<p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a></p>
-</div>
-<div class="section" id="infrastructure-as-a-service">
-<h2>Infrastructure-as-a-service</h2>
-<p>Infrastructure-as-a-service (IaaS) overlaps with virtualized servers
-because the resources are often presented in the same way. The
-difference between virtualized servers and IaaS is the granularity of the
-billing cycle. IaaS generally encourages a finer granularity based on minutes
-or hours of server usage instead of on monthly billing cycles.</p>
-<p>IaaS can be used in combination with virtualized servers to provide
-dynamic upscaling for heavy traffic. When traffic is low then virtualized
-servers can solely be used. This combination of resources reduces cost at
-the expense of greater complexity in the dynamically scaled infrastructure.</p>
-<p>The most common IaaS platforms are
-<a class="reference external" href="http://aws.amazon.com/">Amazon Web Services</a> and
-<a class="reference external" href="http://www.rackspace.com/cloud/">Rackspace Cloud</a>.</p>
-<p>The disadvantage to IaaS platforms is the lock-in if you have to write
-custom code to deploy, dynamically scale, and generally understand your
-infrastructure. Every platform has its quirks. For example,
-Amazon's standard <a class="reference external" href="http://aws.amazon.com/ebs/">Elastic Block Store</a> storage
-infrastructure has at least an order of magnitude worse I/O throughput
-than working with your local disk. Your application's database queries may
-work great locally but then when you deploy the performance is inadequate.
-Amazon has <a class="reference external" href="http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/">higher throughput EBS instances</a>
-but you will pay correspondingly more for them. EBS throughput is just
-one of many quirks you need to understand before committing to an
-IaaS platform.</p>
-</div>
-<div class="section" id="infrastructure-as-a-service-resources">
-<h2>Infrastructure-as-a-service Resources</h2>
-<p><a class="reference external" href="http://aws.amazon.com/python/">Amazon Web Services official documentation for Python</a></p>
-<p><a class="reference external" href="https://github.com/boto/boto">boto</a> is an amazing Python library for
-working with Amazon Web Services</p>
-<p><a class="reference external" href="http://docs.rackspace.com/sdks/guide/content/python.html">Rackspace official documentation for Python</a></p>
-</div>
-<div class="section" id="platform-as-a-service">
-<h2>Platform-as-a-service</h2>
-<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
-on which a web application is deployed. The PaaS layer defines how the
-application accesses resources such as computing time, files, and
-external services. The PaaS provides a higher-level abstraction for working
-with computing resources than deploying an application to a server or IaaS.</p>
-<p>A PaaS makes deployment and operations easier because it forces the developer
-to conform applications to the PaaS architecture.</p>
-<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
-<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
-<a class="reference external" href="https://gondor.io/">Gondor</a>, and
-<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
-platform-as-services that support Python web applications. Each one requires
-varying tradeoffs to deploy to their respective platforms.</p>
-<img alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" src="../img/servers-versus-paas.png" />
-<p>If you go the PaaS route, you can skip over the operating system and web
-server sections because they are baked into PaaS offerings. PaaS offerings
-generally start at the WSGI server layer.</p>
-</div>
-<div class="section" id="platform-as-a-service-resources">
-<h2>Platform-as-a-service resources</h2>
-<p><a class="reference external" href="http://rdegges.com/devops-django-part-4-choosing-heroku">Choosing Heroku</a>
-(Randall Degges)</p>
-</div>
-
-                </section>
-                            <section id="operating-system" class="tech-section">
-                    <h1>Operating System</h1>
-                    <p>The operating system runs on top of the server or virtual server
-and controls access to computing resources. The only operating
-system I can recommend for production Python web stack deployments is
-a flavor of Linux. Ubuntu Long Term Support (LTS) releases, Red Hat
-Enterprise Linux, and CentOS are all viable options.</p>
-<p><em>Side note</em>: Mac OS X is fine for development activities. Windows and Mac
-OS X are not appropriate for most test and production deployments unless
-there is a specific reason why you must use them in lieu of Linux.</p>
-<div class="section" id="ubuntu">
-<h2>Ubuntu</h2>
-<p>Ubuntu is a Linux distribution packaged by the
-<a class="reference external" href="http://www.canonical.com/">Canonical Ltd</a> company. Ubuntu uses the
-Debian distribution as a base for packages, including the <a class="reference external" href="http://wiki.debian.org/Apt">aptitude package
-manager</a>. For desktop versions of Ubuntu,
-GNOME (until the 11.04 release) or Unity (11.10 through current)
-is added to the distribution to provide a user interface.</p>
-<p>Ubuntu <a class="reference external" href="https://wiki.ubuntu.com/LTS">Long Term Support (LTS)</a> releases
-are the recommended versions to use for deployments. LTS versions receive
-five years of post-release updates from Canonical. Every two years, Canonical
-creates a new LTS release, which allows for an easy upgrade path as well
-as flexibility in skipping every other LTS release if necessary.</p>
-</div>
-<div class="section" id="red-hat-and-centos">
-<h2>Red Hat and CentOS</h2>
-<p><a class="reference external" href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
-(RHEL) and <a class="reference external" href="http://www.centos.org/">Community ENTerprise Operating System</a>
-(CentOS) are the same distribution. The only difference between the two
-(other than the name) is that CentOS is an open source, liberally
-licensed free derivative of RHEL.</p>
-<p>RHEL and CentOS use a different package manager and command-line interface
-from Debian-based Linux distributions: RPM Package Manager (RPM) and the
-Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
-to handle the packaging and installation of libraries and applications. YUM
-provides a command-line interface for interacting with the RPM system.</p>
-</div>
-<div class="section" id="operating-system-resources">
-<h2>Operating System Resources</h2>
-<p><a class="reference external" href="http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution">Choosing a Linux Distribution</a></p>
-<p><a class="reference external" href="http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers">First 5 Minutes on a Server</a></p>
-<p><a class="reference external" href="http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/">Securing an Ubuntu Server</a>
-<a class="reference external" href="http://joshrendek.com/2013/01/securing-ubuntu/">Securing Ubuntu</a></p>
-<p><a class="reference external" href="http://spenserj.com/blog/2013/07/15/securing-a-linux-server/">Securing a Linux Server</a></p>
-<p><a class="reference external" href="https://github.com/marshyski/quick-secure">quick-secure scripts</a> for
-securing RedHat Linux distributions on boot.</p>
-</div>
-
-                </section>
-                            <section id="web-server" class="tech-section">
-                    <h1>Web Server</h1>
-                    <p>A web server handles Hypertext Transfer Protocol (HTTP) requests from
-clients. The client is usually a browser such as Internet Explorer, Firefox,
-and Chrome, but it can also be a headless browser like
-<a class="reference external" href="http://phantomjs.org/">phantomjs</a> (commonly used for testing), a
-commandline utility like wget or curl, or a web crawler. The web server
-processes the request and sends a status code and depending on the
-status code a content response as well.</p>
-<p>In a simple case, the client will request a static asset such as a picture
-or JavaScript file. The file sits on the file system in a location the
-web server is authorized to access and the web server sends the file
-to the client with a 200 status code. If the client already requested the
-file and the file has not changed, the web server will pass back a 304
-&quot;Not modified&quot; response indicating the client already has the latest version
-of that file.</p>
-<img alt="Web server and web browser request-response cycles" class="technical-diagram" src="../img/web-browser-server-requests.png" />
-<p>A web server sends files to a web browser based on the web browser's
-request. In the first request, the browser accessed the
-&quot;www.fullstackpython.com&quot;
-address and the server responded with the index.html HTML-formatted file.
-That HTML file contained references to other files, such as style.css and
-script.js that the browser then requested from the server.</p>
-<p>Sending static assets (such as CSS and JavaScript files) can eat up a
-large amount of bandwidth which is why using a Content Delivery Network
-(CDN) is important when possible (see the content delivery network
-section for a more detailed explanation).</p>
-<div class="section" id="web-server-resources">
-<h2>Web Server Resources</h2>
-<p><a class="reference external" href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
-<p><a class="reference external" href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
-<p><a class="reference external" href="http://articles.slicehost.com/nginx">Nginx web server tutorials</a></p>
-<p><a class="reference external" href="http://carrot.is/coding/nginx_introduction">Nginx for Developers: An Introduction</a></p>
-<p><a class="reference external" href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration example</a></p>
-<p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP Status Codes</a></p>
-<p><a class="reference external" href="http://blog.zachorr.com/nginx-setup/">Battle ready Nginx - an optimization guide</a></p>
-<p><a class="reference external" href="http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/">A faster Web server: ripping out Apache for Nginx</a></p>
-<p><a class="reference external" href="http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using">4 HTTP Security Headers You Should Always Be Using</a></p>
-</div>
-
-                </section>
-                            <section id="database" class="tech-section">
-                    <h1>Database</h1>
-                    <p>A database is an abstraction on top of an operating system's file system to
-ease creating, reading, updating, and deleting persistent data. The
-database storage abstraction most commonly used in Python web development is
-sets of relational tables. Alternative storage abstractions are explained in
-the NoSQL section.</p>
-<p>Relational databases store all data in a series of tables. Interconnections
-between the tables are specified as <em>foreign keys</em>.</p>
-<p>Databases storage implementations vary in complexity. SQLite, a database
-included with Python, creates a single file for all data per database.
-Other databases such as Oracle, PostgreSQL, and MySQL have more complicated
-persistence schemes while offering additional advanced features that are
-useful for web application data storage.</p>
-<p><a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a> and
-<a class="reference external" href="http://www.mysql.com/">MySQL</a> are two of the most common open source
-databases.</p>
-<p><a class="reference external" href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
-file on disk. SQLite is built into Python but is only built for access
-by a single connection at a time.</p>
-<div class="section" id="database-connections-with-python">
-<h2>Database connections with Python</h2>
-<p>To work with a relational database using Python, you need to use a code
-library. The most common libraries for relational databases are:</p>
-<p><a class="reference external" href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
-<p><a class="reference external" href="https://pypi.python.org/pypi/MySQL-python/1.2.4">MySQLdb</a> for MySQL</p>
-<p><a class="reference external" href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
-<p>SQLite support is built into Python 2.7+ and therefore a separate library
-is not necessary. Simply &quot;import sqlite3&quot; to begin interfacing with the
-single file-based database.</p>
-</div>
-<div class="section" id="database-third-party-services">
-<h2>Database third-party services</h2>
-<p>Numerous companies run scalable database servers as a hosted service.
-Depending on the provider, there can be several advantages to using a
-hosted database third-party service:</p>
-<ol class="arabic simple">
-<li>automated backups and recovery</li>
-<li>tightened security configurations</li>
-<li>easy vertical scaling</li>
-</ol>
-<p><a class="reference external" href="http://aws.amazon.com/rds/">Amazon Relational Database Service (RDS)</a>
-provides pre-configured MySQL and PostgreSQL instances. The instances can
-be scaled to larger or smaller configurations based on storage and performance
-needs.</p>
-</div>
-<div class="section" id="database-resources">
-<h2>Database resources</h2>
-<p><a class="reference external" href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular
-database management systems.</p>
-<p><a class="reference external" href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
-PostgreSQL content from around the web.</p>
-</div>
-
-                </section>
-                            <section id="wsgi-server" class="tech-section">
-                    <h1>WSGI Server</h1>
-                    <p>A <a class="reference external" href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
-(WSGI) server implements the web server side of the WSGI interface for
-running Python web applications. The WSGI standard v1.0 is specified in
-<a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333</a>. As of September 2010,
-WSGI v1.0 is superseded by
-<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>, which defines the
-v1.0.1 WSGI standard.</p>
-<img alt="WSGI Server &lt;-&gt; Web server &lt;-&gt; Browser" class="technical-diagram" src="../img/web-browser-server-wsgi.png" />
-<p>Requests from the browser that are not for static assets (this is specified
-in the web server's configuration which requests are for static assets and
-which are not) are passed to the WSGI server. Once the request is
-processed and generated by the WSGI server, the response is passed
-back through the web server and onto the browser.</p>
-<div class="section" id="wsgi-resources">
-<h2>WSGI Resources</h2>
-<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333 WSGI v1.0</a>
-and
-<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333 WSGI v1.0.1</a>
-specifications.</p>
-<p><a class="reference external" href="http://gunicorn.org/">Green Unicorn</a>,
-<a class="reference external" href="http://code.google.com/p/modwsgi/">mod_wsgi</a>,
-<a class="reference external" href="https://github.com/unbit/uwsgi-docs">uWSGI</a>, and
-<a class="reference external" href="http://www.gevent.org/">gevent</a> are common WSGI server implementations.</p>
-<p>This <a class="reference external" href="http://agiliq.com/blog/2013/07/basics-wsgi/">Basics of WSGI</a> post
-contains a simple example of how a WSGI-compatible application works.</p>
-<p><a class="reference external" href="http://www.apreche.net/complete-single-server-django-stack-tutorial/">Complete single server Django stack tutorial</a> is thorough and informative for
-non-paas hosting choices.</p>
-</div>
-
-                </section>
-                            <section id="web-framework" class="tech-section">
-                    <h1>Web Framework</h1>
-                    <p>A web application framework is a collection of libraries that
-provide functionality to accomplish common operations for the web. These
-common operations include:</p>
-<ol class="arabic simple">
-<li>URL routing</li>
-<li>HTML, XML, JSON, and other output format templating</li>
-<li>Database manipulation</li>
-<li>Security against Cross-site request forgery (CSRF) and other attacks</li>
-</ol>
-<p>Not all web frameworks include functionality for all of the above
-functionality. Frameworks fall somewhere between simply executing a
-single use case and attempting to be everything to every developer with
-increased complexity.</p>
-<p>For example, the Django web application framework includes an
-Object-Relational Mapping (ORM) layer that abstracts relational database
-read, write, query, and delete operations. However, Django's ORM
-does not work (without modification) on non-relational databases such
-<a class="reference external" href="http://www.mongodb.org/">MongoDB</a> and <a class="reference external" href="http://docs.basho.com/">Riak</a>.
-Other web frameworks such as Flask and Pyramid are generally easier to
-use with non-relational databases by incorporating external Python libraries.</p>
-<div class="section" id="web-framework-monitoring">
-<h2>Web Framework Monitoring</h2>
-<p>Logging is a common mechanism for monitoring web applications written with a
-web framework. Runtime exceptions that prevent code from running are
-important to log to investigate and fix the source of the problems.
-Informational and debugging logging also helps to understand how the
-application is performing even if code is working as intended.</p>
-<p>Logging is often grouped into several categories:</p>
-<ol class="arabic simple">
-<li>Information</li>
-<li>Debug</li>
-<li>Warning</li>
-<li>Error</li>
-</ol>
-<p>Logging errors that occur while a web framework is running is crucial to
-understanding how your application is performing.
-<a class="reference external" href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
-<a class="reference external" href="https://github.com/getsentry/sentry">Sentry</a> exception logging and
-aggregation application. Raven provides the way to send exceptions to
-Sentry, which should be deployed on a separate server from your production
-infrastructure. Raven can also be used by Python scripts to send other
-log data to Sentry for aggregation. Sentry provides a clean web application
-interface for viewing the exceptions. Sentry can also be configured with a
-mail plugin to send emails when exceptions occur.</p>
-</div>
-<div class="section" id="web-framework-resources">
-<h2>Web Framework Resources</h2>
-<p><a class="reference external" href="http://www.djangoproject.com/">Django</a>,
-<a class="reference external" href="http://flask.pocoo.org/">Flask</a>,
-<a class="reference external" href="http://bottlepy.org/docs/dev/">Bottle</a>,
-<a class="reference external" href="http://www.pylonsproject.org/">Pyramid</a>, and
-<a class="reference external" href="http://webpy.org/">web.py</a> are the most common Python web frameworks.</p>
-</div>
-
-                </section>
-                            <section id="static-content" class="tech-section">
-                    <h1>Static Content</h1>
-                    <p>Some content on a website does not change and therefore should be served
-up either directly through the web server or a content delivery network (CDN).
-Examples include JavaScript, image, and CSS files.</p>
-<p>A CDN is a third party that serves your static files.
-<a class="reference external" href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
-<a class="reference external" href="http://www.akamai.com/">Akamai</a>, and
-<a class="reference external" href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a>
-are examples of CDNs. The purpose of a CDN is to remove the load of static
-file requests from web servers that are handling dynamic web content. For
-example, if you have an nginx server that handles both static files and
-acts as a front for a Green Unicorn WSGI server on a 512 megabyte
-virtual private server, the nginx server will run into resource
-constraints under heavy traffic. A CDN can remove the need to serve static
-assets from that nginx server so it can purely act as a pass through for
-requests to the Green Unicorn WSGI server.</p>
-<p>CDNs distribute request load globally by using data centers in different
-locations.</p>
-<div class="section" id="static-content-resources">
-<h2>Static Content Resources</h2>
-<p><a class="reference external" href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
-<p><a class="reference external" href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx">CDNs fail, but your scripts don't have to</a></p>
-<p><a class="reference external" href="http://django-storages.readthedocs.org/en/latest/">django-storages</a> is
-a Django library for managing static and media files on services such as
-Amazon S3 and other content delivery networks.</p>
-</div>
-
-                </section>
-                            <section id="website-security" class="tech-section">
-                    <h1>Website Security</h1>
-                    <p>Website security must be incorporated into building every level of the web
-stack. However, I include a separate section here for topics that deserve
-a comprehensive review such as firewalls, SSL certificates, and public key
-authorization.</p>
-<div class="section" id="key-terms">
-<h2>Key Terms</h2>
-<p><em>Authorization</em> - specifying access rights and permissions to server and
-application resources. For example, a non-logged in user can view a landing
-page but only a logged in user can access an application's &quot;account&quot; screen.</p>
-</div>
-<div class="section" id="website-security-resources">
-<h2>Website Security Resources</h2>
-<p><a class="reference external" href="http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/">When and How to Deploy HTTPS</a></p>
-<p><a class="reference external" href="http://spenserj.com/blog/2013/07/15/securing-a-linux-server/">Securing a Linux Server</a></p>
-<p><a class="reference external" href="http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/">Securing Your Website</a></p>
-<p><a class="reference external" href="http://blog.hartleybrody.com/https-certificates/">How HTTPS Secures Connections: What Every Web Dev Should Know</a></p>
-</div>
-
-                </section>
-                            <section id="caching" class="tech-section">
-                    <h1>Caching</h1>
-                    <p>Caching can reduce load on servers by storing the results of common
-operations and serving the precomputed answers to clients.</p>
-<p>For example, instead of retrieving data from database tables that rarely
-change, you can store the values in-memory. Retrieving values from an
-in-memory location is far faster than retrieving them from a database (which
-stores them on a persistent disk like a hard drive). When the cached values
-change the system can invalidate the cache and re-retrieve the updated values
-for future requests.</p>
-<p>A cache can be created for multiple layers of the stack.</p>
-<div class="section" id="caching-resources">
-<h2>Caching Resources</h2>
-<p><a class="reference external" href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
-<p><a class="reference external" href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
-easily be configured for caching with libraries such as
-<a class="reference external" href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
-</div>
-
-                </section>
-                            <section id="web-analytics" class="tech-section">
-                    <h1>Web Analytics</h1>
-                    <p>Web analytics involves collecting and analyzing data generated by visitors'
-web browsers while they are viewing webpages. The resulting data provides
-insight into how visitors use the site.</p>
-<div class="section" id="web-analytics-third-party-services">
-<h2>Web Analytics Third Party Services</h2>
-<p><a class="reference external" href="http://www.google.com/analytics/">Google Analytics</a> is a widely used
-free analytics tool for website traffic.</p>
-<p><a class="reference external" href="https://mixpanel.com/">MixPanel</a>'s analytics platform focuses on mobile
-and sales funnel metrics. A developer builds what data points need to be
-collected into the server side or client side code. MixPanel captures that
-data and provides metrics and visualizations based on the data.</p>
-<p><a class="reference external" href="https://www.kissmetrics.com/">KISSmetrics</a>' analytics provides context
-for who is visiting a website and what actions they are taking while on
-the site.</p>
-<p><a class="reference external" href="http://www.crazyegg.com/">CrazyEgg</a> is tool for understanding a
-user's focus while using a website based on heatmaps generated from mouse
-movements.</p>
-</div>
-<div class="section" id="web-analytics-resources">
-<h2>Web Analytics Resources</h2>
-<p><a class="reference external" href="http://blog.arkency.com/2012/12/google-analytics-for-developers/">Google Analytics for Developers</a></p>
-</div>
-
-                </section>
-                            <section id="monitoring" class="tech-section">
-                    <h1>Monitoring</h1>
-                    <p>Capturing and analyzing data about your production environment is critical
-to proactively deal with stability, performance, and errors in a web
-application.</p>
-<p>There are several important resources to monitor on the operating system
-and network level of a web stack.</p>
-<ol class="arabic simple">
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Persistence storage consumed versus free</li>
-<li>Network bandwidth and latency</li>
-</ol>
-<p>Application level monitoring encompasses several aspects. The amount of time
-and resources dedicated to each aspect will vary based on whether an
-application is read-heavy, write-heavy, or subject to rapid swings in traffic.</p>
-<ol class="arabic simple">
-<li>Application warnings and errors (500-level HTTP errors)</li>
-<li>Application code performance</li>
-<li>Template rendering time</li>
-<li>Browser rendering time for the application</li>
-<li>Database querying performance</li>
-</ol>
-<div class="section" id="monitoring-third-party-services">
-<h2>Monitoring Third Party Services</h2>
-<p><a class="reference external" href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
-well as plug ins for capturing and analyzing additional data about tools in
-your stack.</p>
-<p><a class="reference external" href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and
-infrastructure. It's popular with DevOps shops that are making changes to
-their production environments and want immediate feedback on the results
-of those modifications.</p>
-<p><a class="reference external" href="http://status.io/">Status.io</a> focuses on uptime and response metrics
-transparency for your users.</p>
-<p><a class="reference external" href="http://www.pagerduty.com/">PagerDuty</a> alerts a designated person or group
-if there are stability, performance, or uptime issues with an application.</p>
-</div>
-<div class="section" id="open-source-projects">
-<h2>Open Source Projects</h2>
-<p><a class="reference external" href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
-listens for metrics and aggregates them for transfer into another service
-such as Graphite.</p>
-<p><a class="reference external" href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
-time-series data and displays them in graphs through a web application.</p>
-</div>
-<div class="section" id="monitoring-resources">
-<h2>Monitoring Resources</h2>
-<p><a class="reference external" href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
-<p><a class="reference external" href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
-</div>
-
-                </section>
-                            <section id="source-control" class="tech-section">
-                    <h1>Source Control</h1>
-                    <p>Source control systems, also known as version control systems, store code
-and other static files, such as images, with a history of the changes made to
-those files.</p>
-<div class="section" id="source-control-systems">
-<h2>Source Control Systems</h2>
-<p><a class="reference external" href="http://git-scm.com/">Git</a> is a free and open source distributed version
-control system.</p>
-<p><a class="reference external" href="http://mercurial.selenic.com/">Mercurial</a> is similar to Git, also a free
-and open source distributed version control system.</p>
-</div>
-<div class="section" id="source-control-third-party-services">
-<h2>Source Control Third Party Services</h2>
-<p><a class="reference external" href="https://github.com/">GitHub</a> is currently the most commonly used source
-control platform for using Git.</p>
-<p><a class="reference external" href="https://bitbucket.org/">BitBucket</a> provides free Git and Mercurial
-repositories for open projects and paid services for hosting private
-repositories.</p>
-</div>
-<div class="section" id="source-control-resources">
-<h2>Source Control Resources</h2>
-<p><a class="reference external" href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> (Patrick McKenzie)</p>
-</div>
-
-                </section>
-                            <section id="configuration-management" class="tech-section">
-                    <h1>Configuration Management</h1>
-                    <p>Configuration management involves modifying servers from an existing state to
-a desired state. Numerous tools exist to modify the state in a controlled
-way, including <a class="reference external" href="http://puppetlabs.com/puppet/what-is-puppet">Puppet</a>,
-<a class="reference external" href="http://www.getchef.com/chef/">Chef</a>,
-<a class="reference external" href="http://www.saltstack.com/">SaltStack</a>, and Ansible. Puppet and Chef are
-written in Ruby, while SaltStack and Ansible are written in Python.</p>
-<div class="section" id="ansible">
-<h2>Ansible</h2>
-<p><a class="reference external" href="http://www.ansibleworks.com/">Ansible</a> is an open source configuration
-management and application deployment tool built in Python.</p>
-</div>
-<div class="section" id="ansible-resources">
-<h2>Ansible Resources</h2>
-<p><a class="reference external" href="http://docs.ansible.com/index.html">Official Ansible documentation</a></p>
-<p><a class="reference external" href="http://www.insom.me.uk/post/pycon-talk.html">Python for Configuration Management with Ansible slides</a>
-from PyCon UK 2013</p>
-<p><a class="reference external" href="http://devopsu.com/newsletters/ansible-weekly-newsletter.html">Ansible Weekly Newsletter</a></p>
-<p><a class="reference external" href="http://labs.qandidate.com/blog/2013/11/15/first-steps-with-ansible/">First Steps with Ansible</a></p>
-<p><a class="reference external" href="http://red-badger.com/blog/2013/06/29/ansible/">Red Badger on Ansible</a></p>
-<p><a class="reference external" href="http://lowendbox.com/blog/getting-started-with-ansible/">Getting Started with Ansible</a></p>
-<p><a class="reference external" href="http://softwareas.com/ansible-and-linode-what-i-learned-about-controlling-linodes-from-ansible">Ansible and Linode</a></p>
-<p><a class="reference external" href="http://jlafon.io/ansible-duo-security.html">Multi-factor SSH authentication with Ansible and Duo Security</a></p>
-<p><a class="reference external" href="http://devopsu.com/blog/ansible-vs-shell-scripts/">Ansible vs. Shell Scripts</a></p>
-<p><a class="reference external" href="http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/">Ansible and Salt: A Detailed Comparison</a></p>
-<p><a class="reference external" href="http://www.nickhammond.com/automating-development-environment-ansible/">Automating your development environment with Ansible</a></p>
-<p><a class="reference external" href="http://devopsu.com/guides/ansible-post-install.html">Post-install steps with Ansible</a></p>
-<p><a class="reference external" href="http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible">First Five (and a half) Minutes on a Server with Ansible</a></p>
-<p><a class="reference external" href="http://davidwinter.me/articles/2013/11/23/introduction-to-ansible/">(Detailed) Introduction to Ansible</a></p>
-<p><a class="reference external" href="http://blog.couchbase.com/create-couchbase-cluster-with-ansible">Create a Couchbase Cluster with Ansible</a></p>
-<p><a class="reference external" href="https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ&quot;">Idempotence, convergence, and other silly fancy words we often use</a></p>
-</div>
-
-                </section>
-                            <section id="dependency-management" class="tech-section">
-                    <h1>Application Dependencies</h1>
-                    <p>Application dependencies are specific Python libraries and their versions
-required for the application to work properly. These dependencies are
-installed separately from system-level packages.</p>
-<p>The most common way to install Python library dependencies is with
-the <a class="reference external" href="http://www.pip-installer.org/en/latest/">pip install</a> combined
-with <a class="reference external" href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate the
-dependencies of individual applications from each other.</p>
-
-                </section>
-                            <section id="no-sql-datastore" class="tech-section">
-                    <h1>NoSQL Data Stores</h1>
-                    <p>Relational databases store the vast majority of web application
-persistent data. However, there are several alternative classifications of
-storage representations.</p>
-<ol class="arabic simple">
-<li>Key-value pair</li>
-<li>Document-oriented</li>
-<li>Column-family table</li>
-<li>Graph</li>
-</ol>
-<p>These persistent data storage representations are commonly used to augment,
-rather than completely replace, relational databases.</p>
-<div class="section" id="document-oriented">
-<h2>Document-Oriented</h2>
-<p>A document-oriented database provides a semi-structured representation for
-nested data.</p>
-</div>
-<div class="section" id="key-value-pair">
-<h2>Key-Value Pair</h2>
-<p>Key-value pair data stores are based
-on <a class="reference external" href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structures.</p>
-</div>
-<div class="section" id="graph">
-<h2>Graph</h2>
-<p>A graph database represent and store data in three aspects: nodes, edges,
-and properties.</p>
-<p>A <em>node</em> is an entity, such as a person or business.</p>
-<p>An <em>edge</em> is the relationship between two entities. For example, an
-edge could represent that a node for a person entity is an employee of a
-business entity.</p>
-<p>A <em>property</em> represents information about nodes. For example, an entity
-representing a person could have a property of &quot;female&quot; or &quot;male&quot;.</p>
-<p><a class="reference external" href="http://www.neo4j.org/">Neo4j</a> is one of the most widely used graph
-databases and runs on the Java Virtual Machine stack.</p>
-</div>
-<div class="section" id="nosql-third-party-services">
-<h2>NoSQL third-party services</h2>
-<p><a class="reference external" href="http://www.mongohq.com/home">MongoHQ</a> provides MongoDB as a service. It's
-easy to set up with either a standard LAMP stack or on Heroku.</p>
-</div>
-<div class="section" id="nosql-data-stores-resources">
-<h2>NoSQL data stores resources</h2>
-<p><a class="reference external" href="http://www.nosqlweekly.com/">NoSQL Weekly</a> is a free curated email
-newsletter that aggregates articles, tutorials, and videos about
-non-relational data stores.</p>
-</div>
-
-                </section>
-                            <section id="about-author" class="tech-section">
-                    <h1>About</h1>
-                    <p>This website was written and built by
-<a class="reference external" href="http://www.mattmakai.com/">Matt Makai</a>, currently a
-<a class="reference external" href="http://thenextweb.com/dd/2012/06/03/a-day-in-the-life-of-a-developer-evangelist/">Developer Evangelist</a>
-at <a class="reference external" href="https://www.twilio.com/">Twilio</a>.</p>
-<p>Other projects by Matt include
-<a class="reference external" href="http://www.codingacrossamerica.com/">Coding Across America</a>
-and
-<a class="reference external" href="https://github.com/makaimc/underwear/">Underwear</a>. You can reach him by
-email at <a class="reference external" href="mailto:matthew.makai&#64;gmail.com">matthew.makai&#64;gmail.com</a> or send him a
-<a class="reference external" href="https://twitter.com/makaimc">direct message on Twitter</a>.</p>
-<p>Typos, inaccurate statements, or general areas for improvement can be handled
-through a
-<a class="reference external" href="https://github.com/makaimc/fullstackpython.github.com/pull/new/gh-pages">pull request on GitHub</a>.</p>
-
-                </section>
-                            <section id="change-log" class="tech-section">
-                    <h1>Change Log</h1>
-                    <div class="section" id="id1">
-<h2>2014</h2>
-<p>Jan: Adding configuration management, application dependencies, and source
-control sections. Also updating about section.</p>
-</div>
-<div class="section" id="id2">
-<h2>2013</h2>
-<p>Dec: Changed CDN section to static content. Transitioning diagrams from
-Paper app drawings to Balsamiq mockups exported to PNG files. Added Python
-database connectors to database section.</p>
-<p>Nov: Modified color scheme. Updated caching and introduction section,
-added section on NoSQL data stores.</p>
-<p>Oct: Creating separate monitoring section.</p>
-<p>Aug: Adding more resources for web servers and other categories.</p>
-<p>Jun: Updating styling, adding new content, switching around sections.</p>
-<p>Jan: Fleshed out web server, OS, and server sections, particularly IaaS
-and PaaS topics, added initial &quot;hand drawn&quot; diagram placeholders for better
-diagrams later.</p>
-</div>
-<div class="section" id="id3">
-<h2>2012</h2>
-<p>Dec: Initial incomplete release on fullstackpython.com, created
-introduction, CDN, web frameworks, and database sections with stubs for
-other areas.</p>
-</div>
-
-                </section>
-                    </div>
+                                                                                                    <br/>
+                Next read about 
+                <a href="/servers.html">servers</a>.
+                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+    <div class="col-md-offset-1 col-md-3" id="sidebar">
+      <div class="list-group">
+                  <a href="/introduction.html" class="list-group-item active">Introduction</a>
+                  <a href="/servers.html" class="list-group-item ">Servers</a>
+                  <a href="/operating-system.html" class="list-group-item ">Operating System</a>
+                  <a href="/web-server.html" class="list-group-item ">Web Server</a>
+                  <a href="/database.html" class="list-group-item ">Database</a>
+                  <a href="/wsgi-server.html" class="list-group-item ">WSGI Server</a>
+                  <a href="/web-framework.html" class="list-group-item ">Web Framework</a>
+                  <a href="/static-content.html" class="list-group-item ">Static Content</a>
+                  <a href="/website-security.html" class="list-group-item ">Website Security</a>
+                  <a href="/caching.html" class="list-group-item ">Caching</a>
+                  <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
+                  <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
+                  <a href="/source-control.html" class="list-group-item ">Source Control</a>
+                  <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
+                  <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
+                  <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
+                  <a href="/about-author.html" class="list-group-item ">About</a>
+                  <a href="/change-log.html" class="list-group-item ">Change Log</a>
+              </div>
     </div>
+</div>
         <hr/>
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2014
         </div>
     </div>
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="theme/js/bootstrap.min.js"></script>
 </body>
 </html>

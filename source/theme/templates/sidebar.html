@@ -1,0 +1,7 @@
+<div class="col-md-offset-1 col-md-3" id="sidebar">
+  <div class="list-group">
+    {% for p in pages|sort(attribute='sort-order') %}
+      <a href="/{{ p.slug }}.html" class="list-group-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+    {% endfor %}
+  </div>
+</div>
