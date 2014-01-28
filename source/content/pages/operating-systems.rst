@@ -1,15 +1,16 @@
-Operating System
-================
+Operating Systems
+=================
 
 :category: page
-:slug: operating-system
+:slug: operating-systems
 :sort-order: 03
 
-The operating system runs on top of the server or virtual server
-and controls access to computing resources. The only operating
-system I can recommend for production Python web stack deployments is
-a flavor of Linux. Ubuntu Long Term Support (LTS) releases, Red Hat 
-Enterprise Linux, and CentOS are all viable options. 
+The operating system runs on the server or virtual server and controls access 
+to computing resources. The only recommeneded operating system for 
+production Python web stack deployments is Linux. There are several 
+Linux distributions commonly used for running production servers. Ubuntu 
+Long Term Support (LTS) releases, Red Hat Enterprise Linux, and CentOS are 
+all viable options. 
 
 *Side note*: Mac OS X is fine for development activities. Windows and Mac 
 OS X are not appropriate for most test and production deployments unless

@@ -73,41 +73,70 @@
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Website Security</h1>
-      <p>Website security must be incorporated into building every level of the web
-stack. However, I include a separate section here for topics that deserve
-a comprehensive review such as firewalls, SSL certificates, and public key
-authorization.</p>
-<div class="section" id="key-terms">
-<h2>Key Terms</h2>
-<p><em>Authorization</em> - specifying access rights and permissions to server and
-application resources. For example, a non-logged in user can view a landing
-page but only a logged in user can access an application's &quot;account&quot; screen.</p>
+      <h1>Operating Systems</h1>
+      <p>The operating system runs on the server or virtual server and controls access
+to computing resources. The only recommeneded operating system for
+production Python web stack deployments is Linux. There are several
+Linux distributions commonly used for running production servers. Ubuntu
+Long Term Support (LTS) releases, Red Hat Enterprise Linux, and CentOS are
+all viable options.</p>
+<p><em>Side note</em>: Mac OS X is fine for development activities. Windows and Mac
+OS X are not appropriate for most test and production deployments unless
+there is a specific reason why you must use them in lieu of Linux.</p>
+<div class="section" id="ubuntu">
+<h2>Ubuntu</h2>
+<p>Ubuntu is a Linux distribution packaged by the
+<a class="reference external" href="http://www.canonical.com/">Canonical Ltd</a> company. Ubuntu uses the
+Debian distribution as a base for packages, including the <a class="reference external" href="http://wiki.debian.org/Apt">aptitude package
+manager</a>. For desktop versions of Ubuntu,
+GNOME (until the 11.04 release) or Unity (11.10 through current)
+is added to the distribution to provide a user interface.</p>
+<p>Ubuntu <a class="reference external" href="https://wiki.ubuntu.com/LTS">Long Term Support (LTS)</a> releases
+are the recommended versions to use for deployments. LTS versions receive
+five years of post-release updates from Canonical. Every two years, Canonical
+creates a new LTS release, which allows for an easy upgrade path as well
+as flexibility in skipping every other LTS release if necessary.</p>
 </div>
-<div class="section" id="website-security-resources">
-<h2>Website Security Resources</h2>
-<p><a class="reference external" href="http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/">When and How to Deploy HTTPS</a></p>
+<div class="section" id="red-hat-and-centos">
+<h2>Red Hat and CentOS</h2>
+<p><a class="reference external" href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
+(RHEL) and <a class="reference external" href="http://www.centos.org/">Community ENTerprise Operating System</a>
+(CentOS) are the same distribution. The only difference between the two
+(other than the name) is that CentOS is an open source, liberally
+licensed free derivative of RHEL.</p>
+<p>RHEL and CentOS use a different package manager and command-line interface
+from Debian-based Linux distributions: RPM Package Manager (RPM) and the
+Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
+to handle the packaging and installation of libraries and applications. YUM
+provides a command-line interface for interacting with the RPM system.</p>
+</div>
+<div class="section" id="operating-system-resources">
+<h2>Operating System Resources</h2>
+<p><a class="reference external" href="http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution">Choosing a Linux Distribution</a></p>
+<p><a class="reference external" href="http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers">First 5 Minutes on a Server</a></p>
+<p><a class="reference external" href="http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/">Securing an Ubuntu Server</a>
+<a class="reference external" href="http://joshrendek.com/2013/01/securing-ubuntu/">Securing Ubuntu</a></p>
 <p><a class="reference external" href="http://spenserj.com/blog/2013/07/15/securing-a-linux-server/">Securing a Linux Server</a></p>
-<p><a class="reference external" href="http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/">Securing Your Website</a></p>
-<p><a class="reference external" href="http://blog.hartleybrody.com/https-certificates/">How HTTPS Secures Connections: What Every Web Dev Should Know</a></p>
+<p><a class="reference external" href="https://github.com/marshyski/quick-secure">quick-secure scripts</a> for
+securing RedHat Linux distributions on boot.</p>
 </div>
 
-                                                                                                                                                                                                                                                    <br/>
+                                                                                                                <br/>
             Next read about 
-            <a href="/caching.html">caching</a>.
+            <a href="/web-server.html">web server</a>.
                 
-                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                              </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
           <a href="/servers.html" class="list-group-item ">Servers</a>
-          <a href="/operating-systems.html" class="list-group-item ">Operating Systems</a>
+          <a href="/operating-systems.html" class="list-group-item active">Operating Systems</a>
           <a href="/web-server.html" class="list-group-item ">Web Server</a>
           <a href="/database.html" class="list-group-item ">Database</a>
           <a href="/wsgi-server.html" class="list-group-item ">WSGI Server</a>
           <a href="/web-framework.html" class="list-group-item ">Web Framework</a>
           <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/website-security.html" class="list-group-item active">Website Security</a>
+          <a href="/website-security.html" class="list-group-item ">Website Security</a>
           <a href="/caching.html" class="list-group-item ">Caching</a>
           <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
           <a href="/monitoring.html" class="list-group-item ">Monitoring</a>

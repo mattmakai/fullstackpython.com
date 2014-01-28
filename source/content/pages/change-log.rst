@@ -8,7 +8,8 @@ Change Log
 2014
 ----
 Jan: Adding configuration management, application dependencies, and source 
-control sections. Also updating about section.
+control sections. Also updating about section. Updated design to be fully
+responsive.
 
 
 2013
