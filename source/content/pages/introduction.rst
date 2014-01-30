@@ -33,9 +33,8 @@ you may also find my post on
 useful.
 
 This guide has a different focus from the above resources. Here I 
-focus on explaining several ways of for how the Python *web application*
-stack works from server infrastructure through JavaScript execution on a 
-user's browser.
+focus on explaining the way a Python *web application* stack works from 
+server infrastructure through JavaScript execution on a user's browser.
 
 People learning Python generally have at least one of the three following
 goals:
