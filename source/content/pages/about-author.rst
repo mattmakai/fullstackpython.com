@@ -15,10 +15,10 @@ Other projects by Matt include
 and
 `Underwear <https://github.com/makaimc/underwear/>`_. You can reach him by 
 email at matthew.makai@gmail.com or send him a 
-`direct message on Twitter <https://twitter.com/makaimc>`_. 
+`direct message on Twitter <https://twitter.com/mattmakai>`_. 
 
 
 Typos, inaccurate statements, or general areas for improvement can be handled
-through a 
-`pull request on GitHub <https://github.com/makaimc/fullstackpython.github.com/pull/new/gh-pages>`_.
+through a pull request on
+`GitHub <https://github.com/makaimc/fullstackpython.github.com/>`_.
 
