@@ -63,6 +63,7 @@ Web Framework Resources
 `Pyramid <http://www.pylonsproject.org/>`_, and
 `web.py <http://webpy.org/>`_ are the most common Python web frameworks.
 
-`Effective Django <http://effectivedjango.com/>`_ is a great introduction to
-using the most common Python web framework.
+`Effective Django <http://effectivedjango.com/>`_ and 
+`Tango with Django <http://www.tangowithdjango.com/book/>`_ are a great free
+introductions to using the most popular Python web framework.
 
