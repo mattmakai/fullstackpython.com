@@ -22,9 +22,9 @@ The term *bare metal* refers to purchasing the actual hardware and hooking
 it up to the Internet either through a business-class internet service 
 provider (ISP) or 
 `co-locating the server <http://webdesign.about.com/od/colocation/a/what_colocation.htm>`_ with other servers. A "business-class" ISP is necessary because
-most residential Internet service agreements prohibt and will eventually
-block traffic to web servers. You may be able to get away with low traffic
-volume but if your site serves a lot of traffic it will catch an ISPs
+most residential Internet service agreements explicitly prohibit running
+web servers on their networks. You may be able to get away with low traffic
+volume but if your site serves a lot of traffic it will alert an ISP's
 filters.
 
 The bare metal option offers the most control over the server configuration,
