@@ -3,14 +3,14 @@
 
 {% for article in articles %}
   <url>
-    <loc>{{ SITEURL }}/{{ article.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/{{ article.slug }}.html</loc>
     <priority>0.8</priority>
   </url>
 {% endfor %}
 
 {% for page in pages %}
   <url>
-    <loc>{{ SITEURL }}/{{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
     <priority>1.0</priority>
   </url>
 {% endfor %}
