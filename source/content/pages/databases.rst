@@ -26,7 +26,8 @@ databases.
 
 `SQLite <http://www.sqlite.org/>`_ is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
-by a single connection at a time.
+by a single connection at a time. Therefore is highly recommended to not
+`run a production web application with SQLite <https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors>`_.
 
 
 Database connections with Python

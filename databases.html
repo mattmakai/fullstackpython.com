@@ -91,7 +91,8 @@ useful for web application data storage.</p>
 databases.</p>
 <p><a class="reference external" href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
-by a single connection at a time.</p>
+by a single connection at a time. Therefore is highly recommended to not
+<a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors">run a production web application with SQLite</a>.</p>
 <div class="section" id="database-connections-with-python">
 <h2>Database connections with Python</h2>
 <p>To work with a relational database using Python, you need to use a code
