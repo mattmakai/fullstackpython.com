@@ -62,3 +62,7 @@ Web Framework Resources
 `Bottle <http://bottlepy.org/docs/dev/>`_,
 `Pyramid <http://www.pylonsproject.org/>`_, and
 `web.py <http://webpy.org/>`_ are the most common Python web frameworks.
+
+`Effective Django <http://effectivedjango.com/>`_ is a great introduction to
+using the most common Python web framework.
+
