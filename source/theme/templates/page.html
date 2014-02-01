@@ -8,8 +8,8 @@
       {% for p in pages|sort(attribute='sort-order') %}
         {% if next_up %}
             <br/>
-            Next read about 
-            <a href="/{{ p.slug }}.html">{{ p.title|lower }}</a>.
+            Next read the 
+            <a href="/{{ p.slug }}.html">{{ p.title|lower }}</a> section.
             {% set next_up = False %}    
         {% endif %}
         {% if p.slug == page.slug %}
