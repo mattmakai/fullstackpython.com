@@ -9,7 +9,7 @@ A database is an abstraction on top of an operating system's file system to
 ease creating, reading, updating, and deleting persistent data. The 
 database storage abstraction most commonly used in Python web development is
 sets of relational tables. Alternative storage abstractions are explained in
-the NoSQL section.
+the `NoSQL <../no-sql-datastore.html>`_ section of this guide.
 
 Relational databases store all data in a series of tables. Interconnections
 between the tables are specified as *foreign keys*.
