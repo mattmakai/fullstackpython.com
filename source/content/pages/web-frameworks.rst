@@ -1,8 +1,8 @@
-Web Framework
-=============
+Web Frameworks
+==============
 
 :category: page
-:slug: web-framework
+:slug: web-frameworks
 :sort-order: 07
 
 A web application framework is a collection of libraries that 

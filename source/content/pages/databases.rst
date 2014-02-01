@@ -1,8 +1,8 @@
-Database
-========
+Databases
+=========
 
 :category: page
-:slug: database
+:slug: databases
 :sort-order: 05
 
 A database is an abstraction on top of an operating system's file system to 

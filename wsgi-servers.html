@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Full stack Python shows how an entire Python web application is built, from the server to the front end JavaScript.">
+    <meta name="description" content="Full Stack Python shows how an entire Python web application is built and deployed. Each section of the guide explains a different key concept, from the server through the Python WSGI web framework to the front end JavaScript.">
     <meta name="author" content="Matt Makai">
     <link rel="shortcut icon" href="theme/img/full-stack-python-logo-bw.png">
     <title>Full Stack Python</title>
@@ -73,59 +73,50 @@
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Web Server</h1>
-      <p>A web server handles Hypertext Transfer Protocol (HTTP) requests from
-clients. The client is usually a browser such as Internet Explorer, Firefox,
-and Chrome, but it can also be a headless browser like
-<a class="reference external" href="http://phantomjs.org/">phantomjs</a> (commonly used for testing), a
-commandline utility like wget or curl, or a web crawler. The web server
-processes the request and sends a status code and depending on the
-status code a content response as well.</p>
-<p>In a simple case, the client will request a static asset such as a picture
-or JavaScript file. The file sits on the file system in a location the
-web server is authorized to access and the web server sends the file
-to the client with a 200 status code. If the client already requested the
-file and the file has not changed, the web server will pass back a 304
-&quot;Not modified&quot; response indicating the client already has the latest version
-of that file.</p>
-<img alt="Web server and web browser request-response cycles" class="technical-diagram" src="theme/img/web-browser-server-requests.png" style="width: 100%;" />
-<p>A web server sends files to a web browser based on the web browser's
-request. In the first request, the browser accessed the
-&quot;www.fullstackpython.com&quot;
-address and the server responded with the index.html HTML-formatted file.
-That HTML file contained references to other files, such as style.css and
-script.js that the browser then requested from the server.</p>
-<p>Sending static assets (such as CSS and JavaScript files) can eat up a
-large amount of bandwidth which is why using a Content Delivery Network
-(CDN) is important when possible (see the content delivery network
-section for a more detailed explanation).</p>
-<div class="section" id="web-server-resources">
-<h2>Web Server Resources</h2>
-<p><a class="reference external" href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
-<p><a class="reference external" href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
-<p><a class="reference external" href="http://articles.slicehost.com/nginx">Nginx web server tutorials</a></p>
-<p><a class="reference external" href="http://carrot.is/coding/nginx_introduction">Nginx for Developers: An Introduction</a></p>
-<p><a class="reference external" href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration example</a></p>
-<p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP Status Codes</a></p>
-<p><a class="reference external" href="http://blog.zachorr.com/nginx-setup/">Battle ready Nginx - an optimization guide</a></p>
-<p><a class="reference external" href="http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/">A faster Web server: ripping out Apache for Nginx</a></p>
-<p><a class="reference external" href="http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using">4 HTTP Security Headers You Should Always Be Using</a></p>
+      <h1>WSGI Servers</h1>
+      <p>A <a class="reference external" href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
+(WSGI) server implements the web server side of the WSGI interface for
+running Python web applications. The WSGI standard v1.0 is specified in
+<a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333</a>. As of September 2010,
+WSGI v1.0 is superseded by
+<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>, which defines the
+v1.0.1 WSGI standard.</p>
+<img alt="WSGI Server &lt;-&gt; Web server &lt;-&gt; Browser" class="technical-diagram" src="theme/img/web-browser-server-wsgi.png" style="width: 100%;" />
+<p>Requests from the browser that are not for static assets (this is specified
+in the web server's configuration which requests are for static assets and
+which are not) are passed to the WSGI server. Once the request is
+processed and generated by the WSGI server, the response is passed
+back through the web server and onto the browser.</p>
+<div class="section" id="wsgi-resources">
+<h2>WSGI Resources</h2>
+<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333 WSGI v1.0</a>
+and
+<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333 WSGI v1.0.1</a>
+specifications.</p>
+<p><a class="reference external" href="http://gunicorn.org/">Green Unicorn</a>,
+<a class="reference external" href="http://code.google.com/p/modwsgi/">mod_wsgi</a>,
+<a class="reference external" href="https://github.com/unbit/uwsgi-docs">uWSGI</a>, and
+<a class="reference external" href="http://www.gevent.org/">gevent</a> are common WSGI server implementations.</p>
+<p>This <a class="reference external" href="http://agiliq.com/blog/2013/07/basics-wsgi/">Basics of WSGI</a> post
+contains a simple example of how a WSGI-compatible application works.</p>
+<p><a class="reference external" href="http://www.apreche.net/complete-single-server-django-stack-tutorial/">Complete single server Django stack tutorial</a> is thorough and informative for
+non-paas hosting choices.</p>
 </div>
 
-                                                                                                                                      <br/>
+                                                                                                                                                                                  <br/>
             Next read about 
-            <a href="/database.html">database</a>.
+            <a href="/web-frameworks.html">web frameworks</a>.
                 
-                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                            </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
           <a href="/servers.html" class="list-group-item ">Servers</a>
           <a href="/operating-systems.html" class="list-group-item ">Operating Systems</a>
-          <a href="/web-server.html" class="list-group-item active">Web Server</a>
-          <a href="/database.html" class="list-group-item ">Database</a>
-          <a href="/wsgi-server.html" class="list-group-item ">WSGI Server</a>
-          <a href="/web-framework.html" class="list-group-item ">Web Framework</a>
+          <a href="/web-servers.html" class="list-group-item ">Web Servers</a>
+          <a href="/databases.html" class="list-group-item ">Databases</a>
+          <a href="/wsgi-servers.html" class="list-group-item active">WSGI Servers</a>
+          <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
           <a href="/static-content.html" class="list-group-item ">Static Content</a>
           <a href="/website-security.html" class="list-group-item ">Website Security</a>
           <a href="/caching.html" class="list-group-item ">Caching</a>

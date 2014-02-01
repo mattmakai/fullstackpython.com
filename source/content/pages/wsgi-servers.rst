@@ -1,8 +1,8 @@
-WSGI Server
-===========
+WSGI Servers
+============
 
 :category: page
-:slug: wsgi-server
+:slug: wsgi-servers
 :sort-order: 06
 
 A `Web Server Gateway Interface <http://wsgi.readthedocs.org/en/latest/>`_ 
