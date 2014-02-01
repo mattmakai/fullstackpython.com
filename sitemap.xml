@@ -3,75 +3,75 @@
 
 
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/about-author.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/change-log.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/configuration-management.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/databases.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/dependency-management.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/introduction.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/monitoring.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/no-sql-datastore.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/operating-systems.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/servers.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/source-control.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/static-content.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/web-analytics.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/web-servers.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/website-security.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/{ page.slug }}.html</loc>
+    <loc>http://www.fullstackpython.com/wsgi-servers.html</loc>
     <priority>1.0</priority>
   </url>
 
