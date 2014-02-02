@@ -6,7 +6,7 @@ Operating Systems
 :sort-order: 03
 
 The operating system runs on the server or virtual server and controls access 
-to computing resources. The only recommeneded operating system for 
+to computing resources. The only recommended operating system for 
 production Python web stack deployments is Linux. There are several 
 Linux distributions commonly used for running production servers. Ubuntu 
 Long Term Support (LTS) releases, Red Hat Enterprise Linux, and CentOS are 
