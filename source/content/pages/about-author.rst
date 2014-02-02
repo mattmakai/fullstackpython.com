@@ -3,7 +3,7 @@ About
 
 :category: page
 :slug: about-author
-:sort-order: 16
+:sort-order: 17
 
 This website was written and built by 
 `Matt Makai <http://www.mattmakai.com/>`_, currently a 

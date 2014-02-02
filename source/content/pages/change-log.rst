@@ -3,12 +3,13 @@ Change Log
 
 :category: page
 :slug: change-log
-:sort-order: 17
+:sort-order: 18
 
 2014
 ----
 Feb: Adding new Django resources, added sitemap.xml. Rewriting all sections
 to fix first draft typos and grammar mistakes as well as add new content.
+Added task queues section due to reader feedback.
 
 Jan: Adding configuration management, application dependencies, and source 
 control sections. Also updating about section. Updated design to be fully
