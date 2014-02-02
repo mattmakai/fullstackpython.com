@@ -59,7 +59,7 @@
         <bold>true</bold>
         <color>15658734</color>
         <size>28</size>
-        <text>%20%0A%20%0A%20%0A%20%0A%20%0AWeb%0Aserver</text>
+        <text>%20%0A%20%0A%20%0A%20%0A%20%0AWSGI%0Aserver</text>
       </controlProperties>
     </control>
     <control controlID="13" controlTypeID="com.balsamiq.mockups::Arrow" x="321" y="177" w="157" h="10" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">

@@ -73,38 +73,13 @@
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Static Content</h1>
-      <p>Some content on a website does not change and therefore should be served
-up either directly through the web server or a content delivery network (CDN).
-Examples include JavaScript, image, and CSS files.</p>
-<p>A CDN is a third party that serves your static files.
-<a class="reference external" href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
-<a class="reference external" href="http://www.akamai.com/">Akamai</a>, and
-<a class="reference external" href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a>
-are examples of CDNs. The purpose of a CDN is to remove the load of static
-file requests from web servers that are handling dynamic web content. For
-example, if you have an nginx server that handles both static files and
-acts as a front for a Green Unicorn WSGI server on a 512 megabyte
-virtual private server, the nginx server will run into resource
-constraints under heavy traffic. A CDN can remove the need to serve static
-assets from that nginx server so it can purely act as a pass through for
-requests to the Green Unicorn WSGI server.</p>
-<p>CDNs distribute request load globally by using data centers in different
-locations.</p>
-<div class="section" id="static-content-resources">
-<h2>Static Content Resources</h2>
-<p><a class="reference external" href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
-<p><a class="reference external" href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx">CDNs fail, but your scripts don't have to</a></p>
-<p><a class="reference external" href="http://django-storages.readthedocs.org/en/latest/">django-storages</a> is
-a Django library for managing static and media files on services such as
-Amazon S3 and other content delivery networks.</p>
-</div>
-
-                                                                                                                                                                                                                              <br/>
+      <h1>Task Queues</h1>
+      
+                                                                                                                                                                                                                                                                                                                                                                                                                                    <br/>
             Next read the 
-            <a href="/website-security.html">website security</a> section.
+            <a href="/about-author.html">about</a> section.
                 
-                                                                                                                                                                                                                                                      </div>
+                                                </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -114,7 +89,7 @@ Amazon S3 and other content delivery networks.</p>
           <a href="/databases.html" class="list-group-item ">Databases</a>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
-          <a href="/static-content.html" class="list-group-item active">Static Content</a>
+          <a href="/static-content.html" class="list-group-item ">Static Content</a>
           <a href="/website-security.html" class="list-group-item ">Website Security</a>
           <a href="/caching.html" class="list-group-item ">Caching</a>
           <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
@@ -123,7 +98,7 @@ Amazon S3 and other content delivery networks.</p>
           <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
           <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
+          <a href="/task-queues.html" class="list-group-item active">Task Queues</a>
           <a href="/about-author.html" class="list-group-item ">About</a>
           <a href="/change-log.html" class="list-group-item ">Change Log</a>
       </div>
