@@ -60,5 +60,8 @@ NoSQL data stores resources
 newsletter that aggregates articles, tutorials, and videos about 
 non-relational data stores.
 
+`NoSQL comparison <http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis>`_ 
+is a large list of popular, BigTable-based, special purpose, and other
+datastores with attributes and the best use cases for each one.
 
 
