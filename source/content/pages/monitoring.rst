@@ -53,7 +53,10 @@ listens for metrics and aggregates them for transfer into another service
 such as Graphite.
 
 `Graphite <https://graphite.readthedocs.org/en/latest/overview.html>`_ stores
-time-series data and displays them in graphs through a web application.
+time-series data and displays them in graphs through a Django web application.
+
+`Sensu <http://sensuapp.org/>`_ is an open source monitoring framework
+written in Ruby but applicable to any programming language web application.
 
 
 Monitoring Resources
@@ -62,3 +65,9 @@ Monitoring Resources
 
 `Effortless Monitoring with collectd, Graphite, and Docker <http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/>`_
 
+Bit.ly describes the "`10 Things We Forgot to Monitor <http://word.bitly.com/post/74839060954/ten-things-to-monitor>`_"
+beyond the standard metrics such as disk & memory usage.
+
+`Four Linux server monitoring tools <http://aarvik.dk/four-linux-server-monitoring-and-management-tools/>`_
+
+`How to design useful monitoring and graphing visualizations <https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/>`_
