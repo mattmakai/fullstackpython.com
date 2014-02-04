@@ -58,6 +58,9 @@ time-series data and displays them in graphs through a Django web application.
 `Sensu <http://sensuapp.org/>`_ is an open source monitoring framework
 written in Ruby but applicable to any programming language web application.
 
+`Graph Explorer <http://vimeo.github.io/graph-explorer/>`_ by Vimeo is a
+Graphite-based dashboard with added features and a slick design.
+
 
 Monitoring Resources
 --------------------
