@@ -25,8 +25,8 @@ Source Control Third Party Services
 control platform for using Git.
 
 `BitBucket <https://bitbucket.org/>`_ provides free Git and Mercurial 
-repositories for open projects and paid services for hosting private 
-repositories.
+repositories for open projects and private repositories for up to five
+users. Users pay for hosting private repositories with more than five users.
 
 
 Source Control Resources
