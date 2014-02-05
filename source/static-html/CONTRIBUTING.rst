@@ -4,10 +4,6 @@ Contributing
 
 Contributions are welcome and greatly appreciated! 
 
-You can contribute in many ways:
-
-Types of Contributions
-----------------------
 
 Fix Typos, Grammar Errors, etc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
