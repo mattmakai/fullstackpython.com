@@ -20,7 +20,7 @@ Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at 
-https://github.com/makaimc/underwear/issues.
+https://github.com/makaimc/fullstackpython.github.com/issues.
 
 
 Get Started!
