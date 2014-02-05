@@ -44,7 +44,7 @@ development.
     $ source venvs/fsp/bin/activate
     $ cd fsp
 
-Note: make changes to the content/pages/\*.rst files then perform a 
+Note: make changes to the source/content/pages/\*.rst files then execute a
 *make run* command from the source/ directory.
 
 6. Commit your changes and push your branch to GitHub::
