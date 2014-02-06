@@ -10,7 +10,7 @@ programming language. The syntax is starting to make sense. The first
 few "AHA!" moments are hitting you as you're building applications with
 a web framework. 
 
-Now you want to know how to take your web application code and put it
+Now you want to know how to take your web application code and make it
 live on the Web. That's where this guide comes in. If you want to gain
 an understanding of everything you need to deploy and run a production Python
 web application, you've come to the right place. 
