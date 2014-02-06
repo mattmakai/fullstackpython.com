@@ -74,4 +74,6 @@ database management systems.
 `PostgreSQL Weekly <http://postgresweekly.com/>`_ is a weekly newsletter of
 PostgreSQL content from around the web.
 
+`DB Weekly <http://dbweekly.com/>`_ is a new (as of Feb 2014) weekly roundup 
+of general database articles and resources.
 
