@@ -61,6 +61,10 @@ provides pre-configured MySQL and PostgreSQL instances. The instances can
 be scaled to larger or smaller configurations based on storage and performance
 needs.
 
+`Google Cloud SQL <https://developers.google.com/cloud-sql/>`_ is a service
+with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
+SQL integrates with Google App Engine but can be used independently as well.
+
 
 Database resources
 ------------------
