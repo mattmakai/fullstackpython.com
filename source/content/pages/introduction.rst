@@ -6,9 +6,9 @@ Introduction
 :sort-order: 01
 
 You're knee deep in learning the `Python <http://www.python.org/>`_
-programming language. The syntax is beginning to make sense. The first
-few "AHA!" moments are hitting you. You've picked up the basic concepts of
-a Python web framework. 
+programming language. The syntax is starting to make sense. The first
+few "AHA!" moments are hitting you as you're building applications with
+a web framework. 
 
 Now you want to know how to take your web application code and put it
 live on the Web. That's where this guide comes in. If you want to gain
