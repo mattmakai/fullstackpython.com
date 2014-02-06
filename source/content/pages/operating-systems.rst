@@ -5,7 +5,7 @@ Operating Systems
 :slug: operating-systems
 :sort-order: 03
 
-The operating system runs on the server or virtual server and controls access 
+An operating system runs on the server or virtual server and controls access 
 to computing resources. The only recommended operating system for 
 production Python web stack deployments is Linux. There are several 
 Linux distributions commonly used for running production servers. Ubuntu 
@@ -29,7 +29,25 @@ Ubuntu `Long Term Support (LTS) <https://wiki.ubuntu.com/LTS>`_ releases
 are the recommended versions to use for deployments. LTS versions receive
 five years of post-release updates from Canonical. Every two years, Canonical 
 creates a new LTS release, which allows for an easy upgrade path as well 
-as flexibility in skipping every other LTS release if necessary.
+as flexibility in skipping every other LTS release if necessary. As of
+February 2014, 
+`12.04 Precise Pangolin <http://releases.ubuntu.com/precise/>`_ 
+is the latest Ubuntu LTS release.
+
+
+Python Packages for Ubuntu
+--------------------------
+There are several 
+`Aptitude <https://help.ubuntu.com/12.04/serverguide/aptitude.html>`_ 
+packages found on Linux servers running a Python stack. These include
+
+* `python-dev <http://packages.ubuntu.com/precise/python-dev>`_ for header
+  files and static library for Python
+
+* `python-virtualenv <http://packages.ubuntu.com/precise/python-virtualenv>`_
+  for creating and managing Python virtual environments 
+  (`virtualenvs <http://www.virtualenv.org/en/latest/>`_)
+
 
 
 Red Hat and CentOS
