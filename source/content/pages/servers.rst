@@ -1,3 +1,4 @@
+=======
 Servers
 =======
 
@@ -16,6 +17,7 @@ web application:
 
 4. Platform-as-a-service
 
+----------
 Bare metal
 ----------
 The term *bare metal* refers to purchasing the actual hardware and hooking 
@@ -44,6 +46,7 @@ smaller case form factors (called "blades") but are correspondingly more
 expensive than putting off-the-shelf components together yourself.
 
 
+-------------------
 Virtualized servers
 -------------------
 Virtual private servers (VPSs) are slices of hardware on top of a larger
@@ -67,11 +70,12 @@ require for ongoing maintenance such as persistent storage backups.
 
 
 Virtualized servers resources
------------------------------
+=============================
 `Choosing a low cost VPS <http://blog.redfern.me/choosing-a-low-cost-vps/>`_ 
 
 
 
+---------------------------
 Infrastructure-as-a-service
 ---------------------------
 Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
@@ -103,7 +107,7 @@ IaaS platform.
 
 
 Infrastructure-as-a-service Resources
--------------------------------------
+=====================================
 `Amazon Web Services official documentation for Python <http://aws.amazon.com/python/>`_ 
 
 `boto <https://github.com/boto/boto>`_ is an amazing Python library for
@@ -112,6 +116,7 @@ working with Amazon Web Services
 `Rackspace official documentation for Python <http://docs.rackspace.com/sdks/guide/content/python.html>`_
 
 
+---------------------
 Platform-as-a-service
 ---------------------
 A platform-as-a-service (PaaS) provides infrastructure and a software layer
@@ -141,8 +146,16 @@ server sections because they are baked into PaaS offerings. PaaS offerings
 generally start at the WSGI server layer.
 
 Platform-as-a-service resources
--------------------------------
-`Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_
-(Randall Degges)
+===============================
+DevOps Django and Heroku Series by `Randall Degges <https://twitter.com/rdegges>`_:
 
+* `Part One: Goals <http://www.rdegges.com/devops-django-part-1-goals/>`_
+
+* `Part Two: The Pain of Deployment <http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/>`_
+
+* `Part Three: The Heroku Way <http://www.rdegges.com/devops-django-part-3-the-heroku-way/>`_
+
+* `Part Four: Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_
+
+`PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment <http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/>`_ by `Nate Aune <https://twitter.com/natea>`_
 
