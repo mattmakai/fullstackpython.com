@@ -108,6 +108,9 @@ IaaS platform.
 
 Infrastructure-as-a-service Resources
 =====================================
+`Apache Libcloud <http://libcloud.apache.org/>`_ is a Python library that
+provides a unified API for many cloud service providers
+
 `Amazon Web Services official documentation for Python <http://aws.amazon.com/python/>`_ 
 
 `boto <https://github.com/boto/boto>`_ is an amazing Python library for
