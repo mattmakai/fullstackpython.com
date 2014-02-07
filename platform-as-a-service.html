@@ -73,51 +73,53 @@
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Configuration Management</h1>
-      <p>Configuration management involves modifying servers from an existing state to
-a desired state. Numerous tools exist to modify the state in a controlled
-way, including <a class="reference external" href="http://puppetlabs.com/puppet/what-is-puppet">Puppet</a>,
-<a class="reference external" href="http://www.getchef.com/chef/">Chef</a>,
-<a class="reference external" href="http://www.saltstack.com/">SaltStack</a>, and Ansible. Puppet and Chef are
-written in Ruby, while SaltStack and Ansible are written in Python.</p>
-<div class="section" id="ansible">
-<h2>Ansible</h2>
-<p><a class="reference external" href="http://www.ansibleworks.com/">Ansible</a> is an open source configuration
-management and application deployment tool built in Python.</p>
-<div class="section" id="ansible-resources">
-<h3>Ansible Resources</h3>
-<p><a class="reference external" href="http://docs.ansible.com/index.html">Official Ansible documentation</a></p>
-<p><a class="reference external" href="http://www.insom.me.uk/post/pycon-talk.html">Python for Configuration Management with Ansible slides</a>
-from PyCon UK 2013</p>
-<p><a class="reference external" href="http://devopsu.com/newsletters/ansible-weekly-newsletter.html">Ansible Weekly Newsletter</a></p>
-<p><a class="reference external" href="http://labs.qandidate.com/blog/2013/11/15/first-steps-with-ansible/">First Steps with Ansible</a></p>
-<p><a class="reference external" href="http://red-badger.com/blog/2013/06/29/ansible/">Red Badger on Ansible</a></p>
-<p><a class="reference external" href="http://lowendbox.com/blog/getting-started-with-ansible/">Getting Started with Ansible</a></p>
-<p><a class="reference external" href="http://softwareas.com/ansible-and-linode-what-i-learned-about-controlling-linodes-from-ansible">Ansible and Linode</a></p>
-<p><a class="reference external" href="http://jlafon.io/ansible-duo-security.html">Multi-factor SSH authentication with Ansible and Duo Security</a></p>
-<p><a class="reference external" href="http://devopsu.com/blog/ansible-vs-shell-scripts/">Ansible vs. Shell Scripts</a></p>
-<p><a class="reference external" href="http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/">Ansible and Salt: A Detailed Comparison</a></p>
-<p><a class="reference external" href="http://www.nickhammond.com/automating-development-environment-ansible/">Automating your development environment with Ansible</a></p>
-<p><a class="reference external" href="http://devopsu.com/guides/ansible-post-install.html">Post-install steps with Ansible</a></p>
-<p><a class="reference external" href="http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible">First Five (and a half) Minutes on a Server with Ansible</a></p>
-<p><a class="reference external" href="http://davidwinter.me/articles/2013/11/23/introduction-to-ansible/">(Detailed) Introduction to Ansible</a></p>
-<p><a class="reference external" href="http://blog.couchbase.com/create-couchbase-cluster-with-ansible">Create a Couchbase Cluster with Ansible</a></p>
-<p><a class="reference external" href="https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ&quot;">Idempotence, convergence, and other silly fancy words we often use</a></p>
-</div>
+      <h1>Platform-as-a-service</h1>
+      <p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
+on which a web application is deployed. Running your web application from
+a PaaS removes the need to know as much about the underlying servers,
+operating system, web server, and often the WSGI server.</p>
+<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move
+ahead to the <a class="reference external" href="../wsgi-servers.html">WSGI servers</a> section.</p>
+<p>The PaaS layer defines how the
+application accesses resources such as computing time, files, and
+external services. The PaaS provides a higher-level abstraction for working
+with computing resources than deploying an application to a server or IaaS.</p>
+<p>A PaaS makes deployment and operations easier because it forces the developer
+to conform applications to the PaaS architecture.</p>
+<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
+<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
+<a class="reference external" href="https://gondor.io/">Gondor</a>, and
+<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
+platform-as-services that support Python web applications. Each one requires
+varying tradeoffs to deploy to their respective platforms.</p>
+<img alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" src="theme/img/servers-versus-paas.png" />
+<p>If you go the PaaS route, you can skip over the operating system and web
+server sections because they are baked into PaaS offerings. PaaS offerings
+generally start at the WSGI server layer.</p>
+<div class="section" id="platform-as-a-service-resources">
+<h2>Platform-as-a-service resources</h2>
+<p>DevOps Django and Heroku Series by <a class="reference external" href="https://twitter.com/rdegges">Randall Degges</a>:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
+<li><a class="reference external" href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
+<li><a class="reference external" href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
+<li><a class="reference external" href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
+</ul>
+<p><a class="reference external" href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a class="reference external" href="https://twitter.com/natea">Nate Aune</a></p>
 </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          <br/>
+                                                                                                                                                            <br/>
             Next read the 
-            <a href="/dependency-management.html">application dependencies</a> section.
+            <a href="/databases.html">databases</a> section.
                 
-                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                          </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
           <a href="/servers.html" class="list-group-item ">Servers</a>
           <a href="/operating-systems.html" class="list-group-item ">Operating Systems</a>
           <a href="/web-servers.html" class="list-group-item ">Web Servers</a>
-          <a href="/platform-as-a-service.html" class="list-group-item ">Platform-as-a-service</a>
+          <a href="/platform-as-a-service.html" class="list-group-item active">Platform-as-a-service</a>
           <a href="/databases.html" class="list-group-item ">Databases</a>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
@@ -130,7 +132,7 @@ from PyCon UK 2013</p>
           <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
           <a href="/third-party-services.html" class="list-group-item ">Third Party Services</a>
           <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/configuration-management.html" class="list-group-item active">Configuration Management</a>
+          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
           <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
           <a href="/about-author.html" class="list-group-item ">About</a>

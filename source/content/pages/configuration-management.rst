@@ -1,9 +1,10 @@
+========================
 Configuration Management
 ========================
 
 :category: page
 :slug: configuration-management
-:sort-order: 13
+:sort-order: 18
 
 Configuration management involves modifying servers from an existing state to 
 a desired state. Numerous tools exist to modify the state in a controlled 
@@ -13,6 +14,7 @@ way, including `Puppet <http://puppetlabs.com/puppet/what-is-puppet>`_,
 written in Ruby, while SaltStack and Ansible are written in Python.
 
 
+-------
 Ansible
 -------
 `Ansible <http://www.ansibleworks.com/>`_ is an open source configuration
@@ -20,7 +22,7 @@ management and application deployment tool built in Python.
 
 
 Ansible Resources
------------------
+=================
 `Official Ansible documentation <http://docs.ansible.com/index.html>`_
 
 `Python for Configuration Management with Ansible slides <http://www.insom.me.uk/post/pycon-talk.html>`_ 

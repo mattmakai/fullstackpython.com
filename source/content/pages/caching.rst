@@ -1,9 +1,10 @@
+=======
 Caching
 =======
 
 :category: page
 :slug: caching
-:sort-order: 09
+:sort-order: 11
 
 Caching can reduce load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. 

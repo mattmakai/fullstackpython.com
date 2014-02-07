@@ -1,9 +1,10 @@
+=====
 About
 =====
 
 :category: page
 :slug: about-author
-:sort-order: 17
+:sort-order: 21
 
 This website was written and built by 
 `Matt Makai <http://www.mattmakai.com/>`_, currently a 

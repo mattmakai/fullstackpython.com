@@ -1,9 +1,10 @@
+==============
 Static Content
 ==============
 
 :category: page
 :slug: static-content
-:sort-order: 08
+:sort-order: 10
 
 Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).

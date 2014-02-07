@@ -1,9 +1,10 @@
+=========
 Databases
 =========
 
 :category: page
 :slug: databases
-:sort-order: 05
+:sort-order: 06
 
 A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. The 

@@ -1,9 +1,10 @@
+===========
 Task Queues
 ===========
 
 :category: page
 :slug: task-queues
-:sort-order: 15
+:sort-order: 09
 
 Task queues handle asynchronous jobs that need to be processed outside the
 usual HTTP request-response cycle. The most common types of jobs for task 

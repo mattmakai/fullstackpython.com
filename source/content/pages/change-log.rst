@@ -1,9 +1,10 @@
+==========
 Change Log
 ==========
 
 :category: page
 :slug: change-log
-:sort-order: 18
+:sort-order: 22
 
 2014
 ----
@@ -11,7 +12,9 @@ Feb: Adding new Django resources, added sitemap.xml. Rewriting all sections
 to fix first draft typos and grammar mistakes as well as add new content.
 Added task queues section due to reader feedback. Rewrote intro section.
 Merged several pull requests (see closed 
-`GitHub repo pull requests <https://github.com/makaimc/fullstackpython.github.com/pulls>`_). New resources for platform-as-a-service section.
+`GitHub repo pull requests <https://github.com/makaimc/fullstackpython.github.com/pulls>`_). New resources for platform-as-a-service section. Adding new
+sections specified by the community as missing. Reorganized ordering of 
+content.
 
 Jan: Adding configuration management, application dependencies, and source 
 control sections. Also updating about section. Updated design to be fully

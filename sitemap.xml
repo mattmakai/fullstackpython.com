@@ -43,6 +43,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/platform-as-a-service.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/servers.html</loc>
     <priority>1.0</priority>
   </url>
@@ -59,7 +63,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/third-party-services.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/web-analytics.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/web-application-security.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/web-browsers.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -68,10 +84,6 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/web-servers.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/website-security.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

@@ -1,9 +1,10 @@
+==============
 Web Frameworks
 ==============
 
 :category: page
 :slug: web-frameworks
-:sort-order: 07
+:sort-order: 08
 
 A web application framework is a collection of libraries that 
 provide functionality to accomplish common operations for the web. These
@@ -28,8 +29,8 @@ Other web frameworks such as Flask and Pyramid are generally easier to
 use with non-relational databases by incorporating external Python libraries.
 
 
-Web Framework Monitoring
-------------------------
+Web Framework Logging
+---------------------
 Logging is a common mechanism for monitoring web applications written with a
 web framework. Runtime exceptions that prevent code from running are 
 important to log to investigate and fix the source of the problems. 

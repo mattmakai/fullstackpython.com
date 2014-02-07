@@ -1,9 +1,10 @@
+=================
 NoSQL Data Stores
 =================
 
 :category: page
 :slug: no-sql-datastore
-:sort-order: 16
+:sort-order: 20
 
 
 Relational databases store the vast majority of web application 
@@ -18,18 +19,21 @@ storage representations.
 These persistent data storage representations are commonly used to augment,
 rather than completely replace, relational databases.
 
+-----------------
 Document-Oriented
 -----------------
 A document-oriented database provides a semi-structured representation for
 nested data. 
 
 
+--------------
 Key-Value Pair
 --------------
 Key-value pair data stores are based
 on `hash map <http://en.wikipedia.org/wiki/Hash_table>`_ data structures.
 
 
+-----
 Graph
 -----
 A graph database represent and store data in three aspects: nodes, edges,
@@ -49,13 +53,13 @@ databases and runs on the Java Virtual Machine stack.
 
 
 NoSQL third-party services
---------------------------
+==========================
 `MongoHQ <http://www.mongohq.com/home>`_ provides MongoDB as a service. It's
 easy to set up with either a standard LAMP stack or on Heroku.
 
 
 NoSQL data stores resources
----------------------------
+===========================
 `NoSQL Weekly <http://www.nosqlweekly.com/>`_ is a free curated email 
 newsletter that aggregates articles, tutorials, and videos about 
 non-relational data stores.
