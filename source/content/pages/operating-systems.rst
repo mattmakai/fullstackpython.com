@@ -1,3 +1,4 @@
+=================
 Operating Systems
 =================
 
@@ -16,6 +17,7 @@ all viable options.
 OS X are not appropriate for most test and production deployments unless
 there is a specific reason why you must use them in lieu of Linux.
 
+------
 Ubuntu
 ------
 Ubuntu is a Linux distribution packaged by the 
@@ -35,8 +37,8 @@ February 2014,
 is the latest Ubuntu LTS release.
 
 
-Python Packages for Ubuntu
---------------------------
+Ubuntu Python Packages
+======================
 There are several 
 `Aptitude <https://help.ubuntu.com/12.04/serverguide/aptitude.html>`_ 
 packages found on Linux servers running a Python stack. These include
@@ -50,6 +52,7 @@ packages found on Linux servers running a Python stack. These include
 
 
 
+------------------
 Red Hat and CentOS
 ------------------
 `Red Hat Enterprise Linux <http://www.redhat.com/products/enterprise-linux/>`_ 
@@ -65,6 +68,7 @@ to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.
 
 
+--------------------------
 Operating System Resources
 --------------------------
 `Choosing a Linux Distribution <http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution>`_
