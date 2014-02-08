@@ -28,3 +28,5 @@ Security Resources
 `Securing Your Website <http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/>`_
 
 `How HTTPS Secures Connections: What Every Web Dev Should Know <http://blog.hartleybrody.com/https-certificates/>`_
+
+Open Web Application Security Project `(OWASP) Cheat Sheets for Security <https://www.owasp.org/index.php/Cheat_Sheets>`_

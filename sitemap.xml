@@ -7,6 +7,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/api-integration.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>
@@ -60,10 +64,6 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/task-queues.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/third-party-services.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
