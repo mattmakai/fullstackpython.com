@@ -23,7 +23,7 @@ useful for web application data storage.
 
 `PostgreSQL <http://www.postgresql.org/>`_ and 
 `MySQL <http://www.mysql.com/>`_ are two of the most common open source
-databases.
+databases for storing Python web application data.
 
 `SQLite <http://www.sqlite.org/>`_ is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
@@ -78,3 +78,5 @@ PostgreSQL content from around the web.
 `DB Weekly <http://dbweekly.com/>`_ is a new (as of Feb 2014) weekly roundup 
 of general database articles and resources.
 
+`Total security in a PostgreSQL database <http://www.ibm.com/developerworks/library/os-postgresecurity/>`_. 
+There is no such thing as total security but this is a good article anyway.
