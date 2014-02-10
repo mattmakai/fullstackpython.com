@@ -93,8 +93,30 @@ databases for storing Python web application data.</p>
 file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time. Therefore is highly recommended to not
 <a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors">run a production web application with SQLite</a>.</p>
-<div class="section" id="database-connections-with-python">
-<h2>Database connections with Python</h2>
+<div class="section" id="id1">
+<h2>PostgreSQL</h2>
+<p>PostgreSQL is the recommended relational database for working with Python
+web applications. PostgreSQL's feature set, active development and stability
+contribute to its usage as the backend for millions of applications live
+on the Web today.</p>
+<div class="section" id="postgresql-resources">
+<h3>PostgreSQL resources</h3>
+<p>This post on &quot;<a class="reference external" href="http://killtheyak.com/use-postgresql-with-django-flask/">Use PostgreSQL with Django or Flask</a>&quot;
+is a great quickstart guide for either framework.</p>
+<p><a class="reference external" href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
+PostgreSQL content from around the web.</p>
+<p><a class="reference external" href="https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution">Scaling PostgreSQL at Braintree</a>. Fascinating
+inside look at the evolution of the database's usage at Braintree.</p>
+<p><a class="reference external" href="http://www.ibm.com/developerworks/library/os-postgresecurity/">Total security in a PostgreSQL database</a>.
+There is no such thing as total security but this is a good article anyway.</p>
+<p><a class="reference external" href="http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/">Understanding PostgreSQL performance</a></p>
+<p><a class="reference external" href="http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram">Handling growth with Postgres</a>
+provides 5 specific tips from Instagram's engineering team on how to scale
+the design of your PostgreSQL database.</p>
+</div>
+</div>
+<div class="section" id="connecting-to-a-database-with-python">
+<h2>Connecting to a database with Python</h2>
 <p>To work with a relational database using Python, you need to use a code
 library. The most common libraries for relational databases are:</p>
 <p><a class="reference external" href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
@@ -121,17 +143,13 @@ needs.</p>
 <p><a class="reference external" href="https://developers.google.com/cloud-sql/">Google Cloud SQL</a> is a service
 with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
 SQL integrates with Google App Engine but can be used independently as well.</p>
-</div>
 <div class="section" id="database-resources">
-<h2>Database resources</h2>
+<h3>Database resources</h3>
 <p><a class="reference external" href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular
 database management systems.</p>
-<p><a class="reference external" href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
-PostgreSQL content from around the web.</p>
 <p><a class="reference external" href="http://dbweekly.com/">DB Weekly</a> is a new (as of Feb 2014) weekly roundup
 of general database articles and resources.</p>
-<p><a class="reference external" href="http://www.ibm.com/developerworks/library/os-postgresecurity/">Total security in a PostgreSQL database</a>.
-There is no such thing as total security but this is a good article anyway.</p>
+</div>
 </div>
 
                                                                                                                                                                                   <br/>

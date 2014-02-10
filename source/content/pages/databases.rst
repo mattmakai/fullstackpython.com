@@ -30,9 +30,38 @@ file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time. Therefore is highly recommended to not
 `run a production web application with SQLite <https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors>`_.
 
+----------
+PostgreSQL
+----------
+PostgreSQL is the recommended relational database for working with Python
+web applications. PostgreSQL's feature set, active development and stability
+contribute to its usage as the backend for millions of applications live
+on the Web today.
 
-Database connections with Python
---------------------------------
+PostgreSQL resources
+====================
+This post on "`Use PostgreSQL with Django or Flask <http://killtheyak.com/use-postgresql-with-django-flask/>`_" 
+is a great quickstart guide for either framework.
+
+`PostgreSQL Weekly <http://postgresweekly.com/>`_ is a weekly newsletter of
+PostgreSQL content from around the web.
+
+`Scaling PostgreSQL at Braintree <https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution>`_. Fascinating
+inside look at the evolution of the database's usage at Braintree.
+
+`Total security in a PostgreSQL database <http://www.ibm.com/developerworks/library/os-postgresecurity/>`_. 
+There is no such thing as total security but this is a good article anyway.
+
+`Understanding PostgreSQL performance <http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/>`_
+
+`Handling growth with Postgres <http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram>`_ 
+provides 5 specific tips from Instagram's engineering team on how to scale
+the design of your PostgreSQL database.
+
+
+------------------------------------
+Connecting to a database with Python
+------------------------------------
 To work with a relational database using Python, you need to use a code 
 library. The most common libraries for relational databases are:
 
@@ -47,6 +76,7 @@ is not necessary. Simply "import sqlite3" to begin interfacing with the
 single file-based database.
 
 
+-----------------------------
 Database third-party services
 -----------------------------
 Numerous companies run scalable database servers as a hosted service. 
@@ -68,15 +98,10 @@ SQL integrates with Google App Engine but can be used independently as well.
 
 
 Database resources
-------------------
+==================
 `DB-Engines <http://db-engines.com/en/ranking>`_ ranks the most popular
 database management systems.
-
-`PostgreSQL Weekly <http://postgresweekly.com/>`_ is a weekly newsletter of
-PostgreSQL content from around the web.
 
 `DB Weekly <http://dbweekly.com/>`_ is a new (as of Feb 2014) weekly roundup 
 of general database articles and resources.
 
-`Total security in a PostgreSQL database <http://www.ibm.com/developerworks/library/os-postgresecurity/>`_. 
-There is no such thing as total security but this is a good article anyway.
