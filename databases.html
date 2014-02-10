@@ -126,6 +126,19 @@ library. The most common libraries for relational databases are:</p>
 is not necessary. Simply &quot;import sqlite3&quot; to begin interfacing with the
 single file-based database.</p>
 </div>
+<div class="section" id="object-relational-mapping">
+<h2>Object-Relational Mapping</h2>
+<p>Object-relational mappers (ORMs) allow developers to access data from a
+backend by writing with Python code instead of SQL queries. Each web
+application framework handles integrating ORMs differently.</p>
+<p>Django provides an ORM with its core functionality. Flask leaves using an
+ORM up to an extension, such as
+<a class="reference external" href="http://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLALchemy</a>.</p>
+<p>Developers can also use ORMs without a web framework, such as when
+creating a data analysis tool or a batch script without a user interface. The
+most widely used stand-alone ORM written for Python is currently
+<a class="reference external" href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+</div>
 <div class="section" id="database-third-party-services">
 <h2>Database third-party services</h2>
 <p>Numerous companies run scalable database servers as a hosted service.

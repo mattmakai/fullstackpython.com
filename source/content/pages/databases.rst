@@ -76,6 +76,23 @@ is not necessary. Simply "import sqlite3" to begin interfacing with the
 single file-based database.
 
 
+-------------------------
+Object-Relational Mapping
+-------------------------
+Object-relational mappers (ORMs) allow developers to access data from a 
+backend by writing with Python code instead of SQL queries. Each web 
+application framework handles integrating ORMs differently. 
+
+Django provides an ORM with its core functionality. Flask leaves using an 
+ORM up to an extension, such as 
+`Flask-SQLALchemy <http://pythonhosted.org/Flask-SQLAlchemy/>`_. 
+
+Developers can also use ORMs without a web framework, such as when
+creating a data analysis tool or a batch script without a user interface. The 
+most widely used stand-alone ORM written for Python is currently
+`SQLAlchemy <http://www.sqlalchemy.org/>`_.
+
+
 -----------------------------
 Database third-party services
 -----------------------------
@@ -96,16 +113,6 @@ needs.
 with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
 SQL integrates with Google App Engine but can be used independently as well.
 
-Object-Relational Mapping
---------------------------
-
-Often you might want to simplify accessing your data, and prefer a simple, 
-object oriented way to manipulate your data, instead of raw SQL queries.
-
-This is solved by Object Relational Mapping (ORM) applications. Sometimes these
-are integrated with your framework of choice, but you might use them without
-general frameworks too. Probably, the most widely used stand-alone ORM written
-for Python is `SQLAlchemy <http://www.sqlalchemy.org/>`_.
 
 Database resources
 ==================
