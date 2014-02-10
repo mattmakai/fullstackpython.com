@@ -79,7 +79,7 @@ single file-based database.
 -------------------------
 Object-Relational Mapping
 -------------------------
-Object-Relational mappers (ORMs) allow developers to access data from a 
+Object-relational mappers (ORMs) allow developers to access data from a 
 backend by writing Python code instead of SQL queries. Each web 
 application framework handles integrating ORMs differently. 
 
