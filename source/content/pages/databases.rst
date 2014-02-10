@@ -96,6 +96,16 @@ needs.
 with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
 SQL integrates with Google App Engine but can be used independently as well.
 
+Object-Relational Mapping
+--------------------------
+
+Often you might want to simplify accessing your data, and prefer a simple, 
+object oriented way to manipulate your data, instead of raw SQL queries.
+
+This is solved by Object Relational Mapping (ORM) applications. Sometimes these
+are integrated with your framework of choice, but you might use them without
+general frameworks too. Probably, the most widely used stand-alone ORM written
+for Python is `SQLAlchemy <http://www.sqlalchemy.org/>`_.
 
 Database resources
 ==================
