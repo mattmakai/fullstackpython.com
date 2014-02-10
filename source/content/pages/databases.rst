@@ -88,8 +88,8 @@ ORM up to an extension, such as
 `Flask-SQLALchemy <http://pythonhosted.org/Flask-SQLAlchemy/>`_. 
 
 Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface. The 
-most widely used stand-alone ORM written for Python is currently
+creating a data analysis tool or a batch script without a user interface. 
+Currently, the most widely used stand-alone ORM written for Python is
 `SQLAlchemy <http://www.sqlalchemy.org/>`_.
 
 
