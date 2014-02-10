@@ -79,8 +79,8 @@ single file-based database.
 -------------------------
 Object-Relational Mapping
 -------------------------
-Object-relational mappers (ORMs) allow developers to access data from a 
-backend by writing with Python code instead of SQL queries. Each web 
+Object-Relational mappers (ORMs) allow developers to access data from a 
+backend by writing Python code instead of SQL queries. Each web 
 application framework handles integrating ORMs differently. 
 
 Django provides an ORM with its core functionality. Flask leaves using an 
