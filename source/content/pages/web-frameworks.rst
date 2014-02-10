@@ -64,10 +64,13 @@ Web Framework Resources
 `Pyramid <http://www.pylonsproject.org/>`_, and
 `web.py <http://webpy.org/>`_ are the most common Python web frameworks.
 
+
+`2 Scoops of Django <http://twoscoopspress.com/products/two-scoops-of-django-1-6>`_ 
+by Daniel Greenfield and Audrey Roy is well worth the price of admission if
+you're serious about learning how to correctly develop Django websites.
+
+
 `Effective Django <http://effectivedjango.com/>`_ and 
 `Tango with Django <http://www.tangowithdjango.com/book/>`_ are a great free
 introductions to using the most popular Python web framework.
 
-`2 Scoops of Django <http://twoscoopspress.org/products/two-scoops-of-django-1-5-e-book-bundle>`_ 
-by Daniel Greenfield and Audrey Roy is well worth the price of admission if
-you're serious about learning how to correctly develop Django websites.
