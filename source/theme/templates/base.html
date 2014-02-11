@@ -65,6 +65,7 @@
     </a>
     <div class="container">
         {% include "nav.html" %}
+
         {% block content %}{% endblock %}
         <hr/>
         <div class="footer pull-right">
@@ -74,5 +75,6 @@
 
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="theme/js/bootstrap.min.js"></script>
+    {% block js %}{% endblock %}
 </body>
 </html>
