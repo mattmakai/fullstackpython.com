@@ -23,7 +23,7 @@ increased complexity.
 For example, the Django web application framework includes an 
 Object-Relational Mapping (ORM) layer that abstracts relational database 
 read, write, query, and delete operations. However, Django's ORM
-does not work (without modification) on non-relational databases such 
+cannot work without significant modification on non-relational databases such 
 `MongoDB <http://www.mongodb.org/>`_ and `Riak <http://docs.basho.com/>`_.
 Other web frameworks such as Flask and Pyramid are generally easier to
 use with non-relational databases by incorporating external Python libraries.
