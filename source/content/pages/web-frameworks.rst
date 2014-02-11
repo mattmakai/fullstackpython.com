@@ -73,6 +73,80 @@ for the community.
 Steve Losh wrote an incredibly detailed `Django Advice guide <http://stevelosh.com/blog/2011/06/django-advice/>`_.
 
 
+-----
+Flask
+-----
+`Flask <http://flask.pocoo.org/>`_ is a Python microframework deliberately 
+built with a 
+`small core and easy extensibility philosophy <http://flask.pocoo.org/docs/design/>`_. 
+Flask is generally considered more 
+"`Pythonic <http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic>`_" than Django because Flask web application code is often more
+explicit. Flask was also written several years after Django and therefore
+learned from the Python community's reactions as the framework evolved.
+Jökull Sólberg wrote a great piece articulating to this effect in his 
+`experience switching between Flask and Django <http://jokull.calepin.co/my-flask-to-django-experience.html>`_.
+
+
+Flask resources
+===============
+The 18 post series Flask mega tutorial is an absolutely amazing starting 
+resource: 
+
+* `Part 1: Hello World <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world>`_
+
+* `Part 2: Templates <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates>`_
+
+* `Part 3: Web Forms <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms>`_
+
+* `Part 4: Database <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database>`_
+
+* `Part 5: User Logins <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins>`_
+
+* `Part 6: Profile Page and Avatars <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars>`_
+
+* `Part 7: Unit Testing <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing>`_
+
+* `Part 8: Followers, Contacts, and Friends <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends>`_
+
+* `Part 9: Pagination <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination>`_
+
+* `Part 10: Full Text Search <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search>`_
+
+* `Part 11: Email Support <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support>`_
+
+* `Part 12: Facelift <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift>`_
+
+* `Part 13: Dates and Times <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times>`_
+
+* `Part 14: I18n and L10n <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n>`_
+
+* `Part 15: Ajax <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax>`_
+
+* `Part 16: Debugging, Testing and Profiling <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling>`_
+
+* `Part 17: Deployment on Linux <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi>`_
+
+* `Part 18: Deployment on the Heroku Cloud <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud>`_
+
+Yeah, there are a lot of parts to the series. However, it helps to keep the 
+complexity contained to small pieces at a time. The whole series is well 
+worth an in-depth read-through.
+
+The `Flask Extensions Registry <http://flask.pocoo.org/extensions/>`_ is a
+curated list of the best packages that extend Flask. It's the first location
+to look through when you're wondering how to do something that's not in the
+core framework.
+
+Great post by Jeff Knupp on `Productionizing a Flask App <http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/>`_
+
+The Plank & Whittle blog has two posts, one on `Packaging a Flask web app <http://www.plankandwhittle.com/packaging-a-flask-web-app/>`_ 
+and another on `Packaging a Flask app in a Debian package <http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/>`_
+once you've built an app and want to deploy it.
+
+The tuts+ `Flask tutorial <http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822>`_ 
+is another great walkthrough for getting started with the framework.
+
+
 ---------------------
 Web Framework Logging
 ---------------------
@@ -103,10 +177,9 @@ mail plugin to send emails when exceptions occur.
 
 Web Framework Resources
 =======================
-`Flask <http://flask.pocoo.org/>`_,
 `Bottle <http://bottlepy.org/docs/dev/>`_,
-`Pyramid <http://www.pylonsproject.org/>`_, and
+`Pyramid <http://www.pylonsproject.org/>`_, 
+`Falcon <http://falconframework.org/>`_,
 `web.py <http://webpy.org/>`_ are the most common Python web frameworks other
-than Django.
-
+than Django and Flask.
 
