@@ -94,7 +94,43 @@ read, write, query, and delete operations. However, Django's ORM
 does not work (without modification) on non-relational databases such
 <a class="reference external" href="http://www.mongodb.org/">MongoDB</a> and <a class="reference external" href="http://docs.basho.com/">Riak</a>.
 Other web frameworks such as Flask and Pyramid are generally easier to
-use with non-relational databases by incorporating external Python libraries.</p>
+use with non-relational databases by incorporating external Python libraries.
+There is a spectrum between minimal functionality with easy extensibility and
+including everything in the framework with tight integration.</p>
+<div class="section" id="django">
+<h2>Django</h2>
+<p><a class="reference external" href="http://www.djangoproject.com/">Django</a> is a widely used Python web
+application framework with a &quot;batteries-included&quot; philosophy. The principle
+behind batteries-included is that the common functionality for building
+web applications should come with the framework instead of as a separate
+library. For example,
+<a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a
+<a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
+<a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
+and a <a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
+(as of version 1.7) are all included with the <a class="reference external" href="https://pypi.python.org/pypi/Django/1.6.2">Django library</a>.</p>
+<div class="section" id="django-resources">
+<h3>Django resources</h3>
+<p><a class="reference external" href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a>
+by Daniel Greenfield and Audrey Roy is well worth the price of admission if
+you're serious about learning how to correctly develop Django websites.</p>
+<p><a class="reference external" href="http://effectivedjango.com/">Effective Django</a> and
+<a class="reference external" href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a great free
+introductions to using the most popular Python web framework.</p>
+<p>DjangoCon US videos from
+<a class="reference external" href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>,
+<a class="reference external" href="http://pyvideo.org/category/23/djangocon-2012">2012</a>,
+<a class="reference external" href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as
+<a class="reference external" href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
+all available free of charge.</p>
+<p>The <a class="reference external" href="http://www.reddit.com/r/django">Django subreddit</a> often has links to
+the latest resources for learning Django.</p>
+<p>Lincoln Loop wrote a
+<a class="reference external" href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>
+for the community.</p>
+<p>Steve Losh wrote an incredibly detailed <a class="reference external" href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>.</p>
+</div>
+</div>
 <div class="section" id="web-framework-logging">
 <h2>Web Framework Logging</h2>
 <p>Logging is a common mechanism for monitoring web applications written with a
@@ -121,17 +157,11 @@ interface for viewing the exceptions. Sentry can also be configured with a
 mail plugin to send emails when exceptions occur.</p>
 <div class="section" id="web-framework-resources">
 <h3>Web Framework Resources</h3>
-<p><a class="reference external" href="http://www.djangoproject.com/">Django</a>,
-<a class="reference external" href="http://flask.pocoo.org/">Flask</a>,
+<p><a class="reference external" href="http://flask.pocoo.org/">Flask</a>,
 <a class="reference external" href="http://bottlepy.org/docs/dev/">Bottle</a>,
 <a class="reference external" href="http://www.pylonsproject.org/">Pyramid</a>, and
-<a class="reference external" href="http://webpy.org/">web.py</a> are the most common Python web frameworks.</p>
-<p><a class="reference external" href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a>
-by Daniel Greenfield and Audrey Roy is well worth the price of admission if
-you're serious about learning how to correctly develop Django websites.</p>
-<p><a class="reference external" href="http://effectivedjango.com/">Effective Django</a> and
-<a class="reference external" href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a great free
-introductions to using the most popular Python web framework.</p>
+<a class="reference external" href="http://webpy.org/">web.py</a> are the most common Python web frameworks other
+than Django.</p>
 </div>
 </div>
 
