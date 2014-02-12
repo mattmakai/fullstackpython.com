@@ -38,5 +38,5 @@ learn what server options exist, which operating system to use, what the
 Web Server Gateway Interface (WSGI) standard is, and so on up through the 
 action that takes place in the user's browser.
 
-Read on once you have a basic understanding of Python plus a web framework 
-and are ready to learn more about the full Python web stack.
+Read on once you have a basic Python understanding and are ready to 
+learn more about the full Python web stack.
