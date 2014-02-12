@@ -24,10 +24,6 @@ fantastic Python guides that you can read first:
 * To get an introduction to both Python and Django at the same time, read
   `Real Python <http://www.realpython.com/>`_ by Fletcher, Michael, and Jeremy.
 
-* To deploy a Python web application to the Heroku platform-as-a-service 
-  (described below in this guide), check out 
-  `Deploying Django <http://www.deploydjango.com/>`_ by Randall Degges.
-
 * If you're not coming in with any software development background, 
   you may find my post on 
   `Learning Python <http://www.mattmakai.com/learning-python-for-non-developers.html>`_ 

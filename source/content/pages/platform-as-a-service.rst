@@ -42,6 +42,8 @@ generally start at the WSGI server layer.
 
 Platform-as-a-service resources
 ===============================
+`PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment <http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/>`_ by `Nate Aune <https://twitter.com/natea>`_
+
 DevOps Django and Heroku Series by `Randall Degges <https://twitter.com/rdegges>`_:
 
 * `Part One: Goals <http://www.rdegges.com/devops-django-part-1-goals/>`_
@@ -52,5 +54,8 @@ DevOps Django and Heroku Series by `Randall Degges <https://twitter.com/rdegges>
 
 * `Part Four: Choosing Heroku <http://rdegges.com/devops-django-part-4-choosing-heroku>`_
 
-`PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment <http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/>`_ by `Nate Aune <https://twitter.com/natea>`_
+`Deploying Django <http://www.deploydjango.com/>`_ by Randall Degges is 
+another great free resource about Heroku.
+
+
 
