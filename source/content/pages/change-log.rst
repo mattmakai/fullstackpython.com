@@ -14,7 +14,7 @@ Added task queues section due to reader feedback. Rewrote intro section.
 Merged several pull requests (see closed 
 `GitHub repo pull requests <https://github.com/makaimc/fullstackpython.github.com/pulls>`_). New resources for platform-as-a-service section. Adding new
 sections specified by the community as missing. Reorganized ordering of 
-content.
+content. Broke out subsections for Django and Flask.
 
 Jan: Adding configuration management, application dependencies, and source 
 control sections. Also updating about section. Updated design to be fully

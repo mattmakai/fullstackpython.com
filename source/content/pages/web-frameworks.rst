@@ -128,8 +128,8 @@ resource:
 
 * `Part 18: Deployment on the Heroku Cloud <http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud>`_
 
-Yeah, there are a lot of parts to the series. However, it helps to keep the 
-complexity contained to small pieces at a time. The whole series is well 
+Yes, there are many parts to the series. However, each post is focused on
+a single topic to contain the complexity. The whole series is well 
 worth an in-depth read-through. The 
 `author <https://twitter.com/miguelgrinberg>`_ is also writing the 
 `O'Reilly Flask Web Development <http://shop.oreilly.com/product/0636920031116.do>`_
@@ -185,4 +185,7 @@ Web Framework Resources
 `Falcon <http://falconframework.org/>`_,
 `web.py <http://webpy.org/>`_ are the most common Python web frameworks other
 than Django and Flask.
+
+This `roundup of 14 minimal Python frameworks <http://codecondo.com/14-minimal-web-frameworks-for-python/>`_
+contains both familiar and less known Python libraries.
 
