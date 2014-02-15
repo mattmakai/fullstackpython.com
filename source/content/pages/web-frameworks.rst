@@ -130,7 +130,10 @@ resource:
 
 Yeah, there are a lot of parts to the series. However, it helps to keep the 
 complexity contained to small pieces at a time. The whole series is well 
-worth an in-depth read-through.
+worth an in-depth read-through. The 
+`author <https://twitter.com/miguelgrinberg>`_ is also writing the 
+`O'Reilly Flask Web Development <http://shop.oreilly.com/product/0636920031116.do>`_
+book so consider picking that up as well.
 
 The `Flask Extensions Registry <http://flask.pocoo.org/extensions/>`_ is a
 curated list of the best packages that extend Flask. It's the first location
