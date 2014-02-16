@@ -142,6 +142,39 @@ how they implement the WSGI standard.</p>
 <p>However, knowing the WSGI standard and how these frameworks and containers
 implement WSGI should be on your learning checklist though as you become
 a more experienced Python web developer.</p>
+<div class="section" id="why-wsgi">
+<h2>Why WSGI?</h2>
+<p>Understanding the purpose of WSGI, and WSGI servers, is just as important as
+understanding their implementation. Why not just point a web server directly at
+your application?
+There are a couple of reasons:</p>
+<ul>
+<li><p class="first"><strong>WSGI gives you flexibility.</strong> Because the WSGI standard has been adopted
+by all Python application frameworks and many web servers, it is trivial for
+an application developer to swap out components of their stack for others.
+Switching web servers, WSGI servers and even frameworks becomes easy, because
+the configuration pattern is the same regardless of whether you are using
+NGINX, Gunicorn and Django or Apache, mod_wsgi and Flask. From <a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>:</p>
+<blockquote>
+<p>The availability and widespread use of such an API in web servers for Python
+[...] would separate choice of framework from choice of web server, freeing
+users to choose a pairing that suits them, while freeing framework and
+server developers to focus on their preferred area of specialization.</p>
+</blockquote>
+</li>
+<li><p class="first"><strong>WSGI servers promote scaling.</strong> If you want to serve thousands of requests
+for dynamic content at once, relying on your application framework to smoothly
+handle the traffic is a bad idea. Most app frameworks don't focus on serving
+lots of concurrent requests gracefully. Rather, that job is left up to the WSGI
+server. It will handle processing requests from the web server and deciding
+how to communicate them to your application framework's process.</p>
+<p>TODO: go into more detail about this</p>
+<p>WSGI servers are designed with scaling in mind, and therefore their infrastructure
+is better suited to handling high traffic volume than directly exposing your
+application to the web.</p>
+</li>
+</ul>
+</div>
 <div class="section" id="wsgi-resources">
 <h2>WSGI Resources</h2>
 <p><a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP 0333 WSGI v1.0</a>
