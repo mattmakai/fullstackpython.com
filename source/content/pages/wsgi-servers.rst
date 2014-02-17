@@ -84,38 +84,29 @@ However, knowing the WSGI standard and how these frameworks and containers
 implement WSGI should be on your learning checklist though as you become
 a more experienced Python web developer.
 
-Why WSGI?
----------
 
-Understanding the purpose of WSGI, and WSGI servers, is just as important as
-understanding their implementation. Why not just point a web server directly at
-your application?
-There are a couple of reasons:
+WSGI's Purpose
+--------------
+Why use WSGI and not just point a web server directly at an application?
 
-* **WSGI gives you flexibility.** Because the WSGI standard has been adopted
-  by all Python application frameworks and many web servers, it is trivial for
-  an application developer to swap out components of their stack for others.
-  Switching web servers, WSGI servers and even frameworks becomes easy, because
-  the configuration pattern is the same regardless of whether you are using
-  NGINX, Gunicorn and Django or Apache, mod_wsgi and Flask. From `PEP 3333 <http://www.python.org/dev/peps/pep-3333/>`_:
+* **WSGI gives you flexibility**. Application developers can swap out
+  web stack components for others. For example, a developer can switch from 
+  Green Unicorn to uWSGI without modifying the application or framework 
+  that implements WSGI. 
+  From `PEP 3333 <http://www.python.org/dev/peps/pep-3333/>`_:
 
-    The availability and widespread use of such an API in web servers for Python
-    [...] would separate choice of framework from choice of web server, freeing
-    users to choose a pairing that suits them, while freeing framework and
-    server developers to focus on their preferred area of specialization.
+    The availability and widespread use of such an API in web servers for 
+    Python [...] would separate choice of framework from choice of web 
+    server, freeing users to choose a pairing that suits them, while 
+    freeing framework and server developers to focus on their preferred 
+    area of specialization.
 
-* **WSGI servers promote scaling.** If you want to serve thousands of requests
-  for dynamic content at once, relying on your application framework to smoothly
-  handle the traffic is a bad idea. Most app frameworks don't focus on serving
-  lots of concurrent requests gracefully. Rather, that job is left up to the WSGI
-  server. It will handle processing requests from the web server and deciding
-  how to communicate them to your application framework's process.
-
-  TODO: go into more detail about this
-
-  WSGI servers are designed with scaling in mind, and therefore their infrastructure
-  is better suited to handling high traffic volume than directly exposing your
-  application to the web.
+* **WSGI servers promote scaling**. Serving thousands of requests for dynamic
+  content at once is the domain of WSGI servers, not frameworks.
+  WSGI servers handle processing requests from the web server and deciding
+  how to communicate those requests to an application framework's process.
+  The segregation of responsibilities is important for efficiently scaling 
+  web traffic.
 
 
 WSGI Resources
