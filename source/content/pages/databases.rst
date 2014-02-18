@@ -58,6 +58,33 @@ There is no such thing as total security but this is a good article anyway.
 provides 5 specific tips from Instagram's engineering team on how to scale
 the design of your PostgreSQL database.
 
+-----
+MySQL
+-----
+MySQL is another viable open source database backend option for Python web 
+applications. MySQL has a slightly easier initial learning curve than 
+PostgreSQL. The database is deployed in production at some of the highest 
+trafficked sites such as 
+`Twitter <https://blog.twitter.com/2012/mysql-twitter>`_, 
+`Facebook <https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920>`__ 
+and `many others major organizations <http://www.mysql.com/customers/>`_.
+However, since the company focused on MySQL development, 
+`MySQL AB <http://en.wikipedia.org/wiki/MySQL_AB>`_, was 
+purchased by Sun Microsystems (which was in turn purchased by Oracle), there
+have been major defections away from the database by
+`Wikipedia <http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/>`_ 
+and `Google <http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb>`_. 
+MySQL remains a viable database option but I always recommend new Python 
+developers learn PostgreSQL if they do not already know MySQL.
+
+
+MySQL resources
+===============
+`28 Beginner's Tutorials for Learning about MySQL Databases <http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/>`_ 
+is a curated collection on various introductory MySQL topics.
+
+This tutorial shows how to install `MySQL on Ubuntu <http://www.cs.wcupa.edu/rkline/index/mysql-lin.html>`_.
+
 
 ------------------------------------
 Connecting to a database with Python
