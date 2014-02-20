@@ -23,8 +23,12 @@ most common types of jobs for task queues include
   15 minutes
 
 
-Task Queue Resources
+Task Queue resources
 --------------------
+`Queues.io <http://queues.io/>`_ is a collection of task queue systems with
+short summaries for each one. The task queues are not all compatible with
+Python but ones that work with it are tagged with the "Python" keyword.
+
 The `Celery <http://www.celeryproject.org/>`_ distributed task queue is the
 most commonly used Python library for handling asynchronous tasks and 
 scheduling.
@@ -33,4 +37,5 @@ The `RQ (Redis Queue) <http://python-rq.org/>`_ is a simple Python
 library for queueing jobs and processing them in the background with workers.
 It is backed by Redis and it is designed to have a low barrier to entry.
 It should be integrated in your web stack easily.
+
 
