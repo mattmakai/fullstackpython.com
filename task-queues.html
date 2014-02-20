@@ -75,14 +75,18 @@
         <div class="row">
     <div class="col-md-8">
       <h1>Task Queues</h1>
-      <p>Task queues handle asynchronous jobs that need to be processed outside the
-usual HTTP request-response cycle. The most common types of jobs for task
-queues include</p>
+      <p>Task queues handle background work that need to be processed outside the
+usual HTTP request-response cycle. These tasks are handled asynchronously
+because HTTP requests must be responded back to by the server as fast as
+possible otherwise the user experience in the web browser will suffer. The
+most common types of jobs for task queues include</p>
 <ul class="simple">
 <li>calculating computationally expensive data analytics</li>
 <li>scheduling periodic jobs such as batch processes</li>
 <li>spreading out large numbers of independent database inserts over time
 instead of all at once</li>
+<li>aggregating collected data values on a fixed interval, such as every
+15 minutes</li>
 </ul>
 <div class="section" id="task-queue-resources">
 <h2>Task Queue Resources</h2>

@@ -6,9 +6,11 @@ Task Queues
 :slug: task-queues
 :sort-order: 09
 
-Task queues handle asynchronous jobs that need to be processed outside the
-usual HTTP request-response cycle. The most common types of jobs for task 
-queues include
+Task queues handle background work that need to be processed outside the
+usual HTTP request-response cycle. These tasks are handled asynchronously 
+because HTTP requests must be responded back to by the server as fast as 
+possible otherwise the user experience in the web browser will suffer. The 
+most common types of jobs for task queues include
 
 * calculating computationally expensive data analytics
 
@@ -16,6 +18,9 @@ queues include
 
 * spreading out large numbers of independent database inserts over time 
   instead of all at once
+
+* aggregating collected data values on a fixed interval, such as every
+  15 minutes
 
 
 Task Queue Resources
