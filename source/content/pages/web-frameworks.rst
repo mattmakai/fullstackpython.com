@@ -161,6 +161,8 @@ included with Python.
 
 Bottle resources
 ================
+Digital Ocean provides an extensive `introductory post on Bottle <https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps>`_.
+
 This post provides a short 
 `tutorial on getting started with Bottle <http://www.giantflyingsaucer.com/blog/?p=3598>`_.
 
