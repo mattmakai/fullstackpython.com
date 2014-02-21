@@ -150,6 +150,23 @@ The tuts+ `Flask tutorial <http://code.tutsplus.com/tutorials/an-introduction-to
 is another great walkthrough for getting started with the framework.
 
 
+------
+Bottle
+------
+`Bottle <http://bottlepy.org/docs/dev/index.html>`_ is a WSGI-compliant
+`single source file <https://github.com/defnull/bottle/blob/master/bottle.py>`_
+web framework with no external dependencies except for the standard library
+included with Python.
+
+
+Bottle resources
+================
+This post provides a short 
+`tutorial on getting started with Bottle <http://www.giantflyingsaucer.com/blog/?p=3598>`_.
+
+Here's a short code snippet for `creating a REST API with Bottle and MongoDB <http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/>`_.
+
+
 ---------------------
 Web Framework Logging
 ---------------------
