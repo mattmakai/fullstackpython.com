@@ -199,11 +199,10 @@ mail plugin to send emails when exceptions occur.
 
 Web Framework Resources
 =======================
-`Bottle <http://bottlepy.org/docs/dev/>`_,
 `Pyramid <http://www.pylonsproject.org/>`_, 
 `Falcon <http://falconframework.org/>`_,
 `web.py <http://webpy.org/>`_ are the most common Python web frameworks other
-than Django and Flask.
+than Django, Flask and Bottle.
 
 This `roundup of 14 minimal Python frameworks <http://codecondo.com/14-minimal-web-frameworks-for-python/>`_
 contains both familiar and less known Python libraries.
