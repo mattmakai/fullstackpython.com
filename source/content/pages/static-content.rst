@@ -6,6 +6,9 @@ Static Content
 :slug: static-content
 :sort-order: 10
 
+---------------
+Static content
+---------------
 Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.

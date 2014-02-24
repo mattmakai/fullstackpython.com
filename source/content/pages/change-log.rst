@@ -6,6 +6,11 @@ Change Log
 :slug: change-log
 :sort-order: 22
 
+
+----------
+Change Log
+----------
+
 2014
 ----
 Feb: Adding new Django resources, added sitemap.xml. Rewriting all sections

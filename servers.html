@@ -75,99 +75,98 @@
         <div class="row">
     <div class="col-md-8">
       <h1>Servers</h1>
-      <p>There are four options for setting up infrastructure to serve a
+<p>There are four options for setting up infrastructure to serve a
 web application:</p>
-<ol class="arabic simple">
-<li>&quot;Bare metal&quot; servers</li>
-<li>Virtualized servers</li>
-<li>Infrastructure-as-a-service</li>
-<li><a class="reference external" href="../platform-as-a-service.html">Platform-as-a-service</a></li>
+<ol>
+<li>
+<p>"Bare metal" servers</p>
+</li>
+<li>
+<p>Virtualized servers</p>
+</li>
+<li>
+<p>Infrastructure-as-a-service</p>
+</li>
+<li>
+<p><a href="../platform-as-a-service.html">Platform-as-a-service</a></p>
+</li>
 </ol>
-<div class="section" id="bare-metal">
 <h2>Bare metal</h2>
-<p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking
-it up to the Internet either through a business-class internet service
-provider (ISP) or
-<a class="reference external" href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a> with other servers. A &quot;business-class&quot; ISP is necessary because
+<p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking 
+it up to the Internet either through a business-class internet service 
+provider (ISP) or 
+<a href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a>
+with other servers. A "business-class" ISP is necessary because
 most residential Internet service agreements explicitly prohibit running
 web servers on their networks. You may be able to get away with low traffic
 volume but if your site serves a lot of traffic it will alert an ISP's
 filters.</p>
 <p>The bare metal option offers the most control over the server configuration,
-usually has the highest performance for the price, but also is the most
+usually has the highest performance for the price, but also is the most 
 expensive upfront option and the highest ongoing maintenance. With bare
-metal servers the ongoing operating cost is the electricity the server(s)
+metal servers the ongoing operating cost is the electricity the server(s) 
 use as well as handling repairs when server components malfunction. You're
 taking on manual labor working with hardware as well as the rest of the
 software stack.</p>
-<p>Buy actual hardware from a vendor either pre-built or as a collection of
-components that you assemble yourself. Here is an
-<a class="reference external" href="http://duartes.org/gustavo/blog/post/building-a-quad-core-server">example of a server buildout</a>. The post is a couple of years old but those are the
-rough components you need to put together your own server. You can also buy
+<p>Buy actual hardware from a vendor either pre-built or as a collection of 
+components that you assemble yourself. Here is an 
+<a href="http://duartes.org/gustavo/blog/post/building-a-quad-core-server">example of a server buildout</a>. 
+The post is a couple of years old but those are the
+rough components you need to put together your own server. You can also buy 
 pre-configured servers from Dell or HP. Those servers tend to be in
-smaller case form factors (called &quot;blades&quot;) but are correspondingly more
+smaller case form factors (called "blades") but are correspondingly more 
 expensive than putting off-the-shelf components together yourself.</p>
-</div>
-<div class="section" id="virtualized-servers">
 <h2>Virtualized servers</h2>
 <p>Virtual private servers (VPSs) are slices of hardware on top of a larger
-bare metal server. Virtualization software such as
-<a class="reference external" href="http://www.xen.org/">Xen</a> and
-<a class="reference external" href="http://www.vmware.com/virtualization/what-is-virtualization.html">VMWare</a>
-allow providers such as <a class="reference external" href="http://www.linode.com/">Linode</a> and
-<a class="reference external" href="http://prgmr.com/xen/">prgmr</a> (as well as a many others) to provide
+bare metal server. Virtualization software such as 
+<a href="http://www.xen.org/">Xen</a> and
+<a href="http://www.vmware.com/virtualization/what-is-virtualization.html">VMWare</a>
+allow providers such as <a href="http://www.linode.com/">Linode</a> and
+<a href="http://prgmr.com/xen/">prgmr</a> (as well as a many others) to provide
 fractions of a full server that appear as their own instances. For example,
 a server with an 8-core Xeon processor and 16 gigabytes of memory can be
 sliced into 8 pieces with the equivalent of 1-core and 2 gigabytes of
 memory.</p>
 <p>The primary disadvantage of virtualized servers is that there is resource
 overhead in the virtualization process. In addition, physical constraints
-such as heavy I/O operations by a single virtualized instance on persistent
+such as heavy I/O operations by a single virtualized instance on persistent 
 storage can cause performance bottlenecks for other virtualized instances on
 the shared server. Choosing virtualized server hosting should be based on
 your needs for urgency of service ticket requests and the frequency you
 require for ongoing maintenance such as persistent storage backups.</p>
-<div class="section" id="virtualized-servers-resources">
 <h3>Virtualized servers resources</h3>
-<p><a class="reference external" href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a></p>
-</div>
-</div>
-<div class="section" id="infrastructure-as-a-service">
+<p><a href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a></p>
 <h2>Infrastructure-as-a-service</h2>
-<p>Infrastructure-as-a-service (IaaS) overlaps with virtualized servers
-because the resources are often presented in the same way. The
+<p>Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
+because the resources are often presented in the same way. The 
 difference between virtualized servers and IaaS is the granularity of the
 billing cycle. IaaS generally encourages a finer granularity based on minutes
 or hours of server usage instead of on monthly billing cycles.</p>
-<p>IaaS can be used in combination with virtualized servers to provide
+<p>IaaS can be used in combination with virtualized servers to provide 
 dynamic upscaling for heavy traffic. When traffic is low then virtualized
 servers can solely be used. This combination of resources reduces cost at
-the expense of greater complexity in the dynamically scaled infrastructure.</p>
-<p>The most common IaaS platforms are
-<a class="reference external" href="http://aws.amazon.com/">Amazon Web Services</a> and
-<a class="reference external" href="http://www.rackspace.com/cloud/">Rackspace Cloud</a>.</p>
+the expense of greater complexity in the dynamically scaled infrastructure. </p>
+<p>The most common IaaS platforms are 
+<a href="http://aws.amazon.com/">Amazon Web Services</a> and 
+<a href="http://www.rackspace.com/cloud/">Rackspace Cloud</a>.</p>
 <p>The disadvantage to IaaS platforms is the lock-in if you have to write
 custom code to deploy, dynamically scale, and generally understand your
-infrastructure. Every platform has its quirks. For example,
-Amazon's standard <a class="reference external" href="http://aws.amazon.com/ebs/">Elastic Block Store</a> storage
-infrastructure has at least an order of magnitude worse I/O throughput
-than working with your local disk. Your application's database queries may
+infrastructure. Every platform has its quirks. For example, 
+Amazon's standard <a href="http://aws.amazon.com/ebs/">Elastic Block Store</a> storage
+infrastructure has at least an order of magnitude worse I/O throughput 
+than working with your local disk. Your application's database queries may 
 work great locally but then when you deploy the performance is inadequate.
-Amazon has <a class="reference external" href="http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/">higher throughput EBS instances</a>
-but you will pay correspondingly more for them. EBS throughput is just
-one of many quirks you need to understand before committing to an
+Amazon has <a href="http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/">higher throughput EBS instances</a>
+but you will pay correspondingly more for them. EBS throughput is just 
+one of many quirks you need to understand before committing to an 
 IaaS platform.</p>
-<div class="section" id="infrastructure-as-a-service-resources">
-<h3>Infrastructure-as-a-service Resources</h3>
-<p><a class="reference external" href="http://libcloud.apache.org/">Apache Libcloud</a> is a Python library that
-provides a unified API for many cloud service providers</p>
-<p><a class="reference external" href="http://aws.amazon.com/python/">Amazon Web Services official documentation for Python</a></p>
-<p><a class="reference external" href="https://github.com/boto/boto">boto</a> is an amazing Python library for
-working with Amazon Web Services</p>
-<p><a class="reference external" href="http://docs.rackspace.com/sdks/guide/content/python.html">Rackspace official documentation for Python</a></p>
-</div>
-</div>
-
+<h3>Infrastructure-as-a-service resources</h3>
+<p><a href="http://libcloud.apache.org/">Apache Libcloud</a> is a Python library that
+provides a unified API for many cloud service providers.</p>
+<p><a href="http://aws.amazon.com/python/">Amazon Web Services has official documentation</a> for running Python web applications.</p>
+<p><a href="https://github.com/boto/boto">boto</a> is an extensive and well-tested 
+Python library for working with Amazon Web Services.</p>
+<p>Rackspace also has <a href="http://docs.rackspace.com/sdks/guide/content/python.html">official documentation for Python</a>.</p>
                                                                                           <br/>
             Next read the 
             <a href="/operating-systems.html">operating systems</a> section.

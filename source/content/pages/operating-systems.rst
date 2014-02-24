@@ -6,6 +6,10 @@ Operating Systems
 :slug: operating-systems
 :sort-order: 03
 
+
+-----------------
+Operating Systems
+-----------------
 An operating system runs on the server or virtual server and controls access 
 to computing resources. The only recommended operating system for 
 production Python web stack deployments is Linux. There are several 

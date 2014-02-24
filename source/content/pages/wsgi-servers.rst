@@ -6,6 +6,9 @@ WSGI Servers
 :slug: wsgi-servers
 :sort-order: 07
 
+------------
+WSGI Servers
+------------
 A `Web Server Gateway Interface <http://wsgi.readthedocs.org/en/latest/>`_
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. The WSGI standard v1.0 is specified in

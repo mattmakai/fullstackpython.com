@@ -6,6 +6,10 @@ Application Dependencies
 :slug: dependency-management
 :sort-order: 19
 
+---------------------------
+Application dependencies
+---------------------------
+
 Application dependencies are specific Python libraries and their versions
 required for the application to work properly. These dependencies are 
 installed separately from system-level packages.

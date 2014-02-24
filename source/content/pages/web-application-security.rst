@@ -6,6 +6,9 @@ Web Application Security
 :slug: web-application-security
 :sort-order: 13
 
+------------------------
+Web Application Security
+------------------------
 Website security must be incorporated into building every level of the web 
 stack. However, I include a separate section here for topics that deserve 
 a comprehensive review such as firewalls, SSL certificates, and public key

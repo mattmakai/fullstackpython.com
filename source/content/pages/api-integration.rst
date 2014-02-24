@@ -6,6 +6,9 @@ API Integration
 :slug: api-integration
 :sort-order: 16
 
+----------------
+API Integration
+----------------
 The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 

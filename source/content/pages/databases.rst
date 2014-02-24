@@ -6,6 +6,9 @@ Databases
 :slug: databases
 :sort-order: 06
 
+------------
+Databases
+------------
 A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. The 
 database storage abstraction most commonly used in Python web development is

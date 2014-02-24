@@ -6,6 +6,10 @@ Source Control
 :slug: source-control
 :sort-order: 17
 
+---------------
+Source control
+---------------
+
 Source control systems, also known as version control systems, store code
 and other static files, such as images, with a history of the changes made to
 those files.

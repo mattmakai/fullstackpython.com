@@ -7,6 +7,9 @@ NoSQL Data Stores
 :sort-order: 20
 
 
+---------------------------
+NoSQL Data Stores
+---------------------------
 Relational databases store the vast majority of web application 
 persistent data. However, there are several alternative classifications of 
 storage representations.

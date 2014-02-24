@@ -6,6 +6,9 @@ Caching
 :slug: caching
 :sort-order: 11
 
+---------------
+Caching
+---------------
 Caching can reduce load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. 
 

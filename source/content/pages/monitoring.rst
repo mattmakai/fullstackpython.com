@@ -6,6 +6,9 @@ Monitoring
 :slug: monitoring
 :sort-order: 14
 
+------------------------
+Monitoring
+------------------------
 Capturing and analyzing data about your production environment is critical
 to proactively deal with stability, performance, and errors in a web 
 application.

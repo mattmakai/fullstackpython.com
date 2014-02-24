@@ -74,8 +74,9 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Task Queues</h1>
-      <p>Task queues handle background work that need to be processed outside the
+      <div class="section" id="id1">
+<h2>Task queues</h2>
+<p>Task queues handle background work that need to be processed outside the
 usual HTTP request-response cycle. These tasks are handled asynchronously
 because HTTP requests must be responded back to by the server as fast as
 possible otherwise the user experience in the web browser will suffer. The
@@ -89,7 +90,7 @@ instead of all at once</li>
 15 minutes</li>
 </ul>
 <div class="section" id="task-queue-resources">
-<h2>Task Queue resources</h2>
+<h3>Task Queue resources</h3>
 <p><a class="reference external" href="http://queues.io/">Queues.io</a> is a collection of task queue systems with
 short summaries for each one. The task queues are not all compatible with
 Python but ones that work with it are tagged with the &quot;Python&quot; keyword.</p>
@@ -100,6 +101,7 @@ scheduling.</p>
 library for queueing jobs and processing them in the background with workers.
 It is backed by Redis and it is designed to have a low barrier to entry.
 It should be integrated in your web stack easily.</p>
+</div>
 </div>
 
                                                                                                                                                                                                                                                     <br/>

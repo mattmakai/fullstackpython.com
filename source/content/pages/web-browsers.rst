@@ -6,6 +6,10 @@ Web Browsers
 :slug: web-browsers
 :sort-order: 12
 
+------------
+Web browsers
+------------
+
 Web browsers are the most common rendering engine for your web application
 content.
 

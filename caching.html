@@ -74,8 +74,9 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Caching</h1>
-      <p>Caching can reduce load on servers by storing the results of common
+      <div class="section" id="id1">
+<h2>Caching</h2>
+<p>Caching can reduce load on servers by storing the results of common
 operations and serving the precomputed answers to clients.</p>
 <p>For example, instead of retrieving data from database tables that rarely
 change, you can store the values in-memory. Retrieving values from an
@@ -85,11 +86,12 @@ change the system can invalidate the cache and re-retrieve the updated values
 for future requests.</p>
 <p>A cache can be created for multiple layers of the stack.</p>
 <div class="section" id="caching-resources">
-<h2>Caching Resources</h2>
+<h3>Caching Resources</h3>
 <p><a class="reference external" href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
 <p><a class="reference external" href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
 easily be configured for caching with libraries such as
 <a class="reference external" href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
+</div>
 </div>
 
                                                                                                                                                                                                                                                                                                 <br/>

@@ -16,6 +16,8 @@ SITEMAP_SAVE_AS = 'sitemap.xml'
 BYLINE = '&copy; 2013 Matt Makai. All Rights Reserved.'
 LINKS = ()
 
+MARKUP = ('rst', 'markdown',)
+
 SOCIAL = (
     ('Email', 'mailto:makaimc@gmail.com'),
     ('GitHub', 'https://github.com/makaimc'),

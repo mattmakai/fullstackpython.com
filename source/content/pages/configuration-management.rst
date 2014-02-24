@@ -6,6 +6,9 @@ Configuration Management
 :slug: configuration-management
 :sort-order: 18
 
+------------------------
+Configuration Management
+------------------------
 Configuration management involves modifying servers from an existing state to 
 a desired state. Numerous tools exist to modify the state in a controlled 
 way, including `Puppet <http://puppetlabs.com/puppet/what-is-puppet>`_, 

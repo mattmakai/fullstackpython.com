@@ -6,6 +6,9 @@ Task Queues
 :slug: task-queues
 :sort-order: 09
 
+---------------
+Task queues
+---------------
 Task queues handle background work that need to be processed outside the
 usual HTTP request-response cycle. These tasks are handled asynchronously 
 because HTTP requests must be responded back to by the server as fast as 

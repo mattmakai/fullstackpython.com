@@ -6,6 +6,9 @@ Web Servers
 :slug: web-servers
 :sort-order: 04
 
+-----------------
+Web servers
+-----------------
 Web servers respond to 
 `Hypertext Transfer Protocol (HTTP) <http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ 
 requests from
