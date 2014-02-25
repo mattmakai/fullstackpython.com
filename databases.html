@@ -74,124 +74,115 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <div class="section" id="id1">
-<h2>Databases</h2>
-<p>A database is an abstraction on top of an operating system's file system to
-ease creating, reading, updating, and deleting persistent data. The
+      <h1>Databases</h1>
+<p>A database is an abstraction on top of an operating system's file system to 
+ease creating, reading, updating, and deleting persistent data. The 
 database storage abstraction most commonly used in Python web development is
 sets of relational tables. Alternative storage abstractions are explained in
-the <a class="reference external" href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
+the <a href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
 <p>Relational databases store all data in a series of tables. Interconnections
 between the tables are specified as <em>foreign keys</em>.</p>
-<p>Databases storage implementations vary in complexity. SQLite, a database
-included with Python, creates a single file for all data per database.
+<p>Databases storage implementations vary in complexity. SQLite, a database 
+included with Python, creates a single file for all data per database. 
 Other databases such as Oracle, PostgreSQL, and MySQL have more complicated
-persistence schemes while offering additional advanced features that are
+persistence schemes while offering additional advanced features that are 
 useful for web application data storage.</p>
-<p><a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a> and
-<a class="reference external" href="http://www.mysql.com/">MySQL</a> are two of the most common open source
+<p><a href="http://www.postgresql.org/">PostgreSQL</a> and 
+<a href="http://www.mysql.com/">MySQL</a> are two of the most common open source
 databases for storing Python web application data.</p>
-<p><a class="reference external" href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
+<p><a href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time. Therefore is highly recommended to not
-<a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors">run a production web application with SQLite</a>.</p>
-</div>
-<div class="section" id="id2">
+<a href="https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors">run a production web application with SQLite</a>.</p>
 <h2>PostgreSQL</h2>
 <p>PostgreSQL is the recommended relational database for working with Python
 web applications. PostgreSQL's feature set, active development and stability
 contribute to its usage as the backend for millions of applications live
 on the Web today.</p>
-<div class="section" id="postgresql-resources">
 <h3>PostgreSQL resources</h3>
-<p>This post on &quot;<a class="reference external" href="http://killtheyak.com/use-postgresql-with-django-flask/">Use PostgreSQL with Django or Flask</a>&quot;
+<p>This post on 
+<a href="http://killtheyak.com/use-postgresql-with-django-flask/">using PostgreSQL with Django or Flask</a>
 is a great quickstart guide for either framework.</p>
-<p><a class="reference external" href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
+<p><a href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
 PostgreSQL content from around the web.</p>
-<p><a class="reference external" href="https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution">Scaling PostgreSQL at Braintree</a>. Fascinating
-inside look at the evolution of the database's usage at Braintree.</p>
-<p><a class="reference external" href="http://www.ibm.com/developerworks/library/os-postgresecurity/">Total security in a PostgreSQL database</a>.
+<p>Braintree wrote about their experiences <a href="https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution">scaling PostgreSQL</a>. 
+The post is an inside look at the evolution of Braintree's usage of the database.</p>
+<p>There's no such thing as total security but this IBM article covers 
+<a href="http://www.ibm.com/developerworks/library/os-postgresecurity/">hardening a PostgreSQL database</a>. 
 There is no such thing as total security but this is a good article anyway.</p>
-<p><a class="reference external" href="http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/">Understanding PostgreSQL performance</a></p>
-<p><a class="reference external" href="http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram">Handling growth with Postgres</a>
+<p>Craig Kerstien's wrote a detailed post about <a href="http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/">understanding PostgreSQL performance</a>.</p>
+<p><a href="http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram">Handling growth with Postgres</a>
 provides 5 specific tips from Instagram's engineering team on how to scale
 the design of your PostgreSQL database.</p>
-</div>
-</div>
-<div class="section" id="id3">
 <h2>MySQL</h2>
-<p>MySQL is another viable open source database backend option for Python web
-applications. MySQL has a slightly easier initial learning curve than
-PostgreSQL. The database is deployed in production at some of the highest
-trafficked sites such as
-<a class="reference external" href="https://blog.twitter.com/2012/mysql-twitter">Twitter</a>,
-<a class="reference external" href="https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920">Facebook</a>
-and <a class="reference external" href="http://www.mysql.com/customers/">many others major organizations</a>.
-However, since the company focused on MySQL development,
-<a class="reference external" href="http://en.wikipedia.org/wiki/MySQL_AB">MySQL AB</a>, was
+<p>MySQL is another viable open source database backend option for Python web 
+applications. MySQL has a slightly easier initial learning curve than 
+PostgreSQL. The database is deployed in production at some of the highest 
+trafficked sites such as 
+<a href="https://blog.twitter.com/2012/mysql-twitter">Twitter</a>, 
+<a href="https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920">Facebook</a>
+and <a href="http://www.mysql.com/customers/">many others major organizations</a>.
+However, since the company focused on MySQL development, 
+<a href="http://en.wikipedia.org/wiki/MySQL_AB">MySQL AB</a>, was 
 purchased by Sun Microsystems (which was in turn purchased by Oracle), there
 have been major defections away from the database by
-<a class="reference external" href="http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/">Wikipedia</a>
-and <a class="reference external" href="http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb">Google</a>.
-MySQL remains a viable database option but I always recommend new Python
+<a href="http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/">Wikipedia</a> 
+and <a href="http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb">Google</a>. 
+MySQL remains a viable database option but I always recommend new Python 
 developers learn PostgreSQL if they do not already know MySQL.</p>
-<div class="section" id="mysql-resources">
 <h3>MySQL resources</h3>
-<p><a class="reference external" href="http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/">28 Beginner's Tutorials for Learning about MySQL Databases</a>
+<p><a href="http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/">28 Beginner's Tutorials for Learning about MySQL Databases</a> 
 is a curated collection on various introductory MySQL topics.</p>
-<p>This tutorial shows how to install <a class="reference external" href="http://www.cs.wcupa.edu/rkline/index/mysql-lin.html">MySQL on Ubuntu</a>.</p>
-</div>
-</div>
-<div class="section" id="connecting-to-a-database-with-python">
+<p>This tutorial shows how to install <a href="http://www.cs.wcupa.edu/rkline/index/mysql-lin.html">MySQL on Ubuntu</a>.</p>
 <h2>Connecting to a database with Python</h2>
-<p>To work with a relational database using Python, you need to use a code
+<p>To work with a relational database using Python, you need to use a code 
 library. The most common libraries for relational databases are:</p>
-<p><a class="reference external" href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
-<p><a class="reference external" href="https://pypi.python.org/pypi/MySQL-python/1.2.4">MySQLdb</a> for MySQL</p>
-<p><a class="reference external" href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
+<ul>
+<li>
+<p><a href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
+</li>
+<li>
+<p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.4">MySQLdb</a> for MySQL</p>
+</li>
+<li>
+<p><a href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
+</li>
+</ul>
 <p>SQLite support is built into Python 2.7+ and therefore a separate library
-is not necessary. Simply &quot;import sqlite3&quot; to begin interfacing with the
+is not necessary. Simply "import sqlite3" to begin interfacing with the 
 single file-based database.</p>
-</div>
-<div class="section" id="object-relational-mapping">
 <h2>Object-Relational Mapping</h2>
-<p>Object-relational mappers (ORMs) allow developers to access data from a
-backend by writing Python code instead of SQL queries. Each web
-application framework handles integrating ORMs differently.</p>
-<p>Django provides an ORM with its core functionality. Flask leaves using an
-ORM up to an extension, such as
-<a class="reference external" href="http://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLALchemy</a>.</p>
+<p>Object-relational mappers (ORMs) allow developers to access data from a 
+backend by writing Python code instead of SQL queries. Each web 
+application framework handles integrating ORMs differently. </p>
+<p>Django provides an ORM with its core functionality. Flask leaves using an 
+ORM up to an extension, such as 
+<a href="http://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLALchemy</a>. </p>
 <p>Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface.
+creating a data analysis tool or a batch script without a user interface. 
 Currently, the most widely used stand-alone ORM written for Python is
-<a class="reference external" href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
-</div>
-<div class="section" id="database-third-party-services">
+<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
 <h2>Database third-party services</h2>
-<p>Numerous companies run scalable database servers as a hosted service.
-Depending on the provider, there can be several advantages to using a
+<p>Numerous companies run scalable database servers as a hosted service. 
+Depending on the provider, there can be several advantages to using a 
 hosted database third-party service:</p>
-<ol class="arabic simple">
+<ol>
 <li>automated backups and recovery</li>
 <li>tightened security configurations</li>
 <li>easy vertical scaling</li>
 </ol>
-<p><a class="reference external" href="http://aws.amazon.com/rds/">Amazon Relational Database Service (RDS)</a>
+<p><a href="http://aws.amazon.com/rds/">Amazon Relational Database Service (RDS)</a> 
 provides pre-configured MySQL and PostgreSQL instances. The instances can
 be scaled to larger or smaller configurations based on storage and performance
 needs.</p>
-<p><a class="reference external" href="https://developers.google.com/cloud-sql/">Google Cloud SQL</a> is a service
+<p><a href="https://developers.google.com/cloud-sql/">Google Cloud SQL</a> is a service
 with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
 SQL integrates with Google App Engine but can be used independently as well.</p>
-<div class="section" id="database-resources">
-<h3>Database resources</h3>
-<p><a class="reference external" href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular
+<h2>Database resources</h2>
+<p><a href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular
 database management systems.</p>
-<p><a class="reference external" href="http://dbweekly.com/">DB Weekly</a> is a new (as of Feb 2014) weekly roundup
-of general database articles and resources.</p>
-</div>
-</div>
-
+<p><a href="http://dbweekly.com/">DB Weekly</a> is a weekly roundup of general database 
+articles and resources.</p>
                                                                                                                                                                                   <br/>
             Next read the 
             <a href="/wsgi-servers.html">wsgi servers</a> section.
