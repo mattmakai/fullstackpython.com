@@ -35,12 +35,20 @@ If you go the PaaS route, you can skip over the operating system and web
 server sections because they are baked into PaaS offerings. PaaS offerings
 generally start at the WSGI server layer. 
 
+
+## Platform-as-a-service responsibilities
+Although PaaS offerings simplify setting up and maintaining the servers,
+operating system, and web server, developers still have responsibilities for other
+layers of their web stack.
+
 While it's useful to know the operating system that underpins your PaaS, for 
 example Heroku uses Ubuntu 10.04, you will not have to know as much about 
 securing the operating system and server level. However, web applications deployed
 to a PaaS are just as vulnerable to security breaches at the application level
 as a standard LAMP stack. It's still your responsibility to ensure the web
-application framework and your app itself is up to date and secured.
+application framework and your app itself is up to date and secured. See the
+[security section](../web-application-security.html) for further information.
+
 
 
 ## Platform-as-a-service resources

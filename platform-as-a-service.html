@@ -99,12 +99,17 @@ to deploy to their respective platforms.</p>
 <p>If you go the PaaS route, you can skip over the operating system and web
 server sections because they are baked into PaaS offerings. PaaS offerings
 generally start at the WSGI server layer. </p>
+<h2>Platform-as-a-service responsibilities</h2>
+<p>Although PaaS offerings simplify setting up and maintaining the servers,
+operating system, and web server, developers still have responsibilities for other
+layers of their web stack.</p>
 <p>While it's useful to know the operating system that underpins your PaaS, for 
 example Heroku uses Ubuntu 10.04, you will not have to know as much about 
 securing the operating system and server level. However, web applications deployed
 to a PaaS are just as vulnerable to security breaches at the application level
 as a standard LAMP stack. It's still your responsibility to ensure the web
-application framework and your app itself is up to date and secured.</p>
+application framework and your app itself is up to date and secured. See the
+<a href="../web-application-security.html">security section</a> for further information.</p>
 <h2>Platform-as-a-service resources</h2>
 <p><a href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a href="https://twitter.com/natea">Nate Aune</a></p>
 <p>This series on DevOps Django by <a href="https://twitter.com/rdegges">Randall Degges</a> is great reading for using the Heroku service:</p>
