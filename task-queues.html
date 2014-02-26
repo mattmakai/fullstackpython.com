@@ -74,41 +74,44 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <div class="section" id="id1">
-<h2>Task queues</h2>
+      <h1>Task queues</h1>
 <p>Task queues handle background work that need to be processed outside the
-usual HTTP request-response cycle. These tasks are handled asynchronously
-because HTTP requests must be responded back to by the server as fast as
-possible otherwise the user experience in the web browser will suffer. The
+usual HTTP request-response cycle. These tasks are handled asynchronously 
+because HTTP requests must be responded back to by the server as fast as 
+possible otherwise the user experience in the web browser will suffer. The 
 most common types of jobs for task queues include</p>
-<ul class="simple">
-<li>calculating computationally expensive data analytics</li>
-<li>scheduling periodic jobs such as batch processes</li>
-<li>spreading out large numbers of independent database inserts over time
-instead of all at once</li>
-<li>aggregating collected data values on a fixed interval, such as every
-15 minutes</li>
+<ul>
+<li>
+<p>calculating computationally expensive data analytics</p>
+</li>
+<li>
+<p>scheduling periodic jobs such as batch processes</p>
+</li>
+<li>
+<p>spreading out large numbers of independent database inserts over time 
+  instead of all at once</p>
+</li>
+<li>
+<p>aggregating collected data values on a fixed interval, such as every
+  15 minutes</p>
+</li>
 </ul>
-<div class="section" id="task-queue-resources">
-<h3>Task Queue resources</h3>
-<p><a class="reference external" href="http://queues.io/">Queues.io</a> is a collection of task queue systems with
-short summaries for each one. The task queues are not all compatible with
-Python but ones that work with it are tagged with the &quot;Python&quot; keyword.</p>
-<p>The <a class="reference external" href="http://www.celeryproject.org/">Celery</a> distributed task queue is the
-most commonly used Python library for handling asynchronous tasks and
+<h2>Task Queue resources</h2>
+<p>The <a href="http://www.celeryproject.org/">Celery</a> distributed task queue is the
+most commonly used Python library for handling asynchronous tasks and 
 scheduling.</p>
-<p>The <a class="reference external" href="http://python-rq.org/">RQ (Redis Queue)</a> is a simple Python
+<p><a href="http://queues.io/">Queues.io</a> is a collection of task queue systems with
+short summaries for each one. The task queues are not all compatible with
+Python but ones that work with it are tagged with the "Python" keyword.</p>
+<p>The <a href="http://python-rq.org/">RQ (Redis Queue)</a> is a simple Python
 library for queueing jobs and processing them in the background with workers.
 It is backed by Redis and it is designed to have a low barrier to entry.
 It should be integrated in your web stack easily.</p>
-</div>
-</div>
-
-                                                                                                                                                                                                                                                    <br/>
+                                                                                                                                                                                                                                                                                                                                            <br/>
             Next read the 
-            <a href="/static-content.html">static content</a> section.
+            <a href="/api-integration.html">api integration</a> section.
                 
-                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                          </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -119,19 +122,19 @@ It should be integrated in your web stack easily.</p>
           <a href="/databases.html" class="list-group-item ">Databases</a>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
-          <a href="/task-queues.html" class="list-group-item active">Task Queues</a>
-          <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/caching.html" class="list-group-item ">Caching</a>
-          <a href="/web-browsers.html" class="list-group-item ">Web Browsers</a>
-          <a href="/web-application-security.html" class="list-group-item ">Web Application Security</a>
-          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
-          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
-          <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
           <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
+          <a href="/static-content.html" class="list-group-item ">Static Content</a>
+          <a href="/source-control.html" class="list-group-item ">Source Control</a>
+          <a href="/caching.html" class="list-group-item ">Caching</a>
+          <a href="/task-queues.html" class="list-group-item active">Task Queues</a>
+          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/about-author.html" class="list-group-item ">About</a>
+          <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
+          <a href="/logging.html" class="list-group-item ">Logging</a>
+          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
+          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
+          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
+          <a href="/about-author.html" class="list-group-item ">About the Author</a>
           <a href="/change-log.html" class="list-group-item ">Change Log</a>
       </div>
 </div></div>

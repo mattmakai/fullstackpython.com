@@ -1,34 +1,29 @@
-==========
-Change Log
-==========
+title: Change Log
+category: page
+slug: change-log
+sort-order: 25
 
-:category: page
-:slug: change-log
-:sort-order: 22
+# Change Log
 
-
-----------
-Change Log
-----------
-
-2014
-----
+## 2014
 Feb: Adding new Django resources, added sitemap.xml. Rewriting all sections
 to fix first draft typos and grammar mistakes as well as add new content.
 Added task queues section due to reader feedback. Rewrote intro section.
 Merged several pull requests (see closed 
-`GitHub repo pull requests <https://github.com/makaimc/fullstackpython.github.com/pulls>`_). New resources for platform-as-a-service section. Adding new
+[GitHub repo pull requests](https://github.com/makaimc/fullstackpython.github.com/pulls)). 
+New resources for platform-as-a-service section. Adding new
 sections specified by the community as missing. Reorganized ordering of 
 content. Broke out subsections for Django and Flask. Added signficant
-content to the WSGI section.
+content to the WSGI section. Converted from RST to Markdown (some of the 
+downstream tools I want to use work better with Markdown than RST). 
+Reorganized content into roughly final chapters.
 
 Jan: Adding configuration management, application dependencies, and source 
 control sections. Also updating about section. Updated design to be fully
 responsive.
 
 
-2013
-----
+## 2013
 Dec: Changed CDN section to static content. Transitioning diagrams from
 Paper app drawings to Balsamiq mockups exported to PNG files. Added Python
 database connectors to database section.
@@ -47,8 +42,7 @@ and PaaS topics, added initial "hand drawn" diagram placeholders for better
 diagrams later.
 
 
-2012
-----
+## 2012
 Dec: Initial incomplete release on fullstackpython.com, created 
 introduction, CDN, web frameworks, and database sections with stubs for 
 other areas.

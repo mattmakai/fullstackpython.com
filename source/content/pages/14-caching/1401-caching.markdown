@@ -1,14 +1,9 @@
-=======
-Caching
-=======
+title: Caching
+category: page
+slug: caching
+sort-order: 14
 
-:category: page
-:slug: caching
-:sort-order: 11
-
----------------
-Caching
----------------
+# Caching
 Caching can reduce load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. 
 
@@ -22,11 +17,10 @@ for future requests.
 A cache can be created for multiple layers of the stack. 
 
 
+## Caching Resources
+[memcached](http://memcached.org/) is a common in-memory caching system.
 
-Caching Resources
------------------
-`memcached <http://memcached.org/>`_ is a common in-memory caching system.
-
-`Redis <http://redis.io/>`_ is a key-value in-memory data store that can
+[Redis](http://redis.io/) is a key-value in-memory data store that can
 easily be configured for caching with libraries such as 
-`django-redis-cache <https://github.com/sebleier/django-redis-cache>`_.
+[django-redis-cache](https://github.com/sebleier/django-redis-cache).
+

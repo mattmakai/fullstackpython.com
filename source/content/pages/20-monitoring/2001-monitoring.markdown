@@ -1,14 +1,10 @@
-==========
-Monitoring
-==========
+title: Monitoring
+category: page
+slug: monitoring
+sort-order: 20
 
-:category: page
-:slug: monitoring
-:sort-order: 14
 
-------------------------
-Monitoring
-------------------------
+# Monitoring
 Capturing and analyzing data about your production environment is critical
 to proactively deal with stability, performance, and errors in a web 
 application.
@@ -32,49 +28,49 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 5. Database querying performance
 
 
-Monitoring Third Party Services
--------------------------------
-`New Relic <http://newrelic.com/>`_. Application and database monitoring as
+## Monitoring Third Party Services
+[New Relic](http://newrelic.com/). Application and database monitoring as
 well as plug ins for capturing and analyzing additional data about tools in
 your stack.
 
-`CopperEgg <http://copperegg.com/>`_ is lower-level monitoring on server and 
+[CopperEgg](http://copperegg.com/) is lower-level monitoring on server and 
 infrastructure. It's popular with DevOps shops that are making changes to
 their production environments and want immediate feedback on the results
 of those modifications.
 
-`Status.io <http://status.io/>`_ focuses on uptime and response metrics 
+[Status.io](http://status.io/) focuses on uptime and response metrics 
 transparency for your users.
 
-`PagerDuty <http://www.pagerduty.com/>`_ alerts a designated person or group
+[PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
 if there are stability, performance, or uptime issues with an application.
 
 
-Open Source Projects
---------------------
-`statsd <https://github.com/etsy/statsd/>`_ is a node.js network daemon that
+## Open Source Monitoring Projects
+[statsd](https://github.com/etsy/statsd/) is a node.js network daemon that
 listens for metrics and aggregates them for transfer into another service
 such as Graphite.
 
-`Graphite <https://graphite.readthedocs.org/en/latest/overview.html>`_ stores
+[Graphite](https://graphite.readthedocs.org/en/latest/overview.html) stores
 time-series data and displays them in graphs through a Django web application.
 
-`Sensu <http://sensuapp.org/>`_ is an open source monitoring framework
+[Sensu](http://sensuapp.org/) is an open source monitoring framework
 written in Ruby but applicable to any programming language web application.
 
-`Graph Explorer <http://vimeo.github.io/graph-explorer/>`_ by Vimeo is a
+[Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
 Graphite-based dashboard with added features and a slick design.
 
 
-Monitoring Resources
---------------------
-`The Virtues of Monitoring <http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html>`_
+## Monitoring Resources
+[The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
 
-`Effortless Monitoring with collectd, Graphite, and Docker <http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/>`_
+[Effortless Monitoring with collectd, Graphite, and Docker](http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/)
 
-Bit.ly describes the "`10 Things We Forgot to Monitor <http://word.bitly.com/post/74839060954/ten-things-to-monitor>`_"
+Bit.ly describes the 
+"[10 Things They Forgot to Monitor](http://word.bitly.com/post/74839060954/ten-things-to-monitor)"
 beyond the standard metrics such as disk & memory usage.
 
-`Four Linux server monitoring tools <http://aarvik.dk/four-linux-server-monitoring-and-management-tools/>`_
+[Four Linux server monitoring tools](http://aarvik.dk/four-linux-server-monitoring-and-management-tools/)
 
-`How to design useful monitoring and graphing visualizations <https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/>`_
+[How to design useful monitoring and graphing visualizations](https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/)
+
+

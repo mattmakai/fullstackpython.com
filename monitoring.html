@@ -74,71 +74,63 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <div class="section" id="id1">
-<h2>Monitoring</h2>
+      <h1>Monitoring</h1>
 <p>Capturing and analyzing data about your production environment is critical
-to proactively deal with stability, performance, and errors in a web
+to proactively deal with stability, performance, and errors in a web 
 application.</p>
-<p>There are several important resources to monitor on the operating system
+<p>There are several important resources to monitor on the operating system 
 and network level of a web stack.</p>
-<ol class="arabic simple">
+<ol>
 <li>CPU utilization</li>
 <li>Memory utilization</li>
 <li>Persistence storage consumed versus free</li>
 <li>Network bandwidth and latency</li>
 </ol>
 <p>Application level monitoring encompasses several aspects. The amount of time
-and resources dedicated to each aspect will vary based on whether an
+and resources dedicated to each aspect will vary based on whether an 
 application is read-heavy, write-heavy, or subject to rapid swings in traffic.</p>
-<ol class="arabic simple">
+<ol>
 <li>Application warnings and errors (500-level HTTP errors)</li>
 <li>Application code performance</li>
 <li>Template rendering time</li>
 <li>Browser rendering time for the application</li>
 <li>Database querying performance</li>
 </ol>
-<div class="section" id="monitoring-third-party-services">
-<h3>Monitoring Third Party Services</h3>
-<p><a class="reference external" href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
+<h2>Monitoring Third Party Services</h2>
+<p><a href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
 well as plug ins for capturing and analyzing additional data about tools in
 your stack.</p>
-<p><a class="reference external" href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and
+<p><a href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and 
 infrastructure. It's popular with DevOps shops that are making changes to
 their production environments and want immediate feedback on the results
 of those modifications.</p>
-<p><a class="reference external" href="http://status.io/">Status.io</a> focuses on uptime and response metrics
+<p><a href="http://status.io/">Status.io</a> focuses on uptime and response metrics 
 transparency for your users.</p>
-<p><a class="reference external" href="http://www.pagerduty.com/">PagerDuty</a> alerts a designated person or group
+<p><a href="http://www.pagerduty.com/">PagerDuty</a> alerts a designated person or group
 if there are stability, performance, or uptime issues with an application.</p>
-</div>
-<div class="section" id="open-source-projects">
-<h3>Open Source Projects</h3>
-<p><a class="reference external" href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
+<h2>Open Source Monitoring Projects</h2>
+<p><a href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
 listens for metrics and aggregates them for transfer into another service
 such as Graphite.</p>
-<p><a class="reference external" href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
+<p><a href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
 time-series data and displays them in graphs through a Django web application.</p>
-<p><a class="reference external" href="http://sensuapp.org/">Sensu</a> is an open source monitoring framework
+<p><a href="http://sensuapp.org/">Sensu</a> is an open source monitoring framework
 written in Ruby but applicable to any programming language web application.</p>
-<p><a class="reference external" href="http://vimeo.github.io/graph-explorer/">Graph Explorer</a> by Vimeo is a
+<p><a href="http://vimeo.github.io/graph-explorer/">Graph Explorer</a> by Vimeo is a
 Graphite-based dashboard with added features and a slick design.</p>
-</div>
-<div class="section" id="monitoring-resources">
-<h3>Monitoring Resources</h3>
-<p><a class="reference external" href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
-<p><a class="reference external" href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
-<p>Bit.ly describes the &quot;<a class="reference external" href="http://word.bitly.com/post/74839060954/ten-things-to-monitor">10 Things We Forgot to Monitor</a>&quot;
+<h2>Monitoring Resources</h2>
+<p><a href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
+<p><a href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
+<p>Bit.ly describes the 
+"<a href="http://word.bitly.com/post/74839060954/ten-things-to-monitor">10 Things They Forgot to Monitor</a>"
 beyond the standard metrics such as disk &amp; memory usage.</p>
-<p><a class="reference external" href="http://aarvik.dk/four-linux-server-monitoring-and-management-tools/">Four Linux server monitoring tools</a></p>
-<p><a class="reference external" href="https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/">How to design useful monitoring and graphing visualizations</a></p>
-</div>
-</div>
-
-                                                                                                                                                                                                                                                                                                                                                                  <br/>
+<p><a href="http://aarvik.dk/four-linux-server-monitoring-and-management-tools/">Four Linux server monitoring tools</a></p>
+<p><a href="https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/">How to design useful monitoring and graphing visualizations</a></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          <br/>
             Next read the 
-            <a href="/web-analytics.html">web analytics</a> section.
+            <a href="/configuration-management.html">configuration management</a> section.
                 
-                                                                                                                                                                                    </div>
+                                                                                            </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -149,19 +141,19 @@ beyond the standard metrics such as disk &amp; memory usage.</p>
           <a href="/databases.html" class="list-group-item ">Databases</a>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
-          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
-          <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/caching.html" class="list-group-item ">Caching</a>
-          <a href="/web-browsers.html" class="list-group-item ">Web Browsers</a>
-          <a href="/web-application-security.html" class="list-group-item ">Web Application Security</a>
-          <a href="/monitoring.html" class="list-group-item active">Monitoring</a>
-          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
-          <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
           <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
+          <a href="/static-content.html" class="list-group-item ">Static Content</a>
+          <a href="/source-control.html" class="list-group-item ">Source Control</a>
+          <a href="/caching.html" class="list-group-item ">Caching</a>
+          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
+          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/about-author.html" class="list-group-item ">About</a>
+          <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
+          <a href="/logging.html" class="list-group-item ">Logging</a>
+          <a href="/monitoring.html" class="list-group-item active">Monitoring</a>
+          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
+          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
+          <a href="/about-author.html" class="list-group-item ">About the Author</a>
           <a href="/change-log.html" class="list-group-item ">Change Log</a>
       </div>
 </div></div>

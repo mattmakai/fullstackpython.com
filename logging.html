@@ -74,26 +74,34 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Caching</h1>
-<p>Caching can reduce load on servers by storing the results of common 
-operations and serving the precomputed answers to clients. </p>
-<p>For example, instead of retrieving data from database tables that rarely 
-change, you can store the values in-memory. Retrieving values from an 
-in-memory location is far faster than retrieving them from a database (which
-stores them on a persistent disk like a hard drive). When the cached values 
-change the system can invalidate the cache and re-retrieve the updated values
-for future requests.</p>
-<p>A cache can be created for multiple layers of the stack. </p>
-<h2>Caching Resources</h2>
-<p><a href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
-<p><a href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
-easily be configured for caching with libraries such as 
-<a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
-                                                                                                                                                                                                                                                                                                                      <br/>
+      <h1>Logging</h1>
+<p>Logging is a common mechanism for monitoring web applications written with a
+web framework. Runtime exceptions that prevent code from running are 
+important to log to investigate and fix the source of the problems. 
+Informational and debugging logging also helps to understand how the 
+application is performing even if code is working as intended.</p>
+<p>Logging is often grouped into several categories:</p>
+<ol>
+<li>Information</li>
+<li>Debug</li>
+<li>Warning</li>
+<li>Error</li>
+</ol>
+<p>Logging errors that occur while a web framework is running is crucial to
+understanding how your application is performing. 
+<a href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
+<a href="https://github.com/getsentry/sentry">Sentry</a> exception logging and 
+aggregation application. Raven provides the way to send exceptions to
+Sentry, which should be deployed on a separate server from your production
+infrastructure. Raven can also be used by Python scripts to send other
+log data to Sentry for aggregation. Sentry provides a clean web application
+interface for viewing the exceptions. Sentry can also be configured with a
+mail plugin to send emails when exceptions occur.</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    <br/>
             Next read the 
-            <a href="/task-queues.html">task queues</a> section.
+            <a href="/monitoring.html">monitoring</a> section.
                 
-                                                                                                                                                                                                                                </div>
+                                                                                                                  </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -107,12 +115,12 @@ easily be configured for caching with libraries such as
           <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
           <a href="/static-content.html" class="list-group-item ">Static Content</a>
           <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/caching.html" class="list-group-item active">Caching</a>
+          <a href="/caching.html" class="list-group-item ">Caching</a>
           <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
           <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
           <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
-          <a href="/logging.html" class="list-group-item ">Logging</a>
+          <a href="/logging.html" class="list-group-item active">Logging</a>
           <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
           <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
           <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
