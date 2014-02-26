@@ -44,6 +44,8 @@ is a great quickstart guide for either framework.
 [PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
 PostgreSQL content from around the web.
 
+This post estimates the [costs of a PostgreSQL connection](http://hans.io/blog/2014/02/19/postgresql_connection/index.html).
+
 Braintree wrote about their experiences [scaling PostgreSQL](https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution). 
 The post is an inside look at the evolution of Braintree's usage of the database.
 
