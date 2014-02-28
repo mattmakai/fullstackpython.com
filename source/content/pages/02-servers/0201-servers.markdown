@@ -68,7 +68,7 @@ require for ongoing maintenance such as persistent storage backups.
 
 
 ### Virtualized servers resources
-[Choosing a low cost VPS](http://blog.redfern.me/choosing-a-low-cost-vps/)
+* [Choosing a low cost VPS](http://blog.redfern.me/choosing-a-low-cost-vps/)
 
 
 ## Infrastructure-as-a-service
@@ -101,13 +101,13 @@ IaaS platform.
 
 
 ### Infrastructure-as-a-service resources
-[Apache Libcloud](http://libcloud.apache.org/) is a Python library that
+* [Apache Libcloud](http://libcloud.apache.org/) is a Python library that
 provides a unified API for many cloud service providers.
 
-[Amazon Web Services has official documentation](http://aws.amazon.com/python/) for running Python web applications.
+* [Amazon Web Services has official documentation](http://aws.amazon.com/python/) for running Python web applications.
 
-[boto](https://github.com/boto/boto) is an extensive and well-tested 
+* [boto](https://github.com/boto/boto) is an extensive and well-tested 
 Python library for working with Amazon Web Services.
 
-Rackspace also has [official documentation for Python](http://docs.rackspace.com/sdks/guide/content/python.html).
+* Rackspace also has [official documentation for Python](http://docs.rackspace.com/sdks/guide/content/python.html).
 
