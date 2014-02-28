@@ -62,3 +62,6 @@ provides some context for understanding and reasoning about web traffic.
 This post provides context for determining if a given metric is
 ["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
 
+Read this post on [how your analytics software actually works](http://www.bayesianwitch.com/blog/2013/howyouranalyticswork.html)
+to get a better understanding of what's going on behind the scenes from
+a technical perspective.
