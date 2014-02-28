@@ -3,8 +3,8 @@ category: page
 slug: introduction
 sort-order: 01
 
-# Introduction
 
+# Introduction
 You're knee deep in learning the [Python](http://www.python.org/)
 programming language. The syntax is starting to make sense. The first
 few "AHA!" moments are hitting you as you're building applications with
