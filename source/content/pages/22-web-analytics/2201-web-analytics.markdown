@@ -13,6 +13,15 @@ selling a product or service you can ultimately build a
 [user funnel](http://moz.com/blog/building-your-marketing-funnel-with-google-analytics) 
 to better understand why people buy or don't buy what you're selling.
 
+It's easy to get overwhelmed at both the number of analytics services and
+the numerous types of data points collected. Focus on just a handful of
+metrics when you're just starting to run a Python web application. As your
+application scales and you understand more about your users then add
+additional analytics services to gain further insight into their behavior
+with heatmaps and user actions funnels. This sarcastic but accurate post
+on the 
+[seven stages of startup analytics grief](http://spenczar.com/posts/2013/Sep/07/seven-stages-analytics-grief/) 
+provides context for how to begin and grow over time.
 
 
 ## Web Analytics Third Party Services
@@ -28,13 +37,21 @@ data and provides metrics and visualizations based on the data.
 for who is visiting a website and what actions they are taking while on
 the site.
 
+[Heap](https://heapanalytics.com/) is a recently founded analytics service
+with a free introductory tier to get started.
+
 [CrazyEgg](http://www.crazyegg.com/) is tool for understanding a
 user's focus while using a website based on heatmaps generated from mouse 
 movements. 
 
 ## Web Analytics Resources
+This 
 [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)
 
 This beginner's guide to 
 [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
 provides some context for understanding and reasoning about web traffic. 
+
+This post provides context for determining if a given metric is
+["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
+
