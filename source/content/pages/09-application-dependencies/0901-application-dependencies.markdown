@@ -17,13 +17,13 @@ dependencies of individual applications from each other.
 
 
 ## Application dependency resources
-[Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
-[virtualenv and pip basics](http://www.jontourage.com/2011/02/09/virtualenv-pip-basics/).
+* [Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
+  [virtualenv and pip basics](http://www.jontourage.com/2011/02/09/virtualenv-pip-basics/).
 
-"[A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
-breaks down what problems these tools solve and how to use them.
+* "[A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
+  breaks down what problems these tools solve and how to use them.
 
-[Tools of the modern Python hacker](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/) 
-contains detailed explanations of virtualenv, Fabric, and pip.
+* [Tools of the modern Python hacker](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/) 
+  contains detailed explanations of virtualenv, Fabric, and pip.
 
 
