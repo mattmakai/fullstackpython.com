@@ -8,7 +8,7 @@ sort-order: 25
 This is a running list of the major changes to Full Stack Python since its
 inception in December 2012. Another way to view the modifications is through
 the 
-[GitHub commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages).
+[source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
 ### March
