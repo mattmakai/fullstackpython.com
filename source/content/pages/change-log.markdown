@@ -6,43 +6,66 @@ sort-order: 25
 # Change Log
 
 ## 2014
-Feb: Adding new Django resources, added sitemap.xml. Rewriting all sections
-to fix first draft typos and grammar mistakes as well as add new content.
-Added task queues section due to reader feedback. Rewrote intro section.
-Merged several pull requests (see closed 
-[GitHub repo pull requests](https://github.com/makaimc/fullstackpython.github.com/pulls)). 
-New resources for platform-as-a-service section. Adding new
-sections specified by the community as missing. Reorganized ordering of 
-content. Broke out subsections for Django and Flask. Added signficant
-content to the WSGI section. Converted from RST to Markdown (some of the 
-downstream tools I want to use work better with Markdown than RST). 
-Reorganized content into roughly final chapters.
+### March
+* Updated application dependencies section with new resources and initial
+  content description.
+* Updated the change log (how meta!) to have a cleaner layout.
 
-Jan: Adding configuration management, application dependencies, and source 
-control sections. Also updating about section. Updated design to be fully
-responsive.
+### February 
+* Added new Django resources. 
+* New sitemap.xml. 
+* Rewriting all sections to fix first draft typos and grammar mistakes 
+  as well as add new content.
+* Added task queues section due to reader feedback. 
+* Rewrote intro section.
+* Merged several pull requests (see closed 
+  [GitHub repo pull requests](https://github.com/makaimc/fullstackpython.github.com/pulls)). 
+* New resources for platform-as-a-service section. 
+* Added new sections specified by the community as missing. 
+* Reorganized ordering of content. 
+* Broke out subsections for Django and Flask. 
+* Added signficant content to the WSGI section. 
+* Converted from RST to Markdown (some of the downstream tools I want to 
+  use work better with Markdown than RST). 
+* Reorganized content into rough outline of "final" chapters.
+
+### January 
+* Added configuration management, application dependencies, and source 
+  control sections. 
+* Updated about section. 
+* Fully responsive web design.
 
 
 ## 2013
-Dec: Changed CDN section to static content. Transitioning diagrams from
-Paper app drawings to Balsamiq mockups exported to PNG files. Added Python
-database connectors to database section.
+### December
+* Changed CDN section to static content section. 
+* Transitioned diagrams from Paper app drawings to Balsamiq mockups 
+  exported to PNG files. 
+* Added Python database connectors to database section.
 
-Nov: Modified color scheme. Updated caching and introduction section,
-added section on NoSQL data stores.
+### November
+* Modified color scheme. 
+* Updated caching and introduction section.
+* Added NoSQL data stores section.
 
-Oct: Creating separate monitoring section.
+### October 
+* Created separate monitoring section.
 
-Aug: Adding more resources for web servers and other categories.
+### August
+* Added more resources for web servers and other categories.
 
-Jun: Updating styling, adding new content, switching around sections.
+### June
+* Updated styling.
+* Switching around several sections.
 
-Jan: Fleshed out web server, OS, and server sections, particularly IaaS 
-and PaaS topics, added initial "hand drawn" diagram placeholders for better 
-diagrams later.
+### January
+* Fleshed out web server, OS, and server sections, particularly IaaS 
+  and PaaS topics.
+* Added initial "hand drawn" diagram placeholders for better diagrams later.
 
 
 ## 2012
-Dec: Initial incomplete release on fullstackpython.com, created 
-introduction, CDN, web frameworks, and database sections with stubs for 
-other areas.
+### December
+* Initial incomplete release on fullstackpython.com, created 
+  introduction, CDN, web frameworks, and database sections with stubs for 
+  other areas.

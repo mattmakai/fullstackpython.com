@@ -76,13 +76,34 @@
     <div class="col-md-8">
       <h1>Application Dependencies</h1>
 <p>Application dependencies are the Python libraries and their versions
-required for the application to work properly. These dependencies are 
+required for an application to work properly. These dependencies are 
 installed separately from system-level packages to prevent library version
 conflicts.</p>
 <p>The most common way to install Python library dependencies is with 
-the <a href="http://www.pip-installer.org/en/latest/">pip install</a> combined
-with <a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate the
+the <a href="http://www.pip-installer.org/en/latest/">pip</a>
+command combined with 
+<a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate the
 dependencies of individual applications from each other.</p>
+<p>Pip and virtualenv work together and have complementary responsibilities.
+Pip downloads and installs application dependencies from the central
+<a href="https://pypi.python.org/pypi">PyPi</a> repository. Virtualenv creates an 
+isolated Python installation is where those dependencies are installed into.</p>
+<h2>requirements.txt</h2>
+<p>The pip convention for specifying application dependencies is with a 
+<a href="http://www.pip-installer.org/en/1.4.1/cookbook.html#requirements-files">requirements.txt</a>
+file. When you build a Python web application you should include a 
+requirements.txt file with 
+<a href="https://devcenter.heroku.com/articles/python-pip">pegged dependencies</a>.</p>
+<h2>setup.py</h2>
+<p>There is another type of dependency specification for Python libraries
+known as 
+<a href="http://stackoverflow.com/questions/1471994/what-is-setup-py">setup.py</a>.
+Setup.py is a standard for distributing and installing Python libraries.
+If you're building a Python library, such as 
+<a href="http://www.python-requests.org/en/latest/">requests</a> or
+<a href="https://github.com/makaimc/underwear">underwear</a> you must include setup.py
+so a dependency manager can correctly install both the library as well as
+additional dependencies for the library.</p>
 <h2>Application dependency resources</h2>
 <ul>
 <li>
@@ -96,6 +117,11 @@ dependencies of individual applications from each other.</p>
 <li>
 <p><a href="http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/">Tools of the modern Python hacker</a> 
   contains detailed explanations of virtualenv, Fabric, and pip.</p>
+</li>
+<li>
+<p>Occasionally arguments about using Python's dependency manager versus
+  one of Linux's depenency managers comes up. This provides
+  <a href="http://notes.pault.ag/debian-python/">one perspective on that debate</a>.</p>
 </li>
 </ul>
                                                                                                                                                                                                                                                     <br/>

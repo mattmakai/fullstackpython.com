@@ -11,6 +11,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/application-dependencies.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>
@@ -24,10 +28,6 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/databases.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/dependency-management.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
