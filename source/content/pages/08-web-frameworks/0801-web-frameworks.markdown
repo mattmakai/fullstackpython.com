@@ -17,9 +17,9 @@ common operations include:
 Not all web frameworks include code for all of the above 
 functionality. Frameworks fall somewhere between simply executing a 
 single use case and attempting to be everything to every developer with
-increased complexity. Some frameworks take the "batteries-included" approach where
-everything possible comes bundled with the framework while others have a minimal
-code library that plays well with extensions.
+increased complexity. Some frameworks take the "batteries-included" approach 
+where everything possible comes bundled with the framework while others 
+have a minimal code library that plays well with extensions.
 
 For example, the Django web application framework includes an 
 Object-Relational Mapping (ORM) layer that abstracts relational database 
@@ -164,11 +164,15 @@ Here's a short code snippet for [creating a REST API with Bottle and MongoDB](ht
 
 
 ## Web Framework Resources
-[Pyramid](http://www.pylonsproject.org/), 
-[Falcon](http://falconframework.org/),
-[web.py](http://webpy.org/) are the most common Python web frameworks other
-than Django, Flask and Bottle.
+* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)" 
+  is a in-depth explanation of what a web framework is and their relation
+  to web servers.
 
-This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
-contains both familiar and less known Python libraries.
+* [Pyramid](http://www.pylonsproject.org/), 
+  [Falcon](http://falconframework.org/),
+  [web.py](http://webpy.org/) are the most common Python web frameworks other
+  than Django, Flask and Bottle.
+
+* This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
+  contains both familiar and less known Python libraries.
 
