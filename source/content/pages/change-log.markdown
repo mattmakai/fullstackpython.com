@@ -12,11 +12,14 @@ the
 
 ## 2014
 ### March
+* Cleaned up links on the first ten chapters and added new resources for
+  web frameworks.
 * Updated application dependencies section with new resources and initial
   content description.
 * Updated the change log (how meta!) to have a cleaner layout.
 
 ### February 
+* Added Bottle as a web framework next to Django and Flask.
 * Added new Django resources. 
 * New sitemap.xml. 
 * Rewriting all sections to fix first draft typos and grammar mistakes 
