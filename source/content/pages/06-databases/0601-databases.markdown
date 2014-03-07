@@ -37,27 +37,26 @@ contribute to its usage as the backend for millions of applications live
 on the Web today.
 
 ### PostgreSQL resources
-This post on 
-[using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
-is a great quickstart guide for either framework.
+* This post on 
+  [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
+  is a great quickstart guide for either framework.
 
-[PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
-PostgreSQL content from around the web.
+* [PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
+  PostgreSQL content from around the web.
 
-This post estimates the [costs of a PostgreSQL connection](http://hans.io/blog/2014/02/19/postgresql_connection/index.html).
-
-Braintree wrote about their experiences [scaling PostgreSQL](https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution). 
+* Braintree wrote about their experiences [scaling PostgreSQL](https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution). 
 The post is an inside look at the evolution of Braintree's usage of the database.
 
-There's no such thing as total security but this IBM article covers 
-[hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
-There is no such thing as total security but this is a good article anyway.
+* This post estimates the [costs of a PostgreSQL connection](http://hans.io/blog/2014/02/19/postgresql_connection/index.html).
 
-Craig Kerstien's wrote a detailed post about [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
+* There is no such thing as total security but this IBM article covers 
+  [hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
 
-[Handling growth with Postgres](http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram)
-provides 5 specific tips from Instagram's engineering team on how to scale
-the design of your PostgreSQL database.
+* Craig Kerstien's wrote a detailed post about [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
+
+* [Handling growth with Postgres](http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram)
+  provides 5 specific tips from Instagram's engineering team on how to scale
+  the design of your PostgreSQL database.
 
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
@@ -77,10 +76,10 @@ MySQL remains a viable database option but I always recommend new Python
 developers learn PostgreSQL if they do not already know MySQL.
 
 ### MySQL resources
-[28 Beginner's Tutorials for Learning about MySQL Databases](http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/) 
-is a curated collection on various introductory MySQL topics.
+* [28 Beginner's Tutorials for Learning about MySQL Databases](http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/) 
+  is a curated collection on various introductory MySQL topics.
 
-This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
+* This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
 
 
 ## Connecting to a database with Python
@@ -133,9 +132,9 @@ SQL integrates with Google App Engine but can be used independently as well.
 
 
 ## Database resources
-[DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
-database management systems.
+* [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
+  database management systems.
 
-[DB Weekly](http://dbweekly.com/) is a weekly roundup of general database 
-articles and resources.
+* [DB Weekly](http://dbweekly.com/) is a weekly roundup of general database 
+  articles and resources.
 

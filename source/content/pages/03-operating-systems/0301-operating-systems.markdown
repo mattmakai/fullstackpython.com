@@ -62,16 +62,16 @@ provides a command-line interface for interacting with the RPM system.
 
 
 ## Operating System Resources
-[Choosing a Linux Distribution](http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution)
+* [Choosing a Linux Distribution](http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution)
 
-[First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers)
+* [First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers)
 
-[Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
+* [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
 
-[Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
+* [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
 
-[Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
+* [Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
 
-[quick NIX secure script](https://github.com/marshyski/quick-secure) for
+* [quick NIX secure script](https://github.com/marshyski/quick-secure) for
 securing Linux distributions.
 

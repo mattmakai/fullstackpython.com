@@ -3,6 +3,7 @@ category: page
 slug: platform-as-a-service
 sort-order: 05
 
+
 # Platform-as-a-service
 A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
@@ -52,20 +53,18 @@ application framework and your app itself is up to date and secured. See the
 
 
 ## Platform-as-a-service resources
-[PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/) by [Nate Aune](https://twitter.com/natea)
+* [PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/) by [Nate Aune](https://twitter.com/natea).
 
-This series on DevOps Django by [Randall Degges](https://twitter.com/rdegges) is great reading for using the Heroku service:
+* [Deploying Django](http://www.deploydjango.com/) by Randall Degges is 
+  another great free resource about Heroku.
 
-* [Part One: Goals](http://www.rdegges.com/devops-django-part-1-goals/)
+* This series on DevOps Django by 
+  [Randall Degges](https://twitter.com/rdegges) is great reading for 
+  using the Heroku service:
 
-* [Part Two: The Pain of Deployment](http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/)
-
-* [Part Three: The Heroku Way](http://www.rdegges.com/devops-django-part-3-the-heroku-way/)
-
-* [Part Four: Choosing Heroku](http://rdegges.com/devops-django-part-4-choosing-heroku)
-
-[Deploying Django](http://www.deploydjango.com/) by Randall Degges is 
-another great free resource about Heroku.
-
+    * [Part One: Goals](http://www.rdegges.com/devops-django-part-1-goals/)
+    * [Part Two: The Pain of Deployment](http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/)
+    * [Part Three: The Heroku Way](http://www.rdegges.com/devops-django-part-3-the-heroku-way/)
+    * [Part Four: Choosing Heroku](http://rdegges.com/devops-django-part-4-choosing-heroku)
 
 

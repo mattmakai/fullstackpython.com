@@ -106,23 +106,24 @@ Why use WSGI and not just point a web server directly at an application?
 
 
 ## WSGI Resources
-[PEP 0333 WSGI v1.0](http://www.python.org/dev/peps/pep-0333/)
-and
-[PEP 3333 WSGI v1.0.1](http://www.python.org/dev/peps/pep-3333/)
-specifications.
+* [PEP 0333 WSGI v1.0](http://www.python.org/dev/peps/pep-0333/)
+  and
+  [PEP 3333 WSGI v1.0.1](http://www.python.org/dev/peps/pep-3333/)
+  specifications.
 
-[Green Unicorn](http://gunicorn.org/),
-[mod\_wsgi](http://code.google.com/p/modwsgi/),
-[uWSGI](https://github.com/unbit/uwsgi-docs), and
-[gevent](http://www.gevent.org/) are common WSGI server implementations.
+* [Green Unicorn](http://gunicorn.org/),
+  [mod\_wsgi](http://code.google.com/p/modwsgi/),
+  [uWSGI](https://github.com/unbit/uwsgi-docs) and
+  [gevent](http://www.gevent.org/) are common WSGI server implementations.
 
-This [Basics of WSGI](http://agiliq.com/blog/2013/07/basics-wsgi/) post
-contains a simple example of how a WSGI-compatible application works.
+* This [basics of WSGI](http://agiliq.com/blog/2013/07/basics-wsgi/) post
+  contains a simple example of how a WSGI-compatible application works.
 
-This [complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/>) 
-is thorough and informative for LAMP-stack hosting choices.
+* A thorough and informative post for LAMP-stack hosting chocies is 
+  presented in the 
+  "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/>)." 
 
-This detailed post entitled
-[The Beautiful Simplicity of an nginx and uWSGI Deployments](http://bartek.im/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html)
-is great reading for understanding Nginx and uWSGI configurations.
+* This detailed post entitled
+  [The Beautiful Simplicity of an nginx and uWSGI Deployments](http://bartek.im/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html)
+  is great reading for understanding Nginx and uWSGI configurations.
 

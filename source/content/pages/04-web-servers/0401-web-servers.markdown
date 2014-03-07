@@ -48,23 +48,24 @@ section for a more detailed explanation).
 
 
 ## Web Server Resources
-[How to set up a safe and secure Web server](http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/)
+* [How to set up a safe and secure Web server](http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/)
 
-[Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
+* [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
 
-[Nginx web server tutorials](http://articles.slicehost.com/nginx)
+* [Nginx web server tutorials](http://articles.slicehost.com/nginx)
 
-[Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
+* [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
 
-An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/).
+* An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/).
 
-A reference with the full list of 
+* A reference with the full list of 
 [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 is provided by W3C.
 
-An optimization guide for 
+* An optimization guide for 
 "[battle ready Nginx](http://blog.zachorr.com/nginx-setup/)."
 
-[A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
+* [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
 
-[4 HTTP Security Headers You Should Always Be Using](http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using)
+* [4 HTTP Security Headers You Should Always Be Using](http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using)
+
