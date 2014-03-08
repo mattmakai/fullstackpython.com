@@ -15,6 +15,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>

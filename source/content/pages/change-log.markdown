@@ -12,6 +12,8 @@ the
 
 ## 2014
 ### March
+* Extracting best Python resources from the introduction into a separate
+  page.
 * Cleaned up links on the first ten chapters and added new resources for
   web frameworks.
 * Updated application dependencies section with new resources and initial
