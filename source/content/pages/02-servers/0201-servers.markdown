@@ -5,8 +5,21 @@ sort-order: 02
 
 
 # Servers
-There are four options for setting up infrastructure to serve a
-web application:
+Servers provide the physical infrastructure to run all the software,
+including your web application, that responds to web requests.
+
+
+## Why are servers necessary?
+Your web application must live somewhere other than your own desktop or 
+laptop. Servers should ideally be accessible 24 hours a day, 7 days a week, 
+with no unplanned downtime. The servers that host your web application for
+actual users (as opposed to test users) are known as *production* servers.
+Production servers hold real data (again as opposed to test data) and must be 
+secure against unauthorized access.
+
+
+## Server hosting options
+There are four options for hosting a web application:
 
 1. "Bare metal" servers
 
