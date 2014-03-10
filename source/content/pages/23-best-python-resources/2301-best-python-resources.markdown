@@ -27,10 +27,21 @@ I had when I was learning the language.
 
 
 ## Experienced Developers New to Python
+* [Learn Python in y minutes](http://learnxinyminutes.com/docs/python/)
+  provides a whirlwind tour of the Python language. The guide is especially
+  useful if you're coming in with previous software development experience
+  and want to quickly grasp how the language is structured.
+
+* [Python for you and me](http://pymbook.readthedocs.org/en/latest/) is an
+  approachable book with sections for Python syntax and the major language 
+  constructs. The book also contains a short guide at the end to get
+  programmers to write their first Flask web application.
+
 * Kenneth Reitz's 
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
   contains a wealth of information both on the Python programming as well
   as the community.
+
 
 
 ## Intermediate
