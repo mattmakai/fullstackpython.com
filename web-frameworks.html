@@ -74,157 +74,180 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Web Frameworks</h1>
-      <p>A web application framework is a collection of libraries that
+      <h1>Web frameworks</h1>
+<p>A web application framework is a collection of libraries that 
 provide functionality to accomplish common operations for the web. These
 common operations include:</p>
-<ol class="arabic simple">
+<ol>
 <li>URL routing</li>
 <li>HTML, XML, JSON, and other output format templating</li>
 <li>Database manipulation</li>
 <li>Security against Cross-site request forgery (CSRF) and other attacks</li>
 </ol>
-<p>Not all web frameworks include functionality for all of the above
-functionality. Frameworks fall somewhere between simply executing a
+<p>Not all web frameworks include code for all of the above 
+functionality. Frameworks fall somewhere between simply executing a 
 single use case and attempting to be everything to every developer with
-increased complexity.</p>
-<p>For example, the Django web application framework includes an
-Object-Relational Mapping (ORM) layer that abstracts relational database
+increased complexity. Some frameworks take the "batteries-included" approach 
+where everything possible comes bundled with the framework while others 
+have a minimal code library that plays well with extensions.</p>
+<p>For example, the Django web application framework includes an 
+Object-Relational Mapping (ORM) layer that abstracts relational database 
 read, write, query, and delete operations. However, Django's ORM
-cannot work without significant modification on non-relational databases such
-<a class="reference external" href="http://www.mongodb.org/">MongoDB</a> and <a class="reference external" href="http://docs.basho.com/">Riak</a>.
-Other web frameworks such as Flask and Pyramid are generally easier to
+cannot work without significant modification on non-relational databases such 
+<a href="http://www.mongodb.org/">MongoDB</a>.
+Some other web frameworks such as Flask and Pyramid are easier to
 use with non-relational databases by incorporating external Python libraries.
 There is a spectrum between minimal functionality with easy extensibility and
 including everything in the framework with tight integration.</p>
-<div class="section" id="django">
 <h2>Django</h2>
-<p><a class="reference external" href="http://www.djangoproject.com/">Django</a> is a widely used Python web
-application framework with a &quot;batteries-included&quot; philosophy. The principle
+<p><a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
+application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as a separate
-library. For example,
-<a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a
-<a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
-<a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
-and a <a class="reference external" href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
-(as of version 1.7) are all included with the <a class="reference external" href="https://pypi.python.org/pypi/Django/1.6.2">Django library</a>.</p>
-<div class="section" id="django-resources">
+library. For example, 
+<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
+<a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
+<a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
+and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
+(as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/1.6.2">Django framework</a>.</p>
 <h3>Django resources</h3>
-<p><a class="reference external" href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a>
-by Daniel Greenfield and Audrey Roy is well worth the price of admission if
-you're serious about learning how to correctly develop Django websites.</p>
-<p><a class="reference external" href="http://effectivedjango.com/">Effective Django</a> and
-<a class="reference external" href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a great free
-introductions to using the most popular Python web framework.</p>
-<p>DjangoCon US videos from
-<a class="reference external" href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>,
-<a class="reference external" href="http://pyvideo.org/category/23/djangocon-2012">2012</a>,
-<a class="reference external" href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as
-<a class="reference external" href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
-all available free of charge.</p>
-<p>The <a class="reference external" href="http://www.reddit.com/r/django">Django subreddit</a> often has links to
-the latest resources for learning Django.</p>
-<p>Lincoln Loop wrote a
-<a class="reference external" href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>
-for the community.</p>
-<p>Steve Losh wrote an incredibly detailed <a class="reference external" href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>.</p>
-</div>
-</div>
-<div class="section" id="flask">
+<ul>
+<li>
+<p><a href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a> 
+  by Daniel Greenfield and Audrey Roy is well worth the price of admission if
+  you're serious about learning how to correctly develop Django websites.</p>
+</li>
+<li>
+<p><a href="http://effectivedjango.com/">Effective Django</a> and 
+  <a href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a extensive 
+  free introductions to using the most popular Python web framework.</p>
+</li>
+<li>
+<p>DjangoCon US videos from 
+  <a href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>, 
+  <a href="http://pyvideo.org/category/23/djangocon-2012">2012</a>, 
+  <a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as<br />
+<a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
+  all available free of charge.</p>
+</li>
+<li>
+<p>The <a href="http://www.reddit.com/r/django">Django subreddit</a> often has links to
+  the latest resources for learning Django.</p>
+</li>
+<li>
+<p>Lincoln Loop wrote a 
+  <a href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>
+  for the community.</p>
+</li>
+<li>
+<p>Steve Losh wrote an incredibly detailed <a href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>.</p>
+</li>
+</ul>
 <h2>Flask</h2>
-<p><a class="reference external" href="http://flask.pocoo.org/">Flask</a> is a Python microframework deliberately
-built with a
-<a class="reference external" href="http://flask.pocoo.org/docs/design/">small core and easy extensibility philosophy</a>.
-Flask is generally considered more
-&quot;<a class="reference external" href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Pythonic</a>&quot; than Django because Flask web application code is often more
+<p><a href="http://flask.pocoo.org/">Flask</a> is a Python microframework deliberately 
+built with a 
+<a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
+Flask is generally considered more 
+<a href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Pythonic</a> 
+than Django because Flask web application code is often more
 explicit. Flask was also written several years after Django and therefore
 learned from the Python community's reactions as the framework evolved.
-Jökull Sólberg wrote a great piece articulating to this effect in his
-<a class="reference external" href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a>.</p>
-<div class="section" id="flask-resources">
+Jökull Sólberg wrote a great piece articulating to this effect in his 
+<a href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a>.</p>
 <h3>Flask resources</h3>
-<p>The 18 post series Flask mega tutorial is an absolutely amazing starting
-resource:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Part 1: Hello World</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">Part 2: Templates</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">Part 3: Web Forms</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database">Part 4: Database</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins">Part 5: User Logins</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars">Part 6: Profile Page and Avatars</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing">Part 7: Unit Testing</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">Part 8: Followers, Contacts, and Friends</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination">Part 9: Pagination</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search">Part 10: Full Text Search</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support">Part 11: Email Support</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift">Part 12: Facelift</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times">Part 13: Dates and Times</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n">Part 14: I18n and L10n</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax">Part 15: Ajax</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">Part 16: Debugging, Testing and Profiling</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">Part 17: Deployment on Linux</a></li>
-<li><a class="reference external" href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Part 18: Deployment on the Heroku Cloud</a></li>
-</ul>
-<p>Yes, there are many parts to the series. However, each post is focused on
-a single topic to contain the complexity. The whole series is well
-worth an in-depth read-through. The
-<a class="reference external" href="https://twitter.com/miguelgrinberg">author</a> is also writing the
-<a class="reference external" href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a>
+<p>The 18-part Flask mega tutorial is an absolutely amazing starting 
+resource for using the Flask framework. Yes, there are a lot of posts in 
+the series. However, each post is focused on a single topic to contain 
+the complexity while the reader is learning the framework. The whole 
+series is well worth an in-depth read-through. The 
+<a href="https://twitter.com/miguelgrinberg">author</a> is also writing the 
+<a href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a>
 book so consider picking that up as well.</p>
-<p>The <a class="reference external" href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a> is a
-curated list of the best packages that extend Flask. It's the first location
-to look through when you're wondering how to do something that's not in the
-core framework.</p>
-<p>Great post by Jeff Knupp on <a class="reference external" href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">Productionizing a Flask App</a></p>
-<p>The Plank &amp; Whittle blog has two posts, one on <a class="reference external" href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">Packaging a Flask web app</a>
-and another on <a class="reference external" href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">Packaging a Flask app in a Debian package</a>
-once you've built an app and want to deploy it.</p>
-<p>The tuts+ <a class="reference external" href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a>
-is another great walkthrough for getting started with the framework.</p>
-</div>
-</div>
-<div class="section" id="web-framework-logging">
-<h2>Web Framework Logging</h2>
-<p>Logging is a common mechanism for monitoring web applications written with a
-web framework. Runtime exceptions that prevent code from running are
-important to log to investigate and fix the source of the problems.
-Informational and debugging logging also helps to understand how the
-application is performing even if code is working as intended.</p>
-<p>Logging is often grouped into several categories:</p>
-<ol class="arabic simple">
-<li>Information</li>
-<li>Debug</li>
-<li>Warning</li>
-<li>Error</li>
-</ol>
-<p>Logging errors that occur while a web framework is running is crucial to
-understanding how your application is performing.
-<a class="reference external" href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
-<a class="reference external" href="https://github.com/getsentry/sentry">Sentry</a> exception logging and
-aggregation application. Raven provides the way to send exceptions to
-Sentry, which should be deployed on a separate server from your production
-infrastructure. Raven can also be used by Python scripts to send other
-log data to Sentry for aggregation. Sentry provides a clean web application
-interface for viewing the exceptions. Sentry can also be configured with a
-mail plugin to send emails when exceptions occur.</p>
-<div class="section" id="web-framework-resources">
-<h3>Web Framework Resources</h3>
-<p><a class="reference external" href="http://bottlepy.org/docs/dev/">Bottle</a>,
-<a class="reference external" href="http://www.pylonsproject.org/">Pyramid</a>,
-<a class="reference external" href="http://falconframework.org/">Falcon</a>,
-<a class="reference external" href="http://webpy.org/">web.py</a> are the most common Python web frameworks other
-than Django and Flask.</p>
-<p>This <a class="reference external" href="http://codecondo.com/14-minimal-web-frameworks-for-python/">roundup of 14 minimal Python frameworks</a>
-contains both familiar and less known Python libraries.</p>
-</div>
-</div>
-
+<ul>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Part 1: Hello World</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">Part 2: Templates</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">Part 3: Web Forms</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database">Part 4: Database</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins">Part 5: User Logins</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars">Part 6: Profile Page and Avatars</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing">Part 7: Unit Testing</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">Part 8: Followers, Contacts, and Friends</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination">Part 9: Pagination</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search">Part 10: Full Text Search</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support">Part 11: Email Support</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift">Part 12: Facelift</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times">Part 13: Dates and Times</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n">Part 14: I18n and L10n</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax">Part 15: Ajax</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">Part 16: Debugging, Testing and Profiling</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">Part 17: Deployment on Linux</a></li>
+<li>
+<p><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Part 18: Deployment on the Heroku Cloud</a></p>
+</li>
+<li>
+<p>The <a href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a> is a
+  curated list of the best packages that extend Flask. It's the first location
+  to look through when you're wondering how to do something that's not in the
+  core framework.</p>
+</li>
+<li>
+<p>Great post by Jeff Knupp on <a href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">Productionizing a Flask App</a></p>
+</li>
+<li>
+<p>The Plank &amp; Whittle blog has two posts, one on 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">Packaging a Flask web app</a> 
+  and another on 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">Packaging a Flask app in a Debian package</a>
+  once you've built an app and want to deploy it.</p>
+</li>
+<li>
+<p>The tuts+ <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a> 
+  is another great walkthrough for getting started with the framework.</p>
+</li>
+</ul>
+<h2>Bottle</h2>
+<p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
+<a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
+web framework with no external dependencies except for the standard library
+included with Python.</p>
+<h3>Bottle resources</h3>
+<ul>
+<li>
+<p>Digital Ocean provides an extensive <a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">introductory post on Bottle</a>.</p>
+</li>
+<li>
+<p>This tutorial provides a walkthrough for
+<a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>.</p>
+</li>
+<li>
+<p>Here's a short code snippet for 
+  <a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a REST API with Bottle and MongoDB</a>.</p>
+</li>
+</ul>
+<h2>Web Framework Resources</h2>
+<ul>
+<li>
+<p>"<a href="http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">What is a web framework?</a>"
+  by <a href="https://twitter.com/jeffknupp">Jeff Knupp</a>
+  is a in-depth explanation of what a web framework is and their relation
+  to web servers.</p>
+</li>
+<li>
+<p><a href="http://www.pylonsproject.org/">Pyramid</a>, 
+  <a href="http://falconframework.org/">Falcon</a>,
+  <a href="http://webpy.org/">web.py</a> are the most common Python web frameworks other
+  than Django, Flask and Bottle.</p>
+</li>
+<li>
+<p>This <a href="http://codecondo.com/14-minimal-web-frameworks-for-python/">roundup of 14 minimal Python frameworks</a>
+  contains both familiar and less known Python libraries.</p>
+</li>
+</ul>
                                                                                                                                                                                                                               <br/>
             Next read the 
-            <a href="/task-queues.html">task queues</a> section.
+            <a href="/application-dependencies.html">application dependencies</a> section.
                 
-                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                              </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -235,19 +258,20 @@ contains both familiar and less known Python libraries.</p>
           <a href="/databases.html" class="list-group-item ">Databases</a>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item active">Web Frameworks</a>
-          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
+          <a href="/application-dependencies.html" class="list-group-item ">Application Dependencies</a>
           <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/caching.html" class="list-group-item ">Caching</a>
-          <a href="/web-browsers.html" class="list-group-item ">Web Browsers</a>
-          <a href="/web-application-security.html" class="list-group-item ">Web Application Security</a>
-          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
-          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
-          <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
+          <a href="/caching.html" class="list-group-item ">Caching</a>
+          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
+          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/about-author.html" class="list-group-item ">About</a>
+          <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
+          <a href="/logging.html" class="list-group-item ">Logging</a>
+          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
+          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
+          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
+          <a href="/best-python-resources.html" class="list-group-item ">Best Python Resources</a>
+          <a href="/about-author.html" class="list-group-item ">About the Author</a>
           <a href="/change-log.html" class="list-group-item ">Change Log</a>
       </div>
 </div></div>

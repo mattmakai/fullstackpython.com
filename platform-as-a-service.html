@@ -75,47 +75,67 @@
         <div class="row">
     <div class="col-md-8">
       <h1>Platform-as-a-service</h1>
-      <p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
+<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
-a PaaS removes the need to know as much about the underlying servers,
-operating system, web server, and often the WSGI server.</p>
-<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move
-ahead to the <a class="reference external" href="../wsgi-servers.html">WSGI servers</a> section.</p>
-<p>The PaaS layer defines how the
-application accesses resources such as computing time, files, and
-external services. The PaaS provides a higher-level abstraction for working
-with computing resources than deploying an application to a server or IaaS.</p>
+a PaaS removes the need to know as much about the underlying servers, 
+operating system, web server, and often the WSGI server. </p>
+<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move 
+ahead to the <a href="../wsgi-servers.html">WSGI servers</a> section.</p>
+<p>The PaaS layer defines how the application accesses resources such as 
+computing time, files, and external services. The PaaS provides a 
+higher-level abstraction for working with computing resources than deploying 
+an application to a server or IaaS.</p>
 <p>A PaaS makes deployment and operations easier because it forces the developer
-to conform applications to the PaaS architecture.</p>
-<p><a class="reference external" href="http://www.heroku.com/">Heroku</a>,
-<a class="reference external" href="https://developers.google.com/appengine/">Google App Engine</a>,
-<a class="reference external" href="https://gondor.io/">Gondor</a>, and
-<a class="reference external" href="https://openshift.redhat.com/community/get-started/python">OpenShift</a> are
-platform-as-services that support Python web applications. Each one requires
-varying tradeoffs to deploy to their respective platforms.</p>
-<img alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" src="theme/img/servers-versus-paas.png" />
+to conform applications to the PaaS architecture. For example, Heroku looks for
+Python's requirements.txt file in the base directory of the repository during
+deployment because that is the de facto community standard.</p>
+<p><a href="http://www.heroku.com/">Heroku</a>
+<a href="https://developers.google.com/appengine/">Google App Engine</a>
+<a href="https://gondor.io/">Gondor</a>, and
+<a href="https://openshift.redhat.com/community/get-started/python&gt;">OpenShift</a> are
+PaaS that support Python web applications. Each one requires varying tradeoffs 
+to deploy to their respective platforms.</p>
+<p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
 <p>If you go the PaaS route, you can skip over the operating system and web
 server sections because they are baked into PaaS offerings. PaaS offerings
-generally start at the WSGI server layer.</p>
-<div class="section" id="platform-as-a-service-resources">
+generally start at the WSGI server layer. </p>
+<h2>Platform-as-a-service responsibilities</h2>
+<p>Although PaaS offerings simplify setting up and maintaining the servers,
+operating system, and web server, developers still have responsibilities for other
+layers of their web stack.</p>
+<p>While it's useful to know the operating system that underpins your PaaS, for 
+example Heroku uses Ubuntu 10.04, you will not have to know as much about 
+securing the operating system and server level. However, web applications deployed
+to a PaaS are just as vulnerable to security breaches at the application level
+as a standard LAMP stack. It's still your responsibility to ensure the web
+application framework and your app itself is up to date and secured. See the
+<a href="../web-application-security.html">security section</a> for further information.</p>
 <h2>Platform-as-a-service resources</h2>
-<p><a class="reference external" href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a class="reference external" href="https://twitter.com/natea">Nate Aune</a></p>
-<p>DevOps Django and Heroku Series by <a class="reference external" href="https://twitter.com/rdegges">Randall Degges</a>:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
-<li><a class="reference external" href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
-<li><a class="reference external" href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
-<li><a class="reference external" href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
+<ul>
+<li>
+<p><a href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a href="https://twitter.com/natea">Nate Aune</a>.</p>
+</li>
+<li>
+<p><a href="http://www.deploydjango.com/">Deploying Django</a> by Randall Degges is 
+  another great free resource about Heroku.</p>
+</li>
+<li>
+<p>This series on DevOps Django by 
+  <a href="https://twitter.com/rdegges">Randall Degges</a> is great reading for 
+  using the Heroku service:</p>
+<ul>
+<li><a href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
+<li><a href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
+<li><a href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
+<li><a href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
 </ul>
-<p><a class="reference external" href="http://www.deploydjango.com/">Deploying Django</a> by Randall Degges is
-another great free resource about Heroku.</p>
-</div>
-
+</li>
+</ul>
                                                                                                                                                             <br/>
             Next read the 
             <a href="/databases.html">databases</a> section.
                 
-                                                                                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -126,19 +146,20 @@ another great free resource about Heroku.</p>
           <a href="/databases.html" class="list-group-item ">Databases</a>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
-          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
+          <a href="/application-dependencies.html" class="list-group-item ">Application Dependencies</a>
           <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/caching.html" class="list-group-item ">Caching</a>
-          <a href="/web-browsers.html" class="list-group-item ">Web Browsers</a>
-          <a href="/web-application-security.html" class="list-group-item ">Web Application Security</a>
-          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
-          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
-          <a href="/dependency-management.html" class="list-group-item ">Application Dependencies</a>
+          <a href="/caching.html" class="list-group-item ">Caching</a>
+          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
+          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
           <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/about-author.html" class="list-group-item ">About</a>
+          <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
+          <a href="/logging.html" class="list-group-item ">Logging</a>
+          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
+          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
+          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
+          <a href="/best-python-resources.html" class="list-group-item ">Best Python Resources</a>
+          <a href="/about-author.html" class="list-group-item ">About the Author</a>
           <a href="/change-log.html" class="list-group-item ">Change Log</a>
       </div>
 </div></div>

@@ -11,6 +11,14 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/application-dependencies.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>
@@ -27,11 +35,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/dependency-management.html</loc>
+    <loc>http://www.fullstackpython.com/introduction.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/introduction.html</loc>
+    <loc>http://www.fullstackpython.com/logging.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -72,10 +80,6 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/web-application-security.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/web-browsers.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

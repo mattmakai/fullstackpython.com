@@ -5,7 +5,6 @@
     <div class="col-md-8">
         {% for page in pages|sort(attribute='sort-order') %}
           {% if loop.first %}
-          <h1>{{ page.title }}</h1>
           {{ page.content }}
           {% for p in pages|sort(attribute='sort-order') %}
             {% if next_up %}
