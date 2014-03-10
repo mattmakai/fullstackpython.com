@@ -29,7 +29,6 @@ interface for viewing the exceptions. Sentry can also be configured with a
 mail plugin to send emails when exceptions occur.
 
 ## Logging Aggregators
-
 When you are running your application on several servers, it is helpful
 to have a monitoring tool called a "logging aggregator". You can configure your
 application to forward your system and application logs to one location that 
@@ -47,7 +46,7 @@ integration with S3 for
 * [splunk](http://www.splunk.com/) Splunk offers third party cloud and self hosted solutions 
 for event aggregation. It excells at searching and data mining any text based data. 
 
-###Open Source Projects
+### Open Source Log Aggregators
 * [Graylog2](http://graylog2.org/) Provides a central server for log aggregation as well as a GUI for
 browsing and searching through log events. There are libraries for most major languages, including python.
 Saves data in elasicache.
