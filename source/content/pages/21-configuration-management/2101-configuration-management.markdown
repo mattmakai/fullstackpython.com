@@ -13,6 +13,14 @@ way, including [Puppet](http://puppetlabs.com/puppet/what-is-puppet),
 written in Ruby, while SaltStack and Ansible are written in Python.
 
 
+# Ad hoc tasks
+Configuration management tools such as Chef, Puppet, Ansible, and SaltStack
+are not useful for performing ad hoc tasks that require interactive responses.
+[Fabric](http://docs.fabfile.org/en/1.8/) and 
+[Invoke](http://docs.pyinvoke.org/en/latest/) are used for interactive 
+operations, such as querying the database from the Django manage.py shell.
+
+
 ## Ansible
 [Ansible](http://www.ansibleworks.com/) is an open source configuration
 management and application deployment tool built in Python.
