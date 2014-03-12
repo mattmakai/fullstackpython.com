@@ -77,8 +77,23 @@
       <h1>Web servers</h1>
 <p>Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
-requests from clients. A client is usually a browser such as Internet Explorer, 
-Firefox, or Chrome, but it can also be a</p>
+requests from clients and send back a response containing a status code and
+often content as well.</p>
+<h2>Why are web servers necessary?</h2>
+<p>Web servers are the ying to the web client's yang. The server and client speak
+the standardized language of the World Wide Web. The standardized language
+is why an old Mozilla Netscape browser can still talk to a modern Apache or
+Nginx web server, even if it cannot render all of the CSS and JavaScript
+properly like a modern web browser. </p>
+<p>The basic language of the Web with the request and response cycle from 
+client to server then server back to client remains the same as it was when
+the Web was invented by 
+<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> at CERN in 1989.
+Modern browsers and web servers have simply extended the language of the Web
+to incorporate new standards.</p>
+<h2>Client requests</h2>
+<p>A client that sends a request to a web server is usually a browser such 
+as Internet Explorer, Firefox, or Chrome, but it can also be a</p>
 <ul>
 <li>headless browser, commonly use for testing, such as 
   <a href="http://phantomjs.org/">phantomjs</a></li>
@@ -111,8 +126,11 @@ script.js that the browser then requested from the server.</p>
 large amount of bandwidth which is why using a Content Delivery Network 
 (CDN) is important when possible (see the content delivery network 
 section for a more detailed explanation).</p>
-<h2>Web Server Resources</h2>
+<h2>Web server resources</h2>
 <ul>
+<li>
+<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP/1.1 Specification</a></p>
+</li>
 <li>
 <p><a href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
 </li>

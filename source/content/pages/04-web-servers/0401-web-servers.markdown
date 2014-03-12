@@ -7,8 +7,27 @@ sort-order: 04
 # Web servers
 Web servers respond to 
 [Hypertext Transfer Protocol](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (HTTP)
-requests from clients. A client is usually a browser such as Internet Explorer, 
-Firefox, or Chrome, but it can also be a
+requests from clients and send back a response containing a status code and
+often content as well.
+
+## Why are web servers necessary?
+Web servers are the ying to the web client's yang. The server and client speak
+the standardized language of the World Wide Web. The standardized language
+is why an old Mozilla Netscape browser can still talk to a modern Apache or
+Nginx web server, even if it cannot render all of the CSS and JavaScript
+properly like a modern web browser. 
+
+The basic language of the Web with the request and response cycle from 
+client to server then server back to client remains the same as it was when
+the Web was invented by 
+[Tim Berners-Lee](http://www.w3.org/People/Berners-Lee/) at CERN in 1989.
+Modern browsers and web servers have simply extended the language of the Web
+to incorporate new standards.
+
+
+## Client requests
+A client that sends a request to a web server is usually a browser such 
+as Internet Explorer, Firefox, or Chrome, but it can also be a
 
 * headless browser, commonly use for testing, such as 
   [phantomjs](http://phantomjs.org/)
@@ -47,7 +66,9 @@ large amount of bandwidth which is why using a Content Delivery Network
 section for a more detailed explanation).
 
 
-## Web Server Resources
+## Web server resources
+* [HTTP/1.1 Specification](http://www.w3.org/Protocols/rfc2616/rfc2616.html)
+
 * [How to set up a safe and secure Web server](http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/)
 
 * [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
