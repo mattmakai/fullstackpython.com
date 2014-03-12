@@ -11,15 +11,21 @@ programs necessary for running your Python web application.
 
 
 ## Why are operating systems necessary?
-An operating system makes all the computing tasks we take for granted, like
-writing to files, communicating over a network and running multiple programs 
-at once, easy. Otherwise you'd need to control the CPU, memory, network,
-graphics card, and many other components with your own low-level implemention.
+An operating system makes many the computing tasks we take for granted easy.
+For example, the operating system enables writing to files, 
+communicating over a network and running multiple programs at once. 
+Otherwise you'd need to control the CPU, memory, network, graphics card, 
+and many other components with your own low-level implemention.
+
 Without using an existing operating system like Linux, Mac OS X, or Windows,
-you'd have to write a new operating system as part of your web application.
-It would be impossible to write features for your Python web application
-because you'd be too busy hunting down a memory leak in your assembly code,
-if you even were able to get that far.
+you'd be forced to write a new operating system as part of your web 
+application.  It would be impossible to write features for your Python 
+web application because you'd be too busy hunting down a memory leak in 
+your assembly code, if you even were able to get that far.
+
+Fortunately, open source provides Linux to the Python world as a great
+free operating system for running our applications.
+
 
 ## Recommended operating systems
 The only recommended operating system for production Python web stack 
