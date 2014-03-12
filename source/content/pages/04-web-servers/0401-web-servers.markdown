@@ -12,7 +12,7 @@ often content such as HTML, XML or JSON as well.
 
 ## Why are web servers necessary?
 Web servers are the ying to the web client's yang. The server and client speak
-the standardized language of the World Wide Web. The standardized language
+the standardized language of the World Wide Web. This standard language
 is why an old Mozilla Netscape browser can still talk to a modern Apache or
 Nginx web server, even if it cannot render all of the CSS and JavaScript
 properly like a modern web browser. 
