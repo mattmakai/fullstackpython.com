@@ -12,6 +12,8 @@ the
 
 ## 2014
 ### March
+* Adding 'why is this necessary' sections to servers, operating systems,
+  and web servers pages.
 * Extracting best Python resources from the introduction into a separate
   page.
 * Cleaned up links on the first ten chapters and added new resources for
