@@ -33,9 +33,9 @@ deployments is Linux. There are several Linux distributions commonly used
 for running production servers. Ubuntu Long Term Support (LTS) releases, 
 Red Hat Enterprise Linux, and CentOS are all viable options. 
 
-*Side note*: Mac OS X is fine for development activities. Windows and Mac 
-OS X are not appropriate for most test and production deployments unless
-there is a specific reason why you must use them in lieu of Linux.
+Mac OS X is fine for development activities. Windows and Mac 
+OS X are not appropriate for production deployments unless there is a 
+specific reason why you must use them in lieu of Linux.
 
 ### Ubuntu
 Ubuntu is a Linux distribution packaged by the 
