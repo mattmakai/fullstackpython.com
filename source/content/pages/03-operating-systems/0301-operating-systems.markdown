@@ -23,7 +23,7 @@ application.  It would be impossible to write features for your Python
 web application because you'd be too busy hunting down a memory leak in 
 your assembly code, if you even were able to get that far.
 
-Fortunately, open source provides Linux to the Python world as a great
+Fortunately, open source provides Linux to the Python world as a rock solid
 free operating system for running our applications.
 
 
@@ -35,7 +35,7 @@ Red Hat Enterprise Linux, and CentOS are all viable options.
 
 Mac OS X is fine for development activities. Windows and Mac 
 OS X are not appropriate for production deployments unless there is a 
-specific reason why you must use them in lieu of Linux.
+major reason why you must use them in lieu of Linux.
 
 ### Ubuntu
 Ubuntu is a Linux distribution packaged by the 
