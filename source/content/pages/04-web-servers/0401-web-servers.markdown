@@ -8,7 +8,7 @@ sort-order: 04
 Web servers respond to 
 [Hypertext Transfer Protocol](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (HTTP)
 requests from clients and send back a response containing a status code and
-often content as well.
+often content such as HTML, XML or JSON as well.
 
 ## Why are web servers necessary?
 Web servers are the ying to the web client's yang. The server and client speak
