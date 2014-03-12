@@ -76,15 +76,27 @@
     <div class="col-md-8">
       <h1>Operating Systems</h1>
 <p>An operating system runs on the server or virtual server and controls access 
-to computing resources. The only recommended operating system for 
-production Python web stack deployments is Linux. There are several 
-Linux distributions commonly used for running production servers. Ubuntu 
-Long Term Support (LTS) releases, Red Hat Enterprise Linux, and CentOS are 
-all viable options. </p>
+to computing resources. The operating system also includes a way to install
+programs necessary for running your Python web application.</p>
+<h2>Why are operating systems necessary?</h2>
+<p>An operating system makes all the computing tasks we take for granted, like
+writing to files, communicating over a network and running multiple programs 
+at once, easy. Otherwise you'd need to control the CPU, memory, network,
+graphics card, and many other components with your own low-level implemention.
+Without using an existing operating system like Linux, Mac OS X, or Windows,
+you'd have to write a new operating system as part of your web application.
+It would be impossible to write features for your Python web application
+because you'd be too busy hunting down a memory leak in your assembly code,
+if you even were able to get that far.</p>
+<h2>Recommended operating systems</h2>
+<p>The only recommended operating system for production Python web stack 
+deployments is Linux. There are several Linux distributions commonly used 
+for running production servers. Ubuntu Long Term Support (LTS) releases, 
+Red Hat Enterprise Linux, and CentOS are all viable options. </p>
 <p><em>Side note</em>: Mac OS X is fine for development activities. Windows and Mac 
 OS X are not appropriate for most test and production deployments unless
 there is a specific reason why you must use them in lieu of Linux.</p>
-<h2>Ubuntu</h2>
+<h3>Ubuntu</h3>
 <p>Ubuntu is a Linux distribution packaged by the 
 <a href="http://www.canonical.com/">Canonical Ltd</a> company. Ubuntu uses the
 Debian distribution as a base for packages, including the 
@@ -99,7 +111,7 @@ as flexibility in skipping every other LTS release if necessary. As of
 February 2014, 
 <a href="http://releases.ubuntu.com/precise/">12.04 Precise Pangolin</a>
 is the latest Ubuntu LTS release.</p>
-<h3>Ubuntu Python Packages</h3>
+<h4>Ubuntu Python Packages</h4>
 <p>There are several 
 <a href="https://help.ubuntu.com/12.04/serverguide/aptitude.html">Aptitude</a>
 packages found on Linux servers running a Python stack. These packages are: </p>
@@ -115,7 +127,7 @@ packages found on Linux servers running a Python stack. These packages are: </p>
   dependencies</p>
 </li>
 </ul>
-<h2>Red Hat and CentOS</h2>
+<h3>Red Hat and CentOS</h3>
 <p><a href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
 (RHEL) and <a href="http://www.centos.org/">Community ENTerprise Operating System</a>
 (CentOS) are the same distribution. The primary difference between the two 

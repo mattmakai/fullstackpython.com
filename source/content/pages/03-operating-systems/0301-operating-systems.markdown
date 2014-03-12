@@ -6,17 +6,32 @@ sort-order: 03
 
 # Operating Systems
 An operating system runs on the server or virtual server and controls access 
-to computing resources. The only recommended operating system for 
-production Python web stack deployments is Linux. There are several 
-Linux distributions commonly used for running production servers. Ubuntu 
-Long Term Support (LTS) releases, Red Hat Enterprise Linux, and CentOS are 
-all viable options. 
+to computing resources. The operating system also includes a way to install
+programs necessary for running your Python web application.
+
+
+## Why are operating systems necessary?
+An operating system makes all the computing tasks we take for granted, like
+writing to files, communicating over a network and running multiple programs 
+at once, easy. Otherwise you'd need to control the CPU, memory, network,
+graphics card, and many other components with your own low-level implemention.
+Without using an existing operating system like Linux, Mac OS X, or Windows,
+you'd have to write a new operating system as part of your web application.
+It would be impossible to write features for your Python web application
+because you'd be too busy hunting down a memory leak in your assembly code,
+if you even were able to get that far.
+
+## Recommended operating systems
+The only recommended operating system for production Python web stack 
+deployments is Linux. There are several Linux distributions commonly used 
+for running production servers. Ubuntu Long Term Support (LTS) releases, 
+Red Hat Enterprise Linux, and CentOS are all viable options. 
 
 *Side note*: Mac OS X is fine for development activities. Windows and Mac 
 OS X are not appropriate for most test and production deployments unless
 there is a specific reason why you must use them in lieu of Linux.
 
-## Ubuntu
+### Ubuntu
 Ubuntu is a Linux distribution packaged by the 
 [Canonical Ltd](http://www.canonical.com/) company. Ubuntu uses the
 Debian distribution as a base for packages, including the 
@@ -34,7 +49,7 @@ February 2014,
 is the latest Ubuntu LTS release.
 
 
-### Ubuntu Python Packages
+#### Ubuntu Python Packages
 There are several 
 [Aptitude](https://help.ubuntu.com/12.04/serverguide/aptitude.html)
 packages found on Linux servers running a Python stack. These packages are: 
@@ -48,7 +63,7 @@ packages found on Linux servers running a Python stack. These packages are:
   dependencies
 
 
-## Red Hat and CentOS
+### Red Hat and CentOS
 [Red Hat Enterprise Linux](http://www.redhat.com/products/enterprise-linux/)
 (RHEL) and [Community ENTerprise Operating System](http://www.centos.org/)
 (CentOS) are the same distribution. The primary difference between the two 
