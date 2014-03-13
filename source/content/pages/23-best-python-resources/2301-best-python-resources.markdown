@@ -14,7 +14,7 @@ my biased perspective the best way to use each one. This is the list I wish
 I had when I was learning the language.
 
 
-## New to Programming
+## New to programming
 * To get an introduction to both Python and Django at the same time, purchase
   [Real Python](http://www.realpython.com/) by Fletcher, Michael, and Jeremy.
 
@@ -25,8 +25,12 @@ I had when I was learning the language.
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
 
+* The O'Reilly book 
+  [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
+  is available in HTML form for free on the web.
 
-## Experienced Developers New to Python
+
+## Experienced developers new to Python
 * [Learn Python in y minutes](http://learnxinyminutes.com/docs/python/)
   provides a whirlwind tour of the Python language. The guide is especially
   useful if you're coming in with previous software development experience
@@ -43,11 +47,23 @@ I had when I was learning the language.
   as the community.
 
 
-
-## Intermediate
+## Beyond the basics
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
   screencasts for learning intermediate topics. I typically prefer to learn
   by reading. However, these videos are helpful in seeing the code on the 
   screen instead of just looking at static code snippets.
 
+* The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
+  Python links and has an active community ready to answer questions from
+  beginners and advanced Python developers alike.
+
+
+## Newsletters
+* [Python Weekly](http://www.pythonweekly.com/) is a free weekly roundup
+  of the latest Python articles, videos, projects, and upcoming events.
+
+* [PyCoder's Weekly](http://pycoders.com/) is another great free weekly
+  email newsletter similar to Python Weekly. The best resources are generally
+  covered in both newsletters but they often cover different articles
+  and projects from around the web.
 
