@@ -23,8 +23,8 @@ application.  It would be impossible to write features for your Python
 web application because you'd be too busy hunting down a memory leak in 
 your assembly code, if you even were able to get that far.
 
-Fortunately, open source provides Linux to the Python world as a rock solid
-free operating system for running our applications.
+Fortunately, the open source community provides Linux to the Python world 
+as a rock solid free operating system for running our applications.
 
 
 ## Recommended operating systems
