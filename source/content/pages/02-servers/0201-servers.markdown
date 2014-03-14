@@ -82,6 +82,11 @@ require for ongoing maintenance such as persistent storage backups.
 
 ### Virtualized servers resources
 * [Choosing a low cost VPS](http://blog.redfern.me/choosing-a-low-cost-vps/)
+  reviews the factors that you should weigh when deciding on hosting 
+  providers.
+
+* This post covers hosting types and host to
+  [choose a web host](http://www.purefiremedia.com/choose-a-web-host/).
 
 
 ## Infrastructure-as-a-service

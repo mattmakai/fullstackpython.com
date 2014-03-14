@@ -58,6 +58,14 @@ application framework and your app itself is up to date and secured. See the
 * [Deploying Django](http://www.deploydjango.com/) by Randall Degges is 
   another great free resource about Heroku.
 
+* Heroku's 
+  [Python deployment documentation](https://devcenter.heroku.com/articles/getting-started-with-python)
+  provides clear examples for how to work with virtualenv, pip and 
+  requirementst.txt to get a applications deployed to their platform.
+
+* Miguel Grinberg's Flask tutorial contains an entire post on deploying 
+  [Flask applications to Heroku](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud).
+
 * This series on DevOps Django by 
   [Randall Degges](https://twitter.com/rdegges) is great reading for 
   using the Heroku service:
