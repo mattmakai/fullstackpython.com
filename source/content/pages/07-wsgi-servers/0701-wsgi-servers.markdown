@@ -25,8 +25,8 @@ was recognition by the community that a consistent way to execute Python
 code for web applications was needed.
 
 Therefore the Python community came up with WSGI as a standard interface that  
-modules and containers could implement to run Python applications. WSGI is
-now the accepted approach for running Python web application code. 
+modules and containers could implement. WSGI is now the accepted approach 
+for running Python web applications.
 
 
 ## WSGI's Purpose
