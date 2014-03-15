@@ -75,10 +75,21 @@
     <div class="col-md-8">
       <h1>Databases</h1>
 <p>A database is an abstraction on top of an operating system's file system to 
-ease creating, reading, updating, and deleting persistent data. The 
-database storage abstraction most commonly used in Python web development is
-sets of relational tables. Alternative storage abstractions are explained in
-the <a href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
+ease creating, reading, updating, and deleting persistent data. </p>
+<h2>Why are databases necessary?</h2>
+<p>At a high level web applications store data and present it to users in a 
+useful way. For example, Google stores data about roads and provides 
+directions to get from one location to another by driving through the 
+<a href="https://www.google.com/maps/">Maps</a> application. Driving directions are 
+possible because the data is stored in a structured way. </p>
+<p>Databases make structured storage reliable and fast. They also give you a 
+mental framework for how the data should be saved and retrieved instead of 
+having to figure out what to do with the data every time you build a new 
+application.</p>
+<h2>Relational databases</h2>
+<p>The database storage abstraction most commonly used in Python web development 
+is sets of relational tables. Alternative storage abstractions are explained 
+in the <a href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
 <p>Relational databases store all data in a series of tables. Interconnections
 between the tables are specified as <em>foreign keys</em>.</p>
 <p>Databases storage implementations vary in complexity. SQLite, a database 
