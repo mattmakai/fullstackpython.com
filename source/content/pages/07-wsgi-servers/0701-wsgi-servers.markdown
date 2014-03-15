@@ -29,7 +29,53 @@ modules and containers could implement to run Python applications. WSGI is
 now the accepted approach for running Python web application code. 
 
 
-## PEP specification
+## WSGI's Purpose
+Why use WSGI and not just point a web server directly at an application?
+
+* **WSGI gives you flexibility**. Application developers can swap out
+  web stack components for others. For example, a developer can switch from 
+  Green Unicorn to uWSGI without modifying the application or framework 
+  that implements WSGI. 
+  From [PEP 3333](http://www.python.org/dev/peps/pep-3333/):
+
+    The availability and widespread use of such an API in web servers for 
+    Python [...] would separate choice of framework from choice of web 
+    server, freeing users to choose a pairing that suits them, while 
+    freeing framework and server developers to focus on their preferred 
+    area of specialization.
+
+* **WSGI servers promote scaling**. Serving thousands of requests for dynamic
+  content at once is the domain of WSGI servers, not frameworks.
+  WSGI servers handle processing requests from the web server and deciding
+  how to communicate those requests to an application framework's process.
+  The segregation of responsibilities is important for efficiently scaling 
+  web traffic.
+
+WSGI is by design a simple standard interface for running Python code. As
+a web developer you won't need to know much more than
+
+* what WSGI stands for (Web Server Gateway Inteface)
+
+* that a WSGI container is a separate running process that runs on a
+  different port than your web server
+
+* your web server is configured to pass requests to the WSGI container which
+  runs your web application, then pass the response (in the form of HTML)
+  back to the requester
+
+If you're using a standard web framework such as Django, Flask, or
+Bottle, or almost any other current Python framework, you don't need to worry
+about how frameworks implement the application side of the WSGI standard.
+Likewise, if you're using a standard WSGI container such as Green Unicorn,
+uWSGI, mod\_wsgi, or gevent, you can get them running without worrying about
+how they implement the WSGI standard.
+
+However, knowing the WSGI standard and how these frameworks and containers
+implement WSGI should be on your learning checklist though as you become
+a more experienced Python web developer.
+
+
+## Official WSGI specifications
 The WSGI standard v1.0 is specified in
 [PEP 0333](http://www.python.org/dev/peps/pep-0333/). As of September 2010,
 WSGI v1.0 is superseded by
@@ -82,52 +128,6 @@ server running on port 8000:
 Note that the above code is a simplified version of a production-ready Nginx
 configuration. For real SSL and non-SSL templates, take a look at the
 [Underwear web server templates](https://github.com/makaimc/underwear/tree/master/underwear/roles/web/templates) on GitHub.
-
-WSGI is by design a simple standard interface for running Python code. As
-a web developer you won't need to know much more than
-
-* what WSGI stands for (Web Server Gateway Inteface)
-
-* that a WSGI container is a separate running process that runs on a
-  different port than your web server
-
-* your web server is configured to pass requests to the WSGI container which
-  runs your web application, then pass the response (in the form of HTML)
-  back to the requester
-
-If you're using a standard web framework such as Django, Flask, or
-Bottle, or almost any other current Python framework, you don't need to worry
-about how frameworks implement the application side of the WSGI standard.
-Likewise, if you're using a standard WSGI container such as Green Unicorn,
-uWSGI, mod\_wsgi, or gevent, you can get them running without worrying about
-how they implement the WSGI standard.
-
-However, knowing the WSGI standard and how these frameworks and containers
-implement WSGI should be on your learning checklist though as you become
-a more experienced Python web developer.
-
-
-## WSGI's Purpose
-Why use WSGI and not just point a web server directly at an application?
-
-* **WSGI gives you flexibility**. Application developers can swap out
-  web stack components for others. For example, a developer can switch from 
-  Green Unicorn to uWSGI without modifying the application or framework 
-  that implements WSGI. 
-  From [PEP 3333](http://www.python.org/dev/peps/pep-3333/):
-
-    The availability and widespread use of such an API in web servers for 
-    Python [...] would separate choice of framework from choice of web 
-    server, freeing users to choose a pairing that suits them, while 
-    freeing framework and server developers to focus on their preferred 
-    area of specialization.
-
-* **WSGI servers promote scaling**. Serving thousands of requests for dynamic
-  content at once is the domain of WSGI servers, not frameworks.
-  WSGI servers handle processing requests from the web server and deciding
-  how to communicate those requests to an application framework's process.
-  The segregation of responsibilities is important for efficiently scaling 
-  web traffic.
 
 
 ## WSGI Resources
