@@ -12,7 +12,7 @@ the
 
 ## 2014
 ### March
-* Added why for databases.
+* Added why for databases and WSGI servers.
 * Updating best resources page with newsletters and a few additional beyond
   the basics resources.
 * Adding 'why is this necessary' sections to servers, operating systems,
