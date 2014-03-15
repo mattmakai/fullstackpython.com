@@ -51,6 +51,8 @@ Why use WSGI and not just point a web server directly at an application?
   The segregation of responsibilities is important for efficiently scaling 
   web traffic.
 
+<img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server <-> Web server <-> Browser" width="100%" class="technical-diagram" />
+
 WSGI is by design a simple standard interface for running Python code. As
 a web developer you won't need to know much more than
 
@@ -81,8 +83,6 @@ The WSGI standard v1.0 is specified in
 WSGI v1.0 is superseded by
 [PEP 3333](http://www.python.org/dev/peps/pep-3333/), which defines the
 v1.0.1 WSGI standard.
-
-<img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server <-> Web server <-> Browser" width="100%" class="technical-diagram" />
 
 
 ## Example configuration
