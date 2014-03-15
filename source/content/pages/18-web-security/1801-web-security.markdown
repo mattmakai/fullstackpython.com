@@ -12,16 +12,18 @@ request forgery and usage of public-private keypairs.
 
 
 ## Security Resources
-[When and How to Deploy HTTPS](http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/)
+* [Security Tips from Apache](http://httpd.apache.org/docs/current/misc/security_tips.html)
 
-[Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
+* [When and How to Deploy HTTPS](http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/)
 
-[Securing Your Website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
+* [Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
 
-[How HTTPS Secures Connections: What Every Web Dev Should Know](http://blog.hartleybrody.com/https-certificates/)
+* [Securing Your Website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
 
-The Open Web Application Security Project (OWASP) has 
-[cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
-topics.
+* [How HTTPS Secures Connections: What Every Web Dev Should Know](http://blog.hartleybrody.com/https-certificates/)
+
+* The Open Web Application Security Project (OWASP) has 
+  [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
+  topics.
 
 
