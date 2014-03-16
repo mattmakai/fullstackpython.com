@@ -11,15 +11,15 @@ running Python web applications.
 
 
 ## Why are WSGI servers necessary?
-A traditional web server does not understand or have any way to execute Python 
-code. In the late 1990s, a developer named Grisha Trubetskoy 
+A traditional web server does not understand or have any way to run Python 
+applications. In the late 1990s, a developer named Grisha Trubetskoy 
 [came up with an Apache module called mod\_python](http://grisha.org/blog/2013/10/25/mod-python-the-long-story/) 
-to execute Python code. For several years in the late 1990s and early 2000s, 
-Apache configured with mod\_python ran most of the Python web applications 
-on the web.
+to execute arbitrary Python code. For several years in the late 1990s 
+and early 2000s, Apache configured with mod\_python ran most Python web 
+applications.
 
-However, mod\_python wasn't a standard. It was just an implementation that 
-allowed arbitrary Python code to run on a server. As mod\_python's 
+However, mod\_python wasn't a actual standard. It was just an implementation 
+that allowed Python code to run on a server. As mod\_python's 
 development stalled and security vulnerabilities were discovered there 
 was recognition by the community that a consistent way to execute Python 
 code for web applications was needed.
