@@ -5,9 +5,21 @@ sort-order: 08
 
 
 # Web frameworks
-A web application framework is a collection of libraries that 
-provide functionality to accomplish common operations for the web. These
-common operations include:
+A web application framework is a code library that make a developer's life
+easier when building reliable, scalable and maintainable web applications.
+
+
+## Why are web frameworks necessary?
+Web frameworks encapsulate what developers have learned over the past twenty
+years while building dynamic web applications. Frameworks make it easier
+to reuse code for common HTTP operations and to structure your code so that 
+it is maintainable.
+
+
+## Common web framework functionality
+Frameworks provide functionality in their code or through extensions to 
+perform common operations required to run web applications. These common 
+operations include:
 
 1. URL routing
 2. HTML, XML, JSON, and other output format templating
