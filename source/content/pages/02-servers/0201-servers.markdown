@@ -50,13 +50,11 @@ taking on manual labor working with hardware as well as the rest of the
 software stack.
 
 Buy actual hardware from a vendor either pre-built or as a collection of 
-components that you assemble yourself. Here is an 
-[example of a server buildout](http://duartes.org/gustavo/blog/post/building-a-quad-core-server). 
-The post is a couple of years old but those are the
-rough components you need to put together your own server. You can also buy 
+components that you assemble yourself. You can also buy 
 pre-configured servers from Dell or HP. Those servers tend to be in
 smaller case form factors (called "blades") but are correspondingly more 
-expensive than putting off-the-shelf components together yourself.
+expensive than putting off-the-shelf components together yourself in a 
+standard computer case.
 
 
 ## Virtualized servers
