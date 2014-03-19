@@ -21,6 +21,10 @@ I had when I was learning the language.
 * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/) is a
   free book by Zed Shaw.
 
+* [Python for You and Me](http://pymbook.readthedocs.org/en/latest/) (pym) is
+  an online book for people completely unfamiliar with the Python programming
+  language.
+
 * I wrote a quick blog post on
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
