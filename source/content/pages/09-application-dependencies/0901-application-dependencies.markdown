@@ -5,32 +5,77 @@ sort-order: 09
 
 
 # Application Dependencies
-Application dependencies are the Python libraries and their versions
-required for an application to work properly. These dependencies are 
-installed separately from system-level packages to prevent library version
-conflicts.
+Application dependencies are the libraries other than your project code
+that are required to create and run your application. 
 
-The most common way to install Python library dependencies is with 
-the [pip](http://www.pip-installer.org/en/latest/)
-command combined with 
-[virtualenv](http://www.virtualenv.org/en/latest/) to isolate the
-dependencies of individual applications from each other.
+
+## Why are application dependencies important?
+Python web applications are built upon the work done by thousands of open
+source programmers. Application dependencies include not only web frameworks but
+also libraries for scraping, parsing, processing, analyzing, visualizing, 
+and myriad other tasks. Python's ecosystem facilitates discovery, retrieval and 
+installation so applications are easier for developers to create.
+
+## Finding libraries
+Python libraries are stored in a central location known as the 
+[Python Package Index](https://pypi.python.org/pypi) (PyPi). PyPi contains
+search functionality with results weighted by usage and relevance based on
+keyword terms.
+
+
+## Isolating application dependencies
+Dependencies are installed separately from system-level packages to prevent 
+library version conflicts. The most common isolation method is 
+[virtualenv](http://www.virtualenv.org/en/latest/). Each virtualenv is its
+own copy of the Python interpreter and depedencies in the site-packages
+directory. To use a virtualenv it must first be created with the virtualenv
+command and then activated.
+
+
+## Downloading and installing Python dependencies
+The recommended way to install Python library dependencies is with the 
+[pip](http://www.pip-installer.org/en/latest/) command when a virtualenv
+is activated.
 
 Pip and virtualenv work together and have complementary responsibilities.
 Pip downloads and installs application dependencies from the central
-[PyPi](https://pypi.python.org/pypi) repository. Virtualenv creates an 
-isolated Python installation is where those dependencies are installed into.
+[PyPi](https://pypi.python.org/pypi) repository. 
 
 
 ## requirements.txt
 The pip convention for specifying application dependencies is with a 
 [requirements.txt](http://www.pip-installer.org/en/1.4.1/cookbook.html#requirements-files)
 file. When you build a Python web application you should include a 
-requirements.txt file with 
-[pegged dependencies](https://devcenter.heroku.com/articles/python-pip).
+requirements.txt file. 
 
 
-## setup.py
+### requirementst.txt example with pegged dependencies
+Python projects' dependencies for a web application should be specified in the
+requirements.txt with 
+[pegged dependencies](https://devcenter.heroku.com/articles/python-pip) like
+the following:
+
+    django==1.6
+    bpython==0.12
+    django-braces==0.2.1
+    django-model-utils==1.1.0
+    logutils==0.3.3
+    South==0.7.6
+    requests==1.2.0
+    stripe==1.9.1
+    dj-database-url==0.2.1
+    django-oauth2-provider==0.2.4
+    djangorestframework==2.3.1
+
+Pegged dependencies with precise version numbers or Git tags are important 
+because otherwise the latest version of a dependency will be used. While
+it may sound good to stay up to date, there's no telling if your application
+actually works with the latest versions of all dependencies. Developers should 
+deliberately upgrade and test to make sure there were no backwards-incompatible
+modifications in newer dependency library versions.
+
+
+##setup.py
 There is another type of dependency specification for Python libraries
 known as 
 [setup.py](http://stackoverflow.com/questions/1471994/what-is-setup-py).

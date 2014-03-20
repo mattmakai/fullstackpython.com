@@ -74,25 +74,63 @@
         <div class="row">
     <div class="col-md-8">
       <h1>Application Dependencies</h1>
-<p>Application dependencies are the Python libraries and their versions
-required for an application to work properly. These dependencies are 
-installed separately from system-level packages to prevent library version
-conflicts.</p>
-<p>The most common way to install Python library dependencies is with 
-the <a href="http://www.pip-installer.org/en/latest/">pip</a>
-command combined with 
-<a href="http://www.virtualenv.org/en/latest/">virtualenv</a> to isolate the
-dependencies of individual applications from each other.</p>
+<p>Application dependencies are the libraries other than your project code
+that are required to create and run your application. </p>
+<h2>Why are application dependencies important?</h2>
+<p>Python web applications are built upon the work done by thousands of open
+source programmers. Application dependencies include not only web frameworks but
+also libraries for scraping, parsing, processing, analyzing, visualizing, 
+and myriad other tasks. Python's ecosystem facilitates discovery, retrieval and 
+installation so applications are easier for developers to create.</p>
+<h2>Finding libraries</h2>
+<p>Python libraries are stored in a central location known as the 
+<a href="https://pypi.python.org/pypi">Python Package Index</a> (PyPi). PyPi contains
+search functionality with results weighted by usage and relevance based on
+keyword terms.</p>
+<h2>Isolating application dependencies</h2>
+<p>Dependencies are installed separately from system-level packages to prevent 
+library version conflicts. The most common isolation method is 
+<a href="http://www.virtualenv.org/en/latest/">virtualenv</a>. Each virtualenv is its
+own copy of the Python interpreter and depedencies in the site-packages
+directory. To use a virtualenv it must first be created with the virtualenv
+command and then activated.</p>
+<h2>Downloading and installing Python dependencies</h2>
+<p>The recommended way to install Python library dependencies is with the 
+<a href="http://www.pip-installer.org/en/latest/">pip</a> command when a virtualenv
+is activated.</p>
 <p>Pip and virtualenv work together and have complementary responsibilities.
 Pip downloads and installs application dependencies from the central
-<a href="https://pypi.python.org/pypi">PyPi</a> repository. Virtualenv creates an 
-isolated Python installation is where those dependencies are installed into.</p>
+<a href="https://pypi.python.org/pypi">PyPi</a> repository. </p>
 <h2>requirements.txt</h2>
 <p>The pip convention for specifying application dependencies is with a 
 <a href="http://www.pip-installer.org/en/1.4.1/cookbook.html#requirements-files">requirements.txt</a>
 file. When you build a Python web application you should include a 
-requirements.txt file with 
-<a href="https://devcenter.heroku.com/articles/python-pip">pegged dependencies</a>.</p>
+requirements.txt file. </p>
+<h3>requirementst.txt example with pegged dependencies</h3>
+<p>Python projects' dependencies for a web application should be specified in the
+requirements.txt with 
+<a href="https://devcenter.heroku.com/articles/python-pip">pegged dependencies</a> like
+the following:</p>
+<div class="codehilite"><pre><span class="n">django</span><span class="o">==</span><span class="mf">1.6</span>
+<span class="n">bpython</span><span class="o">==</span><span class="mf">0.12</span>
+<span class="n">django</span><span class="o">-</span><span class="n">braces</span><span class="o">==</span><span class="mf">0.2.1</span>
+<span class="n">django</span><span class="o">-</span><span class="n">model</span><span class="o">-</span><span class="n">utils</span><span class="o">==</span><span class="mf">1.1.0</span>
+<span class="n">logutils</span><span class="o">==</span><span class="mf">0.3.3</span>
+<span class="n">South</span><span class="o">==</span><span class="mf">0.7.6</span>
+<span class="n">requests</span><span class="o">==</span><span class="mf">1.2.0</span>
+<span class="n">stripe</span><span class="o">==</span><span class="mf">1.9.1</span>
+<span class="n">dj</span><span class="o">-</span><span class="n">database</span><span class="o">-</span><span class="n">url</span><span class="o">==</span><span class="mf">0.2.1</span>
+<span class="n">django</span><span class="o">-</span><span class="n">oauth2</span><span class="o">-</span><span class="n">provider</span><span class="o">==</span><span class="mf">0.2.4</span>
+<span class="n">djangorestframework</span><span class="o">==</span><span class="mf">2.3.1</span>
+</pre></div>
+
+
+<p>Pegged dependencies with precise version numbers or Git tags are important 
+because otherwise the latest version of a dependency will be used. While
+it may sound good to stay up to date, there's no telling if your application
+actually works with the latest versions of all dependencies. Developers should 
+deliberately upgrade and test to make sure there were no backwards-incompatible
+modifications in newer dependency library versions.</p>
 <h2>setup.py</h2>
 <p>There is another type of dependency specification for Python libraries
 known as 
