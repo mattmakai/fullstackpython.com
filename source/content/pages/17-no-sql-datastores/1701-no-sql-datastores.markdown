@@ -58,4 +58,5 @@ non-relational data stores.
 is a large list of popular, BigTable-based, special purpose, and other
 datastores with attributes and the best use cases for each one.
 
-
+[MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
+is a guide about using non-relational databases in green field environments.
