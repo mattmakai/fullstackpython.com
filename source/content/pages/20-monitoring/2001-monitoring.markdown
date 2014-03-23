@@ -5,10 +5,18 @@ sort-order: 20
 
 
 # Monitoring
+Monitoring tools capture, analyze and display information for a web 
+application's execution. Every application has issues arise throughout
+all levels of the web stack. Monitoring tools provide transparency so
+developers and operations teams can respond and fix problems.
+
+
+## Why is monitoring necessary?
 Capturing and analyzing data about your production environment is critical
 to proactively deal with stability, performance, and errors in a web 
 application.
 
+## Monitoring layers
 There are several important resources to monitor on the operating system 
 and network level of a web stack.
 
