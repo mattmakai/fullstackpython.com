@@ -12,6 +12,13 @@ request forgery and usage of public-private keypairs.
 
 
 ## Security Resources
+* [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
+
+* [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
+
+* [quick NIX secure script](https://github.com/marshyski/quick-secure) for
+securing Linux distributions.
+
 * [Security Tips from Apache](http://httpd.apache.org/docs/current/misc/security_tips.html)
 
 * [When and How to Deploy HTTPS](http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/)
