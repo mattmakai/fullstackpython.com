@@ -28,8 +28,9 @@ most common types of jobs for task queues include
 
 * The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
   library for queueing jobs and processing them in the background with workers.
-  It is backed by Redis and it is designed to have a low barrier to entry.
-  It should be integrated in your web stack easily.
+  RQ is backed by Redis and it is designed to have a low barrier to entry.
+  The [intro post](http://nvie.com/posts/introducing-rq/) contains information
+  on design decisions and how to use RQ.
 
 * [Taskmaster](https://github.com/dcramer/taskmaster) is a lightweight simple
   distributed queue for handling large volumes of one-off tasks. 
@@ -55,3 +56,7 @@ most common types of jobs for task queues include
 
 * [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
   provides an introduction to the Celery task queue.
+
+* The "Django in Production" series by 
+  [Rob Golding](https://twitter.com/robgolding63) contains a post 
+  specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/).

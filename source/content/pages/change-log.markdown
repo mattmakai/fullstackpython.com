@@ -12,8 +12,10 @@ the
 
 ## 2014
 ### March
-* Added why is this piece necessary for databases, WSGI servers and web
-  frameworks.
+* Updated task queues page with better explanations and many more curated
+  resources.
+* Added why is this piece necessary for databases, WSGI servers, web 
+  frameworks and application dependencies.
 * Updating best resources page with newsletters and a few additional beyond
   the basics resources.
 * Adding 'why is this necessary' sections to servers, operating systems,
