@@ -53,4 +53,5 @@ most common types of jobs for task queues include
 * Heroku has a clear walkthrough for using 
   [RQ for background tasks](https://devcenter.heroku.com/articles/python-rq).
 
-
+* [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
+  provides an introduction to the Celery task queue.
