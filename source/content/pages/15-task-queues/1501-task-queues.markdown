@@ -21,18 +21,36 @@ most common types of jobs for task queues include
   15 minutes
 
 
-## Task Queue resources
-The [Celery](http://www.celeryproject.org/) distributed task queue is the
-most commonly used Python library for handling asynchronous tasks and 
-scheduling.
+## Task queue projects
+* The [Celery](http://www.celeryproject.org/) distributed task queue is the
+  most commonly used Python library for handling asynchronous tasks and 
+  scheduling.
 
-[Queues.io](http://queues.io/) is a collection of task queue systems with
-short summaries for each one. The task queues are not all compatible with
-Python but ones that work with it are tagged with the "Python" keyword.
+* The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
+  library for queueing jobs and processing them in the background with workers.
+  It is backed by Redis and it is designed to have a low barrier to entry.
+  It should be integrated in your web stack easily.
 
-The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
-library for queueing jobs and processing them in the background with workers.
-It is backed by Redis and it is designed to have a low barrier to entry.
-It should be integrated in your web stack easily.
+* [Taskmaster](https://github.com/dcramer/taskmaster) is a lightweight simple
+  distributed queue for handling large volumes of one-off tasks. 
+
+
+## Task queue resources
+* [Distributing work without Celery](http://justcramer.com/2012/05/04/distributing-work-without-celery/)
+  provides a scenario in which Celery and RabbitMQ are not the right tool
+  for scheduling asynchronous jobs.
+
+* [Queues.io](http://queues.io/) is a collection of task queue systems with
+  short summaries for each one. The task queues are not all compatible with
+  Python but ones that work with it are tagged with the "Python" keyword.
+
+* [Why Task Queues](http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619) 
+  is a presentation for what task queues are and why they are needed. 
+
+* [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
+  is a detail walkthrough for using these tools on an Ubuntu VPS.
+
+* Heroku has a clear walkthrough for using 
+  [RQ for background tasks](https://devcenter.heroku.com/articles/python-rq).
 
 
