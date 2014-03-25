@@ -6,7 +6,7 @@
     <meta name="description" content="Full Stack Python shows how an entire Python web application is built and deployed. Each section of the guide explains a different key concept, from the server through the Python WSGI web framework to the front end JavaScript.">
     <meta name="author" content="Matt Makai">
     <link rel="shortcut icon" href="theme/img/full-stack-python-logo-bw.png">
-    <title>Best Python Resources</title>
+    <title>Cascading Style Sheets</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -73,101 +73,62 @@
 </div>
         <div class="row">
     <div class="col-md-8">
-      <h1>Best Python Resources</h1>
-<p>The Python community is amazing at sharing detailed resources and helping
-beginners learn to program with the language. There's so many resources
-out there though that it can be difficult to know how to find them. </p>
-<p>This page aggregates the absolute best Python resources and explains from
-my biased perspective the best way to use each one. This is the list I wish
-I had when I was learning the language.</p>
-<h2>New to programming</h2>
+      <h1>Cascading Style Sheets (CSS)</h1>
+<p>A Cascading Style Sheet (CSS) files contain rules for how to display and 
+lay out the HTML content when it is rendered by a web browser.</p>
+<h2>Why is CSS necessary?</h2>
+<p>CSS separates content contained in the HTML file from how the content 
+should be displayed. That separation between content and how to display it 
+enables devices to render the content differently based on factors such as
+screen size. For example, a mobile device does not have as much space to
+display a navigation bar on the side of a page so it is often pushed down 
+below the main content. The 
+<a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog example</a> 
+shows that scenario when you resize the browser width.</p>
+<h2>How is CSS retrieved from the web server?</h2>
+<p>The HTML file sent by the web server contains a reference to the CSS file(s)
+needed to render the content. The web browser requests the CSS file after the
+HTML file as shown below in a screenshot captured of the Chrome Web Developer 
+Tools network traffic.</p>
+<p><img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
+<p>That request for the fsp.css file is made because the HTML file for Full 
+Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
+in the view source screenshot below.</p>
+<p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
+<h2>CSS frameworks</h2>
 <ul>
 <li>
-<p>To get an introduction to both Python and Django at the same time, purchase
-  <a href="http://www.realpython.com/">Real Python</a> by Fletcher, Michael, and Jeremy.</p>
+<p><a href="http://getbootstrap.com/">Bootstrap</a></p>
 </li>
 <li>
-<p><a href="http://learnpythonthehardway.org/book/">Learn Python the Hard Way</a> is a
-  free book by Zed Shaw.</p>
-</li>
-<li>
-<p><a href="http://pymbook.readthedocs.org/en/latest/">Python for You and Me</a> (pym) is
-  an online book for people completely unfamiliar with the Python programming
-  language.</p>
-</li>
-<li>
-<p>I wrote a quick blog post on
-  <a href="http://www.mattmakai.com/learning-python-for-non-developers.html">learning Python</a>
-  that non-technical folks trying to learn to program may find useful.</p>
-</li>
-<li>
-<p>The O'Reilly book 
-  <a href="http://greenteapress.com/thinkpython/html/index.html">Think Python: How to Think Like a Computer Scientist</a>
-  is available in HTML form for free on the web.</p>
+<p><a href="http://foundation.zurb.com/">Foundation</a></p>
 </li>
 </ul>
-<h2>Experienced developers new to Python</h2>
+<h2>CSS preprocessors</h2>
 <ul>
 <li>
-<p><a href="http://learnxinyminutes.com/docs/python/">Learn Python in y minutes</a>
-  provides a whirlwind tour of the Python language. The guide is especially
-  useful if you're coming in with previous software development experience
-  and want to quickly grasp how the language is structured.</p>
+<p><a href="http://sass-lang.com/">SASS</a></p>
 </li>
 <li>
-<p><a href="http://pymbook.readthedocs.org/en/latest/">Python for you and me</a> is an
-  approachable book with sections for Python syntax and the major language 
-  constructs. The book also contains a short guide at the end to get
-  programmers to write their first Flask web application.</p>
-</li>
-<li>
-<p>Kenneth Reitz's 
-  <a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python</a>
-  contains a wealth of information both on the Python programming as well
-  as the community.</p>
+<p><a href="http://lesscss.org/">LESS</a></p>
 </li>
 </ul>
-<h2>Beyond the basics</h2>
+<h2>Design resources</h2>
 <ul>
-<li>
-<p><a href="http://mirnazim.org/writings/python-ecosystem-introduction/">The Python Ecosystem: An Introduction</a>
-  provides context for virtual machines, Python packaging, pip, virutalenv
-  and many other topics after learning the basic Python syntax. </p>
-</li>
-<li>
-<p><a href="https://www.neckbeardrepublic.com/">Neckbeard Republic</a> provides free 
-  screencasts for learning intermediate topics. I typically prefer to learn
-  by reading. However, these videos are helpful in seeing the code on the 
-  screen instead of just looking at static code snippets.</p>
-</li>
-<li>
-<p>The <a href="http://www.reddit.com/r/python">Python Subreddit</a> rolls up great
-  Python links and has an active community ready to answer questions from
-  beginners and advanced Python developers alike.</p>
-</li>
-<li>
-<p>The blog <a href="http://freepythontips.wordpress.com/">Free Python Tips</a> provides
-  posts on Python topics as well as news for the Python ecosystem.</p>
-</li>
+<li>The <a href="http://bootstrappingdesign.com/">Bootstrapping Design</a> book is one of 
+  the clearest and concise resources for learning design that I've ever read. 
+  Highly recommended especially if you feel you have no design skills but 
+  need to learn them.</li>
 </ul>
-<h2>Newsletters</h2>
+<h2>CSS resources</h2>
 <ul>
-<li>
-<p><a href="http://www.pythonweekly.com/">Python Weekly</a> is a free weekly roundup
-  of the latest Python articles, videos, projects, and upcoming events.</p>
-</li>
-<li>
-<p><a href="http://pycoders.com/">PyCoder's Weekly</a> is another great free weekly
-  email newsletter similar to Python Weekly. The best resources are generally
-  covered in both newsletters but they often cover different articles
-  and projects from around the web.</p>
-</li>
+<li><a href="http://alistapart.com/article/css-positioning-101">CSS Positioning 101</a></li>
 </ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <br/>
+                                                                                                                                                                                                                                                                          <br/>
             Next read the 
-            <a href="/about-author.html">about the author</a> section.
+            <a href="/static-content.html">static content</a> section.
                 
-                                                </div>
+                                                                                                                                                                                                                                                                                                                        </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="list-group">
           <a href="/introduction.html" class="list-group-item ">Introduction</a>
@@ -179,7 +140,7 @@ I had when I was learning the language.</p>
           <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
           <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
           <a href="/application-dependencies.html" class="list-group-item ">Application Dependencies</a>
-          <a href="/cascading-style-sheets.html" class="list-group-item ">Cascading Style Sheets</a>
+          <a href="/cascading-style-sheets.html" class="list-group-item active">Cascading Style Sheets</a>
           <a href="/static-content.html" class="list-group-item ">Static Content</a>
           <a href="/source-control.html" class="list-group-item ">Source Control</a>
           <a href="/caching.html" class="list-group-item ">Caching</a>
@@ -191,7 +152,7 @@ I had when I was learning the language.</p>
           <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
           <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
           <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/best-python-resources.html" class="list-group-item active">Best Python Resources</a>
+          <a href="/best-python-resources.html" class="list-group-item ">Best Python Resources</a>
           <a href="/about-author.html" class="list-group-item ">About the Author</a>
           <a href="/change-log.html" class="list-group-item ">Change Log</a>
       </div>

@@ -23,6 +23,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/cascading-style-sheets.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/change-log.html</loc>
     <priority>1.0</priority>
   </url>
