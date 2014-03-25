@@ -49,4 +49,9 @@ in the view source screenshot below.
   need to learn them.
 
 ## CSS resources
+* [Mozilla Developer Network's CSS page](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  contains an extensive set of resources, tutorials and demos for learning
+  CSS.
+
 * [CSS Positioning 101](http://alistapart.com/article/css-positioning-101)
+
