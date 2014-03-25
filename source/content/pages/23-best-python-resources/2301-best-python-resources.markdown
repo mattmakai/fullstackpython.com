@@ -52,6 +52,10 @@ I had when I was learning the language.
 
 
 ## Beyond the basics
+* [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
+  provides context for virtual machines, Python packaging, pip, virutalenv
+  and many other topics after learning the basic Python syntax. 
+
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
   screencasts for learning intermediate topics. I typically prefer to learn
   by reading. However, these videos are helpful in seeing the code on the 
@@ -60,6 +64,9 @@ I had when I was learning the language.
 * The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
   Python links and has an active community ready to answer questions from
   beginners and advanced Python developers alike.
+
+* The blog [Free Python Tips](http://freepythontips.wordpress.com/) provides
+  posts on Python topics as well as news for the Python ecosystem.
 
 
 ## Newsletters
