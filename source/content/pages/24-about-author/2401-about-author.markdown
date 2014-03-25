@@ -6,7 +6,8 @@ sort-order: 24
 
 # About the Author
 This website was written and built by 
-[Matt Makai](http://www.mattmakai.com/), currently a 
+[Matt Makai](http://www.mattmakai.com/) 
+([@mattmakai](http://twitter.com/mattmakai)), currently a 
 [Developer Evangelist](http://thenextweb.com/dd/2012/06/03/a-day-in-the-life-of-a-developer-evangelist/)
 at [Twilio](https://www.twilio.com/).
 
