@@ -12,6 +12,7 @@ the
 
 ## 2014
 ### March
+* New intermediate learning links on the best resources page.
 * Updated task queues page with better explanations and many more curated
   resources.
 * Added why is this piece necessary for databases, WSGI servers, web 
