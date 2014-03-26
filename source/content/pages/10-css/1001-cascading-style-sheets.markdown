@@ -58,6 +58,10 @@ web application's design.
 
 * [Gumby](http://gumbyframework.com/)
 
+* [Compass](http://compass-style.org/))
+
+* [Profound Grid](http://www.profoundgrid.com/)
+
 * [Skeleton](http://www.getskeleton.com/)
 
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
