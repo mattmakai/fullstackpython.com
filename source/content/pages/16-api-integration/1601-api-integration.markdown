@@ -19,6 +19,9 @@ across many implementation areas.
 
 
 ## API Integration Resources
-My DjangoCon 2013 talk dove into "[Making Django Play Nice With Third Party Services](http://www.youtube.com/watch?v=iGP8DQIqxXs)."
+* My DjangoCon 2013 talk dove into 
+  "[Making Django Play Nice With Third Party Services](http://www.youtube.com/watch?v=iGP8DQIqxXs)."
 
-
+* [Zapier](https://zapier.com/) is working on an 
+  [APIs 101](https://zapier.com/blog/apis-101/) free guide for what APIs 
+  are, why they are valuable and how to use them properly. 

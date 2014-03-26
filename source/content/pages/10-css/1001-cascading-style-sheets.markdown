@@ -56,7 +56,11 @@ web application's design.
 
 * [Foundation](http://foundation.zurb.com/)
 
-* [Gumby Framework](http://gumbyframework.com/)
+* [Gumby](http://gumbyframework.com/)
+
+* [Skeleton](http://www.getskeleton.com/)
+
+* [HTML5 Boilerplate](http://html5boilerplate.com/)
 
 
 ## Design resources
