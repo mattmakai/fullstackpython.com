@@ -50,6 +50,9 @@ I had when I was learning the language.
   contains a wealth of information both on the Python programming as well
   as the community.
 
+* [Google's Python Class](https://developers.google.com/edu/python/) contains
+  lecture videos and exercises for learning Python.
+
 
 ## Beyond the basics
 * [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
