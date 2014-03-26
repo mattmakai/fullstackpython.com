@@ -83,4 +83,4 @@ web application's design.
   is a detailed guide for learning how to do element positioning correctly
   with CSS.
 
-
+* [CSS3 cheat sheet](http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf)
