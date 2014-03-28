@@ -8,8 +8,10 @@ Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.
 
-A CDN is a third party that serves your static files.
-[Amazon CloudFront](http://aws.amazon.com/cloudfront/),
+
+## Content delivery networks
+A content delivery network (CDN) is a third party that stores and serves 
+static files. [Amazon CloudFront](http://aws.amazon.com/cloudfront/),
 [Akamai](http://www.akamai.com/), and 
 [Rackspace Cloud Files](http://www.rackspace.com/cloud/public/files/) 
 are examples of CDNs. The purpose of a CDN is to remove the load of static

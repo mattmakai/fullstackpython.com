@@ -33,4 +33,6 @@ securing Linux distributions.
   [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
   topics.
 
+* [How HTTPS Secures Connections](http://blog.hartleybrody.com/https-certificates/)
+  is a guide for what HTTPS does and does not secure against.
 
