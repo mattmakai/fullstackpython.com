@@ -9,6 +9,12 @@ up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.
 
 
+## Types of static content
+Static content can be either assets created as part of your development
+process such as images on your landing page or user-generated content. The 
+Django framework calls these two categories *assets* and *media*.
+
+
 ## Content delivery networks
 A content delivery network (CDN) is a third party that stores and serves 
 static files. [Amazon CloudFront](http://aws.amazon.com/cloudfront/),
@@ -23,8 +29,7 @@ constraints under heavy traffic. A CDN can remove the need to serve static
 assets from that nginx server so it can purely act as a pass through for 
 requests to the Green Unicorn WSGI server.
 
-CDNs distribute request load globally by using data centers in different 
-locations.
+CDNs send content responses from data centers with the closest proximity to the requester.
 
 
 ## Static Content Resources
