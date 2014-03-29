@@ -28,6 +28,7 @@ log data to Sentry for aggregation. Sentry provides a clean web application
 interface for viewing the exceptions. Sentry can also be configured with a
 mail plugin to send emails when exceptions occur.
 
+
 ## Logging Aggregators
 When you are running your application on several servers, it is helpful
 to have a monitoring tool called a "logging aggregator". You can configure your
@@ -36,6 +37,7 @@ provides tools such as to viewing searching, and monitoring logging events acros
 
 Another advantage of log aggregatortion tools is they allow you to set up custom alerts
 and alarms so you can get notified when error rates breach a certain threshold.
+
 
 ### Log Aggregator Third Party Services
 * [loggly](https://www.loggly.com/) Loggly is a third party cloud based application that
@@ -46,6 +48,7 @@ integration with S3 for
 * [splunk](http://www.splunk.com/) Splunk offers third party cloud and self hosted solutions 
 for event aggregation. It excells at searching and data mining any text based data. 
 
+
 ### Open Source Log Aggregators
 * [Graylog2](http://graylog2.org/) Provides a central server for log aggregation as well as a GUI for
 browsing and searching through log events. There are libraries for most major languages, including python.
@@ -55,3 +58,13 @@ configure log data workflows.
 * [Scribe](https://github.com/facebook/scribe) A project written by facebook to aggregate logs. It's designed
 to run on multiple servers and scale with the rest of your cluster. Uses the Thrift messagaing format so it can
 be used with any language. 
+
+
+## Logging resources
+* [Logging as Storytelling](http://www.hybridcluster.com/blog/logging-storytelling/)
+  is a multi-part series working the analogy that logs should read like
+  a story so you can better understand what's taking place in your web
+  application. 
+  [Part 2 describes actions](http://www.hybridcluster.com/blog/logging-storytelling-lets-add-action/)
+  and 
+  [part 3 talks about types](http://www.hybridcluster.com/blog/logging-storytelling-3-types/).
