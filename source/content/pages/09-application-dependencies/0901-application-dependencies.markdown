@@ -49,7 +49,7 @@ file. When you build a Python web application you should include a
 requirements.txt file. 
 
 
-### requirementst.txt example with pegged dependencies
+### requirements.txt example with pegged dependencies
 Python projects' dependencies for a web application should be specified in the
 requirements.txt with 
 [pegged dependencies](https://devcenter.heroku.com/articles/python-pip) like
