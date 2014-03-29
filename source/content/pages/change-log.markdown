@@ -12,7 +12,8 @@ the
 
 ## 2014
 ### March
-* Adding new CSS page.
+* Updated logging page with new resources.
+* Added new CSS page.
 * New intermediate learning links on the best resources page.
 * Updated task queues page with better explanations and many more curated
   resources.

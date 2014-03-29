@@ -4,7 +4,7 @@ slug: logging
 sort-order: 19
 
 # Logging
-Logging is a common mechanism for monitoring web applications written with a
+Logging is a mechanism for monitoring web applications written with a
 web framework. Runtime exceptions that prevent code from running are 
 important to log to investigate and fix the source of the problems. 
 Informational and debugging logging also helps to understand how the 
