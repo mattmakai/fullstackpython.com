@@ -61,6 +61,9 @@ be used with any language.
 
 
 ## Logging resources
+* This [intro to logging](http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/)
+  presents the Python logging module and how to use it.
+
 * [Logging as Storytelling](http://www.hybridcluster.com/blog/logging-storytelling/)
   is a multi-part series working the analogy that logs should read like
   a story so you can better understand what's taking place in your web
