@@ -83,6 +83,9 @@ and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/mi
 
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
+* [GoDjango](https://godjango.com/) screencasts and tutorials are free short
+  videos for learning how to build Django applications.
+
 
 ## Flask
 [Flask](http://flask.pocoo.org/) is a Python microframework deliberately 
