@@ -73,6 +73,9 @@ web application's design.
   Highly recommended especially if you feel you have no design skills but 
   need to learn them.
 
+* [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
+  color picker by Adobe that helps choose colors for your designs.
+
 
 ## CSS resources
 * [Mozilla Developer Network's CSS page](https://developer.mozilla.org/en-US/docs/Web/CSS)
