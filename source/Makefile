@@ -1,11 +1,8 @@
 run:
-	mkdir ./output
-	cp -R static-html/* output/
-	pelican -t theme -s settings.py content
-	cp output/pages/* output/
-	rm -rf output/pages/
-	cp -R output/* ..
-	rm -rf output/
+	cp -R static-html/* ..
+	pelican -t theme -s settings.py -o .. content
+	cp ../pages/* ../
+	rm -rf ../pages/
 
 init:
 	pip install -r requirements.txt
