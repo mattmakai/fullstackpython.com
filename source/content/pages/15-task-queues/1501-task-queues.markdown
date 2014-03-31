@@ -28,7 +28,7 @@ most common types of jobs for task queues include
 
 * The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
   library for queueing jobs and processing them in the background with workers.
-  RQ is backed by Redis and it is designed to have a low barrier to entry.
+  RQ is backed by Redis and is designed to have a low barrier to entry.
   The [intro post](http://nvie.com/posts/introducing-rq/) contains information
   on design decisions and how to use RQ.
 
