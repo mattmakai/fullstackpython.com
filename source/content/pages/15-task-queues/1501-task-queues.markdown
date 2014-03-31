@@ -60,3 +60,9 @@ most common types of jobs for task queues include
 * The "Django in Production" series by 
   [Rob Golding](https://twitter.com/robgolding63) contains a post 
   specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/).
+
+* [Asynchronous Processing in Web Applications Part One](http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/) 
+  and [Part Two](http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/)
+  are great reads for understanding the difference between a task queue and
+  why you shouldn't use your database as one.
+
