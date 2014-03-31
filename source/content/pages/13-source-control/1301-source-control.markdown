@@ -15,7 +15,7 @@ about permanently screwing something up. Unwanted changes can be easily rolled
 back. Developers can merge changes with other developer's code through 
 [diff](http://en.wikipedia.org/wiki/Diff) views. 
 
-These benefits exist on all software projects therefore version control is 
+These benefits exist on all software projects. Therefore version control is 
 a necessity regardless of time size or the programming ecosystem used. Every
 project should immediately begin by using a version control system such
 as Git or Mercurial.
