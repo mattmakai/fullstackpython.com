@@ -36,3 +36,6 @@ securing Linux distributions.
 * [How HTTPS Secures Connections](http://blog.hartleybrody.com/https-certificates/)
   is a guide for what HTTPS does and does not secure against.
 
+* [Crypto 101](https://www.crypto101.io/) is an introductory course on
+  cryptography for programmers.
+
