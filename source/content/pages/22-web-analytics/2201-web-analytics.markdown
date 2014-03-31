@@ -52,16 +52,20 @@ user's focus while using a website based on heatmaps generated from mouse
 movements. 
 
 ## Web Analytics Resources
-This 
-[Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)
+* [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)  
 
-This beginner's guide to 
-[math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
-provides some context for understanding and reasoning about web traffic. 
+* [Pandas and Google Analytics](http://blog.yhathq.com/posts/pandas-google-analytics.html)
+  shows how to use pandas for data analysis with Google Analytics' API to
+  perform calculations not available in the tool itself.
 
-This post provides context for determining if a given metric is
-["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
+* This beginner's guide to 
+  [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
+  provides some context for understanding and reasoning about web traffic. 
 
-Read this post on [how your analytics software actually works](http://www.bayesianwitch.com/blog/2013/howyouranalyticswork.html)
-to get a better understanding of what's going on behind the scenes from
-a technical perspective.
+* This post provides context for determining if a given metric is
+  ["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
+
+* Read this post on [how your analytics software actually works](http://www.bayesianwitch.com/blog/2013/howyouranalyticswork.html)
+  to get a better understanding of what's going on behind the scenes from
+  a technical perspective.
+
