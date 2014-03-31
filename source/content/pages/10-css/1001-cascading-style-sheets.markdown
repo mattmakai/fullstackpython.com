@@ -58,7 +58,7 @@ web application's design.
 
 * [Gumby](http://gumbyframework.com/)
 
-* [Compass](http://compass-style.org/))
+* [Compass](http://compass-style.org/)
 
 * [Profound Grid](http://www.profoundgrid.com/)
 
