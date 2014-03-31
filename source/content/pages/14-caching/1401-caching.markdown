@@ -4,7 +4,7 @@ slug: caching
 sort-order: 14
 
 # Caching
-Caching can reduce load on servers by storing the results of common 
+Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. 
 
 For example, instead of retrieving data from database tables that rarely 
