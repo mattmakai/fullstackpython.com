@@ -55,7 +55,7 @@ browsing and searching through log events. There are libraries for most major la
 Saves data in elasicache.
 * [Logstash](http://logstash.net/) Similar to Graylog2, logstash offers features to programatically
 configure log data workflows.
-* [Scribe](https://github.com/facebook/scribe) A project written by facebook to aggregate logs. It's designed
+* [Scribe](https://github.com/facebook/scribe) A project written by Facebook to aggregate logs. It's designed
 to run on multiple servers and scale with the rest of your cluster. Uses the Thrift messagaing format so it can
 be used with any language. 
 
