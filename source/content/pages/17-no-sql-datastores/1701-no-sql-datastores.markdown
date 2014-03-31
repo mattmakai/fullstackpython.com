@@ -28,7 +28,7 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 
 
 ## Graph
-A graph database represent and store data in three aspects: nodes, edges,
+A graph database represents and stores data in three aspects: nodes, edges,
 and properties. 
 
 A *node* is an entity, such as a person or business. 
