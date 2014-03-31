@@ -161,5 +161,5 @@ configuration. For real SSL and non-SSL templates, take a look at the
   [Python WSGI servers](http://nichol.as/benchmark-of-python-web-servers).
   Note that the post is a few years old. Benchmarks should be considered
   for their specific tested scenarios and not quickly extrapolated as general
-  "this server is fast than this other server" results.
+  "this server is faster than this other server" results.
 

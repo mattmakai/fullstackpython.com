@@ -23,8 +23,8 @@ to conform applications to the PaaS architecture. For example, Heroku looks for
 Python's requirements.txt file in the base directory of the repository during
 deployment because that is the de facto community standard.
 
-[Heroku](http://www.heroku.com/)
-[Google App Engine](https://developers.google.com/appengine/)
+[Heroku](http://www.heroku.com/),
+[Google App Engine](https://developers.google.com/appengine/),
 [Gondor](https://gondor.io/), and
 [OpenShift](https://openshift.redhat.com/community/get-started/python>) are
 PaaS that support Python web applications. Each one requires varying tradeoffs 
