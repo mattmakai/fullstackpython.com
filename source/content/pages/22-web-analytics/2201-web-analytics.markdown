@@ -15,7 +15,7 @@ application to better suit their needs.
 It's easy to get overwhelmed at both the number of analytics services and
 the numerous types of data points collected. Focus on just a handful of
 metrics when you're just starting out. As your application scales and you 
-understand more about your users then add additional analytics services 
+understand more about your users add additional analytics services 
 to gain further insight into their behavior with advanced visualizations such
 as heatmaps and action funnels. The
 [seven stages of startup analytics grief](http://spenczar.com/posts/2013/Sep/07/seven-stages-analytics-grief/) 

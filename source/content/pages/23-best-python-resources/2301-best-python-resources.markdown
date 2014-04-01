@@ -47,8 +47,7 @@ I had when I was learning the language.
 
 * Kenneth Reitz's 
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
-  contains a wealth of information both on the Python programming as well
-  as the community.
+  contains a wealth of information both on the Python programming and the community.
 
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.

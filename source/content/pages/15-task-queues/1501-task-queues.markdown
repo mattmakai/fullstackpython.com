@@ -28,7 +28,7 @@ most common types of jobs for task queues include
 
 * The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
   library for queueing jobs and processing them in the background with workers.
-  RQ is backed by Redis and it is designed to have a low barrier to entry.
+  RQ is backed by Redis and is designed to have a low barrier to entry.
   The [intro post](http://nvie.com/posts/introducing-rq/) contains information
   on design decisions and how to use RQ.
 
@@ -49,7 +49,7 @@ most common types of jobs for task queues include
   is a presentation for what task queues are and why they are needed. 
 
 * [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
-  is a detail walkthrough for using these tools on an Ubuntu VPS.
+  is a detailed walkthrough for using these tools on an Ubuntu VPS.
 
 * Heroku has a clear walkthrough for using 
   [RQ for background tasks](https://devcenter.heroku.com/articles/python-rq).

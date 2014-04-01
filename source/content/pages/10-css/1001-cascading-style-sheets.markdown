@@ -5,7 +5,7 @@ sort-order: 10
 
 
 # Cascading Style Sheets (CSS)
-A Cascading Style Sheet (CSS) files contain rules for how to display and 
+Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.
 
 ## Why is CSS necessary?
@@ -58,7 +58,7 @@ web application's design.
 
 * [Gumby](http://gumbyframework.com/)
 
-* [Compass](http://compass-style.org/))
+* [Compass](http://compass-style.org/)
 
 * [Profound Grid](http://www.profoundgrid.com/)
 
