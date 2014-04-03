@@ -154,14 +154,19 @@ included with Python.
 
 
 ### Bottle resources
+* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html) 
+  provides a thorough view of basic concepts and features for the framework.
+
 * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps).
 
 * This tutorial provides a walkthrough for
 [getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598).
 
 * Here's a short code snippet for 
-  [creating a REST API with Bottle and MongoDB](http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/).
+  [creating a RESTful API with Bottle and MongoDB](http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/).
 
+* This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/) 
+  is another Bottle walkthrough for creating a RESTful web API.
 
 ## Web Framework Resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
@@ -177,3 +182,6 @@ included with Python.
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
   contains both familiar and less known Python libraries.
 
+* The [web micro-framework battle](http://www.slideshare.net/r1chardj0n3s/web-microframework-battle/)
+  presentation goes over Bottle, Flask, and many other lesser known Python
+  web frameworks.

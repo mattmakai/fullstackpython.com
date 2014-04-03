@@ -32,24 +32,25 @@ application before taking some action, such as purchasing your service.
 
 
 ## Web Analytics Third Party Services
-[Google Analytics](http://www.google.com/analytics/) is a widely used
-free analytics tool for website traffic.
+* [Google Analytics](http://www.google.com/analytics/) is a widely used
+  free analytics tool for website traffic.
 
-[MixPanel](https://mixpanel.com/)'s analytics platform focuses on mobile
-and sales funnel metrics. A developer builds what data points need to be
-collected into the server side or client side code. MixPanel captures that
-data and provides metrics and visualizations based on the data.
+* [MixPanel](https://mixpanel.com/)'s analytics platform focuses on mobile
+  and sales funnel metrics. A developer builds what data points need to be
+  collected into the server side or client side code. MixPanel captures that
+  data and provides metrics and visualizations based on the data.
 
-[KISSmetrics](https://www.kissmetrics.com/)' analytics provides context
-for who is visiting a website and what actions they are taking while on
-the site.
+* [KISSmetrics](https://www.kissmetrics.com/)' analytics provides context
+  for who is visiting a website and what actions they are taking while on
+  the site.
 
-[Heap](https://heapanalytics.com/) is a recently founded analytics service
-with a free introductory tier to get started.
+* [Heap](https://heapanalytics.com/) is a recently founded analytics service
+  with a free introductory tier to get started.
 
-[CrazyEgg](http://www.crazyegg.com/) is tool for understanding a
-user's focus while using a website based on heatmaps generated from mouse 
-movements. 
+* [CrazyEgg](http://www.crazyegg.com/) is tool for understanding a
+  user's focus while using a website based on heatmaps generated from mouse 
+  movements. 
+
 
 ## Web Analytics Resources
 * [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)  
@@ -69,3 +70,6 @@ movements.
   to get a better understanding of what's going on behind the scenes from
   a technical perspective.
 
+* [Heap vs MixPanel](http://substantial.com/blog/2014/04/03/heap-analytics-vs-mixpanel/)
+  compares the two analytics services.
+  
