@@ -60,4 +60,5 @@ from PyCon UK 2013
 
 * [Idempotence, convergence, and other silly fancy words we often use](https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ)
 
+* [How to Write an Ansible Role for Ansible Galaxy](http://probablyfine.co.uk/2014/03/27/how-to-write-an-ansible-role-for-ansible-galaxy/)
 
