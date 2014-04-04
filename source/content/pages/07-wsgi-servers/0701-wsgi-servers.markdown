@@ -24,7 +24,7 @@ development stalled and security vulnerabilities were discovered there
 was recognition by the community that a consistent way to execute Python 
 code for web applications was needed.
 
-Therefore the Python community came up with WSGI as a standard interface that  
+Therefore the Python community came up with WSGI as a standard interface that
 modules and containers could implement. WSGI is now the accepted approach 
 for running Python web applications.
 
