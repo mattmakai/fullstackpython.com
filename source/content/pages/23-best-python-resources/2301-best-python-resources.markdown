@@ -65,6 +65,9 @@ I had when I was learning the language.
 * The blog [Free Python Tips](http://freepythontips.wordpress.com/) provides
   posts on Python topics as well as news for the Python ecosystem.
 
+* [Python Books](http://pythonbooks.revolunet.com/) is a collection of freely
+  available books on Python, Django, and data analysis.
+
 
 ## Videos and screencasts
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 

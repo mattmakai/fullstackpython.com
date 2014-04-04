@@ -11,6 +11,12 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### April
+* Updated application dependencies with new links to Python library 
+  collections.
+* Merged a couple of awesome pull requests that fixed typos and added 
+  additional Bottle resources.
+
 ### March
 * Updated logging page with new resources.
 * Added new CSS page.

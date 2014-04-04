@@ -22,6 +22,27 @@ Python libraries are stored in a central location known as the
 search functionality with results weighted by usage and relevance based on
 keyword terms.
 
+Besides PyPi there are numerous resources that list common or "must-have" 
+libraries. Ultimately the decision for which application dependencies are
+necessary for your project is up to you. However, it's useful to browse
+through these lists in case you come across a reusable library to solve 
+problems you'd otherwise have to rewrite yourself. Some of the best collections
+of Python libraries are
+
+* [Python.org's useful modules](https://wiki.python.org/moin/UsefulModules)
+  which groups modules into categories.
+
+* [GitHub Explore Trending repositories](https://github.com/trending?l=python)
+  shows the open source Python projects trending today, this week, and this 
+  month.
+
+* This list of [20 Python libraries you can’t live without](http://freepythontips.wordpress.com/2013/07/30/20-python-libraries-you-cant-live-without/)
+  is a wide-ranging collection from data analysis to testing tools.
+
+* Wikipedia actually has an extensive 
+  [page dedicated to Python libraries](http://en.wikipedia.org/wiki/List_of_Python_software) 
+  grouped by categories.
+  
 
 ## Isolating application dependencies
 Dependencies are installed separately from system-level packages to prevent 
