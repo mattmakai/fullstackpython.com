@@ -5,8 +5,9 @@ sort-order: 02
 
 
 # Servers
-Servers provide the physical infrastructure to run all the software,
-including your web application, that responds to web requests.
+Servers are the physical infrastructure to run all the layers of software
+so your web application can respond to requests from clients such as web 
+browsers.
 
 
 ## Why are servers necessary?
