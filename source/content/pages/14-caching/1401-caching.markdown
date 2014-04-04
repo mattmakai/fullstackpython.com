@@ -17,10 +17,17 @@ for future requests.
 A cache can be created for multiple layers of the stack. 
 
 
-## Caching Resources
-[memcached](http://memcached.org/) is a common in-memory caching system.
+## Caching backends
+* [memcached](http://memcached.org/) is a common in-memory caching system.
 
-[Redis](http://redis.io/) is a key-value in-memory data store that can
-easily be configured for caching with libraries such as 
-[django-redis-cache](https://github.com/sebleier/django-redis-cache).
+* [Redis](http://redis.io/) is a key-value in-memory data store that can
+  easily be configured for caching with libraries such as 
+  [django-redis-cache](https://github.com/sebleier/django-redis-cache).
+
+
+## Caching resources
+* "[Caching: Varnish or Nginx?](https://bjornjohansen.no/caching-varnish-or-nginx)"
+  reviews some considerations such as SSL and SPDY support when choosing
+  reverse proxy Nginx or Varnish.
+
 

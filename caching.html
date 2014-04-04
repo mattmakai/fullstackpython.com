@@ -83,11 +83,23 @@ stores them on a persistent disk like a hard drive.) When the cached values
 change the system can invalidate the cache and re-retrieve the updated values
 for future requests.</p>
 <p>A cache can be created for multiple layers of the stack. </p>
-<h2>Caching Resources</h2>
+<h2>Caching backends</h2>
+<ul>
+<li>
 <p><a href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
+</li>
+<li>
 <p><a href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
-easily be configured for caching with libraries such as 
-<a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
+  easily be configured for caching with libraries such as 
+  <a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
+</li>
+</ul>
+<h2>Caching resources</h2>
+<ul>
+<li>"<a href="https://bjornjohansen.no/caching-varnish-or-nginx">Caching: Varnish or Nginx?</a>"
+  reviews some considerations such as SSL and SPDY support when choosing
+  reverse proxy Nginx or Varnish.</li>
+</ul>
                                                                                                                                                                                                                                                                                                                                             <br/>
             Next read the 
             <a href="/task-queues.html">task queues</a> section.
