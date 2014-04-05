@@ -13,8 +13,9 @@ that are required to create and run your application.
 Python web applications are built upon the work done by thousands of open
 source programmers. Application dependencies include not only web frameworks but
 also libraries for scraping, parsing, processing, analyzing, visualizing, 
-and myriad other tasks. Python's ecosystem facilitates discovery, retrieval and 
+and many other tasks. Python's ecosystem facilitates discovery, retrieval and 
 installation so applications are easier for developers to create.
+
 
 ## Finding libraries
 Python libraries are stored in a central location known as the 
@@ -24,10 +25,10 @@ keyword terms.
 
 Besides PyPi there are numerous resources that list common or "must-have" 
 libraries. Ultimately the decision for which application dependencies are
-necessary for your project is up to you. However, it's useful to browse
-through these lists in case you come across a reusable library to solve 
-problems you'd otherwise have to rewrite yourself. Some of the best collections
-of Python libraries are
+necessary for your project is up to you and the functionality you're looking
+to build. However, it's useful to browse through these lists in case you come 
+across a library to solve a problem by reusing the code instead of writing it
+all yourself. A few of the best collections of Python libraries are
 
 * [Python.org's useful modules](https://wiki.python.org/moin/UsefulModules)
   which groups modules into categories.
