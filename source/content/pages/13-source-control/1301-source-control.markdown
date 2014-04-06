@@ -22,39 +22,45 @@ as Git or Mercurial.
 
 
 ## Source Control Systems
-[Git](http://git-scm.com/) is a free and open source distributed version
-control system.
+* [Git](http://git-scm.com/) is a free and open source distributed version
+  control system.
 
-[Mercurial](http://mercurial.selenic.com/) is similar to Git, also a free
-and open source distributed version control system.
+* [Mercurial](http://mercurial.selenic.com/) is similar to Git, also a free
+  and open source distributed version control system.
 
 
 ## Source Control Third Party Services
-[GitHub](https://github.com/) is currently the most commonly used source
-control platform for using Git.
+* [GitHub](https://github.com/) is currently the most commonly used source
+  control platform for using Git.
 
-[BitBucket](https://bitbucket.org/) provides free Git and Mercurial 
-repositories for open projects and private repositories for up to five
-users. Users pay for hosting private repositories with more than five users.
+* [BitBucket](https://bitbucket.org/) provides free Git and Mercurial 
+  repositories for open projects and private repositories for up to five
+  users. Users pay for hosting private repositories with more than five users.
 
 
 ## Source Control Resources
-[Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) by Patrick McKenzie.
+* [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
+  is a comprehensive overview by Patrick McKenzie of why you need source 
+  control.
 
-This lighthearted guide to the 
-[ten astonishments in version control history](http://www.flourish.org/blog/?p=397) 
-is a fun way to learn how systems developed over the past several decades.
+* This lighthearted guide to the 
+  [ten astonishments in version control history](http://www.flourish.org/blog/?p=397) 
+  is a fun way to learn how systems developed over the past several decades.
 
-[A visual guide to version control](http://betterexplained.com/articles/a-visual-guide-to-version-control/) 
-is a detailed article with real-life examples for why version control is
-necessary in software development.
+* [A visual guide to version control](http://betterexplained.com/articles/a-visual-guide-to-version-control/) 
+  is a detailed article with real-life examples for why version control is
+  necessary in software development.
 
-[An introduction to version control](http://guides.beanstalkapp.com/version-control/intro-to-version-control.html) 
-shows the basic concepts behind version control systems.
+* [An introduction to version control](http://guides.beanstalkapp.com/version-control/intro-to-version-control.html) 
+  shows the basic concepts behind version control systems.
 
-[What Is Version Control? Why Is It Important For Due Diligence?](http://oss-watch.ac.uk/resources/versioncontrol) 
-explains the benefits and necessity of version control systems.
+* [What Is Version Control? Why Is It Important For Due Diligence?](http://oss-watch.ac.uk/resources/versioncontrol) 
+  explains the benefits and necessity of version control systems.
 
-[About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
+* [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
+
+* "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
+  by Braintree goes over how this payments company uses Git for development
+  and merging source code.
 
