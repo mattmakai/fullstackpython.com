@@ -134,6 +134,9 @@ book so consider picking that up as well.
   to look through when you're wondering how to do something that's not in the
   core framework.
 
+* Randall Degges wrote a detailed walkthrough for 
+  [building a Flask app in 30 minutes](https://stormpath.com/blog/build-a-flask-app-in-30-minutes/).
+
 * Great post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/)
 
 * The Plank & Whittle blog has two posts, one on 
