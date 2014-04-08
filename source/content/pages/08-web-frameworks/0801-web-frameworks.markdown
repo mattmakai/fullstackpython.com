@@ -145,8 +145,11 @@ book so consider picking that up as well.
   [Packaging a Flask app in a Debian package](http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/)
   once you've built an app and want to deploy it.
 
-* The tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
+* The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
+
+* [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/)
+  walks through how to deploy your Flask app after you've built it.
 
 
 ## Bottle
