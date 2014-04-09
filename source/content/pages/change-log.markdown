@@ -12,6 +12,7 @@ the
 
 ## 2014
 ### April
+* Added small JavaScript section. Updating witih basic resources.
 * Updated application dependencies with new links to Python library 
   collections.
 * Merged a couple of awesome pull requests that fixed typos and added 

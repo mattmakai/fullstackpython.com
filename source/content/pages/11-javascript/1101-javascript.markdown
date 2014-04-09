@@ -17,10 +17,16 @@ which is defined by the
 
 
 ## JavaScript resources
+* [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+  by Mozilla walks through the basic syntax and operators.
+
+* [Coding tools and JavaScript libraries](http://www.smashingmagazine.com/2011/10/28/useful-coding-workflow-tools-for-web-designers-developers/)
+  is a huge list by Smashing Magazine with explanations for each tool and 
+  library for working with JavaScript.
+
 * [Superhero.js](http://superherojs.com/) is an incredibly well designed list
   of resources for how to test, organize, understand and generally work with
   JavaScript.
 
 * [Unheap](http://www.unheap.com/) is an amazing collection of reusable JQuery 
   plugins for everything from navigation to displaying media.
-  
