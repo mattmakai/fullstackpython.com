@@ -91,3 +91,7 @@ provides a command-line interface for interacting with the RPM system.
 
 * [First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers)
 
+* Digital Ocean has a detailed 
+  [walkthrough for setting up Python web applications on Ubuntu](https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications).
+
+

@@ -126,3 +126,6 @@ further clarification.
 * Occasionally arguments about using Python's dependency manager versus
   one of Linux's depenency managers comes up. This provides
   [one perspective on that debate](http://notes.pault.ag/debian-python/).
+
+* This Stack Overflow question details how to set up a 
+  [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
