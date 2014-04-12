@@ -69,7 +69,7 @@ I had when I was learning the language.
   available books on Python, Django, and data analysis.
 
 
-## Videos and screencasts
+## Videos, screencasts and presentations
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
   screencasts for learning intermediate topics. I typically prefer to learn
   by reading. However, these videos are helpful in seeing the code on the 
@@ -81,6 +81,11 @@ I had when I was learning the language.
 * Ontwik has relevant programming videos in its 
   [Python category](http://ontwik.com/category/python/) and
   [Django category](http://ontwik.com/category/django/). 
+
+* Kate Heddleston gave a talk at PyCon 2014 called 
+  "[Full-stack Python Web Applications](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)" 
+  that included clear visuals for how numerous layers of the Python web
+  stack fit together.
 
 
 ## Newsletters
