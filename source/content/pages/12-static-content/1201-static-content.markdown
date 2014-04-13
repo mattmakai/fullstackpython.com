@@ -33,11 +33,15 @@ CDNs send content responses from data centers with the closest proximity to the 
 
 
 ## Static Content Resources
-[Using Amazon S3 to host your Django static files](http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/)
+* [The super stupid idiot's guide to getting started with Django, Pipeline, and S3](http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/)
+  shows how to host static content on S3 and use those files with Django.
 
-[CDNs fail, but your scripts don't have to](http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx)
+* [Using Amazon S3 to host your Django static files](http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/)
 
-[django-storages](http://django-storages.readthedocs.org/en/latest/) is 
+* [CDNs fail, but your scripts don't have to](http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx)
+
+* [django-storages](http://django-storages.readthedocs.org/en/latest/) is 
 a Django library for managing static and media files on services such as
 Amazon S3 and other content delivery networks.
+
 
