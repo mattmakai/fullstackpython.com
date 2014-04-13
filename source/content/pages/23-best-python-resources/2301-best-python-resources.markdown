@@ -83,9 +83,10 @@ I had when I was learning the language.
   [Django category](http://ontwik.com/category/django/). 
 
 * Kate Heddleston gave a talk at PyCon 2014 called 
-  "[Full-stack Python Web Applications](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)" 
-  that included clear visuals for how numerous layers of the Python web
-  stack fit together.
+  "[Full-stack Python Web Applications](http://pyvideo.org/video/2591/so-you-want-to-be-a-full-stack-developer-how-to)"
+  with clear visuals for how numerous layers of the Python web
+  stack fit together. There are also [slides available from the talk](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)
+  with all the diagrams.
 
 
 ## Newsletters
