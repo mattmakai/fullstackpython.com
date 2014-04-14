@@ -12,6 +12,9 @@ the
 
 ## 2014
 ### April
+* Added a [future direction](../future-directions.html) section to explain
+  current priorities for further developments on the site.
+* More resources for web frameworks and configuration management sections.
 * Added small JavaScript section. Updating witih basic resources.
 * Updated application dependencies with new links to Python library 
   collections.
