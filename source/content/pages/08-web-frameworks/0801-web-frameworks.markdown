@@ -148,9 +148,6 @@ book so consider picking that up as well.
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
 
-* [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/)
-  walks through how to deploy your Flask app after you've built it.
-
 
 ## Bottle
 [Bottle](http://bottlepy.org/docs/dev/index.html) is a WSGI-compliant
