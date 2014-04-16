@@ -137,7 +137,12 @@ book so consider picking that up as well.
 * Randall Degges wrote a detailed walkthrough for 
   [building a Flask app in 30 minutes](https://stormpath.com/blog/build-a-flask-app-in-30-minutes/).
 
-* Great post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/)
+* Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
+
+* [Building Websites in Python with Flask](http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J)
+  is another walkthrough tutorial from first steps through 
+  [getting bigger with Flask](http://maximebf.com/blog/2012/11/getting-bigger-with-flask/).
+
 
 * The Plank & Whittle blog has two posts, one on 
   [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/) 
