@@ -128,3 +128,5 @@ Python library for working with Amazon Web Services.
 
 * Rackspace also has [official documentation for Python](http://docs.rackspace.com/sdks/guide/content/python.html).
 
+* [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
+  shows how to work with a VPS once you've got the server up and running.
