@@ -12,6 +12,10 @@ the
 
 ## 2014
 ### April
+* New logo! This one's way more Python software stack, way less boring 
+  folder-thingy. Here's how the old one looked in comparison:
+<img src="theme/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" />
+
 * Added a [future direction](../future-directions.html) section to explain
   current priorities for further developments on the site.
 * More resources for web frameworks and configuration management sections.
