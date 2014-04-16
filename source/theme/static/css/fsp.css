@@ -303,7 +303,7 @@ body {
   font-size: 15px;
   line-height: 1.428571429;
   color: #777777;
-  background-color: #ffffff;
+  background-color: #eee;
 }
 
 input,
@@ -393,8 +393,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
-  font-weight: 700;
+  font-family: "Helvetica Neue", "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight: 500;
   line-height: 1.1;
   color: #000000;
 }
