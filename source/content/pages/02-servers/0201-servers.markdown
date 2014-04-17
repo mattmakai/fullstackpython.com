@@ -118,6 +118,8 @@ IaaS platform.
 
 
 ### Infrastructure-as-a-service resources
+* [The cloud versus dedicated servers](http://www.screamingatmyscreen.com/2012/12/the-cloud-vs-dedicated-servers/)
+
 * [Apache Libcloud](http://libcloud.apache.org/) is a Python library that
 provides a unified API for many cloud service providers.
 
