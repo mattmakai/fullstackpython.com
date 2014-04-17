@@ -17,6 +17,10 @@ which is defined by the
 
 
 ## JavaScript resources
+* [How Browsers Work](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+  is a great overview of both JavaScript and CSS as well as how pages are 
+  rendered in a browser.
+
 * [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   by Mozilla walks through the basic syntax and operators.
 
