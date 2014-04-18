@@ -21,6 +21,9 @@ submit one when you see a fix or improvement that needs to be made!
 
 Here are some things I'm actively working on:
 
+* Testing an idea for "choose your own adventure"-style navigation through
+  the site.
+
 * Clear, concise descriptions for each concept in every section along with
   the "why [x] is needed"
 
