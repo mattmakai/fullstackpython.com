@@ -43,12 +43,45 @@
     a.list-group-item.active:hover {background: #444; border: 1px solid #222;}
     #sidebar {margin-top: 30px;}
 
+    .select-next {
+        min-height: 300px;
+    }
+    .choose-btn {
+        font-size: 1.1em;
+        margin: 10px 0 0 0;
+    }
+    .choose-next {
+        border: 1px solid black;
+        background-color: #444;
+        margin-left: 25px;
+        color: #ddd;
+    }
+    .choose-next a {
+        color: #eee;
+    }
+    .btn-full {width: 100%; box-shadow: 1px 2px 1px #222;}
+    p.under-btn {text-align: left; margin-top: 20px;}
+    h3.panel-head {margin: 5px 0 0 0; font-size: 26px; color: #fff;}
+    .smaller-item {font-size: .8em; padding: 5px 0 5px 10px;}
+    @media (max-width: 1200px) {
+        h3.panel-head {font-size: 22px;}
+    }
+    @media (max-width: 992px) {
+        .choose-next {
+            margin-left: 0px;
+        }
+        .select-next {
+            min-height: 100px;
+        }
+        .smaller-item {font-size: 1em; padding: 15px 0 15px 10px;}
+    }
     @media (max-width: 600px) {
         .logo-header-section {
           margin: 20px 32px 0 0;
         }
     }
     </style>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -111,152 +144,6 @@ Some other web frameworks such as Flask and Pyramid are easier to
 use with non-relational databases by incorporating external Python libraries.
 There is a spectrum between minimal functionality with easy extensibility and
 including everything in the framework with tight integration.</p>
-<h2>Django</h2>
-<p><a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
-application framework with a "batteries-included" philosophy. The principle
-behind batteries-included is that the common functionality for building
-web applications should come with the framework instead of as a separate
-library. For example, 
-<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
-<a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
-<a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
-and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
-(as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/1.6.2">Django framework</a>.</p>
-<h3>Django resources</h3>
-<ul>
-<li>
-<p><a href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a> 
-  by Daniel Greenfield and Audrey Roy is well worth the price of admission if
-  you're serious about learning how to correctly develop Django websites.</p>
-</li>
-<li>
-<p><a href="http://effectivedjango.com/">Effective Django</a> and 
-  <a href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a extensive 
-  free introductions to using the most popular Python web framework.</p>
-</li>
-<li>
-<p>DjangoCon US videos from 
-  <a href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>, 
-  <a href="http://pyvideo.org/category/23/djangocon-2012">2012</a>, 
-  <a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as<br />
-<a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
-  all available free of charge.</p>
-</li>
-<li>
-<p>The <a href="http://www.reddit.com/r/django">Django subreddit</a> often has links to
-  the latest resources for learning Django.</p>
-</li>
-<li>
-<p>Lincoln Loop wrote a 
-  <a href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>
-  for the community.</p>
-</li>
-<li>
-<p>Steve Losh wrote an incredibly detailed <a href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>.</p>
-</li>
-<li>
-<p><a href="https://godjango.com/">GoDjango</a> screencasts and tutorials are free short
-  videos for learning how to build Django applications.</p>
-</li>
-</ul>
-<h2>Flask</h2>
-<p><a href="http://flask.pocoo.org/">Flask</a> is a Python microframework deliberately 
-built with a 
-<a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
-Flask is generally considered more 
-<a href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Pythonic</a> 
-than Django because Flask web application code is often more
-explicit. Flask was also written several years after Django and therefore
-learned from the Python community's reactions as the framework evolved.
-Jökull Sólberg wrote a great piece articulating to this effect in his 
-<a href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a>.</p>
-<h3>Flask resources</h3>
-<p>The 18-part Flask mega tutorial is an absolutely amazing starting 
-resource for using the Flask framework. Yes, there are a lot of posts in 
-the series. However, each post is focused on a single topic to contain 
-the complexity while the reader is learning the framework. The whole 
-series is well worth an in-depth read-through. The 
-<a href="https://twitter.com/miguelgrinberg">author</a> is also writing the 
-<a href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a>
-book so consider picking that up as well.</p>
-<ul>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Part 1: Hello World</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">Part 2: Templates</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">Part 3: Web Forms</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database">Part 4: Database</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins">Part 5: User Logins</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars">Part 6: Profile Page and Avatars</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing">Part 7: Unit Testing</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">Part 8: Followers, Contacts, and Friends</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination">Part 9: Pagination</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search">Part 10: Full Text Search</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support">Part 11: Email Support</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift">Part 12: Facelift</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times">Part 13: Dates and Times</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n">Part 14: I18n and L10n</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax">Part 15: Ajax</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">Part 16: Debugging, Testing and Profiling</a></li>
-<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">Part 17: Deployment on Linux</a></li>
-<li>
-<p><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Part 18: Deployment on the Heroku Cloud</a></p>
-</li>
-<li>
-<p>The <a href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a> is a
-  curated list of the best packages that extend Flask. It's the first location
-  to look through when you're wondering how to do something that's not in the
-  core framework.</p>
-</li>
-<li>
-<p>Randall Degges wrote a detailed walkthrough for 
-  <a href="https://stormpath.com/blog/build-a-flask-app-in-30-minutes/">building a Flask app in 30 minutes</a>.</p>
-</li>
-<li>
-<p>Nice post by Jeff Knupp on <a href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">Productionizing a Flask App</a>.</p>
-</li>
-<li>
-<p><a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J">Building Websites in Python with Flask</a>
-  is another walkthrough tutorial from first steps through 
-  <a href="http://maximebf.com/blog/2012/11/getting-bigger-with-flask/">getting bigger with Flask</a>.</p>
-</li>
-<li>
-<p>The Plank &amp; Whittle blog has two posts, one on 
-  <a href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">Packaging a Flask web app</a> 
-  and another on 
-  <a href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">Packaging a Flask app in a Debian package</a>
-  once you've built an app and want to deploy it.</p>
-</li>
-<li>
-<p>The Tuts+ <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a> 
-  is another great walkthrough for getting started with the framework.</p>
-</li>
-</ul>
-<h2>Bottle</h2>
-<p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
-<a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
-web framework with no external dependencies except for the standard library
-included with Python.</p>
-<h3>Bottle resources</h3>
-<ul>
-<li>
-<p>The <a href="http://bottlepy.org/docs/dev/tutorial.html">official Bottle tutorial</a> 
-  provides a thorough view of basic concepts and features for the framework.</p>
-</li>
-<li>
-<p>Digital Ocean provides an extensive <a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">introductory post on Bottle</a>.</p>
-</li>
-<li>
-<p>This tutorial provides a walkthrough for
-<a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>.</p>
-</li>
-<li>
-<p>Here's a short code snippet for 
-  <a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a RESTful API with Bottle and MongoDB</a>.</p>
-</li>
-<li>
-<p>This <a href="http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/">tutorial</a> 
-  is another Bottle walkthrough for creating a RESTful web API.</p>
-</li>
-</ul>
 <h2>Web Framework Resources</h2>
 <ul>
 <li>
@@ -281,44 +168,101 @@ included with Python.</p>
   web frameworks.</p>
 </li>
 </ul>
-                                                                                                                                                                                                                              <br/>
-            Next read the 
-            <a href="/application-dependencies.html">application dependencies</a> section.
-                
-                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+<h3>Which web framework do you want to learn about?</h3>
+      <div class="row">
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/django.html" class="btn btn-success btn-full"><i class="fa fa-terminal fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                Tell me more about the Django framework.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/flask.html" class="btn btn-success btn-full"><i class="fa fa-flask fa-2x"></i></a>
+            </a>
+            <p class="under-btn">
+                I want to learn more about Flask.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/bottle.html" class="btn btn-success btn-full"><i class="fa fa-tint fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                Show me more information on Bottle.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/other-web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-question fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                What other Python web frameworks exist?
+            </p>
+        </div>
+    </div>
+</div>    </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
-  <div class="list-group">
-          <a href="/introduction.html" class="list-group-item ">Introduction</a>
-          <a href="/servers.html" class="list-group-item ">Servers</a>
-          <a href="/operating-systems.html" class="list-group-item ">Operating Systems</a>
-          <a href="/web-servers.html" class="list-group-item ">Web Servers</a>
-          <a href="/platform-as-a-service.html" class="list-group-item ">Platform-as-a-service</a>
-          <a href="/databases.html" class="list-group-item ">Databases</a>
-          <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
-          <a href="/web-frameworks.html" class="list-group-item active">Web Frameworks</a>
-          <a href="/application-dependencies.html" class="list-group-item ">Application Dependencies</a>
-          <a href="/cascading-style-sheets.html" class="list-group-item ">Cascading Style Sheets</a>
-          <a href="/javascript.html" class="list-group-item ">JavaScript</a>
-          <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/caching.html" class="list-group-item ">Caching</a>
-          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
-          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
-          <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
-          <a href="/logging.html" class="list-group-item ">Logging</a>
-          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
-          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
-          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/best-python-resources.html" class="list-group-item ">Best Python Resources</a>
-          <a href="/about-author.html" class="list-group-item ">About the Author</a>
-          <a href="/change-log.html" class="list-group-item ">Change Log</a>
-          <a href="/future-directions.html" class="list-group-item ">Future Directions</a>
+  <div class="panel panel-success">
+      <div class="panel-heading"><h3 class="panel-head">Web Frameworks</h3></div>
+      <div class="panel-body">
+          <a href="/">Full Stack Python</a> is an open source book explaining
+          each layer of the Python web application stack along with the
+          best Python resources from around the web.
+          <hr/>
+          <a href="http://twitter.com/mattmakai">Matt Makai</a> designed and
+          wrote this site with assistance from community pull 
+          requests. If you're on GitHub you can 
+          <a href="https://github.com/makaimc">follow him</a>
+          to see what daily changes are made or 
+          <a href="https://github.com/makaimc/fullstackpython.github.com">star the repository</a> for future reference.
+                </div>
+  </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-head">Table of Contents</h3>
       </div>
-</div></div>
+      <div class="list-group">
+                        <a href="/introduction.html" class="list-group-item smaller-item ">Introduction</a>
+                        <a href="/bottle.html" class="list-group-item smaller-item ">Bottle</a>
+                        <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
+                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
+                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
+                        <a href="/web-frameworks.html" class="list-group-item smaller-item active">Web Frameworks</a>
+                        <a href="/django.html" class="list-group-item smaller-item ">Django</a>
+                        <a href="/operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
+                        <a href="/flask.html" class="list-group-item smaller-item ">Flask</a>
+                        <a href="/web-servers.html" class="list-group-item smaller-item ">Web Servers</a>
+                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
+                        <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
+                        <a href="/wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
+                        <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
+                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
+                        <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
+                        <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
+                        <a href="/source-control.html" class="list-group-item smaller-item ">Source Control</a>
+                        <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
+                        <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
+                        <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
+                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
+                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Security</a>
+                        <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
+                        <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
+                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
+                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
+                        <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
+                        <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
+                        <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
+                        <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
+                </div>
+  </div>
+  </div></div>
         <hr/>
         <div class="footer pull-right">
-            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2014
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2014
         </div>
     </div>
 

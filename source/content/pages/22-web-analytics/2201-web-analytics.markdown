@@ -72,4 +72,6 @@ application before taking some action, such as purchasing your service.
 
 * [Heap vs MixPanel](http://substantial.com/blog/2014/04/03/heap-analytics-vs-mixpanel/)
   compares the two analytics services.
-  
+
+
+### What's the next topic you want to learn about?

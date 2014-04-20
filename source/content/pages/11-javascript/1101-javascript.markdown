@@ -34,3 +34,6 @@ which is defined by the
 
 * [Unheap](http://www.unheap.com/) is an amazing collection of reusable JQuery 
   plugins for everything from navigation to displaying media.
+
+
+### Do you need to style your app or deploy it next?

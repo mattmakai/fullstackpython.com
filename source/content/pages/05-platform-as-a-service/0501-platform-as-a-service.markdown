@@ -76,3 +76,4 @@ application framework and your app itself is up to date and secured. See the
     * [Part Four: Choosing Heroku](http://rdegges.com/devops-django-part-4-choosing-heroku)
 
 
+### Do you want to use a PaaS or deploy to a traditional server?

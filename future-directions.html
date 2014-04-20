@@ -43,13 +43,45 @@
     a.list-group-item.active:hover {background: #444; border: 1px solid #222;}
     #sidebar {margin-top: 30px;}
 
+    .select-next {
+        min-height: 300px;
+    }
+    .choose-btn {
+        font-size: 1.1em;
+        margin: 10px 0 0 0;
+    }
+    .choose-next {
+        border: 1px solid black;
+        background-color: #444;
+        margin-left: 25px;
+        color: #ddd;
+    }
+    .choose-next a {
+        color: #eee;
+    }
+    .btn-full {width: 100%; box-shadow: 1px 2px 1px #222;}
+    p.under-btn {text-align: left; margin-top: 20px;}
+    h3.panel-head {margin: 5px 0 0 0; font-size: 26px; color: #fff;}
+    .smaller-item {font-size: .8em; padding: 5px 0 5px 10px;}
+    @media (max-width: 1200px) {
+        h3.panel-head {font-size: 22px;}
+    }
+    @media (max-width: 992px) {
+        .choose-next {
+            margin-left: 0px;
+        }
+        .select-next {
+            min-height: 100px;
+        }
+        .smaller-item {font-size: 1em; padding: 15px 0 15px 10px;}
+    }
     @media (max-width: 600px) {
         .logo-header-section {
           margin: 20px 32px 0 0;
         }
     }
-    .next-section {background-color: red;}
     </style>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -94,8 +126,7 @@ submit one when you see a fix or improvement that needs to be made!</p>
 <p>Here are some things I'm actively working on:</p>
 <ul>
 <li>
-<p>Testing an idea for "choose your own adventure"-style navigation through
-  the site.</p>
+<p>Determining whether the new navigation works well for this site or not.</p>
 </li>
 <li>
 <p>Clear, concise descriptions for each concept in every section along with
@@ -108,40 +139,91 @@ submit one when you see a fix or improvement that needs to be made!</p>
   and <a href="../web-application-security.html">Web Security</a> sections.</p>
 </li>
 </ul>
+      <div class="row">
+    <div class="col-md-4">
+        <div class="well select-next">
+            <a href="/introduction.html" class="btn btn-success btn-full"><i class="fa fa-fast-backward fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                Let me start over from the Full Stack Python introduction.
+            </p>
+        </div>
     </div>
+    <div class="col-md-4">
+        <div class="well select-next">
+            <a href="/change-log.html" class="btn btn-success btn-full"><i class="fa fa-pencil-square-o fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                What's changed on Full Stack Python since the site began?
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="well select-next">
+            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                I want to learn how to code a Python web application now.
+            </p>
+        </div>
+    </div>
+</div>    </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
-  <div class="list-group">
-          <a href="/introduction.html" class="list-group-item ">Introduction</a>
-          <a href="/servers.html" class="list-group-item ">Servers</a>
-          <a href="/operating-systems.html" class="list-group-item ">Operating Systems</a>
-          <a href="/web-servers.html" class="list-group-item ">Web Servers</a>
-          <a href="/platform-as-a-service.html" class="list-group-item ">Platform-as-a-service</a>
-          <a href="/databases.html" class="list-group-item ">Databases</a>
-          <a href="/wsgi-servers.html" class="list-group-item ">WSGI Servers</a>
-          <a href="/web-frameworks.html" class="list-group-item ">Web Frameworks</a>
-          <a href="/application-dependencies.html" class="list-group-item ">Application Dependencies</a>
-          <a href="/cascading-style-sheets.html" class="list-group-item ">Cascading Style Sheets</a>
-          <a href="/javascript.html" class="list-group-item ">JavaScript</a>
-          <a href="/static-content.html" class="list-group-item ">Static Content</a>
-          <a href="/source-control.html" class="list-group-item ">Source Control</a>
-          <a href="/caching.html" class="list-group-item ">Caching</a>
-          <a href="/task-queues.html" class="list-group-item ">Task Queues</a>
-          <a href="/api-integration.html" class="list-group-item ">API Integration</a>
-          <a href="/no-sql-datastore.html" class="list-group-item ">NoSQL Data Stores</a>
-          <a href="/web-application-security.html" class="list-group-item ">Web Security</a>
-          <a href="/logging.html" class="list-group-item ">Logging</a>
-          <a href="/monitoring.html" class="list-group-item ">Monitoring</a>
-          <a href="/configuration-management.html" class="list-group-item ">Configuration Management</a>
-          <a href="/web-analytics.html" class="list-group-item ">Web Analytics</a>
-          <a href="/best-python-resources.html" class="list-group-item ">Best Python Resources</a>
-          <a href="/about-author.html" class="list-group-item ">About the Author</a>
-          <a href="/change-log.html" class="list-group-item ">Change Log</a>
-          <a href="/future-directions.html" class="list-group-item active">Future Directions</a>
+  <div class="panel panel-success">
+      <div class="panel-heading"><h3 class="panel-head">Future Directions</h3></div>
+      <div class="panel-body">
+          <a href="/">Full Stack Python</a> is an open source book explaining
+          each layer of the Python web application stack along with the
+          best Python resources from around the web.
+          <hr/>
+          <a href="http://twitter.com/mattmakai">Matt Makai</a> designed and
+          wrote this site with assistance from community pull 
+          requests. If you're on GitHub you can 
+          <a href="https://github.com/makaimc">follow him</a>
+          to see what daily changes are made or 
+          <a href="https://github.com/makaimc/fullstackpython.github.com">star the repository</a> for future reference.
+                </div>
+  </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-head">Table of Contents</h3>
       </div>
-</div></div>
+      <div class="list-group">
+                        <a href="/introduction.html" class="list-group-item smaller-item ">Introduction</a>
+                        <a href="/bottle.html" class="list-group-item smaller-item ">Bottle</a>
+                        <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
+                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
+                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
+                        <a href="/web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
+                        <a href="/django.html" class="list-group-item smaller-item ">Django</a>
+                        <a href="/operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
+                        <a href="/flask.html" class="list-group-item smaller-item ">Flask</a>
+                        <a href="/web-servers.html" class="list-group-item smaller-item ">Web Servers</a>
+                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
+                        <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
+                        <a href="/wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
+                        <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
+                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
+                        <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
+                        <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
+                        <a href="/source-control.html" class="list-group-item smaller-item ">Source Control</a>
+                        <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
+                        <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
+                        <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
+                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
+                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Security</a>
+                        <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
+                        <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
+                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
+                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
+                        <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
+                        <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
+                        <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
+                        <a href="/future-directions.html" class="list-group-item smaller-item active">Future Directions</a>
+                </div>
+  </div>
+  </div></div>
         <hr/>
         <div class="footer pull-right">
-            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2014
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2014
         </div>
     </div>
 

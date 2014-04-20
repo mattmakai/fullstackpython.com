@@ -7,30 +7,19 @@ sort-order: 01
 # Introduction
 You're knee deep in learning the [Python](http://www.python.org/)
 programming language. The syntax is starting to make sense. The first
-few "*ahh-ha*!" moments are hitting you as you're building applications with
-a web framework.
+few "*ahh-ha*!" moments are hitting you as you're learning conditional
+statements, for loops and classes while playing around with the open source 
+libraries that make Python such an amazing language.
 
-Now you want to know how to take your web application code and make it
-live on the Web. That's where this guide comes in. When you want to gain
-an understanding of everything you need to deploy and run a production Python
-web application, you've come to the right place. 
+Now you want to take your initial Python knowledge and make something real.
+A real web application live on the web that you can show off or sell 
+as a service to other people. That's where Full Stack Python comes in. 
+You've come to the right place to learn everything you need to deploy and 
+run a production Python web application.
 
-If you've previously read this guide check out the 
-[change log](../change-log.html) to find out what major sections have been
-added since your last visit.
+This guide branches out on topic because your learning needs depend on your 
+programming background. So this guide will walk you through steps based 
+on what you want to do when you need to get it done.
 
-If you are not yet ready to deploy your application there are a few other 
-[fantastic Python guides](../best-python-resources.html) that you can read 
-first.
 
-This guide has a different focus from the other Python resources on the
-best resource links page. In each section of this guide you will learn topics 
-such as 
-
-  * what server options exist
-  * which operating system to use for production applications
-  * what the Web Server Gateway Interface (WSGI) standard is
-  * why each layer of the stack is necessary
-
-Read on once you have a basic Python understanding and are ready to 
-learn more about the full Python web stack.
+### Let's get started. What do you need to do right now?

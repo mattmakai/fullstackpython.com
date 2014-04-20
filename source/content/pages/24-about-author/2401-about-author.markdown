@@ -23,3 +23,5 @@ Typos, inaccurate statements, or general areas for improvement can be handled
 through a pull request on
 [GitHub](https://github.com/makaimc/fullstackpython.github.com/).
 
+
+### Where to now?

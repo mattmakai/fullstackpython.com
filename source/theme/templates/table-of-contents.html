@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+      <h1>Table of Contents</h1>
+      <div class="list-group">
+        {% for p in pages|sort(attribute='sort-order') %}
+          <a href="/{{ p.slug }}.html" class="list-group-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+    {% include "sidebar.html" %}
+</div>
+{% endblock %}

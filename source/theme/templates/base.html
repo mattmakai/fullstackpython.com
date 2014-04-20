@@ -43,12 +43,45 @@
     a.list-group-item.active:hover {background: #444; border: 1px solid #222;}
     #sidebar {margin-top: 30px;}
 
+    .select-next {
+        min-height: 300px;
+    }
+    .choose-btn {
+        font-size: 1.1em;
+        margin: 10px 0 0 0;
+    }
+    .choose-next {
+        border: 1px solid black;
+        background-color: #444;
+        margin-left: 25px;
+        color: #ddd;
+    }
+    .choose-next a {
+        color: #eee;
+    }
+    .btn-full {width: 100%; box-shadow: 1px 2px 1px #222;}
+    p.under-btn {text-align: left; margin-top: 20px;}
+    h3.panel-head {margin: 5px 0 0 0; font-size: 26px; color: #fff;}
+    .smaller-item {font-size: .8em; padding: 5px 0 5px 10px;}
+    @media (max-width: 1200px) {
+        h3.panel-head {font-size: 22px;}
+    }
+    @media (max-width: 992px) {
+        .choose-next {
+            margin-left: 0px;
+        }
+        .select-next {
+            min-height: 100px;
+        }
+        .smaller-item {font-size: 1em; padding: 15px 0 15px 10px;}
+    }
     @media (max-width: 600px) {
         .logo-header-section {
           margin: 20px 32px 0 0;
         }
     }
     </style>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -73,7 +106,8 @@
         {% block content %}{% endblock %}
         <hr/>
         <div class="footer pull-right">
-            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2014
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2014
         </div>
     </div>
 

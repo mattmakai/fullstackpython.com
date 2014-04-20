@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
+    <meta name="author" content="Matt Makai">
+    <link rel="shortcut icon" href="theme/img/fsp-fav.png">
+    <title>Flask - Full Stack Python</title>
+    <link href="theme/css/fsp.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    html,
+    body {
+      font-size: 18px;
+      color: #222;
+      background: #fefefe;
+    }
+    body {
+      padding-top: 10px;
+    }
+    .footer {
+      padding: 20px 0 30px 0;
+    }
+    a, a:hover {border-bottom: 1px dotted; color: #444;}
+    a:hover {text-decoration: none; color: #000;}
+    .logo-title a, .logo-title a:hover {font-size: 72px; font-weight: normal;
+                                        letter-spacing: .04em;
+                                        vertical-align: middle;
+                                        margin-left: 5px;
+                                        color: #000; text-decoration: none;
+                                        border-bottom: none;  
+                                        font-family: "Helvetica Neue", 
+                                                     sans-serif;
+                                        line-height: .9em;}
+    .logo-title a:hover {color: gray;}
+    .logo-image {vertical-align: middle; border: none;}
+    .logo-header-section {margin: 15px 0 15px 0;}
+    a.list-group-item.active {background: #444; border: 1px solid #222;}
+    a.list-group-item.active:hover {background: #444; border: 1px solid #222;}
+    #sidebar {margin-top: 30px;}
+
+    .select-next {
+        min-height: 300px;
+    }
+    .choose-btn {
+        font-size: 1.1em;
+        margin: 10px 0 0 0;
+    }
+    .choose-next {
+        border: 1px solid black;
+        background-color: #444;
+        margin-left: 25px;
+        color: #ddd;
+    }
+    .choose-next a {
+        color: #eee;
+    }
+    .btn-full {width: 100%; box-shadow: 1px 2px 1px #222;}
+    p.under-btn {text-align: left; margin-top: 20px;}
+    h3.panel-head {margin: 5px 0 0 0; font-size: 26px; color: #fff;}
+    .smaller-item {font-size: .8em; padding: 5px 0 5px 10px;}
+    @media (max-width: 1200px) {
+        h3.panel-head {font-size: 22px;}
+    }
+    @media (max-width: 992px) {
+        .choose-next {
+            margin-left: 0px;
+        }
+        .select-next {
+            min-height: 100px;
+        }
+        .smaller-item {font-size: 1em; padding: 15px 0 15px 10px;}
+    }
+    @media (max-width: 600px) {
+        .logo-header-section {
+          margin: 20px 32px 0 0;
+        }
+    }
+    </style>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19910497-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+  </head>
+
+<body>
+    <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+    </a>
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
+            <span class="logo-title"><a href="/">Full Stack Python</a></span>
+        </div>
+    </div>
+</div>
+        <div class="row">
+    <div class="col-md-8">
+      <h1>Flask</h1>
+<p><a href="http://flask.pocoo.org/">Flask</a> is a Python microframework deliberately 
+built with a 
+<a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
+Flask is generally considered more 
+<a href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Pythonic</a> 
+than Django because Flask web application code is often more
+explicit. Flask was also written several years after Django and therefore
+learned from the Python community's reactions as the framework evolved.
+Jökull Sólberg wrote a great piece articulating to this effect in his 
+<a href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a>.</p>
+<h2>Flask resources</h2>
+<p>The 18-part Flask mega tutorial is an absolutely amazing starting 
+resource for using the Flask framework. Yes, there are a lot of posts in 
+the series. However, each post is focused on a single topic to contain 
+the complexity while the reader is learning the framework. The whole 
+series is well worth an in-depth read-through. The 
+<a href="https://twitter.com/miguelgrinberg">author</a> is also writing the 
+<a href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a>
+book so consider picking that up as well.</p>
+<ul>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Part 1: Hello World</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">Part 2: Templates</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">Part 3: Web Forms</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database">Part 4: Database</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins">Part 5: User Logins</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars">Part 6: Profile Page and Avatars</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing">Part 7: Unit Testing</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">Part 8: Followers, Contacts, and Friends</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination">Part 9: Pagination</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search">Part 10: Full Text Search</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support">Part 11: Email Support</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift">Part 12: Facelift</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times">Part 13: Dates and Times</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n">Part 14: I18n and L10n</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax">Part 15: Ajax</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">Part 16: Debugging, Testing and Profiling</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">Part 17: Deployment on Linux</a></li>
+<li>
+<p><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Part 18: Deployment on the Heroku Cloud</a></p>
+</li>
+<li>
+<p>The <a href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a> is a
+  curated list of the best packages that extend Flask. It's the first location
+  to look through when you're wondering how to do something that's not in the
+  core framework.</p>
+</li>
+<li>
+<p>Randall Degges wrote a detailed walkthrough for 
+  <a href="https://stormpath.com/blog/build-a-flask-app-in-30-minutes/">building a Flask app in 30 minutes</a>.</p>
+</li>
+<li>
+<p>Nice post by Jeff Knupp on <a href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">Productionizing a Flask App</a>.</p>
+</li>
+<li>
+<p><a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J">Building Websites in Python with Flask</a>
+  is another walkthrough tutorial from first steps through 
+  <a href="http://maximebf.com/blog/2012/11/getting-bigger-with-flask/">getting bigger with Flask</a>.</p>
+</li>
+<li>
+<p>The Plank &amp; Whittle blog has two posts, one on 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">Packaging a Flask web app</a> 
+  and another on 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">Packaging a Flask app in a Debian package</a>
+  once you've built an app and want to deploy it.</p>
+</li>
+<li>
+<p>The Tuts+ <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a> 
+  is another great walkthrough for getting started with the framework.</p>
+</li>
+</ul>
+<h3>What do you need to learn about web frameworks next?</h3>
+      <div class="row">
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/application-dependencies.html" class="btn btn-success btn-full"><i class="fa fa-archive fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                How do I install libraries that my web app depends on?
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next"> 
+            <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                How do I deploy a web app once I'm done coding?
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                I'd like to go back to reviewing other web frameworks.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                My user interface looks terrible. How do I style my web app?
+            </p>
+        </div>
+    </div>
+</div>    </div>
+    <div class="col-md-offset-1 col-md-3" id="sidebar">
+  <div class="panel panel-success">
+      <div class="panel-heading"><h3 class="panel-head">Flask</h3></div>
+      <div class="panel-body">
+          <a href="/">Full Stack Python</a> is an open source book explaining
+          each layer of the Python web application stack along with the
+          best Python resources from around the web.
+          <hr/>
+          <a href="http://twitter.com/mattmakai">Matt Makai</a> designed and
+          wrote this site with assistance from community pull 
+          requests. If you're on GitHub you can 
+          <a href="https://github.com/makaimc">follow him</a>
+          to see what daily changes are made or 
+          <a href="https://github.com/makaimc/fullstackpython.github.com">star the repository</a> for future reference.
+                </div>
+  </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-head">Table of Contents</h3>
+      </div>
+      <div class="list-group">
+                        <a href="/introduction.html" class="list-group-item smaller-item ">Introduction</a>
+                        <a href="/bottle.html" class="list-group-item smaller-item ">Bottle</a>
+                        <a href="/deployment.html" class="list-group-item smaller-item ">Deployment</a>
+                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item ">Other Web Frameworks</a>
+                        <a href="/servers.html" class="list-group-item smaller-item ">Servers</a>
+                        <a href="/web-frameworks.html" class="list-group-item smaller-item ">Web Frameworks</a>
+                        <a href="/django.html" class="list-group-item smaller-item ">Django</a>
+                        <a href="/operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
+                        <a href="/flask.html" class="list-group-item smaller-item active">Flask</a>
+                        <a href="/web-servers.html" class="list-group-item smaller-item ">Web Servers</a>
+                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item ">Platform-as-a-service</a>
+                        <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
+                        <a href="/wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
+                        <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
+                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
+                        <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
+                        <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
+                        <a href="/source-control.html" class="list-group-item smaller-item ">Source Control</a>
+                        <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
+                        <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
+                        <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
+                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
+                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Security</a>
+                        <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
+                        <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
+                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
+                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
+                        <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
+                        <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
+                        <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
+                        <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
+                </div>
+  </div>
+  </div></div>
+        <hr/>
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2014
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="theme/js/bootstrap.min.js"></script>
+    </body>
+</html>

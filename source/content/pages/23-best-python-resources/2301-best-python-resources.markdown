@@ -85,8 +85,7 @@ I had when I was learning the language.
   videos from both major conferences and meetups.
 
 * Ontwik has relevant programming videos in its 
-  [Python category](http://ontwik.com/category/python/) and
-  [Django category](http://ontwik.com/category/django/). 
+  [Python category](http://ontwik.com/category/python/).
 
 
 ## Newsletters
@@ -98,3 +97,6 @@ I had when I was learning the language.
   covered in both newsletters but they often cover different articles
   and projects from around the web.
 
+
+Those resources should help you get started with learning the basic Python
+language. How do you want to proceeed now?

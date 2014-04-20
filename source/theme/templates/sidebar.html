@@ -1,7 +1,34 @@
 <div class="col-md-offset-1 col-md-3" id="sidebar">
-  <div class="list-group">
-    {% for p in pages|sort(attribute='sort-order') %}
-      <a href="/{{ p.slug }}.html" class="list-group-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
-    {% endfor %}
+  <div class="panel panel-success">
+      <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
+      <div class="panel-body">
+          <a href="/">Full Stack Python</a> is an open source book explaining
+          each layer of the Python web application stack along with the
+          best Python resources from around the web.
+          <hr/>
+          <a href="http://twitter.com/mattmakai">Matt Makai</a> designed and
+          wrote this site with assistance from community pull 
+          requests. If you're on GitHub you can 
+          <a href="https://github.com/makaimc">follow him</a>
+          to see what daily changes are made or 
+          <a href="https://github.com/makaimc/fullstackpython.github.com">star the repository</a> for future reference.
+          {% if not page %}
+          <hr/>
+          Looking for a specific topic? Check out the 
+          <a href="/table-of-contents.html">table of contents</a>.
+          {% endif %}
+      </div>
   </div>
+  {% if page %}
+  <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-head">Table of Contents</h3>
+      </div>
+      <div class="list-group">
+          {% for p in pages|sort(attribute='sort-order') %}
+              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+          {% endfor %}
+      </div>
+  </div>
+  {% endif %}
 </div>

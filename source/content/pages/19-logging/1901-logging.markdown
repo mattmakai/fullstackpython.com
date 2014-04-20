@@ -71,3 +71,6 @@ be used with any language.
   [Part 2 describes actions](http://www.hybridcluster.com/blog/logging-storytelling-lets-add-action/)
   and 
   [part 3 talks about types](http://www.hybridcluster.com/blog/logging-storytelling-3-types/).
+
+
+### Logging isn't enough. How do I analyze more data about the app?

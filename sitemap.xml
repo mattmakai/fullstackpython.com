@@ -19,6 +19,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/bottle.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>
@@ -36,6 +40,18 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/databases.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/deployment.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/django.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/flask.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -64,6 +80,10 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/operating-systems.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/other-web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

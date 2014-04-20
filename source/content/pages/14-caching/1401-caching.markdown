@@ -31,3 +31,4 @@ A cache can be created for multiple layers of the stack.
   reverse proxy Nginx or Varnish.
 
 
+### What do you want to learn now that your app is responding faster?

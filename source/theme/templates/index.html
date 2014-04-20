@@ -5,28 +5,12 @@
     <div class="col-md-8">
         {% for page in pages|sort(attribute='sort-order') %}
           {% if loop.first %}
-          {{ page.content }}
-          {% for p in pages|sort(attribute='sort-order') %}
-            {% if next_up %}
-                <br/>
-                Next read about 
-                <a href="/{{ p.slug }}.html">{{ p.title|lower }}</a>.
-                {% set next_up = False %}    
-            {% endif %}
-            {% if p.slug == page.slug %}
-                {% set next_up = True %}
-            {% endif %}
-          {% endfor %}
+              {{ page.content }}
           {% endif %}
         {% endfor %}
+        {% include "chapters/introduction.html" %}
     </div>
-    <div class="col-md-offset-1 col-md-3" id="sidebar">
-      <div class="list-group">
-        {% for p in pages|sort(attribute='sort-order') %}
-          <a href="/{{ p.slug }}.html" class="list-group-item {% if p.slug == 'introduction' %}active{% endif %}">{{ p.title }}</a>
-        {% endfor %}
-      </div>
-    </div>
+    {% include "sidebar.html" %}
 </div>
 {% endblock %}
 

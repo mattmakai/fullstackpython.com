@@ -12,6 +12,8 @@ the
 
 ## 2014
 ### April
+* Huge site update to reorganize the way content is presented and navigated.
+  Kinda has that "choose your own adventure" thing going for it, doesn't it?
 * New logo! This one's way more Python software stack, way less boring 
   folder-thingy. Here's how the old one looked in comparison:
 <img src="theme/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" />
@@ -104,3 +106,5 @@ the
 * Initial incomplete release on fullstackpython.com, created 
   introduction, CDN, web frameworks, and database sections with stubs for 
   other areas.
+
+That's the whole history of Full Stack Python. What do you want to learn now?

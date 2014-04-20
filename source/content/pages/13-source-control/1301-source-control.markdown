@@ -64,3 +64,5 @@ reviews the basics of distributed version control systems.
   by Braintree goes over how this payments company uses Git for development
   and merging source code.
 
+
+### Now that your source code is versioned, what's next?

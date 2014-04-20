@@ -19,19 +19,7 @@ Production servers hold real data (again as opposed to test data) and must be
 secure against unauthorized access.
 
 
-## Server hosting options
-There are four options for hosting a web application:
-
-1. "Bare metal" servers
-
-2. Virtualized servers
-
-3. Infrastructure-as-a-service
-
-4. [Platform-as-a-service](../platform-as-a-service.html)
-
-
-## Bare metal
+## "Bare metal" servers
 The term *bare metal* refers to purchasing the actual hardware and hooking 
 it up to the Internet either through a business-class internet service 
 provider (ISP) or 
@@ -132,3 +120,6 @@ Python library for working with Amazon Web Services.
 
 * [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
   shows how to work with a VPS once you've got the server up and running.
+
+
+### What topic do you need to learn about next?

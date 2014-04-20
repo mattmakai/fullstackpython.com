@@ -66,3 +66,5 @@ most common types of jobs for task queues include
   are great reads for understanding the difference between a task queue and
   why you shouldn't use your database as one.
 
+
+### What's next after task queues?

@@ -63,3 +63,6 @@ from PyCon UK 2013
 * [How to Write an Ansible Role for Ansible Galaxy](http://probablyfine.co.uk/2014/03/27/how-to-write-an-ansible-role-for-ansible-galaxy/)
 
 * [Testing with Jenkins, Docker and Ansible](http://blog.mist.io/post/82383668190/move-fast-and-dont-break-things-testing-with)
+
+
+### What's next after automating your app configuration?

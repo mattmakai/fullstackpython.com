@@ -94,4 +94,4 @@ provides a command-line interface for interacting with the RPM system.
 * Digital Ocean has a detailed 
   [walkthrough for setting up Python web applications on Ubuntu](https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications).
 
-
+### What topic do you need to learn to keep going?

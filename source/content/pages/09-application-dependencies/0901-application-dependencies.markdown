@@ -129,3 +129,6 @@ further clarification.
 
 * This Stack Overflow question details how to set up a 
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
+
+
+### What do you need to learn after installing your app dependencies?

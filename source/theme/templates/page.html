@@ -6,17 +6,7 @@
 <div class="row">
     <div class="col-md-8">
       {{ page.content }}
-      {% for p in pages|sort(attribute='sort-order') %}
-        {% if next_up %}
-            <br/>
-            Next read the 
-            <a href="/{{ p.slug }}.html">{{ p.title|lower }}</a> section.
-            {% set next_up = False %}    
-        {% endif %}
-        {% if p.slug == page.slug %}
-            {% set next_up = True %}
-        {% endif %}
-      {% endfor %}
+      {% include "chapters/" + page.slug + ".html" %}
     </div>
     {% include "sidebar.html" %}
 </div>
