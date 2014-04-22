@@ -54,4 +54,4 @@ and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/mi
   all available free of charge.
 
 
-### What do you need to learn next to build your app?
+### What do you need to learn next for your Django app?
