@@ -70,5 +70,12 @@ book so consider picking that up as well.
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
 
+* [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
+  shows the basic first steps for setting up a Flask project.
+
+
+## Flask projects
+* [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
+  starting point for new Flask projects.
 
 ### What do you need to learn about web frameworks next?
