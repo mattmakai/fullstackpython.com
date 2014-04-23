@@ -18,13 +18,17 @@ and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/mi
 
 
 ## Django resources
+* [Tango with Django](http://www.tangowithdjango.com/book/) are a extensive 
+  free introductions to using the most popular Python web framework. Several
+  current developers said this book really helped them get over the initial
+  framework learning curve.
+
 * [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-6) 
   by Daniel Greenfield and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
 
-* [Effective Django](http://effectivedjango.com/) and 
-  [Tango with Django](http://www.tangowithdjango.com/book/) are a extensive 
-  free introductions to using the most popular Python web framework.
+* [Effective Django](http://effectivedjango.com/) is another free introduction
+  to the web framework.
 
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
   the latest resources for learning Django.
