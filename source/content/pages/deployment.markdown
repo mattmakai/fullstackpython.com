@@ -27,4 +27,13 @@ There are four options for deploying and hosting a web application:
 4. Platform-as-a-service
 
 
+## Deployment resources
+* [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
+  walks through stages of deployment with source control, planning, 
+  continuous deployment and monitoring the results.
+
+* [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
+  defines delivery versus deployment and walks through a continuous deployment
+  workflow.
+
 ### How would you like to deploy your web app?
