@@ -5,13 +5,13 @@ sort-order: 02
 
 
 # Deployment
-Deployment means packaging up your web application and putting it in a 
+Deployment involves packaging up your web application and putting it in a 
 production environment that can run the app.
 
 
 ## Why is deployment necessary?
 Your web application must live somewhere other than your own desktop or 
-laptop. A production environment is a canonical version of your current 
+laptop. A production environment is the canonical version of your current 
 application and its associated data.
 
 
