@@ -30,5 +30,10 @@ A cache can be created for multiple layers of the stack.
   reviews some considerations such as SSL and SPDY support when choosing
   reverse proxy Nginx or Varnish.
 
+* [Caching is Hard, Draw me a Picture](http://bizcoder.com/caching-is-hard-draw-me-a-picture)
+  has diagrams of how web request caching layers work. The post is relevant
+  reading even though the author is describing his Microsoft code as the 
+  impetus for writing the content.
+
 
 ### What do you want to learn now that your app is responding faster?
