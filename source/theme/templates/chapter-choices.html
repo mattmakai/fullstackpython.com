@@ -1,46 +1,42 @@
-
-{% if page %}
+{% if not page.choice4url == '' %}
+    {% set colwidth = 3 %}
+{% else %}
+    {% set colwidth = 4 %}
+{% endif %}
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-{{ colwidth }}">
         <div class="well select-next">
-            <a href="{{ page.choice1Url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice1Icon }} fa-2x"></i></a>
+            <a href="{{ page.choice1url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice1icon }} fa-2x"></i></a>
             <p class="under-btn">
-                {{ page.choice1Text }}
+                {{ page.choice1text }}
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-{{ colwidth }}">
         <div class="well select-next">
-            <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-2x"></i></a>
+            <a href="{{ page.choice2url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice2icon }} fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                I already built a Python web application. I need to deploy it.
+                {{ page.choice2text }}
             </p>
         </div>
     </div>
+    <div class="col-md-{{ colwidth }}">
+        <div class="well select-next">
+            <a href="{{ page.choice3url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice3icon }} fa-2x"></i></a>
+            <p class="under-btn">
+                {{ page.choice3text }}
+            </p>
+        </div>
+    </div>
+    {% if colwidth == 3 %}
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/best-python-resources.html" class="btn btn-success btn-full"><i class="fa fa-book fa-inverse fa-2x"></i></a>
+            <a href="{{ page.choice4url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice4icon }} fa-2x"></i></a>
             <p class="under-btn">
-                I need to prepare myself first with more resources.
+                {{ page.choice4text }}
             </p>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/change-log.html" class="btn btn-success btn-full"><i class="fa fa-pencil-square-o fa-inverse fa-2x"></i></a>
-            <p class="under-btn">
-                I've read Full Stack Python before. What's new?
-            </p>
-        </div>
-    </div>
+    {% endif %}
 </div>
-{% else %}
-
-{% for page in pages|sort(attribute='sort-order') %}
-  {% if loop.first %}
-      {{ page.content }}
-  {% endif %}
-{% endfor %}
-
-{% endif %}

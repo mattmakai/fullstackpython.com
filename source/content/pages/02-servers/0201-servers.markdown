@@ -2,6 +2,18 @@ title: Servers
 category: page
 slug: servers
 sort-order: 02
+choice1url: /operating-systems.html
+choice1icon: fa-linux fa-inverse
+choice1text: What operating system should I use once the server is set up?
+choice2url: /platform-as-a-service.html
+choice2icon: fa-puzzle-piece fa-inverse
+choice2text: Forget servers. Give me the easier platform-as-a-service option.
+choice3url: /web-servers.html
+choice3icon: fa-exchange fa-inverse
+choice3text: I'll install Linux as my OS. Which web server should I use?
+choice4url:
+choice4icon:
+choice4text:
 
 
 # Servers
@@ -122,4 +134,4 @@ Python library for working with Amazon Web Services.
   shows how to work with a VPS once you've got the server up and running.
 
 
-### What topic do you need to learn about next?
+### Keep going with a server or try a PaaS option?

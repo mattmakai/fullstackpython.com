@@ -6,7 +6,11 @@
 <div class="row">
     <div class="col-md-8">
       {{ page.content }}
-      {% include "chapters/" + page.slug + ".html" %}
+      {% if page.choice1url %}
+        {% include "chapter-choices.html" %}
+      {% else %}
+        {% include "chapters/" + page.slug + ".html" %}
+      {% endif %}
     </div>
     {% include "sidebar.html" %}
 </div>

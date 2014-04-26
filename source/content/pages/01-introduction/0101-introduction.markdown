@@ -16,7 +16,6 @@ choice4icon: fa-pencil-square-o fa-inverse
 choice4text: I've read Full Stack Python before. What's new?
 
 
-
 # Introduction
 You're knee deep in learning the [Python](http://www.python.org/)
 programming language. The syntax is starting to make sense. The first
