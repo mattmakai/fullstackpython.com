@@ -1,0 +1,46 @@
+
+{% if page %}
+<div class="row">
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="{{ page.choice1Url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice1Icon }} fa-2x"></i></a>
+            <p class="under-btn">
+                {{ page.choice1Text }}
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-2x"></i></a>
+            </a>
+            <p class="under-btn">
+                I already built a Python web application. I need to deploy it.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/best-python-resources.html" class="btn btn-success btn-full"><i class="fa fa-book fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                I need to prepare myself first with more resources.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/change-log.html" class="btn btn-success btn-full"><i class="fa fa-pencil-square-o fa-inverse fa-2x"></i></a>
+            <p class="under-btn">
+                I've read Full Stack Python before. What's new?
+            </p>
+        </div>
+    </div>
+</div>
+{% else %}
+
+{% for page in pages|sort(attribute='sort-order') %}
+  {% if loop.first %}
+      {{ page.content }}
+  {% endif %}
+{% endfor %}
+
+{% endif %}

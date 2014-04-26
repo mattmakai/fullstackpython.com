@@ -6,9 +6,9 @@
         {% for page in pages|sort(attribute='sort-order') %}
           {% if loop.first %}
               {{ page.content }}
+              {% include "index-choices.html" %}
           {% endif %}
         {% endfor %}
-        {% include "chapters/introduction.html" %}
     </div>
     {% include "sidebar.html" %}
 </div>
