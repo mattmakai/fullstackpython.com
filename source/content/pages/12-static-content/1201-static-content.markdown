@@ -2,6 +2,19 @@ title: Static Content
 category: page
 slug: static-content
 sort-order: 12
+choice1url: 
+choice1icon: 
+choice1text: 
+choice2url: 
+choice2icon: 
+choice2text: 
+choice3url: 
+choice3icon: 
+choice3text: 
+choice4url:
+choice4icon:
+choice4text:
+
 
 # Static content
 Some content on a website does not change and therefore should be served

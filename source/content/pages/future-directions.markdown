@@ -2,6 +2,18 @@ title: Future Directions
 category: page
 slug: future-directions
 sort-order: 26
+choice1url: 
+choice1icon: 
+choice1text: 
+choice2url: 
+choice2icon: 
+choice2text: 
+choice3url: 
+choice3icon: 
+choice3text: 
+choice4url:
+choice4icon:
+choice4text:
 
 
 # Future Directions
@@ -32,3 +44,4 @@ Here are some things I'm actively working on:
   and [Web Security](../web-application-security.html) sections.
 
 
+### That's what coming. What would you like to learn right now?

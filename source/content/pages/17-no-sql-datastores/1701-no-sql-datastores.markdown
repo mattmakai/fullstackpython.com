@@ -2,6 +2,18 @@ title: NoSQL Data Stores
 category: page
 slug: no-sql-datastore
 sort-order: 17
+choice1url: 
+choice1icon: 
+choice1text: 
+choice2url: 
+choice2icon: 
+choice2text: 
+choice3url: 
+choice3icon: 
+choice3text: 
+choice4url:
+choice4icon:
+choice4text:
 
 
 # NoSQL Data Stores

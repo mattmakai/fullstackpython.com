@@ -2,6 +2,18 @@ title: WSGI Servers
 category: page
 slug: wsgi-servers
 sort-order: 07
+choice1url: 
+choice1icon: 
+choice1text: 
+choice2url: 
+choice2icon: 
+choice2text: 
+choice3url: 
+choice3icon: 
+choice3text: 
+choice4url:
+choice4icon:
+choice4text:
 
 
 # WSGI Servers

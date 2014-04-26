@@ -2,6 +2,18 @@ title: Best Python Resources
 category: page
 slug: best-python-resources
 sort-order: 23
+choice1url: 
+choice1icon: 
+choice1text: 
+choice2url: 
+choice2icon: 
+choice2text: 
+choice3url: 
+choice3icon: 
+choice3text: 
+choice4url:
+choice4icon:
+choice4text:
 
 
 # Best Python Resources

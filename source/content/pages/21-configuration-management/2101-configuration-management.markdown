@@ -2,6 +2,18 @@ title: Configuration Management
 category: page
 slug: configuration-management
 sort-order: 21
+choice1url: 
+choice1icon: 
+choice1text: 
+choice2url: 
+choice2icon: 
+choice2text: 
+choice3url: 
+choice3icon: 
+choice3text: 
+choice4url:
+choice4icon:
+choice4text:
 
 
 # Configuration Management
