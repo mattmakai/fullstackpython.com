@@ -30,8 +30,6 @@ You've come to the right place to learn everything you need to deploy and
 run a production Python web application.
 
 This guide branches out on topic because your learning needs depend on what
-you're currently trying to do. This guide walks you through steps based 
-on what you want to do when you need to get it done.
-
+you're currently trying to do. 
 
 ### Let's get started. What do you need to do right now?

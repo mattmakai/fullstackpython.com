@@ -7667,7 +7667,7 @@ td.visible-print {
     #sidebar {margin-top: 30px;}
 
     .select-next {
-        min-height: 300px;
+        min-height: 260px;
     }
     .choose-btn {
         font-size: 1.1em;
@@ -7688,6 +7688,9 @@ td.visible-print {
     .smaller-item {font-size: .8em; padding: 5px 0 5px 10px;}
     @media (max-width: 1200px) {
         h3.panel-head {font-size: 22px;}
+        .select-next {
+            min-height: 300px;
+        }
     }
     @media (max-width: 992px) {
         .choose-next {
