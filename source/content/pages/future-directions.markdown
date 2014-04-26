@@ -2,15 +2,15 @@ title: Future Directions
 category: page
 slug: future-directions
 sort-order: 26
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /introduction.html
+choice1icon: fa-fast-backward fa-inverse
+choice1text: Let me start over from the Full Stack Python introduction.
+choice2url: /change-log.html
+choice2icon: fa-pencil-square-o fa-inverse
+choice2text: What's changed on Full Stack Python since the site began?
+choice3url: /web-frameworks.html
+choice3icon: fa-code fa-inverse
+choice3text: I want to learn how to code a Python web application now.
 choice4url:
 choice4icon:
 choice4text:

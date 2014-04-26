@@ -2,15 +2,15 @@ title: Best Python Resources
 category: page
 slug: best-python-resources
 sort-order: 23
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /web-frameworks.html
+choice1icon: fa-code fa-inverse
+choice1text: I'm ready to learn how to code an application with a web framework.
+choice2url: /deployment.html
+choice2icon: fa-share
+choice2text: I already built a web application. I need to know how to deploy it.
+choice3url: /introduction.html
+choice3icon: fa-fast-backward fa-inverse
+choice3text: Let me start over from the Full Stack Python introduction.
 choice4url:
 choice4icon:
 choice4text:
