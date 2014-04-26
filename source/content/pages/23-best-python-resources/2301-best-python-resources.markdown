@@ -98,5 +98,4 @@ I had when I was learning the language.
   and projects from around the web.
 
 
-Those resources should help you get started with learning the basic Python
-language. How do you want to proceeed now?
+### Those resources should help get you started. What's next?

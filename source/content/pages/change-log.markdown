@@ -12,6 +12,11 @@ the
 
 ## 2014
 ### April
+* Added an email sign up form to determine how many people are interested in
+  a full book since I've had a lot of requests in person to write one.
+* Added new resources to the other web frameworks section.
+* Updated the way choices to go from one page to another are generated. It's
+  now done off metadata instead of duplicated HTML content.
 * Huge site update to reorganize the way content is presented and navigated.
   Kinda has that "choose your own adventure" thing going for it, doesn't it?
 * New logo! This one's way more Python software stack, way less boring 
