@@ -37,6 +37,9 @@ I had when I was learning the language.
   an online book for people completely unfamiliar with the Python programming
   language.
 
+* [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
+  tutorial for the Python language. 
+
 * I wrote a quick blog post on
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.

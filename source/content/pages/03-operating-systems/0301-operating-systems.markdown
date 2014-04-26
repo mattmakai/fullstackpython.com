@@ -2,15 +2,15 @@ title: Operating Systems
 category: page
 slug: operating-systems
 sort-order: 03
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /web-servers.html
+choice1icon: fa-exchange fa-inverse
+choice1text: I'll install Linux as my OS. What web server should I use?
+choice2url: /application-dependencies.html
+choice2icon: fa-archive fa-inverse
+choice2text: How should I install Python libraries on the new OS?
+choice3url: /platform-as-a-service.html
+choice3icon: fa-puzzle-piece fa-inverse
+choice3text: Forget servers. Tell me about the platform-as-a-service option.
 choice4url:
 choice4icon:
 choice4text:
