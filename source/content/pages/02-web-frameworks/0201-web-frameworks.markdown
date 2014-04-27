@@ -27,19 +27,24 @@ years while building dynamic web applications. Frameworks make it easier
 to reuse code for common HTTP operations and to structure your code so that 
 it is maintainable.
 
+
 ## Web frameworks learning checklist
-[ ] Choose a major web framework ([Django](/django.html) or 
-    [Flask](/flask.html) recommended) and stick with it
+<i class="fa fa-check-square-o"></i> 
+Choose a major web framework ([Django](/django.html) or 
+[Flask](/flask.html) are recommended) and stick with it.
 
-[ ] Work through a detailed tutorial found within the resources links on the
-    framework's page
+<i class="fa fa-check-square-o"></i> 
+Work through a detailed tutorial found within the resources links on the
+framework's page.
 
-[ ] Study open source examples built with your framework of choice so you can 
-    take parts of those projects and use the code in your application
+<i class="fa fa-check-square-o"></i> 
+Study open source examples built with your framework of choice so you can 
+take parts of those projects and reuse the code in your application.
 
-[ ] Build the first simple iteration of your web application then go to
-    the [deployment](/deployment.html) section to make it accessible on the 
-    web
+<i class="fa fa-check-square-o"></i> 
+Build the first simple iteration of your web application then go to
+the [deployment](/deployment.html) section to make it accessible on the 
+web.
 
 
 ## Common web framework functionality

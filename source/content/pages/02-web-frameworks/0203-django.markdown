@@ -2,15 +2,15 @@ title: Django
 category: page
 slug: django
 sort-order: 022
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /cascading-style-sheets.html
+choice1icon: fa-css3 fa-inverse
+choice1text: My user interface looks terrible. How do I style a web application?
+choice2url: /api-integration.html
+choice2icon: fa-link fa-inverse
+choice2text: I want to integrate external APIs into my Django project.
+choice3url: /deployment.html
+choice3icon: fa-share fa-inverse
+choice3text: How do I deploy a Django web app once I've put something together?
 choice4url:
 choice4icon:
 choice4text:
