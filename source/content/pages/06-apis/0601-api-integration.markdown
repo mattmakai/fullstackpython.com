@@ -2,18 +2,18 @@ title: API Integration
 category: page
 slug: api-integration
 sort-order: 061
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /task-queues.html
+choice1icon: fa-tasks
+choice1text: How can I invoke APIs outside the HTTP request-response cycle?
+choice2url: /logging.html
+choice2icon: fa-align-left fa-inverse 
+choice2text: How do I use logging with my app?
+choice3url: /web-application-security.html
+choice3icon: fa-lock fa-inverse
+choice3text: Where can I learn about web application security?
 choice4url:
 choice4icon:
-choice4text:
+choice4text: 
 
 
 # API Integration
