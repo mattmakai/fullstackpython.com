@@ -2,15 +2,15 @@ title: Cascading Style Sheets
 category: page
 slug: cascading-style-sheets
 sort-order: 051
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /javascript.html
+choice1icon: fa-html5 fa-inverse
+choice1text: How do I create more dynamic interaction in the browser with JavaScript?
+choice2url: /static-content.html
+choice2icon: fa-spinner fa-inverse
+choice2text: How should I host static content such as my CSS files?
+choice3url: /source-control.html
+choice3icon: fa-code-fork fa-inverse
+choice3text: How can I save and version my code so it doesn't get lost?
 choice4url:
 choice4icon:
 choice4text:
@@ -19,6 +19,7 @@ choice4text:
 # Cascading Style Sheets (CSS)
 Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.
+
 
 ## Why is CSS necessary?
 CSS separates content contained in the HTML file from how the content 
@@ -31,7 +32,27 @@ below the main content. The
 shows that scenario when you resize the browser width.
 
 
-## How is CSS retrieved from the web server?
+## CSS learning checklist
+<i class="fa fa-check-square-o"></i> 
+Create a simple HTML file with basic elements in it. Use the
+``python -m SimpleHTTPServer`` command to serve it up. Create a ``<style>`` 
+section within the ``<head>`` section in the HTML page. Start playing with CSS 
+to change the look and feel of the page.
+
+<i class="fa fa-check-square-o"></i> 
+Check out front end frameworks such as Bootstrap and Foundation and integrate
+one of those into the HTML page.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the framework's grid system, styling options and customization
+so you get comfortable with how to use the framework.
+
+<i class="fa fa-check-square-o"></i> 
+Apply the framework to your web application and tweak the design until you
+have something that looks much better than generic HTML.
+
+
+## How is CSS retrieved from a web server?
 The HTML file sent by the web server contains a reference to the CSS file(s)
 needed to render the content. The web browser requests the CSS file after the
 HTML file as shown below in a screenshot captured of the Chrome Web Developer 

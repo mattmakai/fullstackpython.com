@@ -31,6 +31,20 @@ across many implementation areas.
 
 
 ## API Integration Resources
+* John Sheehan's 
+  "[Zen and the Art of API Maintenance](https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance)"
+  slides are relevant for API integration.
+
+* This post on 
+  "[API Driven Development](https://stormpath.com/blog/api-driven-development/)"
+  by Randall Degges explains how using APIs in your application cuts down
+  on the amount of code you have to write and maintain so you can launch your
+  application faster.
+
+* [Safe Sex with Third Party APIs](http://www.slideshare.net/SmartBear_Software/safe-sex-with-thirdparty-apis)
+  is a funny high level overview of what you should do to protect your 
+  application when relying on third party services.
+
 * My DjangoCon 2013 talk dove into 
   "[Making Django Play Nice With Third Party Services](http://www.youtube.com/watch?v=iGP8DQIqxXs)."
 
