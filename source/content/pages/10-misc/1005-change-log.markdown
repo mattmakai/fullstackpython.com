@@ -24,9 +24,10 @@ the
 
 ## 2014
 ### April
-* Adding the concept of "learning checklists" to web frameworks and Django
-  pages to give readers some guidance for how to learn each topic. Will expand 
-  these checklists out into other pages over the next couple of weeks.
+* Adding the concept of "learning checklists" to web frameworks, Django, CSS
+  and JavaScript pages to give readers some guidance for how to learn each 
+  topic. Will expand these checklists out into other pages over the next 
+  couple of weeks.
 * Added an email sign up form to determine how many people are interested in
   a full book since I've had a lot of requests in person to write one.
 * Added new resources to the other web frameworks section.

@@ -23,7 +23,12 @@ to enable dynamic content and interaction.
 
 ## Why is JavaScript necessary?
 JavaScript executes in the client and enables dynamic content and interaction
-that is not possible with HTML and CSS alone. 
+that is not possible with HTML and CSS alone. Every modern Python web 
+application uses JavaScript on the front end. The trend towards richer client
+experiences will increase as projects such as 
+[Angular.js](https://angularjs.org/),
+[Backbone.js](http://backbonejs.org/), and 
+[Ember.js](http://emberjs.com/) continue to mature.
 
 
 ## JavaScript learning checklist
@@ -43,6 +48,10 @@ JavaScript easier.
 Work with JavaScript on the page. Incorporate examples from open source 
 projects listed below as well as JQuery plugins. Check out the Unheap link
 below to find a large collection of categorized JQuery plugins.
+
+<i class="fa fa-check-square-o"></i> 
+Check out the JavaScript resources below to learn more about advanced concepts
+and open source libraries.
 
 <i class="fa fa-check-square-o"></i> 
 Integrate JavaScript into your web application and check the 
