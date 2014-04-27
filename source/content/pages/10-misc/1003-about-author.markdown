@@ -8,9 +8,9 @@ choice1text:
 choice2url: 
 choice2icon: 
 choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice3url: /change-log.html
+choice3icon: fa-pencil-square-o fa-inverse
+choice3text: I've read Full Stack Python before. What's new?
 choice4url:
 choice4icon:
 choice4text:

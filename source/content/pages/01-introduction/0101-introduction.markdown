@@ -7,13 +7,13 @@ choice1icon: fa-code fa-inverse
 choice1text: I want to learn how to code a web application with Python.
 choice2url: /deployment.html
 choice2icon: fa-share
-choice2text: I already built a Python web application. I need to deploy it.
+choice2text: I've already built a Python web application. I need to deploy it.
 choice3url: /best-python-resources.html
 choice3icon: fa-book fa-inverse
-choice3text: I need to prepare myself with more Python resources first.
-choice4url: /change-log.html
-choice4icon: fa-pencil-square-o fa-inverse
-choice4text: I've read Full Stack Python before. What's new?
+choice3text: I need to prepare myself with more basic Python resources first.
+choice4url:
+choice4icon:
+choice4text:
 
 
 # Introduction
