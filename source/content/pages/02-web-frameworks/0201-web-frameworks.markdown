@@ -27,7 +27,7 @@ years while building dynamic web applications. Frameworks make it easier
 to reuse code for common HTTP operations and to structure your code so that 
 it is maintainable.
 
-## Web frameworks checklist
+## Web frameworks learning checklist
 [ ] Choose a major web framework ([Django](/django.html) or 
     [Flask](/flask.html) recommended) and stick with it
 

@@ -28,6 +28,51 @@ library. For example,
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 (as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/1.6.2).
 
+## Why is Django a good web framework to use?
+The Django project's stability, performance and community have grown 
+tremendously over the past decade since the framework's creation. Detailed
+tutorials and best practices are readily available on the web and in books.
+The framework continues to add significant new functionality such as 
+[database migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
+with each release. 
+
+I highly recommend the Django framework as a starting place for new Python web 
+developers because the official documentation and tutorials are some of the 
+best anywhere in software development. Many cities also have Django-specific
+groups such as [Django District](http://www.meetup.com/django-district/),
+[Django Boston](http://www.meetup.com/djangoboston/) and 
+[San Francisco Django](http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/) 
+so new developers can get help when they are stuck.
+
+
+## Django learning checklist
+<i class="fa fa-check-square-o"></i> 
+[Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
+your local development machine.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the initial 
+["polls" tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
+ 
+<i class="fa fa-check-square-o"></i> 
+Build a few more simple applications using the tutorial resources found
+under "Django resources" below.
+
+<i class="fa fa-check-square-o"></i> 
+Start coding your own Django project with help from the 
+[official documentation](https://docs.djangoproject.com/en/dev/) and 
+resource links below. You'll make plenty of mistakes which is critical
+on your path to learning the right way to build applications.
+
+<i class="fa fa-check-square-o"></i> 
+Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&qid=1391562062&sr=8-2&tag=mlinar-20) 
+to understand Django best practices and learn better ways of building 
+Django web applications.
+
+<i class="fa fa-check-square-o"></i> 
+Move on to the [deployment section](/deployment.html) to get your Django 
+project on the web.
+
 
 ## Django resources
 * [Tango with Django](http://www.tangowithdjango.com/book/) are a extensive 
