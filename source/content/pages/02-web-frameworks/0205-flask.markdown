@@ -2,15 +2,15 @@ title: Flask
 category: page
 slug: flask
 sort-order: 023
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /deployment.html
+choice1icon: fa-share fa-inverse
+choice1text: How do I deploy Flask web application when I'm ready to put it on the web?
+choice2url: /web-frameworks.html
+choice2icon: fa-code fa-inverse
+choice2text: I'd like to go back to reviewing other web frameworks.
+choice3url: /cascading-style-sheets.html
+choice3icon: fa-css3 fa-inverse
+choice3text: The user interface looks terrible. How do I style my web app?
 choice4url:
 choice4icon:
 choice4text:
@@ -27,6 +27,28 @@ explicit. Flask was also written several years after Django and therefore
 learned from the Python community's reactions as the framework evolved.
 Jökull Sólberg wrote a great piece articulating to this effect in his 
 [experience switching between Flask and Django](http://jokull.calepin.co/my-flask-to-django-experience.html).
+
+
+## Flask learning checklist
+<i class="fa fa-check-square-o"></i> 
+[Install Flask](http://flask.pocoo.org/docs/installation/) on
+your local development machine.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the 18-part Flask tutorial listed first under "Flask resources"
+below.
+ 
+<i class="fa fa-check-square-o"></i> 
+Read through [Flask Extensions Registry](http://flask.pocoo.org/extensions/)
+to find out what extensions you'll need to build your project.
+
+<i class="fa fa-check-square-o"></i> 
+Start coding your Flask app based on what you learned from the 18 part
+Flask tutorial plus open source example applications found below. 
+
+<i class="fa fa-check-square-o"></i> 
+Move on to the [deployment section](/deployment.html) to get your initial 
+Flask project on the web.
 
 
 ## Flask resources
@@ -58,7 +80,7 @@ book so consider picking that up as well.
   * [Part 17: Deployment on Linux](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
   * [Part 18: Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
 
-* The [Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
+* [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
   to look through when you're wondering how to do something that's not in the
   core framework.
@@ -86,8 +108,9 @@ book so consider picking that up as well.
   shows the basic first steps for setting up a Flask project.
 
 
-## Flask projects
+## Open source Flask projects
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
   starting point for new Flask projects.
+
 
 ### What do you need to learn about web frameworks next?
