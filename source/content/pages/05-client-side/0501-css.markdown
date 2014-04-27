@@ -35,9 +35,10 @@ shows that scenario when you resize the browser width.
 ## CSS learning checklist
 <i class="fa fa-check-square-o"></i> 
 Create a simple HTML file with basic elements in it. Use the
-``python -m SimpleHTTPServer`` command to serve it up. Create a ``<style>`` 
-section within the ``<head>`` section in the HTML page. Start playing with CSS 
-to change the look and feel of the page.
+``python -m SimpleHTTPServer`` command to serve it up. Create a 
+``<style></style>`` element within the ``<head>`` section in the HTML page. 
+Start playing with CSS within that style element to change the look and feel 
+of the page.
 
 <i class="fa fa-check-square-o"></i> 
 Check out front end frameworks such as Bootstrap and Foundation and integrate
