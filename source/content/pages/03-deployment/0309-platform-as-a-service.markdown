@@ -2,18 +2,18 @@ title: Platform-as-a-service
 category: page
 slug: platform-as-a-service
 sort-order: 035
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /wsgi-servers.html
+choice1icon: fa-play fa-inverse
+choice1text: What WSGI server should I use to run Python code?
+choice2url: /databases.html
+choice2icon: fa-hdd-o
+choice2text: How do I set up a database for use with my app?
+choice3url: /application-dependencies.html
+choice3icon: fa-archive fa-inverse
+choice3text: How can I install the libraries my app depends upon?
+choice4url: /static-content.html
+choice4icon: fa-spinner fa-inverse
+choice4text: My PaaS says I should use a CDN to serve static content. How?
 
 
 # Platform-as-a-service
