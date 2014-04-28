@@ -2,18 +2,18 @@ title: Change Log
 category: page
 slug: change-log
 sort-order: 103
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /introduction.html
+choice1icon: fa-fast-backward fa-inverse
+choice1text: Let me start over from the Full Stack Python introduction.
+choice2url: /future-directions.html
+choice2icon: fa-magic fa-inverse
+choice2text: Show me what's coming on Full Stack Python in the future.
+choice3url: /about-author.html
+choice3icon: fa-user fa-inverse
+choice3text: Who's the author of Full Stack Python?
+choice4url: /web-frameworks.html
+choice4icon: fa-code fa-inverse
+choice4text: I want to learn how to code a Python web application now. 
 
 
 # Change Log
