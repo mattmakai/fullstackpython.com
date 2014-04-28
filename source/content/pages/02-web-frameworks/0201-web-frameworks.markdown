@@ -85,5 +85,9 @@ including everything in the framework with tight integration.
   "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
   question on Stack Overflow.
 
+* This [Python web framework roundup](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
+  covers Django, Flask and Bottle as well as several other lesser known Python
+  frameworks.
+
 
 ### Which web framework do you want to learn about?
