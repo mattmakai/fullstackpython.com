@@ -28,7 +28,7 @@ library. For example,
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 (as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/1.6.2).
 
-## Why is Django a good web framework to use?
+## Why is Django a good web framework choice?
 The Django project's stability, performance and community have grown 
 tremendously over the past decade since the framework's creation. Detailed
 tutorials and best practices are readily available on the web and in books.

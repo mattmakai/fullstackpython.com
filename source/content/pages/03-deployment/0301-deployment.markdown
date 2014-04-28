@@ -30,13 +30,13 @@ application and its associated data.
 ## Deployment hosting options
 There are four options for deploying and hosting a web application:
 
-1. "Bare metal" servers
+1. ["Bare metal" servers](/servers.html)
 
-2. Virtualized servers
+2. [Virtualized servers](/servers.html)
 
-3. Infrastructure-as-a-service
+3. [Infrastructure-as-a-service](/servers.html)
 
-4. Platform-as-a-service
+4. [Platform-as-a-service](/platform-as-a-service.html)
 
 
 ## Deployment resources
@@ -47,5 +47,6 @@ There are four options for deploying and hosting a web application:
 * [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
+
 
 ### How would you like to deploy your web app?
