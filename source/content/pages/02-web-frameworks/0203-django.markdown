@@ -45,7 +45,7 @@ groups such as [Django District](http://www.meetup.com/django-district/),
 so new developers can get help when they are stuck.
 
 
-## Django learning checklist
+## Django framework learning checklist
 <i class="fa fa-check-square-o"></i> 
 [Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
 your local development machine.

@@ -2,15 +2,15 @@ title: Bottle
 category: page
 slug: bottle
 sort-order: 024
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /deployment.html
+choice1icon: fa-share fa-inverse
+choice1text: How do I deploy my Bottle app once I've built the initial concept?
+choice2url: /cascading-style-sheets.html
+choice2icon: fa-css3 fa-inverse
+choice2text: The user interface I built looks terrible. How do I style my web app?
+choice3url: /web-frameworks.html
+choice3icon: fa-code fa-inverse
+choice3text: I'd like to go back to reviewing other web frameworks.
 choice4url:
 choice4icon:
 choice4text:
@@ -21,6 +21,24 @@ choice4text:
 [single source file](https://github.com/defnull/bottle/blob/master/bottle.py)
 web framework with no external dependencies except for the standard library
 included with Python.
+
+
+## Bottle framework learning checklist
+<i class="fa fa-check-square-o"></i> 
+[Download Bottle](https://github.com/defnull/bottle/raw/master/bottle.py) or
+install via pip with ``pip install bottle`` on your local development machine.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the official 
+[Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html).
+
+<i class="fa fa-check-square-o"></i> 
+Start coding your Bottle app based on what you learned in the official 
+tutorial plus reading open source example applications found below. 
+
+<i class="fa fa-check-square-o"></i> 
+Move on to the [deployment section](/deployment.html) to get your initial 
+Bottle application on the web.
 
 
 ### Bottle resources

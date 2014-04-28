@@ -29,7 +29,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 [experience switching between Flask and Django](http://jokull.calepin.co/my-flask-to-django-experience.html).
 
 
-## Flask learning checklist
+## Flask framework learning checklist
 <i class="fa fa-check-square-o"></i> 
 [Install Flask](http://flask.pocoo.org/docs/installation/) on
 your local development machine.
@@ -108,9 +108,12 @@ book so consider picking that up as well.
   shows the basic first steps for setting up a Flask project.
 
 
-## Open source Flask projects
+## Open source Flask example projects
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
   starting point for new Flask projects.
+
+* Use the [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
+  for getting set up on Google App Engine with Flask.
 
 
 ### What do you need to learn about web frameworks next?
