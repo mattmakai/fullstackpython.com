@@ -115,5 +115,10 @@ book so consider picking that up as well.
 * Use the [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
   for getting set up on Google App Engine with Flask.
 
+* Here is a 
+  [note-taking app](http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/)
+  along with the 
+  [source code in Gists](https://gist.github.com/coleifer/632d3c9aa6b2ea519384).
+
 
 ### What do you need to learn about web frameworks next?
