@@ -2,15 +2,15 @@ title: Deployment
 category: page
 slug: deployment
 sort-order: 031
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /servers.html
+choice1icon: fa-sort-amount-asc fa-inverse
+choice1text: Show me options for bare metal, virtualized servers, and infrastructure-as-a-service.
+choice2url: /platform-as-a-service.html
+choice2icon: fa-puzzle-piece fa-inverse
+choice2text: How do I use a platform-as-a-service to deploy my Python web app?
+choice3url: /web-frameworks.html
+choice3icon: fa-code fa-inverse
+choice3text: I'm not yet ready to deploy. Show me web frameworks I should use to create an app.
 choice4url:
 choice4icon:
 choice4text:
