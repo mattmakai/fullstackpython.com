@@ -41,7 +41,7 @@ Move on to the [deployment section](/deployment.html) to get your initial
 Bottle application on the web.
 
 
-### Bottle resources
+## Bottle resources
 * The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html) 
   provides a thorough view of basic concepts and features for the framework.
 
@@ -55,6 +55,14 @@ Bottle application on the web.
 
 * This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/) 
   is another Bottle walkthrough for creating a RESTful web API.
+
+* [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
+  Bottle projects.
+
+
+## Open source Bottle example projects
+* [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with
+  Bottle.
 
 
 ### What do you need to learn next?

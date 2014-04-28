@@ -107,6 +107,10 @@ book so consider picking that up as well.
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project.
 
+* [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
+  covers a subject that comes up quickly once you begin adding significant
+  functionality to your Flask application.
+
 
 ## Open source Flask example projects
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
