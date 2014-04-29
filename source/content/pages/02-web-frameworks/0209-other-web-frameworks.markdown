@@ -41,6 +41,11 @@ framework that routes URLs directly to model code.
 in building web applications.
 
 
+## web2py
+[Web2py](http://www.web2py.com/) is a batteries-included philosophy framework
+with project structure based on model-view-controller patterns.
+
+
 ## Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
   contains both familiar and less known Python libraries.
