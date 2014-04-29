@@ -116,6 +116,9 @@ book so consider picking that up as well.
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
   starting point for new Flask projects.
 
+* [Flaskr TDD](https://github.com/mjhea0/flaskr-tdd) takes the official Flask
+  tutorial and adds test driven development and JQuery to the project. 
+
 * Use the [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
   for getting set up on Google App Engine with Flask.
 
