@@ -2,18 +2,18 @@ title: Web Servers
 category: page
 slug: web-servers
 sort-order: 034
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /wsgi-servers.html
+choice1icon: fa-play fa-inverse
+choice1text: How do I execute Python since the web server doesn't do that?
+choice2url: /application-dependencies.html
+choice2icon: fa-archive fa-inverse
+choice2text: How should I install Python libraries on the server?
+choice3url: /static-content.html
+choice3icon: fa-spinner
+choice3text: What other ways can be used to host static content?
+choice4url: /platform-as-a-service.html
+choice4icon: fa-puzzle-piece fa-inverse
+choice4text: Forget servers. Tell me about platforms-as-a-service.
 
 
 # Web servers
