@@ -2,18 +2,18 @@ title: Configuration Management
 category: page
 slug: configuration-management
 sort-order: 039
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /logging.html
+choice1icon: fa-align-left fa-inverse
+choice1text: How do I log events that happen in my app while it is running?
+choice2url: /web-analytics.html
+choice2icon: fa-dashboard
+choice2text: I want to learn more about the users of my app with web analytics.
+choice3url: /api-integration.html
+choice3icon: fa-link fa-inverse
+choice3text: How do I integrate external APIs into my application?
+choice4url: /web-application-security.html
+choice4icon: fa-lock fa-inverse
+choice4text: What should I do to secure my web application?
 
 
 # Configuration Management
@@ -25,7 +25,7 @@ way, including [Puppet](http://puppetlabs.com/puppet/what-is-puppet),
 written in Ruby, while SaltStack and Ansible are written in Python.
 
 
-# Ad hoc tasks
+## Ad hoc tasks
 Configuration management tools such as Chef, Puppet, Ansible, and SaltStack
 are not useful for performing ad hoc tasks that require interactive responses.
 [Fabric](http://docs.fabfile.org/en/1.8/) and 
