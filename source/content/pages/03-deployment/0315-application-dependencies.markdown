@@ -2,18 +2,18 @@ title: Application Dependencies
 category: page
 slug: application-dependencies
 sort-order: 038
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /wsgi-servers.html
+choice1icon: fa-play fa-inverse
+choice1text: How do I set up a WSGI server to execute Python code?
+choice2url: /databases.html
+choice2icon: fa-hdd-o
+choice2text: What database should I set up to store my app's persistent data?
+choice3url: /api-integration.html
+choice3icon: fa-link fa-inverse
+choice3text: How do I integrate an external API into my app?
+choice4url: /cascading-style-sheets.html
+choice4icon: fa-css3 fa-inverse
+choice4text: How do I style my app with cascading style sheets?
 
 
 # Application Dependencies

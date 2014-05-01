@@ -2,18 +2,18 @@ title: WSGI Servers
 category: page
 slug: wsgi-servers
 sort-order: 036
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /databases.html
+choice1icon: fa-hdd-o
+choice1text: How do I store persistent data for my Python web app?
+choice2url: /javascript.html
+choice2icon: fa-html5 fa-inverse
+choice2text: How can I use JavaScript to create a better user interface?
+choice3url: /cascading-style-sheets.html
+choice3icon: fa-css3 fa-inverse
+choice3text: What do I need to know about CSS to style my web application?
+choice4url: /logging.html
+choice4icon: fa-align-left fa-inverse
+choice4text: My code is running but I'm getting errors. How do I log them?
 
 
 # WSGI Servers
