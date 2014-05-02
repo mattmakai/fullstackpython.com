@@ -189,5 +189,8 @@ SQL integrates with Google App Engine but can be used independently as well.
 * [DB Weekly](http://dbweekly.com/) is a weekly roundup of general database 
   articles and resources.
 
+* [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
+  provides a detailed comparison of SQLAlchemy against alternatives.
+
 
 ### What's next to get your app running?
