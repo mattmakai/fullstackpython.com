@@ -2,18 +2,18 @@ title: Databases
 category: page
 slug: databases
 sort-order: 041
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /no-sql-datastore.html
+choice1icon: fa-inbox
+choice1text: What about non-relational data stores hipsters tell me to use? 
+choice2url: /wsgi-servers.html
+choice2icon: fa-css3 fa-inverse
+choice2text: My app is running but looks awful. How do I style the interface?
+choice3url: /javascript.html
+choice3icon: fa-html5 fa-inverse
+choice3text: How do I create a better user experience with JavaScript?
+choice4url: /logging.html
+choice4icon: fa-align-left fa-inverse
+choice4text: How do I log issues when they occur in my app?
 
 
 # Databases
