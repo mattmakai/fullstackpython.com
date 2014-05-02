@@ -4,7 +4,7 @@ slug: flask
 sort-order: 023
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
-choice1text: How do I deploy Flask web application when I'm ready to put it on the web?
+choice1text: How do I deploy Flask web application when it's ready to go live?
 choice2url: /web-frameworks.html
 choice2icon: fa-code fa-inverse
 choice2text: I'd like to go back to reviewing other web frameworks.

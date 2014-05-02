@@ -10,7 +10,7 @@ choice2icon: fa-link fa-inverse
 choice2text: I want to integrate external APIs into my Django project.
 choice3url: /deployment.html
 choice3icon: fa-share fa-inverse
-choice3text: How do I deploy a Django web app once I've put something together?
+choice3text: How do I deploy a Django web app once it's coded?
 choice4url: /source-control.html
 choice4icon: fa-code-fork fa-inverse
 choice4text: How can I version and store my source code so I don't lose it?

@@ -2,15 +2,15 @@ title: Source Control
 category: page
 slug: source-control
 sort-order: 037
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /deployment.html
+choice1icon: fa-share
+choice1text: How do I deploy the code I've created for my web app?
+choice2url: /web-analytics.html
+choice2icon: fa-dashboard
+choice2text: I want to learn more about the users of my application.
+choice3url: /api-integration.html
+choice3icon: fa-link
+choice3text: How do I integrate external APIs into my web application?
 choice4url:
 choice4icon:
 choice4text:
