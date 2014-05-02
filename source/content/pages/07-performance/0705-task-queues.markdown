@@ -2,15 +2,15 @@ title: Task Queues
 category: page
 slug: task-queues
 sort-order: 073
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /logging.html
+choice1icon: fa-align-left fa-inverse
+choice1text: How do I monitor my app and its task queues with logging?
+choice2url: /web-analytics.html
+choice2icon: fa-dashboard
+choice2text: How can I learn more about the users of my application? 
+choice3url: /monitoring.html
+choice3icon: fa-bar-chart-o fa-inverse
+choice3text: What tools exist for monitoring a live web application?
 choice4url:
 choice4icon:
 choice4text:
