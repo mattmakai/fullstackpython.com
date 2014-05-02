@@ -30,11 +30,14 @@ For example,
 an [object-relational mapper](https://docs.djangoproject.com/en/dev/topics/db/),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 (as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/1.6.2). 
-Compare that functionality to the Flask framework which requires a separate
-library such as [Flask-Login](https://flask-login.readthedocs.org/en/latest/)
-to perform user authentication. The batteries-includes and extensibility 
-philosophies are simply two different ways to tackle framework building. 
-Neither philosophy is inherently better than the other.
+Compare that included functionality to the Flask framework which requires a 
+separate library such as 
+[Flask-Login](https://flask-login.readthedocs.org/en/latest/)
+to perform user authentication. 
+
+The batteries-includes and extensibility philosophies are simply two different 
+ways to tackle framework building.  Neither philosophy is inherently better 
+than the other.
 
 
 ## Why is Django a good web framework choice?
