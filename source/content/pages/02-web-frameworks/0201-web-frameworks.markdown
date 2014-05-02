@@ -75,7 +75,7 @@ There is a spectrum between minimal functionality with easy extensibility and
 including everything in the framework with tight integration.
 
 
-## Web Framework Resources
+## General web framework resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
   by [Jeff Knupp](https://twitter.com/jeffknupp)
   is a in-depth explanation of what a web framework is and their relation

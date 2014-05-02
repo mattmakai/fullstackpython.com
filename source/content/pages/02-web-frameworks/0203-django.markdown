@@ -97,7 +97,7 @@ project on the web.
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
 
-### Django videos
+## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
   videos for learning how to build Django applications.
 
