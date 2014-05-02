@@ -126,5 +126,8 @@ web application's design.
   breaks CSS layout topics into chapters so you can learn each part one
   at a time.
 
+* [Google's Web Fundamentals class](https://developers.google.com/web/fundamentals/)
+  shows how to create responsive designs and performant websites.
+
 
 ### Once your app is styled what do you need to learn next?

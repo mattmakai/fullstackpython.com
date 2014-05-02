@@ -23,6 +23,10 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### May
+* Continuing to add learning checklists to sections such as servers.
+* Moving navigation options into meta tags on markdown pages.
+
 ### April
 * Adding the concept of "learning checklists" to web frameworks, Django, CSS
   and JavaScript pages to give readers some guidance for how to learn each 
