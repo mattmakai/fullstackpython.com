@@ -67,6 +67,9 @@ I had when I was learning the language.
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
 
+* Check out the [Real Python! Blog](http://www.realpython.com/blog/) for a great
+  set of relevant posts about Python web development topics.
+
 
 ## Beyond the basics
 * [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
