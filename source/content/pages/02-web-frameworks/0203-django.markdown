@@ -20,13 +20,22 @@ choice4text: How can I version and store my source code so I don't lose it?
 [Django](http://www.djangoproject.com/) is a widely used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
-web applications should come with the framework instead of as a separate
-library. For example, 
+web applications should come with the framework instead of as separate
+libraries. 
+
+For example, 
+[authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
 [URL routing](https://docs.djangoproject.com/en/dev/topics/http/urls/), a 
 [templating system](https://docs.djangoproject.com/en/dev/topics/templates/),
 [object-relational mapper](https://docs.djangoproject.com/en/dev/topics/db/),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
-(as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/1.6.2).
+(as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/1.6.2). 
+Compare that functionality to the Flask framework which requires a separate
+library such as [Flask-Login](https://flask-login.readthedocs.org/en/latest/)
+to perform user authentication. The batteries-includes and extensibility 
+philosophies are simply two different ways to tackle framework building. 
+Neither philosophy is inherently better than the other.
+
 
 ## Why is Django a good web framework choice?
 The Django project's stability, performance and community have grown 
