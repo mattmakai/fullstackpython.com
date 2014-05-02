@@ -2,15 +2,15 @@ title: NoSQL Data Stores
 category: page
 slug: no-sql-datastore
 sort-order: 042
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
+choice1url: /databases.html
+choice1icon: fa-hdd-o
+choice1text: Tell me more about standard relational databases.
+choice2url: /cascading-style-sheets.html
+choice2icon: fa-css3 fa-inverse
+choice2text: My app is running but looks awful. How do I style the interface?
+choice3url: /javascript.html
+choice3icon: fa-html5 fa-inverse
+choice3text: How do I create a better browser experience with JavaScript?
 choice4url:
 choice4icon:
 choice4text:

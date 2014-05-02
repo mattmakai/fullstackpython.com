@@ -57,6 +57,24 @@ possible because the data is stored in a structured way. </p>
 mental framework for how the data should be saved and retrieved instead of 
 having to figure out what to do with the data every time you build a new 
 application.</p>
+<h2>Databases learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+<code>sudo apt-get install postgresql</code>.</p>
+<p><i class="fa fa-check-square-o"></i>
+Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is part of your
+application dependencies.</p>
+<p><i class="fa fa-check-square-o"></i>
+Configure your web application to connect to the PostgreSQL instance.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create models in your ORM, either with Django's 
+<a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
+<a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
+<p><i class="fa fa-check-square-o"></i>
+Sync the ORM models with the PostgreSQL instance.</p>
+<p><i class="fa fa-check-square-o"></i>
+Start creating, reading, updating and deleting data in the database from your 
+web application.</p>
 <h2>Relational databases</h2>
 <p>The database storage abstraction most commonly used in Python web development 
 is sets of relational tables. Alternative storage abstractions are explained 
