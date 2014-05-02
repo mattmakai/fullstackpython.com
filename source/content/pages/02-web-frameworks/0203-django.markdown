@@ -27,7 +27,7 @@ For example,
 [authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
 [URL routing](https://docs.djangoproject.com/en/dev/topics/http/urls/), a 
 [templating system](https://docs.djangoproject.com/en/dev/topics/templates/),
-[object-relational mapper](https://docs.djangoproject.com/en/dev/topics/db/),
+an [object-relational mapper](https://docs.djangoproject.com/en/dev/topics/db/),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 (as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/1.6.2). 
 Compare that functionality to the Flask framework which requires a separate
