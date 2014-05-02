@@ -60,6 +60,8 @@ alerting on custom searches.
 integration with S3 for 
 * [splunk](http://www.splunk.com/) Splunk offers third party cloud and self hosted solutions 
 for event aggregation. It excells at searching and data mining any text based data. 
+* [Raygun](http://raygun.io/) logs errors and provides immediate notification
+  when issues arise.
 
 
 ### Open Source Log Aggregators
