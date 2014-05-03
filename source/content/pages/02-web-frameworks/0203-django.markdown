@@ -35,7 +35,7 @@ separate library such as
 [Flask-Login](https://flask-login.readthedocs.org/en/latest/)
 to perform user authentication. 
 
-The batteries-includes and extensibility philosophies are simply two different 
+The batteries-included and extensibility philosophies are simply two different 
 ways to tackle framework building.  Neither philosophy is inherently better 
 than the other.
 
