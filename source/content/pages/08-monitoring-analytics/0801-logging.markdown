@@ -57,7 +57,7 @@ and alarms so you can get notified when error rates breach a certain threshold.
 aggregates logs. They have instructions for every major language, including python. It includes email
 alerting on custom searches. 
 * [papertrail](https://papertrailapp.com/) Paper trail is similar to both loggly and splunk and provides
-integration with S3 for 
+integration with S3 for long term storage.
 * [splunk](http://www.splunk.com/) Splunk offers third party cloud and self hosted solutions 
 for event aggregation. It excells at searching and data mining any text based data. 
 * [Raygun](http://raygun.io/) logs errors and provides immediate notification

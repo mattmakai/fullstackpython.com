@@ -25,11 +25,14 @@ lay out the HTML content when it is rendered by a web browser.
 CSS separates content contained in the HTML file from how the content 
 should be displayed. That separation between content and how to display it 
 enables devices to render the content differently based on factors such as
-screen size. For example, a mobile device does not have as much space to
-display a navigation bar on the side of a page so it is often pushed down 
+screen size. 
+
+For example, a mobile device does not have as much space to display a 
+navigation bar on the side of a page so it is often pushed down 
 below the main content. The 
 [Bootstrap Blog example](http://getbootstrap.com/examples/blog/) 
-shows that scenario when you resize the browser width.
+shows that navigation bar relocation scenario when you resize the browser 
+width.
 
 
 ## CSS learning checklist
