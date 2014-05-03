@@ -126,5 +126,11 @@ project on the web.
   [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
   all available free of charge.
 
+## Open source Django example projects
+* [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
+  app that allows audiences to text in during a presentation with feedback
+  or questions.
+
+
 
 ### What do you need to learn next for your Django app?
