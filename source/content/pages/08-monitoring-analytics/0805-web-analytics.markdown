@@ -2,18 +2,18 @@ title: Web Analytics
 category: page
 slug: web-analytics
 sort-order: 083
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /web-application-security.html
+choice1icon: fa-lock fa-inverse
+choice1text: What should I know about web application security?
+choice2url: /api-integration.html
+choice2icon: fa-link fa-inverse
+choice2text: How do I integrate external APIs into my web application?
+choice3url: /configuration-management.html
+choice3icon: fa-gears
+choice3text: I want to learn how to automate setting up my app.
+choice4url: /task-queues.html
+choice4icon: fa-tasks
+choice4text: How do I run code outside the HTTP request-response cycle?
 
 
 # Web analytics

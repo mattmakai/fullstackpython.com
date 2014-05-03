@@ -2,18 +2,18 @@ title: Web Security
 category: page
 slug: web-application-security
 sort-order: 092
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /web-analytics.html
+choice1icon: fa-dashboard
+choice1text: I want to learn more about the users of my app with analytics.
+choice2url: /api-integration.html
+choice2icon: fa-link fa-inverse
+choice2text: How do I integrate external APIs into my app?
+choice3url: /logging.html
+choice3icon: fa-align-left fa-inverse
+choice3text: How can I log events that occur while the app is running?
+choice4url: /monitoring.html
+choice4icon: fa-bar-chart-o fa-inverse
+choice4text: What tools should I use for monitoring the live web app?
 
 
 # Web Application Security

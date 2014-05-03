@@ -2,18 +2,18 @@ title: Monitoring
 category: page
 slug: monitoring
 sort-order: 082
-choice1url: 
-choice1icon: 
-choice1text: 
-choice2url: 
-choice2icon: 
-choice2text: 
-choice3url: 
-choice3icon: 
-choice3text: 
-choice4url:
-choice4icon:
-choice4text:
+choice1url: /web-analytics.html
+choice1icon: fa-dashboard
+choice1text: How do I learn more about the users of my app with web analytics?
+choice2url: /web-application-security.html
+choice2icon: fa-lock fa-inverse
+choice2text: What should I learn about web application security?
+choice3url: /configuration-management.html
+choice3icon: fa-gears fa-inverse
+choice3text: How do I automate the server configuration I've set up?
+choice4url: /logging.html
+choice4icon: fa-align-left fa-inverse
+choice4text: How should I log events in my application outside monitoring?
 
 
 # Monitoring
