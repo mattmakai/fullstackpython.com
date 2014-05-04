@@ -87,5 +87,10 @@ be used with any language.
   and 
   [part 3 talks about types](http://www.hybridcluster.com/blog/logging-storytelling-3-types/).
 
+* Django's 1.3 release brought unified logging into project configurations. 
+  This [post shows how to set up logging](http://www.djm.org.uk/how-to-log-file-django-13-and-above/)
+  in a project's settings.py file. Caktus Group also has a nice tutorial on
+  [central logging with graypy and Graylog2](http://www.caktusgroup.com/blog/2013/09/18/central-logging-django-graylog2-and-graypy/).
+
 
 ### Logging isn't enough. How do I analyze more data about the app?
