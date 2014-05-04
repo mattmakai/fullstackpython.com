@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### May
+* Adding more logging resources.
 * Continuing to add learning checklists to sections such as servers.
 * Moving navigation options into meta tags on markdown pages.
 

@@ -98,6 +98,9 @@ certain threshold.
   and 
   [part 3 talks about types](http://www.hybridcluster.com/blog/logging-storytelling-3-types/).
 
+* [Taking the pain out of Python logging](https://hynek.me/articles/taking-some-pain-out-of-python-logging/)
+  shows a logging set up with uWSGI.
+
 * Django's 1.3 release brought unified logging into project configurations. 
   This [post shows how to set up logging](http://www.djm.org.uk/how-to-log-file-django-13-and-above/)
   in a project's settings.py file. Caktus Group also has a nice tutorial on
