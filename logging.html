@@ -69,38 +69,58 @@ interface for viewing the exceptions. Sentry can also be configured with a
 mail plugin to send emails when exceptions occur.</p>
 <h2>Logging Aggregators</h2>
 <p>When you are running your application on several servers, it is helpful
-to have a monitoring tool called a "logging aggregator". You can configure your
-application to forward your system and application logs to one location that 
-provides tools for viewing, searching, and monitoring logging events across your cluster. </p>
-<p>Another advantage of log aggregatortion tools is they allow you to set up custom alerts
-and alarms so you can get notified when error rates breach a certain threshold.</p>
+to have a monitoring tool called a "logging aggregator". You can configure 
+your application to forward your system and application logs to one location 
+that provides tools for viewing, searching, and monitoring logging events 
+across your cluster. </p>
+<p>Another advantage of log aggregatortion tools is they allow you to set up 
+custom alerts and alarms so you can get notified when error rates breach a 
+certain threshold.</p>
 <h3>Log Aggregator Third Party Services</h3>
 <ul>
-<li><a href="https://www.loggly.com/">loggly</a> Loggly is a third party cloud based application that
-aggregates logs. They have instructions for every major language, including python. It includes email
-alerting on custom searches. </li>
-<li><a href="https://papertrailapp.com/">papertrail</a> Paper trail is similar to both loggly and splunk and provides
-integration with S3 for long term storage.</li>
-<li><a href="http://www.splunk.com/">splunk</a> Splunk offers third party cloud and self hosted solutions 
-for event aggregation. It excells at searching and data mining any text based data. </li>
-<li><a href="http://raygun.io/">Raygun</a> logs errors and provides immediate notification
-  when issues arise.</li>
+<li>
+<p><a href="https://www.loggly.com/">loggly</a> Loggly is a third party cloud based 
+  application that aggregates logs. They have instructions for every major 
+  language, including python. It includes email alerting on custom searches. </p>
+</li>
+<li>
+<p><a href="https://papertrailapp.com/">papertrail</a> Paper trail is similar to both 
+  loggly and splunk and provides integration with S3 for long term storage.</p>
+</li>
+<li>
+<p><a href="http://www.splunk.com/">splunk</a> Splunk offers third party cloud and self 
+  hosted solutions for event aggregation. It excells at searching and data 
+  mining any text based data. </p>
+</li>
+<li>
+<p><a href="http://raygun.io/">Raygun</a> logs errors and provides immediate notification
+  when issues arise.</p>
+</li>
 </ul>
 <h3>Open Source Log Aggregators</h3>
 <ul>
-<li><a href="http://graylog2.org/">Graylog2</a> Provides a central server for log aggregation as well as a GUI for
-browsing and searching through log events. There are libraries for most major languages, including python.
-Saves data in elasicache.</li>
-<li><a href="http://logstash.net/">Logstash</a> Similar to Graylog2, logstash offers features to programatically
-configure log data workflows.</li>
-<li><a href="https://github.com/facebook/scribe">Scribe</a> A project written by Facebook to aggregate logs. It's designed
-to run on multiple servers and scale with the rest of your cluster. Uses the Thrift messagaing format so it can
-be used with any language. </li>
+<li>
+<p><a href="http://graylog2.org/">Graylog2</a> provides a central server for log 
+  aggregation as well as a GUI for browsing and searching through log events. 
+  There are libraries for most major languages, including python. Saves data 
+  in Elasticache.</p>
+</li>
+<li>
+<p><a href="http://logstash.net/">Logstash</a> Similar to Graylog2, logstash offers 
+  features to programatically configure log data workflows.</p>
+</li>
+<li>
+<p><a href="https://github.com/facebook/scribe">Scribe</a> A project written by Facebook 
+  to aggregate logs. It's designed to run on multiple servers and scale with 
+  the rest of your cluster. Uses the Thrift messagaing format so it can be 
+  used with any language. </p>
+</li>
 </ul>
 <h2>Logging resources</h2>
 <ul>
 <li>
-<p>This <a href="http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/">intro to logging</a>
+<p>This 
+  <a href="http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/">intro to logging</a>
   presents the Python logging module and how to use it.</p>
 </li>
 <li>

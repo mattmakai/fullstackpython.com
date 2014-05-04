@@ -44,39 +44,50 @@ mail plugin to send emails when exceptions occur.
 
 ## Logging Aggregators
 When you are running your application on several servers, it is helpful
-to have a monitoring tool called a "logging aggregator". You can configure your
-application to forward your system and application logs to one location that 
-provides tools for viewing, searching, and monitoring logging events across your cluster. 
+to have a monitoring tool called a "logging aggregator". You can configure 
+your application to forward your system and application logs to one location 
+that provides tools for viewing, searching, and monitoring logging events 
+across your cluster. 
 
-Another advantage of log aggregatortion tools is they allow you to set up custom alerts
-and alarms so you can get notified when error rates breach a certain threshold.
+Another advantage of log aggregatortion tools is they allow you to set up 
+custom alerts and alarms so you can get notified when error rates breach a 
+certain threshold.
 
 
 ### Log Aggregator Third Party Services
-* [loggly](https://www.loggly.com/) Loggly is a third party cloud based application that
-aggregates logs. They have instructions for every major language, including python. It includes email
-alerting on custom searches. 
-* [papertrail](https://papertrailapp.com/) Paper trail is similar to both loggly and splunk and provides
-integration with S3 for long term storage.
-* [splunk](http://www.splunk.com/) Splunk offers third party cloud and self hosted solutions 
-for event aggregation. It excells at searching and data mining any text based data. 
+* [loggly](https://www.loggly.com/) Loggly is a third party cloud based 
+  application that aggregates logs. They have instructions for every major 
+  language, including python. It includes email alerting on custom searches. 
+
+* [papertrail](https://papertrailapp.com/) Paper trail is similar to both 
+  loggly and splunk and provides integration with S3 for long term storage.
+
+* [splunk](http://www.splunk.com/) Splunk offers third party cloud and self 
+  hosted solutions for event aggregation. It excells at searching and data 
+  mining any text based data. 
+
 * [Raygun](http://raygun.io/) logs errors and provides immediate notification
   when issues arise.
 
 
 ### Open Source Log Aggregators
-* [Graylog2](http://graylog2.org/) Provides a central server for log aggregation as well as a GUI for
-browsing and searching through log events. There are libraries for most major languages, including python.
-Saves data in elasicache.
-* [Logstash](http://logstash.net/) Similar to Graylog2, logstash offers features to programatically
-configure log data workflows.
-* [Scribe](https://github.com/facebook/scribe) A project written by Facebook to aggregate logs. It's designed
-to run on multiple servers and scale with the rest of your cluster. Uses the Thrift messagaing format so it can
-be used with any language. 
+* [Graylog2](http://graylog2.org/) provides a central server for log 
+  aggregation as well as a GUI for browsing and searching through log events. 
+  There are libraries for most major languages, including python. Saves data 
+  in Elasticache.
+
+* [Logstash](http://logstash.net/) Similar to Graylog2, logstash offers 
+  features to programatically configure log data workflows.
+
+* [Scribe](https://github.com/facebook/scribe) A project written by Facebook 
+  to aggregate logs. It's designed to run on multiple servers and scale with 
+  the rest of your cluster. Uses the Thrift messagaing format so it can be 
+  used with any language. 
 
 
 ## Logging resources
-* This [intro to logging](http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/)
+* This 
+  [intro to logging](http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/)
   presents the Python logging module and how to use it.
 
 * [Logging as Storytelling](http://www.hybridcluster.com/blog/logging-storytelling/)
