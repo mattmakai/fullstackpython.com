@@ -56,6 +56,11 @@ groups such as [Django District](http://www.meetup.com/django-district/),
 [San Francisco Django](http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/) 
 so new developers can get help when they are stuck.
 
+There's some debate on whether 
+[learning Python by using Django is a bad idea](http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/). 
+However, that criticism is invalid if you take the time to learn the Python
+syntax and language semantics first before diving into web development.
+
 
 ## Django framework learning checklist
 <i class="fa fa-check-square-o"></i> 

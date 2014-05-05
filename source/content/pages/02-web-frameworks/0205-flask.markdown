@@ -17,13 +17,30 @@ choice4text: How can I version and store my source code so I don't lose it?
 
 
 # Flask
-[Flask](http://flask.pocoo.org/) is a Python microframework deliberately 
-built with a 
+[Flask](http://flask.pocoo.org/) is a Python web framework built with a 
 [small core and easy-to-extend philosophy](http://flask.pocoo.org/docs/design/). 
+
+## Why is Flask a good web framework choice?
 Flask is generally considered more 
 [Pythonic](http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic) 
-than Django because Flask web application code is often more
-explicit. Flask was also written several years after Django and therefore
+than Django because Flask web application code is by and large more explicit. 
+Flask is easy to get started with as a beginner because there is little 
+boilerplate code for getting a simple app up and running. 
+
+For example, here's a valid "hello world" web application with Flask (the
+equivalent in Django would be significantly more code):
+
+    from flask import Flask
+    app = Flask(__name__)
+
+    @app.route('/')
+    def hello_world():
+        return 'Hello World!'
+
+    if __name__ == '__main__':
+    app.run()
+
+Flask was also written several years after Django and therefore
 learned from the Python community's reactions as the framework evolved.
 Jökull Sólberg wrote a great piece articulating to this effect in his 
 [experience switching between Flask and Django](http://jokull.calepin.co/my-flask-to-django-experience.html).
