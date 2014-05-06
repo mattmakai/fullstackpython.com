@@ -113,6 +113,10 @@ project on the web.
 
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
+* [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
+  has several nice examples for breaking Django into smaller simplier 
+  components.
+
 
 ## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
