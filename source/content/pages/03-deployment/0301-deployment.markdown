@@ -59,6 +59,15 @@ There are four options for deploying and hosting a web application:
 
 4. [Platform-as-a-service](/platform-as-a-service.html)
 
+The first three options are similar. The deployer needs to provision one or
+more servers with a Linux distribution. System packages, a web server, 
+WSGI server, database and the Python environment are then installed. Finally
+the application can be pulled from source and installed in the environment.
+
+Note that there are other ways of installing a Python web application through
+system-specific package management systems. We won't cover those in this
+guide as they are considered advanced deployment techniques.
+
 
 ## Deployment resources
 * [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
