@@ -39,6 +39,18 @@ Key-value pair data stores are based
 on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 
 
+## Column-family table
+A the column-family table class of NoSQL data stores builds on the key-value
+pair type. Each key-value pair is considered a row in the store while the
+column family is similar to a table in the relational database model.
+
+
+### Column-family table data stores
+* Apache [HBase](https://hbase.apache.org/)
+
+* Apache [Cassandra](http://cassandra.apache.org/)
+
+
 ## Graph
 A graph database represents and stores data in three aspects: nodes, edges,
 and properties. 
@@ -62,16 +74,18 @@ easy to set up with either a standard LAMP stack or on Heroku.
 
 
 ## NoSQL data stores resources
-[NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email 
-newsletter that aggregates articles, tutorials, and videos about 
-non-relational data stores.
+* [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
 
-[NoSQL comparison](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
-is a large list of popular, BigTable-based, special purpose, and other
-datastores with attributes and the best use cases for each one.
+* [NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email 
+  newsletter that aggregates articles, tutorials, and videos about 
+  non-relational data stores.
 
-[MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
-is a guide about using non-relational databases in green field environments.
+* [NoSQL comparison](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+  is a large list of popular, BigTable-based, special purpose, and other
+  datastores with attributes and the best use cases for each one.
+
+* [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
+  is a guide about using non-relational databases in green field environments.
 
 
 ### What's next?
