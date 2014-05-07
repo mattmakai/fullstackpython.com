@@ -37,6 +37,27 @@ Modern browsers and web servers have simply extended the language of the Web
 to incorporate new standards.
 
 
+## Web servers learning checklist
+<i class="fa fa-check-square-o"></i>
+Choose a web server. [Nginx](http://nginx.org/en/) is recommended although 
+[Apache](http://httpd.apache.org/) is also a great choice.
+
+<i class="fa fa-check-square-o"></i>
+Create an SSL certificate. For testing use a self-signed certificate and for a
+production app buy one from [Digicert](http://www.digicert.com/). Configure 
+the web server to serve traffic over SSL. You'll need SSL for serving only
+HTTPS traffic and preventing security issues that occur with unencrypted user 
+input.
+
+<i class="fa fa-check-square-o"></i>
+Configure the web server to serve up static files such as CSS, JavaScript
+and images.
+
+<i class="fa fa-check-square-o"></i>
+Once you set up the [WSGI server](/wsgi-server.html) you'll need to configure
+the web server as a pass through for dynamic content.
+
+
 ## Client requests
 A client that sends a request to a web server is usually a browser such 
 as Internet Explorer, Firefox, or Chrome, but it can also be a
