@@ -39,6 +39,28 @@ Fortunately, the open source community provides Linux to the Python world
 as a rock solid free operating system for running our applications.
 
 
+## Operating systems learning checklist
+<i class="fa fa-check-square-o"></i>
+Choose either a Debian-based Linux distribution such as Ubuntu or a 
+Fedora-based distribution like CentOS.
+
+<i class="fa fa-check-square-o"></i>
+Harden the security through a few basic steps. Install basic security 
+packages such as [fail2ban](http://www.fail2ban.org/wiki/index.php/Main_Page) 
+or its equivalent. Create a new user account with sudo privileges and disable
+root logins. Disable password-only logins and Use a public-private keypair 
+instead. Read more about hardening systems in the resources listed below.
+
+<i class="fa fa-check-square-o"></i>
+Install Python-specific packages to prepare the environment for an application
+deployment. Which packages you'll need to install depends on the distribution
+you've selected.
+
+<i class="fa fa-check-square-o"></i>
+Read up on [web servers](/web-servers.html) as installing one will be the 
+next step in the deployment process.
+
+
 ## Recommended operating systems
 The only recommended operating system for production Python web stack 
 deployments is Linux. There are several Linux distributions commonly used 
