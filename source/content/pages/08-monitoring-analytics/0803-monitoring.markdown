@@ -83,6 +83,9 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 * [Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
   Graphite-based dashboard with added features and a slick design.
 
+* [PacketBeat](http://packetbeat.com/) sniffs protocol packets then allows
+  developers to visualize what's happening with an application.
+
 
 ## Monitoring Resources
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
