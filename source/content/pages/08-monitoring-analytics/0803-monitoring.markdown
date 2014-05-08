@@ -28,6 +28,25 @@ Capturing and analyzing data about your production environment is critical
 to proactively deal with stability, performance, and errors in a web 
 application.
 
+## Monitoring learning checklist
+<i class="fa fa-check-square-o"></i>
+Review the software-as-a-service and open source monitoring tools below. Third
+party services tend to be easier to set up and host the data for you. Open
+source projects give you more control but you'll need to have additional 
+servers ready for the monitoring.
+
+<i class="fa fa-check-square-o"></i>
+My recommendation is to install [New Relic](http://newrelic.com/)'s free 
+option with the trial period to see how it works with your app. It'll give you
+a good idea of the capabilities for application-level monitoring tools.
+
+<i class="fa fa-check-square-o"></i>
+As your app scales take a look at setting up one of the the open source 
+monitoring projects such as StatsD with Graphite. The combination of those
+two projects will give you fine-grained control over the system metrics 
+you're collecting and visualizing.
+
+
 ## Monitoring layers
 There are several important resources to monitor on the operating system 
 and network level of a web stack.

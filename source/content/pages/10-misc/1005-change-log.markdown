@@ -24,7 +24,8 @@ the
 
 ## 2014
 ### May
-* Added learning checklist to operating systems and web servers pages.
+* Added learning checklist to operating systems, web servers and monitoring 
+  pages.
 * Adding more logging resources.
 * Continuing to add learning checklists to sections such as servers.
 * Moving navigation options into meta tags on markdown pages.
