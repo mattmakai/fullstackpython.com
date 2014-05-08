@@ -65,7 +65,7 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
   if there are stability, performance, or uptime issues with an application.
 
 
-## Open Source Monitoring Projects
+## Open source monitoring projects
 * [statsd](https://github.com/etsy/statsd/) is a node.js network daemon that
   listens for metrics and aggregates them for transfer into another service
   such as Graphite.
@@ -83,11 +83,17 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 * [Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
   Graphite-based dashboard with added features and a slick design.
 
-* [PacketBeat](http://packetbeat.com/) sniffs protocol packets then allows
-  developers to visualize what's happening with an application.
+* [PacketBeat](http://packetbeat.com/) sniffs protocol packets. Elasticsearch
+  then allows developers to search the collected data and visualize what's 
+  happening inside their web application using the Kibana user interface.
+
+* [Munin](http://munin-monitoring.org/) is a client plugin-based monitoring 
+  system that sends monitoring traffic to the Munin node where the data can
+  be analyzed and visualized. Note this project is written in Perl so Perl 5
+  must be installed on the node collecting the data.
 
 
-## Monitoring Resources
+## Monitoring resources
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
 
 * [Effortless Monitoring with collectd, Graphite, and Docker](http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/)
@@ -102,6 +108,9 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 * [Four Linux server monitoring tools](http://aarvik.dk/four-linux-server-monitoring-and-management-tools/)
 
 * [How to design useful monitoring and graphing visualizations](https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/)
+
+* The Collector Highlight Series has an article on [StatsD](http://blog.librato.com/posts/statsd)
+  that explains how to install it and how it works.
 
 
 ### What topic do you want to learn next?
