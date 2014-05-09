@@ -17,11 +17,27 @@ choice4text:
 
 
 # Task queues
-Task queues handle background work that need to be processed outside the
-usual HTTP request-response cycle. These tasks are handled asynchronously 
-because HTTP requests must be responded back to by the server as fast as 
-possible otherwise the user experience in the web browser will suffer. The 
-most common types of jobs for task queues include
+Task queues handle background work processed outside the usual HTTP 
+request-response cycle. 
+
+## Why are tasks queues necessary?
+Some tasks are handled asynchronously either because they are not initiated by 
+an HTTP request or because they are long-running jobs that take longer than
+a few milliseconds. 
+
+For example, a web application could poll the GitHub API every 10 minutes to
+find out what are the top 100 starred repositories. A task queue would be set
+up to automatically call the GitHub API, process the results and store them
+in a persistent database for later use.
+
+Another example is when a database query would take too long during the HTTP
+request-response cycle. The query could be performed in the background on a
+fixed interval with the results stored in the database. Then when the 
+HTTP request comes in it could fetch the calculated results from the database 
+instead of re-executing the query. This is a form of [caching](/caching.html)
+enabled by task queues.
+
+Other types of jobs for task queues include
 
 * calculating computationally expensive data analytics
 
