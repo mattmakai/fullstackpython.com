@@ -90,7 +90,7 @@ when scaling out a large deployment of distributed task queues.
   own servers.
 
 
-## Task queues learning checklist
+## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 
 Pick a slow function in your project that is called during an HTTP request.
 
