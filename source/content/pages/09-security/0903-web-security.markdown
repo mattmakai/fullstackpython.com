@@ -51,5 +51,10 @@ securing Linux distributions.
 * [Crypto 101](https://www.crypto101.io/) is an introductory course on
   cryptography for programmers.
 
+* [The first few milliseconds of an HTTPS connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
+  provides a detailed look at the SSL handshake process that is implemented
+  by browsers based on the [RFC 2818](http://tools.ietf.org/html/rfc2818)
+  specification.
+
 
 ### What topic do you want to learn about next?
