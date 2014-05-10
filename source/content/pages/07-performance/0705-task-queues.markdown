@@ -21,7 +21,7 @@ Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.
 
 
-## Why are tasks queues necessary?
+## Why are task queues necessary?
 Tasks are handled asynchronously either because they are not initiated by 
 an HTTP request or because they are long-running jobs that would dramatically
 reduce the performance of an HTTP response.
