@@ -25,8 +25,8 @@ the
 ## 2014
 ### May
 * Cleaned up and polished the task queues page.
-* Added learning checklist to operating systems, web servers and monitoring 
-  pages.
+* Added learning checklist to operating systems, web servers, task queues and 
+  monitoring pages.
 * Adding more logging resources.
 * Continuing to add learning checklists to sections such as servers.
 * Moving navigation options into meta tags on markdown pages.

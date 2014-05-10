@@ -50,6 +50,31 @@ Other types of jobs for task queues include
 * scheduling periodic jobs such as batch processes
 
 
+## Task queues learning checklist
+<i class="fa fa-check-square-o"></i> 
+Pick a slow function in your project that is called during an HTTP request.
+
+<i class="fa fa-check-square-o"></i> 
+Determine if you can precompute the results on a fixed interval instead of
+during the HTTP request. If so, create a separate function you can call
+from elsewhere then store the precomputed value in the database.
+
+<i class="fa fa-check-square-o"></i> 
+Read the Celery documentation and the links in the resources section below
+to understand how the project works.
+
+<i class="fa fa-check-square-o"></i> 
+Install a message broker such as RabbitMQ or Redis and then add Celery to your 
+project. Configure Celery to work with the installed message broker.
+
+<i class="fa fa-check-square-o"></i> 
+Use Celery to invoke the function from step one on a regular basis.
+
+<i class="fa fa-check-square-o"></i>
+Have the HTTP request function use the precomputed value instead of the 
+slow running code it originally relied upon.
+
+
 ## Task queue projects
 The defacto standard Python task queue is Celery. The other task queue 
 projects that arise tend to come from the perspective that Celery is overly
