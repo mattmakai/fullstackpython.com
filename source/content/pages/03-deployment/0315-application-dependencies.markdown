@@ -66,7 +66,7 @@ directory. To use a virtualenv it must first be created with the virtualenv
 command and then activated.
 
 
-## Downloading and installing Python dependencies
+## Installing Python dependencies
 The recommended way to install Python library dependencies is with the 
 [pip](http://www.pip-installer.org/en/latest/) command when a virtualenv
 is activated.
@@ -82,8 +82,6 @@ The pip convention for specifying application dependencies is with a
 file. When you build a Python web application you should include a 
 requirements.txt file. 
 
-
-### requirements.txt example with pegged dependencies
 Python projects' dependencies for a web application should be specified in the
 requirements.txt with 
 [pegged dependencies](https://devcenter.heroku.com/articles/python-pip) like
@@ -109,7 +107,7 @@ deliberately upgrade and test to make sure there were no backwards-incompatible
 modifications in newer dependency library versions.
 
 
-##setup.py
+## setup.py
 There is another type of dependency specification for Python libraries
 known as 
 [setup.py](http://stackoverflow.com/questions/1471994/what-is-setup-py).

@@ -33,7 +33,7 @@ project should immediately begin by using a version control system such
 as Git or Mercurial.
 
 
-## Source Control Systems
+## Source control systems
 * [Git](http://git-scm.com/) is a free and open source distributed version
   control system.
 
@@ -41,7 +41,7 @@ as Git or Mercurial.
   and open source distributed version control system.
 
 
-## Source Control Third Party Services
+## Source control hosted services
 * [GitHub](https://github.com/) is currently the most commonly used source
   control platform for using Git.
 
@@ -50,7 +50,7 @@ as Git or Mercurial.
   users. Users pay for hosting private repositories with more than five users.
 
 
-## Source Control Resources
+## Source control resources
 * [Pro Git](http://git-scm.com/book) is a free open source book that walks 
   through all aspects of using the version control system.
 
