@@ -65,6 +65,25 @@ Other types of jobs for task queues include
   distributed queue for handling large volumes of one-off tasks. 
 
 
+## Hosted message and task queue services
+Task queue third party services aim to solve the complexity issues that arise
+when scaling out a large deployment of distributed task queues.
+
+* [Iron.io](http://www.iron.io/) is a distributed messaging service platform 
+  that works with many types of task queues such as Celery. It also is built
+  to work with other IaaS and PaaS environments such as Amazon Web Services
+  and Heroku.
+
+* [Amazon Simple Queue Service (SQS)](http://aws.amazon.com/sqs/) is a
+  set of five APIs for creating, sending, receiving, modifying and deleting
+  messages.
+
+* [CloudAMQP](http://www.cloudamqp.com/) is at its core managed servers with
+  RabbitMQ installed and configured. This service is an option if you are 
+  using RabbitMQ and do not want to maintain RabbitMQ installations on your 
+  own servers.
+  
+
 ## Task queue resources
 * [Distributing work without Celery](http://justcramer.com/2012/05/04/distributing-work-without-celery/)
   provides a scenario in which Celery and RabbitMQ are not the right tool
