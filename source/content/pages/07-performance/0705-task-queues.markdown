@@ -17,40 +17,46 @@ choice4text:
 
 
 # Task queues
-Task queues handle background work processed outside the usual HTTP 
-request-response cycle. 
+Task queues manage background work that must be executed outside the usual
+HTTP request-response cycle.
+
 
 ## Why are tasks queues necessary?
-Some tasks are handled asynchronously either because they are not initiated by 
-an HTTP request or because they are long-running jobs that take longer than
-a few milliseconds. 
+Tasks are handled asynchronously either because they are not initiated by 
+an HTTP request or because they are long-running jobs that would dramatically
+reduce the performance of an HTTP response.
 
 For example, a web application could poll the GitHub API every 10 minutes to
-find out what are the top 100 starred repositories. A task queue would be set
-up to automatically call the GitHub API, process the results and store them
+collect the names of the top 100 starred repositories. A task queue would
+handle invoking code to call the GitHub API, process the results and store them
 in a persistent database for later use.
 
 Another example is when a database query would take too long during the HTTP
 request-response cycle. The query could be performed in the background on a
-fixed interval with the results stored in the database. Then when the 
-HTTP request comes in it could fetch the calculated results from the database 
-instead of re-executing the query. This is a form of [caching](/caching.html)
-enabled by task queues.
+fixed interval with the results stored in the database. When an
+HTTP request comes in that needs those results a query would simply fetch the
+precalculated result instead of re-executing the longer query.
+This precalculation scenario is a form of [caching](/caching.html) enabled 
+by task queues.
 
 Other types of jobs for task queues include
 
-* calculating computationally expensive data analytics
-
-* scheduling periodic jobs such as batch processes
-
 * spreading out large numbers of independent database inserts over time 
-  instead of all at once
+  instead of inserting everything at once
 
 * aggregating collected data values on a fixed interval, such as every
   15 minutes
 
+* scheduling periodic jobs such as batch processes
+
 
 ## Task queue projects
+The defacto standard Python task queue is Celery. The other task queue 
+projects that arise tend to come from the perspective that Celery is overly
+complicated for simple use cases. My recommendation is to put the effort into
+Celery's reasonable learning curve as it is worth the time it takes to 
+understand how to use the project.
+
 * The [Celery](http://www.celeryproject.org/) distributed task queue is the
   most commonly used Python library for handling asynchronous tasks and 
   scheduling.
