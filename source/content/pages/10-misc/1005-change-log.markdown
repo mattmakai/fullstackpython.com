@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### May
+* Cleaned up and polished the task queues page.
 * Added learning checklist to operating systems, web servers and monitoring 
   pages.
 * Adding more logging resources.
