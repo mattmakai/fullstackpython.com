@@ -36,7 +36,7 @@ Here are some things I'm actively working on:
 * Clear, concise descriptions for each concept in every section along with
   the "why [x] is needed"
 
-* Learning checklists for every section.
+* Learning checklists for every section where it makes sense.
 
 * Flesh out [JavaScript](../javascript.html), 
   [Configuration Management](../configuration-management.html), 
