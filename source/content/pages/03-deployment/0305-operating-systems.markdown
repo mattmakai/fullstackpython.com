@@ -3,7 +3,7 @@ category: page
 slug: operating-systems
 sort-order: 033
 choice1url: /web-servers.html
-choice1icon: fa-exchange fa-inverse
+choice1icon: fa-cloud
 choice1text: I'll install Linux as my OS. What web server should I use?
 choice2url: /application-dependencies.html
 choice2icon: fa-archive fa-inverse

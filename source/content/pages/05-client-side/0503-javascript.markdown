@@ -11,9 +11,9 @@ choice2text: Where should I host static content such as my JavaScript files?
 choice3url: /source-control.html
 choice3icon: fa-code-fork fa-inverse
 choice3text: How do I save and version my code so it does not get lost?
-choice4url: /deployment.html
-choice4icon: fa-share fa-inverse
-choice4text: How do I deploy my web application?
+choice4url: /application-programming-intefaces.html
+choice4icon: fa-exchange
+choice4text: What are application programming interfaces?
 
 
 # JavaScript
