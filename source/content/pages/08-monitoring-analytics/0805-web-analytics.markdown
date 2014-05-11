@@ -28,6 +28,7 @@ how visitors use the site and why they stay or leave. The key concept to
 analytics is *learning* about your users so you can improve your web 
 application to better suit their needs. 
 
+
 ## Web analytics concepts
 It's easy to get overwhelmed at both the number of analytics services and
 the numerous types of data points collected. Focus on just a handful of

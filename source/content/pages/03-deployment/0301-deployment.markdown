@@ -27,27 +27,6 @@ laptop. A production environment is the canonical version of your current
 application and its associated data.
 
 
-## Deployment learning checklist
-<i class="fa fa-check-square-o"></i>
-If you're tight on time look at the 
-[platform-as-a-service (PaaS)](/platform-as-a-service.html) options. You can
-deploy a low traffic project web app for free or low cost. You won't have to
-worry about setting up the operating system and web server compared to going
-the traditional server route. In theory you should be able to get your 
-application live on the web sooner with PaaS hosting.
-
-<i class="fa fa-check-square-o"></i>
-[Traditional server options](/servers.html) are your best bet for learning
-how the entire Python web stack works. You'll often save money with a virtual
-private server instead of a platform-as-a-service as you scale up.
-
-<i class="fa fa-check-square-o"></i>
-Read about servers, [operating systems](/operating-systems.html), 
-[web servers](/web-servers.html) and [WSGI servers](/wsgi-servers.html) to get
-a broad picture of what components need to be set up to run a Python web 
-application.
-
-
 ## Deployment hosting options
 There are four options for deploying and hosting a web application:
 
@@ -67,6 +46,27 @@ the application can be pulled from source and installed in the environment.
 Note that there are other ways of installing a Python web application through
 system-specific package management systems. We won't cover those in this
 guide as they are considered advanced deployment techniques.
+
+
+## Deployment learning checklist
+<i class="fa fa-check-square-o"></i>
+If you're tight on time look at the 
+[platform-as-a-service (PaaS)](/platform-as-a-service.html) options. You can
+deploy a low traffic project web app for free or low cost. You won't have to
+worry about setting up the operating system and web server compared to going
+the traditional server route. In theory you should be able to get your 
+application live on the web sooner with PaaS hosting.
+
+<i class="fa fa-check-square-o"></i>
+[Traditional server options](/servers.html) are your best bet for learning
+how the entire Python web stack works. You'll often save money with a virtual
+private server instead of a platform-as-a-service as you scale up.
+
+<i class="fa fa-check-square-o"></i>
+Read about servers, [operating systems](/operating-systems.html), 
+[web servers](/web-servers.html) and [WSGI servers](/wsgi-servers.html) to get
+a broad picture of what components need to be set up to run a Python web 
+application.
 
 
 ## Deployment resources
