@@ -75,6 +75,13 @@ as Git or Mercurial.
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
+* [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) details
+  a Git branching model for small teams.
+
+* [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html) builds on
+  git-flow, goes over some of the issues that arise with it and presents a
+  few solutions to those problems.
+
 * [Git Workflows That Work](http://blog.endpoint.com/2014/05/git-workflows-that-work.html)
   is a helpful post with diagrams to show how teams can create a Git workflow
   that will help their development process.
