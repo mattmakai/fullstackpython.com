@@ -75,6 +75,10 @@ as Git or Mercurial.
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
+* [Git Workflows That Work](http://blog.endpoint.com/2014/05/git-workflows-that-work.html)
+  is a helpful post with diagrams to show how teams can create a Git workflow
+  that will help their development process.
+
 * "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
   by Braintree goes over how this payments company uses Git for development
   and merging source code.
