@@ -117,6 +117,10 @@ project on the web.
   has several nice examples for breaking Django into smaller simplier 
   components.
 
+* [Making a specific Django app faster](http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html)
+  is a Django performance blog post with some tips on measuring performance
+  and optimizing based on the measured results.
+
 
 ## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
@@ -134,6 +138,7 @@ project on the web.
   [2011](http://pyvideo.org/category/3/djangocon-2011), as well as  
   [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
   all available free of charge.
+
 
 ## Open source Django example projects
 * [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
