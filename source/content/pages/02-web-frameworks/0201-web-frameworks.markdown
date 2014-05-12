@@ -28,25 +28,6 @@ to reuse code for common HTTP operations and to structure your code so that
 it is maintainable.
 
 
-## Web frameworks learning checklist
-<i class="fa fa-check-square-o"></i> 
-Choose a major web framework ([Django](/django.html) or 
-[Flask](/flask.html) are recommended) and stick with it.
-
-<i class="fa fa-check-square-o"></i> 
-Work through a detailed tutorial found within the resources links on the
-framework's page.
-
-<i class="fa fa-check-square-o"></i> 
-Study open source examples built with your framework of choice so you can 
-take parts of those projects and reuse the code in your application.
-
-<i class="fa fa-check-square-o"></i> 
-Build the first simple iteration of your web application then go to
-the [deployment](/deployment.html) section to make it accessible on the 
-web.
-
-
 ## Common web framework functionality
 Frameworks provide functionality in their code or through extensions to 
 perform common operations required to run web applications. These common 
@@ -73,6 +54,25 @@ Some other web frameworks such as Flask and Pyramid are easier to
 use with non-relational databases by incorporating external Python libraries.
 There is a spectrum between minimal functionality with easy extensibility and
 including everything in the framework with tight integration.
+
+
+## Web frameworks learning checklist
+<i class="fa fa-check-square-o"></i> 
+Choose a major web framework ([Django](/django.html) or 
+[Flask](/flask.html) are recommended) and stick with it.
+
+<i class="fa fa-check-square-o"></i> 
+Work through a detailed tutorial found within the resources links on the
+framework's page.
+
+<i class="fa fa-check-square-o"></i> 
+Study open source examples built with your framework of choice so you can 
+take parts of those projects and reuse the code in your application.
+
+<i class="fa fa-check-square-o"></i> 
+Build the first simple iteration of your web application then go to
+the [deployment](/deployment.html) section to make it accessible on the 
+web.
 
 
 ## General web framework resources
