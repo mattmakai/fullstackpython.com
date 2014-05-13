@@ -44,6 +44,9 @@ I had when I was learning the language.
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
 
+* Code Academy has a [Python track](http://www.codecademy.com/tracks/python)
+  for people completely new to programming.
+
 * The O'Reilly book 
   [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
   is available in HTML form for free on the web.
