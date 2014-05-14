@@ -62,35 +62,6 @@ However, that criticism is invalid if you take the time to learn the Python
 syntax and language semantics first before diving into web development.
 
 
-## Django framework learning checklist
-<i class="fa fa-check-square-o"></i> 
-[Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
-your local development machine.
-
-<i class="fa fa-check-square-o"></i> 
-Work through the initial 
-["polls" tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
- 
-<i class="fa fa-check-square-o"></i> 
-Build a few more simple applications using the tutorial resources found
-under "Django resources" below.
-
-<i class="fa fa-check-square-o"></i> 
-Start coding your own Django project with help from the 
-[official documentation](https://docs.djangoproject.com/en/dev/) and 
-resource links below. You'll make plenty of mistakes which is critical
-on your path to learning the right way to build applications.
-
-<i class="fa fa-check-square-o"></i> 
-Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&qid=1391562062&sr=8-2&tag=mlinar-20) 
-to understand Django best practices and learn better ways of building 
-Django web applications.
-
-<i class="fa fa-check-square-o"></i> 
-Move on to the [deployment section](/deployment.html) to get your Django 
-project on the web.
-
-
 ## Django resources
 * [Tango with Django](http://www.tangowithdjango.com/book/) are a extensive 
   free introductions to using the most popular Python web framework. Several
@@ -145,6 +116,34 @@ project on the web.
   app that allows audiences to text in during a presentation with feedback
   or questions.
 
+
+## Django learning checklist
+<i class="fa fa-check-square-o"></i> 
+[Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
+your local development machine.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the initial 
+["polls" tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
+ 
+<i class="fa fa-check-square-o"></i> 
+Build a few more simple applications using the tutorial resources found
+in the "Django resources" section.
+
+<i class="fa fa-check-square-o"></i> 
+Start coding your own Django project with help from the 
+[official documentation](https://docs.djangoproject.com/en/dev/) and 
+resource links below. You'll make plenty of mistakes which is critical
+on your path to learning the right way to build applications.
+
+<i class="fa fa-check-square-o"></i> 
+Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&qid=1391562062&sr=8-2&tag=mlinar-20) 
+to understand Django best practices and learn better ways of building 
+Django web applications.
+
+<i class="fa fa-check-square-o"></i> 
+Move on to the [deployment section](/deployment.html) to get your Django 
+project on the web.
 
 
 ### What do you need to learn next for your Django app?

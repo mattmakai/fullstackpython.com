@@ -56,6 +56,21 @@ There is a spectrum between minimal functionality with easy extensibility and
 including everything in the framework with tight integration.
 
 
+## General web framework resources
+* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
+  by [Jeff Knupp](https://twitter.com/jeffknupp)
+  is a in-depth explanation of what a web framework is and their relation
+  to web servers.
+
+* Check out the answer to the 
+  "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
+  question on Stack Overflow.
+
+* This [Python web framework roundup](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
+  covers Django, Flask and Bottle as well as several other lesser known Python
+  frameworks.
+
+
 ## Web frameworks learning checklist
 <i class="fa fa-check-square-o"></i> 
 Choose a major web framework ([Django](/django.html) or 
@@ -73,21 +88,6 @@ take parts of those projects and reuse the code in your application.
 Build the first simple iteration of your web application then go to
 the [deployment](/deployment.html) section to make it accessible on the 
 web.
-
-
-## General web framework resources
-* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
-  by [Jeff Knupp](https://twitter.com/jeffknupp)
-  is a in-depth explanation of what a web framework is and their relation
-  to web servers.
-
-* Check out the answer to the 
-  "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
-  question on Stack Overflow.
-
-* This [Python web framework roundup](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
-  covers Django, Flask and Bottle as well as several other lesser known Python
-  frameworks.
 
 
 ### Which web framework do you want to learn about?

@@ -23,24 +23,6 @@ web framework with no external dependencies except for the standard library
 included with Python.
 
 
-## Bottle framework learning checklist
-<i class="fa fa-check-square-o"></i> 
-[Download Bottle](https://github.com/defnull/bottle/raw/master/bottle.py) or
-install via pip with ``pip install bottle`` on your local development machine.
-
-<i class="fa fa-check-square-o"></i> 
-Work through the official 
-[Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html).
-
-<i class="fa fa-check-square-o"></i> 
-Start coding your Bottle app based on what you learned in the official 
-tutorial plus reading open source example applications found below. 
-
-<i class="fa fa-check-square-o"></i> 
-Move on to the [deployment section](/deployment.html) to get your initial 
-Bottle application on the web.
-
-
 ## Bottle resources
 * The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html) 
   provides a thorough view of basic concepts and features for the framework.
@@ -63,6 +45,24 @@ Bottle application on the web.
 ## Open source Bottle example projects
 * [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with
   Bottle.
+
+
+## Bottle framework learning checklist
+<i class="fa fa-check-square-o"></i> 
+[Download Bottle](https://github.com/defnull/bottle/raw/master/bottle.py) or
+install via pip with ``pip install bottle`` on your local development machine.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the official 
+[Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html).
+
+<i class="fa fa-check-square-o"></i> 
+Start coding your Bottle app based on what you learned in the official 
+tutorial plus reading open source example applications found below. 
+
+<i class="fa fa-check-square-o"></i> 
+Move on to the [deployment section](/deployment.html) to get your initial 
+Bottle application on the web.
 
 
 ### What do you need to learn next?

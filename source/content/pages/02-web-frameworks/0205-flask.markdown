@@ -46,28 +46,6 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 [experience switching between Flask and Django](http://jokull.calepin.co/my-flask-to-django-experience.html).
 
 
-## Flask framework learning checklist
-<i class="fa fa-check-square-o"></i> 
-[Install Flask](http://flask.pocoo.org/docs/installation/) on
-your local development machine.
-
-<i class="fa fa-check-square-o"></i> 
-Work through the 18-part Flask tutorial listed first under "Flask resources"
-below.
- 
-<i class="fa fa-check-square-o"></i> 
-Read through [Flask Extensions Registry](http://flask.pocoo.org/extensions/)
-to find out what extensions you'll need to build your project.
-
-<i class="fa fa-check-square-o"></i> 
-Start coding your Flask app based on what you learned from the 18 part
-Flask tutorial plus open source example applications found below. 
-
-<i class="fa fa-check-square-o"></i> 
-Move on to the [deployment section](/deployment.html) to get your initial 
-Flask project on the web.
-
-
 ## Flask resources
 The 18-part Flask mega tutorial is an absolutely amazing starting 
 resource for using the Flask framework. Yes, there are a lot of posts in 
@@ -145,6 +123,28 @@ book so consider picking that up as well.
   [note-taking app](http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/)
   along with the 
   [source code in Gists](https://gist.github.com/coleifer/632d3c9aa6b2ea519384).
+
+
+## Flask framework learning checklist
+<i class="fa fa-check-square-o"></i> 
+[Install Flask](http://flask.pocoo.org/docs/installation/) on
+your local development machine.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the 18-part Flask tutorial listed first under "Flask resources"
+below.
+ 
+<i class="fa fa-check-square-o"></i> 
+Read through [Flask Extensions Registry](http://flask.pocoo.org/extensions/)
+to find out what extensions you'll need to build your project.
+
+<i class="fa fa-check-square-o"></i> 
+Start coding your Flask app based on what you learned from the 18 part
+Flask tutorial plus open source example applications found below. 
+
+<i class="fa fa-check-square-o"></i> 
+Move on to the [deployment section](/deployment.html) to get your initial 
+Flask project on the web.
 
 
 ### What do you need to learn about web frameworks next?
