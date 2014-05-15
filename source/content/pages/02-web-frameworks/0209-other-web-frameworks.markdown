@@ -20,18 +20,6 @@ choice4text: How can I version and store my source code so I don't lose it?
 Python has a significant number of web frameworks outside the usual Django,
 Flask and Bottle suspects.
 
-## Bottle framework learning checklist
-<i class="fa fa-check-square-o"></i> 
-Read through the web frameworks listed here and check out their project
-websites. 
-
-<i class="fa fa-check-square-o"></i> 
-It's useful to know what other web frameworks exist besides Django and Flask.
-However, when you're just starting to learn to program there are significantly 
-more tutorials and resources for [Django](/django.html) and 
-[Flask](/flask.html) on the web. My recommendation is to start with one of
-those two frameworks then expand your knowledge from there.
-
 
 ## Pyramid
 The [Pyramid framework](http://www.pylonsproject.org/) stems from the Pylons
@@ -66,6 +54,19 @@ with project structure based on model-view-controller patterns.
 * The [web micro-framework battle](http://www.slideshare.net/r1chardj0n3s/web-microframework-battle/)
   presentation goes over Bottle, Flask, and many other lesser known Python
   web frameworks.
+
+
+## Other frameworks learning checklist
+<i class="fa fa-check-square-o"></i> 
+Read through the web frameworks listed above and check out their project
+websites. 
+
+<i class="fa fa-check-square-o"></i> 
+It's useful to know what other web frameworks exist besides Django and Flask.
+However, when you're just starting to learn to program there are significantly 
+more tutorials and resources for [Django](/django.html) and 
+[Flask](/flask.html) on the web. My recommendation is to start with one of
+those two frameworks then expand your knowledge from there.
 
 
 ### What do you need to learn next?

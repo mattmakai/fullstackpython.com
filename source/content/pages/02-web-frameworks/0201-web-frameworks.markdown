@@ -73,8 +73,10 @@ including everything in the framework with tight integration.
 
 ## Web frameworks learning checklist
 <i class="fa fa-check-square-o"></i> 
-Choose a major web framework ([Django](/django.html) or 
-[Flask](/flask.html) are recommended) and stick with it.
+Choose a major Python web framework ([Django](/django.html) or 
+[Flask](/flask.html) are recommended) and stick with it. When you're just
+starting it's best to learn one framework first instead of bouncing around
+trying to understand every framework. 
 
 <i class="fa fa-check-square-o"></i> 
 Work through a detailed tutorial found within the resources links on the
