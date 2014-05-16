@@ -80,9 +80,34 @@ in the CSS.
 
 
 ## CSS preprocessors
-* [SASS](http://sass-lang.com/)
+A CSS preprocessor compiles a processed language into plain CSS code. CSS 
+preprocessing languages add syntax such as variables, mixins and functions
+to reduce code duplication. The additional syntax also makes it possible for
+designers to use these basic programming constructs to write maintainable
+front end code.
 
-* [LESS](http://lesscss.org/)
+* [Sass](http://sass-lang.com/) is currently the favored preprocessor in
+  the design community. Sass is considered the most powerful CSS preprocessor
+  in terms of advanced language features.
+
+* [LESS](http://lesscss.org/) is right up there with Sass and has an ace up
+  its sleeve in that the [Bootstrap Framework](http://getbootstrap.com/) is
+  written in LESS which brings up its popularity.
+
+* [Stylus](http://learnboost.github.io/stylus/) is often cited as the third
+  most popular CSS preprocessing language.
+
+
+### CSS preprocessor resources
+* The Advanced Guide to HTML and CSS book has a well-written chapter on 
+  [preprocessors](http://learn.shayhowe.com/advanced-html-css/preprocessors).
+
+* [Sass vs LESS](http://css-tricks.com/sass-vs-less/) provides a short answer
+  on which framework to use then a longer more detailed response for those
+  interested in understanding the details.
+
+* [How to choose the right CSS preprocessor](http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor)
+  has a comparison of Sass, LESS and Stylus.
 
 
 ## CSS frameworks
