@@ -37,7 +37,8 @@ deployment because that is the de facto community standard.
 
 [Heroku](http://www.heroku.com/),
 [Google App Engine](https://developers.google.com/appengine/),
-[Gondor](https://gondor.io/), and
+[Gondor](https://gondor.io/),
+[PythonAnywhere](https://www.pythonanywhere.com/) and
 [OpenShift](https://openshift.redhat.com/community/get-started/python>) are
 PaaS that support Python web applications. Each one requires varying tradeoffs 
 to deploy to their respective platforms.
