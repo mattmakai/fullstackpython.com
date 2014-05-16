@@ -48,6 +48,16 @@ system-specific package management systems. We won't cover those in this
 guide as they are considered advanced deployment techniques.
 
 
+## Deployment resources
+* [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
+  walks through stages of deployment with source control, planning, 
+  continuous deployment and monitoring the results.
+
+* [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
+  defines delivery versus deployment and walks through a continuous deployment
+  workflow.
+
+
 ## Deployment learning checklist
 <i class="fa fa-check-square-o"></i>
 If you're tight on time look at the 
@@ -67,16 +77,6 @@ Read about servers, [operating systems](/operating-systems.html),
 [web servers](/web-servers.html) and [WSGI servers](/wsgi-servers.html) to get
 a broad picture of what components need to be set up to run a Python web 
 application.
-
-
-## Deployment resources
-* [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
-  walks through stages of deployment with source control, planning, 
-  continuous deployment and monitoring the results.
-
-* [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
-  defines delivery versus deployment and walks through a continuous deployment
-  workflow.
 
 
 ### How would you like to deploy your web app?
