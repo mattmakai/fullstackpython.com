@@ -35,27 +35,6 @@ shows that navigation bar relocation scenario when you resize the browser
 width.
 
 
-## CSS learning checklist
-<i class="fa fa-check-square-o"></i> 
-Create a simple HTML file with basic elements in it. Use the
-``python -m SimpleHTTPServer`` command to serve it up. Create a 
-``<style></style>`` element within the ``<head>`` section in the HTML page. 
-Start playing with CSS within that style element to change the look and feel 
-of the page.
-
-<i class="fa fa-check-square-o"></i> 
-Check out front end frameworks such as Bootstrap and Foundation and integrate
-one of those into the HTML page.
-
-<i class="fa fa-check-square-o"></i> 
-Work through the framework's grid system, styling options and customization
-so you get comfortable with how to use the framework.
-
-<i class="fa fa-check-square-o"></i> 
-Apply the framework to your web application and tweak the design until you
-have something that looks much better than generic HTML.
-
-
 ## How is CSS retrieved from a web server?
 The HTML file sent by the web server contains a reference to the CSS file(s)
 needed to render the content. The web browser requests the CSS file after the
@@ -160,6 +139,27 @@ web application's design.
 * [Tailoring CSS for performance](http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html)
   is an interesting read since many developers do not consider the 
   implications of CSS complexity in browser rendering time.
+
+
+## CSS learning checklist
+<i class="fa fa-check-square-o"></i> 
+Create a simple HTML file with basic elements in it. Use the
+``python -m SimpleHTTPServer`` command to serve it up. Create a 
+``<style></style>`` element within the ``<head>`` section in the HTML page. 
+Start playing with CSS within that style element to change the look and feel 
+of the page.
+
+<i class="fa fa-check-square-o"></i> 
+Check out front end frameworks such as Bootstrap and Foundation and integrate
+one of those into the HTML page.
+
+<i class="fa fa-check-square-o"></i> 
+Work through the framework's grid system, styling options and customization
+so you get comfortable with how to use the framework.
+
+<i class="fa fa-check-square-o"></i> 
+Apply the framework to your web application and tweak the design until you
+have something that looks much better than generic HTML.
 
 
 ### Once your app is styled what do you need to learn next?
