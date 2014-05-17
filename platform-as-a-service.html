@@ -56,20 +56,14 @@ computing time, files, and external services. The PaaS provides a
 higher-level abstraction for working with computing resources than deploying 
 an application to a server or IaaS.</p>
 <p>A PaaS makes deployment and operations easier because it forces the developer
-to conform applications to the PaaS architecture. For example, Heroku looks for
-Python's requirements.txt file in the base directory of the repository during
-deployment because that is the de facto community standard.</p>
-<p><a href="http://www.heroku.com/">Heroku</a>,
-<a href="https://developers.google.com/appengine/">Google App Engine</a>,
-<a href="https://gondor.io/">Gondor</a>,
-<a href="https://www.pythonanywhere.com/">PythonAnywhere</a> and
-<a href="https://openshift.redhat.com/community/get-started/python&gt;">OpenShift</a> are
-PaaS that support Python web applications. Each one requires varying tradeoffs 
-to deploy to their respective platforms.</p>
+to conform applications to the PaaS architecture. For example, Heroku looks 
+for Python's requirements.txt file in the base directory of the repository 
+during deployment because that is the file's de facto community standard
+location.</p>
 <p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
-<p>If you go the PaaS route, you can skip over the operating system and web
-server sections because they are baked into PaaS offerings. PaaS offerings
-generally start at the WSGI server layer. </p>
+<p>If you go the PaaS route, you can skip configuring an operating system
+and web server prebaked into PaaS offerings. PaaS offerings generally start 
+at the WSGI server layer. </p>
 <h2>Platform-as-a-service responsibilities</h2>
 <p>Although PaaS offerings simplify setting up and maintaining the servers,
 operating system, and web server, developers still have responsibilities for other
@@ -81,6 +75,27 @@ to a PaaS are just as vulnerable to security breaches at the application level
 as a standard LAMP stack. It's still your responsibility to ensure the web
 application framework and your app itself is up to date and secured. See the
 <a href="../web-application-security.html">security section</a> for further information.</p>
+<h2>Platforms-as-a-service that support Python</h2>
+<ul>
+<li>
+<p><a href="http://www.heroku.com/">Heroku</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/appengine/">Google App Engine</a></p>
+</li>
+<li>
+<p><a href="https://gondor.io/">Gondor</a></p>
+</li>
+<li>
+<p><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></p>
+</li>
+<li>
+<p><a href="https://openshift.redhat.com/community/get-started/python&gt;">OpenShift</a></p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a></p>
+</li>
+</ul>
 <h2>Platform-as-a-service resources</h2>
 <ul>
 <li>

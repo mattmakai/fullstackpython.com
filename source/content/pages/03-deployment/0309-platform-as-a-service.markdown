@@ -31,23 +31,16 @@ higher-level abstraction for working with computing resources than deploying
 an application to a server or IaaS.
 
 A PaaS makes deployment and operations easier because it forces the developer
-to conform applications to the PaaS architecture. For example, Heroku looks for
-Python's requirements.txt file in the base directory of the repository during
-deployment because that is the de facto community standard.
-
-[Heroku](http://www.heroku.com/),
-[Google App Engine](https://developers.google.com/appengine/),
-[Gondor](https://gondor.io/),
-[PythonAnywhere](https://www.pythonanywhere.com/) and
-[OpenShift](https://openshift.redhat.com/community/get-started/python>) are
-PaaS that support Python web applications. Each one requires varying tradeoffs 
-to deploy to their respective platforms.
+to conform applications to the PaaS architecture. For example, Heroku looks 
+for Python's requirements.txt file in the base directory of the repository 
+during deployment because that is the file's de facto community standard
+location.
 
 <img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" />
 
-If you go the PaaS route, you can skip over the operating system and web
-server sections because they are baked into PaaS offerings. PaaS offerings
-generally start at the WSGI server layer. 
+If you go the PaaS route, you can skip configuring an operating system
+and web server prebaked into PaaS offerings. PaaS offerings generally start 
+at the WSGI server layer. 
 
 
 ## Platform-as-a-service responsibilities
@@ -63,6 +56,19 @@ as a standard LAMP stack. It's still your responsibility to ensure the web
 application framework and your app itself is up to date and secured. See the
 [security section](../web-application-security.html) for further information.
 
+
+## Platforms-as-a-service that support Python
+* [Heroku](http://www.heroku.com/)
+
+* [Google App Engine](https://developers.google.com/appengine/)
+
+* [Gondor](https://gondor.io/)
+
+* [PythonAnywhere](https://www.pythonanywhere.com/)
+
+* [OpenShift](https://openshift.redhat.com/community/get-started/python>)
+
+* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 
 
 ## Platform-as-a-service resources
