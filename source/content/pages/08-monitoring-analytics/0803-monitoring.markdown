@@ -78,7 +78,11 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
   of those modifications.
 
 * [Status.io](http://status.io/) focuses on uptime and response metrics 
-  transparency for your users.
+  transparency for web applications.
+
+* [StatusPage.io](https://www.statuspage.io/) (yes, there's both a Status and
+  StatusPage.io) provides easy set up status pages for monitoring application
+  up time.
 
 * [PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
   if there are stability, performance, or uptime issues with an application.
