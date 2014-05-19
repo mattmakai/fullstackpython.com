@@ -61,22 +61,6 @@ the Web was invented by
 <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> at CERN in 1989.
 Modern browsers and web servers have simply extended the language of the Web
 to incorporate new standards.</p>
-<h2>Web servers learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
-<a href="http://httpd.apache.org/">Apache</a> is also a great choice.</p>
-<p><i class="fa fa-check-square-o"></i>
-Create an SSL certificate. For testing use a self-signed certificate and for a
-production app buy one from <a href="http://www.digicert.com/">Digicert</a>. Configure 
-the web server to serve traffic over SSL. You'll need SSL for serving only
-HTTPS traffic and preventing security issues that occur with unencrypted user 
-input.</p>
-<p><i class="fa fa-check-square-o"></i>
-Configure the web server to serve up static files such as CSS, JavaScript
-and images.</p>
-<p><i class="fa fa-check-square-o"></i>
-Once you set up the <a href="/wsgi-server.html">WSGI server</a> you'll need to configure
-the web server as a pass through for dynamic content.</p>
 <h2>Client requests</h2>
 <p>A client that sends a request to a web server is usually a browser such 
 as Internet Explorer, Firefox, or Chrome, but it can also be a</p>
@@ -148,7 +132,23 @@ is provided by W3C.</p>
 <p><a href="http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using">4 HTTP Security Headers You Should Always Be Using</a></p>
 </li>
 </ul>
-<h3>What do you want to learn after setting up a web server?</h3>
+<h2>Web servers learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
+<a href="http://httpd.apache.org/">Apache</a> is also a great choice.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create an SSL certificate. For testing use a self-signed certificate and for a
+production app buy one from <a href="http://www.digicert.com/">Digicert</a>. Configure 
+the web server to serve traffic over SSL. You'll need SSL for serving only
+HTTPS traffic and preventing security issues that occur with unencrypted user 
+input.</p>
+<p><i class="fa fa-check-square-o"></i>
+Configure the web server to serve up static files such as CSS, JavaScript
+and images.</p>
+<p><i class="fa fa-check-square-o"></i>
+Once you set up the <a href="/wsgi-server.html">WSGI server</a> you'll need to configure
+the web server as a pass through for dynamic content.</p>
+<h3>What do you want to learn after the web server is set up?</h3>
                   <div class="row">
     <div class="col-md-3">
         <div class="well select-next">

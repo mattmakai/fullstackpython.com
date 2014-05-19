@@ -24,9 +24,11 @@ the
 
 ## 2014
 ### May
+* Moving learning checklists to the bottom of the pages since they are 
+  specific advice for steps to take after reading a section.
 * Adding a stub section for APIs.
 * Cleaned up and polished the task queues and web analytics pages.
-* Added learning checklist to operating systems, web servers, task queues and 
+* Added learning checklist to operating systems, web servers, task queues and
   monitoring pages.
 * Adding more logging resources.
 * Continuing to add learning checklists to sections such as servers.

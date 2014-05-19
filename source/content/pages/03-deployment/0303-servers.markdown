@@ -152,4 +152,20 @@ Python library for working with Amazon Web Services.
   shows how to work with a VPS once you've got the server up and running.
 
 
-### Keep going with a server or try a PaaS option?
+## Servers learning checklist
+<i class="fa fa-check-square-o"></i>
+Sign up for a 
+[Linode](https://www.linode.com/?r=bfeecaf55a83cd3dd224a5f2a3a001fdf95d4c3d) 
+or
+[Digital Ocean](https://www.digitalocean.com/) account.
+
+<i class="fa fa-check-square-o"></i>
+Rent a VPS for a month. It will be provisioned and in a shutdown state 
+awaiting your instructions.
+
+<i class="fa fa-check-square-o"></i>
+Move to the [operating systems](/operating-systems.html) section to learn 
+how to load Ubuntu 12.04 LTS as a base OS for Python web applications.
+
+
+### Keep going with setting up a server or try a PaaS?
