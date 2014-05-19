@@ -57,24 +57,6 @@ possible because the data is stored in a structured way. </p>
 mental framework for how the data should be saved and retrieved instead of 
 having to figure out what to do with the data every time you build a new 
 application.</p>
-<h2>Databases learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Install PostgreSQL on your server. Assuming you went with Ubuntu run 
-<code>sudo apt-get install postgresql</code>.</p>
-<p><i class="fa fa-check-square-o"></i>
-Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is part of your
-application dependencies.</p>
-<p><i class="fa fa-check-square-o"></i>
-Configure your web application to connect to the PostgreSQL instance.</p>
-<p><i class="fa fa-check-square-o"></i>
-Create models in your ORM, either with Django's 
-<a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
-<a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
-<p><i class="fa fa-check-square-o"></i>
-Sync the ORM models with the PostgreSQL instance.</p>
-<p><i class="fa fa-check-square-o"></i>
-Start creating, reading, updating and deleting data in the database from your 
-web application.</p>
 <h2>Relational databases</h2>
 <p>The database storage abstraction most commonly used in Python web development 
 is sets of relational tables. Alternative storage abstractions are explained 
@@ -214,6 +196,24 @@ SQL integrates with Google App Engine but can be used independently as well.</p>
   provides a detailed comparison of SQLAlchemy against alternatives.</p>
 </li>
 </ul>
+<h2>Databases learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+<code>sudo apt-get install postgresql</code>.</p>
+<p><i class="fa fa-check-square-o"></i>
+Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is part of your
+application dependencies.</p>
+<p><i class="fa fa-check-square-o"></i>
+Configure your web application to connect to the PostgreSQL instance.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create models in your ORM, either with Django's 
+<a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
+<a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
+<p><i class="fa fa-check-square-o"></i>
+Sync the ORM models with the PostgreSQL instance.</p>
+<p><i class="fa fa-check-square-o"></i>
+Start creating, reading, updating and deleting data in the database from your 
+web application.</p>
 <h3>What's next to get your app running?</h3>
                   <div class="row">
     <div class="col-md-3">
@@ -514,7 +514,7 @@ function mce_success_cb(resp){
                         <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
                         <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
                         <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
-                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Security</a>
+                        <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>

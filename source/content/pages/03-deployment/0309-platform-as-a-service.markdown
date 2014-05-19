@@ -95,4 +95,35 @@ application framework and your app itself is up to date and secured. See the
     * [Part Four: Choosing Heroku](http://rdegges.com/devops-django-part-4-choosing-heroku)
 
 
+## Platform-as-a-service learning checklist
+<i class="fa fa-check-square-o"></i>
+Review the potential Python platform-as-a-service options above and on their
+websites.
+
+<i class="fa fa-check-square-o"></i>
+Sign up for a PaaS account at the provider that apepars to best fit your
+application needs. Heroku is the PaaS option recommended for starters due to 
+their detailed documentation and walkthroughs available on the web. However,
+the other options are perfectly viable since their purpose is to make deploying
+applications as easy as possible.
+
+<i class="fa fa-check-square-o"></i>
+Check if there are any PaaS-specific configuration files needed for your app
+to run properly on the PaaS after it is deployed.
+
+<i class="fa fa-check-square-o"></i>
+Deploy your app to the PaaS. 
+
+<i class="fa fa-check-square-o"></i>
+Sync your application's configuration with the database.
+
+<i class="fa fa-check-square-o"></i>
+Set up a content delivery network for your application's 
+[static content](/static-content.html) unless your PaaS provider already
+handles this deployment step for you.
+
+<i class="fa fa-check-square-o"></i>
+Check if the application's functionality is working and tweak as necessary.
+
+
 ### Do you want to use a PaaS or deploy to a traditional server?

@@ -32,30 +32,6 @@ mental framework for how the data should be saved and retrieved instead of
 having to figure out what to do with the data every time you build a new 
 application.
 
-## Databases learning checklist
-<i class="fa fa-check-square-o"></i>
-Install PostgreSQL on your server. Assuming you went with Ubuntu run 
-``sudo apt-get install postgresql``.
-
-<i class="fa fa-check-square-o"></i>
-Make sure the [psycopg2](http://initd.org/psycopg/) library is part of your
-application dependencies.
-
-<i class="fa fa-check-square-o"></i>
-Configure your web application to connect to the PostgreSQL instance.
-
-<i class="fa fa-check-square-o"></i>
-Create models in your ORM, either with Django's 
-[built-in ORM](https://docs.djangoproject.com/en/dev/topics/db/) or
-[SQLAlchemy with Flask](http://www.sqlalchemy.org/). 
-
-<i class="fa fa-check-square-o"></i>
-Sync the ORM models with the PostgreSQL instance.
-
-<i class="fa fa-check-square-o"></i>
-Start creating, reading, updating and deleting data in the database from your 
-web application.
-
 
 ## Relational databases
 The database storage abstraction most commonly used in Python web development 
@@ -191,6 +167,31 @@ SQL integrates with Google App Engine but can be used independently as well.
 
 * [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
   provides a detailed comparison of SQLAlchemy against alternatives.
+
+
+## Databases learning checklist
+<i class="fa fa-check-square-o"></i>
+Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+``sudo apt-get install postgresql``.
+
+<i class="fa fa-check-square-o"></i>
+Make sure the [psycopg2](http://initd.org/psycopg/) library is part of your
+application dependencies.
+
+<i class="fa fa-check-square-o"></i>
+Configure your web application to connect to the PostgreSQL instance.
+
+<i class="fa fa-check-square-o"></i>
+Create models in your ORM, either with Django's 
+[built-in ORM](https://docs.djangoproject.com/en/dev/topics/db/) or
+[SQLAlchemy with Flask](http://www.sqlalchemy.org/). 
+
+<i class="fa fa-check-square-o"></i>
+Sync the ORM models with the PostgreSQL instance.
+
+<i class="fa fa-check-square-o"></i>
+Start creating, reading, updating and deleting data in the database from your 
+web application.
 
 
 ### What's next to get your app running?

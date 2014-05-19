@@ -1,4 +1,4 @@
-title: Web Security
+title: Web Application Security
 category: page
 slug: web-application-security
 sort-order: 092

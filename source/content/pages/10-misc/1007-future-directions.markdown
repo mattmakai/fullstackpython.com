@@ -36,7 +36,21 @@ Here are some things I'm actively working on:
 * Clear, concise descriptions for each concept in every section along with
   the "why [x] is needed"
 
-* Learning checklists for every section where it makes sense.
+* Create learning checklists for every section where it makes sense. The
+  remaining sections that need checklists are 
+
+    1. WSGI servers
+    1. source control
+    1. application dependencies
+    1. configuration management
+    1. NoSQL data stores
+    1. application programming interfaces
+    1. API integration
+    1. static content
+    1. caching
+    1. logging
+    1. web analytics
+    1. web application security
 
 * Flesh out [JavaScript](../javascript.html), 
   [Configuration Management](../configuration-management.html), 
