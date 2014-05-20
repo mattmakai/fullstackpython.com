@@ -30,6 +30,15 @@ continuously grows in importance because APIs provide critical functionality
 across many implementation areas.
 
 
+## Hosted API services
+* [Runscope](https://www.runscope.com/) is a service specifically designed
+  for APIs that assists developers with automated testing and traffic
+  inspection.
+
+* [Apiary](http://apiary.io/) provides a blueprint for creating APIs so
+  they are easier to test and generate clean documentation.
+
+
 ## API Integration Resources
 * John Sheehan's 
   "[Zen and the Art of API Maintenance](https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance)"

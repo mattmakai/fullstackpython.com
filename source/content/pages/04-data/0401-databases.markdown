@@ -20,6 +20,7 @@ choice4text: How do I log issues when they occur in my app?
 A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. 
 
+
 ## Why are databases necessary?
 At a high level web applications store data and present it to users in a 
 useful way. For example, Google stores data about roads and provides 
@@ -63,6 +64,7 @@ web applications. PostgreSQL's feature set, active development and stability
 contribute to its usage as the backend for millions of applications live
 on the Web today.
 
+
 ### PostgreSQL resources
 * This post on 
   [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
@@ -85,6 +87,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
   provides 5 specific tips from Instagram's engineering team on how to scale
   the design of your PostgreSQL database.
 
+
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
 applications. MySQL has a slightly easier initial learning curve than 
@@ -101,6 +104,7 @@ have been major defections away from the database by
 and [Google](http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb). 
 MySQL remains a viable database option but I always recommend new Python 
 developers learn PostgreSQL if they do not already know MySQL.
+
 
 ### MySQL resources
 * [28 Beginner's Tutorials for Learning about MySQL Databases](http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/) 
