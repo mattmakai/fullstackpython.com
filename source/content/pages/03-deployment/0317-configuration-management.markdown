@@ -52,6 +52,10 @@ from PyCon UK 2013
 
 * [Getting Started with Ansible](http://lowendbox.com/blog/getting-started-with-ansible/)
 
+* [Ansible Text Message Notifications with Twilio SMS](https://www.twilio.com/blog/2014/05/ansible-text-messages-notifications-with-twilio-sms.html)
+  is my blog post with a detailed example for using the Twilio module in
+  core Ansible 1.6+.
+
 * [Ansible and Linode](http://softwareas.com/ansible-and-linode-what-i-learned-about-controlling-linodes-from-ansible)
 
 * [Multi-factor SSH authentication with Ansible and Duo Security](http://jlafon.io/ansible-duo-security.html)
