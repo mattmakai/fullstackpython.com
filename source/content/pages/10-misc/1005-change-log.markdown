@@ -28,8 +28,8 @@ the
   specific advice for steps to take after reading a section.
 * Adding a stub section for APIs.
 * Cleaned up and polished the task queues and web analytics pages.
-* Added learning checklist to operating systems, web servers, task queues and
-  monitoring pages.
+* Added learning checklist to operating systems, web servers, task queues,
+  monitoring pages and WSGI servers.
 * Adding more logging resources.
 * Continuing to add learning checklists to sections such as servers.
 * Moving navigation options into meta tags on markdown pages.
