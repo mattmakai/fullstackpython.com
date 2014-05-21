@@ -194,8 +194,8 @@ The following are WSGI servers based on community recommendations.
 
 ## WSGI servers learning checklist
 <i class="fa fa-check-square-o"></i>
-Understand that WSGI is a standard specification for applications and servers 
-to implement. 
+Understand that WSGI is a standard Python specification for applications and 
+servers to implement. 
 
 <i class="fa fa-check-square-o"></i>
 Pick a WSGI server based on available documentation and tutorials. Green 
