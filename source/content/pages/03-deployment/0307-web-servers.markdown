@@ -120,7 +120,7 @@ Configure the web server to serve up static files such as CSS, JavaScript
 and images.
 
 <i class="fa fa-check-square-o"></i>
-Once you set up the [WSGI server](/wsgi-server.html) you'll need to configure
+Once you set up the [WSGI server](/wsgi-servers.html) you'll need to configure
 the web server as a pass through for dynamic content.
 
 

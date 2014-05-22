@@ -36,6 +36,12 @@ Here are some things I'm actively working on:
 * Clear, concise descriptions for each concept in every section along with
   the "why [x] is needed"
 
+* Flesh out [JavaScript](../javascript.html), 
+  [Configuration Management](../configuration-management.html), 
+  [API Integration](../api-integration.html),
+  and [Web Security](../web-application-security.html) sections.
+
+
 * Create learning checklists for every section where it makes sense. The
   remaining sections that need checklists are 
 
@@ -49,11 +55,6 @@ Here are some things I'm actively working on:
     1. logging
     1. web analytics
     1. web application security
-
-* Flesh out [JavaScript](../javascript.html), 
-  [Configuration Management](../configuration-management.html), 
-  [API Integration](../api-integration.html),
-  and [Web Security](../web-application-security.html) sections.
 
 
 ### That's what coming. What would you like to learn right now?
