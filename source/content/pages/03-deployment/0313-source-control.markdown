@@ -75,6 +75,9 @@ as Git or Mercurial.
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
+* [git ready](http://gitready.com/) has a nice collection of blog posts based on
+  beginner, intermediate and advanced use cases.
+
 * [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) details
   a Git branching model for small teams.
 
