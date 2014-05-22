@@ -24,9 +24,10 @@ the
 
 ## 2014
 ### May
+* Added learning checklist for source control.
 * Moving learning checklists to the bottom of the pages since they are 
   specific advice for steps to take after reading a section.
-* Adding a stub section for APIs.
+* Added a stub section for APIs.
 * Cleaned up and polished the task queues and web analytics pages.
 * Added learning checklist to operating systems, web servers, task queues,
   monitoring pages and WSGI servers.
