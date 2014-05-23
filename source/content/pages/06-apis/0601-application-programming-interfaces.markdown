@@ -21,6 +21,11 @@ Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.
 
 
+## API open source projects
+* [Swagger](https://github.com/wordnik/swagger-core) is an open source project 
+  written in Scala that defines a standard interface for RESTful APIs.
+
+
 ## API resources
 * [Zapier](https://zapier.com/) has an
   [APIs 101](https://zapier.com/blog/apis-101/) free guide for what APIs 
