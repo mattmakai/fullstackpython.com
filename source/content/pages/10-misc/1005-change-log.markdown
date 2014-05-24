@@ -24,8 +24,8 @@ the
 
 ## 2014
 ### May
-* Added learning checklist for source control, application dependencies
-  and configuration management.
+* Added learning checklist for source control, application dependencies,
+  configuration management and NoSQL data stores.
 * Moving learning checklists to the bottom of the pages since they are 
   specific advice for steps to take after reading a section.
 * Added a stub section for APIs.

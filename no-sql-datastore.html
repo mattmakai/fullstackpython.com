@@ -104,6 +104,20 @@ easy to set up with either a standard LAMP stack or on Heroku.</p>
   is a guide about using non-relational databases in green field environments.</p>
 </li>
 </ul>
+<h2>NoSQL data stores learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Understand why NoSQL data stores are better for some use cases than relational
+databases. In general these benefits are only seen at large scale so they may
+not be applicable to your web application.</p>
+<p><i class="fa fa-check-square-o"></i>
+Integrate Redis into your project for a speed boost over slower persistent 
+storage. Storing session data in memory is generally much faster than saving
+that data in a traditional relational database that uses persistent storage. 
+Note that when memory is flushed the data goes away so anything that needs to
+be persistent must still be backed up to disk on a regular basis.</p>
+<p><i class="fa fa-check-square-o"></i>
+Evaluate other use cases such as storing transient logs in document-oriented
+data stores such as MongoDB.</p>
 <h3>What's next?</h3>
                   <div class="row">
     <div class="col-md-4">

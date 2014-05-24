@@ -33,6 +33,8 @@ submit one when you see a fix or improvement that needs to be made!
 
 Here are some things I'm actively working on:
 
+* Add one more section for building and exposing APIs.
+
 * Clear, concise descriptions for each concept in every section along with
   the "why [x] is needed"
 
@@ -41,11 +43,9 @@ Here are some things I'm actively working on:
   [API Integration](../api-integration.html),
   and [Web Security](../web-application-security.html) sections.
 
-
 * Create learning checklists for every section where it makes sense. The
   remaining sections that need checklists are 
 
-    1. NoSQL data stores
     1. application programming interfaces
     1. API integration
     1. static content
