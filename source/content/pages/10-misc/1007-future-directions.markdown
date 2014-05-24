@@ -45,7 +45,6 @@ Here are some things I'm actively working on:
 * Create learning checklists for every section where it makes sense. The
   remaining sections that need checklists are 
 
-    1. application dependencies
     1. configuration management
     1. NoSQL data stores
     1. application programming interfaces

@@ -24,7 +24,7 @@ the
 
 ## 2014
 ### May
-* Added learning checklist for source control.
+* Added learning checklist for source control and application dependencies.
 * Moving learning checklists to the bottom of the pages since they are 
   specific advice for steps to take after reading a section.
 * Added a stub section for APIs.

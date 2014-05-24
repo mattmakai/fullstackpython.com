@@ -141,4 +141,23 @@ further clarification.
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
 
 
+## Application dependencies learning checklist
+<i class="fa fa-check-square-o"></i>
+Ensure the libraries your web application depends on are all captured in a
+requirement.txt file with pegged versions. 
+
+<i class="fa fa-check-square-o"></i>
+An easy way to capture currently installed dependencies is with the 
+``pip freeze`` command.
+
+<i class="fa fa-check-square-o"></i>
+Create a fresh virtualenv and install the dependencies from your 
+requirements.txt file by using the ``pip install -r requirements.txt`` 
+command.
+
+<i class="fa fa-check-square-o"></i>
+Check that your application runs properly with the fresh virtualenv and only
+the installed dependencies from the requirements.txt file.
+
+
 ### What do you need to learn after installing your app dependencies?
