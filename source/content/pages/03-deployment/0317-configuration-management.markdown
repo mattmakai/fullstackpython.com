@@ -18,7 +18,11 @@ choice4text: What should I do to secure my web application?
 
 # Configuration Management
 Configuration management involves modifying servers from an existing state to 
-a desired state. Numerous tools exist to modify the state in a controlled 
+a desired state and automating how an application is deployed.
+
+
+## Configuration management tools
+Numerous tools exist to modify server state in a controlled 
 way, including [Puppet](http://puppetlabs.com/puppet/what-is-puppet), 
 [Chef](http://www.getchef.com/chef/), 
 [SaltStack](http://www.saltstack.com/), and Ansible. Puppet and Chef are
@@ -79,6 +83,28 @@ from PyCon UK 2013
 * [How to Write an Ansible Role for Ansible Galaxy](http://probablyfine.co.uk/2014/03/27/how-to-write-an-ansible-role-for-ansible-galaxy/)
 
 * [Testing with Jenkins, Docker and Ansible](http://blog.mist.io/post/82383668190/move-fast-and-dont-break-things-testing-with)
+
+
+## Application dependencies learning checklist
+<i class="fa fa-check-square-o"></i>
+Learn about configuration management in the context of deployment automation
+and infrastructure-as-code.
+
+<i class="fa fa-check-square-o"></i>
+Pick a configuration management tool and stick with it. My recommendation is
+Ansible because it is by far the easiest tool to learn and be productive with.
+
+<i class="fa fa-check-square-o"></i>
+Read your configuration management tool's documentation and, when necessary,
+the source code.
+
+<i class="fa fa-check-square-o"></i>
+Automate the configuration management and deployment for your project. Note
+that this is by far the most time consuming step in this checklist but will
+pay dividends every time you deploy your project.
+
+<i class="fa fa-check-square-o"></i>
+Hook the automated deployment tool into your existing deployment process.
 
 
 ### What's next after automating your app configuration?
