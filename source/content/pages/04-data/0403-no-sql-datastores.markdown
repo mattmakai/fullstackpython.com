@@ -29,6 +29,7 @@ storage representations.
 These persistent data storage representations are commonly used to augment,
 rather than completely replace, relational databases.
 
+
 ## Document-Oriented
 A document-oriented database provides a semi-structured representation for
 nested data. 
