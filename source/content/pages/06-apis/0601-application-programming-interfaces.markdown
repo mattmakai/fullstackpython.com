@@ -29,9 +29,9 @@ to consume data through APIs.
 
 
 ## Webhook
-A webhook is a user-defined HTTP callback to a URL that executes when on a 
-system condition is met. The call alerts the second system and often passes
-data as well.
+A webhook is a user-defined HTTP callback to a URL that executes when a 
+system condition is met. The call alerts the second system via a POST or GET
+request and often passes data as well.
 
 Webhooks are important because they enable two-way communication initiation 
 for APIs. Webhook flexibility comes in from their definition by the API user
