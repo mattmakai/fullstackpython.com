@@ -29,7 +29,21 @@ to consume data through APIs.
 
 
 ## Webhook
-A webhook is a user-defined HTTP callback.
+A webhook is a user-defined HTTP callback to a URL that executes when on a 
+system condition is met. The call alerts the second system and often passes
+data as well.
+
+Webhooks are important because they enable two-way communication initiation 
+for APIs. Webhook flexibility comes in from their definition by the API user
+instead of the API itself.
+
+For example, in the [Twilio API](https://www.twilio.com/api) when a text 
+message is sent to a Twilio phone number Twilio sends an HTTP POST request 
+webhook to the URL specified by the user. The URL is defined in a text box
+on the number's page on Twilio as shown below.
+
+<img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" />
+
 
 
 ## API open source projects

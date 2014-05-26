@@ -48,7 +48,17 @@ webpages are not easily consumable by other machines. Numerous scraping
 programs and libraries exist to rip data out of HTML but it's simpler
 to consume data through APIs.</p>
 <h2>Webhook</h2>
-<p>A webhook is a user-defined HTTP callback.</p>
+<p>A webhook is a user-defined HTTP callback to a URL that executes when on a 
+system condition is met. The call alerts the second system and often passes
+data as well.</p>
+<p>Webhooks are important because they enable two-way communication initiation 
+for APIs. Webhook flexibility comes in from their definition by the API user
+instead of the API itself.</p>
+<p>For example, in the <a href="https://www.twilio.com/api">Twilio API</a> when a text 
+message is sent to a Twilio phone number Twilio sends an HTTP POST request 
+webhook to the URL specified by the user. The URL is defined in a text box
+on the number's page on Twilio as shown below.</p>
+<p><img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" /></p>
 <h2>API open source projects</h2>
 <ul>
 <li><a href="https://github.com/wordnik/swagger-core">Swagger</a> is an open source project 
