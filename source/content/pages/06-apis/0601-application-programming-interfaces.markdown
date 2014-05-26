@@ -1,6 +1,6 @@
 title: Application Programming Interfaces
 category: page
-slug: application-programming-intefaces
+slug: application-programming-interfaces
 sort-order: 061
 choice1url: /api-integration.html
 choice1icon: fa-link
@@ -28,7 +28,7 @@ programs and libraries exist to rip data out of HTML but it's simpler
 to consume data through APIs.
 
 
-## Webhook
+## Webhooks
 A webhook is a user-defined HTTP callback to a URL that executes when a 
 system condition is met. The call alerts the second system via a POST or GET
 request and often passes data as well.
@@ -56,6 +56,22 @@ on the number's page on Twilio as shown below.
   [APIs 101](https://zapier.com/blog/apis-101/) free guide for what APIs 
   are, why they are valuable and how to use them properly. 
 
+
+## CSS learning checklist
+<i class="fa fa-check-square-o"></i> 
+Learn the API concepts of machine-to-machine communication with JSON and XML,
+endpoints and webhooks.
+
+<i class="fa fa-check-square-o"></i> 
+Integrate an API such as Twilio or Stripe into your web application. Read the
+[API integration](/api-integration.html) section for more information.
+
+<i class="fa fa-check-square-o"></i> 
+Use a framework to create an API for your own application. 
+
+<i class="fa fa-check-square-o"></i> 
+Expose your web application's API so other applications can consume data you
+want to share.
 
 
 ### What's next after learning about APIs?
