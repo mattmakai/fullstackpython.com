@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Change Log - Full Stack Python</title>
+    <title>API Creation - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,176 +39,46 @@
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Change Log</h1>
-<p>This is a running list of the major changes to Full Stack Python since its
-inception in December 2012. Another way to view the modifications is through
-the 
-<a href="https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages">source repository's commit log</a> on GitHub.</p>
-<h2>2014</h2>
-<h3>May</h3>
+      <h1>API Creation</h1>
+<p>Creating and exposing APIs allows your web application to interact with other
+applications through machine-to-machine communication.</p>
+<h2>API creation frameworks</h2>
 <ul>
-<li>Updated APIs page with basic information on webhooks.</li>
-<li>Added learning checklist for source control, application dependencies,
-  configuration management, NoSQL data stores and APIs.</li>
-<li>Moving learning checklists to the bottom of the pages since they are 
-  specific advice for steps to take after reading a section.</li>
-<li>Added a stub section for APIs.</li>
-<li>Cleaned up and polished the task queues and web analytics pages.</li>
-<li>Added learning checklist to operating systems, web servers, task queues,
-  monitoring pages and WSGI servers.</li>
-<li>Adding more logging resources.</li>
-<li>Continuing to add learning checklists to sections such as servers.</li>
-<li>Moving navigation options into meta tags on markdown pages.</li>
+<li><a href="http://www.django-rest-framework.org/">Django REST framework</a> and 
+  <a href="http://www.flaskapi.org/">Flask API</a> are popular options for exposing
+  APIs from Django and Flask web applications.</li>
 </ul>
-<h3>April</h3>
-<ul>
-<li>Adding the concept of "learning checklists" to web frameworks, Django, CSS
-  and JavaScript pages to give readers some guidance for how to learn each 
-  topic. Will expand these checklists out into other pages over the next 
-  couple of weeks.</li>
-<li>Added an email sign up form to determine how many people are interested in
-  a full book since I've had a lot of requests in person to write one.</li>
-<li>Added new resources to the other web frameworks section.</li>
-<li>Updated the way choices to go from one page to another are generated. It's
-  now done off metadata instead of duplicated HTML content.</li>
-<li>Huge site update to reorganize the way content is presented and navigated.
-  Kinda has that "choose your own adventure" thing going for it, doesn't it?</li>
-<li>
-<p>New logo! This one's way more Python software stack, way less boring 
-  folder-thingy. Here's how the old one looked in comparison:
-<img src="theme/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" /></p>
-</li>
-<li>
-<p>Added a <a href="../future-directions.html">future direction</a> section to explain
-  current priorities for further developments on the site.</p>
-</li>
-<li>More resources for web frameworks and configuration management sections.</li>
-<li>Added small JavaScript section. Updating witih basic resources.</li>
-<li>Updated application dependencies with new links to Python library 
-  collections.</li>
-<li>Merged a couple of awesome pull requests that fixed typos and added 
-  additional Bottle resources.</li>
-</ul>
-<h3>March</h3>
-<ul>
-<li>Updated logging page with new resources.</li>
-<li>Added new CSS page.</li>
-<li>New intermediate learning links on the best resources page.</li>
-<li>Updated task queues page with better explanations and many more curated
-  resources.</li>
-<li>Added why is this piece necessary for databases, WSGI servers, web 
-  frameworks and application dependencies.</li>
-<li>Updating best resources page with newsletters and a few additional beyond
-  the basics resources.</li>
-<li>Adding 'why is this necessary' sections to servers, operating systems,
-  and web servers pages.</li>
-<li>Extracting best Python resources from the introduction into a separate
-  page.</li>
-<li>Cleaned up links on the first ten chapters and added new resources for
-  web frameworks.</li>
-<li>Updated application dependencies section with new resources and initial
-  content description.</li>
-<li>Updated the change log (how meta!) to have a cleaner layout.</li>
-</ul>
-<h3>February</h3>
-<ul>
-<li>Added Bottle as a web framework next to Django and Flask.</li>
-<li>Added new Django resources. </li>
-<li>New sitemap.xml. </li>
-<li>Rewriting all sections to fix first draft typos and grammar mistakes 
-  as well as add new content.</li>
-<li>Added task queues section due to reader feedback. </li>
-<li>Rewrote intro section.</li>
-<li>Merged several pull requests (see closed 
-  <a href="https://github.com/makaimc/fullstackpython.github.com/pulls">GitHub repo pull requests</a>). </li>
-<li>New resources for platform-as-a-service section. </li>
-<li>Added new sections specified by the community as missing. </li>
-<li>Reorganized ordering of content. </li>
-<li>Broke out subsections for Django and Flask. </li>
-<li>Added signficant content to the WSGI section. </li>
-<li>Converted from RST to Markdown (some of the downstream tools I want to 
-  use work better with Markdown than RST). </li>
-<li>Reorganized content into rough outline of "final" chapters.</li>
-</ul>
-<h3>January</h3>
-<ul>
-<li>Added configuration management, application dependencies, and source 
-  control sections. </li>
-<li>Updated about section. </li>
-<li>Fully responsive web design.</li>
-</ul>
-<h2>2013</h2>
-<h3>December</h3>
-<ul>
-<li>Changed CDN section to static content section. </li>
-<li>Transitioned diagrams from Paper app drawings to Balsamiq mockups 
-  exported to PNG files. </li>
-<li>Added Python database connectors to database section.</li>
-</ul>
-<h3>November</h3>
-<ul>
-<li>Modified color scheme. </li>
-<li>Updated caching and introduction section.</li>
-<li>Added NoSQL data stores section.</li>
-</ul>
-<h3>October</h3>
-<ul>
-<li>Created separate monitoring section.</li>
-</ul>
-<h3>August</h3>
-<ul>
-<li>Added more resources for web servers and other categories.</li>
-</ul>
-<h3>June</h3>
-<ul>
-<li>Updated styling.</li>
-<li>Switching around several sections.</li>
-</ul>
-<h3>January</h3>
-<ul>
-<li>Fleshed out web server, OS, and server sections, particularly IaaS 
-  and PaaS topics.</li>
-<li>Added initial "hand drawn" diagram placeholders for better diagrams later.</li>
-</ul>
-<h2>2012</h2>
-<h3>December</h3>
-<ul>
-<li>Initial incomplete release on fullstackpython.com, created 
-  introduction, CDN, web frameworks, and database sections with stubs for 
-  other areas.</li>
-</ul>
-<p>That's the whole history of Full Stack Python. What do you want to learn now?</p>
                   <div class="row">
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/introduction.html" class="btn btn-success btn-full"><i class="fa fa-fast-backward fa-inverse fa-2x"></i></a>
+            <a href="/application-programming-interfaces.html" class="btn btn-success btn-full"><i class="fa fa-exchange fa-2x"></i></a>
             <p class="under-btn">
-                Let me start over from the Full Stack Python introduction.
+                What are application programming interfaces?
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/future-directions.html" class="btn btn-success btn-full"><i class="fa fa-magic fa-inverse fa-2x"></i></a>
+            <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                Show me what's coming on Full Stack Python in the future.
+                How do I integrate external APIs into my application?
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/about-author.html" class="btn btn-success btn-full"><i class="fa fa-user fa-inverse fa-2x"></i></a>
+            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                Who's the author of Full Stack Python?
+                How can I learn about web application security?
             </p>
         </div>
     </div>
         <div class="col-md-3">
         <div class="well select-next">
-            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
+            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                I want to learn how to code a Python web application now.
+                Where should I host static content such as JavaScript files?
             </p>
         </div>
     </div>
@@ -431,7 +301,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Change Log</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">API Creation</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
           each Python web application stack layer and provides the
@@ -471,7 +341,7 @@ function mce_success_cb(resp){
                         <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
                         <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
                         <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
-                        <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
+                        <a href="/api-creation.html" class="list-group-item smaller-item active">API Creation</a>
                         <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
                         <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
                         <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
@@ -481,7 +351,7 @@ function mce_success_cb(resp){
                         <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
-                        <a href="/change-log.html" class="list-group-item smaller-item active">Change Log</a>
+                        <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
                         <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
                 </div>
   </div>
