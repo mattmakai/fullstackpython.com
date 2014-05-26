@@ -172,6 +172,10 @@ SQL integrates with Google App Engine but can be used independently as well.
 * [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
   provides a detailed comparison of SQLAlchemy against alternatives.
 
+* [A different view](http://blog.isotoma.com/2014/05/a-different-view/) 
+  provides some perspective on the impedance mismatch between ORMs and
+  traditional SQL queries.
+
 
 ## Databases learning checklist
 <i class="fa fa-check-square-o"></i>
