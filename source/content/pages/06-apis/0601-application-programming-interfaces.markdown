@@ -21,6 +21,17 @@ Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.
 
 
+## Why are APIs important?
+HTML, CSS and JavaScript create human-readable webpages. However, those 
+webpages are not easily consumable by other machines. Numerous scraping
+programs and libraries exist to rip data out of HTML but it's simpler
+to consume data through APIs.
+
+
+## Webhook
+A webhook is a user-defined HTTP callback.
+
+
 ## API open source projects
 * [Swagger](https://github.com/wordnik/swagger-core) is an open source project 
   written in Scala that defines a standard interface for RESTful APIs.

@@ -38,7 +38,7 @@ equivalent in Django would be significantly more code):
         return 'Hello World!'
 
     if __name__ == '__main__':
-    app.run()
+        app.run()
 
 Flask was also written several years after Django and therefore
 learned from the Python community's reactions as the framework evolved.
