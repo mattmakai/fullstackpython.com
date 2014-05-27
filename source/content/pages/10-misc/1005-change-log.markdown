@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### May
+* Added link to my O'Reilly Programming blog post on demand for full stack 
+  developer capabilities.
 * Updated APIs page with basic information on webhooks.
 * Added learning checklist for source control, application dependencies,
   configuration management, NoSQL data stores and APIs.

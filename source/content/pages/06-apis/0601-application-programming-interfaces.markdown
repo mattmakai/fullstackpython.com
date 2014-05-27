@@ -57,7 +57,7 @@ on the number's page on Twilio as shown below.
   are, why they are valuable and how to use them properly. 
 
 
-## CSS learning checklist
+## APIs learning checklist
 <i class="fa fa-check-square-o"></i> 
 Learn the API concepts of machine-to-machine communication with JSON and XML,
 endpoints and webhooks.

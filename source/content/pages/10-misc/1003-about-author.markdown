@@ -30,6 +30,8 @@ and
 email at matthew.makai@gmail.com or tweet at
 [him on Twitter](https://twitter.com/mattmakai). 
 
+Read my thoughts on the "full stack" trend in a 
+[post I wrote for O'Reilly Programming](http://programming.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
 
 Typos, inaccurate statements, or general areas for improvement can be handled
 through a pull request on
