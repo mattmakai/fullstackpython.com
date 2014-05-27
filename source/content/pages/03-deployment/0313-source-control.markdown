@@ -75,8 +75,12 @@ as Git or Mercurial.
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
+* [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
+  covers the basics as well as more advanced Git commands while explaining each
+  step along the way.
+
 * [git ready](http://gitready.com/) has a nice collection of blog posts based on
-  beginner, intermediate and advanced use cases.
+  beginner, intermediate and advanced Git use cases.
 
 * [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) details
   a Git branching model for small teams.
