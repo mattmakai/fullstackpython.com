@@ -28,7 +28,8 @@ the
   developer capabilities.
 * Updated APIs page with basic information on webhooks.
 * Added learning checklist for source control, application dependencies,
-  configuration management, NoSQL data stores, APIs and API integration.
+  configuration management, NoSQL data stores, APIs, API integration and
+  API creation sections.
 * Moving learning checklists to the bottom of the pages since they are 
   specific advice for steps to take after reading a section.
 * Added a stub section for APIs.
