@@ -38,6 +38,9 @@ applications through machine-to-machine communication.
   
 
 ## API creation resources
+* [NARWHL](http://www.narwhl.com/) is a practical API design site for 
+  developers confused about what is appropriate for RESTful APIs.
+
 * [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
   by [PyDanny](https://twitter.com/pydanny) contains questions and insight
   into what makes a good API framework and which one you should currently
