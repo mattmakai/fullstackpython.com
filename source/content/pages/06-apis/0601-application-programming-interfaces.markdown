@@ -28,6 +28,19 @@ programs and libraries exist to rip data out of HTML but it's simpler
 to consume data through APIs.
 
 
+## Key API concepts
+There are several key concepts that get thrown around in the APIs world. It's
+best to understand these ideas first before diving into the API literature.
+
+* Representation State Transfer (REST)
+
+* Webhooks
+
+* JavaScript Object Notation (JSON) and Extensible Markup Language (XML)
+
+* Endpoints
+
+
 ## Webhooks
 A webhook is a user-defined HTTP callback to a URL that executes when a 
 system condition is met. The call alerts the second system via a POST or GET
@@ -43,7 +56,6 @@ webhook to the URL specified by the user. The URL is defined in a text box
 on the number's page on Twilio as shown below.
 
 <img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" />
-
 
 
 ## API open source projects
