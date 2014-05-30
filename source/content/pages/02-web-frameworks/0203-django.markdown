@@ -120,8 +120,8 @@ syntax and language semantics first before diving into web development.
   app that allows audiences to text in during a presentation with feedback
   or questions.
 
-* [Openduty](https://github.com/ustream/openduty) is similar to PagerDuty
-  but is open source and self-hosted.
+* [Openduty](https://github.com/ustream/openduty) is a website status checking
+  and alert system similar to PagerDuty.
 
 
 ## Django learning checklist
