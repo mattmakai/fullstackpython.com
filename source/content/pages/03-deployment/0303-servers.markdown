@@ -31,24 +31,6 @@ Production servers hold real data (again as opposed to test data) and must be
 secure against unauthorized access.
 
 
-## Servers learning checklist
-<i class="fa fa-check-square-o"></i>
-Understand the difference between bare metal servers, virtual private servers
-(VPS) and infrastructure-as-a-service. 
-
-<i class="fa fa-check-square-o"></i>
-Sign up for a hosting provider. I recommend getting a 
-[Linode VPS](https://www.linode.com/?r=bfeecaf55a83cd3dd224a5f2a3a001fdf95d4c3d) 
-to set up your initial infrastructure and deploy your web application there.
-[Digital Ocean](https://www.digitalocean.com/) and 
-[prgrmr](http://prgmr.com/xen/) are other VPS options. You can change
-hosting providers later after learning how to deploy web apps.
-
-<i class="fa fa-check-square-o"></i>
-Provision your first server and move on to the 
-[operating systems section](/operating-systems.html).
-
-
 ## "Bare metal" servers
 The term *bare metal* refers to purchasing the actual hardware and hooking 
 it up to the Internet either through a business-class internet service 
@@ -154,18 +136,21 @@ Python library for working with Amazon Web Services.
 
 ## Servers learning checklist
 <i class="fa fa-check-square-o"></i>
-Sign up for a 
-[Linode](https://www.linode.com/?r=bfeecaf55a83cd3dd224a5f2a3a001fdf95d4c3d) 
-or
-[Digital Ocean](https://www.digitalocean.com/) account.
+Sign up for a hosting provider. I recommend getting a 
+[Linode VPS](https://www.linode.com/?r=bfeecaf55a83cd3dd224a5f2a3a001fdf95d4c3d) 
+to set up your initial infrastructure and deploy your web application there.
+[Digital Ocean](https://www.digitalocean.com/) and 
+[prgrmr](http://prgmr.com/xen/) are other VPS options. You can change
+hosting providers later after the deployment process is automated.
 
 <i class="fa fa-check-square-o"></i>
-Rent a VPS for a month. It will be provisioned and in a shutdown state 
+Provision your first server. It will be ready but in a shutdown state while
 awaiting your instructions.
 
 <i class="fa fa-check-square-o"></i>
 Move to the [operating systems](/operating-systems.html) section to learn 
 how to load Ubuntu 12.04 LTS as a base OS for Python web applications.
+
 
 
 ### Keep going with setting up a server or try a PaaS?
