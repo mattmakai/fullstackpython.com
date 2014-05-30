@@ -4,7 +4,7 @@ slug: cascading-style-sheets
 sort-order: 051
 choice1url: /javascript.html
 choice1icon: fa-html5 fa-inverse
-choice1text: How do I create more dynamic interaction in the browser with JavaScript?
+choice1text: How do I create dynamic browser interaction with JavaScript?
 choice2url: /static-content.html
 choice2icon: fa-spinner fa-inverse
 choice2text: How should I host static content such as my CSS files?
@@ -13,7 +13,7 @@ choice3icon: fa-code-fork fa-inverse
 choice3text: How can I save and version my code so it doesn't get lost?
 choice4url: /application-programming-intefaces.html
 choice4icon: fa-exchange
-choice4text: What are application programming interfaces?
+choice4text: What are APIs?
 
 
 # Cascading Style Sheets (CSS)
