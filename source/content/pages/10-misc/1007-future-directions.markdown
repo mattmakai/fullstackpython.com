@@ -44,7 +44,6 @@ Here are some things I'm actively working on:
 * Create learning checklists for every section where it makes sense. The
   remaining sections that need checklists are 
 
-    1. static content
     1. caching
     1. logging
     1. web analytics

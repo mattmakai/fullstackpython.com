@@ -58,4 +58,20 @@ a Django library for managing static and media files on services such as
 Amazon S3 and other content delivery networks.
 
 
+## Static content learning checklist
+<i class="fa fa-check-square-o"></i>
+Identify a content delivery network to offload serving static content files
+from your local web server. I recommend using Amazon S3 with CloudFront as 
+it's easy to set up and will scale to high bandwidth demands.
+
+<i class="fa fa-check-square-o"></i>
+Update your web application deployment process so updated static files are
+uploaded to the CDN. 
+
+<i class="fa fa-check-square-o"></i>
+Move static content serving from the www subdomain to a static (or similarly
+named) subdomain so browsers will load static content in parallel to www
+HTTP requests.
+
+
 ### What's next for building your app?
