@@ -41,6 +41,9 @@ applications through machine-to-machine communication.
 * [NARWHL](http://www.narwhl.com/) is a practical API design site for 
   developers confused about what is appropriate for RESTful APIs.
 
+* This [API Design Guide](https://github.com/interagent/http-api-design) 
+  is based on Heroku's best practices for the platform's API.
+
 * [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
   by [PyDanny](https://twitter.com/pydanny) contains questions and insight
   into what makes a good API framework and which one you should currently
@@ -48,6 +51,9 @@ applications through machine-to-machine communication.
 
 * [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
   is an interesting overview of the Python API frameworks space.
+
+* This big list of API usability & developer experience resources contains
+  a solid collection of links to content.
 
 
 ## API creation learning checklist
