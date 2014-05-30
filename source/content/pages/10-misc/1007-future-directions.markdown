@@ -35,12 +35,13 @@ Here are some things I'm actively working on:
 
 * Update these sections with better explanations and resources: 
 
-    1. [JavaScript](../javascript.html)
-    1. [Configuration Management](../configuration-management.html)
-    1. [API Integration](../api-integration.html)
-    1. [API Creation](../api-creation.html)
-    1. [Web Security](../web-application-security.html)
-    1. 
+    1. [Source control](/source-control.html)
+    1. [Configuration management](/configuration-management.html)
+    1. [JavaScript](/javascript.html)
+    1. [API integration](/api-integration.html)
+    1. [API creation](/api-creation.html)
+    1. [Caching](/caching.html)
+    1. [Web security](/web-application-security.html)
 
 * Create learning checklists for every section where it makes sense. The
   remaining sections that need checklists are 

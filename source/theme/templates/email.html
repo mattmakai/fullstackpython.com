@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Email sign up - {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+      <h1>Detailed Full Stack Python Tutorials</h1>
+      <p>Hey folks, thanks for reading Full Stack Python! I have been amazed by
+      the amount of web traffic and thank you emails I've received since
+      starting this site at the end of 2012.</p>
+      <p>One request I keep getting is for tutorials on exactly how to 
+      perform steps like setting up configuration management, integrating 
+      app and hardening web application security.</p>
+      <p>So I'm considering taking the material here and combining it with
+      detailed walkthroughs in an ebook format. If that sounds good to you,
+      sign up below and I'll send you an email when that content is created.
+      </p>
+      {% include "email-for-book.html" %}
+    </div>
+    {% include "sidebar.html" %}
+</div>
+{% endblock %}

@@ -9,7 +9,7 @@ GITHUB_URL = 'https://github.com/makaimc/fullstackpython.github.com'
 DISQUS_SITENAME = 'makaimc'
 PDF_GENERATOR = False
 
-DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents')
+DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email')
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
