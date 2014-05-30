@@ -6,20 +6,21 @@
           each Python web application stack layer and provides the
           best web resources for those topics.
           <hr/>
-          Looking for more detailed tutorials and walkthroughs than what is
+          Need more detailed tutorials and walkthroughs than what is
           presented here? 
           <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          {% if not page %}
+          <hr/>
+          Check out the 
+          <a href="/table-of-contents.html">table of contents</a> if you're
+          searching for a particular topic.
+          {% endif %}
           <hr/>
           <a href="http://twitter.com/mattmakai">Matt Makai</a> designed and
           wrote this site with assistance from community pull 
           requests. On GitHub you can 
           <a href="https://github.com/makaimc">follow him</a>
           to see what daily changes are made.
-          {% if not page %}
-          <hr/>
-          Looking for a specific topic? Check out the 
-          <a href="/table-of-contents.html">table of contents</a>.
-          {% endif %}
       </div>
   </div>
   {% if page %}
