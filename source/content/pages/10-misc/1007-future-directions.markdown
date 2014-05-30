@@ -33,13 +33,14 @@ submit one when you see a fix or improvement that needs to be made!
 
 Here are some things I'm actively working on:
 
-* Clear, concise descriptions for each concept in every section along with
-  the "why [x] is needed"
+* Update these sections with better explanations and resources: 
 
-* Flesh out [JavaScript](../javascript.html), 
-  [Configuration Management](../configuration-management.html), 
-  [API Integration](../api-integration.html)
-  and [Web Security](../web-application-security.html) sections.
+    1. [JavaScript](../javascript.html)
+    1. [Configuration Management](../configuration-management.html)
+    1. [API Integration](../api-integration.html)
+    1. [API Creation](../api-creation.html)
+    1. [Web Security](../web-application-security.html)
+    1. 
 
 * Create learning checklists for every section where it makes sense. The
   remaining sections that need checklists are 
@@ -48,6 +49,9 @@ Here are some things I'm actively working on:
     1. logging
     1. web analytics
     1. web application security
+
+* After those updates are done I'll go back through and apply visuals to
+  each section to make them easier to read and understand.
 
 
 ### That's what coming. What would you like to learn right now?

@@ -176,6 +176,9 @@ SQL integrates with Google App Engine but can be used independently as well.
   provides some perspective on the impedance mismatch between ORMs and
   traditional SQL queries.
 
+* [Databases integration testing strategies](https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python)
+  covers a difficult topic that comes up on every real world project.
+
 
 ## Databases learning checklist
 <i class="fa fa-check-square-o"></i>
