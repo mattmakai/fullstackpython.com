@@ -49,4 +49,22 @@ A cache can be created for multiple layers of the stack.
   impetus for writing the content.
 
 
+## Caching learning checklist
+<i class="fa fa-check-square-o"></i>
+Analyze your web application for the slowest parts. It's likely there are
+complex database queries that can be precomputed and stored in an in-memory
+data store.
+
+<i class="fa fa-check-square-o"></i>
+Leverage your existing in-memory data store already used for session data
+to cache the results of those complex database queries. 
+A [task queue](/task-queues.html) can often be used to precompute the results 
+on a regular basis and save them in the data store.
+
+<i class="fa fa-check-square-o"></i>
+Incorporate a cache invalidation scheme so the precomputed results remain 
+accurate when served up to the user.
+
+
+
 ### What do you want to learn now that your app is responding faster?
