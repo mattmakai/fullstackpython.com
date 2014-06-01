@@ -10,7 +10,7 @@ choice2icon: fa-share
 choice2text: I've already built a Python web application. I need to deploy it.
 choice3url: /best-python-resources.html
 choice3icon: fa-book fa-inverse
-choice3text: I need to prepare myself with more basic Python resources first.
+choice3text: I need additional introductory Python resources to study first.
 choice4url:
 choice4icon:
 choice4text:
