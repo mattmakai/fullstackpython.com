@@ -11,9 +11,9 @@ choice2text: What's changed on Full Stack Python since the site began?
 choice3url: /web-frameworks.html
 choice3icon: fa-code fa-inverse
 choice3text: I want to learn how to code a Python web application now.
-choice4url:
-choice4icon:
-choice4text:
+choice4url: /about-author.html
+choice4icon: fa-user
+choice4text: Who created Full Stack Python?
 
 
 # Future Directions
@@ -43,13 +43,9 @@ Here are some things I'm actively working on:
     1. [Caching](/caching.html)
     1. [Web security](/web-application-security.html)
 
-* Create learning checklists for every section where it makes sense. The
-  remaining sections that need checklists are 
 
-    1. web application security
-
-* After those updates are done I'll go back through and apply visuals to
-  each section to make them easier to read and understand.
+After those updates are done I'll go back through and apply visuals to
+each section to make them easier to read and understand.
 
 
 ### That's what coming. What would you like to learn right now?

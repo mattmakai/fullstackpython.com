@@ -25,7 +25,8 @@ the
 ## 2014
 ### June
 * Updated logging page with better explanations and content ordering.
-* Added learning checklist for logging and web analytics.
+* Added learning checklists for all sections. The remaining sections that now
+  also have checklists are logging, web analytics and web application security.
 
 ### May
 * Added link to my O'Reilly Programming blog post on demand for full stack 
