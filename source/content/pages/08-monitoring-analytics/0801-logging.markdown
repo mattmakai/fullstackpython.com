@@ -52,22 +52,6 @@ custom alerts and alarms so you can get notified when error rates breach a
 certain threshold.
 
 
-### Log Aggregator Third Party Services
-* [loggly](https://www.loggly.com/) Loggly is a third party cloud based 
-  application that aggregates logs. They have instructions for every major 
-  language, including python. It includes email alerting on custom searches. 
-
-* [papertrail](https://papertrailapp.com/) Paper trail is similar to both 
-  loggly and splunk and provides integration with S3 for long term storage.
-
-* [splunk](http://www.splunk.com/) Splunk offers third party cloud and self 
-  hosted solutions for event aggregation. It excells at searching and data 
-  mining any text based data. 
-
-* [Raygun](http://raygun.io/) logs errors and provides immediate notification
-  when issues arise.
-
-
 ### Open Source Log Aggregators
 * [Raven](http://raven.readthedocs.org/en/latest/) is a Python client for the
   [Sentry](https://github.com/getsentry/sentry) exception logging and 
@@ -87,6 +71,25 @@ certain threshold.
   to aggregate logs. It's designed to run on multiple servers and scale with 
   the rest of your cluster. Uses the Thrift messagaing format so it can be 
   used with any language. 
+
+
+### Hosted Log Aggregator Services
+* [Loggly](https://www.loggly.com/) Loggly is a third party cloud based 
+  application that aggregates logs. They have instructions for every major 
+  language, including python. It includes email alerting on custom searches. 
+
+* [Papertrail](https://papertrailapp.com/) Paper trail is similar to both 
+  loggly and splunk and provides integration with S3 for long term storage.
+
+* [Splunk](http://www.splunk.com/) Splunk offers third party cloud and self 
+  hosted solutions for event aggregation. It excells at searching and data 
+  mining any text based data. 
+
+* [Raygun](http://raygun.io/) logs errors and provides immediate notification
+  when issues arise.
+
+* [Scalyr](https://www.scalyr.com/) provides log aggregation, dashboards,
+  alerts and search in a user interface on top of standard logs.
 
 
 ## Logging resources
