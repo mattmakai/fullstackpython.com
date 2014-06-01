@@ -156,6 +156,8 @@ The following are WSGI servers based on community recommendations.
 * [mod\_wsgi](https://code.google.com/p/modwsgi/) is an Apache module 
   implementing the WSGI specification.
 
+* [CherryPy](https://github.com/cherrypy/cherrypy) is a pure Python web 
+  server that also functions as a WSGI server.
 
 
 ## WSGI resources
@@ -190,6 +192,10 @@ The following are WSGI servers based on community recommendations.
   Note that the post is a few years old. Benchmarks should be considered
   for their specific tested scenarios and not quickly extrapolated as general
   "this server is faster than this other server" results.
+
+* [How to Deploy Python WSGI Applications with CherryPy](https://www.digitalocean.com/community/articles/how-to-deploy-python-wsgi-applications-using-a-cherrypy-web-server-behind-nginx)
+  answers why CherryPy is a simple combination web and WSGI server along with 
+  how to use it.
 
 
 ## WSGI servers learning checklist
