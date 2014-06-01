@@ -39,11 +39,14 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </div>        <div class="row">
     <div class="col-md-8">
       <h1>Logging</h1>
-<p>Logging is a mechanism for monitoring web applications written with a
-web framework. Runtime exceptions that prevent code from running are 
-important to log to investigate and fix the source of the problems. 
-Informational and debugging logging also helps to understand how the 
-application is performing even if code is working as intended.</p>
+<p>Logging saves output such as errors, warnings and event information to 
+files for debugging purposes. </p>
+<h2>Why is logging important?</h2>
+<p>Runtime exceptions that prevent code from running are important to log to 
+investigate and fix the source of the problems. Informational and debugging 
+logging also helps to understand how the application is performing even if 
+code is working as intended.</p>
+<h2>Logging levels</h2>
 <p>Logging is often grouped into several categories:</p>
 <ol>
 <li>Information</li>
@@ -52,15 +55,7 @@ application is performing even if code is working as intended.</p>
 <li>Error</li>
 </ol>
 <p>Logging errors that occur while a web framework is running is crucial to
-understanding how your application is performing. 
-<a href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
-<a href="https://github.com/getsentry/sentry">Sentry</a> exception logging and 
-aggregation application. Raven provides the way to send exceptions to
-Sentry, which should be deployed on a separate server from your production
-infrastructure. Raven can also be used by Python scripts to send other
-log data to Sentry for aggregation. Sentry provides a clean web application
-interface for viewing the exceptions. Sentry can also be configured with a
-mail plugin to send emails when exceptions occur.</p>
+understanding how your application is performing. </p>
 <h2>Logging Aggregators</h2>
 <p>When you are running your application on several servers, it is helpful
 to have a monitoring tool called a "logging aggregator". You can configure 
@@ -93,6 +88,13 @@ certain threshold.</p>
 </ul>
 <h3>Open Source Log Aggregators</h3>
 <ul>
+<li>
+<p><a href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
+  <a href="https://github.com/getsentry/sentry">Sentry</a> exception logging and 
+  aggregation application. Raven can also be used by Python scripts to send 
+  other log data to Sentry for aggregation. Sentry provides a clean web 
+  application interface for viewing the exceptions. </p>
+</li>
 <li>
 <p><a href="http://graylog2.org/">Graylog2</a> provides a central server for log 
   aggregation as well as a GUI for browsing and searching through log events. 

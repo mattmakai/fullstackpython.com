@@ -17,12 +17,18 @@ choice4text:
 
 
 # Logging
-Logging is a mechanism for monitoring web applications written with a
-web framework. Runtime exceptions that prevent code from running are 
-important to log to investigate and fix the source of the problems. 
-Informational and debugging logging also helps to understand how the 
-application is performing even if code is working as intended.
+Logging saves output such as errors, warnings and event information to 
+files for debugging purposes. 
 
+
+## Why is logging important?
+Runtime exceptions that prevent code from running are important to log to 
+investigate and fix the source of the problems. Informational and debugging 
+logging also helps to understand how the application is performing even if 
+code is working as intended.
+
+
+## Logging levels
 Logging is often grouped into several categories:
 
 1. Information
@@ -32,14 +38,6 @@ Logging is often grouped into several categories:
 
 Logging errors that occur while a web framework is running is crucial to
 understanding how your application is performing. 
-[Raven](http://raven.readthedocs.org/en/latest/) is a Python client for the
-[Sentry](https://github.com/getsentry/sentry) exception logging and 
-aggregation application. Raven provides the way to send exceptions to
-Sentry, which should be deployed on a separate server from your production
-infrastructure. Raven can also be used by Python scripts to send other
-log data to Sentry for aggregation. Sentry provides a clean web application
-interface for viewing the exceptions. Sentry can also be configured with a
-mail plugin to send emails when exceptions occur.
 
 
 ## Logging Aggregators
@@ -71,6 +69,12 @@ certain threshold.
 
 
 ### Open Source Log Aggregators
+* [Raven](http://raven.readthedocs.org/en/latest/) is a Python client for the
+  [Sentry](https://github.com/getsentry/sentry) exception logging and 
+  aggregation application. Raven can also be used by Python scripts to send 
+  other log data to Sentry for aggregation. Sentry provides a clean web 
+  application interface for viewing the exceptions. 
+
 * [Graylog2](http://graylog2.org/) provides a central server for log 
   aggregation as well as a GUI for browsing and searching through log events. 
   There are libraries for most major languages, including python. Saves data 
