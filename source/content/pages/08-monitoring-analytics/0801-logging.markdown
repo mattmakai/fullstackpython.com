@@ -107,4 +107,20 @@ certain threshold.
   [central logging with graypy and Graylog2](http://www.caktusgroup.com/blog/2013/09/18/central-logging-django-graylog2-and-graypy/).
 
 
+## Logging learning checklist
+<i class="fa fa-check-square-o"></i>
+Read how to integrate logging into your web application framework. 
+
+<i class="fa fa-check-square-o"></i>
+Ensure errors and anomalous results are logged. While these logs can be stored 
+in [monitoring](/monitoring.html) solutions, it's best to have your own log
+storage location to debug issues as they arise to complement other monitoring 
+systems.
+
+<i class="fa fa-check-square-o"></i>
+Integrate logging for system events you may need to use for debugging purposes
+later. For example, you may want to know the return values on functions when
+they are above a certain threshold. 
+
+
 ### Logging isn't enough. How do I analyze more data about the app?
