@@ -24,7 +24,8 @@ the
 
 ## 2014
 ### June
-* Added learning checklist for logging.
+* Updated logging page with better explanations and content ordering.
+* Added learning checklist for logging and web analytics.
 
 ### May
 * Added link to my O'Reilly Programming blog post on demand for full stack 
