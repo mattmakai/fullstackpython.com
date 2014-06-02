@@ -42,7 +42,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>A <a href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. </p>
-<h2>Why are WSGI servers necessary?</h2>
+<h2>Why is WSGI necessary?</h2>
 <p>A traditional web server does not understand or have any way to run Python 
 applications. In the late 1990s, a developer named Grisha Trubetskoy 
 <a href="http://grisha.org/blog/2013/10/25/mod-python-the-long-story/">came up with an Apache module called mod_python</a> 
@@ -57,6 +57,9 @@ code for web applications was needed.</p>
 <p>Therefore the Python community came up with WSGI as a standard interface that
 modules and containers could implement. WSGI is now the accepted approach 
 for running Python web applications.</p>
+<p><img src="theme/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" /></p>
+<p>As shown in the above diagram, a WSGI server simply invokes a callable object
+on the WSGI application as defined by the PEP 3333 standard.</p>
 <h2>WSGI's Purpose</h2>
 <p>Why use WSGI and not just point a web server directly at an application?</p>
 <ul>

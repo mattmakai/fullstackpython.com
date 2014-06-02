@@ -22,7 +22,7 @@ A [Web Server Gateway Interface](http://wsgi.readthedocs.org/en/latest/)
 running Python web applications. 
 
 
-## Why are WSGI servers necessary?
+## Why is WSGI necessary?
 A traditional web server does not understand or have any way to run Python 
 applications. In the late 1990s, a developer named Grisha Trubetskoy 
 [came up with an Apache module called mod\_python](http://grisha.org/blog/2013/10/25/mod-python-the-long-story/) 
@@ -39,6 +39,11 @@ code for web applications was needed.
 Therefore the Python community came up with WSGI as a standard interface that
 modules and containers could implement. WSGI is now the accepted approach 
 for running Python web applications.
+
+<img src="theme/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" />
+
+As shown in the above diagram, a WSGI server simply invokes a callable object
+on the WSGI application as defined by the PEP 3333 standard.
 
 
 ## WSGI's Purpose
