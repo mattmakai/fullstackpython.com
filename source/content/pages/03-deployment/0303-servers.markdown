@@ -120,6 +120,9 @@ IaaS platform.
 ### Infrastructure-as-a-service resources
 * [The cloud versus dedicated servers](http://www.screamingatmyscreen.com/2012/12/the-cloud-vs-dedicated-servers/)
 
+* [5 common server setups for your web application](https://www.digitalocean.com/community/articles/5-common-server-setups-for-your-web-application)
+  is a great introduction to how hosting can be arranged.
+
 * [Apache Libcloud](http://libcloud.apache.org/) is a Python library that
 provides a unified API for many cloud service providers.
 
