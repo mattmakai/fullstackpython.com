@@ -57,13 +57,20 @@ all yourself. A few of the best collections of Python libraries are
   grouped by categories.
   
 
-## Isolating application dependencies
+## Isolating dependencies
 Dependencies are installed separately from system-level packages to prevent 
 library version conflicts. The most common isolation method is 
 [virtualenv](http://www.virtualenv.org/en/latest/). Each virtualenv is its
 own copy of the Python interpreter and depedencies in the site-packages
 directory. To use a virtualenv it must first be created with the virtualenv
 command and then activated.
+
+The virtualenv stores dependencies in an isolated environment. The web 
+application then relies only on that virtualenv instance which has a separate
+copy of the Python interpreter and site-packages directory. A high level of
+how a server configured with virtualenv can look is shown in the picture below.
+
+<img src="theme/img/server-setup.png" alt="How the virtualenv separates dependencies on the server." width="100%" class="technical-diagram" />
 
 
 ## Installing Python dependencies
