@@ -1,7 +1,7 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1625" measuredH="610" mockupW="1599" mockupH="602">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1460" measuredH="588" mockupW="1434" mockupH="580">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="769" y="8" w="691" h="577" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
-    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="790" y="69" w="649" h="393" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="790" y="69" w="649" h="501" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="818" y="117" w="268" h="81" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
@@ -94,7 +94,7 @@
         <orientation>landscape</orientation>
       </controlProperties>
     </control>
-    <control controlID="35" controlTypeID="com.balsamiq.mockups::RoundButton" x="388" y="11" w="334" h="599" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::RoundButton" x="388" y="11" w="334" h="574" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <shape>dottedRect</shape>
         <size>24</size>
@@ -266,9 +266,26 @@
         <underline>true</underline>
       </controlProperties>
     </control>
-    <control controlID="58" controlTypeID="com.balsamiq.mockups::List" x="1525" y="365" w="-1" h="-1" measuredW="100" measuredH="126" zOrder="33" locked="false" isInGroup="-1">
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::List" x="26" y="462" w="-1" h="-1" measuredW="100" measuredH="126" zOrder="33" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Deployment%0ADjango%0AFlask%0ABottle</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::TextArea" x="1127" y="246" w="283" h="81" measuredW="200" measuredH="140" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>28</size>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="1143" y="266" w="-1" h="-1" measuredW="251" measuredH="40" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/wsgi-servers.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221117%2C258%2C1368%2C298%22%20href%3D%22http%3A//www.fullstackpython.com/wsgi-servers.html%22%20alt%3D%22http%3A//www.fullstackpython.com/wsgi-servers.html%22%20id%3D%2260%22%20target%3D%22_blank%22/%3E</map>
+        <size>32</size>
+        <text>WSGI%20application</text>
+        <underline>true</underline>
       </controlProperties>
     </control>
   </controls>

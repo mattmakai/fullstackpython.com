@@ -88,6 +88,10 @@ front end code.
 * [How to choose the right CSS preprocessor](http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor)
   has a comparison of Sass, LESS and Stylus.
 
+* [Musings on CSS preprocessors](http://css-tricks.com/musings-on-preprocessing/)
+  contains helpful advice ranging from how to work with preprocessors in a
+  team environment to what apps you can use to aid your workflow.
+
 
 ## CSS frameworks
 CSS frameworks provide structure and a boilerplate base for building a
