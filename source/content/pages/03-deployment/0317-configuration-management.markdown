@@ -75,7 +75,11 @@ from PyCon UK 2013
 * [First Five (and a half) Minutes on a Server with Ansible](http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible) 
 
 * [(Detailed) Introduction to Ansible](http://davidwinter.me/articles/2013/11/23/introduction-to-ansible/)
- 
+
+* [Shippable + Ansible + Docker + Loggly for awesome deployments](http://www.hiddentao.com/archives/2014/06/03/shippable-ansible-docker-loggly-for-awesome-deployments/)
+  is a well written detailed post about using Docker and Ansible together with
+  a few other pieces.
+
 * [Create a Couchbase Cluster with Ansible](http://blog.couchbase.com/create-couchbase-cluster-with-ansible)
 
 * [Idempotence, convergence, and other silly fancy words we often use](https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ)
