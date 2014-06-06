@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### June
+* Split version control resources from Git resources. Added new version
+  control resources.
 * Updated logging page with better explanations and content ordering.
 * Added learning checklists for all sections. The remaining sections that now
   also have checklists are logging, web analytics and web application security.

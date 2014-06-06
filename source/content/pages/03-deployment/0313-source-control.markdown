@@ -51,8 +51,9 @@ as Git or Mercurial.
 
 
 ## Source control resources
-* [Pro Git](http://git-scm.com/book) is a free open source book that walks 
-  through all aspects of using the version control system.
+* [Version control best practices](https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/)
+  is part of an ongoing deployment guide written by the folks at 
+  [Rainforest](https://www.rainforestqa.com/).
 
 * [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
   is a comprehensive overview by Patrick McKenzie of why you need source 
@@ -74,6 +75,11 @@ as Git or Mercurial.
 
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
+
+
+## Git resources
+* [Pro Git](http://git-scm.com/book) is a free open source book that walks 
+  through all aspects of using the version control system.
 
 * [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
   covers the basics as well as more advanced Git commands while explaining each
