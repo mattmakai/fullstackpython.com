@@ -34,7 +34,7 @@ as Git or Mercurial.
 
 <img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
 
-Pulling code during a deployment is One way source control systems can fit 
+Pulling code during a deployment is a potential way source control systems fit
 into the deployment process. 
 
 Note that some developers recommend deployment pipelines package the source 
