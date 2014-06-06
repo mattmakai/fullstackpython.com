@@ -32,6 +32,17 @@ a necessity regardless of time size or the programming ecosystem used. Every
 project should immediately begin by using a version control system such
 as Git or Mercurial.
 
+<img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
+
+Pulling code during a deployment is One way source control systems can fit 
+into the deployment process. 
+
+Note that some developers recommend deployment pipelines package the source 
+code to deploy it and never have a production environment touch a source 
+control system directly. However, for small scale deployments it's often
+easiest to pull from source code when you're getting started instead of 
+figuring out how to wrap the Python code in a system installation package.
+
 
 ## Source control systems
 * [Git](http://git-scm.com/) is a free and open source distributed version

@@ -420,5 +420,27 @@
         </control>
       </groupChildrenDescriptors>
     </control>
+    <control controlID="75" controlTypeID="__group__" x="426" y="502" w="259" h="54" measuredW="259" measuredH="54" zOrder="41" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="259" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="75">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="22" y="7" w="-1" h="-1" measuredW="210" measuredH="40" zOrder="1" locked="false" isInGroup="75">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/source-control.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22422%2C501%2C632%2C541%22%20href%3D%22http%3A//www.fullstackpython.com/source-control.html%22%20alt%3D%22http%3A//www.fullstackpython.com/source-control.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Source%20control</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
   </controls>
 </mockup>

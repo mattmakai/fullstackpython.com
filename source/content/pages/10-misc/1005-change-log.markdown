@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### June
+* Added diagram to source control page.
 * Split version control resources from Git resources. Added new version
   control resources.
 * Updated logging page with better explanations and content ordering.
