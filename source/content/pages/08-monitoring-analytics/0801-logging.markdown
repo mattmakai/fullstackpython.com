@@ -105,6 +105,9 @@ certain threshold.
   and 
   [part 3 talks about types](http://www.hybridcluster.com/blog/logging-storytelling-3-types/).
 
+* [A Brief Digression About Logging](https://lukasa.co.uk/2014/05/A_Brief_Digression_About_Logging/)
+  is a short post that gets Python logging up and running quickly.
+
 * [Taking the pain out of Python logging](https://hynek.me/articles/taking-some-pain-out-of-python-logging/)
   shows a logging set up with uWSGI.
 
