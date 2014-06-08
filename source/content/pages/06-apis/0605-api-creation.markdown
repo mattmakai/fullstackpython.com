@@ -52,8 +52,10 @@ applications through machine-to-machine communication.
 * [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
   is an interesting overview of the Python API frameworks space.
 
-* This big list of API usability & developer experience resources contains
-  a solid collection of links to content.
+* [10 Reasons Why Developers Hate Your API (And what to do about it)](http://www.slideshare.net/jmusser/ten-reasons-developershateyourapi)
+  goes through the top difficulties and annoyances developers face when
+  working with APIs and how you can avoid your API falling into the same
+  traps.
 
 
 ## API creation learning checklist
