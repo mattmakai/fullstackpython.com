@@ -96,6 +96,12 @@ syntax and language semantics first before diving into web development.
   is a Django performance blog post with some tips on measuring performance
   and optimizing based on the measured results.
 
+* [Django Debug Toolbar](http://django-debug-toolbar.readthedocs.org/en/1.2/) 
+  is a powerful Django ORM database query inspection tool. Highly recommended
+  during development to ensure you're writing reasonable query code. 
+  [Django Silk](http://mtford.co.uk/blog/2/) is another inspection tool and
+  has capabilities to do more than just SQL inspection.
+
 
 ## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
