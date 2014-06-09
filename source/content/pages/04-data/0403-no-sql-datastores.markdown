@@ -30,14 +30,35 @@ These persistent data storage representations are commonly used to augment,
 rather than completely replace, relational databases.
 
 
-## Document-Oriented
+## Document-oriented
 A document-oriented database provides a semi-structured representation for
 nested data. 
 
 
-## Key-Value Pair
+### Document-oriented data stores
+* [MongoDB](http://www.mongodb.org/) is an open source document-oriented 
+  data store with a Binary Object Notation (BSON) storage format that is 
+  JSON-style and familiar to web developers.
+
+* [Riak](http://basho.com/riak/) is an open source distributed data store
+  focused on availability, fault tolerance and large scale deployments.
+
+* [Apache CouchDB](http://couchdb.apache.org/) is also an open source project
+  where the focus is on embracing RESTful-style HTTP access for working with 
+  stored JSON data.
+
+
+## Key-value Pair
 Key-value pair data stores are based
 on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
+
+
+### Key-value pair data stores
+* [Redis](http://redis.io/) is an open source in-memory key-value pair data 
+  store. Redis is often called "the Swiss Army Knife of web application
+  development." It can be used for caching, queuing, and storing session data 
+  for faster access than a traditional relational database, among many other
+  use cases.
 
 
 ## Column-family table
@@ -65,13 +86,16 @@ business entity.
 A *property* represents information about nodes. For example, an entity 
 representing a person could have a property of "female" or "male".
 
-[Neo4j](http://www.neo4j.org/) is one of the most widely used graph 
-databases and runs on the Java Virtual Machine stack.
+
+### Graph data stores
+* [Neo4j](http://www.neo4j.org/) is one of the most widely used graph 
+  databases and runs on the Java Virtual Machine stack.
+
 
 
 ## NoSQL third-party services
-[MongoHQ](http://www.mongohq.com/home) provides MongoDB as a service. It's
-easy to set up with either a standard LAMP stack or on Heroku.
+* [MongoHQ](http://www.mongohq.com/home) provides MongoDB as a service. It's
+  easy to set up with either a standard LAMP stack or on Heroku.
 
 
 ## NoSQL data stores resources

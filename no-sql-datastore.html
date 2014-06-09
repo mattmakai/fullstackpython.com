@@ -50,12 +50,37 @@ storage representations.</p>
 </ol>
 <p>These persistent data storage representations are commonly used to augment,
 rather than completely replace, relational databases.</p>
-<h2>Document-Oriented</h2>
+<h2>Document-oriented</h2>
 <p>A document-oriented database provides a semi-structured representation for
 nested data. </p>
-<h2>Key-Value Pair</h2>
+<h3>Document-oriented data stores</h3>
+<ul>
+<li>
+<p><a href="http://www.mongodb.org/">MongoDB</a> is an open source document-oriented 
+  data store with a Binary Object Notation (BSON) storage format that is 
+  JSON-style and familiar to web developers.</p>
+</li>
+<li>
+<p><a href="http://basho.com/riak/">Riak</a> is an open source distributed data store
+  focused on availability, fault tolerance and large scale deployments.</p>
+</li>
+<li>
+<p><a href="http://couchdb.apache.org/">Apache CouchDB</a> is also an open source project
+  where the focus is on embracing RESTful-style HTTP access for working with 
+  stored JSON data.</p>
+</li>
+</ul>
+<h2>Key-value Pair</h2>
 <p>Key-value pair data stores are based
 on <a href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structures.</p>
+<h3>Key-value pair data stores</h3>
+<ul>
+<li><a href="http://redis.io/">Redis</a> is an open source in-memory key-value pair data 
+  store. Redis is often called "the Swiss Army Knife of web application
+  development." It can be used for caching, queuing, and storing session data 
+  for faster access than a traditional relational database, among many other
+  use cases.</li>
+</ul>
 <h2>Column-family table</h2>
 <p>A the column-family table class of NoSQL data stores builds on the key-value
 pair type. Each key-value pair is considered a row in the store while the
@@ -78,11 +103,16 @@ edge could represent that a node for a person entity is an employee of a
 business entity. </p>
 <p>A <em>property</em> represents information about nodes. For example, an entity 
 representing a person could have a property of "female" or "male".</p>
-<p><a href="http://www.neo4j.org/">Neo4j</a> is one of the most widely used graph 
-databases and runs on the Java Virtual Machine stack.</p>
+<h3>Graph data stores</h3>
+<ul>
+<li><a href="http://www.neo4j.org/">Neo4j</a> is one of the most widely used graph 
+  databases and runs on the Java Virtual Machine stack.</li>
+</ul>
 <h2>NoSQL third-party services</h2>
-<p><a href="http://www.mongohq.com/home">MongoHQ</a> provides MongoDB as a service. It's
-easy to set up with either a standard LAMP stack or on Heroku.</p>
+<ul>
+<li><a href="http://www.mongohq.com/home">MongoHQ</a> provides MongoDB as a service. It's
+  easy to set up with either a standard LAMP stack or on Heroku.</li>
+</ul>
 <h2>NoSQL data stores resources</h2>
 <ul>
 <li>
