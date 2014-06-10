@@ -47,6 +47,10 @@ nested data.
   where the focus is on embracing RESTful-style HTTP access for working with 
   stored JSON data.
 
+### Document-oriented data store resources
+* [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
+  is a guide about using non-relational databases in green field environments.
+
 
 ## Key-value Pair
 Key-value pair data stores are based
@@ -92,13 +96,18 @@ representing a person could have a property of "female" or "male".
   databases and runs on the Java Virtual Machine stack.
 
 
+### Graph data store resources
+* [Introduction to Graph Databases](http://www.slideshare.net/maxdemarzi/introduction-to-graph-databases-12735789)
+  covers trends in NoSQL data stores and compares graph databases to other 
+  data store types.
+
 
 ## NoSQL third-party services
 * [MongoHQ](http://www.mongohq.com/home) provides MongoDB as a service. It's
   easy to set up with either a standard LAMP stack or on Heroku.
 
 
-## NoSQL data stores resources
+## NoSQL data store resources
 * [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
 
 * [NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email 
@@ -108,9 +117,6 @@ representing a person could have a property of "female" or "male".
 * [NoSQL comparison](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
   is a large list of popular, BigTable-based, special purpose, and other
   datastores with attributes and the best use cases for each one.
-
-* [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
-  is a guide about using non-relational databases in green field environments.
 
 
 ## NoSQL data stores learning checklist

@@ -23,13 +23,21 @@ treatment, such as cross-site scripting (XSS), SQL injection, cross-site
 request forgery and usage of public-private keypairs.
 
 
-## Security Resources
-* [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
-
-* [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
+## Security open source projects
+* [Bro](http://www.bro.org/) is a network security and traffic monitor.
 
 * [quick NIX secure script](https://github.com/marshyski/quick-secure) for
 securing Linux distributions.
+
+
+## Security Resources
+* The Open Web Application Security Project (OWASP) has 
+  [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
+  topics.
+
+* [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
+
+* [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
 
 * [Security Tips from Apache](http://httpd.apache.org/docs/current/misc/security_tips.html)
 
@@ -40,10 +48,6 @@ securing Linux distributions.
 * [Securing Your Website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
 
 * [How HTTPS Secures Connections: What Every Web Dev Should Know](http://blog.hartleybrody.com/https-certificates/)
-
-* The Open Web Application Security Project (OWASP) has 
-  [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
-  topics.
 
 * [How HTTPS Secures Connections](http://blog.hartleybrody.com/https-certificates/)
   is a guide for what HTTPS does and does not secure against.

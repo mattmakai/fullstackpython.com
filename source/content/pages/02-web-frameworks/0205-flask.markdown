@@ -80,6 +80,11 @@ book so consider picking that up as well.
   to look through when you're wondering how to do something that's not in the
   core framework.
 
+* [Explore Flask](http://exploreflask.com/) is a public domain book that
+  was previously backed on Kickstarter and cost money for about a year before
+  being open sourced. The book explains best practices and patterns for 
+  building Flask apps.
+
 * Randall Degges wrote a detailed walkthrough for 
   [building a Flask app in 30 minutes](https://stormpath.com/blog/build-a-flask-app-in-30-minutes/).
 
