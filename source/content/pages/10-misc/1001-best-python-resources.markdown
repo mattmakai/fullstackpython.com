@@ -83,6 +83,10 @@ I had when I was learning the language.
   Python links and has an active community ready to answer questions from
   beginners and advanced Python developers alike.
 
+* [Good to Great Python Reads](http://jessenoller.com/good-to-great-python-reads/)
+  is a collection of intermediate and advanced Python articles around the web
+  focused on nuances and details of the Python language itself.
+
 * The blog [Free Python Tips](http://freepythontips.wordpress.com/) provides
   posts on Python topics as well as news for the Python ecosystem.
 
