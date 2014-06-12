@@ -92,6 +92,10 @@ syntax and language semantics first before diving into web development.
   has several nice examples for breaking Django into smaller simplier 
   components.
 
+* The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
+  explains the architecture of the resulting set up and includes Chef scripts
+  to automate the deployment.
+
 * [Making a specific Django app faster](http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html)
   is a Django performance blog post with some tips on measuring performance
   and optimizing based on the measured results.
