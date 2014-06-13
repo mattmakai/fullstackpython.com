@@ -52,6 +52,9 @@ equivalent of browser testing in the web application world.
   that can test both your own APIs and external APIs that your application
   relies upon.
 
+* [API Science](https://www.apiscience.com/) is focused on deep API testing,
+  including multi-step API calls and monitoring of external APIs.
+
 * [SmartBear](http://smartbear.com/api-testing/) has several API monitoring
   and testing tools for APIs.
 
