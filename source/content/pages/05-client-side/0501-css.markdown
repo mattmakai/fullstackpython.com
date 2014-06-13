@@ -123,6 +123,10 @@ web application's design.
 
 
 ## CSS resources
+* [Frontend Development Bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
+  is one of the largest collections of valuable resources for frontend
+  learning both in CSS as well as JavaScript.
+
 * [Mozilla Developer Network's CSS page](https://developer.mozilla.org/en-US/docs/Web/CSS)
   contains an extensive set of resources, tutorials and demos for learning
   CSS.
