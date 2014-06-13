@@ -37,6 +37,25 @@ applications through machine-to-machine communication.
   other WSGI framework with minimal porting effort.
   
 
+## API testing projects
+Building, running and maintaining APIs requires as much effort as building,
+running and maintaining a web application. API testing frameworks are the 
+equivalent of browser testing in the web application world.
+
+* [zato-apitest](https://github.com/zatosource/zato-apitest) invokes HTTP 
+  APIs and provides hooks for running through other testing frameworks.
+
+
+
+## Hosted API testing services
+* [Runscope](https://www.runscope.com/) is an API testing SaaS application
+  that can test both your own APIs and external APIs that your application
+  relies upon.
+
+* [SmartBear](http://smartbear.com/api-testing/) has several API monitoring
+  and testing tools for APIs.
+
+
 ## API creation resources
 * [NARWHL](http://www.narwhl.com/) is a practical API design site for 
   developers confused about what is appropriate for RESTful APIs.
