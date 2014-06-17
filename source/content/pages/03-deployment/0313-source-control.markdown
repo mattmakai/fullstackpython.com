@@ -44,7 +44,15 @@ easiest to pull from source code when you're getting started instead of
 figuring out how to wrap the Python code in a system installation package.
 
 
-## Source control systems
+## Source control projects
+Numerous source control systems have been created over the past several
+decades. In the past, proprietary source control software offered features
+tailored to large development teams and specific project workflows. However,
+open source systems are now used for version control on the largest and most
+complicated software projects in existence. There's no reason why your project
+should use anything other than an open source version control system in
+today's Python development world. The two primary choices are:
+
 * [Git](http://git-scm.com/) is a free and open source distributed version
   control system.
 
