@@ -35,7 +35,6 @@ Here are some things I'm actively working on:
 
 * Update these sections with better explanations and resources: 
 
-    1. [Source control](/source-control.html)
     1. [Configuration management](/configuration-management.html)
     1. [JavaScript](/javascript.html)
     1. [API integration](/api-integration.html)

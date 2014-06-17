@@ -60,7 +60,13 @@ today's Python development world. The two primary choices are:
   and open source distributed version control system.
 
 
-## Source control hosted services
+## Hosted source control services
+Git and Mercurial can be downloaded and run on your own server. However,
+it's easy and cheap to get started with a hosted version control service.
+You can transition away from the service at a later time by moving your 
+repositories if your needs change. A couple of recommended hosted version
+control services are:
+
 * [GitHub](https://github.com/) is currently the most commonly used source
   control platform for using Git.
 
