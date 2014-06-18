@@ -111,6 +111,10 @@ when scaling out a large deployment of distributed task queues.
 * [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
   provides an introduction to the Celery task queue.
 
+* [Celery - Best Practices](https://denibertovic.com/posts/celery-best-practices/)
+  explains things you should not do with Celery and shows some underused 
+  features for making task queues easier to work with.
+
 * The "Django in Production" series by 
   [Rob Golding](https://twitter.com/robgolding63) contains a post 
   specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/).
