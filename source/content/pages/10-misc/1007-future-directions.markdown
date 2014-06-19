@@ -37,8 +37,10 @@ Here are some things I'm actively working on:
 
     1. [Configuration management](/configuration-management.html)
     1. [JavaScript](/javascript.html)
+    1. [CSS](/cascading-style-sheets.html)
     1. [API integration](/api-integration.html)
     1. [API creation](/api-creation.html)
+    1. [Static content](/static-content.html)
     1. [Caching](/caching.html)
     1. [Web security](/web-application-security.html)
 
