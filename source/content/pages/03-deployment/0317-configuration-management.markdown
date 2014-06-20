@@ -76,6 +76,8 @@ from PyCon UK 2013
 
 * [(Detailed) Introduction to Ansible](http://davidwinter.me/articles/2013/11/23/introduction-to-ansible/)
 
+* [6 practices for super smooth Ansible experience](http://hakunin.com/six-ansible-practices)
+
 * [Shippable + Ansible + Docker + Loggly for awesome deployments](http://www.hiddentao.com/archives/2014/06/03/shippable-ansible-docker-loggly-for-awesome-deployments/)
   is a well written detailed post about using Docker and Ansible together with
   a few other pieces.
