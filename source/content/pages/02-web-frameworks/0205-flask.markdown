@@ -117,6 +117,10 @@ book so consider picking that up as well.
 
 
 ## Open source Flask example projects
+* [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
+  open source project that goes along with Miguel Grinberg's O'Reilly Flask
+  book.
+
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
   starting point for new Flask projects.
 
