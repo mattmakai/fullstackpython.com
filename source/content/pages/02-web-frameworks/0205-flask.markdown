@@ -115,6 +115,10 @@ book so consider picking that up as well.
   covers a subject that comes up quickly once you begin adding significant
   functionality to your Flask application.
 
+* [Unit Testing Your Twilio App Using Python’s Flask and Nose](https://www.twilio.com/blog/2014/03/unit-testing-your-twilio-app-using-pythons-flask-and-nose.html)
+  covers integrating the Twilio API into a Flask application and how to test 
+  that functionality with [nose](https://nose.readthedocs.org/en/latest/).
+
 
 ## Open source Flask example projects
 * [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
