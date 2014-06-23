@@ -77,7 +77,7 @@ so new developers can get help when they are stuck.</p>
 <a href="http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/">learning Python by using Django is a bad idea</a>. 
 However, that criticism is invalid if you take the time to learn the Python
 syntax and language semantics first before diving into web development.</p>
-<h2>Django resources</h2>
+<h2>Django tutorials</h2>
 <ul>
 <li>
 <p><a href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a extensive 
@@ -116,18 +116,6 @@ syntax and language semantics first before diving into web development.</p>
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.</p>
 </li>
-<li>
-<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
-  is a Django performance blog post with some tips on measuring performance
-  and optimizing based on the measured results.</p>
-</li>
-<li>
-<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
-  is a powerful Django ORM database query inspection tool. Highly recommended
-  during development to ensure you're writing reasonable query code. 
-  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
-  has capabilities to do more than just SQL inspection.</p>
-</li>
 </ul>
 <h2>Django videos</h2>
 <ul>
@@ -150,6 +138,44 @@ syntax and language semantics first before diving into web development.</p>
   <a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as<br />
 <a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
   all available free of charge.</p>
+</li>
+</ul>
+<h2>Django ORM resources</h2>
+<p>The <a href="https://docs.djangoproject.com/en/dev/topics/db/">Django ORM</a> works well
+for simple and medium-complexity database operations. However, there are often
+complaints that the ORM makes complex queries much more complicated than
+writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
+<p>It's technically possible to drop down to SQL but it ties the queries to a 
+specific database implementation. The ORM is coupled closely with Django so
+replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
+though that some of the Django core committers believe it is only a matter of
+time before the default ORM is replaced with SQLAlchemy. It will be a large
+effort to get that working though so it's likely to come in Django 1.9 or 
+later.</p>
+<p>Since the majority of Django projects are tied to the default ORM, it's best to
+read up on advanced use cases and tools for doing your best work within the
+existing framework.</p>
+<ul>
+<li>
+<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
+  is a powerful Django ORM database query inspection tool. Highly recommended
+  during development to ensure you're writing reasonable query code. 
+  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
+  has capabilities to do more than just SQL inspection.</p>
+</li>
+<li>
+<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
+  is a Django performance blog post with some tips on measuring performance
+  and optimizing based on the measured results.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
+  is Alex Gaynor's overview of the bad designs decisions, some of which he
+  made, while building the Django ORM.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
+  is specific to using PostgreSQL with Django.</p>
 </li>
 </ul>
 <h2>Open source Django example projects</h2>
