@@ -55,6 +55,10 @@ with project structure based on model-view-controller patterns.
   presentation goes over Bottle, Flask, and many other lesser known Python
   web frameworks.
 
+* A Python newcomer asked the Python Subreddit to 
+ [explain the differences between numerous Python web frameworks](http://www.reddit.com/r/Python/comments/28qr7c/can_anyone_explain_the_differences_between_web2py/)
+ and received some interesting responses from other users.
+
 
 ## Other frameworks learning checklist
 <i class="fa fa-check-square-o"></i> 
