@@ -79,6 +79,10 @@ equivalent of browser testing in the web application world.
   working with APIs and how you can avoid your API falling into the same
   traps.
 
+* "[Design a beautiful REST API](https://medium.com/@zwacky/design-a-beautiful-rest-api-901c73489458)"
+  reviews common design decisions regarding endpoints, versioning, errors and
+  pagination.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
