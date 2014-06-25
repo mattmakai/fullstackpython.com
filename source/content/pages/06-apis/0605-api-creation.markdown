@@ -81,7 +81,9 @@ equivalent of browser testing in the web application world.
 
 * "[Design a beautiful REST API](https://medium.com/@zwacky/design-a-beautiful-rest-api-901c73489458)"
   reviews common design decisions regarding endpoints, versioning, errors and
-  pagination.
+  pagination. There is also a 
+  [source material YouTube video](https://www.youtube.com/watch?v=5WXYw4J4QOU)
+  where this blog post derives its recommendations from.
 
 
 ## API creation learning checklist
