@@ -95,6 +95,9 @@ representing a person could have a property of "female" or "male".
 * [Neo4j](http://www.neo4j.org/) is one of the most widely used graph 
   databases and runs on the Java Virtual Machine stack.
 
+* [Cayley](https://github.com/google/cayley) is an open source graph data
+  store written by Google primarily written in Go.
+
 
 ### Graph data store resources
 * [Introduction to Graph Databases](http://www.slideshare.net/maxdemarzi/introduction-to-graph-databases-12735789)
