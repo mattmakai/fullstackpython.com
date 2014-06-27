@@ -85,6 +85,10 @@ equivalent of browser testing in the web application world.
   [source material YouTube video](https://www.youtube.com/watch?v=5WXYw4J4QOU)
   where this blog post derives its recommendations from.
 
+* "[Self-descriptive, isn't. Don't assume anything.](http://www.bizcoder.com/self-descriptive-isn-t-don-t-assume-anything)"
+  is an appeal that metadata makes a difference in whether APIs are descriptive
+  or not.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
