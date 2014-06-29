@@ -24,14 +24,30 @@ to enable dynamic content and interaction.
 ## Why is JavaScript necessary?
 JavaScript executes in the client and enables dynamic content and interaction
 that is not possible with HTML and CSS alone. Every modern Python web 
-application uses JavaScript on the front end. The trend towards richer client
-experiences will increase as projects such as 
-[Angular.js](https://angularjs.org/),
-[Backbone.js](http://backbonejs.org/), and 
-[Ember.js](http://emberjs.com/) continue to mature.
+application uses JavaScript on the front end. 
 
 
-## Where did JavaScript originate?
+## Front end frameworks
+Front end JavaScript frameworks move the rendering for most of a web 
+application to the client side. Often these applications are informally 
+referred to as "one page apps" because the webpage is not reloaded upon every
+click to a new URL. Instead, partial HTML pages are loaded into the 
+document object model or data is retrieved through an API call then displayed
+on the existing page.
+
+Examples of these front end frameworks include:
+
+* [Angular.js](https://angularjs.org/)
+
+* [Backbone.js](http://backbonejs.org/)
+
+* [Ember.js](http://emberjs.com/)
+
+Front end frameworks are rapidly evolving. Over the next several years 
+consensus about good practices for using the frameworks will emerge.
+
+
+## How did JavaScript originate?
 JavaScript is an implementation of 
 [the ECMAScript specification](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/JavaScript_Overview) 
 which is defined by the 
