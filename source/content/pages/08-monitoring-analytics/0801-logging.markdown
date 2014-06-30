@@ -40,7 +40,7 @@ Logging errors that occur while a web framework is running is crucial to
 understanding how your application is performing. 
 
 
-## Logging Aggregators
+## Logging aggregators
 When you are running your application on several servers, it is helpful
 to have a monitoring tool called a "logging aggregator". You can configure 
 your application to forward your system and application logs to one location 
@@ -52,12 +52,13 @@ custom alerts and alarms so you can get notified when error rates breach a
 certain threshold.
 
 
-### Open Source Log Aggregators
-* [Raven](http://raven.readthedocs.org/en/latest/) is a Python client for the
-  [Sentry](https://github.com/getsentry/sentry) exception logging and 
-  aggregation application. Raven can also be used by Python scripts to send 
-  other log data to Sentry for aggregation. Sentry provides a clean web 
-  application interface for viewing the exceptions. 
+### Open source log aggregators
+* [Sentry](https://github.com/getsentry/sentry) started as a Django-only
+  exception handling service but now has separate logging clients to cover 
+  almost all major languages and frameworks. It still works really well for 
+  Python-powered web applications and is often used in conjunction with other 
+  monitoring tools. [Raven](http://raven.readthedocs.org/en/latest/) is open
+  source Python client for Sentry.
 
 * [Graylog2](http://graylog2.org/) provides a central server for log 
   aggregation as well as a GUI for browsing and searching through log events. 
@@ -73,7 +74,7 @@ certain threshold.
   used with any language. 
 
 
-### Hosted Log Aggregator Services
+### Hosted logging services
 * [Loggly](https://www.loggly.com/) Loggly is a third party cloud based 
   application that aggregates logs. They have instructions for every major 
   language, including python. It includes email alerting on custom searches. 
@@ -90,6 +91,9 @@ certain threshold.
 
 * [Scalyr](https://www.scalyr.com/) provides log aggregation, dashboards,
   alerts and search in a user interface on top of standard logs.
+
+* There is a [hosted version of Sentry](https://www.getsentry.com/welcome/)
+  in case you do not have the time to set up the open source project yourself.
 
 
 ## Logging resources

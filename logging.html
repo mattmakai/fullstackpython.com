@@ -56,7 +56,7 @@ code is working as intended.</p>
 </ol>
 <p>Logging errors that occur while a web framework is running is crucial to
 understanding how your application is performing. </p>
-<h2>Logging Aggregators</h2>
+<h2>Logging aggregators</h2>
 <p>When you are running your application on several servers, it is helpful
 to have a monitoring tool called a "logging aggregator". You can configure 
 your application to forward your system and application logs to one location 
@@ -65,14 +65,15 @@ across your cluster. </p>
 <p>Another advantage of log aggregatortion tools is they allow you to set up 
 custom alerts and alarms so you can get notified when error rates breach a 
 certain threshold.</p>
-<h3>Open Source Log Aggregators</h3>
+<h3>Open source log aggregators</h3>
 <ul>
 <li>
-<p><a href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
-  <a href="https://github.com/getsentry/sentry">Sentry</a> exception logging and 
-  aggregation application. Raven can also be used by Python scripts to send 
-  other log data to Sentry for aggregation. Sentry provides a clean web 
-  application interface for viewing the exceptions. </p>
+<p><a href="https://github.com/getsentry/sentry">Sentry</a> started as a Django-only
+  exception handling service but now has separate logging clients to cover 
+  almost all major languages and frameworks. It still works really well for 
+  Python-powered web applications and is often used in conjunction with other 
+  monitoring tools. <a href="http://raven.readthedocs.org/en/latest/">Raven</a> is open
+  source Python client for Sentry.</p>
 </li>
 <li>
 <p><a href="http://graylog2.org/">Graylog2</a> provides a central server for log 
@@ -91,7 +92,7 @@ certain threshold.</p>
   used with any language. </p>
 </li>
 </ul>
-<h3>Hosted Log Aggregator Services</h3>
+<h3>Hosted logging services</h3>
 <ul>
 <li>
 <p><a href="https://www.loggly.com/">Loggly</a> Loggly is a third party cloud based 
@@ -114,6 +115,10 @@ certain threshold.</p>
 <li>
 <p><a href="https://www.scalyr.com/">Scalyr</a> provides log aggregation, dashboards,
   alerts and search in a user interface on top of standard logs.</p>
+</li>
+<li>
+<p>There is a <a href="https://www.getsentry.com/welcome/">hosted version of Sentry</a>
+  in case you do not have the time to set up the open source project yourself.</p>
 </li>
 </ul>
 <h2>Logging resources</h2>

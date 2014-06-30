@@ -49,7 +49,7 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 5. Database querying performance
 
 
-## Monitoring Third Party Services
+## Hosted monitoring services
 * [New Relic](http://newrelic.com/). Application and database monitoring as
   well as plug ins for capturing and analyzing additional data about tools in
   your stack.

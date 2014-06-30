@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### June
+* Added more monitoring and logging resources.
 * New resources for Flask and NoSQL projects.
 * Updated NoSQL data store page with specific open source projects.
 * Added diagram to source control page.
