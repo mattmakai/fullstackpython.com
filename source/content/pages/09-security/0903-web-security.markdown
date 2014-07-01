@@ -35,6 +35,10 @@ securing Linux distributions.
   [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
   topics.
 
+* [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
+  is a great list of password cracking, scanning, sniffing and other security
+  penetration testing tools.
+
 * [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
 
 * [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
