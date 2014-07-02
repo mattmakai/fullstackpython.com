@@ -79,6 +79,10 @@ I had when I was learning the language.
   provides context for virtual machines, Python packaging, pip, virutalenv
   and many other topics after learning the basic Python syntax. 
 
+* [awesome-python](https://github.com/vinta/awesome-python) is an incredible
+  list of Python frameworks, libraries and software. I wish I had this
+  page when I was just getting started with Python.
+
 * The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
   Python links and has an active community ready to answer questions from
   beginners and advanced Python developers alike.
