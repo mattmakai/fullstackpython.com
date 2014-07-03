@@ -5,7 +5,7 @@ sort-order: 041
 choice1url: /no-sql-datastore.html
 choice1icon: fa-inbox
 choice1text: What about non-relational data stores hipsters tell me to use? 
-choice2url: /wsgi-servers.html
+choice2url: /cascading-style-sheets.html
 choice2icon: fa-css3 fa-inverse
 choice2text: My app is running but looks awful. How do I style the interface?
 choice3url: /javascript.html
