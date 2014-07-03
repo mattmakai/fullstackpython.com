@@ -5,7 +5,7 @@ sort-order: 063
 choice1url: /api-creation.html
 choice1icon: fa-cubes
 choice1text: How do I create an API for my own web application?
-choice1url: /logging.html
+choice2url: /logging.html
 choice2icon: fa-align-left fa-inverse 
 choice2text: How do I use logging with my app?
 choice3url: /web-application-security.html
