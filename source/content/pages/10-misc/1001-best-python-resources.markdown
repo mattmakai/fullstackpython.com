@@ -33,6 +33,10 @@ I had when I was learning the language.
 * [Learn Python the Hard Way](http://learnpythonthehardway.org/book/) is a
   free book by Zed Shaw.
 
+* [Dive into Python 3](http://www.diveinto.org/python3/) is an open source
+  book provided under the Creative Commons license and available in HTML or
+  PDF form.
+
 * [Python for You and Me](http://pymbook.readthedocs.org/en/latest/) (pym) is
   an online book for people completely unfamiliar with the Python programming
   language.
@@ -40,16 +44,16 @@ I had when I was learning the language.
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
-* I wrote a quick blog post on
-  [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
-  that non-technical folks trying to learn to program may find useful.
-
 * Code Academy has a [Python track](http://www.codecademy.com/tracks/python)
   for people completely new to programming.
 
 * The O'Reilly book 
   [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
   is available in HTML form for free on the web.
+
+* I wrote a quick blog post on
+  [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
+  that non-technical folks trying to learn to program may find useful.
 
 
 ## Experienced developers new to Python
