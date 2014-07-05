@@ -183,9 +183,9 @@ The following are WSGI servers based on community recommendations.
   presented in the 
   "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/>)." 
 
-* This detailed post entitled
-  [The Beautiful Simplicity of an nginx and uWSGI Deployments](http://bartek.im/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html)
-  is great reading for understanding Nginx and uWSGI configurations.
+* This post entitled
+  [The Beautiful Simplicity of an nginx and uWSGI Deployments](http://justbartek.ca/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html)
+  explained Nginx and uWSGI configurations.
 
 * The Python community made a long effort to 
   [transition from mod\_python](http://blog.dscpl.com.au/2010/05/modpython-project-soon-to-be-officially.html) 
