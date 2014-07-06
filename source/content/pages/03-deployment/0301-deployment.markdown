@@ -8,9 +8,9 @@ choice1text: Show me options for bare metal, virtualized servers, and infrastruc
 choice2url: /platform-as-a-service.html
 choice2icon: fa-puzzle-piece fa-inverse
 choice2text: How do I use a platform-as-a-service to deploy my Python web app?
-choice3url: /web-frameworks.html
-choice3icon: fa-code fa-inverse
-choice3text: I'm not yet ready to deploy. Show me web frameworks I should use to create an app.
+choice3url: /operating-systems.html
+choice3icon: fa-linux
+choice3text: I have a server I can use. How do I set up the operating system?
 choice4url:
 choice4icon:
 choice4text:
