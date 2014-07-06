@@ -64,6 +64,8 @@ from PyCon UK 2013
 
 * [Multi-factor SSH authentication with Ansible and Duo Security](http://jlafon.io/ansible-duo-security.html)
 
+* [Introducing Ansible into Legacy Projects](http://benlopatin.com/getting-started-with-ansible/)
+
 * [Ansible vs. Shell Scripts](http://devopsu.com/blog/ansible-vs-shell-scripts/)
 
 * [Ansible and Salt: A Detailed Comparison](http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/)
