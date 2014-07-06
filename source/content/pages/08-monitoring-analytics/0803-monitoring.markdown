@@ -49,27 +49,6 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 5. Database querying performance
 
 
-## Hosted monitoring services
-* [New Relic](http://newrelic.com/). Application and database monitoring as
-  well as plug ins for capturing and analyzing additional data about tools in
-  your stack.
-
-* [CopperEgg](http://copperegg.com/) is lower-level monitoring on server and 
-  infrastructure. It's popular with DevOps shops that are making changes to
-  their production environments and want immediate feedback on the results
-  of those modifications.
-
-* [Status.io](http://status.io/) focuses on uptime and response metrics 
-  transparency for web applications.
-
-* [StatusPage.io](https://www.statuspage.io/) (yes, there's both a Status and
-  StatusPage.io) provides easy set up status pages for monitoring application
-  up time.
-
-* [PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
-  if there are stability, performance, or uptime issues with an application.
-
-
 ## Open source monitoring projects
 * [statsd](https://github.com/etsy/statsd/) is a node.js network daemon that
   listens for metrics and aggregates them for transfer into another service
@@ -96,6 +75,30 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
   system that sends monitoring traffic to the Munin node where the data can
   be analyzed and visualized. Note this project is written in Perl so Perl 5
   must be installed on the node collecting the data.
+
+
+## Hosted monitoring services
+* [New Relic](http://newrelic.com/). Application and database monitoring as
+  well as plug ins for capturing and analyzing additional data about tools in
+  your stack.
+
+* [CopperEgg](http://copperegg.com/) is lower-level monitoring on server and 
+  infrastructure. It's popular with DevOps shops that are making changes to
+  their production environments and want immediate feedback on the results
+  of those modifications.
+
+* [Status.io](http://status.io/) focuses on uptime and response metrics 
+  transparency for web applications.
+
+* [StatusPage.io](https://www.statuspage.io/) (yes, there's both a Status and
+  StatusPage.io) provides easy set up status pages for monitoring application
+  up time.
+
+* [PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
+  if there are stability, performance, or uptime issues with an application.
+
+* [App Enlight](https://appenlight.com/) provides performance, exception and 
+  error monitoring and is currently specific to Python web applications.
 
 
 ## Monitoring resources
