@@ -45,6 +45,11 @@ Here are some things I'm actively working on:
     1. [Web security](/web-application-security.html)
 
 
+* Plain English explanations for Django, Flask and Bottle framework concepts 
+  such as how forms work with templates, how models interact with views and
+  what the files are when a new boilerplate project is created (especially
+  important with Django)
+
 After those updates are done I'll go back through and apply visuals to
 each section to make them easier to read and understand.
 
