@@ -83,10 +83,6 @@ I had when I was learning the language.
   provides context for virtual machines, Python packaging, pip, virutalenv
   and many other topics after learning the basic Python syntax. 
 
-* [awesome-python](https://github.com/vinta/awesome-python) is an incredible
-  list of Python frameworks, libraries and software. I wish I had this
-  page when I was just getting started with Python.
-
 * The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
   Python links and has an active community ready to answer questions from
   beginners and advanced Python developers alike.
@@ -120,6 +116,16 @@ I had when I was learning the language.
 
 * Ontwik has relevant programming videos in its 
   [Python category](http://ontwik.com/category/python/).
+
+
+## Curated Python packages lists
+* [awesome-python](https://github.com/vinta/awesome-python) is an incredible
+  list of Python frameworks, libraries and software. I wish I had this
+  page when I was just getting started with Python.
+
+* [easy-python](http://easy-python.readthedocs.org/en/latest/) is like
+  awesome-python although instead of just a Git repository this site is
+  in the Read the Docs format.
 
 
 ## Newsletters
