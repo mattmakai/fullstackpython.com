@@ -121,7 +121,7 @@ I had when I was learning the language.
 ## Curated Python packages lists
 * [awesome-python](https://github.com/vinta/awesome-python) is an incredible
   list of Python frameworks, libraries and software. I wish I had this
-  page when I was just getting started with Python.
+  page when I was just getting started. 
 
 * [easy-python](http://easy-python.readthedocs.org/en/latest/) is like
   awesome-python although instead of just a Git repository this site is
