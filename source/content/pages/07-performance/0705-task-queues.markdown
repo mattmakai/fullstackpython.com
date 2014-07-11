@@ -91,6 +91,10 @@ when scaling out a large deployment of distributed task queues.
 
 
 ## Task queue resources
+* [Getting Started Scheduling Tasks with Celery](http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/)
+  is a detailed walkthrough for setting up Celery with Django (although
+  Celery can also be used without a problem with other frameworks).
+
 * [Distributing work without Celery](http://justcramer.com/2012/05/04/distributing-work-without-celery/)
   provides a scenario in which Celery and RabbitMQ are not the right tool
   for scheduling asynchronous jobs.
