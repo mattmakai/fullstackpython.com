@@ -107,6 +107,9 @@ syntax and language semantics first before diving into web development.
 * [Designing Django's Migrations](http://pyvideo.org/video/2630/designing-djangos-migrations)
   covers Django 1.7's new migrations from the main programmer Andrew Godwin.
 
+* [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
+  series of video tutorials for the framework.
+
 * DjangoCon US videos from 
   [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
   [2012](http://pyvideo.org/category/23/djangocon-2012), 
