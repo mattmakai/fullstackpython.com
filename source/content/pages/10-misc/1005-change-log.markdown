@@ -23,6 +23,12 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### July
+* Lots of new Django and task queue resources.
+* Added two new Python libraries lists to the Best Python Resources page.
+* Thanks [Hacker News](https://news.ycombinator.com/item?id=7985692) for
+  doubling my traffic so far in 2014! 65k uniques and counting...
+
 ### June
 * Added more monitoring and logging resources.
 * New resources for Flask and NoSQL projects.
