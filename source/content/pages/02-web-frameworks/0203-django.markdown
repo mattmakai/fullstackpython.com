@@ -159,6 +159,9 @@ existing framework.
 * [Openduty](https://github.com/ustream/openduty) is a website status checking
   and alert system similar to PagerDuty.
 
+* [Courtside](https://github.com/myusuf3/courtside) is a pick up sports web 
+  application written and maintained by the author of PyCoder's Weekly.
+
 
 ## Django learning checklist
 <i class="fa fa-check-square-o"></i> 
