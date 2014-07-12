@@ -96,7 +96,6 @@ book which is an excellent learning resource.
   is another walkthrough tutorial from first steps through 
   [getting bigger with Flask](http://maximebf.com/blog/2012/11/getting-bigger-with-flask/).
 
-
 * The Plank & Whittle blog has two posts, one on 
   [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/) 
   and another on 
@@ -105,6 +104,11 @@ book which is an excellent learning resource.
 
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
+
+* [Create Your Own Obnoxiously Simple Messaging App Just Like Yo](http://readwrite.com/2014/07/11/one-click-messaging-app)
+  is a silly walkthrough of very basic Flask web application that uses
+  [Nitrous.io](https://www.nitrous.io/) to get started and 
+  [Twilio](https://www.twilio.com/) for SMS.
 
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project. 
