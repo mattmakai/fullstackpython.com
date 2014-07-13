@@ -22,6 +22,10 @@ applications through machine-to-machine communication.
 
 
 ## API creation frameworks
+* [Sandman](http://www.github.com/jeffknupp/sandman) is a widely used tool to
+  automatically generate a RESTful API service from a legacy database without
+  writing a line of code (though it's easily extensible through code).
+
 * [Django REST framework](http://www.django-rest-framework.org/) and
   [Tastypie](https://django-tastypie.readthedocs.org/en/latest/) are 
   the two most widely used API frameworks to use with Django. The edge
