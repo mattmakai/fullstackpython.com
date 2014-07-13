@@ -22,10 +22,6 @@ applications through machine-to-machine communication.
 
 
 ## API creation frameworks
-* [Sandman](http://www.github.com/jeffknupp/sandman) is a widely used tool to
-  automatically generate a RESTful API service from a legacy database without
-  writing a line of code (though it's easily extensible through code).
-
 * [Django REST framework](http://www.django-rest-framework.org/) and
   [Tastypie](https://django-tastypie.readthedocs.org/en/latest/) are 
   the two most widely used API frameworks to use with Django. The edge
@@ -35,11 +31,18 @@ applications through machine-to-machine communication.
   [Flask API](http://flask.pocoo.org/docs/api/) are popular libraries for 
   exposing APIs from Flask web applications.
 
+* [Sandman](http://www.github.com/jeffknupp/sandman) is a widely used tool to
+  automatically generate a RESTful API service from a legacy database without
+  writing a line of code (though it's easily extensible through code).
+
+* [Cornice](https://cornice.readthedocs.org/en/latest/) is a REST framework
+  for Pyramid.
+
 * [Restless](https://github.com/toastdriven/restless) is a lightweight API
   framework that aims to be framework agnostic. The general concept is that
   you can use the same API code for Django, Flask, Bottle, Pyramid or any
   other WSGI framework with minimal porting effort.
-  
+
 
 ## API testing projects
 Building, running and maintaining APIs requires as much effort as building,

@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### July
+* Merged a pull request for new REST frameworks.
 * Lots of new Django, Flask and task queue resources.
 * Added two new Python libraries lists to the Best Python Resources page.
 * Thanks [Hacker News](https://news.ycombinator.com/item?id=7985692) for
