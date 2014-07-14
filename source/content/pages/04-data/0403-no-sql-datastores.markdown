@@ -65,6 +65,12 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   use cases.
 
 
+### Key-value pair resources
+* "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
+  is a guide for getting up with the extremely useful in-memory data store.
+
+
+
 ## Column-family table
 A the column-family table class of NoSQL data stores builds on the key-value
 pair type. Each key-value pair is considered a row in the store while the
