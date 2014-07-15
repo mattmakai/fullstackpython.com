@@ -123,6 +123,10 @@ book which is an excellent learning resource.
   covers integrating the Twilio API into a Flask application and how to test 
   that functionality with [nose](https://nose.readthedocs.org/en/latest/).
 
+* The Flask documentation has some quick examples for how to deploy Flask
+  with 
+  [standalone WSGI containers](http://flask.pocoo.org/docs/deploying/wsgi-standalone/).
+
 
 ## Open source Flask example projects
 * [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
