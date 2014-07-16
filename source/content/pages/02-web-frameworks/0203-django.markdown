@@ -96,6 +96,9 @@ syntax and language semantics first before diving into web development.
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.
 
+* The [Django subreddit](http://www.reddit.com/r/django) is a good spot to
+  learn about Django and ask questions.
+
 
 ## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
