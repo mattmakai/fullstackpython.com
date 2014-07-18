@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### July
+* Added a map to the front page. May move that elsewhere later though based
+  on feedback.
 * Merged a pull request for new REST frameworks.
 * Lots of new Django, Flask and task queue resources.
 * Added two new Python libraries lists to the Best Python Resources page.
