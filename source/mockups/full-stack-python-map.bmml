@@ -731,10 +731,19 @@
     <control controlID="79" controlTypeID="com.balsamiq.mockups::Label" x="853" y="635" w="252" h="-1" measuredW="212" measuredH="36" zOrder="59" locked="false" isInGroup="-1">
       <controlProperties>
         <color>0</color>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22805%2C618%2C1057%2C654%22%20href%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20alt%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20id%3D%2279%22%20target%3D%22_blank%22/%3E</map>
         <size>28</size>
         <text>app%20source%20code</text>
         <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="637" w="133" h="14" measuredW="150" measuredH="100" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>retrieved%20from</text>
       </controlProperties>
     </control>
   </controls>
