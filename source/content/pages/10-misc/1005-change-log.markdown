@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### July
+* Updated map with further details.
 * Added a map to the front page. May move that elsewhere later though based
   on feedback.
 * Merged a pull request for new REST frameworks.

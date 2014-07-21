@@ -34,7 +34,7 @@ There is a lot of material to cover on this site so here's a map that visually
 depicts how the topics relate to each other. Click the image to pull up a PDF 
 version.
 
-<a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a>
+<a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a>
 
 This guide branches out on topic because your learning needs depend on what
 you're currently trying to do. 
