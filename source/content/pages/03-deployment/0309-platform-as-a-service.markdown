@@ -101,8 +101,8 @@ Review the potential Python platform-as-a-service options above and on their
 websites.
 
 <i class="fa fa-check-square-o"></i>
-Sign up for a PaaS account at the provider that apepars to best fit your
-application needs. Heroku is the PaaS option recommended for starters due to 
+Sign up for a PaaS account at the provider that appears to best fit your
+application needs. Heroku is the PaaS option recommended for starters due to
 their detailed documentation and walkthroughs available on the web. However,
 the other options are perfectly viable since their purpose is to make deploying
 applications as easy as possible.
