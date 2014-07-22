@@ -99,6 +99,10 @@ when scaling out a large deployment of distributed task queues.
   provides a scenario in which Celery and RabbitMQ are not the right tool
   for scheduling asynchronous jobs.
 
+* [Evaluating persistent, replicated message queues](http://www.warski.org/blog/2014/07/evaluating-persistent-replicated-message-queues/)
+  is a detailed comparison of Amazon SQS, MongoDB, RabbitMQ, HornetQ and
+  Kafka's designs and performance.
+
 * [Queues.io](http://queues.io/) is a collection of task queue systems with
   short summaries for each one. The task queues are not all compatible with
   Python but ones that work with it are tagged with the "Python" keyword.
