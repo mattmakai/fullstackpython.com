@@ -79,7 +79,7 @@ control services are:
   users. Users pay for hosting private repositories with more than five users.
 
 
-## Source control resources
+## General source control resources
 * [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
   is a comprehensive overview by Patrick McKenzie of why you need source 
   control.
