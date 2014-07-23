@@ -17,25 +17,29 @@ choice4text:
 
 
 # Source control
-Source control systems, also known as version control systems, store code
-and other static files, such as images, with a history of the changes made to
-those files.
+Source control, also known as *version control*, stores software code files
+with a detailed history of every modification made to those files.
 
 ## Why is source control necessary?
 Version control systems allow developers to modify code without worrying 
 about permanently screwing something up. Unwanted changes can be easily rolled
-back. Developers can merge changes with other developer's code through 
-[diff](http://en.wikipedia.org/wiki/Diff) views. 
+back to previous working versions of the code. 
 
-These benefits exist on all software projects. Therefore version control is 
-a necessity regardless of time size or the programming ecosystem used. Every
+Source control also makes team software development easier. One developer 
+can combine her code modifications with other developers' code through 
+[diff](http://en.wikipedia.org/wiki/Diff) views that show line-by-line 
+changes then merge the appropriate code into the main code branch.
+
+Version control is a necessity on all software projects regardless of 
+development time, codebase size or the programming language used. Every
 project should immediately begin by using a version control system such
 as Git or Mercurial.
 
-<img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
-
+## Source control during deployment
 Pulling code during a deployment is a potential way source control systems fit
 into the deployment process. 
+
+<img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
 
 Note that some developers recommend deployment pipelines package the source 
 code to deploy it and never have a production environment touch a source 
