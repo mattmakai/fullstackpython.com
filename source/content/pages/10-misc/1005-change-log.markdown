@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### July
+* Made source control page text clearer.
 * Added my Full Stack Python video from the EuroPython 2014 conference.
 * Updated map with further details.
 * Added a map to the front page. May move that elsewhere later though based
