@@ -106,6 +106,11 @@ I had when I was learning the language.
   stack fit together. There are also [slides available from the talk](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)
   with all the diagrams.
 
+* My [EuroPython 2014 "Full Stack Python"](https://www.youtube.com/watch?v=s6NaOKD40rY)
+  talk goes over each topic from this guide and provides context for how the
+  pieces fit together. 
+  The [talk slides](http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html) are also available.
+
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
   screencasts for learning intermediate topics. I typically prefer to learn
   by reading. However, these videos are helpful in seeing the code on the 
