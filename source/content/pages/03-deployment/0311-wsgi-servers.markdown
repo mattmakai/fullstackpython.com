@@ -99,7 +99,10 @@ The WSGI standard v1.0 is specified in
 [PEP 0333](http://www.python.org/dev/peps/pep-0333/). As of September 2010,
 WSGI v1.0 is superseded by
 [PEP 3333](http://www.python.org/dev/peps/pep-3333/), which defines the
-v1.0.1 WSGI standard.
+v1.0.1 WSGI standard. If you're working with Python 2.x and you're compliant
+with PEP 0333, then you're also compliant with 3333. The newer version is
+simply an update for Python 3 and has instructions for how unicode should
+be handled.
 
 [wsgiref in Python 2.x](https://docs.python.org/2/library/wsgiref.html) and
 [wsgiref in Python 3.x](https://docs.python.org/3.4/library/wsgiref.html)
