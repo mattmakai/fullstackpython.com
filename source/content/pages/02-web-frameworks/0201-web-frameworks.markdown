@@ -48,7 +48,7 @@ have a minimal code library that plays well with extensions.
 For example, the Django web application framework includes an 
 Object-Relational Mapping (ORM) layer that abstracts relational database 
 read, write, query, and delete operations. However, Django's ORM
-cannot work without significant modification on non-relational databases such 
+cannot work without significant modification on non-relational databases such as 
 [MongoDB](http://www.mongodb.org/).
 Some other web frameworks such as Flask and Pyramid are easier to
 use with non-relational databases by incorporating external Python libraries.
@@ -59,7 +59,7 @@ including everything in the framework with tight integration.
 ## General web framework resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
   by [Jeff Knupp](https://twitter.com/jeffknupp)
-  is a in-depth explanation of what a web framework is and their relation
+  is an in-depth explanation of what a web framework is and their relation
   to web servers.
 
 * Check out the answer to the 
