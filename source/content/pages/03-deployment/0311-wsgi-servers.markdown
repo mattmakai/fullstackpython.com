@@ -101,6 +101,12 @@ WSGI v1.0 is superseded by
 [PEP 3333](http://www.python.org/dev/peps/pep-3333/), which defines the
 v1.0.1 WSGI standard.
 
+[wsgiref in Python 2.x](https://docs.python.org/2/library/wsgiref.html) and
+[wsgiref in Python 3.x](https://docs.python.org/3.4/library/wsgiref.html)
+are the reference implementations of the WSGI specification built into
+Python's standard library so it can be used to build WSGI servers and
+applications.
+
 
 ## Example web server configuration
 A web server's configuration specifies what requests should be passed to
