@@ -22,10 +22,21 @@ lay out the HTML content when it is rendered by a web browser.
 
 
 ## Why is CSS necessary?
-CSS separates content contained in the HTML file from how the content 
-should be displayed. That separation between content and how to display it 
-enables devices to render the content differently based on factors such as
-screen size. 
+CSS separates the content contained in HTML files from how the content 
+should be displayed. It is important to separate the content from the rules
+for how it should be rendered primarily because it is easier to reuse those
+rules across many pages. CSS files are also much easier to maintain on large
+projects than styles embedded within the HTML files.
+
+
+## Responsive design
+Separating the content from the rules for how to display the content allows 
+devices to render the output differently based on factors such as screen size
+and device type. Displaying content differently based on varying screen 
+attributes is often called *responsive design*. The responsiveness is 
+accomplished by implementing
+[media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
+in the CSS. 
 
 For example, a mobile device does not have as much space to display a 
 navigation bar on the side of a page so it is often pushed down 
@@ -48,14 +59,6 @@ Stack Python contains a reference to ``theme/css/fsp.css`` which is shown
 in the view source screenshot below.
 
 <img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" />
-
-
-## Responsive design
-Responsive design is an approach for creating CSS that lays out content 
-differently based on screen attributes. The responsiveness is accomplished 
-by implementing
-[media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
-in the CSS. 
 
 
 ## CSS preprocessors

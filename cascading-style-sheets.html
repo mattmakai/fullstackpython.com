@@ -42,10 +42,19 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.</p>
 <h2>Why is CSS necessary?</h2>
-<p>CSS separates content contained in the HTML file from how the content 
-should be displayed. That separation between content and how to display it 
-enables devices to render the content differently based on factors such as
-screen size. </p>
+<p>CSS separates the content contained in HTML files from how the content 
+should be displayed. It is important to separate the content from the rules
+for how it should be rendered primarily because it is easier to reuse those
+rules across many pages. CSS files are also much easier to maintain on large
+projects than styles embedded within the HTML files.</p>
+<h2>Responsive design</h2>
+<p>Separating the content from the rules for how to display the content allows 
+devices to render the output differently based on factors such as screen size
+and device type. Displaying content differently based on varying screen 
+attributes is often called <em>responsive design</em>. The responsiveness is 
+accomplished by implementing
+<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a>
+in the CSS. </p>
 <p>For example, a mobile device does not have as much space to display a 
 navigation bar on the side of a page so it is often pushed down 
 below the main content. The 
@@ -62,12 +71,6 @@ Tools network traffic.</p>
 Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
 in the view source screenshot below.</p>
 <p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
-<h2>Responsive design</h2>
-<p>Responsive design is an approach for creating CSS that lays out content 
-differently based on screen attributes. The responsiveness is accomplished 
-by implementing
-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a>
-in the CSS. </p>
 <h2>CSS preprocessors</h2>
 <p>A CSS preprocessor compiles a processed language into plain CSS code. CSS 
 preprocessing languages add syntax such as variables, mixins and functions
