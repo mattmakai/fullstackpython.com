@@ -36,6 +36,11 @@ with web application speed as a top priority.
 [Morepath](http://morepath.readthedocs.org/en/latest/) is a micro web 
 framework that routes URLs directly to model code.
 
+* Morepath's creator gave a 
+  [great talk on the motivation and structure for
+  the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
+  at EuroPython 2014.
+
 
 ## web.py
 [web.py](http://webpy.org/) is a Python web framework designed for simplicity
