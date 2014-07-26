@@ -43,6 +43,12 @@ applications through machine-to-machine communication.
   you can use the same API code for Django, Flask, Bottle, Pyramid or any
   other WSGI framework with minimal porting effort.
 
+* [Eve](http://python-eve.org/) is a Python REST framework built with Flask,
+  MongoDB and Redis. The framework's primary author 
+  [Nicola Iarocci](https://twitter.com/nicolaiarocci) gave a great talk at 
+  [EuroPython 2014](https://www.youtube.com/watch?v=9sUsLvG72_o) that 
+  introduced the main features of the framework.
+
 
 ## API testing projects
 Building, running and maintaining APIs requires as much effort as building,

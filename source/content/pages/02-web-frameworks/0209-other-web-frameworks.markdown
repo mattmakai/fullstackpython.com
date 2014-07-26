@@ -37,8 +37,7 @@ with web application speed as a top priority.
 framework that routes URLs directly to model code.
 
 * Morepath's creator gave a 
-  [great talk on the motivation and structure for
-  the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
+  [great talk on the motivation and structure for the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
   at EuroPython 2014.
 
 
