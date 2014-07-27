@@ -21,12 +21,15 @@ The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There's so many resources
 out there though that it can be difficult to know how to find them. 
 
-This page aggregates the absolute best Python resources and explains from
-my biased perspective the best way to use each one. This is the list I wish
-I had when I was learning the language.
+This page aggregates the best Python resources with a brief description of
+its one's learning purpose.
 
 
 ## New to programming
+If you're learning your first programming language these books were written
+with you in mind. Developers learning Python as a second or later language
+should skip down to the next section for "experienced developers".
+
 * To get an introduction to both Python and Django at the same time, purchase
   [Real Python](http://www.realpython.com/) by Fletcher, Michael, and Jeremy.
 

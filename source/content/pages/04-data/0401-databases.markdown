@@ -144,22 +144,19 @@ Currently, the most widely used stand-alone ORM written for Python is
 
 
 ## Database third-party services
-Numerous companies run scalable database servers as a hosted service. 
-Depending on the provider, there can be several advantages to using a 
-hosted database third-party service:
+Numerous companies run scalable database servers as a hosted service.
+Hosted databases can often provide automated backups and recovery,
+tightened security configurations and easy vertical scaling, depending on the
+provider.
 
-1. automated backups and recovery
-2. tightened security configurations
-3. easy vertical scaling
+* [Amazon Relational Database Service (RDS)](http://aws.amazon.com/rds/)
+  provides pre-configured MySQL and PostgreSQL instances. The instances can
+  be scaled to larger or smaller configurations based on storage and performance
+  needs.
 
-[Amazon Relational Database Service (RDS)](http://aws.amazon.com/rds/) 
-provides pre-configured MySQL and PostgreSQL instances. The instances can
-be scaled to larger or smaller configurations based on storage and performance
-needs.
-
-[Google Cloud SQL](https://developers.google.com/cloud-sql/) is a service
-with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
-SQL integrates with Google App Engine but can be used independently as well.
+* [Google Cloud SQL](https://developers.google.com/cloud-sql/) is a service
+  with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
+  SQL integrates with Google App Engine but can be used independently as well.
 
 
 ## Database resources
