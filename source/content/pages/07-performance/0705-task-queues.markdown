@@ -132,6 +132,9 @@ when scaling out a large deployment of distributed task queues.
   are great reads for understanding the difference between a task queue and
   why you shouldn't use your database as one.
 
+* [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
+  a short introductory task queue screencast.
+
 
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 
