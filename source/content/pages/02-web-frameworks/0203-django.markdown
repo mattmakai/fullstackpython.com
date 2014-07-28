@@ -173,6 +173,9 @@ existing framework.
   [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
   with detailed explanations of each step.
 
+* [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
+  project template from Daniel Greenfeld, for use with Audrey Roy's [Cookiecutter](https://github.com/audreyr/cookiecutter). Cool features and Heroku-ready.
+
 
 ## Django learning checklist
 <i class="fa fa-check-square-o"></i> 
