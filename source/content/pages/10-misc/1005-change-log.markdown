@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### July
+* New Django example project resources.
 * Rewrote parts of source control and CSS pages for clarity.
 * Merged typo fixes PR #32.
 * Added my Full Stack Python video from the EuroPython 2014 conference.
