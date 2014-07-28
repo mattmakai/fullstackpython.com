@@ -73,7 +73,7 @@ syntax and language semantics first before diving into web development.
   framework learning curve.
 
 * [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-6) 
-  by Daniel Greenfield and Audrey Roy is well worth the price of admission if
+  by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
 
 * [Effective Django](http://effectivedjango.com/) is another free introduction
