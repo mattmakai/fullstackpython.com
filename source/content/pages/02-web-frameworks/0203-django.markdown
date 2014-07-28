@@ -168,6 +168,13 @@ existing framework.
 * [Courtside](https://github.com/myusuf3/courtside) is a pick up sports web 
   application written and maintained by the author of PyCoder's Weekly.
 
+* These two Django Interactive Voice Response (IVR) system web application
+  repositorities [part 1](https://github.com/phalt/twilio-django-part-1) and
+  [part 2](https://github.com/phalt/twilio-django-part-2) show you how to
+  build a really cool Django application. There's also an accompanying 
+  [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
+  with detailed explanations of each step.
+
 
 ## Django learning checklist
 <i class="fa fa-check-square-o"></i> 
