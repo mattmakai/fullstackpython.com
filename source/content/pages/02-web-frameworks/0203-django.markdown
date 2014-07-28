@@ -80,7 +80,8 @@ syntax and language semantics first before diving into web development.
   to the web framework.
 
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
-  the latest resources for learning Django.
+  the latest resources for learning Django and is also a good spot to ask 
+  questions about it.
 
 * Lincoln Loop wrote a 
   [Django Best Practices guide](http://lincolnloop.com/django-best-practices/)
@@ -95,9 +96,6 @@ syntax and language semantics first before diving into web development.
 * The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.
-
-* The [Django subreddit](http://www.reddit.com/r/django) is a good spot to
-  learn about Django and ask questions.
 
 
 ## Django videos
