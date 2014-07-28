@@ -136,6 +136,9 @@ book which is an excellent learning resource.
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
   starting point for new Flask projects.
 
+* [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a project
+  template for use with [Cookiecutter](https://github.com/audreyr/cookiecutter).
+
 * [Flaskr TDD](https://github.com/mjhea0/flaskr-tdd) takes the official Flask
   tutorial and adds test driven development and JQuery to the project. 
 
