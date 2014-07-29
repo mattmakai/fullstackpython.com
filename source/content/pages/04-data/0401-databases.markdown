@@ -158,6 +158,9 @@ provider.
   with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
   SQL integrates with Google App Engine but can be used independently as well.
 
+* [BitCan](http://www.gobitcan.com/) provides both MySQL and MongoDB hosted
+  databases with extensive backup services.
+
 
 ## Database resources
 * [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
