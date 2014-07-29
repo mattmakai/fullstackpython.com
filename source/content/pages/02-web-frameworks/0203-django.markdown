@@ -173,8 +173,19 @@ existing framework.
   [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
   with detailed explanations of each step.
 
+
+## Django project templates
+* [Caktus Group's Django project template](https://github.com/caktus/django-project-template) 
+  is Django 1.6+ ready.
+
 * [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
-  project template from Daniel Greenfeld, for use with Audrey Roy's [Cookiecutter](https://github.com/audreyr/cookiecutter). Cool features and Heroku-ready.
+  project template from Daniel Greenfield, for use with Audrey Roy's 
+  [Cookiecutter](https://github.com/audreyr/cookiecutter). Heroku 
+  deployment-ready.
+
+* [Two Scoops Django project template](https://github.com/twoscoops/django-twoscoops-project)
+  is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
+  described in the Two Scoops of Django book.
 
 
 ## Django learning checklist

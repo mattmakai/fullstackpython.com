@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### July
+* Merged pull request for Django page and updated Django page with project 
+  template section.
 * New Django example project resources.
 * Rewrote parts of source control and CSS pages for clarity.
 * Merged typo fixes PR #32.
