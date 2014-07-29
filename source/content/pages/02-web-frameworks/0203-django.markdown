@@ -179,7 +179,7 @@ existing framework.
   is Django 1.6+ ready.
 
 * [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
-  project template from Daniel Greenfield, for use with Audrey Roy's 
+  project template from Daniel Greenfeld, for use with Audrey Roy's 
   [Cookiecutter](https://github.com/audreyr/cookiecutter). Heroku 
   deployment-ready.
 
