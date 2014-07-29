@@ -73,14 +73,15 @@ syntax and language semantics first before diving into web development.
   framework learning curve.
 
 * [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-6) 
-  by Daniel Greenfield and Audrey Roy is well worth the price of admission if
+  by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
 
 * [Effective Django](http://effectivedjango.com/) is another free introduction
   to the web framework.
 
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
-  the latest resources for learning Django.
+  the latest resources for learning Django and is also a good spot to ask 
+  questions about it.
 
 * Lincoln Loop wrote a 
   [Django Best Practices guide](http://lincolnloop.com/django-best-practices/)
@@ -95,9 +96,6 @@ syntax and language semantics first before diving into web development.
 * The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.
-
-* The [Django subreddit](http://www.reddit.com/r/django) is a good spot to
-  learn about Django and ask questions.
 
 
 ## Django videos
@@ -174,6 +172,9 @@ existing framework.
   build a really cool Django application. There's also an accompanying 
   [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
   with detailed explanations of each step.
+
+* [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
+  project template from Daniel Greenfeld, for use with Audrey Roy's [Cookiecutter](https://github.com/audreyr/cookiecutter). Cool features and Heroku-ready.
 
 
 ## Django learning checklist
