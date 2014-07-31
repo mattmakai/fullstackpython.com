@@ -1,0 +1,3706 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matt Makai">
+    <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
+    <link rel="shortcut icon" href="theme/img/fsp-fav.png">
+    <title>Full Stack Python</title>
+    <link href="theme/css/fsp.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19910497-7']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>  </head>
+
+<body>
+    <a href="https://github.com/makaimc/fullstackpython.github.com" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+    </a>
+    <div class="container">
+        <div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;"/></a>
+            <span class="logo-title"><a href="/">Full Stack Python</a></span>
+        </div>
+    </div>
+</div>        <div class="row">
+    <div class="col-md-8">
+                      <h1>Introduction</h1>
+<p>You're knee deep in learning the <a href="http://www.python.org/">Python</a>
+programming language. The syntax is starting to make sense. The first
+few "<em>ahh-ha</em>!" moments are hitting you as you're learning conditional
+statements, for loops and classes while playing around with the open source 
+libraries that make Python such an amazing language.</p>
+<p>Now you want to take your initial Python knowledge and make something real.
+A real web application that's available on the web which you can show off or 
+sell as a service to other people. That's where Full Stack Python comes in. 
+You've come to the right place to learn everything you need to deploy and 
+run a production Python web application.</p>
+<p>There is a lot of material to cover on this site so here's a map that visually 
+depicts how the topics relate to each other. Click the image to pull up a PDF 
+version.</p>
+<p><a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a></p>
+<p>This guide branches out on topic because your learning needs depend on what
+you're currently trying to do. </p>
+<h3>Let's get started. What do you need to do right now?</h3>
+                      <h1>Web frameworks</h1>
+<p>A web application framework is a code library that makes a developer's life
+easier when building reliable, scalable and maintainable web applications.</p>
+<h2>Why are web frameworks necessary?</h2>
+<p>Web frameworks encapsulate what developers have learned over the past twenty
+years while building dynamic web applications. Frameworks make it easier
+to reuse code for common HTTP operations and to structure your code so that 
+it is maintainable.</p>
+<h2>Common web framework functionality</h2>
+<p>Frameworks provide functionality in their code or through extensions to 
+perform common operations required to run web applications. These common 
+operations include:</p>
+<ol>
+<li>URL routing</li>
+<li>HTML, XML, JSON, and other output format templating</li>
+<li>Database manipulation</li>
+<li>Security against Cross-site request forgery (CSRF) and other attacks</li>
+</ol>
+<p>Not all web frameworks include code for all of the above 
+functionality. Frameworks fall somewhere between simply executing a 
+single use case and attempting to be everything to every developer with
+increased complexity. Some frameworks take the "batteries-included" approach 
+where everything possible comes bundled with the framework while others 
+have a minimal code library that plays well with extensions.</p>
+<p>For example, the Django web application framework includes an 
+Object-Relational Mapping (ORM) layer that abstracts relational database 
+read, write, query, and delete operations. However, Django's ORM
+cannot work without significant modification on non-relational databases such as 
+<a href="http://www.mongodb.org/">MongoDB</a>.
+Some other web frameworks such as Flask and Pyramid are easier to
+use with non-relational databases by incorporating external Python libraries.
+There is a spectrum between minimal functionality with easy extensibility and
+including everything in the framework with tight integration.</p>
+<h2>General web framework resources</h2>
+<ul>
+<li>
+<p>"<a href="http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">What is a web framework?</a>"
+  by <a href="https://twitter.com/jeffknupp">Jeff Knupp</a>
+  is an in-depth explanation of what a web framework is and their relation
+  to web servers.</p>
+</li>
+<li>
+<p>Check out the answer to the 
+  "<a href="http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp">What is a web framework and how does it compare to LAMP?</a>"
+  question on Stack Overflow.</p>
+</li>
+<li>
+<p>This <a href="http://www.konstruktor.ee/blog/python-web-framework-roundup/">Python web framework roundup</a>
+  covers Django, Flask and Bottle as well as several other lesser known Python
+  frameworks.</p>
+</li>
+</ul>
+<h2>Web frameworks learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Choose a major Python web framework (<a href="/django.html">Django</a> or 
+<a href="/flask.html">Flask</a> are recommended) and stick with it. When you're just
+starting it's best to learn one framework first instead of bouncing around
+trying to understand every framework. </p>
+<p><i class="fa fa-check-square-o"></i> 
+Work through a detailed tutorial found within the resources links on the
+framework's page.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Study open source examples built with your framework of choice so you can 
+take parts of those projects and reuse the code in your application.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Build the first simple iteration of your web application then go to
+the <a href="/deployment.html">deployment</a> section to make it accessible on the 
+web.</p>
+<h3>Which web framework do you want to learn about?</h3>
+                      <h1>Django</h1>
+<p><a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
+application framework with a "batteries-included" philosophy. The principle
+behind batteries-included is that the common functionality for building
+web applications should come with the framework instead of as separate
+libraries. </p>
+<p><a href="http://www.djangoproject.com/" style="border: none;"><img src="theme/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a></p>
+<p>For example, 
+<a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
+<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
+<a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
+an <a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
+and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
+(as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/1.6.2">Django framework</a>. 
+Compare that included functionality to the Flask framework which requires a 
+separate library such as 
+<a href="https://flask-login.readthedocs.org/en/latest/">Flask-Login</a>
+to perform user authentication. </p>
+<p>The batteries-included and extensibility philosophies are simply two different 
+ways to tackle framework building.  Neither philosophy is inherently better 
+than the other.</p>
+<h2>Why is Django a good web framework choice?</h2>
+<p>The Django project's stability, performance and community have grown 
+tremendously over the past decade since the framework's creation. Detailed
+tutorials and best practices are readily available on the web and in books.
+The framework continues to add significant new functionality such as 
+<a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database migrations</a>
+with each release. </p>
+<p>I highly recommend the Django framework as a starting place for new Python web 
+developers because the official documentation and tutorials are some of the 
+best anywhere in software development. Many cities also have Django-specific
+groups such as <a href="http://www.meetup.com/django-district/">Django District</a>,
+<a href="http://www.meetup.com/djangoboston/">Django Boston</a> and 
+<a href="http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/">San Francisco Django</a> 
+so new developers can get help when they are stuck.</p>
+<p>There's some debate on whether 
+<a href="http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/">learning Python by using Django is a bad idea</a>. 
+However, that criticism is invalid if you take the time to learn the Python
+syntax and language semantics first before diving into web development.</p>
+<h2>Django tutorials</h2>
+<ul>
+<li>
+<p><a href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a extensive 
+  free introductions to using the most popular Python web framework. Several
+  current developers said this book really helped them get over the initial
+  framework learning curve.</p>
+</li>
+<li>
+<p><a href="http://twoscoopspress.com/products/two-scoops-of-django-1-6">2 Scoops of Django</a> 
+  by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
+  you're serious about learning how to correctly develop Django websites.</p>
+</li>
+<li>
+<p><a href="http://effectivedjango.com/">Effective Django</a> is another free introduction
+  to the web framework.</p>
+</li>
+<li>
+<p>The <a href="http://www.reddit.com/r/django">Django subreddit</a> often has links to
+  the latest resources for learning Django and is also a good spot to ask 
+  questions about it.</p>
+</li>
+<li>
+<p>Lincoln Loop wrote a 
+  <a href="http://lincolnloop.com/django-best-practices/">Django Best Practices guide</a>
+  for the community.</p>
+</li>
+<li>
+<p>Steve Losh wrote an incredibly detailed <a href="http://stevelosh.com/blog/2011/06/django-advice/">Django Advice guide</a>.</p>
+</li>
+<li>
+<p><a href="http://programming.oreilly.com/2014/04/simplifying-django.html">Lightweight Django</a>
+  has several nice examples for breaking Django into smaller simplier 
+  components.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/rogueleaderr/definitive_guide_to_django_deployment">Definitive Guide to Django Deployment</a>
+  explains the architecture of the resulting set up and includes Chef scripts
+  to automate the deployment.</p>
+</li>
+</ul>
+<h2>Django videos</h2>
+<ul>
+<li>
+<p><a href="https://godjango.com/">GoDjango</a> screencasts and tutorials are free short
+  videos for learning how to build Django applications.</p>
+</li>
+<li>
+<p>Ontwik has learning videos in its 
+  <a href="http://ontwik.com/category/django/">Django category</a>.</p>
+</li>
+<li>
+<p><a href="http://pyvideo.org/video/2630/designing-djangos-migrations">Designing Django's Migrations</a>
+  covers Django 1.7's new migrations from the main programmer Andrew Godwin.</p>
+</li>
+<li>
+<p><a href="http://gettingstartedwithdjango.com/">Getting Started with Django</a> is a
+  series of video tutorials for the framework.</p>
+</li>
+<li>
+<p>DjangoCon US videos from 
+  <a href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>, 
+  <a href="http://pyvideo.org/category/23/djangocon-2012">2012</a>, 
+  <a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as<br />
+<a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
+  all available free of charge.</p>
+</li>
+</ul>
+<h2>Django ORM resources</h2>
+<p>The <a href="https://docs.djangoproject.com/en/dev/topics/db/">Django ORM</a> works well
+for simple and medium-complexity database operations. However, there are often
+complaints that the ORM makes complex queries much more complicated than
+writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
+<p>It's technically possible to drop down to SQL but it ties the queries to a 
+specific database implementation. The ORM is coupled closely with Django so
+replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
+though that some of the Django core committers believe it is only a matter of
+time before the default ORM is replaced with SQLAlchemy. It will be a large
+effort to get that working though so it's likely to come in Django 1.9 or 
+later.</p>
+<p>Since the majority of Django projects are tied to the default ORM, it's best to
+read up on advanced use cases and tools for doing your best work within the
+existing framework.</p>
+<ul>
+<li>
+<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
+  is a powerful Django ORM database query inspection tool. Highly recommended
+  during development to ensure you're writing reasonable query code. 
+  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
+  has capabilities to do more than just SQL inspection.</p>
+</li>
+<li>
+<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
+  is a Django performance blog post with some tips on measuring performance
+  and optimizing based on the measured results.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
+  is Alex Gaynor's overview of the bad designs decisions, some of which he
+  made, while building the Django ORM.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
+  is specific to using PostgreSQL with Django.</p>
+</li>
+</ul>
+<h2>Open source Django example projects</h2>
+<ul>
+<li>
+<p><a href="https://github.com/makaimc/txt2react">Txt 2 React</a> is a full Django web
+  app that allows audiences to text in during a presentation with feedback
+  or questions.</p>
+</li>
+<li>
+<p><a href="https://github.com/ustream/openduty">Openduty</a> is a website status checking
+  and alert system similar to PagerDuty.</p>
+</li>
+<li>
+<p><a href="https://github.com/myusuf3/courtside">Courtside</a> is a pick up sports web 
+  application written and maintained by the author of PyCoder's Weekly.</p>
+</li>
+<li>
+<p>These two Django Interactive Voice Response (IVR) system web application
+  repositorities <a href="https://github.com/phalt/twilio-django-part-1">part 1</a> and
+  <a href="https://github.com/phalt/twilio-django-part-2">part 2</a> show you how to
+  build a really cool Django application. There's also an accompanying 
+  <a href="https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html">blog post</a>
+  with detailed explanations of each step.</p>
+</li>
+</ul>
+<h2>Django project templates</h2>
+<ul>
+<li>
+<p><a href="https://github.com/caktus/django-project-template">Caktus Group's Django project template</a> 
+  is Django 1.6+ ready.</p>
+</li>
+<li>
+<p><a href="https://github.com/pydanny/cookiecutter-django">Cookiecutter Django</a> is a 
+  project template from Daniel Greenfeld, for use with Audrey Roy's 
+  <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>. Heroku 
+  deployment-ready.</p>
+</li>
+<li>
+<p><a href="https://github.com/twoscoops/django-twoscoops-project">Two Scoops Django project template</a>
+  is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
+  described in the Two Scoops of Django book.</p>
+</li>
+</ul>
+<h2>Django learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+<a href="https://docs.djangoproject.com/en/dev/topics/install/">Install Django</a> on
+your local development machine.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Work through the initial 
+<a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">"polls" tutorial</a>.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Build a few more simple applications using the tutorial resources found
+in the "Django resources" section.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Start coding your own Django project with help from the 
+<a href="https://docs.djangoproject.com/en/dev/">official documentation</a> and 
+resource links below. You'll make plenty of mistakes which is critical
+on your path to learning the right way to build applications.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Read <a href="http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&amp;qid=1391562062&amp;sr=8-2&amp;tag=mlinar-20">2 Scoops of Django</a> 
+to understand Django best practices and learn better ways of building 
+Django web applications.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Move on to the <a href="/deployment.html">deployment section</a> to get your Django 
+project on the web.</p>
+<h3>What do you need to learn next for your Django app?</h3>
+                      <h1>Flask</h1>
+<p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
+<a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
+<a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.png" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram" /></a></p>
+<h2>Why is Flask a good web framework choice?</h2>
+<p>Flask is considered more 
+<a href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Pythonic</a> 
+than Django because Flask web application code is in most cases more explicit. 
+Flask is easy to get started with as a beginner because there is little 
+boilerplate code for getting a simple app up and running. </p>
+<p>For example, here's a valid "hello world" web application with Flask (the
+equivalent in Django would be significantly more code):</p>
+<div class="codehilite"><pre><span class="n">from</span> <span class="n">flask</span> <span class="n">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="err">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">)</span>
+<span class="n">def</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
+    <span class="k">return</span> <span class="err">&#39;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">&#39;</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="err">&#39;</span><span class="n">__main__</span><span class="err">&#39;</span><span class="o">:</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Flask was also written several years after Django and therefore
+learned from the Python community's reactions as the framework evolved.
+Jökull Sólberg wrote a great piece articulating to this effect in his 
+<a href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a>.</p>
+<h2>Flask resources</h2>
+<p>The 18-part Flask mega tutorial is an absolutely amazing starting 
+resource for using the Flask framework. Yes, there are a lot of posts in 
+the series. However, each post is focused on a single topic to contain 
+the complexity while the reader is learning the framework. The whole 
+series is well worth an in-depth read-through. The 
+<a href="https://twitter.com/miguelgrinberg">author</a> is also wrote the new
+<a href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a>
+book which is an excellent learning resource.</p>
+<ul>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Part 1: Hello World</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">Part 2: Templates</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms">Part 3: Web Forms</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database">Part 4: Database</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins">Part 5: User Logins</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars">Part 6: Profile Page and Avatars</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing">Part 7: Unit Testing</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">Part 8: Followers, Contacts, and Friends</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination">Part 9: Pagination</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search">Part 10: Full Text Search</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support">Part 11: Email Support</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift">Part 12: Facelift</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times">Part 13: Dates and Times</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n">Part 14: I18n and L10n</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax">Part 15: Ajax</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">Part 16: Debugging, Testing and Profiling</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">Part 17: Deployment on Linux</a></li>
+<li>
+<p><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Part 18: Deployment on the Heroku Cloud</a></p>
+</li>
+<li>
+<p><a href="http://flask.pocoo.org/extensions/">The Flask Extensions Registry</a> is a
+  curated list of the best packages that extend Flask. It's the first location
+  to look through when you're wondering how to do something that's not in the
+  core framework.</p>
+</li>
+<li>
+<p><a href="http://exploreflask.com/">Explore Flask</a> is a public domain book that
+  was previously backed on Kickstarter and cost money for about a year before
+  being open sourced. The book explains best practices and patterns for 
+  building Flask apps.</p>
+</li>
+<li>
+<p>Randall Degges wrote a detailed walkthrough for 
+  <a href="https://stormpath.com/blog/build-a-flask-app-in-30-minutes/">building a Flask app in 30 minutes</a>.</p>
+</li>
+<li>
+<p>Nice post by Jeff Knupp on <a href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">Productionizing a Flask App</a>.</p>
+</li>
+<li>
+<p><a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J">Building Websites in Python with Flask</a>
+  is another walkthrough tutorial from first steps through 
+  <a href="http://maximebf.com/blog/2012/11/getting-bigger-with-flask/">getting bigger with Flask</a>.</p>
+</li>
+<li>
+<p>The Plank &amp; Whittle blog has two posts, one on 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">Packaging a Flask web app</a> 
+  and another on 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">Packaging a Flask app in a Debian package</a>
+  once you've built an app and want to deploy it.</p>
+</li>
+<li>
+<p>The Tuts+ <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a> 
+  is another great walkthrough for getting started with the framework.</p>
+</li>
+<li>
+<p><a href="http://readwrite.com/2014/07/11/one-click-messaging-app">Create Your Own Obnoxiously Simple Messaging App Just Like Yo</a>
+  is a silly walkthrough of very basic Flask web application that uses
+  <a href="https://www.nitrous.io/">Nitrous.io</a> to get started and 
+  <a href="https://www.twilio.com/">Twilio</a> for SMS.</p>
+</li>
+<li>
+<p><a href="http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/">Flask by Example: Part 1</a>
+  shows the basic first steps for setting up a Flask project. 
+  <a href="http://www.realpython.com/blog/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/">Part 2</a> 
+  is also now online that shows how to use PostgreSQL, SQLAlchemy and Alembic.</p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications">How to Structure Large Flask Applications</a>
+  covers a subject that comes up quickly once you begin adding significant
+  functionality to your Flask application.</p>
+</li>
+<li>
+<p><a href="https://www.twilio.com/blog/2014/03/unit-testing-your-twilio-app-using-pythons-flask-and-nose.html">Unit Testing Your Twilio App Using Python’s Flask and Nose</a>
+  covers integrating the Twilio API into a Flask application and how to test 
+  that functionality with <a href="https://nose.readthedocs.org/en/latest/">nose</a>.</p>
+</li>
+<li>
+<p>The Flask documentation has some quick examples for how to deploy Flask
+  with 
+  <a href="http://flask.pocoo.org/docs/deploying/wsgi-standalone/">standalone WSGI containers</a>.</p>
+</li>
+</ul>
+<h2>Open source Flask example projects</h2>
+<ul>
+<li>
+<p><a href="https://github.com/miguelgrinberg/microblog">Microblog</a> is the companion
+  open source project that goes along with Miguel Grinberg's O'Reilly Flask
+  book.</p>
+</li>
+<li>
+<p><a href="https://github.com/JackStouffer/Flask-Foundation">Flask Foundation</a> is a
+  starting point for new Flask projects.</p>
+</li>
+<li>
+<p><a href="https://github.com/sloria/cookiecutter-flask">Cookiecutter Flask</a> is a project
+  template for use with <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/mjhea0/flaskr-tdd">Flaskr TDD</a> takes the official Flask
+  tutorial and adds test driven development and JQuery to the project. </p>
+</li>
+<li>
+<p>Use the <a href="https://github.com/kamalgill/flask-appengine-template">Flask App Engine Template</a>
+  for getting set up on Google App Engine with Flask.</p>
+</li>
+<li>
+<p>Here is a 
+  <a href="http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/">note-taking app</a>
+  along with the 
+  <a href="https://gist.github.com/coleifer/632d3c9aa6b2ea519384">source code in Gists</a>.</p>
+</li>
+</ul>
+<h2>Flask framework learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+<a href="http://flask.pocoo.org/docs/installation/">Install Flask</a> on
+your local development machine.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Work through the 18-part Flask tutorial listed first under "Flask resources"
+below.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Read through <a href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a>
+to find out what extensions you'll need to build your project.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Start coding your Flask app based on what you learned from the 18 part
+Flask tutorial plus open source example applications found below. </p>
+<p><i class="fa fa-check-square-o"></i> 
+Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
+Flask project on the web.</p>
+<h3>What do you need to learn about web frameworks next?</h3>
+                      <h1>Bottle</h1>
+<p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
+<a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
+web framework with no external dependencies except for the standard library
+included with Python.</p>
+<h2>Bottle resources</h2>
+<ul>
+<li>
+<p>The <a href="http://bottlepy.org/docs/dev/tutorial.html">official Bottle tutorial</a> 
+  provides a thorough view of basic concepts and features for the framework.</p>
+</li>
+<li>
+<p>Digital Ocean provides an extensive <a href="https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps">introductory post on Bottle</a>.</p>
+</li>
+<li>
+<p>This tutorial provides a walkthrough for
+<a href="http://www.giantflyingsaucer.com/blog/?p=3598">getting started with Bottle</a>.</p>
+</li>
+<li>
+<p>Here's a short code snippet for 
+  <a href="http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/">creating a RESTful API with Bottle and MongoDB</a>.</p>
+</li>
+<li>
+<p>This <a href="http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/">tutorial</a> 
+  is another Bottle walkthrough for creating a RESTful web API.</p>
+</li>
+<li>
+<p><a href="http://gengo.github.io/decanter/">Decanter</a> is a library for structuring 
+  Bottle projects.</p>
+</li>
+</ul>
+<h2>Open source Bottle example projects</h2>
+<ul>
+<li><a href="https://github.com/thekad/pasttle">Pattle</a> is a pastebin clone built with
+  Bottle.</li>
+</ul>
+<h2>Bottle framework learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+<a href="https://github.com/defnull/bottle/raw/master/bottle.py">Download Bottle</a> or
+install via pip with <code>pip install bottle</code> on your local development machine.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Work through the official 
+<a href="http://bottlepy.org/docs/dev/tutorial.html">Bottle tutorial</a>.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Start coding your Bottle app based on what you learned in the official 
+tutorial plus reading open source example applications found below. </p>
+<p><i class="fa fa-check-square-o"></i> 
+Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
+Bottle application on the web.</p>
+<h3>What do you need to learn next?</h3>
+                      <h1>Other Web Frameworks</h1>
+<p>Python has a significant number of web frameworks outside the usual Django,
+Flask and Bottle suspects.</p>
+<h2>Pyramid</h2>
+<p>The <a href="http://www.pylonsproject.org/">Pyramid framework</a> stems from the Pylons
+project which develops a set of open source web application frameworks. 
+Pyramid applications are built using a model-view-controller architecture.</p>
+<h2>Falcon</h2>
+<p><a href="http://falconframework.org/">Falcon</a> is a minimalist web framework designed
+with web application speed as a top priority.</p>
+<h2>Morepath</h2>
+<p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
+framework that routes URLs directly to model code.</p>
+<ul>
+<li>Morepath's creator gave a 
+  <a href="https://www.youtube.com/watch?v=gyDKMAWPyuY">great talk on the motivation and structure for the new framework</a> 
+  at EuroPython 2014.</li>
+</ul>
+<h2>web.py</h2>
+<p><a href="http://webpy.org/">web.py</a> is a Python web framework designed for simplicity
+in building web applications.</p>
+<h2>web2py</h2>
+<p><a href="http://www.web2py.com/">Web2py</a> is a batteries-included philosophy framework
+with project structure based on model-view-controller patterns.</p>
+<h2>Other web framework resources</h2>
+<ul>
+<li>
+<p>This <a href="http://codecondo.com/14-minimal-web-frameworks-for-python/">roundup of 14 minimal Python frameworks</a>
+  contains both familiar and less known Python libraries.</p>
+</li>
+<li>
+<p>The <a href="http://www.slideshare.net/r1chardj0n3s/web-microframework-battle/">web micro-framework battle</a>
+  presentation goes over Bottle, Flask, and many other lesser known Python
+  web frameworks.</p>
+</li>
+<li>
+<p>A Python newcomer asked the Python Subreddit to 
+ <a href="http://www.reddit.com/r/Python/comments/28qr7c/can_anyone_explain_the_differences_between_web2py/">explain the differences between numerous Python web frameworks</a>
+ and received some interesting responses from other users.</p>
+</li>
+</ul>
+<h2>Other frameworks learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Read through the web frameworks listed above and check out their project
+websites. </p>
+<p><i class="fa fa-check-square-o"></i> 
+It's useful to know what other web frameworks exist besides Django and Flask.
+However, when you're just starting to learn to program there are significantly 
+more tutorials and resources for <a href="/django.html">Django</a> and 
+<a href="/flask.html">Flask</a> on the web. My recommendation is to start with one of
+those two frameworks then expand your knowledge from there.</p>
+<h3>What do you need to learn next?</h3>
+                      <h1>Deployment</h1>
+<p>Deployment involves packaging up your web application and putting it in a 
+production environment that can run the app.</p>
+<h2>Why is deployment necessary?</h2>
+<p>Your web application must live somewhere other than your own desktop or 
+laptop. A production environment is the canonical version of your current 
+application and its associated data.</p>
+<h2>Deployment hosting options</h2>
+<p>There are four options for deploying and hosting a web application:</p>
+<ol>
+<li>
+<p><a href="/servers.html">"Bare metal" servers</a></p>
+</li>
+<li>
+<p><a href="/servers.html">Virtualized servers</a></p>
+</li>
+<li>
+<p><a href="/servers.html">Infrastructure-as-a-service</a></p>
+</li>
+<li>
+<p><a href="/platform-as-a-service.html">Platform-as-a-service</a></p>
+</li>
+</ol>
+<p>The first three options are similar. The deployer needs to provision one or
+more servers with a Linux distribution. System packages, a web server, 
+WSGI server, database and the Python environment are then installed. Finally
+the application can be pulled from source and installed in the environment.</p>
+<p>Note that there are other ways of installing a Python web application through
+system-specific package management systems. We won't cover those in this
+guide as they are considered advanced deployment techniques.</p>
+<h2>Deployment resources</h2>
+<ul>
+<li>
+<p><a href="http://omniti.com/seeds/thoughts-on-web-application-deployment">Thoughts on web application deployment</a>
+  walks through stages of deployment with source control, planning, 
+  continuous deployment and monitoring the results.</p>
+</li>
+<li>
+<p><a href="http://blogs.atlassian.com/2014/04/practical-continuous-deployment/">Practical continuous deployment</a>
+  defines delivery versus deployment and walks through a continuous deployment
+  workflow.</p>
+</li>
+</ul>
+<h2>Deployment learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+If you're tight on time look at the 
+<a href="/platform-as-a-service.html">platform-as-a-service (PaaS)</a> options. You can
+deploy a low traffic project web app for free or low cost. You won't have to
+worry about setting up the operating system and web server compared to going
+the traditional server route. In theory you should be able to get your 
+application live on the web sooner with PaaS hosting.</p>
+<p><i class="fa fa-check-square-o"></i>
+<a href="/servers.html">Traditional server options</a> are your best bet for learning
+how the entire Python web stack works. You'll often save money with a virtual
+private server instead of a platform-as-a-service as you scale up.</p>
+<p><i class="fa fa-check-square-o"></i>
+Read about servers, <a href="/operating-systems.html">operating systems</a>, 
+<a href="/web-servers.html">web servers</a> and <a href="/wsgi-servers.html">WSGI servers</a> to get
+a broad picture of what components need to be set up to run a Python web 
+application.</p>
+<h3>How would you like to deploy your web app?</h3>
+                      <h1>Servers</h1>
+<p>Servers are the physical infrastructure to run all the layers of software
+so your web application can respond to requests from clients such as web 
+browsers.</p>
+<h2>Why are servers necessary?</h2>
+<p>Your web application must live somewhere other than your own desktop or 
+laptop. Servers should ideally be accessible 24 hours a day, 7 days a week, 
+with no unplanned downtime. The servers that host your web application for
+actual users (as opposed to test users) are known as <em>production</em> servers.
+Production servers hold real data (again as opposed to test data) and must be 
+secure against unauthorized access.</p>
+<h2>"Bare metal" servers</h2>
+<p>The term <em>bare metal</em> refers to purchasing the actual hardware and hooking 
+it up to the Internet either through a business-class internet service 
+provider (ISP) or 
+<a href="http://webdesign.about.com/od/colocation/a/what_colocation.htm">co-locating the server</a>
+with other servers. A "business-class" ISP is necessary because
+most residential Internet service agreements explicitly prohibit running
+web servers on their networks. You may be able to get away with low traffic
+volume but if your site serves a lot of traffic it will alert an ISP's
+filters.</p>
+<p>The bare metal option offers the most control over the server configuration,
+usually has the highest performance for the price, but also is the most 
+expensive upfront option and the highest ongoing maintenance. With bare
+metal servers the ongoing operating cost is the electricity the server(s) 
+use as well as handling repairs when server components malfunction. You're
+taking on manual labor working with hardware as well as the rest of the
+software stack.</p>
+<p>Buy actual hardware from a vendor either pre-built or as a collection of 
+components that you assemble yourself. You can also buy 
+pre-configured servers from Dell or HP. Those servers tend to be in
+smaller case form factors (called "blades") but are correspondingly more 
+expensive than putting off-the-shelf components together yourself in a 
+standard computer case.</p>
+<h2>Virtualized servers</h2>
+<p>Virtual private servers (VPSs) are slices of hardware on top of a larger
+bare metal server. Virtualization software such as 
+<a href="http://www.xen.org/">Xen</a> and
+<a href="http://www.vmware.com/virtualization/what-is-virtualization.html">VMWare</a>
+allow providers such as <a href="http://www.linode.com/">Linode</a> and
+<a href="http://prgmr.com/xen/">prgmr</a> (as well as a many others) to provide
+fractions of a full server that appear as their own instances. For example,
+a server with an 8-core Xeon processor and 16 gigabytes of memory can be
+sliced into 8 pieces with the equivalent of 1-core and 2 gigabytes of
+memory.</p>
+<p>The primary disadvantage of virtualized servers is that there is resource
+overhead in the virtualization process. In addition, physical constraints
+such as heavy I/O operations by a single virtualized instance on persistent 
+storage can cause performance bottlenecks for other virtualized instances on
+the shared server. Choosing virtualized server hosting should be based on
+your needs for urgency of service ticket requests and the frequency you
+require for ongoing maintenance such as persistent storage backups.</p>
+<h3>Virtualized servers resources</h3>
+<ul>
+<li>
+<p><a href="http://blog.redfern.me/choosing-a-low-cost-vps/">Choosing a low cost VPS</a>
+  reviews the factors that you should weigh when deciding on hosting 
+  providers.</p>
+</li>
+<li>
+<p>This post covers hosting types and host to
+  <a href="http://www.purefiremedia.com/choose-a-web-host/">choose a web host</a>.</p>
+</li>
+</ul>
+<h2>Infrastructure-as-a-service</h2>
+<p>Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
+because the resources are often presented in the same way. The 
+difference between virtualized servers and IaaS is the granularity of the
+billing cycle. IaaS generally encourages a finer granularity based on minutes
+or hours of server usage instead of on monthly billing cycles.</p>
+<p>IaaS can be used in combination with virtualized servers to provide 
+dynamic upscaling for heavy traffic. When traffic is low then virtualized
+servers can solely be used. This combination of resources reduces cost at
+the expense of greater complexity in the dynamically scaled infrastructure. </p>
+<p>The most common IaaS platforms are 
+<a href="http://aws.amazon.com/">Amazon Web Services</a> and 
+<a href="http://www.rackspace.com/cloud/">Rackspace Cloud</a>.</p>
+<p>The disadvantage to IaaS platforms is the lock-in if you have to write
+custom code to deploy, dynamically scale, and generally understand your
+infrastructure. Every platform has its quirks. For example, 
+Amazon's standard <a href="http://aws.amazon.com/ebs/">Elastic Block Store</a> storage
+infrastructure has at least an order of magnitude worse I/O throughput 
+than working with your local disk. Your application's database queries may 
+work great locally but then when you deploy the performance is inadequate.
+Amazon has <a href="http://aws.amazon.com/about-aws/whats-new/2012/07/31/announcing-provisioned-iops-for-amazon-ebs/">higher throughput EBS instances</a>
+but you will pay correspondingly more for them. EBS throughput is just 
+one of many quirks you need to understand before committing to an 
+IaaS platform.</p>
+<h3>Infrastructure-as-a-service resources</h3>
+<ul>
+<li>
+<p><a href="http://www.screamingatmyscreen.com/2012/12/the-cloud-vs-dedicated-servers/">The cloud versus dedicated servers</a></p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/articles/5-common-server-setups-for-your-web-application">5 common server setups for your web application</a>
+  is a great introduction to how hosting can be arranged.</p>
+</li>
+<li>
+<p><a href="http://libcloud.apache.org/">Apache Libcloud</a> is a Python library that
+provides a unified API for many cloud service providers.</p>
+</li>
+<li>
+<p><a href="http://aws.amazon.com/python/">Amazon Web Services has official documentation</a> for running Python web applications.</p>
+</li>
+<li>
+<p><a href="https://github.com/boto/boto">boto</a> is an extensive and well-tested 
+Python library for working with Amazon Web Services.</p>
+</li>
+<li>
+<p>Rackspace also has <a href="http://docs.rackspace.com/sdks/guide/content/python.html">official documentation for Python</a>.</p>
+</li>
+<li>
+<p><a href="http://feross.org/how-to-setup-your-linode/">How to set up your Linode for maximum awesomeness</a>
+  shows how to work with a VPS once you've got the server up and running.</p>
+</li>
+</ul>
+<h2>Servers learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Sign up for a hosting provider. I recommend getting a 
+<a href="https://www.linode.com/?r=bfeecaf55a83cd3dd224a5f2a3a001fdf95d4c3d">Linode VPS</a> 
+to set up your initial infrastructure and deploy your web application there.
+<a href="https://www.digitalocean.com/">Digital Ocean</a> and 
+<a href="http://prgmr.com/xen/">prgrmr</a> are other VPS options. You can change
+hosting providers later after the deployment process is automated.</p>
+<p><i class="fa fa-check-square-o"></i>
+Provision your first server. It will be ready but in a shutdown state while
+awaiting your instructions.</p>
+<p><i class="fa fa-check-square-o"></i>
+Move to the <a href="/operating-systems.html">operating systems</a> section to learn 
+how to load Ubuntu 12.04 LTS as a base OS for Python web applications.</p>
+<h3>Keep going with setting up a server or try a PaaS?</h3>
+                      <h1>Operating Systems</h1>
+<p>An operating system runs on the server or virtual server and controls access 
+to computing resources. The operating system also includes a way to install
+programs necessary for running your Python web application.</p>
+<h2>Why are operating systems necessary?</h2>
+<p>An operating system makes many the computing tasks we take for granted easy.
+For example, the operating system enables writing to files, 
+communicating over a network and running multiple programs at once. 
+Otherwise you'd need to control the CPU, memory, network, graphics card, 
+and many other components with your own low-level implemention.</p>
+<p>Without using an existing operating system like Linux, Mac OS X, or Windows,
+you'd be forced to write a new operating system as part of your web 
+application.  It would be impossible to write features for your Python 
+web application because you'd be too busy hunting down a memory leak in 
+your assembly code, if you even were able to get that far.</p>
+<p>Fortunately, the open source community provides Linux to the Python world 
+as a rock solid free operating system for running our applications.</p>
+<h2>Recommended operating systems</h2>
+<p>The only recommended operating system for production Python web stack 
+deployments is Linux. There are several Linux distributions commonly used 
+for running production servers. Ubuntu Long Term Support (LTS) releases, 
+Red Hat Enterprise Linux, and CentOS are all viable options. </p>
+<p>Mac OS X is fine for development activities. Windows and Mac 
+OS X are not appropriate for production deployments unless there is a 
+major reason why you must use them in lieu of Linux.</p>
+<h3>Ubuntu</h3>
+<p>Ubuntu is a Linux distribution packaged by the 
+<a href="http://www.canonical.com/">Canonical Ltd</a> company. Ubuntu uses the
+Debian distribution as a base for packages, including the 
+<a href="http://wiki.debian.org/Apt">aptitude package manager</a>. For desktop versions 
+of Ubuntu, GNOME (until the 11.04 release) or Unity (11.10 through current)
+is bundled with the distribution to provide a user interface.</p>
+<p>Ubuntu <a href="https://wiki.ubuntu.com/LTS">Long Term Support</a> (LTS) releases
+are the recommended versions to use for deployments. LTS versions receive
+five years of post-release updates from Canonical. Every two years, Canonical 
+creates a new LTS release, which allows for an easy upgrade path as well 
+as flexibility in skipping every other LTS release if necessary. As of
+February 2014, 
+<a href="http://releases.ubuntu.com/precise/">12.04 Precise Pangolin</a>
+is the latest Ubuntu LTS release.</p>
+<h4>Ubuntu Python Packages</h4>
+<p>There are several 
+<a href="https://help.ubuntu.com/12.04/serverguide/aptitude.html">Aptitude</a>
+packages found on Linux servers running a Python stack. These packages are: </p>
+<ul>
+<li>
+<p><a href="http://packages.ubuntu.com/precise/python-dev">python-dev</a> for header
+  files and static library for Python</p>
+</li>
+<li>
+<p><a href="http://packages.ubuntu.com/precise/python-virtualenv">python-virtualenv</a>
+  for creating and managing Python 
+  <a href="http://www.virtualenv.org/en/latest/">virtualenvs</a> to isolate library
+  dependencies</p>
+</li>
+</ul>
+<h3>Red Hat and CentOS</h3>
+<p><a href="http://www.redhat.com/products/enterprise-linux/">Red Hat Enterprise Linux</a>
+(RHEL) and <a href="http://www.centos.org/">Community ENTerprise Operating System</a>
+(CentOS) are the same distribution. The primary difference between the two 
+is that CentOS is an open source, liberally licensed free derivative of RHEL.</p>
+<p>RHEL and CentOS use a different package manager and command-line interface 
+from Debian-based Linux distributions: RPM Package Manager (RPM) and the 
+Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
+to handle the packaging and installation of libraries and applications. YUM
+provides a command-line interface for interacting with the RPM system.</p>
+<h2>Operating System Resources</h2>
+<ul>
+<li>
+<p><a href="http://www.linux.org/threads/selecting-a-linux-distribution.4087/">What is a Linux distribution and how do I choose the right one?</a></p>
+</li>
+<li>
+<p>Lifehacker's <a href="http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you">guide to choosing a Linux distro</a>.</p>
+</li>
+<li>
+<p><a href="http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution">Choosing a Linux Distribution</a></p>
+</li>
+<li>
+<p><a href="http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers">First 5 Minutes on a Server</a></p>
+</li>
+<li>
+<p>Digital Ocean has a detailed 
+  <a href="https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications">walkthrough for setting up Python web applications on Ubuntu</a>.</p>
+</li>
+</ul>
+<h2>Operating systems learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Choose either a Debian-based Linux distribution such as Ubuntu or a 
+Fedora-based distribution like CentOS.</p>
+<p><i class="fa fa-check-square-o"></i>
+Harden the security through a few basic steps. Install basic security 
+packages such as <a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> 
+or its equivalent. Create a new user account with sudo privileges and disable
+root logins. Disable password-only logins and use a public-private keypair 
+instead. Read more about hardening systems in the resources listed below.</p>
+<p><i class="fa fa-check-square-o"></i>
+Install Python-specific packages to prepare the environment for running a
+Python application. Which packages you'll need to install depends on the 
+distribution you've selected.</p>
+<p><i class="fa fa-check-square-o"></i>
+Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
+next step in the deployment process.</p>
+<h3>What topic do you need to learn to keep going?</h3>
+                      <h1>Web servers</h1>
+<p>Web servers respond to 
+<a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
+requests from clients and send back a response containing a status code and
+often content such as HTML, XML or JSON as well.</p>
+<h2>Why are web servers necessary?</h2>
+<p>Web servers are the ying to the web client's yang. The server and client speak
+the standardized language of the World Wide Web. This standard language
+is why an old Mozilla Netscape browser can still talk to a modern Apache or
+Nginx web server, even if it cannot properly render the page design like a 
+modern web browser can. </p>
+<p>The basic language of the Web with the request and response cycle from 
+client to server then server back to client remains the same as it was when
+the Web was invented by 
+<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> at CERN in 1989.
+Modern browsers and web servers have simply extended the language of the Web
+to incorporate new standards.</p>
+<h2>Client requests</h2>
+<p>A client that sends a request to a web server is usually a browser such 
+as Internet Explorer, Firefox, or Chrome, but it can also be a</p>
+<ul>
+<li>headless browser, commonly use for testing, such as 
+  <a href="http://phantomjs.org/">phantomjs</a></li>
+<li>commandline utility, for example <a href="https://www.gnu.org/software/wget/">wget</a>
+  and <a href="http://curl.haxx.se/">curl</a></li>
+<li>text-based web browser such as 
+  <a href="http://lynx.browser.org/">Lynx</a></li>
+<li>web crawler. </li>
+</ul>
+<p>Web server process requests from the above clients. The result of the web
+server's processing is a 
+<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">response code</a>
+and commonly a content response. Some status codes, such as 204 (No content) 
+and 403 (Forbidden), do not have content responses.</p>
+<p>In a simple case, the client will request a static asset such as a picture
+or JavaScript file. The file sits on the file system in a location the
+web server is authorized to access and the web server sends the file
+to the client with a 200 status code. If the client already requested the
+file and the file has not changed, the web server will pass back a 304 
+"Not modified" response indicating the client already has the latest version
+of that file.</p>
+<p><img src="theme/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" /></p>
+<p>A web server sends files to a web browser based on the web browser's 
+request. In the first request, the browser accessed the 
+"www.fullstackpython.com"
+address and the server responded with the index.html HTML-formatted file. 
+That HTML file contained references to other files, such as style.css and 
+script.js that the browser then requested from the server.</p>
+<p>Sending static assets (such as CSS and JavaScript files) can eat up a 
+large amount of bandwidth which is why using a Content Delivery Network 
+(CDN) is important when possible (see the content delivery network 
+section for a more detailed explanation).</p>
+<h2>Web server resources</h2>
+<ul>
+<li>
+<p><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP/1.1 Specification</a></p>
+</li>
+<li>
+<p><a href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
+</li>
+<li>
+<p><a href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
+</li>
+<li>
+<p><a href="http://articles.slicehost.com/nginx">Nginx web server tutorials</a></p>
+</li>
+<li>
+<p><a href="http://carrot.is/coding/nginx_introduction">Nginx for Developers: An Introduction</a></p>
+</li>
+<li>
+<p>An example of an <a href="http://tautt.com/best-nginx-configuration-for-security/">Nginx security configuration</a>.</p>
+</li>
+<li>
+<p>A reference with the full list of 
+<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP status codes</a>
+is provided by W3C.</p>
+</li>
+<li>
+<p>An optimization guide for 
+"<a href="http://blog.zachorr.com/nginx-setup/">battle ready Nginx</a>."</p>
+</li>
+<li>
+<p><a href="http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/">A faster Web server: ripping out Apache for Nginx</a></p>
+</li>
+<li>
+<p><a href="http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using">4 HTTP Security Headers You Should Always Be Using</a></p>
+</li>
+</ul>
+<h2>Web servers learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Choose a web server. <a href="http://nginx.org/en/">Nginx</a> is recommended although 
+<a href="http://httpd.apache.org/">Apache</a> is also a great choice.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create an SSL certificate. For testing use a self-signed certificate and for a
+production app buy one from <a href="http://www.digicert.com/">Digicert</a>. Configure 
+the web server to serve traffic over SSL. You'll need SSL for serving only
+HTTPS traffic and preventing security issues that occur with unencrypted user 
+input.</p>
+<p><i class="fa fa-check-square-o"></i>
+Configure the web server to serve up static files such as CSS, JavaScript
+and images.</p>
+<p><i class="fa fa-check-square-o"></i>
+Once you set up the <a href="/wsgi-servers.html">WSGI server</a> you'll need to configure
+the web server as a pass through for dynamic content.</p>
+<h3>What do you want to learn after the web server is set up?</h3>
+                      <h1>Platform-as-a-service</h1>
+<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
+on which a web application is deployed. Running your web application from
+a PaaS removes the need to know as much about the underlying servers, 
+operating system, web server, and often the WSGI server. </p>
+<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move 
+ahead to the <a href="../wsgi-servers.html">WSGI servers</a> section.</p>
+<p>The PaaS layer defines how the application accesses resources such as 
+computing time, files, and external services. The PaaS provides a 
+higher-level abstraction for working with computing resources than deploying 
+an application to a server or IaaS.</p>
+<p>A PaaS makes deployment and operations easier because it forces the developer
+to conform applications to the PaaS architecture. For example, Heroku looks 
+for Python's requirements.txt file in the base directory of the repository 
+during deployment because that is the file's de facto community standard
+location.</p>
+<p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
+<p>If you go the PaaS route, you can skip configuring an operating system
+and web server prebaked into PaaS offerings. PaaS offerings generally start 
+at the WSGI server layer. </p>
+<h2>Platform-as-a-service responsibilities</h2>
+<p>Although PaaS offerings simplify setting up and maintaining the servers,
+operating system, and web server, developers still have responsibilities for other
+layers of their web stack.</p>
+<p>While it's useful to know the operating system that underpins your PaaS, for 
+example Heroku uses Ubuntu 10.04, you will not have to know as much about 
+securing the operating system and server level. However, web applications deployed
+to a PaaS are just as vulnerable to security breaches at the application level
+as a standard LAMP stack. It's still your responsibility to ensure the web
+application framework and your app itself is up to date and secured. See the
+<a href="../web-application-security.html">security section</a> for further information.</p>
+<h2>Platforms-as-a-service that support Python</h2>
+<ul>
+<li>
+<p><a href="http://www.heroku.com/">Heroku</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/appengine/">Google App Engine</a></p>
+</li>
+<li>
+<p><a href="https://gondor.io/">Gondor</a></p>
+</li>
+<li>
+<p><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></p>
+</li>
+<li>
+<p><a href="https://openshift.redhat.com/community/get-started/python&gt;">OpenShift</a></p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a></p>
+</li>
+</ul>
+<h2>Platform-as-a-service resources</h2>
+<ul>
+<li>
+<p><a href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a href="https://twitter.com/natea">Nate Aune</a>.</p>
+</li>
+<li>
+<p><a href="http://www.deploydjango.com/">Deploying Django</a> by Randall Degges is 
+  another great free resource about Heroku.</p>
+</li>
+<li>
+<p>Heroku's 
+  <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Python deployment documentation</a>
+  provides clear examples for how to work with virtualenv, pip and 
+  requirementst.txt to get a applications deployed to their platform.</p>
+</li>
+<li>
+<p>Miguel Grinberg's Flask tutorial contains an entire post on deploying 
+  <a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Flask applications to Heroku</a>.</p>
+</li>
+<li>
+<p>This series on DevOps Django by 
+  <a href="https://twitter.com/rdegges">Randall Degges</a> is great reading for 
+  using the Heroku service:</p>
+<ul>
+<li><a href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
+<li><a href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
+<li><a href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
+<li><a href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
+</ul>
+</li>
+</ul>
+<h2>Platform-as-a-service learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Review the potential Python platform-as-a-service options above and on their
+websites.</p>
+<p><i class="fa fa-check-square-o"></i>
+Sign up for a PaaS account at the provider that appears to best fit your
+application needs. Heroku is the PaaS option recommended for starters due to
+their detailed documentation and walkthroughs available on the web. However,
+the other options are perfectly viable since their purpose is to make deploying
+applications as easy as possible.</p>
+<p><i class="fa fa-check-square-o"></i>
+Check if there are any PaaS-specific configuration files needed for your app
+to run properly on the PaaS after it is deployed.</p>
+<p><i class="fa fa-check-square-o"></i>
+Deploy your app to the PaaS. </p>
+<p><i class="fa fa-check-square-o"></i>
+Sync your application's configuration with the database.</p>
+<p><i class="fa fa-check-square-o"></i>
+Set up a content delivery network for your application's 
+<a href="/static-content.html">static content</a> unless your PaaS provider already
+handles this deployment step for you.</p>
+<p><i class="fa fa-check-square-o"></i>
+Check if the application's functionality is working and tweak as necessary.</p>
+<h3>Do you want to use a PaaS or deploy to a traditional server?</h3>
+                      <h1>WSGI Servers</h1>
+<p>A <a href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
+(WSGI) server implements the web server side of the WSGI interface for
+running Python web applications. </p>
+<h2>Why is WSGI necessary?</h2>
+<p>A traditional web server does not understand or have any way to run Python 
+applications. In the late 1990s, a developer named Grisha Trubetskoy 
+<a href="http://grisha.org/blog/2013/10/25/mod-python-the-long-story/">came up with an Apache module called mod_python</a> 
+to execute arbitrary Python code. For several years in the late 1990s 
+and early 2000s, Apache configured with mod_python ran most Python web 
+applications.</p>
+<p>However, mod_python wasn't a standard specification. It was just an 
+implementation that allowed Python code to run on a server. As mod_python's 
+development stalled and security vulnerabilities were discovered there 
+was recognition by the community that a consistent way to execute Python 
+code for web applications was needed.</p>
+<p>Therefore the Python community came up with WSGI as a standard interface that
+modules and containers could implement. WSGI is now the accepted approach 
+for running Python web applications.</p>
+<p><img src="theme/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" /></p>
+<p>As shown in the above diagram, a WSGI server simply invokes a callable object
+on the WSGI application as defined by the PEP 3333 standard.</p>
+<h2>WSGI's Purpose</h2>
+<p>Why use WSGI and not just point a web server directly at an application?</p>
+<ul>
+<li>
+<p><strong>WSGI gives you flexibility</strong>. Application developers can swap out
+  web stack components for others. For example, a developer can switch from 
+  Green Unicorn to uWSGI without modifying the application or framework 
+  that implements WSGI. 
+  From <a href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>:</p>
+<p>The availability and widespread use of such an API in web servers for 
+Python [...] would separate choice of framework from choice of web 
+server, freeing users to choose a pairing that suits them, while 
+freeing framework and server developers to focus on their preferred 
+area of specialization.</p>
+</li>
+<li>
+<p><strong>WSGI servers promote scaling</strong>. Serving thousands of requests for dynamic
+  content at once is the domain of WSGI servers, not frameworks.
+  WSGI servers handle processing requests from the web server and deciding
+  how to communicate those requests to an application framework's process.
+  The segregation of responsibilities is important for efficiently scaling 
+  web traffic.</p>
+</li>
+</ul>
+<p><img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server <-> Web server &lt;-&gt; Browser" width="100%" class="technical-diagram" /&gt;</p>
+<p>WSGI is by design a simple standard interface for running Python code. As
+a web developer you won't need to know much more than</p>
+<ul>
+<li>
+<p>what WSGI stands for (Web Server Gateway Inteface)</p>
+</li>
+<li>
+<p>that a WSGI container is a separate running process that runs on a
+  different port than your web server</p>
+</li>
+<li>
+<p>your web server is configured to pass requests to the WSGI container which
+  runs your web application, then pass the response (in the form of HTML)
+  back to the requester</p>
+</li>
+</ul>
+<p>If you're using a standard web framework such as Django, Flask, or
+Bottle, or almost any other current Python framework, you don't need to worry
+about how frameworks implement the application side of the WSGI standard.
+Likewise, if you're using a standard WSGI container such as Green Unicorn,
+uWSGI, mod_wsgi, or gevent, you can get them running without worrying about
+how they implement the WSGI standard.</p>
+<p>However, knowing the WSGI standard and how these frameworks and containers
+implement WSGI should be on your learning checklist though as you become
+a more experienced Python web developer.</p>
+<h2>Official WSGI specifications</h2>
+<p>The WSGI standard v1.0 is specified in
+<a href="http://www.python.org/dev/peps/pep-0333/">PEP 0333</a>. As of September 2010,
+WSGI v1.0 is superseded by
+<a href="http://www.python.org/dev/peps/pep-3333/">PEP 3333</a>, which defines the
+v1.0.1 WSGI standard. If you're working with Python 2.x and you're compliant
+with PEP 0333, then you're also compliant with 3333. The newer version is
+simply an update for Python 3 and has instructions for how unicode should
+be handled.</p>
+<p><a href="https://docs.python.org/2/library/wsgiref.html">wsgiref in Python 2.x</a> and
+<a href="https://docs.python.org/3.4/library/wsgiref.html">wsgiref in Python 3.x</a>
+are the reference implementations of the WSGI specification built into
+Python's standard library so it can be used to build WSGI servers and
+applications.</p>
+<h2>Example web server configuration</h2>
+<p>A web server's configuration specifies what requests should be passed to
+the WSGI server to process. Once a request is processed and generated by the
+WSGI server, the response is passed back through the web server and onto
+the browser. </p>
+<p>For example, this Nginx web server's configuration specifics
+Nginx should handle static assets (such as images, JavaScript, and CSS
+files) under the /static directory and pass all other requests to the WSGI
+server running on port 8000:</p>
+<div class="codehilite"><pre><span class="cp"># this specifies that there is a WSGI server running on port 8000</span>
+<span class="n">upstream</span> <span class="n">app_server_djangoapp</span> <span class="p">{</span>
+    <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp"># Nginx is set up to run on the standard HTTP port and listen for requests</span>
+<span class="n">server</span> <span class="p">{</span>
+  <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
+
+  <span class="err">#</span> <span class="n">nginx</span> <span class="n">should</span> <span class="n">serve</span> <span class="n">up</span> <span class="k">static</span> <span class="n">files</span> <span class="n">and</span> <span class="n">never</span> <span class="n">send</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span> <span class="n">server</span>
+  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="p">{</span>
+    <span class="n">autoindex</span> <span class="n">on</span><span class="p">;</span>
+    <span class="n">alias</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">assets</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="err">#</span> <span class="n">requests</span> <span class="n">that</span> <span class="k">do</span> <span class="n">not</span> <span class="n">fall</span> <span class="n">under</span> <span class="o">/</span><span class="k">static</span> <span class="n">are</span> <span class="n">passed</span> <span class="n">on</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span>
+  <span class="err">#</span> <span class="n">server</span> <span class="n">that</span> <span class="n">was</span> <span class="n">specified</span> <span class="n">above</span> <span class="n">running</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">8000</span>
+  <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+    <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">http_host</span><span class="p">;</span>
+    <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!-</span><span class="n">f</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_djangoapp;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Note that the above code is a simplified version of a production-ready Nginx
+configuration. For real SSL and non-SSL templates, take a look at the
+<a href="https://github.com/makaimc/underwear/tree/master/underwear/roles/web/templates">Underwear web server templates</a> on GitHub.</p>
+<h2>WSGI servers</h2>
+<p>There is a comprehensive list of WSGI servers on the 
+<a href="http://wsgi.readthedocs.org/en/latest/servers.html">WSGI Read the Docs</a> page.
+The following are WSGI servers based on community recommendations.</p>
+<ul>
+<li>
+<p><a href="http://gunicorn.org/">Green Unicorn</a> is a pre-fork worker model based
+  server ported from the Ruby <a href="http://unicorn.bogomips.org/">Unicorn</a> project.</p>
+</li>
+<li>
+<p><a href="http://uwsgi-docs.readthedocs.org/en/latest/">uWSGI</a> is gaining steam as
+  a highly-performant WSGI server implementation.</p>
+</li>
+<li>
+<p><a href="https://code.google.com/p/modwsgi/">mod_wsgi</a> is an Apache module 
+  implementing the WSGI specification.</p>
+</li>
+<li>
+<p><a href="https://github.com/cherrypy/cherrypy">CherryPy</a> is a pure Python web 
+  server that also functions as a WSGI server.</p>
+</li>
+</ul>
+<h2>WSGI resources</h2>
+<ul>
+<li>
+<p><a href="http://www.python.org/dev/peps/pep-0333/">PEP 0333 WSGI v1.0</a>
+  and
+  <a href="http://www.python.org/dev/peps/pep-3333/">PEP 3333 WSGI v1.0.1</a>
+  specifications.</p>
+</li>
+<li>
+<p><a href="http://gunicorn.org/">Green Unicorn</a>,
+  <a href="http://code.google.com/p/modwsgi/">mod_wsgi</a>,
+  <a href="https://github.com/unbit/uwsgi-docs">uWSGI</a> and
+  <a href="http://www.gevent.org/">gevent</a> are common WSGI server implementations.</p>
+</li>
+<li>
+<p>This <a href="http://agiliq.com/blog/2013/07/basics-wsgi/">basics of WSGI</a> post
+  contains a simple example of how a WSGI-compatible application works.</p>
+</li>
+<li>
+<p>A thorough and informative post for LAMP-stack hosting chocies is 
+  presented in the 
+  "<a href="http://www.apreche.net/complete-single-server-django-stack-tutorial/&gt;">complete single server Django stack tutorial</a>." </p>
+</li>
+<li>
+<p>This post entitled
+  <a href="http://justbartek.ca/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html">The Beautiful Simplicity of an nginx and uWSGI Deployments</a>
+  explained Nginx and uWSGI configurations.</p>
+</li>
+<li>
+<p>The Python community made a long effort to 
+  <a href="http://blog.dscpl.com.au/2010/05/modpython-project-soon-to-be-officially.html">transition from mod_python</a> 
+  to the WSGI standard. That transition period is now complete and an 
+  implementation of WSGI should always be used instead mod_python.</p>
+</li>
+<li>
+<p>Nicholas Piël wrote an interesting benchmark blog post of 
+  <a href="http://nichol.as/benchmark-of-python-web-servers">Python WSGI servers</a>.
+  Note that the post is a few years old. Benchmarks should be considered
+  for their specific tested scenarios and not quickly extrapolated as general
+  "this server is faster than this other server" results.</p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/articles/how-to-deploy-python-wsgi-applications-using-a-cherrypy-web-server-behind-nginx">How to Deploy Python WSGI Applications with CherryPy</a>
+  answers why CherryPy is a simple combination web and WSGI server along with 
+  how to use it.</p>
+</li>
+</ul>
+<h2>WSGI servers learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Understand that WSGI is a standard Python specification for applications and 
+servers to implement. </p>
+<p><i class="fa fa-check-square-o"></i>
+Pick a WSGI server based on available documentation and tutorials. Green 
+Unicorn is a good one to start with since it's been around for awhile.</p>
+<p><i class="fa fa-check-square-o"></i>
+Add the WSGI server to your server deployment.</p>
+<p><i class="fa fa-check-square-o"></i>
+Configure the web server to pass requests to the WSGI server for appropriate
+URL patterns.</p>
+<p><i class="fa fa-check-square-o"></i>
+Test that the WSGI server responds to local requests but not direct requests 
+outside your infrastructure. The web server should be the pass through for
+requests to and responses from the WSGI server.</p>
+<h3>What's next after your Python code is running?</h3>
+                      <h1>Source control</h1>
+<p>Source control, also known as <em>version control</em>, stores software code files
+with a detailed history of every modification made to those files.</p>
+<h2>Why is source control necessary?</h2>
+<p>Version control systems allow developers to modify code without worrying 
+about permanently screwing something up. Unwanted changes can be easily rolled
+back to previous working versions of the code. </p>
+<p>Source control also makes team software development easier. One developer 
+can combine her code modifications with other developers' code through 
+<a href="http://en.wikipedia.org/wiki/Diff">diff</a> views that show line-by-line 
+changes then merge the appropriate code into the main code branch.</p>
+<p>Version control is a necessity on all software projects regardless of 
+development time, codebase size or the programming language used. Every
+project should immediately begin by using a version control system such
+as Git or Mercurial.</p>
+<h2>Source control during deployment</h2>
+<p>Pulling code during a deployment is a potential way source control systems fit
+into the deployment process. </p>
+<p><img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system."></p>
+<p>Note that some developers recommend deployment pipelines package the source 
+code to deploy it and never have a production environment touch a source 
+control system directly. However, for small scale deployments it's often
+easiest to pull from source code when you're getting started instead of 
+figuring out how to wrap the Python code in a system installation package.</p>
+<h2>Source control projects</h2>
+<p>Numerous source control systems have been created over the past several
+decades. In the past, proprietary source control software offered features
+tailored to large development teams and specific project workflows. However,
+open source systems are now used for version control on the largest and most
+complicated software projects in existence. There's no reason why your project
+should use anything other than an open source version control system in
+today's Python development world. The two primary choices are:</p>
+<ul>
+<li>
+<p><a href="http://git-scm.com/">Git</a> is a free and open source distributed version
+  control system.</p>
+</li>
+<li>
+<p><a href="http://mercurial.selenic.com/">Mercurial</a> is similar to Git, also a free
+  and open source distributed version control system.</p>
+</li>
+</ul>
+<h2>Hosted source control services</h2>
+<p>Git and Mercurial can be downloaded and run on your own server. However,
+it's easy and cheap to get started with a hosted version control service.
+You can transition away from the service at a later time by moving your 
+repositories if your needs change. A couple of recommended hosted version
+control services are:</p>
+<ul>
+<li>
+<p><a href="https://github.com/">GitHub</a> is currently the most commonly used source
+  control platform for using Git.</p>
+</li>
+<li>
+<p><a href="https://bitbucket.org/">BitBucket</a> provides free Git and Mercurial 
+  repositories for open projects and private repositories for up to five
+  users. Users pay for hosting private repositories with more than five users.</p>
+</li>
+</ul>
+<h2>General source control resources</h2>
+<ul>
+<li>
+<p><a href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> 
+  is a comprehensive overview by Patrick McKenzie of why you need source 
+  control.</p>
+</li>
+<li>
+<p><a href="https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/">Version control best practices</a>
+  is a good write up of how to work with version control systems. The post is 
+  part of an ongoing deployment guide written by the folks at 
+  <a href="https://www.rainforestqa.com/">Rainforest</a>.</p>
+</li>
+<li>
+<p>This lighthearted guide to the 
+  <a href="http://www.flourish.org/blog/?p=397">ten astonishments in version control history</a> 
+  is a fun way to learn how systems developed over the past several decades.</p>
+</li>
+<li>
+<p><a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A visual guide to version control</a> 
+  is a detailed article with real-life examples for why version control is
+  necessary in software development.</p>
+</li>
+<li>
+<p><a href="http://guides.beanstalkapp.com/version-control/intro-to-version-control.html">An introduction to version control</a> 
+  shows the basic concepts behind version control systems.</p>
+</li>
+<li>
+<p><a href="http://oss-watch.ac.uk/resources/versioncontrol">What Is Version Control? Why Is It Important For Due Diligence?</a> 
+  explains the benefits and necessity of version control systems.</p>
+</li>
+<li>
+<p><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">About version control</a> 
+reviews the basics of distributed version control systems.</p>
+</li>
+</ul>
+<h2>Git resources</h2>
+<ul>
+<li>
+<p><a href="http://git-scm.com/book">Pro Git</a> is a free open source book that walks 
+  through all aspects of using the version control system.</p>
+</li>
+<li>
+<p><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git">A Hacker's Guide to Git</a>
+  covers the basics as well as more advanced Git commands while explaining each
+  step along the way.</p>
+</li>
+<li>
+<p><a href="http://gitready.com/">git ready</a> has a nice collection of blog posts based on
+  beginner, intermediate and advanced Git use cases.</p>
+</li>
+<li>
+<p><a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a> details
+  a Git branching model for small teams.</p>
+</li>
+<li>
+<p><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a> builds on
+  git-flow, goes over some of the issues that arise with it and presents a
+  few solutions to those problems.</p>
+</li>
+<li>
+<p><a href="http://blog.endpoint.com/2014/05/git-workflows-that-work.html">Git Workflows That Work</a>
+  is a helpful post with diagrams to show how teams can create a Git workflow
+  that will help their development process.</p>
+</li>
+<li>
+<p>"<a href="http://www.braintreepaymentsolutions.com/devblog/our-git-workflow">Our Git Workflow</a>"
+  by Braintree goes over how this payments company uses Git for development
+  and merging source code.</p>
+</li>
+</ul>
+<h2>Source control learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Pick a version control system. Git is recommended because on the web there 
+are a significant number of tutorials to help both new and advanced users.</p>
+<p><i class="fa fa-check-square-o"></i>
+Learn basic use cases for version control such as committing changes, rolling 
+back to earlier file versions and searching for when lines of code were 
+modified during development history.</p>
+<p><i class="fa fa-check-square-o"></i>
+Ensure your source code is backed up in a central repository. A central
+repository is critical not only if your local development version is corrupted
+but also for the deployment process.</p>
+<p><i class="fa fa-check-square-o"></i>
+Integrate source control into your deployment process in three ways. First,
+pull the project source code from version control during deployments. Second, 
+kick off deployments when code is modified by using webhooks or polling on 
+the repository. Third, ensure you can roll back to a previous version if a 
+code deployment goes wrong.</p>
+<h3>Now that your source code is versioned, what's next?</h3>
+                      <h1>Application Dependencies</h1>
+<p>Application dependencies are the libraries other than your project code
+that are required to create and run your application. </p>
+<h2>Why are application dependencies important?</h2>
+<p>Python web applications are built upon the work done by thousands of open
+source programmers. Application dependencies include not only web frameworks but
+also libraries for scraping, parsing, processing, analyzing, visualizing, 
+and many other tasks. Python's ecosystem facilitates discovery, retrieval and 
+installation so applications are easier for developers to create.</p>
+<h2>Finding libraries</h2>
+<p>Python libraries are stored in a central location known as the 
+<a href="https://pypi.python.org/pypi">Python Package Index</a> (PyPi). PyPi contains
+search functionality with results weighted by usage and relevance based on
+keyword terms.</p>
+<p>Besides PyPi there are numerous resources that list common or "must-have" 
+libraries. Ultimately the decision for which application dependencies are
+necessary for your project is up to you and the functionality you're looking
+to build. However, it's useful to browse through these lists in case you come 
+across a library to solve a problem by reusing the code instead of writing it
+all yourself. A few of the best collections of Python libraries are</p>
+<ul>
+<li>
+<p><a href="https://wiki.python.org/moin/UsefulModules">Python.org's useful modules</a>
+  which groups modules into categories.</p>
+</li>
+<li>
+<p><a href="https://github.com/trending?l=python">GitHub Explore Trending repositories</a>
+  shows the open source Python projects trending today, this week, and this 
+  month.</p>
+</li>
+<li>
+<p>This list of <a href="http://freepythontips.wordpress.com/2013/07/30/20-python-libraries-you-cant-live-without/">20 Python libraries you can’t live without</a>
+  is a wide-ranging collection from data analysis to testing tools.</p>
+</li>
+<li>
+<p>Wikipedia actually has an extensive 
+  <a href="http://en.wikipedia.org/wiki/List_of_Python_software">page dedicated to Python libraries</a> 
+  grouped by categories.</p>
+</li>
+</ul>
+<h2>Isolating dependencies</h2>
+<p>Dependencies are installed separately from system-level packages to prevent 
+library version conflicts. The most common isolation method is 
+<a href="http://www.virtualenv.org/en/latest/">virtualenv</a>. Each virtualenv is its
+own copy of the Python interpreter and depedencies in the site-packages
+directory. To use a virtualenv it must first be created with the virtualenv
+command and then activated.</p>
+<p>The virtualenv stores dependencies in an isolated environment. The web 
+application then relies only on that virtualenv instance which has a separate
+copy of the Python interpreter and site-packages directory. A high level of
+how a server configured with virtualenv can look is shown in the picture below.</p>
+<p><img src="theme/img/server-setup.png" alt="How the virtualenv separates dependencies on the server." width="100%" class="technical-diagram" /></p>
+<h2>Installing Python dependencies</h2>
+<p>The recommended way to install Python library dependencies is with the 
+<a href="http://www.pip-installer.org/en/latest/">pip</a> command when a virtualenv
+is activated.</p>
+<p>Pip and virtualenv work together and have complementary responsibilities.
+Pip downloads and installs application dependencies from the central
+<a href="https://pypi.python.org/pypi">PyPi</a> repository. </p>
+<h2>requirements.txt</h2>
+<p>The pip convention for specifying application dependencies is with a 
+<a href="http://www.pip-installer.org/en/1.4.1/cookbook.html#requirements-files">requirements.txt</a>
+file. When you build a Python web application you should include a 
+requirements.txt file. </p>
+<p>Python projects' dependencies for a web application should be specified in the
+requirements.txt with 
+<a href="https://devcenter.heroku.com/articles/python-pip">pegged dependencies</a> like
+the following:</p>
+<div class="codehilite"><pre><span class="n">django</span><span class="o">==</span><span class="mf">1.6</span>
+<span class="n">bpython</span><span class="o">==</span><span class="mf">0.12</span>
+<span class="n">django</span><span class="o">-</span><span class="n">braces</span><span class="o">==</span><span class="mf">0.2.1</span>
+<span class="n">django</span><span class="o">-</span><span class="n">model</span><span class="o">-</span><span class="n">utils</span><span class="o">==</span><span class="mf">1.1.0</span>
+<span class="n">logutils</span><span class="o">==</span><span class="mf">0.3.3</span>
+<span class="n">South</span><span class="o">==</span><span class="mf">0.7.6</span>
+<span class="n">requests</span><span class="o">==</span><span class="mf">1.2.0</span>
+<span class="n">stripe</span><span class="o">==</span><span class="mf">1.9.1</span>
+<span class="n">dj</span><span class="o">-</span><span class="n">database</span><span class="o">-</span><span class="n">url</span><span class="o">==</span><span class="mf">0.2.1</span>
+<span class="n">django</span><span class="o">-</span><span class="n">oauth2</span><span class="o">-</span><span class="n">provider</span><span class="o">==</span><span class="mf">0.2.4</span>
+<span class="n">djangorestframework</span><span class="o">==</span><span class="mf">2.3.1</span>
+</pre></div>
+
+
+<p>Pegged dependencies with precise version numbers or Git tags are important 
+because otherwise the latest version of a dependency will be used. While
+it may sound good to stay up to date, there's no telling if your application
+actually works with the latest versions of all dependencies. Developers should 
+deliberately upgrade and test to make sure there were no backwards-incompatible
+modifications in newer dependency library versions.</p>
+<h2>setup.py</h2>
+<p>There is another type of dependency specification for Python libraries
+known as 
+<a href="http://stackoverflow.com/questions/1471994/what-is-setup-py">setup.py</a>.
+Setup.py is a standard for distributing and installing Python libraries.
+If you're building a Python library, such as 
+<a href="http://www.python-requests.org/en/latest/">requests</a> or
+<a href="https://github.com/makaimc/underwear">underwear</a> you must include setup.py
+so a dependency manager can correctly install both the library as well as
+additional dependencies for the library. There's still quite a bit of 
+confusion in the Python community over the difference between 
+requirements.txt and setup.py, so read this 
+<a href="https://caremad.io/blog/setup-vs-requirement/">well written post</a> for
+further clarification.</p>
+<h2>Application dependency resources</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/jonathanchu">Jon Chu</a> wrote a great introduction on 
+  <a href="http://www.jontourage.com/2011/02/09/virtualenv-pip-basics/">virtualenv and pip basics</a>.</p>
+</li>
+<li>
+<p>"<a href="http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/">A non-magical introduction to virtualenv and pip</a> 
+  breaks down what problems these tools solve and how to use them.</p>
+</li>
+<li>
+<p><a href="http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/">Tools of the modern Python hacker</a> 
+  contains detailed explanations of virtualenv, Fabric, and pip.</p>
+</li>
+<li>
+<p>Occasionally arguments about using Python's dependency manager versus
+  one of Linux's depenency managers comes up. This provides
+  <a href="http://notes.pault.ag/debian-python/">one perspective on that debate</a>.</p>
+</li>
+<li>
+<p>This Stack Overflow question details how to set up a 
+  <a href="http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu">virtual environment for Python development</a>.</p>
+</li>
+<li>
+<p>An alternative approach for managing dependencies with Docker instead of
+  through virtualenv is explained in this post entitled 
+  "<a href="http://continuousdelivery.uglyduckling.nl/uncategorized/using-docker-as-a-python-development-environment/">Using Docker as a Python Development Environment</a>."</p>
+</li>
+</ul>
+<h2>Application dependencies learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Ensure the libraries your web application depends on are all captured in a
+requirement.txt file with pegged versions. </p>
+<p><i class="fa fa-check-square-o"></i>
+An easy way to capture currently installed dependencies is with the 
+<code>pip freeze</code> command.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create a fresh virtualenv and install the dependencies from your 
+requirements.txt file by using the <code>pip install -r requirements.txt</code> 
+command.</p>
+<p><i class="fa fa-check-square-o"></i>
+Check that your application runs properly with the fresh virtualenv and only
+the installed dependencies from the requirements.txt file.</p>
+<h3>What do you need to learn after installing your app dependencies?</h3>
+                      <h1>Configuration Management</h1>
+<p>Configuration management involves modifying servers from an existing state to 
+a desired state and automating how an application is deployed.</p>
+<h2>Configuration management tools</h2>
+<p>Numerous tools exist to modify server state in a controlled 
+way, including <a href="http://puppetlabs.com/puppet/what-is-puppet">Puppet</a>, 
+<a href="http://www.getchef.com/chef/">Chef</a>, 
+<a href="http://www.saltstack.com/">SaltStack</a>, and Ansible. Puppet and Chef are
+written in Ruby, while SaltStack and Ansible are written in Python.</p>
+<h2>Ad hoc tasks</h2>
+<p>Configuration management tools such as Chef, Puppet, Ansible, and SaltStack
+are not useful for performing ad hoc tasks that require interactive responses.
+<a href="http://docs.fabfile.org/en/1.8/">Fabric</a> and 
+<a href="http://docs.pyinvoke.org/en/latest/">Invoke</a> are used for interactive 
+operations, such as querying the database from the Django manage.py shell.</p>
+<h2>Ansible</h2>
+<p><a href="http://www.ansibleworks.com/">Ansible</a> is an open source configuration
+management and application deployment tool built in Python.</p>
+<h3>Ansible Resources</h3>
+<ul>
+<li>
+<p><a href="http://docs.ansible.com/index.html">Official Ansible documentation</a></p>
+</li>
+<li>
+<p><a href="http://www.insom.me.uk/post/pycon-talk.html">Python for Configuration Management with Ansible slides</a> 
+from PyCon UK 2013</p>
+</li>
+<li>
+<p><a href="http://devopsu.com/newsletters/ansible-weekly-newsletter.html">Ansible Weekly Newsletter</a></p>
+</li>
+<li>
+<p><a href="http://labs.qandidate.com/blog/2013/11/15/first-steps-with-ansible/">First Steps with Ansible</a></p>
+</li>
+<li>
+<p><a href="http://red-badger.com/blog/2013/06/29/ansible/">Red Badger on Ansible</a></p>
+</li>
+<li>
+<p><a href="http://lowendbox.com/blog/getting-started-with-ansible/">Getting Started with Ansible</a></p>
+</li>
+<li>
+<p><a href="https://www.twilio.com/blog/2014/05/ansible-text-messages-notifications-with-twilio-sms.html">Ansible Text Message Notifications with Twilio SMS</a>
+  is my blog post with a detailed example for using the Twilio module in
+  core Ansible 1.6+.</p>
+</li>
+<li>
+<p><a href="http://softwareas.com/ansible-and-linode-what-i-learned-about-controlling-linodes-from-ansible">Ansible and Linode</a></p>
+</li>
+<li>
+<p><a href="http://jlafon.io/ansible-duo-security.html">Multi-factor SSH authentication with Ansible and Duo Security</a></p>
+</li>
+<li>
+<p><a href="http://benlopatin.com/getting-started-with-ansible/">Introducing Ansible into Legacy Projects</a></p>
+</li>
+<li>
+<p><a href="http://devopsu.com/blog/ansible-vs-shell-scripts/">Ansible vs. Shell Scripts</a></p>
+</li>
+<li>
+<p><a href="http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/">Ansible and Salt: A Detailed Comparison</a></p>
+</li>
+<li>
+<p><a href="http://www.nickhammond.com/automating-development-environment-ansible/">Automating your development environment with Ansible</a></p>
+</li>
+<li>
+<p><a href="http://devopsu.com/guides/ansible-post-install.html">Post-install steps with Ansible</a> </p>
+</li>
+<li>
+<p><a href="http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible">First Five (and a half) Minutes on a Server with Ansible</a> </p>
+</li>
+<li>
+<p><a href="http://davidwinter.me/articles/2013/11/23/introduction-to-ansible/">(Detailed) Introduction to Ansible</a></p>
+</li>
+<li>
+<p><a href="http://hakunin.com/six-ansible-practices">6 practices for super smooth Ansible experience</a></p>
+</li>
+<li>
+<p><a href="http://www.hiddentao.com/archives/2014/06/03/shippable-ansible-docker-loggly-for-awesome-deployments/">Shippable + Ansible + Docker + Loggly for awesome deployments</a>
+  is a well written detailed post about using Docker and Ansible together with
+  a few other pieces.</p>
+</li>
+<li>
+<p><a href="http://blog.couchbase.com/create-couchbase-cluster-with-ansible">Create a Couchbase Cluster with Ansible</a></p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ">Idempotence, convergence, and other silly fancy words we often use</a></p>
+</li>
+<li>
+<p><a href="http://probablyfine.co.uk/2014/03/27/how-to-write-an-ansible-role-for-ansible-galaxy/">How to Write an Ansible Role for Ansible Galaxy</a></p>
+</li>
+<li>
+<p><a href="http://blog.mist.io/post/82383668190/move-fast-and-dont-break-things-testing-with">Testing with Jenkins, Docker and Ansible</a></p>
+</li>
+</ul>
+<h2>Application dependencies learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Learn about configuration management in the context of deployment automation
+and infrastructure-as-code.</p>
+<p><i class="fa fa-check-square-o"></i>
+Pick a configuration management tool and stick with it. My recommendation is
+Ansible because it is by far the easiest tool to learn and be productive with.</p>
+<p><i class="fa fa-check-square-o"></i>
+Read your configuration management tool's documentation and, when necessary,
+the source code.</p>
+<p><i class="fa fa-check-square-o"></i>
+Automate the configuration management and deployment for your project. Note
+that this is by far the most time consuming step in this checklist but will
+pay dividends every time you deploy your project.</p>
+<p><i class="fa fa-check-square-o"></i>
+Hook the automated deployment tool into your existing deployment process.</p>
+<h3>What's next after automating your app configuration?</h3>
+                      <h1>Databases</h1>
+<p>A database is an abstraction on top of an operating system's file system to 
+ease creating, reading, updating, and deleting persistent data. </p>
+<h2>Why are databases necessary?</h2>
+<p>At a high level web applications store data and present it to users in a 
+useful way. For example, Google stores data about roads and provides 
+directions to get from one location to another by driving through the 
+<a href="https://www.google.com/maps/">Maps</a> application. Driving directions are 
+possible because the data is stored in a structured way. </p>
+<p>Databases make structured storage reliable and fast. They also give you a 
+mental framework for how the data should be saved and retrieved instead of 
+having to figure out what to do with the data every time you build a new 
+application.</p>
+<h2>Relational databases</h2>
+<p>The database storage abstraction most commonly used in Python web development 
+is sets of relational tables. Alternative storage abstractions are explained 
+in the <a href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
+<p>Relational databases store all data in a series of tables. Interconnections
+between the tables are specified as <em>foreign keys</em>.</p>
+<p>Databases storage implementations vary in complexity. SQLite, a database 
+included with Python, creates a single file for all data per database. 
+Other databases such as Oracle, PostgreSQL, and MySQL have more complicated
+persistence schemes while offering additional advanced features that are 
+useful for web application data storage.</p>
+<p><a href="http://www.postgresql.org/">PostgreSQL</a> and 
+<a href="http://www.mysql.com/">MySQL</a> are two of the most common open source
+databases for storing Python web application data.</p>
+<p><a href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
+file on disk. SQLite is built into Python but is only built for access
+by a single connection at a time. Therefore is highly recommended to not
+<a href="https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors">run a production web application with SQLite</a>.</p>
+<h2>PostgreSQL</h2>
+<p>PostgreSQL is the recommended relational database for working with Python
+web applications. PostgreSQL's feature set, active development and stability
+contribute to its usage as the backend for millions of applications live
+on the Web today.</p>
+<h3>PostgreSQL resources</h3>
+<ul>
+<li>
+<p>This post on 
+  <a href="http://killtheyak.com/use-postgresql-with-django-flask/">using PostgreSQL with Django or Flask</a>
+  is a great quickstart guide for either framework.</p>
+</li>
+<li>
+<p><a href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
+  PostgreSQL content from around the web.</p>
+</li>
+<li>
+<p>Braintree wrote about their experiences <a href="https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution">scaling PostgreSQL</a>. 
+The post is an inside look at the evolution of Braintree's usage of the database.</p>
+</li>
+<li>
+<p>This post estimates the <a href="http://hans.io/blog/2014/02/19/postgresql_connection/index.html">costs of a PostgreSQL connection</a>.</p>
+</li>
+<li>
+<p>There is no such thing as total security but this IBM article covers 
+  <a href="http://www.ibm.com/developerworks/library/os-postgresecurity/">hardening a PostgreSQL database</a>. </p>
+</li>
+<li>
+<p>Craig Kerstien's wrote a detailed post about <a href="http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/">understanding PostgreSQL performance</a>.</p>
+</li>
+<li>
+<p><a href="http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram">Handling growth with Postgres</a>
+  provides 5 specific tips from Instagram's engineering team on how to scale
+  the design of your PostgreSQL database.</p>
+</li>
+</ul>
+<h2>MySQL</h2>
+<p>MySQL is another viable open source database backend option for Python web 
+applications. MySQL has a slightly easier initial learning curve than 
+PostgreSQL. The database is deployed in production at some of the highest 
+trafficked sites such as 
+<a href="https://blog.twitter.com/2012/mysql-twitter">Twitter</a>, 
+<a href="https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920">Facebook</a>
+and <a href="http://www.mysql.com/customers/">many others major organizations</a>.
+However, since the company focused on MySQL development, 
+<a href="http://en.wikipedia.org/wiki/MySQL_AB">MySQL AB</a>, was 
+purchased by Sun Microsystems (which was in turn purchased by Oracle), there
+have been major defections away from the database by
+<a href="http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/">Wikipedia</a> 
+and <a href="http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb">Google</a>. 
+MySQL remains a viable database option but I always recommend new Python 
+developers learn PostgreSQL if they do not already know MySQL.</p>
+<h3>MySQL resources</h3>
+<ul>
+<li>
+<p><a href="http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/">28 Beginner's Tutorials for Learning about MySQL Databases</a> 
+  is a curated collection on various introductory MySQL topics.</p>
+</li>
+<li>
+<p>This tutorial shows how to install <a href="http://www.cs.wcupa.edu/rkline/index/mysql-lin.html">MySQL on Ubuntu</a>.</p>
+</li>
+</ul>
+<h2>Connecting to a database with Python</h2>
+<p>To work with a relational database using Python, you need to use a code 
+library. The most common libraries for relational databases are:</p>
+<ul>
+<li>
+<p><a href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
+</li>
+<li>
+<p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.4">MySQLdb</a> for MySQL</p>
+</li>
+<li>
+<p><a href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
+</li>
+</ul>
+<p>SQLite support is built into Python 2.7+ and therefore a separate library
+is not necessary. Simply "import sqlite3" to begin interfacing with the 
+single file-based database.</p>
+<h2>Object-Relational Mapping</h2>
+<p>Object-relational mappers (ORMs) allow developers to access data from a 
+backend by writing Python code instead of SQL queries. Each web 
+application framework handles integrating ORMs differently. </p>
+<p>Django provides an ORM with its core functionality. Flask leaves using an 
+ORM up to an extension, such as 
+<a href="http://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLALchemy</a>. </p>
+<p>Developers can also use ORMs without a web framework, such as when
+creating a data analysis tool or a batch script without a user interface. 
+Currently, the most widely used stand-alone ORM written for Python is
+<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+<h2>Database third-party services</h2>
+<p>Numerous companies run scalable database servers as a hosted service.
+Hosted databases can often provide automated backups and recovery,
+tightened security configurations and easy vertical scaling, depending on the
+provider.</p>
+<ul>
+<li>
+<p><a href="http://aws.amazon.com/rds/">Amazon Relational Database Service (RDS)</a>
+  provides pre-configured MySQL and PostgreSQL instances. The instances can
+  be scaled to larger or smaller configurations based on storage and performance
+  needs.</p>
+</li>
+<li>
+<p><a href="https://developers.google.com/cloud-sql/">Google Cloud SQL</a> is a service
+  with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
+  SQL integrates with Google App Engine but can be used independently as well.</p>
+</li>
+<li>
+<p><a href="http://www.gobitcan.com/">BitCan</a> provides both MySQL and MongoDB hosted
+  databases with extensive backup services.</p>
+</li>
+</ul>
+<h2>Database resources</h2>
+<ul>
+<li>
+<p><a href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular
+  database management systems.</p>
+</li>
+<li>
+<p><a href="http://dbweekly.com/">DB Weekly</a> is a weekly roundup of general database 
+  articles and resources.</p>
+</li>
+<li>
+<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
+  provides a detailed comparison of SQLAlchemy against alternatives.</p>
+</li>
+<li>
+<p><a href="http://blog.isotoma.com/2014/05/a-different-view/">A different view</a> 
+  provides some perspective on the impedance mismatch between ORMs and
+  traditional SQL queries.</p>
+</li>
+<li>
+<p><a href="https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python">Databases integration testing strategies</a>
+  covers a difficult topic that comes up on every real world project.</p>
+</li>
+</ul>
+<h2>Databases learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+<code>sudo apt-get install postgresql</code>.</p>
+<p><i class="fa fa-check-square-o"></i>
+Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is part of your
+application dependencies.</p>
+<p><i class="fa fa-check-square-o"></i>
+Configure your web application to connect to the PostgreSQL instance.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create models in your ORM, either with Django's 
+<a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
+<a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
+<p><i class="fa fa-check-square-o"></i>
+Sync the ORM models with the PostgreSQL instance.</p>
+<p><i class="fa fa-check-square-o"></i>
+Start creating, reading, updating and deleting data in the database from your 
+web application.</p>
+<h3>What's next to get your app running?</h3>
+                      <h1>NoSQL Data Stores</h1>
+<p>Relational databases store the vast majority of web application 
+persistent data. However, there are several alternative classifications of 
+storage representations.</p>
+<ol>
+<li>Key-value pair</li>
+<li>Document-oriented</li>
+<li>Column-family table</li>
+<li>Graph</li>
+</ol>
+<p>These persistent data storage representations are commonly used to augment,
+rather than completely replace, relational databases.</p>
+<h2>Document-oriented</h2>
+<p>A document-oriented database provides a semi-structured representation for
+nested data. </p>
+<h3>Document-oriented data stores</h3>
+<ul>
+<li>
+<p><a href="http://www.mongodb.org/">MongoDB</a> is an open source document-oriented 
+  data store with a Binary Object Notation (BSON) storage format that is 
+  JSON-style and familiar to web developers.</p>
+</li>
+<li>
+<p><a href="http://basho.com/riak/">Riak</a> is an open source distributed data store
+  focused on availability, fault tolerance and large scale deployments.</p>
+</li>
+<li>
+<p><a href="http://couchdb.apache.org/">Apache CouchDB</a> is also an open source project
+  where the focus is on embracing RESTful-style HTTP access for working with 
+  stored JSON data.</p>
+</li>
+</ul>
+<h3>Document-oriented data store resources</h3>
+<ul>
+<li><a href="http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/">MongoDB for startups</a> 
+  is a guide about using non-relational databases in green field environments.</li>
+</ul>
+<h2>Key-value Pair</h2>
+<p>Key-value pair data stores are based
+on <a href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structures.</p>
+<h3>Key-value pair data stores</h3>
+<ul>
+<li><a href="http://redis.io/">Redis</a> is an open source in-memory key-value pair data 
+  store. Redis is often called "the Swiss Army Knife of web application
+  development." It can be used for caching, queuing, and storing session data 
+  for faster access than a traditional relational database, among many other
+  use cases.</li>
+</ul>
+<h3>Key-value pair resources</h3>
+<ul>
+<li>"<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis">How To Install and Use Redis</a>"
+  is a guide for getting up with the extremely useful in-memory data store.</li>
+</ul>
+<h2>Column-family table</h2>
+<p>A the column-family table class of NoSQL data stores builds on the key-value
+pair type. Each key-value pair is considered a row in the store while the
+column family is similar to a table in the relational database model.</p>
+<h3>Column-family table data stores</h3>
+<ul>
+<li>
+<p>Apache <a href="https://hbase.apache.org/">HBase</a></p>
+</li>
+<li>
+<p>Apache <a href="http://cassandra.apache.org/">Cassandra</a></p>
+</li>
+</ul>
+<h2>Graph</h2>
+<p>A graph database represents and stores data in three aspects: nodes, edges,
+and properties. </p>
+<p>A <em>node</em> is an entity, such as a person or business. </p>
+<p>An <em>edge</em> is the relationship between two entities. For example, an 
+edge could represent that a node for a person entity is an employee of a 
+business entity. </p>
+<p>A <em>property</em> represents information about nodes. For example, an entity 
+representing a person could have a property of "female" or "male".</p>
+<h3>Graph data stores</h3>
+<ul>
+<li>
+<p><a href="http://www.neo4j.org/">Neo4j</a> is one of the most widely used graph 
+  databases and runs on the Java Virtual Machine stack.</p>
+</li>
+<li>
+<p><a href="https://github.com/google/cayley">Cayley</a> is an open source graph data
+  store written by Google primarily written in Go.</p>
+</li>
+</ul>
+<h3>Graph data store resources</h3>
+<ul>
+<li><a href="http://www.slideshare.net/maxdemarzi/introduction-to-graph-databases-12735789">Introduction to Graph Databases</a>
+  covers trends in NoSQL data stores and compares graph databases to other 
+  data store types.</li>
+</ul>
+<h2>NoSQL third-party services</h2>
+<ul>
+<li><a href="http://www.mongohq.com/home">MongoHQ</a> provides MongoDB as a service. It's
+  easy to set up with either a standard LAMP stack or on Heroku.</li>
+</ul>
+<h2>NoSQL data store resources</h2>
+<ul>
+<li>
+<p><a href="http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html">CAP Theorem overview</a></p>
+</li>
+<li>
+<p><a href="http://www.nosqlweekly.com/">NoSQL Weekly</a> is a free curated email 
+  newsletter that aggregates articles, tutorials, and videos about 
+  non-relational data stores.</p>
+</li>
+<li>
+<p><a href="http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis">NoSQL comparison</a>
+  is a large list of popular, BigTable-based, special purpose, and other
+  datastores with attributes and the best use cases for each one.</p>
+</li>
+</ul>
+<h2>NoSQL data stores learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Understand why NoSQL data stores are better for some use cases than relational
+databases. In general these benefits are only seen at large scale so they may
+not be applicable to your web application.</p>
+<p><i class="fa fa-check-square-o"></i>
+Integrate Redis into your project for a speed boost over slower persistent 
+storage. Storing session data in memory is generally much faster than saving
+that data in a traditional relational database that uses persistent storage. 
+Note that when memory is flushed the data goes away so anything that needs to
+be persistent must still be backed up to disk on a regular basis.</p>
+<p><i class="fa fa-check-square-o"></i>
+Evaluate other use cases such as storing transient logs in document-oriented
+data stores such as MongoDB.</p>
+<h3>What's next?</h3>
+                      <h1>Cascading Style Sheets (CSS)</h1>
+<p>Cascading Style Sheet (CSS) files contain rules for how to display and 
+lay out the HTML content when it is rendered by a web browser.</p>
+<h2>Why is CSS necessary?</h2>
+<p>CSS separates the content contained in HTML files from how the content 
+should be displayed. It is important to separate the content from the rules
+for how it should be rendered primarily because it is easier to reuse those
+rules across many pages. CSS files are also much easier to maintain on large
+projects than styles embedded within the HTML files.</p>
+<h2>Responsive design</h2>
+<p>Separating the content from the rules for how to display the content allows 
+devices to render the output differently based on factors such as screen size
+and device type. Displaying content differently based on varying screen 
+attributes is often called <em>responsive design</em>. The responsiveness is 
+accomplished by implementing
+<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a>
+in the CSS. </p>
+<p>For example, a mobile device does not have as much space to display a 
+navigation bar on the side of a page so it is often pushed down 
+below the main content. The 
+<a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog example</a> 
+shows that navigation bar relocation scenario when you resize the browser 
+width.</p>
+<h2>How is CSS retrieved from a web server?</h2>
+<p>The HTML file sent by the web server contains a reference to the CSS file(s)
+needed to render the content. The web browser requests the CSS file after the
+HTML file as shown below in a screenshot captured of the Chrome Web Developer 
+Tools network traffic.</p>
+<p><img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
+<p>That request for the fsp.css file is made because the HTML file for Full 
+Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
+in the view source screenshot below.</p>
+<p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
+<h2>CSS preprocessors</h2>
+<p>A CSS preprocessor compiles a processed language into plain CSS code. CSS 
+preprocessing languages add syntax such as variables, mixins and functions
+to reduce code duplication. The additional syntax also makes it possible for
+designers to use these basic programming constructs to write maintainable
+front end code.</p>
+<ul>
+<li>
+<p><a href="http://sass-lang.com/">Sass</a> is currently the favored preprocessor in
+  the design community. Sass is considered the most powerful CSS preprocessor
+  in terms of advanced language features.</p>
+</li>
+<li>
+<p><a href="http://lesscss.org/">LESS</a> is right up there with Sass and has an ace up
+  its sleeve in that the <a href="http://getbootstrap.com/">Bootstrap Framework</a> is
+  written in LESS which brings up its popularity.</p>
+</li>
+<li>
+<p><a href="http://learnboost.github.io/stylus/">Stylus</a> is often cited as the third
+  most popular CSS preprocessing language.</p>
+</li>
+</ul>
+<h3>CSS preprocessor resources</h3>
+<ul>
+<li>
+<p>The Advanced Guide to HTML and CSS book has a well-written chapter on 
+  <a href="http://learn.shayhowe.com/advanced-html-css/preprocessors">preprocessors</a>.</p>
+</li>
+<li>
+<p><a href="http://css-tricks.com/sass-vs-less/">Sass vs LESS</a> provides a short answer
+  on which framework to use then a longer more detailed response for those
+  interested in understanding the details.</p>
+</li>
+<li>
+<p><a href="http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor">How to choose the right CSS preprocessor</a>
+  has a comparison of Sass, LESS and Stylus.</p>
+</li>
+<li>
+<p><a href="http://css-tricks.com/musings-on-preprocessing/">Musings on CSS preprocessors</a>
+  contains helpful advice ranging from how to work with preprocessors in a
+  team environment to what apps you can use to aid your workflow.</p>
+</li>
+</ul>
+<h2>CSS frameworks</h2>
+<p>CSS frameworks provide structure and a boilerplate base for building a
+web application's design.</p>
+<ul>
+<li>
+<p><a href="http://getbootstrap.com/">Bootstrap</a></p>
+</li>
+<li>
+<p><a href="http://foundation.zurb.com/">Foundation</a></p>
+</li>
+<li>
+<p><a href="http://gumbyframework.com/">Gumby</a></p>
+</li>
+<li>
+<p><a href="http://compass-style.org/">Compass</a></p>
+</li>
+<li>
+<p><a href="http://www.profoundgrid.com/">Profound Grid</a></p>
+</li>
+<li>
+<p><a href="http://www.getskeleton.com/">Skeleton</a></p>
+</li>
+<li>
+<p><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></p>
+</li>
+</ul>
+<h2>Design resources</h2>
+<ul>
+<li>
+<p>The <a href="http://bootstrappingdesign.com/">Bootstrapping Design</a> book is one of 
+  the clearest and concise resources for learning design that I've ever read. 
+  Highly recommended especially if you feel you have no design skills but 
+  need to learn them.</p>
+</li>
+<li>
+<p><a href="https://kuler.adobe.com/create/color-wheel/">Kuler</a> is a complementary
+  color picker by Adobe that helps choose colors for your designs.</p>
+</li>
+</ul>
+<h2>CSS resources</h2>
+<ul>
+<li>
+<p><a href="https://github.com/dypsilon/frontend-dev-bookmarks">Frontend Development Bookmarks</a>
+  is one of the largest collections of valuable resources for frontend
+  learning both in CSS as well as JavaScript.</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network's CSS page</a>
+  contains an extensive set of resources, tutorials and demos for learning
+  CSS.</p>
+</li>
+<li>
+<p><a href="http://alistapart.com/article/css-positioning-101">CSS Positioning 101</a>
+  is a detailed guide for learning how to do element positioning correctly
+  with CSS.</p>
+</li>
+<li>
+<p><a href="http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf">CSS3 cheat sheet</a></p>
+</li>
+<li>
+<p><a href="http://learnlayout.com/toc.html">Learn CSS layout</a> is a simple guide that
+  breaks CSS layout topics into chapters so you can learn each part one
+  at a time.</p>
+</li>
+<li>
+<p><a href="https://developers.google.com/web/fundamentals/">Google's Web Fundamentals class</a>
+  shows how to create responsive designs and performant websites.</p>
+</li>
+<li>
+<p><a href="http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html">Tailoring CSS for performance</a>
+  is an interesting read since many developers do not consider the 
+  implications of CSS complexity in browser rendering time.</p>
+</li>
+<li>
+<p><a href="http://caniuse.com/">Can I Use...</a> is a compatibility table that shows
+  which versions of browsers implement specific CSS features.</p>
+</li>
+</ul>
+<h2>CSS learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Create a simple HTML file with basic elements in it. Use the
+<code>python -m SimpleHTTPServer</code> command to serve it up. Create a 
+<code>&lt;style&gt;&lt;/style&gt;</code> element within the <code>&lt;head&gt;</code> section in the HTML page. 
+Start playing with CSS within that style element to change the look and feel 
+of the page.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Check out front end frameworks such as Bootstrap and Foundation and integrate
+one of those into the HTML page.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Work through the framework's grid system, styling options and customization
+so you get comfortable with how to use the framework.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Apply the framework to your web application and tweak the design until you
+have something that looks much better than generic HTML.</p>
+<h3>Once your app is styled what do you need to learn next?</h3>
+                      <h1>JavaScript</h1>
+<p>JavaScript is a small scripting programming language embedded in web browsers 
+to enable dynamic content and interaction. </p>
+<h2>Why is JavaScript necessary?</h2>
+<p>JavaScript executes in the client and enables dynamic content and interaction
+that is not possible with HTML and CSS alone. Every modern Python web 
+application uses JavaScript on the front end. </p>
+<h2>Front end frameworks</h2>
+<p>Front end JavaScript frameworks move the rendering for most of a web 
+application to the client side. Often these applications are informally 
+referred to as "one page apps" because the webpage is not reloaded upon every
+click to a new URL. Instead, partial HTML pages are loaded into the 
+document object model or data is retrieved through an API call then displayed
+on the existing page.</p>
+<p>Examples of these front end frameworks include:</p>
+<ul>
+<li>
+<p><a href="https://angularjs.org/">Angular.js</a></p>
+</li>
+<li>
+<p><a href="http://backbonejs.org/">Backbone.js</a></p>
+</li>
+<li>
+<p><a href="http://emberjs.com/">Ember.js</a></p>
+</li>
+</ul>
+<p>Front end frameworks are rapidly evolving. Over the next several years 
+consensus about good practices for using the frameworks will emerge.</p>
+<h2>How did JavaScript originate?</h2>
+<p>JavaScript is an implementation of 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/JavaScript_Overview">the ECMAScript specification</a> 
+which is defined by the 
+<a href="http://www.ecma-international.org/default.htm">Ecma International Standards Body</a>.</p>
+<h2>JavaScript resources</h2>
+<ul>
+<li>
+<p><a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work</a>
+  is a great overview of both JavaScript and CSS as well as how pages are 
+  rendered in a browser.</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">A re-introduction to JavaScript</a>
+  by Mozilla walks through the basic syntax and operators.</p>
+</li>
+<li>
+<p><a href="http://www.smashingmagazine.com/2011/10/28/useful-coding-workflow-tools-for-web-designers-developers/">Coding tools and JavaScript libraries</a>
+  is a huge list by Smashing Magazine with explanations for each tool and 
+  library for working with JavaScript.</p>
+</li>
+<li>
+<p><a href="http://superherojs.com/">Superhero.js</a> is an incredibly well designed list
+  of resources for how to test, organize, understand and generally work with
+  JavaScript.</p>
+</li>
+<li>
+<p><a href="http://www.unheap.com/">Unheap</a> is an amazing collection of reusable JQuery 
+  plugins for everything from navigation to displaying media.</p>
+</li>
+</ul>
+<h2>JavaScript learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Create a simple HTML file with basic elements in it. Use the
+<code>python -m SimpleHTTPServer</code> command to serve it up. Create a 
+<code>&lt;script type="text/javascript"&gt;&lt;/script&gt;</code> 
+element at the end of the <code>&lt;body&gt;</code> section in the HTML page. Start playing 
+with JavaScript within that element to learn the basic syntax.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Download <a href="http://jquery.com/">JQuery</a> and add it to the page above your 
+JavaScript element. Start working with JQuery and learning how it makes basic
+JavaScript easier.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Work with JavaScript on the page. Incorporate examples from open source 
+projects listed below as well as JQuery plugins. Check out the Unheap link
+below to find a large collection of categorized JQuery plugins.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Check out the JavaScript resources below to learn more about advanced concepts
+and open source libraries.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Integrate JavaScript into your web application and check the 
+<a href="/static-content.html">static content</a> section for how to host the JavaScript
+files.</p>
+<h3>Do you need to style your app or deploy it next?</h3>
+                      <h1>Application Programming Interfaces</h1>
+<p>Application programming interfaces (APIs) provide machine-readable
+data transfer and signaling between applications.</p>
+<h2>Why are APIs important?</h2>
+<p>HTML, CSS and JavaScript create human-readable webpages. However, those 
+webpages are not easily consumable by other machines. Numerous scraping
+programs and libraries exist to rip data out of HTML but it's simpler
+to consume data through APIs.</p>
+<h2>Key API concepts</h2>
+<p>There are several key concepts that get thrown around in the APIs world. It's
+best to understand these ideas first before diving into the API literature.</p>
+<ul>
+<li>
+<p>Representation State Transfer (REST)</p>
+</li>
+<li>
+<p>Webhooks</p>
+</li>
+<li>
+<p>JavaScript Object Notation (JSON) and Extensible Markup Language (XML)</p>
+</li>
+<li>
+<p>Endpoints</p>
+</li>
+</ul>
+<h2>Webhooks</h2>
+<p>A webhook is a user-defined HTTP callback to a URL that executes when a 
+system condition is met. The call alerts the second system via a POST or GET
+request and often passes data as well.</p>
+<p>Webhooks are important because they enable two-way communication initiation 
+for APIs. Webhook flexibility comes in from their definition by the API user
+instead of the API itself.</p>
+<p>For example, in the <a href="https://www.twilio.com/api">Twilio API</a> when a text 
+message is sent to a Twilio phone number Twilio sends an HTTP POST request 
+webhook to the URL specified by the user. The URL is defined in a text box
+on the number's page on Twilio as shown below.</p>
+<p><img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" /></p>
+<h2>API open source projects</h2>
+<ul>
+<li><a href="https://github.com/wordnik/swagger-core">Swagger</a> is an open source project 
+  written in Scala that defines a standard interface for RESTful APIs.</li>
+</ul>
+<h2>API resources</h2>
+<ul>
+<li>
+<p><a href="https://zapier.com/">Zapier</a> has an
+  <a href="https://zapier.com/blog/apis-101/">APIs 101</a> free guide for what APIs 
+  are, why they are valuable and how to use them properly. </p>
+</li>
+<li>
+<p><a href="http://sendgrid.com/blog/whats-webhook/">What is a webhook?</a> by 
+  <a href="https://twitter.com/YayNickQ">Nick Quinlan</a> is a plain English explanation
+  for what webhooks are and why they are necessary in the API world.</p>
+</li>
+</ul>
+<h2>APIs learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Learn the API concepts of machine-to-machine communication with JSON and XML,
+endpoints and webhooks.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Integrate an API such as Twilio or Stripe into your web application. Read the
+<a href="/api-integration.html">API integration</a> section for more information.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Use a framework to create an API for your own application. </p>
+<p><i class="fa fa-check-square-o"></i> 
+Expose your web application's API so other applications can consume data you
+want to share.</p>
+<h3>What's next after learning about APIs?</h3>
+                      <h1>API Integration</h1>
+<p>The majority of production Python web applications rely on several
+externally hosted application programming interfaces (APIs). APIs are also
+commonly referred to as third party services or external platforms. 
+Examples include <a href="https://www.twilio.com/">Twilio</a> for messaging and voice
+services, <a href="https://stripe.com/">Stripe</a> for payment processing, and
+<a href="https://disqus.com/">Disqus</a> for embedded webpage comments.</p>
+<p>There are many articles about proper API design but best practices for 
+integrating APIs is less commonly written about. However, this subject 
+continuously grows in importance because APIs provide critical functionality
+across many implementation areas.</p>
+<h2>Hosted API services</h2>
+<ul>
+<li>
+<p><a href="https://www.runscope.com/">Runscope</a> is a service specifically designed
+  for APIs that assists developers with automated testing and traffic
+  inspection.</p>
+</li>
+<li>
+<p><a href="http://apiary.io/">Apiary</a> provides a blueprint for creating APIs so
+  they are easier to test and generate clean documentation.</p>
+</li>
+</ul>
+<h2>API Integration Resources</h2>
+<ul>
+<li>
+<p>John Sheehan's 
+  "<a href="https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance">Zen and the Art of API Maintenance</a>"
+  slides are relevant for API integration.</p>
+</li>
+<li>
+<p>This post on 
+  "<a href="https://stormpath.com/blog/api-driven-development/">API Driven Development</a>"
+  by Randall Degges explains how using APIs in your application cuts down
+  on the amount of code you have to write and maintain so you can launch your
+  application faster.</p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/SmartBear_Software/safe-sex-with-thirdparty-apis">Safe Sex with Third Party APIs</a>
+  is a funny high level overview of what you should do to protect your 
+  application when relying on third party services.</p>
+</li>
+<li>
+<p>My DjangoCon 2013 talk dove into 
+  "<a href="http://www.youtube.com/watch?v=iGP8DQIqxXs">Making Django Play Nice With Third Party Services</a>."</p>
+</li>
+</ul>
+<h2>API integration learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Pick an API known for top notch documentation. Here's a list of 
+<a href="https://medium.com/she-hacks-hacker-academy/4d3c43be9386">ten APIs that are a good starting point for beginners</a>.</p>
+<p><i class="fa fa-check-square-o"></i>
+Read the API documentation for your chosen API. Figure out a simple use case
+for how your application could be improved by using that API.</p>
+<p><i class="fa fa-check-square-o"></i>
+Before you start writing any code, play around with the API through the 
+commandline with <a href="http://curl.haxx.se/">curl</a> or in the browser with 
+<a href="http://www.getpostman.com/">Postman</a>. This exercise will help you get a
+better understanding of API authentication and the data required for requests
+and responses.</p>
+<p><i class="fa fa-check-square-o"></i>
+Evaluate whether to use a helper library or work with 
+<a href="http://docs.python-requests.org/en/latest/">Requests</a>. Helper libraries are
+usually easier to get started with while Requests gives you more control over
+the HTTP calls.</p>
+<p><i class="fa fa-check-square-o"></i>
+Move your API calls into a <a href="/task-queues.html">task queue</a> so they do not 
+block the HTTP request-response cycle for your web application.</p>
+<h3>What's next after integrating APIs into your app?</h3>
+                      <h1>API Creation</h1>
+<p>Creating and exposing APIs allows your web application to interact with other
+applications through machine-to-machine communication.</p>
+<h2>API creation frameworks</h2>
+<ul>
+<li>
+<p><a href="http://www.django-rest-framework.org/">Django REST framework</a> and
+  <a href="https://django-tastypie.readthedocs.org/en/latest/">Tastypie</a> are 
+  the two most widely used API frameworks to use with Django. The edge
+  currently goes to Django REST framework based on rough community sentiment.</p>
+</li>
+<li>
+<p><a href="http://flask-restful.readthedocs.org/en/latest/">Flask-RESTful</a> and
+  <a href="http://flask.pocoo.org/docs/api/">Flask API</a> are popular libraries for 
+  exposing APIs from Flask web applications.</p>
+</li>
+<li>
+<p><a href="http://www.github.com/jeffknupp/sandman">Sandman</a> is a widely used tool to
+  automatically generate a RESTful API service from a legacy database without
+  writing a line of code (though it's easily extensible through code).</p>
+</li>
+<li>
+<p><a href="https://cornice.readthedocs.org/en/latest/">Cornice</a> is a REST framework
+  for Pyramid.</p>
+</li>
+<li>
+<p><a href="https://github.com/toastdriven/restless">Restless</a> is a lightweight API
+  framework that aims to be framework agnostic. The general concept is that
+  you can use the same API code for Django, Flask, Bottle, Pyramid or any
+  other WSGI framework with minimal porting effort.</p>
+</li>
+<li>
+<p><a href="http://python-eve.org/">Eve</a> is a Python REST framework built with Flask,
+  MongoDB and Redis. The framework's primary author 
+  <a href="https://twitter.com/nicolaiarocci">Nicola Iarocci</a> gave a great talk at 
+  <a href="https://www.youtube.com/watch?v=9sUsLvG72_o">EuroPython 2014</a> that 
+  introduced the main features of the framework.</p>
+</li>
+</ul>
+<h2>API testing projects</h2>
+<p>Building, running and maintaining APIs requires as much effort as building,
+running and maintaining a web application. API testing frameworks are the 
+equivalent of browser testing in the web application world.</p>
+<ul>
+<li><a href="https://github.com/zatosource/zato-apitest">zato-apitest</a> invokes HTTP 
+  APIs and provides hooks for running through other testing frameworks.</li>
+</ul>
+<h2>Hosted API testing services</h2>
+<ul>
+<li>
+<p><a href="https://www.runscope.com/">Runscope</a> is an API testing SaaS application
+  that can test both your own APIs and external APIs that your application
+  relies upon.</p>
+</li>
+<li>
+<p><a href="https://www.apiscience.com/">API Science</a> is focused on deep API testing,
+  including multi-step API calls and monitoring of external APIs.</p>
+</li>
+<li>
+<p><a href="http://smartbear.com/api-testing/">SmartBear</a> has several API monitoring
+  and testing tools for APIs.</p>
+</li>
+</ul>
+<h2>API creation resources</h2>
+<ul>
+<li>
+<p><a href="http://www.narwhl.com/">NARWHL</a> is a practical API design site for 
+  developers confused about what is appropriate for RESTful APIs.</p>
+</li>
+<li>
+<p>This <a href="https://github.com/interagent/http-api-design">API Design Guide</a> 
+  is based on Heroku's best practices for the platform's API.</p>
+</li>
+<li>
+<p><a href="http://pydanny.com/choosing-an-api-framework-for-django.html">Choosing an API framework for Django</a>
+  by <a href="https://twitter.com/pydanny">PyDanny</a> contains questions and insight
+  into what makes a good API framework and which one you should currently
+  choose for Django.</p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions">RESTful web services with Python</a>
+  is an interesting overview of the Python API frameworks space.</p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/jmusser/ten-reasons-developershateyourapi">10 Reasons Why Developers Hate Your API (And what to do about it)</a>
+  goes through the top difficulties and annoyances developers face when
+  working with APIs and how you can avoid your API falling into the same
+  traps.</p>
+</li>
+<li>
+<p>"<a href="https://medium.com/@zwacky/design-a-beautiful-rest-api-901c73489458">Design a beautiful REST API</a>"
+  reviews common design decisions regarding endpoints, versioning, errors and
+  pagination. There is also a 
+  <a href="https://www.youtube.com/watch?v=5WXYw4J4QOU">source material YouTube video</a>
+  where this blog post derives its recommendations from.</p>
+</li>
+<li>
+<p>"<a href="http://www.bizcoder.com/self-descriptive-isn-t-don-t-assume-anything">Self-descriptive, isn't. Don't assume anything.</a>"
+  is an appeal that metadata makes a difference in whether APIs are descriptive
+  or not.</p>
+</li>
+</ul>
+<h2>API creation learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Pick an API framework appropriate for your web framework. For Django I 
+recommend Django REST framework and for Flask I recommend Flask-RESTful.</p>
+<p><i class="fa fa-check-square-o"></i>
+Begin by building out a simple use case for the API. Generally the use case
+will either involve data that users want in a machine-readable format or a
+backend for alternative clients such as an iOS or Android mobile app.</p>
+<p><i class="fa fa-check-square-o"></i>
+Add an authentication mechanism through OAuth or a token scheme.</p>
+<p><i class="fa fa-check-square-o"></i>
+Add rate limiting to the API if data usage volume could be a performance issue.
+Also add basic metrics so you can determine how often the API is being 
+accessed and whether it is performing properly.</p>
+<p><i class="fa fa-check-square-o"></i>
+Provide ample documentation and a walkthrough for how the API can be accessed
+and used.</p>
+<p><i class="fa fa-check-square-o"></i>
+Figure out other use cases and expand based on what you learned with the 
+initial API use case.</p>
+<h3>What's next after building an API for your web app?</h3>
+                      <h1>Static content</h1>
+<p>Some content on a website does not change and therefore should be served
+up either directly through the web server or a content delivery network (CDN).
+Examples include JavaScript, image, and CSS files.</p>
+<h2>Types of static content</h2>
+<p>Static content can be either assets created as part of your development
+process such as images on your landing page or user-generated content. The 
+Django framework calls these two categories <em>assets</em> and <em>media</em>.</p>
+<h2>Content delivery networks</h2>
+<p>A content delivery network (CDN) is a third party that stores and serves 
+static files. <a href="http://aws.amazon.com/cloudfront/">Amazon CloudFront</a>,
+<a href="http://www.akamai.com/">Akamai</a>, and 
+<a href="http://www.rackspace.com/cloud/public/files/">Rackspace Cloud Files</a> 
+are examples of CDNs. The purpose of a CDN is to remove the load of static
+file requests from web servers that are handling dynamic web content. For
+example, if you have an nginx server that handles both static files and 
+acts as a front for a Green Unicorn WSGI server on a 512 megabyte 
+virtual private server, the nginx server will run into resource 
+constraints under heavy traffic. A CDN can remove the need to serve static
+assets from that nginx server so it can purely act as a pass through for 
+requests to the Green Unicorn WSGI server.</p>
+<p>CDNs send content responses from data centers with the closest proximity to the requester.</p>
+<h2>Static Content Resources</h2>
+<ul>
+<li>
+<p><a href="http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/">The super stupid idiot's guide to getting started with Django, Pipeline, and S3</a>
+  shows how to host static content on S3 and use those files with Django.</p>
+</li>
+<li>
+<p><a href="http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/">Using Amazon S3 to host your Django static files</a></p>
+</li>
+<li>
+<p><a href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx">CDNs fail, but your scripts don't have to</a></p>
+</li>
+<li>
+<p><a href="http://django-storages.readthedocs.org/en/latest/">django-storages</a> is 
+a Django library for managing static and media files on services such as
+Amazon S3 and other content delivery networks.</p>
+</li>
+</ul>
+<h2>Static content learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Identify a content delivery network to offload serving static content files
+from your local web server. I recommend using Amazon S3 with CloudFront as 
+it's easy to set up and will scale to high bandwidth demands.</p>
+<p><i class="fa fa-check-square-o"></i>
+Update your web application deployment process so updated static files are
+uploaded to the CDN. </p>
+<p><i class="fa fa-check-square-o"></i>
+Move static content serving from the www subdomain to a static (or similarly
+named) subdomain so browsers will load static content in parallel to www
+HTTP requests.</p>
+<h3>What's next for building your app?</h3>
+                      <h1>Caching</h1>
+<p>Caching can reduce the load on servers by storing the results of common 
+operations and serving the precomputed answers to clients. </p>
+<p>For example, instead of retrieving data from database tables that rarely 
+change, you can store the values in-memory. Retrieving values from an 
+in-memory location is far faster than retrieving them from a database (which
+stores them on a persistent disk like a hard drive.) When the cached values 
+change the system can invalidate the cache and re-retrieve the updated values
+for future requests.</p>
+<p>A cache can be created for multiple layers of the stack. </p>
+<h2>Caching backends</h2>
+<ul>
+<li>
+<p><a href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
+</li>
+<li>
+<p><a href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
+  easily be configured for caching with libraries such as 
+  <a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
+</li>
+</ul>
+<h2>Caching resources</h2>
+<ul>
+<li>
+<p>"<a href="https://bjornjohansen.no/caching-varnish-or-nginx">Caching: Varnish or Nginx?</a>"
+  reviews some considerations such as SSL and SPDY support when choosing
+  reverse proxy Nginx or Varnish.</p>
+</li>
+<li>
+<p><a href="http://bizcoder.com/caching-is-hard-draw-me-a-picture">Caching is Hard, Draw me a Picture</a>
+  has diagrams of how web request caching layers work. The post is relevant
+  reading even though the author is describing his Microsoft code as the 
+  impetus for writing the content.</p>
+</li>
+</ul>
+<h2>Caching learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Analyze your web application for the slowest parts. It's likely there are
+complex database queries that can be precomputed and stored in an in-memory
+data store.</p>
+<p><i class="fa fa-check-square-o"></i>
+Leverage your existing in-memory data store already used for session data
+to cache the results of those complex database queries. 
+A <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
+on a regular basis and save them in the data store.</p>
+<p><i class="fa fa-check-square-o"></i>
+Incorporate a cache invalidation scheme so the precomputed results remain 
+accurate when served up to the user.</p>
+<h3>What do you want to learn now that your app is responding faster?</h3>
+                      <h1>Task queues</h1>
+<p>Task queues manage background work that must be executed outside the usual
+HTTP request-response cycle.</p>
+<h2>Why are task queues necessary?</h2>
+<p>Tasks are handled asynchronously either because they are not initiated by 
+an HTTP request or because they are long-running jobs that would dramatically
+reduce the performance of an HTTP response.</p>
+<p>For example, a web application could poll the GitHub API every 10 minutes to
+collect the names of the top 100 starred repositories. A task queue would
+handle invoking code to call the GitHub API, process the results and store them
+in a persistent database for later use.</p>
+<p>Another example is when a database query would take too long during the HTTP
+request-response cycle. The query could be performed in the background on a
+fixed interval with the results stored in the database. When an
+HTTP request comes in that needs those results a query would simply fetch the
+precalculated result instead of re-executing the longer query.
+This precalculation scenario is a form of <a href="/caching.html">caching</a> enabled 
+by task queues.</p>
+<p>Other types of jobs for task queues include</p>
+<ul>
+<li>
+<p>spreading out large numbers of independent database inserts over time 
+  instead of inserting everything at once</p>
+</li>
+<li>
+<p>aggregating collected data values on a fixed interval, such as every
+  15 minutes</p>
+</li>
+<li>
+<p>scheduling periodic jobs such as batch processes</p>
+</li>
+</ul>
+<h2>Task queue projects</h2>
+<p>The defacto standard Python task queue is Celery. The other task queue 
+projects that arise tend to come from the perspective that Celery is overly
+complicated for simple use cases. My recommendation is to put the effort into
+Celery's reasonable learning curve as it is worth the time it takes to 
+understand how to use the project.</p>
+<ul>
+<li>
+<p>The <a href="http://www.celeryproject.org/">Celery</a> distributed task queue is the
+  most commonly used Python library for handling asynchronous tasks and 
+  scheduling.</p>
+</li>
+<li>
+<p>The <a href="http://python-rq.org/">RQ (Redis Queue)</a> is a simple Python
+  library for queueing jobs and processing them in the background with workers.
+  RQ is backed by Redis and is designed to have a low barrier to entry.
+  The <a href="http://nvie.com/posts/introducing-rq/">intro post</a> contains information
+  on design decisions and how to use RQ.</p>
+</li>
+<li>
+<p><a href="https://github.com/dcramer/taskmaster">Taskmaster</a> is a lightweight simple
+  distributed queue for handling large volumes of one-off tasks. </p>
+</li>
+</ul>
+<h2>Hosted message and task queue services</h2>
+<p>Task queue third party services aim to solve the complexity issues that arise
+when scaling out a large deployment of distributed task queues.</p>
+<ul>
+<li>
+<p><a href="http://www.iron.io/">Iron.io</a> is a distributed messaging service platform 
+  that works with many types of task queues such as Celery. It also is built
+  to work with other IaaS and PaaS environments such as Amazon Web Services
+  and Heroku.</p>
+</li>
+<li>
+<p><a href="http://aws.amazon.com/sqs/">Amazon Simple Queue Service (SQS)</a> is a
+  set of five APIs for creating, sending, receiving, modifying and deleting
+  messages.</p>
+</li>
+<li>
+<p><a href="http://www.cloudamqp.com/">CloudAMQP</a> is at its core managed servers with
+  RabbitMQ installed and configured. This service is an option if you are 
+  using RabbitMQ and do not want to maintain RabbitMQ installations on your 
+  own servers.</p>
+</li>
+</ul>
+<h2>Task queue resources</h2>
+<ul>
+<li>
+<p><a href="http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/">Getting Started Scheduling Tasks with Celery</a>
+  is a detailed walkthrough for setting up Celery with Django (although
+  Celery can also be used without a problem with other frameworks).</p>
+</li>
+<li>
+<p><a href="http://justcramer.com/2012/05/04/distributing-work-without-celery/">Distributing work without Celery</a>
+  provides a scenario in which Celery and RabbitMQ are not the right tool
+  for scheduling asynchronous jobs.</p>
+</li>
+<li>
+<p><a href="http://www.warski.org/blog/2014/07/evaluating-persistent-replicated-message-queues/">Evaluating persistent, replicated message queues</a>
+  is a detailed comparison of Amazon SQS, MongoDB, RabbitMQ, HornetQ and
+  Kafka's designs and performance.</p>
+</li>
+<li>
+<p><a href="http://queues.io/">Queues.io</a> is a collection of task queue systems with
+  short summaries for each one. The task queues are not all compatible with
+  Python but ones that work with it are tagged with the "Python" keyword.</p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619">Why Task Queues</a> 
+  is a presentation for what task queues are and why they are needed. </p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps">How to use Celery with RabbitMQ</a>
+  is a detailed walkthrough for using these tools on an Ubuntu VPS.</p>
+</li>
+<li>
+<p>Heroku has a clear walkthrough for using 
+  <a href="https://devcenter.heroku.com/articles/python-rq">RQ for background tasks</a>.</p>
+</li>
+<li>
+<p><a href="http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/">Introducing Celery for Python+Django</a> 
+  provides an introduction to the Celery task queue.</p>
+</li>
+<li>
+<p><a href="https://denibertovic.com/posts/celery-best-practices/">Celery - Best Practices</a>
+  explains things you should not do with Celery and shows some underused 
+  features for making task queues easier to work with.</p>
+</li>
+<li>
+<p>The "Django in Production" series by 
+  <a href="https://twitter.com/robgolding63">Rob Golding</a> contains a post 
+  specifically on <a href="http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/">Background Tasks</a>.</p>
+</li>
+<li>
+<p><a href="http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/">Asynchronous Processing in Web Applications Part One</a> 
+  and <a href="http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/">Part Two</a>
+  are great reads for understanding the difference between a task queue and
+  why you shouldn't use your database as one.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=68QWZU_gCDA">A 4 Minute Intro to Celery</a> is
+  a short introductory task queue screencast.</p>
+</li>
+</ul>
+<h2>Task queue learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Pick a slow function in your project that is called during an HTTP request.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Determine if you can precompute the results on a fixed interval instead of
+during the HTTP request. If so, create a separate function you can call
+from elsewhere then store the precomputed value in the database.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Read the Celery documentation and the links in the resources section below
+to understand how the project works.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Install a message broker such as RabbitMQ or Redis and then add Celery to your 
+project. Configure Celery to work with the installed message broker.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Use Celery to invoke the function from step one on a regular basis.</p>
+<p><i class="fa fa-check-square-o"></i>
+Have the HTTP request function use the precomputed value instead of the 
+slow running code it originally relied upon.</p>
+<h3>What's next after task queues?</h3>
+                      <h1>Logging</h1>
+<p>Logging saves output such as errors, warnings and event information to 
+files for debugging purposes. </p>
+<h2>Why is logging important?</h2>
+<p>Runtime exceptions that prevent code from running are important to log to 
+investigate and fix the source of the problems. Informational and debugging 
+logging also helps to understand how the application is performing even if 
+code is working as intended.</p>
+<h2>Logging levels</h2>
+<p>Logging is often grouped into several categories:</p>
+<ol>
+<li>Information</li>
+<li>Debug</li>
+<li>Warning</li>
+<li>Error</li>
+</ol>
+<p>Logging errors that occur while a web framework is running is crucial to
+understanding how your application is performing. </p>
+<h2>Logging aggregators</h2>
+<p>When you are running your application on several servers, it is helpful
+to have a monitoring tool called a "logging aggregator". You can configure 
+your application to forward your system and application logs to one location 
+that provides tools for viewing, searching, and monitoring logging events 
+across your cluster. </p>
+<p>Another advantage of log aggregatortion tools is they allow you to set up 
+custom alerts and alarms so you can get notified when error rates breach a 
+certain threshold.</p>
+<h3>Open source log aggregators</h3>
+<ul>
+<li>
+<p><a href="https://github.com/getsentry/sentry">Sentry</a> started as a Django-only
+  exception handling service but now has separate logging clients to cover 
+  almost all major languages and frameworks. It still works really well for 
+  Python-powered web applications and is often used in conjunction with other 
+  monitoring tools. <a href="http://raven.readthedocs.org/en/latest/">Raven</a> is open
+  source Python client for Sentry.</p>
+</li>
+<li>
+<p><a href="http://graylog2.org/">Graylog2</a> provides a central server for log 
+  aggregation as well as a GUI for browsing and searching through log events. 
+  There are libraries for most major languages, including python. Saves data 
+  in Elasticache.</p>
+</li>
+<li>
+<p><a href="http://logstash.net/">Logstash</a> Similar to Graylog2, logstash offers 
+  features to programatically configure log data workflows.</p>
+</li>
+<li>
+<p><a href="https://github.com/facebook/scribe">Scribe</a> A project written by Facebook 
+  to aggregate logs. It's designed to run on multiple servers and scale with 
+  the rest of your cluster. Uses the Thrift messagaing format so it can be 
+  used with any language. </p>
+</li>
+</ul>
+<h3>Hosted logging services</h3>
+<ul>
+<li>
+<p><a href="https://www.loggly.com/">Loggly</a> Loggly is a third party cloud based 
+  application that aggregates logs. They have instructions for every major 
+  language, including python. It includes email alerting on custom searches. </p>
+</li>
+<li>
+<p><a href="https://papertrailapp.com/">Papertrail</a> Paper trail is similar to both 
+  loggly and splunk and provides integration with S3 for long term storage.</p>
+</li>
+<li>
+<p><a href="http://www.splunk.com/">Splunk</a> Splunk offers third party cloud and self 
+  hosted solutions for event aggregation. It excells at searching and data 
+  mining any text based data. </p>
+</li>
+<li>
+<p><a href="http://raygun.io/">Raygun</a> logs errors and provides immediate notification
+  when issues arise.</p>
+</li>
+<li>
+<p><a href="https://www.scalyr.com/">Scalyr</a> provides log aggregation, dashboards,
+  alerts and search in a user interface on top of standard logs.</p>
+</li>
+<li>
+<p>There is a <a href="https://www.getsentry.com/welcome/">hosted version of Sentry</a>
+  in case you do not have the time to set up the open source project yourself.</p>
+</li>
+</ul>
+<h2>Logging resources</h2>
+<ul>
+<li>
+<p>This 
+  <a href="http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/">intro to logging</a>
+  presents the Python logging module and how to use it.</p>
+</li>
+<li>
+<p><a href="http://www.hybridcluster.com/blog/logging-storytelling/">Logging as Storytelling</a>
+  is a multi-part series working the analogy that logs should read like
+  a story so you can better understand what's taking place in your web
+  application. 
+  <a href="http://www.hybridcluster.com/blog/logging-storytelling-lets-add-action/">Part 2 describes actions</a>
+  and 
+  <a href="http://www.hybridcluster.com/blog/logging-storytelling-3-types/">part 3 talks about types</a>.</p>
+</li>
+<li>
+<p><a href="https://lukasa.co.uk/2014/05/A_Brief_Digression_About_Logging/">A Brief Digression About Logging</a>
+  is a short post that gets Python logging up and running quickly.</p>
+</li>
+<li>
+<p><a href="https://hynek.me/articles/taking-some-pain-out-of-python-logging/">Taking the pain out of Python logging</a>
+  shows a logging set up with uWSGI.</p>
+</li>
+<li>
+<p>Django's 1.3 release brought unified logging into project configurations. 
+  This <a href="http://www.djm.org.uk/how-to-log-file-django-13-and-above/">post shows how to set up logging</a>
+  in a project's settings.py file. Caktus Group also has a nice tutorial on
+  <a href="http://www.caktusgroup.com/blog/2013/09/18/central-logging-django-graylog2-and-graypy/">central logging with graypy and Graylog2</a>.</p>
+</li>
+</ul>
+<h2>Logging learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Read how to integrate logging into your web application framework. </p>
+<p><i class="fa fa-check-square-o"></i>
+Ensure errors and anomalous results are logged. While these logs can be stored 
+in <a href="/monitoring.html">monitoring</a> solutions, it's best to have your own log
+storage location to debug issues as they arise to complement other monitoring 
+systems.</p>
+<p><i class="fa fa-check-square-o"></i>
+Integrate logging for system events you may need to use for debugging purposes
+later. For example, you may want to know the return values on functions when
+they are above a certain threshold. </p>
+<h3>Logging isn't enough. How do I analyze more data about the app?</h3>
+                      <h1>Monitoring</h1>
+<p>Monitoring tools capture, analyze and display information for a web 
+application's execution. Every application has issues arise throughout
+all levels of the web stack. Monitoring tools provide transparency so
+developers and operations teams can respond and fix problems.</p>
+<h2>Why is monitoring necessary?</h2>
+<p>Capturing and analyzing data about your production environment is critical
+to proactively deal with stability, performance, and errors in a web 
+application.</p>
+<h2>Monitoring layers</h2>
+<p>There are several important resources to monitor on the operating system 
+and network level of a web stack.</p>
+<ol>
+<li>CPU utilization</li>
+<li>Memory utilization</li>
+<li>Persistence storage consumed versus free</li>
+<li>Network bandwidth and latency</li>
+</ol>
+<p>Application level monitoring encompasses several aspects. The amount of time
+and resources dedicated to each aspect will vary based on whether an 
+application is read-heavy, write-heavy, or subject to rapid swings in traffic.</p>
+<ol>
+<li>Application warnings and errors (500-level HTTP errors)</li>
+<li>Application code performance</li>
+<li>Template rendering time</li>
+<li>Browser rendering time for the application</li>
+<li>Database querying performance</li>
+</ol>
+<h2>Open source monitoring projects</h2>
+<ul>
+<li>
+<p><a href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
+  listens for metrics and aggregates them for transfer into another service
+  such as Graphite.</p>
+</li>
+<li>
+<p><a href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
+  time-series data and displays them in graphs through a Django web application.</p>
+</li>
+<li>
+<p><a href="http://github.hubspot.com/bucky/">Bucky</a> measures the performance of a
+  web application from end user's browsers and sends that data back to the
+  server for collection.</p>
+</li>
+<li>
+<p><a href="http://sensuapp.org/">Sensu</a> is an open source monitoring framework
+  written in Ruby but applicable to any programming language web application.</p>
+</li>
+<li>
+<p><a href="http://vimeo.github.io/graph-explorer/">Graph Explorer</a> by Vimeo is a
+  Graphite-based dashboard with added features and a slick design.</p>
+</li>
+<li>
+<p><a href="http://packetbeat.com/">PacketBeat</a> sniffs protocol packets. Elasticsearch
+  then allows developers to search the collected data and visualize what's 
+  happening inside their web application using the Kibana user interface.</p>
+</li>
+<li>
+<p><a href="http://munin-monitoring.org/">Munin</a> is a client plugin-based monitoring 
+  system that sends monitoring traffic to the Munin node where the data can
+  be analyzed and visualized. Note this project is written in Perl so Perl 5
+  must be installed on the node collecting the data.</p>
+</li>
+</ul>
+<h2>Hosted monitoring services</h2>
+<ul>
+<li>
+<p><a href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
+  well as plug ins for capturing and analyzing additional data about tools in
+  your stack.</p>
+</li>
+<li>
+<p><a href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and 
+  infrastructure. It's popular with DevOps shops that are making changes to
+  their production environments and want immediate feedback on the results
+  of those modifications.</p>
+</li>
+<li>
+<p><a href="http://status.io/">Status.io</a> focuses on uptime and response metrics 
+  transparency for web applications.</p>
+</li>
+<li>
+<p><a href="https://www.statuspage.io/">StatusPage.io</a> (yes, there's both a Status and
+  StatusPage.io) provides easy set up status pages for monitoring application
+  up time.</p>
+</li>
+<li>
+<p><a href="http://www.pagerduty.com/">PagerDuty</a> alerts a designated person or group
+  if there are stability, performance, or uptime issues with an application.</p>
+</li>
+<li>
+<p><a href="https://appenlight.com/">App Enlight</a> provides performance, exception and 
+  error monitoring and is currently specific to Python web applications.</p>
+</li>
+</ul>
+<h2>Monitoring resources</h2>
+<ul>
+<li>
+<p><a href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
+</li>
+<li>
+<p><a href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
+</li>
+<li>
+<p><a href="http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/">Practical Guide to StatsD/Graphite Monitoring</a> 
+  is a detailed guide with code examples for monitoring infrastructure.</p>
+</li>
+<li>
+<p>Bit.ly describes the 
+  "<a href="http://word.bitly.com/post/74839060954/ten-things-to-monitor">10 Things They Forgot to Monitor</a>"
+  beyond the standard metrics such as disk &amp; memory usage.</p>
+</li>
+<li>
+<p><a href="http://aarvik.dk/four-linux-server-monitoring-and-management-tools/">Four Linux server monitoring tools</a></p>
+</li>
+<li>
+<p><a href="https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/">How to design useful monitoring and graphing visualizations</a></p>
+</li>
+<li>
+<p>The Collector Highlight Series has an article on <a href="http://blog.librato.com/posts/statsd">StatsD</a>
+  that explains how to install it and how it works.</p>
+</li>
+</ul>
+<h2>Monitoring learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Review the software-as-a-service and open source monitoring tools below. Third
+party services tend to be easier to set up and host the data for you. Open
+source projects give you more control but you'll need to have additional 
+servers ready for the monitoring.</p>
+<p><i class="fa fa-check-square-o"></i>
+My recommendation is to install <a href="http://newrelic.com/">New Relic</a>'s free 
+option with the trial period to see how it works with your app. It'll give you
+a good idea of the capabilities for application-level monitoring tools.</p>
+<p><i class="fa fa-check-square-o"></i>
+As your app scales take a look at setting up one of the the open source 
+monitoring projects such as StatsD with Graphite. The combination of those
+two projects will give you fine-grained control over the system metrics 
+you're collecting and visualizing.</p>
+<h3>What topic do you want to learn next?</h3>
+                      <h1>Web analytics</h1>
+<p>Web analytics involves collecting, processing, visualizing web data to enable
+critical thinking about how users interact with a web application.</p>
+<h2>Why is web analytics important?</h2>
+<p>User clients, especially web browsers, generate significant data while users
+read and interact with webpages. The data provides insight into 
+how visitors use the site and why they stay or leave. The key concept to
+analytics is <em>learning</em> about your users so you can improve your web 
+application to better suit their needs. </p>
+<h2>Web analytics concepts</h2>
+<p>It's easy to get overwhelmed at both the number of analytics services and
+the numerous types of data points collected. Focus on just a handful of
+metrics when you're just starting out. As your application scales and you 
+understand more about your users add additional analytics services 
+to gain further insight into their behavior with advanced visualizations such
+as heatmaps and action funnels. The
+<a href="http://spenczar.com/posts/2013/Sep/07/seven-stages-analytics-grief/">seven stages of startup analytics grief</a> 
+post is an amusing read and provides context for how to begin and then grow 
+tracked metrics over time.</p>
+<h3>User funnels</h3>
+<p>If your application is
+selling a product or service you can ultimately build a 
+<a href="http://moz.com/blog/building-your-marketing-funnel-with-google-analytics">user funnel</a> (often called "sales funnel" prior to a user becoming a customer)
+to better understand why people buy or don't buy what you're selling. With
+a funnel you can visualize drop-off points where visitors leave your 
+application before taking some action, such as purchasing your service.</p>
+<h2>Open source web analytics projects</h2>
+<ul>
+<li>
+<p><a href="http://piwik.org/">Piwik</a> is a web analytics platform you can host yourself.
+  Piwik is a solid choice if you cannot use Google Analytics or want to 
+  customize your own web analytics platform.</p>
+</li>
+<li>
+<p><a href="http://www.openwebanalytics.com/">Open Web Analytics</a> is another 
+  self-hosted platform that integrates through a JavaScript snippet that
+  tracks users' interactions with the webpage.</p>
+</li>
+</ul>
+<h2>Hosted web analytics services</h2>
+<ul>
+<li>
+<p><a href="http://www.google.com/analytics/">Google Analytics</a> is a widely used
+  free analytics tool for website traffic.</p>
+</li>
+<li>
+<p><a href="https://mixpanel.com/">MixPanel</a>'s analytics platform focuses on mobile
+  and sales funnel metrics. A developer builds what data points need to be
+  collected into the server side or client side code. MixPanel captures that
+  data and provides metrics and visualizations based on the data.</p>
+</li>
+<li>
+<p><a href="https://www.kissmetrics.com/">KISSmetrics</a>' analytics provides context
+  for who is visiting a website and what actions they are taking while on
+  the site.</p>
+</li>
+<li>
+<p><a href="https://heapanalytics.com/">Heap</a> is a recently founded analytics service
+  with a free introductory tier to get started.</p>
+</li>
+<li>
+<p><a href="http://www.crazyegg.com/">CrazyEgg</a> is tool for understanding a
+  user's focus while using a website based on heatmaps generated from mouse 
+  movements. </p>
+</li>
+</ul>
+<h2>Web analytics resources</h2>
+<ul>
+<li>
+<p><a href="http://blog.arkency.com/2012/12/google-analytics-for-developers/">Google Analytics for Developers</a>  </p>
+</li>
+<li>
+<p><a href="http://blog.yhathq.com/posts/pandas-google-analytics.html">Pandas and Google Analytics</a>
+  shows how to use pandas for data analysis with Google Analytics' API to
+  perform calculations not available in the tool itself.</p>
+</li>
+<li>
+<p>This beginner's guide to 
+  <a href="http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/">math and stats behind web analytics</a>
+  provides some context for understanding and reasoning about web traffic. </p>
+</li>
+<li>
+<p>This post provides context for determining if a given metric is
+  <a href="http://fizzle.co/sparkline/vanity-vs-actionable-metrics">"vanity" or actionable</a>.</p>
+</li>
+<li>
+<p>Read this post on <a href="http://www.bayesianwitch.com/blog/2013/howyouranalyticswork.html">how your analytics software actually works</a>
+  to get a better understanding of what's going on behind the scenes from
+  a technical perspective.</p>
+</li>
+<li>
+<p><a href="http://substantial.com/blog/2014/04/03/heap-analytics-vs-mixpanel/">Heap vs MixPanel</a>
+  compares the two analytics services.</p>
+</li>
+</ul>
+<h2>Web analytics learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Add Google Analytics or Piwik to your application. Both are free and while 
+Piwik is not as powerful as Google Analytics you can self-host the application
+which is the only option in many environments.</p>
+<p><i class="fa fa-check-square-o"></i>
+Think critically about the factors that will make your application successful.
+These factors will vary based on whether it's an internal enterprise app, 
+an e-commerce site or an information-based application.</p>
+<p><i class="fa fa-check-square-o"></i>
+Add metrics generated from your web traffic based on the factors that drive
+your application's success. You can add these metrics with either some custom
+code or with a hosted web analytics service.</p>
+<p><i class="fa fa-check-square-o"></i>
+Continuously reevaluate whether the metrics you've chosen are still the 
+appropriate ones defining your application's success. Improve and refine the
+metrics generated by the web analytics as necessary.</p>
+<h3>What's the next topic you want to learn about?</h3>
+                      <h1>Web Application Security</h1>
+<p>Website security must be thought about while building every level of the web 
+stack. However, this section includes topics that deserve particular
+treatment, such as cross-site scripting (XSS), SQL injection, cross-site 
+request forgery and usage of public-private keypairs.</p>
+<h2>Security open source projects</h2>
+<ul>
+<li>
+<p><a href="http://www.bro.org/">Bro</a> is a network security and traffic monitor.</p>
+</li>
+<li>
+<p><a href="https://github.com/marshyski/quick-secure">quick NIX secure script</a> for
+securing Linux distributions.</p>
+</li>
+</ul>
+<h2>Security Resources</h2>
+<ul>
+<li>
+<p>The Open Web Application Security Project (OWASP) has 
+  <a href="https://www.owasp.org/index.php/Cheat_Sheets">cheat sheets for security</a> 
+  topics.</p>
+</li>
+<li>
+<p><a href="http://gexos.github.io/Hacking-Tools-Repository/">Hacking Tools Repository</a>
+  is a great list of password cracking, scanning, sniffing and other security
+  penetration testing tools.</p>
+</li>
+<li>
+<p><a href="http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/">Securing an Ubuntu Server</a></p>
+</li>
+<li>
+<p><a href="http://joshrendek.com/2013/01/securing-ubuntu/">Securing Ubuntu</a></p>
+</li>
+<li>
+<p><a href="http://httpd.apache.org/docs/current/misc/security_tips.html">Security Tips from Apache</a></p>
+</li>
+<li>
+<p><a href="http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/">When and How to Deploy HTTPS</a></p>
+</li>
+<li>
+<p><a href="http://spenserj.com/blog/2013/07/15/securing-a-linux-server/">Securing a Linux Server</a></p>
+</li>
+<li>
+<p><a href="http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/">Securing Your Website</a></p>
+</li>
+<li>
+<p><a href="http://blog.hartleybrody.com/https-certificates/">How HTTPS Secures Connections: What Every Web Dev Should Know</a></p>
+</li>
+<li>
+<p><a href="http://blog.hartleybrody.com/https-certificates/">How HTTPS Secures Connections</a>
+  is a guide for what HTTPS does and does not secure against.</p>
+</li>
+<li>
+<p><a href="https://www.crypto101.io/">Crypto 101</a> is an introductory course on
+  cryptography for programmers.</p>
+</li>
+<li>
+<p><a href="http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html">The first few milliseconds of an HTTPS connection</a>
+  provides a detailed look at the SSL handshake process that is implemented
+  by browsers based on the <a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>
+  specification.</p>
+</li>
+</ul>
+<h2>Web security learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Read and understand the major web application security flaws that are
+commonly exploited by malicious actors. These include cross-site request 
+forgery (CSRF), cross-site scripting (XSS), SQL injection and session 
+hijacking. The 
+<a href="https://www.owasp.org/index.php/Top_10_2013-Top_10">OWASP top 10 web application vulnerabilities list</a> 
+is a great place to get an overview of these topics.</p>
+<p><i class="fa fa-check-square-o"></i>
+Determine how the framework you've chosen mitigates these vulnerabilities.</p>
+<p><i class="fa fa-check-square-o"></i>
+Ensure your code implements the mitigation techniques for your framework. </p>
+<p><i class="fa fa-check-square-o"></i>
+Think like an attacker and actively work to break into your own system. If
+you do not have enough experience to confidently break the security consider
+hiring a known white hat attacker. Have her break the application's security,
+report the easiest vulnerabilities to exploit in your app and help implement
+protections against those weaknesses.</p>
+<p><i class="fa fa-check-square-o"></i>
+Recognize that no system is ever totally secure. However, the more popular
+an application becomes the more attractive a target it is to attackers.
+Reevaluate your web application security on a frequent basis.</p>
+<h3>What topic do you want to learn about next?</h3>
+                      <h1>Best Python Resources</h1>
+<p>The Python community is amazing at sharing detailed resources and helping
+beginners learn to program with the language. There's so many resources
+out there though that it can be difficult to know how to find them. </p>
+<p>This page aggregates the best Python resources with a brief description of
+its one's learning purpose.</p>
+<h2>New to programming</h2>
+<p>If you're learning your first programming language these books were written
+with you in mind. Developers learning Python as a second or later language
+should skip down to the next section for "experienced developers".</p>
+<ul>
+<li>
+<p>To get an introduction to both Python and Django at the same time, purchase
+  <a href="http://www.realpython.com/">Real Python</a> by Fletcher, Michael, and Jeremy.</p>
+</li>
+<li>
+<p><a href="http://learnpythonthehardway.org/book/">Learn Python the Hard Way</a> is a
+  free book by Zed Shaw.</p>
+</li>
+<li>
+<p><a href="http://www.diveinto.org/python3/">Dive into Python 3</a> is an open source
+  book provided under the Creative Commons license and available in HTML or
+  PDF form.</p>
+</li>
+<li>
+<p><a href="http://pymbook.readthedocs.org/en/latest/">Python for You and Me</a> (pym) is
+  an online book for people completely unfamiliar with the Python programming
+  language.</p>
+</li>
+<li>
+<p><a href="http://www.swaroopch.com/notes/python/">A Byte of Python</a> is a beginner's
+  tutorial for the Python language. </p>
+</li>
+<li>
+<p>Code Academy has a <a href="http://www.codecademy.com/tracks/python">Python track</a>
+  for people completely new to programming.</p>
+</li>
+<li>
+<p>The O'Reilly book 
+  <a href="http://greenteapress.com/thinkpython/html/index.html">Think Python: How to Think Like a Computer Scientist</a>
+  is available in HTML form for free on the web.</p>
+</li>
+<li>
+<p>I wrote a quick blog post on
+  <a href="http://www.mattmakai.com/learning-python-for-non-developers.html">learning Python</a>
+  that non-technical folks trying to learn to program may find useful.</p>
+</li>
+</ul>
+<h2>Experienced developers new to Python</h2>
+<ul>
+<li>
+<p><a href="http://learnxinyminutes.com/docs/python/">Learn Python in y minutes</a>
+  provides a whirlwind tour of the Python language. The guide is especially
+  useful if you're coming in with previous software development experience
+  and want to quickly grasp how the language is structured.</p>
+</li>
+<li>
+<p><a href="http://pymbook.readthedocs.org/en/latest/">Python for you and me</a> is an
+  approachable book with sections for Python syntax and the major language 
+  constructs. The book also contains a short guide at the end to get
+  programmers to write their first Flask web application.</p>
+</li>
+<li>
+<p>Kenneth Reitz's 
+  <a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python</a>
+  contains a wealth of information both on the Python programming and the community.</p>
+</li>
+<li>
+<p><a href="https://developers.google.com/edu/python/">Google's Python Class</a> contains
+  lecture videos and exercises for learning Python.</p>
+</li>
+<li>
+<p>Check out the <a href="http://www.realpython.com/blog/">Real Python! Blog</a> for a great
+  set of relevant posts about Python web development topics.</p>
+</li>
+</ul>
+<h2>Beyond the basics</h2>
+<ul>
+<li>
+<p><a href="http://mirnazim.org/writings/python-ecosystem-introduction/">The Python Ecosystem: An Introduction</a>
+  provides context for virtual machines, Python packaging, pip, virutalenv
+  and many other topics after learning the basic Python syntax. </p>
+</li>
+<li>
+<p>The <a href="http://www.reddit.com/r/python">Python Subreddit</a> rolls up great
+  Python links and has an active community ready to answer questions from
+  beginners and advanced Python developers alike.</p>
+</li>
+<li>
+<p><a href="http://jessenoller.com/good-to-great-python-reads/">Good to Great Python Reads</a>
+  is a collection of intermediate and advanced Python articles around the web
+  focused on nuances and details of the Python language itself.</p>
+</li>
+<li>
+<p>The blog <a href="http://freepythontips.wordpress.com/">Free Python Tips</a> provides
+  posts on Python topics as well as news for the Python ecosystem.</p>
+</li>
+<li>
+<p><a href="http://pythonbooks.revolunet.com/">Python Books</a> is a collection of freely
+  available books on Python, Django, and data analysis.</p>
+</li>
+</ul>
+<h2>Videos, screencasts and presentations</h2>
+<ul>
+<li>
+<p><a href="https://twitter.com/heddle317">Kate Heddleston</a> gave a talk at PyCon 2014 
+  called 
+  "<a href="http://pyvideo.org/video/2591/so-you-want-to-be-a-full-stack-developer-how-to">Full-stack Python Web Applications</a>"
+  with clear visuals for how numerous layers of the Python web
+  stack fit together. There are also <a href="https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston">slides available from the talk</a>
+  with all the diagrams.</p>
+</li>
+<li>
+<p>My <a href="https://www.youtube.com/watch?v=s6NaOKD40rY">EuroPython 2014 "Full Stack Python"</a>
+  talk goes over each topic from this guide and provides context for how the
+  pieces fit together. 
+  The <a href="http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html">talk slides</a> are also available.</p>
+</li>
+<li>
+<p><a href="https://www.neckbeardrepublic.com/">Neckbeard Republic</a> provides free 
+  screencasts for learning intermediate topics. I typically prefer to learn
+  by reading. However, these videos are helpful in seeing the code on the 
+  screen instead of just looking at static code snippets.</p>
+</li>
+<li>
+<p><a href="http://www.pyvideo.org/">PyVideo</a> organizes and indexes thousands of Python
+  videos from both major conferences and meetups.</p>
+</li>
+<li>
+<p>Ontwik has relevant programming videos in its 
+  <a href="http://ontwik.com/category/python/">Python category</a>.</p>
+</li>
+</ul>
+<h2>Curated Python packages lists</h2>
+<ul>
+<li>
+<p><a href="https://github.com/vinta/awesome-python">awesome-python</a> is an incredible
+  list of Python frameworks, libraries and software. I wish I had this
+  page when I was just getting started. </p>
+</li>
+<li>
+<p><a href="http://easy-python.readthedocs.org/en/latest/">easy-python</a> is like
+  awesome-python although instead of just a Git repository this site is
+  in the Read the Docs format.</p>
+</li>
+</ul>
+<h2>Newsletters</h2>
+<ul>
+<li>
+<p><a href="http://www.pythonweekly.com/">Python Weekly</a> is a free weekly roundup
+  of the latest Python articles, videos, projects, and upcoming events.</p>
+</li>
+<li>
+<p><a href="http://pycoders.com/">PyCoder's Weekly</a> is another great free weekly
+  email newsletter similar to Python Weekly. The best resources are generally
+  covered in both newsletters but they often cover different articles
+  and projects from around the web.</p>
+</li>
+</ul>
+<h3>Those resources should help get you started. What's next?</h3>
+                      <h1>About the Author</h1>
+<p>This website was written and built by 
+<a href="http://www.mattmakai.com/">Matt Makai</a> 
+(<a href="http://twitter.com/mattmakai">@mattmakai</a>), currently a 
+<a href="http://thenextweb.com/dd/2012/06/03/a-day-in-the-life-of-a-developer-evangelist/">Developer Evangelist</a>
+at <a href="https://www.twilio.com/">Twilio</a>.</p>
+<p>Other projects by Matt include 
+<a href="http://www.codingacrossamerica.com/">Coding Across America</a>
+and
+<a href="https://github.com/makaimc/underwear/">Underwear</a>. You can reach him by 
+email at matthew.makai@gmail.com or tweet at
+<a href="https://twitter.com/mattmakai">him on Twitter</a>. </p>
+<p>Read my thoughts on the "full stack" trend in a 
+<a href="http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html">post I wrote for O'Reilly Programming</a>.</p>
+<p>Typos, inaccurate statements, or general areas for improvement can be handled
+through a pull request on
+<a href="https://github.com/makaimc/fullstackpython.github.com/">GitHub</a>.</p>
+<h3>Where to now?</h3>
+                      <h1>Change Log</h1>
+<p>This is a running list of the major changes to Full Stack Python since its
+inception in December 2012. Another way to view the modifications is through
+the 
+<a href="https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages">source repository's commit log</a> on GitHub.</p>
+<h2>2014</h2>
+<h3>July</h3>
+<ul>
+<li>Merged pull request for Django page and updated Django page with project 
+  template section.</li>
+<li>New Django example project resources.</li>
+<li>Rewrote parts of source control and CSS pages for clarity.</li>
+<li>Merged typo fixes PR #32.</li>
+<li>Added my Full Stack Python video from the EuroPython 2014 conference.</li>
+<li>Updated map with further details.</li>
+<li>Added a map to the front page. May move that elsewhere later though based
+  on feedback.</li>
+<li>Merged a pull request for new REST frameworks.</li>
+<li>Lots of new Django, Flask and task queue resources.</li>
+<li>Added two new Python libraries lists to the Best Python Resources page.</li>
+<li>Thanks <a href="https://news.ycombinator.com/item?id=7985692">Hacker News</a> for
+  doubling my traffic so far in 2014! 65k uniques and counting...</li>
+</ul>
+<h3>June</h3>
+<ul>
+<li>Added more monitoring and logging resources.</li>
+<li>New resources for Flask and NoSQL projects.</li>
+<li>Updated NoSQL data store page with specific open source projects.</li>
+<li>Added diagram to source control page.</li>
+<li>Split version control resources from Git resources. Added new version
+  control resources.</li>
+<li>Updated logging page with better explanations and content ordering.</li>
+<li>Added learning checklists for all sections. The remaining sections that now
+  also have checklists are logging, web analytics and web application security.</li>
+</ul>
+<h3>May</h3>
+<ul>
+<li>Added link to my O'Reilly Programming blog post on demand for full stack 
+  developer capabilities.</li>
+<li>Updated APIs page with basic information on webhooks.</li>
+<li>Added learning checklists for source control, application dependencies,
+  configuration management, NoSQL data stores, APIs, API integration, 
+  API creation, static content and caching sections.</li>
+<li>Moving learning checklists to the bottom of the pages since they are 
+  specific advice for steps to take after reading a section.</li>
+<li>Added a stub section for APIs.</li>
+<li>Cleaned up and polished the task queues and web analytics pages.</li>
+<li>Added learning checklist to operating systems, web servers, task queues,
+  monitoring pages and WSGI servers.</li>
+<li>Adding more logging resources.</li>
+<li>Continuing to add learning checklists to sections such as servers.</li>
+<li>Moving navigation options into meta tags on markdown pages.</li>
+</ul>
+<h3>April</h3>
+<ul>
+<li>Adding the concept of "learning checklists" to web frameworks, Django, CSS
+  and JavaScript pages to give readers some guidance for how to learn each 
+  topic. Will expand these checklists out into other pages over the next 
+  couple of weeks.</li>
+<li>Added an email sign up form to determine how many people are interested in
+  a full book since I've had a lot of requests in person to write one.</li>
+<li>Added new resources to the other web frameworks section.</li>
+<li>Updated the way choices to go from one page to another are generated. It's
+  now done off metadata instead of duplicated HTML content.</li>
+<li>Huge site update to reorganize the way content is presented and navigated.
+  Kinda has that "choose your own adventure" thing going for it, doesn't it?</li>
+<li>
+<p>New logo! This one's way more Python software stack, way less boring 
+  folder-thingy. Here's how the old one looked in comparison:
+<img src="theme/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" /></p>
+</li>
+<li>
+<p>Added a <a href="../future-directions.html">future direction</a> section to explain
+  current priorities for further developments on the site.</p>
+</li>
+<li>More resources for web frameworks and configuration management sections.</li>
+<li>Added small JavaScript section. Updating witih basic resources.</li>
+<li>Updated application dependencies with new links to Python library 
+  collections.</li>
+<li>Merged a couple of awesome pull requests that fixed typos and added 
+  additional Bottle resources.</li>
+</ul>
+<h3>March</h3>
+<ul>
+<li>Updated logging page with new resources.</li>
+<li>Added new CSS page.</li>
+<li>New intermediate learning links on the best resources page.</li>
+<li>Updated task queues page with better explanations and many more curated
+  resources.</li>
+<li>Added why is this piece necessary for databases, WSGI servers, web 
+  frameworks and application dependencies.</li>
+<li>Updating best resources page with newsletters and a few additional beyond
+  the basics resources.</li>
+<li>Adding 'why is this necessary' sections to servers, operating systems,
+  and web servers pages.</li>
+<li>Extracting best Python resources from the introduction into a separate
+  page.</li>
+<li>Cleaned up links on the first ten chapters and added new resources for
+  web frameworks.</li>
+<li>Updated application dependencies section with new resources and initial
+  content description.</li>
+<li>Updated the change log (how meta!) to have a cleaner layout.</li>
+</ul>
+<h3>February</h3>
+<ul>
+<li>Added Bottle as a web framework next to Django and Flask.</li>
+<li>Added new Django resources. </li>
+<li>New sitemap.xml. </li>
+<li>Rewriting all sections to fix first draft typos and grammar mistakes 
+  as well as add new content.</li>
+<li>Added task queues section due to reader feedback. </li>
+<li>Rewrote intro section.</li>
+<li>Merged several pull requests (see closed 
+  <a href="https://github.com/makaimc/fullstackpython.github.com/pulls">GitHub repo pull requests</a>). </li>
+<li>New resources for platform-as-a-service section. </li>
+<li>Added new sections specified by the community as missing. </li>
+<li>Reorganized ordering of content. </li>
+<li>Broke out subsections for Django and Flask. </li>
+<li>Added signficant content to the WSGI section. </li>
+<li>Converted from RST to Markdown (some of the downstream tools I want to 
+  use work better with Markdown than RST). </li>
+<li>Reorganized content into rough outline of "final" chapters.</li>
+</ul>
+<h3>January</h3>
+<ul>
+<li>Added configuration management, application dependencies, and source 
+  control sections. </li>
+<li>Updated about section. </li>
+<li>Fully responsive web design.</li>
+</ul>
+<h2>2013</h2>
+<h3>December</h3>
+<ul>
+<li>Changed CDN section to static content section. </li>
+<li>Transitioned diagrams from Paper app drawings to Balsamiq mockups 
+  exported to PNG files. </li>
+<li>Added Python database connectors to database section.</li>
+</ul>
+<h3>November</h3>
+<ul>
+<li>Modified color scheme. </li>
+<li>Updated caching and introduction section.</li>
+<li>Added NoSQL data stores section.</li>
+</ul>
+<h3>October</h3>
+<ul>
+<li>Created separate monitoring section.</li>
+</ul>
+<h3>August</h3>
+<ul>
+<li>Added more resources for web servers and other categories.</li>
+</ul>
+<h3>June</h3>
+<ul>
+<li>Updated styling.</li>
+<li>Switching around several sections.</li>
+</ul>
+<h3>January</h3>
+<ul>
+<li>Fleshed out web server, OS, and server sections, particularly IaaS 
+  and PaaS topics.</li>
+<li>Added initial "hand drawn" diagram placeholders for better diagrams later.</li>
+</ul>
+<h2>2012</h2>
+<h3>December</h3>
+<ul>
+<li>Initial incomplete release on fullstackpython.com, created 
+  introduction, CDN, web frameworks, and database sections with stubs for 
+  other areas.</li>
+</ul>
+<p>That's the whole history of Full Stack Python. What do you want to learn now?</p>
+                      <h1>Future Directions</h1>
+<p>Full Stack Python is a larger undertaking than I originally envisioned. My
+original intent was to link to the best resources by category. That grew into
+explaining the concepts plus including the best links I could find.</p>
+<p>This short section lays out my thoughts on what I'm working to improve in the
+intermediate-to-long term. Full Stack Python is my main 2014 project so I want 
+to make it a comprehensive "complete" reference for Python developers by the
+end of the year.</p>
+<p>These plans can change based on 
+<a href="https://github.com/makaimc/fullstackpython.github.com/pulls">pull requests</a>
+from the community. I work to integrate PRs within a day or two so please 
+submit one when you see a fix or improvement that needs to be made!</p>
+<p>Here are some things I'm actively working on:</p>
+<ul>
+<li>
+<p>Update these sections with better explanations and resources: </p>
+<ol>
+<li><a href="/configuration-management.html">Configuration management</a></li>
+<li><a href="/javascript.html">JavaScript</a></li>
+<li><a href="/cascading-style-sheets.html">CSS</a></li>
+<li><a href="/api-integration.html">API integration</a></li>
+<li><a href="/api-creation.html">API creation</a></li>
+<li><a href="/static-content.html">Static content</a></li>
+<li><a href="/caching.html">Caching</a></li>
+<li><a href="/web-application-security.html">Web security</a></li>
+</ol>
+</li>
+<li>
+<p>Plain English explanations for Django, Flask and Bottle framework concepts 
+  such as how forms work with templates, how models interact with views and
+  what the files are when a new boilerplate project is created (especially
+  important with Django)</p>
+</li>
+</ul>
+<p>After those updates are done I'll go back through and apply visuals to
+each section to make them easier to read and understand.</p>
+<h3>That's what coming. What would you like to learn right now?</h3>
+            </div>
+    <div class="col-md-offset-1 col-md-3" id="sidebar">
+  <div class="panel panel-success">
+      <div class="panel-heading"><h3 class="panel-head">Full Stack Python</h3></div>
+      <div class="panel-body">
+          <a href="/">Full Stack Python</a> is an open book that explains
+          each Python web application stack layer and provides the
+          best web resources for those topics.
+          <hr/>
+                    Check out the 
+          <a href="/table-of-contents.html">table of contents</a> if you're
+          searching for a particular topic.
+                    <hr/>
+          Need more detailed tutorials and walkthroughs than what is
+          presented here? 
+          <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          <hr/>
+          <a href="http://twitter.com/mattmakai">Matt Makai</a> built
+          this site with assistance from community pull requests. On GitHub 
+          you can <a href="https://github.com/makaimc">follow Matt</a>
+          to see the daily changes.
+      </div>
+  </div>
+  </div></div>
+        <hr/>
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2014
+        </div>
+    </div>
+    <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/5846.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script></body>
+</html>
