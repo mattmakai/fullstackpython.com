@@ -27,6 +27,15 @@ laptop. A production environment is the canonical version of your current
 application and its associated data.
 
 
+## Deployment map
+Python web application deployments are comprised of many pieces that need to
+be individually configured. Here is a map that visually depicts how each
+deployment topic relates to each other. Click the image to pull up a PDF 
+version.
+
+<a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a>
+
+
 ## Deployment hosting options
 There are four options for deploying and hosting a web application:
 
