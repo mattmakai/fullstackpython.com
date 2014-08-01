@@ -27,7 +27,7 @@ laptop. A production environment is the canonical version of your current
 application and its associated data.
 
 
-## Deployment map
+## Deployment topics map
 Python web application deployments are comprised of many pieces that need to
 be individually configured. Here is a map that visually depicts how each
 deployment topic relates to each other. Click the image to pull up a PDF 
