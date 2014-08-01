@@ -23,6 +23,9 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### August
+* Moved topics map from introduction page to deployment page.
+
 ### July
 * Merged pull request for Django page and updated Django page with project 
   template section.
