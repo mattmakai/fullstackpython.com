@@ -23,9 +23,12 @@ data transfer and signaling between applications.
 
 ## Why are APIs important?
 HTML, CSS and JavaScript create human-readable webpages. However, those 
-webpages are not easily consumable by other machines. Numerous scraping
-programs and libraries exist to rip data out of HTML but it's simpler
-to consume data through APIs.
+webpages are not easily consumable by other machines.
+
+Numerous scraping programs and libraries exist to rip data out of HTML but 
+it's simpler to consume data through APIs. For example, if you want the
+content of a news article it's easier to get the content through an API than
+to scrap the text out of the HTML.
 
 
 ## Key API concepts
