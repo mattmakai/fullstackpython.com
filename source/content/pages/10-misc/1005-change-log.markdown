@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### August
+* Small tweaks to NoSQL, introduction and a few other pages.
 * Moved topics map from introduction page to deployment page.
 
 ### July
