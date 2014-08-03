@@ -30,6 +30,24 @@ These persistent data storage representations are commonly used to augment,
 rather than completely replace, relational databases.
 
 
+## Key-value Pair
+Key-value pair data stores are based
+on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
+
+
+### Key-value pair data stores
+* [Redis](http://redis.io/) is an open source in-memory key-value pair data 
+  store. Redis is often called "the Swiss Army Knife of web application
+  development." It can be used for caching, queuing, and storing session data 
+  for faster access than a traditional relational database, among many other
+  use cases.
+
+
+### Key-value pair resources
+* "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
+  is a guide for getting up with the extremely useful in-memory data store.
+
+
 ## Document-oriented
 A document-oriented database provides a semi-structured representation for
 nested data. 
@@ -50,25 +68,6 @@ nested data.
 ### Document-oriented data store resources
 * [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
   is a guide about using non-relational databases in green field environments.
-
-
-## Key-value Pair
-Key-value pair data stores are based
-on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
-
-
-### Key-value pair data stores
-* [Redis](http://redis.io/) is an open source in-memory key-value pair data 
-  store. Redis is often called "the Swiss Army Knife of web application
-  development." It can be used for caching, queuing, and storing session data 
-  for faster access than a traditional relational database, among many other
-  use cases.
-
-
-### Key-value pair resources
-* "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
-  is a guide for getting up with the extremely useful in-memory data store.
-
 
 
 ## Column-family table
