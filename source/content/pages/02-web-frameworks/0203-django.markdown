@@ -97,6 +97,9 @@ syntax and language semantics first before diving into web development.
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.
 
+* [django-awesome](https://github.com/rosarior/awesome-django) is a curated
+  list of Django libraries and resources.
+
 
 ## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
