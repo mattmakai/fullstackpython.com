@@ -47,6 +47,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/continuous-integration.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/databases.html</loc>
     <priority>1.0</priority>
   </url>

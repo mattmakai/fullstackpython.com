@@ -97,6 +97,10 @@ syntax and language semantics first before diving into web development.
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.
 
+* [Deploying a Django app on Amazon EC2 instance](http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/)
+  is a detailed walkthrough for deploying an example Django app to Amazon
+  Web Services.
+
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
 
