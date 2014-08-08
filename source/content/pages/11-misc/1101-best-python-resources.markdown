@@ -54,6 +54,9 @@ should skip down to the next section for "experienced developers".
   [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
   is available in HTML form for free on the web.
 
+* [Python Practice Book](http://anandology.com/python-practice-book/index.html)
+  is a book of Python exercises to help you learn the basic language syntax.
+
 * I wrote a quick blog post on
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
