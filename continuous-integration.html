@@ -39,9 +39,51 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </div>        <div class="row">
     <div class="col-md-8">
       <h1>Continuous Integration</h1>
-<p>TBD :)</p>
+<p>Continuous integration (CI) automates building, testing and deploying 
+applications.</p>
+<h2>Why is continuous integration important?</h2>
+<p>When CI is set up well it can dramatically reduce deployment times by 
+eliminating manual steps and ensure code does not have bugs that are being
+checked by automated tests. Source code changes as a project evolves.
+CI combined with unit and integration tests check that code modifications 
+do not break existing tests ensure the software works as intended.</p>
+<h2>Open source CI projects</h2>
+<ul>
+<li>
+<p><a href="http://jenkins-ci.org/">Jenkins</a> is a common CI server for building and
+  deploying to test and production servers. 
+  <a href="https://github.com/jenkinsci/jenkins">Jenkins source code is on GitHub</a>.</p>
+</li>
+<li>
+<p><a href="http://www.go.cd/">Go CD</a> by ThoughtWorks was designed with the build and
+  test &amp; release cycles in mind. 
+  <a href="https://github.com/gocd/gocd">Go CD source code is on GitHub</a></p>
+</li>
+<li>
+<p><a href="http://stridercd.com/">Strider</a> is a CI server written in node.js. 
+  <a href="https://github.com/Strider-CD/strider">Strider source code is on GitHub</a>.</p>
+</li>
+</ul>
+<h2>Hosted CI services</h2>
+<ul>
+<li>
+<p><a href="https://travis-ci.org/">Travis CI</a> provides free CI for open source 
+  projects and has a <a href="https://travis-ci.com/">commercial version</a> for 
+  private repositories.</p>
+</li>
+<li>
+<p><a href="https://www.atlassian.com/software/bamboo">Bamboo</a> is 
+  <a href="https://www.atlassian.com/">Atlassian</a>'s hosted continuous integration that
+  is also free for open source projects.</p>
+</li>
+<li>
+<p><a href="https://circleci.com/">Circle CI</a> works with open or closed source projects
+  on GitHub and can deploy them to Heroku if builds are successful.</p>
+</li>
+</ul>
+<h3>What do you want to add to your application next?</h3>
                   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
             <a href="/logging.html" class="btn btn-success btn-full"><i class="fa fa-align-left fa-inverse fa-2x"></i></a>
             <p class="under-btn">
@@ -49,28 +91,20 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                I want to learn more about the users of my app with web analytics.
+                What should I do to secure my web application?
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
             <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-inverse fa-2x"></i></a>
             <p class="under-btn">
                 How do I integrate external APIs into my application?
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
-            <p class="under-btn">
-                What should I do to secure my web application?
             </p>
         </div>
     </div>
@@ -337,8 +371,8 @@ function mce_success_cb(resp){
                         <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
                         <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
                         <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
-                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
                         <a href="/continuous-integration.html" class="list-group-item smaller-item active">Continuous Integration</a>
+                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
                         <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
                         <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
                         <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
