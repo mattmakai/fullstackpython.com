@@ -1,7 +1,7 @@
 title: Operating Systems
 category: page
 slug: operating-systems
-sort-order: 033
+sort-order: 0306
 choice1url: /web-servers.html
 choice1icon: fa-cloud
 choice1text: I'll install Linux as my OS. What web server should I use?

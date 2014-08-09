@@ -1,7 +1,7 @@
 title: Source Control
 category: page
 slug: source-control
-sort-order: 037
+sort-order: 0309
 choice1url: /deployment.html
 choice1icon: fa-share
 choice1text: How do I deploy the code I've created for my web app?
