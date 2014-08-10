@@ -32,12 +32,18 @@ do not break existing tests ensure the software works as intended.
   deploying to test and production servers. 
   [Jenkins source code is on GitHub](https://github.com/jenkinsci/jenkins).
 
-* [Go CD](http://www.go.cd/) by ThoughtWorks was designed with the build and
-  test & release cycles in mind. 
-  [Go CD source code is on GitHub](https://github.com/gocd/gocd)
+* [Go CD](http://www.go.cd/) is a CI server by ThoughtWorks that was 
+  designed with best practices for the build and test & release cycles in 
+  mind. [Go CD source code is on GitHub](https://github.com/gocd/gocd).
 
 * [Strider](http://stridercd.com/) is a CI server written in node.js. 
   [Strider source code is on GitHub](https://github.com/Strider-CD/strider).
+
+* [BuildBot](http://buildbot.net/) is a continuous integration **framework** 
+  with a set of components for creating your own CI server. It's written in
+  Python and intended for development teams that want more controller over
+  their build and deployment pipeline.
+  [BuildBot source code is on GitHub](https://github.com/buildbot/buildbot).
 
 
 ## Hosted CI services
@@ -51,6 +57,9 @@ do not break existing tests ensure the software works as intended.
 
 * [Circle CI](https://circleci.com/) works with open or closed source projects
   on GitHub and can deploy them to Heroku if builds are successful.
+
+* [Shippable](https://www.shippable.com/) uses Docker containers to speed 
+  the build and integration process. It's free for public repositories.
 
 
 ### What do you want to add to your application next?
