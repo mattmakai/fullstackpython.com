@@ -63,4 +63,10 @@ do not break existing tests ensure the software works as intended.
   the build and integration process. It's free for public repositories.
 
 
+## Continuous integration resources
+* "[Diving into continuous integration as a newbie](http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/)"
+  is a retrospective on learning CI from a Rackspace intern on how she learned
+  the subject.
+
+
 ### What do you want to add to your application next?
