@@ -79,6 +79,10 @@ equivalent of browser testing in the web application world.
 * This [API Design Guide](https://github.com/interagent/http-api-design) 
   is based on Heroku's best practices for the platform's API.
 
+* [18F](https://18f.gsa.gov/)'s 
+  [API standards](https://github.com/18f/api-standards) explains the details
+  behind their design decisions on creating modern RESTful APIs.
+
 * [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
   by [PyDanny](https://twitter.com/pydanny) contains questions and insight
   into what makes a good API framework and which one you should currently
