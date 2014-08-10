@@ -64,6 +64,10 @@ do not break existing tests ensure the software works as intended.
 
 
 ## Continuous integration resources
+* [What is continuous integration](http://martinfowler.com/articles/continuousIntegration.html)
+  is a classic detailed article by Martin Fowler on the concepts behind CI
+  and how to implement it.
+
 * "[Diving into continuous integration as a newbie](http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/)"
   is a retrospective on learning CI from a Rackspace intern on how she learned
   the subject.
