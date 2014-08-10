@@ -32,9 +32,10 @@ do not break existing tests ensure the software works as intended.
   deploying to test and production servers. 
   [Jenkins source code is on GitHub](https://github.com/jenkinsci/jenkins).
 
-* [Go CD](http://www.go.cd/) is a CI server by ThoughtWorks that was 
-  designed with best practices for the build and test & release cycles in 
-  mind. [Go CD source code is on GitHub](https://github.com/gocd/gocd).
+* [Go CD](http://www.go.cd/) is a CI server by 
+  [ThoughtWorks](http://www.thoughtworks.com/) that was designed with best 
+  practices for the build and test & release cycles in mind. 
+  [Go CD source code is on GitHub](https://github.com/gocd/gocd).
 
 * [Strider](http://stridercd.com/) is a CI server written in node.js. 
   [Strider source code is on GitHub](https://github.com/Strider-CD/strider).
