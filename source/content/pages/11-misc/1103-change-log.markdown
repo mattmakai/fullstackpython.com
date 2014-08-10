@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### August
+* Added [Continuous Integration](/continuous-integration.html) page.
 * Splitting out deployment from automation so I can add chapters on continuous
   integration, configuration management (which will be moved from the 
   existing deployment chapter) and related topics.
