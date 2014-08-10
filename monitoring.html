@@ -47,6 +47,18 @@ developers and operations teams can respond and fix problems.</p>
 <p>Capturing and analyzing data about your production environment is critical
 to proactively deal with stability, performance, and errors in a web 
 application.</p>
+<h2>Difference between monitoring and logging</h2>
+<p>Monitoring and logging are very similar in their purpose of helping to 
+diagnose issues with an application and aid the debugging process. One way
+to think about the difference is that logging happens based on explicit events
+while monitoring is a passive background collection of data. </p>
+<p>For example, when an error occurs, that event is explicitly logged through
+code in an exception handler. Meanwhile, a monitoring agent instruments the
+code and gathers data not only about the logged exception but also the 
+performance of the functions.</p>
+<p>This distinction between logging and monitoring is vague and not necessarily
+the only way to look at it. Pragmatically, both are useful for maintaining a
+production web application.</p>
 <h2>Monitoring layers</h2>
 <p>There are several important resources to monitor on the operating system 
 and network level of a web stack.</p>
@@ -482,9 +494,9 @@ function mce_success_cb(resp){
                         <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
                         <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
                         <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
+                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
                         <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
                         <a href="/monitoring.html" class="list-group-item smaller-item active">Monitoring</a>
-                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
                         <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
