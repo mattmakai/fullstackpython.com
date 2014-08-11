@@ -62,6 +62,12 @@ do not break existing tests ensure the software works as intended.
 * [Shippable](https://www.shippable.com/) uses Docker containers to speed 
   the build and integration process. It's free for public repositories.
 
+* [Drone](https://drone.io/) is another CI service that also provides free
+  builds for open source projects.
+
+* [Codeship](https://www.codeship.io/) provides continuous integration for
+  Python 2.7.
+
 
 ## Continuous integration resources
 * [What is continuous integration](http://martinfowler.com/articles/continuousIntegration.html)
