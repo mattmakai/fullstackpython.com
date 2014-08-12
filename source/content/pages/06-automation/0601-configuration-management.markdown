@@ -2,9 +2,9 @@ title: Configuration Management
 category: page
 slug: configuration-management
 sort-order: 061
-choice1url: /logging.html
-choice1icon: fa-align-left fa-inverse
-choice1text: How do I log events that happen in my app while it is running?
+choice1url: /continuous-integration.html
+choice1icon: fa-refresh
+choice1text: How do I continuously integrate my project's codebase?
 choice2url: /web-analytics.html
 choice2icon: fa-dashboard
 choice2text: I want to learn more about the users of my app with web analytics.
