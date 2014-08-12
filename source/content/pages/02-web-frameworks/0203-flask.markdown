@@ -150,6 +150,9 @@ book which is an excellent learning resource.
   along with the 
   [source code in Gists](https://gist.github.com/coleifer/632d3c9aa6b2ea519384).
 
+* [Bean Counter](https://github.com/BouncyNudibranch/bean-counter) is an
+  open source Flask app for tracking coffee.
+
 
 ## Flask framework learning checklist
 <i class="fa fa-check-square-o"></i> 
