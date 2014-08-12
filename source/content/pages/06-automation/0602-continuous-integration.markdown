@@ -68,6 +68,9 @@ do not break existing tests ensure the software works as intended.
 * [Codeship](https://www.codeship.io/) provides continuous integration for
   Python 2.7.
 
+* [Snap](https://snap-ci.com/) is a CI server and build pipeline tool for
+  both integrating and deploying code.
+
 
 ## Continuous integration resources
 * [What is continuous integration](http://martinfowler.com/articles/continuousIntegration.html)
