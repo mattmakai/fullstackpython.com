@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### August
+* Added another Flask open source example app.
+* Added new [Code Metrics](/code-metrics.html) page.
 * Updated CI page with more services and open source projects.
 * Added [Continuous Integration](/continuous-integration.html) page.
 * Splitting out deployment from automation so I can add chapters on continuous
