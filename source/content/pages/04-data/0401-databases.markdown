@@ -1,7 +1,7 @@
 title: Databases
 category: page
 slug: databases
-sort-order: 041
+sort-order: 0401
 choice1url: /no-sql-datastore.html
 choice1icon: fa-inbox
 choice1text: What about non-relational data stores hipsters tell me to use? 
