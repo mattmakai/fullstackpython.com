@@ -1,7 +1,7 @@
 title: Static Content
 category: page
 slug: static-content
-sort-order: 071
+sort-order: 0701
 choice1url: /caching.html
 choice1icon: fa-repeat
 choice1text: How do I cache repeated operations to improve performance?
