@@ -30,7 +30,7 @@ request forgery and usage of public-private keypairs.
 securing Linux distributions.
 
 
-## Security Resources
+## Security resources
 * The Open Web Application Security Project (OWASP) has 
   [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
   topics.
@@ -38,6 +38,13 @@ securing Linux distributions.
 * [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
   is a great list of password cracking, scanning, sniffing and other security
   penetration testing tools.
+
+* [The Sorry State of SSL](https://hynek.me/talks/tls/) details the 
+  history and evolution of SSL/TLS. There are important differences between
+  the versions and Hynek explains why TLS should always be used. The
+  talk prompted work to improve Python's SSL in 2.7.9 based on the upgrades
+  in Python 3 outlined in 
+  [The not-so-sorry state of SSL in Python](https://developer.rackspace.com/blog/the-not-so-sorry-state-of-ssl-in-python/).
 
 * [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
 
