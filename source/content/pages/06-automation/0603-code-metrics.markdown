@@ -40,6 +40,10 @@ system are occurring.
 * [PyFlakes](https://pypi.python.org/pypi/pyflakes) parses source files for
   errors and reports on them.
 
+* [Pyntch](http://www.unixuser.org/~euske/python/pyntch/index.html) is a
+  static code analyzer that attempts to detect runtime errors. It does not
+  perform code style checking.
+
 
 ## Hosted code metrics services
 * [Landscape](https://landscape.io/) provides free code metrics for open 
