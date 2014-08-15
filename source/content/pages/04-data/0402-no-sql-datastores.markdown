@@ -103,6 +103,9 @@ representing a person could have a property of "female" or "male".
 * [Cayley](https://github.com/google/cayley) is an open source graph data
   store written by Google primarily written in Go.
 
+* [Titan](http://thinkaurelius.github.io/titan/) is a distributed graph
+  database built for multi-node clusters.
+
 
 ### Graph data store resources
 * [Introduction to Graph Databases](http://www.slideshare.net/maxdemarzi/introduction-to-graph-databases-12735789)
