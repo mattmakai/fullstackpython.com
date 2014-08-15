@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### August
+* New resources for code metrics and NoSQL databases.
 * Added another Flask open source example app.
 * Added new [Code Metrics](/code-metrics.html) page.
 * Updated CI page with more services and open source projects.
