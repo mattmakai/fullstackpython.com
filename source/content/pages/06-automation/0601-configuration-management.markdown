@@ -37,6 +37,18 @@ are not useful for performing ad hoc tasks that require interactive responses.
 operations, such as querying the database from the Django manage.py shell.
 
 
+## Configuration management tool comparisons
+* [Moving away from Puppet: SaltStack or Ansible?](http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/)
+  is an openly biased but detailed post on why to choose SaltStack over 
+  Ansible in certain situations.
+  
+* [Ansible vs. Shell Scripts](http://devopsu.com/blog/ansible-vs-shell-scripts/)
+  provides some perspective on why a configuration management tool is better
+  than old venerable shell scripts.
+
+* [Ansible and Salt: A Detailed Comparison](http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/)
+
+
 ## Ansible
 [Ansible](http://www.ansibleworks.com/) is an open source configuration
 management and application deployment tool built in Python.
@@ -65,10 +77,6 @@ from PyCon UK 2013
 * [Multi-factor SSH authentication with Ansible and Duo Security](http://jlafon.io/ansible-duo-security.html)
 
 * [Introducing Ansible into Legacy Projects](http://benlopatin.com/getting-started-with-ansible/)
-
-* [Ansible vs. Shell Scripts](http://devopsu.com/blog/ansible-vs-shell-scripts/)
-
-* [Ansible and Salt: A Detailed Comparison](http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/)
 
 * [Automating your development environment with Ansible](http://www.nickhammond.com/automating-development-environment-ansible/)
 
