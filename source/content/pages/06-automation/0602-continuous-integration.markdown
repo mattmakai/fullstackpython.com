@@ -77,6 +77,10 @@ do not break existing tests ensure the software works as intended.
   is a classic detailed article by Martin Fowler on the concepts behind CI
   and how to implement it.
 
+* [Continuous Integration & Delivery - Illustrated](http://bitcubby.com/continuous-integration-delivery-illustrated/)
+  uses well done drawings to show how continuous integration and delivery 
+  works for testing and managing data.
+
 * [Diving into continuous integration as a newbie](http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/)
   is a retrospective on learning CI from a Rackspace intern on how she learned
   the subject.
