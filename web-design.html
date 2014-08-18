@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Source Control - Full Stack Python</title>
+    <title>Web Design - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,178 +38,65 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Source control</h1>
-<p>Source control, also known as <em>version control</em>, stores software code files
-with a detailed history of every modification made to those files.</p>
-<h2>Why is source control necessary?</h2>
-<p>Version control systems allow developers to modify code without worrying 
-about permanently screwing something up. Unwanted changes can be easily rolled
-back to previous working versions of the code. </p>
-<p>Source control also makes team software development easier. One developer 
-can combine her code modifications with other developers' code through 
-<a href="http://en.wikipedia.org/wiki/Diff">diff</a> views that show line-by-line 
-changes then merge the appropriate code into the main code branch.</p>
-<p>Version control is a necessity on all software projects regardless of 
-development time, codebase size or the programming language used. Every
-project should immediately begin by using a version control system such
-as Git or Mercurial.</p>
-<h2>Source control during deployment</h2>
-<p>Pulling code during a deployment is a potential way source control systems fit
-into the deployment process. </p>
-<p><img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system."></p>
-<p>Note that some developers recommend deployment pipelines package the source 
-code to deploy it and never have a production environment touch a source 
-control system directly. However, for small scale deployments it's often
-easiest to pull from source code when you're getting started instead of 
-figuring out how to wrap the Python code in a system installation package.</p>
-<h2>Source control projects</h2>
-<p>Numerous source control systems have been created over the past several
-decades. In the past, proprietary source control software offered features
-tailored to large development teams and specific project workflows. However,
-open source systems are now used for version control on the largest and most
-complicated software projects in existence. There's no reason why your project
-should use anything other than an open source version control system in
-today's Python development world. The two primary choices are:</p>
+      <h1>Web Design</h1>
+<p>Web design is the creation of a web application's style and user interaction
+using CSS and JavaScript.</p>
+<h2>Why is web design important?</h2>
+<p>You don't really expect users to use your 2014 web application if it looks
+like this, do you?</p>
+<p><img src="theme/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> </p>
+<p>Creating web pages with their own style and interactivity so users can easily
+accomplish their tasks is a major part of building modern web applications.</p>
+<h2>Responsive design</h2>
+<p>Separating the content from the rules for how to display the content allows 
+devices to render the output differently based on factors such as screen size
+and device type. Displaying content differently based on varying screen 
+attributes is often called <em>responsive design</em>. The responsiveness is 
+accomplished by implementing
+<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a>
+in the <a href="/cascading-style-sheets.html">CSS</a>. </p>
+<p>For example, a mobile device does not have as much space to display a 
+navigation bar on the side of a page so it is often pushed down 
+below the main content. The 
+<a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog example</a> 
+shows that navigation bar relocation scenario when you resize the browser 
+width.</p>
+<h2>Design resources</h2>
 <ul>
 <li>
-<p><a href="http://git-scm.com/">Git</a> is a free and open source distributed version
-  control system.</p>
+<p>The <a href="http://bootstrappingdesign.com/">Bootstrapping Design</a> book is one of 
+  the clearest and concise resources for learning design that I've ever read. 
+  Highly recommended especially if you feel you have no design skills but 
+  need to learn them.</p>
 </li>
 <li>
-<p><a href="http://mercurial.selenic.com/">Mercurial</a> is similar to Git, also a free
-  and open source distributed version control system.</p>
+<p><a href="https://kuler.adobe.com/create/color-wheel/">Kuler</a> is a complementary
+  color picker by Adobe that helps choose colors for your designs.</p>
 </li>
 </ul>
-<h2>Hosted source control services</h2>
-<p>Git and Mercurial can be downloaded and run on your own server. However,
-it's easy and cheap to get started with a hosted version control service.
-You can transition away from the service at a later time by moving your 
-repositories if your needs change. A couple of recommended hosted version
-control services are:</p>
-<ul>
-<li>
-<p><a href="https://github.com/">GitHub</a> is currently the most commonly used source
-  control platform for using Git.</p>
-</li>
-<li>
-<p><a href="https://bitbucket.org/">BitBucket</a> provides free Git and Mercurial 
-  repositories for open projects and private repositories for up to five
-  users. Users pay for hosting private repositories with more than five users.</p>
-</li>
-</ul>
-<h2>General source control resources</h2>
-<ul>
-<li>
-<p><a href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> 
-  is a comprehensive overview by Patrick McKenzie of why you need source 
-  control.</p>
-</li>
-<li>
-<p><a href="https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/">Version control best practices</a>
-  is a good write up of how to work with version control systems. The post is 
-  part of an ongoing deployment guide written by the folks at 
-  <a href="https://www.rainforestqa.com/">Rainforest</a>.</p>
-</li>
-<li>
-<p>This lighthearted guide to the 
-  <a href="http://www.flourish.org/blog/?p=397">ten astonishments in version control history</a> 
-  is a fun way to learn how systems developed over the past several decades.</p>
-</li>
-<li>
-<p><a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A visual guide to version control</a> 
-  is a detailed article with real-life examples for why version control is
-  necessary in software development.</p>
-</li>
-<li>
-<p><a href="http://guides.beanstalkapp.com/version-control/intro-to-version-control.html">An introduction to version control</a> 
-  shows the basic concepts behind version control systems.</p>
-</li>
-<li>
-<p><a href="http://oss-watch.ac.uk/resources/versioncontrol">What Is Version Control? Why Is It Important For Due Diligence?</a> 
-  explains the benefits and necessity of version control systems.</p>
-</li>
-<li>
-<p><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">About version control</a> 
-reviews the basics of distributed version control systems.</p>
-</li>
-</ul>
-<h2>Git resources</h2>
-<ul>
-<li>
-<p><a href="http://git-scm.com/book">Pro Git</a> is a free open source book that walks 
-  through all aspects of using the version control system.</p>
-</li>
-<li>
-<p><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git">A Hacker's Guide to Git</a>
-  covers the basics as well as more advanced Git commands while explaining each
-  step along the way.</p>
-</li>
-<li>
-<p><a href="http://gitready.com/">git ready</a> has a nice collection of blog posts based on
-  beginner, intermediate and advanced Git use cases.</p>
-</li>
-<li>
-<p><a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a> details
-  a Git branching model for small teams.</p>
-</li>
-<li>
-<p><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a> builds on
-  git-flow, goes over some of the issues that arise with it and presents a
-  few solutions to those problems.</p>
-</li>
-<li>
-<p><a href="http://blog.endpoint.com/2014/05/git-workflows-that-work.html">Git Workflows That Work</a>
-  is a helpful post with diagrams to show how teams can create a Git workflow
-  that will help their development process.</p>
-</li>
-<li>
-<p>"<a href="http://www.braintreepaymentsolutions.com/devblog/our-git-workflow">Our Git Workflow</a>"
-  by Braintree goes over how this payments company uses Git for development
-  and merging source code.</p>
-</li>
-</ul>
-<h2>Source control learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Pick a version control system. Git is recommended because on the web there 
-are a significant number of tutorials to help both new and advanced users.</p>
-<p><i class="fa fa-check-square-o"></i>
-Learn basic use cases for version control such as committing changes, rolling 
-back to earlier file versions and searching for when lines of code were 
-modified during development history.</p>
-<p><i class="fa fa-check-square-o"></i>
-Ensure your source code is backed up in a central repository. A central
-repository is critical not only if your local development version is corrupted
-but also for the deployment process.</p>
-<p><i class="fa fa-check-square-o"></i>
-Integrate source control into your deployment process in three ways. First,
-pull the project source code from version control during deployments. Second, 
-kick off deployments when code is modified by using webhooks or polling on 
-the repository. Third, ensure you can roll back to a previous version if a 
-code deployment goes wrong.</p>
-<h3>Now that your source code is versioned, what's next?</h3>
                   <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-2x"></i></a>
+            <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-2x"></i></a>
             <p class="under-btn">
-                How do I deploy the code I've created for my web app?
+                How do I implement the design with CSS?
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                I want to learn more about the users of my application.
+                How should I host static content such as my CSS files?
             </p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-2x"></i></a>
+            <a href="/javascript.html" class="btn btn-success btn-full"><i class="fa fa-html5 fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I integrate external APIs into my web application?
+                How do I create dynamic browser interaction with JavaScript?
             </p>
         </div>
     </div>
@@ -432,7 +319,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Source Control</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Web Design</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
           each Python web application stack layer and provides the
@@ -470,11 +357,11 @@ function mce_success_cb(resp){
                         <a href="/operating-systems.html" class="list-group-item smaller-item ">Operating Systems</a>
                         <a href="/web-servers.html" class="list-group-item smaller-item ">Web Servers</a>
                         <a href="/wsgi-servers.html" class="list-group-item smaller-item ">WSGI Servers</a>
-                        <a href="/source-control.html" class="list-group-item smaller-item active">Source Control</a>
+                        <a href="/source-control.html" class="list-group-item smaller-item ">Source Control</a>
                         <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
                         <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
                         <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
-                        <a href="/web-design.html" class="list-group-item smaller-item ">Web Design</a>
+                        <a href="/web-design.html" class="list-group-item smaller-item active">Web Design</a>
                         <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
                         <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
                         <a href="/continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
