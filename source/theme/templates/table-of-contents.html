@@ -6,7 +6,48 @@
       <h1>Table of Contents</h1>
       <div class="list-group">
         {% for p in pages|sort(attribute='sort-order') %}
-          <a href="/{{ p.slug }}.html" class="list-group-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+            {% if p.slug == 'introduction' %}
+                <h3>1. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
+            {% elif p.slug == 'web-frameworks' %}
+                <h3>2. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
+            {% elif p.slug == 'deployment' %}
+                <h3>3. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
+            {% elif p.slug == 'databases' %}
+                <h3>4. Databases</h3>
+                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">Relational {{ p.title }}</a>
+              <br>
+            {% elif p.slug == 'databases' %}
+                <h3>4. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
+            {% elif p.slug == 'web-design' %}
+                <h3>5. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
+            {% elif p.slug == 'continuous-integration' %}
+              <h3>6. Automation</h3>
+              <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% elif p.slug == 'static-content' %}
+              <h3>7. Performance</h3>
+              <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% elif p.slug == 'application-programming-interfaces' %}
+                <h3>8. APIs</h3>
+                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% elif p.slug == 'logging' %}
+                <h3>9. Monitoring & Analytics</h3>
+                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% elif p.slug == 'web-application-security' %}
+                <h3>10. Security</h3>
+                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% elif p.slug == 'best-python-resources' %}
+                <h3>11. Miscellaneous</h3>
+                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% else %}
+              <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              <br>
+            {% endif %}
         {% endfor %}
       </div>
     </div>
