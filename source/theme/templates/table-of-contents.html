@@ -38,14 +38,20 @@
               <br>
             {% elif p.slug == 'web-application-security' %}
                 <h3>10. Security</h3>
-                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+                <span style="padding-left: 37px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+                {% set greater_indent = true %}
               <br>
             {% elif p.slug == 'best-python-resources' %}
                 <h3>11. Miscellaneous</h3>
-                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+                <span style="padding-left: 37px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
               <br>
             {% else %}
-              <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
+              {% if not greater_indent %}
+                <span style="padding-left: 25px;"> </span>
+              {% else %}
+                <span style="padding-left: 37px;"> </span>
+              {% endif %}
+              <a href="/{{ p.slug }}.html">{{ p.title }}</a>
               <br>
             {% endif %}
         {% endfor %}
