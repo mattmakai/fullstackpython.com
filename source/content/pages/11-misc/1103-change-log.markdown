@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### August
+* Added new [Web Design](/web-design.html) page to cleanly separate CSS from
+  design topics and resources.
 * New resources for code metrics and NoSQL databases.
 * Added another Flask open source example app.
 * Added new [Code Metrics](/code-metrics.html) page.
