@@ -101,6 +101,9 @@ syntax and language semantics first before diving into web development.
   is a detailed walkthrough for deploying an example Django app to Amazon
   Web Services.
 
+* [Deploying Django on AWS](http://www.nickpolet.com/blog/deploying-django-on-aws/1/)
+  is another walkthrough for deploying Django to AWS.
+
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
 
