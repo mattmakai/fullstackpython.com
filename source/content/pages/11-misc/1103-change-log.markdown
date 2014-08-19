@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### August
+* Updated change log so it's easier to read and broken down by sections.
 * Added new [Web Design](/web-design.html) page to cleanly separate CSS from
   design topics and resources.
 * New resources for code metrics and NoSQL databases.
