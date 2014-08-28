@@ -123,6 +123,10 @@ book which is an excellent learning resource.
   covers a subject that comes up quickly once you begin adding significant
   functionality to your Flask application.
 
+* "[One line of code cut our Flask page load times by 60%](https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679)
+  is an important note about optimizing Flask template cache size to 
+  dramatically increase performance in some cases.
+
 * [Unit Testing Your Twilio App Using Python’s Flask and Nose](https://www.twilio.com/blog/2014/03/unit-testing-your-twilio-app-using-pythons-flask-and-nose.html)
   covers integrating the Twilio API into a Flask application and how to test 
   that functionality with [nose](https://nose.readthedocs.org/en/latest/).
