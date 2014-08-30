@@ -188,9 +188,9 @@ The following are WSGI servers based on community recommendations.
 * This [basics of WSGI](http://agiliq.com/blog/2013/07/basics-wsgi/) post
   contains a simple example of how a WSGI-compatible application works.
 
-* A thorough and informative post for LAMP-stack hosting chocies is 
+* A thorough and informative post for LAMP-stack hosting choices is 
   presented in the 
-  "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/>)." 
+  "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/)." 
 
 * This post entitled
   [The Beautiful Simplicity of an nginx and uWSGI Deployments](http://justbartek.ca/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html)
