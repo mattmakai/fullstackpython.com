@@ -70,6 +70,10 @@ including everything in the framework with tight integration.
   covers Django, Flask and Bottle as well as several other lesser known Python
   frameworks.
 
+* This fascinating blog post takes a look at the 
+  [code complexity of several Python web frameworks](http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/)
+  by providing visualizations based on their code bases.
+
 
 ## Web frameworks learning checklist
 <i class="fa fa-check-square-o"></i> 
