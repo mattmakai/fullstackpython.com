@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### August
+* New interesting link for web framework code complexity visualizations.
+* Merged pull request that fixed some issues on WSGI page.
 * Updated table of contents so it's easier to read and broken down by 
   sections.
 * Added new [Web Design](/web-design.html) page to cleanly separate CSS from
