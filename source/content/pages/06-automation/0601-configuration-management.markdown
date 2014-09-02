@@ -57,10 +57,14 @@ management and application deployment tool built in Python.
 ### Ansible Resources
 * [Official Ansible documentation](http://docs.ansible.com/index.html)
 
-* [Python for Configuration Management with Ansible slides](http://www.insom.me.uk/post/pycon-talk.html) 
-from PyCon UK 2013
+* [An Ansible tutorial](https://serversforhackers.com/editions/2014/08/26/getting-started-with-ansible/)
+  is a fantastically detailed introduction to using Ansible to set up
+  servers.
 
 * [Ansible Weekly Newsletter](http://devopsu.com/newsletters/ansible-weekly-newsletter.html)
+
+* [Python for Configuration Management with Ansible slides](http://www.insom.me.uk/post/pycon-talk.html) 
+from PyCon UK 2013
 
 * [First Steps with Ansible](http://labs.qandidate.com/blog/2013/11/15/first-steps-with-ansible/)
 
