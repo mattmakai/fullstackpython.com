@@ -64,6 +64,9 @@ application before taking some action, such as purchasing your service.
 * [Google Analytics](http://www.google.com/analytics/) is a widely used
   free analytics tool for website traffic.
 
+* [Clicky](http://clicky.com/) provides real-time analytics comparable to
+  Google Analytics' real-time dashboard.
+
 * [MixPanel](https://mixpanel.com/)'s analytics platform focuses on mobile
   and sales funnel metrics. A developer builds what data points need to be
   collected into the server side or client side code. MixPanel captures that
