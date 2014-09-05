@@ -23,6 +23,9 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### September
+* A few new resources for NoSQL data stores.
+
 ### August
 * New interesting link for web framework code complexity visualizations.
 * Merged pull request that fixed some issues on WSGI page.

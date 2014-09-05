@@ -120,6 +120,11 @@ representing a person could have a property of "female" or "male".
 
 ## NoSQL data store resources
 * [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
+  presents the basic constraints all databases must trade off in operation.
+
+* This post on [What is a NoSQL database? Learn By Writing One in Python](http://jeffknupp.com/blog/2014/09/01/what-is-a-nosql-database-learn-by-writing-one-in-python/)
+  is a detailed article that breaks the mystique behind what some forms
+  of NoSQL databases are doing under the covers.
 
 * [NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email 
   newsletter that aggregates articles, tutorials, and videos about 
@@ -128,6 +133,7 @@ representing a person could have a property of "female" or "male".
 * [NoSQL comparison](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
   is a large list of popular, BigTable-based, special purpose, and other
   datastores with attributes and the best use cases for each one.
+
 
 
 ## NoSQL data stores learning checklist
