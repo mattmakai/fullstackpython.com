@@ -35,6 +35,10 @@ securing Linux distributions.
   [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
   topics.
 
+* This page contains a
+  [fantastic currated list of security reading material](http://dfir.org/?q=node/8/)
+  from beginning to advanced topics.
+
 * [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
   is a great list of password cracking, scanning, sniffing and other security
   penetration testing tools.
