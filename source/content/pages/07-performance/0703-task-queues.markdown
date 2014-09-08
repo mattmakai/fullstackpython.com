@@ -110,6 +110,10 @@ when scaling out a large deployment of distributed task queues.
 * [Why Task Queues](http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619) 
   is a presentation for what task queues are and why they are needed. 
 
+* Flask by Example [Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
+  provides a detailed walkthrough of setting up workers to use RQ with
+  Redis.
+
 * [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
   is a detailed walkthrough for using these tools on an Ubuntu VPS.
 
