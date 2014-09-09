@@ -57,4 +57,8 @@ width.
 * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
   color picker by Adobe that helps choose colors for your designs.
 
+* If you want to learn more about how browsers work behind the scenes, 
+  here's a 
+  [blog post series on building a browser engine](http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html)
+  that will show you how to build a simple rendering engine.
 
