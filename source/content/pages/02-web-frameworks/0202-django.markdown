@@ -107,6 +107,8 @@ syntax and language semantics first before diving into web development.
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
 
+* [Starting a Django Project](https://realpython.com/learn/start-django/) answers the question, “How do I setup a Django (1.5, 1.6, or 1.7) Project from scratch?”
+
 
 ## Django videos
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
