@@ -79,7 +79,9 @@ book which is an excellent learning resource.
 
 * [Building a blog using Flask and AngularJS Part 1](http://blog.john.mayonvolcanosoftware.com/building-a-blog-using-flask-and-angularjs-part-1/)
   is the first of a multipart series on working with Flask and an AngularJS 
-  front end.
+  front end. 
+  [Part 2](http://blog.john.mayonvolcanosoftware.com/building-a-blog-using-flask-and-angularjs-part-2/) is also available 
+  [along with the source code](https://github.com/basco-johnkevin/building-a-blog-using-flask-and-angularjs).
 
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
