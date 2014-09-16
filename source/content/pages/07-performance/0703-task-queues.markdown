@@ -139,6 +139,10 @@ when scaling out a large deployment of distributed task queues.
 * [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
   a short introductory task queue screencast.
 
+* Heroku wrote about how to 
+  [secure Celery](https://engineering.heroku.com/blogs/2014-09-15-securing-celery)
+  when tasks are otherwise sent over unencrypted networks.
+
 
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 

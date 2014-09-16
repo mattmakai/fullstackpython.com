@@ -48,8 +48,6 @@ Here are some things I'm actively working on:
   what the files are when a new boilerplate project is created (especially
   important with Django)
 
-* Flesh out new continuous integration, web design and code metrics sections.
-
 * Split web application security and other security (lower level protocols)
   into separate pages.
 
