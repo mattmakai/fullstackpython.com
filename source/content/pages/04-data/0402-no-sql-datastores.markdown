@@ -47,6 +47,10 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 * "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
   is a guide for getting up with the extremely useful in-memory data store.
 
+* This video on 
+  [Scaling Redis at Twitter](https://www.youtube.com/watch?v=rP9EKvWt0zo) is
+  a detailed look behind the scenes with a massive Redis deployment.
+
 
 ## Document-oriented
 A document-oriented database provides a semi-structured representation for
