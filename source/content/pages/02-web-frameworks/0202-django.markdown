@@ -124,6 +124,7 @@ syntax and language semantics first before diving into web development.
   series of video tutorials for the framework.
 
 * DjangoCon US videos from 
+  [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
   [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
   [2012](http://pyvideo.org/category/23/djangocon-2012), 
   [2011](http://pyvideo.org/category/3/djangocon-2011), as well as  
