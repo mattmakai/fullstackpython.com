@@ -106,6 +106,10 @@ equivalent of browser testing in the web application world.
   is an appeal that metadata makes a difference in whether APIs are descriptive
   or not.
 
+* [Designing the Artsy API](http://artsy.github.io/blog/2014/09/12/designing-the-public-artsy-api/)
+  has their recommendations list for building an API based on their recent
+  experiences.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
