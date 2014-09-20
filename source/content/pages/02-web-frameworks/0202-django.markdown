@@ -111,6 +111,11 @@ syntax and language semantics first before diving into web development.
 
 
 ## Django videos
+* Kate Heddleston and I gave a talk at DjangoCon 2014 called
+  [Choose Your Own Django Deployment Adventure](https://www.youtube.com/watch?v=QrFEKghISEI)
+  which walked through many of the scenarios you'd face when deploying your
+  first Django website.
+
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
   videos for learning how to build Django applications.
 
