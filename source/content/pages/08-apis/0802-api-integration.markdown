@@ -30,7 +30,7 @@ continuously grows in importance because APIs provide critical functionality
 across many implementation areas.
 
 
-## Hosted API services
+## Hosted API testing services
 * [Runscope](https://www.runscope.com/) is a service specifically designed
   for APIs that assists developers with automated testing and traffic
   inspection.
@@ -40,6 +40,11 @@ across many implementation areas.
 
 
 ## API Integration Resources
+* Some developers prefer to use 
+  [Requests](http://docs.python-requests.org/en/latest/) instead of an API's 
+  helper library. In that case check out this 
+  [tutorial on using requests to access web APIs](http://engineering.hackerearth.com/2014/08/21/python-requests-module/).
+
 * John Sheehan's 
   "[Zen and the Art of API Maintenance](https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance)"
   slides are relevant for API integration.
