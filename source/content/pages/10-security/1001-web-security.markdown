@@ -75,6 +75,10 @@ securing Linux distributions.
   by browsers based on the [RFC 2818](http://tools.ietf.org/html/rfc2818)
   specification.
 
+* [An in-depth analysis of SSH attacks on Amazon EC2](http://getprismatic.com/story/1409447605839)
+  shows how important it is to secure your web servers, especially when they are
+  hosted in IP address ranges that are commonly scanned by malicious actors.
+
 
 ## Web security learning checklist
 <i class="fa fa-check-square-o"></i>
