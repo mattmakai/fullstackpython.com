@@ -101,6 +101,9 @@ syntax and language semantics first before diving into web development.
   is a detailed walkthrough for deploying an example Django app to Amazon
   Web Services.
 
+* This [step-by-step guide for Django](http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/)
+  shows how to transmit data via AJAX with JQuery.
+
 * [Deploying Django on AWS](http://www.nickpolet.com/blog/deploying-django-on-aws/1/)
   is another walkthrough for deploying Django to AWS.
 
