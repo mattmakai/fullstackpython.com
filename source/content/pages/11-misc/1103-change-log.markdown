@@ -24,7 +24,7 @@ the
 
 ## 2014
 ### September
-* New resources for Flask and task queues sections.
+* New resources for Flask, Django and task queues sections.
 * A few new resources for NoSQL data stores.
 
 ### August
