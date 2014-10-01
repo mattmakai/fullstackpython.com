@@ -23,6 +23,9 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### October
+* New Flask resources.
+
 ### September
 * New resources for Flask, Django and task queues sections.
 * A few new resources for NoSQL data stores.
