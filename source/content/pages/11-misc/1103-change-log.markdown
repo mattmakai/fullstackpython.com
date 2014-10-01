@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### October
+* Adding new Django 1.7-specific resources section.
 * New Flask resources.
 
 ### September
