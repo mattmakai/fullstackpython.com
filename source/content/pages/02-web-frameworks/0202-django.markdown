@@ -125,9 +125,6 @@ syntax and language semantics first before diving into web development.
 * Ontwik has learning videos in its 
   [Django category](http://ontwik.com/category/django/).
 
-* [Designing Django's Migrations](http://pyvideo.org/video/2630/designing-djangos-migrations)
-  covers Django 1.7's new migrations from the main programmer Andrew Godwin.
-
 * [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
   series of video tutorials for the framework.
 
@@ -138,6 +135,20 @@ syntax and language semantics first before diving into web development.
   [2011](http://pyvideo.org/category/3/djangocon-2011), as well as  
   [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
   all available free of charge.
+
+
+## Django 1.7-specific resources
+* Paul Hallett wrote a 
+  [detailed Django 1.7 app upgrade guide](https://www.twilio.com/blog/2014/10/upgrading-your-django-reusable-app-to-support-django-1-7.html) 
+  on the Twilio blog from his experience working with the django-twilio 
+  package.
+
+* [Designing Django's Migrations](http://pyvideo.org/video/2630/designing-djangos-migrations)
+  covers Django 1.7's new migrations from the main programmer Andrew Godwin.
+
+* Real Python's [migrations primer](https://realpython.com/blog/python/django-migrations-a-primer/)
+  explores the difference between South's migrations and the built-in
+  Django 1.7 migrations as well as how you use them.
 
 
 ## Django ORM resources
