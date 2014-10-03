@@ -151,7 +151,7 @@ syntax and language semantics first before diving into web development.
   explores the difference between South's migrations and the built-in
   Django 1.7 migrations as well as how you use them.
 
-* Andrew Pinkman's "Upgrading to Django 1.7" series is great learning
+* Andrew Pinkham's "Upgrading to Django 1.7" series is great learning
   material for understanding what's changed in this major released and
   how to adapt your Django project.
   [Part 1](http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/) 
