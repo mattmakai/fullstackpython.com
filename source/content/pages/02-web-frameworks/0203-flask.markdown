@@ -77,6 +77,12 @@ book which is an excellent learning resource.
   * [Part 17: Deployment on Linux](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
   * [Part 18: Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
 
+* [Branded MMS Coupon Generation with Python and Twilio](https://www.twilio.com/blog/2014/10/branded-mms-coupon-generation-with-python-and-twilio.html)
+  is a Flask tutorial I wrote for building a web application that can send
+  branded barcode coupons via MMS. The post goes through every step from
+  a blank directory until you have a working app that you can deploy to
+  Heroku.
+
 * [Building a blog using Flask and AngularJS Part 1](http://blog.john.mayonvolcanosoftware.com/building-a-blog-using-flask-and-angularjs-part-1/)
   is the first of a multipart series on working with Flask and an AngularJS 
   front end. 
