@@ -38,6 +38,10 @@ included with Python.
 * This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/) 
   is another Bottle walkthrough for creating a RESTful web API.
 
+* [BAM! A Web Framework "Short Stack"](http://reachtim.com/articles/BAM-Short-Stack.html)
+  is a walkthrough of using Bottle, Apache and MongoDB to create a web
+  application.
+
 * [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
   Bottle projects.
 
