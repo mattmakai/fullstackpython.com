@@ -24,8 +24,8 @@ the
 
 ## 2014
 ### October
-* Adding new Django 1.7-specific resources section.
-* New Flask resources.
+* Adding new Django 1.7-specific resources section on the Django page.
+* New web frameworks, Bottle and Flask resources.
 
 ### September
 * New resources for Flask, Django and task queues sections.
