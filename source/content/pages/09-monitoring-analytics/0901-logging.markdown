@@ -70,7 +70,7 @@ certain threshold.
 
 * [Scribe](https://github.com/facebook/scribe) A project written by Facebook 
   to aggregate logs. It's designed to run on multiple servers and scale with 
-  the rest of your cluster. Uses the Thrift messagaing format so it can be 
+  the rest of your cluster. Uses the Thrift messaging format so it can be 
   used with any language. 
 
 
