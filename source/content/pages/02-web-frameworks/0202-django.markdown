@@ -154,9 +154,10 @@ syntax and language semantics first before diving into web development.
 * Andrew Pinkham's "Upgrading to Django 1.7" series is great learning
   material for understanding what's changed in this major released and
   how to adapt your Django project.
-  [Part 1](http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/) 
-  and [part 2](http://andrewsforge.com/article/upgrading-django-to-17/part-2-migrations-in-django-16-and-17/)
-  are available with further parts coming in the future.
+  [Part 1](http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/),
+  [part 2](http://andrewsforge.com/article/upgrading-django-to-17/part-2-migrations-in-django-16-and-17/) and
+  [part 3](http://andrewsforge.com/article/upgrading-django-to-17/part-3-django-17-new-features/)
+  are currently available with further parts coming in the future.
 
 
 ## Django ORM resources
