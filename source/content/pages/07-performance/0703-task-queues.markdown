@@ -136,6 +136,11 @@ when scaling out a large deployment of distributed task queues.
   are great reads for understanding the difference between a task queue and
   why you shouldn't use your database as one.
 
+* [Celery in Production](http://www.caktusgroup.com/blog/2014/09/29/celery-production/)
+  on the Caktus Group blog contains good practices from their experience 
+  using Celery with RabbitMQ, monitoring tools and other aspects not often
+  discussed in existing documentation.
+
 * [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
   a short introductory task queue screencast.
 
