@@ -129,7 +129,11 @@ book which is an excellent learning resource.
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project. 
   [Part 2](http://www.realpython.com/blog/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/) 
-  is also now online that shows how to use PostgreSQL, SQLAlchemy and Alembic.
+  explains how to use PostgreSQL, SQLAlchemy and Alembic. 
+  [Part 3](https://realpython.com/blog/python/flask-by-example-part-3-text-processing-with-requests-beautifulsoup-nltk/)
+  describes text processing with BeautifulSoup and NLTK. 
+  [Part 4](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
+  shows how to build a task queue with Flask and Redis.
 
 * [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
   covers a subject that comes up quickly once you begin adding significant
