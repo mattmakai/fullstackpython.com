@@ -67,8 +67,8 @@ syntax and language semantics first before diving into web development.
 
 
 ## Django tutorials
-* [Tango with Django](http://www.tangowithdjango.com/book/) are a extensive 
-  free introductions to using the most popular Python web framework. Several
+* [Tango with Django](http://www.tangowithdjango.com/book/) is an extensive 
+  set of free introductions to using the most popular Python web framework. Several
   current developers said this book really helped them get over the initial
   framework learning curve.
 
@@ -110,7 +110,7 @@ syntax and language semantics first before diving into web development.
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
 
-* [Starting a Django Project](https://realpython.com/learn/start-django/) answers the question, “How do I setup a Django (1.5, 1.6, or 1.7) Project from scratch?”
+* [Starting a Django Project](https://realpython.com/learn/start-django/) answers the question, “How do I set up a Django (1.5, 1.6, or 1.7) project from scratch?”
 
 
 ## Django videos
@@ -152,7 +152,7 @@ syntax and language semantics first before diving into web development.
   Django 1.7 migrations as well as how you use them.
 
 * Andrew Pinkham's "Upgrading to Django 1.7" series is great learning
-  material for understanding what's changed in this major released and
+  material for understanding what's changed in this major release and
   how to adapt your Django project.
   [Part 1](http://andrewsforge.com/article/upgrading-django-to-17/part-1-introduction-and-django-releases/),
   [part 2](http://andrewsforge.com/article/upgrading-django-to-17/part-2-migrations-in-django-16-and-17/) and
