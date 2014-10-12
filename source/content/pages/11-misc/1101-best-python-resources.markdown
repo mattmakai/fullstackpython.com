@@ -18,11 +18,11 @@ choice4text:
 
 # Best Python Resources
 The Python community is amazing at sharing detailed resources and helping
-beginners learn to program with the language. There's so many resources
+beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. 
 
 This page aggregates the best Python resources with a brief description of
-its one's learning purpose.
+how it fits one's learning purpose.
 
 
 ## New to programming
@@ -82,7 +82,7 @@ should skip down to the next section for "experienced developers".
 
 * Kenneth Reitz's 
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
-  contains a wealth of information both on the Python programming and the community.
+  contains a wealth of information both on the Python programming language and the community.
 
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
