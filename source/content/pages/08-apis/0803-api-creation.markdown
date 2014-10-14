@@ -73,16 +73,6 @@ equivalent of browser testing in the web application world.
 
 
 ## API creation resources
-* [NARWHL](http://www.narwhl.com/) is a practical API design site for 
-  developers confused about what is appropriate for RESTful APIs.
-
-* This [API Design Guide](https://github.com/interagent/http-api-design) 
-  is based on Heroku's best practices for the platform's API.
-
-* [18F](https://18f.gsa.gov/)'s 
-  [API standards](https://github.com/18f/api-standards) explains the details
-  behind their design decisions on creating modern RESTful APIs.
-
 * [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
   by [PyDanny](https://twitter.com/pydanny) contains questions and insight
   into what makes a good API framework and which one you should currently
@@ -95,6 +85,21 @@ equivalent of browser testing in the web application world.
   goes through the top difficulties and annoyances developers face when
   working with APIs and how you can avoid your API falling into the same
   traps.
+
+* Versioning of RESTful APIs is a difficult and contentious topic in the 
+  web API community. This two-part series covers 
+  [various ways to version your API](http://urthen.github.io/2013/05/09/ways-to-version-your-api/) 
+  and [how to architect a version-less API](http://urthen.github.io/2013/05/16/ways-to-version-your-api-part-2/).
+
+* [NARWHL](http://www.narwhl.com/) is a practical API design site for 
+  developers confused about what is appropriate for RESTful APIs.
+
+* This [API Design Guide](https://github.com/interagent/http-api-design) 
+  is based on Heroku's best practices for the platform's API.
+
+* [18F](https://18f.gsa.gov/)'s 
+  [API standards](https://github.com/18f/api-standards) explains the details
+  behind their design decisions on creating modern RESTful APIs.
 
 * "[Design a beautiful REST API](https://medium.com/@zwacky/design-a-beautiful-rest-api-901c73489458)"
   reviews common design decisions regarding endpoints, versioning, errors and

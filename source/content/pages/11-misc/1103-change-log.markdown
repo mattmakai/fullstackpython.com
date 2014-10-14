@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### October
+* More API creation resources.
 * Merged a bunch of pull requests that cleaned up spelling and grammar
   errors. Thank you contributors!
 * Adding new Django 1.7-specific resources section on the Django page.
