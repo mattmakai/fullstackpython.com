@@ -64,6 +64,9 @@ should skip down to the next section for "experienced developers".
 * [Python Practice Book](http://anandology.com/python-practice-book/index.html)
   is a book of Python exercises to help you learn the basic language syntax.
 
+* Looking for ideas about what projects to use to learn to code? Check out 
+  [this list of 5 programming project for Python beginners](https://medium.com/learning-journalism-tech/five-mini-programming-projects-for-the-python-beginner-21492f6ce0f3).
+
 * I wrote a quick blog post on
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
