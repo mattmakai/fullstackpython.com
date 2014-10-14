@@ -23,11 +23,11 @@ programs necessary for running your Python web application.
 
 
 ## Why are operating systems necessary?
-An operating system makes many the computing tasks we take for granted easy.
+An operating system makes many of the computing tasks we take for granted easy.
 For example, the operating system enables writing to files, 
 communicating over a network and running multiple programs at once. 
 Otherwise you'd need to control the CPU, memory, network, graphics card, 
-and many other components with your own low-level implemention.
+and many other components with your own low-level implementation.
 
 Without using an existing operating system like Linux, Mac OS X, or Windows,
 you'd be forced to write a new operating system as part of your web 
