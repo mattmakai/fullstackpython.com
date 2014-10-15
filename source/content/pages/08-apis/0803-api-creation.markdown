@@ -101,13 +101,19 @@ equivalent of browser testing in the web application world.
   [API standards](https://github.com/18f/api-standards) explains the details
   behind their design decisions on creating modern RESTful APIs.
 
-* "[Design a beautiful REST API](https://medium.com/@zwacky/design-a-beautiful-rest-api-901c73489458)"
+* [Design a beautiful REST API](https://medium.com/@zwacky/design-a-beautiful-rest-api-901c73489458)
   reviews common design decisions regarding endpoints, versioning, errors and
   pagination. There is also a 
   [source material YouTube video](https://www.youtube.com/watch?v=5WXYw4J4QOU)
   where this blog post derives its recommendations from.
 
-* "[Self-descriptive, isn't. Don't assume anything.](http://www.bizcoder.com/self-descriptive-isn-t-don-t-assume-anything)"
+* [Move Fast, Don't Break Your API](http://amberonrails.com/move-fast-dont-break-your-api/)
+  are slides and a detailed blog post from Amber Feng at Stripe about 
+  building an API, separating layers of responsibility, hiding backwards
+  compatibility and a whole slew of other great advice for developers
+  and API designers.
+
+* [Self-descriptive, isn't. Don't assume anything.](http://www.bizcoder.com/self-descriptive-isn-t-don-t-assume-anything)
   is an appeal that metadata makes a difference in whether APIs are descriptive
   or not.
 
