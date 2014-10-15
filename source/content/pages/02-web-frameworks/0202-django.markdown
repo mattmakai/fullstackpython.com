@@ -178,6 +178,10 @@ Since the majority of Django projects are tied to the default ORM, it's best to
 read up on advanced use cases and tools for doing your best work within the
 existing framework.
 
+* [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
+  is a detailed article by Tom Christie on encapsulating Django models for
+  data integrity.
+
 * [Django Debug Toolbar](http://django-debug-toolbar.readthedocs.org/en/1.2/) 
   is a powerful Django ORM database query inspection tool. Highly recommended
   during development to ensure you're writing reasonable query code. 
