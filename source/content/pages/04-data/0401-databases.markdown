@@ -87,6 +87,10 @@ The post is an inside look at the evolution of Braintree's usage of the database
   provides 5 specific tips from Instagram's engineering team on how to scale
   the design of your PostgreSQL database.
 
+* [Following a Select Statement Through Postgres Internals](http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals)
+  provides a fascinating look into the internal workings of PostgreSQL
+  during a query.
+
 
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
