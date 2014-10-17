@@ -123,6 +123,11 @@ representing a person could have a property of "female" or "male".
 
 
 ## NoSQL data store resources
+* [NoSQL databases: an overview](http://www.thoughtworks.com/insights/blog/nosql-databases-overview)
+  explains what NoSQL means, how data is stored differently than in
+  relational systems and what the Consistency, Availability and 
+  Partition-Tolerance (CAP) Theorem means.
+
 * [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
   presents the basic constraints all databases must trade off in operation.
 
