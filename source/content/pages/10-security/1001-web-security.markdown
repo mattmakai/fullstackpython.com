@@ -39,6 +39,11 @@ securing Linux distributions.
   [fantastic currated list of security reading material](http://dfir.org/?q=node/8/)
   from beginning to advanced topics.
 
+* If you're having users submit sensitive information to your site you need
+  to use SSL/TLS. Anything before TLS is now insecure. Check out this
+  [handy guide](http://wingolog.org/archives/2014/10/17/ffs-ssl) that goes
+  over some of the nuances of the subject.
+
 * [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
   is a great list of password cracking, scanning, sniffing and other security
   penetration testing tools.

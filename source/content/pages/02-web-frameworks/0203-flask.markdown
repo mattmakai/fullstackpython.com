@@ -24,7 +24,7 @@ choice4text: How can I version and store my source code so I don't lose it?
 
 ## Why is Flask a good web framework choice?
 Flask is considered more 
-[Pythonic](http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic) 
+[Pythonic](http://blog.startifact.com/posts/older/what-is-pythonic.html)
 than Django because Flask web application code is in most cases more explicit. 
 Flask is easy to get started with as a beginner because there is little 
 boilerplate code for getting a simple app up and running. 
