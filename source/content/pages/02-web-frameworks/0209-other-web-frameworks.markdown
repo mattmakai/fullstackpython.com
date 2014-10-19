@@ -27,6 +27,12 @@ project which develops a set of open source web application frameworks.
 Pyramid applications are built using a model-view-controller architecture.
 
 
+## TurboGears2
+[TurboGears2](http://www.turbogears.org) born as a full stack layer on top
+of Pylons is now a standalone web framework that can act both as a full stack
+solution (like Django) or as a micro framework.
+
+
 ## Falcon
 [Falcon](http://falconframework.org/) is a minimalist web framework designed
 with web application speed as a top priority.
