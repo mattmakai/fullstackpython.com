@@ -94,6 +94,10 @@ equivalent of browser testing in the web application world.
 * [NARWHL](http://www.narwhl.com/) is a practical API design site for 
   developers confused about what is appropriate for RESTful APIs.
 
+* [Implementing a RESTful Web API with Python & Flask](http://blog.luisrei.com/articles/flaskrest.html)
+  is a straightforward introduction to using Flask to create request
+  handling and responses to produce a web API.
+
 * This [API Design Guide](https://github.com/interagent/http-api-design) 
   is based on Heroku's best practices for the platform's API.
 
