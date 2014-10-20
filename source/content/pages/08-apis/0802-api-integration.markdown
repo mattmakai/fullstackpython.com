@@ -45,6 +45,9 @@ across many implementation areas.
   helper library. In that case check out this 
   [tutorial on using requests to access web APIs](http://engineering.hackerearth.com/2014/08/21/python-requests-module/).
 
+* If you use Requests check out this handy guide on gracefully
+  [handling HTTP errors with Python](http://www.mobify.com/blog/http-requests-are-hard/).
+
 * John Sheehan's 
   "[Zen and the Art of API Maintenance](https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance)"
   slides are relevant for API integration.
