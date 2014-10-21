@@ -131,6 +131,9 @@ provides a unified API for many cloud service providers.
 * [boto](https://github.com/boto/boto) is an extensive and well-tested 
 Python library for working with Amazon Web Services.
 
+* [Poseidon](https://github.com/changhiskhan/poseidon) is a Python commandline
+  interface for managing Digital Ocean droplets (servers).
+
 * Rackspace also has [official documentation for Python](http://docs.rackspace.com/sdks/guide/content/python.html).
 
 * [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
