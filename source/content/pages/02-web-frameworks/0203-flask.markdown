@@ -139,6 +139,10 @@ book which is an excellent learning resource.
   covers a subject that comes up quickly once you begin adding significant
   functionality to your Flask application.
 
+* [Video streaming with Flask](http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
+  is another fantastic tutorial by Miguel Grinberg that covers video 
+  streaming.
+
 * "[One line of code cut our Flask page load times by 60%](https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679)
   is an important note about optimizing Flask template cache size to 
   dramatically increase performance in some cases.
