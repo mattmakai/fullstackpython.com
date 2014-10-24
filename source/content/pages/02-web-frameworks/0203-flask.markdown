@@ -181,6 +181,8 @@ book which is an excellent learning resource.
 * [Bean Counter](https://github.com/BouncyNudibranch/bean-counter) is an
   open source Flask app for tracking coffee.
 
+* [FlaskBB](http://flaskbb.org/) is a Flask app for a discussion forum.
+
 
 ## Flask framework learning checklist
 <i class="fa fa-check-square-o"></i> 
