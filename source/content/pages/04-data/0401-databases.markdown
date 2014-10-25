@@ -146,6 +146,11 @@ creating a data analysis tool or a batch script without a user interface.
 Currently, the most widely used stand-alone ORM written for Python is
 [SQLAlchemy](http://www.sqlalchemy.org/).
 
+If you're interested in the differences between SQLAlchemy and the Django
+ORM I highly recommend reading 
+[SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/)
+by Armin Ronacher.
+
 
 ## Database third-party services
 Numerous companies run scalable database servers as a hosted service.
