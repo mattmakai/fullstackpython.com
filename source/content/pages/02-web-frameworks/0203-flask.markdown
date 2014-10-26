@@ -162,7 +162,9 @@ book which is an excellent learning resource.
   book.
 
 * [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
-  starting point for new Flask projects.
+  starting point for new Flask projects. There's also a 
+  [companion website](https://jackstouffer.github.io/Flask-Foundation/) for
+  the project that explains what extensions the base project includes.
 
 * [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a project
   template for use with [Cookiecutter](https://github.com/audreyr/cookiecutter).
