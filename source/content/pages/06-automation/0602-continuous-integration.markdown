@@ -77,6 +77,9 @@ do not break existing tests ensure the software works as intended.
   is a classic detailed article by Martin Fowler on the concepts behind CI
   and how to implement it.
 
+* [Continuous Deployment For Practical People](http://www.airpair.com/continuous-deployment/posts/continuous-deployment-for-practical-people)
+  is not specific to Python but a great read on what it entails.
+
 * [Continuous Integration & Delivery - Illustrated](http://bitcubby.com/continuous-integration-delivery-illustrated/)
   uses well done drawings to show how continuous integration and delivery 
   works for testing and managing data.
