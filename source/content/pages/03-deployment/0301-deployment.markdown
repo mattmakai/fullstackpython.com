@@ -66,6 +66,9 @@ guide as they are considered advanced deployment techniques.
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
 
+* If you're using Flask this 
+  [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
+  is a great way to familiarize yourself with the deployment process.
 
 ## Deployment learning checklist
 <i class="fa fa-check-square-o"></i>
