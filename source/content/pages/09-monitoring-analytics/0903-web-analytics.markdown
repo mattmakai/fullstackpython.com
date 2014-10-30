@@ -91,6 +91,10 @@ application before taking some action, such as purchasing your service.
   shows how to use pandas for data analysis with Google Analytics' API to
   perform calculations not available in the tool itself.
 
+* [Build your own Google Analytics Dashboard in Excel](http://blog.zoomeranalytics.com/google-analytics/)
+  show how to extract your Google Analytics data via their web API and Python
+  helper library so it can be used in other tools such as Excel.
+
 * This beginner's guide to 
   [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
   provides some context for understanding and reasoning about web traffic. 
