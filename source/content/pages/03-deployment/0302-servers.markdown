@@ -155,7 +155,7 @@ awaiting your instructions.
 
 <i class="fa fa-check-square-o"></i>
 Move to the [operating systems](/operating-systems.html) section to learn 
-how to load Ubuntu 12.04 LTS as a base OS for Python web applications.
+how to load Ubuntu 14.04 LTS as a base OS for Python web applications.
 
 
 

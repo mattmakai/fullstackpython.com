@@ -62,8 +62,8 @@ are the recommended versions to use for deployments. LTS versions receive
 five years of post-release updates from Canonical. Every two years, Canonical 
 creates a new LTS release, which allows for an easy upgrade path as well 
 as flexibility in skipping every other LTS release if necessary. As of
-February 2014, 
-[12.04 Precise Pangolin](http://releases.ubuntu.com/precise/)
+November 2014, 
+[14.04 Trusty Tahr](http://releases.ubuntu.com/14.04/)
 is the latest Ubuntu LTS release.
 
 

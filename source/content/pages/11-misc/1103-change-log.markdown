@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### October
+* Always adding new links to the best resources. More resources for 
+  deployments, web analytics and Flask.
 * More API creation and consumption resources.
 * Merged a bunch of pull requests that cleaned up spelling and grammar
   errors. Thank you contributors!
