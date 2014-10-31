@@ -59,6 +59,7 @@ less expensive set up or a cloud-based development environment.
 * [PyDev](http://pydev.org/) is a Python IDE plug in for 
   [Eclipse](https://www.eclipse.org/).
 
+
 ## Hosted development environment services
 In the past couple of years several cloud-based development environments
 have popped up. These can work great for when you're learning or stuck on
@@ -78,4 +79,8 @@ up your application.
   [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
   that the author Lauren Orsini tried out. She also explains what a cloud 
   IDE is and is not.
+
+* Real Python has an awesome, detailed post on 
+  [setting up your Sublime Text 3 environment](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
+  as a full-fledged IDE.
 
