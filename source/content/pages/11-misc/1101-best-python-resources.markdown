@@ -11,9 +11,9 @@ choice2text: I already built a web application. I need to know how to deploy it.
 choice3url: /introduction.html
 choice3icon: fa-fast-backward fa-inverse
 choice3text: Let me start over from the Full Stack Python introduction.
-choice4url:
-choice4icon:
-choice4text:
+choice4url: /development-environments.html
+choice4icon: fa-desktop
+choice4text: What should I use to code my Python application?
 
 
 # Best Python Resources
@@ -22,7 +22,10 @@ beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. 
 
 This page aggregates the best Python resources with a brief description of
-how it fits one's learning purpose.
+how it fits one's learning purpose. 
+
+Looking for information on Python development environments? There's a 
+[whole other page for editors and IDEs](/development-environments.html).
 
 
 ## New to programming

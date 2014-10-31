@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Caching - Full Stack Python</title>
+    <title>Development Environments - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,86 +38,86 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Caching</h1>
-<p>Caching can reduce the load on servers by storing the results of common 
-operations and serving the precomputed answers to clients. </p>
-<p>For example, instead of retrieving data from database tables that rarely 
-change, you can store the values in-memory. Retrieving values from an 
-in-memory location is far faster than retrieving them from a database (which
-stores them on a persistent disk like a hard drive.) When the cached values 
-change the system can invalidate the cache and re-retrieve the updated values
-for future requests.</p>
-<p>A cache can be created for multiple layers of the stack. </p>
-<h2>Caching backends</h2>
+      <h1>Development Environments</h1>
+<p>A development environment is a combination of a text editor and the Python
+interpreter. The text editor allows you to write the code. The interpreter
+provides a way to execute the code you've written. A text editor can be
+as simple as Notepad on Windows or more complicated as a complete integrated
+development environment (IDE) such as 
+<a href="https://www.jetbrains.com/pycharm/">PyCharm</a> which runs on any major 
+operating system.</p>
+<h2>Why is a development environment necessary?</h2>
+<p>Python code needs to be written, executed and tested to build
+applications. The text editor provides a way to write the code. The 
+interpreter allows it to be executed. Testing to see if the code does what
+you want can either be done manually or by unit and functional tests. </p>
+<h2>A full development environment example</h2>
+<p>Here's what I (the author of Full Stack Python, 
+<a href="/about-author.html">Matt Makai</a>) use to develop most of my Python 
+applications. I have a Macbook Pro with Mac OS X as its base operating 
+system. <a href="/operating-systems.html">Ubuntu 14.04 LTS</a> is virtualized on top 
+with <a href="https://www.parallels.com/">Parallels</a>. My code is written in 
+<a href="http://www.vim.org/">vim</a> and executed with the 
+<a href="https://www.python.org/download/releases/2.7.8/">Python 2.7.x</a> interpreter
+via the command line. I use virtualenv to create separate Python interpreters
+with their own isolated
+<a href="/application-dependencies.html">application dependencies</a> and
+<a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a>
+to quickly switch between the interpreters created by virtualenv.</p>
+<p>That's a common set up but you can certainly write great code with a much
+less expensive set up or a cloud-based development environment.</p>
+<h2>Open source development environments</h2>
 <ul>
-<li>
-<p><a href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
-</li>
-<li>
-<p><a href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
-  easily be configured for caching with libraries such as 
-  <a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
-</li>
+<li><a href="http://www.vim.org/">vim</a> is my editor of choice and installed by default
+  on most *nix systems.</li>
+<li><a href="http://www.gnu.org/software/emacs/">emacs</a> is another editor often used
+  on *nix.</li>
+<li><a href="http://pydev.org/">PyDev</a> is a Python IDE plug in for 
+  <a href="https://www.eclipse.org/">Eclipse</a>.</li>
 </ul>
-<h2>Caching resources</h2>
+<h2>Hosted development environment services</h2>
+<p>In the past couple of years several cloud-based development environments
+have popped up. These can work great for when you're learning or stuck on
+a machine with only a browser but no way to install your own software. Most
+of these have free tiers for getting started and paid tiers as you scale
+up your application.</p>
 <ul>
-<li>
-<p>"<a href="https://bjornjohansen.no/caching-varnish-or-nginx">Caching: Varnish or Nginx?</a>"
-  reviews some considerations such as SSL and SPDY support when choosing
-  reverse proxy Nginx or Varnish.</p>
-</li>
-<li>
-<p><a href="http://bizcoder.com/caching-is-hard-draw-me-a-picture">Caching is Hard, Draw me a Picture</a>
-  has diagrams of how web request caching layers work. The post is relevant
-  reading even though the author is describing his Microsoft code as the 
-  impetus for writing the content.</p>
-</li>
+<li><a href="https://www.nitrous.io/">Nitrous.io</a></li>
+<li><a href="https://c9.io/">Cloud9</a></li>
+<li><a href="https://www.terminal.com/">Terminal</a></li>
+<li><a href="https://koding.com/">Koding</a></li>
 </ul>
-<h2>Caching learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Analyze your web application for the slowest parts. It's likely there are
-complex database queries that can be precomputed and stored in an in-memory
-data store.</p>
-<p><i class="fa fa-check-square-o"></i>
-Leverage your existing in-memory data store already used for session data
-to cache the results of those complex database queries. 
-A <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
-on a regular basis and save them in the data store.</p>
-<p><i class="fa fa-check-square-o"></i>
-Incorporate a cache invalidation scheme so the precomputed results remain 
-accurate when served up to the user.</p>
-<h3>What do you want to learn now that your app is responding faster?</h3>
+<h2>Development environment resources</h2>
+<ul>
+<li>If you're considering the cloud-based development environment route, check
+  out this 
+  <a href="http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding">great article comparing Cloud9, Koding and Nitrous.io</a>
+  that the author Lauren Orsini tried out. She also explains what a cloud 
+  IDE is and is not.</li>
+</ul>
                   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/task-queues.html" class="btn btn-success btn-full"><i class="fa fa-tasks fa-2x"></i></a>
+            <a href="/introduction.html" class="btn btn-success btn-full"><i class="fa fa-fast-backward fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I run Python outside the HTTP request-response cycle?
+                Let me start over from the Full Stack Python introduction.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="/best-python-resources.html" class="btn btn-success btn-full"><i class="fa fa-book fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                What can I learn about my users through web analytics?
+                Show me a list of the best Python learning resources.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
+            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                What should I know about security to protect my app?
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/configuration-management.html" class="btn btn-success btn-full"><i class="fa fa-gears fa-inverse fa-2x"></i></a>
-            <p class="under-btn">
-                How do I automate the server configuration that I set up?
+                I want to get started coding a Python web app.
             </p>
         </div>
     </div>
@@ -340,7 +340,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Caching</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Development Environments</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
           each Python web application stack layer and provides the
@@ -389,7 +389,7 @@ function mce_success_cb(resp){
                         <a href="/code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
                         <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
                         <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
-                        <a href="/caching.html" class="list-group-item smaller-item active">Caching</a>
+                        <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
                         <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
                         <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
                         <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
@@ -399,7 +399,7 @@ function mce_success_cb(resp){
                         <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
                         <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
-                        <a href="/development-environments.html" class="list-group-item smaller-item ">Development Environments</a>
+                        <a href="/development-environments.html" class="list-group-item smaller-item active">Development Environments</a>
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
                         <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>

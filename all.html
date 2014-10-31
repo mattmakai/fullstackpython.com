@@ -3716,7 +3716,9 @@ Reevaluate your web application security on a frequent basis.</p>
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. </p>
 <p>This page aggregates the best Python resources with a brief description of
-how it fits one's learning purpose.</p>
+how it fits one's learning purpose. </p>
+<p>Looking for information on Python development environments? There's a 
+<a href="/development-environments.html">whole other page for editors and IDEs</a>.</p>
 <h2>New to programming</h2>
 <p>If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
@@ -3887,6 +3889,63 @@ should skip down to the next section for "experienced developers".</p>
 </li>
 </ul>
 <h3>Those resources should help get you started. What's next?</h3>
+                      <h1>Development Environments</h1>
+<p>A development environment is a combination of a text editor and the Python
+interpreter. The text editor allows you to write the code. The interpreter
+provides a way to execute the code you've written. A text editor can be
+as simple as Notepad on Windows or more complicated as a complete integrated
+development environment (IDE) such as 
+<a href="https://www.jetbrains.com/pycharm/">PyCharm</a> which runs on any major 
+operating system.</p>
+<h2>Why is a development environment necessary?</h2>
+<p>Python code needs to be written, executed and tested to build
+applications. The text editor provides a way to write the code. The 
+interpreter allows it to be executed. Testing to see if the code does what
+you want can either be done manually or by unit and functional tests. </p>
+<h2>A full development environment example</h2>
+<p>Here's what I (the author of Full Stack Python, 
+<a href="/about-author.html">Matt Makai</a>) use to develop most of my Python 
+applications. I have a Macbook Pro with Mac OS X as its base operating 
+system. <a href="/operating-systems.html">Ubuntu 14.04 LTS</a> is virtualized on top 
+with <a href="https://www.parallels.com/">Parallels</a>. My code is written in 
+<a href="http://www.vim.org/">vim</a> and executed with the 
+<a href="https://www.python.org/download/releases/2.7.8/">Python 2.7.x</a> interpreter
+via the command line. I use virtualenv to create separate Python interpreters
+with their own isolated
+<a href="/application-dependencies.html">application dependencies</a> and
+<a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a>
+to quickly switch between the interpreters created by virtualenv.</p>
+<p>That's a common set up but you can certainly write great code with a much
+less expensive set up or a cloud-based development environment.</p>
+<h2>Open source development environments</h2>
+<ul>
+<li><a href="http://www.vim.org/">vim</a> is my editor of choice and installed by default
+  on most *nix systems.</li>
+<li><a href="http://www.gnu.org/software/emacs/">emacs</a> is another editor often used
+  on *nix.</li>
+<li><a href="http://pydev.org/">PyDev</a> is a Python IDE plug in for 
+  <a href="https://www.eclipse.org/">Eclipse</a>.</li>
+</ul>
+<h2>Hosted development environment services</h2>
+<p>In the past couple of years several cloud-based development environments
+have popped up. These can work great for when you're learning or stuck on
+a machine with only a browser but no way to install your own software. Most
+of these have free tiers for getting started and paid tiers as you scale
+up your application.</p>
+<ul>
+<li><a href="https://www.nitrous.io/">Nitrous.io</a></li>
+<li><a href="https://c9.io/">Cloud9</a></li>
+<li><a href="https://www.terminal.com/">Terminal</a></li>
+<li><a href="https://koding.com/">Koding</a></li>
+</ul>
+<h2>Development environment resources</h2>
+<ul>
+<li>If you're considering the cloud-based development environment route, check
+  out this 
+  <a href="http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding">great article comparing Cloud9, Koding and Nitrous.io</a>
+  that the author Lauren Orsini tried out. She also explains what a cloud 
+  IDE is and is not.</li>
+</ul>
                       <h1>About the Author</h1>
 <p>This website was written and built by 
 <a href="http://www.mattmakai.com/">Matt Makai</a> 
@@ -3913,6 +3972,8 @@ the
 <h2>2014</h2>
 <h3>October</h3>
 <ul>
+<li>Added the first new page in awhile! All about 
+  <a href="/development-environments.html">development environments</a>.</li>
 <li>Always adding new links to the best resources. More resources for 
   deployments, web analytics and Flask.</li>
 <li>More API creation and consumption resources.</li>
