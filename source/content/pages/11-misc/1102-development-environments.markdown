@@ -77,8 +77,8 @@ up your application.
 * If you're considering the cloud-based development environment route, check
   out this 
   [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
-  that the author Lauren Orsini tried out. She also explains what a cloud 
-  IDE is and is not.
+  by Lauren Orsini. She also explains more about what a cloud IDE is and is
+  not.
 
 * Real Python has an awesome, detailed post on 
   [setting up your Sublime Text 3 environment](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
