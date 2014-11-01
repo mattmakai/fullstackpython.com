@@ -60,6 +60,12 @@ less expensive set up or a cloud-based development environment.
   [Eclipse](https://www.eclipse.org/).
 
 
+## Python-specific IDEs
+* [PyCharm](https://www.jetbrains.com/pycharm/)
+* [WingIDE](https://wingware.com/)
+* [Komodo](http://komodoide.com/)
+
+
 ## Hosted development environment services
 In the past couple of years several cloud-based development environments
 have popped up. These can work great for when you're learning or stuck on
