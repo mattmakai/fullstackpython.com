@@ -133,6 +133,11 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 
 * [How to design useful monitoring and graphing visualizations](https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/)
 
+* [5 years of metrics and monitoring](https://speakerdeck.com/auxesis/5-years-of-metrics-and-monitoring)
+  is a great presentation highlighting that visualization so humans can
+  understand measurements is a hard problem. Line graphs are often not
+  the best solution and they are overused.
+
 * The Collector Highlight Series has an article on [StatsD](http://blog.librato.com/posts/statsd)
   that explains how to install it and how it works.
 

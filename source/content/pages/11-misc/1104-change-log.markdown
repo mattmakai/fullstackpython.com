@@ -23,6 +23,9 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### November
+* New monitoring and development environments resources.
+
 ### October
 * Added the first new page in awhile! All about 
   [development environments](/development-environments.html).
