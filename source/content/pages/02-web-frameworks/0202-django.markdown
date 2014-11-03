@@ -122,9 +122,6 @@ syntax and language semantics first before diving into web development.
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
   videos for learning how to build Django applications.
 
-* Ontwik has learning videos in its 
-  [Django category](http://ontwik.com/category/django/).
-
 * [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
   series of video tutorials for the framework.
 

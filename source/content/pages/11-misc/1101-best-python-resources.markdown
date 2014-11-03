@@ -138,9 +138,6 @@ should skip down to the next section for "experienced developers".
 * [PyVideo](http://www.pyvideo.org/) organizes and indexes thousands of Python
   videos from both major conferences and meetups.
 
-* Ontwik has relevant programming videos in its 
-  [Python category](http://ontwik.com/category/python/).
-
 
 ## Curated Python packages lists
 * [awesome-python](https://github.com/vinta/awesome-python) is an incredible

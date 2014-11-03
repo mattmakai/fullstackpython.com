@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### November
+* Removing broken links from Best Python Resources and Django pages.
 * New monitoring and development environments resources.
 
 ### October
