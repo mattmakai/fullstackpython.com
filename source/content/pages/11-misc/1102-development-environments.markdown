@@ -87,8 +87,11 @@ of these have free tiers for getting started and paid tiers as you scale
 up your application.
 
 * [Nitrous.io](https://www.nitrous.io/)
+
 * [Cloud9](https://c9.io/)
+
 * [Terminal](https://www.terminal.com/)
+
 * [Koding](https://koding.com/)
 
 
@@ -103,3 +106,5 @@ up your application.
   [setting up your Sublime Text 3 environment](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
   as a full-fledged IDE.
 
+* The [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/dev/env/)
+  has a page dedicated to development environments.
