@@ -90,6 +90,10 @@ should skip down to the next section for "experienced developers".
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
   contains a wealth of information both on the Python programming language and the community.
 
+* [How to Develop Quality Python Code](https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code)
+  is a good read to begin learning about development environments, 
+  application dependencies and project structure.
+
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
 
