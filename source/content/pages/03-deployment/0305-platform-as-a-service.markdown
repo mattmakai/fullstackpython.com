@@ -74,8 +74,8 @@ application framework and your app itself is up to date and secured. See the
 ## Platform-as-a-service resources
 * [PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/) by [Nate Aune](https://twitter.com/natea).
 
-* [Deploying Django](http://www.deploydjango.com/) by Randall Degges is 
-  another great free resource about Heroku.
+* [Deploying Django](http://www.rdegges.com/deploying-django/) by 
+  Randall Degges is another great free resource about Heroku.
 
 * Heroku's 
   [Python deployment documentation](https://devcenter.heroku.com/articles/getting-started-with-python)

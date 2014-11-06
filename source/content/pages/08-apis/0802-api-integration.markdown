@@ -65,6 +65,10 @@ across many implementation areas.
 * My DjangoCon 2013 talk dove into 
   "[Making Django Play Nice With Third Party Services](http://www.youtube.com/watch?v=iGP8DQIqxXs)."
 
+* If you're looking for a fun project that uses two web APIs within a 
+  Django application, try out this tutorial to 
+  [Build your own Pokédex with Django, MMS and PokéAPI](https://www.twilio.com/blog/2014/11/build-your-own-pokedex-with-django-mms-and-pokeapi.html).
+
 
 ## API integration learning checklist
 <i class="fa fa-check-square-o"></i>
