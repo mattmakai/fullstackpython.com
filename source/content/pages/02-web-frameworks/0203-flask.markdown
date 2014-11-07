@@ -77,6 +77,14 @@ book which is an excellent learning resource.
   * [Part 17: Deployment on Linux](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
   * [Part 18: Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
 
+* If you're looking for a fun introduction to Flask and WebSockets, check out
+  my blog post on creating 
+  [Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html).
+  That post is my favorite technical walkthrough I've written to date. There
+  is also a companion open source 
+  [GitHub repository](https://github.com/makaimc/choose-your-own-adventure-presentations) 
+  for the app with tags for each step in the blog post.
+
 * [Branded MMS Coupon Generation with Python and Twilio](https://www.twilio.com/blog/2014/10/branded-mms-coupon-generation-with-python-and-twilio.html)
   is a Flask tutorial I wrote for building a web application that can send
   branded barcode coupons via MMS. The post goes through every step from

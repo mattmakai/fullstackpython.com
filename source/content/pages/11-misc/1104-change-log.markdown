@@ -24,6 +24,8 @@ the
 
 ## 2014
 ### November
+* Adding my new Flask blog post on choose your own adventure presentations
+  along with the open source repository.
 * More resources under Best Python Resources.
 * Removing broken links from Best Python Resources and Django pages.
 * New monitoring and development environments resources.
