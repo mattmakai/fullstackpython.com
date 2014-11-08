@@ -143,6 +143,11 @@ book which is an excellent learning resource.
   [Part 4](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   shows how to build a task queue with Flask and Redis.
 
+* Along with the above FLask by Example series, there's also a 
+  [Discover Flask](https://github.com/realpython/discover-flask) series of
+  videos. The GitHub repo contains the code and the 25+ videos are hosted
+  on YouTube.
+
 * [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
   covers a subject that comes up quickly once you begin adding significant
   functionality to your Flask application.
