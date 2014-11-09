@@ -79,6 +79,13 @@ syntax and language semantics first before diving into web development.
 * [Effective Django](http://effectivedjango.com/) is another free introduction
   to the web framework.
 
+* [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) focuses on web development using
+  Django, with some coverage of JavaScript (inescapable for any web programmer). This book uses a concrete 
+  example—the development of a website using the Django web framework, from scratch—to teach the TDD methodology,
+  and how it applies to web programming, from the basics of database integration and javascript, going via 
+  browser-automation tools like Selenium, to advanced (and trendy) topics like NoSQL, websockets and Async 
+  programming.The book is available to read online for free.
+
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
   the latest resources for learning Django and is also a good spot to ask 
   questions about it.
