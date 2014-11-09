@@ -65,6 +65,10 @@ securing Linux distributions.
 
 * [Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
 
+* The EFF has a well written overview on 
+  [what makes a good security audit](https://www.eff.org/deeplinks/2014/11/what-makes-good-security-audit). It's broad but contains some of their behind the
+  scenes thinking on important considerations with security audits.
+
 * [Securing Your Website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
 
 * [How HTTPS Secures Connections: What Every Web Dev Should Know](http://blog.hartleybrody.com/https-certificates/)
