@@ -172,6 +172,11 @@ provider.
 
 
 ## Database resources
+* [Why I Love Databases](https://medium.com/@jeeyoungk/why-i-love-databases-1d4cc433685f)
+  is a great read on the CAP Theorem, distributed systems and other topics
+  that are at the core of database theory and implementation. Well worth
+  the time to read.
+
 * [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
   database management systems.
 
