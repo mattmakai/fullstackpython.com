@@ -115,6 +115,10 @@ reviews the basics of distributed version control systems.
   covers the basics as well as more advanced Git commands while explaining each
   step along the way.
 
+* [A practical git introduction](http://mrchlblng.me/2014/09/practical-git-introduction/)
+  is exactly what the title says it is. This is a well written guide with 
+  plenty of code snippets to get you up to speed with Git.
+
 * [git ready](http://gitready.com/) has a nice collection of blog posts based on
   beginner, intermediate and advanced Git use cases.
 
