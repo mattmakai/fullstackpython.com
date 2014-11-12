@@ -24,6 +24,7 @@ the
 
 ## 2014
 ### November
+* Revising development environments page and adding new resources.
 * Adding my new Flask blog post on choose your own adventure presentations
   along with the open source repository.
 * More resources under Best Python Resources.

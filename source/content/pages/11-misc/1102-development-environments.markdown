@@ -33,7 +33,7 @@ interpreter allows it to be executed. Testing to see if the code does what
 you want can either be done manually or by unit and functional tests. 
 
 
-## A full development environment example
+## A development environment example
 Here's what I (the author of Full Stack Python, 
 [Matt Makai](/about-author.html)) use to develop most of my Python 
 applications. I have a Macbook Pro with Mac OS X as its base operating 
@@ -74,7 +74,8 @@ less expensive set up or a cloud-based development environment.
   built on [JetBrains](https://www.jetbrains.com/)' platform. There are
   free editions for students and open source projects.
 
-* [WingIDE](https://wingware.com/)
+* [Wing IDE](https://wingware.com/) is a paid development environment with
+  integrated debugging and code completion.
 
 * [Komodo](http://komodoide.com/)
 
@@ -108,3 +109,7 @@ up your application.
 
 * The [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/dev/env/)
   has a page dedicated to development environments.
+
+* [Choosing the best Python IDE](http://pedrokroger.net/choosing-best-python-ide/)
+  is a review of six IDEs. PyCharm, Wing IDE and PyDev stand out above the
+  other three in this review.
