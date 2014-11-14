@@ -94,6 +94,10 @@ syntax and language semantics first before diving into web development.
   [Django Best Practices guide](http://lincolnloop.com/django-best-practices/)
   for the community.
 
+* [Building Web Applications with Django and AngularJS](https://thinkster.io/brewer/angular-django-tutorial/)
+  is a very detailed guide for using Django as an API layer and AngularJS
+  as the MVC front end in the browser.
+
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
