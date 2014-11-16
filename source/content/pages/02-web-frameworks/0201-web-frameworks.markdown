@@ -78,6 +78,11 @@ including everything in the framework with tight integration.
   [code complexity of several Python web frameworks](http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/)
   by providing visualizations based on their code bases.
 
+* [What web frameworks do you use and why are they awesome?](http://www.reddit.com/r/webdev/comments/2les4x/what_frameworks_do_you_use_and_why_are_they/)
+  is a language agnostic Reddit discussion on web frameworks. It's interesting
+  to see what programmers in other languages like and dislike about their
+  suite of web frameworks compared to the main Python frameworks.
+
 
 ## Web frameworks learning checklist
 <i class="fa fa-check-square-o"></i> 
