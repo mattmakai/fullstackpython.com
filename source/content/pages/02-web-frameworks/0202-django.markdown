@@ -123,6 +123,10 @@ syntax and language semantics first before diving into web development.
 
 * [Starting a Django Project](https://realpython.com/learn/start-django/) answers the question, “How do I set up a Django (1.5, 1.6, or 1.7) project from scratch?”
 
+* [Using Amazon S3 to Store your Django Site's Static and Media Files](http://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/)
+  is a well written guide to a question commonly asked about static and
+  media file serving.
+
 
 ## Django videos
 * Kate Heddleston and I gave a talk at DjangoCon 2014 called

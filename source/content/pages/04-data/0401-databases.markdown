@@ -177,6 +177,10 @@ provider.
   that are at the core of database theory and implementation. Well worth
   the time to read.
 
+* [PostgreSQL vs. MS SQL Server](http://www.pg-versus-ms.com/) is one
+  perspective on the differences between the two database servers from a
+  data analyst.
+
 * [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
   database management systems.
 
