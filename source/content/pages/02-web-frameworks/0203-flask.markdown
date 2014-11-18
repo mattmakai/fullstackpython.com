@@ -54,7 +54,7 @@ resource for using the Flask framework. Yes, there are a lot of posts in
 the series. However, each post is focused on a single topic to contain 
 the complexity while the reader is learning the framework. The whole 
 series is well worth an in-depth read-through. The 
-[author](https://twitter.com/miguelgrinberg) is also wrote the new
+[author](https://twitter.com/miguelgrinberg) also wrote the new
 [O'Reilly Flask Web Development](http://shop.oreilly.com/product/0636920031116.do)
 book which is an excellent learning resource.
 
