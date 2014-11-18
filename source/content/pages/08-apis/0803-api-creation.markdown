@@ -125,6 +125,9 @@ equivalent of browser testing in the web application world.
   has their recommendations list for building an API based on their recent
   experiences.
 
+* [Some REST Best Practices](https://bourgeois.me/rest/) is a high level
+  summary of rules to follow while creating your API.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
