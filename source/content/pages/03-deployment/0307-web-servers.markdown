@@ -102,6 +102,10 @@ is provided by W3C.
 
 * [4 HTTP Security Headers You Should Always Be Using](http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using)
 
+* [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
+  covers how to mitigate against brute force password guessing attempts using
+  Nginx rate limits.
+
 
 ## Web servers learning checklist
 <i class="fa fa-check-square-o"></i>
