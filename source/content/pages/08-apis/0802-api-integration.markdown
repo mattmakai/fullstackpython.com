@@ -66,6 +66,9 @@ across many implementation areas.
   is a funny high level overview of what you should do to protect your 
   application when relying on third party services.
 
+* [API Retry Patterns](http://migrateup.com/python-retry-patterns-for-http-apis/)
+  shows you how to build resiliency into calls to web APIs.
+
 * My DjangoCon 2013 talk dove into 
   "[Making Django Play Nice With Third Party Services](http://www.youtube.com/watch?v=iGP8DQIqxXs)."
 
