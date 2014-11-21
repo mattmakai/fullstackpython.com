@@ -26,6 +26,21 @@ checked by automated tests. Source code changes as a project evolves.
 CI combined with unit and integration tests check that code modifications 
 do not break existing tests ensure the software works as intended.
 
+## Continuous integration example
+The following picture represents a high level perspective on how continuous
+integration and deployment can work. When new code is commited to a source
+repository there is a hook that notifies the continuous integration server
+that new code needs to be built (the continuous integration server could also
+poll the source code repository if a notification is not possible).
+
+The continuous integration server pulls the code to build and test it. If
+all tests pass, the continuous integration server begins the deployment
+process. The new code is pulled down to the server where the deployment is
+taking place. Finally the deployment process is completed via restarting 
+services and related deployment activities.
+
+<img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." />
+
 
 ## Open source CI projects
 * [Jenkins](http://jenkins-ci.org/) is a common CI server for building and
