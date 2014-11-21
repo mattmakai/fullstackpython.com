@@ -28,9 +28,13 @@ do not break existing tests ensure the software works as intended.
 
 ## Continuous integration example
 The following picture represents a high level perspective on how continuous
-integration and deployment can work. When new code is commited to a source
-repository there is a hook that notifies the continuous integration server
-that new code needs to be built (the continuous integration server could also
+integration and deployment can work. 
+
+<img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." />
+
+In the above diagram, when new code is commited to a source repository 
+there is a hook that notifies the continuous integration server that new 
+code needs to be built (the continuous integration server could also
 poll the source code repository if a notification is not possible).
 
 The continuous integration server pulls the code to build and test it. If
@@ -39,7 +43,9 @@ process. The new code is pulled down to the server where the deployment is
 taking place. Finally the deployment process is completed via restarting 
 services and related deployment activities.
 
-<img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." />
+There are many other ways a continuous integration server and its 
+deployments can be structured. The above was just one example of a 
+relatively simple set up.
 
 
 ## Open source CI projects

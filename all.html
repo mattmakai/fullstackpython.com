@@ -2431,16 +2431,20 @@ CI combined with unit and integration tests check that code modifications
 do not break existing tests ensure the software works as intended.</p>
 <h2>Continuous integration example</h2>
 <p>The following picture represents a high level perspective on how continuous
-integration and deployment can work. When new code is commited to a source
-repository there is a hook that notifies the continuous integration server
-that new code needs to be built (the continuous integration server could also
+integration and deployment can work. </p>
+<p><img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." /></p>
+<p>In the above diagram, when new code is commited to a source repository 
+there is a hook that notifies the continuous integration server that new 
+code needs to be built (the continuous integration server could also
 poll the source code repository if a notification is not possible).</p>
 <p>The continuous integration server pulls the code to build and test it. If
 all tests pass, the continuous integration server begins the deployment
 process. The new code is pulled down to the server where the deployment is
 taking place. Finally the deployment process is completed via restarting 
 services and related deployment activities.</p>
-<p><img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." /></p>
+<p>There are many other ways a continuous integration server and its 
+deployments can be structured. The above was just one example of a 
+relatively simple set up.</p>
 <h2>Open source CI projects</h2>
 <ul>
 <li>

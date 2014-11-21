@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="999" measuredH="539" mockupW="873" mockupH="513">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="884" measuredH="488" mockupW="698" mockupH="434">
   <controls>
     <control controlID="4" controlTypeID="__group__" x="222" y="290" w="240" h="128" measuredW="240" measuredH="128" zOrder="1" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
@@ -15,7 +15,7 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::Canvas" x="126" y="26" w="873" h="513" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Canvas" x="186" y="54" w="698" h="434" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <borderColor>16777215</borderColor>
       </controlProperties>
