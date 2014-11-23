@@ -17,7 +17,7 @@ choice4text:
 
 
 # About the Author
-This website was written and built by 
+This website was coded and written by
 [Matt Makai](http://www.mattmakai.com/) 
 ([@mattmakai](http://twitter.com/mattmakai)), currently a 
 [Developer Evangelist](http://thenextweb.com/dd/2012/06/03/a-day-in-the-life-of-a-developer-evangelist/)
@@ -27,8 +27,9 @@ Other projects by Matt include
 [Coding Across America](http://www.codingacrossamerica.com/)
 and
 [Underwear](https://github.com/makaimc/underwear/). You can reach him by 
-email at matthew.makai@gmail.com or tweet at
-[him on Twitter](https://twitter.com/mattmakai). 
+email at matthew.makai@gmail.com,
+[Twitter at mattmakai](https://twitter.com/mattmakai)
+or [GitHub at makaimc](https://github.com/makaimc).
 
 Read my thoughts on the "full stack" trend in a 
 [post I wrote for O'Reilly Programming](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
