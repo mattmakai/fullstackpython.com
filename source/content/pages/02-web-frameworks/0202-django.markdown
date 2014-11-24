@@ -211,6 +211,12 @@ existing framework.
 * [Going Beyond Django ORM with Postgres](https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres)
   is specific to using PostgreSQL with Django.
 
+* [Migrating a Django app from MySQL to PostgreSQL](http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/)
+  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
+  is that any Django app that's been running for awhile on one relational
+  database will require a lot more work to port over to another backend
+  even with the power of the ORM.
+
 
 ## Open source Django example projects
 * [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
