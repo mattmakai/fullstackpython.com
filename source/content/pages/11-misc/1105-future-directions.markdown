@@ -33,7 +33,7 @@ submit one when you see a fix or improvement that needs to be made!
 
 Here are some things I'm actively working on:
 
-* Update these sections with better explanations and resources: 
+* Update these sections with clearer explanations and more resources:
 
     1. [Configuration management](/configuration-management.html)
     1. [JavaScript](/javascript.html)
@@ -49,7 +49,8 @@ Here are some things I'm actively working on:
   important with Django)
 
 * Split web application security and other security (lower level protocols)
-  into separate pages.
+  into separate pages. Have separate chapters on what you need to know about
+  these topics.
 
 After those updates are done I'll go back through and apply visuals to
 each section to make them easier to read and understand.
