@@ -60,6 +60,10 @@ should skip down to the next section for "experienced developers".
 * Code Academy has a [Python track](http://www.codecademy.com/tracks/python)
   for people completely new to programming.
 
+* [Introduction to Programming with Python](http://opentechschool.github.io/python-beginners/en/index.html)
+  goes over the basic syntax and control structures in Python. The free book 
+  has numerous code examples to go along with each topic.
+
 * The O'Reilly book 
   [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
   is available in HTML form for free on the web.
