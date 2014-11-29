@@ -109,5 +109,7 @@ relatively simple set up.
   is a retrospective on learning CI from a Rackspace intern on how she learned
   the subject.
 
+* [StackShare's Continuous Integration tag](http://stackshare.io/continuous-integration) 
+  lists a slew of hosted CI services roughly ranked by user upvotes.
 
 ### What do you want to add to your application next?
