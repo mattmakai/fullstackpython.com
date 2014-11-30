@@ -141,6 +141,10 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 * The Collector Highlight Series has an article on [StatsD](http://blog.librato.com/posts/statsd)
   that explains how to install it and how it works.
 
+* This [survey on monitoring tools](http://kartar.net/2014/11/monitoring-survey---tools/)
+  has some nice data and graphs on what developers and operations folks use
+  in their environments.
+
 
 ## Monitoring learning checklist
 <i class="fa fa-check-square-o"></i>
