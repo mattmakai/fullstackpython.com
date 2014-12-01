@@ -73,6 +73,10 @@ which is defined by the
 * [Unheap](http://www.unheap.com/) is an amazing collection of reusable JQuery 
   plugins for everything from navigation to displaying media.
 
+* [The State of JavaScript in 2015](http://www.breck-mckye.com/blog/2014/12/the-state-of-javascript-in-2015/)
+  is an opinion piece about favoring small, single-purpose JavaScript libraries 
+  over larger frameworks due to churn in the ecosystem.
+
 
 ## JavaScript learning checklist
 <i class="fa fa-check-square-o"></i> 
