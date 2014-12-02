@@ -76,6 +76,10 @@ across many implementation areas.
   Django application, try out this tutorial to 
   [Build your own Pokédex with Django, MMS and PokéAPI](https://www.twilio.com/blog/2014/11/build-your-own-pokedex-with-django-mms-and-pokeapi.html).
 
+* [vcr.py](https://www.brianthicks.com/2014/12/01/test-apis-properly-with-vcr-py/)
+  is a way to capture and replay HTTP requests with mocks. It's extremely
+  useful for testing API integrations.
+
 
 ## API integration learning checklist
 <i class="fa fa-check-square-o"></i>

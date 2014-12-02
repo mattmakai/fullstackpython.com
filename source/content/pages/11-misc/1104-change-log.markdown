@@ -23,6 +23,9 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+###
+* Added new API resources for integration and creation.
+
 ### November
 * Adding a nice new continuous integration diagram.
 * More Django and database resources.
