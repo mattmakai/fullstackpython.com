@@ -26,6 +26,10 @@ applications through machine-to-machine communication.
   [Tastypie](https://django-tastypie.readthedocs.org/en/latest/) are 
   the two most widely used API frameworks to use with Django. The edge
   currently goes to Django REST framework based on rough community sentiment.
+  Django REST framework recently hit the 
+  [3.0 release mark](http://www.django-rest-framework.org/topics/3.0-announcement/) 
+  after Tom Christie ran a 
+  [successful Kickstarter campaign](https://www.kickstarter.com/projects/tomchristie/django-rest-framework-3).
 
 * [Flask-RESTful](http://flask-restful.readthedocs.org/en/latest/) and
   [Flask API](http://flask.pocoo.org/docs/api/) are popular libraries for 
