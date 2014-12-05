@@ -60,7 +60,9 @@ nested data.
 ### Document-oriented data stores
 * [MongoDB](http://www.mongodb.org/) is an open source document-oriented 
   data store with a Binary Object Notation (BSON) storage format that is 
-  JSON-style and familiar to web developers.
+  JSON-style and familiar to web developers. 
+  [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) is the most
+  commonly used client to interface with MongoDB through Python code.
 
 * [Riak](http://basho.com/riak/) is an open source distributed data store
   focused on availability, fault tolerance and large scale deployments.
