@@ -69,6 +69,10 @@ across many implementation areas.
 * [API Retry Patterns](http://migrateup.com/python-retry-patterns-for-http-apis/)
   shows you how to build resiliency into calls to web APIs.
 
+* [Retries in Requests](http://www.coglib.com/~icordasc/blog/2014/12/retries-in-requests.html)
+  is a nice tutorial for easily re-executing failed HTTP requests with the
+  Requests library.
+
 * My DjangoCon 2013 talk dove into 
   "[Making Django Play Nice With Third Party Services](http://www.youtube.com/watch?v=iGP8DQIqxXs)."
 
