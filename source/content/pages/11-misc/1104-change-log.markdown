@@ -24,6 +24,7 @@ the
 
 ## 2014
 ###
+* New NoSQL Python client resources.
 * Added new API resources for integration and creation.
 
 ### November
