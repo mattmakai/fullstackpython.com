@@ -40,7 +40,8 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   store. Redis is often called "the Swiss Army Knife of web application
   development." It can be used for caching, queuing, and storing session data 
   for faster access than a traditional relational database, among many other
-  use cases.
+  use cases. [Redis-py](https://github.com/andymccurdy/redis-py) is a solid
+  Python client to use with Redis.
 
 
 ### Key-value pair resources
