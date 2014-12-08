@@ -166,5 +166,10 @@ should skip down to the next section for "experienced developers".
   covered in both newsletters but they often cover different articles
   and projects from around the web.
 
+* [Import Python](http://importpython.com/newsletter/) is a newer newsletter
+  thank Python Weekly and PyCoder's Weekly. So far I've found this newsletter
+  covers different sources from other newsletters. It's well worth subscribing
+  to all three so you don't miss anything.
+
 
 ### Those resources should help get you started. What's next?
