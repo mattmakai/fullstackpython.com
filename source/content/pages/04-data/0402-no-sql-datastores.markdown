@@ -27,7 +27,10 @@ storage representations.
 4. Graph
 
 These persistent data storage representations are commonly used to augment,
-rather than completely replace, relational databases.
+rather than completely replace, relational databases. The underlying 
+persistence type used by the NoSQL database often gives it different
+performance characteristics than a relational database, with better results
+on some types of read/writes and worse performance on others.
 
 
 ## Key-value Pair
