@@ -75,6 +75,10 @@ on the number's page on Twilio as shown below.
   [Nick Quinlan](https://twitter.com/YayNickQ) is a plain English explanation
   for what webhooks are and why they are necessary in the API world.
 
+* [Simplicity and Utility, or, Why SOAP Lost](http://keithba.net/simplicity-and-utility-or-why-soap-lost)
+  provides context for why JSON-based web services are more common today than
+  SOAP which was popular in the early 2000s.
+
 
 ## APIs learning checklist
 <i class="fa fa-check-square-o"></i> 
