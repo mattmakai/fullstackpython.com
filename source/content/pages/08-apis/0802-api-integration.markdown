@@ -84,6 +84,10 @@ across many implementation areas.
   is a way to capture and replay HTTP requests with mocks. It's extremely
   useful for testing API integrations.
 
+* [Apigee's Web API Design ebook](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+  is free and contains a wealth of practical advice for what design
+  decisions to make for your web API.
+
 
 ## API integration learning checklist
 <i class="fa fa-check-square-o"></i>
