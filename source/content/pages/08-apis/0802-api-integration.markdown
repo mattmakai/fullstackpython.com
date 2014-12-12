@@ -88,6 +88,9 @@ across many implementation areas.
   is free and contains a wealth of practical advice for what design
   decisions to make for your web API.
 
+* [Caching external API requests](https://realpython.com/blog/python/caching-external-api-requests/)
+  is a good post on how to potentially limit the number of HTTP calls 
+  required when accessing an external web API via the Requests library.
 
 ## API integration learning checklist
 <i class="fa fa-check-square-o"></i>
