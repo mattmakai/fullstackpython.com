@@ -147,6 +147,11 @@ syntax and language semantics first before diving into web development.
 * [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
   series of video tutorials for the framework.
 
+* The videos and slides from 
+  [Django: Under the Hood 2014](http://www.djangounderthehood.com/talks/)
+  are from Django core commiters and provide insight into the ORM, 
+  internationalization, templates and other topics.
+
 * DjangoCon US videos from 
   [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
   [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
