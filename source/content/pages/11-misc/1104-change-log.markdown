@@ -24,6 +24,7 @@ the
 
 ## 2014
 ###
+* Split out Djangular resources into a separate section.
 * New NoSQL Python client resources.
 * Added new API resources for integration and creation.
 

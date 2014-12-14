@@ -94,10 +94,6 @@ syntax and language semantics first before diving into web development.
   [Django Best Practices guide](http://lincolnloop.com/django-best-practices/)
   for the community.
 
-* [Building Web Applications with Django and AngularJS](https://thinkster.io/brewer/angular-django-tutorial/)
-  is a very detailed guide for using Django as an API layer and AngularJS
-  as the MVC front end in the browser.
-
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
@@ -184,6 +180,25 @@ syntax and language semantics first before diving into web development.
   and
   [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
   are now all available to read.
+
+
+## Django with Angular (Djangular) resources
+* [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
+  is a very detailed introduction to Djangular with example code. 
+
+* [Building Web Applications with Django and AngularJS](https://thinkster.io/brewer/angular-django-tutorial/)
+  is a very detailed guide for using Django as an API layer and AngularJS
+  as the MVC front end in the browser.
+
+* This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework)
+  tutorial along with 
+  [part 2](http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework),
+  [part 3](http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework)
+  and
+  [part 4](http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework)
+  creates an example blog application with Djangular. There is also a
+  corresponding [GitHub repo](https://github.com/mouradmourafiq/django-angular-blog)
+  for the project code.
 
 
 ## Django ORM resources
