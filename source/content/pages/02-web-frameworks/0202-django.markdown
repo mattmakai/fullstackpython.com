@@ -246,6 +246,11 @@ existing framework.
   database will require a lot more work to port over to another backend
   even with the power of the ORM.
 
+* [Django Model Descriptors](http://blog.kevinastone.com/django-model-descriptors.html)
+  discusses and shows how to incorporate business logic into Django models
+  to reduce complexity from the views and make the code easier to reuse across
+  separate views.
+
 
 ## Open source Django example projects
 * [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
