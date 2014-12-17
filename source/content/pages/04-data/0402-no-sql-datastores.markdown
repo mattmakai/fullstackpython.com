@@ -79,6 +79,13 @@ nested data.
 * [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
   is a guide about using non-relational databases in green field environments.
 
+* The creator and maintainers of PyMongo review four decisions they regret
+  from building the widely-used Python MongoDB driver.
+    1. [start\_request](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-start-request/)
+    1. [use\_greenlets](http://emptysqua.re/blog/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/)
+    1. ["copy\_database"](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/)
+    1. The final post will cover MongoReplicaSetClient. 
+
 
 ## Column-family table
 A the column-family table class of NoSQL data stores builds on the key-value
