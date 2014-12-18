@@ -116,6 +116,10 @@ developers learn PostgreSQL if they do not already know MySQL.
 
 * This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
 
+* [Graph Data From MySQL Database in Python](http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/)
+  is an interesting study with code of how to pull data out of MySQL and graph
+  the data with Plotly.
+
 
 ## Connecting to a database with Python
 To work with a relational database using Python, you need to use a code 
