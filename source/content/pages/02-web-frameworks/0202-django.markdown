@@ -270,6 +270,9 @@ existing framework.
   [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
   with detailed explanations of each step.
 
+* [Taiga](https://github.com/taigaio/taiga-back) is a project management
+  tool built with Django as the backend and AngularJS as the front end.
+
 
 ## Django project templates
 * [Caktus Group's Django project template](https://github.com/caktus/django-project-template) 
