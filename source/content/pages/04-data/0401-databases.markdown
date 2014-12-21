@@ -91,6 +91,9 @@ The post is an inside look at the evolution of Braintree's usage of the database
   provides a fascinating look into the internal workings of PostgreSQL
   during a query.
 
+* This article explains how and why PostgreSQL can handle [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
+  for many use cases.
+
 
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
