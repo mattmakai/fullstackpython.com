@@ -31,6 +31,10 @@ securing Linux distributions.
 
 
 ## HTTPS resources
+* [How does HTTPS actually work?](http://robertheaton.com/2014/03/27/how-does-https-actually-work/)
+  is a well-written overview of the protocol including certificates, 
+  signatures, signing and related topics.
+
 * This question asking [what is the difference between TLS and SSL?](http://security.stackexchange.com/questions/5126/whats-the-difference-between-ssl-tls-and-https)
   explains that TLS is a newer version of SSL and should be used because
   SSL through version 3.0 is insecure.
