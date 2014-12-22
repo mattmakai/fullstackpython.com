@@ -61,6 +61,12 @@ securing Linux distributions.
   by browsers based on the [RFC 2818](http://tools.ietf.org/html/rfc2818)
   specification.
 
+* [Qualy SSL Server Test](https://www.ssllabs.com/ssltest/) can be used to
+  determine what's in place and what is missing for your server's HTTPS 
+  connection. Once you run the test read this article on 
+  [Getting an A+ on Qualy's SSL Labs Tester](https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/)
+  to improve your situation.
+  
 
 ## General security resources
 * The Open Web Application Security Project (OWASP) has 
