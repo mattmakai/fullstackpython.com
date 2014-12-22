@@ -24,6 +24,8 @@ the
 
 ## 2014
 ###
+* Adding new security resources and splitting HTTPS resources into their own
+  section.
 * Split out Djangular resources into a separate section.
 * New NoSQL Python client resources.
 * Added new API resources for integration and creation.

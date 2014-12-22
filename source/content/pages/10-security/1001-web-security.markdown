@@ -30,23 +30,15 @@ request forgery and usage of public-private keypairs.
 securing Linux distributions.
 
 
-## Security resources
-* The Open Web Application Security Project (OWASP) has 
-  [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
-  topics.
-
-* This page contains a
-  [fantastic currated list of security reading material](http://dfir.org/?q=node/8/)
-  from beginning to advanced topics.
+## HTTPS resources
+* This question asking [what is the difference between TLS and SSL?](http://security.stackexchange.com/questions/5126/whats-the-difference-between-ssl-tls-and-https)
+  explains that TLS is a newer version of SSL and should be used because
+  SSL through version 3.0 is insecure.
 
 * If you're having users submit sensitive information to your site you need
   to use SSL/TLS. Anything before TLS is now insecure. Check out this
   [handy guide](http://wingolog.org/archives/2014/10/17/ffs-ssl) that goes
   over some of the nuances of the subject.
-
-* [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
-  is a great list of password cracking, scanning, sniffing and other security
-  penetration testing tools.
 
 * [The Sorry State of SSL](https://hynek.me/talks/tls/) details the 
   history and evolution of SSL/TLS. There are important differences between
@@ -55,13 +47,35 @@ securing Linux distributions.
   in Python 3 outlined in 
   [The not-so-sorry state of SSL in Python](https://developer.rackspace.com/blog/the-not-so-sorry-state-of-ssl-in-python/).
 
+* [How HTTPS Secures Connections](http://blog.hartleybrody.com/https-certificates/)
+  is a guide for what HTTPS does and does not secure against.
+
+* [When and How to Deploy HTTPS](http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/)
+
+* [The first few milliseconds of an HTTPS connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
+  provides a detailed look at the SSL handshake process that is implemented
+  by browsers based on the [RFC 2818](http://tools.ietf.org/html/rfc2818)
+  specification.
+
+
+## General security resources
+* The Open Web Application Security Project (OWASP) has 
+  [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
+  topics.
+
+* This page contains a
+  [fantastic currated list of security reading material](http://dfir.org/?q=node/8/)
+  from beginning to advanced topics.
+
+* [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
+  is a great list of password cracking, scanning, sniffing and other security
+  penetration testing tools.
+
 * [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
 
 * [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
 
 * [Security Tips from Apache](http://httpd.apache.org/docs/current/misc/security_tips.html)
-
-* [When and How to Deploy HTTPS](http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/)
 
 * [Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
 
@@ -71,18 +85,8 @@ securing Linux distributions.
 
 * [Securing Your Website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
 
-* [How HTTPS Secures Connections: What Every Web Dev Should Know](http://blog.hartleybrody.com/https-certificates/)
-
-* [How HTTPS Secures Connections](http://blog.hartleybrody.com/https-certificates/)
-  is a guide for what HTTPS does and does not secure against.
-
 * [Crypto 101](https://www.crypto101.io/) is an introductory course on
   cryptography for programmers.
-
-* [The first few milliseconds of an HTTPS connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
-  provides a detailed look at the SSL handshake process that is implemented
-  by browsers based on the [RFC 2818](http://tools.ietf.org/html/rfc2818)
-  specification.
 
 * [An in-depth analysis of SSH attacks on Amazon EC2](http://getprismatic.com/story/1409447605839)
   shows how important it is to secure your web servers, especially when they are
