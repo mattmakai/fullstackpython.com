@@ -61,6 +61,11 @@ CDNs send content responses from data centers with the closest proximity to the 
 a Django library for managing static and media files on services such as
 Amazon S3 and other content delivery networks.
 
+* RevSys has a nice article on a range of 
+  [important static file optimizations](http://www.revsys.com/12days/front-end-performance/)
+  such as setting cache headers, optimizing JavaScript and reducing the
+  size of images.
+
 
 ## Static content learning checklist
 <i class="fa fa-check-square-o"></i>
