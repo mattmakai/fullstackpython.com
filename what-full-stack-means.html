@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Configuration Management - Full Stack Python</title>
+    <title>What "Full Stack" Means - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,161 +38,51 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Configuration Management</h1>
-<p>Configuration management involves modifying servers from an existing state to 
-a desired state and automating how an application is deployed.</p>
-<h2>Configuration management tools</h2>
-<p>Numerous tools exist to modify server state in a controlled 
-way, including <a href="http://puppetlabs.com/puppet/what-is-puppet">Puppet</a>, 
-<a href="http://www.getchef.com/chef/">Chef</a>, 
-<a href="http://www.saltstack.com/">SaltStack</a>, and Ansible. Puppet and Chef are
-written in Ruby, while SaltStack and Ansible are written in Python.</p>
-<h2>Ad hoc tasks</h2>
-<p>Configuration management tools such as Chef, Puppet, Ansible, and SaltStack
-are not useful for performing ad hoc tasks that require interactive responses.
-<a href="http://docs.fabfile.org/en/1.8/">Fabric</a> and 
-<a href="http://docs.pyinvoke.org/en/latest/">Invoke</a> are used for interactive 
-operations, such as querying the database from the Django manage.py shell.</p>
-<h2>Configuration management tool comparisons</h2>
-<ul>
+      <h1>What "full stack" means</h1>
+<p>The terms "full stack" and "Full Stack Python" are ambiguous but I am using
+a specific definition here on this site. These term can be defined for a 
+web stack either to mean</p>
+<ol>
 <li>
-<p><a href="http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/">Moving away from Puppet: SaltStack or Ansible?</a>
-  is an openly biased but detailed post on why to choose SaltStack over 
-  Ansible in certain situations.</p>
+<p>Every layer, from the machine code up to the browser, are written in Python </p>
 </li>
 <li>
-<p><a href="http://devopsu.com/blog/ansible-vs-shell-scripts/">Ansible vs. Shell Scripts</a>
-  provides some perspective on why a configuration management tool is better
-  than old venerable shell scripts.</p>
+<p>Python code interacts with code written in other languages such as C and
+   JavaScript to provide a complete web stack</p>
 </li>
-<li>
-<p><a href="http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/">Ansible and Salt: A Detailed Comparison</a></p>
-</li>
-</ul>
-<h2>Ansible</h2>
-<p><a href="http://www.ansibleworks.com/">Ansible</a> is an open source configuration
-management and application deployment tool built in Python.</p>
-<h3>Ansible Resources</h3>
-<ul>
-<li>
-<p><a href="http://docs.ansible.com/index.html">Official Ansible documentation</a></p>
-</li>
-<li>
-<p><a href="https://serversforhackers.com/editions/2014/08/26/getting-started-with-ansible/">An Ansible tutorial</a>
-  is a fantastically detailed introduction to using Ansible to set up
-  servers.</p>
-</li>
-<li>
-<p><a href="http://devopsu.com/newsletters/ansible-weekly-newsletter.html">Ansible Weekly Newsletter</a></p>
-</li>
-<li>
-<p><a href="http://www.insom.me.uk/post/pycon-talk.html">Python for Configuration Management with Ansible slides</a> 
-from PyCon UK 2013</p>
-</li>
-<li>
-<p><a href="http://labs.qandidate.com/blog/2013/11/15/first-steps-with-ansible/">First Steps with Ansible</a></p>
-</li>
-<li>
-<p><a href="http://red-badger.com/blog/2013/06/29/ansible/">Red Badger on Ansible</a></p>
-</li>
-<li>
-<p><a href="http://lowendbox.com/blog/getting-started-with-ansible/">Getting Started with Ansible</a></p>
-</li>
-<li>
-<p><a href="https://www.twilio.com/blog/2014/05/ansible-text-messages-notifications-with-twilio-sms.html">Ansible Text Message Notifications with Twilio SMS</a>
-  is my blog post with a detailed example for using the Twilio module in
-  core Ansible 1.6+.</p>
-</li>
-<li>
-<p><a href="http://softwareas.com/ansible-and-linode-what-i-learned-about-controlling-linodes-from-ansible">Ansible and Linode</a></p>
-</li>
-<li>
-<p><a href="http://jlafon.io/ansible-duo-security.html">Multi-factor SSH authentication with Ansible and Duo Security</a></p>
-</li>
-<li>
-<p><a href="http://benlopatin.com/getting-started-with-ansible/">Introducing Ansible into Legacy Projects</a></p>
-</li>
-<li>
-<p><a href="http://www.nickhammond.com/automating-development-environment-ansible/">Automating your development environment with Ansible</a></p>
-</li>
-<li>
-<p><a href="http://devopsu.com/guides/ansible-post-install.html">Post-install steps with Ansible</a> </p>
-</li>
-<li>
-<p><a href="http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible">First Five (and a half) Minutes on a Server with Ansible</a> </p>
-</li>
-<li>
-<p><a href="http://davidwinter.me/articles/2013/11/23/introduction-to-ansible/">(Detailed) Introduction to Ansible</a></p>
-</li>
-<li>
-<p><a href="http://hakunin.com/six-ansible-practices">6 practices for super smooth Ansible experience</a></p>
-</li>
-<li>
-<p><a href="http://www.hiddentao.com/archives/2014/06/03/shippable-ansible-docker-loggly-for-awesome-deployments/">Shippable + Ansible + Docker + Loggly for awesome deployments</a>
-  is a well written detailed post about using Docker and Ansible together with
-  a few other pieces.</p>
-</li>
-<li>
-<p><a href="http://blog.couchbase.com/create-couchbase-cluster-with-ansible">Create a Couchbase Cluster with Ansible</a></p>
-</li>
-<li>
-<p><a href="https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ">Idempotence, convergence, and other silly fancy words we often use</a></p>
-</li>
-<li>
-<p><a href="http://probablyfine.co.uk/2014/03/27/how-to-write-an-ansible-role-for-ansible-galaxy/">How to Write an Ansible Role for Ansible Galaxy</a></p>
-</li>
-<li>
-<p><a href="http://blog.mist.io/post/82383668190/move-fast-and-dont-break-things-testing-with">Testing with Jenkins, Docker and Ansible</a></p>
-</li>
-</ul>
-<h2>Application dependencies learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Learn about configuration management in the context of deployment automation
-and infrastructure-as-code.</p>
-<p><i class="fa fa-check-square-o"></i>
-Pick a configuration management tool and stick with it. My recommendation is
-Ansible because it is by far the easiest tool to learn and be productive with.</p>
-<p><i class="fa fa-check-square-o"></i>
-Read your configuration management tool's documentation and, when necessary,
-the source code.</p>
-<p><i class="fa fa-check-square-o"></i>
-Automate the configuration management and deployment for your project. Note
-that this is by far the most time consuming step in this checklist but will
-pay dividends every time you deploy your project.</p>
-<p><i class="fa fa-check-square-o"></i>
-Hook the automated deployment tool into your existing deployment process.</p>
-<h3>What's next after automating your app configuration?</h3>
+</ol>
+<p>I named this site for the first definition. Python is just one language among
+many that allows our computers to execute software and communicate with each
+other. </p>
+<p>For beginners, learning the syntax and libraries in Python necessary to 
+build a web application or web API is a major undertaking. Even intermediate 
+and advanced Python software developers need to constantly program and learn 
+to keep up with our ever evolving ecosystem. I created Full Stack Python to
+be just one of <a href="/best-python-resources.html">many resources</a> that help Python 
+developers build and maintain their programming skills.</p>
                   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/continuous-integration.html" class="btn btn-success btn-full"><i class="fa fa-refresh fa-2x"></i></a>
+            <a href="/introduction.html" class="btn btn-success btn-full"><i class="fa fa-fast-backward fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I continuously integrate my project's codebase?
+                Let me start over from the Full Stack Python introduction.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="/future-directions.html" class="btn btn-success btn-full"><i class="fa fa-magic fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                I want to learn more about the users of my app with web analytics.
+                Show me what's coming on Full Stack Python in the future.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-inverse fa-2x"></i></a>
+            <a href="/about-author.html" class="btn btn-success btn-full"><i class="fa fa-user fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I integrate external APIs into my application?
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
-            <p class="under-btn">
-                What should I do to secure my web application?
+                Who's the author of Full Stack Python?
             </p>
         </div>
     </div>
@@ -415,7 +305,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Configuration Management</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">What "Full Stack" Means</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
           each Python web application stack layer and provides the
@@ -462,7 +352,7 @@ function mce_success_cb(resp){
                         <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
                         <a href="/continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
                         <a href="/code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
-                        <a href="/configuration-management.html" class="list-group-item smaller-item active">Configuration Management</a>
+                        <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
                         <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
                         <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
                         <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
@@ -478,7 +368,7 @@ function mce_success_cb(resp){
                         <a href="/about-author.html" class="list-group-item smaller-item ">About the Author</a>
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
                         <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
-                        <a href="/what-full-stack-means.html" class="list-group-item smaller-item ">What "Full Stack" Means</a>
+                        <a href="/what-full-stack-means.html" class="list-group-item smaller-item active">What "Full Stack" Means</a>
                 </div>
   </div>
   </div></div>
