@@ -21,10 +21,12 @@ The terms "full stack" and "Full Stack Python" are ambiguous but I am using
 a specific definition here on this site. These term can be defined for a 
 web stack either to mean
 
-1. Every layer, from the machine code up to the browser, are written in Python 
-   
-1. Python code interacts with code written in other languages such as C and
-   JavaScript to provide a complete web stack
+* Python code interacts with code written in other languages such as C and
+  JavaScript to provide a complete web stack
+
+or
+
+* Every layer, from the machine code up to the browser, are written in Python 
 
 I named this site for the first definition. Python is just one language among
 many that allows our computers to execute software and communicate with each
