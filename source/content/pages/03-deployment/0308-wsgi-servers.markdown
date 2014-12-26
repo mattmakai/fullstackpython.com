@@ -211,6 +211,9 @@ The following are WSGI servers based on community recommendations.
   answers why CherryPy is a simple combination web and WSGI server along with 
   how to use it.
 
+* Another Digital Ocean walkthrough goes into
+  [How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx).
+
 
 ## WSGI servers learning checklist
 <i class="fa fa-check-square-o"></i>

@@ -70,6 +70,7 @@ guide as they are considered advanced deployment techniques.
   [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
   is a great way to familiarize yourself with the deployment process.
 
+
 ## Deployment learning checklist
 <i class="fa fa-check-square-o"></i>
 If you're tight on time look at the 
