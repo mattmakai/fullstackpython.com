@@ -188,6 +188,10 @@ The following are WSGI servers based on community recommendations.
 * This [basics of WSGI](http://agiliq.com/blog/2013/07/basics-wsgi/) post
   contains a simple example of how a WSGI-compatible application works.
 
+* [A comparison of web servers for Python web apps](https://www.digitalocean.com/community/tutorials/a-comparison-of-web-servers-for-python-based-web-applications)
+  is a good read to understand basic information about various WSGI server
+  implementations.
+
 * A thorough and informative post for LAMP-stack hosting choices is 
   presented in the 
   "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/)." 
