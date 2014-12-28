@@ -168,6 +168,10 @@ book which is an excellent learning resource.
   with 
   [standalone WSGI containers](http://flask.pocoo.org/docs/deploying/wsgi-standalone/).
 
+* [Handling Email Confirmation in Flask](https://realpython.com/blog/python/handling-email-confirmation-in-flask/)
+  is a great walkthrough for a common use case of ensuring an email address
+  matches with the user's login information.
+
 
 ## Open source Flask example projects
 * [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
