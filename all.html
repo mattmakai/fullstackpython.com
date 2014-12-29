@@ -4590,6 +4590,62 @@ to keep up with our ever evolving ecosystem. I created Full Stack Python to
 be just one of <a href="/best-python-resources.html">many resources</a> that help Python 
 developers build and maintain their programming skills.</p>
 <h3>What to do now that we've got "full stack" defined?</h3>
+                      <h1>WebSockets</h1>
+<p>A WebSocket is a <a href="http://tools.ietf.org/html/rfc6455">standard protocol</a> for 
+two-way communication between servers and clients. The WebSockets protocol does
+not run over HTTP, instead it is a separate implementation on top of 
+<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a>.</p>
+<h2>Why use WebSockets?</h2>
+<p>WebSockets allow two-way communication between the client and server. 
+A WebSockets-enabled application allows a web server to push data to a web 
+browser without the browser having to poll for updates via HTTP. Allowing 
+push from the server to the client and vice versa is much more efficient than 
+having the client constantly ask the server "are there any updates?".</p>
+<p>Previous approaches for for keeping a connection alive between client and 
+server over HTTP, such as 
+[Comet](http://en.wikipedia.org/wiki/Comet_(programming), have either used 
+long polling or were not implemented by all browsers.</p>
+<h2>JavaScript client libraries</h2>
+<ul>
+<li>
+<p><a href="http://socket.io/">Socket.io</a>'s client side JavaScript library can be 
+  used to connect to a server side WebSockets implementation.</p>
+</li>
+<li>
+<p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a> is a Flash-based
+  client-side WebSockets implementation.</p>
+</li>
+</ul>
+<h2>WebSockets resources</h2>
+<ul>
+<li>
+<p>The official W3C 
+  <a href="http://www.w3.org/TR/websockets/">candidate draft for WebSockets API</a> 
+  and the 
+  <a href="http://dev.w3.org/html5/websockets/">working draft for WebSockets</a> are 
+  good reference material but can be tough for those new to the WebSockets
+  concepts. I recommend reading the working draft after looking through some
+  of the more beginner-friendly resources list below.</p>
+</li>
+<li>
+<p>Mozilla's 
+  <a href="https://developer.mozilla.org/en-US/docs/WebSockets">Developer Resources for WebSockets</a>
+  is a good place to find documentation and tools for developing with 
+  WebSockets.</p>
+</li>
+<li>
+<p><a href="http://mrjoes.github.io/2013/06/21/python-realtime.html">Real-time in Python</a>
+  provides Python-specific context for how the server push updates were 
+  implemented in the past and how Python's tools have evolved to perform
+  server side updates.</p>
+</li>
+<li>
+<p>The <a href="https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html">Choose Your Own Adventure Presentations</a>
+  tutorial uses WebSockets via gevent on the server and socketio.js for 
+  pushing vote count updates from the server to the client. </p>
+</li>
+</ul>
+<h3>What's next for your web application after setting up WebSockets?</h3>
             </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">

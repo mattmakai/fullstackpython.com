@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Monitoring - Full Stack Python</title>
+    <title>WebSockets - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,199 +38,85 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>Monitoring</h1>
-<p>Monitoring tools capture, analyze and display information for a web 
-application's execution. Every application has issues arise throughout
-all levels of the web stack. Monitoring tools provide transparency so
-developers and operations teams can respond and fix problems.</p>
-<h2>Why is monitoring necessary?</h2>
-<p>Capturing and analyzing data about your production environment is critical
-to proactively deal with stability, performance, and errors in a web 
-application.</p>
-<h2>Difference between monitoring and logging</h2>
-<p>Monitoring and logging are very similar in their purpose of helping to 
-diagnose issues with an application and aid the debugging process. One way
-to think about the difference is that logging happens based on explicit events
-while monitoring is a passive background collection of data. </p>
-<p>For example, when an error occurs, that event is explicitly logged through
-code in an exception handler. Meanwhile, a monitoring agent instruments the
-code and gathers data not only about the logged exception but also the 
-performance of the functions.</p>
-<p>This distinction between logging and monitoring is vague and not necessarily
-the only way to look at it. Pragmatically, both are useful for maintaining a
-production web application.</p>
-<h2>Monitoring layers</h2>
-<p>There are several important resources to monitor on the operating system 
-and network level of a web stack.</p>
-<ol>
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Persistence storage consumed versus free</li>
-<li>Network bandwidth and latency</li>
-</ol>
-<p>Application level monitoring encompasses several aspects. The amount of time
-and resources dedicated to each aspect will vary based on whether an 
-application is read-heavy, write-heavy, or subject to rapid swings in traffic.</p>
-<ol>
-<li>Application warnings and errors (500-level HTTP errors)</li>
-<li>Application code performance</li>
-<li>Template rendering time</li>
-<li>Browser rendering time for the application</li>
-<li>Database querying performance</li>
-</ol>
-<h2>Open source monitoring projects</h2>
+      <h1>WebSockets</h1>
+<p>A WebSocket is a <a href="http://tools.ietf.org/html/rfc6455">standard protocol</a> for 
+two-way communication between servers and clients. The WebSockets protocol does
+not run over HTTP, instead it is a separate implementation on top of 
+<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a>.</p>
+<h2>Why use WebSockets?</h2>
+<p>WebSockets allow two-way communication between the client and server. 
+A WebSockets-enabled application allows a web server to push data to a web 
+browser without the browser having to poll for updates via HTTP. Allowing 
+push from the server to the client and vice versa is much more efficient than 
+having the client constantly ask the server "are there any updates?".</p>
+<p>Previous approaches for for keeping a connection alive between client and 
+server over HTTP, such as 
+[Comet](http://en.wikipedia.org/wiki/Comet_(programming), have either used 
+long polling or were not implemented by all browsers.</p>
+<h2>JavaScript client libraries</h2>
 <ul>
 <li>
-<p><a href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
-  listens for metrics and aggregates them for transfer into another service
-  such as Graphite.</p>
+<p><a href="http://socket.io/">Socket.io</a>'s client side JavaScript library can be 
+  used to connect to a server side WebSockets implementation.</p>
 </li>
 <li>
-<p><a href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
-  time-series data and displays them in graphs through a Django web application.</p>
-</li>
-<li>
-<p><a href="http://github.hubspot.com/bucky/">Bucky</a> measures the performance of a
-  web application from end user's browsers and sends that data back to the
-  server for collection.</p>
-</li>
-<li>
-<p><a href="http://sensuapp.org/">Sensu</a> is an open source monitoring framework
-  written in Ruby but applicable to any programming language web application.</p>
-</li>
-<li>
-<p><a href="http://vimeo.github.io/graph-explorer/">Graph Explorer</a> by Vimeo is a
-  Graphite-based dashboard with added features and a slick design.</p>
-</li>
-<li>
-<p><a href="http://packetbeat.com/">PacketBeat</a> sniffs protocol packets. Elasticsearch
-  then allows developers to search the collected data and visualize what's 
-  happening inside their web application using the Kibana user interface.</p>
-</li>
-<li>
-<p><a href="http://munin-monitoring.org/">Munin</a> is a client plugin-based monitoring 
-  system that sends monitoring traffic to the Munin node where the data can
-  be analyzed and visualized. Note this project is written in Perl so Perl 5
-  must be installed on the node collecting the data.</p>
+<p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a> is a Flash-based
+  client-side WebSockets implementation.</p>
 </li>
 </ul>
-<h2>Hosted monitoring services</h2>
+<h2>WebSockets resources</h2>
 <ul>
 <li>
-<p><a href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
-  well as plug ins for capturing and analyzing additional data about tools in
-  your stack.</p>
+<p>The official W3C 
+  <a href="http://www.w3.org/TR/websockets/">candidate draft for WebSockets API</a> 
+  and the 
+  <a href="http://dev.w3.org/html5/websockets/">working draft for WebSockets</a> are 
+  good reference material but can be tough for those new to the WebSockets
+  concepts. I recommend reading the working draft after looking through some
+  of the more beginner-friendly resources list below.</p>
 </li>
 <li>
-<p><a href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and 
-  infrastructure. It's popular with DevOps shops that are making changes to
-  their production environments and want immediate feedback on the results
-  of those modifications.</p>
+<p>Mozilla's 
+  <a href="https://developer.mozilla.org/en-US/docs/WebSockets">Developer Resources for WebSockets</a>
+  is a good place to find documentation and tools for developing with 
+  WebSockets.</p>
 </li>
 <li>
-<p><a href="http://status.io/">Status.io</a> focuses on uptime and response metrics 
-  transparency for web applications.</p>
+<p><a href="http://mrjoes.github.io/2013/06/21/python-realtime.html">Real-time in Python</a>
+  provides Python-specific context for how the server push updates were 
+  implemented in the past and how Python's tools have evolved to perform
+  server side updates.</p>
 </li>
 <li>
-<p><a href="https://www.statuspage.io/">StatusPage.io</a> (yes, there's both a Status and
-  StatusPage.io) provides easy set up status pages for monitoring application
-  up time.</p>
-</li>
-<li>
-<p><a href="http://www.pagerduty.com/">PagerDuty</a> alerts a designated person or group
-  if there are stability, performance, or uptime issues with an application.</p>
-</li>
-<li>
-<p><a href="https://appenlight.com/">App Enlight</a> provides performance, exception and 
-  error monitoring and is currently specific to Python web applications.</p>
+<p>The <a href="https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html">Choose Your Own Adventure Presentations</a>
+  tutorial uses WebSockets via gevent on the server and socketio.js for 
+  pushing vote count updates from the server to the client. </p>
 </li>
 </ul>
-<h2>Monitoring resources</h2>
-<ul>
-<li>
-<p><a href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
-</li>
-<li>
-<p><a href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
-</li>
-<li>
-<p><a href="http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/">Practical Guide to StatsD/Graphite Monitoring</a> 
-  is a detailed guide with code examples for monitoring infrastructure.</p>
-</li>
-<li>
-<p>Bit.ly describes the 
-  "<a href="http://word.bitly.com/post/74839060954/ten-things-to-monitor">10 Things They Forgot to Monitor</a>"
-  beyond the standard metrics such as disk &amp; memory usage.</p>
-</li>
-<li>
-<p><a href="http://aarvik.dk/four-linux-server-monitoring-and-management-tools/">Four Linux server monitoring tools</a></p>
-</li>
-<li>
-<p><a href="https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/">How to design useful monitoring and graphing visualizations</a></p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/auxesis/5-years-of-metrics-and-monitoring">5 years of metrics and monitoring</a>
-  is a great presentation highlighting that visualization so humans can
-  understand measurements is a hard problem. Line graphs are often not
-  the best solution and they are overused.</p>
-</li>
-<li>
-<p>The Collector Highlight Series has an article on <a href="http://blog.librato.com/posts/statsd">StatsD</a>
-  that explains how to install it and how it works.</p>
-</li>
-<li>
-<p>This <a href="http://kartar.net/2014/11/monitoring-survey---tools/">survey on monitoring tools</a>
-  has some nice data and graphs on what developers and operations folks use
-  in their environments.</p>
-</li>
-</ul>
-<h2>Monitoring learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Review the software-as-a-service and open source monitoring tools below. Third
-party services tend to be easier to set up and host the data for you. Open
-source projects give you more control but you'll need to have additional 
-servers ready for the monitoring.</p>
-<p><i class="fa fa-check-square-o"></i>
-My recommendation is to install <a href="http://newrelic.com/">New Relic</a>'s free 
-option with the trial period to see how it works with your app. It'll give you
-a good idea of the capabilities for application-level monitoring tools.</p>
-<p><i class="fa fa-check-square-o"></i>
-As your app scales take a look at setting up one of the the open source 
-monitoring projects such as StatsD with Graphite. The combination of those
-two projects will give you fine-grained control over the system metrics 
-you're collecting and visualizing.</p>
-<h3>What topic do you want to learn next?</h3>
+<h3>What's next for your web application after setting up WebSockets?</h3>
                   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="/wsgi-servers.html" class="btn btn-success btn-full"><i class="fa fa-play fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I learn more about the users of my app with web analytics?
+                How do I execute Python since the web server doesn't do that?
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
+            <a href="/application-dependencies.html" class="btn btn-success btn-full"><i class="fa fa-archive fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                What should I learn about web application security?
+                How should I install Python libraries on the server?
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/configuration-management.html" class="btn btn-success btn-full"><i class="fa fa-gears fa-inverse fa-2x"></i></a>
+            <a href="/development-environments.html" class="btn btn-success btn-full"><i class="fa fa-desktop fa-2x"></i></a>
             <p class="under-btn">
-                How do I automate the server configuration I've set up?
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/logging.html" class="btn btn-success btn-full"><i class="fa fa-align-left fa-inverse fa-2x"></i></a>
-            <p class="under-btn">
-                How should I log events in my application outside monitoring?
+                What should I use to code my Python application?
             </p>
         </div>
     </div>
@@ -453,7 +339,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Monitoring</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">WebSockets</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
           each Python web application stack layer and provides the
@@ -508,7 +394,7 @@ function mce_success_cb(resp){
                         <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
                         <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
                         <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
-                        <a href="/monitoring.html" class="list-group-item smaller-item active">Monitoring</a>
+                        <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
                         <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
                         <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
@@ -517,7 +403,7 @@ function mce_success_cb(resp){
                         <a href="/change-log.html" class="list-group-item smaller-item ">Change Log</a>
                         <a href="/future-directions.html" class="list-group-item smaller-item ">Future Directions</a>
                         <a href="/what-full-stack-means.html" class="list-group-item smaller-item ">What "Full Stack" Means</a>
-                        <a href="/websockets.html" class="list-group-item smaller-item ">WebSockets</a>
+                        <a href="/websockets.html" class="list-group-item smaller-item active">WebSockets</a>
                 </div>
   </div>
   </div></div>
