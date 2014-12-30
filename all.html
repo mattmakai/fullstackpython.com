@@ -4616,6 +4616,26 @@ long polling or were not implemented by all browsers.</p>
   client-side WebSockets implementation.</p>
 </li>
 </ul>
+<h2>Websockets with Nginx</h2>
+<p>Nginx officially supports WebSocket proxying as of 
+<a href="http://nginx.com/blog/websocket-nginx/">version 1.3</a>. However, you have
+to configure the Upgrade and Connection headers to ensure requests are
+passed through Nginx to your WSGI server. It can be tricky to set this up
+the first time. The following resources are helpful for setting up the
+configuration properly.</p>
+<ul>
+<li>
+<p>Nginx has <a href="http://nginx.org/en/docs/http/websocket.html">an official page for WebSocket proxying</a>.</p>
+</li>
+<li>
+<p><a href="http://blog.martinfjordvald.com/2013/02/websockets-in-nginx/">WebSockets in Nginx</a>
+  walks through the Nginx WebSockets configuration directives.</p>
+</li>
+<li>
+<p><a href="https://chrislea.com/2013/02/23/proxying-websockets-with-nginx/">Proxying WebSockets with Nginx</a>
+  shows how to proxy with Socket.io.</p>
+</li>
+</ul>
 <h2>WebSockets resources</h2>
 <ul>
 <li>
