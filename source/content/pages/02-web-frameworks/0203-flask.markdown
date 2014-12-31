@@ -134,6 +134,13 @@ book which is an excellent learning resource.
   [Nitrous.io](https://www.nitrous.io/) to get started and 
   [Twilio](https://www.twilio.com/) for SMS.
 
+* The blog post series "Things which aren't magic" covers how Flask's 
+  ubiquitous @app.route decorator works under the covers. There are two 
+  parts in the series,
+  [part 1](http://ains.co/blog/things-which-arent-magic-flask-part-1.html)
+  and 
+  [part 2](http://ains.co/blog/things-which-arent-magic-flask-part-2.html).
+
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project. 
   [Part 2](http://www.realpython.com/blog/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/) 
