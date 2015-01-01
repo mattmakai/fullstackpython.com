@@ -61,7 +61,7 @@ configuration properly.
   shows how to proxy with Socket.io.
 
 
-## WebSockets resources
+## General WebSockets resources
 * The official W3C 
   [candidate draft for WebSockets API](http://www.w3.org/TR/websockets/) 
   and the 
@@ -75,6 +75,12 @@ configuration properly.
   is a good place to find documentation and tools for developing with 
   WebSockets.
 
+* The "Can I Use?" website has a 
+  [handy WebSockets reference chart](http://caniuse.com/#feat=websockets) 
+  for which web browsers and specific versions support WebSockets.
+
+
+## Python-specific WebSockets resources
 * [Real-time in Python](http://mrjoes.github.io/2013/06/21/python-realtime.html)
   provides Python-specific context for how the server push updates were 
   implemented in the past and how Python's tools have evolved to perform

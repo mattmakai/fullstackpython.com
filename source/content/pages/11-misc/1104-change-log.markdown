@@ -22,16 +22,21 @@ inception in December 2012. Another way to view the modifications is through
 the 
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
+## 2015
+### January
+* Added [WebSockets](/websockets.html) page and some initial resources.
+
+
 ## 2014
-###
-* Adding new security resources and splitting HTTPS resources into their own
+### December
+* Added new security resources and splitting HTTPS resources into their own
   section.
 * Split out Djangular resources into a separate section.
 * New NoSQL Python client resources.
 * Added new API resources for integration and creation.
 
 ### November
-* Adding a nice new continuous integration diagram.
+* Added a nice new continuous integration diagram.
 * More Django and database resources.
 * Revising development environments page and adding new resources.
 * Adding my new Flask blog post on choose your own adventure presentations
