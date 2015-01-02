@@ -762,6 +762,38 @@ tutorial plus reading open source example applications found below. </p>
 Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
 Bottle application on the web.</p>
 <h3>What do you need to learn next?</h3>
+                      <h2>Morepath</h2>
+<p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
+framework with a model-driven approach to creating web applications and web
+APIs.</p>
+<p>Morepath's framework philosophy is that the data models should drive the
+creation via the web framework. By default the framework routes URLs directly 
+to model code, unlike for example Django which requires explicit URL routing
+by the developer.</p>
+<h2>Why is Morepath an interesting web framework?</h2>
+<p>Simple <a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD web applications and APIs</a> 
+can be tedious to build when they are driven straight from data models without
+much logic between the model and the view. With the rise of front end 
+JavaScript frameworks many Python web frameworks are becoming 
+<a href="/application-programming-interfaces.html">RESTful APIs</a> that return JSON
+instead of the framework's original purpose as generating HTML with a 
+templating system. Morepath appears to have been created with the RESTful API
+model in mind and cuts out the assumption that templates will definitely be
+used to generate the web user interface.</p>
+<h3>Morepath resources</h3>
+<ul>
+<li>
+<p><a href="http://blog.startifact.com/posts/on-the-morepath.html">On the Morepath</a>
+  is a blog post by Startifact on how they use Morepath and some of the
+  features of the framework.</p>
+</li>
+<li>
+<p>Morepath's creator gave a 
+  <a href="https://www.youtube.com/watch?v=gyDKMAWPyuY">great talk on the motivation and structure for the new framework</a> 
+  at EuroPython 2014.</p>
+</li>
+</ul>
+<h3>Do you want to learn more about frameworks or web APIs?</h3>
                       <h1>Other Web Frameworks</h1>
 <p>Python has a significant number of web frameworks outside the usual Django,
 Flask and Bottle suspects.</p>
@@ -776,14 +808,6 @@ solution (like Django) or as a micro framework.</p>
 <h2>Falcon</h2>
 <p><a href="http://falconframework.org/">Falcon</a> is a minimalist web framework designed
 with web application speed as a top priority.</p>
-<h2>Morepath</h2>
-<p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
-framework that routes URLs directly to model code.</p>
-<ul>
-<li>Morepath's creator gave a 
-  <a href="https://www.youtube.com/watch?v=gyDKMAWPyuY">great talk on the motivation and structure for the new framework</a> 
-  at EuroPython 2014.</li>
-</ul>
 <h2>web.py</h2>
 <p><a href="http://webpy.org/">web.py</a> is a Python web framework designed for simplicity
 in building web applications.</p>
@@ -4312,6 +4336,7 @@ the
 <h2>2015</h2>
 <h3>January</h3>
 <ul>
+<li>Added a new separate page for the <a href="/morepath.html">Morepath framework</a>.</li>
 <li>Updated the <a href="/future-directions.html">future directions</a> page for 2015.</li>
 <li>Added new WebSockets resources.</li>
 <li>Added <a href="/websockets.html">WebSockets</a> page and some initial resources.</li>

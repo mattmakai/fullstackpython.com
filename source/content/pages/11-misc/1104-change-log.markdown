@@ -24,6 +24,7 @@ the
 
 ## 2015
 ### January
+* Added a new separate page for the [Morepath framework](/morepath.html).
 * Updated the [future directions](/future-directions.html) page for 2015.
 * Added new WebSockets resources.
 * Added [WebSockets](/websockets.html) page and some initial resources.

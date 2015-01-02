@@ -95,6 +95,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/morepath.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/no-sql-datastore.html</loc>
     <priority>1.0</priority>
   </url>
