@@ -30,13 +30,14 @@ by the developer.
 ## Why is Morepath an interesting web framework?
 Simple [CRUD web applications and APIs](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 
 can be tedious to build when they are driven straight from data models without
-much logic between the model and the view. With the rise of front end 
-JavaScript frameworks many Python web frameworks are becoming 
+much logic between the model and the view. 
+
+With the rise of front end JavaScript frameworks, many Python web frameworks 
+are first being used to build 
 [RESTful APIs](/application-programming-interfaces.html) that return JSON
-instead of the framework's original purpose as generating HTML with a 
-templating system. Morepath appears to have been created with the RESTful API
-model in mind and cuts out the assumption that templates will definitely be
-used to generate the web user interface.
+instead rendering HTML via a templating system. Morepath appears to have 
+been created with the RESTful API model approach in mind and cuts out the 
+assumption that templates will drive the user interface.
 
 
 ### Morepath resources
