@@ -90,5 +90,8 @@ configuration properly.
   tutorial uses WebSockets via gevent on the server and socketio.js for 
   pushing vote count updates from the server to the client. 
 
+* [Async with Bottle](http://bottlepy.org/docs/dev/async.html) shows how to
+  use greenlets to support WebSockets with the Bottle web framework.
+
 
 ### What's next for your web application after setting up WebSockets?

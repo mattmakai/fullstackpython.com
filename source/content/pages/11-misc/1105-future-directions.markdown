@@ -17,43 +17,33 @@ choice4text: Who created Full Stack Python?
 
 
 # Future Directions
-Full Stack Python is a larger undertaking than I originally envisioned. My
-original intent was to link to the best resources by category. That grew into
-explaining the concepts plus including the best links I could find.
+Full Stack Python has completely blown away my expectations for what I could
+accomplish with a side project. I really appreciate all the in-person feedback,
+emails and pull requests I've received from the community.
 
-This short section lays out my thoughts on what I'm working to improve in the
-intermediate-to-long term. Full Stack Python is my main 2014 project so I want 
-to make it a comprehensive "complete" reference for Python developers by the
-end of the year.
+For 2015 I'm looking forward to taking FSP far beyond the scope I originally
+intended. Here are some thing to watch out for:
 
-These plans can change based on 
+1. Reordering of the content, with top level categories for 
+
+    * web frameworks
+    * deployment
+    * data
+    * performance
+    * operations
+    * security
+    * front ends (web and mobile)
+
+1. More visuals such as the diagram on the 
+   [source control](/source-control.html) page
+
+1. Step-by-step tutorials instead of just explanations and external resources
+
+
+Note that these plans can change based on 
 [pull requests](https://github.com/makaimc/fullstackpython.github.com/pulls)
 from the community. I work to integrate PRs within a day or two so please 
 submit one when you see a fix or improvement that needs to be made!
-
-Here are some things I'm actively working on:
-
-* Update these sections with clearer explanations and more resources:
-
-    1. [Configuration management](/configuration-management.html)
-    1. [JavaScript](/javascript.html)
-    1. [CSS](/cascading-style-sheets.html)
-    1. [API integration](/api-integration.html)
-    1. [API creation](/api-creation.html)
-    1. [Web security](/web-application-security.html)
-
-
-* Plain English explanations for Django, Flask and Bottle framework concepts 
-  such as how forms work with templates, how models interact with views and
-  what the files are when a new boilerplate project is created (especially
-  important with Django)
-
-* Split web application security and other security (lower level protocols)
-  into separate pages. Have separate chapters on what you need to know about
-  these topics.
-
-After those updates are done I'll go back through and apply visuals to
-each section to make them easier to read and understand.
 
 
 ### That's what coming. What would you like to learn right now?

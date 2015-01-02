@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### January
+* Updated the [future directions](/future-directions.html) page for 2015.
+* Added new WebSockets resources.
 * Added [WebSockets](/websockets.html) page and some initial resources.
 
 
