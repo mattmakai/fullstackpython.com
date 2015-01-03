@@ -77,6 +77,9 @@ securing Linux distributions.
   [fantastic currated list of security reading material](http://dfir.org/?q=node/8/)
   from beginning to advanced topics.
 
+* The [/r/netsec](http://www.reddit.com/r/netsec/) subreddit is one place to
+  go to learn more about network and application security.
+
 * [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
   is a great list of password cracking, scanning, sniffing and other security
   penetration testing tools.
