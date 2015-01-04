@@ -66,6 +66,12 @@ including everything in the framework with tight integration.
   "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
   question on Stack Overflow.
 
+* [Frameworks](http://youtu.be/W6KCPXl6Zuc) is a really well done short video
+  that explains how to choose between web frameworks. The author has some
+  particular opinions about what should be in a framework. For the most part
+  I agree although I've found sessions and database ORMs to be a helpful
+  part of a framework when done well.
+
 * [Django vs Flask vs Pyramid: Choosing a Python Web Framework](https://www.airpair.com/python/posts/django-flask-pyramid)
   contains background information and code comparisons for similar
   web applications built in these three big Python frameworks.
