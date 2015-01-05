@@ -24,6 +24,7 @@ the
 
 ## 2015
 ### January
+* Continuing to add WebSockets resources, especially Python-specific ones.
 * Added a new separate page for the [Morepath framework](/morepath.html).
 * Updated the [future directions](/future-directions.html) page for 2015.
 * Added new WebSockets resources.

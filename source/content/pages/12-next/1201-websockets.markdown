@@ -93,5 +93,9 @@ configuration properly.
 * [Async with Bottle](http://bottlepy.org/docs/dev/async.html) shows how to
   use greenlets to support WebSockets with the Bottle web framework.
 
+* If you're deploying to Heroku, there is a 
+  [specific WebSockets guide](https://devcenter.heroku.com/articles/python-websockets)
+  for getting your Python application up and running.
+
 
 ### What's next for your web application after setting up WebSockets?
