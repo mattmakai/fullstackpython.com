@@ -59,5 +59,9 @@ system are occurring.
 * This [Stack Overflow question on Python static code analysis tools](http://stackoverflow.com/questions/1428872/pylint-pychecker-or-pyflakes)
   contains comparison discussions of PyLint, PyChecker and PyFlakes.
 
+* [Getting Started with Pylint](http://jbisbee.blogspot.ca/2014/04/getting-started-with-pylint.html)
+  goes over setting up Pylint, generating the .pylintrc file and what's
+  in the configuration.
+
 
 ### What's next after obtaining code metrics?
