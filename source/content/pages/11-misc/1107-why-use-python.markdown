@@ -23,8 +23,10 @@ programming community.
 
 Python is an accessible language for new programmers because of the extensive 
 availability of 
-[free and low cost introdutory resources](/best-python-resources.html) 
-as well as being taught in many universities.
+[free and low cost introdutory resources](/best-python-resources.html). The
+language is also widely taught in universities and used for working with 
+beginner-friendly devices such as the 
+[Raspberry Pi](http://www.raspberrypi.org/).
 
 
 ## Why does the choice of programming language matter?
