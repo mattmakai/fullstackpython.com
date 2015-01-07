@@ -38,7 +38,7 @@ philosophy of the programming language you've selected.
 Python's culture values open source software, community involvement with 
 [local, national and international events](http://www.pycon.org/) and
 teaching to new programmers. If those values are also important to you and/or
-your organization then Python may be a good fit to use.
+your organization then Python may be a good fit. 
 
 
 
