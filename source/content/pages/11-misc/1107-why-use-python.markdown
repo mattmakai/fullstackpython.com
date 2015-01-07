@@ -24,7 +24,7 @@ programming community.
 
 Python is an accessible language for new programmers because of the extensive 
 availability of 
-[free and low cost introdutory resources](/best-python-resources.html). The
+[free and low cost introductory resources](/best-python-resources.html). The
 language is also widely taught in universities and used for working with 
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).
