@@ -61,6 +61,9 @@ your organization then Python may be a good fit to use.
 
 
 ### Resources for Python enterprise advocacy
+* CIO Magazine discusses why 
+  [dynamic languages are increasingly being adopted in enterprise environments](http://www.cio.com/article/2431212/developer/dynamic-languages--not-just-for-scripting-any-more.html).
+
 * PayPal covers 
   [10 myths about enterprise Python](https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/)
   via their engineering blog.
