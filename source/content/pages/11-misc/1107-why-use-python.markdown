@@ -18,12 +18,13 @@ choice4text:
 
 # Why Use Python?
 Python's expansive library of open source data analysis tools, web frameworks 
-and testing tools make its ecosystem one of the largest out of any programming
-community. 
+and testing instruments make its ecosystem one of the largest out of any 
+programming community. 
 
-Python is also an accessible language for new programmers because
-of the extensive availability of free and low cost introdutory resources as
-well as being taught in many universities.
+Python is an accessible language for new programmers because of the extensive 
+availability of 
+[free and low cost introdutory resources](/best-python-resources.html) 
+as well as being taught in many universities.
 
 
 ## Why does the choice of programming language matter?
