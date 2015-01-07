@@ -209,6 +209,9 @@ book which is an excellent learning resource.
 
 * [FlaskBB](http://flaskbb.org/) is a Flask app for a discussion forum.
 
+* [psdash](https://github.com/Jahaja/psdash) is an app built with Flask and
+  psutils to display information about the computer it is running on.
+
 
 ## Flask framework learning checklist
 <i class="fa fa-check-square-o"></i> 
