@@ -70,14 +70,19 @@ configuration properly.
   concepts. I recommend reading the working draft after looking through some
   of the more beginner-friendly resources list below.
 
-* Mozilla's 
-  [Developer Resources for WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets)
-  is a good place to find documentation and tools for developing with 
-  WebSockets.
+* [WebSockets 101](http://lucumr.pocoo.org/2012/9/24/websockets-101/) by
+  Armin Ronacher provides a detailed assessment of the subpar state of HTTP
+  proxying in regards to WebSockets. He also discusses the complexities of
+  the WebSockets protocol including the packet implementation.
 
 * The "Can I Use?" website has a 
   [handy WebSockets reference chart](http://caniuse.com/#feat=websockets) 
   for which web browsers and specific versions support WebSockets.
+
+* Mozilla's 
+  [Developer Resources for WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets)
+  is a good place to find documentation and tools for developing with 
+  WebSockets.
 
 
 ## Python-specific WebSockets resources

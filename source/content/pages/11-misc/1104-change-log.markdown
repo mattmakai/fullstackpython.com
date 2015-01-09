@@ -24,6 +24,9 @@ the
 
 ## 2015
 ### January
+* Working on a [Why Use Python?](/why-use-python.html) page with my own 
+  assessment of the strengths and weaknesses of Python along with links to 
+  resources where other folks discuss their own experiences.
 * Continuing to add WebSockets resources, especially Python-specific ones.
 * Added a new separate page for the [Morepath framework](/morepath.html).
 * Updated the [future directions](/future-directions.html) page for 2015.
