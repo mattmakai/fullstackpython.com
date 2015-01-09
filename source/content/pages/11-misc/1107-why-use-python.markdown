@@ -32,11 +32,13 @@ beginner-friendly devices such as the
 
 ## Why does the choice of programming language matter?
 Programming languages have unique ecosystems, cultures and philosophies
-built around them. You may unfortunately find friction with the community 
-and difficulty in learning if your approach to programming varies from the 
-philosophy of the programming language you've selected.
+built around them. You will find friction with a community and difficulty 
+in learning if your approach to programming varies from the philosophy of 
+the programming language you've selected.
 
-Python's culture values open source software, community involvement with 
+Python's culture values 
+[open source software](https://github.com/trending?l=python&since=monthly), 
+community involvement with 
 [local, national and international events](http://www.pycon.org/) and
 teaching to new programmers. If those values are also important to you and/or
 your organization then Python may be a good fit. 
@@ -67,7 +69,6 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
     If the implementation is hard to explain, it's a bad idea.
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
-
 
 
 ### More perspectives on why to use Python
