@@ -181,6 +181,10 @@ syntax and language semantics first before diving into web development.
   [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
   are now all available to read.
 
+* [Integerating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
+  is a good post to read for figuring out how to use [Gulp](http://gulpjs.com/)
+  for handling front end tools in development and production Django sites.
+
 
 ## Django with Angular (Djangular) resources
 * [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
