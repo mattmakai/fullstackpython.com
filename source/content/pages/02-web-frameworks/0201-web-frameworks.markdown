@@ -17,15 +17,16 @@ choice4text: What other Python web frameworks exist?
 
 
 # Web frameworks
-A web application framework is a code library that makes a developer's life
-easier when building reliable, scalable and maintainable web applications.
+A web framework is a code library that makes a developer's life easier when 
+building reliable, scalable and maintainable web applications.
 
 
 ## Why are web frameworks necessary?
 Web frameworks encapsulate what developers have learned over the past twenty
-years while building dynamic web applications. Frameworks make it easier
-to reuse code for common HTTP operations and to structure your code so that 
-it is maintainable.
+years while programming sites and applications for the web. Frameworks make 
+it easier to reuse code for common HTTP operations and to structure projects 
+so developers with knowledge of the framework can more quickly build and
+maintain the application.
 
 
 ## Common web framework functionality
