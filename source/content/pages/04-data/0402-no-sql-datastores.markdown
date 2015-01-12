@@ -55,6 +55,10 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   [Scaling Redis at Twitter](https://www.youtube.com/watch?v=rP9EKvWt0zo) is
   a detailed look behind the scenes with a massive Redis deployment.
 
+* [Walrus](http://charlesleifer.com/blog/walrus-lightweight-python-utilities-for-working-with-redis/)
+  is a higher-level Python wrapper for Redis with some caching, querying
+  and data structure components build into the library.
+
 
 ## Document-oriented
 A document-oriented database provides a semi-structured representation for
