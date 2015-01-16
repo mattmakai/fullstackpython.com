@@ -61,6 +61,19 @@ configuration properly.
   shows how to proxy with Socket.io.
 
 
+## Open source Python examples with WebSockets
+* The 
+  [python-websockets-example](https://github.com/makaimc/python-websockets-example)
+  contains code to create a simple web application that provides WebSockets
+  using Flask, Flask-SocketIO and gevent.
+
+
+* The Flask-SocketIO project has a 
+  [chat web application](https://github.com/miguelgrinberg/Flask-SocketIO/tree/master/example) 
+  that demos sending server generated events as well as input from users
+  via a text box input on a form.
+
+
 ## General WebSockets resources
 * The official W3C 
   [candidate draft for WebSockets API](http://www.w3.org/TR/websockets/) 
