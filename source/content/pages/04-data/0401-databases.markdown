@@ -119,6 +119,10 @@ developers learn PostgreSQL if they do not already know MySQL.
 
 * This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
 
+* [Terrible Choices: MySQL](http://blog.ionelmc.ro/2014/12/28/terrible-choices-mysql/)
+  is a blog post about specific deficiencies in MySQL's implementation that
+  hinder its usage with Django's ORM.
+
 * [Graph Data From MySQL Database in Python](http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/)
   is an interesting study with code of how to pull data out of MySQL and graph
   the data with Plotly.
