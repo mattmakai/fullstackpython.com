@@ -42,6 +42,10 @@ with web application speed as a top priority.
 [web.py](http://webpy.org/) is a Python web framework designed for simplicity
 in building web applications.
 
+* See this Reddit discussion on 
+  [reasons why to not use web.py](http://www.reddit.com/r/Python/comments/2sjghv/is_there_any_reason_to_not_use_webpy/)
+  for some insight into the state of the project.
+
 
 ## web2py
 [Web2py](http://www.web2py.com/) is a batteries-included philosophy framework

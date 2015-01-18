@@ -113,3 +113,8 @@ up your application.
 * [Choosing the best Python IDE](http://pedrokroger.net/choosing-best-python-ide/)
   is a review of six IDEs. PyCharm, Wing IDE and PyDev stand out above the
   other three in this review.
+
+* [PyCharm: The Good Parts](http://nafiulis.me/pycharm-the-good-parts-i.html)
+  shows you how to be more efficient and productive with that IDE if it's
+  your choice for writing Python code.
+
