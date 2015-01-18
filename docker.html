@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>JavaScript - Full Stack Python</title>
+    <title>Docker - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,124 +38,67 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-      <h1>JavaScript</h1>
-<p>JavaScript is a small scripting programming language embedded in web browsers 
-to enable dynamic content and interaction. </p>
-<h2>Why is JavaScript necessary?</h2>
-<p>JavaScript executes in the client and enables dynamic content and interaction
-that is not possible with HTML and CSS alone. Every modern Python web 
-application uses JavaScript on the front end. </p>
-<h2>Front end frameworks</h2>
-<p>Front end JavaScript frameworks move the rendering for most of a web 
-application to the client side. Often these applications are informally 
-referred to as "one page apps" because the webpage is not reloaded upon every
-click to a new URL. Instead, partial HTML pages are loaded into the 
-document object model or data is retrieved through an API call then displayed
-on the existing page.</p>
-<p>Examples of these front end frameworks include:</p>
+      <h1>Docker</h1>
+<p>Docker is an <a href="https://github.com/docker/docker">open source</a> 
+infrastructure management platform that manages disk images.</p>
+<h2>Why is Docker important?</h2>
+<p>Docker can package up applications along with their necessary operating system
+dependencies for easier deployment across environments. In the long run it
+has the potential to be the abstraction layer that easily manages containers
+running on top of any type of server, regardless of whether that server is
+on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</p>
+<h2>Docker resources</h2>
 <ul>
 <li>
-<p><a href="https://angularjs.org/">Angular.js</a></p>
+<p><a href="http://www.centurylinklabs.com/what-is-docker-and-when-to-use-it/">What is Docker and When to Use It</a>
+  clearly delineates what Docker is and what it isn't. This is a good article
+  for when you're first wrapping your head around Docker conceptually.</p>
 </li>
 <li>
-<p><a href="http://backbonejs.org/">Backbone.js</a></p>
-</li>
-<li>
-<p><a href="http://emberjs.com/">Ember.js</a></p>
+<p><a href="https://github.com/atbaker">Andrew Baker</a> presented a fantastic tutorial 
+  at <a href="http://andrewtorkbaker.com/pyohio-docker-101-tutorial">PyOhio</a> on 
+  <a href="https://github.com/atbaker/docker-tutorial">beginner and advanced Docker usage</a>. Andrew also created 
+  <a href="http://shop.oreilly.com/product/0636920035732.do">O'Reilly Introduction to Docker video</a> that's
+  well worth buying.</p>
 </li>
 </ul>
-<p>Front end frameworks are rapidly evolving. Over the next several years 
-consensus about good practices for using the frameworks will emerge.</p>
-<h2>How did JavaScript originate?</h2>
-<p>JavaScript is an implementation of 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/JavaScript_Overview">the ECMAScript specification</a> 
-which is defined by the 
-<a href="http://www.ecma-international.org/default.htm">Ecma International Standards Body</a>.</p>
-<h2>JavaScript resources</h2>
+<h2>Python-specific Docker resources</h2>
 <ul>
 <li>
-<p><a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work</a>
-  is a great overview of both JavaScript and CSS as well as how pages are 
-  rendered in a browser.</p>
+<p><a href="http://blog.dscpl.com.au/2014/12/hosting-python-wsgi-applications-using.html">Hosting Python WSGI applications using Docker</a>
+  shows how to use Docker in WSGI application deployments specifically using
+  mod_wsgi.</p>
 </li>
 <li>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">A re-introduction to JavaScript</a>
-  by Mozilla walks through the basic syntax and operators.</p>
-</li>
-<li>
-<p><a href="http://www.smashingmagazine.com/2011/10/28/useful-coding-workflow-tools-for-web-designers-developers/">Coding tools and JavaScript libraries</a>
-  is a huge list by Smashing Magazine with explanations for each tool and 
-  library for working with JavaScript.</p>
-</li>
-<li>
-<p><a href="http://superherojs.com/">Superhero.js</a> is an incredibly well designed list
-  of resources for how to test, organize, understand and generally work with
-  JavaScript.</p>
-</li>
-<li>
-<p><a href="http://www.unheap.com/">Unheap</a> is an amazing collection of reusable JQuery 
-  plugins for everything from navigation to displaying media.</p>
-</li>
-<li>
-<p><a href="http://www.breck-mckye.com/blog/2014/12/the-state-of-javascript-in-2015/">The State of JavaScript in 2015</a>
-  is an opinion piece about favoring small, single-purpose JavaScript libraries 
-  over larger frameworks due to churn in the ecosystem.</p>
+<p><a href="http://handlebarcreative.tumblr.com/post/104881545637/deploying-django-applications-in-docker">Deploying Django Applications in Docker</a>
+  explains some of the concepts behind using Docker for Python deployments and
+  shows how to specifically use it for deploying Django. </p>
 </li>
 </ul>
-<h2>JavaScript learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i> 
-Create a simple HTML file with basic elements in it. Use the
-<code>python -m SimpleHTTPServer</code> command to serve it up. Create a 
-<code>&lt;script type="text/javascript"&gt;&lt;/script&gt;</code> 
-element at the end of the <code>&lt;body&gt;</code> section in the HTML page. Start playing 
-with JavaScript within that element to learn the basic syntax.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Download <a href="http://jquery.com/">JQuery</a> and add it to the page above your 
-JavaScript element. Start working with JQuery and learning how it makes basic
-JavaScript easier.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Work with JavaScript on the page. Incorporate examples from open source 
-projects listed below as well as JQuery plugins. Check out the Unheap link
-below to find a large collection of categorized JQuery plugins.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Check out the JavaScript resources below to learn more about advanced concepts
-and open source libraries.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Integrate JavaScript into your web application and check the 
-<a href="/static-content.html">static content</a> section for how to host the JavaScript
-files.</p>
-<h3>Do you need to style your app or deploy it next?</h3>
+<h3>What do you want to learn next about deployment?</h3>
                   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
+            <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-2x"></i></a>
             <p class="under-btn">
-                How do I style my web application's user interface?
+                How do I deploy a Python application without a container?
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
+            <a href="/continuous-integration.html" class="btn btn-success btn-full"><i class="fa fa-refresh fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                Where should I host static content such as my JavaScript files?
+                How do I regularly integrate my project's codebase?
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
+            <a href="/development-environments.html" class="btn btn-success btn-full"><i class="fa fa-desktop fa-2x"></i></a>
             <p class="under-btn">
-                How do I save and version my code so it does not get lost?
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/application-programming-intefaces.html" class="btn btn-success btn-full"><i class="fa fa-exchange fa-2x"></i></a>
-            <p class="under-btn">
-                What are web application programming interfaces?
+                What should I use to code my Python application?
             </p>
         </div>
     </div>
@@ -378,7 +321,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">JavaScript</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Docker</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
           each Python web application stack layer and provides the
@@ -423,7 +366,7 @@ function mce_success_cb(resp){
                         <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
                         <a href="/web-design.html" class="list-group-item smaller-item ">Web Design</a>
                         <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
-                        <a href="/javascript.html" class="list-group-item smaller-item active">JavaScript</a>
+                        <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
                         <a href="/continuous-integration.html" class="list-group-item smaller-item ">Continuous Integration</a>
                         <a href="/code-metrics.html" class="list-group-item smaller-item ">Code Metrics</a>
                         <a href="/configuration-management.html" class="list-group-item smaller-item ">Configuration Management</a>
@@ -445,7 +388,7 @@ function mce_success_cb(resp){
                         <a href="/what-full-stack-means.html" class="list-group-item smaller-item ">What "Full Stack" Means</a>
                         <a href="/why-use-python.html" class="list-group-item smaller-item ">Why Use Python?</a>
                         <a href="/websockets.html" class="list-group-item smaller-item ">WebSockets</a>
-                        <a href="/docker.html" class="list-group-item smaller-item ">Docker</a>
+                        <a href="/docker.html" class="list-group-item smaller-item active">Docker</a>
                 </div>
   </div>
   </div></div>

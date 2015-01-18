@@ -30,6 +30,32 @@ beginner-friendly devices such as the
 [Raspberry Pi](http://www.raspberrypi.org/).
 
 
+## Python's programming language popularity
+Several programming language popularity rankings exist. While it's
+possible to criticize that these guides are not exact, every ranking shows 
+Python as a top programming language within the top ten, if not the top five
+of all languages.  
+
+Most recently, the 
+[RedMonk January 2015 ranking](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/) had Python at #4.
+
+The 
+[TIOBE Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html),
+a long-running language ranking, has Python steady at #8. 
+
+The [PopularitY of Programming Language](http://pypl.github.io/PYPL.html) 
+(PYPL), based on leading indicators from Google Trends search keyword 
+analysis, shows Python at #3.
+
+[GitHut](http://githut.info/), a visualization of GitHub language popularity, 
+pegs Python at #3 overall as well.
+
+These rankings provide a rough measure for language popularity. They are not 
+intended as a precise measurement tool to determine exactly how many 
+developers are using a language. However, the aggregate view shows that Python 
+remains a stable programming language with a growing ecosystem.
+
+
 ## Why does the choice of programming language matter?
 Programming languages have unique ecosystems, cultures and philosophies
 built around them. You will find friction with a community and difficulty 
@@ -82,11 +108,6 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 * [Why I Push for Python](http://lorenabarba.com/blog/why-i-push-for-python/)
   explains one professor's rationale for promoting Python to teach programming
   to undergraduates.
-
-* The [PopularitY of Programming Language index](https://sites.google.com/site/pydatalog/pypl/PyPL-PopularitY-of-Programming-Language)
-  shows Python continues to be in widespread usage and has leading indicators
-  according to Google Trends that it is a highly searched for programming
-  language.
 
 
 ### Resources for Python enterprise advocacy

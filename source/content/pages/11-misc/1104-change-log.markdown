@@ -24,6 +24,10 @@ the
 
 ## 2015
 ### January
+* Major update with the beginning of a page on [Docker](/docker.html), split
+  out static file handling resources on the [Django](/django.html) page
+  and a new section on Python programming language popularity on the 
+  "Why Use Python?" page.
 * Working on a [Why Use Python?](/why-use-python.html) page with my own 
   assessment of the strengths and weaknesses of Python along with links to 
   resources where other folks discuss their own experiences.

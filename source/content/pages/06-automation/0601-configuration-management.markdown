@@ -4,7 +4,7 @@ slug: configuration-management
 sort-order: 061
 choice1url: /continuous-integration.html
 choice1icon: fa-refresh
-choice1text: How do I continuously integrate my project's codebase?
+choice1text: How do I regularly integrate my project's codebase?
 choice2url: /web-analytics.html
 choice2icon: fa-dashboard
 choice2text: I want to learn more about the users of my app with web analytics.
