@@ -46,9 +46,14 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   shows how to use Docker in WSGI application deployments specifically using
   mod\_wsgi.
 
+* [How to Containerize Python Web Applications](https://www.digitalocean.com/community/tutorials/docker-explained-how-to-containerize-python-web-applications)
+  is an extensive tutorial that uses a Flask application and deploys it
+  using a Docker container.
+
 * [Deploying Django Applications in Docker](http://handlebarcreative.tumblr.com/post/104881545637/deploying-django-applications-in-docker)
   explains some of the concepts behind using Docker for Python deployments and
   shows how to specifically use it for deploying Django. 
+
 
 
 ### What do you want to learn next about deployment?
