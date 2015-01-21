@@ -24,6 +24,7 @@ the
 
 ## 2015
 ### January
+* New task queue resources.
 * Major update with the beginning of a page on [Docker](/docker.html), split
   out static file handling resources on the [Django](/django.html) page
   and a new section on Python programming language popularity on the 

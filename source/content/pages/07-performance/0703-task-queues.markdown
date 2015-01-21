@@ -152,6 +152,11 @@ when scaling out a large deployment of distributed task queues.
   [secure Celery](https://engineering.heroku.com/blogs/2014-09-15-securing-celery)
   when tasks are otherwise sent over unencrypted networks.
 
+* Miguel Grinberg wrote a nice post on using the 
+  [task queue Celery with Flask](http://blog.miguelgrinberg.com/post/using-celery-with-flask). 
+  He gives an overview of Celery followed by specific code to set up the task
+  queue and integrate it with Flask.
+
 
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 
