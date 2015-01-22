@@ -18,7 +18,9 @@ choice4text:
 
 # Docker
 Docker is an [open source](https://github.com/docker/docker) 
-infrastructure management platform that manages disk images.
+infrastructure management platform for running and deploying software. The
+Docker platform is constantly evolving so an exact definition is currently
+a moving target.
 
 
 ## Why is Docker important?
