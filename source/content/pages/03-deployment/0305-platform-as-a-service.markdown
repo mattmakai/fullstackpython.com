@@ -94,6 +94,10 @@ application framework and your app itself is up to date and secured. See the
     * [Part Three: The Heroku Way](http://www.rdegges.com/devops-django-part-3-the-heroku-way/)
     * [Part Four: Choosing Heroku](http://rdegges.com/devops-django-part-4-choosing-heroku)
 
+* [Deploying a Django App to AWS Elastic Beanstalk](https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/)
+  is a fantastic post that shows how to deploy to Amazon Web Service's own
+  PaaS.
+
 
 ## Platform-as-a-service learning checklist
 <i class="fa fa-check-square-o"></i>
