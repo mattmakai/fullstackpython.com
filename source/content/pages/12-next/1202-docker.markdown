@@ -56,6 +56,9 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   explains some of the concepts behind using Docker for Python deployments and
   shows how to specifically use it for deploying Django. 
 
+* [A Docker primer – from zero to a running Django app](https://ochronus.com/docker-primer-django/)
+  provides specific commands and expected output for running Django apps
+  with Docker and Vagrant.
 
 
 ### What do you want to learn next about deployment?
