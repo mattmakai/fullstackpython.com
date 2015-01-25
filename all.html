@@ -4842,9 +4842,9 @@ the server to frequently push data to a web browser. Previously, most web
 applications would implement long polling via frequent
 Asynchronous JavaScript and XML (AJAX) requests as shown in the below diagram. </p>
 <p><img src="theme/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" /></p>
-<p>Server push, as shown in the below diagram, is more efficient and scalable 
-than long polling because the web browser does not have to constantly ask for 
-updates through a stream of AJAX requests.</p>
+<p>Server push is more efficient and scalable than long polling because the 
+web browser does not have to constantly ask for updates through a stream 
+of AJAX requests.</p>
 <p><img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" /></p>
 <p>The WebSockets approach for server pushed updates works well for certain
 categories of web applications such as chat room, which is why that's often

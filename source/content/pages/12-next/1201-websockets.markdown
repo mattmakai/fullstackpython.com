@@ -38,9 +38,9 @@ Asynchronous JavaScript and XML (AJAX) requests as shown in the below diagram.
 
 <img src="theme/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" />
 
-Server push, as shown in the below diagram, is more efficient and scalable 
-than long polling because the web browser does not have to constantly ask for 
-updates through a stream of AJAX requests.
+Server push is more efficient and scalable than long polling because the 
+web browser does not have to constantly ask for updates through a stream 
+of AJAX requests.
 
 <img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" />
 
