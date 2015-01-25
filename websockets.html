@@ -86,11 +86,17 @@ passed through Nginx to your WSGI server. It can be tricky to set this up
 the first time. </p>
 <p>Here are the configuration settings I use in my Nginx file as part of my
 WebSockets proxy.</p>
-<div class="codehilite"><pre><span class="n">server</span> <span class="p">{</span>
+<div class="codehilite"><pre><span class="cp"># this is where my WSGI server sits answering only on localhost</span>
+<span class="cp"># usually this is Gunicorn monkey patched with gevent</span>
+<span class="n">upstream</span> <span class="n">app_server_wsgiapp</span> <span class="p">{</span>
+  <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">server</span> <span class="p">{</span>
 
     <span class="err">#</span> <span class="n">my</span> <span class="n">typical</span> <span class="n">web</span> <span class="n">server</span> <span class="n">configuration</span> <span class="n">goes</span> <span class="n">here</span>
 
-    <span class="err">#</span> <span class="n">this</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
+    <span class="err">#</span> <span class="n">this</span> <span class="n">section</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
     <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="p">.</span><span class="n">io</span> <span class="p">{</span>
         <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_wsgiapp/socket.io;</span>
         <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>

@@ -72,11 +72,17 @@ the first time.
 Here are the configuration settings I use in my Nginx file as part of my
 WebSockets proxy.
 
+    # this is where my WSGI server sits answering only on localhost
+    # usually this is Gunicorn monkey patched with gevent
+    upstream app_server_wsgiapp {
+      server localhost:5000 fail_timeout=0;
+    }
+
     server {
 
         # my typical web server configuration goes here
 
-        # this is specific to the WebSockets proxying
+        # this section is specific to the WebSockets proxying
         location /socket.io {
             proxy_pass http://app_server_wsgiapp/socket.io;
             proxy_redirect off;
