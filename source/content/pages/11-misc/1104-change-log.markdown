@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### January
+* Major update to [WebSockets page](/websockets.html) with new diagrams 
+  and better explanations for why server push is useful.
 * New task queue resources.
 * Major update with the beginning of a page on [Docker](/docker.html), split
   out static file handling resources on the [Django](/django.html) page

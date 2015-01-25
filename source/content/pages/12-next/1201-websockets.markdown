@@ -18,22 +18,40 @@ choice4text:
 
 # WebSockets
 A WebSocket is a [standard protocol](http://tools.ietf.org/html/rfc6455) for 
-two-way communication between servers and clients. The WebSockets protocol does
-not run over HTTP, instead it is a separate implementation on top of 
+two-way data transfer between a client and server. The WebSockets protocol 
+does not run over HTTP, instead it is a separate implementation on top of 
 [TCP](http://en.wikipedia.org/wiki/Transmission_Control_Protocol).
 
 
 ## Why use WebSockets?
-WebSockets allow two-way communication between the client and server. 
-A WebSockets-enabled application allows a web server to push data to a web 
-browser without the browser having to poll for updates via HTTP. Allowing 
-push from the server to the client and vice versa is much more efficient than 
-having the client constantly ask the server "are there any updates?".
+A WebSocket connection allows full-duplex communication between a client 
+and server so that either side can push data to the other through an 
+established connection. The reason why WebSockets, along with the related 
+technologies of 
+[Server-sent Events](http://en.wikipedia.org/wiki/Server-sent_events) (SSE) 
+and 
+[WebRTC data channels](https://tools.ietf.org/html/draft-ietf-rtcweb-data-channel-12), 
+are important is that HTTP is not meant for keeping open a connection for
+the server to frequently push data to a web browser. Previously, most web
+applications would implement long polling via frequent
+Asynchronous JavaScript and XML (AJAX) requests as shown in the below diagram. 
 
-Previous approaches for for keeping a connection alive between client and 
-server over HTTP, such as 
-[Comet](http://en.wikipedia.org/wiki/Comet_(programming), have either used 
-long polling or were not implemented by all browsers.
+<img src="theme/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" />
+
+Server push, as shown in the below diagram, is more efficient and scalable 
+than long polling because the web browser does not have to constantly ask for 
+updates through a stream of AJAX requests.
+
+<img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" />
+
+The WebSockets approach for server pushed updates works well for certain
+categories of web applications such as chat room, which is why that's often
+the example application for a WebSocket library.
+
+Both a JavaScript library on the web browser and a WebSockets 
+implementation on the server are necessary to establish and maintain the
+connection between the client and server. Examples of JavaScript client 
+libraries and WSGI implementations can be found below.
 
 
 ## JavaScript client libraries
@@ -44,13 +62,39 @@ long polling or were not implemented by all browsers.
   client-side WebSockets implementation.
 
 
-## Websockets with Nginx
+## Nginx WebSocket proxying
 Nginx officially supports WebSocket proxying as of 
 [version 1.3](http://nginx.com/blog/websocket-nginx/). However, you have
 to configure the Upgrade and Connection headers to ensure requests are
 passed through Nginx to your WSGI server. It can be tricky to set this up
-the first time. The following resources are helpful for setting up the
-configuration properly.
+the first time. 
+
+Here are the configuration settings I use in my Nginx file as part of my
+WebSockets proxy.
+
+    server {
+
+        # my typical web server configuration goes here
+
+        # this is specific to the WebSockets proxying
+        location /socket.io {
+            proxy_pass http://app_server_wsgiapp/socket.io;
+            proxy_redirect off;
+
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_read_timeout 600;
+        }
+    }
+
+
+The following resources are also helpful for setting up the configuration 
+properly.
 
 * Nginx has [an official page for WebSocket proxying](http://nginx.org/en/docs/http/websocket.html).
 
