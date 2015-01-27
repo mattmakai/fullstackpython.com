@@ -72,6 +72,10 @@ syntax and language semantics first before diving into web development.
   current developers said this book really helped them get over the initial
   framework learning curve.
 
+* The [Django Girls Tutorial](http://tutorial.djangogirls.org/en/index.html)
+  is a great tutorial that doesn't assume any prior knowledge of Python or
+  Django while helping you build your first web application.
+
 * [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-6) 
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.

@@ -24,6 +24,9 @@ the
 
 ## 2015
 ### January
+* Stripped a significant portion of unused Bootstrap boilerplate from the CSS
+  file and minified it. The resulting CSS file is over 100KB less (about
+  25KB down from 130KB) so the site should load faster now.
 * Major update to [WebSockets page](/websockets.html) with new diagrams 
   and better explanations for why server push is useful.
 * New task queue resources.
