@@ -24,6 +24,9 @@ the
 
 ## 2015
 ### January
+* Rewrote the Mailchimp sign up form for the email list so it doesn't have
+  the external JQuery libraries as dependencies. Site should be even faster
+  now.
 * Stripped a significant portion of unused Bootstrap boilerplate from the CSS
   file and minified it. The resulting CSS file is over 100KB less (about
   25KB down from 130KB) so the site should load faster now.
