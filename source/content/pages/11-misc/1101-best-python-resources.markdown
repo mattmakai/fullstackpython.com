@@ -36,7 +36,7 @@ should skip down to the next section for "experienced developers".
 * If you've never programmed before check out the 
   [Getting Started](http://learntocodewith.me/getting-started/) page on 
   [Learn To Code with Me](http://learntocodewith.me/)
-  by [Laurence Bradford](https://twitter.com/SEAdevelopment). She's done an 
+  by [Laurence Bradford](https://twitter.com/lebdev). She's done an 
   incredible job of breaking down the steps beginners should take when 
   they're uncertain about where to begin.
 

@@ -5,12 +5,10 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8">
-      {{ page.content }}
-      {% if page.choice1url %}
-        {% include "chapter-choices.html" %}
-      {% else %}
-        {% include "chapters/" + page.slug + ".html" %}
-      {% endif %}
+          {{ page.content }}
+          {% if page.choice1url %}
+            {% include "chapter-choices.html" %}
+          {% endif %}
       {% include "email-for-book.html" %}
     </div>
     {% include "sidebar.html" %}

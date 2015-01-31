@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-8">
         {% for page in pages|sort(attribute='sort-order') %}
-              {{ page.content }}
+          {{ page.content }}
         {% endfor %}
     </div>
     {% include "sidebar.html" %}

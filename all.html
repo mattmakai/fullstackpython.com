@@ -11,6 +11,10 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .toc-indent {padding-left: 25px;}
+        .toc-more-indent {padding-left: 37px;}
+    </style>
     <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-19910497-7']);
@@ -34,7 +38,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </div>
 </div>        <div class="row">
     <div class="col-md-8">
-                      <h1>Introduction</h1>
+                  <h1>Introduction</h1>
 <p>You're knee deep in learning the <a href="http://www.python.org/">Python</a>
 programming language. The syntax is starting to make sense. The first
 few "<em>ahh-ha</em>!" moments are hitting you as you're learning conditional
@@ -48,7 +52,7 @@ run a production Python web application.</p>
 <p>This guide branches out on topic because your learning needs depend on what
 you're currently trying to do. </p>
 <h3>Let's get started. What do you need to do right now?</h3>
-                      <h1>Web frameworks</h1>
+                  <h1>Web frameworks</h1>
 <p>A web framework is a code library that makes a developer's life easier when 
 building reliable, scalable and maintainable web applications.</p>
 <h2>Why are web frameworks necessary?</h2>
@@ -141,7 +145,7 @@ Build the first simple iteration of your web application then go to
 the <a href="/deployment.html">deployment</a> section to make it accessible on the 
 web.</p>
 <h3>Which web framework do you want to learn about?</h3>
-                      <h1>Django</h1>
+                  <h1>Django</h1>
 <p><a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
@@ -494,7 +498,7 @@ Django web applications.</p>
 Move on to the <a href="/deployment.html">deployment section</a> to get your Django 
 project on the web.</p>
 <h3>What do you need to learn next for your Django app?</h3>
-                      <h1>Flask</h1>
+                  <h1>Flask</h1>
 <p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
 <a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
 <a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.png" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram" /></a></p>
@@ -736,7 +740,7 @@ Flask tutorial plus open source example applications found below. </p>
 Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
 Flask project on the web.</p>
 <h3>What do you need to learn about web frameworks next?</h3>
-                      <h1>Bottle</h1>
+                  <h1>Bottle</h1>
 <p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
 <a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
 web framework with no external dependencies except for the standard library
@@ -791,7 +795,7 @@ tutorial plus reading open source example applications found below. </p>
 Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
 Bottle application on the web.</p>
 <h3>What do you need to learn next?</h3>
-                      <h2>Morepath</h2>
+                  <h2>Morepath</h2>
 <p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
 framework with a model-driven approach to creating web applications and web
 APIs.</p>
@@ -823,7 +827,7 @@ assumption that templates will drive the user interface.</p>
 </li>
 </ul>
 <h3>Do you want to learn more about frameworks or web APIs?</h3>
-                      <h1>Other Web Frameworks</h1>
+                  <h1>Other Web Frameworks</h1>
 <p>Python has a significant number of web frameworks outside the usual Django,
 Flask and Bottle suspects.</p>
 <h2>Pyramid</h2>
@@ -885,7 +889,7 @@ more tutorials and resources for <a href="/django.html">Django</a> and
 <a href="/flask.html">Flask</a> on the web. My recommendation is to start with one of
 those two frameworks then expand your knowledge from there.</p>
 <h3>What do you need to learn next?</h3>
-                      <h1>Deployment</h1>
+                  <h1>Deployment</h1>
 <p>Deployment involves packaging up your web application and putting it in a 
 production environment that can run the app.</p>
 <h2>Why is deployment necessary?</h2>
@@ -957,7 +961,7 @@ Read about servers, <a href="/operating-systems.html">operating systems</a>,
 a broad picture of what components need to be set up to run a Python web 
 application.</p>
 <h3>How would you like to deploy your web app?</h3>
-                      <h1>Servers</h1>
+                  <h1>Servers</h1>
 <p>Servers are the physical infrastructure to run all the layers of software
 so your web application can respond to requests from clients such as web 
 browsers.</p>
@@ -1092,7 +1096,7 @@ awaiting your instructions.</p>
 Move to the <a href="/operating-systems.html">operating systems</a> section to learn 
 how to load Ubuntu 14.04 LTS as a base OS for Python web applications.</p>
 <h3>Keep going with setting up a server or try a PaaS?</h3>
-                      <h1>Platform-as-a-service</h1>
+                  <h1>Platform-as-a-service</h1>
 <p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
 a PaaS removes the need to know as much about the underlying servers, 
@@ -1204,7 +1208,7 @@ handles this deployment step for you.</p>
 <p><i class="fa fa-check-square-o"></i>
 Check if the application's functionality is working and tweak as necessary.</p>
 <h3>Do you want to use a PaaS or deploy to a traditional server?</h3>
-                      <h1>Operating Systems</h1>
+                  <h1>Operating Systems</h1>
 <p>An operating system runs on the server or virtual server and controls access 
 to computing resources. The operating system also includes a way to install
 programs necessary for running your Python web application.</p>
@@ -1307,7 +1311,7 @@ distribution you've selected.</p>
 Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
 next step in the deployment process.</p>
 <h3>What topic do you need to learn to keep going?</h3>
-                      <h1>Web servers</h1>
+                  <h1>Web servers</h1>
 <p>Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
 requests from clients and send back a response containing a status code and
@@ -1417,7 +1421,7 @@ and images.</p>
 Once you set up the <a href="/wsgi-servers.html">WSGI server</a> you'll need to configure
 the web server as a pass through for dynamic content.</p>
 <h3>What do you want to learn after the web server is set up?</h3>
-                      <h1>WSGI Servers</h1>
+                  <h1>WSGI Servers</h1>
 <p>A <a href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. </p>
@@ -1641,7 +1645,7 @@ Test that the WSGI server responds to local requests but not direct requests
 outside your infrastructure. The web server should be the pass through for
 requests to and responses from the WSGI server.</p>
 <h3>What's next after your Python code is running?</h3>
-                      <h1>Source control</h1>
+                  <h1>Source control</h1>
 <p>Source control, also known as <em>version control</em>, stores software code files
 with a detailed history of every modification made to those files.</p>
 <h2>Why is source control necessary?</h2>
@@ -1795,7 +1799,7 @@ kick off deployments when code is modified by using webhooks or polling on
 the repository. Third, ensure you can roll back to a previous version if a 
 code deployment goes wrong.</p>
 <h3>Now that your source code is versioned, what's next?</h3>
-                      <h1>Application Dependencies</h1>
+                  <h1>Application Dependencies</h1>
 <p>Application dependencies are the libraries other than your project code
 that are required to create and run your application. </p>
 <h2>Why are application dependencies important?</h2>
@@ -1941,7 +1945,7 @@ command.</p>
 Check that your application runs properly with the fresh virtualenv and only
 the installed dependencies from the requirements.txt file.</p>
 <h3>What do you need to learn after installing your app dependencies?</h3>
-                      <h1>Databases</h1>
+                  <h1>Databases</h1>
 <p>A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. </p>
 <h2>Why are databases necessary?</h2>
@@ -2161,7 +2165,7 @@ Sync the ORM models with the PostgreSQL instance.</p>
 Start creating, reading, updating and deleting data in the database from your 
 web application.</p>
 <h3>What's next to get your app running?</h3>
-                      <h1>NoSQL Data Stores</h1>
+                  <h1>NoSQL Data Stores</h1>
 <p>Relational databases store the vast majority of web application 
 persistent data. However, there are several alternative classifications of 
 storage representations.</p>
@@ -2335,7 +2339,7 @@ be persistent must still be backed up to disk on a regular basis.</p>
 Evaluate other use cases such as storing transient logs in document-oriented
 data stores such as MongoDB.</p>
 <h3>What's next?</h3>
-                      <h1>Web Design</h1>
+                  <h1>Web Design</h1>
 <p>Web design is the creation of a web application's style and user interaction
 using CSS and JavaScript.</p>
 <h2>Why is web design important?</h2>
@@ -2377,7 +2381,7 @@ width.</p>
   that will show you how to build a simple rendering engine.</p>
 </li>
 </ul>
-                      <h1>Cascading Style Sheets (CSS)</h1>
+                  <h1>Cascading Style Sheets (CSS)</h1>
 <p>Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.</p>
 <h2>Why is CSS necessary?</h2>
@@ -2521,7 +2525,7 @@ so you get comfortable with how to use the framework.</p>
 Apply the framework to your web application and tweak the design until you
 have something that looks much better than generic HTML.</p>
 <h3>Once your app is styled what do you need to learn next?</h3>
-                      <h1>JavaScript</h1>
+                  <h1>JavaScript</h1>
 <p>JavaScript is a small scripting programming language embedded in web browsers 
 to enable dynamic content and interaction. </p>
 <h2>Why is JavaScript necessary?</h2>
@@ -2608,7 +2612,7 @@ Integrate JavaScript into your web application and check the
 <a href="/static-content.html">static content</a> section for how to host the JavaScript
 files.</p>
 <h3>Do you need to style your app or deploy it next?</h3>
-                      <h1>Continuous Integration</h1>
+                  <h1>Continuous Integration</h1>
 <p>Continuous integration (CI) automates building, testing and deploying 
 applications.</p>
 <h2>Why is continuous integration important?</h2>
@@ -2718,7 +2722,7 @@ relatively simple set up.</p>
 </li>
 </ul>
 <h3>What do you want to add to your application next?</h3>
-                      <h1>Code Metrics</h1>
+                  <h1>Code Metrics</h1>
 <p>Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.</p>
 <h2>Why are code metrics important?</h2>
@@ -2772,7 +2776,7 @@ system are occurring.</p>
 </li>
 </ul>
 <h3>What's next after obtaining code metrics?</h3>
-                      <h1>Configuration Management</h1>
+                  <h1>Configuration Management</h1>
 <p>Configuration management involves modifying servers from an existing state to 
 a desired state and automating how an application is deployed.</p>
 <h2>Configuration management tools</h2>
@@ -2896,7 +2900,7 @@ pay dividends every time you deploy your project.</p>
 <p><i class="fa fa-check-square-o"></i>
 Hook the automated deployment tool into your existing deployment process.</p>
 <h3>What's next after automating your app configuration?</h3>
-                      <h1>Static content</h1>
+                  <h1>Static content</h1>
 <p>Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.</p>
@@ -2960,7 +2964,7 @@ Move static content serving from the www subdomain to a static (or similarly
 named) subdomain so browsers will load static content in parallel to www
 HTTP requests.</p>
 <h3>What's next for building your app?</h3>
-                      <h1>Caching</h1>
+                  <h1>Caching</h1>
 <p>Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. </p>
 <p>For example, instead of retrieving data from database tables that rarely 
@@ -3009,7 +3013,7 @@ on a regular basis and save them in the data store.</p>
 Incorporate a cache invalidation scheme so the precomputed results remain 
 accurate when served up to the user.</p>
 <h3>What do you want to learn now that your app is responding faster?</h3>
-                      <h1>Task queues</h1>
+                  <h1>Task queues</h1>
 <p>Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.</p>
 <h2>Why are task queues necessary?</h2>
@@ -3192,7 +3196,7 @@ Use Celery to invoke the function from step one on a regular basis.</p>
 Have the HTTP request function use the precomputed value instead of the 
 slow running code it originally relied upon.</p>
 <h3>What's next after task queues?</h3>
-                      <h1>Application Programming Interfaces</h1>
+                  <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>
 <h2>Why are APIs important?</h2>
@@ -3267,7 +3271,7 @@ Use a framework to create an API for your own application. </p>
 Expose your web application's API so other applications can consume data you
 want to share.</p>
 <h3>What's next after learning about APIs?</h3>
-                      <h1>API Integration</h1>
+                  <h1>API Integration</h1>
 <p>The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 
@@ -3380,7 +3384,7 @@ the HTTP calls.</p>
 Move your API calls into a <a href="/task-queues.html">task queue</a> so they do not 
 block the HTTP request-response cycle for your web application.</p>
 <h3>What's next after integrating APIs into your app?</h3>
-                      <h1>API Creation</h1>
+                  <h1>API Creation</h1>
 <p>Creating and exposing APIs allows your web application to interact with other
 applications through machine-to-machine communication.</p>
 <h2>API creation frameworks</h2>
@@ -3539,7 +3543,7 @@ and used.</p>
 Figure out other use cases and expand based on what you learned with the 
 initial API use case.</p>
 <h3>What's next after building an API for your web app?</h3>
-                      <h1>Logging</h1>
+                  <h1>Logging</h1>
 <p>Logging saves output such as errors, warnings and event information to 
 files for debugging purposes. </p>
 <h2>Why is logging important?</h2>
@@ -3666,7 +3670,7 @@ Integrate logging for system events you may need to use for debugging purposes
 later. For example, you may want to know the return values on functions when
 they are above a certain threshold. </p>
 <h3>Logging isn't enough. How do I analyze more data about the app?</h3>
-                      <h1>Monitoring</h1>
+                  <h1>Monitoring</h1>
 <p>Monitoring tools capture, analyze and display information for a web 
 application's execution. Every application has issues arise throughout
 all levels of the web stack. Monitoring tools provide transparency so
@@ -3828,7 +3832,7 @@ monitoring projects such as StatsD with Graphite. The combination of those
 two projects will give you fine-grained control over the system metrics 
 you're collecting and visualizing.</p>
 <h3>What topic do you want to learn next?</h3>
-                      <h1>Web analytics</h1>
+                  <h1>Web analytics</h1>
 <p>Web analytics involves collecting, processing, visualizing web data to enable
 critical thinking about how users interact with a web application.</p>
 <h2>Why is web analytics important?</h2>
@@ -3950,7 +3954,7 @@ Continuously reevaluate whether the metrics you've chosen are still the
 appropriate ones defining your application's success. Improve and refine the
 metrics generated by the web analytics as necessary.</p>
 <h3>What's the next topic you want to learn about?</h3>
-                      <h1>Web Application Security</h1>
+                  <h1>Web Application Security</h1>
 <p>Website security must be thought about while building every level of the web 
 stack. However, this section includes topics that deserve particular
 treatment, such as cross-site scripting (XSS), SQL injection, cross-site 
@@ -4086,7 +4090,7 @@ Recognize that no system is ever totally secure. However, the more popular
 an application becomes the more attractive a target it is to attackers.
 Reevaluate your web application security on a frequent basis.</p>
 <h3>What topic do you want to learn about next?</h3>
-                      <h1>Best Python Resources</h1>
+                  <h1>Best Python Resources</h1>
 <p>The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. </p>
@@ -4103,7 +4107,7 @@ should skip down to the next section for "experienced developers".</p>
 <p>If you've never programmed before check out the 
   <a href="http://learntocodewith.me/getting-started/">Getting Started</a> page on 
   <a href="http://learntocodewith.me/">Learn To Code with Me</a>
-  by <a href="https://twitter.com/SEAdevelopment">Laurence Bradford</a>. She's done an 
+  by <a href="https://twitter.com/lebdev">Laurence Bradford</a>. She's done an 
   incredible job of breaking down the steps beginners should take when 
   they're uncertain about where to begin.</p>
 </li>
@@ -4276,7 +4280,7 @@ should skip down to the next section for "experienced developers".</p>
 </li>
 </ul>
 <h3>Those resources should help get you started. What's next?</h3>
-                      <h1>Development Environments</h1>
+                  <h1>Development Environments</h1>
 <p>A development environment is a combination of a text editor and the Python
 interpreter. The text editor allows you to write the code. The interpreter
 provides a way to execute the code you've written. A text editor can be
@@ -4398,7 +4402,7 @@ up your application.</p>
   adding more advanced commands on top.</p>
 </li>
 </ul>
-                      <h1>About the Author</h1>
+                  <h1>About the Author</h1>
 <p>This website was coded and written by
 <a href="http://www.mattmakai.com/">Matt Makai</a> 
 (<a href="http://twitter.com/mattmakai">@mattmakai</a>), currently a 
@@ -4417,7 +4421,7 @@ or <a href="https://github.com/makaimc">GitHub at makaimc</a>.</p>
 through a pull request on
 <a href="https://github.com/makaimc/fullstackpython.github.com/">GitHub</a>.</p>
 <h3>Where to now?</h3>
-                      <h1>Change Log</h1>
+                  <h1>Change Log</h1>
 <p>This is a running list of the major changes to Full Stack Python since its
 inception in December 2012. Another way to view the modifications is through
 the 
@@ -4668,7 +4672,7 @@ the
   other areas.</li>
 </ul>
 <p>That's the whole history of Full Stack Python. What do you want to learn now?</p>
-                      <h1>Future Directions</h1>
+                  <h1>Future Directions</h1>
 <p>Full Stack Python has completely blown away my expectations for what I could
 accomplish with a side project. I really appreciate all the in-person feedback,
 emails and pull requests I've received from the community.</p>
@@ -4700,7 +4704,7 @@ intended. Here are some thing to watch out for:</p>
 from the community. I work to integrate PRs within a day or two so please 
 submit one when you see a fix or improvement that needs to be made!</p>
 <h3>That's what coming. What would you like to learn right now?</h3>
-                      <h1>What "full stack" means</h1>
+                  <h1>What "full stack" means</h1>
 <p>The terms "full stack" and "Full Stack Python" are ambiguous but I am using
 a specific definition here on this site. These term can be defined for a 
 web stack either to mean</p>
@@ -4728,7 +4732,7 @@ to keep up with our ever evolving ecosystem. I created Full Stack Python to
 be just one of <a href="/best-python-resources.html">many resources</a> that help Python 
 developers build and maintain their programming skills.</p>
 <h3>What to do now that we've got "full stack" defined?</h3>
-                      <h1>Why Use Python?</h1>
+                  <h1>Why Use Python?</h1>
 <p>Python's expansive library of open source data analysis tools, 
 <a href="/web-frameworks.html">web frameworks</a>, 
 and testing instruments make its ecosystem one of the largest out of any 
@@ -4831,7 +4835,7 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
 </li>
 </ul>
 <h2>What else would you like to know about Python?</h2>
-                      <h1>WebSockets</h1>
+                  <h1>WebSockets</h1>
 <p>A WebSocket is a <a href="http://tools.ietf.org/html/rfc6455">standard protocol</a> for 
 two-way data transfer between a client and server. The WebSockets protocol 
 does not run over HTTP, instead it is a separate implementation on top of 
@@ -4990,7 +4994,7 @@ properly.</p>
 </li>
 </ul>
 <h3>What's next for your web application after setting up WebSockets?</h3>
-                      <h1>Docker</h1>
+                  <h1>Docker</h1>
 <p>Docker is an <a href="https://github.com/docker/docker">open source</a> 
 infrastructure management platform for running and deploying software. The
 Docker platform is constantly evolving so an exact definition is currently
@@ -5042,7 +5046,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</
 <h3>What do you want to learn next about deployment?</h3>
             </div>
     <div class="col-md-offset-1 col-md-3" id="sidebar">
-  <div class="panel panel-success">
+    <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">Full Stack Python</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a> is an open book that explains
@@ -5051,23 +5055,21 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</
           <hr/>
                     Check out the 
           <a href="/table-of-contents.html">table of contents</a> if you're
-          searching for a particular topic.
+          searching for a particular subject.
                     <hr/>
-          Need more detailed tutorials and walkthroughs than what is
-          presented here? 
+          Need more detailed tutorials and walkthroughs than you see here?
           <a href="/email.html">Sign up for an email alert when that content is created.</a>
           <hr/>
           <a href="http://twitter.com/mattmakai">Matt Makai</a> built
-          this site with assistance from community pull requests. On GitHub 
-          you can <a href="https://github.com/makaimc">follow Matt</a>
-          to see the daily changes.
+          this site with greatly appreciated assistance from community 
+          <a href="https://github.com/makaimc/fullstackpython.github.com/pulls">pull requests</a>.
       </div>
   </div>
-  </div></div>
+</div></div>
         <hr/>
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
-            2014
+            2015
         </div>
     </div>
     <link href="theme/css/f.min.css" rel="stylesheet">

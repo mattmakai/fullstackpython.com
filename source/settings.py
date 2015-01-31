@@ -13,7 +13,7 @@ DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email', 'all')
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
-BYLINE = '&copy; 2014 Matt Makai. All Rights Reserved.'
+BYLINE = '&copy; 2015 Matt Makai. All Rights Reserved.'
 LINKS = ()
 
 MARKUP = ('rst', 'markdown',)

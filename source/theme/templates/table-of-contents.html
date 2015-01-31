@@ -4,65 +4,196 @@
 <div class="row">
     <div class="col-md-5">
       <h1>Table of Contents</h1>
+      <p>
+        Every topic below with a link currently has a page on Full Stack 
+        Python. If there isn't a link I'm working on getting a page for that
+        topic up.
+      </p>
       <div class="list-group">
-        {% for p in pages|sort(attribute='sort-order') %}
-            {% if p.slug == 'introduction' %}
-                <h3>1. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
-            {% elif p.slug == 'web-frameworks' %}
-                <h3>2. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
-            {% elif p.slug == 'deployment' %}
-                <h3>3. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
-            {% elif p.slug == 'databases' %}
-                <h3>4. Databases</h3>
-                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">Relational {{ p.title }}</a>
-              <br>
-            {% elif p.slug == 'databases' %}
-                <h3>4. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
-            {% elif p.slug == 'web-design' %}
-                <h3>5. <a href="/{{ p.slug }}.html">{{ p.title }}</a></h3>
-            {% elif p.slug == 'continuous-integration' %}
-              <h3>6. Automation</h3>
-              <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
-              <br>
-            {% elif p.slug == 'static-content' %}
-              <h3>7. Performance</h3>
-              <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
-              <br>
-            {% elif p.slug == 'application-programming-interfaces' %}
-                <h3>8. APIs</h3>
-                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
-              <br>
-            {% elif p.slug == 'logging' %}
-                <h3>9. Monitoring & Analytics</h3>
-                <span style="padding-left: 25px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
-              <br>
-            {% elif p.slug == 'web-application-security' %}
-                <h3>10. Security</h3>
-                <span style="padding-left: 37px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
-                {% set greater_indent = true %}
-              <br>
-            {% elif p.slug == 'best-python-resources' %}
-                <h3>11. Miscellaneous</h3>
-                <span style="padding-left: 37px;"> </span><a href="/{{ p.slug }}.html">{{ p.title }}</a>
-              <br>
-            {% else %}
-              {% if not greater_indent %}
-                <span style="padding-left: 25px;"> </span>
-              {% else %}
-                <span style="padding-left: 37px;"> </span>
-              {% endif %}
-              <a href="/{{ p.slug }}.html">{{ p.title }}</a>
-              <br>
-            {% endif %}
-        {% endfor %}
-      </div>
+            <h3>1. 
+                <a href="/introduction.html">Introduction</a>
+            </h3>
+
+
+            <h3>2. Learning Python</h3>
+            <div class="toc-indent">
+                <a href="/why-use-python.html">Why Use Python?</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/development-environments.html">Development Environments</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/best-python-resources.html">The Best Python Resources</a>
+            </div>
+
+            <div class="toc-indent">
+                The Standard Library (stdlib)
+            </div>
+
+            <!--
+            <div class="toc-indent">
+                List Comprehensions
+            </div>
+            
+            <div class="toc-indent">
+                Generators
+            </div>
+            
+            <div class="toc-indent">
+                Docstrings
+            </div>
+            -->
+
+
+            <h3>3. Web Development</h3>
+            <div class="toc-indent">
+                <a href="/web-frameworks.html">Web Frameworks</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/django.html">Django</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/flask.html">Flask</a>
+            </div>
+            <div class="toc-indent">
+                Pyramid
+            </div>
+            <div class="toc-indent">
+                <a href="/bottle.html">Bottle</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/morepath.html">Morepath</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/other-web-frameworks.html">Other web frameworks</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/web-design.html">Web design</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/cascading-style-sheets.html">Cascading Style Sheets (CSS)</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/javascript.html">JavaScript</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/websockets.html">WebSockets</a>
+            </div>
+
+
+            <h3>4. <a href="/deployment.html">Web App Deployment</a></h3>
+            <div class="toc-indent">
+                <a href="/servers.html">Servers</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/platform-as-a-service.html">Platform-as-a-Service</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/operating-systems.html">Operating systems</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/web-servers.html">Web servers</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/wsgi-servers.html">WSGI servers</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/source-control.html">Source control</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/application-dependencies.html">Application dependencies</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/static-content.html">Static content</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/caching.html">Caching</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/task-queues.html">Task queues</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/configuration-management.html">Configuration management</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/continuous-integration.html">Continuous integration</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/docker.html">Docker</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/logging.html">Logging</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/monitoring.html">Monitoring</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/web-analytics.html">Web Analytics</a>
+            </div>
+
+
+            <h3>5. Data Persistence</h3>
+            <div class="toc-indent">
+                <a href="/databases.html">Relational databases</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/no-sql-datastore.html">NoSQL</a>
+            </div>
+
+            <h3>6. 
+                <a href="/application-programming-interfaces.html">Web APIs</a>
+            </h3>
+            <div class="toc-indent">
+                <a href="/api-integration.html">API integration</a>
+            </div>
+            <div class="toc-indent">
+                <a href="/api-creation.html">API creation</a>
+            </div>
+
+
+            <h3>6. Testing</h3>
+            <div class="toc-indent">
+                <a href="/code-metrics.html">Code metrics</a>
+            </div>
+            <div class="toc-indent">
+                Unit testing
+            </div>
+            <div class="toc-indent">
+                Integration testing
+            </div>
+            <div class="toc-indent">
+                User interface testing
+            </div>
+
+
+            <h3>7. Security</h3>
+            <div class="toc-indent">
+                <a href="/web-application-security.html">Web application security</a>
+            </div>
+
+
+            <h3>8. Meta</h3>
+            <div class="toc-more-indent">
+                <a href="/what-full-stack-means.html">What "full stack" means</a>
+            </div>
+            <div class="toc-more-indent">
+                <a href="/about-author.html">About the author</a>
+            </div>
+            <div class="toc-more-indent">
+                <a href="/change-log.html">Change log</a>
+            </div>
+            <div class="toc-more-indent">
+                <a href="/future-directions.html">Future directions</a>
+            </div>
+
+        </div>
     </div>
     <div class="col-md-3">
       <p>
       <h1>Map</h1>
       In addition to the table of content, there's also a work-in-progress 
       <a href="/full-stack-python-map.pdf">subjects map (.pdf)</a> 
-      that visually lays out each chapter.
+      that visually lays out web app deployment concepts.
       </p>
     </div>
     {% include "sidebar.html" %}

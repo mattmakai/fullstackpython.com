@@ -1,4 +1,16 @@
 <div class="col-md-offset-1 col-md-3" id="sidebar">
+  {% if page %}
+  <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Table of Contents</a></h3>
+      </div>
+      <div class="list-group">
+          {% for p in pages|sort(attribute='sort-order') %}
+              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+          {% endfor %}
+      </div>
+  </div>
+  {% endif %}
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
       <div class="panel-body">
@@ -9,7 +21,7 @@
           {% if not page %}
           Check out the 
           <a href="/table-of-contents.html">table of contents</a> if you're
-          searching for a particular topic.
+          searching for a particular subject.
           {% else %}
           There's a work-in-progress 
           <a href="/full-stack-python-map.pdf">subjects map (.pdf)</a> 
@@ -17,26 +29,12 @@
           contents found below.
           {% endif %}
           <hr/>
-          Need more detailed tutorials and walkthroughs than what is
-          presented here? 
+          Need more detailed tutorials and walkthroughs than you see here?
           <a href="/email.html">Sign up for an email alert when that content is created.</a>
           <hr/>
           <a href="http://twitter.com/mattmakai">Matt Makai</a> built
-          this site with assistance from community pull requests. On GitHub 
-          you can <a href="https://github.com/makaimc">follow Matt</a>
-          to see the daily changes.
+          this site with greatly appreciated assistance from community 
+          <a href="https://github.com/makaimc/fullstackpython.github.com/pulls">pull requests</a>.
       </div>
   </div>
-  {% if page %}
-  <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-head">Table of Contents</h3>
-      </div>
-      <div class="list-group">
-          {% for p in pages|sort(attribute='sort-order') %}
-              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
-          {% endfor %}
-      </div>
-  </div>
-  {% endif %}
 </div>
