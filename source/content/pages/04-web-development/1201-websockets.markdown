@@ -44,14 +44,39 @@ of AJAX requests.
 
 <img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" />
 
-The WebSockets approach for server pushed updates works well for certain
-categories of web applications such as chat room, which is why that's often
-the example application for a WebSocket library.
+While the above diagram shows a server pushing data to the client, WebSockets
+is a full-duplex connection so the client can also push data to the server
+as shown in the diagram below.
 
-Both a JavaScript library on the web browser and a WebSockets 
-implementation on the server are necessary to establish and maintain the
-connection between the client and server. Examples of JavaScript client 
-libraries and WSGI implementations can be found below.
+<img src="theme/img/websockets-flow-with-client-push.png" width="100%" alt="WebSockets also allow client push in addition to server pushed updates." class="technical-diagram" />
+
+The WebSockets approach for server- and client-pushed updates works well for 
+certain categories of web applications such as chat room, which is why that's 
+often an example application for a WebSocket library.
+
+
+## Implementing WebSockets
+Both the web browser and the server must implement the WebSockets protocol
+to establish and maintain the connection. There are important implications for 
+servers since WebSockets connections are long lived, unlike typical HTTP 
+connections. 
+
+A multi-threaded or multi-process based server cannot scale appropriately for
+WebSockets because it is designed to open a connection, handle a request as 
+quickly as possible and then close the connection. An asynchronous server such 
+as [Tornado](http://www.tornadoweb.org/en/stable/) or 
+[Green Unicorn](http://gunicorn.org/) monkey patched with 
+[gevent](http://www.gevent.org/) is necessary for any practical WebSockets 
+server-side implementation.
+
+On the client side, it is not necessary to use a JavaScript library for 
+WebSockets. Web browsers that implement WebSockets will expose all necessary
+client-side functionality through the WebSockets object. However, a JavaScript 
+wrapper library can make a developer's life easier by implementing graceful 
+degradation (often falling back to long-polling when WebSockets are 
+not supported) and by providing a wrapper around browser-specific WebSocket 
+quirks. Examples of JavaScript client libraries and WSGI implementations 
+are found below.
 
 
 ## JavaScript client libraries
@@ -80,22 +105,22 @@ WebSockets proxy.
 
     server {
 
-        # my typical web server configuration goes here
+      # typical web server configuration goes here
 
-        # this section is specific to the WebSockets proxying
-        location /socket.io {
-            proxy_pass http://app_server_wsgiapp/socket.io;
-            proxy_redirect off;
+      # this section is specific to the WebSockets proxying
+      location /socket.io {
+        proxy_pass http://app_server_wsgiapp/socket.io;
+        proxy_redirect off;
 
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "upgrade";
-            proxy_read_timeout 600;
-        }
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 600;
+      }
     }
 
 

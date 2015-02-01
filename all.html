@@ -4857,13 +4857,33 @@ Asynchronous JavaScript and XML (AJAX) requests as shown in the below diagram. <
 web browser does not have to constantly ask for updates through a stream 
 of AJAX requests.</p>
 <p><img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" /></p>
-<p>The WebSockets approach for server pushed updates works well for certain
-categories of web applications such as chat room, which is why that's often
-the example application for a WebSocket library.</p>
-<p>Both a JavaScript library on the web browser and a WebSockets 
-implementation on the server are necessary to establish and maintain the
-connection between the client and server. Examples of JavaScript client 
-libraries and WSGI implementations can be found below.</p>
+<p>While the above diagram shows a server pushing data to the client, WebSockets
+is a full-duplex connection so the client can also push data to the server
+as shown in the diagram below.</p>
+<p><img src="theme/img/websockets-flow-with-client-push.png" width="100%" alt="WebSockets also allow client push in addition to server pushed updates." class="technical-diagram" /></p>
+<p>The WebSockets approach for server- and client-pushed updates works well for 
+certain categories of web applications such as chat room, which is why that's 
+often an example application for a WebSocket library.</p>
+<h2>Implementing WebSockets</h2>
+<p>Both the web browser and the server must implement the WebSockets protocol
+to establish and maintain the connection. There are important implications for 
+servers since WebSockets connections are long lived, unlike typical HTTP 
+connections. </p>
+<p>A multi-threaded or multi-process based server cannot scale appropriately for
+WebSockets because it is designed to open a connection, handle a request as 
+quickly as possible and then close the connection. An asynchronous server such 
+as <a href="http://www.tornadoweb.org/en/stable/">Tornado</a> or 
+<a href="http://gunicorn.org/">Green Unicorn</a> monkey patched with 
+<a href="http://www.gevent.org/">gevent</a> is necessary for any practical WebSockets 
+server-side implementation.</p>
+<p>On the client side, it is not necessary to use a JavaScript library for 
+WebSockets. Web browsers that implement WebSockets will expose all necessary
+client-side functionality through the WebSockets object. However, a JavaScript 
+wrapper library can make a developer's life easier by implementing graceful 
+degradation (often falling back to long-polling when WebSockets are 
+not supported) and by providing a wrapper around browser-specific WebSocket 
+quirks. Examples of JavaScript client libraries and WSGI implementations 
+are found below.</p>
 <h2>JavaScript client libraries</h2>
 <ul>
 <li>
@@ -4891,22 +4911,22 @@ WebSockets proxy.</p>
 
 <span class="n">server</span> <span class="p">{</span>
 
-    <span class="err">#</span> <span class="n">my</span> <span class="n">typical</span> <span class="n">web</span> <span class="n">server</span> <span class="n">configuration</span> <span class="n">goes</span> <span class="n">here</span>
+  <span class="err">#</span> <span class="n">typical</span> <span class="n">web</span> <span class="n">server</span> <span class="n">configuration</span> <span class="n">goes</span> <span class="n">here</span>
 
-    <span class="err">#</span> <span class="n">this</span> <span class="n">section</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
-    <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="p">.</span><span class="n">io</span> <span class="p">{</span>
-        <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_wsgiapp/socket.io;</span>
-        <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
+  <span class="err">#</span> <span class="n">this</span> <span class="n">section</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
+  <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="p">.</span><span class="n">io</span> <span class="p">{</span>
+    <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_wsgiapp/socket.io;</span>
+    <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
 
-        <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
 
-        <span class="n">proxy_http_version</span> <span class="mf">1.1</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">Upgrade</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s">&quot;upgrade&quot;</span><span class="p">;</span>
-        <span class="n">proxy_read_timeout</span> <span class="mi">600</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="n">proxy_http_version</span> <span class="mf">1.1</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">Upgrade</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s">&quot;upgrade&quot;</span><span class="p">;</span>
+    <span class="n">proxy_read_timeout</span> <span class="mi">600</span><span class="p">;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
