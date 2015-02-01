@@ -32,7 +32,7 @@ email at matthew.makai@gmail.com,
 or on [GitHub at makaimc](https://github.com/makaimc).
 
 Read my thoughts on the "full stack" trend in a 
-[post I wrote for O'Reilly Programming](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
+[post I wrote for O'Reilly Radar](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
 
 Typos, inaccurate statements or general areas for improvement can be handled
 through an issue ticket or pull request on
