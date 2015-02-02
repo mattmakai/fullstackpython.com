@@ -135,6 +135,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/vim.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/web-analytics.html</loc>
     <priority>1.0</priority>
   </url>

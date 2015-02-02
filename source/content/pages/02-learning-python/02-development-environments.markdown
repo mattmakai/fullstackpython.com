@@ -118,8 +118,4 @@ up your application.
   shows you how to be more efficient and productive with that IDE if it's
   your choice for writing Python code.
 
-* [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
-  is a wonderful tutorial that follows the path I took when learning Vim:
-  learn just enough to survive with it as your day-to-day editor then begin 
-  adding more advanced commands on top.
 

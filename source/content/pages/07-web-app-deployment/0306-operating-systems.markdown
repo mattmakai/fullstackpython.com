@@ -106,6 +106,10 @@ provides a command-line interface for interacting with the RPM system.
 * Digital Ocean has a detailed 
   [walkthrough for setting up Python web applications on Ubuntu](https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications).
 
+* [linux-internals](http://0xax.gitbooks.io/linux-insides/content/index.html) is
+  a series of posts about how Linux works under the covers, starting from the
+  low level booting process.
+
 
 ## Operating systems learning checklist
 <i class="fa fa-check-square-o"></i>
