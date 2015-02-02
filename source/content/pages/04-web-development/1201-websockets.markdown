@@ -71,12 +71,14 @@ server-side implementation.
 
 On the client side, it is not necessary to use a JavaScript library for 
 WebSockets. Web browsers that implement WebSockets will expose all necessary
-client-side functionality through the WebSockets object. However, a JavaScript 
-wrapper library can make a developer's life easier by implementing graceful 
-degradation (often falling back to long-polling when WebSockets are 
-not supported) and by providing a wrapper around browser-specific WebSocket 
-quirks. Examples of JavaScript client libraries and WSGI implementations 
-are found below.
+client-side functionality through the 
+[WebSockets object](http://www.w3.org/TR/2011/WD-websockets-20110419/). 
+
+However, a JavaScript wrapper library can make a developer's life easier by 
+implementing graceful degradation (often falling back to long-polling when 
+WebSockets are not supported) and by providing a wrapper around 
+browser-specific WebSocket quirks. Examples of JavaScript client libraries 
+and WSGI implementations are found below.
 
 
 ## JavaScript client libraries
