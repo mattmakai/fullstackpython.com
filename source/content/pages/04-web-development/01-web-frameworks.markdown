@@ -60,7 +60,7 @@ including everything in the framework with tight integration.
 ## General web framework resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
   by [Jeff Knupp](https://twitter.com/jeffknupp)
-  is an in-depth explanation of what a web framework is and their relation
+  is an in-depth explanation of what web frameworks are and their relation
   to web servers.
 
 * Check out the answer to the 

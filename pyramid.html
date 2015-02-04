@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Web Analytics - Full Stack Python</title>
+    <title>Pyramid - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -35,159 +35,45 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Web analytics</h1>
-<p>Web analytics involves collecting, processing, visualizing web data to enable
-critical thinking about how users interact with a web application.</p>
-<h2>Why is web analytics important?</h2>
-<p>User clients, especially web browsers, generate significant data while users
-read and interact with webpages. The data provides insight into 
-how visitors use the site and why they stay or leave. The key concept to
-analytics is <em>learning</em> about your users so you can improve your web 
-application to better suit their needs. </p>
-<h2>Web analytics concepts</h2>
-<p>It's easy to get overwhelmed at both the number of analytics services and
-the numerous types of data points collected. Focus on just a handful of
-metrics when you're just starting out. As your application scales and you 
-understand more about your users add additional analytics services 
-to gain further insight into their behavior with advanced visualizations such
-as heatmaps and action funnels. The
-<a href="http://spenczar.com/posts/2013/Sep/07/seven-stages-analytics-grief/">seven stages of startup analytics grief</a> 
-post is an amusing read and provides context for how to begin and then grow 
-tracked metrics over time.</p>
-<h3>User funnels</h3>
-<p>If your application is
-selling a product or service you can ultimately build a 
-<a href="http://moz.com/blog/building-your-marketing-funnel-with-google-analytics">user funnel</a> (often called "sales funnel" prior to a user becoming a customer)
-to better understand why people buy or don't buy what you're selling. With
-a funnel you can visualize drop-off points where visitors leave your 
-application before taking some action, such as purchasing your service.</p>
-<h2>Open source web analytics projects</h2>
+          <h1>Pyramid</h1>
+<p><a href="http://www.pylonsproject.org/projects/pyramid/about">Pyramid</a> is an open 
+source <a href="/wsgi-servers.html">WSGI</a> web framework based on the 
+Model-View-Controller (MVC) architectural pattern.</p>
+<h2>Pyramid resources</h2>
 <ul>
 <li>
-<p><a href="http://piwik.org/">Piwik</a> is a web analytics platform you can host yourself.
-  Piwik is a solid choice if you cannot use Google Analytics or want to 
-  customize your own web analytics platform.</p>
+<p>The <a href="http://docs.pylonsproject.org/projects/pyramid-tutorials/en/latest/">Pyramid tutorials page</a>
+  is a good place to start getting your hands dirty with example projects.</p>
 </li>
 <li>
-<p><a href="http://www.openwebanalytics.com/">Open Web Analytics</a> is another 
-  self-hosted platform that integrates through a JavaScript snippet that
-  tracks users' interactions with the webpage.</p>
+<p>Six Feet Up explains why Pyramid is their choice for 
+  <a href="http://www.sixfeetup.com/blog/pyramid-for-rapid-development-projects">rapid development projects</a>
+  in that blog post.</p>
 </li>
 </ul>
-<h2>Hosted web analytics services</h2>
-<ul>
-<li>
-<p><a href="http://www.google.com/analytics/">Google Analytics</a> is a widely used
-  free analytics tool for website traffic.</p>
-</li>
-<li>
-<p><a href="http://clicky.com/">Clicky</a> provides real-time analytics comparable to
-  Google Analytics' real-time dashboard.</p>
-</li>
-<li>
-<p><a href="https://mixpanel.com/">MixPanel</a>'s analytics platform focuses on mobile
-  and sales funnel metrics. A developer builds what data points need to be
-  collected into the server side or client side code. MixPanel captures that
-  data and provides metrics and visualizations based on the data.</p>
-</li>
-<li>
-<p><a href="https://www.kissmetrics.com/">KISSmetrics</a>' analytics provides context
-  for who is visiting a website and what actions they are taking while on
-  the site.</p>
-</li>
-<li>
-<p><a href="https://heapanalytics.com/">Heap</a> is a recently founded analytics service
-  with a free introductory tier to get started.</p>
-</li>
-<li>
-<p><a href="http://www.crazyegg.com/">CrazyEgg</a> is tool for understanding a
-  user's focus while using a website based on heatmaps generated from mouse 
-  movements. </p>
-</li>
-</ul>
-<h2>Web analytics resources</h2>
-<ul>
-<li>
-<p><a href="http://blog.arkency.com/2012/12/google-analytics-for-developers/">Google Analytics for Developers</a>  </p>
-</li>
-<li>
-<p><a href="http://blog.yhathq.com/posts/pandas-google-analytics.html">Pandas and Google Analytics</a>
-  shows how to use pandas for data analysis with Google Analytics' API to
-  perform calculations not available in the tool itself.</p>
-</li>
-<li>
-<p><a href="http://blog.zoomeranalytics.com/google-analytics/">Build your own Google Analytics Dashboard in Excel</a>
-  show how to extract your Google Analytics data via their web API and Python
-  helper library so it can be used in other tools such as Excel.</p>
-</li>
-<li>
-<p>This beginner's guide to 
-  <a href="http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/">math and stats behind web analytics</a>
-  provides some context for understanding and reasoning about web traffic. </p>
-</li>
-<li>
-<p>This post provides context for determining if a given metric is
-  <a href="http://fizzle.co/sparkline/vanity-vs-actionable-metrics">"vanity" or actionable</a>.</p>
-</li>
-<li>
-<p>Read this post on <a href="http://www.bayesianwitch.com/blog/2013/howyouranalyticswork.html">how your analytics software actually works</a>
-  to get a better understanding of what's going on behind the scenes from
-  a technical perspective.</p>
-</li>
-<li>
-<p><a href="http://substantial.com/blog/2014/04/03/heap-analytics-vs-mixpanel/">Heap vs MixPanel</a>
-  compares the two analytics services.</p>
-</li>
-</ul>
-<h2>Web analytics learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Add Google Analytics or Piwik to your application. Both are free and while 
-Piwik is not as powerful as Google Analytics you can self-host the application
-which is the only option in many environments.</p>
-<p><i class="fa fa-check-square-o"></i>
-Think critically about the factors that will make your application successful.
-These factors will vary based on whether it's an internal enterprise app, 
-an e-commerce site or an information-based application.</p>
-<p><i class="fa fa-check-square-o"></i>
-Add metrics generated from your web traffic based on the factors that drive
-your application's success. You can add these metrics with either some custom
-code or with a hosted web analytics service.</p>
-<p><i class="fa fa-check-square-o"></i>
-Continuously reevaluate whether the metrics you've chosen are still the 
-appropriate ones defining your application's success. Improve and refine the
-metrics generated by the web analytics as necessary.</p>
-<h3>What's the next topic you want to learn about?</h3>
                           <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
+            <a href="/django.html" class="btn btn-success btn-full"><i class="fa fa-terminal fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                What should I know about web application security?
+                Tell me more about the Django framework.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-inverse fa-2x"></i></a>
+            <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                How do I integrate external APIs into my web application?
+                My user interface looks terrible. How do I style my web app?
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/configuration-management.html" class="btn btn-success btn-full"><i class="fa fa-gears fa-2x"></i></a>
+            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                I want to learn how to automate setting up my app.
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/task-queues.html" class="btn btn-success btn-full"><i class="fa fa-tasks fa-2x"></i></a>
-            <p class="under-btn">
-                How do I run code outside the HTTP request-response cycle?
+                I'd like to go back to reviewing other web frameworks.
             </p>
         </div>
     </div>
@@ -232,7 +118,7 @@ metrics generated by the web analytics as necessary.</p>
                         <a href="/application-dependencies.html" class="list-group-item smaller-item ">Application Dependencies</a>
                         <a href="/databases.html" class="list-group-item smaller-item ">Databases</a>
                         <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
-                        <a href="/pyramid.html" class="list-group-item smaller-item ">Pyramid</a>
+                        <a href="/pyramid.html" class="list-group-item smaller-item active">Pyramid</a>
                         <a href="/web-design.html" class="list-group-item smaller-item ">Web Design</a>
                         <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
                         <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
@@ -247,7 +133,7 @@ metrics generated by the web analytics as necessary.</p>
                         <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
                         <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
                         <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
-                        <a href="/web-analytics.html" class="list-group-item smaller-item active">Web Analytics</a>
+                        <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
                         <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
                         <a href="/development-environments.html" class="list-group-item smaller-item ">Development Environments</a>
@@ -261,7 +147,7 @@ metrics generated by the web analytics as necessary.</p>
                 </div>
   </div>
     <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Web Analytics</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Pyramid</h3></div>
       <div class="panel-body">
                     Need more detailed tutorials and walkthroughs than you see here?
           <a href="/email.html">Sign up for an email alert when that content is created.</a>
