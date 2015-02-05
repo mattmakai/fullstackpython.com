@@ -192,5 +192,10 @@ properly.
   [specific WebSockets guide](https://devcenter.heroku.com/articles/python-websockets)
   for getting your Python application up and running.
 
+* The 
+  [Reddit thread for this page](http://www.reddit.com/r/Python/comments/2ujqd7/an_overview_of_using_websockets_in_python/)
+  has some interesting comments on what's missing from the above content that
+  I'm working to address.
+
 
 ### What's next for your web application after setting up WebSockets?

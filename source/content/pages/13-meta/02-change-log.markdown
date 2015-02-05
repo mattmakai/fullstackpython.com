@@ -23,10 +23,14 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2015
-### January
+### February
+* Reorganized content pages to make for better logical groupings as I add new
+  content.
 * Major improvements to [Websockets](/websockets.html) page after suggestions
   from 
   [issue #47 on GitHub repository](https://github.com/makaimc/fullstackpython.github.com/issues/47).
+
+### January
 * Rewrote the Mailchimp sign up form for the email list so it doesn't have
   the external JQuery libraries as dependencies. Site should be even faster
   now.
