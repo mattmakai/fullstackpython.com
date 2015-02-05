@@ -38,6 +38,9 @@ the editor becomes predictable.
   learn just enough to survive with it as your day-to-day editor then begin 
   adding more advanced commands on top.
 
+* [A vim Tutorial and Primer](https://danielmiessler.com/study/vim/) is an
+  incredibly deep study in how to go from beginner to knowledgeable in Vim.
+
 * [Vim as Your IDE](http://haridas.in/vim-as-your-ide.html) discusses how to
   set up Vim for greater productivity once you learn the initial Vim language 
   for using the editor.
