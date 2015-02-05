@@ -1,7 +1,7 @@
 title: Logging
 category: page
 slug: logging
-sort-order: 0901
+sort-order: 0714
 choice1url: /monitoring.html
 choice1icon: fa-bar-chart-o fa-inverse
 choice1text: How can I monitor my live app with tools other than just logs?

@@ -1,7 +1,7 @@
 title: Web Design
 category: page
 slug: web-design
-sort-order: 0501
+sort-order: 0410
 choice1url: /cascading-style-sheets.html
 choice1icon: fa-css3
 choice1text: How do I implement the design with CSS?

@@ -1,7 +1,7 @@
 title: Code Metrics
 category: page
 slug: code-metrics
-sort-order: 0603
+sort-order: 0805
 choice1url: /continuous-integration.html
 choice1icon: fa-refresh
 choice1text: How can I continuously evaluate my code with these metrics?

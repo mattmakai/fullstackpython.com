@@ -1,7 +1,7 @@
 title: Platform-as-a-service
 category: page
 slug: platform-as-a-service
-sort-order: 0305
+sort-order: 0704
 choice1url: /wsgi-servers.html
 choice1icon: fa-play fa-inverse
 choice1text: What WSGI server should I use to run Python code?

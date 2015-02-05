@@ -1,7 +1,7 @@
 title: Servers
 category: page
 slug: servers
-sort-order: 0302
+sort-order: 0702
 choice1url: /operating-systems.html
 choice1icon: fa-linux fa-inverse
 choice1text: What operating system should I use once the server is set up?

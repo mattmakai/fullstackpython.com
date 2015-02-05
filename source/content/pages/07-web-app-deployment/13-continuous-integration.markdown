@@ -1,7 +1,7 @@
 title: Continuous Integration
 category: page
 slug: continuous-integration
-sort-order: 0602
+sort-order: 0713
 choice1url: /logging.html
 choice1icon: fa-align-left fa-inverse
 choice1text: How do I log events that happen in my app while it is running?

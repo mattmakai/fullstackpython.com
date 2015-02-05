@@ -1,7 +1,7 @@
 title: Django
 category: page
 slug: django
-sort-order: 0202
+sort-order: 0402
 choice1url: /cascading-style-sheets.html
 choice1icon: fa-css3 fa-inverse
 choice1text: My user interface looks terrible. How do I style a web application?

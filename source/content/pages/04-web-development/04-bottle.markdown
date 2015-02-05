@@ -1,7 +1,7 @@
 title: Bottle
 category: page
 slug: bottle
-sort-order: 0204
+sort-order: 0404
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
 choice1text: How do I deploy my Bottle app once I've built the initial concept?

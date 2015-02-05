@@ -1,7 +1,7 @@
 title: API Integration
 category: page
 slug: api-integration
-sort-order: 0802
+sort-order: 0602
 choice1url: /api-creation.html
 choice1icon: fa-cubes
 choice1text: How do I create an API for my own web application?

@@ -1,7 +1,7 @@
 title: Deployment
 category: page
 slug: deployment
-sort-order: 0301
+sort-order: 0701
 choice1url: /servers.html
 choice1icon: fa-sort-amount-asc fa-inverse
 choice1text: Show me options for bare metal, virtualized servers, and infrastructure-as-a-service.

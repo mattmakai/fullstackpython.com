@@ -1,7 +1,7 @@
 title: About the Author
 category: page
 slug: about-author
-sort-order: 1103
+sort-order: 1404
 choice1url: /introduction.html
 choice1icon: fa-fast-backward fa-inverse
 choice1text: Let me start over from the Full Stack Python introduction.

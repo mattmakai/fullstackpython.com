@@ -1,7 +1,7 @@
 title: Monitoring
 category: page
 slug: monitoring
-sort-order: 0902
+sort-order: 0715
 choice1url: /web-analytics.html
 choice1icon: fa-dashboard
 choice1text: How do I learn more about the users of my app with web analytics?

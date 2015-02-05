@@ -1,7 +1,7 @@
 title: Flask
 category: page
 slug: flask
-sort-order: 0203
+sort-order: 0403
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
 choice1text: How do I deploy Flask web application when it's ready to go live?

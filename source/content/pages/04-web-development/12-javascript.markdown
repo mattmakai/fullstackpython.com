@@ -1,7 +1,7 @@
 title: JavaScript
 category: page
 slug: javascript
-sort-order: 052
+sort-order: 0412
 choice1url: /cascading-style-sheets.html
 choice1icon: fa-css3 fa-inverse
 choice1text: How do I style my web application's user interface?

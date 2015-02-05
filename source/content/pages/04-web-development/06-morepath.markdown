@@ -1,7 +1,7 @@
 title: Morepath
 category: page
 slug: morepath
-sort-order: 0206
+sort-order: 0406
 choice1url: /web-frameworks.html
 choice1icon: fa-code
 choice1text: Show me more about web frameworks in general.

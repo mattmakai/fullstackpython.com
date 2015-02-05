@@ -1,7 +1,7 @@
 title: Change Log
 category: page
 slug: change-log
-sort-order: 1104
+sort-order: 1302
 choice1url: /introduction.html
 choice1icon: fa-fast-backward fa-inverse
 choice1text: Let me start over from the Full Stack Python introduction.

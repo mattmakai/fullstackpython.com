@@ -1,7 +1,7 @@
 title: Caching
 category: page
 slug: caching
-sort-order: 0702
+sort-order: 0718
 choice1url: /task-queues.html
 choice1icon: fa-tasks
 choice1text: How do I run Python outside the HTTP request-response cycle?

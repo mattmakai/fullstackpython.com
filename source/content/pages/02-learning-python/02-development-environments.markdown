@@ -1,7 +1,7 @@
 title: Development Environments
 category: page
 slug: development-environments
-sort-order: 1102
+sort-order: 0202
 choice1url: /introduction.html
 choice1icon: fa-fast-backward fa-inverse
 choice1text: Let me start over from the Full Stack Python introduction.

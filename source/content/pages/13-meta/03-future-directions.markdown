@@ -1,7 +1,7 @@
 title: Future Directions
 category: page
 slug: future-directions
-sort-order: 1105
+sort-order: 1303
 choice1url: /introduction.html
 choice1icon: fa-fast-backward fa-inverse
 choice1text: Let me start over from the Full Stack Python intro.

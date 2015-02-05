@@ -1,7 +1,7 @@
 title: WebSockets
 category: page
 slug: websockets
-sort-order: 1201
+sort-order: 0413
 choice1url: /wsgi-servers.html
 choice1icon: fa-play fa-inverse
 choice1text: How do I execute Python since the web server doesn't do that?

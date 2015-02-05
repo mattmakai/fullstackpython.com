@@ -1,7 +1,7 @@
 title: Best Python Resources
 category: page
 slug: best-python-resources
-sort-order: 1101
+sort-order: 0204
 choice1url: /web-frameworks.html
 choice1icon: fa-code fa-inverse
 choice1text: I'm ready to learn how to code an application with a web framework.

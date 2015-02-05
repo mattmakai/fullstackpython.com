@@ -1,7 +1,7 @@
 title: Web Servers
 category: page
 slug: web-servers
-sort-order: 0307
+sort-order: 0706
 choice1url: /wsgi-servers.html
 choice1icon: fa-play fa-inverse
 choice1text: How do I execute Python since the web server doesn't do that?

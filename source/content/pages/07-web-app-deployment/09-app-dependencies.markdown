@@ -1,7 +1,7 @@
 title: Application Dependencies
 category: page
 slug: application-dependencies
-sort-order: 0310
+sort-order: 0709
 choice1url: /wsgi-servers.html
 choice1icon: fa-play fa-inverse
 choice1text: How do I set up a WSGI server to execute Python code?

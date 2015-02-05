@@ -1,7 +1,7 @@
 title: API Creation
 category: page
 slug: api-creation
-sort-order: 0803
+sort-order: 0603
 choice1url: /application-programming-interfaces.html
 choice1icon: fa-exchange
 choice1text: What are application programming interfaces?

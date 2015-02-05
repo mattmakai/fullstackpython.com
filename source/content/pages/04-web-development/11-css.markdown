@@ -1,7 +1,7 @@
 title: Cascading Style Sheets
 category: page
 slug: cascading-style-sheets
-sort-order: 0502
+sort-order: 0411
 choice1url: /javascript.html
 choice1icon: fa-html5 fa-inverse
 choice1text: How do I create dynamic browser interaction with JavaScript?

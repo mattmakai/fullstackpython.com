@@ -1,7 +1,7 @@
 title: Task Queues
 category: page
 slug: task-queues
-sort-order: 0703
+sort-order: 0711
 choice1url: /logging.html
 choice1icon: fa-align-left fa-inverse
 choice1text: How do I monitor my app and its task queues with logging?

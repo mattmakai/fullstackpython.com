@@ -1,7 +1,7 @@
 title: NoSQL Data Stores
 category: page
 slug: no-sql-datastore
-sort-order: 0402
+sort-order: 0502
 choice1url: /databases.html
 choice1icon: fa-hdd-o
 choice1text: Tell me more about standard relational databases.

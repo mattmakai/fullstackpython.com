@@ -1,7 +1,7 @@
 title: Docker
 category: page
 slug: docker
-sort-order: 1202
+sort-order: 0717
 choice1url: /deployment.html
 choice1icon: fa-share
 choice1text: How do I deploy a Python application without a container?

@@ -1,7 +1,7 @@
 title: WSGI Servers
 category: page
 slug: wsgi-servers
-sort-order: 0308
+sort-order: 0707
 choice1url: /databases.html
 choice1icon: fa-hdd-o
 choice1text: How do I store persistent data for my Python web app?

@@ -1,7 +1,7 @@
 title: Configuration Management
 category: page
 slug: configuration-management
-sort-order: 061
+sort-order: 0712
 choice1url: /continuous-integration.html
 choice1icon: fa-refresh
 choice1text: How do I regularly integrate my project's codebase?

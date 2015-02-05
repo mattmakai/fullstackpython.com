@@ -1,7 +1,7 @@
 title: Web Analytics
 category: page
 slug: web-analytics
-sort-order: 0903
+sort-order: 0716
 choice1url: /web-application-security.html
 choice1icon: fa-lock fa-inverse
 choice1text: What should I know about web application security?
