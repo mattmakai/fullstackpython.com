@@ -49,5 +49,10 @@ the editor becomes predictable.
   explains the language syntax and how you can build up over time to master
   the editor.
 
+* In [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/) the
+  author explains his on-again off-again relationship with using Vim. He then
+  shows how he configures and uses the editor so it sticks as his primary
+  code editting tool.
+
 
 ### What do you want to learn about Python development?

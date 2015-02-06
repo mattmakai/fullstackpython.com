@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### February
+* Added a [Vim](/vim.html) page and resources for learning Vim as a Python
+  code editor.
 * Reorganized content pages to make for better logical groupings as I add new
   content.
 * Major improvements to [Websockets](/websockets.html) page after suggestions
