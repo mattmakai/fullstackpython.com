@@ -157,6 +157,10 @@ when scaling out a large deployment of distributed task queues.
   He gives an overview of Celery followed by specific code to set up the task
   queue and integrate it with Flask.
 
+* [3 Gotchas for Working with Celery](http://wiredcraft.com/posts/2015/02/04/3-gotchas-for-celery.html)
+  are things to keep in mind when you're new to the Celery task queue 
+  implementation.
+
 
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 
