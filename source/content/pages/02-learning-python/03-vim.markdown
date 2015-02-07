@@ -33,6 +33,9 @@ the editor becomes predictable.
 
 
 ## General Vim resources
+* [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
+  game that helps you learn Vim commands by playing through the adventure.
+
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
   is a wonderful tutorial that follows the path I took when learning Vim:
   learn just enough to survive with it as your day-to-day editor then begin 
@@ -44,6 +47,9 @@ the editor becomes predictable.
 * [Vim as Your IDE](http://haridas.in/vim-as-your-ide.html) discusses how to
   set up Vim for greater productivity once you learn the initial Vim language 
   for using the editor.
+
+* [Setting up Vim for Python](http://stackoverflow.com/questions/9172802/setting-up-vim-for-python)
+  has a well written answer on Stack Overflow for getting started with Vim.
 
 * [Vim as a Language](http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/)
   explains the language syntax and how you can build up over time to master
