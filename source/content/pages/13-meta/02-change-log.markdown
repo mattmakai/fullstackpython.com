@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### February
+* New [Pyramid](/pyramid.html) resources. I definitely need to flesh that page
+  out further.
 * Added a [Vim](/vim.html) page and resources for learning Vim as a Python
   code editor.
 * Reorganized content pages to make for better logical groupings as I add new

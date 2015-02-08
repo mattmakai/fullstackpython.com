@@ -29,3 +29,8 @@ Model-View-Controller (MVC) architectural pattern.
 * Six Feet Up explains why Pyramid is their choice for 
   [rapid development projects](http://www.sixfeetup.com/blog/pyramid-for-rapid-development-projects)
   in that blog post.
+
+* [Pyramid is awesome for beginners](http://ruslanspivak.com/2012/02/05/pyramid-is-awesome-for-beginners/)
+  shows a simple "hello world" app for Pyramid and explains the framework
+  isn't necessarily as complex as people believe it is.
+
