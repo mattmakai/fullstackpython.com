@@ -14,3 +14,9 @@
     {% include "sidebar.html" %}
 </div>
 {% endblock %}
+
+{% block js %}
+{% if page.title == 'Django' %}
+{% include "crazyegg.html" %}
+{% endif %}
+{% endblock %}
