@@ -132,6 +132,15 @@ equivalent of browser testing in the web application world.
 * [Some REST Best Practices](https://bourgeois.me/rest/) is a high level
   summary of rules to follow while creating your API.
 
+* Hacker News had a discussion on 
+  [what's the best way to write an API spec?](https://news.ycombinator.com/item?id=8912897)
+  that provides a few different viewpoints on this topic.
+
+* [Apigee's Web API Design ebook](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+  is free and contains a wealth of practical advice for what design
+  decisions to make for your web API.
+
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>

@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### February
+* Updated several out of date resources and added a new 
+  [logging](/logging.html) resource.
 * New [Pyramid](/pyramid.html) resources. I definitely need to flesh that page
   out further.
 * Added a [Vim](/vim.html) page and resources for learning Vim as a Python

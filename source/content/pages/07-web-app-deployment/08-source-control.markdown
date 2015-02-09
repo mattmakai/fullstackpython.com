@@ -90,7 +90,7 @@ control services are:
   [Rainforest](https://www.rainforestqa.com/).
 
 * This lighthearted guide to the 
-  [ten astonishments in version control history](http://www.flourish.org/blog/?p=397) 
+  [ten astonishments in version control history](http://www.flourish.org/2011/12/astonishments-ten-in-the-history-of-version-control/) 
   is a fun way to learn how systems developed over the past several decades.
 
 * [A visual guide to version control](http://betterexplained.com/articles/a-visual-guide-to-version-control/) 

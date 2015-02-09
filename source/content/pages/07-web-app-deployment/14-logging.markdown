@@ -120,6 +120,10 @@ certain threshold.
   in a project's settings.py file. Caktus Group also has a nice tutorial on
   [central logging with graypy and Graylog2](http://www.caktusgroup.com/blog/2013/09/18/central-logging-django-graylog2-and-graypy/).
 
+* [Django Logging Configuration: How the Default Settings Interfere with Yours](http://www.caktusgroup.com/blog/2015/01/27/Django-Logging-Configuration-logging_config-default-settings-logger/)
+  explains a problem with the default Django logging configuration and what
+  to do about in your project.
+
 
 ## Logging learning checklist
 <i class="fa fa-check-square-o"></i>
