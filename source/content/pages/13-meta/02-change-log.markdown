@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### February
+* Updated [table of contents](/table-of-contents.html) with new layout that'll
+  allow me to expand on core Python language topics.
 * Updated several out of date resources and added a new 
   [logging](/logging.html) resource.
 * New [Pyramid](/pyramid.html) resources. I definitely need to flesh that page

@@ -61,7 +61,7 @@ management and application deployment tool built in Python.
   is a fantastically detailed introduction to using Ansible to set up
   servers.
 
-* [Ansible Weekly Newsletter](http://devopsu.com/newsletters/ansible-weekly-newsletter.html)
+* [Briefs on Ansible Newsletter](http://devopsu.com/newsletters/ansible-weekly-newsletter.html)
 
 * [Python for Configuration Management with Ansible slides](http://www.insom.me.uk/post/pycon-talk.html) 
 from PyCon UK 2013
