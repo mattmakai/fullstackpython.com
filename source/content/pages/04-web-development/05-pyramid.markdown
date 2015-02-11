@@ -21,6 +21,8 @@ choice4text:
 source [WSGI](/wsgi-servers.html) web framework based on the 
 Model-View-Controller (MVC) architectural pattern.
 
+<a href="http://www.pylonsproject.org/" style="border: none;"><img src="theme/img/pyramid-logo.jpg" style="border-radius: 5px;" width="100%" alt="Pyramid web framework logo." class="technical-diagram" /></a>
+
 
 ## Pyramid resources
 * The [Pyramid tutorials page](http://docs.pylonsproject.org/projects/pyramid-tutorials/en/latest/)
