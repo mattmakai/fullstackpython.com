@@ -1,0 +1,41 @@
+title: Generators
+category: page
+slug: generators
+sort-order: 0301
+choice1url: /best-python-resources.html
+choice1icon: fa-book fa-inverse
+choice1text: What other resources should I use to learn Python? 
+choice2url: /development-environments.html
+choice2icon: fa-desktop
+choice2text: What editor should I use to program with Python?
+choice3url: /introduction.html
+choice3icon: fa-fast-backward fa-inverse
+choice3text: Let me start over from the Full Stack Python introduction.
+choice4url:
+choice4icon:
+choice4text:
+
+
+# Generators
+Generators are a Python core language construct that allow a function's return
+value to to behave as an iterator. A generator can allow more efficient 
+memory usage by allocating and allocating during the context of a large
+number of iterations. Generators are defined in 
+[PEP255](https://www.python.org/dev/peps/pep-0255/) and included in the
+language as of Python 2.2 in 2001.
+
+
+## Python generator resources
+* [An introduction to Python generators](http://intermediatepythonista.com/python-generators)
+  by Intermediate Pythonista is a well done post with code examples.
+
+* This blog post entitled 
+  [Python Generators](http://rdrewd.blogspot.com/2014/02/python-generators.html)
+  specifically focuses on generating dictionaries. It provides a good 
+  introduction for those new to Python.
+
+* [Python 201: An Intro to Generators](http://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
+  is another short but informative read with example generators code.
+
+
+### What's next after learning about generators?
