@@ -24,6 +24,8 @@ the
 
 ## 2015
 ### February
+* Added a [generators](/generators.html) page that's mostly a stub that I will
+  be building out to explain this core language feature.
 * Updated [table of contents](/table-of-contents.html) with new layout that'll
   allow me to expand on core Python language topics.
 * Updated several out of date resources and added a new 
