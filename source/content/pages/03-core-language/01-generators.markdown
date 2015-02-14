@@ -37,5 +37,9 @@ language as of Python 2.2 in 2001.
 * [Python 201: An Intro to Generators](http://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
   is another short but informative read with example generators code.
 
+* [Iterators & Generators](http://anandology.com/python-practice-book/iterators.html)
+  provides code examples for these two constructs and some simple explanations
+  for each..
+
 
 ### What's next after learning about generators?
