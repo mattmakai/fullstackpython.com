@@ -22,8 +22,11 @@ inception in December 2012. Another way to view the modifications is through
 the 
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
+
 ## 2015
 ### February
+* Updated the [Vim](/vim.html) page with a Vimrc configuration file 
+  explanation along with Vimrc resources.
 * Added a [generators](/generators.html) page that's mostly a stub that I will
   be building out to explain this core language feature.
 * Updated [table of contents](/table-of-contents.html) with new layout that'll

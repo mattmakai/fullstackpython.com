@@ -279,6 +279,35 @@ your thoughts can flow into code. </p>
 editor she may feel like it is impossible to understand all the key commands.
 However, the commands stack together in a logical way so that over time
 the editor becomes predictable.</p>
+<h2>Configuring Vim with a Vimrc</h2>
+<p>The Vimrc file is used to configure the Vim editor. A Vimrc file can range
+from nothing in it to very complicated with hundreds or thousands of lines
+of configuration commands.</p>
+<p>Here's a simple example .vimrc file I use for Python development to get a feel
+for some of the configuration statements:</p>
+<div class="codehilite"><pre><span class="cp"># enable syntax highlighting</span>
+<span class="n">syntax</span> <span class="n">on</span>
+
+<span class="cp"># the next 4 lines set tabs to have 4 spaces, autoindent when already</span>
+<span class="cp"># working with indented lines, expand tabs key presses to spaces and</span>
+<span class="cp"># move lines 4 spaces each time the &gt;&gt; or &lt;&lt; commands are used</span>
+<span class="n">set</span> <span class="n">ts</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">set</span> <span class="n">autoindent</span>
+<span class="n">set</span> <span class="n">expandtab</span>
+<span class="n">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span>
+
+<span class="cp"># enable all Python syntax highlighting features</span>
+<span class="n">let</span> <span class="n">python_highlight_all</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+<p>The Vimrc file lives under the home directory of the user account running
+Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
+file is found at <code>/Users/matt/.vimrc</code>. On Ubuntu Linux my Vimrc file
+can be found within <code>/home/matt/.vimrc</code>. </p>
+<p>If the Vimrc file does not already exist, just create it within the user's
+home directory and it will be picked up by Vim the next time you start the
+program.</p>
 <h2>General Vim resources</h2>
 <ul>
 <li>
@@ -314,6 +343,18 @@ the editor becomes predictable.</p>
   author explains his on-again off-again relationship with using Vim. He then
   shows how he configures and uses the editor so it sticks as his primary
   code editting tool.</p>
+</li>
+</ul>
+<h2>Vimrc resources</h2>
+<ul>
+<li>
+<p><a href="http://dougblack.io/words/a-good-vimrc.html">A Good Vimrc</a> is a fantastic,
+  detailed overview and opinionated guide to configuring Vim. Highly 
+  recommended for new and experienced Vim users.</p>
+</li>
+<li>
+<p><a href="https://justin.abrah.ms/vim/vim_and_python.html">Vim and Python</a> shows
+  and explains many Python-specific .vimrc options.</p>
 </li>
 </ul>
 <h3>What do you want to learn about Python development?</h3>
@@ -4894,6 +4935,8 @@ the
 <h2>2015</h2>
 <h3>February</h3>
 <ul>
+<li>Updated the <a href="/vim.html">Vim</a> page with a Vimrc configuration file 
+  explanation along with Vimrc resources.</li>
 <li>Added a <a href="/generators.html">generators</a> page that's mostly a stub that I will
   be building out to explain this core language feature.</li>
 <li>Updated <a href="/table-of-contents.html">table of contents</a> with new layout that'll

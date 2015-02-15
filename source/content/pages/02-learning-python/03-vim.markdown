@@ -32,6 +32,39 @@ However, the commands stack together in a logical way so that over time
 the editor becomes predictable.
 
 
+## Configuring Vim with a Vimrc
+The Vimrc file is used to configure the Vim editor. A Vimrc file can range
+from nothing in it to very complicated with hundreds or thousands of lines
+of configuration commands.
+
+Here's a simple example .vimrc file I use for Python development to get a feel
+for some of the configuration statements:
+
+    # enable syntax highlighting
+    syntax on
+
+    # the next 4 lines set tabs to have 4 spaces, autoindent when already
+    # working with indented lines, expand tabs key presses to spaces and
+    # move lines 4 spaces each time the >> or << commands are used
+    set ts=4
+    set autoindent
+    set expandtab
+    set shiftwidth=4
+
+    # enable all Python syntax highlighting features
+    let python_highlight_all = 1
+
+
+The Vimrc file lives under the home directory of the user account running
+Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
+file is found at ``/Users/matt/.vimrc``. On Ubuntu Linux my Vimrc file
+can be found within ``/home/matt/.vimrc``. 
+
+If the Vimrc file does not already exist, just create it within the user's
+home directory and it will be picked up by Vim the next time you start the
+program.
+
+
 ## General Vim resources
 * [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
   game that helps you learn Vim commands by playing through the adventure.
@@ -59,6 +92,14 @@ the editor becomes predictable.
   author explains his on-again off-again relationship with using Vim. He then
   shows how he configures and uses the editor so it sticks as his primary
   code editting tool.
+
+## Vimrc resources
+* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
+  detailed overview and opinionated guide to configuring Vim. Highly 
+  recommended for new and experienced Vim users.
+
+* [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
+  and explains many Python-specific .vimrc options.
 
 
 ### What do you want to learn about Python development?
