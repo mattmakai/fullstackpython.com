@@ -35,8 +35,8 @@ should skip down to the next section for "experienced developers".
 
 * To get an introduction to Python, Django and Flask at the same time, 
   consider purchasing the 
-  [Real Python](http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page) course by Fletcher, Michael and 
-  Jeremy.
+  <a href="http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page" onclick="trackOutboundLink('http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page'); return false;">Real Python</a> 
+  course by Fletcher, Michael and Jeremy.
 
 * If you've never programmed before check out the 
   [Getting Started](http://learntocodewith.me/getting-started/) page on 
