@@ -33,8 +33,10 @@ If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
 should skip down to the next section for "experienced developers".
 
-* To get an introduction to Python, Django and Flask at the same time, purchase
-  [Real Python](http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page) by Fletcher, Michael, and Jeremy.
+* To get an introduction to Python, Django and Flask at the same time, 
+  consider purchasing the 
+  [Real Python](http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page) course by Fletcher, Michael and 
+  Jeremy.
 
 * If you've never programmed before check out the 
   [Getting Started](http://learntocodewith.me/getting-started/) page on 
