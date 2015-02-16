@@ -7,7 +7,7 @@
       </div>
       <div class="list-group">
           {% for p in pages|sort(attribute='sort-order') %}
-              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}">{{ p.title }}</a>
+              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}" style='font-family: "Helvetica Neue",sans-serif;'>{{ p.title }}</a>
           {% endfor %}
       </div>
   </div>

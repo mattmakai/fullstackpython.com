@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block meta_header %}{% if page.meta %}
+    <meta name="description" content="{{ page.meta }}">
+{% endif %}{% endblock %}
+
 {% block title %}{{ page.title }} - {% endblock %}
 
 {% block content %}

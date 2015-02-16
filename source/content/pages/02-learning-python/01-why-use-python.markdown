@@ -2,6 +2,7 @@ title: Why Use Python?
 category: page
 slug: why-use-python
 sort-order: 0201
+meta: Learn why you should use Python the accessible yet powerfulprogramming language.
 choice1url: /introduction.html
 choice1icon: fa-fast-backward fa-inverse
 choice1text: Let me start over from the Full Stack Python introduction.
@@ -28,6 +29,14 @@ availability of
 language is also widely taught in universities and used for working with 
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).
+
+<!--
+<div class="deep-well">
+If you're learning Python you should also make sure to read about 
+<a href="/best-python-resoureces.html">the best Python resources</a> and
+<a href="/what-full-stack-means.html">what "full stack" means</a>.
+</div>
+-->
 
 
 ## Python's programming language popularity
