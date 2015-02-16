@@ -2,6 +2,7 @@ title: Flask
 category: page
 slug: flask
 sort-order: 0403
+meta: Flask is a Python web framework built with a small core and easy-to-extend philosophy. Learn more about Flask on Full Stack Python. 
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
 choice1text: How do I deploy Flask web application when it's ready to go live?
