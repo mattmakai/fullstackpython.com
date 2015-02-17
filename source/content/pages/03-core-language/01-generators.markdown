@@ -41,5 +41,9 @@ language as of Python 2.2 in 2001.
   provides code examples for these two constructs and some simple explanations
   for each..
 
+* The question to [Understanding Generators in Python?](http://stackoverflow.com/questions/1756096/understanding-generators-in-python)
+  on Stack Overflow has an impressive answer that clearly lays out the
+  code and concepts involved with Python generators.
+
 
 ### What's next after learning about generators?
