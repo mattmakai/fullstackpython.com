@@ -30,13 +30,12 @@ language is also widely taught in universities and used for working with
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).
 
-<!--
-<div class="deep-well">
-If you're learning Python you should also make sure to read about 
-<a href="/best-python-resoureces.html">the best Python resources</a> and
+<div class="well">
+If you're learning Python you should also take a look at
+<a href="/best-python-resources.html">the best Python resources</a> and
+read
 <a href="/what-full-stack-means.html">what "full stack" means</a>.
 </div>
--->
 
 
 ## Python's programming language popularity
