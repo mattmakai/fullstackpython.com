@@ -2,6 +2,7 @@ title: Best Python Resources
 category: page
 slug: best-python-resources
 sort-order: 0204
+meta: Get recommendations for dozens of great programming tutorials on Full Stack Python's Best Python Resources page.
 choice1url: /web-frameworks.html
 choice1icon: fa-code fa-inverse
 choice1text: I'm ready to learn how to code an application with a web framework.
@@ -35,7 +36,7 @@ should skip down to the next section for "experienced developers".
 
 * To get an introduction to Python, Django and Flask at the same time, 
   consider purchasing the 
-  <a href="http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page" onclick="trackOutboundLink('http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page'); return false;">Real Python</a> 
+  <a href="https://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page" onclick="trackOutboundLink('http://www.realpython.com/?utm_source=fullstackpython&utm_medium=referral&utm_campaign=best_resources_page'); return false;">Real Python</a> 
   course by Fletcher, Michael and Jeremy.
 
 * If you've never programmed before check out the 
