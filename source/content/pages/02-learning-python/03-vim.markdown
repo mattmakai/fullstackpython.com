@@ -2,6 +2,7 @@ title: Vim
 category: page
 slug: vim
 sort-order: 0203
+meta: Vim is a text editor with powerful string manipulation capabilities often used for software development. Learn more about Vim on Full Stack Python.
 choice1url: /development-environments.html
 choice1icon: fa-desktop
 choice1text: What other editors and development environments exist?
