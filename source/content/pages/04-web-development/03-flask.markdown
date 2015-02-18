@@ -23,6 +23,13 @@ choice4text: How can I version and store my source code so I don't lose it?
 <a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.png" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram" /></a>
 
 
+<div class="well" style="margin-top: 20px;">
+If you're learning about Flask you should also understand
+<a href="/web-frameworks.html">web frameworks</a> and read
+how to <a href="/deployment.html">deploy web applications</a>.
+</div>
+
+
 ## Why is Flask a good web framework choice?
 Flask is considered more 
 [Pythonic](http://blog.startifact.com/posts/older/what-is-pythonic.html)
