@@ -2,6 +2,7 @@ title: Development Environments
 category: page
 slug: development-environments
 sort-order: 0202
+meta: Text editors and IDEs are critical to productive Python software development. Learn more about development environments on Full Stack Python.
 choice1url: /introduction.html
 choice1icon: fa-fast-backward fa-inverse
 choice1text: Let me start over from the Full Stack Python introduction.

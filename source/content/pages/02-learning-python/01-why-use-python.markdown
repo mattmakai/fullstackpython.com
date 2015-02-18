@@ -30,10 +30,9 @@ language is also widely taught in universities and used for working with
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).
 
-<div class="well">
-If you're learning Python you should also take a look at
-<a href="/best-python-resources.html">the best Python resources</a> and
-read
+<div class="well well-sm">
+If you're learning about why to use Python you should also take a look at
+<a href="/best-python-resources.html">the best Python resources</a> and read
 <a href="/what-full-stack-means.html">what "full stack" means</a>.
 </div>
 
