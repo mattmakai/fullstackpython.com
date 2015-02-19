@@ -20,11 +20,9 @@
 {% endblock %}
 
 {% block js %}
-{% if page.title == 'Django' %}
-{% include "crazyegg.html" %}
-{% endif %}
-{% include "outbound.html" %}
 {% if page.title == 'Flask' %}
+{% include "crazyegg.html" %}
 <div style="display: none;"><img src="https://www.linkedin.com/profile/view?authToken=zRgB&authType=name&id=3952407" /></div>
 {% endif %}
+{% include "outbound.html" %}
 {% endblock %}
