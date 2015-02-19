@@ -25,6 +25,7 @@ the
 
 ## 2015
 ### February
+* New [Django](/django.html) resources.
 * Updated the [Vim](/vim.html) page with a Vimrc configuration file 
   explanation along with Vimrc resources.
 * Added a [generators](/generators.html) page that's mostly a stub that I will

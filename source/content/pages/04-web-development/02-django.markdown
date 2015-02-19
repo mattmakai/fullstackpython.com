@@ -68,6 +68,13 @@ syntax and language semantics first before diving into web development.
 
 
 ## Django tutorials
+* [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
+  focuses on web development using Django and JavaScript. This book uses 
+  the development of a website using the Django web framework as a real
+  world example of how to perform test-driven development (TDD). There is
+  also coverage of NoSQL, websockets and asynchronous responses. The book can
+  be read online for free or purchased in hard copy via O'Reilly.
+
 * [Tango with Django](http://www.tangowithdjango.com/book/) is an extensive 
   set of free introductions to using the most popular Python web framework. Several
   current developers said this book really helped them get over the initial
@@ -83,13 +90,6 @@ syntax and language semantics first before diving into web development.
 
 * [Effective Django](http://effectivedjango.com/) is another free introduction
   to the web framework.
-
-* [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
-  focuses on web development using Django and JavaScript. This book uses 
-  the development of a website using the Django web framework as a real
-  world example of how to perform test-driven development (TDD). There is
-  also coverage of NoSQL, websockets and asynchronous responses. The book can
-  be read online for free or purchased in hard copy via O'Reilly.
 
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
   the latest resources for learning Django and is also a good spot to ask 
@@ -182,9 +182,13 @@ syntax and language semantics first before diving into web development.
   [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
   are now all available to read.
 
-* [Integerating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
+* [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
   is a good post to read for figuring out how to use [Gulp](http://gulpjs.com/)
   for handling front end tools in development and production Django sites.
+
+* [Getting Started with Django Testing](http://howchoo.com/g/mjkwmtu5zdl/getting-started-with-django-testing)
+  will help you stop procrastinating on testing your Django projects if you're
+  uncertain where to begin.
 
 
 ## Django with Angular (Djangular) resources
