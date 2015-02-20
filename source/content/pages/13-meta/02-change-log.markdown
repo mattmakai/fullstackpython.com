@@ -25,6 +25,8 @@ the
 
 ## 2015
 ### February
+* Added new [monitoring](/monitoring.html), [websockets](/websockets.html) and
+  [continuous integration](/continuous-integration.html) resources.
 * New [Django](/django.html) resources.
 * Updated the [Vim](/vim.html) page with a Vimrc configuration file 
   explanation along with Vimrc resources.

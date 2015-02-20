@@ -145,6 +145,11 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
   has some nice data and graphs on what developers and operations folks use
   in their environments.
 
+* Ryan Frantz wrote a nice post on 
+  [Solving Monitoring](http://ryanfrantz.com/posts/solving-monitoring/)
+  with a new definition of what monitoring means based on today's complex
+  systems and how the practice should evolve going forward.
+
 
 ## Monitoring learning checklist
 <i class="fa fa-check-square-o"></i>

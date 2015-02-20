@@ -174,12 +174,21 @@ properly.
   is a good place to find documentation and tools for developing with 
   WebSockets.
 
+* [websocketd](http://websocketd.com/) is a WebSockets server aiming to be
+  the "CGI of WebSockets". Worth a look.
+
 
 ## Python-specific WebSockets resources
 * [Real-time in Python](http://mrjoes.github.io/2013/06/21/python-realtime.html)
   provides Python-specific context for how the server push updates were 
   implemented in the past and how Python's tools have evolved to perform
   server side updates.
+
+* [websockets](https://github.com/aaugustin/websockets) is a WebSockets 
+  implementation for Python 3.3+ written with the 
+  [asyncio](https://docs.python.org/3.4/library/asyncio.html) module (or with 
+  [Tulip](https://code.google.com/p/tulip/) if you're working with 
+  Python 3.3).
 
 * The [Choose Your Own Adventure Presentations](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
   tutorial uses WebSockets via gevent on the server and socketio.js for 

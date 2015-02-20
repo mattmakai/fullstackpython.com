@@ -112,4 +112,10 @@ relatively simple set up.
 * [StackShare's Continuous Integration tag](http://stackshare.io/continuous-integration) 
   lists a slew of hosted CI services roughly ranked by user upvotes.
 
+* [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
+  is a short tutorial showing how to use the official 
+  [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
+  Docker hub.
+
+
 ### What do you want to add to your application next?
