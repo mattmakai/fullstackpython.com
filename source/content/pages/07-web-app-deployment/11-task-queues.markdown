@@ -161,6 +161,10 @@ when scaling out a large deployment of distributed task queues.
   are things to keep in mind when you're new to the Celery task queue 
   implementation.
 
+* [Deferred Tasks and Scheduled Jobs with Celery 3.1, Django 1.7 and Redis](https://godjango.com/63-deferred-tasks-and-scheduled-jobs-with-celery-31-django-17-and-redis/)
+  is a video along with code that shows how to set up Celery with Redis as the
+  broker in a Django application.
+
 
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 
