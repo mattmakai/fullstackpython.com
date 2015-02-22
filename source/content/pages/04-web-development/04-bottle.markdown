@@ -42,13 +42,18 @@ included with Python.
   is a walkthrough of using Bottle, Apache and MongoDB to create a web
   application.
 
-* [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
-  Bottle projects.
+* [Bottle, full stack without Django](http://www.avelino.xxx/2014/12/bottle-full-stack-without-django)
+  does a nice job of connecting SQLAlchemy with Bottle and building an example
+  application using the framework.
 
 
 ## Open source Bottle example projects
 * [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with
   Bottle.
+
+* [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
+  Bottle projects.
+
 
 
 ## Bottle framework learning checklist
