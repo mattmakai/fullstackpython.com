@@ -140,6 +140,9 @@ equivalent of browser testing in the web application world.
   is free and contains a wealth of practical advice for what design
   decisions to make for your web API.
 
+* [1-to-1 Relationships and Subresources in REST APIs](http://developers.lyst.com/2015/02/20/1-to-1-relationships-and-subresources-in-rest-apis/)
+  tells the story of design decisions that were made during an API's creation
+  and why those choices were made.
 
 
 ## API creation learning checklist
