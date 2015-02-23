@@ -2,6 +2,7 @@ title: Other Web Frameworks
 category: page
 slug: other-web-frameworks
 sort-order: 0409
+meta: Python has dozens of web frameworks with differing philosophies. Learn more about lesser known frameworks on Full Stack Python.
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
 choice1text: How do I deploy a web app once I'm done coding?

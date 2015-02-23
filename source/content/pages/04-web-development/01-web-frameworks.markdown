@@ -2,7 +2,7 @@ title: Web Frameworks
 category: page
 slug: web-frameworks
 sort-order: 0401
-meta: Web frameworks are code libraries that help developers solve common web application creation problems. Learn about web frameworks on Full Stack Python.
+meta: Web frameworks are code libraries that help developers solve common web application challenges. Learn more on Full Stack Python.
 choice1url: /django.html
 choice1icon: fa-terminal fa-inverse
 choice1text: Tell me more about the Django framework.

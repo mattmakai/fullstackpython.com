@@ -2,7 +2,7 @@ title: Django
 category: page
 slug: django
 sort-order: 0402
-meta: Django is a widely used Python web framework build with a 'batteries-included' philosophy. Learn more about Django on Full Stack Python.
+meta: Django is a widely used Python web framework with a 'batteries-included' philosophy. Learn more about Django on Full Stack Python.
 choice1url: /cascading-style-sheets.html
 choice1icon: fa-css3 fa-inverse
 choice1text: My user interface looks terrible. How do I style a web application?
