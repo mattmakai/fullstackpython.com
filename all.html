@@ -593,6 +593,60 @@ language as of Python 2.2 in 2001.</p>
 </li>
 </ul>
 <h3>What's next after learning about generators?</h3>
+                  <h1>Comprehensions</h1>
+<p>Comprehensions are a Python language construct for concisely creating data
+in lists, dictionaries and sets. List comprehensions are included in Python 2
+while dictionary and set comprehensions were introduced to the language in
+Python 3.</p>
+<h2>Why are comprehensions important?</h2>
+<p>Comprehensions are a more clear syntax for populating conditional data in the 
+core Python data structures. Creating data without comprehensions often 
+involves nested loops with conditionals that can be difficult for code
+readers to properly evaluate.</p>
+<h2>Example code</h2>
+<p>List comprehension:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">double_digit_evens</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double_digit_evens</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Set comprehension:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">double_digit_odds</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)}</span>
+<span class="p">{</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">99</span><span class="p">}</span>
+</pre></div>
+
+
+<p>Dictionary comprehension:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="n">e</span><span class="o">:</span> <span class="n">e</span><span class="o">*</span><span class="mi">10</span> <span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)}</span>
+<span class="p">{</span><span class="mi">1</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">4</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">5</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">6</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">7</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">8</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">9</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">10</span><span class="o">:</span> <span class="mi">100</span><span class="p">}</span>
+</pre></div>
+
+
+<h2>Comprehension resources</h2>
+<ul>
+<li>
+<p>Intermediate Python's 
+  <a href="http://intermediatepythonista.com/python-comprehensions">Python Comprehensions</a>
+  post gives a well written overview of comprehensions for the three core 
+  Python data structures.</p>
+</li>
+<li>
+<p>The Python 3 Patterns and Idioms site has an overview of 
+  <a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Comprehensions.html">comprehensions</a>
+  including code examples and diagrams to explain how they work.</p>
+</li>
+<li>
+<p><a href="http://blog.cdleary.com/2010/04/learning-python-by-example-list-comprehensions/">Learning Python by example: list comprehensions</a>
+  gives an example of an incorrect list comprehension then shows how to
+  correct its issues.</p>
+</li>
+<li>
+<p><a href="http://www.pythonforbeginners.com/basics/list-comprehensions-in-python">List comprehensions in Python</a>
+  covers what the code for list comprehensions looks like and gives some
+  example code to show how they work.</p>
+</li>
+</ul>
                   <h1>Web frameworks</h1>
 <p>A web framework is a code library that makes a developer's life easier when 
 building reliable, scalable and maintainable web applications.</p>

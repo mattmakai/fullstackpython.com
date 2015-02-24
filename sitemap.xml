@@ -47,6 +47,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/comprehensions.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/configuration-management.html</loc>
     <priority>1.0</priority>
   </url>
