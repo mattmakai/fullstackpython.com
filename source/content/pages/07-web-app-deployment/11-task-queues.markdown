@@ -165,6 +165,10 @@ when scaling out a large deployment of distributed task queues.
   is a video along with code that shows how to set up Celery with Redis as the
   broker in a Django application.
 
+* [Setting up an asynchronous task queue for Django using Celery and Redis](http://michal.karzynski.pl/blog/2014/05/18/setting-up-an-asynchronous-task-queue-for-django-using-celery-redis/)
+  is a straightforward tutorial for setting up the Celery task queue for 
+  Django web applications using the Redis broker on the back end.
+
 
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 

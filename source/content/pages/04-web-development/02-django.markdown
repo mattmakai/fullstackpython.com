@@ -122,7 +122,9 @@ syntax and language semantics first before diving into web development.
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
 
-* [Starting a Django Project](https://realpython.com/learn/start-django/) answers the question, “How do I set up a Django (1.5, 1.6, or /1.7) project from scratch?”
+* [Starting a Django Project](https://realpython.com/learn/start-django/) 
+  answers the question, “How do I set up a Django (1.5, 1.6, or 1.7) project 
+  from scratch?”
 
 * The [recommended Django project layout](http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/)
   is helpful for developers new to Django to understand how to structure
