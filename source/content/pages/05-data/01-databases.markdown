@@ -87,6 +87,10 @@ The post is an inside look at the evolution of Braintree's usage of the database
   provides 5 specific tips from Instagram's engineering team on how to scale
   the design of your PostgreSQL database.
 
+* [Inserting And Using A New Record In Postgres](http://rob.conery.io/2015/02/09/inserting-using-new-record-postgres/)
+  shows some SQL equivalents to what many developers just do in their ORM
+  of choice.
+
 * [Following a Select Statement Through Postgres Internals](http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals)
   provides a fascinating look into the internal workings of PostgreSQL
   during a query.
