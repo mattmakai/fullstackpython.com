@@ -144,6 +144,11 @@ equivalent of browser testing in the web application world.
   tells the story of design decisions that were made during an API's creation
   and why those choices were made.
 
+* [Implementing a RESTful Web API with Python & Flask](http://blog.luisrei.com/articles/flaskrest.html)
+  is a good walkthrough for coding a Flask app that provides standard 
+  web API functionality such as proper HTTP responses, authentication
+  and logging.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
