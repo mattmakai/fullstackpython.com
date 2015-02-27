@@ -18,7 +18,7 @@ choice4text:
 
 # Logging
 Logging saves output such as errors, warnings and event information to 
-files for debugging purposes. 
+persistent storage for debugging purposes. 
 
 
 ## Why is logging important?
@@ -75,16 +75,17 @@ certain threshold.
 
 
 ### Hosted logging services
-* [Loggly](https://www.loggly.com/) Loggly is a third party cloud based 
+* <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fs    p&utm_medium=promo&utm_campaign=march" onclick="trackOutboundLink('https://www.loggly.com/log-management/python-logging/?utm_source=fs    p&utm_medium=promo&utm_campaign=march'); return false;">Loggly</a> 
+  is a third party cloud based 
   application that aggregates logs. They have instructions for every major 
   language, including python. It includes email alerting on custom searches. 
 
-* [Papertrail](https://papertrailapp.com/) Paper trail is similar to both 
-  loggly and splunk and provides integration with S3 for long term storage.
-
-* [Splunk](http://www.splunk.com/) Splunk offers third party cloud and self 
-  hosted solutions for event aggregation. It excells at searching and data 
+* [Splunk](http://www.splunk.com/) offers third party cloud and self 
+  hosted solutions for event aggregation. It excels at searching and data 
   mining any text based data. 
+
+* [Papertrail](https://papertrailapp.com/) is similar to both 
+  Loggly and Splunk and provides integration with S3 for long term storage.
 
 * [Raygun](http://raygun.io/) logs errors and provides immediate notification
   when issues arise.
