@@ -25,6 +25,7 @@ the
 
 ## 2015
 ### February
+* Cleaned up the sidebar and [email](/email.html) subscribe messaging.
 * Added new [monitoring](/monitoring.html), [websockets](/websockets.html) and
   [continuous integration](/continuous-integration.html) resources.
 * New [Django](/django.html) resources.
