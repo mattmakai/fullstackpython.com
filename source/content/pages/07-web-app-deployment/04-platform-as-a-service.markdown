@@ -98,6 +98,10 @@ application framework and your app itself is up to date and secured. See the
   is a fantastic post that shows how to deploy to Amazon Web Service's own
   PaaS.
 
+* [Deploy your hack in 3 steps: Intro to AWS and Elastic Beanstalk](https://news.mlh.io/deploy-your-hack-in-3-steps-intro-to-aws-and-elastic-beanstalk-02-20-2015)
+  shows how to deploy a simple Ruby Sinatra app, but the steps are generally
+  applicable to Python web apps as well. 
+
 
 ## Platform-as-a-service learning checklist
 <i class="fa fa-check-square-o"></i>

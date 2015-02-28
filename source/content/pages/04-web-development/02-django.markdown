@@ -262,6 +262,10 @@ existing framework.
   to reduce complexity from the views and make the code easier to reuse across
   separate views.
 
+* [Supporting both Django 1.7 and South](http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/)
+  explains the difficulty of supporting Django 1.7 and maintaining South 
+  migrations for Django 1.6 then goes into how it can be done.
+
 
 ## Static and media files
 Deploying and handling static and media files can be confusing for new

@@ -78,17 +78,30 @@
     </p>
   </div>
 </div>
-{% elif page.title == 'Deployment' or page.title == 'Servers' %}
+{% elif page.slug == 'monitoring' %}
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-head">Sponsored By</h3>
   </div>
   <div class="panel-body">
     <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march"><img src="theme/img/sponsored/loggly.jpg" alt="Loggly with Beaver logo" width="100%"></a>
-    <p style="font-size: .8em; margin-top: 10px;">Want to improve your Python 
-       deployment? I highly recommend 
+    <p style="font-size: .8em; margin-top: 10px;">Want to improve monitoring
+       in your Python web app? I highly recommend 
+       <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march" onclick="trackOutboundLink('https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march'); return false;">signing up for a free Loggly account</a>.
+    </p>
+  </div>
+</div>
+{% elif page.slug == 'deployment' or page.slug == 'servers' or page.slug == 'platform-as-a-service' or page.slug == 'operating-systems' or page.slug == 'web-servers' or page.slug == 'wsgi-servers' or page.slug == 'source-control' or page.slug == 'application-dependencies' or page.slug == 'static-content' or page.slug == 'caching' or page.slug == 'task-queues' or page.slug == 'configuration-management' or page.slug == 'continuous-integration' or page.slug == 'web-analytics' or page.slug == 'docker' or page.slug == 'databases' or page.slug == 'no-sql-datastore' or page.slug == 'web-application-security' %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-head">Sponsored By</h3>
+  </div>
+  <div class="panel-body">
+    <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march"><img src="theme/img/sponsored/loggly.jpg" alt="Loggly with Beaver logo" width="100%"></a>
+    <p style="font-size: .8em; margin-top: 10px;">Want to enhance your Python 
+       web application deployments? I highly recommend 
        <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march" onclick="trackOutboundLink('https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march'); return false;">signing up for a free Loggly account</a>
-       to improve the logging performance.
+       to improve your logging performance.
     </p>
   </div>
 </div>
