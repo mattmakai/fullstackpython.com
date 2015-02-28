@@ -374,6 +374,8 @@ should skip down to the next section for "experienced developers".</p>
             2015
         </div>
     </div>
-<script type="text/javascript" src="theme/js/track_out.js"></script>
+<script type='text/javascript'>
+    var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
 </body>
 </html>
