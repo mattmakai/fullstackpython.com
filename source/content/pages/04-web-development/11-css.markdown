@@ -2,6 +2,7 @@ title: Cascading Style Sheets
 category: page
 slug: cascading-style-sheets
 sort-order: 0411
+meta: Learn how to use Cascading Style Sheets (CSS) to create your web application's user interface design on Full Stack Python.
 choice1url: /javascript.html
 choice1icon: fa-html5 fa-inverse
 choice1text: How do I create dynamic browser interaction with JavaScript?
