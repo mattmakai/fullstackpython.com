@@ -187,6 +187,11 @@ book which is an excellent learning resource.
   is a great walkthrough for a common use case of ensuring an email address
   matches with the user's login information.
 
+* Most Flask developers use SQLAlchemy as an ORM to relational databases.
+  If you're unfamiliar with SQLAlchemy questions will often come up such as
+  [what's the difference between flush and commit?](http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit)
+  that are important to understand as you build out your app.
+
 
 ## Open source Flask example projects
 * [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
