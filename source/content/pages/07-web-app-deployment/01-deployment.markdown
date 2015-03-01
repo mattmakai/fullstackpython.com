@@ -2,6 +2,7 @@ title: Deployment
 category: page
 slug: deployment
 sort-order: 0701
+meta: Web application deployment involves packaging up your app and putting it in a product environment. Learn more about deployment on Full Stack Python.
 choice1url: /servers.html
 choice1icon: fa-sort-amount-asc fa-inverse
 choice1text: Show me options for bare metal, virtualized servers, and infrastructure-as-a-service.
