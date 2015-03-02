@@ -24,6 +24,10 @@ the
 
 
 ## 2015
+### March
+* Beefing up the Django resources and will soon break them further down 
+  into subcategories so they are easier to find by topic.
+
 ### February
 * Cleaned up the sidebar and [email](/email.html) subscribe messaging.
 * Added new [monitoring](/monitoring.html), [websockets](/websockets.html) and

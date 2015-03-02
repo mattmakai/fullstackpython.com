@@ -270,6 +270,12 @@ existing framework.
   explains the difficulty of supporting Django 1.7 and maintaining South 
   migrations for Django 1.6 then goes into how it can be done.
 
+* [Adding basic search to your Django site](https://www.calazan.com/adding-basic-search-to-your-django-site/)
+  shows how to write generic queries that'll allow you to provide site 
+  search via the Django ORM without relying on another tool like 
+  ElasticSearch. This is great for small sites before you scale them up with
+  a more robust search engine.
+
 
 ## Static and media files
 Deploying and handling static and media files can be confusing for new
