@@ -27,6 +27,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/bottle.html</loc>
     <priority>1.0</priority>
   </url>

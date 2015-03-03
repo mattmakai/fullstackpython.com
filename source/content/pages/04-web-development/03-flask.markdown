@@ -57,33 +57,32 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 
 
 ## Flask resources
-The 18-part Flask mega tutorial is an absolutely amazing starting 
-resource for using the Flask framework. Yes, there are a lot of posts in 
-the series. However, each post is focused on a single topic to contain 
-the complexity while the reader is learning the framework. The whole 
-series is well worth an in-depth read-through. The 
-[author](https://twitter.com/miguelgrinberg) also wrote the new
-[O'Reilly Flask Web Development](http://shop.oreilly.com/product/0636920031116.do)
-book which is an excellent learning resource.
-
-  * [Part 1: Hello World](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
-  * [Part 2: Templates](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates)
-  * [Part 3: Web Forms](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
-  * [Part 4: Database](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database)
-  * [Part 5: User Logins](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins)
-  * [Part 6: Profile Page and Avatars](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars)
-  * [Part 7: Unit Testing](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing)
-  * [Part 8: Followers, Contacts, and Friends](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends)
-  * [Part 9: Pagination](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination)
-  * [Part 10: Full Text Search](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search)
-  * [Part 11: Email Support](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support)
-  * [Part 12: Facelift](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift)
-  * [Part 13: Dates and Times](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times)
-  * [Part 14: I18n and L10n](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n)
-  * [Part 15: Ajax](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax)
-  * [Part 16: Debugging, Testing and Profiling](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling)
-  * [Part 17: Deployment on Linux](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
-  * [Part 18: Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud)
+* The Flask mega tutorial by 
+  [Miguel Grinberg](https://twitter.com/miguelgrinberg) is a perfect 
+  starting resource for using this web framework. Each post focuses on a 
+  single topic and builds on previous posts. The series includes 18 parts:
+  [#1 Hello World](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), 
+  [#2 Templates](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates),
+  [#3 Web Forms](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms),
+  [#4 Database](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database),
+  [#5 User Logins](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins),
+  [#6 Profile Page and Avatars](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars),
+  [#7 Unit Testing](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-unit-testing),
+  [#8 Followers, Contacts, and Friends](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends),
+  [#9 Pagination](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination),
+  [#10 Full Text Search](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-x-full-text-search),
+  [#11 Email Support](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xi-email-support),
+  [#12 Facelift](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift),
+  [#13 Dates and Times](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times),
+  [#14 I18n and L10n](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n),
+  [#15 Ajax](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-ajax),
+  [#16 Debugging, Testing and Profiling](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling),
+  [#17 Deployment on Linux](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
+  and 
+  [#18 Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud). 
+  Miguel also wrote the 
+  [O'Reilly Flask Web Development](http://shop.oreilly.com/product/0636920031116.do)
+  book which is also an excellent learning resource.
 
 * If you're looking for a fun introduction to Flask and WebSockets, check out
   my blog post on creating 
@@ -157,11 +156,6 @@ book which is an excellent learning resource.
   describes text processing with BeautifulSoup and NLTK. 
   [Part 4](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   shows how to build a task queue with Flask and Redis.
-
-* Along with the above FLask by Example series, there's also a 
-  [Discover Flask](https://github.com/realpython/discover-flask) series of
-  videos. The GitHub repo contains the code and the 25+ videos are hosted
-  on YouTube.
 
 * [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
   covers a subject that comes up quickly once you begin adding significant

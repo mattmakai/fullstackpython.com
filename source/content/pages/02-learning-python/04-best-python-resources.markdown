@@ -22,11 +22,16 @@ The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. 
 
-This page aggregates the best Python resources with a brief description of
-how it fits one's learning purpose. 
+This page aggregates the best general Python resources with descriptions of
+what they provide to readers.
 
-Looking for information on Python development environments? There's a 
-[whole other page for editors and IDEs](/development-environments.html).
+<div class="well" style="margin-top: 20px;">
+If you prefer learning by watching videos 
+<a href="/best-python-videos.html">best Python videos</a> as well
+as a read what 
+<a href="/development-environments.html">development environments</a>
+to use for coding.
+</div>
 
 
 ## New to programming
@@ -36,7 +41,7 @@ should skip down to the next section for "experienced developers".
 
 * To get an introduction to Python, Django and Flask at the same time, 
   consider purchasing the 
-  <a href="https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources" onclick="trackOutboundLink('http://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources'); return false;">Real Python</a> 
+  <a href="https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources" onclick="trackOutboundLink('https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources'); return false;">Real Python</a> 
   course by Fletcher, Michael and Jeremy.
 
 * If you've never programmed before check out the 
@@ -101,12 +106,6 @@ should skip down to the next section for "experienced developers".
   is a good read to begin learning about development environments, 
   application dependencies and project structure.
 
-* [Google's Python Class](https://developers.google.com/edu/python/) contains
-  lecture videos and exercises for learning Python.
-
-* Check out the [Real Python! Blog](http://www.realpython.com/blog/) for a great
-  set of relevant posts about Python web development topics.
-
 
 ## Beyond the basics
 * [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
@@ -129,25 +128,8 @@ should skip down to the next section for "experienced developers".
 
 
 ## Videos, screencasts and presentations
-* [Kate Heddleston](https://twitter.com/heddle317) gave a talk at PyCon 2014 
-  called 
-  "[Full-stack Python Web Applications](http://pyvideo.org/video/2591/so-you-want-to-be-a-full-stack-developer-how-to)"
-  with clear visuals for how numerous layers of the Python web
-  stack fit together. There are also [slides available from the talk](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)
-  with all the diagrams.
-
-* My [EuroPython 2014 "Full Stack Python"](https://www.youtube.com/watch?v=s6NaOKD40rY)
-  talk goes over each topic from this guide and provides context for how the
-  pieces fit together. 
-  The [talk slides](http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html) are also available.
-
-* [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
-  screencasts for learning intermediate topics. I typically prefer to learn
-  by reading. However, these videos are helpful in seeing the code on the 
-  screen instead of just looking at static code snippets.
-
-* [PyVideo](http://www.pyvideo.org/) organizes and indexes thousands of Python
-  videos from both major conferences and meetups.
+Videos from conferences and meetups along with screencasts are listed on
+the [best Python videos](/best-python-videos.html) page.
 
 
 ## Curated Python packages lists
@@ -162,7 +144,7 @@ should skip down to the next section for "experienced developers".
 
 ## Newsletters
 * [Python Weekly](http://www.pythonweekly.com/) is a free weekly roundup
-  of the latest Python articles, videos, projects, and upcoming events.
+  of the latest Python articles, videos, projects and upcoming events.
 
 * [PyCoder's Weekly](http://pycoders.com/) is another great free weekly
   email newsletter similar to Python Weekly. The best resources are generally

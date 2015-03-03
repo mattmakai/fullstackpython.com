@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Learn how to use Cascading Style Sheets (CSS) to create your web application's user interface design on Full Stack Python.">
+    <meta name="description" content="Watch the best videos to learn Python from the language masters of the community on Full Stack Python's Best Python Videos page.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Cascading Style Sheets - Full Stack Python</title>
+    <title>Best Python Videos - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -38,181 +38,144 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Cascading Style Sheets (CSS)</h1>
-<p>Cascading Style Sheet (CSS) files contain rules for how to display and 
-lay out the HTML content when it is rendered by a web browser.</p>
-<h2>Why is CSS necessary?</h2>
-<p>CSS separates the content contained in HTML files from how the content 
-should be displayed. It is important to separate the content from the rules
-for how it should be rendered primarily because it is easier to reuse those
-rules across many pages. CSS files are also much easier to maintain on large
-projects than styles embedded within the HTML files.</p>
-<h2>How is CSS retrieved from a web server?</h2>
-<p>The HTML file sent by the web server contains a reference to the CSS file(s)
-needed to render the content. The web browser requests the CSS file after the
-HTML file as shown below in a screenshot captured of the Chrome Web Developer 
-Tools network traffic.</p>
-<p><img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
-<p>That request for the fsp.css file is made because the HTML file for Full 
-Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
-in the view source screenshot below.</p>
-<p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
-<h2>CSS preprocessors</h2>
-<p>A CSS preprocessor compiles a processed language into plain CSS code. CSS 
-preprocessing languages add syntax such as variables, mixins and functions
-to reduce code duplication. The additional syntax also makes it possible for
-designers to use these basic programming constructs to write maintainable
-front end code.</p>
+          <h1>Best Python Videos</h1>
+<p>If you prefer to learn Python programming by watching videos then this is the
+resource for you. I've watched hundreds of live technical talks and combed
+through videos to pick out the ones with great speakers who'll teach you the
+most about the language and ecosystem. </p>
+<p>This page links to the best free videos as well as other video lists so you 
+can do your own searching through the huge backlog of conference and meetup 
+talks from the past several years. </p>
+<div class="well" style="margin-top: 20px;">
+Be sure to read the
+<a href="/best-python-resources.html">best Python resources</a> for
+links to books and articles as well as 
+<a href="/web-frameworks.html">web frameworks</a>
+to learn more about web development.
+</div>
+
+<h2>Web development with Django, Flask and other frameworks</h2>
 <ul>
 <li>
-<p><a href="http://sass-lang.com/">Sass</a> is currently the favored preprocessor in
-  the design community. Sass is considered the most powerful CSS preprocessor
-  in terms of advanced language features.</p>
+<p><a href="https://twitter.com/heddle317">Kate Heddleston</a> gave a talk at PyCon 2014 
+  called 
+  "<a href="http://pyvideo.org/video/2591/so-you-want-to-be-a-full-stack-developer-how-to">Full-stack Python Web Applications</a>"
+  with clear visuals for how numerous layers of the Python web
+  stack fit together. There are also <a href="https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston">slides available from the talk</a>
+  with all the diagrams.</p>
 </li>
 <li>
-<p><a href="http://lesscss.org/">LESS</a> is right up there with Sass and has an ace up
-  its sleeve in that the <a href="http://getbootstrap.com/">Bootstrap Framework</a> is
-  written in LESS which brings up its popularity.</p>
+<p>My <a href="https://www.youtube.com/watch?v=s6NaOKD40rY">EuroPython 2014 "Full Stack Python"</a>
+  talk goes over each topic from this guide and provides context for how the
+  pieces fit together. 
+  The <a href="http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html">talk slides</a> are also available.</p>
 </li>
 <li>
-<p><a href="http://learnboost.github.io/stylus/">Stylus</a> is often cited as the third
-  most popular CSS preprocessing language.</p>
+<p>Kate Heddleston and I gave a talk at DjangoCon 2014 called
+  <a href="https://www.youtube.com/watch?v=QrFEKghISEI">Choose Your Own Django Deployment Adventure</a>
+  which walked through many of the scenarios you'd face when deploying your
+  first Django website.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/realpython/discover-flask">Discover Flask</a> series is
+  a detailed Flask tutorial on video with corresponding code examples on 
+  GitHub.</p>
+</li>
+<li>
+<p><a href="http://pyvideo.org/video/2630/designing-djangos-migrations">Designing Django's Migrations</a>
+  covers Django 1.7's new migrations from the main programmer 
+  of South and now Django's built-in migrations, Andrew Godwin.</p>
+</li>
+<li>
+<p><a href="https://godjango.com/">GoDjango</a> screencasts and tutorials are free short
+  videos for learning how to build Django applications.</p>
+</li>
+<li>
+<p><a href="http://gettingstartedwithdjango.com/">Getting Started with Django</a> is a
+  series of video tutorials for the framework.</p>
+</li>
+<li>
+<p>The videos and slides from 
+  <a href="http://www.djangounderthehood.com/talks/">Django: Under the Hood 2014</a>
+  are from Django core commiters and provide insight into the ORM, 
+  internationalization, templates and other topics.</p>
+</li>
+<li>
+<p>DjangoCon US videos from 
+  <a href="https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3">2014</a>, 
+  <a href="http://www.youtube.com/user/TheOpenBastion/videos">2013</a>, 
+  <a href="http://pyvideo.org/category/23/djangocon-2012">2012</a>, 
+  <a href="http://pyvideo.org/category/3/djangocon-2011">2011</a>, as well as<br />
+<a href="http://pyvideo.org/category">earlier US and DjangoCon EU conferences</a> are
+  all available free of charge.</p>
 </li>
 </ul>
-<h3>CSS preprocessor resources</h3>
+<h2>Core Python language videos</h2>
 <ul>
 <li>
-<p>The Advanced Guide to HTML and CSS book has a well-written chapter on 
-  <a href="http://learn.shayhowe.com/advanced-html-css/preprocessors">preprocessors</a>.</p>
+<p>Jessica McKellar's 
+  <a href="https://www.youtube.com/watch?v=sL_syMmRkoU">Building and breaking a Python sandbox</a>
+  is a fascinating walk through the lower layers of the Python interpreter.</p>
 </li>
 <li>
-<p><a href="http://css-tricks.com/sass-vs-less/">Sass vs LESS</a> provides a short answer
-  on which framework to use then a longer more detailed response for those
-  interested in understanding the details.</p>
-</li>
-<li>
-<p><a href="http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor">How to choose the right CSS preprocessor</a>
-  has a comparison of Sass, LESS and Stylus.</p>
-</li>
-<li>
-<p><a href="http://css-tricks.com/musings-on-preprocessing/">Musings on CSS preprocessors</a>
-  contains helpful advice ranging from how to work with preprocessors in a
-  team environment to what apps you can use to aid your workflow.</p>
+<p>Brandon Rhodes' 
+  <a href="https://www.youtube.com/watch?v=fYlnfvKVDoM">All Your Ducks In A Row: Data Structures in the Std Lib and Beyond</a>
+  goes through how data structures are implemented, how to select a
+  data structure appropriate to your application and how the list and 
+  dictionary can be used in many situations.</p>
 </li>
 </ul>
-<h2>CSS frameworks</h2>
-<p>CSS frameworks provide structure and a boilerplate base for building a
-web application's design.</p>
+<h2>Screencasts and class recordings</h2>
 <ul>
 <li>
-<p><a href="http://getbootstrap.com/">Bootstrap</a></p>
+<p><a href="https://www.neckbeardrepublic.com/">Neckbeard Republic</a> provides free 
+  screencasts for learning intermediate topics. I typically prefer to learn
+  by reading. However, these videos are helpful in seeing the code on the 
+  screen instead of just looking at static code snippets.</p>
 </li>
 <li>
-<p><a href="http://foundation.zurb.com/">Foundation</a></p>
-</li>
-<li>
-<p><a href="http://gumbyframework.com/">Gumby</a></p>
-</li>
-<li>
-<p><a href="http://compass-style.org/">Compass</a></p>
-</li>
-<li>
-<p><a href="http://www.profoundgrid.com/">Profound Grid</a></p>
-</li>
-<li>
-<p><a href="http://www.getskeleton.com/">Skeleton</a></p>
-</li>
-<li>
-<p><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></p>
+<p><a href="https://developers.google.com/edu/python/">Google's Python Class</a> contains
+  lecture videos and exercises for learning Python.</p>
 </li>
 </ul>
-<h2>CSS resources</h2>
+<h2>Video compilations</h2>
 <ul>
 <li>
-<p><a href="https://github.com/dypsilon/frontend-dev-bookmarks">Frontend Development Bookmarks</a>
-  is one of the largest collections of valuable resources for frontend
-  learning both in CSS as well as JavaScript.</p>
+<p><a href="http://www.pyvideo.org/">PyVideo</a> organizes and indexes thousands of Python
+  videos from both major conferences and meetups.</p>
 </li>
 <li>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network's CSS page</a>
-  contains an extensive set of resources, tutorials and demos for learning
-  CSS.</p>
-</li>
-<li>
-<p><a href="http://alistapart.com/article/css-positioning-101">CSS Positioning 101</a>
-  is a detailed guide for learning how to do element positioning correctly
-  with CSS.</p>
-</li>
-<li>
-<p><a href="http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf">CSS3 cheat sheet</a></p>
-</li>
-<li>
-<p><a href="http://learnlayout.com/toc.html">Learn CSS layout</a> is a simple guide that
-  breaks CSS layout topics into chapters so you can learn each part one
-  at a time.</p>
-</li>
-<li>
-<p><a href="https://developers.google.com/web/fundamentals/">Google's Web Fundamentals class</a>
-  shows how to create responsive designs and performant websites.</p>
-</li>
-<li>
-<p><a href="http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html">Tailoring CSS for performance</a>
-  is an interesting read since many developers do not consider the 
-  implications of CSS complexity in browser rendering time.</p>
-</li>
-<li>
-<p><a href="http://caniuse.com/">Can I Use...</a> is a compatibility table that shows
-  which versions of browsers implement specific CSS features.</p>
+<p><a href="https://github.com/makaimc/incredible-technical-speakers">Incredible Technical Speakers</a>
+  is a repository I put together that features software developer speakers
+  talking about programming language agnostic topics. The list is intended
+  to emphasize professional software developers who also have the ability to
+  engage an audience of peers with an exciting talk.</p>
 </li>
 </ul>
-<h2>CSS learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i> 
-Create a simple HTML file with basic elements in it. Use the
-<code>python -m SimpleHTTPServer</code> command to serve it up. Create a 
-<code>&lt;style&gt;&lt;/style&gt;</code> element within the <code>&lt;head&gt;</code> section in the HTML page. 
-Start playing with CSS within that style element to change the look and feel 
-of the page.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Check out front end frameworks such as Bootstrap and Foundation and integrate
-one of those into the HTML page.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Work through the framework's grid system, styling options and customization
-so you get comfortable with how to use the framework.</p>
-<p><i class="fa fa-check-square-o"></i> 
-Apply the framework to your web application and tweak the design until you
-have something that looks much better than generic HTML.</p>
-<h3>Once your app is styled what do you need to learn next?</h3>
+<h3>What's next after watching Python videos?</h3>
                           <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/javascript.html" class="btn btn-success btn-full"><i class="fa fa-html5 fa-inverse fa-2x"></i></a>
+            <a href="/best-python-resources.html" class="btn btn-success btn-full"><i class="fa fa-book fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I create dynamic browser interaction with JavaScript?
+                I'd prefer reading materials to learn Python.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/static-content.html" class="btn btn-success btn-full"><i class="fa fa-spinner fa-inverse fa-2x"></i></a>
+            <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                How should I host static content such as my CSS files?
+                I want to learn how to code a web application with Python.
             </p>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="well select-next">
-            <a href="/source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
+            <a href="/development-environments.html" class="btn btn-success btn-full"><i class="fa fa-desktop fa-2x"></i></a>
             <p class="under-btn">
-                How can I save and version my code so it doesn't get lost?
-            </p>
-        </div>
-    </div>
-        <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/application-programming-intefaces.html" class="btn btn-success btn-full"><i class="fa fa-exchange fa-2x"></i></a>
-            <p class="under-btn">
-                What are APIs?
+                What should I use to code my Python application?
             </p>
         </div>
     </div>
@@ -253,7 +216,7 @@ have something that looks much better than generic HTML.</p>
                         <a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Development Environments</a>
                         <a href="/vim.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Vim</a>
                         <a href="/best-python-resources.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Resources</a>
-                        <a href="/best-python-videos.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Videos</a>
+                        <a href="/best-python-videos.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Best Python Videos</a>
                         <a href="/generators.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Generators</a>
                         <a href="/comprehensions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Comprehensions</a>
                         <a href="/web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Frameworks</a>
@@ -264,7 +227,7 @@ have something that looks much better than generic HTML.</p>
                         <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
                         <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
                         <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
-                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
+                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
                         <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
                         <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
                         <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
@@ -298,7 +261,7 @@ have something that looks much better than generic HTML.</p>
                 </div>
   </div>
     <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Cascading Style Sheets</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Best Python Videos</h3></div>
       <div class="panel-body">
                     Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
@@ -314,7 +277,12 @@ have something that looks much better than generic HTML.</p>
             2015
         </div>
     </div>
-<script type='text/javascript'>
+    <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0016/5846.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script><script type='text/javascript'>
     var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
 </script>
 </body>

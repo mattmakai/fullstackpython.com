@@ -139,29 +139,11 @@ syntax and language semantics first before diving into web development.
 
 
 ## Django videos
-* Kate Heddleston and I gave a talk at DjangoCon 2014 called
-  [Choose Your Own Django Deployment Adventure](https://www.youtube.com/watch?v=QrFEKghISEI)
-  which walked through many of the scenarios you'd face when deploying your
-  first Django website.
-
-* [GoDjango](https://godjango.com/) screencasts and tutorials are free short
-  videos for learning how to build Django applications.
-
-* [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
-  series of video tutorials for the framework.
-
-* The videos and slides from 
-  [Django: Under the Hood 2014](http://www.djangounderthehood.com/talks/)
-  are from Django core commiters and provide insight into the ORM, 
-  internationalization, templates and other topics.
-
-* DjangoCon US videos from 
-  [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
-  [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
-  [2012](http://pyvideo.org/category/23/djangocon-2012), 
-  [2011](http://pyvideo.org/category/3/djangocon-2011), as well as  
-  [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
-  all available free of charge.
+<div class="well" style="margin-top: 20px;">
+Looking for Django videos instead of just articles? There's a special section
+for Django and web development on the 
+<a href="/best-python-videos.html">Best Python Videos</a> page.
+</div>
 
 
 ## Django 1.7-specific resources
@@ -169,10 +151,6 @@ syntax and language semantics first before diving into web development.
   [detailed Django 1.7 app upgrade guide](https://www.twilio.com/blog/2014/10/upgrading-your-django-reusable-app-to-support-django-1-7.html) 
   on the Twilio blog from his experience working with the django-twilio 
   package.
-
-* [Designing Django's Migrations](http://pyvideo.org/video/2630/designing-djangos-migrations)
-  covers Django 1.7's new migrations from the main programmer 
-  of South and now Django's built-in migrations, Andrew Godwin.
 
 * Real Python's [migrations primer](https://realpython.com/blog/python/django-migrations-a-primer/)
   explores the difference between South's migrations and the built-in
