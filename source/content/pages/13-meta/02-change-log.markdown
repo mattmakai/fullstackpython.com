@@ -25,6 +25,9 @@ the
 
 ## 2015
 ### March
+* Added a new page on [best Python videos](best-python-videos.html) that 
+  breaks out all the videos I had scattered around the site and puts the
+  best ones in a single place.
 * Beefing up the Django resources and will soon break them further down 
   into subcategories so they are easier to find by topic.
 
