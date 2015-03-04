@@ -160,212 +160,6 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
 </li>
 </ul>
 <h2>What else would you like to know about Python?</h2>
-                  <h1>Development Environments</h1>
-<p>A development environment is a combination of a text editor and the Python
-interpreter. The text editor allows you to write the code. The interpreter
-provides a way to execute the code you've written. A text editor can be
-as simple as Notepad on Windows or more complicated as a complete integrated
-development environment (IDE) such as 
-<a href="https://www.jetbrains.com/pycharm/">PyCharm</a> which runs on any major 
-operating system.</p>
-<h2>Why is a development environment necessary?</h2>
-<p>Python code needs to be written, executed and tested to build
-applications. The text editor provides a way to write the code. The 
-interpreter allows it to be executed. Testing to see if the code does what
-you want can either be done manually or by unit and functional tests. </p>
-<h2>A development environment example</h2>
-<p>Here's what I (the author of Full Stack Python, 
-<a href="/about-author.html">Matt Makai</a>) use to develop most of my Python 
-applications. I have a Macbook Pro with Mac OS X as its base operating 
-system. <a href="/operating-systems.html">Ubuntu 14.04 LTS</a> is virtualized on top 
-with <a href="https://www.parallels.com/">Parallels</a>. My code is written in 
-<a href="http://www.vim.org/">vim</a> and executed with the 
-<a href="https://www.python.org/download/releases/2.7.8/">Python 2.7.x</a> interpreter
-via the command line. I use virtualenv to create separate Python interpreters
-with their own isolated
-<a href="/application-dependencies.html">application dependencies</a> and
-<a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a>
-to quickly switch between the interpreters created by virtualenv.</p>
-<p>That's a common set up but you can certainly write great code with a much
-less expensive set up or a cloud-based development environment.</p>
-<h2>Open source development environments</h2>
-<ul>
-<li>
-<p><a href="http://www.vim.org/">vim</a> is my editor of choice and installed by default
-  on most *nix systems.</p>
-</li>
-<li>
-<p><a href="http://www.gnu.org/software/emacs/">emacs</a> is another editor often used
-  on *nix.</p>
-</li>
-<li>
-<p><a href="http://pydev.org/">PyDev</a> is a Python IDE plug in for 
-  <a href="https://www.eclipse.org/">Eclipse</a>.</p>
-</li>
-<li>
-<p><a href="http://www.sublimetext.com/">Sublime Text</a> versions 2 and 3 (currently
-  in beta) are popular text editors that can be extended with code completion,
-  linting, syntax highlighting and other features using plugins.</p>
-</li>
-<li>
-<p><a href="https://atom.io/">Atom</a> is an open source editor built by the 
-  <a href="https://github.com">GitHub</a> team.</p>
-</li>
-</ul>
-<h2>Python-specific IDEs</h2>
-<ul>
-<li>
-<p><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> is a Python-specific IDE
-  built on <a href="https://www.jetbrains.com/">JetBrains</a>' platform. There are
-  free editions for students and open source projects.</p>
-</li>
-<li>
-<p><a href="https://wingware.com/">Wing IDE</a> is a paid development environment with
-  integrated debugging and code completion.</p>
-</li>
-<li>
-<p><a href="http://komodoide.com/">Komodo</a></p>
-</li>
-</ul>
-<h2>Hosted development environment services</h2>
-<p>In the past couple of years several cloud-based development environments
-have popped up. These can work great for when you're learning or stuck on
-a machine with only a browser but no way to install your own software. Most
-of these have free tiers for getting started and paid tiers as you scale
-up your application.</p>
-<ul>
-<li>
-<p><a href="https://www.nitrous.io/">Nitrous.io</a></p>
-</li>
-<li>
-<p><a href="https://c9.io/">Cloud9</a></p>
-</li>
-<li>
-<p><a href="https://www.terminal.com/">Terminal</a></p>
-</li>
-<li>
-<p><a href="https://koding.com/">Koding</a></p>
-</li>
-</ul>
-<h2>Development environment resources</h2>
-<ul>
-<li>
-<p>If you're considering the cloud-based development environment route, check
-  out this 
-  <a href="http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding">great article comparing Cloud9, Koding and Nitrous.io</a>
-  by Lauren Orsini. She also explains more about what a cloud IDE is and is
-  not.</p>
-</li>
-<li>
-<p>Real Python has an awesome, detailed post on 
-  <a href="https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/">setting up your Sublime Text 3 environment</a>
-  as a full-fledged IDE.</p>
-</li>
-<li>
-<p>The <a href="http://docs.python-guide.org/en/latest/dev/env/">Hitchhiker's Guide to Python</a>
-  has a page dedicated to development environments.</p>
-</li>
-<li>
-<p><a href="http://pedrokroger.net/choosing-best-python-ide/">Choosing the best Python IDE</a>
-  is a review of six IDEs. PyCharm, Wing IDE and PyDev stand out above the
-  other three in this review.</p>
-</li>
-<li>
-<p><a href="http://nafiulis.me/pycharm-the-good-parts-i.html">PyCharm: The Good Parts</a>
-  shows you how to be more efficient and productive with that IDE if it's
-  your choice for writing Python code.</p>
-</li>
-</ul>
-                  <h1>Vim</h1>
-<p>Vim, shorthand for Vi IMproved, is a text editor with numerous configuration 
-options and wide-ranging extensions that can be used to write Python code.</p>
-<h2>Why is Vim a good Python development environment?</h2>
-<p>Vim's philosophy is that developers are fastest when they never take their 
-hands off the keys. Even using the mouse is a detriment to the rate at which
-your thoughts can flow into code. </p>
-<p>Vim has a language behind its commands. When a beginner is learning the
-editor she may feel like it is impossible to understand all the key commands.
-However, the commands stack together in a logical way so that over time
-the editor becomes predictable.</p>
-<h2>Configuring Vim with a Vimrc</h2>
-<p>The Vimrc file is used to configure the Vim editor. A Vimrc file can range
-from nothing in it to very complicated with hundreds or thousands of lines
-of configuration commands.</p>
-<p>Here's a simple example .vimrc file I use for Python development to get a feel
-for some of the configuration statements:</p>
-<div class="codehilite"><pre><span class="cp"># enable syntax highlighting</span>
-<span class="n">syntax</span> <span class="n">on</span>
-
-<span class="cp"># the next 4 lines set tabs to have 4 spaces, autoindent when already</span>
-<span class="cp"># working with indented lines, expand tabs key presses to spaces and</span>
-<span class="cp"># move lines 4 spaces each time the &gt;&gt; or &lt;&lt; commands are used</span>
-<span class="n">set</span> <span class="n">ts</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">set</span> <span class="n">autoindent</span>
-<span class="n">set</span> <span class="n">expandtab</span>
-<span class="n">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span>
-
-<span class="cp"># enable all Python syntax highlighting features</span>
-<span class="n">let</span> <span class="n">python_highlight_all</span> <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-
-
-<p>The Vimrc file lives under the home directory of the user account running
-Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
-file is found at <code>/Users/matt/.vimrc</code>. On Ubuntu Linux my Vimrc file
-can be found within <code>/home/matt/.vimrc</code>. </p>
-<p>If the Vimrc file does not already exist, just create it within the user's
-home directory and it will be picked up by Vim the next time you start the
-program.</p>
-<h2>General Vim resources</h2>
-<ul>
-<li>
-<p><a href="http://vim-adventures.com/">Vim Adventures</a> is a cute, fun browser-based
-  game that helps you learn Vim commands by playing through the adventure.</p>
-</li>
-<li>
-<p><a href="http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/">Learn Vim Progressively</a>
-  is a wonderful tutorial that follows the path I took when learning Vim:
-  learn just enough to survive with it as your day-to-day editor then begin 
-  adding more advanced commands on top.</p>
-</li>
-<li>
-<p><a href="https://danielmiessler.com/study/vim/">A vim Tutorial and Primer</a> is an
-  incredibly deep study in how to go from beginner to knowledgeable in Vim.</p>
-</li>
-<li>
-<p><a href="http://haridas.in/vim-as-your-ide.html">Vim as Your IDE</a> discusses how to
-  set up Vim for greater productivity once you learn the initial Vim language 
-  for using the editor.</p>
-</li>
-<li>
-<p><a href="http://stackoverflow.com/questions/9172802/setting-up-vim-for-python">Setting up Vim for Python</a>
-  has a well written answer on Stack Overflow for getting started with Vim.</p>
-</li>
-<li>
-<p><a href="http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/">Vim as a Language</a>
-  explains the language syntax and how you can build up over time to master
-  the editor.</p>
-</li>
-<li>
-<p>In <a href="http://mislav.uniqpath.com/2011/12/vim-revisited/">Vim: revisited</a> the
-  author explains his on-again off-again relationship with using Vim. He then
-  shows how he configures and uses the editor so it sticks as his primary
-  code editting tool.</p>
-</li>
-</ul>
-<h2>Vimrc resources</h2>
-<ul>
-<li>
-<p><a href="http://dougblack.io/words/a-good-vimrc.html">A Good Vimrc</a> is a fantastic,
-  detailed overview and opinionated guide to configuring Vim. Highly 
-  recommended for new and experienced Vim users.</p>
-</li>
-<li>
-<p><a href="https://justin.abrah.ms/vim/vim_and_python.html">Vim and Python</a> shows
-  and explains many Python-specific .vimrc options.</p>
-</li>
-</ul>
-<h3>What do you want to learn about Python development?</h3>
                   <h1>Best Python Resources</h1>
 <p>The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
@@ -647,6 +441,291 @@ to learn more about web development.
 </li>
 </ul>
 <h3>What's next after watching Python videos?</h3>
+                  <h1>Development Environments</h1>
+<p>A development environment is a combination of a text editor and the Python
+interpreter. The text editor allows you to write the code. The interpreter
+provides a way to execute the code you've written. A text editor can be
+as simple as Notepad on Windows or more complicated as a complete integrated
+development environment (IDE) such as 
+<a href="https://www.jetbrains.com/pycharm/">PyCharm</a> which runs on any major 
+operating system.</p>
+<h2>Why is a development environment necessary?</h2>
+<p>Python code needs to be written, executed and tested to build
+applications. The text editor provides a way to write the code. The 
+interpreter allows it to be executed. Testing to see if the code does what
+you want can either be done manually or by unit and functional tests. </p>
+<h2>A development environment example</h2>
+<p>Here's what I (the author of Full Stack Python, 
+<a href="/about-author.html">Matt Makai</a>) use to develop most of my Python 
+applications. I have a Macbook Pro with Mac OS X as its base operating 
+system. <a href="/operating-systems.html">Ubuntu 14.04 LTS</a> is virtualized on top 
+with <a href="https://www.parallels.com/">Parallels</a>. My code is written in 
+<a href="http://www.vim.org/">vim</a> and executed with the 
+<a href="https://www.python.org/download/releases/2.7.8/">Python 2.7.x</a> interpreter
+via the command line. I use virtualenv to create separate Python interpreters
+with their own isolated
+<a href="/application-dependencies.html">application dependencies</a> and
+<a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a>
+to quickly switch between the interpreters created by virtualenv.</p>
+<p>That's a common set up but you can certainly write great code with a much
+less expensive set up or a cloud-based development environment.</p>
+<h2>Open source development environments</h2>
+<ul>
+<li>
+<p><a href="http://www.vim.org/">vim</a> is my editor of choice and installed by default
+  on most *nix systems.</p>
+</li>
+<li>
+<p><a href="http://www.gnu.org/software/emacs/">emacs</a> is another editor often used
+  on *nix.</p>
+</li>
+<li>
+<p><a href="http://pydev.org/">PyDev</a> is a Python IDE plug in for 
+  <a href="https://www.eclipse.org/">Eclipse</a>.</p>
+</li>
+<li>
+<p><a href="http://www.sublimetext.com/">Sublime Text</a> versions 2 and 3 (currently
+  in beta) are popular text editors that can be extended with code completion,
+  linting, syntax highlighting and other features using plugins.</p>
+</li>
+<li>
+<p><a href="https://atom.io/">Atom</a> is an open source editor built by the 
+  <a href="https://github.com">GitHub</a> team.</p>
+</li>
+</ul>
+<h2>Python-specific IDEs</h2>
+<ul>
+<li>
+<p><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> is a Python-specific IDE
+  built on <a href="https://www.jetbrains.com/">JetBrains</a>' platform. There are
+  free editions for students and open source projects.</p>
+</li>
+<li>
+<p><a href="https://wingware.com/">Wing IDE</a> is a paid development environment with
+  integrated debugging and code completion.</p>
+</li>
+<li>
+<p><a href="http://komodoide.com/">Komodo</a></p>
+</li>
+</ul>
+<h2>Hosted development environment services</h2>
+<p>In the past couple of years several cloud-based development environments
+have popped up. These can work great for when you're learning or stuck on
+a machine with only a browser but no way to install your own software. Most
+of these have free tiers for getting started and paid tiers as you scale
+up your application.</p>
+<ul>
+<li>
+<p><a href="https://www.nitrous.io/">Nitrous.io</a></p>
+</li>
+<li>
+<p><a href="https://c9.io/">Cloud9</a></p>
+</li>
+<li>
+<p><a href="https://www.terminal.com/">Terminal</a></p>
+</li>
+<li>
+<p><a href="https://koding.com/">Koding</a></p>
+</li>
+</ul>
+<h2>Development environment resources</h2>
+<ul>
+<li>
+<p>If you're considering the cloud-based development environment route, check
+  out this 
+  <a href="http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding">great article comparing Cloud9, Koding and Nitrous.io</a>
+  by Lauren Orsini. She also explains more about what a cloud IDE is and is
+  not.</p>
+</li>
+<li>
+<p>Real Python has an awesome, detailed post on 
+  <a href="https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/">setting up your Sublime Text 3 environment</a>
+  as a full-fledged IDE.</p>
+</li>
+<li>
+<p>The <a href="http://docs.python-guide.org/en/latest/dev/env/">Hitchhiker's Guide to Python</a>
+  has a page dedicated to development environments.</p>
+</li>
+<li>
+<p><a href="http://pedrokroger.net/choosing-best-python-ide/">Choosing the best Python IDE</a>
+  is a review of six IDEs. PyCharm, Wing IDE and PyDev stand out above the
+  other three in this review.</p>
+</li>
+<li>
+<p><a href="http://nafiulis.me/pycharm-the-good-parts-i.html">PyCharm: The Good Parts</a>
+  shows you how to be more efficient and productive with that IDE if it's
+  your choice for writing Python code.</p>
+</li>
+</ul>
+                  <h1>Vim</h1>
+<p>Vim, shorthand for Vi IMproved, is a text editor with numerous configuration 
+options and wide-ranging extensions that can be used to write Python code.</p>
+<h2>Why is Vim a good Python development environment?</h2>
+<p>Vim's philosophy is that developers are fastest when they never take their 
+hands off the keys. Even using the mouse is a detriment to the rate at which
+your thoughts can flow into code. </p>
+<p>Vim has a language behind its commands. When a beginner is learning the
+editor she may feel like it is impossible to understand all the key commands.
+However, the commands stack together in a logical way so that over time
+the editor becomes predictable.</p>
+<h2>Configuring Vim with a Vimrc</h2>
+<p>The Vimrc file is used to configure the Vim editor. A Vimrc file can range
+from nothing in it to very complicated with hundreds or thousands of lines
+of configuration commands.</p>
+<p>Here's a simple example .vimrc file I use for Python development to get a feel
+for some of the configuration statements:</p>
+<div class="codehilite"><pre><span class="cp"># enable syntax highlighting</span>
+<span class="n">syntax</span> <span class="n">on</span>
+
+<span class="cp"># the next 4 lines set tabs to have 4 spaces, autoindent when already</span>
+<span class="cp"># working with indented lines, expand tabs key presses to spaces and</span>
+<span class="cp"># move lines 4 spaces each time the &gt;&gt; or &lt;&lt; commands are used</span>
+<span class="n">set</span> <span class="n">ts</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">set</span> <span class="n">autoindent</span>
+<span class="n">set</span> <span class="n">expandtab</span>
+<span class="n">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span>
+
+<span class="cp"># enable all Python syntax highlighting features</span>
+<span class="n">let</span> <span class="n">python_highlight_all</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+
+<p>The Vimrc file lives under the home directory of the user account running
+Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
+file is found at <code>/Users/matt/.vimrc</code>. On Ubuntu Linux my Vimrc file
+can be found within <code>/home/matt/.vimrc</code>. </p>
+<p>If the Vimrc file does not already exist, just create it within the user's
+home directory and it will be picked up by Vim the next time you start the
+program.</p>
+<h2>General Vim resources</h2>
+<ul>
+<li>
+<p><a href="http://vim-adventures.com/">Vim Adventures</a> is a cute, fun browser-based
+  game that helps you learn Vim commands by playing through the adventure.</p>
+</li>
+<li>
+<p><a href="http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/">Learn Vim Progressively</a>
+  is a wonderful tutorial that follows the path I took when learning Vim:
+  learn just enough to survive with it as your day-to-day editor then begin 
+  adding more advanced commands on top.</p>
+</li>
+<li>
+<p><a href="https://danielmiessler.com/study/vim/">A vim Tutorial and Primer</a> is an
+  incredibly deep study in how to go from beginner to knowledgeable in Vim.</p>
+</li>
+<li>
+<p><a href="http://haridas.in/vim-as-your-ide.html">Vim as Your IDE</a> discusses how to
+  set up Vim for greater productivity once you learn the initial Vim language 
+  for using the editor.</p>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/9172802/setting-up-vim-for-python">Setting up Vim for Python</a>
+  has a well written answer on Stack Overflow for getting started with Vim.</p>
+</li>
+<li>
+<p><a href="http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/">Vim as a Language</a>
+  explains the language syntax and how you can build up over time to master
+  the editor.</p>
+</li>
+<li>
+<p>In <a href="http://mislav.uniqpath.com/2011/12/vim-revisited/">Vim: revisited</a> the
+  author explains his on-again off-again relationship with using Vim. He then
+  shows how he configures and uses the editor so it sticks as his primary
+  code editting tool.</p>
+</li>
+</ul>
+<h2>Vimrc resources</h2>
+<ul>
+<li>
+<p><a href="http://dougblack.io/words/a-good-vimrc.html">A Good Vimrc</a> is a fantastic,
+  detailed overview and opinionated guide to configuring Vim. Highly 
+  recommended for new and experienced Vim users.</p>
+</li>
+<li>
+<p><a href="https://justin.abrah.ms/vim/vim_and_python.html">Vim and Python</a> shows
+  and explains many Python-specific .vimrc options.</p>
+</li>
+</ul>
+<h3>What do you want to learn about Python development?</h3>
+                  <h1>Emacs</h1>
+<p>Emacs is an extensible text editor that can be customized by writing Lisp
+code.</p>
+<h2>Why is Emacs a good choice for Python coding?</h2>
+<p>Emacs is designed to be customized via the built-in Lisp interpreter and
+package manager. The package manager, named package.el, has menus for
+handling installation. The largest Lisp Package Archive is 
+<a href="http://melpa.org">Melpa</a>, which provides automatic updates from upstream
+sources.</p>
+<p>Macros are useful for performing repetitive actions in Emacs. A macro
+is just a recording of a previous set of keystrokes that can be replayed
+to perform future actions.</p>
+<p>Hooks, which are Lisp variables that hold lists of functions to call,
+provide an extension mechanism for Emacs. For example,
+<code>kill-emacs-hook</code> runs before exiting Emacs so functions can be loaded
+into that hook to perform necessary actions before the exiting completes.</p>
+<h2>General Emacs resources</h2>
+<ul>
+<li>
+<p><a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html">GNU Emacs Manual</a>
+  provides an official in-depth review for how to use Emacs.</p>
+</li>
+<li>
+<p><a href="http://emacsredux.com/">Emacs Redux</a> is a blog with tips and tricks for
+  how to use Emacs effectively.</p>
+</li>
+<li>
+<p><a href="http://emacsrocks.com/">Emacs Rocks</a> is a video tutorial series for Emacs.</p>
+</li>
+<li>
+<p><a href="http://whattheemacsd.com/">What the .emacs.d?!</a> provides a bunch of tiny
+  optimizations for Emacs' workflow.</p>
+</li>
+</ul>
+<h2>Notable Elisp Packages</h2>
+<ul>
+<li>
+<p><a href="http://magit.github.io/">Magit</a> allows the user to inspect and modify
+  Git repositories from within Emacs.</p>
+</li>
+<li>
+<p><a href="http://company-mode.github.io/">company-mode</a> creates a modular in-buffer
+  completion framework.</p>
+</li>
+<li>
+<p><a href="http://flycheck.github.io/">Flycheck</a> provides syntax checking.</p>
+</li>
+<li>
+<p><a href="https://github.com/proofit404/anaconda-mode/">anaconda-mode</a> is specific
+  to Python development and allows code navigation, documentation lookup 
+  and code completion. The <a href="http://jedi.jedidjah.ch/en/latest/">jedi</a> library 
+  is used under the hood.</p>
+</li>
+<li>
+<p><a href="http://ternjs.net/">Tern</a> is a stand-alone code-analysis engine for
+  JavaScript. It can be integrated within a Django project
+  via the <a href="https://github.com/proofit404/tern-django">tern-django</a> package.</p>
+</li>
+</ul>
+<h2>Popular user configurations</h2>
+<ul>
+<li>
+<p><a href="https://github.com/bbatsov/prelude">Prelude</a> is an enhanced Emacs
+  version 24 distribution.</p>
+</li>
+<li>
+<p><a href="https://github.com/purcell/emacs.d">A reasonable Emacs config</a> shows
+  a batteries-includes Emacs configuration bundle.</p>
+</li>
+<li>
+<p><a href="https://github.com/magnars/.emacs.d">Emacs settings</a> is a repository of
+  configurations used in the Emacs Rocks screencasts.</p>
+</li>
+<li>
+<p><a href="https://github.com/syl20bnr/spacemacs">Spacemacs</a> mashes together Emacs'
+  extensibility and Vim's ergonomic text editing features.</p>
+</li>
+</ul>
+<h3>What's next once your development environment is set up?</h3>
                   <h1>Generators</h1>
 <p>Generators are a Python core language construct that allow a function's return
 value to to behave as an iterator. A generator can allow more efficient 
