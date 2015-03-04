@@ -170,6 +170,8 @@ when scaling out a large deployment of distributed task queues.
   Django web applications using the Redis broker on the back end.
 
 
+
+
 ## Task queue learning checklist
 <i class="fa fa-check-square-o"></i> 
 Pick a slow function in your project that is called during an HTTP request.

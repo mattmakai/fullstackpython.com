@@ -40,5 +40,9 @@ Model-View-Controller (MVC) architectural pattern.
 * [Build a chat app with Pyramid, SQLDB, and Bluemix](http://www.ibm.com/developerworks/cloud/library/cl-chatapp-bluemix-app/index.html)
   is a Pyramid application walkthrough specific to IBM's Bluemix platform.
 
+* [Developing Web Apps Using the Python Pyramid Framework](https://www.youtube.com/watch?v=kRKOWNdT72A)
+  is a video from San Francisco Python with an overview of how to install,
+  get started and build a web app with the Pyramid framework.
+
 
 ### Learn more about frameworks or continue building your Pyramid app?
