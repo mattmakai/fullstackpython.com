@@ -25,7 +25,10 @@ the
 
 ## 2015
 ### March
-* Added a new page on [best Python videos](best-python-videos.html) that 
+* Added new [Emacs](/emacs.html) page based on 
+  [pull request #49](https://github.com/makaimc/fullstackpython.github.com/pull/49) 
+  base information. Thank you!
+* Added a new page on [best Python videos](/best-python-videos.html) that 
   breaks out all the videos I had scattered around the site and puts the
   best ones in a single place.
 * Beefing up the Django resources and will soon break them further down 
