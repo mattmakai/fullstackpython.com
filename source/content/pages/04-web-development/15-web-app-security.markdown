@@ -2,6 +2,7 @@ title: Web Application Security
 category: page
 slug: web-application-security
 sort-order: 0415
+meta: Web applications can be attacked by malicious actors in many ways. Learn about security measures on Full Stack Python.
 choice1url: /web-analytics.html
 choice1icon: fa-dashboard
 choice1text: I want to learn more about the users of my app with analytics.
