@@ -32,7 +32,7 @@ applications through machine-to-machine communication.
   [successful Kickstarter campaign](https://www.kickstarter.com/projects/tomchristie/django-rest-framework-3).
 
 * [Flask-RESTful](http://flask-restful.readthedocs.org/en/latest/) and
-  [Flask API](http://flask.pocoo.org/docs/api/) are popular libraries for 
+  [Flask API](http://www.flaskapi.org/) are popular libraries for 
   exposing APIs from Flask web applications.
 
 * [Sandman](http://www.github.com/jeffknupp/sandman) is a widely used tool to
