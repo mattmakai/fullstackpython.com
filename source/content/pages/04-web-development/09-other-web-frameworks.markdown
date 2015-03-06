@@ -19,13 +19,7 @@ choice4text: How can I version and store my source code so I don't lose it?
 
 # Other Web Frameworks
 Python has a significant number of web frameworks outside the usual Django,
-Flask and Bottle suspects.
-
-
-## Pyramid
-The [Pyramid framework](http://www.pylonsproject.org/) stems from the Pylons
-project which develops a set of open source web application frameworks. 
-Pyramid applications are built using a model-view-controller architecture.
+Flask, Pyramid and Bottle suspects.
 
 
 ## TurboGears2
