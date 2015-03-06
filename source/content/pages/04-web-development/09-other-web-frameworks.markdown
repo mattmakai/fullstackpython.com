@@ -64,6 +64,19 @@ about moving the project forward, especially the number of open outstanding
 issues that exist in the tracker.
 
 
+## Muffin
+[Muffin](https://github.com/klen/muffin) is a web framework
+built on top of the [asyncio](https://docs.python.org/3/library/asyncio.html)
+module in the Python 3.4+ standard library. Muffin takes inspiration from
+Flask with URL routes defined as decorators upon view functions. The 
+[Peewee ORM](https://peewee.readthedocs.org/en/latest/) is used instead of 
+the more common SQLAlchemy ORM.
+
+Muffin has limited documentation, but 
+[an example app](https://github.com/klen/muffin/tree/develop/example) 
+is bundled with the framework's source code.
+
+
 ## Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
   contains both familiar and less known Python libraries.

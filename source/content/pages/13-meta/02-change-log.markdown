@@ -25,6 +25,8 @@ the
 
 ## 2015
 ### March
+* Added the Muffin framework to the 
+  [other web frameworks](/other-web-frameworks.html) page.
 * Added new [Emacs](/emacs.html) page based on 
   [pull request #49](https://github.com/makaimc/fullstackpython.github.com/pull/49) 
   base information. Thank you!
