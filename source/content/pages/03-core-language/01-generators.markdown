@@ -46,5 +46,11 @@ language as of Python 2.2 in 2001.
   on Stack Overflow has an impressive answer that clearly lays out the
   code and concepts involved with Python generators.
 
+* [Generator Tricks for Systems Programmers](http://www.dabeaz.com/generators/)
+  provides code examples for using generators. The material was originally
+  presented in a PyCon workshop for systems programmers but is relevant to
+  all Python developers working to understand appropriate ways to use
+  generators.
+
 
 ### What's next after learning about generators?
