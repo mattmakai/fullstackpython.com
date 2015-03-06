@@ -75,7 +75,7 @@ certain threshold.
 
 
 ### Hosted logging services
-* <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fsp&utm_medium=promo&utm_campaign=march" onclick="trackOutboundLink('https://www.loggly.com/log-management/python-logging/?utm_source=fs    p&utm_medium=promo&utm_campaign=march'); return false;">Loggly</a> 
+* <a href="https://www.loggly.com/log-management/python-logging/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=march" onclick="trackOutboundLink('https://www.loggly.com/log-management/python-logging/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=march'); return false;">Loggly</a> 
   is a third party cloud based 
   application that aggregates logs. They have instructions for every major 
   language, including python. It includes email alerting on custom searches. 
