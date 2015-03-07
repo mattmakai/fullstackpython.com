@@ -150,8 +150,10 @@ equivalent of browser testing in the web application world.
   and logging.
 
 * [REST Hooks](http://resthooks.org/) is an open source Python project that 
-  makes it easier to implement webhooks, which are more efficient than polling
-  for API updates.
+  makes it easier to implement subscription-based "REST hooks". These REST
+  hooks are similar to webhooks, but provide a different mechanism for 
+  subscribing to updates via a REST interface. Both REST hooks and webhooks
+  are far more efficient than polling for updates and notifications.
 
 
 ## API creation learning checklist
