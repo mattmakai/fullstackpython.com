@@ -149,6 +149,10 @@ equivalent of browser testing in the web application world.
   web API functionality such as proper HTTP responses, authentication
   and logging.
 
+* [REST Hooks](http://resthooks.org/) is an open source Python project that 
+  makes it easier to implement webhooks, which are more efficient than polling
+  for API updates.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
