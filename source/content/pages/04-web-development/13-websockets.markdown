@@ -79,7 +79,7 @@ However, a JavaScript wrapper library can make a developer's life easier by
 implementing graceful degradation (often falling back to long-polling when 
 WebSockets are not supported) and by providing a wrapper around 
 browser-specific WebSocket quirks. Examples of JavaScript client libraries 
-and WSGI implementations are found below.
+and Python implementations are found below.
 
 
 ## JavaScript client libraries
@@ -88,6 +88,15 @@ and WSGI implementations are found below.
 
 * [web-socket-js](https://github.com/gimite/web-socket-js) is a Flash-based
   client-side WebSockets implementation.
+
+
+## Python implementations
+* [Autobahn](http://autobahn.ws/python/) uses Twisted or asyncio to implement
+  the WebSockets protocol.
+
+* [Crossbar.io](http://crossbar.io/) builds upon Autobahn and includes a
+  separate server for handling the WebSockets connections if desired by
+  the web app developer.
 
 
 ## Nginx WebSocket proxying
@@ -194,6 +203,10 @@ properly.
 * The [Choose Your Own Adventure Presentations](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
   tutorial uses WebSockets via gevent on the server and socketio.js for 
   pushing vote count updates from the server to the client. 
+
+* [Adding Real Time to Django Applications](http://crossbar.io/docs/Adding-Real-Time-to-Django-Applications/)
+  shows how to use Django and Crossbar.io to implement a publish/subscribe
+  feature in the application.
 
 * [Async with Bottle](http://bottlepy.org/docs/dev/async.html) shows how to
   use greenlets to support WebSockets with the Bottle web framework.

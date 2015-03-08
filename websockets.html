@@ -87,7 +87,7 @@ client-side functionality through the
 implementing graceful degradation (often falling back to long-polling when 
 WebSockets are not supported) and by providing a wrapper around 
 browser-specific WebSocket quirks. Examples of JavaScript client libraries 
-and WSGI implementations are found below.</p>
+and Python implementations are found below.</p>
 <h2>JavaScript client libraries</h2>
 <ul>
 <li>
@@ -97,6 +97,18 @@ and WSGI implementations are found below.</p>
 <li>
 <p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a> is a Flash-based
   client-side WebSockets implementation.</p>
+</li>
+</ul>
+<h2>Python implementations</h2>
+<ul>
+<li>
+<p><a href="http://autobahn.ws/python/">Autobahn</a> uses Twisted or asyncio to implement
+  the WebSockets protocol.</p>
+</li>
+<li>
+<p><a href="http://crossbar.io/">Crossbar.io</a> builds upon Autobahn and includes a
+  separate server for handling the WebSockets connections if desired by
+  the web app developer.</p>
 </li>
 </ul>
 <h2>Nginx WebSocket proxying</h2>
@@ -217,6 +229,11 @@ properly.</p>
 <p>The <a href="https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html">Choose Your Own Adventure Presentations</a>
   tutorial uses WebSockets via gevent on the server and socketio.js for 
   pushing vote count updates from the server to the client. </p>
+</li>
+<li>
+<p><a href="http://crossbar.io/docs/Adding-Real-Time-to-Django-Applications/">Adding Real Time to Django Applications</a>
+  shows how to use Django and Crossbar.io to implement a publish/subscribe
+  feature in the application.</p>
 </li>
 <li>
 <p><a href="http://bottlepy.org/docs/dev/async.html">Async with Bottle</a> shows how to
