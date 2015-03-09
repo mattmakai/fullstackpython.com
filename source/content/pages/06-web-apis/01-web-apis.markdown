@@ -2,6 +2,7 @@ title: Application Programming Interfaces
 category: page
 slug: application-programming-interfaces
 sort-order: 0601
+meta: Web application programming interfaces (APIs) provide a machine-to-machine data transport mechanism. Learn more about web APIs at Full Stack Python.
 choice1url: /api-integration.html
 choice1icon: fa-link
 choice1text: How do I integrate external APIs into my application?

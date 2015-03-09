@@ -2,6 +2,7 @@ title: Databases
 category: page
 slug: databases
 sort-order: 0501
+meta: Relational databases a critical part of Python web applications. Learn more about persisting data in databases at Full Stack Python.
 choice1url: /no-sql-datastore.html
 choice1icon: fa-inbox
 choice1text: What about non-relational data stores hipsters tell me to use? 

@@ -2,6 +2,7 @@ title: NoSQL Data Stores
 category: page
 slug: no-sql-datastore
 sort-order: 0502
+meta: NoSQL data stores persistent data in different ways than traditional relational databases. Learn more about NoSQL on Full Stack Python.
 choice1url: /databases.html
 choice1icon: fa-hdd-o
 choice1text: Tell me more about standard relational databases.
