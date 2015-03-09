@@ -94,6 +94,20 @@ program.
   shows how he configures and uses the editor so it sticks as his primary
   code editting tool.
 
+
+## Vim installation guides
+* [Upgrading Vim on OS X](http://prioritized.net/blog/upgrading-vim-on-os-x/)
+  explains why to upgrade from Vim 7.2 to 7.3+ and how to do it using 
+  [Homebrew](http://brew.sh/).
+
+* The easiest way to install Vim on Windows 7+ is to download and run the 
+  [gvim74.exe](http://www.vim.org/download.php#pc) file.
+
+* On Linux make sure to install the 
+  [vim package](https://launchpad.net/ubuntu/+source/vim) with
+  ``sudo apt-get install vim``.
+
+
 ## Vimrc resources
 * [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
   detailed overview and opinionated guide to configuring Vim. Highly 
