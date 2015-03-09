@@ -93,6 +93,10 @@ to learn more about web development.
   data structure appropriate to your application and how the list and 
   dictionary can be used in many situations.
 
+* The talk [Python Descriptors](https://www.youtube.com/watch?v=ZdvpNaWwx24) 
+  by Simeon Franklin explains the what and why of this core Python language 
+  feature.
+
 
 ## Screencasts and class recordings
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
