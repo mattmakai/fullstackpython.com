@@ -107,6 +107,12 @@ to learn more about web development.
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
 
+* While there aren't always live streams, it's worth checking out 
+  [Watch People Code](http://www.watchpeoplecode.com/) to see if anyone is 
+  live coding or has a recording of working on a Python project. Even
+  experienced developers can learn a whole lot from watching other 
+  developer's work on their projects.
+
 
 ## Video compilations
 * [PyVideo](http://www.pyvideo.org/) organizes and indexes thousands of Python
