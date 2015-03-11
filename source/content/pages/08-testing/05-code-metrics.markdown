@@ -2,6 +2,7 @@ title: Code Metrics
 category: page
 slug: code-metrics
 sort-order: 0805
+meta: Code metrics provide insight into the quality of a code base via analysis tools. Learn more about code metrics on Full Stack Python.
 choice1url: /continuous-integration.html
 choice1icon: fa-refresh
 choice1text: How can I continuously evaluate my code with these metrics?
