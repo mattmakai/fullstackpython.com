@@ -2,6 +2,7 @@ title: WSGI Servers
 category: page
 slug: wsgi-servers
 sort-order: 0707
+meta: A Web Server Gateway Interface (WSGI) server runs Python code to create a web application. Learn more about WSGI servers on Full Stack Python.
 choice1url: /databases.html
 choice1icon: fa-hdd-o
 choice1text: How do I store persistent data for my Python web app?
@@ -68,7 +69,7 @@ Why use WSGI and not just point a web server directly at an application?
   The segregation of responsibilities is important for efficiently scaling 
   web traffic.
 
-<img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server <-> Web server <-> Browser" width="100%" class="technical-diagram" />
+<img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server - Web server - Browser" width="100%" class="technical-diagram" />
 
 WSGI is by design a simple standard interface for running Python code. As
 a web developer you won't need to know much more than
