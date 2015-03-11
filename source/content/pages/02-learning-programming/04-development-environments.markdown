@@ -119,4 +119,6 @@ up your application.
   shows you how to be more efficient and productive with that IDE if it's
   your choice for writing Python code.
 
+* JetBrains' [PyCharm Blog](http://blog.jetbrains.com/pycharm/) is required
+  reading if you're using the IDE or considering trying it.
 
