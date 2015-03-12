@@ -2,6 +2,7 @@ title: Source Control
 category: page
 slug: source-control
 sort-order: 0708
+meta: Source control versions and backs up code for when programming problems occur. Learn more about source control on Full Stack Python.
 choice1url: /deployment.html
 choice1icon: fa-share
 choice1text: How do I deploy the code I've created for my web app?
