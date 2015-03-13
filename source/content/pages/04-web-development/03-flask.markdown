@@ -20,7 +20,7 @@ choice4text: How can I version and store my source code so I don't lose it?
 # Flask
 [Flask](http://flask.pocoo.org/) is a Python web framework built with a 
 [small core and easy-to-extend philosophy](http://flask.pocoo.org/docs/design/). 
-<a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.png" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a>
+<a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a>
 
 
 <div class="well" style="margin-top: 20px;">
