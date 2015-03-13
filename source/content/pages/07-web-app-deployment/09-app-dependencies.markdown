@@ -1,6 +1,7 @@
 title: Application Dependencies
 category: page
 slug: application-dependencies
+meta: Python web applications depend on many code libraries. Learn more about application dependencies on Full Stack Python.
 sort-order: 0709
 choice1url: /wsgi-servers.html
 choice1icon: fa-play fa-inverse

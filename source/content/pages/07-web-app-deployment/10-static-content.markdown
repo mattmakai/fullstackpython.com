@@ -2,6 +2,7 @@ title: Static Content
 category: page
 slug: static-content
 sort-order: 0710
+meta: Serving static and media files is an important part of Python web application deployments. Learn more about static content on Full Stack Python.
 choice1url: /caching.html
 choice1icon: fa-repeat
 choice1text: How do I cache repeated operations to improve performance?
