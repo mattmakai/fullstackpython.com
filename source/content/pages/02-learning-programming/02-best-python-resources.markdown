@@ -26,9 +26,9 @@ This page aggregates the best general Python resources with descriptions of
 what they provide to readers.
 
 <div class="well" style="margin-top: 20px;">
-If you prefer learning by watching videos 
-<a href="/best-python-videos.html">best Python videos</a> as well
-as a read what 
+If you prefer to learn by watching videos check out the
+<a href="/best-python-videos.html">best Python videos</a>. You may
+also be interested in reading about
 <a href="/development-environments.html">development environments</a>
 to use for coding.
 </div>
