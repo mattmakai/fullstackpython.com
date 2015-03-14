@@ -26,6 +26,7 @@ the
 
 ## 2015
 ### March
+* Adding a slew of new [Django](/django.html) resources.
 * Working on including Crossbar.io and Autobahn to the 
   [websockets](/websockets.html) page.
 * Added the Muffin framework to the 

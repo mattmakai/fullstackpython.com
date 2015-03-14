@@ -2,6 +2,7 @@ title: Docker
 category: page
 slug: docker
 sort-order: 0717
+meta: Docker is a container management system often used for deploying web applications. Learn more about Docker on Full Stack Python.
 choice1url: /deployment.html
 choice1icon: fa-share
 choice1text: How do I deploy a Python application without a container?
@@ -41,6 +42,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial). Andrew also created 
   [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) that's
   well worth buying.
+
+* [Docker in Practice - A Guide for Engineers](https://zwischenzugs.wordpress.com/2015/03/14/docker-in-practice-a-guide-for-engineers/)
+  is an explanation of the concepts and philosophy by the authors of the 
+  new Manning Docker book in early access format.
 
 
 ## Python-specific Docker resources

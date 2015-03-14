@@ -254,6 +254,10 @@ existing framework.
   ElasticSearch. This is great for small sites before you scale them up with
   a more robust search engine.
 
+* [How to use Django's Proxy Models](https://www.wellfireinteractive.com/blog/using-django-proxy-models)
+  is a solid post on a Django ORM concept that doesn't frequently get a lot
+  of love or explanation.
+
 
 ## Static and media files
 Deploying and handling static and media files can be confusing for new
@@ -267,6 +271,10 @@ to handle these files properly.
 
 * [Loading Django FileField and ImageFields from the file system](http://www.revsys.com/blog/2014/dec/03/loading-django-files-from-code/)
   shows how to load a model field with a file from the file system.
+
+* [Restricting access to user-uploaded files in Django](http://blog.wearefarm.com/2015/02/09/contact-form-uploads/)
+  provides a protection mechanism for media files.
+
 
 
 ## Open source Django example projects
