@@ -2,6 +2,7 @@ title: Logging
 category: page
 slug: logging
 sort-order: 0714
+meta: Logging saves error, warning and event output to persistent storage for debugging purposes. Learn more about logging on Full Stack Python.
 choice1url: /monitoring.html
 choice1icon: fa-bar-chart-o fa-inverse
 choice1text: How can I monitor my live app with tools other than just logs?

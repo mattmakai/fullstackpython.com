@@ -2,6 +2,7 @@ title: Task Queues
 category: page
 slug: task-queues
 sort-order: 0711
+meta: Task queues handle asynchronous jobs outside the HTTP request-response cycle. Learn more about task queues on Full Stack Python.
 choice1url: /logging.html
 choice1icon: fa-align-left fa-inverse
 choice1text: How do I monitor my app and its task queues with logging?

@@ -2,6 +2,7 @@ title: Web Analytics
 category: page
 slug: web-analytics
 sort-order: 0716
+meta: Web analytics tools collect, process and visualize data from web visitors so developers can better serve their users. Learn more about web analytics on Full Stack Python.
 choice1url: /web-application-security.html
 choice1icon: fa-lock fa-inverse
 choice1text: What should I know about web application security?

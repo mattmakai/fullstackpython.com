@@ -2,6 +2,7 @@ title: Caching
 category: page
 slug: caching
 sort-order: 0718
+meta: Caching reduces load on servers by pre-calculating the results of common operations. Learn more about caching on Full Stack Python.
 choice1url: /task-queues.html
 choice1icon: fa-tasks
 choice1text: How do I run Python outside the HTTP request-response cycle?
