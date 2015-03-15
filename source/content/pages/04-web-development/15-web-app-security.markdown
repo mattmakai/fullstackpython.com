@@ -106,6 +106,10 @@ securing Linux distributions.
   shows how important it is to secure your web servers, especially when they are
   hosted in IP address ranges that are commonly scanned by malicious actors.
 
+* [Cloud Security Auditing: Challenges and Emerging Approaches](http://www.infoq.com/articles/cloud-security-auditing-challenges-and-emerging-approaches)
+  is a high-level overview of some of security auditing problems that come
+  with cloud deployments.
+
 
 ## Web security learning checklist
 <i class="fa fa-check-square-o"></i>

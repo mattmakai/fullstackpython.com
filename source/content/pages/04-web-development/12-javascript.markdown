@@ -78,6 +78,10 @@ which is defined by the
   is an opinion piece about favoring small, single-purpose JavaScript libraries 
   over larger frameworks due to churn in the ecosystem.
 
+* [The Modern JavaScript Developer’s Toolbox ](http://www.infoq.com/articles/modern-javascript-toolbox)
+  provides a high-level overview of tools frequently used on the client and
+  server side for developers using JavaScript in their web applications.
+
 
 ## JavaScript learning checklist
 <i class="fa fa-check-square-o"></i> 
