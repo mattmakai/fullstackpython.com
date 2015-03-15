@@ -133,6 +133,11 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   [Packaging a Flask app in a Debian package](http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/)
   once you've built an app and want to deploy it.
 
+* [How to make a Flask blog in one hour or less](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)
+  is a well written tutorial that uses the 
+  [Peewee ORM](https://peewee.readthedocs.org/en/latest/) instead of 
+  SQLAlchemy for the blog back end.
+
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
 
