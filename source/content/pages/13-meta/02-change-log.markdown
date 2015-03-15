@@ -26,6 +26,9 @@ the
 
 ## 2015
 ### March
+* Updated the [web analytics](/web-analytics.html) page with a new 
+  Python-specific section for walkthroughs that are specific to building or
+  using analytics with Python applications.
 * Adding a slew of new [Django](/django.html) resources.
 * Working on including Crossbar.io and Autobahn to the 
   [websockets](/websockets.html) page.

@@ -84,8 +84,10 @@ application before taking some action, such as purchasing your service.
   movements. 
 
 
-## Web analytics resources
-* [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)  
+## Python-specific web analytics resources
+* [Building an Analytics App with Flask](http://charlesleifer.com/blog/saturday-morning-hacks-building-an-analytics-app-with-flask/)
+  is a detailed walkthrough for collecting and analyzing webpage
+  analytics with your own Flask app.
 
 * [Pandas and Google Analytics](http://blog.yhathq.com/posts/pandas-google-analytics.html)
   shows how to use pandas for data analysis with Google Analytics' API to
@@ -94,6 +96,10 @@ application before taking some action, such as purchasing your service.
 * [Build your own Google Analytics Dashboard in Excel](http://blog.zoomeranalytics.com/google-analytics/)
   show how to extract your Google Analytics data via their web API and Python
   helper library so it can be used in other tools such as Excel.
+
+
+## General web analytics resources
+* [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)  
 
 * This beginner's guide to 
   [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
