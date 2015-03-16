@@ -258,6 +258,10 @@ existing framework.
   is a solid post on a Django ORM concept that doesn't frequently get a lot
   of love or explanation.
 
+* [Tightening Django Admin Logins](http://tech.marksblogg.com/django-admin-logins.html)
+  shows you how to log authentication failures, create an IP addresses white
+  list and combine fail2ban with the authentication failures list.
+
 
 ## Static and media files
 Deploying and handling static and media files can be confusing for new
