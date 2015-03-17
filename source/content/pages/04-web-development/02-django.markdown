@@ -101,6 +101,11 @@ syntax and language semantics first before diving into web development.
 
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
+* [Django by Example](http://lightbird.net/dbe2/) is a set of tutorials for
+  creating Django projects such as a blog, forum, issue tracker and portfolio.
+  This is a good site if you want to dive right into the code with minimal
+  prose.
+
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
   has several nice examples for breaking Django into smaller simplier 
   components.
