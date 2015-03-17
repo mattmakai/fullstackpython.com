@@ -100,6 +100,11 @@ provides a command-line interface for interacting with the RPM system.
 
 * Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
 
+* Since Linux is your go-to production operating system, it's important to
+  get comfortable with the Unix/Linux commands and philosophy. Study up on
+  [this introduction to Unix tutorial](http://www.oliverelliott.org/article/computing/tut_unix/)
+  to become more familiar with the operating system.
+
 * [Choosing a Linux Distribution](http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution)
 
 * [First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers)
