@@ -148,10 +148,6 @@ further clarification.
 * This Stack Overflow question details how to set up a 
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
 
-* An alternative approach for managing dependencies with Docker instead of
-  through virtualenv is explained in this post entitled 
-  "[Using Docker as a Python Development Environment](http://continuousdelivery.uglyduckling.nl/uncategorized/using-docker-as-a-python-development-environment/)."
-
 
 ## Application dependencies learning checklist
 <i class="fa fa-check-square-o"></i>
