@@ -57,6 +57,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is an extensive tutorial that uses a Flask application and deploys it
   using a Docker container.
 
+* [Docker in Action - Fitter, Happier, More Productive ](https://realpython.com/blog/python/docker-in-action-fitter-happier-more-productive/)
+  is a killer tutorial that shows how to combine Docker with CircleCI to
+  continuously deploy a Flask application.
+
 * [Deploying Django Applications in Docker](http://handlebarcreative.tumblr.com/post/104881545637/deploying-django-applications-in-docker)
   explains some of the concepts behind using Docker for Python deployments and
   shows how to specifically use it for deploying Django. 
