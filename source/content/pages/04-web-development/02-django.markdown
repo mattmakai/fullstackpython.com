@@ -67,6 +67,13 @@ However, that criticism is invalid if you take the time to learn the Python
 syntax and language semantics first before diving into web development.
 
 
+<div class="well see-also">
+While you're learning about Django you should also read up on
+<a href="/web-frameworks.html">web frameworks</a> and check out the
+<a href="/bottle.html">Bottle framework</a>.
+</div>
+
+
 ## Django tutorials
 * [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 

@@ -58,7 +58,14 @@ There is a spectrum between minimal functionality with easy extensibility and
 including everything in the framework with tight integration.
 
 
-## General web framework resources
+<div class="well see-also">
+While you're learning about web frmaeworks you should also find out about
+<a href="/deployment.html">web application deployment</a> and 
+<a href="/application-programming-interfaces.html">web APIs</a>.
+</div>
+
+
+## Web framework resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
   by [Jeff Knupp](https://twitter.com/jeffknupp)
   is an in-depth explanation of what web frameworks are and their relation

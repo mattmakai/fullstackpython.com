@@ -18,22 +18,32 @@ choice4text:
 
 
 # Vim
-Vim, shorthand for Vi IMproved, is a text editor with numerous configuration 
-options and wide-ranging extensions that can be used to write Python code.
+Vim, short for Vi IMproved, is a configurable text editor often used as
+a Python development environment. Vim proponents commonly cite the numerous 
+plugins, Vimscript and logical command language as major Vim strengths.
 
 
 ## Why is Vim a good Python development environment?
-Vim's philosophy is that developers are fastest when they never take their 
-hands off the keys. Even using the mouse is a detriment to the rate at which
-your thoughts can flow into code. 
+Vim's philosophy is that developers are more productive when they avoid 
+taking their hands off the keyboard. Code should flow naturally from the 
+developer's thoughts through the keyboard and onto the screen. Using a mouse 
+or other perphipheral is a detriment to the rate at which a developer's 
+thoughts become code.
 
-Vim has a language behind its commands. When a beginner is learning the
-editor she may feel like it is impossible to understand all the key commands.
-However, the commands stack together in a logical way so that over time
-the editor becomes predictable.
+Vim has a logical, structured command language. When a beginner is learning 
+the editor she may feel like it is impossible to understand all the key 
+commands. However, the commands stack together in a logical way so that over 
+time the editor becomes predictable.
+
+<div class="well see-also">
+If you're interested in Vim you'll also want to read about 
+<a href="/development-environments.html">development environments for coding</a>
+and learn 
+<a href="/why-use-python.html">what makes Python a great programming language</a>.
+</div>
 
 
-## Configuring Vim with a Vimrc
+## Configuring Vim with a Vimrc file
 The Vimrc file is used to configure the Vim editor. A Vimrc file can range
 from nothing in it to very complicated with hundreds or thousands of lines
 of configuration commands.
@@ -64,6 +74,7 @@ can be found within ``/home/matt/.vimrc``.
 If the Vimrc file does not already exist, just create it within the user's
 home directory and it will be picked up by Vim the next time you start the
 program.
+
 
 
 ## General Vim resources

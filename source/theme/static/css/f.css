@@ -1733,4 +1733,5 @@ h3.panel-head {margin: 5px 0 0 0; font-size: 26px; color: #fff;}
     }
 }
 .technical-diagram {margin: 10px 0 5px 0;}
-
+.see-also {margin-top: 20px; background: #22B24C; color: #eee;}
+.see-also a {color: #fff;}
