@@ -25,7 +25,7 @@ out there though that it can be difficult to know how to find them.
 This page aggregates the best general Python resources with descriptions of
 what they provide to readers.
 
-<div class="well" style="margin-top: 20px;">
+<div class="well see-also">
 If you prefer to learn by watching videos check out the
 <a href="/best-python-videos.html">best Python videos</a>. You may
 also be interested in reading about

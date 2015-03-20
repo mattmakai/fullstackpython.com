@@ -33,6 +33,12 @@ applications. The text editor provides a way to write the code. The
 interpreter allows it to be executed. Testing to see if the code does what
 you want can either be done manually or by unit and functional tests. 
 
+<div class="well see-also">
+While you're learning about development environments be sure to
+check out information on <a href="/vim.html">Vim</a> and 
+<a href="/emacs.html">Emacs</a>.
+</div>
+
 
 ## A development environment example
 Here's what I (the author of Full Stack Python, 
