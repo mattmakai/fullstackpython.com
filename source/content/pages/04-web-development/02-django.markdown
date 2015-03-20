@@ -179,6 +179,10 @@ for Django and web development on the
   will help you stop procrastinating on testing your Django projects if you're
   uncertain where to begin.
 
+* [Django views automated testing with Selenium](https://medium.com/@unary/django-views-automated-testing-with-selenium-d9df95bdc926)
+  gives some example code to get up and running with 
+  [Selenium](http://www.seleniumhq.org) browser-based tests.
+
 
 ## Django with Angular (Djangular) resources
 * [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
