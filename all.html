@@ -635,14 +635,24 @@ to get a feel for some of the configuration statements:</p>
 </pre></div>
 
 
+<p>Here is how these configuration options look with a dark background on 
+Mac OS X while editing the markdown for this webpage (how meta!).</p>
+<p><img src="theme/img/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;"></p>
+<p>Take a look at another example using these configuration options, this time
+with a light background and editing Python code from my 
+<a href="https://github.com/makaimc/choose-your-own-adventure-presentations">Choose Your Own Adventures Presentations</a>
+project.</p>
+<p><img src="theme/img/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;"></p>
 <p>The Vimrc file lives under the home directory of the user account running
 Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
-file is found at <code>/Users/matt/.vimrc</code>. On Ubuntu Linux my Vimrc file
-can be found within <code>/home/matt/.vimrc</code>. </p>
-<p>If the Vimrc file does not already exist, just create it within the user's
-home directory and it will be picked up by Vim the next time you start the
-program.</p>
-<h2>General Vim resources</h2>
+file is found at <code>/Users/matt/.vimrc</code>. On Ubuntu Linux my .vimrc file
+can be found within the <code>/home/matt/</code> directory. </p>
+<p>If a Vimrc file does not already exist, just create it within the user's
+home directory and it will be picked up by Vim the next time you open the
+editor.</p>
+<h2>Vim tutorials</h2>
+<p>Vim has a reputation for a difficult learning curve, but it's much easier
+to get started with these tutorials.</p>
 <ul>
 <li>
 <p><a href="http://vim-adventures.com/">Vim Adventures</a> is a cute, fun browser-based
@@ -659,15 +669,6 @@ program.</p>
   incredibly deep study in how to go from beginner to knowledgeable in Vim.</p>
 </li>
 <li>
-<p><a href="http://haridas.in/vim-as-your-ide.html">Vim as Your IDE</a> discusses how to
-  set up Vim for greater productivity once you learn the initial Vim language 
-  for using the editor.</p>
-</li>
-<li>
-<p><a href="http://stackoverflow.com/questions/9172802/setting-up-vim-for-python">Setting up Vim for Python</a>
-  has a well written answer on Stack Overflow for getting started with Vim.</p>
-</li>
-<li>
 <p><a href="http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/">Vim as a Language</a>
   explains the language syntax and how you can build up over time to master
   the editor.</p>
@@ -679,7 +680,40 @@ program.</p>
   code editting tool.</p>
 </li>
 </ul>
+<h2>Vim Python IDE bundles and resources</h2>
+<p>Once you get comfortable with Vim as an editor, there are several 
+configuration options and plugins you can use to enhance your Python 
+productivity. These are the resources and tutorials to read when you're
+ready to take that step.</p>
+<ul>
+<li>
+<p>The <a href="https://github.com/klen/python-mode">python-mode</a> project is a Vim
+  plugin with syntax highlighting, breakpoints, PEP8 linting, code completion
+  and many other features you'd expect from an integrated development
+  environment.</p>
+</li>
+<li>
+<p><a href="https://github.com/gmarik/Vundle.vim">Vundle</a> comes highly recommended
+  as a plug-in manager for Vim.</p>
+</li>
+<li>
+<p><a href="http://haridas.in/vim-as-your-ide.html">Vim as Your IDE</a> discusses how to
+  set up Vim for greater productivity once you learn the initial Vim language 
+  for using the editor.</p>
+</li>
+<li>
+<p><a href="unlogic.co.uk/2013/02/08/vim-as-a-python-ide/">Vim as a Python IDE</a>
+  goes through the steps necessary to make Vim into a more comfortable 
+  environment for Python development.</p>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/9172802/setting-up-vim-for-python">Setting up Vim for Python</a>
+  has a well written answer on Stack Overflow for getting started with Vim.</p>
+</li>
+</ul>
 <h2>Vim installation guides</h2>
+<p>These installation guides will help you get Vim up and running on Mac OS X, 
+Linux and Windows.</p>
 <ul>
 <li>
 <p><a href="http://prioritized.net/blog/upgrading-vim-on-os-x/">Upgrading Vim on OS X</a>
@@ -697,6 +731,9 @@ program.</p>
 </li>
 </ul>
 <h2>Vimrc resources</h2>
+<p>These are a few resources for learning how to structure a .vimrc file. I
+recommend adding configuration options one at a time to test them 
+individually instead of going whole hog with a Vimrc you are unfamiliar with.</p>
 <ul>
 <li>
 <p><a href="http://dougblack.io/words/a-good-vimrc.html">A Good Vimrc</a> is a fantastic,
@@ -706,6 +743,11 @@ program.</p>
 <li>
 <p><a href="https://justin.abrah.ms/vim/vim_and_python.html">Vim and Python</a> shows
   and explains many Python-specific .vimrc options.</p>
+</li>
+<li>
+<p>This 
+  <a href="https://github.com/amix/vimrc/tree/master/vimrcs">repository's folder with Vimrc files</a>
+  has example configurations that are well commented and easy to learn from. </p>
 </li>
 </ul>
 <h2>Vim Plugin resources</h2>
@@ -720,6 +762,10 @@ program.</p>
   provides a list of plugins with a description for each one on its 
   usefulness. The comments at the bottom are also interesting as people have
   suggested alternatives to some of the plugins mentioned in the post.</p>
+</li>
+<li>
+<p><a href="https://github.com/powerline/powerline">Powerline</a> is a popular statusline
+  plugin for Vim that works with both Python 2 and 3.</p>
 </li>
 </ul>
 <h3>What do you want to learn about Python development?</h3>
@@ -5439,6 +5485,8 @@ the
 <h2>2015</h2>
 <h3>March</h3>
 <ul>
+<li>Major update to <a href="/vim.html">Vim</a> page to add screenshots, a better example
+  .vimrc configuration and many more resources.</li>
 <li>Updated the <a href="/web-analytics.html">web analytics</a> page with a new 
   Python-specific section for walkthroughs that are specific to building or
   using analytics with Python applications.</li>

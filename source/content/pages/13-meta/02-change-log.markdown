@@ -26,6 +26,8 @@ the
 
 ## 2015
 ### March
+* Major update to [Vim](/vim.html) page to add screenshots, a better example
+  .vimrc configuration and many more resources.
 * Updated the [web analytics](/web-analytics.html) page with a new 
   Python-specific section for walkthroughs that are specific to building or
   using analytics with Python applications.
