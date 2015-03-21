@@ -169,6 +169,12 @@ Linux and Windows.
   [vim package](https://launchpad.net/ubuntu/+source/vim) with
   ``sudo apt-get install vim``.
 
+* If you're using PyCharm as your IDE you won't need to install Vim as a 
+  separate text editor - instead use the 
+  [IdeaVim](https://plugins.jetbrains.com/plugin/164) PyCharm plugin to get
+  Vim keybindings, visual/insert mode, configuration with ~/.ideavimrc and
+  other Vim emulation features. 
+
 
 ## Vimrc resources
 These are a few resources for learning how to structure a .vimrc file. I
