@@ -48,21 +48,34 @@ The Vimrc file is used to configure the Vim editor. A Vimrc file can range
 from nothing in it to very complicated with hundreds or thousands of lines
 of configuration commands.
 
-Here's a simple example .vimrc file I use for Python development to get a feel
-for some of the configuration statements:
+Here's a short, commented example .vimrc file I use for Python development 
+to get a feel for some of the configuration statements:
 
-    # enable syntax highlighting
-    syntax on
+    " enable syntax highlighting
+    syntax enable
 
-    # the next 4 lines set tabs to have 4 spaces, autoindent when already
-    # working with indented lines, expand tabs key presses to spaces and
-    # move lines 4 spaces each time the >> or << commands are used
+    " show line numbers
+    set number
+
+    " set tabs to have 4 spaces
     set ts=4
+
+    " indent when moving to the next line while writing code
     set autoindent
+
+    " expand tabs into spaces
     set expandtab
+
+    " when using the >> or << commands, shift lines by 4 spaces
     set shiftwidth=4
 
-    # enable all Python syntax highlighting features
+    " show a visual line under the cursor's current line 
+    set cursorline
+
+    " show the matching part of the pair for [] {} and ()
+    set showmatch
+
+    " enable all Python syntax highlighting features
     let python_highlight_all = 1
 
 
@@ -126,6 +139,17 @@ program.
 
 * [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
   and explains many Python-specific .vimrc options.
+
+
+## Vim Plugin resources
+* [5 Essential VIM Plugins That Greatly Increase my Productivity](http://joelhooks.com/blog/2013/04/23/5-essential-vim-plugins/)
+  covers the author's experience with the Vundle, NERDTree, ctrlp, Syntastic
+  and EasyMotion Vim plugins.
+
+* [Getting more from Vim with plugins](http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/)
+  provides a list of plugins with a description for each one on its 
+  usefulness. The comments at the bottom are also interesting as people have
+  suggested alternatives to some of the plugins mentioned in the post.
 
 
 ### What do you want to learn about Python development?

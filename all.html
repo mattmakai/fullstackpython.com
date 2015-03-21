@@ -604,20 +604,33 @@ and learn
 <p>The Vimrc file is used to configure the Vim editor. A Vimrc file can range
 from nothing in it to very complicated with hundreds or thousands of lines
 of configuration commands.</p>
-<p>Here's a simple example .vimrc file I use for Python development to get a feel
-for some of the configuration statements:</p>
-<div class="codehilite"><pre><span class="cp"># enable syntax highlighting</span>
-<span class="n">syntax</span> <span class="n">on</span>
+<p>Here's a short, commented example .vimrc file I use for Python development 
+to get a feel for some of the configuration statements:</p>
+<div class="codehilite"><pre><span class="s">&quot; enable syntax highlighting</span>
+<span class="n">syntax</span> <span class="n">enable</span>
 
-<span class="cp"># the next 4 lines set tabs to have 4 spaces, autoindent when already</span>
-<span class="cp"># working with indented lines, expand tabs key presses to spaces and</span>
-<span class="cp"># move lines 4 spaces each time the &gt;&gt; or &lt;&lt; commands are used</span>
+<span class="s">&quot; show line numbers</span>
+<span class="n">set</span> <span class="n">number</span>
+
+<span class="s">&quot; set tabs to have 4 spaces</span>
 <span class="n">set</span> <span class="n">ts</span><span class="o">=</span><span class="mi">4</span>
+
+<span class="s">&quot; indent when moving to the next line while writing code</span>
 <span class="n">set</span> <span class="n">autoindent</span>
+
+<span class="s">&quot; expand tabs into spaces</span>
 <span class="n">set</span> <span class="n">expandtab</span>
+
+<span class="s">&quot; when using the &gt;&gt; or &lt;&lt; commands, shift lines by 4 spaces</span>
 <span class="n">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span>
 
-<span class="cp"># enable all Python syntax highlighting features</span>
+<span class="s">&quot; show a visual line under the cursor&#39;s current line </span>
+<span class="n">set</span> <span class="n">cursorline</span>
+
+<span class="s">&quot; show the matching part of the pair for [] {} and ()</span>
+<span class="n">set</span> <span class="n">showmatch</span>
+
+<span class="s">&quot; enable all Python syntax highlighting features</span>
 <span class="n">let</span> <span class="n">python_highlight_all</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -693,6 +706,20 @@ program.</p>
 <li>
 <p><a href="https://justin.abrah.ms/vim/vim_and_python.html">Vim and Python</a> shows
   and explains many Python-specific .vimrc options.</p>
+</li>
+</ul>
+<h2>Vim Plugin resources</h2>
+<ul>
+<li>
+<p><a href="http://joelhooks.com/blog/2013/04/23/5-essential-vim-plugins/">5 Essential VIM Plugins That Greatly Increase my Productivity</a>
+  covers the author's experience with the Vundle, NERDTree, ctrlp, Syntastic
+  and EasyMotion Vim plugins.</p>
+</li>
+<li>
+<p><a href="http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/">Getting more from Vim with plugins</a>
+  provides a list of plugins with a description for each one on its 
+  usefulness. The comments at the bottom are also interesting as people have
+  suggested alternatives to some of the plugins mentioned in the post.</p>
 </li>
 </ul>
 <h3>What do you want to learn about Python development?</h3>
