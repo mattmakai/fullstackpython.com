@@ -146,7 +146,7 @@ ready to take that step.
   set up Vim for greater productivity once you learn the initial Vim language 
   for using the editor.
 
-* [Vim as a Python IDE](unlogic.co.uk/2013/02/08/vim-as-a-python-ide/)
+* [Vim as a Python IDE](http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/)
   goes through the steps necessary to make Vim into a more comfortable 
   environment for Python development.
 
