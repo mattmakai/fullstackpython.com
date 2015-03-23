@@ -170,6 +170,9 @@ when scaling out a large deployment of distributed task queues.
   is a straightforward tutorial for setting up the Celery task queue for 
   Django web applications using the Redis broker on the back end.
 
+* [Background jobs with Django and Celery](http://django.zone/posts/background-jobs-django-and-celery)
+  shows the code and a simple explanation of how to use Celery with 
+  [Django](/django.html).
 
 
 
