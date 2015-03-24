@@ -106,6 +106,10 @@ application before taking some action, such as purchasing your service.
   [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
   provides some context for understanding and reasoning about web traffic. 
 
+* [An Analytics Primer for Developers](https://hacks.mozilla.org/2015/03/an-analytics-primer-for-developers/)
+  by Mozilla explains what to track, choosing an analytics platform and how
+  to serve up the analytics JavaScript asynchronously.
+
 * This post provides context for determining if a given metric is
   ["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
 
