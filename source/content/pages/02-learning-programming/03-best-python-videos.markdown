@@ -12,9 +12,6 @@ choice2text: I want to learn how to code a web application with Python.
 choice3url: /development-environments.html
 choice3icon: fa-desktop
 choice3text: What should I use to code my Python application?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Best Python Videos

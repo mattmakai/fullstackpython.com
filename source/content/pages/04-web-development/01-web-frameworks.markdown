@@ -9,12 +9,9 @@ choice1text: Tell me more about the Django framework.
 choice2url: /flask.html
 choice2icon: fa-flask
 choice2text: I want to learn more about the Flask web framework.
-choice3url: /bottle.html
-choice3icon: fa-tint fa-inverse
-choice3text: Show me more information on Bottle.
-choice4url: /other-web-frameworks.html
-choice4icon: fa-question fa-inverse
-choice4text: What other Python web frameworks exist?
+choice3url: /other-web-frameworks.html
+choice3icon: fa-question fa-inverse
+choice3text: What other Python web frameworks exist?
 
 
 # Web frameworks

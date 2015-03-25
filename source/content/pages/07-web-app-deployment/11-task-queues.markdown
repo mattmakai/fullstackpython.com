@@ -12,9 +12,6 @@ choice2text: How can I learn more about the users of my application?
 choice3url: /monitoring.html
 choice3icon: fa-bar-chart-o fa-inverse
 choice3text: What tools exist for monitoring a live web application?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Task queues

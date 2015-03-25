@@ -12,9 +12,6 @@ choice2text: How do I integrate external APIs into my application?
 choice3url: /web-application-security.html
 choice3icon: fa-lock fa-inverse
 choice3text: How can I learn about web application security?
-choice4url: /static-content.html
-choice4icon: fa-spinner fa-inverse
-choice4text: Where should I host static content such as JavaScript files?
 
 
 # API Creation

@@ -9,12 +9,9 @@ choice1text: How do I execute Python since the web server doesn't do that?
 choice2url: /application-dependencies.html
 choice2icon: fa-archive fa-inverse
 choice2text: How should I install Python libraries on the server?
-choice3url: /static-content.html
-choice3icon: fa-spinner
-choice3text: What other ways can be used to host static content?
-choice4url: /platform-as-a-service.html
-choice4icon: fa-puzzle-piece fa-inverse
-choice4text: Forget servers. Tell me about platforms-as-a-service.
+choice3url: /platform-as-a-service.html
+choice3icon: fa-puzzle-piece fa-inverse
+choice3text: Forget servers. Tell me about platforms-as-a-service.
 
 
 # Web servers

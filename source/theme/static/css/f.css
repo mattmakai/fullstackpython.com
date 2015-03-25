@@ -689,7 +689,7 @@ fieldset[disabled] .checkbox-inline {
 
 .btn {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 8px 12px 4px;
   margin-bottom: 0;
   font-size: 15px;
   font-weight: normal;
@@ -1708,7 +1708,7 @@ a.list-group-item.active:hover {background: #444; border: 1px solid #222;}
 .choose-next a {
     color: #eee;
 }
-.btn-full {width: 100%; box-shadow: 1px 2px 1px #222;}
+.btn-full {width: 100%; box-shadow: 1px 2px 1px #222; padding-bottom: 0px;}
 p.under-btn {text-align: left; margin-top: 20px;}
 h3.panel-head {margin: 5px 0 0 0; font-size: 26px; color: #fff;}
 .smaller-item {font-size: .8em; padding: 5px 0 5px 10px;}

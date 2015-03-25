@@ -12,9 +12,6 @@ choice2text: Forget servers. Give me the easier platform-as-a-service option.
 choice3url: /web-servers.html
 choice3icon: fa-cloud
 choice3text: I'll install Linux as my OS. Which web server should I use?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Servers

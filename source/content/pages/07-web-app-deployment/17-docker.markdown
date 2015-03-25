@@ -12,9 +12,6 @@ choice2text: How do I regularly integrate my project's codebase?
 choice3url: /development-environments.html
 choice3icon: fa-desktop
 choice3text: What should I use to code my Python application?
-choice4url: 
-choice4icon: 
-choice4text: 
 
 
 # Docker

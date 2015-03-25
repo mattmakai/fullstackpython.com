@@ -12,9 +12,6 @@ choice2text: What database should I set up to store my app's persistent data?
 choice3url: /api-integration.html
 choice3icon: fa-link fa-inverse
 choice3text: How do I integrate an external API into my app?
-choice4url: /cascading-style-sheets.html
-choice4icon: fa-css3 fa-inverse
-choice4text: How do I style my app with cascading style sheets?
 
 
 # Application Dependencies

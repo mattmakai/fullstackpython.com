@@ -12,9 +12,6 @@ choice2text: How do I integrate external APIs into my web application?
 choice3url: /configuration-management.html
 choice3icon: fa-gears
 choice3text: I want to learn how to automate setting up my app.
-choice4url: /task-queues.html
-choice4icon: fa-tasks
-choice4text: How do I run code outside the HTTP request-response cycle?
 
 
 # Web analytics

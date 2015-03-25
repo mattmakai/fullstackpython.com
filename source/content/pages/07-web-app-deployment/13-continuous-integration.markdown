@@ -12,9 +12,7 @@ choice2text: What should I do to secure my web application?
 choice3url: /api-integration.html
 choice3icon: fa-link fa-inverse
 choice3text: How do I integrate external APIs into my application?
-choice4url:
-choice4icon:
-choice4text:
+
 
 # Continuous Integration
 Continuous integration (CI) automates building, testing and deploying 

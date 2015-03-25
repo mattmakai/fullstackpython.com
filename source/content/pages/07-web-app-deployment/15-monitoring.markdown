@@ -12,9 +12,6 @@ choice2text: What should I learn about web application security?
 choice3url: /configuration-management.html
 choice3icon: fa-gears fa-inverse
 choice3text: How do I automate the server configuration I've set up?
-choice4url: /logging.html
-choice4icon: fa-align-left fa-inverse
-choice4text: How should I log events in my application outside monitoring?
 
 
 # Monitoring

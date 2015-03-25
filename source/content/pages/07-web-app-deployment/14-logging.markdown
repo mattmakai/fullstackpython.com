@@ -12,9 +12,6 @@ choice2text: I want to learn more about the users of my application.
 choice3url: /web-application-security.html
 choice3icon: fa-lock fa-inverse
 choice3text: Something in the logs looks strange. How do I learn about security?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Logging

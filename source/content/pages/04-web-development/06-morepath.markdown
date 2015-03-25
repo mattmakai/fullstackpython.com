@@ -12,9 +12,6 @@ choice2text: What other Python web frameworks exist?
 choice3url: /application-programming-interfaces.html
 choice3icon: fa-exchange
 choice3text: Tell me more about web APIs.
-choice4url:
-choice4icon:
-choice4text:
 
 
 ## Morepath

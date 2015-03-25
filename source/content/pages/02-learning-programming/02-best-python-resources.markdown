@@ -9,12 +9,9 @@ choice1text: I'm ready to learn how to code an application with a web framework.
 choice2url: /deployment.html
 choice2icon: fa-share
 choice2text: I already built a web application. I need to know how to deploy it.
-choice3url: /introduction.html
-choice3icon: fa-fast-backward fa-inverse
-choice3text: Let me start over from the Full Stack Python introduction.
-choice4url: /development-environments.html
-choice4icon: fa-desktop
-choice4text: What should I use to code my Python application?
+choice3url: /development-environments.html
+choice3icon: fa-desktop
+choice3text: What should I use to code my Python application?
 
 
 # Best Python Resources

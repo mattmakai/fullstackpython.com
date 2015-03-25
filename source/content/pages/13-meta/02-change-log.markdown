@@ -12,9 +12,6 @@ choice2text: Show me what's coming on Full Stack Python in the future.
 choice3url: /about-author.html
 choice3icon: fa-user fa-inverse
 choice3text: Who's the author of Full Stack Python?
-choice4url: /web-frameworks.html
-choice4icon: fa-code fa-inverse
-choice4text: I want to learn how to code a Python web application now. 
 
 
 # Change Log

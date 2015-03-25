@@ -225,7 +225,7 @@ a.list-group-item.active:hover{background:#444;border:1px solid #222}
 .choose-btn{font-size:1.1em;margin:10px 0 0 0}
 .choose-next{border:1px solid #000;background-color:#444;margin-left:25px;color:#ddd}
 .choose-next a{color:#eee}
-.btn-full{width:100%;box-shadow:1px 2px 1px #222}
+.btn-full{width:100%;box-shadow:1px 2px 1px #222; padding-bottom: 4px;}
 p.under-btn{text-align:left;margin-top:20px}
 h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
 .smaller-item{font-size:.8em;padding:5px 0 5px 10px}

@@ -12,9 +12,6 @@ choice2text: How do I integrate external APIs into my app?
 choice3url: /logging.html
 choice3icon: fa-align-left fa-inverse
 choice3text: How can I log events that occur while the app is running?
-choice4url: /about-author.html
-choice4icon: fa-user
-choice4text: Who created Full Stack Python?
 
 
 # Web Application Security

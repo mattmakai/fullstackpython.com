@@ -12,9 +12,6 @@ choice2text: How do I use logging with my app?
 choice3url: /web-application-security.html
 choice3icon: fa-lock fa-inverse
 choice3text: Where can I learn about web application security?
-choice4url: /task-queues.html
-choice4icon: fa-tasks
-choice4text: How can I invoke APIs outside the HTTP request-response cycle?
 
 
 # API Integration

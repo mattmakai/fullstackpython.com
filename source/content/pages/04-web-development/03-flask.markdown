@@ -6,15 +6,12 @@ meta: Flask is a Python web framework built with a small core and many extension
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
 choice1text: How do I deploy Flask web application?
-choice2url: /web-frameworks.html
+choice2url: /other-web-frameworks.html
 choice2icon: fa-code fa-inverse
-choice2text: I'd like to go back to reviewing other web frameworks.
-choice3url: /cascading-style-sheets.html
-choice3icon: fa-css3 fa-inverse
-choice3text: The user interface looks terrible. How do I style my web app?
-choice4url: /source-control.html
-choice4icon: fa-code-fork fa-inverse
-choice4text: How can I version and store my source code so I don't lose it?
+choice2text: I'd like to go review other web frameworks.
+choice3url: /source-control.html
+choice3icon: fa-code-fork fa-inverse
+choice3text: How can I version and store my source code so I don't lose it?
 
 
 # Flask

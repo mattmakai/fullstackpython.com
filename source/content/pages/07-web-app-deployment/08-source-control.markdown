@@ -12,9 +12,6 @@ choice2text: I want to learn more about the users of my application.
 choice3url: /api-integration.html
 choice3icon: fa-link
 choice3text: How do I integrate external APIs into my web application?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Source control

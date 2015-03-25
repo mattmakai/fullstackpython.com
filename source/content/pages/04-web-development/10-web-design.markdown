@@ -12,9 +12,6 @@ choice2text: How should I host static content such as my CSS files?
 choice3url: /javascript.html
 choice3icon: fa-html5 fa-inverse
 choice3text: How do I create dynamic browser interaction with JavaScript?
-choice4url: 
-choice4icon: 
-choice4text: 
 
 
 # Web Design

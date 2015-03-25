@@ -12,9 +12,6 @@ choice2text: How can I use JavaScript to create a better user interface?
 choice3url: /cascading-style-sheets.html
 choice3icon: fa-css3 fa-inverse
 choice3text: What do I need to know about CSS to style my web application?
-choice4url: /logging.html
-choice4icon: fa-align-left fa-inverse
-choice4text: My code is running but I'm getting errors. How do I log them?
 
 
 # WSGI Servers

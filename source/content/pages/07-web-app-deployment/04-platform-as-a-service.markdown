@@ -12,9 +12,6 @@ choice2text: How do I set up a database for use with my app?
 choice3url: /application-dependencies.html
 choice3icon: fa-archive fa-inverse
 choice3text: How can I install the libraries my app depends upon?
-choice4url: /static-content.html
-choice4icon: fa-spinner fa-inverse
-choice4text: My PaaS says I should use a CDN to serve static content. How?
 
 
 # Platform-as-a-service

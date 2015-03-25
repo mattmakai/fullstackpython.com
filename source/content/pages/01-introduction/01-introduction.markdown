@@ -12,9 +12,7 @@ choice2text: I've already built a Python web application. I need to deploy it.
 choice3url: /best-python-resources.html
 choice3icon: fa-book fa-inverse
 choice3text: Show me a list of the best Python learning resources.
-choice4url:
-choice4icon:
-choice4text:
+
 
 # Introduction
 You're knee deep in learning the [Python](http://www.python.org/)

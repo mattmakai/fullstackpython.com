@@ -12,9 +12,6 @@ choice2text: How can I invoke APIs outside the HTTP request-response cycle?
 choice3url: /web-application-security.html
 choice3icon: fa-lock fa-inverse
 choice3text: Where can I learn about web application security?
-choice4url: /api-creation.html
-choice4icon: fa-cubes
-choice4text: How do I create an API for my own web application?
 
 
 # Application Programming Interfaces

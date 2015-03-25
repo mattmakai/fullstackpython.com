@@ -12,9 +12,6 @@ choice2text: What can I learn about my users through web analytics?
 choice3url: /web-application-security.html
 choice3icon: fa-lock fa-inverse
 choice3text: What should I know about security to protect my app?
-choice4url: /configuration-management.html
-choice4icon: fa-gears fa-inverse
-choice4text: How do I automate the server configuration that I set up?
 
 
 # Caching

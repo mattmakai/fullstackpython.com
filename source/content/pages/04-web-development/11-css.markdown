@@ -12,9 +12,6 @@ choice2text: How should I host static content such as my CSS files?
 choice3url: /source-control.html
 choice3icon: fa-code-fork fa-inverse
 choice3text: How can I save and version my code so it doesn't get lost?
-choice4url: /application-programming-intefaces.html
-choice4icon: fa-exchange
-choice4text: What are APIs?
 
 
 # Cascading Style Sheets (CSS)

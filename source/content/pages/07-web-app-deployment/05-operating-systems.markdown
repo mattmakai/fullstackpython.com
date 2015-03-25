@@ -12,9 +12,6 @@ choice2text: How should I install Python libraries on the new OS?
 choice3url: /platform-as-a-service.html
 choice3icon: fa-puzzle-piece fa-inverse
 choice3text: Forget servers. Tell me about the platform-as-a-service option.
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Operating Systems

@@ -12,9 +12,6 @@ choice2text: I want to learn more about the users of my app with web analytics.
 choice3url: /api-integration.html
 choice3icon: fa-link fa-inverse
 choice3text: How do I integrate external APIs into my application?
-choice4url: /web-application-security.html
-choice4icon: fa-lock fa-inverse
-choice4text: What should I do to secure my web application?
 
 
 # Configuration Management

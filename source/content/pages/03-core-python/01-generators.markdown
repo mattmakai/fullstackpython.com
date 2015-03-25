@@ -12,9 +12,6 @@ choice2text: What editor should I use to program with Python?
 choice3url: /introduction.html
 choice3icon: fa-fast-backward fa-inverse
 choice3text: Let me start over from the Full Stack Python introduction.
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Generators

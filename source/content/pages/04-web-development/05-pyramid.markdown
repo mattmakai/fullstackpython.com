@@ -12,9 +12,6 @@ choice2text: My user interface looks terrible. How do I style my web app?
 choice3url: /web-frameworks.html
 choice3icon: fa-code fa-inverse
 choice3text: I'd like to go back to reviewing other web frameworks.
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Pyramid

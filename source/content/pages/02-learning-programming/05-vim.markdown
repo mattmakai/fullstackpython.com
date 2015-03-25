@@ -12,9 +12,6 @@ choice2text: Show me a list of the best Python learning resources.
 choice3url: /web-frameworks.html
 choice3icon: fa-code fa-inverse
 choice3text: I want to get started coding a Python web app.
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Vim

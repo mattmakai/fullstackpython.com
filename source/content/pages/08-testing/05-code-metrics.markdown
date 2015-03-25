@@ -12,9 +12,6 @@ choice2text: How can I call functions outside the HTTP requests?
 choice3url: /web-application-security.html
 choice3icon: fa-lock fa-inverse
 choice3text: What should I do to secure my web application?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Code Metrics

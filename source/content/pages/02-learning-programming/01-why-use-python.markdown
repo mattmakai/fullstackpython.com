@@ -12,9 +12,6 @@ choice2text: Show me what's coming on Full Stack Python in the future.
 choice3url: /table-of-contents.html
 choice3icon: fa-list-alt
 choice3text: Let me see the list of all Full Stack Python topics.
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Why Use Python?

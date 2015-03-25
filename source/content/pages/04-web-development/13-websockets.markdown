@@ -12,9 +12,6 @@ choice2text: How should I install Python libraries on the server?
 choice3url: /development-environments.html
 choice3icon: fa-desktop
 choice3text: What should I use to code my Python application?
-choice4url: 
-choice4icon: 
-choice4text: 
 
 
 # WebSockets

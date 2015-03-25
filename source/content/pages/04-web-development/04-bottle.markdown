@@ -5,16 +5,13 @@ sort-order: 0404
 meta: Bottle is a Python web framework contained within a single source file. Learn more about Bottle on Full Stack Python. 
 choice1url: /deployment.html
 choice1icon: fa-share fa-inverse
-choice1text: How do I deploy my Bottle app once I've built the initial concept?
+choice1text: How do I deploy a Bottle web app?
 choice2url: /cascading-style-sheets.html
 choice2icon: fa-css3 fa-inverse
-choice2text: The user interface I built looks terrible. How do I style my web app?
+choice2text: My user interface looks terrible. How do I style my web app?
 choice3url: /web-frameworks.html
 choice3icon: fa-code fa-inverse
-choice3text: I'd like to go back to reviewing other web frameworks.
-choice4url: /source-control.html
-choice4icon: fa-code-fork fa-inverse
-choice4text: How can I version and store my source code so I don't lose it?
+choice3text: I'd like to go back to reviewing web frameworks.
 
 
 # Bottle

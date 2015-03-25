@@ -12,9 +12,6 @@ choice2text: How do I use a platform-as-a-service to deploy my Python web app?
 choice3url: /operating-systems.html
 choice3icon: fa-linux
 choice3text: I have a server I can use. How do I set up the operating system?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # Deployment

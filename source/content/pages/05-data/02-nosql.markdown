@@ -12,9 +12,6 @@ choice2text: My app is running but looks awful. How do I style the interface?
 choice3url: /javascript.html
 choice3icon: fa-html5 fa-inverse
 choice3text: How do I create a better browser experience with JavaScript?
-choice4url:
-choice4icon:
-choice4text:
 
 
 # NoSQL Data Stores
