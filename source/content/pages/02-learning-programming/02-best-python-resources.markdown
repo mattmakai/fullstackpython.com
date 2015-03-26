@@ -2,16 +2,7 @@ title: Best Python Resources
 category: page
 slug: best-python-resources
 sort-order: 0202
-meta: Get recommendations for dozens of great programming tutorials on Full Stack Python's Best Python Resources page.
-choice1url: /web-frameworks.html
-choice1icon: fa-code fa-inverse
-choice1text: I'm ready to learn how to code an application with a web framework.
-choice2url: /deployment.html
-choice2icon: fa-share
-choice2text: I already built a web application. I need to know how to deploy it.
-choice3url: /development-environments.html
-choice3icon: fa-desktop
-choice3text: What should I use to code my Python application?
+meta: Get recommendations for dozens of great programming tutorials via Full Stack Python's Best Python Resources page.
 
 
 # Best Python Resources

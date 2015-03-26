@@ -3,15 +3,6 @@ category: page
 slug: monitoring
 sort-order: 0715
 meta: Monitoring tools capture and visualize data from an application's execution. Learn more about monitoring on Full Stack Python.
-choice1url: /web-analytics.html
-choice1icon: fa-dashboard
-choice1text: How do I learn more about the users of my app with web analytics?
-choice2url: /web-application-security.html
-choice2icon: fa-lock fa-inverse
-choice2text: What should I learn about web application security?
-choice3url: /configuration-management.html
-choice3icon: fa-gears fa-inverse
-choice3text: How do I automate the server configuration I've set up?
 
 
 # Monitoring

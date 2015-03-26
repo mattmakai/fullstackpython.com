@@ -3,15 +3,6 @@ category: page
 slug: pyramid
 sort-order: 0405
 meta: Pyramid is a Python web framework that grew out of the Pylons project. Learn more about Pyramid on Full Stack Python. 
-choice1url: /django.html
-choice1icon: fa-terminal fa-inverse
-choice1text: Tell me more about the Django framework.
-choice2url: /cascading-style-sheets.html
-choice2icon: fa-css3 fa-inverse
-choice2text: My user interface looks terrible. How do I style my web app?
-choice3url: /web-frameworks.html
-choice3icon: fa-code fa-inverse
-choice3text: I'd like to go back to reviewing other web frameworks.
 
 
 # Pyramid

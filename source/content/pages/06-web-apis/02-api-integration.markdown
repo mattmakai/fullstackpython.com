@@ -3,15 +3,6 @@ category: page
 slug: api-integration
 sort-order: 0602
 meta: Integrating web APIs into an application is necessary for both mobile and web applications. Learn more about API integration on Full Stack Python.
-choice1url: /api-creation.html
-choice1icon: fa-cubes
-choice1text: How do I create an API for my own web application?
-choice2url: /logging.html
-choice2icon: fa-align-left fa-inverse 
-choice2text: How do I use logging with my app?
-choice3url: /web-application-security.html
-choice3icon: fa-lock fa-inverse
-choice3text: Where can I learn about web application security?
 
 
 # API Integration

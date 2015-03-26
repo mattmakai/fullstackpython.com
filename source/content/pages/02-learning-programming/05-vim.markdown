@@ -3,15 +3,6 @@ category: page
 slug: vim
 sort-order: 0205
 meta: Vim is a text editor with powerful string manipulation capabilities. Learn more about Vim on Full Stack Python.
-choice1url: /development-environments.html
-choice1icon: fa-desktop
-choice1text: What other editors and development environments exist?
-choice2url: /best-python-resources.html
-choice2icon: fa-book fa-inverse
-choice2text: Show me a list of the best Python learning resources.
-choice3url: /web-frameworks.html
-choice3icon: fa-code fa-inverse
-choice3text: I want to get started coding a Python web app.
 
 
 # Vim

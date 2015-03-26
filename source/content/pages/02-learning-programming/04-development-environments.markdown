@@ -3,15 +3,6 @@ category: page
 slug: development-environments
 sort-order: 0204
 meta: Development environments allow programmers to work with code. Learn more about development environments on Full Stack Python.
-choice1url: /introduction.html
-choice1icon: fa-fast-backward fa-inverse
-choice1text: Let me start over from the Full Stack Python introduction.
-choice2url: /best-python-resources.html
-choice2icon: fa-book fa-inverse
-choice2text: Show me a list of the best Python learning resources.
-choice3url: /web-frameworks.html
-choice3icon: fa-code fa-inverse
-choice3text: I want to get started coding a Python web app.
 
 
 # Development Environments

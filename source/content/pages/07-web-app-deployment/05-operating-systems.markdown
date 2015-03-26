@@ -3,15 +3,6 @@ category: page
 slug: operating-systems
 sort-order: 0705
 meta: Learn what operating system you should be using for you web application and resources to configure the OS on Full Stack Python.
-choice1url: /web-servers.html
-choice1icon: fa-cloud
-choice1text: I'll install Linux as my OS. What web server should I use?
-choice2url: /application-dependencies.html
-choice2icon: fa-archive fa-inverse
-choice2text: How should I install Python libraries on the new OS?
-choice3url: /platform-as-a-service.html
-choice3icon: fa-puzzle-piece fa-inverse
-choice3text: Forget servers. Tell me about the platform-as-a-service option.
 
 
 # Operating Systems

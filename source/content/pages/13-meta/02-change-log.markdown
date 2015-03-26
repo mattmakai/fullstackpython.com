@@ -3,15 +3,6 @@ category: page
 slug: change-log
 sort-order: 1302
 meta: If you're interested in what's new to learn on Full Stack Python, the change log is the right place to look.
-choice1url: /introduction.html
-choice1icon: fa-fast-backward fa-inverse
-choice1text: Let me start over from the Full Stack Python introduction.
-choice2url: /future-directions.html
-choice2icon: fa-magic fa-inverse
-choice2text: Show me what's coming on Full Stack Python in the future.
-choice3url: /about-author.html
-choice3icon: fa-user fa-inverse
-choice3text: Who's the author of Full Stack Python?
 
 
 # Change Log

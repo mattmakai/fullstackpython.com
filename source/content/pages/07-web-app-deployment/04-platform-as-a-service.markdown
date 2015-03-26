@@ -3,15 +3,6 @@ category: page
 slug: platform-as-a-service
 sort-order: 0704
 meta: A platform-as-a-service simplifies the deployment of application code while risking other tradeoffs. Learn more on Full Stack Python.
-choice1url: /wsgi-servers.html
-choice1icon: fa-play fa-inverse
-choice1text: What WSGI server should I use to run Python code?
-choice2url: /databases.html
-choice2icon: fa-hdd-o
-choice2text: How do I set up a database for use with my app?
-choice3url: /application-dependencies.html
-choice3icon: fa-archive fa-inverse
-choice3text: How can I install the libraries my app depends upon?
 
 
 # Platform-as-a-service

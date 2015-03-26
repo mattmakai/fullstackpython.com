@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block meta_header %}
-<meta name="description" content="Full Stack Python explains Python programming concepts in plain language terms and provides references to the best tutorials on the web for those topics.">
+<meta name="description" content="Full Stack Python explains programming concepts in plain language and provides links to the best tutorials for those topics.">
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
         {% for page in pages|sort(attribute='sort-order') %}
           {% if page.slug == 'introduction' %}
               {{ page.content }}
-              {% include "index-choices.html" %}
+              {% include "choices/index.html" %}
           {% endif %}
         {% endfor %}
     </div>

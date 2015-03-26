@@ -3,15 +3,6 @@ category: page
 slug: websockets
 sort-order: 0413
 meta: WebSockets are a protocol for full-duplex web communications. Learn about WebSockets on Full Stack Python.
-choice1url: /wsgi-servers.html
-choice1icon: fa-play fa-inverse
-choice1text: How do I execute Python since the web server doesn't do that?
-choice2url: /application-dependencies.html
-choice2icon: fa-archive fa-inverse
-choice2text: How should I install Python libraries on the server?
-choice3url: /development-environments.html
-choice3icon: fa-desktop
-choice3text: What should I use to code my Python application?
 
 
 # WebSockets

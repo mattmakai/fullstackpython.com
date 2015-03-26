@@ -3,15 +3,6 @@ category: page
 slug: introduction
 sort-order: 0101
 meta: Full Stack Python helps you learn Python programming through plain language explanations along with links to other great resources.
-choice1url: /web-frameworks.html
-choice1icon: fa-code fa-inverse
-choice1text: I want to learn how to code a web application with Python.
-choice2url: /deployment.html
-choice2icon: fa-share
-choice2text: I've already built a Python web application. I need to deploy it.
-choice3url: /best-python-resources.html
-choice3icon: fa-book fa-inverse
-choice3text: Show me a list of the best Python learning resources.
 
 
 # Introduction

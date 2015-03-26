@@ -3,15 +3,6 @@ category: page
 slug: servers
 sort-order: 0702
 meta: Servers are required to run web applications. Learn more about setting up servers on Full Stack Python.
-choice1url: /operating-systems.html
-choice1icon: fa-linux fa-inverse
-choice1text: What operating system should I use once the server is set up?
-choice2url: /platform-as-a-service.html
-choice2icon: fa-puzzle-piece fa-inverse
-choice2text: Forget servers. Give me the easier platform-as-a-service option.
-choice3url: /web-servers.html
-choice3icon: fa-cloud
-choice3text: I'll install Linux as my OS. Which web server should I use?
 
 
 # Servers

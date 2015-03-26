@@ -3,15 +3,6 @@ category: page
 slug: web-design
 sort-order: 0410
 meta: Web design creates a compelling user experience for your Python web app. Learn more about web design on Full Stack Python.
-choice1url: /cascading-style-sheets.html
-choice1icon: fa-css3
-choice1text: How do I implement the design with CSS?
-choice2url: /static-content.html
-choice2icon: fa-spinner fa-inverse
-choice2text: How should I host static content such as my CSS files?
-choice3url: /javascript.html
-choice3icon: fa-html5 fa-inverse
-choice3text: How do I create dynamic browser interaction with JavaScript?
 
 
 # Web Design

@@ -3,15 +3,6 @@ category: page
 slug: django
 sort-order: 0402
 meta: Django is a widely used Python web framework with a 'batteries-included' philosophy. Learn more about Django on Full Stack Python.
-choice1url: /cascading-style-sheets.html
-choice1icon: fa-css3 fa-inverse
-choice1text: My user interface looks terrible. How do I style a web application?
-choice2url: /api-integration.html
-choice2icon: fa-link fa-inverse
-choice2text: I want to integrate external APIs into my Django project.
-choice3url: /deployment.html
-choice3icon: fa-share fa-inverse
-choice3text: How do I deploy a Django web app once it's coded?
 
 
 # Django
@@ -37,8 +28,8 @@ separate library such as
 [Flask-Login](https://flask-login.readthedocs.org/en/latest/)
 to perform user authentication. 
 
-The batteries-included and extensibility philosophies are simply two different 
-ways to tackle framework building.  Neither philosophy is inherently better 
+The batteries-included and extensibility philosophies are simply two different
+ways to tackle framework building. Neither philosophy is inherently better 
 than the other.
 
 

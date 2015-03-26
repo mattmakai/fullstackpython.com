@@ -3,15 +3,6 @@ category: page
 slug: web-servers
 sort-order: 0706
 meta: A web server responds to HTTP requests and responds to clients. Learn more about how web servers interact with Python web apps on Full Stack Python.
-choice1url: /wsgi-servers.html
-choice1icon: fa-play fa-inverse
-choice1text: How do I execute Python since the web server doesn't do that?
-choice2url: /application-dependencies.html
-choice2icon: fa-archive fa-inverse
-choice2text: How should I install Python libraries on the server?
-choice3url: /platform-as-a-service.html
-choice3icon: fa-puzzle-piece fa-inverse
-choice3text: Forget servers. Tell me about platforms-as-a-service.
 
 
 # Web servers

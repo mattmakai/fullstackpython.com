@@ -3,15 +3,6 @@ category: page
 slug: application-dependencies
 meta: Python web applications depend on many code libraries. Learn more about application dependencies on Full Stack Python.
 sort-order: 0709
-choice1url: /wsgi-servers.html
-choice1icon: fa-play fa-inverse
-choice1text: How do I set up a WSGI server to execute Python code?
-choice2url: /databases.html
-choice2icon: fa-hdd-o
-choice2text: What database should I set up to store my app's persistent data?
-choice3url: /api-integration.html
-choice3icon: fa-link fa-inverse
-choice3text: How do I integrate an external API into my app?
 
 
 # Application Dependencies

@@ -3,15 +3,6 @@ category: page
 slug: javascript
 sort-order: 0412
 meta: Learn about JavaScript and Model-View-Controller frameworks for your web application on Full Stack Python.
-choice1url: /cascading-style-sheets.html
-choice1icon: fa-css3 fa-inverse
-choice1text: How do I style my web application's user interface?
-choice2url: /static-content.html
-choice2icon: fa-spinner fa-inverse
-choice2text: Where should I host static content such as my JavaScript files?
-choice3url: /source-control.html
-choice3icon: fa-code-fork fa-inverse
-choice3text: How do I save and version my code so it does not get lost?
 
 
 # JavaScript

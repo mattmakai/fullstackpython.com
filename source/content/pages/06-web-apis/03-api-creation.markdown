@@ -2,16 +2,7 @@ title: API Creation
 category: page
 slug: api-creation
 sort-order: 0603
-meta: RESTful web APIs are a crucial mechanism for machine-to-machine communication. Learn more about creating web APIs on Full Stack Python.
-choice1url: /application-programming-interfaces.html
-choice1icon: fa-exchange
-choice1text: What are application programming interfaces?
-choice2url: /api-integration.html
-choice2icon: fa-link
-choice2text: How do I integrate external APIs into my application?
-choice3url: /web-application-security.html
-choice3icon: fa-lock fa-inverse
-choice3text: How can I learn about web application security?
+meta: Web APIs enable machine-to-machine communication. Learn more about creating web APIs on Full Stack Python.
 
 
 # API Creation

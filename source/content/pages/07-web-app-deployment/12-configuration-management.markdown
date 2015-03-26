@@ -3,15 +3,6 @@ category: page
 slug: configuration-management
 sort-order: 0712
 meta: Configuration management tools allow developers to automate deployment and environment setting. Learn more about configuration management on Full Stack Python.
-choice1url: /continuous-integration.html
-choice1icon: fa-refresh
-choice1text: How do I regularly integrate my project's codebase?
-choice2url: /web-analytics.html
-choice2icon: fa-dashboard
-choice2text: I want to learn more about the users of my app with web analytics.
-choice3url: /api-integration.html
-choice3icon: fa-link fa-inverse
-choice3text: How do I integrate external APIs into my application?
 
 
 # Configuration Management

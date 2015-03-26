@@ -3,15 +3,6 @@ category: page
 slug: web-analytics
 sort-order: 0716
 meta: Web analytics tools collect, process and visualize data from web visitors so developers can better serve their users. Learn more about web analytics on Full Stack Python.
-choice1url: /web-application-security.html
-choice1icon: fa-lock fa-inverse
-choice1text: What should I know about web application security?
-choice2url: /api-integration.html
-choice2icon: fa-link fa-inverse
-choice2text: How do I integrate external APIs into my web application?
-choice3url: /configuration-management.html
-choice3icon: fa-gears
-choice3text: I want to learn how to automate setting up my app.
 
 
 # Web analytics

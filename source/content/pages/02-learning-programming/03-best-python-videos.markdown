@@ -3,15 +3,6 @@ category: page
 slug: best-python-videos
 sort-order: 0203
 meta: Watch the best videos to learn Python from the language masters of the community on Full Stack Python's Best Python Videos page.
-choice1url: /best-python-resources.html
-choice1icon: fa-book fa-inverse
-choice1text: I'd prefer reading materials to learn Python.
-choice2url: /web-frameworks.html
-choice2icon: fa-code fa-inverse
-choice2text: I want to learn how to code a web application with Python.
-choice3url: /development-environments.html
-choice3icon: fa-desktop
-choice3text: What should I use to code my Python application?
 
 
 # Best Python Videos

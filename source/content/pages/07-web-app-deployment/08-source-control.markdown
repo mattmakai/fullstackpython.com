@@ -3,15 +3,6 @@ category: page
 slug: source-control
 sort-order: 0708
 meta: Source control versions and backs up code for when programming problems occur. Learn more about source control on Full Stack Python.
-choice1url: /deployment.html
-choice1icon: fa-share
-choice1text: How do I deploy the code I've created for my web app?
-choice2url: /web-analytics.html
-choice2icon: fa-dashboard
-choice2text: I want to learn more about the users of my application.
-choice3url: /api-integration.html
-choice3icon: fa-link
-choice3text: How do I integrate external APIs into my web application?
 
 
 # Source control

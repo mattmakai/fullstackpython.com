@@ -3,15 +3,6 @@ category: page
 slug: comprehensions
 sort-order: 0302
 meta: Python comprehensions concisely create data for lists, dictionaries and sets. Learn more about comprehensions on Full Stack Python.
-choice1url: /databases.html
-choice1icon: fa-hdd-o
-choice1text: How do I persistent data I generate in my programs?
-choice2url: /development-environments.html
-choice2icon: fa-desktop
-choice2text: What editor should I use to program with Python?
-choice3url: /introduction.html
-choice3icon: fa-fast-backward fa-inverse
-choice3text: Let me start over from the Full Stack Python introduction.
 
 
 # Comprehensions

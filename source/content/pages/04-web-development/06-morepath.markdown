@@ -3,15 +3,6 @@ category: page
 slug: morepath
 sort-order: 0406
 meta: Morepath is a Python web framework with a model-driven design approach. Learn more about Morepath on Full Stack Python. 
-choice1url: /web-frameworks.html
-choice1icon: fa-code
-choice1text: Show me more about web frameworks in general.
-choice2url: /other-web-frameworks.html
-choice2icon: fa-question fa-inverse
-choice2text: What other Python web frameworks exist?
-choice3url: /application-programming-interfaces.html
-choice3icon: fa-exchange
-choice3text: Tell me more about web APIs.
 
 
 ## Morepath

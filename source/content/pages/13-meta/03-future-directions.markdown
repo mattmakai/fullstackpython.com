@@ -3,15 +3,6 @@ category: page
 slug: future-directions
 sort-order: 1303
 meta: In the future directions page on Full Stack Python I give some insight into what my current priorities are for enhancing the site.
-choice1url: /about-author.html
-choice1icon: fa-user
-choice1text: Who created Full Stack Python?
-choice2url: /change-log.html
-choice2icon: fa-pencil-square-o fa-inverse
-choice2text: What's changed on this site since it began?
-choice3url: /web-frameworks.html
-choice3icon: fa-code fa-inverse
-choice3text: I want to learn how to code a Python web application now.
 
 
 # Future Directions

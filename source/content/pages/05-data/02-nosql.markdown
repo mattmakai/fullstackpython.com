@@ -3,15 +3,6 @@ category: page
 slug: no-sql-datastore
 sort-order: 0502
 meta: NoSQL data stores persistent data in different ways than traditional relational databases. Learn more about NoSQL on Full Stack Python.
-choice1url: /databases.html
-choice1icon: fa-hdd-o
-choice1text: Tell me more about standard relational databases.
-choice2url: /cascading-style-sheets.html
-choice2icon: fa-css3 fa-inverse
-choice2text: My app is running but looks awful. How do I style the interface?
-choice3url: /javascript.html
-choice3icon: fa-html5 fa-inverse
-choice3text: How do I create a better browser experience with JavaScript?
 
 
 # NoSQL Data Stores

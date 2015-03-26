@@ -3,15 +3,6 @@ category: page
 slug: logging
 sort-order: 0714
 meta: Logging saves error, warning and event output to persistent storage for debugging purposes. Learn more about logging on Full Stack Python.
-choice1url: /monitoring.html
-choice1icon: fa-bar-chart-o fa-inverse
-choice1text: How can I monitor my live app with tools other than just logs?
-choice2url: /web-analytics.html
-choice2icon: fa-dashboard
-choice2text: I want to learn more about the users of my application.
-choice3url: /web-application-security.html
-choice3icon: fa-lock fa-inverse
-choice3text: Something in the logs looks strange. How do I learn about security?
 
 
 # Logging

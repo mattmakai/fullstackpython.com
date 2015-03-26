@@ -1,20 +1,17 @@
 <div class="row">
-    {% include "choices/buttons/changelog-button.html" %}
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="{{ page.choice2url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice2icon }} fa-2x"></i></a>
-            </a>
-            <p class="under-btn">
-                {{ page.choice2text }}
-            </p>
+            {% include "choices/buttons/introduction.html" %}
         </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="{{ page.choice3url }}" class="btn btn-success btn-full"><i class="fa {{ page.choice3icon }} fa-2x"></i></a>
-            <p class="under-btn">
-                {{ page.choice3text }}
-            </p>
+            {% include "choices/buttons/change-log.html" %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="well select-next">
+            {% include "choices/buttons/application-programming-interfaces.html" %}
         </div>
     </div>
 </div>

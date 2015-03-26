@@ -3,15 +3,6 @@ category: page
 slug: generators
 sort-order: 0301
 meta: Generators allow a function's return value to behave as an iterator via the yield keyword. Learn more about generators at Full Stack Python.
-choice1url: /best-python-resources.html
-choice1icon: fa-book fa-inverse
-choice1text: What other resources should I use to learn Python? 
-choice2url: /development-environments.html
-choice2icon: fa-desktop
-choice2text: What editor should I use to program with Python?
-choice3url: /introduction.html
-choice3icon: fa-fast-backward fa-inverse
-choice3text: Let me start over from the Full Stack Python introduction.
 
 
 # Generators

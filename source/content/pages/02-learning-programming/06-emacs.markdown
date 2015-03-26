@@ -3,15 +3,6 @@ category: page
 slug: emacs
 sort-order: 0206
 meta: Emacs is an extensible, customizable text editor often used for coding. Learn more about Emacs on Full Stack Python.
-choice1url: /vim.html
-choice1icon: fa-file-text
-choice1text: Tell me more about Vim, another powerful text editor.
-choice2url: /best-python-resources.html
-choice2icon: fa-book fa-inverse
-choice2text: Show me a list of the best Python learning resources.
-choice3url: /web-frameworks.html
-choice3icon: fa-code fa-inverse
-choice3text: I want to get started coding a Python web app.
 
 
 # Emacs

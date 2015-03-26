@@ -2,16 +2,7 @@ title: Static Content
 category: page
 slug: static-content
 sort-order: 0710
-meta: Serving static and media files is an important part of Python web application deployments. Learn more about static content on Full Stack Python.
-choice1url: /caching.html
-choice1icon: fa-repeat
-choice1text: How do I cache repeated operations to improve performance?
-choice2url: /web-analytics.html
-choice2icon: fa-dashboard
-choice2text: What can I learn about my users through web analytics?
-choice3url: /configuration-management.html
-choice3icon: fa-gears fa-inverse
-choice3text: How do I automate the server configuration I set up?
+meta: Serving static and media files are an important part of Python deployments. Learn more about static content on Full Stack Python.
 
 
 # Static content

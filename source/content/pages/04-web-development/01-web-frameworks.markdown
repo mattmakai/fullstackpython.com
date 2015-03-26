@@ -3,15 +3,6 @@ category: page
 slug: web-frameworks
 sort-order: 0401
 meta: Web frameworks are code libraries that help developers solve common web application challenges. Learn more on Full Stack Python.
-choice1url: /django.html
-choice1icon: fa-terminal fa-inverse
-choice1text: Tell me more about the Django framework.
-choice2url: /flask.html
-choice2icon: fa-flask
-choice2text: I want to learn more about the Flask web framework.
-choice3url: /other-web-frameworks.html
-choice3icon: fa-question fa-inverse
-choice3text: What other Python web frameworks exist?
 
 
 # Web frameworks

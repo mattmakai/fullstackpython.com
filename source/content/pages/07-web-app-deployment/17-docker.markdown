@@ -3,15 +3,6 @@ category: page
 slug: docker
 sort-order: 0717
 meta: Docker is a container management system often used for deploying web applications. Learn more about Docker on Full Stack Python.
-choice1url: /deployment.html
-choice1icon: fa-share
-choice1text: How do I deploy a Python application without a container?
-choice2url: /continuous-integration.html
-choice2icon: fa-refresh
-choice2text: How do I regularly integrate my project's codebase?
-choice3url: /development-environments.html
-choice3icon: fa-desktop
-choice3text: What should I use to code my Python application?
 
 
 # Docker

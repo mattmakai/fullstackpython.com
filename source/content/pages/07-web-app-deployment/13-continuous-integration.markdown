@@ -3,15 +3,6 @@ category: page
 slug: continuous-integration
 sort-order: 0713
 meta: Continuous integration automatically rebuilds and deploys applications as developers commit code. Learn more on Full Stack Python.
-choice1url: /logging.html
-choice1icon: fa-align-left fa-inverse
-choice1text: How do I log events that happen in my app while it is running?
-choice2url: /web-application-security.html
-choice2icon: fa-lock fa-inverse
-choice2text: What should I do to secure my web application?
-choice3url: /api-integration.html
-choice3icon: fa-link fa-inverse
-choice3text: How do I integrate external APIs into my application?
 
 
 # Continuous Integration

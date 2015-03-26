@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-md-8">
           {{ page.content }}
-          {% include "chapter-choices.html" %}
+          {% include "choices/" + page.slug + ".html" %}
       {% include "email-for-book.html" %}
     </div>
     {% include "sidebar.html" %}

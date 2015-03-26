@@ -3,15 +3,6 @@ category: page
 slug: other-web-frameworks
 sort-order: 0409
 meta: Python has dozens of web frameworks with differing philosophies. Learn more about lesser known frameworks on Full Stack Python.
-choice1url: /deployment.html
-choice1icon: fa-share fa-inverse
-choice1text: How do I deploy a web app once I'm done coding?
-choice2url: /web-frameworks.html
-choice2icon: fa-code fa-inverse
-choice2text: I'd like to go back to reviewing other web frameworks.
-choice3url: /cascading-style-sheets.html
-choice3icon: fa-css3 fa-inverse
-choice3text: How do I style the user interface I built for my web app?
 
 
 # Other Web Frameworks

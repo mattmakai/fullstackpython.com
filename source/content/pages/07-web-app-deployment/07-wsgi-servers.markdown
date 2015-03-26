@@ -3,15 +3,6 @@ category: page
 slug: wsgi-servers
 sort-order: 0707
 meta: A Web Server Gateway Interface (WSGI) server runs Python code to create a web application. Learn more about WSGI servers on Full Stack Python.
-choice1url: /databases.html
-choice1icon: fa-hdd-o
-choice1text: How do I store persistent data for my Python web app?
-choice2url: /javascript.html
-choice2icon: fa-html5 fa-inverse
-choice2text: How can I use JavaScript to create a better user interface?
-choice3url: /cascading-style-sheets.html
-choice3icon: fa-css3 fa-inverse
-choice3text: What do I need to know about CSS to style my web application?
 
 
 # WSGI Servers

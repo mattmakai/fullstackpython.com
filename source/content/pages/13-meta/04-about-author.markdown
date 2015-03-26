@@ -3,18 +3,6 @@ category: page
 slug: about-author
 sort-order: 1404
 meta: Learn more about the author of Full Stack Python, Matt Makai.
-choice1url: /introduction.html
-choice1icon: fa-fast-backward fa-inverse
-choice1text: Let me start over from the Full Stack Python introduction.
-choice2url: /change-log.html
-choice2icon: fa-pencil-square-o fa-inverse
-choice2text: I've read Full Stack Python before. What's new?
-choice3url: /future-directions.html
-choice3icon: fa-magic fa-inverse
-choice3text: Show me what's coming on Full Stack Python in the future.
-choice4url:
-choice4icon:
-choice4text:
 
 
 # About the Author
