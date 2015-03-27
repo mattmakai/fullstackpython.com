@@ -108,6 +108,11 @@ reviews the basics of distributed version control systems.
   is exactly what the title says it is. This is a well written guide with 
   plenty of code snippets to get you up to speed with Git.
 
+* [Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out)
+  demonstrates how Git's graph-based data structure produces certain behavior 
+  through example Git commands. This is a highly recommended read after you've
+  grasped the basics and are looking to go deeper with Git.
+
 * [git ready](http://gitready.com/) has a nice collection of blog posts based on
   beginner, intermediate and advanced Git use cases.
 
