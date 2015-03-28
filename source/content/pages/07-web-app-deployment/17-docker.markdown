@@ -31,6 +31,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) that's
   well worth buying.
 
+* [What the Bleep is Docker?](http://pythonforengineers.com/what-the-bleep-is-docker/)
+  is a plain English explanation with examples of what Docker provides and
+  what it can be used for in your environment.
+
 * [Docker in Practice - A Guide for Engineers](https://zwischenzugs.wordpress.com/2015/03/14/docker-in-practice-a-guide-for-engineers/)
   is an explanation of the concepts and philosophy by the authors of the 
   new Manning Docker book in early access format.

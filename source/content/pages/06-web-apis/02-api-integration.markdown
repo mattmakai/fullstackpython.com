@@ -9,9 +9,9 @@ meta: Integrating web APIs into an application is necessary for both mobile and 
 The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 
-Examples include [Twilio](https://www.twilio.com/) for messaging and voice
-services, [Stripe](https://stripe.com/) for payment processing, and
-[Disqus](https://disqus.com/) for embedded webpage comments.
+Examples include [Twilio](https://www.twilio.com/docs/) for messaging and 
+voice services, [Stripe](https://stripe.com/docs/api) for payment processing 
+and [Disqus](https://disqus.com/api/docs/) for embedded webpage comments.
 
 There are many articles about proper API design but best practices for 
 integrating APIs is less commonly written about. However, this subject 
