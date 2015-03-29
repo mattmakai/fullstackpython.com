@@ -2,7 +2,7 @@ title: Web Analytics
 category: page
 slug: web-analytics
 sort-order: 0716
-meta: Web analytics tools collect, process and visualize data from web visitors so developers can better serve their users. Learn more about web analytics on Full Stack Python.
+meta: Web analytics tools collect and visualize data from visitors so developers can better serve users. Learn more about web analytics on Full Stack Python.
 
 
 # Web analytics
