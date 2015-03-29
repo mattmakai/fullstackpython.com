@@ -31,3 +31,5 @@ pip-log.txt
 
 # Emacs backups
 *~
+
+source/cache/
