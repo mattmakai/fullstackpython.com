@@ -74,6 +74,12 @@ equivalent of browser testing in the web application world.
 * [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
   is an interesting overview of the Python API frameworks space.
 
+* [An API is only as good as its documentation](https://rocketeer.be/blog/2015/03/api-quality/)
+  is a strongly held mantra in the web API world because so many APIs have
+  poor documentation that prevents ease-of-use. If an API is not well 
+  documented then developers who have options to use something else will
+  just skip it.
+
 * [10 Reasons Why Developers Hate Your API (And what to do about it)](http://www.slideshare.net/jmusser/ten-reasons-developershateyourapi)
   goes through the top difficulties and annoyances developers face when
   working with APIs and how you can avoid your API falling into the same
