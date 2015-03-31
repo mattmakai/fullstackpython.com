@@ -50,6 +50,11 @@ should skip down to the next section for "experienced developers".
   an online book for people completely unfamiliar with the Python programming
   language.
 
+* While not Python-specific, Mozilla put together a 
+  [Learning the Web](https://developer.mozilla.org/en-US/Learn) tutorial
+  for beginners and intermediate web users who want to build websites.
+  It's worth a look from a general web development perspective.
+
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
