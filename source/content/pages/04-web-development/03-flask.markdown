@@ -71,11 +71,12 @@ how to <a href="/deployment.html">deploy web applications</a>.
   [O'Reilly Flask Web Development](http://shop.oreilly.com/product/0636920031116.do)
   book which is also an excellent learning resource.
 
-* If you're looking for a fun introduction to Flask and WebSockets, check out
+* If you're looking for a fun tutorial with Flask and WebSockets, check out
   my blog post on creating 
   [Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html).
-  That post is my favorite technical walkthrough I've written to date. There
-  is also a companion open source 
+  Follow up that tutorial by 
+  [building an admin interface](https://www.twilio.com/blog/2015/03/choose-your-own-adventures-presentations-wizard-mode-part-1-of-3.html) 
+  that'll show you how to use forms and SQLAlchemy There is also a companion open source 
   [GitHub repository](https://github.com/makaimc/choose-your-own-adventure-presentations) 
   for the app with tags for each step in the blog post.
 

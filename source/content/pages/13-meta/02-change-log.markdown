@@ -13,6 +13,9 @@ the
 
 
 ## 2015
+### April
+* Added new resources on the [Flask](/flask.html) page.
+
 ### March
 * Added new [source control](/source-control.html) resources.
 * Major site performance improvements. I removed font awesome and replaced
