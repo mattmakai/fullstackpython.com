@@ -47,7 +47,7 @@ including everything in the framework with tight integration.
 
 
 <div class="well see-also">
-While you're learning about web frmaeworks you should also find out about
+While you're learning about web frameworks you should also study
 <a href="/deployment.html">web application deployment</a> and 
 <a href="/application-programming-interfaces.html">web APIs</a>.
 </div>
@@ -88,24 +88,20 @@ While you're learning about web frmaeworks you should also find out about
 
 
 ## Web frameworks learning checklist
-<i class="fa fa-check-square-o"></i> 
-Choose a major Python web framework ([Django](/django.html) or 
-[Flask](/flask.html) are recommended) and stick with it. When you're just
-starting it's best to learn one framework first instead of bouncing around
-trying to understand every framework. 
+1. Choose a major Python web framework ([Django](/django.html) or 
+   [Flask](/flask.html) are recommended) and stick with it. When you're just
+   starting it's best to learn one framework first instead of bouncing around
+   trying to understand every framework. 
 
-<i class="fa fa-check-square-o"></i> 
-Work through a detailed tutorial found within the resources links on the
-framework's page.
+1. Work through a detailed tutorial found within the resources links on the
+   framework's page.
 
-<i class="fa fa-check-square-o"></i> 
-Study open source examples built with your framework of choice so you can 
-take parts of those projects and reuse the code in your application.
+1. Study open source examples built with your framework of choice so you can 
+   take parts of those projects and reuse the code in your application.
 
-<i class="fa fa-check-square-o"></i> 
-Build the first simple iteration of your web application then go to
-the [deployment](/deployment.html) section to make it accessible on the 
-web.
+1. Build the first simple iteration of your web application then go to
+   the [deployment](/deployment.html) section to make it accessible on the 
+   web.
 
 
 ### Which web framework do you want to learn about?

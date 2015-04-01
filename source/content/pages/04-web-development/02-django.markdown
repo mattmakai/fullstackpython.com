@@ -322,32 +322,26 @@ to handle these files properly.
 
 
 ## Django learning checklist
-<i class="fa fa-check-square-o"></i> 
-[Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
-your local development machine.
+1. [Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
+   your local development machine.
 
-<i class="fa fa-check-square-o"></i> 
-Work through the initial 
-["polls" tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
+1. Work through the initial 
+   ["polls" tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
  
-<i class="fa fa-check-square-o"></i> 
-Build a few more simple applications using the tutorial resources found
-in the "Django resources" section.
+1. Build a few more simple applications using the tutorial resources found
+   in the "Django resources" section.
 
-<i class="fa fa-check-square-o"></i> 
-Start coding your own Django project with help from the 
-[official documentation](https://docs.djangoproject.com/en/dev/) and 
-resource links below. You'll make plenty of mistakes which is critical
-on your path to learning the right way to build applications.
+1. Start coding your own Django project with help from the 
+   [official documentation](https://docs.djangoproject.com/en/dev/) and 
+   resource links below. You'll make plenty of mistakes which is critical
+   on your path to learning the right way to build applications.
 
-<i class="fa fa-check-square-o"></i> 
-Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&qid=1391562062&sr=8-2&tag=mlinar-20) 
-to understand Django best practices and learn better ways of building 
-Django web applications.
+1. Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&qid=1391562062&sr=8-2&tag=mlinar-20) 
+   to understand Django best practices and learn better ways of building 
+   Django web applications.
 
-<i class="fa fa-check-square-o"></i> 
-Move on to the [deployment section](/deployment.html) to get your Django 
-project on the web.
+1. Move on to the [deployment section](/deployment.html) to get your Django 
+   project on the web.
 
 
 ### What do you need to learn next for your Django app?
