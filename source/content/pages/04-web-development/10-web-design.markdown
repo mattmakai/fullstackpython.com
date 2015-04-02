@@ -43,6 +43,10 @@ width.
   Highly recommended especially if you feel you have no design skills but 
   need to learn them.
 
+* [Learn Design Principles](http://learndesignprinciples.com) is a well
+  thought out clear explanation for how to think about design according to
+  specific rules such as axis, symmetry, hierarchy and rhythm.
+
 * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
   color picker by Adobe that helps choose colors for your designs.
 
