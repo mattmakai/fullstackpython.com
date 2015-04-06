@@ -141,6 +141,11 @@ While you're learning about Django you should also read up on
   are Python 3 compatible in green and ones that are not yet compatible with
   Python 3 in red.
 
+* Luke Plant writes about 
+  [his approach to class based views](http://lukeplant.me.uk/blog/posts/my-approach-to-class-based-views/) (CBVs),
+  which often provoke heated debate in the Django community for whether they
+  are a time saver or "too much magic" for the framework.
+
 
 ## Django videos
 <div class="well" style="margin-top: 20px;">

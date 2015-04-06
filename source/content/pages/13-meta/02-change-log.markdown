@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### April
+* Updated the [Django](/django.html) page with new resources. The page is
+  getting unwieldy at its current size so I'll likely pare it down with
+  better categorizes sometime soon.
 * Added new resources on the [Flask](/flask.html) page.
 
 ### March
