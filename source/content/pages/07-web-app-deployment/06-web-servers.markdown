@@ -95,8 +95,9 @@ is provided by W3C.
   covers how to mitigate against brute force password guessing attempts using
   Nginx rate limits.
 
-* If you're looking to learn about web servers by building one, here's a 
-  [tutorial that shows how to code a web server in Python](http://ruslanspivak.com/lsbaws-part1/).
+* If you're looking to learn about web servers by building one, here's
+  [part one of a tutorial that shows how to code a web server in Python](http://ruslanspivak.com/lsbaws-part1/)
+  and [part two](http://ruslanspivak.com/lsbaws-part2/).
 
 
 ## Web servers learning checklist
