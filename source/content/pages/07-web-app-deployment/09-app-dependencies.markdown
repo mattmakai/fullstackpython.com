@@ -136,6 +136,10 @@ further clarification.
 * This Stack Overflow question details how to set up a 
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
 
+* [Tips for using pip + virtualenv + virtualenvwrapper](http://mrcoles.com/tips-using-pip-virtualenv-virtualenvwrapper/)
+  shows how to use shell aliases and postactivate virtualenvwrapper hooks to
+  make life easier when using these tools.
+
 
 ## Application dependencies learning checklist
 <i class="fa fa-check-square-o"></i>
