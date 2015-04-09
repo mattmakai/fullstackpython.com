@@ -131,6 +131,10 @@ reviews the basics of distributed version control systems.
   by Braintree goes over how this payments company uses Git for development
   and merging source code.
 
+* [Code Sleuthing with Git](https://robots.thoughtbot.com/code-sleuthing-with-git)
+  shows how to review past changes when a deployment goes wrong to figure
+  out what the heck happened.
+
 
 ## Source control learning checklist
 <i class="fa fa-check-square-o"></i>
