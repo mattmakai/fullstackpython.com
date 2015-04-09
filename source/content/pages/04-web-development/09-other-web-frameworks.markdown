@@ -2,7 +2,7 @@ title: Other Web Frameworks
 category: page
 slug: other-web-frameworks
 sort-order: 0409
-meta: Python has dozens of web frameworks with differing philosophies. Learn more about lesser known frameworks on Full Stack Python.
+meta: Python has dozens of web frameworks with differing philosophies. Learn more about frameworks on Full Stack Python.
 
 
 # Other Web Frameworks

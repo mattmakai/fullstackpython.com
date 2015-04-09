@@ -136,6 +136,9 @@ further clarification.
 * This Stack Overflow question details how to set up a 
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
 
+* Another Stack Overflow page answers 
+  [how to set environment variables when using virtualenv](http://stackoverflow.com/questions/9554087/setting-an-environment-variable-in-virtualenv).
+
 * [Tips for using pip + virtualenv + virtualenvwrapper](http://mrcoles.com/tips-using-pip-virtualenv-virtualenvwrapper/)
   shows how to use shell aliases and postactivate virtualenvwrapper hooks to
   make life easier when using these tools.
