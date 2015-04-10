@@ -143,6 +143,12 @@ further clarification.
   shows how to use shell aliases and postactivate virtualenvwrapper hooks to
   make life easier when using these tools.
 
+* [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating
+  environment variables stored in a .env file in your projects' home
+  directories. Environment variables aren't managed by virtualenv and although
+  virtualenvwrapper has some hooks for handling them, it's often easiest to
+  use a shell script or .env file to set them in a development environment.
+
 
 ## Application dependencies learning checklist
 <i class="fa fa-check-square-o"></i>
