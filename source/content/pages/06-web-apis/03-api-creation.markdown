@@ -150,6 +150,10 @@ equivalent of browser testing in the web application world.
   subscribing to updates via a REST interface. Both REST hooks and webhooks
   are far more efficient than polling for updates and notifications.
 
+* [How many status codes does your API need?](https://blogs.dropbox.com/developers/2015/04/how-many-http-status-codes-should-your-api-use/)
+  gives an answer from a Dropbox API developer as to their decision making
+  process.
+
 
 ## API creation learning checklist
 <i class="fa fa-check-square-o"></i>
