@@ -46,22 +46,24 @@ That's a common set up but you can certainly write great code with a much
 less expensive set up or a cloud-based development environment.
 
 
-## Open source development environments
+## Open source text editors
 * [vim](http://www.vim.org/) is my editor of choice and installed by default
   on most \*nix systems.
 
 * [emacs](http://www.gnu.org/software/emacs/) is another editor often used
   on \*nix.
 
-* [PyDev](http://pydev.org/) is a Python IDE plug in for 
-  [Eclipse](https://www.eclipse.org/).
+* [Atom](https://atom.io/) is an open source editor built by the 
+  [GitHub](https://github.com) team.
 
+
+## Proprietary (closed source) editors
 * [Sublime Text](http://www.sublimetext.com/) versions 2 and 3 (currently
   in beta) are popular text editors that can be extended with code completion,
   linting, syntax highlighting and other features using plugins.
 
-* [Atom](https://atom.io/) is an open source editor built by the 
-  [GitHub](https://github.com) team.
+* [Komodo](http://komodoide.com/) is a cross-platform text editor and IDE
+  for major languages including Python, Ruby, JavaScript, Go and more.
 
 
 ## Python-specific IDEs
@@ -72,7 +74,9 @@ less expensive set up or a cloud-based development environment.
 * [Wing IDE](https://wingware.com/) is a paid development environment with
   integrated debugging and code completion.
 
-* [Komodo](http://komodoide.com/)
+* [PyDev](http://pydev.org/) is a Python IDE plug in for 
+  [Eclipse](https://www.eclipse.org/).
+
 
 
 ## Hosted development environment services
