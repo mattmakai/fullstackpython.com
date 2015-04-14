@@ -146,6 +146,9 @@ While you're learning about Django you should also read up on
   which often provoke heated debate in the Django community for whether they
   are a time saver or "too much magic" for the framework.
 
+* [How to serve Django apps with uWSGI and Nginx on 14.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-14-04)
+  is a detailed tutorial that walks through each step in the deployment process.
+
 
 ## Django videos
 <div class="well" style="margin-top: 20px;">
