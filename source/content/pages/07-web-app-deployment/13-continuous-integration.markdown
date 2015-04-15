@@ -107,5 +107,9 @@ relatively simple set up.
   [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
   Docker hub.
 
+* [Good practices for continuous integration](http://buildoutcoredev.readthedocs.org/en/latest/continous-integration.html)
+  includes advice on checking in code, commit tests and reverting to
+  previous revisions.
+
 
 ### What do you want to add to your application next?
