@@ -113,6 +113,10 @@ certain threshold.
   explains a problem with the default Django logging configuration and what
   to do about in your project.
 
+* [Exceptional Logging of Exceptions in Python](https://www.loggly.com/blog/exceptional-logging-of-exceptions-in-python/)
+  shows how to log errors more accurately to pinpoint the problem instead of
+  receiving generic exceptions in your logs.
+
 
 ## Logging learning checklist
 <i class="fa fa-check-square-o"></i>
