@@ -85,6 +85,11 @@ to learn more about web development.
   by Simeon Franklin explains the what and why of this core Python language 
   feature.
 
+* David Beazley gives an amazing live coded performance to show
+  [Python concurrency](https://www.youtube.com/watch?v=MCs5OvhV9S4)
+  using threads, event loops and coroutines. David makes the live coding
+  look easy but a whole lot of work must've gone into that talk.
+
 
 ## Screencasts and class recordings
 * [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
