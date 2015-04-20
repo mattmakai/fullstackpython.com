@@ -57,6 +57,9 @@ relatively simple set up.
   their build and deployment pipeline.
   [BuildBot source code is on GitHub](https://github.com/buildbot/buildbot).
 
+* [TeamCity](https://www.jetbrains.com/teamcity/) is JetBrains' closed source
+  CI server that requires a license to use.
+
 
 ## Hosted CI services
 * [Travis CI](https://travis-ci.org/) provides free CI for open source 
@@ -110,6 +113,10 @@ relatively simple set up.
 * [Good practices for continuous integration](http://buildoutcoredev.readthedocs.org/en/latest/continous-integration.html)
   includes advice on checking in code, commit tests and reverting to
   previous revisions.
+
+* [Deploying to AWS using Ansible, Docker and Teamcity](http://blog.bwhaley.com/deploying-to-aws-using-ansible-docker-and-teamcity)
+  is an example walking through one potential way to use the Teamcity CI
+  server for automated deployments.
 
 
 ### What do you want to add to your application next?
