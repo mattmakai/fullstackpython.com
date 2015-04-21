@@ -201,6 +201,9 @@ provider.
 * [Databases integration testing strategies](https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python)
   covers a difficult topic that comes up on every real world project.
 
+* The title's a bit presumptuous but here's a useful list of 
+  [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
+
 
 ## Databases learning checklist
 <i class="fa fa-check-square-o"></i>
