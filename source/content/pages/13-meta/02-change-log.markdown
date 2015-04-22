@@ -14,6 +14,7 @@ the
 
 ## 2015
 ### April
+* New [Vim](/vim.html) resources.
 * Updated the [Django](/django.html) page with new resources. The page is
   getting unwieldy at its current size so I'll likely pare it down with
   better categorizes sometime soon.

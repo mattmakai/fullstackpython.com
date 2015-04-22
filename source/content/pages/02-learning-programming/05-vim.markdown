@@ -110,6 +110,11 @@ to get started with these tutorials.
   explains the language syntax and how you can build up over time to master
   the editor.
 
+* [How to install and use Vim on a cloud server](https://www.digitalocean.com/community/tutorials/installing-and-using-the-vim-text-editor-on-a-cloud-server)
+  along with [How to use Vim for advanced editing of code on a VPS](https://www.digitalocean.com/community/tutorials/how-to-use-vim-for-advanced-editing-of-plain-text-or-code-on-a-vps--2)
+  are two detailed Digital Ocean guides for getting up and running with Vim,
+  regardless of whether you're using it locally or on a cloud server.
+
 * In [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/) the
   author explains his on-again off-again relationship with using Vim. He then
   shows how he configures and uses the editor so it sticks as his primary
