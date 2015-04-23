@@ -88,6 +88,10 @@ provides a command-line interface for interacting with the RPM system.
 
 * Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
 
+* The [Ops School curriculum](http://www.opsschool.org/en/latest/) is a
+  comprehensive resource for learning about Linux fundamentals and how to
+  perform the work that system administrators typically handle.
+
 * Since Linux is your go-to production operating system, it's important to
   get comfortable with the Unix/Linux commands and philosophy. Study up on
   [this introduction to Unix tutorial](http://www.oliverelliott.org/article/computing/tut_unix/)
