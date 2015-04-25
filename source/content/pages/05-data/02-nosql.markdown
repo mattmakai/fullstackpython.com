@@ -141,6 +141,10 @@ representing a person could have a property of "female" or "male".
   is a detailed article that breaks the mystique behind what some forms
   of NoSQL databases are doing under the covers.
 
+* The [CAP Theorem series](http://blog.thislongrun.com/2015/03/the-cap-theorem-series.html)
+  explains concepts related to NoSQL such as what is ACID compared to CAP, CP 
+  versus CA and high availability in large scale deployments.
+
 * [NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email 
   newsletter that aggregates articles, tutorials, and videos about 
   non-relational data stores.
