@@ -32,5 +32,9 @@ Model-View-Controller (MVC) architectural pattern.
   is a video from San Francisco Python with an overview of how to install,
   get started and build a web app with the Pyramid framework.
 
+* This [podcast interview with the primary author of the Pyramid framework](http://www.talkpythontome.com/episodes/show/3/pyramid-web-framework)
+  explains how Pyramid sprang from Pylons and how Pyramid compares to other 
+  modern frameworks.
+
 
 ### Learn more about frameworks or continue building your Pyramid app?
