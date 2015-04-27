@@ -50,7 +50,7 @@ all yourself. A few of the best collections of Python libraries are
 Dependencies are installed separately from system-level packages to prevent 
 library version conflicts. The most common isolation method is 
 [virtualenv](http://www.virtualenv.org/en/latest/). Each virtualenv is its
-own copy of the Python interpreter and depedencies in the site-packages
+own copy of the Python interpreter and dependencies in the site-packages
 directory. To use a virtualenv it must first be created with the virtualenv
 command and then activated.
 
