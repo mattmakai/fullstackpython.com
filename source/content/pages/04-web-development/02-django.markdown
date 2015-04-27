@@ -278,6 +278,10 @@ existing framework.
   shows you how to log authentication failures, create an IP addresses white
   list and combine fail2ban with the authentication failures list.
 
+* [Django 1.7: Database Migrations Done Right](https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/)
+  explains why South was not directly integrated into Django, how migrations
+  are built and shows how backwards migrations work.
+
 
 ## Static and media files
 Deploying and handling static and media files can be confusing for new
