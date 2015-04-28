@@ -39,6 +39,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is an explanation of the concepts and philosophy by the authors of the 
   new Manning Docker book in early access format.
 
+* [Eight Docker Development Patterns](http://www.hokstad.com/docker/patterns)
+  shares lessons learned and explains how to work with the containers so you 
+  get more use out of them during development.
+
 
 ## Python-specific Docker resources
 * [Hosting Python WSGI applications using Docker](http://blog.dscpl.com.au/2014/12/hosting-python-wsgi-applications-using.html)
