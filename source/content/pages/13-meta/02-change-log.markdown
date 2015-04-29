@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### April
+* Added more [NoSQL resources](/no-sql-datastore.html), especially ones involving
+  Redis.
 * New [Pyramid](/pyramid.html) resource where the primary author is 
   interviewed about the web framework.
 * New [Vim](/vim.html) resources.
