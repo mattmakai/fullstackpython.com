@@ -38,6 +38,10 @@ width.
 
 
 ## Design resources
+* [Web Design Repo](http://www.webdesignrepo.com/) is a one stop shop for 
+  links to blogs, podcasts, inspiration, tutorials and tools related to
+  web design.
+
 * The [Bootstrapping Design](http://bootstrappingdesign.com/) book is one of 
   the clearest and concise resources for learning design that I've ever read. 
   Highly recommended especially if you feel you have no design skills but 
