@@ -5,7 +5,7 @@ SITENAME = u'Matt Makai'
 SITEURL = 'http://www.fullstackpython.com'
 TIMEZONE = 'America/New_York'
 
-GITHUB_URL = 'https://github.com/makaimc/fullstackpython.github.com'
+GITHUB_URL = 'https://github.com/makaimc/fullstackpython.com'
 DISQUS_SITENAME = 'makaimc'
 PDF_GENERATOR = False
 
