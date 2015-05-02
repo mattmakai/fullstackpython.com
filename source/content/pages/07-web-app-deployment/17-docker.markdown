@@ -65,5 +65,9 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   provides specific commands and expected output for running Django apps
   with Docker and Vagrant.
 
+* [Using Docker and Docker Compose to replace virtualenv](https://www.calazan.com/using-docker-and-docker-compose-for-local-django-development-replacing-virtualenv/)
+  is a tutorial for using Docker instead of virtualenv for dependency
+  isolation.
+
 
 ### What do you want to learn next about deployment?
