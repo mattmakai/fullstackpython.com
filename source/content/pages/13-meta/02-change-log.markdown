@@ -13,6 +13,10 @@ the
 
 
 ## 2015
+### May
+* Added additional [Django](/django.html) resources, specifically related to
+  testing.
+
 ### April
 * Added more [NoSQL resources](/no-sql-datastore.html), especially ones involving
   Redis.

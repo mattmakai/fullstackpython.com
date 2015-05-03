@@ -158,7 +158,7 @@ for Django and web development on the
 </div>
 
 
-## Django 1.7-specific resources
+## Django migrations
 * Paul Hallett wrote a 
   [detailed Django 1.7 app upgrade guide](https://www.twilio.com/blog/2014/10/upgrading-your-django-reusable-app-to-support-django-1-7.html) 
   on the Twilio blog from his experience working with the django-twilio 
@@ -178,6 +178,8 @@ for Django and web development on the
   [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
   are now all available to read.
 
+
+## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
   is a good post to read for figuring out how to use [Gulp](http://gulpjs.com/)
   for handling front end tools in development and production Django sites.
@@ -185,6 +187,10 @@ for Django and web development on the
 * [Getting Started with Django Testing](http://howchoo.com/g/mjkwmtu5zdl/getting-started-with-django-testing)
   will help you stop procrastinating on testing your Django projects if you're
   uncertain where to begin.
+
+* [Testing in Django](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/)
+  provides numerous examples and explanations for how to test your Django
+  project's code.
 
 * [Django views automated testing with Selenium](https://medium.com/@unary/django-views-automated-testing-with-selenium-d9df95bdc926)
   gives some example code to get up and running with 
