@@ -29,8 +29,14 @@ should skip down to the next section for "experienced developers".
 
 * To get an introduction to Python, Django and Flask at the same time, 
   consider purchasing the 
-  <a href="https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources" onclick="trackOutboundLink('https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources'); return false;">Real Python</a> 
+  <a href="https://realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources" onclick="trackOutboundLink('https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources'); return false;">Real Python</a> 
   course by Fletcher, Michael and Jeremy.
+
+* This [short 5 minute video](https://www.youtube.com/watch?v=mvK0UzFNw1Q)
+  explains why it's better to think of projects you'd like to build and
+  problems you want to solve with programming. Start working on those projects
+  and problems rather than jumping into a specific language that's recommended
+  to you by a friend.
 
 * If you've never programmed before check out the 
   [Getting Started](http://learntocodewith.me/getting-started/) page on 
