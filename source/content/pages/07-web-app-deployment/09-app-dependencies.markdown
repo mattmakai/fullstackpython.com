@@ -143,11 +143,19 @@ further clarification.
   shows how to use shell aliases and postactivate virtualenvwrapper hooks to
   make life easier when using these tools.
 
+
+## Open source app dependency projects
 * [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating
   environment variables stored in a .env file in your projects' home
   directories. Environment variables aren't managed by virtualenv and although
   virtualenvwrapper has some hooks for handling them, it's often easiest to
   use a shell script or .env file to set them in a development environment.
+
+* [Pipreqs](https://github.com/bndr/pipreqs) searches through a project for
+  dependencies based on imports. It then generates a requirements.txt file
+  based on the libraries necessary to run those dependencies. Note though that
+  while this could come in handy with a legacy project, the version numbers
+  for those libraries will not be generated with the output.
 
 
 ## Application dependencies learning checklist
