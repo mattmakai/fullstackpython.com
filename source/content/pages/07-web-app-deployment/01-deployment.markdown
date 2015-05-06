@@ -55,6 +55,14 @@ guide as they are considered advanced deployment techniques.
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
 
+* In [this free video by Neal Ford](http://player.oreilly.com/videos/9781491908181?toc_id=210188),
+  he talks about engineering practices for continuous delivery. He explains
+  the difference between 
+  [continuous integration](/continuous-integration.html),
+  continuous deployment and continuous delivery. Highly recommended for an
+  overview of deployment concepts and as an introduction to the other videos
+  on those subjects in that series.
+
 * If you're using Flask this 
   [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
   is a great way to familiarize yourself with the deployment process.
