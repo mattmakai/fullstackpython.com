@@ -101,6 +101,10 @@ While you're learning about Django you should also read up on
   This is a good site if you want to dive right into the code with minimal
   prose.
 
+* The [TaskBuster Django tutorial](http://www.marinamele.com/taskbuster-django-tutorial)
+  is a walkthrough specifically written to show a new Django 1.8 application 
+  built with Python 3.
+
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
   has several nice examples for breaking Django into smaller simplier 
   components.
