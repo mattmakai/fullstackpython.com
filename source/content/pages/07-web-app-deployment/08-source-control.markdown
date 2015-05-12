@@ -100,6 +100,10 @@ reviews the basics of distributed version control systems.
 * [Pro Git](http://git-scm.com/book) is a free open source book that walks 
   through all aspects of using the version control system.
 
+* [Git in Six Hundred Words](http://maryrosecook.com/blog/post/git-in-six-hundred-words)
+  is a clear and concise essay explaining the fundamental concepts of
+  Git.
+
 * [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
   covers the basics as well as more advanced Git commands while explaining each
   step along the way.
