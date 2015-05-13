@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### May
+* New page on [Enterprise Python](/enterprise-python.html). A bit op-ed-ish
+  perhaps, but I think it captures some of the spirit of the open source
+  ecosystem with regards to Python for enterprise software development.
 * Added additional [Django](/django.html) resources, specifically related to
   testing.
 
