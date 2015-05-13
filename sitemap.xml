@@ -87,10 +87,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/development-environments.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/platform-as-a-service.html</loc>
     <priority>1.0</priority>
   </url>
@@ -107,11 +103,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/vim.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/emacs.html</loc>
+    <loc>http://www.fullstackpython.com/enterprise-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -123,6 +115,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/development-environments.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/wsgi-servers.html</loc>
     <priority>1.0</priority>
   </url>
@@ -131,7 +127,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/vim.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/application-dependencies.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/emacs.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
