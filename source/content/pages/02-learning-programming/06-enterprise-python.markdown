@@ -91,8 +91,20 @@ can no longer ignore the progress of Python and the great open source
 community in the enterprise software development landscape if they want to
 continue delivering business value to their business side customers.
 
+## Open source enterprise Python projects
+* [Collab](https://github.com/cfpb/collab) by the 
+  U.S. government's 
+  [Consumer Financial Protection Bureau](http://www.consumerfinance.gov/) 
+  (CFPB) agency is a corporate intranet and collaboration platform for large
+  organizations. The project is currently running and in-use by thousands of
+  CFPB employees.
 
-### Enterprise Python software development resources
+* [Pants](https://github.com/twitter/pants) is a build system for software
+  projects with many distinct parts and built with many different programming
+  languages as is often the case in large organizations.
+
+
+## Enterprise Python software development resources
 * There are a couple of solid demystifying articles in CIO magazine including
   [this broad overview of Python in enterprises](http://www.cio.com/article/2437137/developer/you-used-python-to-write-what-.html),
   [why dynamic languages are gaining share for enterprise development](http://www.cio.com/article/2431212/developer/dynamic-languages--not-just-for-scripting-any-more.html).
@@ -108,3 +120,5 @@ continue delivering business value to their business side customers.
   contains a solid explanation what differentiates enterprise software
   from traditional software.
 
+
+### What do you want to learn next about Python software development?
