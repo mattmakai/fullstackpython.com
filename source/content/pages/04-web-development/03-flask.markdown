@@ -75,10 +75,14 @@ how to <a href="/deployment.html">deploy web applications</a>.
   my blog post on creating 
   [Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html).
   Follow up that tutorial by 
-  [building an admin interface](https://www.twilio.com/blog/2015/03/choose-your-own-adventures-presentations-wizard-mode-part-1-of-3.html) 
-  that'll show you how to use forms and SQLAlchemy There is also a companion open source 
+  [building an admin interface in part 1](https://www.twilio.com/blog/2015/03/choose-your-own-adventures-presentations-wizard-mode-part-1-of-3.html),
+  [part 2](https://www.twilio.com/blog/2015/05/choose-your-own-adventure-presentations-wizard-mode-part-2-of-3.html)
+  and part 3 (coming soon) that'll show you how to use forms and SQLAlchemy. 
+  There is also a companion open source 
   [GitHub repository](https://github.com/makaimc/choose-your-own-adventure-presentations) 
-  for the app with tags for each step in the blog post.
+  for the app with 
+  [tags for each step](https://github.com/makaimc/choose-your-own-adventure-presentations/releases) 
+  in the blog posts.
 
 * [Branded MMS Coupon Generation with Python and Twilio](https://www.twilio.com/blog/2014/10/branded-mms-coupon-generation-with-python-and-twilio.html)
   is a Flask tutorial I wrote for building a web application that can send
