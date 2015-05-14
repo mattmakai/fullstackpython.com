@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Web design creates a compelling user experience for your Python web app. Learn more about web design on Full Stack Python.">
+    <meta name="description" content="Python make it possible to work with data through analysis, visualization and persistence. Learn more about data on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Web Design - Full Stack Python</title>
+    <title>Data - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,73 +34,85 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Web Design</h1>
-<p>Web design is the creation of a web application's style and user interaction
-using CSS and JavaScript.</p>
-<h2>Why is web design important?</h2>
-<p>You don't really expect users to use your 2014 web application if it looks
-like this, do you?</p>
-<p><img src="theme/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> </p>
-<p>Creating web pages with their own style and interactivity so users can easily
-accomplish their tasks is a major part of building modern web applications.</p>
-<h2>Responsive design</h2>
-<p>Separating the content from the rules for how to display the content allows 
-devices to render the output differently based on factors such as screen size
-and device type. Displaying content differently based on varying screen 
-attributes is often called <em>responsive design</em>. The responsiveness is 
-accomplished by implementing
-<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a>
-in the <a href="/cascading-style-sheets.html">CSS</a>. </p>
-<p>For example, a mobile device does not have as much space to display a 
-navigation bar on the side of a page so it is often pushed down 
-below the main content. The 
-<a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog example</a> 
-shows that navigation bar relocation scenario when you resize the browser 
-width.</p>
-<h2>Design resources</h2>
+          <h1>Data</h1>
+<p>Data is an incredibly broad topic but it can be broken down into many
+subsections, including (in no particular order):</p>
+<ul>
+<li>data processing / wrangling</li>
+<li>machine learning</li>
+<li>data analysis</li>
+<li>visualization</li>
+<li>geospatial mapping</li>
+<li>persistence via <a href="/databases.html">relational databases</a> and 
+  <a href="/no-sql-datastore.html">NoSQL data stores</a></li>
+<li>object-relational mapping</li>
+<li>natural language processing (NLP)</li>
+<li>indexing, search and retrieval</li>
+</ul>
+<p>The Python community has built and continues to create open source libraries 
+and tutorials for all of the above topics.</p>
+<h2>Why is Python a great language choice for data tasks?</h2>
+<p>Python has a wide array of open source code libraries available and a
+diverse community of people with different backgrounds who contribute to
+make those libraries better each day.</p>
+<p>In addition, Python data manipulation code can be combined with 
+<a href="/web-frameworks.html">web frameworks</a> and
+<a href="/application-programming-interfaces.html">web APIs</a> to build software
+that would be difficult to create with a single other language. For example,
+Ruby is a fantastic language for building web applications but its data
+analysis and visualization libraries are very limited compared to what
+is currently available in the Pythn ecosystem.</p>
+<h2>How did Python become so widely used for working with data?</h2>
+<p>Python is a general purpose programming language and can be applied to
+many problem areas. Over the past couple of decades, Python has become 
+increasingly popular in the scientific and financial communities. Projects
+such as <a href="http://pandas.pydata.org/">pandas</a> grew out of a hedge-fund while
+<a href="http://www.numpy.org/">NumPy</a> and <a href="http://www.scipy.org/">SciPy</a> were
+created in academic environments then improved by the broader open source
+community.</p>
+<p>The question is: why Python was used to created these projects? The answer
+is a mix of luck, the growth of the open source community as Python was
+maturing and wide adoption by people not formally trained as computer 
+scientists. The pragmatic syntax and explicit style helped very intelligent
+people without programming backgrounds to pick up the language and get their
+work done with less fuss than other programming languages. Over time the
+code used in the financial world and scientific community was shared at the
+same time global open source communities were developing, further spreading
+their usage among a broader base of software developers.</p>
+<p>There's no doubt some of the momentum behind Python's wide adoption for all 
+types of data manipulation was that it happened to be the right language in
+the right place at the right time. Nevertheless, it was ultimately the hard 
+work of a massive number of engineers and scientists around the world who
+created the incredible mix of data code libraries available today.</p>
+<h3>General Python data resources</h3>
 <ul>
 <li>
-<p><a href="http://www.webdesignrepo.com/">Web Design Repo</a> is a one stop shop for 
-  links to blogs, podcasts, inspiration, tutorials and tools related to
-  web design.</p>
+<p><a href="http://pydata.org/">PyData</a> is a community for developer and users of 
+  Python data tools. They put on fantastic conferences around the and fund 
+  the continued development of open source data-related libraries.</p>
 </li>
 <li>
-<p>The <a href="http://bootstrappingdesign.com/">Bootstrapping Design</a> book is one of 
-  the clearest and concise resources for learning design that I've ever read. 
-  Highly recommended especially if you feel you have no design skills but 
-  need to learn them.</p>
-</li>
-<li>
-<p><a href="http://learndesignprinciples.com">Learn Design Principles</a> is a well
-  thought out clear explanation for how to think about design according to
-  specific rules such as axis, symmetry, hierarchy and rhythm.</p>
-</li>
-<li>
-<p><a href="https://kuler.adobe.com/create/color-wheel/">Kuler</a> is a complementary
-  color picker by Adobe that helps choose colors for your designs.</p>
-</li>
-<li>
-<p>If you want to learn more about how browsers work behind the scenes, 
-  here's a 
-  <a href="http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html">blog post series on building a browser engine</a>
-  that will show you how to build a simple rendering engine.</p>
+<p><a href="http://continuum.io/">Continuum Analytics</a> is one of the leading Python
+  companies that pours a tremendous amount of time and funding into
+  the data community.</p>
 </li>
 </ul>
+<h3>What else would you like to learn about Python and data?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M275 128h1505l-266 1333-804 267-698-267 71-356h297l-29 147 422 161 486-161 68-339h-1208l58-297h1209l38-191h-1208z" fill="#fff"/></svg></a>
-<p class="under-btn">My app runs but looks awful. How do I style the user interface?</p>        </div>
+<a href="/databases.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1168 1216q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm256 0q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm112 160v-320q0-13-9.5-22.5t-22.5-9.5h-1216q-13 0-22.5 9.5t-9.5 22.5v320q0 13 9.5 22.5t22.5 9.5h1216q13 0 22.5-9.5t9.5-22.5zm-1230-480h1180l-157-482q-4-13-16-21.5t-26-8.5h-782q-14 0-26 8.5t-16 21.5zm1358 160v320q0 66-47 113t-113 47h-1216q-66 0-113-47t-47-113v-320q0-25 16-75l197-606q17-53 63-86t101-33h782q55 0 101 33t63 86l197 606q16 50 16 75z" fill="#fff"/></svg></a>
+<p class="under-btn">Tell me about standard relational databases.</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/static-content.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z" fill="#fff"/></svg></a>
-<p class="under-btn">How should I host and service static content files?</p>        </div>
+<a href="/no-sql-datastore.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1151 960h316q-1-3-2.5-8t-2.5-8l-212-496h-708l-212 496q-1 2-2.5 8t-2.5 8h316l95 192h320zm513 30v482q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-482q0-62 25-123l238-552q10-25 36.5-42t52.5-17h832q26 0 52.5 17t36.5 42l238 552q25 61 25 123z" fill="#fff"/></svg></a>
+<p class="under-btn">What're these NoSQL data stores hipster developers keep talking about?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/javascript.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm512-109v222q0 12-8 23t-20 13l-185 28q-19 54-39 91 35 50 107 138 10 12 10 25t-9 23q-27 37-99 108t-94 71q-12 0-26-9l-138-108q-44 23-91 38-16 136-29 186-7 28-36 28h-222q-14 0-24.5-8.5t-11.5-21.5l-28-184q-49-16-90-37l-141 107q-10 9-25 9-14 0-25-11-126-114-165-168-7-10-7-23 0-12 8-23 15-21 51-66.5t54-70.5q-27-50-41-99l-183-27q-13-2-21-12.5t-8-23.5v-222q0-12 8-23t19-13l186-28q14-46 39-92-40-57-107-138-10-12-10-24 0-10 9-23 26-36 98.5-107.5t94.5-71.5q13 0 26 10l138 107q44-23 91-38 16-136 29-186 7-28 36-28h222q14 0 24.5 8.5t11.5 21.5l28 184q49 16 90 37l142-107q9-9 24-9 13 0 25 10 129 119 165 170 7 8 7 22 0 12-8 23-15 21-51 66.5t-54 70.5q26 50 41 98l183 28q13 2 21 12.5t8 23.5z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I use JavaScript with my Python web application?</p>        </div>
+<a href="/why-use-python.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1152-576q0-51-39-89.5t-89-38.5h-352q0-58 48-159.5t48-160.5q0-98-32-145t-128-47q-26 26-38 85t-30.5 125.5-59.5 109.5q-22 23-77 91-4 5-23 30t-31.5 41-34.5 42.5-40 44-38.5 35.5-40 27-35.5 9h-32v640h32q13 0 31.5 3t33 6.5 38 11 35 11.5 35.5 12.5 29 10.5q211 73 342 73h121q192 0 192-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5q32-1 53.5-47t21.5-81zm128-1q0 89-49 163 9 33 9 69 0 77-38 144 3 21 3 43 0 101-60 178 1 139-85 219.5t-227 80.5h-129q-96 0-189.5-22.5t-216.5-65.5q-116-40-138-40h-288q-53 0-90.5-37.5t-37.5-90.5v-640q0-53 37.5-90.5t90.5-37.5h274q36-24 137-155 58-75 107-128 24-25 35.5-85.5t30.5-126.5 62-108q39-37 90-37 84 0 151 32.5t102 101.5 35 186q0 93-48 192h176q104 0 180 76t76 179z" fill="#fff"/></svg></a>
+<p class="under-btn">Why is Python a good programming language to use?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -149,12 +161,12 @@ width.</p>
               <a href="/pyramid.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
               <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
               <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
-              <a href="/web-design.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
+              <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
               <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
               <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
               <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
               <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
-              <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
+              <a href="/data.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
@@ -185,7 +197,7 @@ width.</p>
       </div>
   </div>
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Web Design</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Data</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.

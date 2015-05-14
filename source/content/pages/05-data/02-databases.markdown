@@ -1,7 +1,7 @@
 title: Databases
 category: page
 slug: databases
-sort-order: 0501
+sort-order: 0502
 meta: Relational databases a critical part of Python web applications. Learn more about persisting data in databases at Full Stack Python.
 
 

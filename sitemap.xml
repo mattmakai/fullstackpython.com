@@ -7,7 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/databases.html</loc>
+    <loc>http://www.fullstackpython.com/data.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -51,11 +51,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/django.html</loc>
+    <loc>http://www.fullstackpython.com/databases.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/no-sql-datastore.html</loc>
+    <loc>http://www.fullstackpython.com/django.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -76,6 +76,10 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/future-directions.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/no-sql-datastore.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

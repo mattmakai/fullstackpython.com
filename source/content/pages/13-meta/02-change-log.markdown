@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### May
+* New page on the super broad topic of [Data](/data.html) with Python.
+  Eventually it'll link to all sorts of data topics such as analysis,
+  visualization and processing.
 * New page on [Enterprise Python](/enterprise-python.html). A bit op-ed-ish
   perhaps, but I think it captures some of the spirit of the open source
   ecosystem with regards to Python for enterprise software development.
