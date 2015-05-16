@@ -120,3 +120,6 @@ up your application.
 * JetBrains' [PyCharm Blog](http://blog.jetbrains.com/pycharm/) is required
   reading if you're using the IDE or considering trying it.
 
+* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
+  has a comparison of several features between the two editors.
+
