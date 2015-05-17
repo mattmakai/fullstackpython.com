@@ -104,17 +104,9 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   explains one professor's rationale for promoting Python to teach programming
   to undergraduates.
 
-
-### Resources for Python enterprise advocacy
-* CIO Magazine discusses why 
-  [dynamic languages are increasingly being adopted in enterprise environments](http://www.cio.com/article/2431212/developer/dynamic-languages--not-just-for-scripting-any-more.html).
-
-* PayPal covers 
-  [10 myths about enterprise Python](https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/)
-  via their engineering blog.
-
-* My DjangoCon 2014 talk focused on overcoming false biases against 
-  [Python and Django in enterprise environments](https://www.youtube.com/watch?v=aMtiCX38w20).
+* If you're wondering about the differences in Python's dynamically typed
+  system versus statically typed languages, be sure to 
+  [read this thorough explanation of the topic](http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html).
 
 
 ## What else would you like to know about Python?
