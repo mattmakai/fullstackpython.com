@@ -125,6 +125,10 @@ should skip down to the next section for "experienced developers".
 * [Python Books](http://pythonbooks.revolunet.com/) is a collection of freely
   available books on Python, Django, and data analysis.
 
+* [Python IAQ: Infrequently Asked Questions](http://norvig.com/python-iaq.html)
+  is a list of quirky queries on rare Python features and why certain syntax
+  was or was not built into the language.
+
 
 ## Videos, screencasts and presentations
 Videos from conferences and meetups along with screencasts are listed on
