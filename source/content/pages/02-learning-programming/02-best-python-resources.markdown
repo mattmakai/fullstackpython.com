@@ -71,6 +71,12 @@ should skip down to the next section for "experienced developers".
   goes over the basic syntax and control structures in Python. The free book 
   has numerous code examples to go along with each topic.
 
+* Google put together a great compilation of materials and subjects you 
+  should read and learn from if you want to be a 
+  [professional programmer](https://www.google.com/about/careers/students/guide-to-technical-development.html).
+  Those resources are useful not only for Python beginners but any developer
+  who wants to have a strong professional career in software.
+
 * The O'Reilly book 
   [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
   is available in HTML form for free on the web.
