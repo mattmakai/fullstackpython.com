@@ -63,8 +63,11 @@ nested data.
 * [MongoDB](http://www.mongodb.org/) is an open source document-oriented 
   data store with a Binary Object Notation (BSON) storage format that is 
   JSON-style and familiar to web developers. 
-  [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) is the most
-  commonly used client to interface with MongoDB through Python code.
+  [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) is a
+  are commonly used client for interfacing with one or more MongoDB 
+  instances through Python code. [MongoEngine](http://mongoengine.org/)
+  is a Python ORM specifically written for MongoDB that is built on top
+  of PyMongo.
 
 * [Riak](http://basho.com/riak/) is an open source distributed data store
   focused on availability, fault tolerance and large scale deployments.
