@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### May
+* Worked on making [Why Use Python?](/why-use-python.html) page specific to
+  that topic now that the [Enterprise Python](/enterprise-python.html) page
+  contains enterprise-y info.
 * New page on the super broad topic of [Data](/data.html) with Python.
   Eventually it'll link to all sorts of data topics such as analysis,
   visualization and processing.
