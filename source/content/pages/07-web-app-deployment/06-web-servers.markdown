@@ -96,8 +96,9 @@ is provided by W3C.
   Nginx rate limits.
 
 * If you're looking to learn about web servers by building one, here's
-  [part one of a tutorial that shows how to code a web server in Python](http://ruslanspivak.com/lsbaws-part1/)
-  and [part two](http://ruslanspivak.com/lsbaws-part2/).
+  [part one](http://ruslanspivak.com/lsbaws-part1/),
+  [part two](http://ruslanspivak.com/lsbaws-part2/) and [part three](http://ruslanspivak.com/lsbaws-part3/) 
+  of a great tutorial that shows how to code a web server in Python.
 
 
 ## Web servers learning checklist
