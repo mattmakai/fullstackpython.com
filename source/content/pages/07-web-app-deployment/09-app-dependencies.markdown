@@ -143,6 +143,11 @@ further clarification.
   shows how to use shell aliases and postactivate virtualenvwrapper hooks to
   make life easier when using these tools.
 
+* Major speed improvements were made in pip 7 over previous versions. 
+  Read 
+  [this article about the differences](https://lincolnloop.com/blog/fast-immutable-python-deployments/)
+  and be sure to upgrade.
+
 
 ## Open source app dependency projects
 * [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating
