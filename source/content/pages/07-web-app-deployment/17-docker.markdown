@@ -69,5 +69,9 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is a tutorial for using Docker instead of virtualenv for dependency
   isolation.
 
+* Lincoln Loop wrote up 
+  [a closer look at Docker](https://lincolnloop.com/blog/closer-look-docker/)
+  from the perspective of Python developers handling deployments.
+
 
 ### What do you want to learn next about deployment?
