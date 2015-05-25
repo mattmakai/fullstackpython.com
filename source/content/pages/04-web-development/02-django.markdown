@@ -294,6 +294,10 @@ existing framework.
   explains why South was not directly integrated into Django, how migrations
   are built and shows how backwards migrations work.
 
+* [Squashing and optimizing migrations in Django](http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/)
+  shows a simple example with code for how to use the migrations integrated
+  into Django 1.7.
+
 
 ## Static and media files
 Deploying and handling static and media files can be confusing for new

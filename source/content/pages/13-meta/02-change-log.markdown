@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### May
+* Added new [Django](/django.html) resources, especially around migrations
+  in Django 1.7+.
 * Worked on making [Why Use Python?](/why-use-python.html) page specific to
   that topic now that the [Enterprise Python](/enterprise-python.html) page
   contains enterprise-y info.
