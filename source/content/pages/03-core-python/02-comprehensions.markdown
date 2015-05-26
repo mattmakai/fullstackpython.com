@@ -60,5 +60,3 @@ Dictionary comprehension:
   is a solid overview of Python lists in general and tangentially covers 
   list comprehensions.
 
-
-### Learn more about data or head back to the intro?

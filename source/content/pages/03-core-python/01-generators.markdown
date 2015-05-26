@@ -40,5 +40,3 @@ language as of Python 2.2 in 2001.
   all Python developers working to understand appropriate ways to use
   generators.
 
-
-### What's next after learning about generators?
