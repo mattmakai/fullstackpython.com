@@ -103,5 +103,3 @@ While you're learning about web frameworks you should also study
    the [deployment](/deployment.html) section to make it accessible on the 
    web.
 
-
-### Which web framework do you want to learn about?
