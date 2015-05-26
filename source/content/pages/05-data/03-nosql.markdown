@@ -11,9 +11,9 @@ persistent data. However, there are several alternative classifications of
 storage representations.
 
 1. Key-value pair
-2. Document-oriented
-3. Column-family table
-4. Graph
+1. Document-oriented
+1. Column-family table
+1. Graph
 
 These persistent data storage representations are commonly used to augment,
 rather than completely replace, relational databases. The underlying 
@@ -35,8 +35,14 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   use cases. [Redis-py](https://github.com/andymccurdy/redis-py) is a solid
   Python client to use with Redis.
 
+* [Memcached](http://www.memcached.org/) is another widely used in-memory
+  key-value pair storage system.
+
 
 ### Key-value pair resources
+* [What is a key-value store database?](http://dba.stackexchange.com/questions/607/what-is-a-key-value-store-database)
+  is a Stack Overflow Q&A that straight on answers this subject.
+
 * "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
   is a guide for getting up with the extremely useful in-memory data store.
 
@@ -162,23 +168,18 @@ representing a person could have a property of "female" or "male".
   datastores with attributes and the best use cases for each one.
 
 
-
 ## NoSQL data stores learning checklist
-<i class="fa fa-check-square-o"></i>
-Understand why NoSQL data stores are better for some use cases than relational
-databases. In general these benefits are only seen at large scale so they may
-not be applicable to your web application.
+1. Understand why NoSQL data stores are better for some use cases than 
+   relational databases. In general these benefits are only seen at large 
+   scale so they may not be applicable to your web application.
 
-<i class="fa fa-check-square-o"></i>
-Integrate Redis into your project for a speed boost over slower persistent 
-storage. Storing session data in memory is generally much faster than saving
-that data in a traditional relational database that uses persistent storage. 
-Note that when memory is flushed the data goes away so anything that needs to
-be persistent must still be backed up to disk on a regular basis.
+1. Integrate Redis into your project for a speed boost over slower persistent 
+   storage. Storing session data in memory is generally much faster than 
+   saving that data in a traditional relational database that uses persistent 
+   storage. Note that when memory is flushed the data goes away so anything 
+   that needs to be persistent must still be backed up to disk on a regular 
+   basis.
 
-<i class="fa fa-check-square-o"></i>
-Evaluate other use cases such as storing transient logs in document-oriented
-data stores such as MongoDB.
+1. Evaluate other use cases such as storing transient logs in a 
+   document-oriented data store such as MongoDB.
 
-
-### What's next?

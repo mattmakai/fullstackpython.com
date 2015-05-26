@@ -2808,7 +2808,6 @@ created the incredible mix of data code libraries available today.</p>
   in scientific fields.</p>
 </li>
 </ul>
-<h3>What else would you like to learn about Python and data?</h3>
           <h1>Databases</h1>
 <p>A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. </p>
@@ -3020,24 +3019,32 @@ provider.</p>
 </li>
 </ul>
 <h2>Databases learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Install PostgreSQL on your server. Assuming you went with Ubuntu run 
-<code>sudo apt-get install postgresql</code>.</p>
-<p><i class="fa fa-check-square-o"></i>
-Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is part of your
-application dependencies.</p>
-<p><i class="fa fa-check-square-o"></i>
-Configure your web application to connect to the PostgreSQL instance.</p>
-<p><i class="fa fa-check-square-o"></i>
-Create models in your ORM, either with Django's 
-<a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
-<a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
-<p><i class="fa fa-check-square-o"></i>
-Sync the ORM models with the PostgreSQL instance.</p>
-<p><i class="fa fa-check-square-o"></i>
-Start creating, reading, updating and deleting data in the database from your 
-web application.</p>
-<h3>What's next to get your app running?</h3>
+<ol>
+<li>
+<p>Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+   <code>sudo apt-get install postgresql</code>.</p>
+</li>
+<li>
+<p>Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is in your
+   application's dependencies.</p>
+</li>
+<li>
+<p>Configure your web application to connect to the PostgreSQL instance.</p>
+</li>
+<li>
+<p>Create models in your ORM, either with Django's 
+   <a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
+   <a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
+</li>
+<li>
+<p>Build your database tables or sync the ORM models with the PostgreSQL 
+   instance, if you're using an ORM.</p>
+</li>
+<li>
+<p>Start creating, reading, updating and deleting data in the database 
+   from your web application.</p>
+</li>
+</ol>
           <h1>NoSQL Data Stores</h1>
 <p>Relational databases store the vast majority of web application 
 persistent data. However, there are several alternative classifications of 
@@ -3058,15 +3065,25 @@ on some types of read/writes and worse performance on others.</p>
 on <a href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structures.</p>
 <h3>Key-value pair data stores</h3>
 <ul>
-<li><a href="http://redis.io/">Redis</a> is an open source in-memory key-value pair data 
+<li>
+<p><a href="http://redis.io/">Redis</a> is an open source in-memory key-value pair data 
   store. Redis is often called "the Swiss Army Knife of web application
   development." It can be used for caching, queuing, and storing session data 
   for faster access than a traditional relational database, among many other
   use cases. <a href="https://github.com/andymccurdy/redis-py">Redis-py</a> is a solid
-  Python client to use with Redis.</li>
+  Python client to use with Redis.</p>
+</li>
+<li>
+<p><a href="http://www.memcached.org/">Memcached</a> is another widely used in-memory
+  key-value pair storage system.</p>
+</li>
 </ul>
 <h3>Key-value pair resources</h3>
 <ul>
+<li>
+<p><a href="http://dba.stackexchange.com/questions/607/what-is-a-key-value-store-database">What is a key-value store database?</a>
+  is a Stack Overflow Q&amp;A that straight on answers this subject.</p>
+</li>
 <li>
 <p>"<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis">How To Install and Use Redis</a>"
   is a guide for getting up with the extremely useful in-memory data store.</p>
@@ -3211,20 +3228,25 @@ representing a person could have a property of "female" or "male".</p>
 </li>
 </ul>
 <h2>NoSQL data stores learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Understand why NoSQL data stores are better for some use cases than relational
-databases. In general these benefits are only seen at large scale so they may
-not be applicable to your web application.</p>
-<p><i class="fa fa-check-square-o"></i>
-Integrate Redis into your project for a speed boost over slower persistent 
-storage. Storing session data in memory is generally much faster than saving
-that data in a traditional relational database that uses persistent storage. 
-Note that when memory is flushed the data goes away so anything that needs to
-be persistent must still be backed up to disk on a regular basis.</p>
-<p><i class="fa fa-check-square-o"></i>
-Evaluate other use cases such as storing transient logs in document-oriented
-data stores such as MongoDB.</p>
-<h3>What's next?</h3>
+<ol>
+<li>
+<p>Understand why NoSQL data stores are better for some use cases than 
+   relational databases. In general these benefits are only seen at large 
+   scale so they may not be applicable to your web application.</p>
+</li>
+<li>
+<p>Integrate Redis into your project for a speed boost over slower persistent 
+   storage. Storing session data in memory is generally much faster than 
+   saving that data in a traditional relational database that uses persistent 
+   storage. Note that when memory is flushed the data goes away so anything 
+   that needs to be persistent must still be backed up to disk on a regular 
+   basis.</p>
+</li>
+<li>
+<p>Evaluate other use cases such as storing transient logs in a 
+   document-oriented data store such as MongoDB.</p>
+</li>
+</ol>
           <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>

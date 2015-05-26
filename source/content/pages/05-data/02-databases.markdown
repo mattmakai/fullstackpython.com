@@ -206,28 +206,21 @@ provider.
 
 
 ## Databases learning checklist
-<i class="fa fa-check-square-o"></i>
-Install PostgreSQL on your server. Assuming you went with Ubuntu run 
-``sudo apt-get install postgresql``.
+1. Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+   ``sudo apt-get install postgresql``.
 
-<i class="fa fa-check-square-o"></i>
-Make sure the [psycopg2](http://initd.org/psycopg/) library is part of your
-application dependencies.
+1. Make sure the [psycopg2](http://initd.org/psycopg/) library is in your
+   application's dependencies.
 
-<i class="fa fa-check-square-o"></i>
-Configure your web application to connect to the PostgreSQL instance.
+1. Configure your web application to connect to the PostgreSQL instance.
 
-<i class="fa fa-check-square-o"></i>
-Create models in your ORM, either with Django's 
-[built-in ORM](https://docs.djangoproject.com/en/dev/topics/db/) or
-[SQLAlchemy with Flask](http://www.sqlalchemy.org/). 
+1. Create models in your ORM, either with Django's 
+   [built-in ORM](https://docs.djangoproject.com/en/dev/topics/db/) or
+   [SQLAlchemy with Flask](http://www.sqlalchemy.org/). 
 
-<i class="fa fa-check-square-o"></i>
-Sync the ORM models with the PostgreSQL instance.
+1. Build your database tables or sync the ORM models with the PostgreSQL 
+   instance, if you're using an ORM.
 
-<i class="fa fa-check-square-o"></i>
-Start creating, reading, updating and deleting data in the database from your 
-web application.
+1. Start creating, reading, updating and deleting data in the database 
+   from your web application.
 
-
-### What's next to get your app running?

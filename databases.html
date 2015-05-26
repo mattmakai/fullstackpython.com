@@ -245,23 +245,32 @@ provider.</p>
 </li>
 </ul>
 <h2>Databases learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Install PostgreSQL on your server. Assuming you went with Ubuntu run 
-<code>sudo apt-get install postgresql</code>.</p>
-<p><i class="fa fa-check-square-o"></i>
-Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is part of your
-application dependencies.</p>
-<p><i class="fa fa-check-square-o"></i>
-Configure your web application to connect to the PostgreSQL instance.</p>
-<p><i class="fa fa-check-square-o"></i>
-Create models in your ORM, either with Django's 
-<a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
-<a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
-<p><i class="fa fa-check-square-o"></i>
-Sync the ORM models with the PostgreSQL instance.</p>
-<p><i class="fa fa-check-square-o"></i>
-Start creating, reading, updating and deleting data in the database from your 
-web application.</p>
+<ol>
+<li>
+<p>Install PostgreSQL on your server. Assuming you went with Ubuntu run 
+   <code>sudo apt-get install postgresql</code>.</p>
+</li>
+<li>
+<p>Make sure the <a href="http://initd.org/psycopg/">psycopg2</a> library is in your
+   application's dependencies.</p>
+</li>
+<li>
+<p>Configure your web application to connect to the PostgreSQL instance.</p>
+</li>
+<li>
+<p>Create models in your ORM, either with Django's 
+   <a href="https://docs.djangoproject.com/en/dev/topics/db/">built-in ORM</a> or
+   <a href="http://www.sqlalchemy.org/">SQLAlchemy with Flask</a>. </p>
+</li>
+<li>
+<p>Build your database tables or sync the ORM models with the PostgreSQL 
+   instance, if you're using an ORM.</p>
+</li>
+<li>
+<p>Start creating, reading, updating and deleting data in the database 
+   from your web application.</p>
+</li>
+</ol>
 <h3>What's next to get your app running?</h3>
 <div class="row">
     <div class="col-md-4">

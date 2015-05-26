@@ -77,5 +77,3 @@ created the incredible mix of data code libraries available today.
   provides an overview of the Python language with iPython Notebook for those 
   in scientific fields.
 
-
-### What else would you like to learn about Python and data?
