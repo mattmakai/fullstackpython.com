@@ -21,5 +21,3 @@ run a production Python web application.
 This guide branches out on topic because your learning needs depend on what
 you're currently trying to do. 
 
-
-### Let's get started. What do you need to do right now?

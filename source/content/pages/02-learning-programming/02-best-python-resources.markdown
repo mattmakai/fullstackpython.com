@@ -165,5 +165,3 @@ the [best Python videos](/best-python-videos.html) page.
   covers different sources from other newsletters. It's well worth subscribing
   to all three so you don't miss anything.
 
-
-### Those resources should help get you started. What's next?

@@ -199,5 +199,3 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.
 * [Powerline](https://github.com/powerline/powerline) is a popular statusline
   plugin for Vim that works with both Python 2 and 3.
 
-
-### What do you want to learn about Python development?

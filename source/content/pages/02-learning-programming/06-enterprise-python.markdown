@@ -120,5 +120,3 @@ continue delivering business value to their business side customers.
   contains a solid explanation what differentiates enterprise software
   from traditional software.
 
-
-### What do you want to learn next about Python software development?

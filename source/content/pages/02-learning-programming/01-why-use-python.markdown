@@ -108,5 +108,3 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   system versus statically typed languages, be sure to 
   [read this thorough explanation of the topic](http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html).
 
-
-## What else would you like to know about Python?

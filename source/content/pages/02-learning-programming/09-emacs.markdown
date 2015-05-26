@@ -79,5 +79,3 @@ use as well as
 * [Spacemacs](https://github.com/syl20bnr/spacemacs) mashes together Emacs'
   extensibility and Vim's ergonomic text editing features.
 
-
-### What's next once your development environment is set up?

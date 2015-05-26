@@ -117,5 +117,3 @@ to learn more about web development.
   to emphasize professional software developers who also have the ability to
   engage an audience of peers with an exciting talk.
 
-
-### What's next after watching Python videos?
