@@ -312,4 +312,3 @@ the
   introduction, CDN, web frameworks, and database sections with stubs for 
   other areas.
 
-That's the whole history of Full Stack Python. What do you want to learn now?

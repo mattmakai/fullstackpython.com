@@ -52,5 +52,3 @@ system are occurring.
   goes over setting up Pylint, generating the .pylintrc file and what's
   in the configuration.
 
-
-### What's next after obtaining code metrics?

@@ -23,5 +23,3 @@ Note that these plans can change based on
 from the community. I work to integrate PRs within a day or two so please 
 submit one when you see a fix or improvement that needs to be made!
 
-
-### That's what coming. What would you like to learn right now?

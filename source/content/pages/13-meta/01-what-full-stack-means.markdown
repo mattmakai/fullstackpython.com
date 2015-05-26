@@ -33,5 +33,3 @@ to keep up with our ever evolving ecosystem. I created Full Stack Python to
 be just one of [many resources](/best-python-resources.html) that help Python 
 developers build and maintain their programming skills.
 
-
-### What to do now that we've got "full stack" defined?
