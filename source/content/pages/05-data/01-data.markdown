@@ -73,5 +73,9 @@ created the incredible mix of data code libraries available today.
   companies that pours a tremendous amount of time and funding into
   the data community.
 
+* [A crash course in Python for scientists](http://nbviewer.ipython.org/gist/rpmuller/5920182)
+  provides an overview of the Python language with iPython Notebook for those 
+  in scientific fields.
+
 
 ### What else would you like to learn about Python and data?
