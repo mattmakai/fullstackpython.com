@@ -375,5 +375,3 @@ to handle these files properly.
 1. Move on to the [deployment section](/deployment.html) to get your Django 
    project on the web.
 
-
-### What do you need to learn next for your Django app?
