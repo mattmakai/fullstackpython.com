@@ -238,5 +238,3 @@ Flask tutorial plus open source example applications found below.
 Move on to the [deployment section](/deployment.html) to get your initial 
 Flask project on the web.
 
-
-### What do you need to learn about web frameworks next?
