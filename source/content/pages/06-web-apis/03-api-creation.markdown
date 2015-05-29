@@ -156,30 +156,23 @@ equivalent of browser testing in the web application world.
 
 
 ## API creation learning checklist
-<i class="fa fa-check-square-o"></i>
-Pick an API framework appropriate for your web framework. For Django I 
-recommend Django REST framework and for Flask I recommend Flask-RESTful.
+1. Pick an API framework appropriate for your web framework. For Django I 
+   recommend Django REST framework and for Flask I recommend Flask-RESTful.
 
-<i class="fa fa-check-square-o"></i>
-Begin by building out a simple use case for the API. Generally the use case
-will either involve data that users want in a machine-readable format or a
-backend for alternative clients such as an iOS or Android mobile app.
+1. Begin by building out a simple use case for the API. Generally the use 
+   case will either involve data that users want in a machine-readable 
+   format or a backend for alternative clients such as an iOS or Android 
+   mobile app.
 
-<i class="fa fa-check-square-o"></i>
-Add an authentication mechanism through OAuth or a token scheme.
+1. Add an authentication mechanism through OAuth or a token scheme.
 
-<i class="fa fa-check-square-o"></i>
-Add rate limiting to the API if data usage volume could be a performance issue.
-Also add basic metrics so you can determine how often the API is being 
-accessed and whether it is performing properly.
+1. Add rate limiting to the API if data usage volume could be a performance 
+   issue. Also add basic metrics so you can determine how often the API is 
+   being accessed and whether it is performing properly.
 
-<i class="fa fa-check-square-o"></i>
-Provide ample documentation and a walkthrough for how the API can be accessed
-and used.
+1. Provide ample documentation and a walkthrough for how the API can be 
+   accessed and used.
 
-<i class="fa fa-check-square-o"></i>
-Figure out other use cases and expand based on what you learned with the 
-initial API use case.
+1. Figure out other use cases and expand based on what you learned with the 
+   initial API use case.
 
-
-### What's next after building an API for your web app?

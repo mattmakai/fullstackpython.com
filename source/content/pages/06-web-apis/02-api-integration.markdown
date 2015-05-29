@@ -79,30 +79,23 @@ across many implementation areas.
 
 
 ## API integration learning checklist
-<i class="fa fa-check-square-o"></i>
-Pick an API known for top notch documentation. Here's a list of 
-[ten APIs that are a good starting point for beginners](https://medium.com/she-hacks-hacker-academy/4d3c43be9386).
+1. Pick an API known for top notch documentation. Here's a list of 
+   [ten APIs that are a good starting point for beginners](https://medium.com/she-hacks-hacker-academy/4d3c43be9386).
 
-<i class="fa fa-check-square-o"></i>
-Read the API documentation for your chosen API. Figure out a simple use case
-for how your application could be improved by using that API.
+1. Read the API documentation for your chosen API. Figure out a simple 
+   use case for how your application could be improved by using that API.
 
-<i class="fa fa-check-square-o"></i>
-Before you start writing any code, play around with the API through the 
-commandline with [curl](http://curl.haxx.se/) or in the browser with 
-[Postman](http://www.getpostman.com/). This exercise will help you get a
-better understanding of API authentication and the data required for requests
-and responses.
+1. Before you start writing any code, play around with the API through the 
+   commandline with [curl](http://curl.haxx.se/) or in the browser with 
+   [Postman](http://www.getpostman.com/). This exercise will help you get 
+   a better understanding of API authentication and the data required for 
+   requests and responses.
 
-<i class="fa fa-check-square-o"></i>
-Evaluate whether to use a helper library or work with 
-[Requests](http://docs.python-requests.org/en/latest/). Helper libraries are
-usually easier to get started with while Requests gives you more control over
-the HTTP calls.
+1. Evaluate whether to use a helper library or work with 
+   [Requests](http://docs.python-requests.org/en/latest/). Helper libraries 
+   are usually easier to get started with while Requests gives you more 
+   control over the HTTP calls.
 
-<i class="fa fa-check-square-o"></i>
-Move your API calls into a [task queue](/task-queues.html) so they do not 
-block the HTTP request-response cycle for your web application.
+1. Move your API calls into a [task queue](/task-queues.html) so they do not 
+   block the HTTP request-response cycle for your web application.
 
-
-### What's next after integrating APIs into your app?

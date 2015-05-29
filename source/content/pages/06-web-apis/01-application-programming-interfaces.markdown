@@ -70,20 +70,16 @@ on the number's page on Twilio as shown below.
 
 
 ## APIs learning checklist
-<i class="fa fa-check-square-o"></i> 
-Learn the API concepts of machine-to-machine communication with JSON and XML,
-endpoints and webhooks.
+1. Learn the API concepts of machine-to-machine communication with JSON and 
+   XML, endpoints and webhooks.
 
-<i class="fa fa-check-square-o"></i> 
-Integrate an API such as Twilio or Stripe into your web application. Read the
-[API integration](/api-integration.html) section for more information.
+1. Integrate an API such as Twilio or Stripe into your web application. 
+   Read the [API integration](/api-integration.html) section for more 
+   information.
 
-<i class="fa fa-check-square-o"></i> 
-Use a framework to create an API for your own application. 
+1. Use a framework to create an API for your own application. Learn about
+   web API frameworks on the [API creation](/api-creation.html) page.
 
-<i class="fa fa-check-square-o"></i> 
-Expose your web application's API so other applications can consume data you
-want to share.
+1. Expose your web application's API so other applications can consume data 
+   you want to share.
 
-
-### What's next after learning about APIs?
