@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### May
+* Got a whole lot of work done on my upcoming 
+  [Full Stack Python Guide to Deployments](http://www.deploypython.com/) book.
+  Very close to releasing it (looking at mid-June).
 * Added new [Django](/django.html) resources, especially around migrations
   in Django 1.7+.
 * Worked on making [Why Use Python?](/why-use-python.html) page specific to
