@@ -2,7 +2,7 @@ title: Deployment
 category: page
 slug: deployment
 sort-order: 0701
-meta: Web application deployment involves packaging up your app and putting it in a product environment. Learn more about deployment on Full Stack Python.
+meta: Web application deployment involves packaging and running your app on a server. Learn more about deployments on Full Stack Python.
 
 
 # Deployment
@@ -69,24 +69,19 @@ guide as they are considered advanced deployment techniques.
 
 
 ## Deployment learning checklist
-<i class="fa fa-check-square-o"></i>
-If you're tight on time look at the 
-[platform-as-a-service (PaaS)](/platform-as-a-service.html) options. You can
-deploy a low traffic project web app for free or low cost. You won't have to
-worry about setting up the operating system and web server compared to going
-the traditional server route. In theory you should be able to get your 
-application live on the web sooner with PaaS hosting.
+1. If you're tight on time look at the 
+   [platform-as-a-service (PaaS)](/platform-as-a-service.html) options. You 
+   can deploy a low traffic project web app for free or low cost. You won't 
+   have to worry about setting up the operating system and web server 
+   compared to going the traditional server route. In theory you should be 
+   able to get your application live on the web sooner with PaaS hosting.
 
-<i class="fa fa-check-square-o"></i>
-[Traditional server options](/servers.html) are your best bet for learning
-how the entire Python web stack works. You'll often save money with a virtual
-private server instead of a platform-as-a-service as you scale up.
+1. [Traditional server options](/servers.html) are your best bet for learning
+   how the entire Python web stack works. You'll often save money with a 
+   virtual private server instead of a platform-as-a-service as you scale up.
 
-<i class="fa fa-check-square-o"></i>
-Read about servers, [operating systems](/operating-systems.html), 
-[web servers](/web-servers.html) and [WSGI servers](/wsgi-servers.html) to get
-a broad picture of what components need to be set up to run a Python web 
-application.
+1. Read about servers, [operating systems](/operating-systems.html), 
+   [web servers](/web-servers.html) and [WSGI servers](/wsgi-servers.html) 
+   to get a broad picture of what components need to be set up to run a 
+   Python web application.
 
-
-### How would you like to deploy your web app?
