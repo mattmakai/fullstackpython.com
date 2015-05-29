@@ -38,5 +38,3 @@ assumption that templates will drive the user interface.
   [great talk on the motivation and structure for the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
   at EuroPython 2014.
 
-
-### Do you want to learn more about frameworks or web APIs?

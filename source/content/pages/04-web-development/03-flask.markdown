@@ -218,23 +218,19 @@ how to <a href="/deployment.html">deploy web applications</a>.
 
 
 ## Flask framework learning checklist
-<i class="fa fa-check-square-o"></i> 
-[Install Flask](http://flask.pocoo.org/docs/installation/) on
-your local development machine.
+1. [Install Flask](http://flask.pocoo.org/docs/installation/) on
+   your local development machine.
 
-<i class="fa fa-check-square-o"></i> 
-Work through the 18-part Flask tutorial listed first under "Flask resources"
-below.
+1. Work through the 18-part Flask tutorial listed first under "Flask 
+   resources" above.
  
-<i class="fa fa-check-square-o"></i> 
-Read through [Flask Extensions Registry](http://flask.pocoo.org/extensions/)
-to find out what extensions you'll need to build your project.
+1. Read through 
+   [Flask Extensions Registry](http://flask.pocoo.org/extensions/) to find 
+   out what extensions you'll need to build your project.
 
-<i class="fa fa-check-square-o"></i> 
-Start coding your Flask app based on what you learned from the 18 part
-Flask tutorial plus open source example applications found below. 
+1. Start coding your Flask app based on what you learned from the 18 part
+   Flask tutorial plus open source example applications found below. 
 
-<i class="fa fa-check-square-o"></i> 
-Move on to the [deployment section](/deployment.html) to get your initial 
-Flask project on the web.
+1. Move on to the [deployment section](/deployment.html) to get your initial 
+   Flask project on the web.
 

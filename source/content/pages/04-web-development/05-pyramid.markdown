@@ -36,5 +36,3 @@ Model-View-Controller (MVC) architectural pattern.
   explains how Pyramid sprang from Pylons and how Pyramid compares to other 
   modern frameworks.
 
-
-### Learn more about frameworks or continue building your Pyramid app?
