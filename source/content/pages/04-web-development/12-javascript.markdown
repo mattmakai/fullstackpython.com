@@ -72,31 +72,25 @@ which is defined by the
 
 
 ## JavaScript learning checklist
-<i class="fa fa-check-square-o"></i> 
-Create a simple HTML file with basic elements in it. Use the
-``python -m SimpleHTTPServer`` command to serve it up. Create a 
-``<script type="text/javascript"></script>`` 
-element at the end of the ``<body>`` section in the HTML page. Start playing 
-with JavaScript within that element to learn the basic syntax.
+1. Create a simple HTML file with basic elements in it. Use the
+   ``python -m SimpleHTTPServer`` command to serve it up. Create a 
+   ``<script type="text/javascript"></script>`` 
+   element at the end of the ``<body>`` section in the HTML page. Play
+   with JavaScript within that element to learn the basic syntax.
 
-<i class="fa fa-check-square-o"></i> 
-Download [JQuery](http://jquery.com/) and add it to the page above your 
-JavaScript element. Start working with JQuery and learning how it makes basic
-JavaScript easier.
+1. Download [JQuery](http://jquery.com/) and add it to the page above your 
+   JavaScript element. Start working with JQuery and learning how it makes 
+   basic JavaScript easier.
 
-<i class="fa fa-check-square-o"></i> 
-Work with JavaScript on the page. Incorporate examples from open source 
-projects listed below as well as JQuery plugins. Check out the Unheap link
-below to find a large collection of categorized JQuery plugins.
+1. Work with JavaScript on the page. Incorporate examples from open source 
+   projects listed below as well as JQuery plugins. Check out 
+   [Unheap](http://www.unheap.com/) to find a large collection of categorized 
+   JQuery plugins.
 
-<i class="fa fa-check-square-o"></i> 
-Check out the JavaScript resources below to learn more about advanced concepts
-and open source libraries.
+1. Check out the JavaScript resources below to learn more about advanced 
+   concepts and open source libraries.
 
-<i class="fa fa-check-square-o"></i> 
-Integrate JavaScript into your web application and check the 
-[static content](/static-content.html) section for how to host the JavaScript
-files.
+1. Integrate JavaScript into your web application and check the 
+   [static content](/static-content.html) section for how to host the 
+   JavaScript files.
 
-
-### Do you need to style your app or deploy it next?

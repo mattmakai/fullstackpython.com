@@ -104,31 +104,24 @@ securing Linux distributions.
 
 
 ## Web security learning checklist
-<i class="fa fa-check-square-o"></i>
-Read and understand the major web application security flaws that are
-commonly exploited by malicious actors. These include cross-site request 
-forgery (CSRF), cross-site scripting (XSS), SQL injection and session 
-hijacking. The 
-[OWASP top 10 web application vulnerabilities list](https://www.owasp.org/index.php/Top_10_2013-Top_10) 
-is a great place to get an overview of these topics.
+1. Read and understand the major web application security flaws that are
+   commonly exploited by malicious actors. These include cross-site request 
+   forgery (CSRF), cross-site scripting (XSS), SQL injection and session 
+   hijacking. The 
+   [OWASP top 10 web application vulnerabilities list](https://www.owasp.org/index.php/Top_10_2013-Top_10) 
+   is a great place to get an overview of these topics.
 
-<i class="fa fa-check-square-o"></i>
-Determine how the framework you've chosen mitigates these vulnerabilities.
+1. Determine how the framework you've chosen mitigates these vulnerabilities.
 
-<i class="fa fa-check-square-o"></i>
-Ensure your code implements the mitigation techniques for your framework. 
+1. Ensure your code implements the mitigation techniques for your framework. 
 
-<i class="fa fa-check-square-o"></i>
-Think like an attacker and actively work to break into your own system. If
-you do not have enough experience to confidently break the security consider
-hiring a known white hat attacker. Have her break the application's security,
-report the easiest vulnerabilities to exploit in your app and help implement
-protections against those weaknesses.
+1. Think like an attacker and actively work to break into your own system. 
+   If you do not have enough experience to confidently break the security 
+   consider hiring a known white hat attacker. Have her break the 
+   application's security, report the easiest vulnerabilities to exploit in 
+   your app and help implement protections against those weaknesses.
 
-<i class="fa fa-check-square-o"></i>
-Recognize that no system is ever totally secure. However, the more popular
-an application becomes the more attractive a target it is to attackers.
-Reevaluate your web application security on a frequent basis.
+1. Recognize that no system is ever totally secure. However, the more popular
+   an application becomes the more attractive a target it is to attackers.
+   Reevaluate your web application security on a frequent basis.
 
-
-### What topic do you want to learn about next?

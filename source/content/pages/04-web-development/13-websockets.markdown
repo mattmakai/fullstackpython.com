@@ -208,5 +208,3 @@ properly.
   has some interesting comments on what's missing from the above content that
   I'm working to address.
 
-
-### What's next for your web application after setting up WebSockets?
