@@ -118,24 +118,18 @@ web application's design.
 
 
 ## CSS learning checklist
-<i class="fa fa-check-square-o"></i> 
-Create a simple HTML file with basic elements in it. Use the
-``python -m SimpleHTTPServer`` command to serve it up. Create a 
-``<style></style>`` element within the ``<head>`` section in the HTML page. 
-Start playing with CSS within that style element to change the look and feel 
-of the page.
+1. Create a simple HTML file with basic elements in it. Use the
+   ``python -m SimpleHTTPServer`` command to serve it up. Create a 
+   ``<style></style>`` element within the ``<head>`` section in the HTML
+   markup. Play with CSS within that style element to change the look and 
+   feel of the page.
 
-<i class="fa fa-check-square-o"></i> 
-Check out front end frameworks such as Bootstrap and Foundation and integrate
-one of those into the HTML page.
+1. Check out front end frameworks such as Bootstrap and Foundation and integrate
+   one of those into the HTML page.
 
-<i class="fa fa-check-square-o"></i> 
-Work through the framework's grid system, styling options and customization
-so you get comfortable with how to use the framework.
+1. Work through the framework's grid system, styling options and customization
+   so you get comfortable with how to use the framework.
 
-<i class="fa fa-check-square-o"></i> 
-Apply the framework to your web application and tweak the design until you
-have something that looks much better than generic HTML.
+1. Apply the framework to your web application and tweak the design until you
+   have something that looks much better than generic HTML.
 
-
-### Once your app is styled what do you need to learn next?
