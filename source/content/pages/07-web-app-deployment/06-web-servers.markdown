@@ -2,7 +2,7 @@ title: Web Servers
 category: page
 slug: web-servers
 sort-order: 0706
-meta: A web server responds to HTTP requests and responds to clients. Learn more about how web servers interact with Python web apps on Full Stack Python.
+meta: A web server handles HTTP requests and responses. Learn how web servers work with Python web apps on Full Stack Python.
 
 
 # Web servers

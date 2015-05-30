@@ -44,7 +44,7 @@ For example, the operating system enables writing to files,
 communicating over a network and running multiple programs at once. 
 Otherwise you'd need to control the CPU, memory, network, graphics card, 
 and many other components with your own low-level implementation.</p>
-<p>Without using an existing operating system like Linux, Mac OS X, or Windows,
+<p>Without using an existing operating system like Linux, Mac OS X or Windows,
 you'd be forced to write a new operating system as part of your web 
 application.  It would be impossible to write features for your Python 
 web application because you'd be too busy hunting down a memory leak in 
@@ -100,7 +100,7 @@ from Debian-based Linux distributions: RPM Package Manager (RPM) and the
 Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
 to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.</p>
-<h2>Operating System Resources</h2>
+<h2>Operating system resources</h2>
 <ul>
 <li>
 <p><a href="http://www.linux.org/threads/selecting-a-linux-distribution.4087/">What is a Linux distribution and how do I choose the right one?</a></p>
@@ -135,24 +135,32 @@ provides a command-line interface for interacting with the RPM system.</p>
   low level booting process.</p>
 </li>
 </ul>
-<h2>Operating systems learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Choose either a Debian-based Linux distribution such as Ubuntu or a 
-Fedora-based distribution like CentOS.</p>
-<p><i class="fa fa-check-square-o"></i>
-Harden the security through a few basic steps. Install basic security 
-packages such as <a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> 
-or its equivalent. Create a new user account with sudo privileges and disable
-root logins. Disable password-only logins and use a public-private keypair 
-instead. Read more about hardening systems in the resources listed below.</p>
-<p><i class="fa fa-check-square-o"></i>
-Install Python-specific packages to prepare the environment for running a
-Python application. Which packages you'll need to install depends on the 
-distribution you've selected.</p>
-<p><i class="fa fa-check-square-o"></i>
-Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
-next step in the deployment process.</p>
-<h3>What topic do you need to learn to keep going?</h3>
+<h2>Operating system learning checklist</h2>
+<ol>
+<li>
+<p>Choose either a Debian-based Linux distribution such as Ubuntu or a 
+   Fedora-based distribution like CentOS.</p>
+</li>
+<li>
+<p>Harden the security through a few basic steps. Install basic security 
+   packages such as 
+   <a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> and
+   <a href="https://help.ubuntu.com/community/AutomaticSecurityUpdates">unattended-upgrades</a>.
+   Create a new user account with sudo privileges and disable
+   root logins. Disable password-only logins and use a public-private keypair 
+   instead. Read more about hardening systems in the resources listed below.</p>
+</li>
+<li>
+<p>Install Python-specific packages to prepare the environment for running a
+   Python application. Which packages you'll need to install depends on the 
+   distribution you've selected.</p>
+</li>
+<li>
+<p>Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
+   next step in the deployment process.</p>
+</li>
+</ol>
+<h3>After setting up your OS you should configure a web server.</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">

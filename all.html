@@ -3988,29 +3988,36 @@ application framework and your app itself is up to date and secured. See the
 </li>
 </ul>
 <h2>Platform-as-a-service learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Review the potential Python platform-as-a-service options above and on their
-websites.</p>
-<p><i class="fa fa-check-square-o"></i>
-Sign up for a PaaS account at the provider that appears to best fit your
-application needs. Heroku is the PaaS option recommended for starters due to
-their detailed documentation and walkthroughs available on the web. However,
-the other options are perfectly viable since their purpose is to make deploying
-applications as easy as possible.</p>
-<p><i class="fa fa-check-square-o"></i>
-Check if there are any PaaS-specific configuration files needed for your app
-to run properly on the PaaS after it is deployed.</p>
-<p><i class="fa fa-check-square-o"></i>
-Deploy your app to the PaaS. </p>
-<p><i class="fa fa-check-square-o"></i>
-Sync your application's configuration with the database.</p>
-<p><i class="fa fa-check-square-o"></i>
-Set up a content delivery network for your application's 
-<a href="/static-content.html">static content</a> unless your PaaS provider already
-handles this deployment step for you.</p>
-<p><i class="fa fa-check-square-o"></i>
-Check if the application's functionality is working and tweak as necessary.</p>
-<h3>Do you want to use a PaaS or deploy to a traditional server?</h3>
+<ol>
+<li>
+<p>Review the potential Python platform-as-a-service options listed above.</p>
+</li>
+<li>
+<p>Sign up for a PaaS account at the provider that appears to best fit your
+   application needs. Heroku is the PaaS option recommended for starters due 
+   to their detailed documentation and walkthroughs available on the web. 
+   However, the other options are also viable since their purpose is to make 
+   deploying applications as easy as possible.</p>
+</li>
+<li>
+<p>Check if there are any PaaS-specific configuration files needed for your 
+   app to run properly on the PaaS after it is deployed.</p>
+</li>
+<li>
+<p>Deploy your app to the PaaS. </p>
+</li>
+<li>
+<p>Sync your application's configuration with the database.</p>
+</li>
+<li>
+<p>Set up a content delivery network for your application's 
+   <a href="/static-content.html">static content</a> unless your PaaS provider already
+   handles this deployment step for you.</p>
+</li>
+<li>
+<p>Check if the application's functionality is working and tweak as necessary.</p>
+</li>
+</ol>
           <h1>Operating Systems</h1>
 <p>An operating system runs on the server or virtual server and controls access 
 to computing resources. The operating system also includes a way to install
@@ -4021,7 +4028,7 @@ For example, the operating system enables writing to files,
 communicating over a network and running multiple programs at once. 
 Otherwise you'd need to control the CPU, memory, network, graphics card, 
 and many other components with your own low-level implementation.</p>
-<p>Without using an existing operating system like Linux, Mac OS X, or Windows,
+<p>Without using an existing operating system like Linux, Mac OS X or Windows,
 you'd be forced to write a new operating system as part of your web 
 application.  It would be impossible to write features for your Python 
 web application because you'd be too busy hunting down a memory leak in 
@@ -4077,7 +4084,7 @@ from Debian-based Linux distributions: RPM Package Manager (RPM) and the
 Yellowdog Updater, Modified (YUM). RPM has a specific .rpm file format
 to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.</p>
-<h2>Operating System Resources</h2>
+<h2>Operating system resources</h2>
 <ul>
 <li>
 <p><a href="http://www.linux.org/threads/selecting-a-linux-distribution.4087/">What is a Linux distribution and how do I choose the right one?</a></p>
@@ -4112,24 +4119,31 @@ provides a command-line interface for interacting with the RPM system.</p>
   low level booting process.</p>
 </li>
 </ul>
-<h2>Operating systems learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Choose either a Debian-based Linux distribution such as Ubuntu or a 
-Fedora-based distribution like CentOS.</p>
-<p><i class="fa fa-check-square-o"></i>
-Harden the security through a few basic steps. Install basic security 
-packages such as <a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> 
-or its equivalent. Create a new user account with sudo privileges and disable
-root logins. Disable password-only logins and use a public-private keypair 
-instead. Read more about hardening systems in the resources listed below.</p>
-<p><i class="fa fa-check-square-o"></i>
-Install Python-specific packages to prepare the environment for running a
-Python application. Which packages you'll need to install depends on the 
-distribution you've selected.</p>
-<p><i class="fa fa-check-square-o"></i>
-Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
-next step in the deployment process.</p>
-<h3>What topic do you need to learn to keep going?</h3>
+<h2>Operating system learning checklist</h2>
+<ol>
+<li>
+<p>Choose either a Debian-based Linux distribution such as Ubuntu or a 
+   Fedora-based distribution like CentOS.</p>
+</li>
+<li>
+<p>Harden the security through a few basic steps. Install basic security 
+   packages such as 
+   <a href="http://www.fail2ban.org/wiki/index.php/Main_Page">fail2ban</a> and
+   <a href="https://help.ubuntu.com/community/AutomaticSecurityUpdates">unattended-upgrades</a>.
+   Create a new user account with sudo privileges and disable
+   root logins. Disable password-only logins and use a public-private keypair 
+   instead. Read more about hardening systems in the resources listed below.</p>
+</li>
+<li>
+<p>Install Python-specific packages to prepare the environment for running a
+   Python application. Which packages you'll need to install depends on the 
+   distribution you've selected.</p>
+</li>
+<li>
+<p>Read up on <a href="/web-servers.html">web servers</a> as installing one will be the 
+   next step in the deployment process.</p>
+</li>
+</ol>
           <h1>Web servers</h1>
 <p>Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)

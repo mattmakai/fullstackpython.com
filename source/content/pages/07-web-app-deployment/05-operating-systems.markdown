@@ -18,7 +18,7 @@ communicating over a network and running multiple programs at once.
 Otherwise you'd need to control the CPU, memory, network, graphics card, 
 and many other components with your own low-level implementation.
 
-Without using an existing operating system like Linux, Mac OS X, or Windows,
+Without using an existing operating system like Linux, Mac OS X or Windows,
 you'd be forced to write a new operating system as part of your web 
 application.  It would be impossible to write features for your Python 
 web application because you'd be too busy hunting down a memory leak in 
@@ -83,7 +83,7 @@ to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.
 
 
-## Operating System Resources
+## Operating system resources
 * [What is a Linux distribution and how do I choose the right one?](http://www.linux.org/threads/selecting-a-linux-distribution.4087/)
 
 * Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
@@ -109,26 +109,22 @@ provides a command-line interface for interacting with the RPM system.
   low level booting process.
 
 
-## Operating systems learning checklist
-<i class="fa fa-check-square-o"></i>
-Choose either a Debian-based Linux distribution such as Ubuntu or a 
-Fedora-based distribution like CentOS.
+## Operating system learning checklist
+1. Choose either a Debian-based Linux distribution such as Ubuntu or a 
+   Fedora-based distribution like CentOS.
 
-<i class="fa fa-check-square-o"></i>
-Harden the security through a few basic steps. Install basic security 
-packages such as [fail2ban](http://www.fail2ban.org/wiki/index.php/Main_Page) 
-or its equivalent. Create a new user account with sudo privileges and disable
-root logins. Disable password-only logins and use a public-private keypair 
-instead. Read more about hardening systems in the resources listed below.
+1. Harden the security through a few basic steps. Install basic security 
+   packages such as 
+   [fail2ban](http://www.fail2ban.org/wiki/index.php/Main_Page) and
+   [unattended-upgrades](https://help.ubuntu.com/community/AutomaticSecurityUpdates).
+   Create a new user account with sudo privileges and disable
+   root logins. Disable password-only logins and use a public-private keypair 
+   instead. Read more about hardening systems in the resources listed below.
 
-<i class="fa fa-check-square-o"></i>
-Install Python-specific packages to prepare the environment for running a
-Python application. Which packages you'll need to install depends on the 
-distribution you've selected.
+1. Install Python-specific packages to prepare the environment for running a
+   Python application. Which packages you'll need to install depends on the 
+   distribution you've selected.
 
-<i class="fa fa-check-square-o"></i>
-Read up on [web servers](/web-servers.html) as installing one will be the 
-next step in the deployment process.
+1. Read up on [web servers](/web-servers.html) as installing one will be the 
+   next step in the deployment process.
 
-
-### What topic do you need to learn to keep going?
