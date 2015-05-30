@@ -53,7 +53,7 @@ relatively simple set up.
 
 * [BuildBot](http://buildbot.net/) is a continuous integration **framework** 
   with a set of components for creating your own CI server. It's written in
-  Python and intended for development teams that want more controller over
+  Python and intended for development teams that want more control over
   their build and deployment pipeline.
   [BuildBot source code is on GitHub](https://github.com/buildbot/buildbot).
 
