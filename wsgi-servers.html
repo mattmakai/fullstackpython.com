@@ -242,22 +242,29 @@ The following are WSGI servers based on community recommendations.</p>
 </li>
 </ul>
 <h2>WSGI servers learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Understand that WSGI is a standard Python specification for applications and 
-servers to implement. </p>
-<p><i class="fa fa-check-square-o"></i>
-Pick a WSGI server based on available documentation and tutorials. Green 
-Unicorn is a good one to start with since it's been around for awhile.</p>
-<p><i class="fa fa-check-square-o"></i>
-Add the WSGI server to your server deployment.</p>
-<p><i class="fa fa-check-square-o"></i>
-Configure the web server to pass requests to the WSGI server for appropriate
-URL patterns.</p>
-<p><i class="fa fa-check-square-o"></i>
-Test that the WSGI server responds to local requests but not direct requests 
-outside your infrastructure. The web server should be the pass through for
-requests to and responses from the WSGI server.</p>
-<h3>What's next after your Python code is running?</h3>
+<ol>
+<li>
+<p>Understand that WSGI is a standard Python specification for applications 
+   and servers to implement. </p>
+</li>
+<li>
+<p>Pick a WSGI server based on available documentation and tutorials. Green 
+   Unicorn is a good one to start with since it's been around for awhile.</p>
+</li>
+<li>
+<p>Add the WSGI server to your server deployment.</p>
+</li>
+<li>
+<p>Configure the web server to pass requests to the WSGI server for 
+   appropriate URL patterns.</p>
+</li>
+<li>
+<p>Test that the WSGI server responds to local requests but not direct 
+   requests outside your infrastructure. The web server should be the pass 
+   through for requests to and responses from the WSGI server.</p>
+</li>
+</ol>
+<h3>What's next after your Python app is running?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">

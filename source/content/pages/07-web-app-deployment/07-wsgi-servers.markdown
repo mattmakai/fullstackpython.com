@@ -209,25 +209,18 @@ The following are WSGI servers based on community recommendations.
 
 
 ## WSGI servers learning checklist
-<i class="fa fa-check-square-o"></i>
-Understand that WSGI is a standard Python specification for applications and 
-servers to implement. 
+1. Understand that WSGI is a standard Python specification for applications 
+   and servers to implement. 
 
-<i class="fa fa-check-square-o"></i>
-Pick a WSGI server based on available documentation and tutorials. Green 
-Unicorn is a good one to start with since it's been around for awhile.
+1. Pick a WSGI server based on available documentation and tutorials. Green 
+   Unicorn is a good one to start with since it's been around for awhile.
 
-<i class="fa fa-check-square-o"></i>
-Add the WSGI server to your server deployment.
+1. Add the WSGI server to your server deployment.
 
-<i class="fa fa-check-square-o"></i>
-Configure the web server to pass requests to the WSGI server for appropriate
-URL patterns.
+1. Configure the web server to pass requests to the WSGI server for 
+   appropriate URL patterns.
 
-<i class="fa fa-check-square-o"></i>
-Test that the WSGI server responds to local requests but not direct requests 
-outside your infrastructure. The web server should be the pass through for
-requests to and responses from the WSGI server.
+1. Test that the WSGI server responds to local requests but not direct 
+   requests outside your infrastructure. The web server should be the pass 
+   through for requests to and responses from the WSGI server.
 
-
-### What's next after your Python code is running?
