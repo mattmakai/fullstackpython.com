@@ -141,26 +141,20 @@ reviews the basics of distributed version control systems.
 
 
 ## Source control learning checklist
-<i class="fa fa-check-square-o"></i>
-Pick a version control system. Git is recommended because on the web there 
-are a significant number of tutorials to help both new and advanced users.
+1. Pick a version control system. Git is recommended because on the web there
+   are a significant number of tutorials to help both new and advanced users.
 
-<i class="fa fa-check-square-o"></i>
-Learn basic use cases for version control such as committing changes, rolling 
-back to earlier file versions and searching for when lines of code were 
-modified during development history.
+1. Learn basic use cases for version control such as committing changes, 
+   rolling back to earlier file versions and searching for when lines of code 
+   were modified during development history.
 
-<i class="fa fa-check-square-o"></i>
-Ensure your source code is backed up in a central repository. A central
-repository is critical not only if your local development version is corrupted
-but also for the deployment process.
+1. Ensure your source code is backed up in a central repository. A central
+   repository is critical not only if your local development version is 
+   corrupted but also for the deployment process.
 
-<i class="fa fa-check-square-o"></i>
-Integrate source control into your deployment process in three ways. First,
-pull the project source code from version control during deployments. Second, 
-kick off deployments when code is modified by using webhooks or polling on 
-the repository. Third, ensure you can roll back to a previous version if a 
-code deployment goes wrong.
+1. Integrate source control into your deployment process in three ways. First,
+   pull the project source code from version control during deployments. 
+   Second, kick off deployments when code is modified by using webhooks or 
+   polling on the repository. Third, ensure you can roll back to a previous 
+   version if a code deployment goes wrong.
 
-
-### Now that your source code is versioned, what's next?
