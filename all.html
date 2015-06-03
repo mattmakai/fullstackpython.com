@@ -4900,18 +4900,22 @@ Amazon S3 and other content delivery networks.</p>
 </li>
 </ul>
 <h2>Static content learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Identify a content delivery network to offload serving static content files
-from your local web server. I recommend using Amazon S3 with CloudFront as 
-it's easy to set up and will scale to high bandwidth demands.</p>
-<p><i class="fa fa-check-square-o"></i>
-Update your web application deployment process so updated static files are
-uploaded to the CDN. </p>
-<p><i class="fa fa-check-square-o"></i>
-Move static content serving from the www subdomain to a static (or similarly
-named) subdomain so browsers will load static content in parallel to www
-HTTP requests.</p>
-<h3>What's next for building your app?</h3>
+<ol>
+<li>
+<p>Identify a content delivery network to offload serving static content 
+   files from your local web server. I recommend using Amazon S3 with 
+   CloudFront as it's easy to set up and will scale to high bandwidth demands.</p>
+</li>
+<li>
+<p>Update your web application deployment process so updated static files are
+   uploaded to the CDN. </p>
+</li>
+<li>
+<p>Move static content serving from the www subdomain to a static (or 
+   similarly named) subdomain so browsers will load static content in 
+   parallel to www HTTP requests.</p>
+</li>
+</ol>
           <h1>Task queues</h1>
 <p>Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.</p>
