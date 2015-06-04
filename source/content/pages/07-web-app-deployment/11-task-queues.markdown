@@ -2,7 +2,7 @@ title: Task Queues
 category: page
 slug: task-queues
 sort-order: 0711
-meta: Task queues handle asynchronous jobs outside the HTTP request-response cycle. Learn more about task queues on Full Stack Python.
+meta: Task queues handle asynchronous jobs outside the HTTP request-response cycle. Learn about task queues on Full Stack Python.
 
 
 # Task queues
@@ -165,28 +165,21 @@ when scaling out a large deployment of distributed task queues.
 
 
 ## Task queue learning checklist
-<i class="fa fa-check-square-o"></i> 
-Pick a slow function in your project that is called during an HTTP request.
+1. Pick a slow function in your project that is called during an HTTP 
+   request.
 
-<i class="fa fa-check-square-o"></i> 
-Determine if you can precompute the results on a fixed interval instead of
-during the HTTP request. If so, create a separate function you can call
-from elsewhere then store the precomputed value in the database.
+1. Determine if you can precompute the results on a fixed interval instead 
+   of during the HTTP request. If so, create a separate function you can call
+   from elsewhere then store the precomputed value in the database.
 
-<i class="fa fa-check-square-o"></i> 
-Read the Celery documentation and the links in the resources section below
-to understand how the project works.
+1. Read the Celery documentation and the links in the resources section below
+   to understand how the project works.
 
-<i class="fa fa-check-square-o"></i> 
-Install a message broker such as RabbitMQ or Redis and then add Celery to your 
-project. Configure Celery to work with the installed message broker.
+1. Install a message broker such as RabbitMQ or Redis and then add Celery to 
+   your project. Configure Celery to work with the installed message broker.
 
-<i class="fa fa-check-square-o"></i> 
-Use Celery to invoke the function from step one on a regular basis.
+1. Use Celery to invoke the function from step one on a regular basis.
 
-<i class="fa fa-check-square-o"></i>
-Have the HTTP request function use the precomputed value instead of the 
-slow running code it originally relied upon.
+1. Have the HTTP request function use the precomputed value instead of the 
+   slow running code it originally relied upon.
  
-
-### What's next after task queues?
