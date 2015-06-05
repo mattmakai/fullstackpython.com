@@ -95,25 +95,18 @@ from PyCon UK 2013
 
 
 ## Application dependencies learning checklist
-<i class="fa fa-check-square-o"></i>
-Learn about configuration management in the context of deployment automation
-and infrastructure-as-code.
+1. Learn about configuration management in the context of deployment 
+   automation and infrastructure-as-code.
 
-<i class="fa fa-check-square-o"></i>
-Pick a configuration management tool and stick with it. My recommendation is
-Ansible because it is by far the easiest tool to learn and be productive with.
+1. Pick a configuration management tool and stick with it. My recommendation 
+   is Ansible because it is by far the easiest tool to learn and use.
 
-<i class="fa fa-check-square-o"></i>
-Read your configuration management tool's documentation and, when necessary,
-the source code.
+1. Read your configuration management tool's documentation and, when 
+   necessary, the source code.
 
-<i class="fa fa-check-square-o"></i>
-Automate the configuration management and deployment for your project. Note
-that this is by far the most time consuming step in this checklist but will
-pay dividends every time you deploy your project.
+1. Automate the configuration management and deployment for your project. 
+   Note that this is by far the most time consuming step in this 
+   checklist but will pay dividends every time you deploy your project.
 
-<i class="fa fa-check-square-o"></i>
-Hook the automated deployment tool into your existing deployment process.
+1. Hook the automated deployment tool into your existing deployment process.
 
-
-### What's next after automating your app configuration?
