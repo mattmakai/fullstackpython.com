@@ -5386,7 +5386,6 @@ relatively simple set up.</p>
   server for automated deployments.</p>
 </li>
 </ul>
-<h3>What do you want to add to your application next?</h3>
           <h1>Logging</h1>
 <p>Logging saves output such as errors, warnings and event information to 
 persistent storage for debugging purposes. </p>
@@ -5512,18 +5511,22 @@ certain threshold.</p>
 </li>
 </ul>
 <h2>Logging learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Read how to integrate logging into your web application framework. </p>
-<p><i class="fa fa-check-square-o"></i>
-Ensure errors and anomalous results are logged. While these logs can be stored 
-in <a href="/monitoring.html">monitoring</a> solutions, it's best to have your own log
-storage location to debug issues as they arise to complement other monitoring 
-systems.</p>
-<p><i class="fa fa-check-square-o"></i>
-Integrate logging for system events you may need to use for debugging purposes
-later. For example, you may want to know the return values on functions when
-they are above a certain threshold. </p>
-<h3>Logging isn't enough. How do I analyze more data about the app?</h3>
+<ol>
+<li>
+<p>Read how to integrate logging into your web application framework. </p>
+</li>
+<li>
+<p>Ensure errors and anomalous results are logged. While these logs can be 
+   stored in <a href="/monitoring.html">monitoring</a> solutions, it's best to have your 
+   own log storage location to debug issues as they arise to complement other 
+   monitoring systems.</p>
+</li>
+<li>
+<p>Integrate logging for system events you may need to use for debugging 
+   purposes later. For example, you may want to know the return values on 
+   functions when they are above a certain threshold. </p>
+</li>
+</ol>
           <h1>Monitoring</h1>
 <p>Monitoring tools capture, analyze and display information for a web 
 application's execution. Every application has issues arise throughout
@@ -5677,21 +5680,25 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.</
 </li>
 </ul>
 <h2>Monitoring learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Review the software-as-a-service and open source monitoring tools below. Third
-party services tend to be easier to set up and host the data for you. Open
-source projects give you more control but you'll need to have additional 
-servers ready for the monitoring.</p>
-<p><i class="fa fa-check-square-o"></i>
-My recommendation is to install <a href="http://newrelic.com/">New Relic</a>'s free 
-option with the trial period to see how it works with your app. It'll give you
-a good idea of the capabilities for application-level monitoring tools.</p>
-<p><i class="fa fa-check-square-o"></i>
-As your app scales take a look at setting up one of the the open source 
-monitoring projects such as StatsD with Graphite. The combination of those
-two projects will give you fine-grained control over the system metrics 
-you're collecting and visualizing.</p>
-<h3>What topic do you want to learn next?</h3>
+<ol>
+<li>
+<p>Review the software-as-a-service and open source monitoring tools below. 
+   Third party services tend to be easier to set up and host the data for 
+   you. Open source projects give you more control but you'll need to have 
+   additional servers ready for the monitoring.</p>
+</li>
+<li>
+<p>My recommendation is to install <a href="http://newrelic.com/">New Relic</a>'s free 
+   option with the trial period to see how it works with your app. It'll give 
+   you a good idea of the capabilities for application-level monitoring tools.</p>
+</li>
+<li>
+<p>As your app scales take a look at setting up one of the the open source 
+   monitoring projects such as StatsD with Graphite. The combination of those
+   two projects will give you fine-grained control over the system metrics 
+   you're collecting and visualizing.</p>
+</li>
+</ol>
           <h1>Web analytics</h1>
 <p>Web analytics involves collecting, processing, visualizing web data to enable
 critical thinking about how users interact with a web application.</p>

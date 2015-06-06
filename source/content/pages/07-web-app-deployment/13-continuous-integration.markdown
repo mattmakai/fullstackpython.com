@@ -9,12 +9,14 @@ meta: Continuous integration automatically rebuilds and deploys applications as 
 Continuous integration (CI) automates building, testing and deploying 
 applications.
 
+
 ## Why is continuous integration important?
 When CI is set up well it can dramatically reduce deployment times by 
 eliminating manual steps and ensure code does not have bugs that are being
 checked by automated tests. Source code changes as a project evolves.
 CI combined with unit and integration tests check that code modifications 
 do not break existing tests ensure the software works as intended.
+
 
 ## Continuous integration example
 The following picture represents a high level perspective on how continuous
@@ -118,5 +120,3 @@ relatively simple set up.
   is an example walking through one potential way to use the Teamcity CI
   server for automated deployments.
 
-
-### What do you want to add to your application next?

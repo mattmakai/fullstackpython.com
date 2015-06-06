@@ -21,9 +21,9 @@ code is working as intended.
 Logging is often grouped into several categories:
 
 1. Information
-2. Debug
-3. Warning
-4. Error
+1. Debug
+1. Warning
+1. Error
 
 Logging errors that occur while a web framework is running is crucial to
 understanding how your application is performing. 
@@ -119,19 +119,14 @@ certain threshold.
 
 
 ## Logging learning checklist
-<i class="fa fa-check-square-o"></i>
-Read how to integrate logging into your web application framework. 
+1. Read how to integrate logging into your web application framework. 
 
-<i class="fa fa-check-square-o"></i>
-Ensure errors and anomalous results are logged. While these logs can be stored 
-in [monitoring](/monitoring.html) solutions, it's best to have your own log
-storage location to debug issues as they arise to complement other monitoring 
-systems.
+1. Ensure errors and anomalous results are logged. While these logs can be 
+   stored in [monitoring](/monitoring.html) solutions, it's best to have your 
+   own log storage location to debug issues as they arise to complement other 
+   monitoring systems.
 
-<i class="fa fa-check-square-o"></i>
-Integrate logging for system events you may need to use for debugging purposes
-later. For example, you may want to know the return values on functions when
-they are above a certain threshold. 
+1. Integrate logging for system events you may need to use for debugging 
+   purposes later. For example, you may want to know the return values on 
+   functions when they are above a certain threshold. 
 
-
-### Logging isn't enough. How do I analyze more data about the app?

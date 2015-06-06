@@ -141,22 +141,17 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 
 
 ## Monitoring learning checklist
-<i class="fa fa-check-square-o"></i>
-Review the software-as-a-service and open source monitoring tools below. Third
-party services tend to be easier to set up and host the data for you. Open
-source projects give you more control but you'll need to have additional 
-servers ready for the monitoring.
+1. Review the software-as-a-service and open source monitoring tools below. 
+   Third party services tend to be easier to set up and host the data for 
+   you. Open source projects give you more control but you'll need to have 
+   additional servers ready for the monitoring.
 
-<i class="fa fa-check-square-o"></i>
-My recommendation is to install [New Relic](http://newrelic.com/)'s free 
-option with the trial period to see how it works with your app. It'll give you
-a good idea of the capabilities for application-level monitoring tools.
+1. My recommendation is to install [New Relic](http://newrelic.com/)'s free 
+   option with the trial period to see how it works with your app. It'll give 
+   you a good idea of the capabilities for application-level monitoring tools.
 
-<i class="fa fa-check-square-o"></i>
-As your app scales take a look at setting up one of the the open source 
-monitoring projects such as StatsD with Graphite. The combination of those
-two projects will give you fine-grained control over the system metrics 
-you're collecting and visualizing.
+1. As your app scales take a look at setting up one of the the open source 
+   monitoring projects such as StatsD with Graphite. The combination of those
+   two projects will give you fine-grained control over the system metrics 
+   you're collecting and visualizing.
 
-
-### What topic do you want to learn next?
