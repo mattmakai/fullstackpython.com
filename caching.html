@@ -70,19 +70,24 @@ for future requests.</p>
 </li>
 </ul>
 <h2>Caching learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Analyze your web application for the slowest parts. It's likely there are
-complex database queries that can be precomputed and stored in an in-memory
-data store.</p>
-<p><i class="fa fa-check-square-o"></i>
-Leverage your existing in-memory data store already used for session data
-to cache the results of those complex database queries. 
-A <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
-on a regular basis and save them in the data store.</p>
-<p><i class="fa fa-check-square-o"></i>
-Incorporate a cache invalidation scheme so the precomputed results remain 
-accurate when served up to the user.</p>
-<h3>What do you want to learn now that your app is responding faster?</h3>
+<ol>
+<li>
+<p>Analyze your web application for the slowest parts. It's likely there are
+   complex database queries that can be precomputed and stored in an in-memory
+   data store.</p>
+</li>
+<li>
+<p>Leverage your existing in-memory data store already used for session data
+   to cache the results of those complex database queries. A 
+   <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
+   on a regular basis and save them in the data store.</p>
+</li>
+<li>
+<p>Incorporate a cache invalidation scheme so the precomputed results remain 
+   accurate when served up to the user.</p>
+</li>
+</ol>
+<h3>What do you want to learn next for your deployment?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">

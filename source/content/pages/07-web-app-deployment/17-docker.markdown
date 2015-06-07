@@ -31,6 +31,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) that's
   well worth buying.
 
+* [Docker Jumpstart](https://github.com/odewahn/docker-jumpstart/) is a 
+  comprehensive introduction to what Docker is and how to get started with
+  using the tool.
+
 * [What the Bleep is Docker?](http://pythonforengineers.com/what-the-bleep-is-docker/)
   is a plain English explanation with examples of what Docker provides and
   what it can be used for in your environment.
@@ -73,5 +77,3 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [a closer look at Docker](https://lincolnloop.com/blog/closer-look-docker/)
   from the perspective of Python developers handling deployments.
 
-
-### What do you want to learn next about deployment?

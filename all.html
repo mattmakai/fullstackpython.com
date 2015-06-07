@@ -5866,6 +5866,11 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</
   well worth buying.</p>
 </li>
 <li>
+<p><a href="https://github.com/odewahn/docker-jumpstart/">Docker Jumpstart</a> is a 
+  comprehensive introduction to what Docker is and how to get started with
+  using the tool.</p>
+</li>
+<li>
 <p><a href="http://pythonforengineers.com/what-the-bleep-is-docker/">What the Bleep is Docker?</a>
   is a plain English explanation with examples of what Docker provides and
   what it can be used for in your environment.</p>
@@ -5919,7 +5924,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</
   from the perspective of Python developers handling deployments.</p>
 </li>
 </ul>
-<h3>What do you want to learn next about deployment?</h3>
           <h1>Caching</h1>
 <p>Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. </p>
@@ -5956,19 +5960,23 @@ for future requests.</p>
 </li>
 </ul>
 <h2>Caching learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Analyze your web application for the slowest parts. It's likely there are
-complex database queries that can be precomputed and stored in an in-memory
-data store.</p>
-<p><i class="fa fa-check-square-o"></i>
-Leverage your existing in-memory data store already used for session data
-to cache the results of those complex database queries. 
-A <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
-on a regular basis and save them in the data store.</p>
-<p><i class="fa fa-check-square-o"></i>
-Incorporate a cache invalidation scheme so the precomputed results remain 
-accurate when served up to the user.</p>
-<h3>What do you want to learn now that your app is responding faster?</h3>
+<ol>
+<li>
+<p>Analyze your web application for the slowest parts. It's likely there are
+   complex database queries that can be precomputed and stored in an in-memory
+   data store.</p>
+</li>
+<li>
+<p>Leverage your existing in-memory data store already used for session data
+   to cache the results of those complex database queries. A 
+   <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
+   on a regular basis and save them in the data store.</p>
+</li>
+<li>
+<p>Incorporate a cache invalidation scheme so the precomputed results remain 
+   accurate when served up to the user.</p>
+</li>
+</ol>
           <h1>Code Metrics</h1>
 <p>Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.</p>
@@ -6055,6 +6063,15 @@ inception in December 2012. Another way to view the modifications is through
 the 
 <a href="https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages">source repository's commit log</a> on GitHub.</p>
 <h2>2015</h2>
+<h3>June</h3>
+<ul>
+<li>Added new <a href="/docker.html">Docker</a> resources.</li>
+<li>Made some changes to what is contained in the Markdown files versus the
+  HTML Jinja2 templates. Behind the scenes work that needed to be done to
+  move the project forward.</li>
+<li>Work continues on the 
+  <a href="http://www.deploypython.com/">Full Stack Python Guide to Deployments</a> book.</li>
+</ul>
 <h3>May</h3>
 <ul>
 <li>Got a whole lot of work done on my upcoming 

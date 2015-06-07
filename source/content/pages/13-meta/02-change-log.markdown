@@ -13,6 +13,14 @@ the
 
 
 ## 2015
+### June
+* Added new [Docker](/docker.html) resources.
+* Made some changes to what is contained in the Markdown files versus the
+  HTML Jinja2 templates. Behind the scenes work that needed to be done to
+  move the project forward.
+* Work continues on the 
+  [Full Stack Python Guide to Deployments](http://www.deploypython.com/) book.
+
 ### May
 * Got a whole lot of work done on my upcoming 
   [Full Stack Python Guide to Deployments](http://www.deploypython.com/) book.
