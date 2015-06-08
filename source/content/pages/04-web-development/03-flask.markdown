@@ -185,6 +185,15 @@ how to <a href="/deployment.html">deploy web applications</a>.
 
 
 ## Open source Flask example projects
+* [Choose Your Own Adventure Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations)
+  combines Flask with [Reveal.js](http://lab.hakim.se/reveal-js/) and text 
+  messages to create presentations where the audience can vote on how the 
+  story should proceed. The code is all open source under an MIT license
+  and also uses the 
+  [Flask-SocketIO](https://flask-socketio.readthedocs.org/en/latest/) and 
+  [Flask-WTF](https://flask-wtf.readthedocs.org/en/latest/) projects to
+  support voting and form input.
+
 * [Skylines](https://github.com/skylines-project/skylines) is an open source 
   flight tracking web application built with Flask. You can check out a 
   [running version of the application](https://skylines.aero/).
