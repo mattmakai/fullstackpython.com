@@ -193,21 +193,8 @@ how to <a href="/deployment.html">deploy web applications</a>.
   open source project that goes along with Miguel Grinberg's O'Reilly Flask
   book.
 
-* [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
-  starting point for new Flask projects. There's also a 
-  [companion website](https://jackstouffer.github.io/Flask-Foundation/) for
-  the project that explains what extensions the base project includes.
-
-* [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a 
-  project template for use with 
-  [Cookiecutter](https://github.com/audreyr/cookiecutter).
-
 * [Flaskr TDD](https://github.com/mjhea0/flaskr-tdd) takes the official Flask
   tutorial and adds test driven development and JQuery to the project. 
-
-* Use the 
-  [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
-  for getting set up on Google App Engine with Flask.
 
 * Here is a 
   [note-taking app](http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/)
@@ -221,6 +208,21 @@ how to <a href="/deployment.html">deploy web applications</a>.
 
 * [psdash](https://github.com/Jahaja/psdash) is an app built with Flask and
   psutils to display information about the computer it is running on.
+
+
+## Flask project templates
+* Use the 
+  [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
+  for getting set up on Google App Engine with Flask.
+
+* [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation) is a
+  starting point for new Flask projects. There's also a 
+  [companion website](https://jackstouffer.github.io/Flask-Foundation/) for
+  the project that explains what extensions the base project includes.
+
+* [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a 
+  project template for use with 
+  [Cookiecutter](https://github.com/audreyr/cookiecutter).
 
 
 ## Flask framework learning checklist
