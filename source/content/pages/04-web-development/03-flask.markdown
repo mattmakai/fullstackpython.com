@@ -185,6 +185,10 @@ how to <a href="/deployment.html">deploy web applications</a>.
 
 
 ## Open source Flask example projects
+* [Skylines](https://github.com/skylines-project/skylines) is an open source 
+  flight tracking web application built with Flask. You can check out a 
+  [running version of the application](https://skylines.aero/).
+
 * [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
   open source project that goes along with Miguel Grinberg's O'Reilly Flask
   book.
@@ -194,13 +198,15 @@ how to <a href="/deployment.html">deploy web applications</a>.
   [companion website](https://jackstouffer.github.io/Flask-Foundation/) for
   the project that explains what extensions the base project includes.
 
-* [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a project
-  template for use with [Cookiecutter](https://github.com/audreyr/cookiecutter).
+* [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a 
+  project template for use with 
+  [Cookiecutter](https://github.com/audreyr/cookiecutter).
 
 * [Flaskr TDD](https://github.com/mjhea0/flaskr-tdd) takes the official Flask
   tutorial and adds test driven development and JQuery to the project. 
 
-* Use the [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
+* Use the 
+  [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
   for getting set up on Google App Engine with Flask.
 
 * Here is a 
