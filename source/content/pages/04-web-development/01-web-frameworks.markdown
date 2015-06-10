@@ -53,6 +53,30 @@ While you're learning about web frameworks you should also study
 </div>
 
 
+## Do I have to use a web framework?
+Whether or not you have to use a web framework depends on your experience
+with web development and what you're trying to accomplish. If you are 
+a beginner programmer and just want to work on a web application as a 
+learning project then a framework can help you understand the concepts listed
+above, such as URL routing, data manipulation and authentication that are
+common to the majority of web applications.
+
+On the other hand if you're an experienced programmer with significant 
+web development experience you may feel like the existing frameworks do not
+match your project's requirements. In that case, you can either mix and match
+open source libraries such as [Werkzeug](http://werkzeug.pocoo.org/) for
+WSGI plumbing with your own code to create your own framework. There's 
+certainly a lot of room for new frameworks to satisfy the needs of Python
+web developers that are unmet by [Django](/django.html), [Flask](/flask.html),
+[Pyramid](/pyramid.html), [Bottle](/bottle.html) and 
+[many others](/other-web-frameworks.html).
+
+In short, whether or not you need to use a web framework depends on your
+experience and what you're trying to accomplish. Using a web framework to
+build a web application certainly isn't required, but it'll make most 
+developers' lives easier in many cases.
+
+
 ## Web framework resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
   by [Jeff Knupp](https://twitter.com/jeffknupp)

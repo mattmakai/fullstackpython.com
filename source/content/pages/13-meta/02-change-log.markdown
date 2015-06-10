@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### June
+* Added a new section entitled "Do I have to use a web framework?" to the
+  [web frameworks](/web-frameworks.html) page.
 * Reviewed and updated the [introduction](/introduction.html) with slight
   modifications.
 * Added new [Docker](/docker.html) resources.
