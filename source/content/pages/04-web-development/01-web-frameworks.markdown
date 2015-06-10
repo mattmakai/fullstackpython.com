@@ -14,7 +14,7 @@ building reliable, scalable and maintainable web applications.
 Web frameworks encapsulate what developers have learned over the past twenty
 years while programming sites and applications for the web. Frameworks make 
 it easier to reuse code for common HTTP operations and to structure projects 
-so developers with knowledge of the framework can more quickly build and
+so other developers with knowledge of the framework can quickly build and
 maintain the application.
 
 
@@ -27,23 +27,27 @@ operations include:
 2. HTML, XML, JSON, and other output format templating
 3. Database manipulation
 4. Security against Cross-site request forgery (CSRF) and other attacks
+5. Session storage and retrieval
 
-Not all web frameworks include code for all of the above 
-functionality. Frameworks fall somewhere between simply executing a 
-single use case and attempting to be everything to every developer with
-increased complexity. Some frameworks take the "batteries-included" approach 
-where everything possible comes bundled with the framework while others 
-have a minimal code library that plays well with extensions.
+Not all web frameworks include code for all of the above functionality. 
+Frameworks fall on the spectrum from executing a single use case to providing 
+every known web framework feature to every developer. Some frameworks take 
+the "batteries-included" approach where everything possible comes bundled 
+with the framework while others have a minimal core package that is amenable
+to extensions provided by other packages.
 
-For example, the Django web application framework includes an 
+For example, the [Django web application framework](/django.html) includes an 
 Object-Relational Mapping (ORM) layer that abstracts relational database 
 read, write, query, and delete operations. However, Django's ORM
-cannot work without significant modification on non-relational databases such as 
-[MongoDB](http://www.mongodb.org/).
-Some other web frameworks such as Flask and Pyramid are easier to
+cannot work without significant modification on non-relational databases 
+such as [MongoDB](http://www.mongodb.org/).
+
+Some other web frameworks such as [Flask](/flask.html) and 
+[Pyramid](/pyramid.html) are easier to
 use with non-relational databases by incorporating external Python libraries.
-There is a spectrum between minimal functionality with easy extensibility and
-including everything in the framework with tight integration.
+There is a spectrum between minimal functionality with easy extensibility on
+one end and including everything in the framework with tight integration on
+the other end.
 
 
 <div class="well see-also">
@@ -54,32 +58,31 @@ While you're learning about web frameworks you should also study
 
 
 ## Do I have to use a web framework?
-Whether or not you have to use a web framework depends on your experience
-with web development and what you're trying to accomplish. If you are 
-a beginner programmer and just want to work on a web application as a 
+Whether or not you use a web framework in your project depends on your 
+experience with web development and what you're trying to accomplish. If you 
+are a beginner programmer and just want to work on a web application as a 
 learning project then a framework can help you understand the concepts listed
 above, such as URL routing, data manipulation and authentication that are
 common to the majority of web applications.
 
 On the other hand if you're an experienced programmer with significant 
 web development experience you may feel like the existing frameworks do not
-match your project's requirements. In that case, you can either mix and match
+match your project's requirements. In that case, you can mix and match
 open source libraries such as [Werkzeug](http://werkzeug.pocoo.org/) for
 WSGI plumbing with your own code to create your own framework. There's 
-certainly a lot of room for new frameworks to satisfy the needs of Python
-web developers that are unmet by [Django](/django.html), [Flask](/flask.html),
-[Pyramid](/pyramid.html), [Bottle](/bottle.html) and 
+still plenty of room in the Python ecosystem for new frameworks to satisfy 
+the needs of web developers that are unmet by [Django](/django.html), 
+[Flask](/flask.html), [Pyramid](/pyramid.html), [Bottle](/bottle.html) and 
 [many others](/other-web-frameworks.html).
 
-In short, whether or not you need to use a web framework depends on your
-experience and what you're trying to accomplish. Using a web framework to
-build a web application certainly isn't required, but it'll make most 
-developers' lives easier in many cases.
+In short, whether or not you need to use a web framework to build a web 
+application depends on your experience and what you're trying to accomplish. 
+Using a web framework to build a web application certainly isn't required, 
+but it'll make most developers' lives easier in many cases.
 
 
 ## Web framework resources
 * "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
-  by [Jeff Knupp](https://twitter.com/jeffknupp)
   is an in-depth explanation of what web frameworks are and their relation
   to web servers.
 
