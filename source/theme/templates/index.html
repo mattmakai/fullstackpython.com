@@ -10,6 +10,7 @@
         {% for page in pages|sort(attribute='sort-order') %}
           {% if page.slug == 'introduction' %}
               {{ page.content }}
+              <h3>What do you need to learn to create your application?</h3>
               {% include "choices/index.html" %}
           {% endif %}
         {% endfor %}

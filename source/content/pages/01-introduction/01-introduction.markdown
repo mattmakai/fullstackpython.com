@@ -12,12 +12,13 @@ few "*ahh-ha*!" moments are hitting you as you're learning conditional
 statements, for loops and classes while playing around with the open source 
 libraries that make Python such an amazing language.
 
-Now you want to take your initial Python knowledge and make something real.
-A real web application that's available on the web which you can show off or 
+Now you want to take your initial Python knowledge and make something real,
+like an application that's available on the web that you can show off or 
 sell as a service to other people. That's where Full Stack Python comes in. 
-You've come to the right place to learn everything you need to deploy and 
-run a production Python web application.
+You've come to the right place to learn everything you need to create, deploy 
+and run a production Python web application.
 
-This guide branches out on topic because your learning needs depend on what
-you're currently trying to do. 
+This guide branches out on topic because your learning requirements depend on 
+what you're working on. Select one of the buttons below or check out the full
+[table of contents](/table-of-contents.html). 
 

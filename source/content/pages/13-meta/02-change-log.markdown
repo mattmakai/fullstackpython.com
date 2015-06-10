@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### June
+* Reviewed and updated the [introduction](/introduction.html) with slight
+  modifications.
 * Added new [Docker](/docker.html) resources.
 * Made some changes to what is contained in the Markdown files versus the
   HTML Jinja2 templates. Behind the scenes work that needed to be done to
