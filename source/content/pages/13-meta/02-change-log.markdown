@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### June
+* Added new page with a little advice on 
+  [learning programming](/learning-programming.html).
 * Proofread and tweaked the [web frameworks](/web-frameworks.html) page.
 * Added a new section entitled "Do I have to use a web framework?" to the
   [web frameworks](/web-frameworks.html) page.

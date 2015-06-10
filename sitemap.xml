@@ -23,6 +23,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/learning-programming.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
@@ -31,15 +35,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/why-use-python.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/api-integration.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -63,11 +59,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/api-creation.html</loc>
+    <loc>http://www.fullstackpython.com/why-use-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
+    <loc>http://www.fullstackpython.com/api-creation.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -87,11 +83,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/bottle.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.fullstackpython.com/platform-as-a-service.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

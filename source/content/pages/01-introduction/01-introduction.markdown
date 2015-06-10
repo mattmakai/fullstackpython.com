@@ -18,7 +18,3 @@ sell as a service to other people. That's where Full Stack Python comes in.
 You've come to the right place to learn everything you need to create, deploy 
 and run a production Python web application.
 
-This guide branches out on topic because your learning requirements depend on 
-what you're working on. Select one of the buttons below or check out the full
-[table of contents](/table-of-contents.html). 
-
