@@ -156,8 +156,8 @@ The following are WSGI servers based on community recommendations.
 * [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/) is gaining steam as
   a highly-performant WSGI server implementation.
 
-* [mod\_wsgi](https://code.google.com/p/modwsgi/) is an Apache module 
-  implementing the WSGI specification.
+* [mod\_wsgi](https://github.com/GrahamDumpleton/mod_wsgi) is an Apache 
+  module implementing the WSGI specification.
 
 * [CherryPy](https://github.com/cherrypy/cherrypy) is a pure Python web 
   server that also functions as a WSGI server.
@@ -168,11 +168,6 @@ The following are WSGI servers based on community recommendations.
   and
   [PEP 3333 WSGI v1.0.1](http://www.python.org/dev/peps/pep-3333/)
   specifications.
-
-* [Green Unicorn](http://gunicorn.org/),
-  [mod\_wsgi](http://code.google.com/p/modwsgi/),
-  [uWSGI](https://github.com/unbit/uwsgi-docs) and
-  [gevent](http://www.gevent.org/) are common WSGI server implementations.
 
 * This [basics of WSGI](http://agiliq.com/blog/2013/07/basics-wsgi/) post
   contains a simple example of how a WSGI-compatible application works.
