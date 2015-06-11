@@ -74,14 +74,11 @@ Pip downloads and installs application dependencies from the central
 
 ## requirements.txt
 The pip convention for specifying application dependencies is with a 
-[requirements.txt](http://www.pip-installer.org/en/1.4.1/cookbook.html#requirements-files)
-file. When you build a Python web application you should include a 
-requirements.txt file. 
+requirements.txt file. When you build a Python web application you 
+should include a requirements.txt file. 
 
 Python projects' dependencies for a web application should be specified in the
-requirements.txt with 
-[pegged dependencies](https://devcenter.heroku.com/articles/python-pip) like
-the following:
+requirements.txt with pegged dependencies like the following:
 
     django==1.6
     bpython==0.12
