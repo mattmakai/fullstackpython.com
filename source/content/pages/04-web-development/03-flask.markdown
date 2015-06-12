@@ -125,11 +125,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
   [Packaging a Flask app in a Debian package](http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/)
   once you've built an app and want to deploy it.
 
-* [How to make a Flask blog in one hour or less](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)
-  is a well written tutorial that uses the 
-  [Peewee ORM](https://peewee.readthedocs.org/en/latest/) instead of 
-  SQLAlchemy for the blog back end.
-
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
 
@@ -177,11 +172,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
 * [Handling Email Confirmation in Flask](https://realpython.com/blog/python/handling-email-confirmation-in-flask/)
   is a great walkthrough for a common use case of ensuring an email address
   matches with the user's login information.
-
-* Most Flask developers use SQLAlchemy as an ORM to relational databases.
-  If you're unfamiliar with SQLAlchemy questions will often come up such as
-  [what's the difference between flush and commit?](http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit)
-  that are important to understand as you build out your app.
 
 
 ## Open source Flask example projects

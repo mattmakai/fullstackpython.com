@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Python make it possible to work with data through analysis, visualization and persistence. Learn more about data on Full Stack Python.">
+    <meta name="description" content="Object-relational mappers (ORMs) provide a bridge between relational databases and object-oriented code. Learn about ORMs on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Data - Full Stack Python</title>
+    <title>Object-relational Mappers - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,75 +34,206 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Data</h1>
-<p>Data is an incredibly broad topic but it can be broken down into many
-subsections, including (in no particular order):</p>
+          <h1>Object-relational mappers (ORMs)</h1>
+<p>An object-relational mapper (ORMs) is a code library that automates the
+transfer of data stored in relational databases tables into objects that
+are more commonly used in application code.</p>
+<h2>Why are ORMs useful?</h2>
+<p>ORMs provide a high-level abstraction upon a 
+<a href="/databases.html">relational database</a> that allows a developer to write 
+Python code instead of SQL to create, read, update and delete data in
+their database.</p>
+<p>However, Python ORM libraries are not required for accessing relational 
+databases. In fact, the low-level access is typically provided by another 
+library, such as <a href="http://initd.org/psycopg/">psycopg</a> (for PostgreSQL)
+or <a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQL-python</a> (for 
+MySQL).</p>
+<p>Developers can also use ORMs without a web framework, such as when
+creating a data analysis tool or a batch script without a user interface. 
+Currently, the most widely used stand-alone ORM written for Python is
+<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+<div class="well see-also">
+While you're learning about ORMs you should also read up on
+<a href="/deployment.html">deployment</a> and check out the
+<a href="/application-dependencies.html">application dependencies</a> page.
+</div>
+
+<h2>What are the downsides of using an ORM?</h2>
+<p>There are numerous downsides of ORMs, including</p>
+<ol>
+<li>impedance mismatch</li>
+<li>difficulty writing complex queries</li>
+<li>potential for reduced performance</li>
+<li>shifting complexity into the application from the database layer</li>
+</ol>
+<h2>Django's ORM</h2>
+<p>The <a href="/django.html">Django</a> web framework comes with its own built-in 
+object-relational mapping module, generally referred to as "the Django ORM".</p>
+<p><a href="https://docs.djangoproject.com/en/dev/topics/db/">Django's ORM</a> works well
+for simple and medium-complexity database operations. However, there are often
+complaints that the ORM makes complex queries much more complicated than
+writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
+<p>It's technically possible to drop down to SQL but it ties the queries to a 
+specific database implementation. The ORM is coupled closely with Django so
+replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
+though that some of the Django core committers believe it is only a matter of
+time before the default ORM is replaced with SQLAlchemy. It will be a large
+effort to get that working though so it's likely to come in Django 1.9 or 
+later.</p>
+<p>Since the majority of Django projects are tied to the default ORM, it's best to
+read up on advanced use cases and tools for doing your best work within the
+existing framework.</p>
+<h2>SQLAlchemy</h2>
+<p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> is currently the most respected 
+Python ORM because it typically get the abstraction level "just right" and 
+seems to make complex database queries easier to write than the Django ORM 
+in most cases. SQLAlchemy is typically used with Flask as the database ORM
+via the <a href="https://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLAlchemy</a> 
+extension.</p>
+<h2>Peewee</h2>
+<p><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a> is another Python ORM 
+written to be 
+<a href="http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/">simpler, smaller and more hackable</a> 
+than SQLAlchemy. The analogy used by the core Peewee author is that Peewee 
+is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work 
+for every exhaustive use case in order to be useful.</p>
+<h2>Schema migrations</h2>
+<p>Schema migrations, for example when you need to add a new column to an
+existing table in your database, are not technically part of ORMs. However,
+since ORMs typically lead to a hands-off approach to the database (at the
+developers peril in many cases), libraries to perform schema migrations 
+often go hand-in-hand with Python ORM usage on web application projects.</p>
+<p>Database schema migrations are a complex topic and deserve their own page. 
+For now, we'll lump schema migration resources under ORM links below. </p>
+<h3>General ORM resources</h3>
 <ul>
-<li>data processing / wrangling</li>
-<li>machine learning</li>
-<li>data analysis</li>
-<li>visualization</li>
-<li>geospatial mapping</li>
-<li>persistence via <a href="/databases.html">relational databases</a> and 
-  <a href="/no-sql-datastore.html">NoSQL data stores</a></li>
-<li><a href="/object-relational-mappers-orms.html">object-relational mappers</a></li>
-<li>natural language processing (NLP)</li>
-<li>indexing, search and retrieval</li>
+<li>
+<p>This article does a solid job of explaing what 
+  <a href="http://www.agiledata.org/essays/impedanceMismatch.html">ORM impedance mismatch</a>
+  is at a high level and provides diagrams to visualize why the problem
+  occurs. There's also a detailed overview of <a href="http://www.agiledata.org/essays/mappingObjects.html">what ORMs are</a>
+  on another page of the website.</p>
+</li>
+<li>
+<p>Martin Fowler addresses the 
+  <a href="http://martinfowler.com/bliki/OrmHate.html">ORM hate</a>
+  in an essay about how ORMs are often misused but that they do provide
+  benefits to developers.</p>
+</li>
 </ul>
-<p>The Python community has built and continues to create open source libraries 
-and tutorials for all of the above topics.</p>
-<h2>Why is Python a great language choice for data tasks?</h2>
-<p>Python has a wide array of open source code libraries available and a
-diverse community of people with different backgrounds who contribute to
-make those libraries better each day.</p>
-<p>In addition, Python data manipulation code can be combined with 
-<a href="/web-frameworks.html">web frameworks</a> and
-<a href="/application-programming-interfaces.html">web APIs</a> to build software
-that would be difficult to create with a single other language. For example,
-Ruby is a fantastic language for building web applications but its data
-analysis and visualization libraries are very limited compared to what
-is currently available in the Pythn ecosystem.</p>
-<h2>How did Python become so widely used for working with data?</h2>
-<p>Python is a general purpose programming language and can be applied to
-many problem areas. Over the past couple of decades, Python has become 
-increasingly popular in the scientific and financial communities. Projects
-such as <a href="http://pandas.pydata.org/">pandas</a> grew out of a hedge-fund while
-<a href="http://www.numpy.org/">NumPy</a> and <a href="http://www.scipy.org/">SciPy</a> were
-created in academic environments then improved by the broader open source
-community.</p>
-<p>The question is: why Python was used to created these projects? The answer
-is a mix of luck, the growth of the open source community as Python was
-maturing and wide adoption by people not formally trained as computer 
-scientists. The pragmatic syntax and explicit style helped very intelligent
-people without programming backgrounds to pick up the language and get their
-work done with less fuss than other programming languages. Over time the
-code used in the financial world and scientific community was shared at the
-same time global open source communities were developing, further spreading
-their usage among a broader base of software developers.</p>
-<p>There's no doubt some of the momentum behind Python's wide adoption for all 
-types of data manipulation was that it happened to be the right language in
-the right place at the right time. Nevertheless, it was ultimately the hard 
-work of a massive number of engineers and scientists around the world who
-created the incredible mix of data code libraries available today.</p>
-<h3>General Python data resources</h3>
+<h3>Django ORM resources</h3>
 <ul>
 <li>
-<p><a href="http://pydata.org/">PyData</a> is a community for developer and users of 
-  Python data tools. They put on fantastic conferences around the and fund 
-  the continued development of open source data-related libraries.</p>
+<p><a href="http://www.dabapps.com/blog/django-models-and-encapsulation/">Django models, encapsulation and data integrity</a>
+  is a detailed article by Tom Christie on encapsulating Django models for
+  data integrity.</p>
 </li>
 <li>
-<p><a href="http://continuum.io/">Continuum Analytics</a> is one of the leading Python
-  companies that pours a tremendous amount of time and funding into
-  the data community.</p>
+<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
+  is a powerful Django ORM database query inspection tool. Highly recommended
+  during development to ensure you're writing reasonable query code. 
+  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
+  has capabilities to do more than just SQL inspection.</p>
 </li>
 <li>
-<p><a href="http://nbviewer.ipython.org/gist/rpmuller/5920182">A crash course in Python for scientists</a>
-  provides an overview of the Python language with iPython Notebook for those 
-  in scientific fields.</p>
+<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
+  is a Django performance blog post with some tips on measuring performance
+  and optimizing based on the measured results.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
+  is Alex Gaynor's overview of the bad designs decisions, some of which he
+  made, while building the Django ORM.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
+  is specific to using PostgreSQL with Django.</p>
+</li>
+<li>
+<p><a href="http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/">Migrating a Django app from MySQL to PostgreSQL</a>
+  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
+  is that any Django app that's been running for awhile on one 
+  <a href="/databases.html">relational database</a> will require a lot more work to 
+  port over to another backend even with the power of the ORM.</p>
+</li>
+<li>
+<p><a href="http://blog.kevinastone.com/django-model-descriptors.html">Django Model Descriptors</a>
+  discusses and shows how to incorporate business logic into Django models
+  to reduce complexity from the views and make the code easier to reuse across
+  separate views.</p>
+</li>
+<li>
+<p><a href="http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/">Supporting both Django 1.7 and South</a>
+  explains the difficulty of supporting Django 1.7 and maintaining South 
+  migrations for Django 1.6 then goes into how it can be done.</p>
+</li>
+<li>
+<p><a href="https://www.calazan.com/adding-basic-search-to-your-django-site/">Adding basic search to your Django site</a>
+  shows how to write generic queries that'll allow you to provide site 
+  search via the Django ORM without relying on another tool like 
+  ElasticSearch. This is great for small sites before you scale them up with
+  a more robust search engine.</p>
+</li>
+<li>
+<p><a href="https://www.wellfireinteractive.com/blog/using-django-proxy-models">How to use Django's Proxy Models</a>
+  is a solid post on a Django ORM concept that doesn't frequently get a lot
+  of love or explanation.</p>
+</li>
+<li>
+<p><a href="http://tech.marksblogg.com/django-admin-logins.html">Tightening Django Admin Logins</a>
+  shows you how to log authentication failures, create an IP addresses white
+  list and combine fail2ban with the authentication failures list.</p>
+</li>
+<li>
+<p><a href="https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/">Django 1.7: Database Migrations Done Right</a>
+  explains why South was not directly integrated into Django, how migrations
+  are built and shows how backwards migrations work.</p>
+</li>
+<li>
+<p><a href="http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/">Squashing and optimizing migrations in Django</a>
+  shows a simple example with code for how to use the migrations integrated
+  into Django 1.7.</p>
 </li>
 </ul>
-<h3>What else would you like to learn about Python and data?</h3>
+<h3>SQLAlchemy resources</h3>
+<ul>
+<li>
+<p>If you're interested in the differences between SQLAlchemy and the Django
+  ORM I highly recommend reading 
+  <a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
+  by Armin Ronacher.</p>
+</li>
+<li>
+<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
+  provides a detailed comparison of SQLAlchemy against alternatives.</p>
+</li>
+<li>
+<p>Most Flask developers use SQLAlchemy as an ORM to relational databases.
+  If you're unfamiliar with SQLAlchemy questions will often come up such as
+  <a href="http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit">what's the difference between flush and commit?</a>
+  that are important to understand as you build out your app.</p>
+</li>
+</ul>
+<h3>Peewee resources</h3>
+<ul>
+<li>
+<p><a href="http://charlesleifer.com/blog/managing-database-connections-with-peewee/">Managing database connections with Peewee</a>
+  explains the connection pool and ExecutionContext of the ORM.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/">Shortcomings in the Django ORM and a look at Peewee</a>
+  from the author of the Peewee ORM explains how some of the design 
+  decisions made in Peewee were in reaction to parts of the Django ORM
+  that didn't work so well in practice.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/">How to make a Flask blog in one hour or less</a>
+  is a well written tutorial that uses the 
+  <a href="https://peewee.readthedocs.org/en/latest/">Peewee ORM</a> instead of 
+  SQLAlchemy for the blog back end.</p>
+</li>
+</ul>
+<h3>What would you like to learn about building Python web apps?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
@@ -116,8 +247,8 @@ created the incredible mix of data code libraries available today.</p>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/why-use-python.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1152-576q0-51-39-89.5t-89-38.5h-352q0-58 48-159.5t48-160.5q0-98-32-145t-128-47q-26 26-38 85t-30.5 125.5-59.5 109.5q-22 23-77 91-4 5-23 30t-31.5 41-34.5 42.5-40 44-38.5 35.5-40 27-35.5 9h-32v640h32q13 0 31.5 3t33 6.5 38 11 35 11.5 35.5 12.5 29 10.5q211 73 342 73h121q192 0 192-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5q32-1 53.5-47t21.5-81zm128-1q0 89-49 163 9 33 9 69 0 77-38 144 3 21 3 43 0 101-60 178 1 139-85 219.5t-227 80.5h-129q-96 0-189.5-22.5t-216.5-65.5q-116-40-138-40h-288q-53 0-90.5-37.5t-37.5-90.5v-640q0-53 37.5-90.5t90.5-37.5h274q36-24 137-155 58-75 107-128 24-25 35.5-85.5t30.5-126.5 62-108q39-37 90-37 84 0 151 32.5t102 101.5 35 186q0 93-48 192h176q104 0 180 76t76 179z" fill="#fff"/></svg></a>
-<p class="under-btn">Why is Python a good programming language to use?</p>        </div>
+<a href="/data.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M63 1536h-63v-1408h63v1408zm63-1h-32v-1407h32v1407zm94 0h-31v-1407h31v1407zm157 0h-31v-1407h31v1407zm157 0h-62v-1407h62v1407zm126 0h-31v-1407h31v1407zm63 0h-31v-1407h31v1407zm63 0h-31v-1407h31v1407zm157 0h-63v-1407h63v1407zm157 0h-63v-1407h63v1407zm126 0h-63v-1407h63v1407zm126 0h-63v-1407h63v1407zm94 0h-63v-1407h63v1407zm189 0h-94v-1407h94v1407zm63 0h-32v-1407h32v1407zm94 1h-63v-1408h63v1408z" fill="#fff"/></svg></a>
+<p class="under-btn">I want to know about using Python to work with data.</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -172,10 +303,10 @@ created the incredible mix of data code libraries available today.</p>
               <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
               <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
               <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
-              <a href="/data.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
+              <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
-              <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers</a>
+              <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers</a>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
@@ -204,7 +335,7 @@ created the incredible mix of data code libraries available today.</p>
       </div>
   </div>
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Data</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Object-relational Mappers</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.

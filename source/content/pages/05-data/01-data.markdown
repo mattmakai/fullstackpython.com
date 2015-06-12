@@ -16,7 +16,7 @@ subsections, including (in no particular order):
 * geospatial mapping
 * persistence via [relational databases](/databases.html) and 
   [NoSQL data stores](/no-sql-datastore.html)
-* object-relational mapping
+* [object-relational mappers](/object-relational-mappers-orms.html)
 * natural language processing (NLP)
 * indexing, search and retrieval
 

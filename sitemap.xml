@@ -91,6 +91,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/object-relational-mappers-orms.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/platform-as-a-service.html</loc>
     <priority>1.0</priority>
   </url>

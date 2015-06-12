@@ -22,6 +22,13 @@ mental framework for how the data should be saved and retrieved instead of
 having to figure out what to do with the data every time you build a new 
 application.
 
+<div class="well see-also">
+While you're learning about relational databases you should also read up on
+<a href="/object-relational-mappers-orms.html">object-relational mappers (ORMs)</a> 
+and check out the
+<a href="/web-frameworks.html">web frameworks</a> page.
+</div>
+
 
 ## Relational databases
 The database storage abstraction most commonly used in Python web development 
@@ -136,24 +143,12 @@ is not necessary. Simply "import sqlite3" to begin interfacing with the
 single file-based database.
 
 
-## Object-Relational Mapping
+## Object-relational Mapping
 Object-relational mappers (ORMs) allow developers to access data from a 
 backend by writing Python code instead of SQL queries. Each web 
-application framework handles integrating ORMs differently. 
-
-Django provides an ORM with its core functionality. Flask leaves using an 
-ORM up to an extension, such as 
-[Flask-SQLALchemy](http://pythonhosted.org/Flask-SQLAlchemy/). 
-
-Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface. 
-Currently, the most widely used stand-alone ORM written for Python is
-[SQLAlchemy](http://www.sqlalchemy.org/).
-
-If you're interested in the differences between SQLAlchemy and the Django
-ORM I highly recommend reading 
-[SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/)
-by Armin Ronacher.
+application framework handles integrating ORMs differently. There's 
+[an entire page on object-relational mapping](/object-relational-mappers-orms.html) 
+(ORMs) that you should read to get a handle on this subject.
 
 
 ## Database third-party services
@@ -190,9 +185,6 @@ provider.
 
 * [DB Weekly](http://dbweekly.com/) is a weekly roundup of general database 
   articles and resources.
-
-* [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
-  provides a detailed comparison of SQLAlchemy against alternatives.
 
 * [A different view](http://blog.isotoma.com/2014/05/a-different-view/) 
   provides some perspective on the impedance mismatch between ORMs and

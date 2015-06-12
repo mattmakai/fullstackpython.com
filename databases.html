@@ -47,6 +47,13 @@ possible because the data is stored in a structured way. </p>
 mental framework for how the data should be saved and retrieved instead of 
 having to figure out what to do with the data every time you build a new 
 application.</p>
+<div class="well see-also">
+While you're learning about relational databases you should also read up on
+<a href="/object-relational-mappers-orms.html">object-relational mappers (ORMs)</a> 
+and check out the
+<a href="/web-frameworks.html">web frameworks</a> page.
+</div>
+
 <h2>Relational databases</h2>
 <p>The database storage abstraction most commonly used in Python web development 
 is sets of relational tables. Alternative storage abstractions are explained 
@@ -168,21 +175,12 @@ library. The most common libraries for relational databases are:</p>
 <p>SQLite support is built into Python 2.7+ and therefore a separate library
 is not necessary. Simply "import sqlite3" to begin interfacing with the 
 single file-based database.</p>
-<h2>Object-Relational Mapping</h2>
+<h2>Object-relational Mapping</h2>
 <p>Object-relational mappers (ORMs) allow developers to access data from a 
 backend by writing Python code instead of SQL queries. Each web 
-application framework handles integrating ORMs differently. </p>
-<p>Django provides an ORM with its core functionality. Flask leaves using an 
-ORM up to an extension, such as 
-<a href="http://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLALchemy</a>. </p>
-<p>Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface. 
-Currently, the most widely used stand-alone ORM written for Python is
-<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
-<p>If you're interested in the differences between SQLAlchemy and the Django
-ORM I highly recommend reading 
-<a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
-by Armin Ronacher.</p>
+application framework handles integrating ORMs differently. There's 
+<a href="/object-relational-mappers-orms.html">an entire page on object-relational mapping</a> 
+(ORMs) that you should read to get a handle on this subject.</p>
 <h2>Database third-party services</h2>
 <p>Numerous companies run scalable database servers as a hosted service.
 Hosted databases can often provide automated backups and recovery,
@@ -225,10 +223,6 @@ provider.</p>
 <li>
 <p><a href="http://dbweekly.com/">DB Weekly</a> is a weekly roundup of general database 
   articles and resources.</p>
-</li>
-<li>
-<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
-  provides a detailed comparison of SQLAlchemy against alternatives.</p>
 </li>
 <li>
 <p><a href="http://blog.isotoma.com/2014/05/a-different-view/">A different view</a> 
@@ -344,6 +338,7 @@ provider.</p>
               <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
+              <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers</a>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>

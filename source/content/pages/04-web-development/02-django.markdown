@@ -20,7 +20,7 @@ For example,
 [authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
 [URL routing](https://docs.djangoproject.com/en/dev/topics/http/urls/), a 
 [templating system](https://docs.djangoproject.com/en/dev/topics/templates/),
-an [object-relational mapper](https://docs.djangoproject.com/en/dev/topics/db/),
+an [object-relational mapper](/object-relational-mappers-orms.html) (ORM),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 (as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/). 
 Compare that included functionality to the Flask framework which requires a 
@@ -223,80 +223,11 @@ for Django and web development on the
 
 
 ## Django ORM resources
-The [Django ORM](https://docs.djangoproject.com/en/dev/topics/db/) works well
-for simple and medium-complexity database operations. However, there are often
-complaints that the ORM makes complex queries much more complicated than
-writing straight SQL or using [SQLAlchemy](http://www.sqlalchemy.org/). 
-
-It's technically possible to drop down to SQL but it ties the queries to a 
-specific database implementation. The ORM is coupled closely with Django so
-replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
-though that some of the Django core committers believe it is only a matter of
-time before the default ORM is replaced with SQLAlchemy. It will be a large
-effort to get that working though so it's likely to come in Django 1.9 or 
-later.
-
-Since the majority of Django projects are tied to the default ORM, it's best to
-read up on advanced use cases and tools for doing your best work within the
-existing framework.
-
-* [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
-  is a detailed article by Tom Christie on encapsulating Django models for
-  data integrity.
-
-* [Django Debug Toolbar](http://django-debug-toolbar.readthedocs.org/en/1.2/) 
-  is a powerful Django ORM database query inspection tool. Highly recommended
-  during development to ensure you're writing reasonable query code. 
-  [Django Silk](http://mtford.co.uk/blog/2/) is another inspection tool and
-  has capabilities to do more than just SQL inspection.
-
-* [Making a specific Django app faster](http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html)
-  is a Django performance blog post with some tips on measuring performance
-  and optimizing based on the measured results.
-
-* [Why I Hate the Django ORM](https://speakerdeck.com/alex/why-i-hate-the-django-orm)
-  is Alex Gaynor's overview of the bad designs decisions, some of which he
-  made, while building the Django ORM.
-
-* [Going Beyond Django ORM with Postgres](https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres)
-  is specific to using PostgreSQL with Django.
-
-* [Migrating a Django app from MySQL to PostgreSQL](http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/)
-  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
-  is that any Django app that's been running for awhile on one relational
-  database will require a lot more work to port over to another backend
-  even with the power of the ORM.
-
-* [Django Model Descriptors](http://blog.kevinastone.com/django-model-descriptors.html)
-  discusses and shows how to incorporate business logic into Django models
-  to reduce complexity from the views and make the code easier to reuse across
-  separate views.
-
-* [Supporting both Django 1.7 and South](http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/)
-  explains the difficulty of supporting Django 1.7 and maintaining South 
-  migrations for Django 1.6 then goes into how it can be done.
-
-* [Adding basic search to your Django site](https://www.calazan.com/adding-basic-search-to-your-django-site/)
-  shows how to write generic queries that'll allow you to provide site 
-  search via the Django ORM without relying on another tool like 
-  ElasticSearch. This is great for small sites before you scale them up with
-  a more robust search engine.
-
-* [How to use Django's Proxy Models](https://www.wellfireinteractive.com/blog/using-django-proxy-models)
-  is a solid post on a Django ORM concept that doesn't frequently get a lot
-  of love or explanation.
-
-* [Tightening Django Admin Logins](http://tech.marksblogg.com/django-admin-logins.html)
-  shows you how to log authentication failures, create an IP addresses white
-  list and combine fail2ban with the authentication failures list.
-
-* [Django 1.7: Database Migrations Done Right](https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/)
-  explains why South was not directly integrated into Django, how migrations
-  are built and shows how backwards migrations work.
-
-* [Squashing and optimizing migrations in Django](http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/)
-  shows a simple example with code for how to use the migrations integrated
-  into Django 1.7.
+Django comes with its own custom object-relational mapper (ORM) typically
+referred to as "the Django ORM". Learn more about the Django ORM on the
+[Python object-relational mappers page](/object-relational-mappers-orms.html) 
+that includes a section specifically for the Django ORM as well as additional
+resources and tutorials.
 
 
 ## Static and media files

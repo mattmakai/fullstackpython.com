@@ -45,7 +45,7 @@ libraries. </p>
 <a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
 <a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
 <a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
-an <a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
+an <a href="/object-relational-mappers-orms.html">object-relational mapper</a> (ORM),
 and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
 (as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/">Django framework</a>. 
 Compare that included functionality to the Flask framework which requires a 
@@ -275,93 +275,11 @@ for Django and web development on the
 </li>
 </ul>
 <h2>Django ORM resources</h2>
-<p>The <a href="https://docs.djangoproject.com/en/dev/topics/db/">Django ORM</a> works well
-for simple and medium-complexity database operations. However, there are often
-complaints that the ORM makes complex queries much more complicated than
-writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
-<p>It's technically possible to drop down to SQL but it ties the queries to a 
-specific database implementation. The ORM is coupled closely with Django so
-replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
-though that some of the Django core committers believe it is only a matter of
-time before the default ORM is replaced with SQLAlchemy. It will be a large
-effort to get that working though so it's likely to come in Django 1.9 or 
-later.</p>
-<p>Since the majority of Django projects are tied to the default ORM, it's best to
-read up on advanced use cases and tools for doing your best work within the
-existing framework.</p>
-<ul>
-<li>
-<p><a href="http://www.dabapps.com/blog/django-models-and-encapsulation/">Django models, encapsulation and data integrity</a>
-  is a detailed article by Tom Christie on encapsulating Django models for
-  data integrity.</p>
-</li>
-<li>
-<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
-  is a powerful Django ORM database query inspection tool. Highly recommended
-  during development to ensure you're writing reasonable query code. 
-  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
-  has capabilities to do more than just SQL inspection.</p>
-</li>
-<li>
-<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
-  is a Django performance blog post with some tips on measuring performance
-  and optimizing based on the measured results.</p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
-  is Alex Gaynor's overview of the bad designs decisions, some of which he
-  made, while building the Django ORM.</p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
-  is specific to using PostgreSQL with Django.</p>
-</li>
-<li>
-<p><a href="http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/">Migrating a Django app from MySQL to PostgreSQL</a>
-  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
-  is that any Django app that's been running for awhile on one relational
-  database will require a lot more work to port over to another backend
-  even with the power of the ORM.</p>
-</li>
-<li>
-<p><a href="http://blog.kevinastone.com/django-model-descriptors.html">Django Model Descriptors</a>
-  discusses and shows how to incorporate business logic into Django models
-  to reduce complexity from the views and make the code easier to reuse across
-  separate views.</p>
-</li>
-<li>
-<p><a href="http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/">Supporting both Django 1.7 and South</a>
-  explains the difficulty of supporting Django 1.7 and maintaining South 
-  migrations for Django 1.6 then goes into how it can be done.</p>
-</li>
-<li>
-<p><a href="https://www.calazan.com/adding-basic-search-to-your-django-site/">Adding basic search to your Django site</a>
-  shows how to write generic queries that'll allow you to provide site 
-  search via the Django ORM without relying on another tool like 
-  ElasticSearch. This is great for small sites before you scale them up with
-  a more robust search engine.</p>
-</li>
-<li>
-<p><a href="https://www.wellfireinteractive.com/blog/using-django-proxy-models">How to use Django's Proxy Models</a>
-  is a solid post on a Django ORM concept that doesn't frequently get a lot
-  of love or explanation.</p>
-</li>
-<li>
-<p><a href="http://tech.marksblogg.com/django-admin-logins.html">Tightening Django Admin Logins</a>
-  shows you how to log authentication failures, create an IP addresses white
-  list and combine fail2ban with the authentication failures list.</p>
-</li>
-<li>
-<p><a href="https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/">Django 1.7: Database Migrations Done Right</a>
-  explains why South was not directly integrated into Django, how migrations
-  are built and shows how backwards migrations work.</p>
-</li>
-<li>
-<p><a href="http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/">Squashing and optimizing migrations in Django</a>
-  shows a simple example with code for how to use the migrations integrated
-  into Django 1.7.</p>
-</li>
-</ul>
+<p>Django comes with its own custom object-relational mapper (ORM) typically
+referred to as "the Django ORM". Learn more about the Django ORM on the
+<a href="/object-relational-mappers-orms.html">Python object-relational mappers page</a> 
+that includes a section specifically for the Django ORM as well as additional
+resources and tutorials.</p>
 <h2>Static and media files</h2>
 <p>Deploying and handling static and media files can be confusing for new
 Django developers. These resources along with the 
@@ -536,6 +454,7 @@ to handle these files properly.</p>
               <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
+              <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers</a>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>

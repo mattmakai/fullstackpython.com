@@ -1288,7 +1288,7 @@ libraries. </p>
 <a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
 <a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
 <a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
-an <a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
+an <a href="/object-relational-mappers-orms.html">object-relational mapper</a> (ORM),
 and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
 (as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/">Django framework</a>. 
 Compare that included functionality to the Flask framework which requires a 
@@ -1518,93 +1518,11 @@ for Django and web development on the
 </li>
 </ul>
 <h2>Django ORM resources</h2>
-<p>The <a href="https://docs.djangoproject.com/en/dev/topics/db/">Django ORM</a> works well
-for simple and medium-complexity database operations. However, there are often
-complaints that the ORM makes complex queries much more complicated than
-writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
-<p>It's technically possible to drop down to SQL but it ties the queries to a 
-specific database implementation. The ORM is coupled closely with Django so
-replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
-though that some of the Django core committers believe it is only a matter of
-time before the default ORM is replaced with SQLAlchemy. It will be a large
-effort to get that working though so it's likely to come in Django 1.9 or 
-later.</p>
-<p>Since the majority of Django projects are tied to the default ORM, it's best to
-read up on advanced use cases and tools for doing your best work within the
-existing framework.</p>
-<ul>
-<li>
-<p><a href="http://www.dabapps.com/blog/django-models-and-encapsulation/">Django models, encapsulation and data integrity</a>
-  is a detailed article by Tom Christie on encapsulating Django models for
-  data integrity.</p>
-</li>
-<li>
-<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
-  is a powerful Django ORM database query inspection tool. Highly recommended
-  during development to ensure you're writing reasonable query code. 
-  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
-  has capabilities to do more than just SQL inspection.</p>
-</li>
-<li>
-<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
-  is a Django performance blog post with some tips on measuring performance
-  and optimizing based on the measured results.</p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
-  is Alex Gaynor's overview of the bad designs decisions, some of which he
-  made, while building the Django ORM.</p>
-</li>
-<li>
-<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
-  is specific to using PostgreSQL with Django.</p>
-</li>
-<li>
-<p><a href="http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/">Migrating a Django app from MySQL to PostgreSQL</a>
-  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
-  is that any Django app that's been running for awhile on one relational
-  database will require a lot more work to port over to another backend
-  even with the power of the ORM.</p>
-</li>
-<li>
-<p><a href="http://blog.kevinastone.com/django-model-descriptors.html">Django Model Descriptors</a>
-  discusses and shows how to incorporate business logic into Django models
-  to reduce complexity from the views and make the code easier to reuse across
-  separate views.</p>
-</li>
-<li>
-<p><a href="http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/">Supporting both Django 1.7 and South</a>
-  explains the difficulty of supporting Django 1.7 and maintaining South 
-  migrations for Django 1.6 then goes into how it can be done.</p>
-</li>
-<li>
-<p><a href="https://www.calazan.com/adding-basic-search-to-your-django-site/">Adding basic search to your Django site</a>
-  shows how to write generic queries that'll allow you to provide site 
-  search via the Django ORM without relying on another tool like 
-  ElasticSearch. This is great for small sites before you scale them up with
-  a more robust search engine.</p>
-</li>
-<li>
-<p><a href="https://www.wellfireinteractive.com/blog/using-django-proxy-models">How to use Django's Proxy Models</a>
-  is a solid post on a Django ORM concept that doesn't frequently get a lot
-  of love or explanation.</p>
-</li>
-<li>
-<p><a href="http://tech.marksblogg.com/django-admin-logins.html">Tightening Django Admin Logins</a>
-  shows you how to log authentication failures, create an IP addresses white
-  list and combine fail2ban with the authentication failures list.</p>
-</li>
-<li>
-<p><a href="https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/">Django 1.7: Database Migrations Done Right</a>
-  explains why South was not directly integrated into Django, how migrations
-  are built and shows how backwards migrations work.</p>
-</li>
-<li>
-<p><a href="http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/">Squashing and optimizing migrations in Django</a>
-  shows a simple example with code for how to use the migrations integrated
-  into Django 1.7.</p>
-</li>
-</ul>
+<p>Django comes with its own custom object-relational mapper (ORM) typically
+referred to as "the Django ORM". Learn more about the Django ORM on the
+<a href="/object-relational-mappers-orms.html">Python object-relational mappers page</a> 
+that includes a section specifically for the Django ORM as well as additional
+resources and tutorials.</p>
 <h2>Static and media files</h2>
 <p>Deploying and handling static and media files can be confusing for new
 Django developers. These resources along with the 
@@ -1830,12 +1748,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
   once you've built an app and want to deploy it.</p>
 </li>
 <li>
-<p><a href="http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/">How to make a Flask blog in one hour or less</a>
-  is a well written tutorial that uses the 
-  <a href="https://peewee.readthedocs.org/en/latest/">Peewee ORM</a> instead of 
-  SQLAlchemy for the blog back end.</p>
-</li>
-<li>
 <p>The Tuts+ <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a> 
   is another great walkthrough for getting started with the framework.</p>
 </li>
@@ -1892,12 +1804,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
 <p><a href="https://realpython.com/blog/python/handling-email-confirmation-in-flask/">Handling Email Confirmation in Flask</a>
   is a great walkthrough for a common use case of ensuring an email address
   matches with the user's login information.</p>
-</li>
-<li>
-<p>Most Flask developers use SQLAlchemy as an ORM to relational databases.
-  If you're unfamiliar with SQLAlchemy questions will often come up such as
-  <a href="http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit">what's the difference between flush and commit?</a>
-  that are important to understand as you build out your app.</p>
 </li>
 </ul>
 <h2>Open source Flask example projects</h2>
@@ -2869,7 +2775,7 @@ subsections, including (in no particular order):</p>
 <li>geospatial mapping</li>
 <li>persistence via <a href="/databases.html">relational databases</a> and 
   <a href="/no-sql-datastore.html">NoSQL data stores</a></li>
-<li>object-relational mapping</li>
+<li><a href="/object-relational-mappers-orms.html">object-relational mappers</a></li>
 <li>natural language processing (NLP)</li>
 <li>indexing, search and retrieval</li>
 </ul>
@@ -2939,6 +2845,13 @@ possible because the data is stored in a structured way. </p>
 mental framework for how the data should be saved and retrieved instead of 
 having to figure out what to do with the data every time you build a new 
 application.</p>
+<div class="well see-also">
+While you're learning about relational databases you should also read up on
+<a href="/object-relational-mappers-orms.html">object-relational mappers (ORMs)</a> 
+and check out the
+<a href="/web-frameworks.html">web frameworks</a> page.
+</div>
+
 <h2>Relational databases</h2>
 <p>The database storage abstraction most commonly used in Python web development 
 is sets of relational tables. Alternative storage abstractions are explained 
@@ -3060,21 +2973,12 @@ library. The most common libraries for relational databases are:</p>
 <p>SQLite support is built into Python 2.7+ and therefore a separate library
 is not necessary. Simply "import sqlite3" to begin interfacing with the 
 single file-based database.</p>
-<h2>Object-Relational Mapping</h2>
+<h2>Object-relational Mapping</h2>
 <p>Object-relational mappers (ORMs) allow developers to access data from a 
 backend by writing Python code instead of SQL queries. Each web 
-application framework handles integrating ORMs differently. </p>
-<p>Django provides an ORM with its core functionality. Flask leaves using an 
-ORM up to an extension, such as 
-<a href="http://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLALchemy</a>. </p>
-<p>Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface. 
-Currently, the most widely used stand-alone ORM written for Python is
-<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
-<p>If you're interested in the differences between SQLAlchemy and the Django
-ORM I highly recommend reading 
-<a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
-by Armin Ronacher.</p>
+application framework handles integrating ORMs differently. There's 
+<a href="/object-relational-mappers-orms.html">an entire page on object-relational mapping</a> 
+(ORMs) that you should read to get a handle on this subject.</p>
 <h2>Database third-party services</h2>
 <p>Numerous companies run scalable database servers as a hosted service.
 Hosted databases can often provide automated backups and recovery,
@@ -3117,10 +3021,6 @@ provider.</p>
 <li>
 <p><a href="http://dbweekly.com/">DB Weekly</a> is a weekly roundup of general database 
   articles and resources.</p>
-</li>
-<li>
-<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
-  provides a detailed comparison of SQLAlchemy against alternatives.</p>
 </li>
 <li>
 <p><a href="http://blog.isotoma.com/2014/05/a-different-view/">A different view</a> 
@@ -3365,6 +3265,205 @@ representing a person could have a property of "female" or "male".</p>
    document-oriented data store such as MongoDB.</p>
 </li>
 </ol>
+          <h1>Object-relational mappers (ORMs)</h1>
+<p>An object-relational mapper (ORMs) is a code library that automates the
+transfer of data stored in relational databases tables into objects that
+are more commonly used in application code.</p>
+<h2>Why are ORMs useful?</h2>
+<p>ORMs provide a high-level abstraction upon a 
+<a href="/databases.html">relational database</a> that allows a developer to write 
+Python code instead of SQL to create, read, update and delete data in
+their database.</p>
+<p>However, Python ORM libraries are not required for accessing relational 
+databases. In fact, the low-level access is typically provided by another 
+library, such as <a href="http://initd.org/psycopg/">psycopg</a> (for PostgreSQL)
+or <a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQL-python</a> (for 
+MySQL).</p>
+<p>Developers can also use ORMs without a web framework, such as when
+creating a data analysis tool or a batch script without a user interface. 
+Currently, the most widely used stand-alone ORM written for Python is
+<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+<div class="well see-also">
+While you're learning about ORMs you should also read up on
+<a href="/deployment.html">deployment</a> and check out the
+<a href="/application-dependencies.html">application dependencies</a> page.
+</div>
+
+<h2>What are the downsides of using an ORM?</h2>
+<p>There are numerous downsides of ORMs, including</p>
+<ol>
+<li>impedance mismatch</li>
+<li>difficulty writing complex queries</li>
+<li>potential for reduced performance</li>
+<li>shifting complexity into the application from the database layer</li>
+</ol>
+<h2>Django's ORM</h2>
+<p>The <a href="/django.html">Django</a> web framework comes with its own built-in 
+object-relational mapping module, generally referred to as "the Django ORM".</p>
+<p><a href="https://docs.djangoproject.com/en/dev/topics/db/">Django's ORM</a> works well
+for simple and medium-complexity database operations. However, there are often
+complaints that the ORM makes complex queries much more complicated than
+writing straight SQL or using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>. </p>
+<p>It's technically possible to drop down to SQL but it ties the queries to a 
+specific database implementation. The ORM is coupled closely with Django so
+replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
+though that some of the Django core committers believe it is only a matter of
+time before the default ORM is replaced with SQLAlchemy. It will be a large
+effort to get that working though so it's likely to come in Django 1.9 or 
+later.</p>
+<p>Since the majority of Django projects are tied to the default ORM, it's best to
+read up on advanced use cases and tools for doing your best work within the
+existing framework.</p>
+<h2>SQLAlchemy</h2>
+<p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> is currently the most respected 
+Python ORM because it typically get the abstraction level "just right" and 
+seems to make complex database queries easier to write than the Django ORM 
+in most cases. SQLAlchemy is typically used with Flask as the database ORM
+via the <a href="https://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLAlchemy</a> 
+extension.</p>
+<h2>Peewee</h2>
+<p><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a> is another Python ORM 
+written to be 
+<a href="http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/">simpler, smaller and more hackable</a> 
+than SQLAlchemy. The analogy used by the core Peewee author is that Peewee 
+is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work 
+for every exhaustive use case in order to be useful.</p>
+<h2>Schema migrations</h2>
+<p>Schema migrations, for example when you need to add a new column to an
+existing table in your database, are not technically part of ORMs. However,
+since ORMs typically lead to a hands-off approach to the database (at the
+developers peril in many cases), libraries to perform schema migrations 
+often go hand-in-hand with Python ORM usage on web application projects.</p>
+<p>Database schema migrations are a complex topic and deserve their own page. 
+For now, we'll lump schema migration resources under ORM links below. </p>
+<h3>General ORM resources</h3>
+<ul>
+<li>
+<p>This article does a solid job of explaing what 
+  <a href="http://www.agiledata.org/essays/impedanceMismatch.html">ORM impedance mismatch</a>
+  is at a high level and provides diagrams to visualize why the problem
+  occurs. There's also a detailed overview of <a href="http://www.agiledata.org/essays/mappingObjects.html">what ORMs are</a>
+  on another page of the website.</p>
+</li>
+<li>
+<p>Martin Fowler addresses the 
+  <a href="http://martinfowler.com/bliki/OrmHate.html">ORM hate</a>
+  in an essay about how ORMs are often misused but that they do provide
+  benefits to developers.</p>
+</li>
+</ul>
+<h3>Django ORM resources</h3>
+<ul>
+<li>
+<p><a href="http://www.dabapps.com/blog/django-models-and-encapsulation/">Django models, encapsulation and data integrity</a>
+  is a detailed article by Tom Christie on encapsulating Django models for
+  data integrity.</p>
+</li>
+<li>
+<p><a href="http://django-debug-toolbar.readthedocs.org/en/1.2/">Django Debug Toolbar</a> 
+  is a powerful Django ORM database query inspection tool. Highly recommended
+  during development to ensure you're writing reasonable query code. 
+  <a href="http://mtford.co.uk/blog/2/">Django Silk</a> is another inspection tool and
+  has capabilities to do more than just SQL inspection.</p>
+</li>
+<li>
+<p><a href="http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html">Making a specific Django app faster</a>
+  is a Django performance blog post with some tips on measuring performance
+  and optimizing based on the measured results.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/alex/why-i-hate-the-django-orm">Why I Hate the Django ORM</a>
+  is Alex Gaynor's overview of the bad designs decisions, some of which he
+  made, while building the Django ORM.</p>
+</li>
+<li>
+<p><a href="https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres">Going Beyond Django ORM with Postgres</a>
+  is specific to using PostgreSQL with Django.</p>
+</li>
+<li>
+<p><a href="http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/">Migrating a Django app from MySQL to PostgreSQL</a>
+  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
+  is that any Django app that's been running for awhile on one 
+  <a href="/databases.html">relational database</a> will require a lot more work to 
+  port over to another backend even with the power of the ORM.</p>
+</li>
+<li>
+<p><a href="http://blog.kevinastone.com/django-model-descriptors.html">Django Model Descriptors</a>
+  discusses and shows how to incorporate business logic into Django models
+  to reduce complexity from the views and make the code easier to reuse across
+  separate views.</p>
+</li>
+<li>
+<p><a href="http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/">Supporting both Django 1.7 and South</a>
+  explains the difficulty of supporting Django 1.7 and maintaining South 
+  migrations for Django 1.6 then goes into how it can be done.</p>
+</li>
+<li>
+<p><a href="https://www.calazan.com/adding-basic-search-to-your-django-site/">Adding basic search to your Django site</a>
+  shows how to write generic queries that'll allow you to provide site 
+  search via the Django ORM without relying on another tool like 
+  ElasticSearch. This is great for small sites before you scale them up with
+  a more robust search engine.</p>
+</li>
+<li>
+<p><a href="https://www.wellfireinteractive.com/blog/using-django-proxy-models">How to use Django's Proxy Models</a>
+  is a solid post on a Django ORM concept that doesn't frequently get a lot
+  of love or explanation.</p>
+</li>
+<li>
+<p><a href="http://tech.marksblogg.com/django-admin-logins.html">Tightening Django Admin Logins</a>
+  shows you how to log authentication failures, create an IP addresses white
+  list and combine fail2ban with the authentication failures list.</p>
+</li>
+<li>
+<p><a href="https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/">Django 1.7: Database Migrations Done Right</a>
+  explains why South was not directly integrated into Django, how migrations
+  are built and shows how backwards migrations work.</p>
+</li>
+<li>
+<p><a href="http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/">Squashing and optimizing migrations in Django</a>
+  shows a simple example with code for how to use the migrations integrated
+  into Django 1.7.</p>
+</li>
+</ul>
+<h3>SQLAlchemy resources</h3>
+<ul>
+<li>
+<p>If you're interested in the differences between SQLAlchemy and the Django
+  ORM I highly recommend reading 
+  <a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
+  by Armin Ronacher.</p>
+</li>
+<li>
+<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
+  provides a detailed comparison of SQLAlchemy against alternatives.</p>
+</li>
+<li>
+<p>Most Flask developers use SQLAlchemy as an ORM to relational databases.
+  If you're unfamiliar with SQLAlchemy questions will often come up such as
+  <a href="http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit">what's the difference between flush and commit?</a>
+  that are important to understand as you build out your app.</p>
+</li>
+</ul>
+<h3>Peewee resources</h3>
+<ul>
+<li>
+<p><a href="http://charlesleifer.com/blog/managing-database-connections-with-peewee/">Managing database connections with Peewee</a>
+  explains the connection pool and ExecutionContext of the ORM.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/">Shortcomings in the Django ORM and a look at Peewee</a>
+  from the author of the Peewee ORM explains how some of the design 
+  decisions made in Peewee were in reaction to parts of the Django ORM
+  that didn't work so well in practice.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/">How to make a Flask blog in one hour or less</a>
+  is a well written tutorial that uses the 
+  <a href="https://peewee.readthedocs.org/en/latest/">Peewee ORM</a> instead of 
+  SQLAlchemy for the blog back end.</p>
+</li>
+</ul>
           <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>
