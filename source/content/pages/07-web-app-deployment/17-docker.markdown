@@ -47,6 +47,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   shares lessons learned and explains how to work with the containers so you 
   get more use out of them during development.
 
+* [The marriage of Ansible and Docker](https://bildung.xarif.de/xwiki/bin/Articles/The+Marriage+of+Ansible+and+Docker)
+  is a detailed look at how Docker and Ansible complement each other as
+  deployment tools.
+
 
 ## Python-specific Docker resources
 * [Hosting Python WSGI applications using Docker](http://blog.dscpl.com.au/2014/12/hosting-python-wsgi-applications-using.html)
