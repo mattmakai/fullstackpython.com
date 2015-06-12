@@ -6,7 +6,7 @@ meta: Object-relational mappers (ORMs) provide a bridge between relational datab
 
 
 # Object-relational mappers (ORMs)
-An object-relational mapper (ORMs) is a code library that automates the
+An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.
 
@@ -15,7 +15,9 @@ are more commonly used in application code.
 ORMs provide a high-level abstraction upon a 
 [relational database](/databases.html) that allows a developer to write 
 Python code instead of SQL to create, read, update and delete data in
-their database.
+their database. Developers can use the programming language they are
+comfortable with, in our case Python, to work with data and not have to
+write SQL statements or stored procedures.
 
 However, Python ORM libraries are not required for accessing relational 
 databases. In fact, the low-level access is typically provided by another 
@@ -25,8 +27,6 @@ MySQL).
 
 Developers can also use ORMs without a web framework, such as when
 creating a data analysis tool or a batch script without a user interface. 
-Currently, the most widely used stand-alone ORM written for Python is
-[SQLAlchemy](http://www.sqlalchemy.org/).
 
 
 <div class="well see-also">

@@ -14,6 +14,10 @@ the
 
 ## 2015
 ### June
+* Added a new page on Python
+  [object-relational mappers](/object-relational-mappers-orms.html), which
+  helped condense that information on a single page and lighten the loads on
+  the Django and relational databases pages.
 * Added new page with a little advice on 
   [learning programming](/learning-programming.html).
 * Proofread and tweaked the [web frameworks](/web-frameworks.html) page.

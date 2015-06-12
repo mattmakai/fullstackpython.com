@@ -35,23 +35,23 @@
 </div><div class="row">
     <div class="col-md-8">
           <h1>Object-relational mappers (ORMs)</h1>
-<p>An object-relational mapper (ORMs) is a code library that automates the
+<p>An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.</p>
 <h2>Why are ORMs useful?</h2>
 <p>ORMs provide a high-level abstraction upon a 
 <a href="/databases.html">relational database</a> that allows a developer to write 
 Python code instead of SQL to create, read, update and delete data in
-their database.</p>
+their database. Developers can use the programming language they are
+comfortable with, in our case Python, to work with data and not have to
+write SQL statements or stored procedures.</p>
 <p>However, Python ORM libraries are not required for accessing relational 
 databases. In fact, the low-level access is typically provided by another 
 library, such as <a href="http://initd.org/psycopg/">psycopg</a> (for PostgreSQL)
 or <a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQL-python</a> (for 
 MySQL).</p>
 <p>Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface. 
-Currently, the most widely used stand-alone ORM written for Python is
-<a href="http://www.sqlalchemy.org/">SQLAlchemy</a>.</p>
+creating a data analysis tool or a batch script without a user interface. </p>
 <div class="well see-also">
 While you're learning about ORMs you should also read up on
 <a href="/deployment.html">deployment</a> and check out the
