@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### June
+* Added a new section just for Nginx resources and Removed broken links on 
+  the [web servers](/web-servers.html) page.
 * Added a new page on Python
   [object-relational mappers](/object-relational-mappers-orms.html), which
   helped condense that information on a single page and lighten the loads on
