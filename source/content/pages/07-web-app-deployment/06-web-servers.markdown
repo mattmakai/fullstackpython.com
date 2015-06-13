@@ -74,31 +74,38 @@ section for a more detailed explanation).
 
 * [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
 
-* [Nginx web server tutorials](http://articles.slicehost.com/nginx)
-
-* [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
-
-* An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/).
-
 * A reference with the full list of 
 [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 is provided by W3C.
 
-* An optimization guide for 
-"[battle ready Nginx](http://blog.zachorr.com/nginx-setup/)."
-
-* [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
-
 * [4 HTTP Security Headers You Should Always Be Using](http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using)
-
-* [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
-  covers how to mitigate against brute force password guessing attempts using
-  Nginx rate limits.
 
 * If you're looking to learn about web servers by building one, here's
   [part one](http://ruslanspivak.com/lsbaws-part1/),
   [part two](http://ruslanspivak.com/lsbaws-part2/) and [part three](http://ruslanspivak.com/lsbaws-part3/) 
   of a great tutorial that shows how to code a web server in Python.
+
+
+## Nginx resources
+* [Inside Nginx: How we designed for performance and scale](http://nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
+  is a blog post from the developers behind Nginx on why they believe their
+  architecture model is more performant and scalable than other approaches
+  used to build web servers.
+
+* [Nginx web server tutorials](http://articles.slicehost.com/nginx) are oldies
+  but goodies on setting up previous versions of Nginx. 
+
+* [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
+
+* An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/).
+
+* [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
+  explains how Nginx can be used instead of Apache in some cases for
+  better performance.
+
+* [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
+  covers how to mitigate against brute force password guessing attempts using
+  Nginx rate limits.
 
 
 ## Web servers learning checklist
