@@ -109,6 +109,11 @@ For now, we'll lump schema migration resources under ORM links below.
   in an essay about how ORMs are often misused but that they do provide
   benefits to developers.
 
+* If you're confused about the difference between a connector, such as 
+  MySQL-python and an ORM like SQLAlchemy, read this 
+  [StackOverflow answer](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb)
+  on the topic.
+
 
 ### Django ORM resources
 * [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
