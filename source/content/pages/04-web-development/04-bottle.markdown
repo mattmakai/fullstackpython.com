@@ -2,7 +2,7 @@ title: Bottle
 category: page
 slug: bottle
 sort-order: 0404
-meta: Bottle is a Python web framework contained within a single source file. Learn more about Bottle on Full Stack Python. 
+meta: Bottle is a Python web framework contained within a single source file. Learn more about Bottle on Full Stack Python.
 
 
 # Bottle
@@ -13,18 +13,20 @@ included with Python.
 
 
 ## Bottle resources
-* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html) 
+* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html)
   provides a thorough view of basic concepts and features for the framework.
 
 * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps).
 
+* [Developing With Bottle](https://realpython.com/blog/python/developing-with-bottle-part-1/) details how to create a basic application with Bottle.
+
 * This tutorial provides a walkthrough for
 [getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598).
 
-* Here's a short code snippet for 
+* Here's a short code snippet for
   [creating a RESTful API with Bottle and MongoDB](http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/).
 
-* This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/) 
+* This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/)
   is another Bottle walkthrough for creating a RESTful web API.
 
 * [BAM! A Web Framework "Short Stack"](http://reachtim.com/articles/BAM-Short-Stack.html)
@@ -40,22 +42,22 @@ included with Python.
 * [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with
   Bottle.
 
-* [Decanter](http://gengo.github.io/decanter/) is a library for structuring 
+* [Decanter](http://gengo.github.io/decanter/) is a library for structuring
   Bottle projects.
 
 
 
 ## Bottle framework learning checklist
-1. [Download Bottle](https://github.com/defnull/bottle/raw/master/bottle.py) 
-   or install via pip with ``pip install bottle`` on your local development 
+1. [Download Bottle](https://github.com/defnull/bottle/raw/master/bottle.py)
+   or install via pip with ``pip install bottle`` on your local development
    machine.
 
-1. Work through the official 
+1. Work through the official
    [Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html).
 
-1. Start coding your Bottle app based on what you learned in the official 
-   tutorial plus reading open source example applications found below. 
+1. Start coding your Bottle app based on what you learned in the official
+   tutorial plus reading open source example applications found above.
 
-1. Move on to the [deployment section](/deployment.html) to get your initial 
+1. Move on to the [deployment section](/deployment.html) to get your initial
    Bottle application on the web.
 
