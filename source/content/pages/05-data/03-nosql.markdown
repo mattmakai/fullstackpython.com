@@ -43,8 +43,15 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 * [What is a key-value store database?](http://dba.stackexchange.com/questions/607/what-is-a-key-value-store-database)
   is a Stack Overflow Q&A that straight on answers this subject.
 
+
+
+### Redis resources
 * "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
   is a guide for getting up with the extremely useful in-memory data store.
+
+* [Getting started with Redis and Python](http://degizmo.com/2010/03/22/getting-started-redis-and-python/)
+  is a walkthrough for installing and playing around with the basics of
+  Redis.
 
 * This video on 
   [Scaling Redis at Twitter](https://www.youtube.com/watch?v=rP9EKvWt0zo) is
@@ -57,7 +64,6 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 * [Writing Redis in Python with Asyncio](http://jamesls.com/writing-redis-in-python-with-asyncio-part-1.html)
   shows a detailed example for how to use the new Asyncio standard library in
   Python 3.4+ for working with Redis.
-
 
 
 ## Document-oriented
