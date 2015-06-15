@@ -16,24 +16,50 @@ ORMs provide a high-level abstraction upon a
 [relational database](/databases.html) that allows a developer to write 
 Python code instead of SQL to create, read, update and delete data in
 their database. Developers can use the programming language they are
-comfortable with, in our case Python, to work with data and not have to
-write SQL statements or stored procedures.
+comfortable with to work with a database instead of writing SQL statements or 
+stored procedures.
 
-However, Python ORM libraries are not required for accessing relational 
-databases. In fact, the low-level access is typically provided by another 
-library, such as [psycopg](http://initd.org/psycopg/) (for PostgreSQL)
-or [MySQL-python](https://pypi.python.org/pypi/MySQL-python/1.2.5) (for 
-MySQL).
+The ability to write Python code instead of SQL can speed up web application
+development, especially at the beginning of a project. The potential 
+development speed boost comes from not having to switch from Python code 
+into writing declarative paradigm SQL statements. While some software
+developers may not mind switching back and forth between languages, it's
+typically easier to knock out a prototype or start a web application using
+a single programming language.
 
-Developers can also use ORMs without a web framework, such as when
-creating a data analysis tool or a batch script without a user interface. 
+ORMs also make it theoretically possible to switch an application between
+various relational databases. For example, a developer could use SQLite for
+local development and MySQL in production. A production application could
+be switched from MySQL to PostgreSQL with minimal code modifications. 
 
+In reality however, it's best to use the same database for local development
+as is used in production. Otherwise unexpected errors could hit in production
+that were not seen in a local development environment. Also, it's rare that
+a project would switch from one database in production to another one unless
+there was a pressing reason.
 
 <div class="well see-also">
 While you're learning about ORMs you should also read up on
 <a href="/deployment.html">deployment</a> and check out the
 <a href="/application-dependencies.html">application dependencies</a> page.
 </div>
+
+
+## Do I have to use an ORM for my web application?
+Python ORM libraries are not required for accessing relational 
+databases. In fact, the low-level access is typically provided by another 
+library called a *database connector*, such as 
+[psycopg](http://initd.org/psycopg/) (for PostgreSQL)
+or [MySQL-python](https://pypi.python.org/pypi/MySQL-python/1.2.5) (for 
+MySQL). Take a look at the table below which shows that ORMs can work with
+different web frameworks and database connectors.
+
+<img src="theme/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" />
+
+For example, in the above table SQLAlchemy can work with or without an
+accompanying web framework as well as different database connectors. 
+Developers can also use ORMs without a web framework, such as when creating 
+a data analysis tool or a batch script without a user interface. 
 
 
 ## What are the downsides of using an ORM?
@@ -46,8 +72,9 @@ There are numerous downsides of ORMs, including
 
 
 ## Django's ORM
-The [Django](/django.html) web framework comes with its own built-in 
-object-relational mapping module, generally referred to as "the Django ORM".
+The [Django](/django.html) web framework comes with 
+its own built-in object-relational mapping module, generally referred to 
+as "the Django ORM" or "Django's ORM".
 
 [Django's ORM](https://docs.djangoproject.com/en/dev/topics/db/) works well
 for simple and medium-complexity database operations. However, there are often
@@ -68,21 +95,30 @@ existing framework.
 
 
 ## SQLAlchemy
-[SQLAlchemy](http://www.sqlalchemy.org/) is currently the most respected 
-Python ORM because it typically get the abstraction level "just right" and 
-seems to make complex database queries easier to write than the Django ORM 
-in most cases. SQLAlchemy is typically used with Flask as the database ORM
-via the [Flask-SQLAlchemy](https://pythonhosted.org/Flask-SQLAlchemy/) 
+[SQLAlchemy](http://www.sqlalchemy.org/) is 
+currently the most respected Python ORM because it typically get the 
+abstraction level "just right" and seems to make complex database queries 
+easier to write than the Django ORM in most cases. SQLAlchemy is typically 
+used with Flask as the database ORM via the 
+[Flask-SQLAlchemy](https://pythonhosted.org/Flask-SQLAlchemy/) 
 extension.
 
 
 ## Peewee
-[Peewee](https://peewee.readthedocs.org/en/latest/) is another Python ORM 
+[Peewee](https://peewee.readthedocs.org/en/latest/) is a Python ORM 
 written to be 
-[simpler, smaller and more hackable](http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/) 
+"[simpler, smaller and more hackable](http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/)"
 than SQLAlchemy. The analogy used by the core Peewee author is that Peewee 
 is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work 
 for every exhaustive use case in order to be useful.
+
+## Pony
+[Pony ORM](http://ponyorm.com/) is another Python ORM with a slight twist in
+its licensing model. The project is multi-licensed. Pony is free for use 
+on open source projects but has a 
+[commercial license](http://ponyorm.com/license-and-pricing.html) that
+is required for commercial projects. The license is a one-time payment 
+and does not necessitate a recurring fee.
 
 
 ## Schema migrations
@@ -203,3 +239,15 @@ For now, we'll lump schema migration resources under ORM links below.
   is a well written tutorial that uses the 
   [Peewee ORM](https://peewee.readthedocs.org/en/latest/) instead of 
   SQLAlchemy for the blog back end.
+
+
+## Pony ORM resources
+* [Why you should give Pony ORM a chance](http://jakeaustwick.me/why-you-should-give-ponyorm-a-chance/)
+  explains some of the benefits of Pony ORM that make it worth trying out.
+
+* The Pony ORM author explains on a Stack Overflow answer 
+  [how Pony ORM works behind the scenes](http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks).
+  Worth a read whether or not you're using the ORM just to find out how
+  some of the magic coding works.
+
+
