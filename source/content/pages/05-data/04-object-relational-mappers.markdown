@@ -268,9 +268,12 @@ For now, we'll lump schema migration resources under ORM links below.
 * [Why you should give Pony ORM a chance](http://jakeaustwick.me/why-you-should-give-ponyorm-a-chance/)
   explains some of the benefits of Pony ORM that make it worth trying out.
 
+* [An intro to Pony ORM](http://www.blog.pythonlibrary.org/2014/07/21/python-101-an-intro-to-pony-orm/)
+  shows the basics of how to use the library, such as creating databases
+  and manipulating data.
+
 * The Pony ORM author explains on a Stack Overflow answer 
   [how Pony ORM works behind the scenes](http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks).
   Worth a read whether or not you're using the ORM just to find out how
   some of the magic coding works.
-
 
