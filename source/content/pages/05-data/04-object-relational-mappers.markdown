@@ -241,7 +241,7 @@ For now, we'll lump schema migration resources under ORM links below.
   SQLAlchemy for the blog back end.
 
 
-## Pony ORM resources
+### Pony ORM resources
 * [Why you should give Pony ORM a chance](http://jakeaustwick.me/why-you-should-give-ponyorm-a-chance/)
   explains some of the benefits of Pony ORM that make it worth trying out.
 
