@@ -14,10 +14,23 @@ are more commonly used in application code.
 ## Why are ORMs useful?
 ORMs provide a high-level abstraction upon a 
 [relational database](/databases.html) that allows a developer to write 
-Python code instead of SQL to create, read, update and delete data in
-their database. Developers can use the programming language they are
-comfortable with to work with a database instead of writing SQL statements or 
-stored procedures.
+Python code instead of SQL to create, read, update and delete data and
+schemas in their database. Developers can use the programming language they 
+are comfortable with to work with a database instead of writing SQL 
+statements or stored procedures. 
+
+For example, in a developer would write the following SQL statement to
+retrieve every row in the USERS table where the ``zip_code`` column is 94107:
+
+    SELECT * FROM USERS WHERE zip_code=94107;
+
+
+The equivalent Django ORM query would instead look like the following Python
+code:
+
+    # obtain everyone in the 94107 zip code and assign to users variable
+    users = Users.objects.filter(zip_code=94107)
+
 
 The ability to write Python code instead of SQL can speed up web application
 development, especially at the beginning of a project. The potential 
@@ -51,13 +64,13 @@ databases. In fact, the low-level access is typically provided by another
 library called a *database connector*, such as 
 [psycopg](http://initd.org/psycopg/) (for PostgreSQL)
 or [MySQL-python](https://pypi.python.org/pypi/MySQL-python/1.2.5) (for 
-MySQL). Take a look at the table below which shows that ORMs can work with
-different web frameworks and database connectors.
+MySQL). Take a look at the table below which shows how ORMs can work with
+different web frameworks and connectors and relational databases.
 
 <img src="theme/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" />
 
-For example, in the above table SQLAlchemy can work with or without an
-accompanying web framework as well as different database connectors. 
+The above table shows for example that SQLAlchemy can work with or without 
+an accompanying web framework as well as varying database connectors. 
 Developers can also use ORMs without a web framework, such as when creating 
 a data analysis tool or a batch script without a user interface. 
 
@@ -66,9 +79,18 @@ a data analysis tool or a batch script without a user interface.
 There are numerous downsides of ORMs, including
 
 1. impedance mismatch
-1. difficulty writing complex queries
+1. difficulty expressing complex queries
 1. potential for reduced performance
 1. shifting complexity into the application from the database layer
+
+
+### Impedance mismatch
+The phrase "impedance mismatch" is commonly used in conjunction with ORMs.
+Impedance mismatch is a catch-all term for the difficulties that occur when
+moving data between relational tables and application objects. The gist
+is that the way a developer uses objects is different from how data is
+stored and joined in relational tables.
+
 
 
 ## Django's ORM
@@ -119,6 +141,7 @@ on open source projects but has a
 [commercial license](http://ponyorm.com/license-and-pricing.html) that
 is required for commercial projects. The license is a one-time payment 
 and does not necessitate a recurring fee.
+
 
 
 ## Schema migrations

@@ -3281,10 +3281,23 @@ are more commonly used in application code.</p>
 <h2>Why are ORMs useful?</h2>
 <p>ORMs provide a high-level abstraction upon a 
 <a href="/databases.html">relational database</a> that allows a developer to write 
-Python code instead of SQL to create, read, update and delete data in
-their database. Developers can use the programming language they are
-comfortable with to work with a database instead of writing SQL statements or 
-stored procedures.</p>
+Python code instead of SQL to create, read, update and delete data and
+schemas in their database. Developers can use the programming language they 
+are comfortable with to work with a database instead of writing SQL 
+statements or stored procedures. </p>
+<p>For example, in a developer would write the following SQL statement to
+retrieve every row in the USERS table where the <code>zip_code</code> column is 94107:</p>
+<div class="highlight"><pre>SELECT * FROM USERS WHERE zip_code=94107;
+</pre></div>
+
+
+<p>The equivalent Django ORM query would instead look like the following Python
+code:</p>
+<div class="highlight"><pre># obtain everyone in the 94107 zip code and assign to users variable
+users = Users.objects.filter(zip_code=94107)
+</pre></div>
+
+
 <p>The ability to write Python code instead of SQL can speed up web application
 development, especially at the beginning of a project. The potential 
 development speed boost comes from not having to switch from Python code 
@@ -3313,21 +3326,27 @@ databases. In fact, the low-level access is typically provided by another
 library called a <em>database connector</em>, such as 
 <a href="http://initd.org/psycopg/">psycopg</a> (for PostgreSQL)
 or <a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQL-python</a> (for 
-MySQL). Take a look at the table below which shows that ORMs can work with
-different web frameworks and database connectors.</p>
+MySQL). Take a look at the table below which shows how ORMs can work with
+different web frameworks and connectors and relational databases.</p>
 <p><img src="theme/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" /></p>
-<p>For example, in the above table SQLAlchemy can work with or without an
-accompanying web framework as well as different database connectors. 
+<p>The above table shows for example that SQLAlchemy can work with or without 
+an accompanying web framework as well as varying database connectors. 
 Developers can also use ORMs without a web framework, such as when creating 
 a data analysis tool or a batch script without a user interface. </p>
 <h2>What are the downsides of using an ORM?</h2>
 <p>There are numerous downsides of ORMs, including</p>
 <ol>
 <li>impedance mismatch</li>
-<li>difficulty writing complex queries</li>
+<li>difficulty expressing complex queries</li>
 <li>potential for reduced performance</li>
 <li>shifting complexity into the application from the database layer</li>
 </ol>
+<h3>Impedance mismatch</h3>
+<p>The phrase "impedance mismatch" is commonly used in conjunction with ORMs.
+Impedance mismatch is a catch-all term for the difficulties that occur when
+moving data between relational tables and application objects. The gist
+is that the way a developer uses objects is different from how data is
+stored and joined in relational tables.</p>
 <h2>Django's ORM</h2>
 <p>The <a href="/django.html">Django</a> web framework comes with 
 its own built-in object-relational mapping module, generally referred to 
