@@ -17,7 +17,7 @@
         <icon>DataBaseIcon%7Cxlarge</icon>
         <shape>rectangle</shape>
         <size>32</size>
-        <text>SQLite%0Adatabase</text>
+        <text>SQLite</text>
       </controlProperties>
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::RoundButton" x="599" y="584" w="234" h="210" measuredW="68" measuredH="68" zOrder="3" locked="false" isInGroup="-1">
@@ -26,7 +26,7 @@
         <icon>DataBaseIcon%7Cxlarge</icon>
         <shape>rectangle</shape>
         <size>32</size>
-        <text>MySQL%20%0Adatabase</text>
+        <text>MySQL</text>
       </controlProperties>
     </control>
     <control controlID="9" controlTypeID="com.balsamiq.mockups::RoundButton" x="894" y="584" w="281" h="210" measuredW="68" measuredH="68" zOrder="4" locked="false" isInGroup="-1">
@@ -35,7 +35,7 @@
         <icon>DataBaseIcon%7Cxlarge</icon>
         <shape>rectangle</shape>
         <size>32</size>
-        <text>PostgreSQL%20database</text>
+        <text>PostgreSQL</text>
       </controlProperties>
     </control>
     <control controlID="10" controlTypeID="com.balsamiq.mockups::SubTitle" x="1207" y="480" w="-1" h="-1" measuredW="127" measuredH="35" zOrder="5" locked="false" isInGroup="-1">
@@ -112,7 +112,7 @@
         <icon>DataBaseIcon%7Cxlarge</icon>
         <shape>rectangle</shape>
         <size>32</size>
-        <text>PostgreSQL%20database</text>
+        <text>PostgreSQL</text>
       </controlProperties>
     </control>
     <control controlID="23" controlTypeID="com.balsamiq.mockups::TextArea" x="336" y="449" w="235" h="96" measuredW="200" measuredH="140" zOrder="16" locked="false" isInGroup="-1">
