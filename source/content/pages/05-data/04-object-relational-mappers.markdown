@@ -118,7 +118,7 @@ adminstrator write tuned SQL statements to replace the ORM's generated
 SQL code.
 
 
-### Shifting complexity from the DB into the app code
+### Shifting complexity from the database into the app code
 The code for working with an application's data has to live somewhere. Before
 ORMs were common, database stored procedures were used to encapsulate the
 database logic. With an ORM, the data manipulation code instead lives in the 
