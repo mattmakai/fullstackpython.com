@@ -19,8 +19,9 @@ schemas in their database. Developers can use the programming language they
 are comfortable with to work with a database instead of writing SQL 
 statements or stored procedures. 
 
-For example, in a developer would write the following SQL statement to
-retrieve every row in the USERS table where the ``zip_code`` column is 94107:
+For example, without an ORM a developer would write the following SQL 
+statement to retrieve every row in the USERS table where the 
+``zip_code`` column is 94107:
 
     SELECT * FROM USERS WHERE zip_code=94107;
 
