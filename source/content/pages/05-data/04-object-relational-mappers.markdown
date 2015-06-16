@@ -137,10 +137,10 @@ There are numerous ORM implementations written in Python, including
 1. [PonyORM](http://ponyorm.com/)
 1. [SQLObject](http://sqlobject.org/)
 
-There are several other ORMs, such as Canonical's 
+There are other ORMs, such as Canonical's 
 [Storm](https://storm.canonical.com/), but most of them do not appear to
-currently be under active development. Learn more about the major ORMs
-below.
+currently be under active development. Learn more about the major active 
+ORMs below.
 
 
 ### Django's ORM
