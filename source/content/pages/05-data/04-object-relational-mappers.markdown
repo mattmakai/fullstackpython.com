@@ -130,6 +130,7 @@ the application and the database stored procedures.
 
 ## Python ORM Implementations
 There are numerous ORM implementations written in Python, including
+
 1. [The Django ORM](https://docs.djangoproject.com/en/1.8/topics/db/)
 1. [SQLAlchemy](http://www.sqlalchemy.org/)
 1. [Peewee](https://peewee.readthedocs.org/en/latest/)
