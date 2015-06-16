@@ -3336,9 +3336,9 @@ a data analysis tool or a batch script without a user interface. </p>
 <h2>What are the downsides of using an ORM?</h2>
 <p>There are numerous downsides of ORMs, including</p>
 <ol>
-<li>impedance mismatch</li>
-<li>potential for reduced performance</li>
-<li>shifting complexity into the application from the database layer</li>
+<li>Impedance mismatch</li>
+<li>Potential for reduced performance</li>
+<li>Shifting complexity from the database into the application code</li>
 </ol>
 <h3>Impedance mismatch</h3>
 <p>The phrase "impedance mismatch" is commonly used in conjunction with ORMs.
@@ -3346,6 +3346,10 @@ Impedance mismatch is a catch-all term for the difficulties that occur when
 moving data between relational tables and application objects. The gist
 is that the way a developer uses objects is different from how data is
 stored and joined in relational tables.</p>
+<p>This article does a solid job of explaing what 
+  <a href="http://www.agiledata.org/essays/impedanceMismatch.html">ORM impedance mismatch</a>
+  is at a high level and provides diagrams to visualize why the problem
+  occurs. </p>
 <h3>Potential for reduced performance</h3>
 <p>One of the concerns that's associated with any higher-level abstraction or
 framework is potential for reduced performance. With ORMs, the performance
@@ -3364,7 +3368,26 @@ section. In most cases ORMs are good enough for roughly 80-90% of use cases
 and in 10-20% of database interactions there can be major performance 
 improvements by having a knowledgeable database adminstrator write tuned
 SQL statements to replace the ORM's generated SQL code.</p>
-<h2>Django's ORM</h2>
+<h3>Shifting complexity from the DB into the app code</h3>
+<p>The code for working with an application's data has to live somewhere. Before
+ORMs were common, database stored procedures were used to encapsulate the
+database logic. With an ORM, the data manipulation code instead lives in the 
+application's codebase. The addition of data handling code in the codebase
+generally isn't an issue with a sound application design, but it does 
+increase the total amount of Python code instead of splitting code between 
+the application and the database stored procedures.</p>
+<h2>Python ORM Implementations</h2>
+<p>There are numerous ORM implementations written in Python, including
+1. <a href="https://docs.djangoproject.com/en/1.8/topics/db/">The Django ORM</a>
+1. <a href="http://www.sqlalchemy.org/">SQLAlchemy</a>
+1. <a href="https://peewee.readthedocs.org/en/latest/">Peewee</a>
+1. <a href="http://ponyorm.com/">PonyORM</a>
+1. <a href="http://sqlobject.org/">SQLObject</a></p>
+<p>There are several other ORMs, such as Canonical's 
+<a href="https://storm.canonical.com/">Storm</a>, but most of them do not appear to
+currently be under active development. Learn more about the major ORMs
+below.</p>
+<h3>Django's ORM</h3>
 <p>The <a href="/django.html">Django</a> web framework comes with 
 its own built-in object-relational mapping module, generally referred to 
 as "the Django ORM" or "Django's ORM".</p>
@@ -3382,7 +3405,7 @@ later.</p>
 <p>Since the majority of Django projects are tied to the default ORM, it's best to
 read up on advanced use cases and tools for doing your best work within the
 existing framework.</p>
-<h2>SQLAlchemy</h2>
+<h3>SQLAlchemy</h3>
 <p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> is 
 currently the most respected Python ORM because it typically get the 
 abstraction level "just right" and seems to make complex database queries 
@@ -3390,20 +3413,24 @@ easier to write than the Django ORM in most cases. SQLAlchemy is typically
 used with Flask as the database ORM via the 
 <a href="https://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLAlchemy</a> 
 extension.</p>
-<h2>Peewee</h2>
+<h3>Peewee</h3>
 <p><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a> is a Python ORM 
 written to be 
 "<a href="http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/">simpler, smaller and more hackable</a>"
 than SQLAlchemy. The analogy used by the core Peewee author is that Peewee 
 is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work 
 for every exhaustive use case in order to be useful.</p>
-<h2>Pony</h2>
+<h3>Pony</h3>
 <p><a href="http://ponyorm.com/">Pony ORM</a> is another Python ORM with a slight twist in
 its licensing model. The project is multi-licensed. Pony is free for use 
 on open source projects but has a 
 <a href="http://ponyorm.com/license-and-pricing.html">commercial license</a> that
 is required for commercial projects. The license is a one-time payment 
 and does not necessitate a recurring fee.</p>
+<h3>SQLObject</h3>
+<p><a href="http://sqlobject.org/">SQLObject</a> is an ORM that has been under active
+open source development since 
+<a href="http://sqlobject.org/News1.html#sqlobject-0-5">before 2003</a>. </p>
 <h2>Schema migrations</h2>
 <p>Schema migrations, for example when you need to add a new column to an
 existing table in your database, are not technically part of ORMs. However,
@@ -3415,10 +3442,7 @@ For now, we'll lump schema migration resources under ORM links below. </p>
 <h3>General ORM resources</h3>
 <ul>
 <li>
-<p>This article does a solid job of explaing what 
-  <a href="http://www.agiledata.org/essays/impedanceMismatch.html">ORM impedance mismatch</a>
-  is at a high level and provides diagrams to visualize why the problem
-  occurs. There's also a detailed overview of <a href="http://www.agiledata.org/essays/mappingObjects.html">what ORMs are</a>
+<p>There's also a detailed overview of <a href="http://www.agiledata.org/essays/mappingObjects.html">what ORMs are</a>
   on another page of the website.</p>
 </li>
 <li>
@@ -3562,6 +3586,19 @@ For now, we'll lump schema migration resources under ORM links below. </p>
   <a href="http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks">how Pony ORM works behind the scenes</a>.
   Worth a read whether or not you're using the ORM just to find out how
   some of the magic coding works.</p>
+</li>
+</ul>
+<h3>SQLObject resources</h3>
+<ul>
+<li>
+<p>This post on 
+  <a href="http://www.andypatterns.com/index.php/blog/object_relational_mapping_pattern_-_using_sqlobj/">Object-Relational Mapping with SQLObject</a> 
+  explains the concept behind ORMs and shows the Python code for how they 
+  can be used.</p>
+</li>
+<li>
+<p>Ian Bicking presented on SQLObject back in 2004 with a talk on
+  <a href="http://www.ianbicking.org/docs/sqlobject-presentation/sqlobject-and-database-programming.html">SQLObject and Database Programming in Python</a>.</p>
 </li>
 </ul>
           <h1>Application Programming Interfaces</h1>

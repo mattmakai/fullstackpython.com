@@ -78,9 +78,9 @@ a data analysis tool or a batch script without a user interface.
 ## What are the downsides of using an ORM?
 There are numerous downsides of ORMs, including
 
-1. impedance mismatch
-1. potential for reduced performance
-1. shifting complexity into the application from the database layer
+1. Impedance mismatch
+1. Potential for reduced performance
+1. Shifting complexity from the database into the application code
 
 
 ### Impedance mismatch
@@ -89,6 +89,11 @@ Impedance mismatch is a catch-all term for the difficulties that occur when
 moving data between relational tables and application objects. The gist
 is that the way a developer uses objects is different from how data is
 stored and joined in relational tables.
+
+This article does a solid job of explaing what 
+  [ORM impedance mismatch](http://www.agiledata.org/essays/impedanceMismatch.html)
+  is at a high level and provides diagrams to visualize why the problem
+  occurs. 
 
 
 ### Potential for reduced performance
@@ -113,8 +118,31 @@ improvements by having a knowledgeable database adminstrator write tuned
 SQL statements to replace the ORM's generated SQL code.
 
 
+### Shifting complexity from the DB into the app code
+The code for working with an application's data has to live somewhere. Before
+ORMs were common, database stored procedures were used to encapsulate the
+database logic. With an ORM, the data manipulation code instead lives in the 
+application's codebase. The addition of data handling code in the codebase
+generally isn't an issue with a sound application design, but it does 
+increase the total amount of Python code instead of splitting code between 
+the application and the database stored procedures.
 
-## Django's ORM
+
+## Python ORM Implementations
+There are numerous ORM implementations written in Python, including
+1. [The Django ORM](https://docs.djangoproject.com/en/1.8/topics/db/)
+1. [SQLAlchemy](http://www.sqlalchemy.org/)
+1. [Peewee](https://peewee.readthedocs.org/en/latest/)
+1. [PonyORM](http://ponyorm.com/)
+1. [SQLObject](http://sqlobject.org/)
+
+There are several other ORMs, such as Canonical's 
+[Storm](https://storm.canonical.com/), but most of them do not appear to
+currently be under active development. Learn more about the major ORMs
+below.
+
+
+### Django's ORM
 The [Django](/django.html) web framework comes with 
 its own built-in object-relational mapping module, generally referred to 
 as "the Django ORM" or "Django's ORM".
@@ -137,7 +165,7 @@ read up on advanced use cases and tools for doing your best work within the
 existing framework.
 
 
-## SQLAlchemy
+### SQLAlchemy
 [SQLAlchemy](http://www.sqlalchemy.org/) is 
 currently the most respected Python ORM because it typically get the 
 abstraction level "just right" and seems to make complex database queries 
@@ -147,7 +175,7 @@ used with Flask as the database ORM via the
 extension.
 
 
-## Peewee
+### Peewee
 [Peewee](https://peewee.readthedocs.org/en/latest/) is a Python ORM 
 written to be 
 "[simpler, smaller and more hackable](http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/)"
@@ -155,13 +183,20 @@ than SQLAlchemy. The analogy used by the core Peewee author is that Peewee
 is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work 
 for every exhaustive use case in order to be useful.
 
-## Pony
+
+### Pony
 [Pony ORM](http://ponyorm.com/) is another Python ORM with a slight twist in
 its licensing model. The project is multi-licensed. Pony is free for use 
 on open source projects but has a 
 [commercial license](http://ponyorm.com/license-and-pricing.html) that
 is required for commercial projects. The license is a one-time payment 
 and does not necessitate a recurring fee.
+
+
+### SQLObject
+[SQLObject](http://sqlobject.org/) is an ORM that has been under active
+open source development since 
+[before 2003](http://sqlobject.org/News1.html#sqlobject-0-5). 
 
 
 
@@ -178,12 +213,9 @@ For now, we'll lump schema migration resources under ORM links below.
 
 
 ### General ORM resources
-* This article does a solid job of explaing what 
-  [ORM impedance mismatch](http://www.agiledata.org/essays/impedanceMismatch.html)
-  is at a high level and provides diagrams to visualize why the problem
-  occurs. There's also a detailed overview of [what ORMs are](http://www.agiledata.org/essays/mappingObjects.html)
+* There's also a detailed overview of [what ORMs are](http://www.agiledata.org/essays/mappingObjects.html)
   on another page of the website.
-
+  
 * Martin Fowler addresses the 
   [ORM hate](http://martinfowler.com/bliki/OrmHate.html)
   in an essay about how ORMs are often misused but that they do provide
@@ -297,4 +329,14 @@ For now, we'll lump schema migration resources under ORM links below.
   [how Pony ORM works behind the scenes](http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks).
   Worth a read whether or not you're using the ORM just to find out how
   some of the magic coding works.
+
+
+### SQLObject resources
+* This post on 
+  [Object-Relational Mapping with SQLObject](http://www.andypatterns.com/index.php/blog/object_relational_mapping_pattern_-_using_sqlobj/) 
+  explains the concept behind ORMs and shows the Python code for how they 
+  can be used.
+
+* Ian Bicking presented on SQLObject back in 2004 with a talk on
+  [SQLObject and Database Programming in Python](http://www.ianbicking.org/docs/sqlobject-presentation/sqlobject-and-database-programming.html).
 
