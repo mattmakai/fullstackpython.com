@@ -40,18 +40,28 @@ development.
     $ source venvs/fsp/bin/activate
     $ cd fsp
 
-1. Install the requirements:
+1. Install the requirements::
 
     $ pip install -r source/requirements.txt
 
 Note: make changes to the source/content/pages/\*.rst files then execute a
 *make run* command from the source/ directory.
 
-6. Commit your changes and push your branch to GitHub::
+1. Commit your changes and push your branch to GitHub::
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin gh-pages
 
-7. Submit a pull request through the GitHub website.
+1. Submit a pull request through the GitHub website.
+
+1. To keep your fork in sync with the original repo, add an `upstream remote <https://help.github.com/articles/configuring-a-remote-for-a-fork/>`_::
+
+    $ git remote add upstream git@github.com:makaimc/fullstackpython.com.git
+
+1. Sync your repo with the original repo::
+
+    $ git checkout master
+    $ git fetch upstream
+    $ git merge upstream/master
 
