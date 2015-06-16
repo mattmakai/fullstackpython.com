@@ -167,12 +167,11 @@ existing framework.
 
 
 ### SQLAlchemy
-[SQLAlchemy](http://www.sqlalchemy.org/) is 
-currently the most respected Python ORM because it typically get the 
-abstraction level "just right" and seems to make complex database queries 
-easier to write than the Django ORM in most cases. SQLAlchemy is typically 
-used with Flask as the database ORM via the 
-[Flask-SQLAlchemy](https://pythonhosted.org/Flask-SQLAlchemy/) 
+[SQLAlchemy](http://www.sqlalchemy.org/) is a well-regarded
+Python ORM because it gets the abstraction level "just right" and 
+seems to make complex database queries easier to write than the Django 
+ORM in most cases. SQLAlchemy is typically used with Flask as the database 
+ORM via the [Flask-SQLAlchemy](https://pythonhosted.org/Flask-SQLAlchemy/) 
 extension.
 
 
