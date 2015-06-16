@@ -56,11 +56,11 @@ Note: make changes to the source/content/pages/\*.rst files then execute a
 
 **Keep your fork in Sync**
 
-7. To keep your fork in sync with the original repo, add an `upstream remote <https://help.github.com/articles/configuring-a-remote-for-a-fork/>`_::
+1. To keep your fork in sync with the original repo, add an `upstream remote <https://help.github.com/articles/configuring-a-remote-for-a-fork/>`_::
 
     $ git remote add upstream git@github.com:makaimc/fullstackpython.com.git
 
-8. Sync your repo with the original repo::
+2. Sync your repo with the original repo::
 
     $ git checkout master
     $ git fetch upstream
