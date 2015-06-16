@@ -71,7 +71,7 @@ different web frameworks and connectors and relational databases.
 <img src="theme/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" />
 
 The above table shows for example that SQLAlchemy can work with or without 
-an accompanying web framework as well as varying database connectors. 
+an accompanying web framework as well as with varying database connectors. 
 Developers can also use ORMs without a web framework, such as when creating 
 a data analysis tool or a batch script without a user interface. 
 
