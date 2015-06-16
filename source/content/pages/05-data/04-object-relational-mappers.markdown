@@ -158,8 +158,8 @@ specific database implementation. The ORM is coupled closely with Django so
 replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
 though that some of the Django core committers believe it is only a matter of
 time before the default ORM is replaced with SQLAlchemy. It will be a large
-effort to get that working though so it's likely to come in Django 1.9 or 
-later.
+effort to get that working though so it's likely to come in 
+[Django 1.9 or later](https://github.com/makaimc/fullstackpython.com/issues/48).
 
 Since the majority of Django projects are tied to the default ORM, it's best to
 read up on advanced use cases and tools for doing your best work within the
