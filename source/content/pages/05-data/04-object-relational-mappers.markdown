@@ -121,9 +121,9 @@ SQL code.
 ### Shifting complexity from the database into the app code
 The code for working with an application's data has to live somewhere. Before
 ORMs were common, database stored procedures were used to encapsulate the
-database logic. With an ORM, the data manipulation code instead lives in the 
-application's codebase. The addition of data handling code in the codebase
-generally isn't an issue with a sound application design, but it does 
+database logic. With an ORM, the data manipulation code instead lives within 
+the application's Python codebase. The addition of data handling logic in the 
+codebase generally isn't an issue with a sound application design, but it does 
 increase the total amount of Python code instead of splitting code between 
 the application and the database stored procedures.
 
