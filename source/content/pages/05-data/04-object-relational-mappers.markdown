@@ -1,4 +1,4 @@
-title: Object-relational Mappers
+title: Object-relational Mappers (ORMs)
 category: page
 slug: object-relational-mappers-orms
 sort-order: 0504
