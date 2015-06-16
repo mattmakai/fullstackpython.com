@@ -79,7 +79,6 @@ a data analysis tool or a batch script without a user interface.
 There are numerous downsides of ORMs, including
 
 1. impedance mismatch
-1. difficulty expressing complex queries
 1. potential for reduced performance
 1. shifting complexity into the application from the database layer
 
@@ -90,6 +89,28 @@ Impedance mismatch is a catch-all term for the difficulties that occur when
 moving data between relational tables and application objects. The gist
 is that the way a developer uses objects is different from how data is
 stored and joined in relational tables.
+
+
+### Potential for reduced performance
+One of the concerns that's associated with any higher-level abstraction or
+framework is potential for reduced performance. With ORMs, the performance
+hit comes from the translation of application code into a corresponding SQL 
+statement which may not be tuned properly. 
+
+ORMs are also often easy to try but difficult to master. For example, a
+beginner using Django might not know about the 
+[`select_related()` function](https://docs.djangoproject.com/en/1.8/ref/models/querysets/#select-related) 
+or how that can dramatically improve some queries' performance with
+foreign key relationships. There are dozens of performance tips and tricks
+for every ORM and it's possible that investing time in learning those
+quirks may be better spent just learning SQL and how to write stored
+procedures.
+
+There's a lot of hand-waving "may or may not" and "potential for" in this
+section. In most cases ORMs are good enough for roughly 80-90% of use cases 
+and in 10-20% of database interactions there can be major performance 
+improvements by having a knowledgeable database adminstrator write tuned
+SQL statements to replace the ORM's generated SQL code.
 
 
 
