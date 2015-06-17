@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### June
+* Nice little update to the [ORMs page](/object-relational-mappers-orms.html)
+  with a diagram showing that different ORMs can work with varying
+  web frameworks and backends.
 * Added a new section just for Nginx resources and Removed broken links on 
   the [web servers](/web-servers.html) page.
 * Added a new page on Python

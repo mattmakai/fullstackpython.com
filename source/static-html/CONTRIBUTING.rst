@@ -62,6 +62,5 @@ Note: make changes to the source/content/pages/\*.rst files then execute a
 
 2. Sync your repo with the original repo::
 
-    $ git checkout master
     $ git fetch upstream
-    $ git merge upstream/master
+    $ git merge upstream/gh-pages
