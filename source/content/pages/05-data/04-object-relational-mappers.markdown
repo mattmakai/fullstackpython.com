@@ -309,6 +309,16 @@ For now, we'll lump schema migration resources under ORM links below.
 * [Managing database connections with Peewee](http://charlesleifer.com/blog/managing-database-connections-with-peewee/)
   explains the connection pool and ExecutionContext of the ORM.
 
+* [An encrypted command-line diary with Python](http://charlesleifer.com/blog/dear-diary-an-encrypted-command-line-diary-with-python/)
+  is an awesome walkthrough explaining how to use SQLite, SQLCipher and
+  Peewee to create an encrypted file with your contents, diary or otherwise.
+
+* The [official Peewee quickstart documentation](http://docs.peewee-orm.com/en/latest/peewee/quickstart.html)
+  along with the 
+  [example Twitter clone app](http://docs.peewee-orm.com/en/latest/peewee/example.html)
+  will walk you through the ins and outs of your first couple Peewee-powered
+  projects.
+
 * [Shortcomings in the Django ORM and a look at Peewee](http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/)
   from the author of the Peewee ORM explains how some of the design
   decisions made in Peewee were in reaction to parts of the Django ORM

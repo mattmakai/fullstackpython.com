@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### June
+* Added new Peewee resources on the 
+  [ORMs page](/object-relational-mappers-orms.html).
 * Nice little update to the [ORMs page](/object-relational-mappers-orms.html)
   with a diagram showing that different ORMs can work with varying
   web frameworks and backends.
