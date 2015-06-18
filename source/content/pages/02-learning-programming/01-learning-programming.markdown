@@ -15,7 +15,7 @@ There are many steps in learning how to program, including
 1. selecting a programming language, such as Python
 1. understanding the syntax and commands for the language
 1. writing code in the language, often using 
-   [pre-exisitng code libraries](/application-dependencies.html) and 
+   [pre-existing code libraries](/application-dependencies.html) and 
    [frameworks](/web-frameworks.html)
 1. executing the program
 1. debugging errors and unexpected results
