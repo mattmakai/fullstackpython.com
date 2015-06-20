@@ -292,9 +292,14 @@ For now, we'll lump schema migration resources under ORM links below.
 
 ### SQLAlchemy resources
 * If you're interested in the differences between SQLAlchemy and the Django
-  ORM I highly recommend reading
+  ORM I recommend reading
   [SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/)
   by Armin Ronacher.
+
+* There is an entire chapter in the 
+  [Architecture of Open Source Applications book on SQLAlchemy ](http://aosabook.org/en/sqlalchemy.html).
+  The content is detailed and well worth reading to understand what's 
+  happening under the covers.
 
 * [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
   provides a detailed comparison of SQLAlchemy against alternatives.
