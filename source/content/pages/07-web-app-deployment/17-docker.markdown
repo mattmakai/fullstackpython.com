@@ -31,6 +31,11 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) that's
   well worth buying.
 
+* [It Really is the Future](http://blog.circleci.com/it-really-is-the-future/)
+  discusses Docker and containers in the context of whether it's all just a
+  bunch of hype or if this is a real trend for infrastructure automation.
+  This is a great read to set the context for why these tools are important.
+
 * [Docker Jumpstart](https://github.com/odewahn/docker-jumpstart/) is a 
   comprehensive introduction to what Docker is and how to get started with
   using the tool.
