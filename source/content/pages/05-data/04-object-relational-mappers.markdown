@@ -216,6 +216,10 @@ For now, we'll lump schema migration resources under ORM links below.
 * There's also a detailed overview of [what ORMs are](http://www.agiledata.org/essays/mappingObjects.html)
   on another page of the website.
 
+* This [example GitHub project](https://github.com/sloria/PythonORMSleepy) 
+  implements the same Flask application with several different ORMs: 
+  SQLAlchemy, Peewee, MongoEngine, stdnet and PonyORM.
+
 * Martin Fowler addresses the
   [ORM hate](http://martinfowler.com/bliki/OrmHate.html)
   in an essay about how ORMs are often misused but that they do provide
