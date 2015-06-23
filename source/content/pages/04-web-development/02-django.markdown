@@ -79,7 +79,7 @@ While you're learning about Django you should also read up on
   is a great tutorial that doesn't assume any prior knowledge of Python or
   Django while helping you build your first web application.
 
-* [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-6) 
+* [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-8) 
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
 
@@ -299,7 +299,7 @@ to handle these files properly.
    resource links below. You'll make plenty of mistakes which is critical
    on your path to learning the right way to build applications.
 
-1. Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&qid=1391562062&sr=8-2&tag=mlinar-20) 
+1. Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342) 
    to understand Django best practices and learn better ways of building 
    Django web applications.
 
