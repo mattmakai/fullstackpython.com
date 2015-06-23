@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### June
+* New [API Creation](/api-creation.html) and [Django](/django.html) resources
+  added.
 * Added new Peewee resources on the 
   [ORMs page](/object-relational-mappers-orms.html).
 * Nice little update to the [ORMs page](/object-relational-mappers-orms.html)
