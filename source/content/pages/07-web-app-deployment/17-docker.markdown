@@ -31,6 +31,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) that's
   well worth buying.
 
+* [How to install Docker and get started](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started)
+  provides a walkthrough for Ubuntu 13.04 for installing and beginning to
+  use Docker for development.
+
 * [It Really is the Future](http://blog.circleci.com/it-really-is-the-future/)
   discusses Docker and containers in the context of whether it's all just a
   bunch of hype or if this is a real trend for infrastructure automation.
