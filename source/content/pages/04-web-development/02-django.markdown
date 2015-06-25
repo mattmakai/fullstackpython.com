@@ -6,11 +6,11 @@ meta: Django is a widely used Python web framework with a 'batteries-included' p
 
 
 # Django
-[Django](http://www.djangoproject.com/) is a widely used Python web 
+[Django](http://www.djangoproject.com/) is a widely-used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as separate
-libraries. 
+libraries.
 
 
 <a href="http://www.djangoproject.com/" style="border: none;"><img src="theme/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a>
@@ -30,7 +30,7 @@ to perform user authentication.
 
 The batteries-included and extensibility philosophies are simply two different
 ways to tackle framework building. Neither philosophy is inherently better 
-than the other.
+than the other one.
 
 
 ## Why is Django a good web framework choice?
