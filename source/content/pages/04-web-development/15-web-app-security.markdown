@@ -28,6 +28,11 @@ securing Linux distributions.
   explains that TLS is a newer version of SSL and should be used because
   SSL through version 3.0 is insecure.
 
+* If you have wondered what all the SSL/TLS acronyms and settings mean,
+  read the 
+  [Security/Server Side TLS guide](https://wiki.mozilla.org/Security/Server_Side_TLS)
+  which Mozilla uses to operationalize its servers.
+
 * If you're having users submit sensitive information to your site you need
   to use SSL/TLS. Anything before TLS is now insecure. Check out this
   [handy guide](http://wingolog.org/archives/2014/10/17/ffs-ssl) that goes
