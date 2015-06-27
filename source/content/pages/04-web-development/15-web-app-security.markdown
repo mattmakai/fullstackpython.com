@@ -90,7 +90,11 @@ securing Linux distributions.
   [what makes a good security audit](https://www.eff.org/deeplinks/2014/11/what-makes-good-security-audit). It's broad but contains some of their behind the
   scenes thinking on important considerations with security audits.
 
-* [Securing Your Website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
+* Ars Technica wrote posts on 
+  [securing your website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
+  along with [how to set up a safe and secure web server: part 1](http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/)
+  and [part 2](http://arstechnica.com/information-technology/2012/11/securing-your-web-server-with-ssltls/)
+  to explain HTTPS and SSL without much required pre-existing knowledge.
 
 * [Crypto 101](https://www.crypto101.io/) is an introductory course on
   cryptography for programmers.
