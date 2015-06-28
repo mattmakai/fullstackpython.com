@@ -66,20 +66,6 @@ equivalent of browser testing in the web application world.
 
 
 ## API creation resources
-* [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
-  by [PyDanny](https://twitter.com/pydanny) contains questions and insight
-  into what makes a good API framework and which one you should currently
-  choose for Django.
-
-* [Create a REST API in Minutes with Pyramid and Ramses](https://realpython.com/blog/python/create-a-rest-api-in-minutes-with-pyramid-and-ramses/)
-  is a thorough tutorial from start to finish that uses the 
-  [Pyramid](/pyramid.html) web framework along with 
-  [Ramses](https://pypi.python.org/pypi/ramses/), a library that uses
-  YAML files to generate a RESTful API.
-
-* [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
-  is an interesting overview of the Python API frameworks space.
-
 * [An API is only as good as its documentation](https://rocketeer.be/blog/2015/03/api-quality/)
   is a strongly held mantra in the web API world because so many APIs have
   poor documentation that prevents ease-of-use. If an API is not well 
@@ -98,13 +84,6 @@ equivalent of browser testing in the web application world.
 
 * [NARWHL](http://www.narwhl.com/) is a practical API design site for 
   developers confused about what is appropriate for RESTful APIs.
-
-* [Implementing a RESTful Web API with Python & Flask](http://blog.luisrei.com/articles/flaskrest.html)
-  is a straightforward introduction to using Flask to create request
-  handling and responses to produce a web API.
-
-* This [API Design Guide](https://github.com/interagent/http-api-design) 
-  is based on Heroku's best practices for the platform's API.
 
 * [18F](https://18f.gsa.gov/)'s 
   [API standards](https://github.com/18f/api-standards) explains the details
@@ -145,6 +124,29 @@ equivalent of browser testing in the web application world.
   tells the story of design decisions that were made during an API's creation
   and why those choices were made.
 
+* [How many status codes does your API need?](https://blogs.dropbox.com/developers/2015/04/how-many-http-status-codes-should-your-api-use/)
+  gives an answer from a Dropbox API developer as to their decision making
+  process.
+
+* This [API Design Guide](https://github.com/interagent/http-api-design) 
+  is based on Heroku's best practices for the platform's API.
+
+
+## Python-specific API creation resources
+* [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
+  by [PyDanny](https://twitter.com/pydanny) contains questions and insight
+  into what makes a good API framework and which one you should currently
+  choose for Django.
+
+* [Create a REST API in Minutes with Pyramid and Ramses](https://realpython.com/blog/python/create-a-rest-api-in-minutes-with-pyramid-and-ramses/)
+  is a thorough tutorial from start to finish that uses the 
+  [Pyramid](/pyramid.html) web framework along with 
+  [Ramses](https://pypi.python.org/pypi/ramses/), a library that uses
+  YAML files to generate a RESTful API.
+
+* [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
+  is an interesting overview of the Python API frameworks space.
+
 * [Implementing a RESTful Web API with Python & Flask](http://blog.luisrei.com/articles/flaskrest.html)
   is a good walkthrough for coding a Flask app that provides standard 
   web API functionality such as proper HTTP responses, authentication
@@ -155,10 +157,6 @@ equivalent of browser testing in the web application world.
   hooks are similar to webhooks, but provide a different mechanism for 
   subscribing to updates via a REST interface. Both REST hooks and webhooks
   are far more efficient than polling for updates and notifications.
-
-* [How many status codes does your API need?](https://blogs.dropbox.com/developers/2015/04/how-many-http-status-codes-should-your-api-use/)
-  gives an answer from a Dropbox API developer as to their decision making
-  process.
 
 
 ## API creation learning checklist
