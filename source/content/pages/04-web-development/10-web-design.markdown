@@ -42,6 +42,9 @@ width.
   links to blogs, podcasts, inspiration, tutorials and tools related to
   web design.
 
+* [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) is
+  an amazing write up of good practices for HTML, CSS and JS.
+
 * The [Bootstrapping Design](http://bootstrappingdesign.com/) book is one of 
   the clearest and concise resources for learning design that I've ever read. 
   Highly recommended especially if you feel you have no design skills but 
