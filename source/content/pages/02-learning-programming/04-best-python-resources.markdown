@@ -87,6 +87,10 @@ should skip down to the next section for "experienced developers".
 * Looking for ideas about what projects to use to learn to code? Check out 
   [this list of 5 programming project for Python beginners](https://medium.com/learning-journalism-tech/five-mini-programming-projects-for-the-python-beginner-21492f6ce0f3).
 
+* There's a Udacity course by one of the creators of Reddit that shows how to 
+  [use Python to build a blog](https://www.udacity.com/course/web-development--cs253).
+  It's a great introduction to web development concepts through coding.
+
 * I wrote a quick blog post on
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
