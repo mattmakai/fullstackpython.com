@@ -34,6 +34,11 @@ assumption that templates will drive the user interface.
   is a blog post by Startifact on how they use Morepath and some of the
   features of the framework.
 
+* [Build a better batching UI with Morepath and Jinja2](http://blog.startifact.com/posts/morepath-batching-example.html)
+  is an introductory post on building a simple web application with the 
+  framework. The code for the application is also 
+  [open source and available on GitHub](https://github.com/morepath/morepath_batching).
+
 * Morepath's creator gave a 
   [great talk on the motivation and structure for the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
   at EuroPython 2014.
