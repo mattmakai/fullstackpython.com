@@ -108,6 +108,12 @@ but it'll make most developers' lives easier in many cases.
   [code complexity of several Python web frameworks](http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/)
   by providing visualizations based on their code bases.
 
+* [Python's web frameworks benchmarks](http://klen.github.io/py-frameworks-bench/)
+  is a test of the responsiveness of a framework with encoding an object to
+  JSON and returning it as a response as well as retrieving data from the 
+  database and rendering it in a template. There were no conclusive results
+  but the output is fun to read about nonetheless.
+
 * [What web frameworks do you use and why are they awesome?](http://www.reddit.com/r/webdev/comments/2les4x/what_frameworks_do_you_use_and_why_are_they/)
   is a language agnostic Reddit discussion on web frameworks. It's interesting
   to see what programmers in other languages like and dislike about their
