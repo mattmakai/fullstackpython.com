@@ -13,6 +13,10 @@ the
 
 
 ## 2015
+### July
+* New resources on the [web frameworks](/web-frameworks.html) and 
+  [Morepath](/morepath.html) pages.
+
 ### June
 * New [API Creation](/api-creation.html) and [Django](/django.html) resources
   added.
