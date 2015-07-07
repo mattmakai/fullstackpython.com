@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### July
+* Updated sidebar with links to the new 
+  [Full Stack Python Guide to Deployments](https://gumroad.com/l/kwjLZ)
+  ebook.
 * New resources on the [web frameworks](/web-frameworks.html) and 
   [Morepath](/morepath.html) pages.
 
