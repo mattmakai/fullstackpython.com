@@ -91,11 +91,14 @@ how to <a href="/deployment.html">deploy web applications</a>.
   a blank directory until you have a working app that you can deploy to
   Heroku.
 
-* [Building a blog using Flask and AngularJS Part 1](http://blog.john.mayonvolcanosoftware.com/building-a-blog-using-flask-and-angularjs-part-1/)
+* [Building a blog using Flask and AngularJS Part 1](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-1/)
   is the first of a multipart series on working with Flask and an AngularJS 
   front end. 
-  [Part 2](http://blog.john.mayonvolcanosoftware.com/building-a-blog-using-flask-and-angularjs-part-2/) is also available 
-  [along with the source code](https://github.com/basco-johnkevin/building-a-blog-using-flask-and-angularjs).
+  [part 2](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-2/)
+  and
+  [part 3](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-3/)
+  are also available 
+  [along with the source code](https://github.com/mgonto/restangular).
 
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
