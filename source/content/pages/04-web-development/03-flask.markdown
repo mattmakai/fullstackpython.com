@@ -94,7 +94,7 @@ how to <a href="/deployment.html">deploy web applications</a>.
 * [Building a blog using Flask and AngularJS Part 1](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-1/)
   is the first of a multipart series on working with Flask and an AngularJS 
   front end. 
-  [part 2](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-2/)
+  [Part 2](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-2/)
   and
   [part 3](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-3/)
   are also available 
