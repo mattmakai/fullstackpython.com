@@ -162,6 +162,9 @@ when scaling out a large deployment of distributed task queues.
   shows the code and a simple explanation of how to use Celery with 
   [Django](/django.html).
 
+* [Asynchronous Tasks With Django and Celery](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/)
+  shows how to integrate Celery with [Django](/django.html) and create Periodic Tasks.
+
 
 
 ## Task queue learning checklist
