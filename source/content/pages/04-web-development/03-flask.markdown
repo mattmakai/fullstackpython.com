@@ -98,7 +98,7 @@ how to <a href="/deployment.html">deploy web applications</a>.
   and
   [part 3](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-3/)
   are also available 
-  [along with the source code](https://github.com/mgonto/restangular).
+  [along with the source code](https://github.com/basco-johnkevin/building-a-blog-using-flask-and-angularjs).
 
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
