@@ -9,7 +9,7 @@ meta: Full Stack Python helps you learn Python programming through plain languag
 You're knee deep in learning the [Python](http://www.python.org/)
 programming language. The syntax is starting to make sense. The first
 few "*ahh-ha*!" moments are hitting you as you're learning conditional
-statements, for loops and classes while playing around with the open source 
+statements, `for` loops and classes while playing around with the open source 
 libraries that make Python such an amazing language.
 
 Now you want to take your initial Python knowledge and make something real,
