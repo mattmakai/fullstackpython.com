@@ -11,9 +11,8 @@ Python's expansive library of open source data analysis tools,
 and testing instruments make its ecosystem one of the largest out of any 
 programming community. 
 
-Python is an accessible language for new programmers because of the extensive 
-availability of 
-[free and low cost introductory resources](/best-python-resources.html). The
+Python is an accessible language for new programmers because the community
+provides many [introductory resources](/best-python-resources.html). The
 language is also widely taught in universities and used for working with 
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).

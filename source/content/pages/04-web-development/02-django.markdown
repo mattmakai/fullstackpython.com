@@ -62,7 +62,13 @@ While you're learning about Django you should also read up on
 </div>
 
 
-## Django tutorials
+## Django books and tutorials
+There are a slew of free or low cost resources out there for Django. Since
+Django was released over 10 years ago and has had a huge number of updates
+since then, when you're looking for an up-to-date Django book check out the
+list below or read this post showing [current Django books](http://twoscoopspress.org/pages/current-django-books)
+as of Django 1.7.
+
 * [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 
   the development of a website using the Django web framework as a real
