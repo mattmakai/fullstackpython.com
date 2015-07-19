@@ -2812,6 +2812,48 @@ securing Linux distributions.</p>
    Reevaluate your web application security on a frequent basis.</p>
 </li>
 </ol>
+          <h1>Static Site Generator</h1>
+<p>A static website generator combines a markup language, such as Markdown 
+or reStructuredText, with a templating engine such as 
+<a href="http://jinja.pocoo.org/">Jinja</a>, to produce HTML 
+files. The HTML files can be hosted and served by a 
+<a href="/web-server.html">web server</a> or 
+<a href="/static-content.html">content delivery network (CDN)</a> 
+without any additional dependencies such as a 
+<a href="/wsgi-server.html">WSGI server</a>.</p>
+<h2>Why are static site generators useful?</h2>
+<p>Static site generators allow a user to create HTML files by writing in a
+markup language and coding template files. HTML does not need to be 
+maintained by hand other than what is in the template files.</p>
+<p>For example, as shown in the diagram below, the Pelican static site 
+generator can take in reStructuredText files and Jinja2 template files 
+as input then combine them to output a set of static HTML files.</p>
+<p><img src="theme/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a></p>
+<h2>Python static site generators</h2>
+<p>Numerous static website generators exist in many different languages. The
+ones listed here are primarily coded in Python.</p>
+<ul>
+<li>
+<p><a href="http://blog.getpelican.com/">Pelican</a> 
+  (<a href="https://github.com/getpelican/pelican">source code</a>) 
+  is a commonly used Python static website generator which is used to create 
+  <a href="https://github.com/makaimc/fullstackpython.com">Full Stack Python</a>. The
+  primary templating engine is Jinja and Markdown, reStructuredText and
+  AsciiDoc are supported with the default configuration.</p>
+</li>
+<li>
+<p><a href="http://posativ.org/acrylamid/">Acrylamid</a> 
+  (<a href="https://github.com/posativ/acrylamid">source code</a>) uses incremental 
+  builds to generate static sites faster than recreating every page after
+  each change is made to the input files.</p>
+</li>
+</ul>
+<h3>Static site generator resources</h3>
+<ul>
+<li><a href="http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html">The Long Road to Building a Static Blog with Pelican</a>
+  is a fantastic read that really gets into the details throughout the 
+  walkthrough. </li>
+</ul>
           <h1>Data</h1>
 <p>Data is an incredibly broad topic but it can be broken down into many
 subsections, including (in no particular order):</p>

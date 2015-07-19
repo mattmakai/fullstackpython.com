@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="A platform-as-a-service simplifies the deployment of application code while risking other tradeoffs. Learn more on Full Stack Python.">
+    <meta name="description" content="A static site generator combines a markup language with a templating engine to produce HTML files. Learn more on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Platform-as-a-service - Full Stack Python</title>
+    <title>Static Site Generator - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,146 +34,64 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Platform-as-a-service</h1>
-<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
-on which a web application is deployed. Running your web application from
-a PaaS removes the need to know as much about the underlying servers, 
-operating system, web server, and often the WSGI server. </p>
-<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move 
-ahead to the <a href="../wsgi-servers.html">WSGI servers</a> section.</p>
-<p>The PaaS layer defines how the application accesses resources such as 
-computing time, files, and external services. The PaaS provides a 
-higher-level abstraction for working with computing resources than deploying 
-an application to a server or IaaS.</p>
-<p>A PaaS makes deployment and operations easier because it forces the developer
-to conform applications to the PaaS architecture. For example, Heroku looks 
-for Python's requirements.txt file in the base directory of the repository 
-during deployment because that is the file's de facto community standard
-location.</p>
-<p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
-<p>If you go the PaaS route, you can skip configuring an operating system
-and web server prebaked into PaaS offerings. PaaS offerings generally start 
-at the WSGI server layer. </p>
-<h2>Platform-as-a-service responsibilities</h2>
-<p>Although PaaS offerings simplify setting up and maintaining the servers,
-operating system, and web server, developers still have responsibilities for other
-layers of their web stack.</p>
-<p>While it's useful to know the operating system that underpins your PaaS, for 
-example Heroku uses Ubuntu 10.04, you will not have to know as much about 
-securing the operating system and server level. However, web applications deployed
-to a PaaS are just as vulnerable to security breaches at the application level
-as a standard LAMP stack. It's still your responsibility to ensure the web
-application framework and your app itself is up to date and secured. See the
-<a href="../web-application-security.html">security section</a> for further information.</p>
-<h2>Platforms-as-a-service that support Python</h2>
+          <h1>Static Site Generator</h1>
+<p>A static website generator combines a markup language, such as Markdown 
+or reStructuredText, with a templating engine such as 
+<a href="http://jinja.pocoo.org/">Jinja</a>, to produce HTML 
+files. The HTML files can be hosted and served by a 
+<a href="/web-server.html">web server</a> or 
+<a href="/static-content.html">content delivery network (CDN)</a> 
+without any additional dependencies such as a 
+<a href="/wsgi-server.html">WSGI server</a>.</p>
+<h2>Why are static site generators useful?</h2>
+<p>Static site generators allow a user to create HTML files by writing in a
+markup language and coding template files. HTML does not need to be 
+maintained by hand other than what is in the template files.</p>
+<p>For example, as shown in the diagram below, the Pelican static site 
+generator can take in reStructuredText files and Jinja2 template files 
+as input then combine them to output a set of static HTML files.</p>
+<p><img src="theme/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a></p>
+<h2>Python static site generators</h2>
+<p>Numerous static website generators exist in many different languages. The
+ones listed here are primarily coded in Python.</p>
 <ul>
 <li>
-<p><a href="http://www.heroku.com/">Heroku</a></p>
+<p><a href="http://blog.getpelican.com/">Pelican</a> 
+  (<a href="https://github.com/getpelican/pelican">source code</a>) 
+  is a commonly used Python static website generator which is used to create 
+  <a href="https://github.com/makaimc/fullstackpython.com">Full Stack Python</a>. The
+  primary templating engine is Jinja and Markdown, reStructuredText and
+  AsciiDoc are supported with the default configuration.</p>
 </li>
 <li>
-<p><a href="https://developers.google.com/appengine/">Google App Engine</a></p>
-</li>
-<li>
-<p><a href="https://gondor.io/">Gondor</a></p>
-</li>
-<li>
-<p><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></p>
-</li>
-<li>
-<p><a href="https://openshift.redhat.com/community/get-started/python&gt;">OpenShift</a></p>
-</li>
-<li>
-<p><a href="https://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a></p>
+<p><a href="http://posativ.org/acrylamid/">Acrylamid</a> 
+  (<a href="https://github.com/posativ/acrylamid">source code</a>) uses incremental 
+  builds to generate static sites faster than recreating every page after
+  each change is made to the input files.</p>
 </li>
 </ul>
-<h2>Platform-as-a-service resources</h2>
+<h3>Static site generator resources</h3>
 <ul>
-<li>
-<p><a href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a href="https://twitter.com/natea">Nate Aune</a>.</p>
-</li>
-<li>
-<p><a href="http://www.rdegges.com/deploying-django/">Deploying Django</a> by 
-  Randall Degges is another great free resource about Heroku.</p>
-</li>
-<li>
-<p>Heroku's 
-  <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Python deployment documentation</a>
-  provides clear examples for how to work with virtualenv, pip and 
-  requirementst.txt to get a applications deployed to their platform.</p>
-</li>
-<li>
-<p>Miguel Grinberg's Flask tutorial contains an entire post on deploying 
-  <a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Flask applications to Heroku</a>.</p>
-</li>
-<li>
-<p>This series on DevOps Django by 
-  <a href="https://twitter.com/rdegges">Randall Degges</a> is great reading for 
-  using the Heroku service:</p>
-<ul>
-<li><a href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
-<li><a href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
-<li><a href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
-<li><a href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
+<li><a href="http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html">The Long Road to Building a Static Blog with Pelican</a>
+  is a fantastic read that really gets into the details throughout the 
+  walkthrough. </li>
 </ul>
-</li>
-<li>
-<p><a href="https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/">Deploying a Django App to AWS Elastic Beanstalk</a>
-  is a fantastic post that shows how to deploy to Amazon Web Service's own
-  PaaS.</p>
-</li>
-<li>
-<p><a href="https://news.mlh.io/deploy-your-hack-in-3-steps-intro-to-aws-and-elastic-beanstalk-02-20-2015">Deploy your hack in 3 steps: Intro to AWS and Elastic Beanstalk</a>
-  shows how to deploy a simple Ruby Sinatra app, but the steps are generally
-  applicable to Python web apps as well. </p>
-</li>
-</ul>
-<h2>Platform-as-a-service learning checklist</h2>
-<ol>
-<li>
-<p>Review the potential Python platform-as-a-service options listed above.</p>
-</li>
-<li>
-<p>Sign up for a PaaS account at the provider that appears to best fit your
-   application needs. Heroku is the PaaS option recommended for starters due 
-   to their detailed documentation and walkthroughs available on the web. 
-   However, the other options are also viable since their purpose is to make 
-   deploying applications as easy as possible.</p>
-</li>
-<li>
-<p>Check if there are any PaaS-specific configuration files needed for your 
-   app to run properly on the PaaS after it is deployed.</p>
-</li>
-<li>
-<p>Deploy your app to the PaaS. </p>
-</li>
-<li>
-<p>Sync your application's configuration with the database.</p>
-</li>
-<li>
-<p>Set up a content delivery network for your application's 
-   <a href="/static-content.html">static content</a> unless your PaaS provider already
-   handles this deployment step for you.</p>
-</li>
-<li>
-<p>Check if the application's functionality is working and tweak as necessary.</p>
-</li>
-</ol>
-<h3>What deployment topic do you want to learn about next?</h3>
+<h3>What else do you want to learn about Python web dev?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/wsgi-servers.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1576 927l-1328 738q-23 13-39.5 3t-16.5-36v-1472q0-26 16.5-36t39.5 3l1328 738q23 13 23 31t-23 31z" fill="#fff"/></svg></a>
-<p class="under-btn">What runs a Python application execute on the server?</p>        </div>
+<a href="/deployment.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 640q0 26-19 45l-512 512q-19 19-45 19t-45-19-19-45v-256h-224q-98 0-175.5 6t-154 21.5-133 42.5-105.5 69.5-80 101-48.5 138.5-17.5 181q0 55 5 123 0 6 2.5 23.5t2.5 26.5q0 15-8.5 25t-23.5 10q-16 0-28-17-7-9-13-22t-13.5-30-10.5-24q-127-285-127-451 0-199 53-333 162-403 875-403h224v-256q0-26 19-45t45-19 45 19l512 512q19 19 19 45z" fill="#fff"/></svg></a>
+<p class="under-btn">I've built a Python web app, now how do I deploy it?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/databases.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1168 1216q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm256 0q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm112 160v-320q0-13-9.5-22.5t-22.5-9.5h-1216q-13 0-22.5 9.5t-9.5 22.5v320q0 13 9.5 22.5t22.5 9.5h1216q13 0 22.5-9.5t9.5-22.5zm-1230-480h1180l-157-482q-4-13-16-21.5t-26-8.5h-782q-14 0-26 8.5t-16 21.5zm1358 160v320q0 66-47 113t-113 47h-1216q-66 0-113-47t-47-113v-320q0-25 16-75l197-606q17-53 63-86t101-33h782q55 0 101 33t63 86l197 606q16 50 16 75z" fill="#fff"/></svg></a>
-<p class="under-btn">Tell me about standard relational databases.</p>        </div>
+<a href="/web-frameworks.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#fff"/></svg></a>
+<p class="under-btn">I want to learn how to code a Python web application using a framework.</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/application-dependencies.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1088 832q0-26-19-45t-45-19h-256q-26 0-45 19t-19 45 19 45 45 19h256q26 0 45-19t19-45zm576-192v960q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-960q0-26 19-45t45-19h1408q26 0 45 19t19 45zm64-448v256q0 26-19 45t-45 19h-1536q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1536q26 0 45 19t19 45z" fill="#fff"/></svg></a>
-<p class="under-btn">How should Python libraries be installed on a server?</p>        </div>
+<a href="/application-programming-interfaces.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 1184v192q0 13-9.5 22.5t-22.5 9.5h-1376v192q0 13-9.5 22.5t-22.5 9.5q-12 0-24-10l-319-320q-9-9-9-22 0-14 9-23l320-320q9-9 23-9 13 0 22.5 9.5t9.5 22.5v192h1376q13 0 22.5 9.5t9.5 22.5zm0-544q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192h-1376q-13 0-22.5-9.5t-9.5-22.5v-192q0-13 9.5-22.5t22.5-9.5h1376v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23z" fill="#fff"/></svg></a>
+<p class="under-btn">What are web application programming interfaces (APIs)?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -227,7 +145,7 @@ application framework and your app itself is up to date and secured. See the
               <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
               <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
               <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
-              <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generator</a>
+              <a href="/static-site-generator.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generator</a>
               <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
@@ -237,7 +155,7 @@ application framework and your app itself is up to date and secured. See the
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
               <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
               <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
-              <a href="/platform-as-a-service.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
+              <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
               <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
               <a href="/web-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Servers</a>
               <a href="/wsgi-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WSGI Servers</a>
@@ -266,7 +184,7 @@ application framework and your app itself is up to date and secured. See the
     </p>
   </div>
 </div>  <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Platform-as-a-service</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Static Site Generator</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
