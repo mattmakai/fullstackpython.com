@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### July
+* Added the beginnings of a 
+  [static site generator page](/static-site-generator.html).
 * Updated sidebar with links to the new 
   [Full Stack Python Guide to Deployments](https://gumroad.com/l/kwjLZ)
   ebook.
