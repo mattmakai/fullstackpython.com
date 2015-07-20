@@ -44,9 +44,18 @@ ones listed here are primarily coded in Python.
   builds to generate static sites faster than recreating every page after
   each change is made to the input files.
 
+* [Grow SDK](http://growsdk.org/) ([source code](http://growsdk.org/)) 
+  uses projects, known as pods, which contain a specific file and directory 
+  structure so the site can be generated. The project remains in the
+  "experimental" phase.
+
 
 ### Static site generator resources
 * [The Long Road to Building a Static Blog with Pelican](http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html)
   is a fantastic read that really gets into the details throughout the 
   walkthrough. 
+
+* [Getting Started with Pelican and GitHub Pages](http://www.mattmakai.com/introduction-to-pelican.html)
+  is a tutorial I wrote for getting up and running with Full Stack Python's
+  source code, which uses Pelican to genereate the site.
 
