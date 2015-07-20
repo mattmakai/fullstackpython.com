@@ -57,5 +57,5 @@ ones listed here are primarily coded in Python.
 
 * [Getting Started with Pelican and GitHub Pages](http://www.mattmakai.com/introduction-to-pelican.html)
   is a tutorial I wrote for getting up and running with Full Stack Python's
-  source code, which uses Pelican to genereate the site.
+  source code, which uses Pelican to generate the site.
 
