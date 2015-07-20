@@ -52,10 +52,6 @@ should skip down to the next section for "experienced developers".
   book provided under the Creative Commons license and available in HTML or
   PDF form.
 
-* [Python for You and Me](http://pymbook.readthedocs.org/en/latest/) (pym) is
-  an online book for people completely unfamiliar with the Python programming
-  language.
-
 * While not Python-specific, Mozilla put together a 
   [Learning the Web](https://developer.mozilla.org/en-US/Learn) tutorial
   for beginners and intermediate web users who want to build websites.
@@ -165,7 +161,7 @@ the [best Python videos](/best-python-videos.html) page.
   and projects from around the web.
 
 * [Import Python](http://importpython.com/newsletter/) is a newer newsletter
-  thank Python Weekly and PyCoder's Weekly. So far I've found this newsletter
-  covers different sources from other newsletters. It's well worth subscribing
-  to all three so you don't miss anything.
+  than Python Weekly and PyCoder's Weekly. So far I've found this newsletter
+  often pulls from different sources than the other two. It's well worth 
+  subscribing to all three so you don't miss anything.
 
