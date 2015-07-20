@@ -58,7 +58,7 @@ to learn more about web development.
 
 * The videos and slides from 
   [Django: Under the Hood 2014](http://www.djangounderthehood.com/talks/)
-  are from Django core commiters and provide insight into the ORM, 
+  are from Django core committers and provide insight into the ORM, 
   internationalization, templates and other topics.
 
 * DjangoCon US videos from 
