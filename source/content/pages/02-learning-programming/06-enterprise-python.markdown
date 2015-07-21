@@ -33,7 +33,7 @@ The complexity due to the many stakeholders involved in the building of
 enterprise software leads to large budgets and extreme scrutiny by 
 non-technical members of an organization. Typically those non-technical 
 people place irrational emphasis on the choice of programming language and 
-frameworks when otherwise they should not make technical deisgn decisions.
+frameworks when otherwise they should not make technical design decisions.
 
 
 ## Why are there misconceptions about Python in enterprise environments?
