@@ -76,7 +76,7 @@ the language is open source and does not have a single corporate controller.
 
 Other ecosystems, such as the .NET platform by Microsoft have fared much 
 better. Microsoft continued to invest in moving the .NET platform along
-throughout the early part of the new millenium.
+throughout the early part of the new millennium.
 
 However, Microsoft's enterprise products often have expensive licensing fees 
 for their application servers and associated software. In addition, Microsoft 
