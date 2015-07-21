@@ -106,7 +106,8 @@ continue delivering business value to their business side customers.
 
 ## Enterprise Python software development resources
 * There are a couple of solid demystifying articles in CIO magazine including
-  [this broad overview of Python in enterprises](http://www.cio.com/article/2437137/developer/you-used-python-to-write-what-.html),
+  [this broad overview of Python in enterprises](http://www.cio.com/article/2437137/developer/you-used-python-to-write-what-.html)
+  and this article on
   [why dynamic languages are gaining share for enterprise development](http://www.cio.com/article/2431212/developer/dynamic-languages--not-just-for-scripting-any-more.html).
 
 * JavaWorld wrote an interesting article about 
