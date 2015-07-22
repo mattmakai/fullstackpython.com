@@ -28,7 +28,7 @@ language as of Python 2.2 in 2001.
 
 * [Iterators & Generators](http://anandology.com/python-practice-book/iterators.html)
   provides code examples for these two constructs and some simple explanations
-  for each..
+  for each one.
 
 * The question to [Understanding Generators in Python?](http://stackoverflow.com/questions/1756096/understanding-generators-in-python)
   on Stack Overflow has an impressive answer that clearly lays out the
