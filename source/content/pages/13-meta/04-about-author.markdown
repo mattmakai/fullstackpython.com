@@ -25,5 +25,5 @@ Read my thoughts on the "full stack" trend in a
 
 Typos, inaccurate statements or general areas for improvement can be handled
 through an issue ticket or pull request on
-[GitHub](https://github.com/makaimc/fullstackpython.github.com/).
+[GitHub](https://github.com/makaimc/fullstackpython.com/).
 

@@ -86,7 +86,7 @@ across many implementation areas.
    use case for how your application could be improved by using that API.
 
 1. Before you start writing any code, play around with the API through the 
-   commandline with [curl](http://curl.haxx.se/) or in the browser with 
+   commandline with [cURL](http://curl.haxx.se/) or in the browser with 
    [Postman](http://www.getpostman.com/). This exercise will help you get 
    a better understanding of API authentication and the data required for 
    requests and responses.
