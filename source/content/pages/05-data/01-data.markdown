@@ -35,7 +35,7 @@ In addition, Python data manipulation code can be combined with
 that would be difficult to create with a single other language. For example,
 Ruby is a fantastic language for building web applications but its data
 analysis and visualization libraries are very limited compared to what
-is currently available in the Pythn ecosystem.
+is currently available in the Python ecosystem.
 
 
 ## How did Python become so widely used for working with data?
