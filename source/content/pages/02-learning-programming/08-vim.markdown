@@ -15,7 +15,7 @@ plugins, Vimscript and logical command language as major Vim strengths.
 Vim's philosophy is that developers are more productive when they avoid 
 taking their hands off the keyboard. Code should flow naturally from the 
 developer's thoughts through the keyboard and onto the screen. Using a mouse 
-or other perphipheral is a detriment to the rate at which a developer's 
+or other peripheral is a detriment to the rate at which a developer's 
 thoughts become code.
 
 Vim has a logical, structured command language. When a beginner is learning 
