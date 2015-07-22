@@ -118,7 +118,7 @@ to get started with these tutorials.
 * In [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/) the
   author explains his on-again off-again relationship with using Vim. He then
   shows how he configures and uses the editor so it sticks as his primary
-  code editting tool.
+  code editing tool.
 
 
 ## Vim Python IDE bundles and resources
