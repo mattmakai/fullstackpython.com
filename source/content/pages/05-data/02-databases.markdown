@@ -134,7 +134,7 @@ library. The most common libraries for relational databases are:
 
 * [psycopg2](http://initd.org/psycopg/) for PostgreSQL
 
-* [MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.4) for MySQL
+* [MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.5) for MySQL
 
 * [cx\_Oracle](http://cx-oracle.sourceforge.net/) for Oracle
 
