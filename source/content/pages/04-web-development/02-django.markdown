@@ -36,7 +36,7 @@ than the other one.
 ## Why is Django a good web framework choice?
 The Django project's stability, performance and community have grown 
 tremendously over the past decade since the framework's creation. Detailed
-tutorials and best practices are readily available on the web and in books.
+tutorials and good practices are readily available on the web and in books.
 The framework continues to add significant new functionality such as 
 [database migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 with each release. 
@@ -147,7 +147,7 @@ as of Django 1.7.
   will show you how to integrate social media sign in buttons into your Django
   application.
 
-* [Django Wall of Shame (WOS)](http://djangowos.com/) shows packages that
+* [Django: Wall of Superpowers!](http://djangowos.com/) shows packages that
   are Python 3 compatible in green and ones that are not yet compatible with
   Python 3 in red.
 
@@ -266,7 +266,7 @@ to handle these files properly.
   application written and maintained by the author of PyCoder's Weekly.
 
 * These two Django Interactive Voice Response (IVR) system web application
-  repositorities [part 1](https://github.com/phalt/twilio-django-part-1) and
+  repositories [part 1](https://github.com/phalt/twilio-django-part-1) and
   [part 2](https://github.com/phalt/twilio-django-part-2) show you how to
   build a really cool Django application. There's also an accompanying 
   [blog post](https://www.twilio.com/blog/2014/07/build-an-ivr-system-with-twilio-and-django.html)
@@ -282,8 +282,8 @@ to handle these files properly.
 
 * [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
   project template from Daniel Greenfeld, for use with Audrey Roy's 
-  [Cookiecutter](https://github.com/audreyr/cookiecutter). Heroku 
-  deployment-ready.
+  [Cookiecutter](https://github.com/audreyr/cookiecutter). The template results
+  are Heroku deployment-ready.
 
 * [Two Scoops Django project template](https://github.com/twoscoops/django-twoscoops-project)
   is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
@@ -306,7 +306,7 @@ to handle these files properly.
    on your path to learning the right way to build applications.
 
 1. Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342) 
-   to understand Django best practices and learn better ways of building 
+   to understand Django good practices and learn better ways of building 
    Django web applications.
 
 1. Move on to the [deployment section](/deployment.html) to get your Django 
