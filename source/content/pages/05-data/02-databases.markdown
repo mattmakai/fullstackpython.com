@@ -77,7 +77,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * There is no such thing as total security but this IBM article covers 
   [hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
 
-* Craig Kerstien's wrote a detailed post about [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
+* Craig Kerstiens wrote a detailed post about [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
 
 * [Handling growth with Postgres](http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram)
   provides 5 specific tips from Instagram's engineering team on how to scale
