@@ -114,7 +114,7 @@ There's a lot of hand-waving "may or may not" and "potential for" in this
 section. In large projects ORMs are good enough for roughly 80-90% of use
 cases but in 10-20% of a project's database interactions there can be
 major performance improvements by having a knowledgeable database
-adminstrator write tuned SQL statements to replace the ORM's generated
+administrator write tuned SQL statements to replace the ORM's generated
 SQL code.
 
 

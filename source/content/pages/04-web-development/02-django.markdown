@@ -112,7 +112,7 @@ as of Django 1.7.
   built with Python 3.
 
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
-  has several nice examples for breaking Django into smaller simplier 
+  has several nice examples for breaking Django into smaller simpler 
   components.
 
 * The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)

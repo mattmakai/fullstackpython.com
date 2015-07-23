@@ -96,8 +96,8 @@ nested data.
   from building the widely-used Python MongoDB driver.
     1. [start\_request](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-start-request/)
     1. [use\_greenlets](http://emptysqua.re/blog/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/)
-    1. ["copy\_database"](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/)
-    1. The final post will cover MongoReplicaSetClient. 
+    1. [copy\_database](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/)
+    1. [MongoReplicaSetClient](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-mongoreplicasetclient/)
 
 
 ## Column-family table
@@ -113,7 +113,7 @@ column family is similar to a table in the relational database model.
 
 
 ## Graph
-A graph database represents and stores data in three aspects: nodes, edges,
+A graph database represents and stores data in three aspects: nodes, edges
 and properties. 
 
 A *node* is an entity, such as a person or business. 
