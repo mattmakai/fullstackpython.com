@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### July
+* Updated a boatload of pages with typo and grammar fixes while reviewing
+  everything for the upcoming launch of 
+  [the PDF version of FSP contained in the packaged book deal](https://gumroad.com/l/WOvyt).
 * Added the beginnings of a 
   [static site generator page](/static-site-generator.html).
 * Updated sidebar with links to the new 
