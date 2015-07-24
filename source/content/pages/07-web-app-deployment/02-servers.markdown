@@ -76,6 +76,9 @@ require for ongoing maintenance such as persistent storage backups.
 * This post covers hosting types and host to
   [choose a web host](http://www.purefiremedia.com/choose-a-web-host/).
 
+* [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
+  shows how to work with a VPS once you've got the server up and running.
+
 
 ## Infrastructure-as-a-service
 Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
@@ -124,9 +127,6 @@ Python library for working with Amazon Web Services.
   interface for managing Digital Ocean droplets (servers).
 
 * Rackspace also has [official documentation for Python](http://docs.rackspace.com/sdks/guide/content/python.html).
-
-* [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
-  shows how to work with a VPS once you've got the server up and running.
 
 
 ## Servers learning checklist

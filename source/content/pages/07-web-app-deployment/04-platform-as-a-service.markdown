@@ -55,7 +55,7 @@ application framework and your app itself is up to date and secured. See the
 
 * [PythonAnywhere](https://www.pythonanywhere.com/)
 
-* [OpenShift](https://openshift.redhat.com/community/get-started/python>)
+* [OpenShift](https://openshift.redhat.com/community/get-started/python)
 
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 
@@ -69,7 +69,7 @@ application framework and your app itself is up to date and secured. See the
 * Heroku's 
   [Python deployment documentation](https://devcenter.heroku.com/articles/getting-started-with-python)
   provides clear examples for how to work with virtualenv, pip and 
-  requirementst.txt to get a applications deployed to their platform.
+  `requirements.txt` to get a applications deployed to their platform.
 
 * Miguel Grinberg's Flask tutorial contains an entire post on deploying 
   [Flask applications to Heroku](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud).
