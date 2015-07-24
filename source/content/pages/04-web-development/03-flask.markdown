@@ -161,7 +161,7 @@ how to <a href="/deployment.html">deploy web applications</a>.
   is another fantastic tutorial by Miguel Grinberg that covers video 
   streaming.
 
-* "[One line of code cut our Flask page load times by 60%](https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679)
+* [One line of code cut our Flask page load times by 60%](https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679)
   is an important note about optimizing Flask template cache size to 
   dramatically increase performance in some cases.
 

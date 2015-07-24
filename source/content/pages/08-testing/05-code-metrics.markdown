@@ -39,6 +39,9 @@ system are occurring.
   source Python projects. Pricing is available for analyzing private 
   repositories as well.
 
+* [Coveralls](https://coveralls.io) shows code coverage from test suites 
+  and other metrics to help developers improve the quality of their code.
+
 
 ## Code metrics resources
 * [Static Code Analizers for Python](http://doughellmann.com/2008/03/01/static-code-analizers-for-python.html)

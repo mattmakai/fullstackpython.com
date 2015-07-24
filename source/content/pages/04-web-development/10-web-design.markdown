@@ -11,8 +11,8 @@ using CSS and JavaScript.
 
 
 ## Why is web design important?
-You don't really expect users to use your 2014 web application if it looks
-like this, do you?
+You wouldn’t use a web application that looked like the following screenshot, 
+would you?
 
 <img src="theme/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> 
 

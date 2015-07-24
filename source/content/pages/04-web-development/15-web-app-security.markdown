@@ -68,7 +68,7 @@ securing Linux distributions.
   topics.
 
 * This page contains a
-  [fantastic currated list of security reading material](http://dfir.org/?q=node/8/)
+  [fantastic curated list of security reading material](http://dfir.org/?q=node/8/)
   from beginning to advanced topics.
 
 * The [/r/netsec](http://www.reddit.com/r/netsec/) subreddit is one place to
