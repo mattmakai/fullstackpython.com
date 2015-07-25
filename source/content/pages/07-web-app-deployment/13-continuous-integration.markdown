@@ -24,7 +24,7 @@ integration and deployment can work.
 
 <img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." />
 
-In the above diagram, when new code is commited to a source repository 
+In the above diagram, when new code is committed to a source repository 
 there is a hook that notifies the continuous integration server that new 
 code needs to be built (the continuous integration server could also
 poll the source code repository if a notification is not possible).

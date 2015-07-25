@@ -120,14 +120,14 @@ further clarification.
 * [Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
   [virtualenv and pip basics](http://www.jontourage.com/2011/02/09/virtualenv-pip-basics/).
 
-* "[A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
+* [A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
   breaks down what problems these tools solve and how to use them.
 
 * [Tools of the modern Python hacker](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/) 
   contains detailed explanations of virtualenv, Fabric, and pip.
 
 * Occasionally arguments about using Python's dependency manager versus
-  one of Linux's depenency managers comes up. This provides
+  one of Linux's dependency managers comes up. This provides
   [one perspective on that debate](http://notes.pault.ag/debian-python/).
 
 * This Stack Overflow question details how to set up a 
@@ -140,21 +140,20 @@ further clarification.
   shows how to use shell aliases and postactivate virtualenvwrapper hooks to
   make life easier when using these tools.
 
-* Major speed improvements were made in pip 7 over previous versions. 
-  Read 
+* Major speed improvements were made in pip 7 over previous versions. Read 
   [this article about the differences](https://lincolnloop.com/blog/fast-immutable-python-deployments/)
   and be sure to upgrade.
 
 
 ## Open source app dependency projects
 * [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating
-  environment variables stored in a .env file in your projects' home
+  environment variables stored in a `.env` file in your projects' home
   directories. Environment variables aren't managed by virtualenv and although
   virtualenvwrapper has some hooks for handling them, it's often easiest to
-  use a shell script or .env file to set them in a development environment.
+  use a shell script or `.env` file to set them in a development environment.
 
 * [Pipreqs](https://github.com/bndr/pipreqs) searches through a project for
-  dependencies based on imports. It then generates a requirements.txt file
+  dependencies based on imports. It then generates a `requirements.txt` file
   based on the libraries necessary to run those dependencies. Note though that
   while this could come in handy with a legacy project, the version numbers
   for those libraries will not be generated with the output.
@@ -165,12 +164,12 @@ further clarification.
    a requirement.txt file with pegged versions. 
 
 1. An easy way to capture currently installed dependencies is with the 
-   ``pip freeze`` command.
+   `pip freeze` command.
 
 1. Create a fresh virtualenv and install the dependencies from your 
-   requirements.txt file by using the ``pip install -r requirements.txt`` 
+   `requirements.txt` file by using the `pip install -r requirements.txt` 
    command.
 
 1. Check that your application runs properly with the fresh virtualenv and 
-   only the installed dependencies from the requirements.txt file.
+   only the installed dependencies from the `requirements.txt` file.
 

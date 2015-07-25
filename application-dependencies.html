@@ -140,7 +140,7 @@ further clarification.</p>
   <a href="http://www.jontourage.com/2011/02/09/virtualenv-pip-basics/">virtualenv and pip basics</a>.</p>
 </li>
 <li>
-<p>"<a href="http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/">A non-magical introduction to virtualenv and pip</a> 
+<p><a href="http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/">A non-magical introduction to virtualenv and pip</a> 
   breaks down what problems these tools solve and how to use them.</p>
 </li>
 <li>
@@ -149,7 +149,7 @@ further clarification.</p>
 </li>
 <li>
 <p>Occasionally arguments about using Python's dependency manager versus
-  one of Linux's depenency managers comes up. This provides
+  one of Linux's dependency managers comes up. This provides
   <a href="http://notes.pault.ag/debian-python/">one perspective on that debate</a>.</p>
 </li>
 <li>
@@ -166,8 +166,7 @@ further clarification.</p>
   make life easier when using these tools.</p>
 </li>
 <li>
-<p>Major speed improvements were made in pip 7 over previous versions. 
-  Read 
+<p>Major speed improvements were made in pip 7 over previous versions. Read 
   <a href="https://lincolnloop.com/blog/fast-immutable-python-deployments/">this article about the differences</a>
   and be sure to upgrade.</p>
 </li>
@@ -176,14 +175,14 @@ further clarification.</p>
 <ul>
 <li>
 <p><a href="https://github.com/kennethreitz/autoenv">Autoenv</a> is a tool for activating
-  environment variables stored in a .env file in your projects' home
+  environment variables stored in a <code>.env</code> file in your projects' home
   directories. Environment variables aren't managed by virtualenv and although
   virtualenvwrapper has some hooks for handling them, it's often easiest to
-  use a shell script or .env file to set them in a development environment.</p>
+  use a shell script or <code>.env</code> file to set them in a development environment.</p>
 </li>
 <li>
 <p><a href="https://github.com/bndr/pipreqs">Pipreqs</a> searches through a project for
-  dependencies based on imports. It then generates a requirements.txt file
+  dependencies based on imports. It then generates a <code>requirements.txt</code> file
   based on the libraries necessary to run those dependencies. Note though that
   while this could come in handy with a legacy project, the version numbers
   for those libraries will not be generated with the output.</p>
@@ -201,12 +200,12 @@ further clarification.</p>
 </li>
 <li>
 <p>Create a fresh virtualenv and install the dependencies from your 
-   requirements.txt file by using the <code>pip install -r requirements.txt</code> 
+   <code>requirements.txt</code> file by using the <code>pip install -r requirements.txt</code> 
    command.</p>
 </li>
 <li>
 <p>Check that your application runs properly with the fresh virtualenv and 
-   only the installed dependencies from the requirements.txt file.</p>
+   only the installed dependencies from the <code>requirements.txt</code> file.</p>
 </li>
 </ol>
 <h3>What's next after installing app dependencies?</h3>

@@ -36,7 +36,7 @@ your application to forward your system and application logs to one location
 that provides tools for viewing, searching, and monitoring logging events 
 across your cluster. 
 
-Another advantage of log aggregatortion tools is they allow you to set up 
+Another advantage of log aggregation tools is they allow you to set up 
 custom alerts and alarms so you can get notified when error rates breach a 
 certain threshold.
 
