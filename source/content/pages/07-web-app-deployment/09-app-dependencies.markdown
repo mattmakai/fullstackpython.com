@@ -74,11 +74,11 @@ Pip downloads and installs application dependencies from the central
 
 ## requirements.txt
 The pip convention for specifying application dependencies is with a 
-requirements.txt file. When you build a Python web application you 
-should include a requirements.txt file. 
+`requirements.txt` file. When you build a Python web application you 
+should include `requirements.txt` in the base directory of your project.
 
-Python projects' dependencies for a web application should be specified in the
-requirements.txt with pegged dependencies like the following:
+Python projects' dependencies for a web application should be specified 
+with pegged dependencies like the following:
 
     django==1.6
     bpython==0.12

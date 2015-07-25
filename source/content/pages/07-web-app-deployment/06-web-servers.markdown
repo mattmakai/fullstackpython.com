@@ -33,7 +33,7 @@ as Internet Explorer, Firefox, or Chrome, but it can also be a
 * headless browser, commonly use for testing, such as 
   [phantomjs](http://phantomjs.org/)
 * commandline utility, for example [wget](https://www.gnu.org/software/wget/)
-  and [curl](http://curl.haxx.se/)
+  and [cURL](http://curl.haxx.se/)
 * text-based web browser such as 
   [Lynx](http://lynx.browser.org/)
 * web crawler. 

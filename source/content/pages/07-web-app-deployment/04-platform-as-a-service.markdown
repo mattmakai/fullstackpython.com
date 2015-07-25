@@ -21,7 +21,7 @@ an application to a server or IaaS.
 
 A PaaS makes deployment and operations easier because it forces the developer
 to conform applications to the PaaS architecture. For example, Heroku looks 
-for Python's requirements.txt file in the base directory of the repository 
+for Python's `requirements.txt` file in the base directory of the repository 
 during deployment because that is the file's de facto community standard
 location.
 
