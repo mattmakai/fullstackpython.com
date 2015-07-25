@@ -55,7 +55,7 @@ certain threshold.
   in Elasticache.
 
 * [Logstash](http://logstash.net/) Similar to Graylog2, logstash offers 
-  features to programatically configure log data workflows.
+  features to programmatically configure log data workflows.
 
 * [Scribe](https://github.com/facebook/scribe) A project written by Facebook 
   to aggregate logs. It's designed to run on multiple servers and scale with 
