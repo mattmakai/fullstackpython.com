@@ -103,6 +103,12 @@ is provided by W3C.
   explains how Nginx can be used instead of Apache in some cases for
   better performance.
 
+* [rwasa](https://2ton.com.au/rwasa/) is a newly released web server written
+  in Assembly with no external dependencies that tuned to be faster than Nginx.
+  The benchmarks are worth taking a look at to see if this server could fit
+  your needs if you need the fastest performance trading off for as of yet
+  untested web server.
+
 * [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
   covers how to mitigate against brute force password guessing attempts using
   Nginx rate limits.
