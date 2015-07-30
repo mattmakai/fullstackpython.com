@@ -165,6 +165,9 @@ when scaling out a large deployment of distributed task queues.
 * [Asynchronous Tasks With Django and Celery](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/)
   shows how to integrate Celery with [Django](/django.html) and create Periodic Tasks.
 
+* [Three quick tips from two years with Celery](https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb)
+  provides some solid advice on retry delays, the -Ofair flag and global
+  task timeouts for Celery.
 
 
 ## Task queue learning checklist
