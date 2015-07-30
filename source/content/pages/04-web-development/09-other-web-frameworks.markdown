@@ -54,10 +54,6 @@ Flask with URL routes defined as decorators upon view functions. The
 [Peewee ORM](https://peewee.readthedocs.org/en/latest/) is used instead of 
 the more common SQLAlchemy ORM.
 
-Muffin has limited documentation, but 
-[an example app](https://github.com/klen/muffin/tree/develop/example) 
-is bundled with the framework's source code.
-
 
 ## Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
