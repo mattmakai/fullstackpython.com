@@ -13,6 +13,10 @@ the
 
 
 ## 2015
+### August
+* Added new [web app security](/web-application-security.html) resources on
+  HTTPS.
+
 ### July
 * Updated a boatload of pages with typo and grammar fixes while reviewing
   everything for the upcoming launch of 

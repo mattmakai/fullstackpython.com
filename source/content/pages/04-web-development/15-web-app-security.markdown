@@ -24,6 +24,10 @@ securing Linux distributions.
   is a well-written overview of the protocol including certificates, 
   signatures, signing and related topics.
 
+* These 
+  [introduction to HTTPS](https://18f.gsa.gov/2015/07/16/introduction-to-https-webinar/)
+  videos explain what HTTPS is and how to implement it.
+
 * This question asking [what is the difference between TLS and SSL?](http://security.stackexchange.com/questions/5126/whats-the-difference-between-ssl-tls-and-https)
   explains that TLS is a newer version of SSL and should be used because
   SSL through version 3.0 is insecure.
