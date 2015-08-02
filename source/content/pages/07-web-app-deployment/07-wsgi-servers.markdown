@@ -202,6 +202,11 @@ The following are WSGI servers based on community recommendations.
 * Another Digital Ocean walkthrough goes into
   [How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx).
 
+* [The uWSGI Swiss Army Knife](https://lincolnloop.com/blog/uwsgi-swiss-army-knife/)
+  shows how uWSGI can potentially be used for more than just running the
+  Python web application - it can also serve static files and handling
+  caching in a deployment.
+
 
 ## WSGI servers learning checklist
 1. Understand that WSGI is a standard Python specification for applications 
