@@ -60,6 +60,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is a detailed look at how Docker and Ansible complement each other as
   deployment tools.
 
+* [Building Docker containers from scratch](http://datakurre.pandala.org/2015/07/building-docker-containers-from-scratch.html)
+  is a short tutorial for creating a Docker container with a specific
+  configuration.
+
 
 ## Python-specific Docker resources
 * [Hosting Python WSGI applications using Docker](http://blog.dscpl.com.au/2014/12/hosting-python-wsgi-applications-using.html)
