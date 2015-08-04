@@ -136,6 +136,9 @@ as of Django 1.7.
   answers the question, “How do I set up a Django (1.5, 1.6, or 1.7) project 
   from scratch?”
 
+* This Django tutorial shows how to 
+  [build a project from scratch using Twitter Bootstrap, Bower, Requests and the Github API](http://drksephy.github.io/2015/07/16/django/).
+
 * The [recommended Django project layout](http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/)
   is helpful for developers new to Django to understand how to structure
   the directories and files within apps for projects.
