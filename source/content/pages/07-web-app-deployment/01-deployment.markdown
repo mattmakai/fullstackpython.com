@@ -47,6 +47,12 @@ guide as they are considered advanced deployment techniques.
 
 
 ## Deployment resources
+* If you need a step-by-step guide to deploying a Python web application,
+  I wrote [a whole book](http://www.deploypython.com/) on exactly this topic 
+  called 
+  [The Full Stack Python Guide to Deployments](https://gumroad.com/l/WOvyt)
+  that you'll find super helpful.
+
 * [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
   walks through stages of deployment with source control, planning, 
   continuous deployment and monitoring the results.
