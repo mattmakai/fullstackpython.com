@@ -151,6 +151,15 @@ the [best Python videos](/best-python-videos.html) page.
   in the Read the Docs format.
 
 
+## Podcasts
+* [Talk Python to Me](http://www.talkpythontome.com/) focuses on the
+  people and organizations coding on Python. Each episode features a
+  different guest interviewee to talk about his or her work.
+
+* [Podcast.\_\_init\_\_](http://podcastinit.com/) is another podcast on
+  "about Python and the people who make it great".
+
+
 ## Newsletters
 * [Python Weekly](http://www.pythonweekly.com/) is a free weekly roundup
   of the latest Python articles, videos, projects and upcoming events.
