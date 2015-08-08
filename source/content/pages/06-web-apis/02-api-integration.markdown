@@ -55,9 +55,6 @@ across many implementation areas.
   is a funny high level overview of what you should do to protect your 
   application when relying on third party services.
 
-* [API Retry Patterns](http://migrateup.com/python-retry-patterns-for-http-apis/)
-  shows you how to build resiliency into calls to web APIs.
-
 * [Retries in Requests](http://www.coglib.com/~icordasc/blog/2014/12/retries-in-requests.html)
   is a nice tutorial for easily re-executing failed HTTP requests with the
   Requests library.
