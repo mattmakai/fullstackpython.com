@@ -38,6 +38,10 @@ should skip down to the next section for "experienced developers".
   and problems rather than jumping into a specific language that's recommended
   to you by a friend.
 
+* [CS for All](http://www.cs.hmc.edu/csforall/) is an open book by professors
+  at Harvey Mudd College which teaches the fundamentals of computer science
+  using Python. It's an accessible read and perfect for programming beginners.
+
 * If you've never programmed before check out the 
   [Getting Started](http://learntocodewith.me/getting-started/) page on 
   [Learn To Code with Me](http://learntocodewith.me/)
