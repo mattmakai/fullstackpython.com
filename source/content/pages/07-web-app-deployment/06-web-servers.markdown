@@ -113,6 +113,10 @@ is provided by W3C.
   covers how to mitigate against brute force password guessing attempts using
   Nginx rate limits.
 
+* [Nginx with dynamic upstreams](http://tenzer.dk/nginx-with-dynamic-upstreams/)
+  is an important note for setting up your upstream WSGI server(s) if you're
+  using Nginx as a reverse proxy with hostnames that change.
+
 
 ## Web servers learning checklist
 1. Choose a web server. [Nginx](http://nginx.org/en/) is often recommended 
