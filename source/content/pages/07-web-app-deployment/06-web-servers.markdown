@@ -38,7 +38,7 @@ as Internet Explorer, Firefox, or Chrome, but it can also be a
   [Lynx](http://lynx.browser.org/)
 * web crawler. 
 
-Web server process requests from the above clients. The result of the web
+Web servers process requests from the above clients. The result of the web
 server's processing is a 
 [response code](https://developer.mozilla.org/en-US/docs/HTTP/Response_codes)
 and commonly a content response. Some status codes, such as 204 (No content) 
