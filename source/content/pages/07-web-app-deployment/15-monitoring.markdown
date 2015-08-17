@@ -105,6 +105,8 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 * [App Enlight](https://appenlight.com/) provides performance, exception and 
   error monitoring and is currently specific to Python web applications.
 
+* [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance metrics, release tracking, and error logging into a single simple service.
+
 
 ## Monitoring resources
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
