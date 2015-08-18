@@ -30,6 +30,9 @@ language as of Python 2.2 in 2001.
   provides code examples for these two constructs and some simple explanations
   for each one.
 
+* [Python: Generators - How to use them and the benefits you receive](https://www.youtube.com/watch?v=bD05uGo_sVI)
+  is a screencast with code that walks through generators in Python.
+
 * The question to [Understanding Generators in Python?](http://stackoverflow.com/questions/1756096/understanding-generators-in-python)
   on Stack Overflow has an impressive answer that clearly lays out the
   code and concepts involved with Python generators.
