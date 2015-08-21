@@ -14,7 +14,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link href="theme/css/f.min.css" rel="stylesheet">
-<script>
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -25,7 +25,7 @@
 <body>
     <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/theme/img/fork.png" alt="Fork me on GitHub"></a>
     <div class="container">
-<div class="row">
+        <div class="row">
     <div class="col-md-12">
         <div class="logo-header-section">
             <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
@@ -83,28 +83,28 @@ your organization then Python may be a good fit. </p>
 <p>The philosophy for Python is so strongly held that it's even embedded in
 the language as shown when the interpreter executes "import this" and
 displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a>.</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">this</span>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">import</span> <span class="n">this</span>
 <span class="n">The</span> <span class="n">Zen</span> <span class="n">of</span> <span class="n">Python</span><span class="p">,</span> <span class="n">by</span> <span class="n">Tim</span> <span class="n">Peters</span>
 
-<span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
-<span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
-<span class="n">Simple</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="nb">complex</span><span class="o">.</span>
-<span class="n">Complex</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="o">.</span>
-<span class="n">Flat</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="o">.</span>
-<span class="n">Sparse</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="o">.</span>
-<span class="n">Readability</span> <span class="n">counts</span><span class="o">.</span>
-<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="s">&#39;t special enough to break the rules.</span>
-<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="o">.</span>
-<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="k">pass</span> <span class="n">silently</span><span class="o">.</span>
-<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="o">.</span>
-<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="o">.</span>
-<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="ow">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="s">&#39;re Dutch.</span>
-<span class="n">Now</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">never</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="s">&#39;s a bad idea.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="o">.</span>
-<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s">&#39;s do more of those!</span>
+<span class="n">Beautiful</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="p">.</span>
+<span class="n">Explicit</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="p">.</span>
+<span class="n">Simple</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complex</span><span class="p">.</span>
+<span class="n">Complex</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="p">.</span>
+<span class="n">Flat</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="p">.</span>
+<span class="n">Sparse</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="p">.</span>
+<span class="n">Readability</span> <span class="n">counts</span><span class="p">.</span>
+<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">special</span> <span class="n">enough</span> <span class="n">to</span> <span class="k">break</span> <span class="n">the</span> <span class="n">rules</span><span class="p">.</span>
+<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="p">.</span>
+<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="n">pass</span> <span class="n">silently</span><span class="p">.</span>
+<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="p">.</span>
+<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="p">.</span>
+<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="n">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="k">do</span> <span class="n">it</span><span class="p">.</span>
+<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="n">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="err">&#39;</span><span class="n">re</span> <span class="n">Dutch</span><span class="p">.</span>
+<span class="n">Now</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="p">.</span>
+<span class="n">Although</span> <span class="n">never</span> <span class="n">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="p">.</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="n">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">a</span> <span class="n">bad</span> <span class="n">idea</span><span class="p">.</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="n">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="p">.</span>
+<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">do</span> <span class="n">more</span> <span class="n">of</span> <span class="n">those</span><span class="o">!</span>
 </pre></div>
 
 
@@ -130,24 +130,24 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
   <a href="http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html">read this thorough explanation of the topic</a>.</p>
 </li>
 </ul>
-<h3>What else do you want to learn about Python?</h3>
+          <h3>What else do you want to learn about Python?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/development-environments.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1728 992v-832q0-13-9.5-22.5t-22.5-9.5h-1600q-13 0-22.5 9.5t-9.5 22.5v832q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5zm128-832v1088q0 66-47 113t-113 47h-544q0 37 16 77.5t32 71 16 43.5q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45q0-14 16-44t32-70 16-78h-544q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1600q66 0 113 47t47 113z" fill="#fff"/></svg></a>
+            <a href="/development-environments.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1728 992v-832q0-13-9.5-22.5t-22.5-9.5h-1600q-13 0-22.5 9.5t-9.5 22.5v832q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5zm128-832v1088q0 66-47 113t-113 47h-544q0 37 16 77.5t32 71 16 43.5q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45q0-14 16-44t32-70 16-78h-544q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1600q66 0 113 47t47 113z" fill="#fff"/></svg></a>
 <p class="under-btn">What editor should I use to code my Python app?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/web-frameworks.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#fff"/></svg></a>
+            <a href="/web-frameworks.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#fff"/></svg></a>
 <p class="under-btn">I want to learn how to code a Python web application using a framework.</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/application-programming-interfaces.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 1184v192q0 13-9.5 22.5t-22.5 9.5h-1376v192q0 13-9.5 22.5t-22.5 9.5q-12 0-24-10l-319-320q-9-9-9-22 0-14 9-23l320-320q9-9 23-9 13 0 22.5 9.5t9.5 22.5v192h1376q13 0 22.5 9.5t9.5 22.5zm0-544q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192h-1376q-13 0-22.5-9.5t-9.5-22.5v-192q0-13 9.5-22.5t22.5-9.5h1376v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23z" fill="#fff"/></svg></a>
+            <a href="/application-programming-interfaces.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 1184v192q0 13-9.5 22.5t-22.5 9.5h-1376v192q0 13-9.5 22.5t-22.5 9.5q-12 0-24-10l-319-320q-9-9-9-22 0-14 9-23l320-320q9-9 23-9 13 0 22.5 9.5t9.5 22.5v192h1376q13 0 22.5 9.5t9.5 22.5zm0-544q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192h-1376q-13 0-22.5-9.5t-9.5-22.5v-192q0-13 9.5-22.5t22.5-9.5h1376v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23z" fill="#fff"/></svg></a>
 <p class="under-btn">What are web application programming interfaces (APIs)?</p>        </div>
     </div>
-</div><div id="mc_embed_signup">
+</div>      <div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
         <h4>Sign up here to receive an email with major updates to this site and Python tutorials delivered to your inbox once a month.</h4>
@@ -164,8 +164,8 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
 </form>
 </div>
     </div>
-<div class="col-md-offset-1 col-md-3" id="sidebar">
-<div class="panel panel-success">
+    <div class="col-md-offset-1 col-md-3" id="sidebar">
+        <div class="panel panel-success">
   <div class="panel-body">
     <a href="http://www.deploypython.com/"><img src="theme/img/sponsored/fsp-deployment-guide.png" alt="The Full Stack Python Guide to Deployments" width="100%"></a>
     <p style="font-size: .8em; margin-top: 10px;">Searching for a complete, step-by-step deployment walkthrough? Learn more about <a href="http://www.deploypython.com/">The Full Stack Python Guide to Deployments book</a>. 
@@ -176,62 +176,62 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
         <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Table of Contents</a></h3>
       </div>
       <div class="list-group">
-              <a href="/introduction.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Introduction</a>
-              <a href="/learning-programming.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Learning Programming</a>
-              <a href="/why-use-python.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Why Use Python?</a>
-              <a href="/best-python-resources.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Resources</a>
-              <a href="/best-python-videos.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Videos</a>
-              <a href="/enterprise-python.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Enterprise Python</a>
-              <a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Development Environments</a>
-              <a href="/vim.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Vim</a>
-              <a href="/emacs.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Emacs</a>
-              <a href="/generators.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Generators</a>
-              <a href="/comprehensions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Comprehensions</a>
-              <a href="/web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Frameworks</a>
-              <a href="/django.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Django</a>
-              <a href="/flask.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Flask</a>
-              <a href="/bottle.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Bottle</a>
-              <a href="/pyramid.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
-              <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
-              <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
-              <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
-              <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
-              <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
-              <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
-              <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
-              <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generator</a>
-              <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
-              <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
-              <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
-              <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
-              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
-              <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
-              <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
-              <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
-              <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
-              <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
-              <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
-              <a href="/web-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Servers</a>
-              <a href="/wsgi-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WSGI Servers</a>
-              <a href="/source-control.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Source Control</a>
-              <a href="/application-dependencies.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Dependencies</a>
-              <a href="/static-content.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Content</a>
-              <a href="/task-queues.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Task Queues</a>
-              <a href="/configuration-management.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Configuration Management</a>
-              <a href="/continuous-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Continuous Integration</a>
-              <a href="/logging.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Logging</a>
-              <a href="/monitoring.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Monitoring</a>
-              <a href="/web-analytics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Analytics</a>
-              <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
-              <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
-              <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
-              <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
-              <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
-              <a href="/future-directions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Future Directions</a>
-              <a href="/about-author.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>About the Author</a>
-      </div>
+                        <a href="/introduction.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Introduction</a>
+                        <a href="/learning-programming.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Learning Programming</a>
+                        <a href="/why-use-python.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Why Use Python?</a>
+                        <a href="/best-python-resources.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Resources</a>
+                        <a href="/best-python-videos.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Videos</a>
+                        <a href="/enterprise-python.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Enterprise Python</a>
+                        <a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Development Environments</a>
+                        <a href="/vim.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Vim</a>
+                        <a href="/emacs.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Emacs</a>
+                        <a href="/generators.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Generators</a>
+                        <a href="/comprehensions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Comprehensions</a>
+                        <a href="/web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Frameworks</a>
+                        <a href="/django.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Django</a>
+                        <a href="/flask.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Flask</a>
+                        <a href="/bottle.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Bottle</a>
+                        <a href="/pyramid.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
+                        <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
+                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
+                        <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
+                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
+                        <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
+                        <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
+                        <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
+                        <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generator</a>
+                        <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
+                        <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
+                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
+                        <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
+                        <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
+                        <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
+                        <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
+                        <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
+                        <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
+                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
+                        <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
+                        <a href="/web-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Servers</a>
+                        <a href="/wsgi-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WSGI Servers</a>
+                        <a href="/source-control.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Source Control</a>
+                        <a href="/application-dependencies.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Dependencies</a>
+                        <a href="/static-content.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Content</a>
+                        <a href="/task-queues.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Task Queues</a>
+                        <a href="/configuration-management.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Configuration Management</a>
+                        <a href="/continuous-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Continuous Integration</a>
+                        <a href="/logging.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Logging</a>
+                        <a href="/monitoring.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Monitoring</a>
+                        <a href="/web-analytics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Analytics</a>
+                        <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
+                        <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
+                        <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
+                        <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
+                        <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
+                        <a href="/future-directions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Future Directions</a>
+                        <a href="/about-author.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>About the Author</a>
+                </div>
   </div>
-<div class="panel panel-success">
+    <div class="panel panel-success">
   <div class="panel-body">
     <a href="http://www.deploypython.com/"><img src="theme/img/sponsored/fsp-deployment-guide.png" alt="The Full Stack Python Guide to Deployments" width="100%"></a>
     <p style="font-size: .8em; margin-top: 10px;">Searching for a complete, step-by-step deployment walkthrough? Learn more about <a href="http://www.deploypython.com/">The Full Stack Python Guide to Deployments book</a>. 
@@ -240,12 +240,12 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
 </div>  <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">Why Use Python?</h3></div>
       <div class="panel-body">
-          Major updates are tweeted via
+                    Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
           <hr/>
           Need more detailed tutorials than you see here?
           <a href="http://www.deploypython.com/">Learn more about The Full Stack Python Guide to Deployments book.</a>
-      </div>
+                </div>
   </div>
 </div></div>
         <hr/>

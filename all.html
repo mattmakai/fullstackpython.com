@@ -13,7 +13,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <link href="theme/css/f.min.css" rel="stylesheet">
-<script>
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -24,7 +24,7 @@
 <body>
     <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/theme/img/fork.png" alt="Fork me on GitHub"></a>
     <div class="container">
-<div class="row">
+        <div class="row">
     <div class="col-md-12">
         <div class="logo-header-section">
             <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
@@ -33,7 +33,7 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Introduction</h1>
+                  <h1>Introduction</h1>
 <p>You're knee deep in learning the <a href="http://www.python.org/">Python</a>
 programming language. The syntax is starting to make sense. The first
 few "<em>ahh-ha</em>!" moments are hitting you as you're learning conditional
@@ -44,7 +44,7 @@ like an application that's available on the web that you can show off or
 sell as a service to other people. That's where Full Stack Python comes in. 
 You've come to the right place to learn everything you need to create, deploy 
 and run a production Python web application.</p>
-          <h1>Learning Programming</h1>
+                  <h1>Learning Programming</h1>
 <p>Learning to program is about understanding how to translate thoughts into 
 source code that can be executed on computers to achieve one or more goals.</p>
 <p>There are many steps in learning how to program, including</p>
@@ -102,7 +102,7 @@ Programming languages, and the ecosystems around them, are human-made
 constructs. Find one that appears to match your personal style and give it a
 try, knowing that whatever you choose you'll need to put in many long days and
 nights to really get comfortable as a software developer.</p>
-          <h1>Why Use Python?</h1>
+                  <h1>Why Use Python?</h1>
 <p>Python's expansive library of open source data analysis tools, 
 <a href="/web-frameworks.html">web frameworks</a>, 
 and testing instruments make its ecosystem one of the largest out of any 
@@ -151,28 +151,28 @@ your organization then Python may be a good fit. </p>
 <p>The philosophy for Python is so strongly held that it's even embedded in
 the language as shown when the interpreter executes "import this" and
 displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a>.</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">this</span>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">import</span> <span class="n">this</span>
 <span class="n">The</span> <span class="n">Zen</span> <span class="n">of</span> <span class="n">Python</span><span class="p">,</span> <span class="n">by</span> <span class="n">Tim</span> <span class="n">Peters</span>
 
-<span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
-<span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
-<span class="n">Simple</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="nb">complex</span><span class="o">.</span>
-<span class="n">Complex</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="o">.</span>
-<span class="n">Flat</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="o">.</span>
-<span class="n">Sparse</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="o">.</span>
-<span class="n">Readability</span> <span class="n">counts</span><span class="o">.</span>
-<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="s">&#39;t special enough to break the rules.</span>
-<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="o">.</span>
-<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="k">pass</span> <span class="n">silently</span><span class="o">.</span>
-<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="o">.</span>
-<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="o">.</span>
-<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="ow">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="s">&#39;re Dutch.</span>
-<span class="n">Now</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">never</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="s">&#39;s a bad idea.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="o">.</span>
-<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s">&#39;s do more of those!</span>
+<span class="n">Beautiful</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="p">.</span>
+<span class="n">Explicit</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="p">.</span>
+<span class="n">Simple</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complex</span><span class="p">.</span>
+<span class="n">Complex</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="p">.</span>
+<span class="n">Flat</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="p">.</span>
+<span class="n">Sparse</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="p">.</span>
+<span class="n">Readability</span> <span class="n">counts</span><span class="p">.</span>
+<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">special</span> <span class="n">enough</span> <span class="n">to</span> <span class="k">break</span> <span class="n">the</span> <span class="n">rules</span><span class="p">.</span>
+<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="p">.</span>
+<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="n">pass</span> <span class="n">silently</span><span class="p">.</span>
+<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="p">.</span>
+<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="p">.</span>
+<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="n">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="k">do</span> <span class="n">it</span><span class="p">.</span>
+<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="n">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="err">&#39;</span><span class="n">re</span> <span class="n">Dutch</span><span class="p">.</span>
+<span class="n">Now</span> <span class="n">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="p">.</span>
+<span class="n">Although</span> <span class="n">never</span> <span class="n">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="p">.</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="n">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">a</span> <span class="n">bad</span> <span class="n">idea</span><span class="p">.</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="n">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="p">.</span>
+<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">do</span> <span class="n">more</span> <span class="n">of</span> <span class="n">those</span><span class="o">!</span>
 </pre></div>
 
 
@@ -198,7 +198,7 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
   <a href="http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html">read this thorough explanation of the topic</a>.</p>
 </li>
 </ul>
-          <h1>Best Python Resources</h1>
+                  <h1>Best Python Resources</h1>
 <p>The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. </p>
@@ -405,7 +405,7 @@ the <a href="/best-python-videos.html">best Python videos</a> page.</p>
   subscribing to all three so you don't miss anything.</p>
 </li>
 </ul>
-          <h1>Best Python Videos</h1>
+                  <h1>Best Python Videos</h1>
 <p>If you prefer to learn Python programming by watching videos then this is the
 resource for you. I've watched hundreds of live technical talks and combed
 through videos to pick out the ones with great speakers who'll teach you the
@@ -537,7 +537,7 @@ to learn more about web development.
   engage an audience of peers with an exciting talk.</p>
 </li>
 </ul>
-          <h1>Enterprise Python</h1>
+                  <h1>Enterprise Python</h1>
 <p>One of the misconceptions around Python and other dynamically-typed languages 
 is that they cannot be reliably used to build enterprise-grade software. 
 However, almost all commercial and government enterprises already use 
@@ -647,7 +647,7 @@ continue delivering business value to their business side customers.</p>
   from traditional software.</p>
 </li>
 </ul>
-          <h1>Development Environments</h1>
+                  <h1>Development Environments</h1>
 <p>A development environment is a combination of a text editor and the Python
 interpreter. The text editor allows you to write the code. The interpreter
 provides a way to execute the code you've written. A text editor can be
@@ -781,7 +781,7 @@ up your application.</p>
   has a comparison of several features between the two editors.</p>
 </li>
 </ul>
-          <h1>Vim</h1>
+                  <h1>Vim</h1>
 <p>Vim, short for Vi IMproved, is a configurable text editor often used as
 a Python development environment. Vim proponents commonly cite the numerous 
 plugins, Vimscript and logical command language as major Vim strengths.</p>
@@ -808,32 +808,32 @@ from nothing in it to very complicated with hundreds or thousands of lines
 of configuration commands.</p>
 <p>Here's a short, commented example .vimrc file I use for Python development 
 to get a feel for some of the configuration statements:</p>
-<div class="highlight"><pre>&quot; enable syntax highlighting
-syntax enable
+<div class="codehilite"><pre><span class="s">&quot; enable syntax highlighting</span>
+<span class="n">syntax</span> <span class="n">enable</span>
 
-&quot; show line numbers
-set number
+<span class="s">&quot; show line numbers</span>
+<span class="n">set</span> <span class="n">number</span>
 
-&quot; set tabs to have 4 spaces
-set ts=4
+<span class="s">&quot; set tabs to have 4 spaces</span>
+<span class="n">set</span> <span class="n">ts</span><span class="o">=</span><span class="mi">4</span>
 
-&quot; indent when moving to the next line while writing code
-set autoindent
+<span class="s">&quot; indent when moving to the next line while writing code</span>
+<span class="n">set</span> <span class="n">autoindent</span>
 
-&quot; expand tabs into spaces
-set expandtab
+<span class="s">&quot; expand tabs into spaces</span>
+<span class="n">set</span> <span class="n">expandtab</span>
 
-&quot; when using the &gt;&gt; or &lt;&lt; commands, shift lines by 4 spaces
-set shiftwidth=4
+<span class="s">&quot; when using the &gt;&gt; or &lt;&lt; commands, shift lines by 4 spaces</span>
+<span class="n">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">4</span>
 
-&quot; show a visual line under the cursor&#39;s current line 
-set cursorline
+<span class="s">&quot; show a visual line under the cursor&#39;s current line </span>
+<span class="n">set</span> <span class="n">cursorline</span>
 
-&quot; show the matching part of the pair for [] {} and ()
-set showmatch
+<span class="s">&quot; show the matching part of the pair for [] {} and ()</span>
+<span class="n">set</span> <span class="n">showmatch</span>
 
-&quot; enable all Python syntax highlighting features
-let python_highlight_all = 1
+<span class="s">&quot; enable all Python syntax highlighting features</span>
+<span class="n">let</span> <span class="n">python_highlight_all</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
 
@@ -983,7 +983,7 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.</p
   plugin for Vim that works with both Python 2 and 3.</p>
 </li>
 </ul>
-          <h1>Emacs</h1>
+                  <h1>Emacs</h1>
 <p>Emacs is an extensible text editor that can be customized by writing Lisp
 code.</p>
 <h2>Why is Emacs a good choice for Python coding?</h2>
@@ -1068,7 +1068,7 @@ use as well as
   extensibility and Vim's ergonomic text editing features.</p>
 </li>
 </ul>
-          <h1>Generators</h1>
+                  <h1>Generators</h1>
 <p>Generators are a Python core language construct that allow a function's return
 value to to behave as an iterator. A generator can allow more efficient 
 memory usage by allocating and deallocating memory during the context of a 
@@ -1113,7 +1113,7 @@ language as of Python 2.2 in 2001.</p>
   generators.</p>
 </li>
 </ul>
-          <h1>Comprehensions</h1>
+                  <h1>Comprehensions</h1>
 <p>Comprehensions are a Python language construct for concisely creating data
 in lists, dictionaries and sets. List comprehensions are included in Python 2
 while dictionary and set comprehensions were introduced to the language in
@@ -1125,21 +1125,21 @@ involves nested loops with conditionals that can be difficult for code
 readers to properly evaluate.</p>
 <h2>Example code</h2>
 <p>List comprehension:</p>
-<div class="highlight"><pre>&gt;&gt;&gt; double_digit_evens = [e*2 for e in range(5, 50)]
-&gt;&gt;&gt; double_digit_evens
-[10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98]
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">double_digit_evens</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">double_digit_evens</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
 </pre></div>
 
 
 <p>Set comprehension:</p>
-<div class="highlight"><pre>&gt;&gt;&gt; double_digit_odds = {e*2+1 for e in range(5, 50)}
-{11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99}
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">double_digit_odds</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)}</span>
+<span class="p">{</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">99</span><span class="p">}</span>
 </pre></div>
 
 
 <p>Dictionary comprehension:</p>
-<div class="highlight"><pre>&gt;&gt;&gt; {e: e*10 for e in range(1, 11)}
-{1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60, 7: 70, 8: 80, 9: 90, 10: 100}
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="n">e</span><span class="o">:</span> <span class="n">e</span><span class="o">*</span><span class="mi">10</span> <span class="k">for</span> <span class="n">e</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)}</span>
+<span class="p">{</span><span class="mi">1</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">4</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">5</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">6</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">7</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">8</span><span class="o">:</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">9</span><span class="o">:</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">10</span><span class="o">:</span> <span class="mi">100</span><span class="p">}</span>
 </pre></div>
 
 
@@ -1172,7 +1172,7 @@ readers to properly evaluate.</p>
   list comprehensions.</p>
 </li>
 </ul>
-          <h1>Web frameworks</h1>
+                  <h1>Web frameworks</h1>
 <p>A web framework is a code library that makes a developer's life easier when 
 building reliable, scalable and maintainable web applications.</p>
 <h2>Why are web frameworks necessary?</h2>
@@ -1310,7 +1310,7 @@ but it'll make most developers' lives easier in many cases.</p>
    web.</p>
 </li>
 </ol>
-          <h1>Django</h1>
+                  <h1>Django</h1>
 <p><a href="http://www.djangoproject.com/">Django</a> is a widely-used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
@@ -1661,7 +1661,7 @@ to handle these files properly.</p>
    project on the web.</p>
 </li>
 </ol>
-          <h1>Flask</h1>
+                  <h1>Flask</h1>
 <p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
 <a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
 <a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a></p>
@@ -1673,15 +1673,15 @@ Flask is easy to get started with as a beginner because there is little
 boilerplate code for getting a simple app up and running. </p>
 <p>For example, here's a valid "hello world" web application with Flask (the
 equivalent in Django would be significantly more code):</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<div class="codehilite"><pre><span class="n">from</span> <span class="n">flask</span> <span class="n">import</span> <span class="n">Flask</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s">&#39;Hello World!&#39;</span>
+<span class="err">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">)</span>
+<span class="n">def</span> <span class="n">hello_world</span><span class="p">()</span><span class="o">:</span>
+    <span class="k">return</span> <span class="err">&#39;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">&#39;</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="err">&#39;</span><span class="n">__main__</span><span class="err">&#39;</span><span class="o">:</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 
 
@@ -1939,7 +1939,7 @@ how to <a href="/deployment.html">deploy web applications</a>.
    Flask project on the web.</p>
 </li>
 </ol>
-          <h1>Bottle</h1>
+                  <h1>Bottle</h1>
 <p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> is a WSGI-compliant
 <a href="https://github.com/defnull/bottle/blob/master/bottle.py">single source file</a>
 web framework with no external dependencies except for the standard library
@@ -2010,7 +2010,7 @@ included with Python.</p>
    Bottle application on the web.</p>
 </li>
 </ol>
-          <h1>Pyramid</h1>
+                  <h1>Pyramid</h1>
 <p><a href="http://www.pylonsproject.org/projects/pyramid/about">Pyramid</a> is an open 
 source <a href="/wsgi-servers.html">WSGI</a> web framework based on the 
 Model-View-Controller (MVC) architectural pattern.</p>
@@ -2046,7 +2046,7 @@ Model-View-Controller (MVC) architectural pattern.</p>
   modern frameworks.</p>
 </li>
 </ul>
-          <h1>Morepath</h1>
+                  <h1>Morepath</h1>
 <p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
 framework with a model-driven approach to creating web applications and web
 APIs.</p>
@@ -2083,7 +2083,7 @@ assumption that templates will drive the user interface.</p>
   at EuroPython 2014.</p>
 </li>
 </ul>
-          <h1>Other Web Frameworks</h1>
+                  <h1>Other Web Frameworks</h1>
 <p>Python has a significant number of web frameworks outside the usual Django,
 Flask, Pyramid and Bottle suspects.</p>
 <h2>TurboGears2</h2>
@@ -2151,7 +2151,7 @@ the more common SQLAlchemy ORM.</p>
    those two frameworks then expand your knowledge from there.</p>
 </li>
 </ol>
-          <h1>Web Design</h1>
+                  <h1>Web Design</h1>
 <p>Web design is the creation of a web application's style and user interaction
 using CSS and JavaScript.</p>
 <h2>Why is web design important?</h2>
@@ -2207,7 +2207,7 @@ width.</p>
   that will show you how to build a simple rendering engine.</p>
 </li>
 </ul>
-          <h1>Cascading Style Sheets (CSS)</h1>
+                  <h1>Cascading Style Sheets (CSS)</h1>
 <p>Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.</p>
 <h2>Why is CSS necessary?</h2>
@@ -2356,7 +2356,7 @@ web application's design.</p>
    have something that looks much better than generic HTML.</p>
 </li>
 </ol>
-          <h1>JavaScript</h1>
+                  <h1>JavaScript</h1>
 <p>JavaScript is a small scripting programming language embedded in web browsers 
 to enable dynamic content and interaction. </p>
 <h2>Why is JavaScript necessary?</h2>
@@ -2455,7 +2455,7 @@ which is defined by the
    JavaScript files.</p>
 </li>
 </ol>
-          <h1>WebSockets</h1>
+                  <h1>WebSockets</h1>
 <p>A WebSocket is a <a href="http://tools.ietf.org/html/rfc6455">standard protocol</a> for 
 two-way data transfer between a client and server. The WebSockets protocol 
 does not run over HTTP, instead it is a separate implementation on top of 
@@ -2536,31 +2536,31 @@ passed through Nginx to your WSGI server. It can be tricky to set this up
 the first time. </p>
 <p>Here are the configuration settings I use in my Nginx file as part of my
 WebSockets proxy.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">where</span> <span class="nt">my</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">sits</span> <span class="nt">answering</span> <span class="nt">only</span> <span class="nt">on</span> <span class="nt">localhost</span>
-<span class="err">#</span> <span class="nt">usually</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">Gunicorn</span> <span class="nt">monkey</span> <span class="nt">patched</span> <span class="nt">with</span> <span class="nt">gevent</span>
-<span class="nt">upstream</span> <span class="nt">app_server_wsgiapp</span> <span class="p">{</span>
-  <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
+<div class="codehilite"><pre><span class="cp"># this is where my WSGI server sits answering only on localhost</span>
+<span class="cp"># usually this is Gunicorn monkey patched with gevent</span>
+<span class="n">upstream</span> <span class="n">app_server_wsgiapp</span> <span class="p">{</span>
+  <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">server</span> <span class="p">{</span>
+<span class="n">server</span> <span class="p">{</span>
 
   <span class="err">#</span> <span class="n">typical</span> <span class="n">web</span> <span class="n">server</span> <span class="n">configuration</span> <span class="n">goes</span> <span class="n">here</span>
 
   <span class="err">#</span> <span class="n">this</span> <span class="n">section</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
-  <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span> <span class="err">{</span>
-    <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">app_server_wsgiapp</span><span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span><span class="p">;</span>
+  <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="p">.</span><span class="n">io</span> <span class="p">{</span>
+    <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_wsgiapp/socket.io;</span>
     <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
 
     <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
 
-    <span class="n">proxy_http_version</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
+    <span class="n">proxy_http_version</span> <span class="mf">1.1</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">Upgrade</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
-    <span class="n">proxy_read_timeout</span> <span class="m">600</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s">&quot;upgrade&quot;</span><span class="p">;</span>
+    <span class="n">proxy_read_timeout</span> <span class="mi">600</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="err">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -2668,7 +2668,7 @@ properly.</p>
   I'm working to address.</p>
 </li>
 </ul>
-          <h1>Web Application Security</h1>
+                  <h1>Web Application Security</h1>
 <p>Website security must be thought about while building every level of the web 
 stack. However, this section includes topics that deserve particular
 treatment, such as cross-site scripting (XSS), SQL injection, cross-site 
@@ -2835,7 +2835,7 @@ securing Linux distributions.</p>
    Reevaluate your web application security on a frequent basis.</p>
 </li>
 </ol>
-          <h1>Static Site Generator</h1>
+                  <h1>Static Site Generator</h1>
 <p>A static website generator combines a markup language, such as Markdown 
 or reStructuredText, with a templating engine such as 
 <a href="http://jinja.pocoo.org/">Jinja</a>, to produce HTML 
@@ -2890,7 +2890,7 @@ ones listed here are primarily coded in Python.</p>
   source code, which uses Pelican to generate the site.</p>
 </li>
 </ul>
-          <h1>Data</h1>
+                  <h1>Data</h1>
 <p>Data is an incredibly broad topic but it can be broken down into many
 subsections, including (in no particular order):</p>
 <ul>
@@ -2958,7 +2958,7 @@ created the incredible mix of data code libraries available today.</p>
   in scientific fields.</p>
 </li>
 </ul>
-          <h1>Databases</h1>
+                  <h1>Databases</h1>
 <p>A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. </p>
 <h2>Why are databases necessary?</h2>
@@ -3130,6 +3130,12 @@ provider.</p>
 <h2>Database resources</h2>
 <ul>
 <li>
+<p><a href="http://coding-geek.com/how-databases-work/">How does a relational database work?</a>
+  is a detailed longform post on the sorting, searching, merging and other
+  operations we often take for granted when using an established relational 
+  database such as PostgreSQL.</p>
+</li>
+<li>
 <p><a href="https://medium.com/@jeeyoungk/why-i-love-databases-1d4cc433685f">Why I Love Databases</a>
   is a great read on the CAP Theorem, distributed systems and other topics
   that are at the core of database theory and implementation. Well worth
@@ -3189,7 +3195,7 @@ provider.</p>
    from your web application.</p>
 </li>
 </ol>
-          <h1>NoSQL Data Stores</h1>
+                  <h1>NoSQL Data Stores</h1>
 <p>Relational databases store the vast majority of web application 
 persistent data. However, there are several alternative classifications of 
 storage representations.</p>
@@ -3397,7 +3403,7 @@ representing a person could have a property of "female" or "male".</p>
    document-oriented data store such as MongoDB.</p>
 </li>
 </ol>
-          <h1>Object-relational mappers (ORMs)</h1>
+                  <h1>Object-relational mappers (ORMs)</h1>
 <p>An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.</p>
@@ -3411,14 +3417,14 @@ statements or stored procedures.</p>
 <p>For example, without an ORM a developer would write the following SQL
 statement to retrieve every row in the USERS table where the
 <code>zip_code</code> column is 94107:</p>
-<div class="highlight"><pre>SELECT * FROM USERS WHERE zip_code=94107;
+<div class="codehilite"><pre><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">USERS</span> <span class="n">WHERE</span> <span class="n">zip_code</span><span class="o">=</span><span class="mi">94107</span><span class="p">;</span>
 </pre></div>
 
 
 <p>The equivalent Django ORM query would instead look like the following Python
 code:</p>
-<div class="highlight"><pre># obtain everyone in the 94107 zip code and assign to users variable
-users = Users.objects.filter(zip_code=94107)
+<div class="codehilite"><pre><span class="cp"># obtain everyone in the 94107 zip code and assign to users variable</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Users</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">zip_code</span><span class="o">=</span><span class="mi">94107</span><span class="p">)</span>
 </pre></div>
 
 
@@ -3752,7 +3758,7 @@ For now, we'll lump schema migration resources under ORM links below.</p>
   <a href="http://www.ianbicking.org/docs/sqlobject-presentation/sqlobject-and-database-programming.html">SQLObject and Database Programming in Python</a>.</p>
 </li>
 </ul>
-          <h1>Application Programming Interfaces</h1>
+                  <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>
 <h2>Why are APIs important?</h2>
@@ -3834,7 +3840,7 @@ on the number's page on Twilio as shown below.</p>
    you want to share.</p>
 </li>
 </ol>
-          <h1>API Integration</h1>
+                  <h1>API Integration</h1>
 <p>The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 
@@ -3944,7 +3950,7 @@ across many implementation areas.</p>
    block the HTTP request-response cycle for your web application.</p>
 </li>
 </ol>
-          <h1>API Creation</h1>
+                  <h1>API Creation</h1>
 <p>Creating and exposing APIs allows your web application to interact with other
 applications through machine-to-machine communication.</p>
 <h2>API creation frameworks</h2>
@@ -4156,7 +4162,7 @@ equivalent of browser testing in the web application world.</p>
    initial API use case.</p>
 </li>
 </ol>
-          <h1>Deployment</h1>
+                  <h1>Deployment</h1>
 <p>Deployment involves packaging up your web application and putting it in a 
 production environment that can run the app.</p>
 <h2>Why is deployment necessary?</h2>
@@ -4248,7 +4254,7 @@ guide as they are considered advanced deployment techniques.</p>
    Python web application.</p>
 </li>
 </ol>
-          <h1>Servers</h1>
+                  <h1>Servers</h1>
 <p>Servers are the physical infrastructure to run all the layers of software
 so your web application can respond to requests from clients such as web 
 browsers.</p>
@@ -4387,7 +4393,7 @@ Python library for working with Amazon Web Services.</p>
    how to load Ubuntu 14.04 LTS as a base OS for Python web applications.</p>
 </li>
 </ol>
-          <h1>Platform-as-a-service</h1>
+                  <h1>Platform-as-a-service</h1>
 <p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
 a PaaS removes the need to know as much about the underlying servers, 
@@ -4511,7 +4517,7 @@ application framework and your app itself is up to date and secured. See the
 <p>Check if the application's functionality is working and tweak as necessary.</p>
 </li>
 </ol>
-          <h1>Operating Systems</h1>
+                  <h1>Operating Systems</h1>
 <p>An operating system runs on the server or virtual server and controls access 
 to computing resources. The operating system also includes a way to install
 programs necessary for running your Python web application.</p>
@@ -4637,7 +4643,7 @@ provides a command-line interface for interacting with the RPM system.</p>
    next step in the deployment process.</p>
 </li>
 </ol>
-          <h1>Web servers</h1>
+                  <h1>Web servers</h1>
 <p>Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
 requests from clients and send back a response containing a status code and
@@ -4778,7 +4784,7 @@ is provided by W3C.</p>
    configure the web server as a pass through for dynamic content.</p>
 </li>
 </ol>
-          <h1>WSGI Servers</h1>
+                  <h1>WSGI Servers</h1>
 <p>A <a href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. </p>
@@ -4873,34 +4879,34 @@ the browser. </p>
 Nginx should handle static assets (such as images, JavaScript, and CSS
 files) under the /static directory and pass all other requests to the WSGI
 server running on port 8000:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">specifies</span> <span class="nt">that</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
-<span class="nt">upstream</span> <span class="nt">app_server_djangoapp</span> <span class="p">{</span>
-    <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
+<div class="codehilite"><pre><span class="cp"># this specifies that there is a WSGI server running on port 8000</span>
+<span class="n">upstream</span> <span class="n">app_server_djangoapp</span> <span class="p">{</span>
+    <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="err">#</span> <span class="nt">Nginx</span> <span class="nt">is</span> <span class="nt">set</span> <span class="nt">up</span> <span class="nt">to</span> <span class="nt">run</span> <span class="nt">on</span> <span class="nt">the</span> <span class="nt">standard</span> <span class="nt">HTTP</span> <span class="nt">port</span> <span class="nt">and</span> <span class="nt">listen</span> <span class="nt">for</span> <span class="nt">requests</span>
-<span class="nt">server</span> <span class="p">{</span>
-  <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
+<span class="cp"># Nginx is set up to run on the standard HTTP port and listen for requests</span>
+<span class="n">server</span> <span class="p">{</span>
+  <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
 
   <span class="err">#</span> <span class="n">nginx</span> <span class="n">should</span> <span class="n">serve</span> <span class="n">up</span> <span class="k">static</span> <span class="n">files</span> <span class="n">and</span> <span class="n">never</span> <span class="n">send</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span> <span class="n">server</span>
-  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="err">{</span>
+  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="p">{</span>
     <span class="n">autoindex</span> <span class="n">on</span><span class="p">;</span>
     <span class="n">alias</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">assets</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="err">#</span> <span class="nt">requests</span> <span class="nt">that</span> <span class="nt">do</span> <span class="nt">not</span> <span class="nt">fall</span> <span class="nt">under</span> <span class="o">/</span><span class="nt">static</span> <span class="nt">are</span> <span class="nt">passed</span> <span class="nt">on</span> <span class="nt">to</span> <span class="nt">the</span> <span class="nt">WSGI</span>
-  <span class="err">#</span> <span class="nt">server</span> <span class="nt">that</span> <span class="nt">was</span> <span class="nt">specified</span> <span class="nt">above</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
-  <span class="nt">location</span> <span class="o">/</span> <span class="p">{</span>
+  <span class="err">#</span> <span class="n">requests</span> <span class="n">that</span> <span class="k">do</span> <span class="n">not</span> <span class="n">fall</span> <span class="n">under</span> <span class="o">/</span><span class="k">static</span> <span class="n">are</span> <span class="n">passed</span> <span class="n">on</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span>
+  <span class="err">#</span> <span class="n">server</span> <span class="n">that</span> <span class="n">was</span> <span class="n">specified</span> <span class="n">above</span> <span class="n">running</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">8000</span>
+  <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
     <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">http_host</span><span class="p">;</span>
     <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
 
-    <span class="n">if</span> <span class="p">(</span><span class="o">!-</span><span class="n">f</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="err">{</span>
-      <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">app_server_djangoapp</span><span class="p">;</span>
-      <span class="n">break</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!-</span><span class="n">f</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_djangoapp;</span>
+      <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -5003,7 +5009,7 @@ The following are WSGI servers based on community recommendations.</p>
    through for requests to and responses from the WSGI server.</p>
 </li>
 </ol>
-          <h1>Source control</h1>
+                  <h1>Source control</h1>
 <p>Source control, also known as <em>version control</em>, stores software code files
 with a detailed history of every modification made to those files.</p>
 <h2>Why is source control necessary?</h2>
@@ -5178,7 +5184,7 @@ reviews the basics of distributed version control systems.</p>
    version if a code deployment goes wrong.</p>
 </li>
 </ol>
-          <h1>Application Dependencies</h1>
+                  <h1>Application Dependencies</h1>
 <p>Application dependencies are the libraries other than your project code
 that are required to create and run your application. </p>
 <h2>Why are application dependencies important?</h2>
@@ -5243,17 +5249,17 @@ Pip downloads and installs application dependencies from the central
 should include <code>requirements.txt</code> in the base directory of your project.</p>
 <p>Python projects' dependencies for a web application should be specified 
 with pegged dependencies like the following:</p>
-<div class="highlight"><pre>django==1.6
-bpython==0.12
-django-braces==0.2.1
-django-model-utils==1.1.0
-logutils==0.3.3
-South==0.7.6
-requests==1.2.0
-stripe==1.9.1
-dj-database-url==0.2.1
-django-oauth2-provider==0.2.4
-djangorestframework==2.3.1
+<div class="codehilite"><pre><span class="n">django</span><span class="o">==</span><span class="mf">1.6</span>
+<span class="n">bpython</span><span class="o">==</span><span class="mf">0.12</span>
+<span class="n">django</span><span class="o">-</span><span class="n">braces</span><span class="o">==</span><span class="mf">0.2.1</span>
+<span class="n">django</span><span class="o">-</span><span class="n">model</span><span class="o">-</span><span class="n">utils</span><span class="o">==</span><span class="mf">1.1.0</span>
+<span class="n">logutils</span><span class="o">==</span><span class="mf">0.3.3</span>
+<span class="n">South</span><span class="o">==</span><span class="mf">0.7.6</span>
+<span class="n">requests</span><span class="o">==</span><span class="mf">1.2.0</span>
+<span class="n">stripe</span><span class="o">==</span><span class="mf">1.9.1</span>
+<span class="n">dj</span><span class="o">-</span><span class="n">database</span><span class="o">-</span><span class="n">url</span><span class="o">==</span><span class="mf">0.2.1</span>
+<span class="n">django</span><span class="o">-</span><span class="n">oauth2</span><span class="o">-</span><span class="n">provider</span><span class="o">==</span><span class="mf">0.2.4</span>
+<span class="n">djangorestframework</span><span class="o">==</span><span class="mf">2.3.1</span>
 </pre></div>
 
 
@@ -5357,7 +5363,7 @@ further clarification.</p>
    only the installed dependencies from the <code>requirements.txt</code> file.</p>
 </li>
 </ol>
-          <h1>Static content</h1>
+                  <h1>Static content</h1>
 <p>Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.</p>
@@ -5425,7 +5431,7 @@ Amazon S3 and other content delivery networks.</p>
    parallel to www HTTP requests.</p>
 </li>
 </ol>
-          <h1>Task queues</h1>
+                  <h1>Task queues</h1>
 <p>Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.</p>
 <h2>Why are task queues necessary?</h2>
@@ -5645,7 +5651,7 @@ when scaling out a large deployment of distributed task queues.</p>
    slow running code it originally relied upon.</p>
 </li>
 </ol>
-          <h1>Configuration Management</h1>
+                  <h1>Configuration Management</h1>
 <p>Configuration management involves modifying servers from an existing state to 
 a desired state and automating how an application is deployed.</p>
 <h2>Configuration management tools</h2>
@@ -5775,7 +5781,7 @@ from PyCon UK 2013</p>
 <p>Hook the automated deployment tool into your existing deployment process.</p>
 </li>
 </ol>
-          <h1>Continuous Integration</h1>
+                  <h1>Continuous Integration</h1>
 <p>Continuous integration (CI) automates building, testing and deploying 
 applications.</p>
 <h2>Why is continuous integration important?</h2>
@@ -5904,7 +5910,7 @@ relatively simple set up.</p>
   server for automated deployments.</p>
 </li>
 </ul>
-          <h1>Logging</h1>
+                  <h1>Logging</h1>
 <p>Logging saves output such as errors, warnings and event information to 
 persistent storage for debugging purposes. </p>
 <h2>Why is logging important?</h2>
@@ -6045,7 +6051,7 @@ certain threshold.</p>
    functions when they are above a certain threshold. </p>
 </li>
 </ol>
-          <h1>Monitoring</h1>
+                  <h1>Monitoring</h1>
 <p>Monitoring tools capture, analyze and display information for a web 
 application's execution. Every application has issues arise throughout
 all levels of the web stack. Monitoring tools provide transparency so
@@ -6217,7 +6223,7 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.</
    you're collecting and visualizing.</p>
 </li>
 </ol>
-          <h1>Web analytics</h1>
+                  <h1>Web analytics</h1>
 <p>Web analytics involves collecting, processing, visualizing web data to enable
 critical thinking about how users interact with a web application.</p>
 <h2>Why is web analytics important?</h2>
@@ -6358,7 +6364,7 @@ application before taking some action, such as purchasing your service.</p>
    the metrics generated by the web analytics as necessary.</p>
 </li>
 </ol>
-          <h1>Docker</h1>
+                  <h1>Docker</h1>
 <p>Docker is an <a href="https://github.com/docker/docker">open source</a> 
 infrastructure management platform for running and deploying software. The
 Docker platform is constantly evolving so an exact definition is currently
@@ -6463,7 +6469,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</
   from the perspective of Python developers handling deployments.</p>
 </li>
 </ul>
-          <h1>Caching</h1>
+                  <h1>Caching</h1>
 <p>Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. </p>
 <p>For example, instead of retrieving data from database tables that rarely 
@@ -6516,7 +6522,7 @@ for future requests.</p>
    accurate when served up to the user.</p>
 </li>
 </ol>
-          <h1>Code Metrics</h1>
+                  <h1>Code Metrics</h1>
 <p>Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.</p>
 <h2>Why are code metrics important?</h2>
@@ -6575,7 +6581,7 @@ system are occurring.</p>
   in the configuration.</p>
 </li>
 </ul>
-          <h1>What "full stack" means</h1>
+                  <h1>What "full stack" means</h1>
 <p>The terms "full stack" and "Full Stack Python" are ambiguous but I am using
 a specific definition here on this site. These term can be defined for a 
 web stack either to mean</p>
@@ -6602,7 +6608,7 @@ and advanced Python software developers need to constantly program and learn
 to keep up with our ever evolving ecosystem. I created Full Stack Python to
 be just one of <a href="/best-python-resources.html">many resources</a> that help Python 
 developers build and maintain their programming skills.</p>
-          <h1>Change Log</h1>
+                  <h1>Change Log</h1>
 <p>This is a running list of the major changes to Full Stack Python since its
 inception in December 2012. Another way to view the modifications is through
 the 
@@ -6981,7 +6987,7 @@ the
   introduction, CDN, web frameworks, and database sections with stubs for 
   other areas.</li>
 </ul>
-          <h1>Future Directions</h1>
+                  <h1>Future Directions</h1>
 <p>Full Stack Python has completely blown away my expectations for what I could
 accomplish with a side project. I really appreciate all the in-person feedback,
 emails and pull requests I've received from the community. Keep them coming!</p>
@@ -6996,7 +7002,7 @@ applications.</p>
 <a href="https://github.com/makaimc/fullstackpython.com/pulls">pull requests</a>
 from the community. I work to integrate PRs within a day or two so please 
 submit one when you see a fix or improvement that needs to be made!</p>
-          <h1>About the Author</h1>
+                  <h1>About the Author</h1>
 <p>This website was coded and written by
 <a href="http://www.mattmakai.com/">Matt Makai</a> 
 (<a href="http://twitter.com/mattmakai">@mattmakai</a>), currently a 
@@ -7014,9 +7020,9 @@ or on <a href="https://github.com/makaimc">GitHub at makaimc</a>.</p>
 <p>Typos, inaccurate statements or general areas for improvement can be handled
 through an issue ticket or pull request on
 <a href="https://github.com/makaimc/fullstackpython.com/">GitHub</a>.</p>
-    </div>
-<div class="col-md-offset-1 col-md-3" id="sidebar">
-<div class="panel panel-success">
+            </div>
+    <div class="col-md-offset-1 col-md-3" id="sidebar">
+    <div class="panel panel-success">
   <div class="panel-body">
     <a href="http://www.deploypython.com/"><img src="theme/img/sponsored/fsp-deployment-guide.png" alt="The Full Stack Python Guide to Deployments" width="100%"></a>
     <p style="font-size: .8em; margin-top: 10px;">Searching for a complete, step-by-step deployment walkthrough? Learn more about <a href="http://www.deploypython.com/">The Full Stack Python Guide to Deployments book</a>. 
@@ -7025,20 +7031,20 @@ through an issue ticket or pull request on
 </div>  <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">Full Stack Python</h3></div>
       <div class="panel-body">
-          View the 
+                    View the 
           <a href="/table-of-contents.html">table of contents</a> if you're
           looking for a specific Python topic.
           <hr/>
-          Major updates are tweeted via
+                    Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
           <hr/>
           Need more detailed tutorials than you see here?
           <a href="http://www.deploypython.com/">Learn more about The Full Stack Python Guide to Deployments book.</a>
-          <hr/>
+                    <hr/>
           <a href="/">Full Stack Python</a> is an open book that explains
           concepts in plain language and provides the most helpful resources 
           on those topics.
-      </div>
+                </div>
   </div>
 </div></div>
         <hr/>

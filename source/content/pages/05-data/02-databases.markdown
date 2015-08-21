@@ -171,6 +171,11 @@ provider.
 
 
 ## Database resources
+* [How does a relational database work?](http://coding-geek.com/how-databases-work/)
+  is a detailed longform post on the sorting, searching, merging and other
+  operations we often take for granted when using an established relational 
+  database such as PostgreSQL.
+
 * [Why I Love Databases](https://medium.com/@jeeyoungk/why-i-love-databases-1d4cc433685f)
   is a great read on the CAP Theorem, distributed systems and other topics
   that are at the core of database theory and implementation. Well worth

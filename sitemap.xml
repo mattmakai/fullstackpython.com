@@ -3,35 +3,11 @@
 
 
   <url>
-    <loc>http://www.fullstackpython.com/application-programming-interfaces.html</loc>
+    <loc>http://www.fullstackpython.com/about-author.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/data.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/deployment.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/generators.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/introduction.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/learning-programming.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/what-full-stack-means.html</loc>
+    <loc>http://www.fullstackpython.com/api-creation.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -39,7 +15,39 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/application-dependencies.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/application-programming-interfaces.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/bottle.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/caching.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/cascading-style-sheets.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/change-log.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/code-metrics.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -47,7 +55,27 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/configuration-management.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/continuous-integration.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/data.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/databases.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/deployment.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/development-environments.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -55,15 +83,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/servers.html</loc>
+    <loc>http://www.fullstackpython.com/docker.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/why-use-python.html</loc>
+    <loc>http://www.fullstackpython.com/emacs.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/api-creation.html</loc>
+    <loc>http://www.fullstackpython.com/enterprise-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -75,103 +103,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/no-sql-datastore.html</loc>
+    <loc>http://www.fullstackpython.com/generators.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/about-author.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/bottle.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/object-relational-mappers-orms.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/platform-as-a-service.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/code-metrics.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/operating-systems.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/pyramid.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/enterprise-python.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/morepath.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/web-servers.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/development-environments.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/wsgi-servers.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/source-control.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/vim.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/application-dependencies.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/emacs.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/other-web-frameworks.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/static-content.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/web-design.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/cascading-style-sheets.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/task-queues.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/configuration-management.html</loc>
+    <loc>http://www.fullstackpython.com/introduction.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -179,11 +115,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/continuous-integration.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/websockets.html</loc>
+    <loc>http://www.fullstackpython.com/learning-programming.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -195,7 +127,43 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/web-application-security.html</loc>
+    <loc>http://www.fullstackpython.com/morepath.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/no-sql-datastore.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/object-relational-mappers-orms.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/operating-systems.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/other-web-frameworks.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/platform-as-a-service.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/pyramid.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/servers.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/source-control.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/static-content.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -203,15 +171,47 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/task-queues.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/vim.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/web-analytics.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/docker.html</loc>
+    <loc>http://www.fullstackpython.com/web-application-security.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/caching.html</loc>
+    <loc>http://www.fullstackpython.com/web-design.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/web-servers.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/websockets.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/what-full-stack-means.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/why-use-python.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/wsgi-servers.html</loc>
     <priority>1.0</priority>
   </url>
 
