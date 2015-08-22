@@ -73,9 +73,6 @@ require for ongoing maintenance such as persistent storage backups.
   reviews the factors that you should weigh when deciding on hosting 
   providers.
 
-* This post covers hosting types and host to
-  [choose a web host](http://www.purefiremedia.com/choose-a-web-host/).
-
 * [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
   shows how to work with a VPS once you've got the server up and running.
 
