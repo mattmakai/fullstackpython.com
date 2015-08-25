@@ -193,6 +193,9 @@ for Django and web development on the
   [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
   are now all available to read.
 
+* [Django migrations without downtimes](http://pankrat.github.io/2015/django-migrations-without-downtimes/)
+  shows one potential way of performing on-line schema migrations with
+  Django.
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
