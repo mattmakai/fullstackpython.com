@@ -16,9 +16,13 @@
     <link href="theme/css/f.min.css" rel="stylesheet">
 </head>
 <body>
-    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/theme/img/fork.png" alt="Fork me on GitHub"></a>
+<div style="padding: 0 0 20px 0; margin: 0 0 20px 0; background-color: #22B24C;">
     <div class="container">
-        <div class="row">
+        <h2 style="color: #fff; margin: 20px 40px 0 0;"><a href="http://www.deploypython.com/" style="color: #fff">The Full Stack Python Guide to Deployments book</a> is now available!</h2>
+    </div>
+</div>    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/theme/img/fork.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+<div class="row">
     <div class="col-md-12">
         <div class="logo-header-section">
             <a href="/" style="text-decoration: none; border: none;"><img src="theme/img/fsp-logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
@@ -108,31 +112,31 @@ passed through Nginx to your WSGI server. It can be tricky to set this up
 the first time. </p>
 <p>Here are the configuration settings I use in my Nginx file as part of my
 WebSockets proxy.</p>
-<div class="codehilite"><pre><span class="cp"># this is where my WSGI server sits answering only on localhost</span>
-<span class="cp"># usually this is Gunicorn monkey patched with gevent</span>
-<span class="n">upstream</span> <span class="n">app_server_wsgiapp</span> <span class="p">{</span>
-  <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">where</span> <span class="nt">my</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">sits</span> <span class="nt">answering</span> <span class="nt">only</span> <span class="nt">on</span> <span class="nt">localhost</span>
+<span class="err">#</span> <span class="nt">usually</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">Gunicorn</span> <span class="nt">monkey</span> <span class="nt">patched</span> <span class="nt">with</span> <span class="nt">gevent</span>
+<span class="nt">upstream</span> <span class="nt">app_server_wsgiapp</span> <span class="p">{</span>
+  <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">server</span> <span class="p">{</span>
+<span class="nt">server</span> <span class="p">{</span>
 
   <span class="err">#</span> <span class="n">typical</span> <span class="n">web</span> <span class="n">server</span> <span class="n">configuration</span> <span class="n">goes</span> <span class="n">here</span>
 
   <span class="err">#</span> <span class="n">this</span> <span class="n">section</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
-  <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="p">.</span><span class="n">io</span> <span class="p">{</span>
-    <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">:</span><span class="c1">//app_server_wsgiapp/socket.io;</span>
+  <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span> <span class="err">{</span>
+    <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">app_server_wsgiapp</span><span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span><span class="p">;</span>
     <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
 
     <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
 
-    <span class="n">proxy_http_version</span> <span class="mf">1.1</span><span class="p">;</span>
+    <span class="n">proxy_http_version</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
     <span class="n">proxy_set_header</span> <span class="n">Upgrade</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s">&quot;upgrade&quot;</span><span class="p">;</span>
-    <span class="n">proxy_read_timeout</span> <span class="mi">600</span><span class="p">;</span>
+    <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
+    <span class="n">proxy_read_timeout</span> <span class="m">600</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">}</span>
+<span class="err">}</span>
 </pre></div>
 
 
@@ -240,24 +244,24 @@ properly.</p>
   I'm working to address.</p>
 </li>
 </ul>
-          <h3>What's next for your web application?</h3>
+<h3>What's next for your web application?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/wsgi-servers.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1576 927l-1328 738q-23 13-39.5 3t-16.5-36v-1472q0-26 16.5-36t39.5 3l1328 738q23 13 23 31t-23 31z" fill="#fff"/></svg></a>
+<a href="/wsgi-servers.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1576 927l-1328 738q-23 13-39.5 3t-16.5-36v-1472q0-26 16.5-36t39.5 3l1328 738q23 13 23 31t-23 31z" fill="#fff"/></svg></a>
 <p class="under-btn">What runs a Python application execute on the server?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/application-dependencies.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1088 832q0-26-19-45t-45-19h-256q-26 0-45 19t-19 45 19 45 45 19h256q26 0 45-19t19-45zm576-192v960q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-960q0-26 19-45t45-19h1408q26 0 45 19t19 45zm64-448v256q0 26-19 45t-45 19h-1536q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1536q26 0 45 19t19 45z" fill="#fff"/></svg></a>
+<a href="/application-dependencies.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1088 832q0-26-19-45t-45-19h-256q-26 0-45 19t-19 45 19 45 45 19h256q26 0 45-19t19-45zm576-192v960q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-960q0-26 19-45t45-19h1408q26 0 45 19t19 45zm64-448v256q0 26-19 45t-45 19h-1536q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1536q26 0 45 19t19 45z" fill="#fff"/></svg></a>
 <p class="under-btn">How should Python libraries be installed on a server?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-            <a href="/development-environments.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1728 992v-832q0-13-9.5-22.5t-22.5-9.5h-1600q-13 0-22.5 9.5t-9.5 22.5v832q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5zm128-832v1088q0 66-47 113t-113 47h-544q0 37 16 77.5t32 71 16 43.5q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45q0-14 16-44t32-70 16-78h-544q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1600q66 0 113 47t47 113z" fill="#fff"/></svg></a>
+<a href="/development-environments.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1728 992v-832q0-13-9.5-22.5t-22.5-9.5h-1600q-13 0-22.5 9.5t-9.5 22.5v832q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5zm128-832v1088q0 66-47 113t-113 47h-544q0 37 16 77.5t32 71 16 43.5q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45q0-14 16-44t32-70 16-78h-544q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1600q66 0 113 47t47 113z" fill="#fff"/></svg></a>
 <p class="under-btn">What editor should I use to code my Python app?</p>        </div>
     </div>
-</div>      <div id="mc_embed_signup">
+</div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
         <h4>Sign up here to receive an email with major updates to this site and Python tutorials delivered to your inbox once a month.</h4>
@@ -274,8 +278,8 @@ properly.</p>
 </form>
 </div>
     </div>
-    <div class="col-md-offset-1 col-md-3" id="sidebar">
-        <div class="panel panel-success">
+<div class="col-md-offset-1 col-md-3" id="sidebar">
+<div class="panel panel-success">
   <div class="panel-body">
     <a href="http://www.deploypython.com/"><img src="theme/img/sponsored/fsp-deployment-guide.png" alt="The Full Stack Python Guide to Deployments" width="100%"></a>
     <p style="font-size: .8em; margin-top: 10px;">Searching for a complete, step-by-step deployment walkthrough? Learn more about <a href="http://www.deploypython.com/">The Full Stack Python Guide to Deployments book</a>. 
@@ -286,62 +290,62 @@ properly.</p>
         <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Table of Contents</a></h3>
       </div>
       <div class="list-group">
-                        <a href="/introduction.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Introduction</a>
-                        <a href="/learning-programming.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Learning Programming</a>
-                        <a href="/why-use-python.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Why Use Python?</a>
-                        <a href="/best-python-resources.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Resources</a>
-                        <a href="/best-python-videos.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Videos</a>
-                        <a href="/enterprise-python.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Enterprise Python</a>
-                        <a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Development Environments</a>
-                        <a href="/vim.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Vim</a>
-                        <a href="/emacs.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Emacs</a>
-                        <a href="/generators.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Generators</a>
-                        <a href="/comprehensions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Comprehensions</a>
-                        <a href="/web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Frameworks</a>
-                        <a href="/django.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Django</a>
-                        <a href="/flask.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Flask</a>
-                        <a href="/bottle.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Bottle</a>
-                        <a href="/pyramid.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
-                        <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
-                        <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
-                        <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
-                        <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
-                        <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
-                        <a href="/websockets.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
-                        <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
-                        <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generator</a>
-                        <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
-                        <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
-                        <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
-                        <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
-                        <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
-                        <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
-                        <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
-                        <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
-                        <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
-                        <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
-                        <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
-                        <a href="/web-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Servers</a>
-                        <a href="/wsgi-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WSGI Servers</a>
-                        <a href="/source-control.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Source Control</a>
-                        <a href="/application-dependencies.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Dependencies</a>
-                        <a href="/static-content.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Content</a>
-                        <a href="/task-queues.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Task Queues</a>
-                        <a href="/configuration-management.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Configuration Management</a>
-                        <a href="/continuous-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Continuous Integration</a>
-                        <a href="/logging.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Logging</a>
-                        <a href="/monitoring.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Monitoring</a>
-                        <a href="/web-analytics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Analytics</a>
-                        <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
-                        <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
-                        <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
-                        <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
-                        <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
-                        <a href="/future-directions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Future Directions</a>
-                        <a href="/about-author.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>About the Author</a>
-                </div>
+              <a href="/introduction.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Introduction</a>
+              <a href="/learning-programming.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Learning Programming</a>
+              <a href="/why-use-python.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Why Use Python?</a>
+              <a href="/best-python-resources.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Resources</a>
+              <a href="/best-python-videos.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Best Python Videos</a>
+              <a href="/enterprise-python.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Enterprise Python</a>
+              <a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Development Environments</a>
+              <a href="/vim.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Vim</a>
+              <a href="/emacs.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Emacs</a>
+              <a href="/generators.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Generators</a>
+              <a href="/comprehensions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Comprehensions</a>
+              <a href="/web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Frameworks</a>
+              <a href="/django.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Django</a>
+              <a href="/flask.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Flask</a>
+              <a href="/bottle.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Bottle</a>
+              <a href="/pyramid.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
+              <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
+              <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
+              <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
+              <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
+              <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
+              <a href="/websockets.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
+              <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
+              <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generator</a>
+              <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
+              <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
+              <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
+              <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
+              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
+              <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
+              <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
+              <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
+              <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
+              <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
+              <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
+              <a href="/web-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Servers</a>
+              <a href="/wsgi-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WSGI Servers</a>
+              <a href="/source-control.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Source Control</a>
+              <a href="/application-dependencies.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Dependencies</a>
+              <a href="/static-content.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Content</a>
+              <a href="/task-queues.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Task Queues</a>
+              <a href="/configuration-management.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Configuration Management</a>
+              <a href="/continuous-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Continuous Integration</a>
+              <a href="/logging.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Logging</a>
+              <a href="/monitoring.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Monitoring</a>
+              <a href="/web-analytics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Analytics</a>
+              <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
+              <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
+              <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
+              <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
+              <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
+              <a href="/future-directions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Future Directions</a>
+              <a href="/about-author.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>About the Author</a>
+      </div>
   </div>
-    <div class="panel panel-success">
+<div class="panel panel-success">
   <div class="panel-body">
     <a href="http://www.deploypython.com/"><img src="theme/img/sponsored/fsp-deployment-guide.png" alt="The Full Stack Python Guide to Deployments" width="100%"></a>
     <p style="font-size: .8em; margin-top: 10px;">Searching for a complete, step-by-step deployment walkthrough? Learn more about <a href="http://www.deploypython.com/">The Full Stack Python Guide to Deployments book</a>. 
@@ -350,12 +354,12 @@ properly.</p>
 </div>  <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">WebSockets</h3></div>
       <div class="panel-body">
-                    Major updates are tweeted via
+          Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
           <hr/>
           Need more detailed tutorials than you see here?
           <a href="http://www.deploypython.com/">Learn more about The Full Stack Python Guide to Deployments book.</a>
-                </div>
+      </div>
   </div>
 </div></div>
         <hr/>

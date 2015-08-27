@@ -210,7 +210,6 @@ th.hidden-md,td.hidden-md{display:table-cell !important}
 .show{display:block !important}
 .invisible{visibility:hidden}
 html,body{font-size:18px;color:#222;background:#fefefe}
-body{padding-top:10px}
 .footer{padding:20px 0 30px 0}
 a,a:hover{border-bottom:1px dotted;color:#444}
 a:hover{text-decoration:none;color:#000}
