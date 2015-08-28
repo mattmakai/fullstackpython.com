@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Pyramid is a Python web framework that grew out of the Pylons project. Learn more about Pyramid on Full Stack Python.">
+    <meta name="description" content="Testing code is a vital part of developing Python applications. Learn more about testing on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Pyramid - Full Stack Python</title>
+    <title>Testing - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,58 +34,58 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Pyramid</h1>
-<p><a href="http://www.pylonsproject.org/projects/pyramid/about">Pyramid</a> is an open 
-source <a href="/wsgi-servers.html">WSGI</a> web framework based on the 
-Model-View-Controller (MVC) architectural pattern.</p>
-<p><a href="http://www.pylonsproject.org/" style="border: none;"><img src="theme/img/pyramid-logo.jpg" style="border-radius: 5px;" width="100%" alt="Pyramid web framework logo." class="technical-diagram" /></a></p>
-<h2>Pyramid resources</h2>
+          <h1>Testing</h1>
+<p>Testing determines whether software runs correctly based on specific inputs 
+and identifies defects that need to be fixed.</p>
+<h2>Why is testing important?</h2>
+<p>As software scales in codebase size, it's impossible for a person or even 
+a large team to keep up with all of the changes and
+the interactions between the changes. Automated testing is the only proven
+method for building reliable software once they grow past the point of a
+simple prototype. Many major software program development failures can be
+traced back to inadequate or a complete lack of testing.</p>
+<p>It's impossible to know whether software works properly unless it is tested.
+While testing can be done manually, by a user clicking buttons or typing in 
+input, it should be performed automatically by writing software programs that
+test the application under test.</p>
+<p>There are many forms of testing and they should all be used together. When 
+a single function of a program is isolated for testing, that is called
+<em>unit testing</em>. Testing more than a single function in an application at
+the same time is known as <em>functional testing</em>. <em>User interface testing</em> 
+ensures the correctness of how a user would interact with the software.</p>
+<h2>Testing in Python</h2>
+<p>Python software development culture is heavy on software testing. Because
+Python is a dynamically-typed language as opposed to a statically-typed
+language, testing takes on even greater importance for ensuring program
+correctness.</p>
+<h2>Testing resources</h2>
 <ul>
 <li>
-<p>The <a href="http://docs.pylonsproject.org/projects/pyramid-tutorials/en/latest/">Pyramid tutorials page</a>
-  is a good place to start getting your hands dirty with example projects.</p>
+<p>Google has a <a href="http://googletesting.blogspot.com/">testing blog</a> where
+  they write about various aspects of testing software at scale.</p>
 </li>
 <li>
-<p>Six Feet Up explains why Pyramid is their choice for 
-  <a href="http://www.sixfeetup.com/blog/pyramid-for-rapid-development-projects">rapid development projects</a>
-  in that blog post.</p>
-</li>
-<li>
-<p><a href="http://ruslanspivak.com/2012/02/05/pyramid-is-awesome-for-beginners/">Pyramid is awesome for beginners</a>
-  shows a simple "hello world" app for Pyramid and explains the framework
-  isn't necessarily as complex as people believe it is.</p>
-</li>
-<li>
-<p><a href="http://www.ibm.com/developerworks/cloud/library/cl-chatapp-bluemix-app/index.html">Build a chat app with Pyramid, SQLDB, and Bluemix</a>
-  is a Pyramid application walkthrough specific to IBM's Bluemix platform.</p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=kRKOWNdT72A">Developing Web Apps Using the Python Pyramid Framework</a>
-  is a video from San Francisco Python with an overview of how to install,
-  get started and build a web app with the Pyramid framework.</p>
-</li>
-<li>
-<p>This <a href="http://www.talkpythontome.com/episodes/show/3/pyramid-web-framework">podcast interview with the primary author of the Pyramid framework</a>
-  explains how Pyramid sprang from Pylons and how Pyramid compares to other 
-  modern frameworks.</p>
+<p><a href="http://michaeldehaan.net/post/120522567217/the-case-for-test-driven-development">The case for test-driven development</a>
+  by Michael DeHaan explains how automation is the only way to build software
+  at a large scale.</p>
 </li>
 </ul>
-<h3>Do you want to learn more about frameworks or a different subject?</h3>
+<h3>What's next after testing your application?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/django.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M649 983l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23zm1079 457v64q0 14-9 23t-23 9h-960q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h960q14 0 23 9t9 23z" fill="#fff"/></svg></a>
-<p class="under-btn">What is the Django web framework?</p>        </div>
+<a href="/code-metrics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1596 380q28 28 48 76t20 88v1152q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h896q40 0 88 20t76 48zm-444-244v376h376q-10-29-22-41l-313-313q-12-12-41-22zm384 1528v-1024h-416q-40 0-68-28t-28-68v-416h-768v1536h1280zm-1024-864q0-14 9-23t23-9h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64zm736 224q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704zm0 256q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704z" fill="#fff"/></svg></a>
+<p class="under-btn">What code metrics should I be aware of?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M275 128h1505l-266 1333-804 267-698-267 71-356h297l-29 147 422 161 486-161 68-339h-1208l58-297h1209l38-191h-1208z" fill="#fff"/></svg></a>
-<p class="under-btn">My app runs but looks awful. How do I style the user interface?</p>        </div>
+<a href="/continuous-integration.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z" fill="#fff"/></svg></a>
+<p class="under-btn">Can I automate testing and deployments for my app?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/other-web-frameworks.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1088 1256v240q0 16-12 28t-28 12h-240q-16 0-28-12t-12-28v-240q0-16 12-28t28-12h240q16 0 28 12t12 28zm316-600q0 54-15.5 101t-35 76.5-55 59.5-57.5 43.5-61 35.5q-41 23-68.5 65t-27.5 67q0 17-12 32.5t-28 15.5h-240q-15 0-25.5-18.5t-10.5-37.5v-45q0-83 65-156.5t143-108.5q59-27 84-56t25-76q0-42-46.5-74t-107.5-32q-65 0-108 29-35 25-107 115-13 16-31 16-12 0-25-8l-164-125q-13-10-15.5-25t5.5-28q160-266 464-266 80 0 161 31t146 83 106 127.5 41 158.5z" fill="#fff"/></svg></a>
-<p class="under-btn">What other Python web frameworks exist?</p>        </div>
+<a href="/web-analytics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1152q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm192-448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm428 481l101-382q6-26-7.5-48.5t-38.5-29.5-48 6.5-30 39.5l-101 382q-60 5-107 43.5t-63 98.5q-20 77 20 146t117 89 146-20 89-117q16-60-6-117t-72-91zm660-33q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm-640-640q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm448 192q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm320 448q0 261-141 483-19 29-54 29h-1402q-35 0-54-29-141-221-141-483 0-182 71-348t191-286 286-191 348-71 348 71 286 191 191 286 71 348z" fill="#fff"/></svg></a>
+<p class="under-btn">I want to learn more about app users via web analytics.</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -131,7 +131,7 @@ Model-View-Controller (MVC) architectural pattern.</p>
               <a href="/django.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Django</a>
               <a href="/flask.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Flask</a>
               <a href="/bottle.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Bottle</a>
-              <a href="/pyramid.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
+              <a href="/pyramid.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Pyramid</a>
               <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
               <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
               <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
@@ -164,7 +164,7 @@ Model-View-Controller (MVC) architectural pattern.</p>
               <a href="/web-analytics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Analytics</a>
               <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
               <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
-              <a href="/testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Testing</a>
+              <a href="/testing.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Testing</a>
               <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
               <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
               <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
@@ -179,7 +179,7 @@ Model-View-Controller (MVC) architectural pattern.</p>
     </p>
   </div>
 </div>  <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Pyramid</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Testing</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
