@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### August
+* Created new pages for [unit testing](/unit-testing.html) and 
+  [integration testing](/integration-testing.html).
 * Created a new page on [testing](/testing.html) that will be fleshed out
   over the next few weeks.
 * Added new [Django](/django.html) resources, especially for migrations.
