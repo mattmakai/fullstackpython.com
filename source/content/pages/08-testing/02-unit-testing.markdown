@@ -27,7 +27,9 @@ of the disparate pieces not fitting together properly.
 ## Unit testing tools
 There are many tools for creating tests in Python. Some of these tools, such
 as pytest, replace the built-in unittest framework. Other tools, such as
-nose, are extensions that ease test case creation.
+nose, are extensions that ease test case creation. Note that many of these
+tools are also used for [integration testing](/integration-testing.html)
+by writing the test cases to exercise multiple parts of code at once.
 
 * [unittest](https://docs.python.org/3/library/unittest.html)
   is the built-in standard library tool for testing Python code.

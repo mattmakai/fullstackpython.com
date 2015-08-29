@@ -56,3 +56,8 @@ correctness.
 * Google has a [testing blog](http://googletesting.blogspot.com/) where
   they write about various aspects of testing software at scale.
 
+* Still confused about the difference between unit, functional and 
+  integration tests? Check out this 
+  [top answer on Stack Overflow](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test) 
+  to that very question.
+

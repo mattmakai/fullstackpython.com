@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Caching reduces load on servers by pre-calculating the results of common operations. Learn more about caching on Full Stack Python.">
+    <meta name="description" content="Integration testing determines the correctness for several parts of a system under test at once. Learn more on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Caching - Full Stack Python</title>
+    <title>Integration Testing - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,75 +34,63 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Caching</h1>
-<p>Caching can reduce the load on servers by storing the results of common 
-operations and serving the precomputed answers to clients. </p>
-<p>For example, instead of retrieving data from database tables that rarely 
-change, you can store the values in-memory. Retrieving values from an 
-in-memory location is far faster than retrieving them from a database (which
-stores them on a persistent disk like a hard drive.) When the cached values 
-change the system can invalidate the cache and re-retrieve the updated values
-for future requests.</p>
-<p>A cache can be created for multiple layers of the stack. </p>
-<h2>Caching backends</h2>
+          <h1>Integration Testing</h1>
+<p>Integration testing exercises two or more parts of an application at once, 
+including the interactions between the parts, to determine if they function
+as intended. This type of <a href="/testing.html">testing</a> identifies defects in 
+the interfaces between disparate parts of a codebase as they invoke 
+each other and pass data between themselves.</p>
+<h2>How is integration testing different from unit testing?</h2>
+<p>While <a href="/unit-testing.html">unit testing</a> is used to find bugs in individual
+functions, integration testing tests the system as a whole. These two
+approaches should be used together, instead of doing just one approach over
+the other. When a system is comprehensively unit tested, it makes 
+integration testing far easier because many of the bugs in the individual
+components will have already been found and fixed. </p>
+<p>As a codebase scales up, both unit and integration testing allow 
+developers to quickly identify breaking changes in their code. Many times
+these breaking changes are unintended and wouldn't be known about until
+later in the development cycle, potentially when an end user discovers 
+the issue while using the software. Automated unit and integration tests
+greatly increase the likelihood that bugs will be found as soon as possible
+during development so they can be addressed immediately.</p>
+<h3>Integration testing resources</h3>
 <ul>
 <li>
-<p><a href="http://memcached.org/">memcached</a> is a common in-memory caching system.</p>
+<p><a href="http://eigenhombre.com/2013/04/13/integration-testing-in-python-with-context-managers/">Integration testing with Context Managers</a>
+  gives an example of a system that needs integration tests and shows how
+  context managers can be used to address the problem. There are a couple
+  other useful posts in this series on testing including 
+  <a href="http://eigenhombre.com/2013/04/18/thoughts-on-integration-testing/">thoughts on integration testing</a>
+  and <a href="http://eigenhombre.com/2013/04/19/processes-vs-threads-for-testing/">processes vs. threads for integration testing</a>.</p>
 </li>
 <li>
-<p><a href="http://redis.io/">Redis</a> is a key-value in-memory data store that can
-  easily be configured for caching with libraries such as 
-  <a href="https://github.com/sebleier/django-redis-cache">django-redis-cache</a>.</p>
+<p>Pytest has a page on <a href="https://pytest.org/latest/goodpractises.html">integration good practices</a> 
+  that you'll likely want to follow when testing your application.</p>
+</li>
+<li>
+<p><a href="http://enterprisecraftsmanship.com/2015/07/13/integration-testing-or-how-to-sleep-well-at-nights/">Integration testing, or how to sleep well at night</a>
+  explains what integration tests are and gives an example. The example is 
+  coded in Java but still relevant when you're learning about integration
+  testing.</p>
 </li>
 </ul>
-<h2>Caching resources</h2>
-<ul>
-<li>
-<p>"<a href="https://bjornjohansen.no/caching-varnish-or-nginx">Caching: Varnish or Nginx?</a>"
-  reviews some considerations such as SSL and SPDY support when choosing
-  reverse proxy Nginx or Varnish.</p>
-</li>
-<li>
-<p><a href="http://bizcoder.com/caching-is-hard-draw-me-a-picture">Caching is Hard, Draw me a Picture</a>
-  has diagrams of how web request caching layers work. The post is relevant
-  reading even though the author is describing his Microsoft code as the 
-  impetus for writing the content.</p>
-</li>
-</ul>
-<h2>Caching learning checklist</h2>
-<ol>
-<li>
-<p>Analyze your web application for the slowest parts. It's likely there are
-   complex database queries that can be precomputed and stored in an in-memory
-   data store.</p>
-</li>
-<li>
-<p>Leverage your existing in-memory data store already used for session data
-   to cache the results of those complex database queries. A 
-   <a href="/task-queues.html">task queue</a> can often be used to precompute the results 
-   on a regular basis and save them in the data store.</p>
-</li>
-<li>
-<p>Incorporate a cache invalidation scheme so the precomputed results remain 
-   accurate when served up to the user.</p>
-</li>
-</ol>
-<h3>What do you want to learn next for your deployment?</h3>
+<h3>What else do you want to learn about testing?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/task-queues.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1024 1408h640v-128h-640v128zm-384-512h1024v-128h-1024v128zm640-512h384v-128h-384v128zm512 832v256q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1664q26 0 45 19t19 45zm0-512v256q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1664q26 0 45 19t19 45zm0-512v256q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1664q26 0 45 19t19 45z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I execute code outside the HTTP request-response cycle?</p>        </div>
+<a href="/unit-testing.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M512 1248v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm-640-1024v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm-640-1024v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68z" fill="#fff"/></svg></a>
+<p class="under-btn">How do I create unit tests?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/web-analytics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1152q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm192-448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm428 481l101-382q6-26-7.5-48.5t-38.5-29.5-48 6.5-30 39.5l-101 382q-60 5-107 43.5t-63 98.5q-20 77 20 146t117 89 146-20 89-117q16-60-6-117t-72-91zm660-33q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm-640-640q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm448 192q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm320 448q0 261-141 483-19 29-54 29h-1402q-35 0-54-29-141-221-141-483 0-182 71-348t191-286 286-191 348-71 348 71 286 191 191 286 71 348z" fill="#fff"/></svg></a>
-<p class="under-btn">I want to learn more about app users via web analytics.</p>        </div>
+<a href="/continuous-integration.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z" fill="#fff"/></svg></a>
+<p class="under-btn">Can I automate testing and deployments for my app?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/web-application-security.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M640 768h512v-192q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-576q0-40 28-68t68-28h32v-192q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" fill="#fff"/></svg></a>
-<p class="under-btn">What can I do to mitigate security vulnerability in my web app?</p>        </div>
+<a href="/code-metrics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1596 380q28 28 48 76t20 88v1152q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h896q40 0 88 20t76 48zm-444-244v376h376q-10-29-22-41l-313-313q-12-12-41-22zm384 1528v-1024h-416q-40 0-68-28t-28-68v-416h-768v1536h1280zm-1024-864q0-14 9-23t23-9h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64zm736 224q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704zm0 256q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704z" fill="#fff"/></svg></a>
+<p class="under-btn">What code metrics should I be aware of?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -180,10 +168,10 @@ for future requests.</p>
               <a href="/monitoring.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Monitoring</a>
               <a href="/web-analytics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Analytics</a>
               <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
-              <a href="/caching.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
+              <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
               <a href="/testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Testing</a>
               <a href="/unit-testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Unit Testing</a>
-              <a href="/integration-testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Integration Testing</a>
+              <a href="/integration-testing.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Integration Testing</a>
               <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
               <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
               <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
@@ -198,7 +186,7 @@ for future requests.</p>
     </p>
   </div>
 </div>  <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Caching</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Integration Testing</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
