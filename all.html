@@ -6587,6 +6587,29 @@ as many of the individual bugs as possible so when the application comes
 together as a whole the separate parts work as correct as possible. Then
 when issues arise they can often be tracked down as unintended consequences
 of the disparate pieces not fitting together properly.</p>
+<h2>Unit testing tools</h2>
+<p>There are many tools for creating tests in Python. Some of these tools, such
+as pytest, replace the built-in unittest framework. Other tools, such as
+nose, are extensions that ease test case creation.</p>
+<ul>
+<li>
+<p><a href="https://docs.python.org/3/library/unittest.html">unittest</a>
+  is the built-in standard library tool for testing Python code.</p>
+</li>
+<li>
+<p><a href="http://pytest.org/latest/">pytest</a></p>
+</li>
+<li>
+<p><a href="https://nose.readthedocs.org/en/latest/">nose</a> is an extension to
+  unittest that makes it easier to create and execute test cases.</p>
+</li>
+<li>
+<p><a href="https://github.com/Yelp/Testify/">testify</a> was a testing framework
+  meant to replace the common unittest+nose combination. However, the team
+  behind testify is transitioning to pytest so it's recommended you do
+  not use testify for new projects.</p>
+</li>
+</ul>
 <h3>Unit testing resources</h3>
 <ul>
 <li>
@@ -6597,11 +6620,22 @@ of the disparate pieces not fitting together properly.</p>
 <li>
 <p><a href="http://www.diveintopython3.net/unit-testing.html">Dive into Python 3's chapter on unit testing</a>
   has a complete example with code and a detailed explanation for creating
-  unit testing with the unittest module.</p>
+  unit testing with the 
+  <a href="https://docs.python.org/3/library/unittest.html">unittest</a> module.</p>
 </li>
 <li>
-<p><a href="https://docs.python.org/3/library/unittest.html">unittest</a> is the 
-  built-in standard library tool for testing Python code.</p>
+<p><a href="https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/">Understanding unit testing</a>
+  explains why testing is important and shows how to do it effectively in
+  your applications.</p>
+</li>
+<li>
+<p><a href="http://www.drdobbs.com/testing/unit-testing-with-python/240165163">Unit testing with Python</a>
+  provides a high-level overview of testing and has diagrams to demonstrate
+  what's going on in the testing cycle.</p>
+</li>
+<li>
+<p>The Python wiki has a page with a list of 
+  <a href="https://wiki.python.org/moin/PythonTestingToolsTaxonomy">Python testing tools and extensions</a>.</p>
 </li>
 </ul>
           <h1>Code Metrics</h1>
