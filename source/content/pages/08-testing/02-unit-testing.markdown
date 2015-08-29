@@ -32,7 +32,8 @@ nose, are extensions that ease test case creation.
 * [unittest](https://docs.python.org/3/library/unittest.html)
   is the built-in standard library tool for testing Python code.
 
-* [pytest](http://pytest.org/latest/)
+* [pytest](http://pytest.org/latest/) is a complete testing tool that
+  emphasizes backwards-compatibility and minimizing boilerplate code.
 
 * [nose](https://nose.readthedocs.org/en/latest/) is an extension to
   unittest that makes it easier to create and execute test cases.
