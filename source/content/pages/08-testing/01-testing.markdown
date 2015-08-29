@@ -26,7 +26,8 @@ test the application under test.
 There are many forms of testing and they should all be used together. When 
 a single function of a program is isolated for testing, that is called
 [unit testing](/unit-testing.html). Testing more than a single function 
-in an application at the same time is known as *functional testing*. 
+in an application at the same time is known as 
+[integration testing](/integration-testing.html). 
 *User interface testing* ensures the correctness of how a user would 
 interact with the software. There are even more forms of testing that large
 programs need, such as *load testing*, *database testing*, and
