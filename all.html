@@ -6539,9 +6539,12 @@ input, it should be performed automatically by writing software programs that
 test the application under test.</p>
 <p>There are many forms of testing and they should all be used together. When 
 a single function of a program is isolated for testing, that is called
-<em>unit testing</em>. Testing more than a single function in an application at
-the same time is known as <em>functional testing</em>. <em>User interface testing</em> 
-ensures the correctness of how a user would interact with the software.</p>
+<a href="/unit-testing.html">unit testing</a>. Testing more than a single function 
+in an application at the same time is known as <em>functional testing</em>. 
+<em>User interface testing</em> ensures the correctness of how a user would 
+interact with the software. There are even more forms of testing that large
+programs need, such as <em>load testing</em>, <em>database testing</em>, and
+<em>browser testing</em> (for web applications).</p>
 <h2>Testing in Python</h2>
 <p>Python software development culture is heavy on software testing. Because
 Python is a dynamically-typed language as opposed to a statically-typed
@@ -6550,13 +6553,55 @@ correctness.</p>
 <h2>Testing resources</h2>
 <ul>
 <li>
-<p>Google has a <a href="http://googletesting.blogspot.com/">testing blog</a> where
-  they write about various aspects of testing software at scale.</p>
+<p><a href="http://late.am/post/2015/04/20/good-test-bad-test.html">Good test, bad test</a>
+  explains the difference between a "good" test case and one that is not
+  as useful. Along the way the post breaks down some myths about common
+  testing subjects such as code coverage, assertions and mocking.</p>
+</li>
+<li>
+<p><a href="http://pythontesting.net/">Python Testing</a> is a site devoted to testing
+  in - you guessed it - the Python programming language.</p>
 </li>
 <li>
 <p><a href="http://michaeldehaan.net/post/120522567217/the-case-for-test-driven-development">The case for test-driven development</a>
   by Michael DeHaan explains how automation is the only way to build software
   at a large scale.</p>
+</li>
+<li>
+<p>Google has a <a href="http://googletesting.blogspot.com/">testing blog</a> where
+  they write about various aspects of testing software at scale.</p>
+</li>
+</ul>
+          <h1>Unit testing</h1>
+<p>Unit testing is a method of determining the correctness of a single function 
+isolated from a larger codebase. The idea is that if all the atomic units
+of an application work as intended in isolation, then integrating them 
+together as intended is much easier.</p>
+<h2>Why is unit testing important?</h2>
+<p>Unit testing is just one form of <a href="/testing.html">testing</a> that works in
+combination with other testing approaches to wring out the bugs from a
+piece of software being developed. When several functions and classes are
+put together it's often difficult to determine the source of a problem if
+several bugs are occurring at the same time. Unit testing helps eliminate
+as many of the individual bugs as possible so when the application comes
+together as a whole the separate parts work as correct as possible. Then
+when issues arise they can often be tracked down as unintended consequences
+of the disparate pieces not fitting together properly.</p>
+<h3>Unit testing resources</h3>
+<ul>
+<li>
+<p><a href="https://realpython.com/blog/python/the-minimum-viable-test-suite/">The Minimum Viable Test Suite</a>
+  shows how to set unit tests and integration tests for a Flask example
+  application.</p>
+</li>
+<li>
+<p><a href="http://www.diveintopython3.net/unit-testing.html">Dive into Python 3's chapter on unit testing</a>
+  has a complete example with code and a detailed explanation for creating
+  unit testing with the unittest module.</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/3/library/unittest.html">unittest</a> is the 
+  built-in standard library tool for testing Python code.</p>
 </li>
 </ul>
           <h1>Code Metrics</h1>
@@ -6653,6 +6698,9 @@ the
 <h2>2015</h2>
 <h3>August</h3>
 <ul>
+<li>Created a new page on <a href="/testing.html">testing</a> that will be fleshed out
+  over the next few weeks.</li>
+<li>Added new <a href="/django.html">Django</a> resources, especially for migrations.</li>
 <li>Added new <a href="/web-application-security.html">web app security</a> resources on
   HTTPS.</li>
 </ul>

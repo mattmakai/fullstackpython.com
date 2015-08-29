@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### August
+* Created a new page on [testing](/testing.html) that will be fleshed out
+  over the next few weeks.
+* Added new [Django](/django.html) resources, especially for migrations.
 * Added new [web app security](/web-application-security.html) resources on
   HTTPS.
 

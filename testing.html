@@ -50,9 +50,12 @@ input, it should be performed automatically by writing software programs that
 test the application under test.</p>
 <p>There are many forms of testing and they should all be used together. When 
 a single function of a program is isolated for testing, that is called
-<em>unit testing</em>. Testing more than a single function in an application at
-the same time is known as <em>functional testing</em>. <em>User interface testing</em> 
-ensures the correctness of how a user would interact with the software.</p>
+<a href="/unit-testing.html">unit testing</a>. Testing more than a single function 
+in an application at the same time is known as <em>functional testing</em>. 
+<em>User interface testing</em> ensures the correctness of how a user would 
+interact with the software. There are even more forms of testing that large
+programs need, such as <em>load testing</em>, <em>database testing</em>, and
+<em>browser testing</em> (for web applications).</p>
 <h2>Testing in Python</h2>
 <p>Python software development culture is heavy on software testing. Because
 Python is a dynamically-typed language as opposed to a statically-typed
@@ -61,13 +64,23 @@ correctness.</p>
 <h2>Testing resources</h2>
 <ul>
 <li>
-<p>Google has a <a href="http://googletesting.blogspot.com/">testing blog</a> where
-  they write about various aspects of testing software at scale.</p>
+<p><a href="http://late.am/post/2015/04/20/good-test-bad-test.html">Good test, bad test</a>
+  explains the difference between a "good" test case and one that is not
+  as useful. Along the way the post breaks down some myths about common
+  testing subjects such as code coverage, assertions and mocking.</p>
+</li>
+<li>
+<p><a href="http://pythontesting.net/">Python Testing</a> is a site devoted to testing
+  in - you guessed it - the Python programming language.</p>
 </li>
 <li>
 <p><a href="http://michaeldehaan.net/post/120522567217/the-case-for-test-driven-development">The case for test-driven development</a>
   by Michael DeHaan explains how automation is the only way to build software
   at a large scale.</p>
+</li>
+<li>
+<p>Google has a <a href="http://googletesting.blogspot.com/">testing blog</a> where
+  they write about various aspects of testing software at scale.</p>
 </li>
 </ul>
 <h3>What's next after testing your application?</h3>
@@ -165,6 +178,7 @@ correctness.</p>
               <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
               <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
               <a href="/testing.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Testing</a>
+              <a href="/unit-testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Unit Testing</a>
               <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
               <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
               <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>

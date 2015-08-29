@@ -25,9 +25,12 @@ test the application under test.
 
 There are many forms of testing and they should all be used together. When 
 a single function of a program is isolated for testing, that is called
-*unit testing*. Testing more than a single function in an application at
-the same time is known as *functional testing*. *User interface testing* 
-ensures the correctness of how a user would interact with the software.
+[unit testing](/unit-testing.html). Testing more than a single function 
+in an application at the same time is known as *functional testing*. 
+*User interface testing* ensures the correctness of how a user would 
+interact with the software. There are even more forms of testing that large
+programs need, such as *load testing*, *database testing*, and
+*browser testing* (for web applications).
 
 
 ## Testing in Python
@@ -38,10 +41,18 @@ correctness.
 
 
 ## Testing resources
-* Google has a [testing blog](http://googletesting.blogspot.com/) where
-  they write about various aspects of testing software at scale.
+* [Good test, bad test](http://late.am/post/2015/04/20/good-test-bad-test.html)
+  explains the difference between a "good" test case and one that is not
+  as useful. Along the way the post breaks down some myths about common
+  testing subjects such as code coverage, assertions and mocking.
+
+* [Python Testing](http://pythontesting.net/) is a site devoted to testing
+  in - you guessed it - the Python programming language.
 
 * [The case for test-driven development](http://michaeldehaan.net/post/120522567217/the-case-for-test-driven-development)
   by Michael DeHaan explains how automation is the only way to build software
   at a large scale.
+
+* Google has a [testing blog](http://googletesting.blogspot.com/) where
+  they write about various aspects of testing software at scale.
 

@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Web application deployment involves packaging and running your app on a server. Learn more about deployments on Full Stack Python.">
+    <meta name="description" content="Unit testing exercises one function isolated from a program. Learn more about unit testing on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Deployment - Full Stack Python</title>
+    <title>Unit Testing - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,114 +34,54 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Deployment</h1>
-<p>Deployment involves packaging up your web application and putting it in a 
-production environment that can run the app.</p>
-<h2>Why is deployment necessary?</h2>
-<p>Your web application must live somewhere other than your own desktop or 
-laptop. A production environment is the canonical version of your current 
-application and its associated data.</p>
-<h2>Deployment topics map</h2>
-<p>Python web application deployments are comprised of many pieces that need to
-be individually configured. Here is a map that visually depicts how each
-deployment topic relates to each other. Click the image to pull up a PDF 
-version.</p>
-<p><a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a></p>
-<h2>Deployment hosting options</h2>
-<p>There are four options for deploying and hosting a web application:</p>
-<ol>
-<li>
-<p><a href="/servers.html">"Bare metal" servers</a></p>
-</li>
-<li>
-<p><a href="/servers.html">Virtualized servers</a></p>
-</li>
-<li>
-<p><a href="/servers.html">Infrastructure-as-a-service</a></p>
-</li>
-<li>
-<p><a href="/platform-as-a-service.html">Platform-as-a-service</a></p>
-</li>
-</ol>
-<p>The first three options are similar. The deployer needs to provision one or
-more servers with a Linux distribution. System packages, a web server, 
-WSGI server, database and the Python environment are then installed. Finally
-the application can be pulled from source and installed in the environment.</p>
-<p>Note that there are other ways of installing a Python web application through
-system-specific package management systems. We won't cover those in this
-guide as they are considered advanced deployment techniques.</p>
-<h2>Deployment resources</h2>
+          <h1>Unit testing</h1>
+<p>Unit testing is a method of determining the correctness of a single function 
+isolated from a larger codebase. The idea is that if all the atomic units
+of an application work as intended in isolation, then integrating them 
+together as intended is much easier.</p>
+<h2>Why is unit testing important?</h2>
+<p>Unit testing is just one form of <a href="/testing.html">testing</a> that works in
+combination with other testing approaches to wring out the bugs from a
+piece of software being developed. When several functions and classes are
+put together it's often difficult to determine the source of a problem if
+several bugs are occurring at the same time. Unit testing helps eliminate
+as many of the individual bugs as possible so when the application comes
+together as a whole the separate parts work as correct as possible. Then
+when issues arise they can often be tracked down as unintended consequences
+of the disparate pieces not fitting together properly.</p>
+<h3>Unit testing resources</h3>
 <ul>
 <li>
-<p>If you need a step-by-step guide to deploying a Python web application,
-  I wrote <a href="http://www.deploypython.com/">a whole book</a> on exactly this topic 
-  called 
-  <a href="https://gumroad.com/l/WOvyt">The Full Stack Python Guide to Deployments</a>
-  that you'll find super helpful.</p>
+<p><a href="https://realpython.com/blog/python/the-minimum-viable-test-suite/">The Minimum Viable Test Suite</a>
+  shows how to set unit tests and integration tests for a Flask example
+  application.</p>
 </li>
 <li>
-<p><a href="http://omniti.com/seeds/thoughts-on-web-application-deployment">Thoughts on web application deployment</a>
-  walks through stages of deployment with source control, planning, 
-  continuous deployment and monitoring the results.</p>
+<p><a href="http://www.diveintopython3.net/unit-testing.html">Dive into Python 3's chapter on unit testing</a>
+  has a complete example with code and a detailed explanation for creating
+  unit testing with the unittest module.</p>
 </li>
 <li>
-<p><a href="http://blogs.atlassian.com/2014/04/practical-continuous-deployment/">Practical continuous deployment</a>
-  defines delivery versus deployment and walks through a continuous deployment
-  workflow.</p>
-</li>
-<li>
-<p>In <a href="http://player.oreilly.com/videos/9781491908181?toc_id=210188">this free video by Neal Ford</a>,
-  he talks about engineering practices for continuous delivery. He explains
-  the difference between 
-  <a href="/continuous-integration.html">continuous integration</a>,
-  continuous deployment and continuous delivery. Highly recommended for an
-  overview of deployment concepts and as an introduction to the other videos
-  on those subjects in that series.</p>
-</li>
-<li>
-<p>If you're using Flask this 
-  <a href="https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/">detailed post on deploying it to Ubuntu</a>
-  is a great way to familiarize yourself with the deployment process.</p>
+<p><a href="https://docs.python.org/3/library/unittest.html">unittest</a> is the 
+  built-in standard library tool for testing Python code.</p>
 </li>
 </ul>
-<h2>Deployment learning checklist</h2>
-<ol>
-<li>
-<p>If you're tight on time look at the 
-   <a href="/platform-as-a-service.html">platform-as-a-service (PaaS)</a> options. You 
-   can deploy a low traffic project web app for free or low cost. You won't 
-   have to worry about setting up the operating system and web server 
-   compared to going the traditional server route. In theory you should be 
-   able to get your application live on the web sooner with PaaS hosting.</p>
-</li>
-<li>
-<p><a href="/servers.html">Traditional server options</a> are your best bet for learning
-   how the entire Python web stack works. You'll often save money with a 
-   virtual private server instead of a platform-as-a-service as you scale up.</p>
-</li>
-<li>
-<p>Read about servers, <a href="/operating-systems.html">operating systems</a>, 
-   <a href="/web-servers.html">web servers</a> and <a href="/wsgi-servers.html">WSGI servers</a> 
-   to get a broad picture of what components need to be set up to run a 
-   Python web application.</p>
-</li>
-</ol>
-<h3>How would you like to deploy your web app?</h3>
+<h3>What else do you want to learn about testing?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/servers.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M128 1408h1024v-128h-1024v128zm0-512h1024v-128h-1024v128zm1568 448q0-40-28-68t-68-28-68 28-28 68 28 68 68 28 68-28 28-68zm-1568-960h1024v-128h-1024v128zm1568 448q0-40-28-68t-68-28-68 28-28 68 28 68 68 28 68-28 28-68zm0-512q0-40-28-68t-68-28-68 28-28 68 28 68 68 28 68-28 28-68zm96 832v384h-1792v-384h1792zm0-512v384h-1792v-384h1792zm0-512v384h-1792v-384h1792z" fill="#fff"/></svg></a>
-<p class="under-btn">Show me options for bare metal and virtualized servers.</p>        </div>
+<a href="/code-metrics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1596 380q28 28 48 76t20 88v1152q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h896q40 0 88 20t76 48zm-444-244v376h376q-10-29-22-41l-313-313q-12-12-41-22zm384 1528v-1024h-416q-40 0-68-28t-28-68v-416h-768v1536h1280zm-1024-864q0-14 9-23t23-9h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64zm736 224q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704zm0 256q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704z" fill="#fff"/></svg></a>
+<p class="under-btn">What code metrics should I be aware of?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/platform-as-a-service.html" class="btn btn-success btn-full"><svg width="32" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 864q0-14-9-23l-352-352q-9-9-23-9t-23 9l-351 351q-10 12-10 24 0 14 9 23t23 9h224v352q0 13 9.5 22.5t22.5 9.5h192q13 0 22.5-9.5t9.5-22.5v-352h224q13 0 22.5-9.5t9.5-22.5zm640 288q0 159-112.5 271.5t-271.5 112.5h-1088q-185 0-316.5-131.5t-131.5-316.5q0-130 70-240t188-165q-2-30-2-43 0-212 150-362t362-150q156 0 285.5 87t188.5 231q71-62 166-62 106 0 181 75t75 181q0 76-41 138 130 31 213.5 135.5t83.5 238.5z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I use a platform-as-a-service to deploy my Python app?.</p>        </div>
+<a href="/testing.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1280 1024h305q-5 6-10 10.5t-9 7.5l-3 4-623 600q-18 18-44 18t-44-18l-624-602q-5-2-21-20h369q22 0 39.5-13.5t22.5-34.5l70-281 190 667q6 20 23 33t39 13q21 0 38-13t23-33l146-485 56 112q18 35 57 35zm512-428q0 145-103 300h-369l-111-221q-8-17-25.5-27t-36.5-8q-45 5-56 46l-129 430-196-686q-6-20-23.5-33t-39.5-13-39 13.5-22 34.5l-116 464h-423q-103-155-103-300 0-220 127-344t351-124q62 0 126.5 21.5t120 58 95.5 68.5 76 68q36-36 76-68t95.5-68.5 120-58 126.5-21.5q224 0 351 124t127 344z" fill="#fff"/></svg></a>
+<p class="under-btn">How do I go about testing my Python code?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/operating-systems.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M791 411q-11 1-15.5 10.5t-8.5 9.5q-5 1-5-5 0-12 19-15h10zm87 14q-4 1-11.5-6.5t-17.5-4.5q24-11 32 2 3 6-3 9zm-351 427q-4-1-6 3t-4.5 12.5-5.5 13.5-10 13q-7 10-1 12 4 1 12.5-7t12.5-18q1-3 2-7t2-6 1.5-4.5.5-4v-3l-1-2.5-3-2zm855 359q0-18-55-42 4-15 7.5-27.5t5-26 3-21.5.5-22.5-1-19.5-3.5-22-4-20.5-5-25-5.5-26.5q-10-48-47-103t-72-75q24 20 57 83 87 162 54 278-11 40-50 42-31 4-38.5-18.5t-8-83.5-11.5-107q-9-39-19.5-69t-19.5-45.5-15.5-24.5-13-15-7.5-7q-14-62-31-103t-29.5-56-23.5-33-15-40q-4-21 6-53.5t4.5-49.5-44.5-25q-15-3-44.5-18t-35.5-16q-8-1-11-26t8-51 36-27q37-3 51 30t4 58q-11 19-2 26.5t30 .5q13-4 13-36v-37q-5-30-13.5-50t-21-30.5-23.5-15-27-7.5q-107 8-89 134 0 15-1 15-9-9-29.5-10.5t-33 .5-15.5-5q1-57-16-90t-45-34q-27-1-41.5 27.5t-16.5 59.5q-1 15 3.5 37t13 37.5 15.5 13.5q10-3 16-14 4-9-7-8-7 0-15.5-14.5t-9.5-33.5q-1-22 9-37t34-14q17 0 27 21t9.5 39-1.5 22q-22 15-31 29-8 12-27.5 23.5t-20.5 12.5q-13 14-15.5 27t7.5 18q14 8 25 19.5t16 19 18.5 13 35.5 6.5q47 2 102-15 2-1 23-7t34.5-10.5 29.5-13 21-17.5q9-14 20-8 5 3 6.5 8.5t-3 12-16.5 9.5q-20 6-56.5 21.5t-45.5 19.5q-44 19-70 23-25 5-79-2-10-2-9 2t17 19q25 23 67 22 17-1 36-7t36-14 33.5-17.5 30-17 24.5-12 17.5-2.5 8.5 11q0 2-1 4.5t-4 5-6 4.5-8.5 5-9 4.5-10 5-9.5 4.5q-28 14-67.5 44t-66.5 43-49 1q-21-11-63-73-22-31-25-22-1 3-1 10 0 25-15 56.5t-29.5 55.5-21 58 11.5 63q-23 6-62.5 90t-47.5 141q-2 18-1.5 69t-5.5 59q-8 24-29 3-32-31-36-94-2-28 4-56 4-19-1-18l-4 5q-36 65 10 166 5 12 25 28t24 20q20 23 104 90.5t93 76.5q16 15 17.5 38t-14 43-45.5 23q8 15 29 44.5t28 54 7 70.5q46-24 7-92-4-8-10.5-16t-9.5-12-2-6q3-5 13-9.5t20 2.5q46 52 166 36 133-15 177-87 23-38 34-30 12 6 10 52-1 25-23 92-9 23-6 37.5t24 15.5q3-19 14.5-77t13.5-90q2-21-6.5-73.5t-7.5-97 23-70.5q15-18 51-18 1-37 34.5-53t72.5-10.5 60 22.5zm-628-827q3-17-2.5-30t-11.5-15q-9-2-9 7 2 5 5 6 10 0 7 15-3 20 8 20 3 0 3-3zm419 197q-2-8-6.5-11.5t-13-5-14.5-5.5q-5-3-9.5-8t-7-8-5.5-6.5-4-4-4 1.5q-14 16 7 43.5t39 31.5q9 1 14.5-8t3.5-20zm-178-213q0-11-5-19.5t-11-12.5-9-3q-14 1-7 7l4 2q14 4 18 31 0 3 8-2zm54-233q0-2-2.5-5t-9-7-9.5-6q-15-15-24-15-9 1-11.5 7.5t-1 13-.5 12.5q-1 4-6 10.5t-6 9 3 8.5q4 3 8 0t11-9 15-9q1-1 9-1t15-2 9-7zm565 1341q20 12 31 24.5t12 24-2.5 22.5-15.5 22-23.5 19.5-30 18.5-31.5 16.5-32 15.5-27 13q-38 19-85.5 56t-75.5 64q-17 16-68 19.5t-89-14.5q-18-9-29.5-23.5t-16.5-25.5-22-19.5-47-9.5q-44-1-130-1-19 0-57 1.5t-58 2.5q-44 1-79.5 15t-53.5 30-43.5 28.5-53.5 11.5q-29-1-111-31t-146-43q-19-4-51-9.5t-50-9-39.5-9.5-33.5-14.5-17-19.5q-10-23 7-66.5t18-54.5q1-16-4-40t-10-42.5-4.5-36.5 10.5-27q14-12 57-14t60-12q30-18 42-35t12-51q21 73-32 106-32 20-83 15-34-3-43 10-13 15 5 57 2 6 8 18t8.5 18 4.5 17 1 22q0 15-17 49t-14 48q3 17 37 26 20 6 84.5 18.5t99.5 20.5q24 6 74 22t82.5 23 55.5 4q43-6 64.5-28t23-48-7.5-58.5-19-52-20-36.5q-121-190-169-242-68-74-113-40-11 9-15-15-3-16-2-38 1-29 10-52t24-47 22-42q8-21 26.5-72t29.5-78 30-61 39-54q110-143 124-195-12-112-16-310-2-90 24-151.5t106-104.5q39-21 104-21 53-1 106 13.5t89 41.5q57 42 91.5 121.5t29.5 147.5q-5 95 30 214 34 113 133 218 55 59 99.5 163t59.5 191q8 49 5 84.5t-12 55.5-20 22q-10 2-23.5 19t-27 35.5-40.5 33.5-61 14q-18-1-31.5-5t-22.5-13.5-13.5-15.5-11.5-20.5-9-19.5q-22-37-41-30t-28 49 7 97q20 70 1 195-10 65 18 100.5t73 33 85-35.5q59-49 89.5-66.5t103.5-42.5q53-18 77-36.5t18.5-34.5-25-28.5-51.5-23.5q-33-11-49.5-48t-15-72.5 15.5-47.5q1 31 8 56.5t14.5 40.5 20.5 28.5 21 19 21.5 13 16.5 9.5z" fill="#fff"/></svg></a>
-<p class="under-btn">I have a server, how do I set up the operating system?</p>        </div>
+<a href="/continuous-integration.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z" fill="#fff"/></svg></a>
+<p class="under-btn">Can I automate testing and deployments for my app?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -203,7 +143,7 @@ guide as they are considered advanced deployment techniques.</p>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
-              <a href="/deployment.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
+              <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
               <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
               <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
               <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
@@ -221,7 +161,7 @@ guide as they are considered advanced deployment techniques.</p>
               <a href="/docker.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Docker</a>
               <a href="/caching.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Caching</a>
               <a href="/testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Testing</a>
-              <a href="/unit-testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Unit Testing</a>
+              <a href="/unit-testing.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Unit Testing</a>
               <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
               <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
               <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
@@ -236,7 +176,7 @@ guide as they are considered advanced deployment techniques.</p>
     </p>
   </div>
 </div>  <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Deployment</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Unit Testing</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
