@@ -1,7 +1,7 @@
 title: Python 2 or 3?
 category: page
 slug: python-2-or-3
-sort-order: 0203
+sort-order: 0104
 meta: Learn about whether you should use Python version 2 or 3 to build your applications.
 
 

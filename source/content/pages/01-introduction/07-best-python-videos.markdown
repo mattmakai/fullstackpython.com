@@ -1,7 +1,7 @@
 title: Best Python Videos
 category: page
 slug: best-python-videos
-sort-order: 0205
+sort-order: 0107
 meta: Watch the best videos to learn Python from the language masters of the community on Full Stack Python's Best Python Videos page.
 
 

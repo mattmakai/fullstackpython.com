@@ -250,6 +250,116 @@ using Django, there is also a wall specifically for
   happen.</p>
 </li>
 </ul>
+          <h1>Enterprise Python</h1>
+<p>One of the misconceptions around Python and other dynamically-typed languages 
+is that they cannot be reliably used to build enterprise-grade software. 
+However, almost all commercial and government enterprises already use 
+Python in some capacity, either as glue code between disparate applications 
+or to build the applications themselves. </p>
+<h2>What is enterprise software?</h2>
+<p>Enterprise software is built for the requirements of an organization rather 
+than the needs of an individual. Software written for enterprises often 
+needs to integrate with legacy systems, such as existing databases and 
+non-web applications. There are often requirements to integrate with 
+authentication systems such as the 
+<a href="http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">Lightweight Directory Access Protocol (LDAP)</a> 
+and 
+<a href="https://msdn.microsoft.com/en-us/library/aa746492%28v=vs.85%29.aspx">Active Directory (AD)</a>.</p>
+<p>Organizations develop enterprise software with numerous custom requirements 
+to fit the specific needs of their operating model. Therefore the software
+development process often becomes far more complicated due to disparate 
+factions within an organization vying for the software to handle their 
+needs at the expense of other factions.</p>
+<p>The complexity due to the many stakeholders involved in the building of 
+enterprise software leads to large budgets and extreme scrutiny by 
+non-technical members of an organization. Typically those non-technical 
+people place irrational emphasis on the choice of programming language and 
+frameworks when otherwise they should not make technical design decisions.</p>
+<h2>Why are there misconceptions about Python in enterprise environments?</h2>
+<p>Traditionally large organizations building enterprise software have used 
+statically typed languages such as C++, .NET and Java. Throughout the 1980s 
+and 1990s large companies such as Microsoft, Sun Microsystems and Oracle 
+marketed these languages as "enterprise grade". The inherent snub to other
+languages was that they were not appropriate for CIOs' difficult technical 
+environments. Languages other than Java, C++ and .NET were seen as risky and
+therefore not worthy of investment.</p>
+<p>In addition, "scripting languages" such as Python, Perl and Ruby were not
+yet robust enough in the 1990s because their core standard libraries were
+still being developed. Frameworks such as <a href="/django.html">Django</a>, 
+<a href="/flask.html">Flask</a> and Rails (for Ruby) did not yet exist. The Web was
+just beginning and most enterprise applications were desktop apps built
+for Windows. Python simply wasn't made for such environments.</p>
+<h2>Why is Python now appropriate for building enterprise software?</h2>
+<p>From the early 2000s through today the languages and ecosystems for many
+dynamically typed languages have greatly improved and often surpassed some
+aspects of other ecosystems. Python, Ruby and other previously derided 
+languages now have vast, well-maintained open source ecosystems backed by 
+both independent developers and large companies including Microsoft, IBM, 
+Google, Facebook, Dropbox, Twilio and many, many others.</p>
+<p>Python's open source libraries, especially for
+<a href="/web-frameworks.html">web development</a> and data analysis, are some of the 
+best maintained and fully featured pieces of code for any language.</p>
+<p>Meanwhile, some of the traditional enterprise software development languages 
+such as Java have languished due to underinvestment by their major corporate 
+backers. When <a href="http://www.oracle.com/us/corporate/press/018363">Oracle purchased Sun Microsystems in 2009</a>
+there was a long lag time before Java was enhanced with new language features
+in Java 7.  Oracle also 
+<a href="http://www.engadget.com/2015/03/06/java-adware-mac/">bundles unwanted adware with the Java installation</a>,
+whereas the Python community would never put up with such a situation because
+the language is open source and does not have a single corporate controller.</p>
+<p>Other ecosystems, such as the .NET platform by Microsoft have fared much 
+better. Microsoft continued to invest in moving the .NET platform along
+throughout the early part of the new millennium.</p>
+<p>However, Microsoft's enterprise products often have expensive licensing fees 
+for their application servers and associated software. In addition, Microsoft 
+is also a major backer of open source, <a href="http://www.hanselman.com/blog/OneOfMicrosoftsBestKeptSecretsPythonToolsForVisualStudioPTVS.aspx">especially Python</a>,
+and their 
+<a href="https://www.visualstudio.com/en-us/features/python-vs.aspx">Python tools for Visual Studio</a> 
+provide a top-notch <a href="/development-environments.html">development environment</a>.</p>
+<p>The end result is that enterprise software development has changed 
+dramatically over the past couple of decades. CIOs and technical executives
+can no longer ignore the progress of Python and the great open source 
+community in the enterprise software development landscape if they want to
+continue delivering business value to their business side customers.</p>
+<h2>Open source enterprise Python projects</h2>
+<ul>
+<li>
+<p><a href="https://github.com/cfpb/collab">Collab</a> by the 
+  U.S. government's 
+  <a href="http://www.consumerfinance.gov/">Consumer Financial Protection Bureau</a> 
+  (CFPB) agency is a corporate intranet and collaboration platform for large
+  organizations. The project is currently running and in-use by thousands of
+  CFPB employees.</p>
+</li>
+<li>
+<p><a href="https://github.com/twitter/pants">Pants</a> is a build system for software
+  projects with many distinct parts and built with many different programming
+  languages as is often the case in large organizations.</p>
+</li>
+</ul>
+<h2>Enterprise Python software development resources</h2>
+<ul>
+<li>
+<p>There are a couple of solid demystifying articles in CIO magazine including
+  <a href="http://www.cio.com/article/2437137/developer/you-used-python-to-write-what-.html">this broad overview of Python in enterprises</a>
+  and this article on
+  <a href="http://www.cio.com/article/2431212/developer/dynamic-languages--not-just-for-scripting-any-more.html">why dynamic languages are gaining share for enterprise development</a>.</p>
+</li>
+<li>
+<p>JavaWorld wrote an interesting article about 
+  <a href="http://www.javaworld.com/article/2078655/scripting-jvm-languages/python-coming-to-the-enterprise--like-it-or-not.html">Python's inroads into enterprise software development</a>.</p>
+</li>
+<li>
+<p>I gave a talk at DjangoCon 2014 on 
+  <a href="https://www.youtube.com/watch?v=aMtiCX38w20">How to Solve the Top 5 Headaches with Django in the Enterprise</a>
+  which covered both Python and Django in large organizations.</p>
+</li>
+<li>
+<p>This <a href="http://programmers.stackexchange.com/questions/141411/what-is-enterprise-software-exactly">StackExchange answer</a>
+  contains a solid explanation what differentiates enterprise software
+  from traditional software.</p>
+</li>
+</ul>
           <h1>Best Python Resources</h1>
 <p>The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
@@ -587,116 +697,6 @@ to learn more about web development.
   talking about programming language agnostic topics. The list is intended
   to emphasize professional software developers who also have the ability to
   engage an audience of peers with an exciting talk.</p>
-</li>
-</ul>
-          <h1>Enterprise Python</h1>
-<p>One of the misconceptions around Python and other dynamically-typed languages 
-is that they cannot be reliably used to build enterprise-grade software. 
-However, almost all commercial and government enterprises already use 
-Python in some capacity, either as glue code between disparate applications 
-or to build the applications themselves. </p>
-<h2>What is enterprise software?</h2>
-<p>Enterprise software is built for the requirements of an organization rather 
-than the needs of an individual. Software written for enterprises often 
-needs to integrate with legacy systems, such as existing databases and 
-non-web applications. There are often requirements to integrate with 
-authentication systems such as the 
-<a href="http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">Lightweight Directory Access Protocol (LDAP)</a> 
-and 
-<a href="https://msdn.microsoft.com/en-us/library/aa746492%28v=vs.85%29.aspx">Active Directory (AD)</a>.</p>
-<p>Organizations develop enterprise software with numerous custom requirements 
-to fit the specific needs of their operating model. Therefore the software
-development process often becomes far more complicated due to disparate 
-factions within an organization vying for the software to handle their 
-needs at the expense of other factions.</p>
-<p>The complexity due to the many stakeholders involved in the building of 
-enterprise software leads to large budgets and extreme scrutiny by 
-non-technical members of an organization. Typically those non-technical 
-people place irrational emphasis on the choice of programming language and 
-frameworks when otherwise they should not make technical design decisions.</p>
-<h2>Why are there misconceptions about Python in enterprise environments?</h2>
-<p>Traditionally large organizations building enterprise software have used 
-statically typed languages such as C++, .NET and Java. Throughout the 1980s 
-and 1990s large companies such as Microsoft, Sun Microsystems and Oracle 
-marketed these languages as "enterprise grade". The inherent snub to other
-languages was that they were not appropriate for CIOs' difficult technical 
-environments. Languages other than Java, C++ and .NET were seen as risky and
-therefore not worthy of investment.</p>
-<p>In addition, "scripting languages" such as Python, Perl and Ruby were not
-yet robust enough in the 1990s because their core standard libraries were
-still being developed. Frameworks such as <a href="/django.html">Django</a>, 
-<a href="/flask.html">Flask</a> and Rails (for Ruby) did not yet exist. The Web was
-just beginning and most enterprise applications were desktop apps built
-for Windows. Python simply wasn't made for such environments.</p>
-<h2>Why is Python now appropriate for building enterprise software?</h2>
-<p>From the early 2000s through today the languages and ecosystems for many
-dynamically typed languages have greatly improved and often surpassed some
-aspects of other ecosystems. Python, Ruby and other previously derided 
-languages now have vast, well-maintained open source ecosystems backed by 
-both independent developers and large companies including Microsoft, IBM, 
-Google, Facebook, Dropbox, Twilio and many, many others.</p>
-<p>Python's open source libraries, especially for
-<a href="/web-frameworks.html">web development</a> and data analysis, are some of the 
-best maintained and fully featured pieces of code for any language.</p>
-<p>Meanwhile, some of the traditional enterprise software development languages 
-such as Java have languished due to underinvestment by their major corporate 
-backers. When <a href="http://www.oracle.com/us/corporate/press/018363">Oracle purchased Sun Microsystems in 2009</a>
-there was a long lag time before Java was enhanced with new language features
-in Java 7.  Oracle also 
-<a href="http://www.engadget.com/2015/03/06/java-adware-mac/">bundles unwanted adware with the Java installation</a>,
-whereas the Python community would never put up with such a situation because
-the language is open source and does not have a single corporate controller.</p>
-<p>Other ecosystems, such as the .NET platform by Microsoft have fared much 
-better. Microsoft continued to invest in moving the .NET platform along
-throughout the early part of the new millennium.</p>
-<p>However, Microsoft's enterprise products often have expensive licensing fees 
-for their application servers and associated software. In addition, Microsoft 
-is also a major backer of open source, <a href="http://www.hanselman.com/blog/OneOfMicrosoftsBestKeptSecretsPythonToolsForVisualStudioPTVS.aspx">especially Python</a>,
-and their 
-<a href="https://www.visualstudio.com/en-us/features/python-vs.aspx">Python tools for Visual Studio</a> 
-provide a top-notch <a href="/development-environments.html">development environment</a>.</p>
-<p>The end result is that enterprise software development has changed 
-dramatically over the past couple of decades. CIOs and technical executives
-can no longer ignore the progress of Python and the great open source 
-community in the enterprise software development landscape if they want to
-continue delivering business value to their business side customers.</p>
-<h2>Open source enterprise Python projects</h2>
-<ul>
-<li>
-<p><a href="https://github.com/cfpb/collab">Collab</a> by the 
-  U.S. government's 
-  <a href="http://www.consumerfinance.gov/">Consumer Financial Protection Bureau</a> 
-  (CFPB) agency is a corporate intranet and collaboration platform for large
-  organizations. The project is currently running and in-use by thousands of
-  CFPB employees.</p>
-</li>
-<li>
-<p><a href="https://github.com/twitter/pants">Pants</a> is a build system for software
-  projects with many distinct parts and built with many different programming
-  languages as is often the case in large organizations.</p>
-</li>
-</ul>
-<h2>Enterprise Python software development resources</h2>
-<ul>
-<li>
-<p>There are a couple of solid demystifying articles in CIO magazine including
-  <a href="http://www.cio.com/article/2437137/developer/you-used-python-to-write-what-.html">this broad overview of Python in enterprises</a>
-  and this article on
-  <a href="http://www.cio.com/article/2431212/developer/dynamic-languages--not-just-for-scripting-any-more.html">why dynamic languages are gaining share for enterprise development</a>.</p>
-</li>
-<li>
-<p>JavaWorld wrote an interesting article about 
-  <a href="http://www.javaworld.com/article/2078655/scripting-jvm-languages/python-coming-to-the-enterprise--like-it-or-not.html">Python's inroads into enterprise software development</a>.</p>
-</li>
-<li>
-<p>I gave a talk at DjangoCon 2014 on 
-  <a href="https://www.youtube.com/watch?v=aMtiCX38w20">How to Solve the Top 5 Headaches with Django in the Enterprise</a>
-  which covered both Python and Django in large organizations.</p>
-</li>
-<li>
-<p>This <a href="http://programmers.stackexchange.com/questions/141411/what-is-enterprise-software-exactly">StackExchange answer</a>
-  contains a solid explanation what differentiates enterprise software
-  from traditional software.</p>
 </li>
 </ul>
           <h1>Development Environments</h1>

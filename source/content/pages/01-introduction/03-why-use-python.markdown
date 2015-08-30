@@ -1,7 +1,7 @@
 title: Why Use Python?
 category: page
 slug: why-use-python
-sort-order: 0202
+sort-order: 0103
 meta: Learn why you should use Python, the powerful and accessible programming language on Full Stack Python.
 
 
