@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="A platform-as-a-service simplifies the deployment of application code while risking other tradeoffs. Learn more on Full Stack Python.">
+    <meta name="description" content="Debugging involves instrumenting, isolating and hunting defects in running code. Learn more about debugging on Full Stack Python.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Platform-as-a-service - Full Stack Python</title>
+    <title>Debugging - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -34,146 +34,55 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Platform-as-a-service</h1>
-<p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
-on which a web application is deployed. Running your web application from
-a PaaS removes the need to know as much about the underlying servers, 
-operating system, web server, and often the WSGI server. </p>
-<p><em>Note</em>: If you are not interested in deploying to a PaaS you can move 
-ahead to the <a href="../wsgi-servers.html">WSGI servers</a> section.</p>
-<p>The PaaS layer defines how the application accesses resources such as 
-computing time, files, and external services. The PaaS provides a 
-higher-level abstraction for working with computing resources than deploying 
-an application to a server or IaaS.</p>
-<p>A PaaS makes deployment and operations easier because it forces the developer
-to conform applications to the PaaS architecture. For example, Heroku looks 
-for Python's <code>requirements.txt</code> file in the base directory of the repository 
-during deployment because that is the file's de facto community standard
-location.</p>
-<p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
-<p>If you go the PaaS route, you can skip configuring an operating system
-and web server prebaked into PaaS offerings. PaaS offerings generally start 
-at the WSGI server layer. </p>
-<h2>Platform-as-a-service responsibilities</h2>
-<p>Although PaaS offerings simplify setting up and maintaining the servers,
-operating system, and web server, developers still have responsibilities for other
-layers of their web stack.</p>
-<p>While it's useful to know the operating system that underpins your PaaS, for 
-example Heroku uses Ubuntu 10.04, you will not have to know as much about 
-securing the operating system and server level. However, web applications deployed
-to a PaaS are just as vulnerable to security breaches at the application level
-as a standard LAMP stack. It's still your responsibility to ensure the web
-application framework and your app itself is up to date and secured. See the
-<a href="../web-application-security.html">security section</a> for further information.</p>
-<h2>Platforms-as-a-service that support Python</h2>
+          <h1>Debugging</h1>
+<p>Developers often find themselves in situations where the code they've written
+is not working quite right. When that happens, a developer debugs their code
+by instrumenting, executing and inspecting the code to determine what state
+of the application does not match the assumptions of how the code should
+be correctly running.</p>
+<h2>Why is debugging important?</h2>
+<p>There are bugs in every modest sized or larger application. Every 
+developer has to learn how to debug code in order to write programs that
+work as correctly as time and budget allow.</p>
+<h3>Debugging resources</h3>
 <ul>
 <li>
-<p><a href="http://www.heroku.com/">Heroku</a></p>
+<p><a href="http://howchoo.com/g/zgi2y2iwyze/debugging-your-python-code">Debugging your Python code</a>
+  walks through a scenario where 
+  <a href="https://docs.python.org/2/library/pdb.html">pdb</a> 
+  can be used to find a defect in a block of Python code.</p>
 </li>
 <li>
-<p><a href="https://developers.google.com/appengine/">Google App Engine</a></p>
+<p><a href="https://pymotw.com/2/pdb/">pdb - Interactive Debugger</a> is featured on
+  the Python Module of the Week blog and has some great detail on using
+  the program effectively.</p>
 </li>
 <li>
-<p><a href="https://gondor.io/">Gondor</a></p>
+<p><a href="http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/">Python debugging tools</a>
+  provides a list of tools such as pdb and its derivatives ipdb, pudb and
+  pdb++ along with how they can be used in the hunt for defects.</p>
 </li>
 <li>
-<p><a href="https://www.pythonanywhere.com/">PythonAnywhere</a></p>
-</li>
-<li>
-<p><a href="https://openshift.redhat.com/community/get-started/python">OpenShift</a></p>
-</li>
-<li>
-<p><a href="https://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a></p>
+<p><a href="https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/">Debugging in Python</a>
+  elaborates on what pdb does and how it can be used.</p>
 </li>
 </ul>
-<h2>Platform-as-a-service resources</h2>
-<ul>
-<li>
-<p><a href="http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/">PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment</a> by <a href="https://twitter.com/natea">Nate Aune</a>.</p>
-</li>
-<li>
-<p><a href="http://www.rdegges.com/deploying-django/">Deploying Django</a> by 
-  Randall Degges is another great free resource about Heroku.</p>
-</li>
-<li>
-<p>Heroku's 
-  <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Python deployment documentation</a>
-  provides clear examples for how to work with virtualenv, pip and 
-  <code>requirements.txt</code> to get a applications deployed to their platform.</p>
-</li>
-<li>
-<p>Miguel Grinberg's Flask tutorial contains an entire post on deploying 
-  <a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Flask applications to Heroku</a>.</p>
-</li>
-<li>
-<p>This series on DevOps Django by 
-  <a href="https://twitter.com/rdegges">Randall Degges</a> is great reading for 
-  using the Heroku service:</p>
-<ul>
-<li><a href="http://www.rdegges.com/devops-django-part-1-goals/">Part One: Goals</a></li>
-<li><a href="http://www.rdegges.com/devops-django-part-2-the-pain-of-deployment/">Part Two: The Pain of Deployment</a></li>
-<li><a href="http://www.rdegges.com/devops-django-part-3-the-heroku-way/">Part Three: The Heroku Way</a></li>
-<li><a href="http://rdegges.com/devops-django-part-4-choosing-heroku">Part Four: Choosing Heroku</a></li>
-</ul>
-</li>
-<li>
-<p><a href="https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/">Deploying a Django App to AWS Elastic Beanstalk</a>
-  is a fantastic post that shows how to deploy to Amazon Web Service's own
-  PaaS.</p>
-</li>
-<li>
-<p><a href="https://news.mlh.io/deploy-your-hack-in-3-steps-intro-to-aws-and-elastic-beanstalk-02-20-2015">Deploy your hack in 3 steps: Intro to AWS and Elastic Beanstalk</a>
-  shows how to deploy a simple Ruby Sinatra app, but the steps are generally
-  applicable to Python web apps as well. </p>
-</li>
-</ul>
-<h2>Platform-as-a-service learning checklist</h2>
-<ol>
-<li>
-<p>Review the potential Python platform-as-a-service options listed above.</p>
-</li>
-<li>
-<p>Sign up for a PaaS account at the provider that appears to best fit your
-   application needs. Heroku is the PaaS option recommended for starters due 
-   to their detailed documentation and walkthroughs available on the web. 
-   However, the other options are also viable since their purpose is to make 
-   deploying applications as easy as possible.</p>
-</li>
-<li>
-<p>Check if there are any PaaS-specific configuration files needed for your 
-   app to run properly on the PaaS after it is deployed.</p>
-</li>
-<li>
-<p>Deploy your app to the PaaS. </p>
-</li>
-<li>
-<p>Sync your application's configuration with the database.</p>
-</li>
-<li>
-<p>Set up a content delivery network for your application's 
-   <a href="/static-content.html">static content</a> unless your PaaS provider already
-   handles this deployment step for you.</p>
-</li>
-<li>
-<p>Check if the application's functionality is working and tweak as necessary.</p>
-</li>
-</ol>
-<h3>What deployment topic do you want to learn about next?</h3>
+<h3>What's next after testing your application?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/wsgi-servers.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1576 927l-1328 738q-23 13-39.5 3t-16.5-36v-1472q0-26 16.5-36t39.5 3l1328 738q23 13 23 31t-23 31z" fill="#fff"/></svg></a>
-<p class="under-btn">What runs a Python application execute on the server?</p>        </div>
+<a href="/code-metrics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1596 380q28 28 48 76t20 88v1152q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h896q40 0 88 20t76 48zm-444-244v376h376q-10-29-22-41l-313-313q-12-12-41-22zm384 1528v-1024h-416q-40 0-68-28t-28-68v-416h-768v1536h1280zm-1024-864q0-14 9-23t23-9h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64zm736 224q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704zm0 256q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704z" fill="#fff"/></svg></a>
+<p class="under-btn">What code metrics should I be aware of?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/databases.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1168 1216q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm256 0q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm112 160v-320q0-13-9.5-22.5t-22.5-9.5h-1216q-13 0-22.5 9.5t-9.5 22.5v320q0 13 9.5 22.5t22.5 9.5h1216q13 0 22.5-9.5t9.5-22.5zm-1230-480h1180l-157-482q-4-13-16-21.5t-26-8.5h-782q-14 0-26 8.5t-16 21.5zm1358 160v320q0 66-47 113t-113 47h-1216q-66 0-113-47t-47-113v-320q0-25 16-75l197-606q17-53 63-86t101-33h782q55 0 101 33t63 86l197 606q16 50 16 75z" fill="#fff"/></svg></a>
-<p class="under-btn">Tell me about standard relational databases.</p>        </div>
+<a href="/continuous-integration.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z" fill="#fff"/></svg></a>
+<p class="under-btn">Can I automate testing and deployments for my app?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/application-dependencies.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1088 832q0-26-19-45t-45-19h-256q-26 0-45 19t-19 45 19 45 45 19h256q26 0 45-19t19-45zm576-192v960q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-960q0-26 19-45t45-19h1408q26 0 45 19t19 45zm64-448v256q0 26-19 45t-45 19h-1536q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1536q26 0 45 19t19 45z" fill="#fff"/></svg></a>
-<p class="under-btn">How should Python libraries be installed on a server?</p>        </div>
+<a href="/unit-testing.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M512 1248v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm-640-1024v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm-640-1024v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm640 512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-320q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h320q40 0 68 28t28 68z" fill="#fff"/></svg></a>
+<p class="under-btn">How do I create unit tests?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -237,7 +146,7 @@ application framework and your app itself is up to date and secured. See the
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
               <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
               <a href="/servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Servers</a>
-              <a href="/platform-as-a-service.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
+              <a href="/platform-as-a-service.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Platform-as-a-service</a>
               <a href="/operating-systems.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Operating Systems</a>
               <a href="/web-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Servers</a>
               <a href="/wsgi-servers.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WSGI Servers</a>
@@ -256,7 +165,7 @@ application framework and your app itself is up to date and secured. See the
               <a href="/unit-testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Unit Testing</a>
               <a href="/integration-testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Integration Testing</a>
               <a href="/code-metrics.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Code Metrics</a>
-              <a href="/debugging.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Debugging</a>
+              <a href="/debugging.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Debugging</a>
               <a href="/what-full-stack-means.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>What "Full Stack" Means</a>
               <a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Change Log</a>
               <a href="/future-directions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Future Directions</a>
@@ -270,7 +179,7 @@ application framework and your app itself is up to date and secured. See the
     </p>
   </div>
 </div>  <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Platform-as-a-service</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Debugging</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
