@@ -91,6 +91,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/python-2-or-3.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/about-author.html</loc>
     <priority>1.0</priority>
   </url>
