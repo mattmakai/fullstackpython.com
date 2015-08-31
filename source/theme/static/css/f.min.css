@@ -19,7 +19,7 @@ table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:62.5%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
-body{font-family:Georgia,"Times New Roman",Times,serif;font-size:15px;line-height:1.428571429;color:#777;background-color:#eee}
+body{font-family:Georgia,"Times New Roman",Times,serif;font-size:15px;line-height:1.428571429;color:#777;background-color:#eee;padding-top: 0px;}
 input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a{color:#eb6864;text-decoration:none}
 a:hover,a:focus{color:#e22620;text-decoration:underline}
