@@ -67,3 +67,7 @@ by writing the test cases to exercise multiple parts of code at once.
 * The Python wiki has a page with a list of 
   [Python testing tools and extensions](https://wiki.python.org/moin/PythonTestingToolsTaxonomy).
 
+* [Working Effectively with Unit Tests](http://blog.fogcreek.com/working-effectively-with-unit-tests-interview-with-jay-fields/)
+  is an interview with the author of a book by the title where he shares
+  some of the insight he's learned on the topic.
+
