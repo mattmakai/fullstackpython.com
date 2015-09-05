@@ -13,6 +13,12 @@ the
 
 
 ## 2015
+### September
+* Added [API creation](/api-creation.html) resources.
+* A new update for 
+  [Full Stack Python Guide to Deployments](http://www.deploypython.com/)
+  went out to existing purchasers!
+
 ### August
 * Created new pages for [unit testing](/unit-testing.html) and 
   [integration testing](/integration-testing.html).

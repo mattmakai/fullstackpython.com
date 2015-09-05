@@ -158,6 +158,12 @@ equivalent of browser testing in the web application world.
   subscribing to updates via a REST interface. Both REST hooks and webhooks
   are far more efficient than polling for updates and notifications.
 
+* Serialization is common for transforming objects into web API JSON
+  results. One company found the serialization performance of Django REST 
+  framework was lacking so they created 
+  [Serpy](https://github.com/clarkduvall/serpy) and 
+  [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
+
 
 ## API creation learning checklist
 1. Pick an API framework appropriate for your web framework. For Django I 
