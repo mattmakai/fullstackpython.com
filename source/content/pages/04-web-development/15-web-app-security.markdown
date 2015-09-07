@@ -115,6 +115,10 @@ securing Linux distributions.
   provides a good overview of the fundamentals for how servers should be
   configured for baseline security.
 
+* As you're developing on Linux, you'll want to read and follow this
+  [Linux workstation security](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md)
+  document to make sure your code and environment are not compromised.
+
 
 ## Web security learning checklist
 1. Read and understand the major web application security flaws that are
