@@ -118,6 +118,9 @@ securing Linux distributions.
 * As you're developing on Linux, you'll want to read and follow this
   [Linux workstation security](https://github.com/lfit/itpol/blob/master/linux-workstation-security.md)
   document to make sure your code and environment are not compromised.
+  If you're on Mac OS X, check out this 
+  [securing Yosemite guide](https://github.com/drduh/OS-X-Yosemite-Security-and-Privacy-Guide)
+  which covers that environment.
 
 
 ## Web security learning checklist
