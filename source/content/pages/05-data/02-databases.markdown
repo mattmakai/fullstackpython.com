@@ -94,6 +94,12 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * This article explains how and why PostgreSQL can handle [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
   for many use cases.
 
+* If you're just getting started with PostgreSQL here are 
+  [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
+
+* The title's a bit presumptuous but here's a useful list of 
+  [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
+
 
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
@@ -170,7 +176,7 @@ provider.
   databases with extensive backup services.
 
 
-## Database resources
+## General database resources
 * [How does a relational database work?](http://coding-geek.com/how-databases-work/)
   is a detailed longform post on the sorting, searching, merging and other
   operations we often take for granted when using an established relational 
@@ -180,10 +186,6 @@ provider.
   is a great read on the CAP Theorem, distributed systems and other topics
   that are at the core of database theory and implementation. Well worth
   the time to read.
-
-* [PostgreSQL vs. MS SQL Server](http://www.pg-versus-ms.com/) is one
-  perspective on the differences between the two database servers from a
-  data analyst.
 
 * [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
   database management systems.
@@ -198,8 +200,9 @@ provider.
 * [Databases integration testing strategies](https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python)
   covers a difficult topic that comes up on every real world project.
 
-* The title's a bit presumptuous but here's a useful list of 
-  [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
+* [PostgreSQL vs. MS SQL Server](http://www.pg-versus-ms.com/) is one
+  perspective on the differences between the two database servers from a
+  data analyst.
 
 
 ## Databases learning checklist
