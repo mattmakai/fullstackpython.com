@@ -122,6 +122,9 @@ securing Linux distributions.
   [securing Yosemite guide](https://github.com/drduh/OS-X-Yosemite-Security-and-Privacy-Guide)
   which covers that environment.
 
+* [TLS and Nginx Web Server Hardening](https://www.moses.io/2015/09/tls-and-server-hardening-post-nginx/)
+  explains a secure server configuration for the Nginx web server.
+
 
 ## Web security learning checklist
 1. Read and understand the major web application security flaws that are
