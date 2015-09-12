@@ -85,11 +85,9 @@ how to <a href="/deployment.html">deploy web applications</a>.
   [tags for each step](https://github.com/makaimc/choose-your-own-adventure-presentations/releases) 
   in the blog posts.
 
-* [Branded MMS Coupon Generation with Python and Twilio](https://www.twilio.com/blog/2014/10/branded-mms-coupon-generation-with-python-and-twilio.html)
-  is a Flask tutorial I wrote for building a web application that can send
-  branded barcode coupons via MMS. The post goes through every step from
-  a blank directory until you have a working app that you can deploy to
-  Heroku.
+* This [simple Flask app uses Twilio Voice](https://www.twilio.com/blog/2015/09/warm-phone-call-transfers-with-python-flask-and-twilio-voice.html)
+  to do voice calling with three participants. It's a fun introduction
+  to Python and Flask I wrote for the Twilio blog.
 
 * [Building a blog using Flask and AngularJS Part 1](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-1/)
   is the first of a multipart series on working with Flask and an AngularJS 
@@ -152,6 +150,12 @@ how to <a href="/deployment.html">deploy web applications</a>.
   describes text processing with BeautifulSoup and NLTK. 
   [Part 4](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   shows how to build a task queue with Flask and Redis.
+
+* [Branded MMS Coupon Generation with Python and Twilio](https://www.twilio.com/blog/2014/10/branded-mms-coupon-generation-with-python-and-twilio.html)
+  is a Flask tutorial I wrote for building a web application that can send
+  branded barcode coupons via MMS. The post goes through every step from
+  a blank directory until you have a working app that you can deploy to
+  Heroku.
 
 * [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
   covers a subject that comes up quickly once you begin adding significant
