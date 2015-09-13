@@ -121,30 +121,21 @@ to get started with these tutorials.
   code editing tool.
 
 
-## Vim Python IDE bundles and resources
-Once you get comfortable with Vim as an editor, there are several 
-configuration options and plugins you can use to enhance your Python 
-productivity. These are the resources and tutorials to read when you're
-ready to take that step.
+## Vimrc resources
+These are a few resources for learning how to structure a `.vimrc` file. I
+recommend adding configuration options one at a time to test them 
+individually instead of going whole hog with a Vimrc you are unfamiliar with.
 
-* The [python-mode](https://github.com/klen/python-mode) project is a Vim
-  plugin with syntax highlighting, breakpoints, PEP8 linting, code completion
-  and many other features you'd expect from an integrated development
-  environment.
+* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
+  detailed overview and opinionated guide to configuring Vim. Highly 
+  recommended for new and experienced Vim users.
 
-* [Vundle](https://github.com/gmarik/Vundle.vim) comes highly recommended
-  as a plug-in manager for Vim.
+* [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
+  and explains many Python-specific .vimrc options.
 
-* [Vim as Your IDE](http://haridas.in/vim-as-your-ide.html) discusses how to
-  set up Vim for greater productivity once you learn the initial Vim language 
-  for using the editor.
-
-* [Vim as a Python IDE](http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/)
-  goes through the steps necessary to make Vim into a more comfortable 
-  environment for Python development.
-
-* [Setting up Vim for Python](http://stackoverflow.com/questions/9172802/setting-up-vim-for-python)
-  has a well written answer on Stack Overflow for getting started with Vim.
+* This 
+  [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
+  has example configurations that are well commented and easy to learn from. 
 
 
 ## Vim installation guides
@@ -169,21 +160,38 @@ Linux and Windows.
   other Vim emulation features. 
 
 
-## Vimrc resources
-These are a few resources for learning how to structure a .vimrc file. I
-recommend adding configuration options one at a time to test them 
-individually instead of going whole hog with a Vimrc you are unfamiliar with.
+## Using Vim as a Python IDE
+Once you get comfortable with Vim as an editor, there are several 
+configuration options and plugins you can use to enhance your Python 
+productivity. These are the resources and tutorials to read when you're
+ready to take that step.
 
-* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
-  detailed overview and opinionated guide to configuring Vim. Highly 
-  recommended for new and experienced Vim users.
+* The [python-mode](https://github.com/klen/python-mode) project is a Vim
+  plugin with syntax highlighting, breakpoints, PEP8 linting, code completion
+  and many other features you'd expect from an integrated development
+  environment.
 
-* [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
-  and explains many Python-specific .vimrc options.
+* [Vim as Your IDE](http://haridas.in/vim-as-your-ide.html) discusses how to
+  set up Vim for greater productivity once you learn the initial Vim language 
+  for using the editor.
 
-* This 
-  [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
-  has example configurations that are well commented and easy to learn from. 
+* [Vim as a Python IDE](http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/)
+  goes through the steps necessary to make Vim into a more comfortable 
+  environment for Python development.
+
+* [Setting up Vim for Python](http://stackoverflow.com/questions/9172802/setting-up-vim-for-python)
+  has a well written answer on Stack Overflow for getting started with Vim.
+
+
+## Vim Plugin Managers 
+* [Vundle](https://github.com/gmarik/Vundle.vim) comes highly recommended
+  as a plugin manager for Vim.
+
+* [Pathogen](https://github.com/tpope/vim-pathogen) is a widely used
+  used plugin manager.
+
+* [Vim-plug](https://github.com/junegunn/vim-plug) bills itself as a
+  minimalistic Vim plugin manager.
 
 
 ## Vim Plugin resources
