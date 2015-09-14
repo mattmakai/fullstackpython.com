@@ -19,7 +19,9 @@ by the developer.
 ## Why is Morepath an interesting web framework?
 Simple [CRUD web applications and APIs](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 
 can be tedious to build when they are driven straight from data models without
-much logic between the model and the view. 
+much logic between the model and the view. Learn more about how Morepath
+[compares with other web frameworks](http://morepath.readthedocs.org/en/latest/compared.html)
+from the creator.
 
 With the rise of front end JavaScript frameworks, many Python web frameworks 
 are first being used to build 
