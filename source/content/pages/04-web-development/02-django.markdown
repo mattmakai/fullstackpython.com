@@ -295,6 +295,9 @@ to handle these files properly.
   is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
   described in the Two Scoops of Django book.
 
+* [Sugardough](https://github.com/mozilla/sugardough) is a Django project
+  template from Mozilla that is compatible with cookiecutter.
+
 
 ## Django learning checklist
 1. [Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on

@@ -14,6 +14,7 @@ the
 
 ## 2015
 ### September
+* Updated the project templates section on the [Django page](/django.html).
 * Added [API creation](/api-creation.html) resources.
 * A new update for 
   [Full Stack Python Guide to Deployments](http://www.deploypython.com/)
