@@ -13,6 +13,16 @@ Model-View-Controller (MVC) architectural pattern.
 <a href="http://www.pylonsproject.org/" style="border: none;"><img src="theme/img/pyramid-logo.jpg" style="border-radius: 5px;" width="100%" alt="Pyramid web framework logo." class="technical-diagram" /></a>
 
 
+## Open source Pyramid example apps
+* [pyramid\_blogr](https://github.com/Pylons/pyramid_blogr) is an example 
+  project that shows how to build a blog with Pyramid modeled on the 
+  [Flaskr](http://flask.pocoo.org/docs/0.10/tutorial/introduction/) tutorial.
+
+* [pyramid\_appengine](https://github.com/twillis/pyramid_appengine)
+  provides a project skeleton for running Pyramid on 
+  [Google App Engine](/platform-as-a-service.html).
+
+
 ## Pyramid resources
 * The [Pyramid tutorials page](http://docs.pylonsproject.org/projects/pyramid-tutorials/en/latest/)
   is a good place to start getting your hands dirty with example projects.
