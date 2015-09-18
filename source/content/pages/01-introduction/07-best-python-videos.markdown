@@ -69,6 +69,9 @@ to learn more about web development.
   [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
   all available free of charge.
 
+* DjangoCon EU videos are also available from 
+  [2015](https://vimeo.com/channels/952478/videos).
+
 
 ## Core Python language videos
 * Jessica McKellar's 
