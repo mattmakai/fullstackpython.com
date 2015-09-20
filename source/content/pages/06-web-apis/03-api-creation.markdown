@@ -164,6 +164,10 @@ equivalent of browser testing in the web application world.
   [Serpy](https://github.com/clarkduvall/serpy) and 
   [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
 
+* To create an API to export your data in comma-separated values,
+  check out this 
+  [blog post on exporting data as CSV format with Django REST framework](http://codingpole.com/using-django-rest-framework-for-csv-export/).
+
 
 ## API creation learning checklist
 1. Pick an API framework appropriate for your web framework. For Django I 
