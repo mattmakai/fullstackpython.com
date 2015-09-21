@@ -137,6 +137,9 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.
   [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
   has example configurations that are well commented and easy to learn from. 
 
+* For people who are having trouble getting started with Vim, check out this
+  blog post on the 
+  [two simple steps that helped this author learn Vim](http://adamdelong.com/two-simple-steps-helped-me-learn-vim/).
 
 ## Vim installation guides
 These installation guides will help you get Vim up and running on Mac OS X, 
