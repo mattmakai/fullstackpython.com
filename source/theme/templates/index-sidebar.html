@@ -4,21 +4,21 @@
       <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
       <div class="panel-body">
           {% if not page %}
+          <a href="/">Full Stack Python</a> is an open book that explains
+          concepts in plain language and provides the most helpful resources 
+          on those topics.
+          <hr/>
           View the 
           <a href="/table-of-contents.html">table of contents</a> if you're
           looking for a specific Python topic.
-          <hr/>
           {% endif %}
+          {% if page %}
+          <hr/>
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
           <hr/>
           Need more detailed tutorials than you see here?
           <a href="http://www.deploypython.com/">Learn more about The Full Stack Python Guide to Deployments book.</a>
-          {% if not page %}
-          <hr/>
-          <a href="/">Full Stack Python</a> is an open book that explains
-          concepts in plain language and provides the most helpful resources 
-          on those topics.
           {% endif %}
       </div>
   </div>
