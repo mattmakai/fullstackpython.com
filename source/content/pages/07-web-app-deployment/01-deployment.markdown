@@ -53,6 +53,11 @@ guide as they are considered advanced deployment techniques.
   [The Full Stack Python Guide to Deployments](https://gumroad.com/l/WOvyt)
   that you'll find super helpful.
 
+* [Deploying Python web applications](http://talkpython.fm/episodes/show/26/deploying-python-web-applications-updated)
+  is an episode of the great Talk Python to Me podcast series where I
+  discuss deploying web applications based on a fairly traditional virtual 
+  private server, Nginx and Green Unicorn stack.
+
 * [Thoughts on web application deployment](http://omniti.com/seeds/thoughts-on-web-application-deployment)
   walks through stages of deployment with source control, planning, 
   continuous deployment and monitoring the results.
