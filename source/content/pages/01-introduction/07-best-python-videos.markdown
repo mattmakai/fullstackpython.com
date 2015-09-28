@@ -95,19 +95,17 @@ to learn more about web development.
 
 
 ## Screencasts and class recordings
-* [Neckbeard Republic](https://www.neckbeardrepublic.com/) provides free 
-  screencasts for learning intermediate topics. I typically prefer to learn
-  by reading. However, these videos are helpful in seeing the code on the 
-  screen instead of just looking at static code snippets.
-
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
 
-* While there aren't always live streams, it's worth checking out 
-  [Watch People Code](http://www.watchpeoplecode.com/) to see if anyone is 
-  live coding or has a recording of working on a Python project. Even
-  experienced developers can learn a whole lot from watching other 
-  developer's work on their projects.
+* While there aren't always live streams online, it's worth checking out the 
+  [Python category on Livecoding.tv](https://www.livecoding.tv/livestreams/python/) 
+  to see if anyone is streaming or has a recording of working on a Python 
+  project. Even experienced developers can learn a whole lot from watching 
+  other developer's work on their projects. I also stream a couple times per
+  week so if you 
+  [follow me on my username](https://www.livecoding.tv/mattmakai/) you'll 
+  get an alert when I go online.
 
 
 ## Video compilations
