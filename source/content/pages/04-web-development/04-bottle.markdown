@@ -37,6 +37,9 @@ included with Python.
   does a nice job of connecting SQLAlchemy with Bottle and building an example
   application using the framework.
 
+* [Using bottle.py in Production](http://nongraphical.com/2012/08/using-bottle-py-in-production/)
+  has some good tips on deploying a Bottle app to a production environment.
+
 
 ## Open source Bottle example projects
 * [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with
