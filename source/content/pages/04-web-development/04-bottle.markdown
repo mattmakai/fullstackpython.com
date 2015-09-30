@@ -40,6 +40,10 @@ included with Python.
 * [Using bottle.py in Production](http://nongraphical.com/2012/08/using-bottle-py-in-production/)
   has some good tips on deploying a Bottle app to a production environment.
 
+* [Jinja2 Templates and Bottle](http://reliablybroken.com/b/2013/12/jinja2-templates-and-bottle/)
+  shows how to use Jinja instead of the built-in templating engine for
+  Bottle page rendering.
+
 
 ## Open source Bottle example projects
 * [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with
