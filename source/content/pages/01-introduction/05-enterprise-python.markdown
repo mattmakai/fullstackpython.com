@@ -121,3 +121,8 @@ continue delivering business value to their business side customers.
   contains a solid explanation what differentiates enterprise software
   from traditional software.
 
+* There was a 
+  [Python subreddit thread about Python in the enterprise](https://www.reddit.com/r/Python/comments/3myppd/everyone_who_encounters_it_seems_to_love_python/)
+  that's worth a look for broader opinions on Python compared to Java and
+  .NET in enterprise environments.
+

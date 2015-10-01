@@ -13,6 +13,10 @@ the
 
 
 ## 2015
+### October
+* Added new resource to the [Enterprise Python](/enterprise-python.html) 
+  page.
+
 ### September
 * Updated the project templates section on the [Django page](/django.html).
 * Added [API creation](/api-creation.html) resources.
