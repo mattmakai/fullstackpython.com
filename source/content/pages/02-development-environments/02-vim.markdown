@@ -185,6 +185,10 @@ ready to take that step.
 * [Setting up Vim for Python](http://stackoverflow.com/questions/9172802/setting-up-vim-for-python)
   has a well written answer on Stack Overflow for getting started with Vim.
 
+* If you're writing your documentation in Markdown using Vim, be sure to
+  read this 
+  [insightful post on a Vim setup for Markdown](http://www.swamphogg.com/2015/vim-setup/).
+
 
 ## Vim Plugin Managers 
 * [Vundle](https://github.com/gmarik/Vundle.vim) comes highly recommended
