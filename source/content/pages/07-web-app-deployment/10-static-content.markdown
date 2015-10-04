@@ -55,6 +55,10 @@ Amazon S3 and other content delivery networks.
   such as setting cache headers, optimizing JavaScript and reducing the
   size of images.
 
+* Twelve folks with significant experience working on and with CDNs
+  provide their perspectives in this piece: 
+  [CDN experts on CDNs](https://www.maxcdn.com/blog/cdn-experts-on-cdns/).
+
 
 ## Static content learning checklist
 1. Identify a content delivery network to offload serving static content 
