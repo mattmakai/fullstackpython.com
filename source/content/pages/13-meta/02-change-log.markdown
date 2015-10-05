@@ -14,7 +14,9 @@ the
 
 ## 2015
 ### October
-* Added new resource to the [Enterprise Python](/enterprise-python.html) 
+* Starting a [microservices](/microservices.html) page with some basic
+  definitions and resources.
+* Added a new resource to the [Enterprise Python](/enterprise-python.html) 
   page.
 
 ### September
