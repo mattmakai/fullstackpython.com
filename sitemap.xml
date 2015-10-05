@@ -234,5 +234,9 @@
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>http://www.fullstackpython.com/microservices.html</loc>
+    <priority>1.0</priority>
+  </url>
 
 </urlset>
