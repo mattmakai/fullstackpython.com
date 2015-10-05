@@ -181,6 +181,10 @@ how to <a href="/deployment.html">deploy web applications</a>.
   is a great walkthrough for a common use case of ensuring an email address
   matches with the user's login information.
 
+* If you're not sure why `DEBUG` should be set to `False` in a production
+  [deployment](/deployment.html), be sure to read this article on 
+  [how Patreon got hacked](http://labs.detectify.com/post/130332638391/how-patreon-got-hacked-publicly-exposed-werkzeug).
+
 
 ## Open source Flask example projects
 * [Choose Your Own Adventure Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations)
