@@ -261,6 +261,11 @@ to handle these files properly.
 
 
 ## Open source Django example projects
+* [Browser calls with Django and Twilio](https://www.twilio.com/docs/howto/walkthrough/browser-calls/python/django)
+  shows how to build a web app with Django and 
+  [Twilio Client](https://www.twilio.com/client) to turn a user's web 
+  browser into a full-fledged phone. Pretty awesome!
+
 * [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
   app that allows audiences to text in during a presentation with feedback
   or questions.
