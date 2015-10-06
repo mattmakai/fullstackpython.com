@@ -13,6 +13,7 @@ This website was coded and written by
 at [Twilio](https://www.twilio.com/).
 
 Other projects by Matt include 
+[The Full Stack Python Guide to Deployments book](http://www.deploypython.com/), 
 [Coding Across America](http://www.codingacrossamerica.com/), 
 [Underwear](https://github.com/makaimc/underwear) and
 [Choose Your Own Adventure Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations). You can reach him by 
