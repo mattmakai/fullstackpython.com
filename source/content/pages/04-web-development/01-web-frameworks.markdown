@@ -49,6 +49,18 @@ There is a spectrum between minimal functionality with easy extensibility on
 one end and including everything in the framework with tight integration on
 the other end.
 
+## Comparing web frameworks
+Are you curious about how the code in a Django project is structured compared 
+with Flask? Check out 
+[this Django web application tutorial](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/django) 
+and then view [the same application built with Flask](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/flask).
+
+There is also a repository called
+[compare-python-web-frameworks](https://github.com/makaimc/compare-python-web-frameworks)
+where the same web application is being coded with varying Python web 
+frameworks, templating engines and 
+[object-relational mappers](/object-relational-mappers-orms.html).
+
 
 <div class="well see-also">
 While you're learning about web frameworks you should also study
