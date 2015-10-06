@@ -94,3 +94,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [a closer look at Docker](https://lincolnloop.com/blog/closer-look-docker/)
   from the perspective of Python developers handling deployments.
 
+* Curious how pip and Docker can be used together? Read this article on 
+  [Efficient management Python projects dependencies with Docker](https://jpetazzo.github.io/2013/12/01/docker-python-pip-requirements/).
+
