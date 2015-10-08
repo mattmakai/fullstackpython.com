@@ -44,6 +44,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   comprehensive introduction to what Docker is and how to get started with
   using the tool.
 
+* If you want to quickly use Docker on Mac OS X, check out these concise
+  instructions 
+  [for setting up your Docker workflow on OS X in 60 seconds](https://www.twilio.com/blog/2015/07/docker-workflow-on-osx-in-60-seconds.html).
+
 * [What the Bleep is Docker?](http://pythonforengineers.com/what-the-bleep-is-docker/)
   is a plain English explanation with examples of what Docker provides and
   what it can be used for in your environment.
