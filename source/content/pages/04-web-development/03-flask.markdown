@@ -161,6 +161,11 @@ how to <a href="/deployment.html">deploy web applications</a>.
   covers a subject that comes up quickly once you begin adding significant
   functionality to your Flask application.
 
+* [Flask Blueprint templates](http://fewstreet.com/2015/01/16/flask-blueprint-templates.html)
+  shows a way of structuring your `__init__.py` file with 
+  [blueprints](http://flask.pocoo.org/docs/0.10/blueprints/) for large
+  projects.
+
 * [Video streaming with Flask](http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
   is another fantastic tutorial by Miguel Grinberg that covers video 
   streaming.
