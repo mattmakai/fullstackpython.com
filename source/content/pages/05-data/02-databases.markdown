@@ -100,6 +100,10 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * The title's a bit presumptuous but here's a useful list of 
   [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
 
+* This guide to 
+  [PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
+  is handy for knowing what to measure and how to do it.
+
 
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
