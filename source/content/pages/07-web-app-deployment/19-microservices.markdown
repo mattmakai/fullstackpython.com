@@ -44,3 +44,7 @@ ease further development and deployment. This approach is called the
   provides some advice on using microservices in a fairly early stage of
   a software project's lifecycle.
 
+* [Developing a RESTful microservice in Python](http://www.skybert.net/python/developing-a-restful-micro-service-in-python/)
+  is a good story of how an aging Java project was replaced with a
+  microservice built with Python and Flask.
+
