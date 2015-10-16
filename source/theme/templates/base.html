@@ -20,8 +20,11 @@
     <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/theme/img/fork.png" alt="Fork me on GitHub"></a>
     <div class="container">
         {% include "nav.html" %}
-{% block content %}{% endblock %}
+        {% block content %}{% endblock %}
         <hr/>
+    </div> 
+    {% block lower_banner %}{% endblock %}
+    <div class="container">
         <div class="footer pull-right">
             <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
             2015

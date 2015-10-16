@@ -68,6 +68,10 @@ on the number's page on Twilio as shown below.
   provides context for why JSON-based web services are more common today than
   SOAP which was popular in the early 2000s.
 
+* [API tools for every occasion](https://medium.com/@orliesaurus/api-tools-for-every-occasion-10-api-tools-released-in-2015-i-can-t-live-without-d5947d9ca9c3)
+  provides a list of 10 tools that are really helpful when working with APIs
+  that are new in 2015.
+
 
 ## APIs learning checklist
 1. Learn the API concepts of machine-to-machine communication with JSON and 
