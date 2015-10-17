@@ -71,3 +71,8 @@ by writing the test cases to exercise multiple parts of code at once.
   is an interview with the author of a book by the title where he shares
   some of the insight he's learned on the topic.
 
+* [Generate your tests](http://blog.kevinastone.com/generate-your-tests.html)
+  shows how to write a test generator that works with the `unittest` 
+  framework.
+
+
