@@ -24,8 +24,8 @@ Model-View-Controller (MVC) architectural pattern.
 
 
 ## Pyramid resources
-* The [Pyramid tutorials page](http://docs.pylonsproject.org/projects/pyramid-tutorials/en/latest/)
-  is a good place to start getting your hands dirty with example projects.
+* The [first Pyramid app](http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/firstapp.html)
+  is a good place to start getting your hands dirty with an example project.
 
 * Six Feet Up explains why Pyramid is their choice for 
   [rapid development projects](http://www.sixfeetup.com/blog/pyramid-for-rapid-development-projects)
