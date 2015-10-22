@@ -6,198 +6,247 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
         <h1>Table of Contents</h1>
         <div class="row">
             <div class="col-md-6">
               <div class="list-group">
                     <h3>1. <a href="/introduction.html">Introduction</a></h3>
-
-                    <h4 class="toc-subsection">1.1 <a href="/learning-programming.html">Learning Programming</a></h4>
-                    <div><a href="/why-use-python.html" class="subsection">Why Use Python?</a></div>
-                    <div><a href="/python-2-or-3.html" class="subsection">Python 2 or 3?</a></div>
-                    <div><a href="/enterprise-python.html" class="subsection">Python in the Enterprise</a></div>
-
-                    <h4 class="toc-subsection">1.2 Community</a></h4>
-                    <div><a href="/events.html" class="subsection">Events</a></div>
-                    <div><a href="/livecoding.html" class="subsection">Live Coding</a></div>
-                    <div><a href="/organizations.html" class="subsection">Organizations</a></div>
-                    <div><a href="/jobs.html" class="subsection">Jobs</a></div>
-                    <div><a href="/best-python-resources.html" class="subsection">The Best Python Resources</a></div>
-                    <div><a href="/best-python-videos.html" class="subsection">Must-watch Python Videos</a></div>
-
+                    <div class="toc-indent">
+                        <a href="/learning-programming.html">Learning Programming</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/why-use-python.html">Why Use Python?</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/python-2-or-3.html">Python 2 or 3?</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        <a href="/community.html">Community</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/conferences.html">Conferences</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/organizations.html">Organizations</a>
+                    </div>
+                    -->
+                    <div class="toc-indent">
+                        <a href="/enterprise-python.html">Enterprise Python</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/best-python-resources.html">The Best Python Resources</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/best-python-videos.html">Must-watch Python Videos</a>
+                    </div>
 
 
                     <h3>2. <a href="/development-environments.html">Development Environments</a></h3>
-
-                    <h4 class="toc-subsection">2.1 Local Editors and IDEs</a></h4>
-                    <div><a href="/vim.html" class="subsection">Vim</a></div>
-                    <div><a href="/emacs.html" class="subsection">Emacs</a></div>
-                    <div><a href="/pycharm.html" class="subsection">PyCharm</a></div>
-                    <div><a href="/sublime-text.html" class="subsection">Sublime Text</a></div>
-                    <div><a href="/wing-ide.html" class="subsection">Wing IDE</a></div>
-                    <div><a href="/idle.html" class="subsection">IDLE</a></div>
-                    <div><a href="/ipython-notebook.html" class="subsection">IPython Notebook</a></div>
-                
-                    <h4 class="toc-subsection">2.2 Cloud IDEs</a></h4>
-                    <div><a href="/nitrous-io.html" class="subsection">Nitrous.IO</a></div>
-                    <div><a href="/cloud9.html" class="subsection">Cloud9</a></div>
-                    <div><a href="/terminal.html" class="subsection">Terminal</a></div>
-                    <div><a href="/koding.html" class="subsection">Koding</a></div>
-
-                    <h4 class="toc-subsection">2.3 Local Development</a></h4>
-                    <div><a href="/environment-variables.html" class="subsection">Environment Variables</a></div>
-                    <div><a href="/dependency-isolation.html" class="subsection">Dependency Isolation</a></div>
-                    <div><a href="/application-dependencies.html" class="subsection">Application Dependencies</a></div>
-
-                    <h4 class="toc-subsection">2.4 <a href="/source-control.html">Source Control</a></h4>
-                    <div><a href="/git.html" class="subsection">Git</a></div>
-                    <div><a href="/mercurial.html" class="subsection">Mercurial</a></div>
-                    <div><a href="/subversion-svn.html" class="subsection">Subversion</a></div>
-
+                    <div class="toc-indent">
+                        <a href="/vim.html">Vim</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/emacs.html">Emacs</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        <a href="/idle.html">Idle</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/ipython-notebook.html">IPython Notebook</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/pycharm.html">PyCharm</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/sublime-text.html">Sublime Text</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/wing-ide.html">Wing IDE</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/pydev.html">PyDev</a>
+                    </div>
+                    -->
 
 
                     <h3>3. Core Python</h3>
-                    <h4 class="toc-subsection">3.1 Language Concepts</h4>
-                    <div><a href="/iteration.html" class="subsection">Iteration</a></div>
-                    <div><a href="/standard-library-stdlib.html" class="subsection">The Standard Library (stdlib)</a></div>
-
-                    <h4 class="toc-subsection">3.2 Intermediate Concepts</h4>
-                    <div><a href="/decorators.html" class="subsection">Decorators</a></div>
-                    <div><a href="/generators.html" class="subsection">Generators</a></div>
-                    <div><a href="/comprehensions.html" class="subsection">Comprehensions</a></div>
-                    <div><a href="/metaclasses.html" class="subsection">Metaclasses</a></div>
-                    
-                    <h4 class="toc-subsection">3.3 Code Execution</h4>
-                    <div><a href="/interpreters.html" class="subsection">C Python</a></div>
-                    <div><a href="/pypy.html" class="subsection">PyPy</a></div>
-                    <div><a href="/jython.html" class="subsection">Jython</a></div>
-
+                    <div class="toc-indent">
+                        <a href="/generators.html">Generators</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/comprehensions.html">Comprehensions</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        <a href="/decorators.html">Decorators</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/metaclasses.html">Metaclasses</a>
+                    </div>
+                    <div class="toc-indent">
+                        The Standard Library (stdlib)
+                    </div>
+                    <div class="toc-indent">
+                        Interpreters
+                    </div>
+                    -->
 
 
                     <h3>4. Web Development</h3>
-                    <h4 class="toc-subsection">4.1 <a href="/web-frameworks.html">Web frameworks</a></h4>
-                    <div><a href="/django.html" class="subsection">Django</a></div>
-                    <div><a href="/flask.html" class="subsection">Flask</a></div>
-                    <div><a href="/pyramid.html" class="subsection">Pyramid</a></div>
-                    <div><a href="/bottle.html" class="subsection">Bottle</a></div>
-                    <div><a href="/morepath.html" class="subsection">Morepath</a></div>
-                    <div><a href="/falcon.html" class="subsection">Falcon</a></div>
-                    <div><a href="/other-web-frameworks.html" class="subsection">Other web frameworks</a></div>
+                    <div class="toc-indent">
+                        <a href="/web-design.html">Web design</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/cascading-style-sheets.html">Cascading Style Sheets (CSS)</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/javascript.html">JavaScript</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/websockets.html">WebSockets</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/web-application-security.html">Web application security</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/static-site-generator.html">Static site generators</a>
+                    </div>
 
-                    <h4 class="toc-subsection">4.2 <a href="/front-end-development.html">Front-end development</a></h4>
-                    <div><a href="/web-design.html" class="subsection">Web design</a></div>
-                    <div><a href="/cascading-style-sheets.html" class="subsection">Cascading Style Sheets (CSS)</a></div>
-                    <div><a href="/javascript.html" class="subsection">JavaScript</a></div>
-                        
-                    <h4 class="toc-subsection">4.3 <a href="/templates.html">Templates</a></h4>
-                    <div><a href="/jinja2.html" class="subsection">Jinja2</a></div>
-                    <div><a href="/mako.html" class="subsection">Mako</a></div>
-                    <div><a href="/django-templates.html" class="subsection">Django Templates</a></div>
-                    
-                    <h4 class="toc-subsection">4.4 <a href="/object-relational-mappers-orms.html">Object-relational mappers (ORMs)</a></h4>
-                    <div><a href="/sql-alchemy.html" class="subsection">SQLAlchemy</a></div>
-                    <div><a href="/django-orm.html" class="subsection">Django ORM</a></div>
-                    <div><a href="/pony.html" class="subsection">Pony</a></div>
-                    
-                    <h4 class="toc-subsection">4.5 <a href="/static-site-generator.html">Static site generators</a></h4>
-                    <div><a href="/pelican.html" class="subsection">Pelican</a></div>
-                    <div><a href="/cactus.html" class="subsection">Cactus</a></div>
-                    <div><a href="/mkdocs.html" class="subsection">MkDocs</a></div>
-                    <div><a href="/hyde.html" class="subsection">Hyde</a></div>
+                    <h3>5. <a href="/web-frameworks.html">Web Frameworks</a></h3>
+                    <div class="toc-indent">
+                        <a href="/django.html">Django</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/flask.html">Flask</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/pyramid.html">Pyramid</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/bottle.html">Bottle</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/morepath.html">Morepath</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        Falcon
+                    </div>
+                    <div class="toc-indent">
+                        Twisted
+                    </div>
+                    -->
+                    <div class="toc-indent">
+                        <a href="/other-web-frameworks.html">Other web frameworks</a>
+                    </div>
 
-                    <h4 class="toc-subsection">4.5 Key Web Development Concepts</h4>
-                    <div><a href="/authentication.html" class="subsection">Authentication</a></div>
-                    <div><a href="/websockets.html" class="subsection">WebSockets</a></div>
-                    <div><a href="/web-application-security.html" class="subsection">Web application security</a></div>
+                    <h3>6. <a href="/data.html">Data</a></h3>
+                    <div class="toc-indent">
+                        <a href="/databases.html">Relational databases</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/no-sql-datastore.html">NoSQL</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/object-relational-mappers-orms.html">Object-relational mappers (ORMs)</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        Search
+                    </div>
+                    <div class="toc-indent">
+                        Machine learning
+                    </div>
+                    <div class="toc-indent">
+                        Data analysis
+                    </div>
+                    -->
+
+
               </div>
             </div>
 
 
             <div class="col-md-6">
               <div class="list-group">
-                    <h3>5. <a href="/data.html">Data</a></h3>
-                    <h4 class="toc-subsection">5.1 <a href="/databases.html">Relational databases</a></h4>
-                    <div><a href="/postgresql.html" class="subsection">PostgreSQL</a></div>
-                    <div><a href="/mysql.html" class="subsection">MySQL</a></div>
-                    <div><a href="/sqlite.html" class="subsection">SQLite</a></div>
-
-                    <h4 class="toc-subsection">5.2 <a href="/no-sql-datastore.html">NoSQL</a></h4>
-                    <div><a href="/redis.html" class="subsection">Redis</a></div>
-                    <div><a href="/mongodb.html" class="subsection">MongoDB</a></div>
-                    <div><a href="/riak.html" class="subsection">Riak</a></div>
-
-                    <h4 class="toc-subsection">5.3 <a href="/search.html">Search</a></h4>
-                    <div><a href="/elastic-search.html" class="subsection">Elastic Search</a></div>
-                    <div><a href="/whoosh.html" class="subsection">Whoosh</a></div>
-                    <div><a href="/solr.html" class="subsection">Solr</a></div>
-                        
-                    <h4 class="toc-subsection">5.4 <a href="/data-analysis.html">Data Analysis</a></h4>
-                    <div><a href="/pandas.html" class="subsection">Pandas</a></div>
-                    <div><a href="/numpy.html" class="subsection">NumPy</a></div>
-                    <div><a href="/scipy.html" class="subsection">SciPy</a></div>
-                    
-                    <h4 class="toc-subsection">5.5 <a href="/natural-language-processing.html">Natural Language Processing</a></h4>
-                    <div><a href="/nltk.html" class="subsection">NLTK</a></div>
-                    <div><a href="/textblob.html" class="subsection">TextBlob</a></div>
-
-
-                    <h4 class="toc-subsection">5.6 <a href="/machine-learning.html">Machine Learning</a></h4>
-                    
-
-
-
-                    <h3>6. <a href="/application-programming-interfaces.html">Web APIs</a></h3>
-                        
-                    <h4 class="toc-subsection">6.1 <a href="/api-creation.html">API Creation</a></h4>
-                    <div><a href="/representational-state-transfer.html" class="subsection">Representational State Transfer (REST)</a></div>
-                    <div><a href="/javascript-object-notation.html" class="subsection">JavaScript Object Notation (JSON)</a></div>
-                    <div><a href="/django-rest-framework.html" class="subsection">Django REST Framework</a></div>
-                    <div><a href="/flask-restful.html" class="subsection">Flask-RESTful</a></div>
-                    
-                    <h4 class="toc-subsection">6.2 <a href="/api-integration.html">API Integration</a></h4>
-                    <div><a href="/helper-libraries.html" class="subsection">Helper Libraries</a></div>
-                    <div><a href="/webhooks.html" class="subsection">Webhooks</a></div>
-
+                    <h3>7. 
+                        <a href="/application-programming-interfaces.html">Web APIs</a>
+                    </h3>
+                    <div class="toc-indent">
+                        <a href="/api-integration.html">API integration</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/api-creation.html">API creation</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        Helper libraries
+                    </div>
+                    <div class="toc-indent">
+                        REST
+                    </div>
+                    -->
 
 
                     <h3>8. <a href="/deployment.html">Web App Deployment</a></h3>
-                    
-                    <h4 class="toc-subsection">8.1 Hosting</h4>
-                    <div><a href="/servers.html" class="subsection">Servers</a></div>
-                    <div><a href="/platform-as-a-service.html" class="subsection">Platform-as-a-Service</a></div>
-                    <div><a href="/operating-systems.html" class="subsection">Operating systems</a></div>
-                    
-                    <h4 class="toc-subsection">8.2 <a href="/web-servers.html">Web servers</a></h4>
-                    <div><a href="/nginx.html" class="subsection">Nginx</a></div>
-                    <div><a href="/apache.html" class="subsection">Apache</a></div>
-                    <div><a href="/lighttpd.html" class="subsection">Lighttpd</a></div>
-
-                    <h4 class="toc-subsection">8.3 <a href="/wsgi-servers.html">WSGI servers</a></h4>
-                    <div><a href="/green-unicorn.html" class="subsection">Green Unicorn</a></div>
-                    <div><a href="/uwsgi.html" class="subsection">uWSGI</a></div>
-                    <div><a href="/mod-wsgi.html" class="subsection">mod_wsgi</a></div>
-                    <div><a href="/cherrypy.html" class="subsection">CherryPy</a></div>
-                    <div><a href="/wsgiref.html" class="subsection">wsgiref</a></div>
-                    
-                    <h4 class="toc-subsection">8.4 Key Deployment Concepts</h4>
-                    <div><a href="/static-content.html" class="subsection">Static content</a></div>
-                    <div><a href="/caching.html" class="subsection">Caching</a></div>
-                    
-                    <h4 class="toc-subsection">8.5 <a href="/task-queues.html">Task Queues</a></h4>
-                    <div><a href="/celery.html" class="subsection">Celery</a></div>
-                    <div><a href="/rq-redis-queue.html" class="subsection">RQ (Redis Queue)</a></div>
-
-                    <h4 class="toc-subsection">8.6 <a href="/configuration-management.html">Configuration management</a></h4>
-                    <div><a href="/ansible.html" class="subsection">Ansible</a></div>
-                    <div><a href="/docker.html" class="subsection">Docker</a></div>
-                    
-                    <h4 class="toc-subsection">8.7 <a href="/continuous-integration.html">Continuous integration</a></h4>
                     <div class="toc-indent">
-                        <a href="/microservices.html">Microservices</a>
+                        <a href="/servers.html">Servers</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/platform-as-a-service.html">Platform-as-a-Service</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/operating-systems.html">Operating systems</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/web-servers.html">Web servers</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/wsgi-servers.html">WSGI servers</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/source-control.html">Source control</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/application-dependencies.html">Application dependencies</a>
+                    </div>
+                    <!--
+                    <div class="toc-indent">
+                        <a href="/environment-variables.html">Environment variables</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/virtualenv.html">Virtualenv</a>
+                    </div>
+                    -->
+                    <div class="toc-indent">
+                        <a href="/static-content.html">Static content</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/caching.html">Caching</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/task-queues.html">Task queues</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/configuration-management.html">Configuration management</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/continuous-integration.html">Continuous integration</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/docker.html">Docker</a>
                     </div>
                     <div class="toc-indent">
                         <a href="/logging.html">Logging</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/monitoring.html">Monitoring</a>
+                    </div>
+                    <div class="toc-indent">
+                        <a href="/web-analytics.html">Web Analytics</a>
                     </div>
                     <div class="toc-indent" style="margin-top: 6px;">
                         There is also an
@@ -206,12 +255,7 @@
                     </div>
 
                     
-                    <h3>9. <a href="/operations.html">Operations</a></h3>
-                    <h4 class="toc-subsection">9.1 <a href="/monitoring.html">Monitoring</a></h4>
-                    <div><a href="/web-analytics.html" class="subsection">Web Analytics</a></div>
-
-
-                    <h3>10. <a href="/testing.html">Testing</a></h3>
+                    <h3>9. <a href="/testing.html">Testing</a></h3>
                     <div class="toc-indent">
                         <a href="/unit-testing.html">Unit testing</a>
                     </div>
@@ -276,6 +320,7 @@
                     <div class="toc-indent">
                         Static site generators (Pelican, Lenscap)
                     </div>
+                    -->
 
                     <h3>10. Meta</h3>
                     <div class="toc-more-indent">
@@ -295,9 +340,6 @@
             </div>
         </div>
     </div>
+    {% include "sidebar.html" %}
 </div>
-{% endblock %}
-
-{% block lower_banner %}
-    {% include "banner.html" %}
 {% endblock %}
