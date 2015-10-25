@@ -59,3 +59,7 @@ ones listed here are primarily coded in Python.
   is a tutorial I wrote for getting up and running with Full Stack Python's
   source code, which uses Pelican to generate the site.
 
+* [Staticgen](https://www.staticgen.com/) lists static website generators
+  of all programming languages sorted by various attributes such as the
+  number of GitHub stars, forks and issues.
+
