@@ -111,6 +111,10 @@ securing Linux distributions.
   is a high-level overview of some of security auditing problems that come
   with cloud deployments.
 
+* Wondering how the common buffer overflow attack works? Check out this
+  [article on buffer overflows](http://arstechnica.com/security/2015/08/how-security-flaws-work-the-buffer-overflow/)
+  that explains the attack in layman's terms.
+
 * [7 Security Measures to Protect Your Servers](https://www.digitalocean.com/community/tutorials/7-security-measures-to-protect-your-servers)
   provides a good overview of the fundamentals for how servers should be
   configured for baseline security.
