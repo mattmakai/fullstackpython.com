@@ -7,26 +7,26 @@ meta: Vim is a text editor with powerful string manipulation capabilities. Learn
 
 # Vim
 Vim, short for Vi IMproved, is a configurable text editor often used as
-a Python development environment. Vim proponents commonly cite the numerous 
+a Python development environment. Vim proponents commonly cite the numerous
 plugins, Vimscript and logical command language as major Vim strengths.
 
 
 ## Why is Vim a good Python development environment?
-Vim's philosophy is that developers are more productive when they avoid 
-taking their hands off the keyboard. Code should flow naturally from the 
-developer's thoughts through the keyboard and onto the screen. Using a mouse 
-or other peripheral is a detriment to the rate at which a developer's 
+Vim's philosophy is that developers are more productive when they avoid
+taking their hands off the keyboard. Code should flow naturally from the
+developer's thoughts through the keyboard and onto the screen. Using a mouse
+or other peripheral is a detriment to the rate at which a developer's
 thoughts become code.
 
-Vim has a logical, structured command language. When a beginner is learning 
-the editor she may feel like it is impossible to understand all the key 
-commands. However, the commands stack together in a logical way so that over 
+Vim has a logical, structured command language. When a beginner is learning
+the editor she may feel like it is impossible to understand all the key
+commands. However, the commands stack together in a logical way so that over
 time the editor becomes predictable.
 
 <div class="well see-also">
-If you're interested in Vim you'll also want to read about 
+If you're interested in Vim you'll also want to read about
 <a href="/development-environments.html">development environments for coding</a>
-and learn 
+and learn
 <a href="/why-use-python.html">what makes Python a great programming language</a>.
 </div>
 
@@ -36,7 +36,7 @@ The Vimrc file is used to configure the Vim editor. A Vimrc file can range
 from nothing in it to very complicated with hundreds or thousands of lines
 of configuration commands.
 
-Here's a short, commented example .vimrc file I use for Python development 
+Here's a short, commented example .vimrc file I use for Python development
 to get a feel for some of the configuration statements:
 
     " enable syntax highlighting
@@ -57,7 +57,7 @@ to get a feel for some of the configuration statements:
     " when using the >> or << commands, shift lines by 4 spaces
     set shiftwidth=4
 
-    " show a visual line under the cursor's current line 
+    " show a visual line under the cursor's current line
     set cursorline
 
     " show the matching part of the pair for [] {} and ()
@@ -67,13 +67,13 @@ to get a feel for some of the configuration statements:
     let python_highlight_all = 1
 
 
-Here is how these configuration options look with a dark background on 
+Here is how these configuration options look with a dark background on
 Mac OS X while editing the markdown for this webpage (how meta!).
 
 <img src="theme/img/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;">
 
 Take a look at another example using these configuration options, this time
-with a light background and editing Python code from my 
+with a light background and editing Python code from my
 [Choose Your Own Adventures Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations)
 project.
 
@@ -84,7 +84,7 @@ project.
 The Vimrc file lives under the home directory of the user account running
 Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
 file is found at ``/Users/matt/.vimrc``. On Ubuntu Linux my .vimrc file
-can be found within the ``/home/matt/`` directory. 
+can be found within the ``/home/matt/`` directory.
 
 If a Vimrc file does not already exist, just create it within the user's
 home directory and it will be picked up by Vim the next time you open the
@@ -100,7 +100,7 @@ to get started with these tutorials.
 
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
   is a wonderful tutorial that follows the path I took when learning Vim:
-  learn just enough to survive with it as your day-to-day editor then begin 
+  learn just enough to survive with it as your day-to-day editor then begin
   adding more advanced commands on top.
 
 * [A vim Tutorial and Primer](https://danielmiessler.com/study/vim/) is an
@@ -123,51 +123,53 @@ to get started with these tutorials.
 
 ## Vimrc resources
 These are a few resources for learning how to structure a `.vimrc` file. I
-recommend adding configuration options one at a time to test them 
+recommend adding configuration options one at a time to test them
 individually instead of going whole hog with a Vimrc you are unfamiliar with.
 
 * [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
-  detailed overview and opinionated guide to configuring Vim. Highly 
+  detailed overview and opinionated guide to configuring Vim. Highly
   recommended for new and experienced Vim users.
 
 * [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
   and explains many Python-specific .vimrc options.
 
-* This 
+* This
   [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
-  has example configurations that are well commented and easy to learn from. 
+  has example configurations that are well commented and easy to learn from.
 
 * For people who are having trouble getting started with Vim, check out this
-  blog post on the 
+  blog post on the
   [two simple steps that helped this author learn Vim](http://adamdelong.com/two-simple-steps-helped-me-learn-vim/).
 
 ## Vim installation guides
-These installation guides will help you get Vim up and running on Mac OS X, 
+These installation guides will help you get Vim up and running on Mac OS X,
 Linux and Windows.
 
 * [Upgrading Vim on OS X](http://prioritized.net/blog/upgrading-vim-on-os-x/)
-  explains why to upgrade from Vim 7.2 to 7.3+ and how to do it using 
+  explains why to upgrade from Vim 7.2 to 7.3+ and how to do it using
   [Homebrew](http://brew.sh/).
 
-* The easiest way to install Vim on Windows 7+ is to download and run the 
+* The easiest way to install Vim on Windows 7+ is to download and run the
   [gvim74.exe](http://www.vim.org/download.php#pc) file.
 
-* On Linux make sure to install the 
+* On Linux make sure to install the
   [vim package](https://launchpad.net/ubuntu/+source/vim) with
   ``sudo apt-get install vim``.
 
-* If you're using PyCharm as your IDE you won't need to install Vim as a 
-  separate text editor - instead use the 
+* If you're using PyCharm as your IDE you won't need to install Vim as a
+  separate text editor - instead use the
   [IdeaVim](https://plugins.jetbrains.com/plugin/164) PyCharm plugin to get
   Vim keybindings, visual/insert mode, configuration with ~/.ideavimrc and
-  other Vim emulation features. 
+  other Vim emulation features.
 
 
 ## Using Vim as a Python IDE
-Once you get comfortable with Vim as an editor, there are several 
-configuration options and plugins you can use to enhance your Python 
+Once you get comfortable with Vim as an editor, there are several
+configuration options and plugins you can use to enhance your Python
 productivity. These are the resources and tutorials to read when you're
 ready to take that step.
+
+* [VIM and Python - a Match Made in Heaven](https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/) details how to set up a powerful VIM environment geared towards wrangling Python day in and day out.
 
 * The [python-mode](https://github.com/klen/python-mode) project is a Vim
   plugin with syntax highlighting, breakpoints, PEP8 linting, code completion
@@ -175,22 +177,22 @@ ready to take that step.
   environment.
 
 * [Vim as Your IDE](http://haridas.in/vim-as-your-ide.html) discusses how to
-  set up Vim for greater productivity once you learn the initial Vim language 
+  set up Vim for greater productivity once you learn the initial Vim language
   for using the editor.
 
 * [Vim as a Python IDE](http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/)
-  goes through the steps necessary to make Vim into a more comfortable 
+  goes through the steps necessary to make Vim into a more comfortable
   environment for Python development.
 
 * [Setting up Vim for Python](http://stackoverflow.com/questions/9172802/setting-up-vim-for-python)
   has a well written answer on Stack Overflow for getting started with Vim.
 
 * If you're writing your documentation in Markdown using Vim, be sure to
-  read this 
+  read this
   [insightful post on a Vim setup for Markdown](http://www.swamphogg.com/2015/vim-setup/).
 
 
-## Vim Plugin Managers 
+## Vim Plugin Managers
 * [Vundle](https://github.com/gmarik/Vundle.vim) comes highly recommended
   as a plugin manager for Vim.
 
@@ -207,7 +209,7 @@ ready to take that step.
   and EasyMotion Vim plugins.
 
 * [Getting more from Vim with plugins](http://benmccormick.org/2014/07/21/learning-vim-in-2014-getting-more-from-vim-with-plugins/)
-  provides a list of plugins with a description for each one on its 
+  provides a list of plugins with a description for each one on its
   usefulness. The comments at the bottom are also interesting as people have
   suggested alternatives to some of the plugins mentioned in the post.
 
