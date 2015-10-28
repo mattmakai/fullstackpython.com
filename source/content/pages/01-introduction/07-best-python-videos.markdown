@@ -24,6 +24,17 @@ to learn more about web development.
 </div>
 
 
+## Livecoding
+* Learn by watching a Python developer code live. Follow my
+  account on [livecoding.tv](https://www.livecoding.tv/mattmakai/) and 
+  you'll receive an email alert when I 
+  [compare Python web frameworks](https://github.com/makaimc/compare-python-web-frameworks), 
+  [build a web API with Django and Django REST Framework](https://github.com/makaimc/plapi) 
+  and 
+  write new pages for 
+  [Full Stack Python](https://github.com/makaimc/fullstackpython.com).
+
+
 ## Web development with Django, Flask and other frameworks
 * [Kate Heddleston](https://twitter.com/heddle317) gave a talk at PyCon 2014 
   called 

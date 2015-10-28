@@ -27,15 +27,6 @@ If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
 should skip down to the next section for "experienced developers".
 
-* Learn by watching a Python developer code live. Follow my
-  account on [livecoding.tv](https://www.livecoding.tv/mattmakai/) and 
-  you'll receive an email alert when I 
-  [compare Python web frameworks](https://github.com/makaimc/compare-python-web-frameworks), 
-  [build a web API with Django and Django REST Framework](https://github.com/makaimc/plapi) 
-  and 
-  write new pages for 
-  [Full Stack Python](https://github.com/makaimc/fullstackpython.com).
-
 * To get an introduction to Python, Django and Flask at the same time, 
   consider purchasing the 
   <a href="https://realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources" onclick="trackOutboundLink('https://www.realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources'); return false;">Real Python</a> 
