@@ -104,6 +104,10 @@ The post is an inside look at the evolution of Braintree's usage of the database
   [PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
   is handy for knowing what to measure and how to do it.
 
+* While you can use a graphical interface for working with PostgreSQL, it's
+  best to spend some time getting 
+  [comfortable with the command-line interface](http://phili.pe/posts/postgresql-on-the-command-line/).
+
 
 ## MySQL
 MySQL is another viable open source database backend option for Python web 
