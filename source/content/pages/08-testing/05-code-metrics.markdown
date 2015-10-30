@@ -55,3 +55,8 @@ system are occurring.
   goes over setting up Pylint, generating the .pylintrc file and what's
   in the configuration.
 
+* This /r/Python 
+  [poll on what linters the community uses](https://www.reddit.com/r/Python/comments/3oyjva/what_python_linter_do_you_use_poll/)
+  provides some input on using PyCharm just for its linting features as
+  well as some other approaches.
+
