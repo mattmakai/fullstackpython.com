@@ -174,6 +174,9 @@ equivalent of browser testing in the web application world.
   check out this 
   [blog post on exporting data as CSV format with Django REST framework](http://codingpole.com/using-django-rest-framework-for-csv-export/).
 
+* [Building better API docs](https://engineering.gosquared.com/building-better-api-docs)
+  shows how Square used Swagger with React to create more helpful docs.
+
 
 ## API creation learning checklist
 1. Pick an API framework appropriate for your web framework. For Django I 
