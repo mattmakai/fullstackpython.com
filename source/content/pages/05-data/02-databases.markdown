@@ -141,6 +141,9 @@ developers learn PostgreSQL if they do not already know MySQL.
   is an interesting study with code of how to pull data out of MySQL and graph
   the data with Plotly.
 
+* [Pinterest open sourced many of their MySQL tools](https://engineering.pinterest.com/blog/open-sourcing-pinterest-mysql-management-tools)
+  to manage instances of the database.
+
 
 ## Connecting to a database with Python
 To work with a relational database using Python, you need to use a code 
