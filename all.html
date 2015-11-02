@@ -3024,10 +3024,24 @@ files. The HTML files can be hosted and served by a
 <a href="/static-content.html">content delivery network (CDN)</a> 
 without any additional dependencies such as a 
 <a href="/wsgi-server.html">WSGI server</a>.</p>
-<h2>Why are static site generators useful?</h2>
+<h2>Why are static website generators useful?</h2>
+<p><a href="/static-content.html">Static content files</a> such as HTML, CSS, JavaScript 
+can be served from a content delivery network (CDN) for high scale and low 
+cost. If a statically generated website is hit by high concurrent traffic 
+it will be easily served by the CDN without dropped connections. </p>
+<p>For example, when 
+<a href="https://news.ycombinator.com/item?id=7985692">Full Stack Python was on the top of Hacker News</a> 
+for a weekend, <a href="https://pages.github.com/">GitHub Pages</a> was used as a CDN
+to serve the site and didn't have any issues even with close to 400 
+concurrent connections at a time, as shown in the following Google Analytics 
+screenshot captured during that traffic burst.</p>
+<p><img src="theme/img/hacker-news-traffic.jpg" width="100%" alt="Example of how static websites scale with a CDN based on Full Stack Python on Hacker News front page traffic." class="technical-diagram"></a></p>
+<h2>How do static website generators work?</h2>
 <p>Static site generators allow a user to create HTML files by writing in a
-markup language and coding template files. HTML does not need to be 
-maintained by hand other than what is in the template files.</p>
+markup language and coding template files. The static site generator then
+combines the markup language and templates to produce HTML. The output HTML 
+does not need to be maintained by hand because it is regenerated every time
+the markup or templates are modified.</p>
 <p>For example, as shown in the diagram below, the Pelican static site 
 generator can take in reStructuredText files and Jinja2 template files 
 as input then combine them to output a set of static HTML files.</p>
@@ -7142,6 +7156,11 @@ inception in December 2012. Another way to view the modifications is through
 the 
 <a href="https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages">source repository's commit log</a> on GitHub.</p>
 <h2>2015</h2>
+<h3>November</h3>
+<ul>
+<li>Updated the <a href="/static-site-generator.html">static site generators</a> page
+  with a better explanation of why they are useful.</li>
+</ul>
 <h3>October</h3>
 <ul>
 <li>Starting a <a href="/microservices.html">microservices</a> page with some basic

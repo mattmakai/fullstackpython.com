@@ -13,6 +13,10 @@ the
 
 
 ## 2015
+### November
+* Updated the [static site generators](/static-site-generator.html) page
+  with a better explanation of why they are useful.
+
 ### October
 * Starting a [microservices](/microservices.html) page with some basic
   definitions and resources.

@@ -15,11 +15,28 @@ files. The HTML files can be hosted and served by a
 without any additional dependencies such as a 
 [WSGI server](/wsgi-server.html).
 
+## Why are static website generators useful?
+[Static content files](/static-content.html) such as HTML, CSS, JavaScript 
+can be served from a content delivery network (CDN) for high scale and low 
+cost. If a statically generated website is hit by high concurrent traffic 
+it will be easily served by the CDN without dropped connections. 
 
-## Why are static site generators useful?
+For example, when 
+[Full Stack Python was on the top of Hacker News](https://news.ycombinator.com/item?id=7985692) 
+for a weekend, [GitHub Pages](https://pages.github.com/) was used as a CDN
+to serve the site and didn't have any issues even with close to 400 
+concurrent connections at a time, as shown in the following Google Analytics 
+screenshot captured during that traffic burst.
+
+<img src="theme/img/hacker-news-traffic.jpg" width="100%" alt="Example of how static websites scale with a CDN based on Full Stack Python on Hacker News front page traffic." class="technical-diagram"></a>
+
+
+## How do static website generators work?
 Static site generators allow a user to create HTML files by writing in a
-markup language and coding template files. HTML does not need to be 
-maintained by hand other than what is in the template files.
+markup language and coding template files. The static site generator then
+combines the markup language and templates to produce HTML. The output HTML 
+does not need to be maintained by hand because it is regenerated every time
+the markup or templates are modified.
 
 For example, as shown in the diagram below, the Pelican static site 
 generator can take in reStructuredText files and Jinja2 template files 
