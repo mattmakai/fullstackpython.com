@@ -80,3 +80,8 @@ ones listed here are primarily coded in Python.
   of all programming languages sorted by various attributes such as the
   number of GitHub stars, forks and issues.
 
+* The title is a big grandiose, but there's some solid detail in this article
+  on 
+  [why static website generators are the next big thing](http://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/).
+  I'd argue static website generators have been big for a long time now.
+
