@@ -94,6 +94,17 @@ ones listed here are primarily coded in Python.
   builds to generate static sites faster than recreating every page after
   each change is made to the input files.
 
+* [Hyde](http://hyde.github.io/) 
+  ([source code](https://github.com/hyde/hyde)) started out as a Python 
+  rewrite of the popular Ruby-based 
+  [Jekyll static site generator](http://jekyllrb.com/). Today the project
+  has moved past those "clone Jekyll" origins. Hyde supports Jinja as well
+  as other templating languages and places more emphasis on metadata within
+  the markup files to instruct the generator how to produce the output files.
+  Check out the 
+  [Hyde-powered websites](https://github.com/hyde/hyde/wiki/Hyde-Powered)
+  page to see live examples created with Hyde.
+
 * [Grow SDK](http://growsdk.org/) ([source code](http://growsdk.org/)) 
   uses projects, known as pods, which contain a specific file and directory 
   structure so the site can be generated. The project remains in the
