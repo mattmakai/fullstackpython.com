@@ -85,6 +85,10 @@ ones listed here are primarily coded in Python.
   structure so the site can be generated. The project remains in the
   "experimental" phase.
 
+* Cactus ([source code](https://github.com/koenbok/Cactus/)) uses the Django
+  templating engine that was originally built with front-end designers in
+  mind. It works with both Python 2.x and 3.x.
+
 
 ### Static site generator resources
 * [The Long Road to Building a Static Blog with Pelican](http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html)
