@@ -12,14 +12,15 @@ or reStructuredText, with a templating engine such as
 files. The HTML files can be hosted and served by a 
 [web server](/web-server.html) or 
 [content delivery network (CDN)](/static-content.html) 
-without any additional dependencies such as a 
+*without* any additional dependencies such as a 
 [WSGI server](/wsgi-server.html).
 
-## Why are static website generators useful?
-[Static content files](/static-content.html) such as HTML, CSS, JavaScript 
+
+## Why are static site generators useful?
+[Static content files](/static-content.html) such as HTML, CSS and JavaScript 
 can be served from a content delivery network (CDN) for high scale and low 
-cost. If a statically generated website is hit by high concurrent traffic 
-it will be easily served by the CDN without dropped connections. 
+cost. If a statically generated website is hit by high concurrent traffic it 
+will be easily served by the CDN without dropped connections. 
 
 For example, when 
 [Full Stack Python was on the top of Hacker News](https://news.ycombinator.com/item?id=7985692) 
@@ -45,7 +46,25 @@ as input then combine them to output a set of static HTML files.
 <img src="theme/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a>
 
 
-## Python static site generators
+## What's the downside to using static site generators?
+The major downside is that the code is not dynamic, so you won't be able to
+do many seemingly-necessary tasks provided by running an application created
+with a traditional [web framework](/web-frameworks.html). Any content that
+is typically powered by a database, such as comments, sessions and user data
+can only be done through third party services. For example, if you want to
+have comments on a static website you'd need to 
+[embed Disqus's form](https://disqus.com/) and be completely reliant upon
+their service.
+
+Many web applications simply cannot be built with only a static site generator.
+However, a static website generator can create part of a site that will be
+served up by a web server while other pages are handled by the WSGI server. 
+If done right, those web applications have the potential to scale better than
+if every page is rendered by the WSGI server. The complexity may or may not be
+worth it for your specific application.
+
+
+## Python static site generator implementations
 Numerous static website generators exist in many different languages. The
 ones listed here are primarily coded in Python.
 
