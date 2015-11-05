@@ -88,8 +88,8 @@ ones listed here are primarily coded in Python.
   ([source code](https://github.com/getnikola/nikola)) takes in either 
   Markdown or reStructuredText and combines the files with Mako templates 
   to output static sites. It is compatible with both Python 2.x and 3.x, 
-  although the current plan is to drop support for Python 2.x in the near 
-  future.
+  although the current plan is to drop support for Python 2.x in early
+  2016.
 
 * [Acrylamid](http://posativ.org/acrylamid/) 
   ([source code](https://github.com/posativ/acrylamid)) uses incremental 
