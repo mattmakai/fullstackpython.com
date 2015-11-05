@@ -1,4 +1,4 @@
-title: Static Site Generator
+title: Static Site Generators
 category: page
 slug: static-site-generator
 sort-order: 0416
