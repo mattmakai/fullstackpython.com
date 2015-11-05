@@ -84,6 +84,11 @@ ones listed here are primarily coded in Python.
   own templates unless a custom site is desired at which point it might make
   more sense to use a different static site generator instead.
 
+* [Nikola](https://getnikola.com/) 
+  ([source code](https://github.com/getnikola/nikola)) takes in either Markdown
+  or reStructuredText and combines the files with Mako templates to output
+  static sites. It is compatible with both Python 2.x and 3.x.
+
 * [Acrylamid](http://posativ.org/acrylamid/) 
   ([source code](https://github.com/posativ/acrylamid)) uses incremental 
   builds to generate static sites faster than recreating every page after
