@@ -63,12 +63,13 @@ generator can take in reStructuredText files and Jinja2 template files
 as input then combine them to output a set of static HTML files.</p>
 <p><img src="theme/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a></p>
 <h2>What's the downside to using static site generators?</h2>
-<p>The major downside is that the code is not dynamic, so you won't be able to
-do many seemingly-necessary tasks provided by running an application created
-with a traditional <a href="/web-frameworks.html">web framework</a>. Any content that
-is typically powered by a database, such as comments, sessions and user data
-can only be done through third party services. For example, if you want to
-have comments on a static website you'd need to 
+<p>The major downside is that code cannot be executed after a site is created. 
+You are stuck with the output files so if you're used to building web 
+applications with a traditional <a href="/web-frameworks.html">web framework</a> you'll
+have to change your expectations. </p>
+<p>Content that is typically powered by a database, such as comments, sessions 
+and user data can only be handled through third party services. For example, 
+if you want to have comments on a static website you'd need to 
 <a href="https://disqus.com/">embed Disqus's form</a> and be completely reliant upon
 their service.</p>
 <p>Many web applications simply cannot be built with only a static site generator.
@@ -77,7 +78,7 @@ served up by a web server while other pages are handled by the WSGI server.
 If done right, those web applications have the potential to scale better than
 if every page is rendered by the WSGI server. The complexity may or may not be
 worth it for your specific application.</p>
-<h2>Python static site generator implementations</h2>
+<h2>Python implementations</h2>
 <p>Numerous static website generators exist in many different languages. The
 ones listed here are primarily coded in Python.</p>
 <ul>
@@ -88,6 +89,14 @@ ones listed here are primarily coded in Python.</p>
   <a href="https://github.com/makaimc/fullstackpython.com">Full Stack Python</a>. The
   primary templating engine is Jinja and Markdown, reStructuredText and
   AsciiDoc are supported with the default configuration.</p>
+</li>
+<li>
+<p><a href="http://www.mkdocs.org/">MkDocs</a> 
+  (<a href="https://github.com/mkdocs/mkdocs/">source code</a>) uses a YAML configuration
+  file to take Markdown files and an optional theme to output a documentation
+  site. The templating engine is Jinja, but a user doesn't have to create her
+  own templates unless a custom site is desired at which point it might make
+  more sense to use a different static site generator instead.</p>
 </li>
 <li>
 <p><a href="http://posativ.org/acrylamid/">Acrylamid</a> 
@@ -129,6 +138,11 @@ ones listed here are primarily coded in Python.</p>
   on 
   <a href="http://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/">why static website generators are the next big thing</a>.
   I'd argue static website generators have been big for a long time now.</p>
+</li>
+<li>
+<p><a href="http://www.mattmakai.com/introduction-to-pelican.html">Getting started with Pelican and GitHub pages</a>
+  is a tutorial I wrote to use the Full Stack Python source code to create
+  and deploy your first static site.</p>
 </li>
 </ul>
 <h3>What else do you want to learn about Python web dev?</h3>

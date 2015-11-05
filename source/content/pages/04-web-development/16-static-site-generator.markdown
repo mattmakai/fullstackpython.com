@@ -47,12 +47,14 @@ as input then combine them to output a set of static HTML files.
 
 
 ## What's the downside to using static site generators?
-The major downside is that the code is not dynamic, so you won't be able to
-do many seemingly-necessary tasks provided by running an application created
-with a traditional [web framework](/web-frameworks.html). Any content that
-is typically powered by a database, such as comments, sessions and user data
-can only be done through third party services. For example, if you want to
-have comments on a static website you'd need to 
+The major downside is that code cannot be executed after a site is created. 
+You are stuck with the output files so if you're used to building web 
+applications with a traditional [web framework](/web-frameworks.html) you'll
+have to change your expectations. 
+
+Content that is typically powered by a database, such as comments, sessions 
+and user data can only be handled through third party services. For example, 
+if you want to have comments on a static website you'd need to 
 [embed Disqus's form](https://disqus.com/) and be completely reliant upon
 their service.
 
@@ -64,7 +66,7 @@ if every page is rendered by the WSGI server. The complexity may or may not be
 worth it for your specific application.
 
 
-## Python static site generator implementations
+## Python implementations
 Numerous static website generators exist in many different languages. The
 ones listed here are primarily coded in Python.
 
@@ -74,6 +76,13 @@ ones listed here are primarily coded in Python.
   [Full Stack Python](https://github.com/makaimc/fullstackpython.com). The
   primary templating engine is Jinja and Markdown, reStructuredText and
   AsciiDoc are supported with the default configuration.
+
+* [MkDocs](http://www.mkdocs.org/) 
+  ([source code](https://github.com/mkdocs/mkdocs/)) uses a YAML configuration
+  file to take Markdown files and an optional theme to output a documentation
+  site. The templating engine is Jinja, but a user doesn't have to create her
+  own templates unless a custom site is desired at which point it might make
+  more sense to use a different static site generator instead.
 
 * [Acrylamid](http://posativ.org/acrylamid/) 
   ([source code](https://github.com/posativ/acrylamid)) uses incremental 
@@ -107,4 +116,8 @@ ones listed here are primarily coded in Python.
   on 
   [why static website generators are the next big thing](http://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/).
   I'd argue static website generators have been big for a long time now.
+
+* [Getting started with Pelican and GitHub pages](http://www.mattmakai.com/introduction-to-pelican.html)
+  is a tutorial I wrote to use the Full Stack Python source code to create
+  and deploy your first static site.
 
