@@ -85,6 +85,12 @@ ones listed here are primarily coded in Python.
   more sense to use a different static site generator instead.
 
 * [Nikola](https://getnikola.com/) 
+  ([source code](https://github.com/getnikola/nikola)) takes in 
+  reStructuredText, Markdown or Jupyter (IPython) Notebooks and combines 
+  the files with Mako or Jinja2 templates to output static sites. It is 
+  compatible with Python 2.7 until 2016 and Python 3.3+ for the 
+  foreseeable future.
+
   ([source code](https://github.com/getnikola/nikola)) takes in either 
   Markdown or reStructuredText and combines the files with Mako templates 
   to output static sites. It is compatible with both Python 2.x and 3.x, 
