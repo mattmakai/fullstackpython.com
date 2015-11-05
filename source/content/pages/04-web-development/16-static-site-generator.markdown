@@ -98,6 +98,27 @@ ones listed here are primarily coded in Python.
   templating engine that was originally built with front-end designers in
   mind. It works with both Python 2.x and 3.x.
 
+### Open source Python static site generator examples
+* This site is 
+  [all open source in its own GitHub repository](https://github.com/makaimc/fullstackpython.com) 
+  under the MIT license. Fork away!
+
+* [Django REST Framework](https://github.com/tomchristie/django-rest-framework/tree/master/docs)
+  uses MkDocs to create its documentation site. Be sure to take a look at the
+  [mkdocs.yml file](https://github.com/tomchristie/django-rest-framework/blob/master/mkdocs.yml)
+  to see how large, well-written docs are structured for that project.
+
+* [Practicing web development](https://www.vlent.nl/) uses Acrylamid to create
+  its site. The code is 
+  [open source on GitHub](https://github.com/markvl/www.vlent.nl).
+
+* [Linux Open Admin Days (Loadsys)](http://loadays.org/) has their 
+  [site open source and available for viewing](https://github.com/loadays/pelican-site). 
+
+* The [Pythonic Perambulations](http://jakevdp.github.io/) blog has a fairly
+  standard theme but is 
+  [also open source on GitHub](https://github.com/jakevdp/PythonicPerambulations).
+
 
 ### Static site generator resources
 * [The Long Road to Building a Static Blog with Pelican](http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html)
