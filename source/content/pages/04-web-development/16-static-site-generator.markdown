@@ -112,9 +112,16 @@ ones listed here are primarily coded in Python.
   structure so the site can be generated. The project remains in the
   "experimental" phase.
 
+* [Complexity](http://complexity.readthedocs.org/en/latest/)
+  ([source code](https://github.com/audreyr/complexity) is a site generator
+  for users who like to work in HTML. It uses HTML for templating but
+  has some functionality from Jinja for inheritance. Works with 
+  Python 2.6+, 3.3+ and PyPy.
+
 * Cactus ([source code](https://github.com/koenbok/Cactus/)) uses the Django
   templating engine that was originally built with front-end designers in
   mind. It works with both Python 2.x and 3.x.
+
 
 ### Open source Python static site generator examples
 * This site is 

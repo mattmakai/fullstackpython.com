@@ -112,9 +112,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
   walks through how this developer organizes the components and architecture
   for his Flask applications.
 
-* Randall Degges wrote a detailed walkthrough for 
-  [building a Flask app in 30 minutes](https://stormpath.com/blog/build-a-flask-app-in-30-minutes/).
-
 * Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
 * [Building Websites in Python with Flask](http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J)
