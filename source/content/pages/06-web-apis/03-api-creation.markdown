@@ -48,6 +48,11 @@ applications through machine-to-machine communication.
   [EuroPython 2014](https://www.youtube.com/watch?v=9sUsLvG72_o) that 
   introduced the main features of the framework.
 
+* [Falcon](http://falconframework.org/) is a fast and lightweight framework
+  well suited to create RESTful APIs. 
+
+* [Pycnic](http://pycnic.nullism.com) is a new JSON-API-only framework designed with
+  REST in mind. 
 
 ## API testing projects
 Building, running and maintaining APIs requires as much effort as building,
