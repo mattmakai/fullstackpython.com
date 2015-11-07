@@ -14,6 +14,11 @@ the
 
 ## 2015
 ### November
+* Merged 
+  [pull request #70](https://github.com/makaimc/fullstackpython.com/pull/70)
+  and fixed some other issues that were in tickets.
+* Made more updates to the static site generators page based on
+  [feedback from folks on the /r/python subreddit](https://www.reddit.com/r/Python/comments/3rnkm9/an_overview_of_python_static_site_generators/).
 * Updated the [static site generators](/static-site-generator.html) page
   with a better explanation of why they are useful.
 
