@@ -2,7 +2,7 @@ title: JavaScript
 category: page
 slug: javascript
 sort-order: 0412
-meta: Learn about JavaScript and Model-View-Controller frameworks for your web application on Full Stack Python.
+meta: Learn about JavaScript and MVC frameworks for web applications on Full Stack Python.
 
 
 # JavaScript
