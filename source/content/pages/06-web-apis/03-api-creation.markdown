@@ -51,6 +51,8 @@ applications through machine-to-machine communication.
 * [Falcon](http://falconframework.org/) is a fast and lightweight framework
   well suited to create RESTful APIs. 
 
+* [Hug](https://github.com/timothycrosley/hug) built on-top of Falcon and Python3 with an aim to make developing Python driven APIs as simple as possible, but no simpler. Hug leverages Python3 annotations to automatically validate and convert incoming and outgoing API parameters.
+
 * [Pycnic](http://pycnic.nullism.com) is a new JSON-API-only framework designed with
   REST in mind. 
 
