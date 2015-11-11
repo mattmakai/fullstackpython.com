@@ -12,7 +12,6 @@
       </div>
   </div>
   {% endif %}
-  {% include "fsp-guide-advert.html" %}
   <div class="panel panel-success">
       <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sort-order') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
       <div class="panel-body">
