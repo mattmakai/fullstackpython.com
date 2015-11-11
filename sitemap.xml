@@ -31,6 +31,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/web-development.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
