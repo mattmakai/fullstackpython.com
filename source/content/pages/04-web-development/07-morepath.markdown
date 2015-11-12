@@ -1,7 +1,7 @@
 title: Morepath
 category: page
 slug: morepath
-sort-order: 0406
+sort-order: 0407
 meta: Morepath is a Python web framework with a model-driven design approach. Learn more about Morepath on Full Stack Python. 
 
 
@@ -35,6 +35,11 @@ assumption that templates will drive the user interface.
 * [On the Morepath](http://blog.startifact.com/posts/on-the-morepath.html)
   is a blog post by Startifact on how they use Morepath and some of the
   features of the framework.
+
+* [A Summer with Morepath](http://blog.stacktrace.ch/post/132538261985)
+  describes the author's experience using Morepath, such as how he built
+  a framework around Morepath's core functionality. He eventually became
+  a core contributor to Morepath based on the application he created.
 
 * [Build a better batching UI with Morepath and Jinja2](http://blog.startifact.com/posts/morepath-batching-example.html)
   is an introductory post on building a simple web application with the 

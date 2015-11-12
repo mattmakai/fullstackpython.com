@@ -35,10 +35,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/what-full-stack-means.html</loc>
     <priority>1.0</priority>
   </url>
@@ -59,10 +55,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/django.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/learning-programming.html</loc>
     <priority>1.0</priority>
   </url>
@@ -79,15 +71,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/api-creation.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/emacs.html</loc>
+    <loc>http://www.fullstackpython.com/django.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/flask.html</loc>
+    <loc>http://www.fullstackpython.com/emacs.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -111,7 +107,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/bottle.html</loc>
+    <loc>http://www.fullstackpython.com/flask.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -127,6 +123,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/bottle.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/code-metrics.html</loc>
     <priority>1.0</priority>
   </url>
@@ -139,15 +139,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/pyramid.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/morepath.html</loc>
+    <loc>http://www.fullstackpython.com/pyramid.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -156,6 +152,10 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/morepath.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

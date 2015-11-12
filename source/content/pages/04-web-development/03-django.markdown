@@ -1,8 +1,8 @@
 title: Django
 category: page
 slug: django
-sort-order: 0402
-meta: Django is a widely used Python web framework with a 'batteries-included' philosophy. Learn more about Django on Full Stack Python.
+sort-order: 0403
+meta: Django is a common 'batteries-included' Python web framework. Learn more about Django on Full Stack Python.
 
 
 # Django

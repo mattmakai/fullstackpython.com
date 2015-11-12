@@ -1,7 +1,7 @@
 title: Pyramid
 category: page
 slug: pyramid
-sort-order: 0405
+sort-order: 0406
 meta: Pyramid is a Python web framework that grew out of the Pylons project. Learn more about Pyramid on Full Stack Python. 
 
 
