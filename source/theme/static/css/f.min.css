@@ -84,14 +84,6 @@ input[type="radio"][disabled],input[type="checkbox"][disabled],.radio[disabled],
 .btn-success:active,.btn-success.active,.open .dropdown-toggle.btn-success{background-image:none}
 .btn-success.disabled,.btn-success[disabled],fieldset[disabled] .btn-success,.btn-success.disabled:hover,.btn-success[disabled]:hover,fieldset[disabled] .btn-success:hover,.btn-success.disabled:focus,.btn-success[disabled]:focus,fieldset[disabled] .btn-success:focus,.btn-success.disabled:active,.btn-success[disabled]:active,fieldset[disabled] .btn-success:active,.btn-success.disabled.active,.btn-success[disabled].active,fieldset[disabled] .btn-success.active{background-color:#22b24c;border-color:#22b24c}
 label{display:inline-block;margin-bottom:5px;font-weight:bold}
-.btn{display:inline-block;padding:8px 12px;margin-bottom:0;font-size:15px;font-weight:normal;line-height:1.428571429;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
-.btn:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
-.btn:hover,.btn:focus{color:#fff;text-decoration:none}
-.btn:active,.btn.active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}
-.btn-primary{color:#fff;background-color:#eb6864;border-color:#eb6864}
-.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{color:#fff;background-color:#e64540;border-color:#e4332e}
-.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{background-image:none}
-.btn-primary.disabled,.btn-primary[disabled],fieldset[disabled] .btn-primary,.btn-primary.disabled:hover,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary:hover,.btn-primary.disabled:focus,.btn-primary[disabled]:focus,fieldset[disabled] .btn-primary:focus,.btn-primary.disabled:active,.btn-primary[disabled]:active,fieldset[disabled] .btn-primary:active,.btn-primary.disabled.active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary.active{background-color:#eb6864;border-color:#eb6864}
 .btn-lg{padding:14px 16px;font-size:19px;line-height:1.33;border-radius:6px}
 .btn-block{display:block;width:100%;padding-right:0;padding-left:0}
 .btn-block+.btn-block{margin-top:5px}
@@ -177,7 +169,6 @@ h4.toc-more-subsection{padding-left: 38px; margin-bottom: 2px; margin-top: 15px;
 .indent{margin-left: 25px; padding-bottom: 1px;}
 .subsection{margin-left: 56px; padding-bottom: 1px;}
 .more-subsection{margin-left: 78px; padding-bottom: 1px;}
-
 .toc-indent {padding-left: 25px; padding-bottom: 1px;}
 .toc-indent-link {margin-left: 25px; padding-bottom: 1px;}
 .toc-subsection-link {margin-left: 56px; padding-bottom: 1px;}
