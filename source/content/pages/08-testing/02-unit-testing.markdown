@@ -56,6 +56,10 @@ by writing the test cases to exercise multiple parts of code at once.
   unit testing with the 
   [unittest](https://docs.python.org/3/library/unittest.html) module.
 
+* [Unit Testing Your Twilio App Using Python’s Flask and Nose](https://www.twilio.com/blog/2014/03/unit-testing-your-twilio-app-using-pythons-flask-and-nose.html)
+  is a detailed tutorial for using the nose test runner for ensuring a
+  Flask application is working properly.
+
 * [Understanding unit testing](https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/)
   explains why testing is important and shows how to do it effectively in
   your applications.
