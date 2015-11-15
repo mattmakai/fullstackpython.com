@@ -36,12 +36,12 @@ client and executed there.
 
 
 ### Web development resources
+* The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
+  how web browsers and related technologies have changed over time as well as
+  the overall growth of the Internet in the amount of data transferred.
+
 * [Three takeaways for web developers after two weeks of painfully slow Internet](https://medium.com/@zengabor/three-takeaways-for-web-developers-after-two-weeks-of-painfully-slow-internet-9e7f6d47726e)
   is a must-read for every web developer. Not everyone has fast Internet
   service, whether because they are in a remote part of the world or they're
   just in a subway tunnel. Optimizing sites so they work in those situations
   is important for keeping your users happy.
-
-* The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
-  how web browsers and related technologies have changed over time as well as
-  the overall growth of the Internet in the amount of data transferred.
