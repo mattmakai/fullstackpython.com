@@ -14,6 +14,9 @@ the
 
 ## 2015
 ### November
+* Working on a page for the umbrella [web development](/web-development.html)
+  concept, but it's early days as I'm trying to figure out how to be clear
+  and concise about this broad topic.
 * Merged 
   [pull request #70](https://github.com/makaimc/fullstackpython.com/pull/70)
   and fixed some other issues that were in tickets.
