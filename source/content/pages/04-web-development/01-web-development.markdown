@@ -36,9 +36,16 @@ client and executed there.
 
 
 ### Web development resources
+* [Web application development is different and better](http://radar.oreilly.com/2014/01/web-application-development-is-different-and-better.html)
+  provides some context for how web development has evolved from writing
+  static HTML files into the complex JavaScript client-side applications
+  produced today.
+
 * The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
   how web browsers and related technologies have changed over time as well as
-  the overall growth of the Internet in the amount of data transferred.
+  the overall growth of the Internet in the amount of data transferred. Note 
+  that the visualization unfortunately stops around the beginning of 2013 but
+  it's a good way to explore what happened in the first 24 years.
 
 * [Three takeaways for web developers after two weeks of painfully slow Internet](https://medium.com/@zengabor/three-takeaways-for-web-developers-after-two-weeks-of-painfully-slow-internet-9e7f6d47726e)
   is a must-read for every web developer. Not everyone has fast Internet
