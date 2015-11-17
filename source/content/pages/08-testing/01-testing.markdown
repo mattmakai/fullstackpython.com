@@ -42,6 +42,10 @@ correctness.
 
 
 ## Testing resources
+* [The Minimum Viable Test Suite](https://realpython.com/blog/python/the-minimum-viable-test-suite/)
+  shows how to set unit tests and integration tests for a Flask example
+  application.
+
 * [Good test, bad test](http://late.am/post/2015/04/20/good-test-bad-test.html)
   explains the difference between a "good" test case and one that is not
   as useful. Along the way the post breaks down some myths about common

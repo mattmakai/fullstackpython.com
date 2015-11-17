@@ -47,10 +47,6 @@ by writing the test cases to exercise multiple parts of code at once.
 
 
 ### Unit testing resources
-* [The Minimum Viable Test Suite](https://realpython.com/blog/python/the-minimum-viable-test-suite/)
-  shows how to set unit tests and integration tests for a Flask example
-  application.
-
 * [Dive into Python 3's chapter on unit testing](http://www.diveintopython3.net/unit-testing.html)
   has a complete example with code and a detailed explanation for creating
   unit testing with the 
@@ -79,4 +75,8 @@ by writing the test cases to exercise multiple parts of code at once.
   shows how to write a test generator that works with the `unittest` 
   framework.
 
+* [An Extended Introduction to the nose Unit Testing Framework](http://ivory.idyll.org/articles/nose-intro.html)
+  shows how this test runner can be used to write basic test suites.
+  While the article is from 2006, it remains relevant today for learning
+  how to use nose with your projects.
 
