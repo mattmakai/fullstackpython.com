@@ -66,6 +66,11 @@ application framework and your app itself is up to date and secured. See the
 * [Deploying Django](http://www.rdegges.com/deploying-django/) by 
   Randall Degges is another great free resource about Heroku.
 
+* [AWS in Plain English](https://www.expeditedssl.com/aws-in-plain-english)
+  shows what current Amazon Web Services individual services are
+  currently called and what they could've been called to be more 
+  clear to users.
+
 * Heroku's 
   [Python deployment documentation](https://devcenter.heroku.com/articles/getting-started-with-python)
   provides clear examples for how to work with virtualenv, pip and 
