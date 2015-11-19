@@ -415,6 +415,14 @@ should skip down to the next section for "experienced developers".</p>
   free book by Zed Shaw.</p>
 </li>
 <li>
+<p>The <a href="https://www.twilio.com/blog/tag/python">Python projects tag</a> on the 
+  Twilio blog is constantly updated with fun tutorials you can build to
+  learn Python, such as the
+  <a href="https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html">International Space Station Tracker with Flask and Redis-Queue</a>, 
+  <a href="https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html">Choose Your Own Adventures Presentations using Flask and WebSockets</a>
+  and <a href="https://www.twilio.com/blog/2015/11/getting-started-with-opencv-and-python-featuring-the-martian-2.html">Martianify Photos with OpenCV</a>.</p>
+</li>
+<li>
 <p><a href="http://www.diveinto.org/python3/">Dive into Python 3</a> is an open source
   book provided under the Creative Commons license and available in HTML or
   PDF form.</p>
@@ -2878,6 +2886,94 @@ properly.</p>
   <a href="http://www.reddit.com/r/Python/comments/2ujqd7/an_overview_of_using_websockets_in_python/">Reddit thread for this page</a>
   has some interesting comments on what's missing from the above content that
   I'm working to address.</p>
+</li>
+</ul>
+          <h1>Template Engines</h1>
+<p>Template engines process template files, which provide an intermediate format 
+between your Python code and a desired output format, such as HTML or PDF.</p>
+<h2>Why are template engines important?</h2>
+<p>Template engines allow developers to generate a desired content type, such 
+as HTML, while using some of the data and programming constructs such as 
+conditionals and for loops to manipulate the output. Template files that are 
+created by developers and then processed by the template engine consist of
+prewritten markup and template tag blocks where data is inserted.</p>
+<p>For example, look at the first ten source lines of HTML of this webpage:</p>
+<div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;author&quot;</span> <span class="na">content=</span><span class="s">&quot;Matt Makai&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">content=</span><span class="s">&quot;Template engines provide programmatic output of formatted content such as HTML, XML or PDF.&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">href=</span><span class="s">&quot;//static.fullstackpython.com/fsp-fav.png&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+
+
+<p>Every one of the HTML lines above is standard for each page on Full Stack Python,
+with the exception of the <code>&lt;meta name="description"...</code> line which provides
+a unique short description of what the individual page contains.</p>
+<p>The <a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/theme/templates/base.html">base.html Jinja template</a> used to generate Full Stack Python
+allows every page on Full Stack Python to have consistent HTML but 
+dynamically generate the pieces that should change between pages when 
+the <a href="/static-site-generator.html">static site generator</a> executes. The below
+code from the <code>base.html</code> template shows that the meta description is up to child 
+templates to create.</p>
+<div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content=</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;author&quot;</span> <span class="na">content=</span><span class="s">&quot;Matt Makai&quot;</span><span class="nt">&gt;</span>
+    <span class="cp">{%</span> <span class="k">block</span> <span class="nv">meta_header</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">href=</span><span class="s">&quot;//static.fullstackpython.com/fsp-fav.png&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+
+
+<p>In a typical <a href="/wsgi-servers.html">WSGI application</a>, the template engine would 
+generate the HTML output response when an HTTP request comes in for a 
+particular URL. </p>
+<h2>Python template engines</h2>
+<p>There are several popular Python template engines. Template engines have to
+walk the spectrum between allowing arbitrary code execution and granting only
+a limited set of capabilities via template tags.</p>
+<h3>Jinja</h3>
+<p><a href="http://jinja.pocoo.org/">Jinja</a>, also known as "Jinja2" is a popular Python 
+template engine written as an independent open source project, unlike some
+template engines that are provided as part of a larger web framework.</p>
+<p>Major Python open source applications such as the 
+<a href="/configuration-management.html">configuration management</a> tools Ansible
+and <a href="https://github.com/saltstack/salt">SaltStack</a>
+as well as the <a href="/static-site-generator.html">static site generator</a> Pelican use
+the Jinja template engine by default for generating output files.</p>
+<h3>Django templating</h3>
+<p>Django comes with its 
+<a href="https://docs.djangoproject.com/en/dev/topics/templates/">own template engine</a>
+in addition to supporting (as of Django 1.9) drop-in replacement with other
+template engines such as Jinja.</p>
+<h3>Mako</h3>
+<p><a href="http://www.makotemplates.org/">Mako</a> is the default templating engine for
+the <a href="/pyramid.html">Pyramid web framework</a> and has wide support as a replacement
+template engine for many <a href="/other-web-frameworks.html">other web frameworks</a>.</p>
+<h3>Template engine resources</h3>
+<ul>
+<li>
+<p><a href="http://aosabook.org/en/500L/a-template-engine.html">A template engine in 500 lines or less</a>
+  is an article by <a href="http://nedbatchelder.com/">Ned Batchelder</a> provides a<br />
+  template engine in 252 lines of Python that can be used to understand how
+  template engines work under the cover.</p>
+</li>
+<li>
+<p><a href="https://realpython.com/blog/python/primer-on-jinja-templating/">A Primer on Jinja Templating</a>
+  shows how to use the major parts of this fantastic template engine.</p>
+</li>
+<li>
+<p><a href="http://agiliq.com/blog/2015/08/template-fragment-caching-gotchas/">Template fragment gotchas</a> 
+  is a collection of situations that can trip up a developer or designer when
+  working with templates.</p>
 </li>
 </ul>
           <h1>Web Application Security</h1>

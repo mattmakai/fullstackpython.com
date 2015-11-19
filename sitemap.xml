@@ -215,6 +215,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/template-engines.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/monitoring.html</loc>
     <priority>1.0</priority>
   </url>
