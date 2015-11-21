@@ -102,3 +102,7 @@ template engine for many [other web frameworks](/other-web-frameworks.html).
   is a collection of situations that can trip up a developer or designer when
   working with templates.
 
+* This 
+  [template engines site](http://www.simple-is-better.org/template/index.html)
+  contains a range of information from what templates engines are to listing
+  more esoteric Python template engines.
