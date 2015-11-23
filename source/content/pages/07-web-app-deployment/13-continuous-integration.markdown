@@ -120,3 +120,6 @@ relatively simple set up.
   is an example walking through one potential way to use the Teamcity CI
   server for automated deployments.
 
+* [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins)
+  is the landing page for Jenkins security. If you're deploying your own
+  instance, you'll need to lock it down against unauthorized users.
