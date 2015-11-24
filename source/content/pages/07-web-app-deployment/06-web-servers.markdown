@@ -87,6 +87,11 @@ is provided by W3C.
 
 
 ## Nginx resources
+* The [Nginx chapter](http://www.aosabook.org/en/nginx.html) in the
+  [Architecture of Open Source Applications book](http://www.aosabook.org/en/index.html)
+  has a great chapter devoted to why Nginx is built to scale a certain way
+  and lessons learned along the development journey.
+
 * [Inside Nginx: How we designed for performance and scale](http://nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
   is a blog post from the developers behind Nginx on why they believe their
   architecture model is more performant and scalable than other approaches
