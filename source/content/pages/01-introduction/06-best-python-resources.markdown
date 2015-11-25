@@ -125,7 +125,7 @@ should skip down to the next section for "experienced developers".
 
 ## Beyond the basics
 * [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
-  provides context for virtual machines, Python packaging, pip, virutalenv
+  provides context for virtual machines, Python packaging, pip, virtualenv
   and many other topics after learning the basic Python syntax. 
 
 * The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
