@@ -69,6 +69,12 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   shows that security is important not only on your application but also
   the databases you're using as well.
 
+* Redis, just as with any relational or NoSQL database, needs to be secured
+  based on [security guidelines](http://www.antirez.com/news/96). There is
+  also a post where the main author of Redis 
+  [cracks its security](http://www.antirez.com/news/96) to show the tradeoffs
+  purposely made between ease of use and security in the default settings.
+
 
 ## Document-oriented
 A document-oriented database provides a semi-structured representation for
