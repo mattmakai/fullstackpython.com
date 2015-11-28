@@ -45,6 +45,10 @@ width.
 * [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) is
   an amazing write up of good practices for HTML, CSS and JS.
 
+* [How I Work with Color](https://medium.com/@JustinMezzell/how-i-work-with-color-8439c98ae5ed)
+  is a fantastic article from a professional designer on how he thinks
+  about color and uses it for certain effects in his designs.
+
 * The [Bootstrapping Design](http://bootstrappingdesign.com/) book is one of 
   the clearest and concise resources for learning design that I've ever read. 
   Highly recommended especially if you feel you have no design skills but 
