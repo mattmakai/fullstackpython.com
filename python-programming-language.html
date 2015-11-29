@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Web application programming interfaces (APIs) provide a machine-to-machine data transport mechanism. Learn more about web APIs at Full Stack Python.">
+    <meta name="description" content="The core Python programming language includes an implementation, interpreter, standard code library and documentation.">
     <link rel="shortcut icon" href="//static.fullstackpython.com/fsp-fav.png">
-    <title>Application Programming Interfaces - Full Stack Python</title>
+    <title>Python Programming Language - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -31,109 +31,78 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Application Programming Interfaces</h1>
-<p>Application programming interfaces (APIs) provide machine-readable
-data transfer and signaling between applications.</p>
-<h2>Why are APIs important?</h2>
-<p>HTML, CSS and JavaScript create human-readable webpages. However, those 
-webpages are not easily consumable by other machines.</p>
-<p>Numerous scraping programs and libraries exist to rip data out of HTML but 
-it's simpler to consume data through APIs. For example, if you want the
-content of a news article it's easier to get the content through an API than
-to scrap the text out of the HTML.</p>
-<h2>Key API concepts</h2>
-<p>There are several key concepts that get thrown around in the APIs world. It's
-best to understand these ideas first before diving into the API literature.</p>
+          <h1>Python Programming Language</h1>
+<p>The Python programming language is an 
+<a href="https://www.python.org/downloads/source/">open source</a>, 
+<a href="/why-use-python.html">widely-used</a> tool for 
+creating software applications.</p>
+<h2>What is Python used for?</h2>
+<p>Python is often used to <a href="/web-frameworks.html">build</a> and <a href="/deployment.html">deploy</a> 
+<a href="/web-development.html">web applications</a> and 
+<a href="/application-programming-interfaces.html">web APIs</a>. Python
+can also analyze and visualize <a href="/data.html">data</a> 
+and <a href="/testing.html">test software</a>, even if the software being
+tested was not written in Python.</p>
+<h2>General Python programming language resources</h2>
 <ul>
 <li>
-<p>Representation State Transfer (REST)</p>
+<p>The <a href="http://www.pythontutor.com/">online Python tutor</a> visually walks
+  through code and shows how it executes on the Python interpreter.</p>
 </li>
 <li>
-<p>Webhooks</p>
+<p><a href="http://pymotw.com/2/index.html">Python Module of the Week</a> is a tour
+  through the Python standard library.</p>
 </li>
 <li>
-<p>JavaScript Object Notation (JSON) and Extensible Markup Language (XML)</p>
+<p><a href="http://satyajit.ranjeev.in/2012/05/17/python-a-few-things-to-remember.html">A few things to remember while coding in Python</a>
+  is a nice collection of good practices to use while building programs
+  with the language. </p>
 </li>
 <li>
-<p>Endpoints</p>
+<p><a href="http://eli.thegreenplace.net/2010/06/30/python-internals-adding-a-new-statement-to-python/">Python internals: adding a new statement to Python</a></p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/audreyr/python-tricks-that-you-cant-live-without">Python tricks that you can't live without</a>
+  is a slideshow by Audrey Roy that goes over code readability, linting,
+  dependency isolation, and other good Python practices.</p>
+</li>
+<li>
+<p><a href="http://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/">Python innards introduction</a>
+  explains how some of Python's internal execution happens.</p>
+</li>
+<li>
+<p><a href="http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python">What is a metaclass in Python</a>
+  is one of the best Stack Overflow answers about Python.</p>
+</li>
+<li>
+<p>Armin Roacher presented <a href="https://speakerdeck.com/mitsuhiko/didntknow">things you didn't know about Python</a>
+  at PyCon South Africa in 2012.</p>
+</li>
+<li>
+<p><a href="http://www.jeffknupp.com/blog/2012/10/04/writing-idiomatic-python/">Writing idiomatic Python</a>
+  is a guide for writing Pythonic code.</p>
+</li>
+<li>
+<p><a href="http://ashfall.github.io/blog/2012/10/23/the-thing-that-runs-your-python/">The thing that runs your Python</a>
+  is a summary of what one developer learned about PyPy while researching it. </p>
 </li>
 </ul>
-<h2>Webhooks</h2>
-<p>A webhook is a user-defined HTTP callback to a URL that executes when a 
-system condition is met. The call alerts the second system via a POST or GET
-request and often passes data as well.</p>
-<p>Webhooks are important because they enable two-way communication initiation 
-for APIs. Webhook flexibility comes in from their definition by the API user
-instead of the API itself.</p>
-<p>For example, in the <a href="https://www.twilio.com/api">Twilio API</a> when a text 
-message is sent to a Twilio phone number Twilio sends an HTTP POST request 
-webhook to the URL specified by the user. The URL is defined in a text box
-on the number's page on Twilio as shown below.</p>
-<p><img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" /></p>
-<h2>API open source projects</h2>
-<ul>
-<li><a href="https://github.com/wordnik/swagger-core">Swagger</a> is an open source project 
-  written in Scala that defines a standard interface for RESTful APIs.</li>
-</ul>
-<h2>API resources</h2>
-<ul>
-<li>
-<p><a href="https://zapier.com/">Zapier</a> has an
-  <a href="https://zapier.com/blog/apis-101/">APIs 101</a> free guide for what APIs 
-  are, why they are valuable and how to use them properly. </p>
-</li>
-<li>
-<p><a href="http://sendgrid.com/blog/whats-webhook/">What is a webhook?</a> by 
-  <a href="https://twitter.com/YayNickQ">Nick Quinlan</a> is a plain English explanation
-  for what webhooks are and why they are necessary in the API world.</p>
-</li>
-<li>
-<p><a href="http://keithba.net/simplicity-and-utility-or-why-soap-lost">Simplicity and Utility, or, Why SOAP Lost</a>
-  provides context for why JSON-based web services are more common today than
-  SOAP which was popular in the early 2000s.</p>
-</li>
-<li>
-<p><a href="https://medium.com/@orliesaurus/api-tools-for-every-occasion-10-api-tools-released-in-2015-i-can-t-live-without-d5947d9ca9c3">API tools for every occasion</a>
-  provides a list of 10 tools that are really helpful when working with APIs
-  that are new in 2015.</p>
-</li>
-</ul>
-<h2>APIs learning checklist</h2>
-<ol>
-<li>
-<p>Learn the API concepts of machine-to-machine communication with JSON and 
-   XML, endpoints and webhooks.</p>
-</li>
-<li>
-<p>Integrate an API such as Twilio or Stripe into your web application. 
-   Read the <a href="/api-integration.html">API integration</a> section for more 
-   information.</p>
-</li>
-<li>
-<p>Use a framework to create an API for your own application. Learn about
-   web API frameworks on the <a href="/api-creation.html">API creation</a> page.</p>
-</li>
-<li>
-<p>Expose your web application's API so other applications can consume data 
-   you want to share.</p>
-</li>
-</ol>
-<h3>Do you want to know more about integrating or creating APIs?</h3>
+<h3>What do you want to learn about Python?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/api-integration.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I integrate existing web APIs into my application?</p>        </div>
+<a href="/best-python-resources.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1703 478q40 57 18 129l-275 906q-19 64-76.5 107.5t-122.5 43.5h-923q-77 0-148.5-53.5t-99.5-131.5q-24-67-2-127 0-4 3-27t4-37q1-8-3-21.5t-3-19.5q2-11 8-21t16.5-23.5 16.5-23.5q23-38 45-91.5t30-91.5q3-10 .5-30t-.5-28q3-11 17-28t17-23q21-36 42-92t25-90q1-9-2.5-32t.5-28q4-13 22-30.5t22-22.5q19-26 42.5-84.5t27.5-96.5q1-8-3-25.5t-2-26.5q2-8 9-18t18-23 17-21q8-12 16.5-30.5t15-35 16-36 19.5-32 26.5-23.5 36-11.5 47.5 5.5l-1 3q38-9 51-9h761q74 0 114 56t18 130l-274 906q-36 119-71.5 153.5t-128.5 34.5h-869q-27 0-38 15-11 16-1 43 24 70 144 70h923q29 0 56-15.5t35-41.5l300-987q7-22 5-57 38 15 59 43zm-1064 2q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5t16.5-22.5l21-64q4-13-2-22.5t-20-9.5h-608q-13 0-25.5 9.5t-16.5 22.5zm-83 256q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5t16.5-22.5l21-64q4-13-2-22.5t-20-9.5h-608q-13 0-25.5 9.5t-16.5 22.5z" fill="#fff"/></svg></a>
+<p class="under-btn">Show me a list of the best Python learning resources.</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/api-creation.html" class="btn btn-success btn-full"><svg width="40" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1632l384-192v-314l-384 164v342zm-64-454l404-173-404-173-404 173zm1088 454l384-192v-314l-384 164v342zm-64-454l404-173-404-173-404 173zm-448-293l384-165v-266l-384 164v267zm-64-379l441-189-441-189-441 189zm1088 518v416q0 36-19 67t-52 47l-448 224q-25 14-57 14t-57-14l-448-224q-5-2-7-4-2 2-7 4l-448 224q-25 14-57 14t-57-14l-448-224q-33-16-52-47t-19-67v-416q0-38 21.5-70t56.5-48l434-186v-400q0-38 21.5-70t56.5-48l448-192q23-10 50-10t50 10l448 192q35 16 56.5 48t21.5 70v400l434 186q36 16 57 48t21 70z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I create an API for my web application?</p>        </div>
+<a href="/development-environments.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1728 992v-832q0-13-9.5-22.5t-22.5-9.5h-1600q-13 0-22.5 9.5t-9.5 22.5v832q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5zm128-832v1088q0 66-47 113t-113 47h-544q0 37 16 77.5t32 71 16 43.5q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45q0-14 16-44t32-70 16-78h-544q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1600q66 0 113 47t47 113z" fill="#fff"/></svg></a>
+<p class="under-btn">What editor should I use to code my Python app?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/task-queues.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1024 1408h640v-128h-640v128zm-384-512h1024v-128h-1024v128zm640-512h384v-128h-384v128zm512 832v256q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1664q26 0 45 19t19 45zm0-512v256q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1664q26 0 45 19t19 45zm0-512v256q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-256q0-26 19-45t45-19h1664q26 0 45 19t19 45z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I execute code outside the HTTP request-response cycle?</p>        </div>
+<a href="/comprehensions.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1184v64q0 13-9.5 22.5t-22.5 9.5h-64q-13 0-22.5-9.5t-9.5-22.5v-64q0-13 9.5-22.5t22.5-9.5h64q13 0 22.5 9.5t9.5 22.5zm0-256v64q0 13-9.5 22.5t-22.5 9.5h-64q-13 0-22.5-9.5t-9.5-22.5v-64q0-13 9.5-22.5t22.5-9.5h64q13 0 22.5 9.5t9.5 22.5zm0-256v64q0 13-9.5 22.5t-22.5 9.5h-64q-13 0-22.5-9.5t-9.5-22.5v-64q0-13 9.5-22.5t22.5-9.5h64q13 0 22.5 9.5t9.5 22.5zm1152 512v64q0 13-9.5 22.5t-22.5 9.5h-960q-13 0-22.5-9.5t-9.5-22.5v-64q0-13 9.5-22.5t22.5-9.5h960q13 0 22.5 9.5t9.5 22.5zm0-256v64q0 13-9.5 22.5t-22.5 9.5h-960q-13 0-22.5-9.5t-9.5-22.5v-64q0-13 9.5-22.5t22.5-9.5h960q13 0 22.5 9.5t9.5 22.5zm0-256v64q0 13-9.5 22.5t-22.5 9.5h-960q-13 0-22.5-9.5t-9.5-22.5v-64q0-13 9.5-22.5t22.5-9.5h960q13 0 22.5 9.5t9.5 22.5zm128 704v-832q0-13-9.5-22.5t-22.5-9.5h-1472q-13 0-22.5 9.5t-9.5 22.5v832q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm128-1088v1088q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1472q66 0 113 47t47 113z" fill="#fff"/></svg></a>
+<p class="under-btn">What are list, dictionary and set comprehensions?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -174,7 +143,7 @@ on the number's page on Twilio as shown below.</p>
               <a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Development Environments</a>
               <a href="/vim.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Vim</a>
               <a href="/emacs.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Emacs</a>
-              <a href="/python-programming-language.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Python Programming Language</a>
+              <a href="/python-programming-language.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Python Programming Language</a>
               <a href="/generators.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Generators</a>
               <a href="/comprehensions.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Comprehensions</a>
               <a href="/web-development.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Development</a>
@@ -196,7 +165,7 @@ on the number's page on Twilio as shown below.</p>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
               <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
-              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
+              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>
               <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Deployment</a>
@@ -229,7 +198,7 @@ on the number's page on Twilio as shown below.</p>
       </div>
   </div>
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Application Programming Interfaces</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Python Programming Language</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.

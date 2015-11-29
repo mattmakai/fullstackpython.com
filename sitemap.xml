@@ -19,11 +19,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/generators.html</loc>
+    <loc>http://www.fullstackpython.com/introduction.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/introduction.html</loc>
+    <loc>http://www.fullstackpython.com/python-programming-language.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -47,11 +47,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/comprehensions.html</loc>
+    <loc>http://www.fullstackpython.com/databases.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/databases.html</loc>
+    <loc>http://www.fullstackpython.com/generators.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -76,6 +76,10 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/api-creation.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/comprehensions.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
