@@ -38,6 +38,14 @@ use as well as
 * [GNU Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
   provides an official in-depth review for how to use Emacs.
 
+* [Emacs - the Best Python Editor?](https://realpython.com/blog/python/emacs-the-best-python-editor/)
+  continues the excellent Real Python series showing how to get started
+  with editors. In addition to this Emacs post, there are also posts on 
+  [Vim](https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/) 
+  and 
+  [Sublime Text 3](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
+  specifically for Python development.
+
 * [Emacs Redux](http://emacsredux.com/) is a blog with tips and tricks for
   how to use Emacs effectively.
 
