@@ -13,6 +13,9 @@ the
 
 
 ## 2015
+### December
+* Added new starter projects to the [Flask](/flask.html) page.
+
 ### November
 * Started a new page for [template engines](/template-engines.html). Needs some
   more writing and resources.
