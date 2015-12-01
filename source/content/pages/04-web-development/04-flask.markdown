@@ -237,6 +237,10 @@ how to <a href="/deployment.html">deploy web applications</a>.
   project template for use with 
   [Cookiecutter](https://github.com/audreyr/cookiecutter).
 
+* [Flask-Boilerplate](https://github.com/MaxHalford/Flask-Boilerplate) 
+  provides another starting project with sign up, log in and password
+  reset.
+
 
 ## Flask framework learning checklist
 1. [Install Flask](http://flask.pocoo.org/docs/installation/) on
