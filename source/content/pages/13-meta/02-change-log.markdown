@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### December
+* New resources and a new basic page on the 
+  [Python programming language itself](/python-programming-language.html).
 * Added new starter projects to the [Flask](/flask.html) page.
 
 ### November

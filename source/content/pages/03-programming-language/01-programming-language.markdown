@@ -28,6 +28,11 @@ tested was not written in Python.
 * [Python Module of the Week](http://pymotw.com/2/index.html) is a tour
   through the Python standard library.
 
+* [What the heck does "pythonic" mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
+  explains the difference in accepted Python coding style compared to other
+  ways to write Python code that, while syntactically correct, are less
+  maintainable and therefore should not be used.
+
 * [A few things to remember while coding in Python](http://satyajit.ranjeev.in/2012/05/17/python-a-few-things-to-remember.html)
   is a nice collection of good practices to use while building programs
   with the language. 
