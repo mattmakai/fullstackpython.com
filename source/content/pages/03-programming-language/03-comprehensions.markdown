@@ -44,6 +44,10 @@ Dictionary comprehension:
   post gives a well written overview of comprehensions for the three core 
   Python data structures.
 
+* [Python List Comprehensions: Explained Visually](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/)
+  explains how the common idiom for iteration became syntactic sugar in
+  the language itself and how you can use it in your own programs.
+
 * The Python 3 Patterns and Idioms site has an overview of 
   [comprehensions](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Comprehensions.html)
   including code examples and diagrams to explain how they work.
