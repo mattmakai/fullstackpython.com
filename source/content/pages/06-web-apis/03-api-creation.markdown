@@ -53,8 +53,8 @@ applications through machine-to-machine communication.
 
 * [Hug](https://github.com/timothycrosley/hug) built on-top of Falcon and Python3 with an aim to make developing Python driven APIs as simple as possible, but no simpler. Hug leverages Python3 annotations to automatically validate and convert incoming and outgoing API parameters.
 
-* [Pycnic](http://pycnic.nullism.com) is a new JSON-API-only framework designed with
-  REST in mind. 
+* [Pycnic](http://pycnic.nullism.com) is a JSON-API-only framework designed 
+  with REST in mind. 
 
 ## API testing projects
 Building, running and maintaining APIs requires as much effort as building,
@@ -84,6 +84,10 @@ equivalent of browser testing in the web application world.
   poor documentation that prevents ease-of-use. If an API is not well 
   documented then developers who have options to use something else will
   just skip it.
+
+* [API Doc JS](http://apidocjs.com/) allows a developer to embed markup
+  in their documentation that will generate a site based on the endpoints
+  available in the API.
 
 * [10 Reasons Why Developers Hate Your API (And what to do about it)](http://www.slideshare.net/jmusser/ten-reasons-developershateyourapi)
   goes through the top difficulties and annoyances developers face when
