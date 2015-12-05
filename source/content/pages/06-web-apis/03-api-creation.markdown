@@ -181,12 +181,19 @@ equivalent of browser testing in the web application world.
   [Serpy](https://github.com/clarkduvall/serpy) and 
   [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
 
+* [Building better API docs](https://engineering.gosquared.com/building-better-api-docs)
+  shows how Square used Swagger with React to create more helpful docs.
+
+
+## Django REST Framework resources
 * To create an API to export your data in comma-separated values,
   check out this 
   [blog post on exporting data as CSV format with Django REST framework](http://codingpole.com/using-django-rest-framework-for-csv-export/).
 
-* [Building better API docs](https://engineering.gosquared.com/building-better-api-docs)
-  shows how Square used Swagger with React to create more helpful docs.
+* If you're looking for a working example of a Django REST 
+  framework project, check out the 
+  [PokeAPI](https://github.com/phalt/pokeapi), open sourced under the BSD 
+  license.
 
 
 ## API creation learning checklist
