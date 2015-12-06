@@ -118,7 +118,10 @@ up your application.
   your choice for writing Python code.
 
 * JetBrains' [PyCharm Blog](http://blog.jetbrains.com/pycharm/) is required
-  reading if you're using the IDE or considering trying it.
+  reading if you're using the IDE or considering trying it. One of the
+  core developers also an interview on the 
+  [Talk Python to Me podcast](http://talkpython.fm/episodes/show/36/python-ides-with-the-pycharm-teama) 
+  that's worth listening to.
 
 * [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
   has a comparison of several features between the two editors.

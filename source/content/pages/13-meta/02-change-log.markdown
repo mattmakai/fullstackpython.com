@@ -14,6 +14,12 @@ the
 
 ## 2015
 ### December
+* Released the December update to 
+  [The Full Stack Python Guide to Deployments](http://www.deploypython.com/) 
+  book with additional polish based on reader feedback.
+* Added new resources to the [API creation](/api-creation.html), 
+  [comprehensions](/comprehensions.html) and 
+  [development environments](/development-environments.html) pages.
 * New resources and a new basic page on the 
   [Python programming language itself](/python-programming-language.html).
 * Added new starter projects to the [Flask](/flask.html) page.
