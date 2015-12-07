@@ -77,8 +77,11 @@ created the incredible mix of data code libraries available today.
   provides an overview of the Python language with iPython Notebook for those 
   in scientific fields.
 
-* The video of Travis Oliphant on 
+* The videos of Travis Oliphant on 
+  [Python's Role in Big Data Analytics: Past, Present, and Future](https://www.youtube.com/watch?v=oXRvpBJ-Dkc)
+  and 
   [Building the PyData Community](https://www.youtube.com/watch?v=d9Qm3PPoYNQ)
-  gives a valuable historical perspective on how the Python data community
-  has evolved over the past 20ish years based on his first-hand experience.
+  give historical perspective on how the Python data tools
+  have evolved over the past 20ish years based on his first-hand experience
+  as a leader and member in that community.
 
