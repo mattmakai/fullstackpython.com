@@ -164,6 +164,10 @@ as of Django 1.7.
   [how to set up Django with PostgreSQL, Nginx and Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-centos-7) 
   are detailed tutorials that walk through each step in the deployment process.
 
+* Working with time zones is necessary for every web application. This 
+  [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a
+  great start for figuring out what you need to know.
+
 
 ## Django videos
 <div class="well" style="margin-top: 20px;">
