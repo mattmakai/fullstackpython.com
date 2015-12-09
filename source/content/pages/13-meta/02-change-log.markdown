@@ -14,6 +14,7 @@ the
 
 ## 2015
 ### December
+* New [web development](/web-development.html) resources.
 * Released the December update to 
   [The Full Stack Python Guide to Deployments](http://www.deploypython.com/) 
   book with additional polish based on reader feedback.
