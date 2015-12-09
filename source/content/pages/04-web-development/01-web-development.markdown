@@ -47,6 +47,12 @@ client and executed there.
   that the visualization unfortunately stops around the beginning of 2013 but
   it's a good way to explore what happened in the first 24 years.
 
+* Web development involves HTTP communication between the server, hosting
+  a website or web application, and the client, a web browser. Knowing
+  how web browsers works is important as a developer, so take a look at
+  this article on 
+  [what's in a web browser](https://medium.com/@camaelon/what-s-in-a-web-browser-83793b51df6c).
+
 * [Three takeaways for web developers after two weeks of painfully slow Internet](https://medium.com/@zengabor/three-takeaways-for-web-developers-after-two-weeks-of-painfully-slow-internet-9e7f6d47726e)
   is a must-read for every web developer. Not everyone has fast Internet
   service, whether because they are in a remote part of the world or they're
