@@ -183,6 +183,13 @@ representing a person could have a property of "female" or "male".
   is a large list of popular, BigTable-based, special purpose, and other
   datastores with attributes and the best use cases for each one.
 
+* Relational databases such as MySQL and PostgreSQL have added features in
+  more recent versions that mimic some of the capabilities of NoSQL data
+  stores. For example, check out this blog post on 
+  [using MySQL as a key-value pair store](http://engineering.wix.com/2015/12/10/scaling-to-100m-mysql-is-a-better-nosql/)
+  and this post on
+  [storing JSON data in PostgreSQL](https://blog.codeship.com/unleash-the-power-of-storing-json-in-postgres/).
+
 
 ## NoSQL data stores learning checklist
 1. Understand why NoSQL data stores are better for some use cases than 
