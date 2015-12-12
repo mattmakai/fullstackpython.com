@@ -163,6 +163,11 @@ ones listed here are primarily coded in Python.
   [why static website generators are the next big thing](http://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/).
   I'd argue static website generators have been big for a long time now.
 
+* Static site generators can be used for a range of websites from side
+  projects up to big sites. This blog post by 
+  [WeWork on why they use a static site generator](http://engineering.wework.com/engineering/2015/12/08/why-wework-com-uses-a-static-generator-and-why-you-should-too/)
+  explains it from the perspective of a large business.
+
 * [Getting started with Pelican and GitHub pages](http://www.mattmakai.com/introduction-to-pelican.html)
   is a tutorial I wrote to use the Full Stack Python source code to create
   and deploy your first static site.
