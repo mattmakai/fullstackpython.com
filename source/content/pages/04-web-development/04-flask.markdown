@@ -2,7 +2,7 @@ title: Flask
 category: page
 slug: flask
 sort-order: 0404
-meta: Flask is an extensible Python web microframework. Learn more about Flask on Full Stack Python. 
+meta: Flask is a popular, extensible web microframework for building web applications with Python.
 
 
 # Flask
