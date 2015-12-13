@@ -33,6 +33,10 @@ tested was not written in Python.
   ways to write Python code that, while syntactically correct, are less
   maintainable and therefore should not be used.
 
+* [A Python interpreter written in Python](http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html)
+  is incredibly meta but really useful for wrapping your head around some
+  of the lower level stuff going on in the language.
+
 * [A few things to remember while coding in Python](http://satyajit.ranjeev.in/2012/05/17/python-a-few-things-to-remember.html)
   is a nice collection of good practices to use while building programs
   with the language. 
