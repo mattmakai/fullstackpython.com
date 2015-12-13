@@ -2,7 +2,7 @@ title: Django
 category: page
 slug: django
 sort-order: 0403
-meta: Django is a common batteries-included Python web framework. Learn more on Full Stack Python.
+meta: Learn more about Django, the popular batteries-included Python web framework, on Full Stack Python.
 
 
 # Django
