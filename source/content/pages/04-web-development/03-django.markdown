@@ -107,10 +107,6 @@ as of Django 1.7.
   This is a good site if you want to dive right into the code with minimal
   prose.
 
-* The [TaskBuster Django tutorial](http://www.marinamele.com/taskbuster-django-tutorial)
-  is a walkthrough specifically written to show a new Django 1.8 application 
-  built with Python 3.
-
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
   has several nice examples for breaking Django into smaller simpler 
   components.
@@ -227,12 +223,12 @@ for Django and web development on the
   is a very detailed guide for using Django as an API layer and AngularJS
   as the MVC front end in the browser.
 
-* This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework)
+* This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://mourafiq.com/2013/07/01/end-to-end-web-app-with-django-angular-1.html)
   tutorial along with 
-  [part 2](http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework),
-  [part 3](http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework)
+  [part 2](http://mourafiq.com/2013/07/15/end-to-end-web-app-with-django-angular-2.html),
+  [part 3](http://mourafiq.com/2013/08/01/end-to-end-web-app-with-django-angular-3.html)
   and
-  [part 4](http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework)
+  [part 4](http://mourafiq.com/2013/08/15/end-to-end-web-app-with-django-angular-4.html)
   creates an example blog application with Djangular. There is also a
   corresponding [GitHub repo](https://github.com/mouradmourafiq/django-angular-blog)
   for the project code.
