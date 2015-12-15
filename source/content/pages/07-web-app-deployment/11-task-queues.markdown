@@ -2,7 +2,7 @@ title: Task Queues
 category: page
 slug: task-queues
 sort-order: 0711
-meta: Task queues handle asynchronous jobs outside the HTTP request-response cycle. Learn about task queues on Full Stack Python.
+meta: Task queues handle asynchronous jobs outside a Python web application HTTP request-response cycle.
 
 
 # Task queues
