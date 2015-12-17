@@ -177,6 +177,12 @@ properly.
 
 
 ## Python-specific WebSockets resources
+* The 
+  "[Async Python Web Apps with WebSockets & gevent](https://youtu.be/L5YQbNrFfyw)"
+  talk I gave at San Francisco Python in January 2015 is a live-coded example
+  Flask web app implementation that allows the audience to interact with
+  WebSockets as I built out the application.
+
 * [Real-time in Python](http://mrjoes.github.io/2013/06/21/python-realtime.html)
   provides Python-specific context for how the server push updates were 
   implemented in the past and how Python's tools have evolved to perform
