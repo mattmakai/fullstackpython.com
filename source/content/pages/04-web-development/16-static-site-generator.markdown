@@ -10,10 +10,10 @@ A static website generator combines a markup language, such as Markdown
 or reStructuredText, with a templating engine such as 
 [Jinja](http://jinja.pocoo.org/), to produce HTML 
 files. The HTML files can be hosted and served by a 
-[web server](/web-server.html) or 
+[web server](/web-servers.html) or 
 [content delivery network (CDN)](/static-content.html) 
 *without* any additional dependencies such as a 
-[WSGI server](/wsgi-server.html).
+[WSGI server](/wsgi-servers.html).
 
 
 ## Why are static site generators useful?
@@ -113,7 +113,7 @@ ones listed here are primarily coded in Python.
   "experimental" phase.
 
 * [Complexity](http://complexity.readthedocs.org/en/latest/)
-  ([source code](https://github.com/audreyr/complexity) is a site generator
+  ([source code](https://github.com/audreyr/complexity)) is a site generator
   for users who like to work in HTML. It uses HTML for templating but
   has some functionality from Jinja for inheritance. Works with 
   Python 2.6+, 3.3+ and PyPy.
