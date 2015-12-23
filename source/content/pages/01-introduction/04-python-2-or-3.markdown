@@ -33,7 +33,7 @@ using Django, there is also a wall specifically for
 
 
 ### Python 2 to 3 resources
-* Wnat to know all of the advantages and what's changed in Python 3 
+* Want to know all of the advantages and what's changed in Python 3 
   compared to Python 2? There's 
   [an official guide to Python 3 changes](https://docs.python.org/3/whatsnew/index.html)
   you'll want to read.
