@@ -41,6 +41,11 @@ client and executed there.
   static HTML files into the complex JavaScript client-side applications
   produced today.
 
+* While not Python-specific, Mozilla put together a 
+  [Learning the Web](https://developer.mozilla.org/en-US/Learn) tutorial
+  for beginners and intermediate web users who want to build websites.
+  It's worth a look for general web development learning.
+
 * The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
   how web browsers and related technologies have changed over time as well as
   the overall growth of the Internet in the amount of data transferred. Note 

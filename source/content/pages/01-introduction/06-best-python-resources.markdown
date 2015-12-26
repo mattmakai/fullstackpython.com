@@ -63,11 +63,6 @@ should skip down to the next section for "experienced developers".
   book provided under the Creative Commons license and available in HTML or
   PDF form.
 
-* While not Python-specific, Mozilla put together a 
-  [Learning the Web](https://developer.mozilla.org/en-US/Learn) tutorial
-  for beginners and intermediate web users who want to build websites.
-  It's worth a look from a general web development perspective.
-
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
@@ -102,17 +97,38 @@ should skip down to the next section for "experienced developers".
   [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
   that non-technical folks trying to learn to program may find useful.
 
-
-## Experienced developers new to Python
-* [Learn Python in y minutes](http://learnxinyminutes.com/docs/python/)
-  provides a whirlwind tour of the Python language. The guide is especially
-  useful if you're coming in with previous software development experience
-  and want to quickly grasp how the language is structured.
-
 * [Python for you and me](http://pymbook.readthedocs.org/en/latest/) is an
   approachable book with sections for Python syntax and the major language 
   constructs. The book also contains a short guide at the end to get
   programmers to write their first Flask web application.
+
+
+## Python for specific occupations
+Python is powerful for many professions. If you're seeking to use Python in a
+specific field, one of these guides may be the most appropriate for you.
+
+* [Python for Social Scientists](http://www-rohan.sdsu.edu/~gawron/python_for_ss/)
+  contains a textbook, course outline and slides for a college course that taught
+  social scientists to use Python for their profession.
+
+* [Practical Business Python](http://pbpython.com/) is a blog that covers topics
+  such as how to automate generating large Excel spreadsheets or perform analysis 
+  when your data is locked in Microsoft Office files.
+
+* [Practical Python for Astronomers](https://python4astronomers.github.io/)
+  provides open source workshop materials for teaching students studying 
+  astronomy to use Python for data analysis.
+
+
+## Experienced developers new to Python
+If you can already program in another language, these resources are better for
+getting up to speed because they are more concise when explaining introductory 
+topics.
+
+* [Learn Python in y minutes](http://learnxinyminutes.com/docs/python/)
+  provides a whirlwind tour of the Python language. The guide is especially
+  useful if you're coming in with previous software development experience
+  and want to quickly grasp how the language is structured.
 
 * Kenneth Reitz's 
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
@@ -122,29 +138,9 @@ should skip down to the next section for "experienced developers".
   is a good read to begin learning about development environments, 
   application dependencies and project structure.
 
-
-## Beyond the basics
-* [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
-  provides context for virtual machines, Python packaging, pip, virtualenv
-  and many other topics after learning the basic Python syntax. 
-
-* The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
-  Python links and has an active community ready to answer questions from
-  beginners and advanced Python developers alike.
-
 * [Good to Great Python Reads](http://jessenoller.com/good-to-great-python-reads/)
   is a collection of intermediate and advanced Python articles around the web
   focused on nuances and details of the Python language itself.
-
-* The blog [Free Python Tips](http://freepythontips.wordpress.com/) provides
-  posts on Python topics as well as news for the Python ecosystem.
-
-* [Python Books](http://pythonbooks.revolunet.com/) is a collection of freely
-  available books on Python, Django, and data analysis.
-
-* [Python IAQ: Infrequently Asked Questions](http://norvig.com/python-iaq.html)
-  is a list of quirky queries on rare Python features and why certain syntax
-  was or was not built into the language.
 
 
 ## Videos, screencasts and presentations

@@ -21,7 +21,7 @@ and [test software](/testing.html), even if the software being
 tested was not written in Python.
 
 
-## General Python programming language resources
+## General Python language resources
 * The [online Python tutor](http://www.pythontutor.com/) visually walks
   through code and shows how it executes on the Python interpreter.
 
@@ -61,4 +61,29 @@ tested was not written in Python.
 
 * [The thing that runs your Python](http://ashfall.github.io/blog/2012/10/23/the-thing-that-runs-your-python/)
   is a summary of what one developer learned about PyPy while researching it. 
+
+
+## Python ecosystem resources
+There's an entire page on [best Python resources](/best-python-resources.html)
+with links but the following resources are a better fit for when you're past 
+the very beginner topics.
+
+* [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
+  provides context for virtual machines, Python packaging, pip, virtualenv
+  and many other topics after learning the basic Python syntax. 
+
+* The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
+  Python links and has an active community ready to answer questions from
+  beginners and advanced Python developers alike.
+
+* The blog [Free Python Tips](http://freepythontips.wordpress.com/) provides
+  posts on Python topics as well as news for the Python ecosystem.
+
+* [Python Books](http://pythonbooks.revolunet.com/) is a collection of freely
+  available books on Python, Django, and data analysis.
+
+* [Python IAQ: Infrequently Asked Questions](http://norvig.com/python-iaq.html)
+  is a list of quirky queries on rare Python features and why certain syntax
+  was or was not built into the language.
+
 

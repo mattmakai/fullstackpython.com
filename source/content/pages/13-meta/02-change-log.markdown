@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### December
+* Added new section on "Python for specific occupations" to the 
+  [best resources page](/best-python-resources.html).
 * New [web development](/web-development.html) resources.
 * Released the December update to 
   [The Full Stack Python Guide to Deployments](http://www.deploypython.com/) 
