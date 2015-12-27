@@ -14,6 +14,8 @@ the
 
 ## 2015
 ### December
+* Started on a [DevOps](/devops.html) page and began adding basic resources
+  to it.
 * Added new section on "Python for specific occupations" to the 
   [best resources page](/best-python-resources.html).
 * New [web development](/web-development.html) resources.
