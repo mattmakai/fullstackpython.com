@@ -71,6 +71,11 @@ application framework and your app itself is up to date and secured. See the
   currently called and what they could've been called to be more 
   clear to users.
 
+* [5 AWS mistakes you should avoid](https://cloudonaut.io/5-aws-mistakes-you-should-avoid/)
+  explains how common beginner practices such as manually managing 
+  infrastructure, not using scaling groups and underutilizing instances can 
+  create problems you'd be better off avoiding altogether.
+
 * Heroku's 
   [Python deployment documentation](https://devcenter.heroku.com/articles/getting-started-with-python)
   provides clear examples for how to work with virtualenv, pip and 
