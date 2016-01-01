@@ -11,6 +11,14 @@ inception in December 2012. Another way to view the modifications is through
 the 
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
+## 2016
+### January
+* Updated the [template engines](/template-engines.html) page with a new image
+  to show the spectrum between arbitrary code execution and no logic in templates.
+* Added a new [Jinja2](/jinja2.html) page specifically for that template engine.
+* Happy New Year! Finished 2015 with over 455,000 users according to Google 
+  Analytics. Thanks everyone! Can't wait to write more pages and improve the
+  existing ones in 2016.
 
 ## 2015
 ### December
