@@ -44,6 +44,10 @@ using Django, there is also a wall specifically for
   implementations. There is also a 
   [quick reference for writting code with Python 2 and 3 compatibility](https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef).
 
+* [The stages of the Python 3 transition](http://www.snarky.ca/the-stages-of-the-python-3-transition)
+  provides perspective from a core Python developer on how the transition from
+  Python 2 to 3 is going as of the end of 2015.
+
 * [Porting to Python 3 is like eating your vegetables](http://nothingbutsnark.svbtle.com/porting-to-python-3-is-like-eating-your-vegetables)
   explains that there are treats in Python 3 that are worth porting for and
   has some tips on making the transition easier.
