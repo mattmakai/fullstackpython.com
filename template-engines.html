@@ -58,8 +58,8 @@ prewritten markup and template tag blocks where data is inserted.</p>
 with the exception of the <code>&lt;meta name="description"...</code> line which provides
 a unique short description of what the individual page contains.</p>
 <p>The <a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/theme/templates/base.html">base.html Jinja template</a> used to generate Full Stack Python
-allows every page on Full Stack Python to have consistent HTML but 
-dynamically generate the pieces that should change between pages when 
+allows every page on the site to have consistent HTML but 
+dynamically generate the pieces that need to change between pages when 
 the <a href="/static-site-generator.html">static site generator</a> executes. The below
 code from the <code>base.html</code> template shows that the meta description is up to child 
 templates to create.</p>
@@ -80,11 +80,14 @@ templates to create.</p>
 generate the HTML output response when an HTTP request comes in for a 
 particular URL. </p>
 <h2>Python template engines</h2>
-<p>There are several popular Python template engines. Template engines have to
-walk the spectrum between allowing arbitrary code execution and granting only
-a limited set of capabilities via template tags.</p>
+<p>There are several popular Python template engines. A template engine implementation 
+will fall somewhere on the spectrum between allowing arbitrary code execution and 
+granting only a limited set of capabilities via template tags. A rough visual of
+the code in template spectrum can be seen below for four of the major Python
+template engines.</p>
+<p><img src="theme/img/template-logic-spectrum.png" width="100%" alt="." class="technical-diagram" style="border-radius: 5px;"></p>
 <h3>Jinja</h3>
-<p><a href="http://jinja.pocoo.org/">Jinja</a>, also known as "Jinja2" is a popular Python 
+<p><a href="http://jinja.pocoo.org/">Jinja</a>, also known as "Jinja2", is a popular Python 
 template engine written as an independent open source project, unlike some
 template engines that are provided as part of a larger web framework.</p>
 <p>Major Python open source applications such as the 
@@ -92,6 +95,7 @@ template engines that are provided as part of a larger web framework.</p>
 and <a href="https://github.com/saltstack/salt">SaltStack</a>
 as well as the <a href="/static-site-generator.html">static site generator</a> Pelican use
 the Jinja template engine by default for generating output files.</p>
+<p>There's a whole lot more to learn about Jinja on the <a href="/jinja2.html">Jinja2</a> page.</p>
 <h3>Django templating</h3>
 <p>Django comes with its 
 <a href="https://docs.djangoproject.com/en/dev/topics/templates/">own template engine</a>
@@ -125,7 +129,7 @@ template engine for many <a href="/other-web-frameworks.html">other web framewor
   more esoteric Python template engines.</p>
 </li>
 </ul>
-<h3>Do you want to learn about CSS, JavaScript or static files next?</h3>
+<h3>Do you want to learn about web frameworks, CSS or JavaScript next?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
@@ -199,6 +203,7 @@ template engine for many <a href="/other-web-frameworks.html">other web framewor
               <a href="/template-engines.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Template Engines</a>
               <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
               <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generators</a>
+              <a href="/jinja2.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Jinja2</a>
               <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>

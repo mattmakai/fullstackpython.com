@@ -243,6 +243,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/jinja2.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/caching.html</loc>
     <priority>1.0</priority>
   </url>

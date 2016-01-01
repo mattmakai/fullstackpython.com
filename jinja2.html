@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Learn how to use Cascading Style Sheets (CSS) to create your web application's user interface design on Full Stack Python.">
+    <meta name="description" content="Jinja2 is a template engine written in Python for outputting formats such as HTML and XML.">
     <link rel="shortcut icon" href="//static.fullstackpython.com/fsp-fav.png">
-    <title>Cascading Style Sheets - Full Stack Python</title>
+    <title>Jinja2 - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -31,171 +31,73 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Cascading Style Sheets (CSS)</h1>
-<p>Cascading Style Sheet (CSS) files contain rules for how to display and 
-lay out the HTML content when it is rendered by a web browser.</p>
-<h2>Why is CSS necessary?</h2>
-<p>CSS separates the content contained in HTML files from how the content 
-should be displayed. It is important to separate the content from the rules
-for how it should be rendered primarily because it is easier to reuse those
-rules across many pages. CSS files are also much easier to maintain on large
-projects than styles embedded within the HTML files.</p>
-<h2>How is CSS retrieved from a web server?</h2>
-<p>The HTML file sent by the web server contains a reference to the CSS file(s)
-needed to render the content. The web browser requests the CSS file after the
-HTML file as shown below in a screenshot captured of the Chrome Web Developer 
-Tools network traffic.</p>
-<p><img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
-<p>That request for the fsp.css file is made because the HTML file for Full 
-Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
-in the view source screenshot below.</p>
-<p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
-<h2>CSS preprocessors</h2>
-<p>A CSS preprocessor compiles a processed language into plain CSS code. CSS 
-preprocessing languages add syntax such as variables, mixins and functions
-to reduce code duplication. The additional syntax also makes it possible for
-designers to use these basic programming constructs to write maintainable
-front end code.</p>
+          <h1>Jinja2</h1>
+<p>Jinja2 is a Python <a href="/template-engines.html">template engine</a> used to create
+HTML, XML or other markup formats that are returned to the user via an
+HTTP response.</p>
+<h2>Why is Jinja2 useful?</h2>
+<p>Jinja2 didn't invent the templating concept. In fact, Jinja2's syntax is
+inspired by Django's built-in template engine, which was released years
+earlier. There were many template engines, such as <a href="https://en.wikipedia.org/wiki/JavaServer_Pages">JavaServer Pages (JSPs)</a> </p>
+<p>Jinja2 is most useful because it has consistent template tag syntax and the
+project is cleanly extracted as 
+<a href="https://github.com/mitsuhiko/jinja2">an independent open source project</a> so
+it can be used a dependency by other code libraries.</p>
+<p>Jinja2 strikes a thoughtful balance on the template engine spectrum where
+on one end you can embed arbitrary code in the templates and the other
+end a developer can code whatever she wants.</p>
+<h2>What projects depend on Jinja2?</h2>
+<p>Jinja2 is a commonly-used templating engine for
+<a href="/web-frameworks.html">web frameworks</a> such as <a href="/flask.html">Flask</a>, 
+<a href="/bottle.html">Bottle</a> <a href="/morepath.html">Morepath</a> and, as of its 1.8 update,
+optionally <a href="/django.html">Django</a> as well. Jinja2 is also used as a template
+language by <a href="/configuration-management.html">configuration management</a> tool 
+Ansible and the <a href="/static-site-generators.html">static site generator</a> Pelican,
+among many other similar tools.</p>
+<p>The idea is that if a developer already knows Jinja2 from working with one 
+project then the exact same syntax and style can be used in another project 
+that requires templating. The re-use reduces the learning curve and saves the
+open source project author from having to reinvent a new templating style.</p>
+<h3>Jinja2 resources</h3>
 <ul>
 <li>
-<p><a href="http://sass-lang.com/">Sass</a> is currently the favored preprocessor in
-  the design community. Sass is considered the most powerful CSS preprocessor
-  in terms of advanced language features.</p>
+<p>Real Python has a nice 
+  <a href="https://realpython.com/blog/python/primer-on-jinja-templating/">Jinja2 primer</a>
+  with many code examples to show how to use the template engine.</p>
 </li>
 <li>
-<p><a href="http://lesscss.org/">LESS</a> is right up there with Sass and has an ace up
-  its sleeve in that the <a href="http://getbootstrap.com/">Bootstrap Framework</a> is
-  written in LESS which brings up its popularity.</p>
+<p>The <a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">second part of the Flask mega tutorial</a> 
+  is all about Jinja2 templates. It walks through control flow, template inheritance
+  and other standard features of the engine.</p>
 </li>
 <li>
-<p><a href="http://learnboost.github.io/stylus/">Stylus</a> is often cited as the third
-  most popular CSS preprocessing language.</p>
+<p><a href="http://jonathanchu.is/posts/upgrading-jinja2-templates-django-18-with-admin/">Upgrading to Jinja2 Templates in Django 1.8 With Admin</a>
+  shows how to fix an issue that can occur with Django 1.8 and using Jinja2 as
+  the template engine.</p>
+</li>
+<li>
+<p>The official 
+  <a href="http://jinja.pocoo.org/docs/dev/templates/">Jinja2 template designer documentation</a>
+  is exceptionally useful both as a reference as well as a full read-through
+  to understand how to properly work with template tags.</p>
 </li>
 </ul>
-<h3>CSS preprocessor resources</h3>
-<ul>
-<li>
-<p>The Advanced Guide to HTML and CSS book has a well-written chapter on 
-  <a href="http://learn.shayhowe.com/advanced-html-css/preprocessors">preprocessors</a>.</p>
-</li>
-<li>
-<p><a href="http://css-tricks.com/sass-vs-less/">Sass vs LESS</a> provides a short answer
-  on which framework to use then a longer more detailed response for those
-  interested in understanding the details.</p>
-</li>
-<li>
-<p><a href="http://blog.teamtreehouse.com/how-to-choose-the-right-css-preprocessor">How to choose the right CSS preprocessor</a>
-  has a comparison of Sass, LESS and Stylus.</p>
-</li>
-<li>
-<p><a href="http://css-tricks.com/musings-on-preprocessing/">Musings on CSS preprocessors</a>
-  contains helpful advice ranging from how to work with preprocessors in a
-  team environment to what apps you can use to aid your workflow.</p>
-</li>
-</ul>
-<h2>CSS frameworks</h2>
-<p>CSS frameworks provide structure and a boilerplate base for building a
-web application's design.</p>
-<ul>
-<li>
-<p><a href="http://getbootstrap.com/">Bootstrap</a></p>
-</li>
-<li>
-<p><a href="http://foundation.zurb.com/">Foundation</a></p>
-</li>
-<li>
-<p><a href="http://gumbyframework.com/">Gumby</a></p>
-</li>
-<li>
-<p><a href="http://compass-style.org/">Compass</a></p>
-</li>
-<li>
-<p><a href="http://www.profoundgrid.com/">Profound Grid</a></p>
-</li>
-<li>
-<p><a href="http://www.getskeleton.com/">Skeleton</a></p>
-</li>
-<li>
-<p><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></p>
-</li>
-</ul>
-<h2>CSS resources</h2>
-<ul>
-<li>
-<p><a href="https://github.com/dypsilon/frontend-dev-bookmarks">Frontend Development Bookmarks</a>
-  is one of the largest collections of valuable resources for frontend
-  learning both in CSS as well as JavaScript.</p>
-</li>
-<li>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network's CSS page</a>
-  contains an extensive set of resources, tutorials and demos for learning
-  CSS.</p>
-</li>
-<li>
-<p><a href="http://alistapart.com/article/css-positioning-101">CSS Positioning 101</a>
-  is a detailed guide for learning how to do element positioning correctly
-  with CSS.</p>
-</li>
-<li>
-<p><a href="http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf">CSS3 cheat sheet</a></p>
-</li>
-<li>
-<p><a href="http://learnlayout.com/toc.html">Learn CSS layout</a> is a simple guide that
-  breaks CSS layout topics into chapters so you can learn each part one
-  at a time.</p>
-</li>
-<li>
-<p><a href="https://developers.google.com/web/fundamentals/">Google's Web Fundamentals class</a>
-  shows how to create responsive designs and performant websites.</p>
-</li>
-<li>
-<p><a href="http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html">Tailoring CSS for performance</a>
-  is an interesting read since many developers do not consider the 
-  implications of CSS complexity in browser rendering time.</p>
-</li>
-<li>
-<p><a href="http://caniuse.com/">Can I Use...</a> is a compatibility table that shows
-  which versions of browsers implement specific CSS features.</p>
-</li>
-</ul>
-<h2>CSS learning checklist</h2>
-<ol>
-<li>
-<p>Create a simple HTML file with basic elements in it. Use the
-   <code>python -m SimpleHTTPServer</code> command to serve it up. Create a 
-   <code>&lt;style&gt;&lt;/style&gt;</code> element within the <code>&lt;head&gt;</code> section in the HTML
-   markup. Play with CSS within that style element to change the look and 
-   feel of the page.</p>
-</li>
-<li>
-<p>Check out front end frameworks such as Bootstrap and Foundation and integrate
-   one of those into the HTML page.</p>
-</li>
-<li>
-<p>Work through the framework's grid system, styling options and customization
-   so you get comfortable with how to use the framework.</p>
-</li>
-<li>
-<p>Apply the framework to your web application and tweak the design until you
-   have something that looks much better than generic HTML.</p>
-</li>
-</ol>
-<h3>Once your app is styled what do you need to learn next?</h3>
+<h3>Learn more about template engines or move to a new topic?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/web-design.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 576q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm1024 384v448h-1408v-192l320-320 160 160 512-512zm96-704h-1600q-13 0-22.5 9.5t-9.5 22.5v1216q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5v-1216q0-13-9.5-22.5t-22.5-9.5zm160 32v1216q0 66-47 113t-113 47h-1600q-66 0-113-47t-47-113v-1216q0-66 47-113t113-47h1600q66 0 113 47t47 113z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I improve an app's user interface?</p>        </div>
+<a href="/template-engines.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 512h-384v384h384v-384zm128 640v128h-640v-128h640zm0-768v640h-640v-640h640zm640 768v128h-512v-128h512zm0-256v128h-512v-128h512zm0-256v128h-512v-128h512zm0-256v128h-512v-128h512zm-1536 960v-960h-128v960q0 26 19 45t45 19 45-19 19-45zm1664 0v-1088h-1536v1088q0 33-11 64h1483q26 0 45-19t19-45zm128-1216v1216q0 80-56 136t-136 56h-1664q-80 0-136-56t-56-136v-1088h256v-128h1792z" fill="#fff"/></svg></a>
+<p class="under-btn">What are template engines and why are they useful?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/static-content.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z" fill="#fff"/></svg></a>
-<p class="under-btn">How should I host and service static content files?</p>        </div>
+<a href="/web-frameworks.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#fff"/></svg></a>
+<p class="under-btn">I want to learn how to code a Python web application using a framework.</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/javascript.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1152 896q0-106-75-181t-181-75-181 75-75 181 75 181 181 75 181-75 75-181zm512-109v222q0 12-8 23t-20 13l-185 28q-19 54-39 91 35 50 107 138 10 12 10 25t-9 23q-27 37-99 108t-94 71q-12 0-26-9l-138-108q-44 23-91 38-16 136-29 186-7 28-36 28h-222q-14 0-24.5-8.5t-11.5-21.5l-28-184q-49-16-90-37l-141 107q-10 9-25 9-14 0-25-11-126-114-165-168-7-10-7-23 0-12 8-23 15-21 51-66.5t54-70.5q-27-50-41-99l-183-27q-13-2-21-12.5t-8-23.5v-222q0-12 8-23t19-13l186-28q14-46 39-92-40-57-107-138-10-12-10-24 0-10 9-23 26-36 98.5-107.5t94.5-71.5q13 0 26 10l138 107q44-23 91-38 16-136 29-186 7-28 36-28h222q14 0 24.5 8.5t11.5 21.5l28 184q49 16 90 37l142-107q9-9 24-9 13 0 25 10 129 119 165 170 7 8 7 22 0 12-8 23-15 21-51 66.5t-54 70.5q26 50 41 98l183 28q13 2 21 12.5t8 23.5z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I use JavaScript with my Python web application?</p>        </div>
+<a href="/deployment.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 640q0 26-19 45l-512 512q-19 19-45 19t-45-19-19-45v-256h-224q-98 0-175.5 6t-154 21.5-133 42.5-105.5 69.5-80 101-48.5 138.5-17.5 181q0 55 5 123 0 6 2.5 23.5t2.5 26.5q0 15-8.5 25t-23.5 10q-16 0-28-17-7-9-13-22t-13.5-30-10.5-24q-127-285-127-451 0-199 53-333 162-403 875-403h224v-256q0-26 19-45t45-19 45 19l512 512q19 19 19 45z" fill="#fff"/></svg></a>
+<p class="under-btn">I've built a Python web app, now how do I deploy it?</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -248,13 +150,13 @@ web application's design.</p>
               <a href="/morepath.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Morepath</a>
               <a href="/other-web-frameworks.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Other Web Frameworks</a>
               <a href="/web-design.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Design</a>
-              <a href="/cascading-style-sheets.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
+              <a href="/cascading-style-sheets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Cascading Style Sheets</a>
               <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
               <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
               <a href="/template-engines.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Template Engines</a>
               <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
               <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generators</a>
-              <a href="/jinja2.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Jinja2</a>
+              <a href="/jinja2.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Jinja2</a>
               <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
@@ -293,7 +195,7 @@ web application's design.</p>
       </div>
   </div>
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Cascading Style Sheets</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Jinja2</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.

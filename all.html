@@ -3054,8 +3054,8 @@ prewritten markup and template tag blocks where data is inserted.</p>
 with the exception of the <code>&lt;meta name="description"...</code> line which provides
 a unique short description of what the individual page contains.</p>
 <p>The <a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/theme/templates/base.html">base.html Jinja template</a> used to generate Full Stack Python
-allows every page on Full Stack Python to have consistent HTML but 
-dynamically generate the pieces that should change between pages when 
+allows every page on the site to have consistent HTML but 
+dynamically generate the pieces that need to change between pages when 
 the <a href="/static-site-generator.html">static site generator</a> executes. The below
 code from the <code>base.html</code> template shows that the meta description is up to child 
 templates to create.</p>
@@ -3076,11 +3076,14 @@ templates to create.</p>
 generate the HTML output response when an HTTP request comes in for a 
 particular URL. </p>
 <h2>Python template engines</h2>
-<p>There are several popular Python template engines. Template engines have to
-walk the spectrum between allowing arbitrary code execution and granting only
-a limited set of capabilities via template tags.</p>
+<p>There are several popular Python template engines. A template engine implementation 
+will fall somewhere on the spectrum between allowing arbitrary code execution and 
+granting only a limited set of capabilities via template tags. A rough visual of
+the code in template spectrum can be seen below for four of the major Python
+template engines.</p>
+<p><img src="theme/img/template-logic-spectrum.png" width="100%" alt="." class="technical-diagram" style="border-radius: 5px;"></p>
 <h3>Jinja</h3>
-<p><a href="http://jinja.pocoo.org/">Jinja</a>, also known as "Jinja2" is a popular Python 
+<p><a href="http://jinja.pocoo.org/">Jinja</a>, also known as "Jinja2", is a popular Python 
 template engine written as an independent open source project, unlike some
 template engines that are provided as part of a larger web framework.</p>
 <p>Major Python open source applications such as the 
@@ -3088,6 +3091,7 @@ template engines that are provided as part of a larger web framework.</p>
 and <a href="https://github.com/saltstack/salt">SaltStack</a>
 as well as the <a href="/static-site-generator.html">static site generator</a> Pelican use
 the Jinja template engine by default for generating output files.</p>
+<p>There's a whole lot more to learn about Jinja on the <a href="/jinja2.html">Jinja2</a> page.</p>
 <h3>Django templating</h3>
 <p>Django comes with its 
 <a href="https://docs.djangoproject.com/en/dev/topics/templates/">own template engine</a>
@@ -3484,6 +3488,57 @@ ones listed here are primarily coded in Python.</p>
 <p><a href="http://www.mattmakai.com/introduction-to-pelican.html">Getting started with Pelican and GitHub pages</a>
   is a tutorial I wrote to use the Full Stack Python source code to create
   and deploy your first static site.</p>
+</li>
+</ul>
+          <h1>Jinja2</h1>
+<p>Jinja2 is a Python <a href="/template-engines.html">template engine</a> used to create
+HTML, XML or other markup formats that are returned to the user via an
+HTTP response.</p>
+<h2>Why is Jinja2 useful?</h2>
+<p>Jinja2 didn't invent the templating concept. In fact, Jinja2's syntax is
+inspired by Django's built-in template engine, which was released years
+earlier. There were many template engines, such as <a href="https://en.wikipedia.org/wiki/JavaServer_Pages">JavaServer Pages (JSPs)</a> </p>
+<p>Jinja2 is most useful because it has consistent template tag syntax and the
+project is cleanly extracted as 
+<a href="https://github.com/mitsuhiko/jinja2">an independent open source project</a> so
+it can be used a dependency by other code libraries.</p>
+<p>Jinja2 strikes a thoughtful balance on the template engine spectrum where
+on one end you can embed arbitrary code in the templates and the other
+end a developer can code whatever she wants.</p>
+<h2>What projects depend on Jinja2?</h2>
+<p>Jinja2 is a commonly-used templating engine for
+<a href="/web-frameworks.html">web frameworks</a> such as <a href="/flask.html">Flask</a>, 
+<a href="/bottle.html">Bottle</a> <a href="/morepath.html">Morepath</a> and, as of its 1.8 update,
+optionally <a href="/django.html">Django</a> as well. Jinja2 is also used as a template
+language by <a href="/configuration-management.html">configuration management</a> tool 
+Ansible and the <a href="/static-site-generators.html">static site generator</a> Pelican,
+among many other similar tools.</p>
+<p>The idea is that if a developer already knows Jinja2 from working with one 
+project then the exact same syntax and style can be used in another project 
+that requires templating. The re-use reduces the learning curve and saves the
+open source project author from having to reinvent a new templating style.</p>
+<h3>Jinja2 resources</h3>
+<ul>
+<li>
+<p>Real Python has a nice 
+  <a href="https://realpython.com/blog/python/primer-on-jinja-templating/">Jinja2 primer</a>
+  with many code examples to show how to use the template engine.</p>
+</li>
+<li>
+<p>The <a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">second part of the Flask mega tutorial</a> 
+  is all about Jinja2 templates. It walks through control flow, template inheritance
+  and other standard features of the engine.</p>
+</li>
+<li>
+<p><a href="http://jonathanchu.is/posts/upgrading-jinja2-templates-django-18-with-admin/">Upgrading to Jinja2 Templates in Django 1.8 With Admin</a>
+  shows how to fix an issue that can occur with Django 1.8 and using Jinja2 as
+  the template engine.</p>
+</li>
+<li>
+<p>The official 
+  <a href="http://jinja.pocoo.org/docs/dev/templates/">Jinja2 template designer documentation</a>
+  is exceptionally useful both as a reference as well as a full read-through
+  to understand how to properly work with template tags.</p>
 </li>
 </ul>
           <h1>Data</h1>

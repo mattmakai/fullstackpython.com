@@ -35,8 +35,8 @@ with the exception of the `<meta name="description"...` line which provides
 a unique short description of what the individual page contains.
 
 The [base.html Jinja template](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/theme/templates/base.html) used to generate Full Stack Python
-allows every page on Full Stack Python to have consistent HTML but 
-dynamically generate the pieces that should change between pages when 
+allows every page on the site to have consistent HTML but 
+dynamically generate the pieces that need to change between pages when 
 the [static site generator](/static-site-generator.html) executes. The below
 code from the `base.html` template shows that the meta description is up to child 
 templates to create.
@@ -59,13 +59,18 @@ particular URL.
 
 
 ## Python template engines
-There are several popular Python template engines. Template engines have to
-walk the spectrum between allowing arbitrary code execution and granting only
-a limited set of capabilities via template tags.
+There are several popular Python template engines. A template engine implementation 
+will fall somewhere on the spectrum between allowing arbitrary code execution and 
+granting only a limited set of capabilities via template tags. A rough visual of
+the code in template spectrum can be seen below for four of the major Python
+template engines.
+
+<img src="theme/img/template-logic-spectrum.png" width="100%" alt="." class="technical-diagram" style="border-radius: 5px;">
+
 
 
 ### Jinja
-[Jinja](http://jinja.pocoo.org/), also known as "Jinja2" is a popular Python 
+[Jinja](http://jinja.pocoo.org/), also known as "Jinja2", is a popular Python 
 template engine written as an independent open source project, unlike some
 template engines that are provided as part of a larger web framework.
 
@@ -74,6 +79,8 @@ Major Python open source applications such as the
 and [SaltStack](https://github.com/saltstack/salt)
 as well as the [static site generator](/static-site-generator.html) Pelican use
 the Jinja template engine by default for generating output files.
+
+There's a whole lot more to learn about Jinja on the [Jinja2](/jinja2.html) page.
 
 
 ### Django templating
