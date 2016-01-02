@@ -123,6 +123,9 @@ WebSockets proxy.
       }
     }
 
+Note if you run into any issues with the above example configuration
+you'll want to scope out the 
+[official HTTP proxy module documentation](http://nginx.org/en/docs/http/ngx_http_proxy_module.html).
 
 The following resources are also helpful for setting up the configuration 
 properly.
