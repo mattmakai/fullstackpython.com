@@ -122,6 +122,11 @@ is provided by W3C.
   is an important note for setting up your upstream WSGI server(s) if you're
   using Nginx as a reverse proxy with hostnames that change.
 
+* [Nginx Caching](https://serversforhackers.com/nginx-caching/) shows how
+  to set up Nginx for caching HTTP requests, which is often done by Varnish
+  but can also be handled by Nginx with the `proxy_cache` and related
+  directives.
+
 
 ## Web servers learning checklist
 1. Choose a web server. [Nginx](http://nginx.org/en/) is often recommended 
