@@ -112,7 +112,7 @@ so a dependency manager can correctly install both the library as well as
 additional dependencies for the library. There's still quite a bit of 
 confusion in the Python community over the difference between 
 requirements.txt and setup.py, so read this 
-[well written post](https://caremad.io/blog/setup-vs-requirement/) for
+[well written post](https://caremad.io/2013/07/setup-vs-requirement/) for
 further clarification.
 
 
