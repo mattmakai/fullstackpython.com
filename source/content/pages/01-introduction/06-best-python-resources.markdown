@@ -115,6 +115,12 @@ specific field, one of these guides may be the most appropriate for you.
   such as how to automate generating large Excel spreadsheets or perform analysis 
   when your data is locked in Microsoft Office files.
 
+* [Python for Social Scientists](http://fbkarsdorp.github.io/python-course/) is a
+  textbook and course on the basics of Python and text processing. Note if you've
+  never worked with Python before the material ramps up quickly after the first
+  chapter so you will likely want to combine it with some other introduction to
+  Python resources.
+
 * [Practical Python for Astronomers](https://python4astronomers.github.io/)
   provides open source workshop materials for teaching students studying 
   astronomy to use Python for data analysis.
