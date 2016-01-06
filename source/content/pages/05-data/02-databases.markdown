@@ -2,7 +2,7 @@ title: Databases
 category: page
 slug: databases
 sort-order: 0502
-meta: Relational databases a critical part of Python web applications. Learn more about persisting data in databases at Full Stack Python.
+meta: Relational databases serve the critical role of persisting data in many Python applications.
 
 
 # Databases
@@ -40,9 +40,10 @@ between the tables are specified as *foreign keys*.
 
 Databases storage implementations vary in complexity. SQLite, a database 
 included with Python, creates a single file for all data per database. 
-Other databases such as Oracle, PostgreSQL, and MySQL have more complicated
-persistence schemes while offering additional advanced features that are 
-useful for web application data storage.
+Other databases such as Oracle, [PostgreSQL](/postgresql.html) and 
+[MySQL](/mysql.html) have more complicated persistence schemes while 
+offering additional advanced features that are useful for web application 
+data storage.
 
 [PostgreSQL](http://www.postgresql.org/) and 
 [MySQL](http://www.mysql.com/) are two of the most common open source
@@ -60,89 +61,17 @@ web applications. PostgreSQL's feature set, active development and stability
 contribute to its usage as the backend for millions of applications live
 on the Web today.
 
-
-### PostgreSQL resources
-* This post on 
-  [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
-  is a great quickstart guide for either framework.
-
-* [PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
-  PostgreSQL content from around the web.
-
-* Braintree wrote about their experiences [scaling PostgreSQL](https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution). 
-The post is an inside look at the evolution of Braintree's usage of the database.
-
-* This post estimates the [costs of a PostgreSQL connection](http://hans.io/blog/2014/02/19/postgresql_connection/index.html).
-
-* There is no such thing as total security but this IBM article covers 
-  [hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
-
-* Craig Kerstiens wrote a detailed post about [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
-
-* [Handling growth with Postgres](http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram)
-  provides 5 specific tips from Instagram's engineering team on how to scale
-  the design of your PostgreSQL database.
-
-* [Inserting And Using A New Record In Postgres](http://rob.conery.io/2015/02/09/inserting-using-new-record-postgres/)
-  shows some SQL equivalents to what many developers just do in their ORM
-  of choice.
-
-* [Following a Select Statement Through Postgres Internals](http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals)
-  provides a fascinating look into the internal workings of PostgreSQL
-  during a query.
-
-* This article explains how and why PostgreSQL can handle [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
-  for many use cases.
-
-* If you're just getting started with PostgreSQL here are 
-  [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
-
-* The title's a bit presumptuous but here's a useful list of 
-  [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
-
-* This guide to 
-  [PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
-  is handy for knowing what to measure and how to do it.
-
-* While you can use a graphical interface for working with PostgreSQL, it's
-  best to spend some time getting 
-  [comfortable with the command-line interface](http://phili.pe/posts/postgresql-on-the-command-line/).
+Learn more about using PostgreSQL with Python on the 
+[PostgreSQL page](/postgresql.html).
 
 
 ## MySQL
-MySQL is another viable open source database backend option for Python web 
+MySQL is another viable open source database implementation for Python 
 applications. MySQL has a slightly easier initial learning curve than 
-PostgreSQL. The database is deployed in production at some of the highest 
-trafficked sites such as 
-[Twitter](https://blog.twitter.com/2012/mysql-twitter), 
-[Facebook](https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920)
-and [many others major organizations](http://www.mysql.com/customers/).
-However, since the company focused on MySQL development, 
-[MySQL AB](http://en.wikipedia.org/wiki/MySQL_AB), was 
-purchased by Sun Microsystems (which was in turn purchased by Oracle), there
-have been major defections away from the database by
-[Wikipedia](http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/) 
-and [Google](http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb). 
-MySQL remains a viable database option but I always recommend new Python 
-developers learn PostgreSQL if they do not already know MySQL.
+PostgreSQL but is not as feature rich.
 
-
-### MySQL resources
-* [28 Beginner's Tutorials for Learning about MySQL Databases](http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/) 
-  is a curated collection on various introductory MySQL topics.
-
-* This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
-
-* [Terrible Choices: MySQL](http://blog.ionelmc.ro/2014/12/28/terrible-choices-mysql/)
-  is a blog post about specific deficiencies in MySQL's implementation that
-  hinder its usage with Django's ORM.
-
-* [Graph Data From MySQL Database in Python](http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/)
-  is an interesting study with code of how to pull data out of MySQL and graph
-  the data with Plotly.
-
-* [Pinterest open sourced many of their MySQL tools](https://engineering.pinterest.com/blog/open-sourcing-pinterest-mysql-management-tools)
-  to manage instances of the database.
+Find out about Python applications with a MySQL backed on the dedicated 
+[MySQL page](/mysql.html).
 
 
 ## Connecting to a database with Python

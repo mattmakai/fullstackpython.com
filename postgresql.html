@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Web applications can be attacked by malicious actors in many ways. Learn about security measures on Full Stack Python.">
+    <meta name="description" content="PostgreSQL is an open source relational database commonly used with Python applications.">
     <link rel="shortcut icon" href="//static.fullstackpython.com/fsp-fav.png">
-    <title>Web Application Security - Full Stack Python</title>
+    <title>PostgreSQL - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -31,212 +31,127 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-          <h1>Web Application Security</h1>
-<p>Website security must be thought about while building every level of the web 
-stack. However, this section includes topics that deserve particular
-treatment, such as cross-site scripting (XSS), SQL injection, cross-site 
-request forgery and usage of public-private keypairs.</p>
-<h2>Security open source projects</h2>
+          <h1>PostgreSQL</h1>
+<p><a href="http://www.postgresql.org/">PostgreSQL</a>, often written as "Postgres" and 
+pronounced "Poss-gres", is an open source
+<a href="/databases.html">relational database</a> implementation frequently used by 
+Python applications as a backed for data storage and retrieval.</p>
+<h2>How does PostgreSQL fit within the Python stack?</h2>
+<p>PostgreSQL is the default database choice for many Python developers, 
+including the Django team when testing the 
+<a href="/object-relational-mappers-orms.html">Django ORM</a>. PostgreSQL is often
+viewed as more feature robust and stable when compared to MySQL, SQLServer 
+and Oracle. All of those databases are reasonable choices. However, because 
+PostgreSQL tends to be used by Python developers the drivers and example
+code for using the database tend to be better documented and contain fewer
+bugs for typical usage scenarios. If you try to use an Oracle database with
+Django, you'll see there is far less example code for that setup compared
+to PostgreSQL backend setups.</p>
+<h2>Why is PostgreSQL a good database choice?</h2>
+<p>PostgreSQL's open source license allows developers to use the database
+without cost in their applications. The PostgreSQL core team releases
+frequent updates that greatly enhance the database's capabilities. For 
+example, in the 
+<a href="http://www.postgresql.org/docs/9.4/static/release-9-4.html">PostgreSQL 9.4 release</a>
+the <a href="http://www.postgresql.org/docs/9.4/static/datatype-json.html">jsonb type</a>
+was added to enhance JavaScript Object Notation (<a href="http://www.json.org/">JSON</a>)
+storage capabilities so that in many cases a separate 
+<a href="/no-sql-datastore.html">NoSQL database</a> is not required in an application's
+architecture.</p>
+<h2>Connecting to a database with Python</h2>
+<p>To work with a relational database using Python you need to use a database 
+driver, which is also referred to as a database connector. The most common 
+driver library for working with PostgreSQL is 
+<a href="http://initd.org/psycopg/">psycopg2</a>.</p>
+<p>In addition to the database driver, many Python developers use an 
+<a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a> with 
+to turn relational data from PostgreSQL into objects that can be used in
+their Python application. For example, while PostgreSQL provides a 
+relational database and psycopg is the common database connector, there
+are many ORMs that can be used with varying web frameworks, as shown in the
+table below.</p>
+<p><img src="theme/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" /></p>
+<p>Learn more about 
+<a href="/object-relational-mappers-orms.html">Python ORMs on that dedicated topic page</a>.</p>
+<h3>PostgreSQL resources</h3>
 <ul>
 <li>
-<p><a href="http://www.bro.org/">Bro</a> is a network security and traffic monitor.</p>
+<p>This post on 
+  <a href="http://killtheyak.com/use-postgresql-with-django-flask/">using PostgreSQL with Django or Flask</a>
+  is a great quickstart guide for either framework.</p>
 </li>
 <li>
-<p><a href="https://github.com/marshyski/quick-secure">quick NIX secure script</a> for
-securing Linux distributions.</p>
+<p><a href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
+  PostgreSQL content from around the web.</p>
+</li>
+<li>
+<p>Braintree wrote about their experiences <a href="https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution">scaling PostgreSQL</a>. 
+The post is an inside look at the evolution of Braintree's usage of the database.</p>
+</li>
+<li>
+<p>This post estimates the <a href="http://hans.io/blog/2014/02/19/postgresql_connection/index.html">costs of a PostgreSQL connection</a>.</p>
+</li>
+<li>
+<p>There is no such thing as total security but this IBM article covers 
+  <a href="http://www.ibm.com/developerworks/library/os-postgresecurity/">hardening a PostgreSQL database</a>. </p>
+</li>
+<li>
+<p>Craig Kerstiens wrote a detailed post about <a href="http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/">understanding PostgreSQL performance</a>.</p>
+</li>
+<li>
+<p><a href="http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram">Handling growth with Postgres</a>
+  provides 5 specific tips from Instagram's engineering team on how to scale
+  the design of your PostgreSQL database.</p>
+</li>
+<li>
+<p><a href="http://rob.conery.io/2015/02/09/inserting-using-new-record-postgres/">Inserting And Using A New Record In Postgres</a>
+  shows some SQL equivalents to what many developers just do in their ORM
+  of choice.</p>
+</li>
+<li>
+<p><a href="http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals">Following a Select Statement Through Postgres Internals</a>
+  provides a fascinating look into the internal workings of PostgreSQL
+  during a query.</p>
+</li>
+<li>
+<p>This article explains how and why PostgreSQL can handle <a href="http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/">full text searching</a>
+  for many use cases.</p>
+</li>
+<li>
+<p>If you're just getting started with PostgreSQL here are 
+  <a href="https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/">10 beginner tasks you should know how to execute</a>.</p>
+</li>
+<li>
+<p>The title's a bit presumptuous but here's a useful list of 
+  <a href="http://engineering.tilt.com/7-postgresql-data-migration-hacks/">7 PostgreSQL data migration hacks you should be using, but aren't</a>.</p>
+</li>
+<li>
+<p>This guide to 
+  <a href="http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/">PostgreSQL monitoring</a>
+  is handy for knowing what to measure and how to do it.</p>
+</li>
+<li>
+<p>While you can use a graphical interface for working with PostgreSQL, it's
+  best to spend some time getting 
+  <a href="http://phili.pe/posts/postgresql-on-the-command-line/">comfortable with the command-line interface</a>.</p>
 </li>
 </ul>
-<h2>HTTPS resources</h2>
-<ul>
-<li>
-<p><a href="http://robertheaton.com/2014/03/27/how-does-https-actually-work/">How does HTTPS actually work?</a>
-  is a well-written overview of the protocol including certificates, 
-  signatures, signing and related topics.</p>
-</li>
-<li>
-<p>These 
-  <a href="https://18f.gsa.gov/2015/07/16/introduction-to-https-webinar/">introduction to HTTPS</a>
-  videos explain what HTTPS is and how to implement it.</p>
-</li>
-<li>
-<p>This question asking <a href="http://security.stackexchange.com/questions/5126/whats-the-difference-between-ssl-tls-and-https">what is the difference between TLS and SSL?</a>
-  explains that TLS is a newer version of SSL and should be used because
-  SSL through version 3.0 is insecure.</p>
-</li>
-<li>
-<p>If you have wondered what all the SSL/TLS acronyms and settings mean,
-  read the 
-  <a href="https://wiki.mozilla.org/Security/Server_Side_TLS">Security/Server Side TLS guide</a>
-  which Mozilla uses to operationalize its servers.</p>
-</li>
-<li>
-<p>If you're having users submit sensitive information to your site you need
-  to use SSL/TLS. Anything before TLS is now insecure. Check out this
-  <a href="http://wingolog.org/archives/2014/10/17/ffs-ssl">handy guide</a> that goes
-  over some of the nuances of the subject.</p>
-</li>
-<li>
-<p><a href="https://hynek.me/talks/tls/">The Sorry State of SSL</a> details the 
-  history and evolution of SSL/TLS. There are important differences between
-  the versions and Hynek explains why TLS should always be used. The
-  talk prompted work to improve Python's SSL in 2.7.9 based on the upgrades
-  in Python 3 outlined in 
-  <a href="https://developer.rackspace.com/blog/the-not-so-sorry-state-of-ssl-in-python/">The not-so-sorry state of SSL in Python</a>.</p>
-</li>
-<li>
-<p><a href="http://blog.hartleybrody.com/https-certificates/">How HTTPS Secures Connections</a>
-  is a guide for what HTTPS does and does not secure against.</p>
-</li>
-<li>
-<p><a href="http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/">When and How to Deploy HTTPS</a></p>
-</li>
-<li>
-<p><a href="http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html">The first few milliseconds of an HTTPS connection</a>
-  provides a detailed look at the SSL handshake process that is implemented
-  by browsers based on the <a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>
-  specification.</p>
-</li>
-<li>
-<p><a href="https://www.ssllabs.com/ssltest/">Qualy SSL Server Test</a> can be used to
-  determine what's in place and what is missing for your server's HTTPS 
-  connection. Once you run the test read this article on 
-  <a href="https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/">Getting an A+ on Qualy's SSL Labs Tester</a>
-  to improve your situation.</p>
-</li>
-</ul>
-<h2>General security resources</h2>
-<ul>
-<li>
-<p>The Open Web Application Security Project (OWASP) has 
-  <a href="https://www.owasp.org/index.php/Cheat_Sheets">cheat sheets for security</a> 
-  topics.</p>
-</li>
-<li>
-<p>This page contains a
-  <a href="http://dfir.org/?q=node/8/">fantastic curated list of security reading material</a>
-  from beginning to advanced topics.</p>
-</li>
-<li>
-<p>The <a href="http://www.reddit.com/r/netsec/">/r/netsec</a> subreddit is one place to
-  go to learn more about network and application security.</p>
-</li>
-<li>
-<p><a href="http://gexos.github.io/Hacking-Tools-Repository/">Hacking Tools Repository</a>
-  is a great list of password cracking, scanning, sniffing and other security
-  penetration testing tools.</p>
-</li>
-<li>
-<p><a href="http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/">Securing an Ubuntu Server</a></p>
-</li>
-<li>
-<p><a href="http://joshrendek.com/2013/01/securing-ubuntu/">Securing Ubuntu</a></p>
-</li>
-<li>
-<p><a href="http://httpd.apache.org/docs/current/misc/security_tips.html">Security Tips from Apache</a></p>
-</li>
-<li>
-<p><a href="http://spenserj.com/blog/2013/07/15/securing-a-linux-server/">Securing a Linux Server</a></p>
-</li>
-<li>
-<p>The EFF has a well written overview on 
-  <a href="https://www.eff.org/deeplinks/2014/11/what-makes-good-security-audit">what makes a good security audit</a>. It's broad but contains some of their behind the
-  scenes thinking on important considerations with security audits.</p>
-</li>
-<li>
-<p>Ars Technica wrote posts on 
-  <a href="http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/">securing your website</a>
-  along with <a href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">how to set up a safe and secure web server: part 1</a>
-  and <a href="http://arstechnica.com/information-technology/2012/11/securing-your-web-server-with-ssltls/">part 2</a>
-  to explain HTTPS and SSL without much required pre-existing knowledge.</p>
-</li>
-<li>
-<p><a href="https://www.crypto101.io/">Crypto 101</a> is an introductory course on
-  cryptography for programmers.</p>
-</li>
-<li>
-<p><a href="http://getprismatic.com/story/1409447605839">An in-depth analysis of SSH attacks on Amazon EC2</a>
-  shows how important it is to secure your web servers, especially when they are
-  hosted in IP address ranges that are commonly scanned by malicious actors.</p>
-</li>
-<li>
-<p><a href="http://www.infoq.com/articles/cloud-security-auditing-challenges-and-emerging-approaches">Cloud Security Auditing: Challenges and Emerging Approaches</a>
-  is a high-level overview of some of security auditing problems that come
-  with cloud deployments.</p>
-</li>
-<li>
-<p>Wondering how the common buffer overflow attack works? Check out this
-  <a href="http://arstechnica.com/security/2015/08/how-security-flaws-work-the-buffer-overflow/">article on buffer overflows</a>
-  that explains the attack in layman's terms.</p>
-</li>
-<li>
-<p><a href="https://www.digitalocean.com/community/tutorials/7-security-measures-to-protect-your-servers">7 Security Measures to Protect Your Servers</a>
-  provides a good overview of the fundamentals for how servers should be
-  configured for baseline security.</p>
-</li>
-<li>
-<p>As you're developing on Linux, you'll want to read and follow this
-  <a href="https://github.com/lfit/itpol/blob/master/linux-workstation-security.md">Linux workstation security</a>
-  document to make sure your code and environment are not compromised.
-  If you're on Mac OS X, check out this 
-  <a href="https://github.com/drduh/OS-X-Yosemite-Security-and-Privacy-Guide">securing Yosemite guide</a>
-  which covers that environment.</p>
-</li>
-<li>
-<p><a href="https://www.moses.io/2015/09/tls-and-server-hardening-post-nginx/">TLS and Nginx Web Server Hardening</a>
-  explains a secure server configuration for the Nginx web server.</p>
-</li>
-<li>
-<p><a href="http://arstechnica.com/security/2015/10/new-attacks-on-network-time-protocol-can-defeat-https-and-create-chaos/">Timing attacks are one form of vulnerability</a> 
-  that can be used to defeat HTTPS in certain configurations. Understanding
-  how those attacks work is important in keeping your users' connections
-  secure.</p>
-</li>
-</ul>
-<h2>Web security learning checklist</h2>
-<ol>
-<li>
-<p>Read and understand the major web application security flaws that are
-   commonly exploited by malicious actors. These include cross-site request 
-   forgery (CSRF), cross-site scripting (XSS), SQL injection and session 
-   hijacking. The 
-   <a href="https://www.owasp.org/index.php/Top_10_2013-Top_10">OWASP top 10 web application vulnerabilities list</a> 
-   is a great place to get an overview of these topics.</p>
-</li>
-<li>
-<p>Determine how the framework you've chosen mitigates these vulnerabilities.</p>
-</li>
-<li>
-<p>Ensure your code implements the mitigation techniques for your framework. </p>
-</li>
-<li>
-<p>Think like an attacker and actively work to break into your own system. 
-   If you do not have enough experience to confidently break the security 
-   consider hiring a known white hat attacker. Have her break the 
-   application's security, report the easiest vulnerabilities to exploit in 
-   your app and help implement protections against those weaknesses.</p>
-</li>
-<li>
-<p>Recognize that no system is ever totally secure. However, the more popular
-   an application becomes the more attractive a target it is to attackers.
-   Reevaluate your web application security on a frequent basis.</p>
-</li>
-</ol>
-<h3>What web development topic do you want to learn about next?</h3>
+<h3>Do you want to learn more about data or web apps?</h3>
 <div class="row">
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/web-analytics.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M384 1152q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm192-448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm428 481l101-382q6-26-7.5-48.5t-38.5-29.5-48 6.5-30 39.5l-101 382q-60 5-107 43.5t-63 98.5q-20 77 20 146t117 89 146-20 89-117q16-60-6-117t-72-91zm660-33q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm-640-640q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm448 192q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm320 448q0 261-141 483-19 29-54 29h-1402q-35 0-54-29-141-221-141-483 0-182 71-348t191-286 286-191 348-71 348 71 286 191 191 286 71 348z" fill="#fff"/></svg></a>
-<p class="under-btn">I want to learn more about app users via web analytics.</p>        </div>
+<a href="/databases.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1168 1216q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm256 0q0 33-23.5 56.5t-56.5 23.5-56.5-23.5-23.5-56.5 23.5-56.5 56.5-23.5 56.5 23.5 23.5 56.5zm112 160v-320q0-13-9.5-22.5t-22.5-9.5h-1216q-13 0-22.5 9.5t-9.5 22.5v320q0 13 9.5 22.5t22.5 9.5h1216q13 0 22.5-9.5t9.5-22.5zm-1230-480h1180l-157-482q-4-13-16-21.5t-26-8.5h-782q-14 0-26 8.5t-16 21.5zm1358 160v320q0 66-47 113t-113 47h-1216q-66 0-113-47t-47-113v-320q0-25 16-75l197-606q17-53 63-86t101-33h782q55 0 101 33t63 86l197 606q16 50 16 75z" fill="#fff"/></svg></a>
+<p class="under-btn">Tell me about standard relational databases.</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/api-integration.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I integrate existing web APIs into my application?</p>        </div>
+<a href="/no-sql-datastore.html" class="btn btn-success btn-full"><svg width="34" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1151 960h316q-1-3-2.5-8t-2.5-8l-212-496h-708l-212 496q-1 2-2.5 8t-2.5 8h316l95 192h320zm513 30v482q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-482q0-62 25-123l238-552q10-25 36.5-42t52.5-17h832q26 0 52.5 17t36.5 42l238 552q25 61 25 123z" fill="#fff"/></svg></a>
+<p class="under-btn">What're these NoSQL data stores hipster developers keep talking about?</p>        </div>
     </div>
     <div class="col-md-4">
         <div class="well select-next">
-<a href="/logging.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 1344v128q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1664q26 0 45 19t19 45zm-384-384v128q0 26-19 45t-45 19h-1280q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1280q26 0 45 19t19 45zm256-384v128q0 26-19 45t-45 19h-1536q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1536q26 0 45 19t19 45zm-384-384v128q0 26-19 45t-45 19h-1152q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1152q26 0 45 19t19 45z" fill="#fff"/></svg></a>
-<p class="under-btn">How do I log errors that occur in my application?</p>        </div>
+<a href="/web-frameworks.html" class="btn btn-success btn-full"><svg width="28" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#fff"/></svg></a>
+<p class="under-btn">I want to learn how to code a Python web application using a framework.</p>        </div>
     </div>
 </div><div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -293,14 +208,14 @@ securing Linux distributions.</p>
               <a href="/javascript.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>JavaScript</a>
               <a href="/websockets.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>WebSockets</a>
               <a href="/template-engines.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Template Engines</a>
-              <a href="/web-application-security.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
+              <a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Web Application Security</a>
               <a href="/static-site-generator.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Static Site Generators</a>
               <a href="/jinja2.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Jinja2</a>
               <a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Data</a>
               <a href="/databases.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
               <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
-              <a href="/postgresql.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>PostgreSQL</a>
+              <a href="/postgresql.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>PostgreSQL</a>
               <a href="/mysql.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>MySQL</a>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
@@ -336,7 +251,7 @@ securing Linux distributions.</p>
       </div>
   </div>
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Web Application Security</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">PostgreSQL</h3></div>
       <div class="panel-body">
           Major updates are tweeted via
           <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.

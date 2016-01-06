@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Relational databases a critical part of Python web applications. Learn more about persisting data in databases at Full Stack Python.">
+    <meta name="description" content="Relational databases serve the critical role of persisting data in many Python applications.">
     <link rel="shortcut icon" href="//static.fullstackpython.com/fsp-fav.png">
     <title>Databases - Full Stack Python</title>
     <!--[if lt IE 9]>
@@ -59,9 +59,10 @@ in the <a href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
 between the tables are specified as <em>foreign keys</em>.</p>
 <p>Databases storage implementations vary in complexity. SQLite, a database 
 included with Python, creates a single file for all data per database. 
-Other databases such as Oracle, PostgreSQL, and MySQL have more complicated
-persistence schemes while offering additional advanced features that are 
-useful for web application data storage.</p>
+Other databases such as Oracle, <a href="/postgresql.html">PostgreSQL</a> and 
+<a href="/mysql.html">MySQL</a> have more complicated persistence schemes while 
+offering additional advanced features that are useful for web application 
+data storage.</p>
 <p><a href="http://www.postgresql.org/">PostgreSQL</a> and 
 <a href="http://www.mysql.com/">MySQL</a> are two of the most common open source
 databases for storing Python web application data.</p>
@@ -74,109 +75,14 @@ by a single connection at a time. Therefore is highly recommended to not
 web applications. PostgreSQL's feature set, active development and stability
 contribute to its usage as the backend for millions of applications live
 on the Web today.</p>
-<h3>PostgreSQL resources</h3>
-<ul>
-<li>
-<p>This post on 
-  <a href="http://killtheyak.com/use-postgresql-with-django-flask/">using PostgreSQL with Django or Flask</a>
-  is a great quickstart guide for either framework.</p>
-</li>
-<li>
-<p><a href="http://postgresweekly.com/">PostgreSQL Weekly</a> is a weekly newsletter of
-  PostgreSQL content from around the web.</p>
-</li>
-<li>
-<p>Braintree wrote about their experiences <a href="https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution">scaling PostgreSQL</a>. 
-The post is an inside look at the evolution of Braintree's usage of the database.</p>
-</li>
-<li>
-<p>This post estimates the <a href="http://hans.io/blog/2014/02/19/postgresql_connection/index.html">costs of a PostgreSQL connection</a>.</p>
-</li>
-<li>
-<p>There is no such thing as total security but this IBM article covers 
-  <a href="http://www.ibm.com/developerworks/library/os-postgresecurity/">hardening a PostgreSQL database</a>. </p>
-</li>
-<li>
-<p>Craig Kerstiens wrote a detailed post about <a href="http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/">understanding PostgreSQL performance</a>.</p>
-</li>
-<li>
-<p><a href="http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram">Handling growth with Postgres</a>
-  provides 5 specific tips from Instagram's engineering team on how to scale
-  the design of your PostgreSQL database.</p>
-</li>
-<li>
-<p><a href="http://rob.conery.io/2015/02/09/inserting-using-new-record-postgres/">Inserting And Using A New Record In Postgres</a>
-  shows some SQL equivalents to what many developers just do in their ORM
-  of choice.</p>
-</li>
-<li>
-<p><a href="http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals">Following a Select Statement Through Postgres Internals</a>
-  provides a fascinating look into the internal workings of PostgreSQL
-  during a query.</p>
-</li>
-<li>
-<p>This article explains how and why PostgreSQL can handle <a href="http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/">full text searching</a>
-  for many use cases.</p>
-</li>
-<li>
-<p>If you're just getting started with PostgreSQL here are 
-  <a href="https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/">10 beginner tasks you should know how to execute</a>.</p>
-</li>
-<li>
-<p>The title's a bit presumptuous but here's a useful list of 
-  <a href="http://engineering.tilt.com/7-postgresql-data-migration-hacks/">7 PostgreSQL data migration hacks you should be using, but aren't</a>.</p>
-</li>
-<li>
-<p>This guide to 
-  <a href="http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/">PostgreSQL monitoring</a>
-  is handy for knowing what to measure and how to do it.</p>
-</li>
-<li>
-<p>While you can use a graphical interface for working with PostgreSQL, it's
-  best to spend some time getting 
-  <a href="http://phili.pe/posts/postgresql-on-the-command-line/">comfortable with the command-line interface</a>.</p>
-</li>
-</ul>
+<p>Learn more about using PostgreSQL with Python on the 
+<a href="/postgresql.html">PostgreSQL page</a>.</p>
 <h2>MySQL</h2>
-<p>MySQL is another viable open source database backend option for Python web 
+<p>MySQL is another viable open source database implementation for Python 
 applications. MySQL has a slightly easier initial learning curve than 
-PostgreSQL. The database is deployed in production at some of the highest 
-trafficked sites such as 
-<a href="https://blog.twitter.com/2012/mysql-twitter">Twitter</a>, 
-<a href="https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920">Facebook</a>
-and <a href="http://www.mysql.com/customers/">many others major organizations</a>.
-However, since the company focused on MySQL development, 
-<a href="http://en.wikipedia.org/wiki/MySQL_AB">MySQL AB</a>, was 
-purchased by Sun Microsystems (which was in turn purchased by Oracle), there
-have been major defections away from the database by
-<a href="http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/">Wikipedia</a> 
-and <a href="http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb">Google</a>. 
-MySQL remains a viable database option but I always recommend new Python 
-developers learn PostgreSQL if they do not already know MySQL.</p>
-<h3>MySQL resources</h3>
-<ul>
-<li>
-<p><a href="http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/">28 Beginner's Tutorials for Learning about MySQL Databases</a> 
-  is a curated collection on various introductory MySQL topics.</p>
-</li>
-<li>
-<p>This tutorial shows how to install <a href="http://www.cs.wcupa.edu/rkline/index/mysql-lin.html">MySQL on Ubuntu</a>.</p>
-</li>
-<li>
-<p><a href="http://blog.ionelmc.ro/2014/12/28/terrible-choices-mysql/">Terrible Choices: MySQL</a>
-  is a blog post about specific deficiencies in MySQL's implementation that
-  hinder its usage with Django's ORM.</p>
-</li>
-<li>
-<p><a href="http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/">Graph Data From MySQL Database in Python</a>
-  is an interesting study with code of how to pull data out of MySQL and graph
-  the data with Plotly.</p>
-</li>
-<li>
-<p><a href="https://engineering.pinterest.com/blog/open-sourcing-pinterest-mysql-management-tools">Pinterest open sourced many of their MySQL tools</a>
-  to manage instances of the database.</p>
-</li>
-</ul>
+PostgreSQL but is not as feature rich.</p>
+<p>Find out about Python applications with a MySQL backed on the dedicated 
+<a href="/mysql.html">MySQL page</a>.</p>
 <h2>Connecting to a database with Python</h2>
 <p>To work with a relational database using Python, you need to use a code 
 library. The most common libraries for relational databases are:</p>
@@ -365,6 +271,8 @@ provider.</p>
               <a href="/databases.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>Databases</a>
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>NoSQL Data Stores</a>
               <a href="/object-relational-mappers-orms.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Object-relational Mappers (ORMs)</a>
+              <a href="/postgresql.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>PostgreSQL</a>
+              <a href="/mysql.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>MySQL</a>
               <a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>API Creation</a>

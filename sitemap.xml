@@ -143,7 +143,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/postgresql.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/mysql.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
