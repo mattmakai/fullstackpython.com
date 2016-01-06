@@ -13,6 +13,10 @@ the
 
 ## 2016
 ### January
+* Split the [relational databases](/databases.html) page sections on
+  [PostgreSQL](/postgresql.html) and [MySQL](/mysql.html) out into their
+  own pages so there is more room to write about the three topics without
+  making the databases page a behemoth.
 * Updated the [template engines](/template-engines.html) page with a new image
   to show the spectrum between arbitrary code execution and no logic in templates.
 * Added a new [Jinja2](/jinja2.html) page specifically for that template engine.
