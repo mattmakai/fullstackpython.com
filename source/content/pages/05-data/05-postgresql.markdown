@@ -27,10 +27,15 @@ to PostgreSQL backend setups.
 
 
 ## Why is PostgreSQL a good database choice?
-PostgreSQL's open source license allows developers to use the database
-without cost in their applications. The PostgreSQL core team releases
-frequent updates that greatly enhance the database's capabilities. For 
-example, in the 
+PostgreSQL's open source license allows developers to operate one or
+more databases without licensing cost in their applications. That operating 
+model is much less expensive compared to Oracle or other proprietary
+databases. In addition, because so many people ranging from independent
+developers to multinational organizations use PostgreSQL, it's often easier
+to find developers with PostgreSQL experience than other relational databases.
+
+The PostgreSQL core team also releases frequent updates that greatly enhance 
+the database's capabilities. For example, in the 
 [PostgreSQL 9.4 release](http://www.postgresql.org/docs/9.4/static/release-9-4.html)
 the [jsonb type](http://www.postgresql.org/docs/9.4/static/datatype-json.html)
 was added to enhance JavaScript Object Notation ([JSON](http://www.json.org/))
@@ -39,8 +44,8 @@ storage capabilities so that in many cases a separate
 architecture.
 
 
-## Connecting to a database with Python
-To work with a relational database using Python you need to use a database 
+## Connecting to PostgreSQL with Python
+To work with relational databases in Python you need to use a database 
 driver, which is also referred to as a database connector. The most common 
 driver library for working with PostgreSQL is 
 [psycopg2](http://initd.org/psycopg/).
@@ -55,7 +60,6 @@ table below.
 
 <img src="theme/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" />
 
-
 Learn more about 
 [Python ORMs on that dedicated topic page](/object-relational-mappers-orms.html).
 
@@ -64,6 +68,9 @@ Learn more about
 * This post on 
   [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
   is a great quickstart guide for either framework.
+
+* [PostgreSQL: The Nice Bits](https://russ.garrett.co.uk/talks/postgres-gds/) is a 
+  good overview slideshow of why PostgreSQL is a great relational database.
 
 * [PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
   PostgreSQL content from around the web.
@@ -107,4 +114,12 @@ The post is an inside look at the evolution of Braintree's usage of the database
   best to spend some time getting 
   [comfortable with the command-line interface](http://phili.pe/posts/postgresql-on-the-command-line/).
 
+* Backing up databases is important because data loss can and does happen. This
+  article explains 
+  [how to back up a PostgreSQL database hosted on an Amazon Web Services EC2 instance](http://www.n2ws.com/blog/how-to-backup-your-aws-cloud-based-postgresql-database.html)
+  if managing your own database on a cloud server is your preferred setup.
+
+* [How to fix undead PostgreSQL queries](https://tech.zalando.com/blog/hack-to-terminate-tcp-conn-postgres/)
+  shows a bit of a hack for when what to do when you can't kill certain PostgreSQL
+  queries.
 

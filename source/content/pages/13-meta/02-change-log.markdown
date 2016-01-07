@@ -13,6 +13,8 @@ the
 
 ## 2016
 ### January
+* Expanding the [PostgreSQL](/postgresql.html) page with more detail and
+  additional resources.
 * Split the [relational databases](/databases.html) page sections on
   [PostgreSQL](/postgresql.html) and [MySQL](/mysql.html) out into their
   own pages so there is more room to write about the three topics without
