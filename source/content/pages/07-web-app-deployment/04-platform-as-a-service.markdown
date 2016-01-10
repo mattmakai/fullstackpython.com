@@ -101,6 +101,11 @@ application framework and your app itself is up to date and secured. See the
   shows how to deploy a simple Ruby Sinatra app, but the steps are generally
   applicable to Python web apps as well. 
 
+* Are you wondering what it will cost to deploy a reasonable sized production 
+  app on a platform-as-a-service like Heroku? Check out Cushion's 
+  [transparent costs list](http://cushionapp.com/expenses/) where they
+  include their expenses from using a PaaS as well as other services.
+
 
 ## Platform-as-a-service learning checklist
 1. Review the potential Python platform-as-a-service options listed above.
