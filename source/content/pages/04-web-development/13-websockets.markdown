@@ -217,3 +217,6 @@ properly.
   has some interesting comments on what's missing from the above content that
   I'm working to address.
 
+* [Creating Websockets Chat with Python](http://pawelmhm.github.io/python/websockets/2016/01/02/playing-with-websockets.html)
+  shows code for a Twisted server that handles WebSockets connections
+  on the server side along with the JavaScript code for the client side.
