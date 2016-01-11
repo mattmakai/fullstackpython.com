@@ -172,3 +172,6 @@ ones listed here are primarily coded in Python.
   is a tutorial I wrote to use the Full Stack Python source code to create
   and deploy your first static site.
 
+* [Ditching Wordpress and becoming one of the cool kids](http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/)
+  is one developer's experience moving away from Wordpress and onto
+  Pelican with reStructuredText for his personal blog.
