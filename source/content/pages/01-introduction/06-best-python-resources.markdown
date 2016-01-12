@@ -136,13 +136,20 @@ topics.
   useful if you're coming in with previous software development experience
   and want to quickly grasp how the language is structured.
 
-* Kenneth Reitz's 
-  [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
-  contains a wealth of information both on the Python programming language and the community.
+* Developers familiar with other languages often have difficulty adapting to
+  accepted Python code style. Make sure to read the 
+  [PEP8](https://www.python.org/dev/peps/pep-0008/) code style guidelines
+  as well as 
+  [The Elements of Python Style](https://github.com/amontalenti/elements-of-python-style)
+  to know the Python community standards.
 
 * [How to Develop Quality Python Code](https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code)
   is a good read to begin learning about development environments, 
   application dependencies and project structure.
+
+* Kenneth Reitz's 
+  [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
+  contains a wealth of information both on the Python programming language and the community.
 
 * [Good to Great Python Reads](http://jessenoller.com/good-to-great-python-reads/)
   is a collection of intermediate and advanced Python articles around the web
