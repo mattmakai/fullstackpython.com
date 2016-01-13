@@ -33,6 +33,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) 
   that's well worth buying.
 
+* [Docker curriculum](http://prakhar.me/docker-curriculum/) is a detailed
+  tutorial created by a developer to show the exact steps for deploying an 
+  application that relies on [Elasticsearch](https://www.elastic.co/). 
+
 * [How to install Docker and get started](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started)
   provides a walkthrough for Ubuntu 13.04 for installing and beginning to
   use Docker for development.

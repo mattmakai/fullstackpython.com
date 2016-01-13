@@ -13,6 +13,8 @@ the
 
 ## 2016
 ### January
+* Added new summaries and links to the [Docker](/docker.html) and 
+  [Best Python Resources](/best-python-resources.html) pages.
 * Expanding the [PostgreSQL](/postgresql.html) page with more detail and
   additional resources.
 * Split the [relational databases](/databases.html) page sections on
