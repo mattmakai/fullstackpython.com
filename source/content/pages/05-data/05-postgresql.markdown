@@ -127,3 +127,9 @@ The post is an inside look at the evolution of Braintree's usage of the database
   explores a relatively obscure topic with the final result that BDR is
   similar to data stores with eventual consistency rather than consistency
   as a requirement.
+
+* [PostgreSQL-metrics](https://github.com/spotify/postgresql-metrics) is a 
+  tool built by Spotify's engineers that extracts and outputs metrics from 
+  an existing PostgreSQL database. There's also a way to extend the tools
+  to pull custom metrics as well.
+
