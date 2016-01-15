@@ -5564,6 +5564,22 @@ the Web was invented by
 <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> at CERN in 1989.
 Modern browsers and web servers have simply extended the language of the Web
 to incorporate new standards.</p>
+<h2>Web server implementations</h2>
+<p>The conceptual web server idea can be implemented in various ways. The 
+following web server implementations each have varying features, extensions
+and configurations.</p>
+<ul>
+<li>
+<p><a href="https://httpd.apache.org/">Apache HTTP Server</a></p>
+</li>
+<li>
+<p><a href="http://nginx.org/en/">Nginx</a></p>
+</li>
+<li>
+<p><a href="https://caddyserver.com/">Caddy</a> is a newcomer to the web server scene
+  and is focused on serving the HTTP/2 protocol with HTTPS. </p>
+</li>
+</ul>
 <h2>Client requests</h2>
 <p>A client that sends a request to a web server is usually a browser such 
 as Internet Explorer, Firefox, or Chrome, but it can also be a</p>
@@ -5597,8 +5613,8 @@ That HTML file contained references to other files, such as style.css and
 script.js that the browser then requested from the server.</p>
 <p>Sending static assets (such as CSS and JavaScript files) can eat up a 
 large amount of bandwidth which is why using a Content Delivery Network 
-(CDN) is important when possible (see the content delivery network 
-section for a more detailed explanation).</p>
+(CDN) to <a href="/static-content.html">serve static assets</a> is important when 
+possible.</p>
 <h2>Web server resources</h2>
 <ul>
 <li>

@@ -2,7 +2,7 @@ title: Web Servers
 category: page
 slug: web-servers
 sort-order: 0706
-meta: A web server handles HTTP requests and responses. Learn how web servers work with Python web apps on Full Stack Python.
+meta: Web servers respond to HTTP requests for static content and serve as reverse proxies for Python web applications.
 
 
 # Web servers
@@ -10,6 +10,7 @@ Web servers respond to
 [Hypertext Transfer Protocol](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (HTTP)
 requests from clients and send back a response containing a status code and
 often content such as HTML, XML or JSON as well.
+
 
 ## Why are web servers necessary?
 Web servers are the ying to the web client's yang. The server and client speak
@@ -25,6 +26,18 @@ the Web was invented by
 Modern browsers and web servers have simply extended the language of the Web
 to incorporate new standards.
 
+
+## Web server implementations
+The conceptual web server idea can be implemented in various ways. The 
+following web server implementations each have varying features, extensions
+and configurations.
+
+* [Apache HTTP Server](https://httpd.apache.org/)
+
+* [Nginx](http://nginx.org/en/)
+
+* [Caddy](https://caddyserver.com/) is a newcomer to the web server scene
+  and is focused on serving the HTTP/2 protocol with HTTPS. 
 
 ## Client requests
 A client that sends a request to a web server is usually a browser such 
@@ -63,8 +76,9 @@ script.js that the browser then requested from the server.
 
 Sending static assets (such as CSS and JavaScript files) can eat up a 
 large amount of bandwidth which is why using a Content Delivery Network 
-(CDN) is important when possible (see the content delivery network 
-section for a more detailed explanation).
+(CDN) to [serve static assets](/static-content.html) is important when 
+possible.
+
 
 
 ## Web server resources
