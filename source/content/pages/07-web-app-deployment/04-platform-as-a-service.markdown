@@ -106,6 +106,11 @@ application framework and your app itself is up to date and secured. See the
   [transparent costs list](http://cushionapp.com/expenses/) where they
   include their expenses from using a PaaS as well as other services.
 
+* The [beginner's guide to scaling to 11 million users on AWS](http://highscalability.com/blog/2016/1/11/a-beginners-guide-to-scaling-to-11-million-users-on-amazons.html)
+  is a useful list of services you'll need to look at as you grow an
+  application from 10 to 100 to 1000 to 500,000 and beyond to millions 
+  of users.
+
 
 ## Platform-as-a-service learning checklist
 1. Review the potential Python platform-as-a-service options listed above.
