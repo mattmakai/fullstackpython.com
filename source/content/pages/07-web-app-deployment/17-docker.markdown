@@ -107,3 +107,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 * Curious how pip and Docker can be used together? Read this article on 
   [Efficient management Python projects dependencies with Docker](https://jpetazzo.github.io/2013/12/01/docker-python-pip-requirements/).
 
+* [Python virtual environments and Docker](http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html)
+  goes into detail on whether virtual environments should be used with Docker
+  and how system packages can generally be a safer route to go.
