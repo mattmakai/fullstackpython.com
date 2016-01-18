@@ -190,6 +190,12 @@ equivalent of browser testing in the web application world.
   check out this 
   [blog post on exporting data as CSV format with Django REST framework](http://codingpole.com/using-django-rest-framework-for-csv-export/).
 
+* This multi-part series on 
+  [getting started with Django REST framework and AngularJS (part 1)](http://engineroom.trackmaven.com/blog/getting-started-drf-angularjs-part-1/)
+  along with its [second part](http://engineroom.trackmaven.com/blog/getting-started-drf-angularjs-part-2/)
+  do a good job of showing how a RESTful API can serve as the backend for
+  a client front end built with a JavaScript MVC framework.
+
 * If you're looking for a working example of a Django REST 
   framework project, check out the 
   [PokeAPI](https://github.com/phalt/pokeapi), open sourced under the BSD 
