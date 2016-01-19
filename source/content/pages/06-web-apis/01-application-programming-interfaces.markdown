@@ -47,7 +47,7 @@ message is sent to a Twilio phone number Twilio sends an HTTP POST request
 webhook to the URL specified by the user. The URL is defined in a text box
 on the number's page on Twilio as shown below.
 
-<img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" />
+<img src="/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" />
 
 
 ## API open source projects

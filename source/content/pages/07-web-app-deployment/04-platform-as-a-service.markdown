@@ -25,7 +25,7 @@ for Python's `requirements.txt` file in the base directory of the repository
 during deployment because that is the file's de facto community standard
 location.
 
-<img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" />
+<img src="/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" />
 
 If you go the PaaS route, you can skip configuring an operating system
 and web server prebaked into PaaS offerings. PaaS offerings generally start 

@@ -29,7 +29,7 @@ Therefore the Python community came up with WSGI as a standard interface that
 modules and containers could implement. WSGI is now the accepted approach 
 for running Python web applications.
 
-<img src="theme/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" />
+<img src="/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" />
 
 As shown in the above diagram, a WSGI server simply invokes a callable object
 on the WSGI application as defined by the PEP 3333 standard.
@@ -57,7 +57,7 @@ Why use WSGI and not just point a web server directly at an application?
   The segregation of responsibilities is important for efficiently scaling 
   web traffic.
 
-<img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server - Web server - Browser" width="100%" class="technical-diagram" />
+<img src="/img/web-browser-server-wsgi.png" alt="WSGI Server - Web server - Browser" width="100%" class="technical-diagram" />
 
 WSGI is by design a simple standard interface for running Python code. As
 a web developer you won't need to know much more than

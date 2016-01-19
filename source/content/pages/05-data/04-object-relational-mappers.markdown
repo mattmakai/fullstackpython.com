@@ -68,7 +68,7 @@ or [MySQL-python](https://pypi.python.org/pypi/MySQL-python/1.2.5) (for
 MySQL). Take a look at the table below which shows how ORMs can work with
 different web frameworks and connectors and relational databases.
 
-<img src="theme/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" />
+<img src="/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" />
 
 The above table shows for example that SQLAlchemy can work with varying
 web frameworks and database connectors. Developers can also use ORMs without

@@ -65,7 +65,7 @@ file and the file has not changed, the web server will pass back a 304
 "Not modified" response indicating the client already has the latest version
 of that file.
 
-<img src="theme/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" />
+<img src="/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" />
 
 A web server sends files to a web browser based on the web browser's 
 request. In the first request, the browser accessed the 

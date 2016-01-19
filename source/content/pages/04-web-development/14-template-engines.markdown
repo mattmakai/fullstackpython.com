@@ -65,7 +65,7 @@ granting only a limited set of capabilities via template tags. A rough visual of
 the code in template spectrum can be seen below for four of the major Python
 template engines.
 
-<img src="theme/img/template-logic-spectrum.png" width="100%" alt="." class="technical-diagram" style="border-radius: 5px;">
+<img src="/img/template-logic-spectrum.png" width="100%" alt="Spectrum between no logic in templates and the ability to run arbitrary code." class="technical-diagram" style="border-radius: 5px;">
 
 
 

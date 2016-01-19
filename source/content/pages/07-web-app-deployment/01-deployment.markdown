@@ -22,7 +22,7 @@ be individually configured. Here is a map that visually depicts how each
 deployment topic relates to each other. Click the image to pull up a PDF 
 version.
 
-<a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a>
+<a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a>
 
 
 ## Deployment hosting options

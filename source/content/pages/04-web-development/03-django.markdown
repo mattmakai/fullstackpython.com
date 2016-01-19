@@ -13,7 +13,7 @@ web applications should come with the framework instead of as separate
 libraries.
 
 
-<a href="http://www.djangoproject.com/" style="border: none;"><img src="theme/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a>
+<a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a>
 
 
 For example, 

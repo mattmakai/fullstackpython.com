@@ -930,12 +930,12 @@ let python_highlight_all = 1
 
 <p>Here is how these configuration options look with a dark background on
 Mac OS X while editing the markdown for this webpage (how meta!).</p>
-<p><img src="theme/img/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;"></p>
+<p><img src="/img/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;"></p>
 <p>Take a look at another example using these configuration options, this time
 with a light background and editing Python code from my
 <a href="https://github.com/makaimc/choose-your-own-adventure-presentations">Choose Your Own Adventures Presentations</a>
 project.</p>
-<p><img src="theme/img/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;"></p>
+<p><img src="/img/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;"></p>
 <p>The Vimrc file lives under the home directory of the user account running
 Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
 file is found at <code>/Users/matt/.vimrc</code>. On Ubuntu Linux my .vimrc file
@@ -1611,7 +1611,7 @@ application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as separate
 libraries.</p>
-<p><a href="http://www.djangoproject.com/" style="border: none;"><img src="theme/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a></p>
+<p><a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a></p>
 <p>For example, 
 <a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
 <a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
@@ -1974,7 +1974,7 @@ to handle these files properly.</p>
           <h1>Flask</h1>
 <p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
 <a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. 
-<a href="http://flask.pocoo.org/" style="border: none;"><img src="theme/img/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a></p>
+<a href="http://flask.pocoo.org/" style="border: none;"><img src="/img/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a></p>
 <h2>Why is Flask a good web framework choice?</h2>
 <p>Flask is considered more 
 <a href="http://blog.startifact.com/posts/older/what-is-pythonic.html">Pythonic</a>
@@ -2350,7 +2350,7 @@ included with Python.</p>
 <p><a href="http://www.pylonsproject.org/projects/pyramid/about">Pyramid</a> is an open 
 source <a href="/wsgi-servers.html">WSGI</a> web framework based on the 
 Model-View-Controller (MVC) architectural pattern.</p>
-<p><a href="http://www.pylonsproject.org/" style="border: none;"><img src="theme/img/pyramid-logo.jpg" style="border-radius: 5px;" width="100%" alt="Pyramid web framework logo." class="technical-diagram" /></a></p>
+<p><a href="http://www.pylonsproject.org/" style="border: none;"><img src="/img/pyramid-logo.jpg" style="border-radius: 5px;" width="100%" alt="Pyramid web framework logo." class="technical-diagram" /></a></p>
 <h2>Open source Pyramid example apps</h2>
 <ul>
 <li>
@@ -2519,7 +2519,7 @@ using CSS and JavaScript.</p>
 <h2>Why is web design important?</h2>
 <p>You wouldn’t use a web application that looked like the following screenshot, 
 would you?</p>
-<p><img src="theme/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> </p>
+<p><img src="/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> </p>
 <p>Creating web pages with their own style and interactivity so users can easily
 accomplish their tasks is a major part of building modern web applications.</p>
 <h2>Responsive design</h2>
@@ -2588,11 +2588,11 @@ projects than styles embedded within the HTML files.</p>
 needed to render the content. The web browser requests the CSS file after the
 HTML file as shown below in a screenshot captured of the Chrome Web Developer 
 Tools network traffic.</p>
-<p><img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
+<p><img src="/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" /></p>
 <p>That request for the fsp.css file is made because the HTML file for Full 
 Stack Python contains a reference to <code>theme/css/fsp.css</code> which is shown
 in the view source screenshot below.</p>
-<p><img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
+<p><img src="/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" /></p>
 <h2>CSS preprocessors</h2>
 <p>A CSS preprocessor compiles a processed language into plain CSS code. CSS 
 preprocessing languages add syntax such as variables, mixins and functions
@@ -2844,15 +2844,15 @@ are important is that HTTP is not meant for keeping open a connection for
 the server to frequently push data to a web browser. Previously, most web
 applications would implement long polling via frequent
 Asynchronous JavaScript and XML (AJAX) requests as shown in the below diagram. </p>
-<p><img src="theme/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" /></p>
+<p><img src="/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" /></p>
 <p>Server push is more efficient and scalable than long polling because the 
 web browser does not have to constantly ask for updates through a stream 
 of AJAX requests.</p>
-<p><img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" /></p>
+<p><img src="/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" /></p>
 <p>While the above diagram shows a server pushing data to the client, WebSockets
 is a full-duplex connection so the client can also push data to the server
 as shown in the diagram below.</p>
-<p><img src="theme/img/websockets-flow-with-client-push.png" width="100%" alt="WebSockets also allow client push in addition to server pushed updates." class="technical-diagram" /></p>
+<p><img src="/img/websockets-flow-with-client-push.png" width="100%" alt="WebSockets also allow client push in addition to server pushed updates." class="technical-diagram" /></p>
 <p>The WebSockets approach for server- and client-pushed updates works well for 
 certain categories of web applications such as chat room, which is why that's 
 often an example application for a WebSocket library.</p>
@@ -3109,7 +3109,7 @@ will fall somewhere on the spectrum between allowing arbitrary code execution an
 granting only a limited set of capabilities via template tags. A rough visual of
 the code in template spectrum can be seen below for four of the major Python
 template engines.</p>
-<p><img src="theme/img/template-logic-spectrum.png" width="100%" alt="." class="technical-diagram" style="border-radius: 5px;"></p>
+<p><img src="/img/template-logic-spectrum.png" width="100%" alt="Spectrum between no logic in templates and the ability to run arbitrary code." class="technical-diagram" style="border-radius: 5px;"></p>
 <h3>Jinja</h3>
 <p><a href="http://jinja.pocoo.org/">Jinja</a>, also known as "Jinja2", is a popular Python 
 template engine written as an independent open source project, unlike some
@@ -3363,7 +3363,7 @@ for a weekend, <a href="https://pages.github.com/">GitHub Pages</a> was used as 
 to serve the site and didn't have any issues even with close to 400 
 concurrent connections at a time, as shown in the following Google Analytics 
 screenshot captured during that traffic burst.</p>
-<p><img src="theme/img/hacker-news-traffic.jpg" width="100%" alt="Example of how static websites scale with a CDN based on Full Stack Python on Hacker News front page traffic." class="technical-diagram"></a></p>
+<p><img src="/img/hacker-news-traffic.jpg" width="100%" alt="Example of how static websites scale with a CDN based on Full Stack Python on Hacker News front page traffic." class="technical-diagram"></a></p>
 <h2>How do static website generators work?</h2>
 <p>Static site generators allow a user to create HTML files by writing in a
 markup language and coding template files. The static site generator then
@@ -3373,7 +3373,7 @@ the markup or templates are modified.</p>
 <p>For example, as shown in the diagram below, the Pelican static site 
 generator can take in reStructuredText files and Jinja2 template files 
 as input then combine them to output a set of static HTML files.</p>
-<p><img src="theme/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a></p>
+<p><img src="/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a></p>
 <h2>What's the downside to using static site generators?</h2>
 <p>The major downside is that code cannot be executed after a site is created. 
 You are stuck with the output files so if you're used to building web 
@@ -4095,7 +4095,7 @@ library called a <em>database connector</em>, such as
 or <a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQL-python</a> (for
 MySQL). Take a look at the table below which shows how ORMs can work with
 different web frameworks and connectors and relational databases.</p>
-<p><img src="theme/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" /></p>
+<p><img src="/img/orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with different connectors and backends." class="technical-diagram" /></p>
 <p>The above table shows for example that SQLAlchemy can work with varying
 web frameworks and database connectors. Developers can also use ORMs without
 a web framework, such as when creating a data analysis tool or a batch
@@ -4438,7 +4438,7 @@ their Python application. For example, while PostgreSQL provides a
 relational database and psycopg is the common database connector, there
 are many ORMs that can be used with varying web frameworks, as shown in the
 table below.</p>
-<p><img src="theme/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" /></p>
+<p><img src="/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" /></p>
 <p>Learn more about 
 <a href="/object-relational-mappers-orms.html">Python ORMs on that dedicated topic page</a>.</p>
 <h3>PostgreSQL resources</h3>
@@ -4534,7 +4534,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
           <h1>MySQL</h1>
 <p>MySQL is an open source <a href="/databases.html">relational database</a> 
 implementation for storing and retrieving data.</p>
-<p><img src="theme/img/mysql.png" width="100%" alt="MySQL logo." class="technical-diagram" /></p>
+<p><img src="/img/mysql.png" width="100%" alt="MySQL logo." class="technical-diagram" /></p>
 <h2>MySQL or PostgreSQL?</h2>
 <p>MySQL is a viable open source database implementation for Python web 
 applications. MySQL has a slightly easier initial learning curve than 
@@ -4623,7 +4623,7 @@ instead of the API itself.</p>
 message is sent to a Twilio phone number Twilio sends an HTTP POST request 
 webhook to the URL specified by the user. The URL is defined in a text box
 on the number's page on Twilio as shown below.</p>
-<p><img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" /></p>
+<p><img src="/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" /></p>
 <h2>API open source projects</h2>
 <ul>
 <li><a href="https://github.com/wordnik/swagger-core">Swagger</a> is an open source project 
@@ -5071,7 +5071,7 @@ application and its associated data.</p>
 be individually configured. Here is a map that visually depicts how each
 deployment topic relates to each other. Click the image to pull up a PDF 
 version.</p>
-<p><a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="theme/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a></p>
+<p><a href="/full-stack-python-map.pdf" target="_blank" style="border: none;"><img src="/img/full-stack-python-map.png" width="100%" alt="Full Stack Python site map." class="technical-diagram" /></a></p>
 <h2>Deployment hosting options</h2>
 <p>There are four options for deploying and hosting a web application:</p>
 <ol>
@@ -5308,7 +5308,7 @@ to conform applications to the PaaS architecture. For example, Heroku looks
 for Python's <code>requirements.txt</code> file in the base directory of the repository 
 during deployment because that is the file's de facto community standard
 location.</p>
-<p><img src="theme/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
+<p><img src="/img/servers-versus-paas.png" width="100%" alt="Traditional LAMP server stack versus a Platform-as-a-Service stack" class="technical-diagram" /></p>
 <p>If you go the PaaS route, you can skip configuring an operating system
 and web server prebaked into PaaS offerings. PaaS offerings generally start 
 at the WSGI server layer. </p>
@@ -5623,7 +5623,7 @@ to the client with a 200 status code. If the client already requested the
 file and the file has not changed, the web server will pass back a 304 
 "Not modified" response indicating the client already has the latest version
 of that file.</p>
-<p><img src="theme/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" /></p>
+<p><img src="/img/web-browser-server-requests.png" width="100%" class="technical-diagram" alt="Web server and web browser request-response cycle" /></p>
 <p>A web server sends files to a web browser based on the web browser's 
 request. In the first request, the browser accessed the 
 "www.fullstackpython.com"
@@ -5754,7 +5754,7 @@ code for web applications was needed.</p>
 <p>Therefore the Python community came up with WSGI as a standard interface that
 modules and containers could implement. WSGI is now the accepted approach 
 for running Python web applications.</p>
-<p><img src="theme/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" /></p>
+<p><img src="/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" /></p>
 <p>As shown in the above diagram, a WSGI server simply invokes a callable object
 on the WSGI application as defined by the PEP 3333 standard.</p>
 <h2>WSGI's Purpose</h2>
@@ -5781,7 +5781,7 @@ area of specialization.</p>
   web traffic.</p>
 </li>
 </ul>
-<p><img src="theme/img/web-browser-server-wsgi.png" alt="WSGI Server - Web server - Browser" width="100%" class="technical-diagram" /></p>
+<p><img src="/img/web-browser-server-wsgi.png" alt="WSGI Server - Web server - Browser" width="100%" class="technical-diagram" /></p>
 <p>WSGI is by design a simple standard interface for running Python code. As
 a web developer you won't need to know much more than</p>
 <ul>
@@ -5978,7 +5978,7 @@ as Git or Mercurial.</p>
 <h2>Source control during deployment</h2>
 <p>Pulling code during a deployment is a potential way source control systems fit
 into the deployment process. </p>
-<p><img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system."></p>
+<p><img src="/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system."></p>
 <p>Note that some developers recommend deployment pipelines package the source 
 code to deploy it and never have a production environment touch a source 
 control system directly. However, for small scale deployments it's often
@@ -6186,7 +6186,7 @@ command and then activated.</p>
 application then relies only on that virtualenv instance which has a separate
 copy of the Python interpreter and site-packages directory. A high level of
 how a server configured with virtualenv can look is shown in the picture below.</p>
-<p><img src="theme/img/server-setup.png" alt="How the virtualenv separates dependencies on the server." width="100%" class="technical-diagram" /></p>
+<p><img src="/img/server-setup.png" alt="How the virtualenv separates dependencies on the server." width="100%" class="technical-diagram" /></p>
 <h2>Installing Python dependencies</h2>
 <p>The recommended way to install Python library dependencies is with the 
 <a href="http://www.pip-installer.org/en/latest/">pip</a> command when a virtualenv
@@ -6767,7 +6767,7 @@ do not break existing tests ensure the software works as intended.</p>
 <h2>Continuous integration example</h2>
 <p>The following picture represents a high level perspective on how continuous
 integration and deployment can work. </p>
-<p><img src="theme/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." /></p>
+<p><img src="/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." /></p>
 <p>In the above diagram, when new code is committed to a source repository 
 there is a hook that notifies the continuous integration server that new 
 code needs to be built (the continuous integration server could also
@@ -8088,7 +8088,7 @@ the
   icons with SVG elements that mimic the font awesome icons.</li>
 <li>Pushed the <a href="https://github.com/makaimc/fullstackpython.github.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d">1000th commit</a> 
   to Full Stack Python!
-<img src="theme/img/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="technical-diagram" /></li>
+<img src="/img/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="technical-diagram" /></li>
 <li>Major update to <a href="/vim.html">Vim</a> page to add screenshots, a better example
   .vimrc configuration and many more resources.</li>
 <li>Updated the <a href="/web-analytics.html">web analytics</a> page with a new 
@@ -8275,7 +8275,7 @@ the
 <li>
 <p>New logo! This one's way more Python software stack, way less boring 
   folder-thingy. Here's how the old one looked in comparison:
-  <img src="theme/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" /></p>
+  <img src="/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" /></p>
 </li>
 <li>
 <p>Added a <a href="../future-directions.html">future direction</a> section to explain

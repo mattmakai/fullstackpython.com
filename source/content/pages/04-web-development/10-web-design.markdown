@@ -14,7 +14,7 @@ using CSS and JavaScript.
 You wouldn’t use a web application that looked like the following screenshot, 
 would you?
 
-<img src="theme/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> 
+<img src="/img/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> 
 
 Creating web pages with their own style and interactivity so users can easily
 accomplish their tasks is a major part of building modern web applications.

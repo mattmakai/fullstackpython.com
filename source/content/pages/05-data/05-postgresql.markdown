@@ -58,7 +58,7 @@ relational database and psycopg is the common database connector, there
 are many ORMs that can be used with varying web frameworks, as shown in the
 table below.
 
-<img src="theme/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" />
+<img src="/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" />
 
 Learn more about 
 [Python ORMs on that dedicated topic page](/object-relational-mappers-orms.html).

@@ -9,7 +9,7 @@ meta: MySQL is an open source database often used by Python developers for stori
 MySQL is an open source [relational database](/databases.html) 
 implementation for storing and retrieving data.
 
-<img src="theme/img/mysql.png" width="100%" alt="MySQL logo." class="technical-diagram" />
+<img src="/img/mysql.png" width="100%" alt="MySQL logo." class="technical-diagram" />
 
 
 ## MySQL or PostgreSQL?

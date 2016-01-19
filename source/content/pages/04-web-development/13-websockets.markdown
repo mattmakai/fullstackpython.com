@@ -25,19 +25,19 @@ the server to frequently push data to a web browser. Previously, most web
 applications would implement long polling via frequent
 Asynchronous JavaScript and XML (AJAX) requests as shown in the below diagram. 
 
-<img src="theme/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" />
+<img src="/img/ajax-long-polling.png" width="100%" alt="Long polling via AJAX is incredibly inefficient for some applications." class="technical-diagram" />
 
 Server push is more efficient and scalable than long polling because the 
 web browser does not have to constantly ask for updates through a stream 
 of AJAX requests.
 
-<img src="theme/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" />
+<img src="/img/websockets-flow.png" width="100%" alt="WebSockets are more efficient than long polling for server sent updates." class="technical-diagram" />
 
 While the above diagram shows a server pushing data to the client, WebSockets
 is a full-duplex connection so the client can also push data to the server
 as shown in the diagram below.
 
-<img src="theme/img/websockets-flow-with-client-push.png" width="100%" alt="WebSockets also allow client push in addition to server pushed updates." class="technical-diagram" />
+<img src="/img/websockets-flow-with-client-push.png" width="100%" alt="WebSockets also allow client push in addition to server pushed updates." class="technical-diagram" />
 
 The WebSockets approach for server- and client-pushed updates works well for 
 certain categories of web applications such as chat room, which is why that's 

@@ -24,13 +24,13 @@ needed to render the content. The web browser requests the CSS file after the
 HTML file as shown below in a screenshot captured of the Chrome Web Developer 
 Tools network traffic.
 
-<img src="theme/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" />
+<img src="/img/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" />
 
 That request for the fsp.css file is made because the HTML file for Full 
 Stack Python contains a reference to ``theme/css/fsp.css`` which is shown
 in the view source screenshot below.
 
-<img src="theme/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" />
+<img src="/img/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" />
 
 
 ## CSS preprocessors

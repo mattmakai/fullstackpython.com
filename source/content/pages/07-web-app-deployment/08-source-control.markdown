@@ -28,7 +28,7 @@ as Git or Mercurial.
 Pulling code during a deployment is a potential way source control systems fit
 into the deployment process. 
 
-<img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
+<img src="/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
 
 Note that some developers recommend deployment pipelines package the source 
 code to deploy it and never have a production environment touch a source 

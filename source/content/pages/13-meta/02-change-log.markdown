@@ -156,7 +156,7 @@ the
   icons with SVG elements that mimic the font awesome icons.
 * Pushed the [1000th commit](https://github.com/makaimc/fullstackpython.github.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d) 
   to Full Stack Python!
-<img src="theme/img/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="technical-diagram" />
+<img src="/img/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="technical-diagram" />
 * Major update to [Vim](/vim.html) page to add screenshots, a better example
   .vimrc configuration and many more resources.
 * Updated the [web analytics](/web-analytics.html) page with a new 
@@ -332,7 +332,7 @@ the
   Kinda has that "choose your own adventure" thing going for it, doesn't it?
 * New logo! This one's way more Python software stack, way less boring 
   folder-thingy. Here's how the old one looked in comparison:
-  <img src="theme/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" />
+  <img src="/img/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" />
 
 * Added a [future direction](../future-directions.html) section to explain
   current priorities for further developments on the site.

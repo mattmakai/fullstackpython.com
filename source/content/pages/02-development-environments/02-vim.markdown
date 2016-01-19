@@ -70,14 +70,14 @@ to get a feel for some of the configuration statements:
 Here is how these configuration options look with a dark background on
 Mac OS X while editing the markdown for this webpage (how meta!).
 
-<img src="theme/img/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;">
+<img src="/img/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;">
 
 Take a look at another example using these configuration options, this time
 with a light background and editing Python code from my
 [Choose Your Own Adventures Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations)
 project.
 
-<img src="theme/img/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;">
+<img src="/img/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;">
 
 
 
