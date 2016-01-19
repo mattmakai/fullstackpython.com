@@ -2314,6 +2314,11 @@ included with Python.</p>
   shows how to use Jinja instead of the built-in templating engine for
   Bottle page rendering.</p>
 </li>
+<li>
+<p><a href="http://joemartaganna.com/jtblog/how-to-build-a-web-app-using-bottle-with-jinja2-in-google-app-engine.html">How to build a web app using Bottle with Jinja2 in Google App Engine</a>
+  provides a tutorial for using Bottle on the Google App Engine 
+  <a href="/platform-as-a-service.html">platform-as-a-service</a>.</p>
+</li>
 </ul>
 <h2>Open source Bottle example projects</h2>
 <ul>
@@ -3528,16 +3533,24 @@ ones listed here are primarily coded in Python.</p>
 HTML, XML or other markup formats that are returned to the user via an
 HTTP response.</p>
 <h2>Why is Jinja2 useful?</h2>
-<p>Jinja2 didn't invent the templating concept. In fact, Jinja2's syntax is
-inspired by Django's built-in template engine, which was released years
-earlier. There were many template engines, such as <a href="https://en.wikipedia.org/wiki/JavaServer_Pages">JavaServer Pages (JSPs)</a> </p>
-<p>Jinja2 is most useful because it has consistent template tag syntax and the
+<p>Jinja2 is useful because it has consistent template tag syntax and the
 project is cleanly extracted as 
 <a href="https://github.com/mitsuhiko/jinja2">an independent open source project</a> so
 it can be used a dependency by other code libraries.</p>
 <p>Jinja2 strikes a thoughtful balance on the template engine spectrum where
 on one end you can embed arbitrary code in the templates and the other
 end a developer can code whatever she wants.</p>
+<h2>Jinja2 origin and development</h2>
+<p>The first recorded public released of Jinja2 was in 
+<a href="http://jinja.pocoo.org/docs/dev/changelog/#version-2-0rc1">2008 with 2.0rc1</a>.
+Since then the engine has seen numerous updates and remains in active
+development.</p>
+<p>Jinja2 engine certainly wasn't the first template engine. In fact, Jinja2's 
+syntax is inspired by Django's built-in template engine, which was released 
+several years earlier. There were many template systems, such as 
+<a href="https://en.wikipedia.org/wiki/JavaServer_Pages">JavaServer Pages (JSPs)</a>,
+that originated almost a decade before Jinja2. Jinja2 built upon the concepts
+of other templat engines and today is widely used by the Python community.</p>
 <h2>What projects depend on Jinja2?</h2>
 <p>Jinja2 is a commonly-used templating engine for
 <a href="/web-frameworks.html">web frameworks</a> such as <a href="/flask.html">Flask</a>, 
@@ -3572,6 +3585,18 @@ open source project author from having to reinvent a new templating style.</p>
   <a href="http://jinja.pocoo.org/docs/dev/templates/">Jinja2 template designer documentation</a>
   is exceptionally useful both as a reference as well as a full read-through
   to understand how to properly work with template tags.</p>
+</li>
+<li>
+<p>When you want to use Jinja2 outside of a <a href="/web-frameworks.html">web framework</a> or 
+  other existing tool, here's a 
+  <a href="http://www.pydanny.com/jinja2-quick-load-function.html">handy quick load function snippet</a>
+  so the template engine can be easily used from a script or the REPL.</p>
+</li>
+<li>
+<p>When working with Jinja2 in combination with LaTeX, some of Jinja2's blocks
+  can conflict with LaTeX commands. Check out this post on
+  <a href="http://eosrei.net/articles/2015/11/latex-templates-python-and-jinja2-generate-pdfs">LaTeX templates with Python and Jinja2 to generate PDFs</a>
+  to resolve those issues.</p>
 </li>
 </ul>
           <h1>Data</h1>
@@ -7935,6 +7960,8 @@ the
 <h2>2016</h2>
 <h3>January</h3>
 <ul>
+<li>Updated the <a href="/jinja2.html">Jinja2</a> page with new sections and resources.
+  Also added a new tutorial link on the <a href="/bottle.html">Bottle</a> page.</li>
 <li>Added new summaries and links to the <a href="/docker.html">Docker</a> and 
   <a href="/best-python-resources.html">Best Python Resources</a> pages.</li>
 <li>Expanding the <a href="/postgresql.html">PostgreSQL</a> page with more detail and

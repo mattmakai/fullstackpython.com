@@ -13,6 +13,8 @@ the
 
 ## 2016
 ### January
+* Updated the [Jinja2](/jinja2.html) page with new sections and resources.
+  Also added a new tutorial link on the [Bottle](/bottle.html) page.
 * Added new summaries and links to the [Docker](/docker.html) and 
   [Best Python Resources](/best-python-resources.html) pages.
 * Expanding the [PostgreSQL](/postgresql.html) page with more detail and

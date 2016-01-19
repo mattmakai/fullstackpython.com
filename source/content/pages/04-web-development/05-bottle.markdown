@@ -44,6 +44,10 @@ included with Python.
   shows how to use Jinja instead of the built-in templating engine for
   Bottle page rendering.
 
+* [How to build a web app using Bottle with Jinja2 in Google App Engine](http://joemartaganna.com/jtblog/how-to-build-a-web-app-using-bottle-with-jinja2-in-google-app-engine.html)
+  provides a tutorial for using Bottle on the Google App Engine 
+  [platform-as-a-service](/platform-as-a-service.html).
+
 
 ## Open source Bottle example projects
 * [Pattle](https://github.com/thekad/pasttle) is a pastebin clone built with

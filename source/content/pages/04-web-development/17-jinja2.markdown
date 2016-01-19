@@ -12,11 +12,7 @@ HTTP response.
 
 
 ## Why is Jinja2 useful?
-Jinja2 didn't invent the templating concept. In fact, Jinja2's syntax is
-inspired by Django's built-in template engine, which was released years
-earlier. There were many template engines, such as [JavaServer Pages (JSPs)](https://en.wikipedia.org/wiki/JavaServer_Pages) 
-
-Jinja2 is most useful because it has consistent template tag syntax and the
+Jinja2 is useful because it has consistent template tag syntax and the
 project is cleanly extracted as 
 [an independent open source project](https://github.com/mitsuhiko/jinja2) so
 it can be used a dependency by other code libraries.
@@ -25,6 +21,19 @@ Jinja2 strikes a thoughtful balance on the template engine spectrum where
 on one end you can embed arbitrary code in the templates and the other
 end a developer can code whatever she wants.
 
+
+## Jinja2 origin and development
+The first recorded public released of Jinja2 was in 
+[2008 with 2.0rc1](http://jinja.pocoo.org/docs/dev/changelog/#version-2-0rc1).
+Since then the engine has seen numerous updates and remains in active
+development.
+
+Jinja2 engine certainly wasn't the first template engine. In fact, Jinja2's 
+syntax is inspired by Django's built-in template engine, which was released 
+several years earlier. There were many template systems, such as 
+[JavaServer Pages (JSPs)](https://en.wikipedia.org/wiki/JavaServer_Pages),
+that originated almost a decade before Jinja2. Jinja2 built upon the concepts
+of other templat engines and today is widely used by the Python community.
 
 
 ## What projects depend on Jinja2?
@@ -59,3 +68,14 @@ open source project author from having to reinvent a new templating style.
   [Jinja2 template designer documentation](http://jinja.pocoo.org/docs/dev/templates/)
   is exceptionally useful both as a reference as well as a full read-through
   to understand how to properly work with template tags.
+
+* When you want to use Jinja2 outside of a [web framework](/web-frameworks.html) or 
+  other existing tool, here's a 
+  [handy quick load function snippet](http://www.pydanny.com/jinja2-quick-load-function.html)
+  so the template engine can be easily used from a script or the REPL.
+
+* When working with Jinja2 in combination with LaTeX, some of Jinja2's blocks
+  can conflict with LaTeX commands. Check out this post on
+  [LaTeX templates with Python and Jinja2 to generate PDFs](http://eosrei.net/articles/2015/11/latex-templates-python-and-jinja2-generate-pdfs)
+  to resolve those issues.
+
