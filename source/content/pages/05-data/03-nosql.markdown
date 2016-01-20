@@ -98,6 +98,7 @@ nested data.
   where the focus is on embracing RESTful-style HTTP access for working with 
   stored JSON data.
 
+
 ### Document-oriented data store resources
 * [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
   is a guide about using non-relational databases in green field environments.
@@ -108,6 +109,11 @@ nested data.
     1. [use\_greenlets](http://emptysqua.re/blog/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/)
     1. [copy\_database](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/)
     1. [MongoReplicaSetClient](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-mongoreplicasetclient/)
+
+* The 
+  [Python and MongoDB](https://talkpython.fm/episodes/show/2/python-and-mongodb) 
+  Talk Python to Me podcast has a great interview with the maintainer of the 
+  Python driver for MongoDB.
 
 
 ## Column-family table
