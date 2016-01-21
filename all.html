@@ -3684,7 +3684,7 @@ ease creating, reading, updating, and deleting persistent data. </p>
 useful way. For example, Google stores data about roads and provides 
 directions to get from one location to another by driving through the 
 <a href="https://www.google.com/maps/">Maps</a> application. Driving directions are 
-possible because the data is stored in a structured way. </p>
+possible because the data is stored in a structured format. </p>
 <p>Databases make structured storage reliable and fast. They also give you a 
 mental framework for how the data should be saved and retrieved instead of 
 having to figure out what to do with the data every time you build a new 
@@ -3699,18 +3699,39 @@ and check out the
 <h2>Relational databases</h2>
 <p>The database storage abstraction most commonly used in Python web development 
 is sets of relational tables. Alternative storage abstractions are explained 
-in the <a href="../no-sql-datastore.html">NoSQL</a> section of this guide.</p>
-<p>Relational databases store all data in a series of tables. Interconnections
-between the tables are specified as <em>foreign keys</em>.</p>
+on the <a href="/no-sql-datastore.html">NoSQL</a> page.</p>
+<p>Relational databases store data in a series of tables. Interconnections
+between the tables are specified as <em>foreign keys</em>. A foreign key is a
+unique reference from one row in a relational table to another row in
+a table, which can be the same table but is most commonly a different table.</p>
 <p>Databases storage implementations vary in complexity. SQLite, a database 
 included with Python, creates a single file for all data per database. 
-Other databases such as Oracle, <a href="/postgresql.html">PostgreSQL</a> and 
-<a href="/mysql.html">MySQL</a> have more complicated persistence schemes while 
-offering additional advanced features that are useful for web application 
-data storage.</p>
+Other databases such as <a href="/postgresql.html">PostgreSQL</a>,
+<a href="/mysql.html">MySQL</a>, Oracle and Microsoft SQL Server have more 
+complicated persistence schemes while offering additional advanced features 
+that are useful for web application data storage. These advanced
+features include but are not limited to:</p>
+<ol>
+<li>data replication between a master database and one or more read-only slave 
+   instances</li>
+<li>advanced column types that can efficiently store semi-structured data
+   such as JavaScript Object Notation (JSON)</li>
+<li>sharding, which allows horizontal scaling of multiple databases that 
+   each serve as read-write instances at the cost of latency in data
+   consistency</li>
+<li>monitoring, statistics and other useful runtime information for
+   database schemas and tables</li>
+</ol>
+<p>Typically web applications start with a single database instance such
+as PostgreSQL with a straightforward schema. Over time the database 
+schema evolves to a more complex structure using schema migrations and 
+advanced features such as replication, sharding and monitoring become
+more useful as database utilization increases based on the application
+users' needs.</p>
+<h2>Most common databases for Python web apps</h2>
 <p><a href="http://www.postgresql.org/">PostgreSQL</a> and 
 <a href="http://www.mysql.com/">MySQL</a> are two of the most common open source
-databases for storing Python web application data.</p>
+databases for storing Python web applications' data.</p>
 <p><a href="http://www.sqlite.org/">SQLite</a> is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
 by a single connection at a time. Therefore is highly recommended to not
@@ -3771,6 +3792,11 @@ provider.</p>
 <li>
 <p><a href="http://www.gobitcan.com/">BitCan</a> provides both MySQL and MongoDB hosted
   databases with extensive backup services.</p>
+</li>
+<li>
+<p><a href="https://www.elephantsql.com/">ElephantSQL</a> is a software-as-a-service company
+  that hosts PostgreSQL databases and handles the server configuration, backups
+  and data connections on top of Amazon Web Services instances.</p>
 </li>
 </ul>
 <h2>General database resources</h2>

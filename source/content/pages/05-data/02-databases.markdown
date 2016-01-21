@@ -15,7 +15,7 @@ At a high level web applications store data and present it to users in a
 useful way. For example, Google stores data about roads and provides 
 directions to get from one location to another by driving through the 
 [Maps](https://www.google.com/maps/) application. Driving directions are 
-possible because the data is stored in a structured way. 
+possible because the data is stored in a structured format. 
 
 Databases make structured storage reliable and fast. They also give you a 
 mental framework for how the data should be saved and retrieved instead of 
@@ -33,21 +33,43 @@ and check out the
 ## Relational databases
 The database storage abstraction most commonly used in Python web development 
 is sets of relational tables. Alternative storage abstractions are explained 
-in the [NoSQL](../no-sql-datastore.html) section of this guide.
+on the [NoSQL](/no-sql-datastore.html) page.
 
-Relational databases store all data in a series of tables. Interconnections
-between the tables are specified as *foreign keys*.
+Relational databases store data in a series of tables. Interconnections
+between the tables are specified as *foreign keys*. A foreign key is a
+unique reference from one row in a relational table to another row in
+a table, which can be the same table but is most commonly a different table.
 
 Databases storage implementations vary in complexity. SQLite, a database 
 included with Python, creates a single file for all data per database. 
-Other databases such as Oracle, [PostgreSQL](/postgresql.html) and 
-[MySQL](/mysql.html) have more complicated persistence schemes while 
-offering additional advanced features that are useful for web application 
-data storage.
+Other databases such as [PostgreSQL](/postgresql.html),
+[MySQL](/mysql.html), Oracle and Microsoft SQL Server have more 
+complicated persistence schemes while offering additional advanced features 
+that are useful for web application data storage. These advanced
+features include but are not limited to:
 
+1. data replication between a master database and one or more read-only slave 
+   instances
+1. advanced column types that can efficiently store semi-structured data
+   such as JavaScript Object Notation (JSON)
+1. sharding, which allows horizontal scaling of multiple databases that 
+   each serve as read-write instances at the cost of latency in data
+   consistency
+1. monitoring, statistics and other useful runtime information for
+   database schemas and tables
+
+Typically web applications start with a single database instance such
+as PostgreSQL with a straightforward schema. Over time the database 
+schema evolves to a more complex structure using schema migrations and 
+advanced features such as replication, sharding and monitoring become
+more useful as database utilization increases based on the application
+users' needs.
+
+
+## Most common databases for Python web apps
 [PostgreSQL](http://www.postgresql.org/) and 
 [MySQL](http://www.mysql.com/) are two of the most common open source
-databases for storing Python web application data.
+databases for storing Python web applications' data.
 
 [SQLite](http://www.sqlite.org/) is a database that is stored in a single
 file on disk. SQLite is built into Python but is only built for access
@@ -114,6 +136,10 @@ provider.
 
 * [BitCan](http://www.gobitcan.com/) provides both MySQL and MongoDB hosted
   databases with extensive backup services.
+
+* [ElephantSQL](https://www.elephantsql.com/) is a software-as-a-service company
+  that hosts PostgreSQL databases and handles the server configuration, backups
+  and data connections on top of Amazon Web Services instances.
 
 
 ## General database resources
