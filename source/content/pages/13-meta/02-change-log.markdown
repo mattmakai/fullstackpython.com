@@ -13,6 +13,8 @@ the
 
 ## 2016
 ### January
+* Major update to [relational databases](/databases.html) page with new
+  sections and resources.
 * Updated the [Jinja2](/jinja2.html) page with new sections and resources.
   Also added a new tutorial link on the [Bottle](/bottle.html) page.
 * Added new summaries and links to the [Docker](/docker.html) and 
