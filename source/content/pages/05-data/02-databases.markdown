@@ -166,6 +166,12 @@ provider.
 * [Databases integration testing strategies](https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python)
   covers a difficult topic that comes up on every real world project.
 
+* [Asynchronous Python and Databases](http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/)
+  is an in-depth article covering why many Python database drivers cannot
+  be used without modification due to the differences in blocking versus
+  asychronous event models. Definitely worth a read if you are using
+  [WebSockets](/websockets.html) via Tornado or gevent.
+
 * [PostgreSQL vs. MS SQL Server](http://www.pg-versus-ms.com/) is one
   perspective on the differences between the two database servers from a
   data analyst.
