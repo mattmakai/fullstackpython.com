@@ -153,6 +153,9 @@ provider.
   that are at the core of database theory and implementation. Well worth
   the time to read.
 
+* [Writing better SQL](http://www.craigkerstiens.com/2016/01/08/writing-better-sql/)
+  is a short code styling guide to make your queries easier to read.
+
 * [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
   database management systems.
 

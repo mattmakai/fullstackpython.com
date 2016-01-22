@@ -50,7 +50,8 @@ driver, which is also referred to as a database connector. The most common
 driver library for working with PostgreSQL is 
 [psycopg2](http://initd.org/psycopg/).
 
-In addition to the database driver, many Python developers use an 
+To abstract the connection between tables and objects, many Python 
+developers use an 
 [object-relational mapper (ORM)](/object-relational-mappers-orms.html) with 
 to turn relational data from PostgreSQL into objects that can be used in
 their Python application. For example, while PostgreSQL provides a 
@@ -97,8 +98,10 @@ The post is an inside look at the evolution of Braintree's usage of the database
   provides a fascinating look into the internal workings of PostgreSQL
   during a query.
 
-* This article explains how and why PostgreSQL can handle [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
-  for many use cases.
+* This article explains how and why PostgreSQL can handle 
+  [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
+  for many use cases. If you're going down this route, read
+  [this blog post that explains how one developer implemented PostgreSQL full text search with SQLAlchemy](http://blog.garage-coding.com/2015/12/18/postgres-fulltext-search.html).
 
 * If you're just getting started with PostgreSQL here are 
   [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
@@ -106,22 +109,26 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * The title's a bit presumptuous but here's a useful list of 
   [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
 
-* This guide to 
-  [PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
+* [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
+  is a list of code libraries, tutorials and newsletters focused 
+  specifically on PostgreSQL.
+
+* This 
+  [guide to PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
   is handy for knowing what to measure and how to do it.
 
 * While you can use a graphical interface for working with PostgreSQL, it's
   best to spend some time getting 
   [comfortable with the command-line interface](http://phili.pe/posts/postgresql-on-the-command-line/).
 
-* Backing up databases is important because data loss can and does happen. This
-  article explains 
+* Backing up databases is important because data loss can and does happen. 
+  This article explains 
   [how to back up a PostgreSQL database hosted on an Amazon Web Services EC2 instance](http://www.n2ws.com/blog/how-to-backup-your-aws-cloud-based-postgresql-database.html)
   if managing your own database on a cloud server is your preferred setup.
 
 * [How to fix undead PostgreSQL queries](https://tech.zalando.com/blog/hack-to-terminate-tcp-conn-postgres/)
-  shows a bit of a hack for when what to do when you can't kill certain PostgreSQL
-  queries.
+  shows a bit of a hack for when what to do when you can't kill certain 
+  PostgreSQL queries.
 
 * [Is bi-directional replication (BDR) in PostgreSQL transactional?](http://sdf.org/~riley/blog/2016/01/04/is-bi-directional-replication-bdr-in-postgres-transactional/)
   explores a relatively obscure topic with the final result that BDR is
@@ -132,4 +139,3 @@ The post is an inside look at the evolution of Braintree's usage of the database
   tool built by Spotify's engineers that extracts and outputs metrics from 
   an existing PostgreSQL database. There's also a way to extend the tools
   to pull custom metrics as well.
-

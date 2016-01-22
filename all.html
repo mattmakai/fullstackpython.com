@@ -3814,6 +3814,10 @@ provider.</p>
   the time to read.</p>
 </li>
 <li>
+<p><a href="http://www.craigkerstiens.com/2016/01/08/writing-better-sql/">Writing better SQL</a>
+  is a short code styling guide to make your queries easier to read.</p>
+</li>
+<li>
 <p><a href="http://db-engines.com/en/ranking">DB-Engines</a> ranks the most popular
   database management systems.</p>
 </li>
@@ -4495,7 +4499,8 @@ architecture.</p>
 driver, which is also referred to as a database connector. The most common 
 driver library for working with PostgreSQL is 
 <a href="http://initd.org/psycopg/">psycopg2</a>.</p>
-<p>In addition to the database driver, many Python developers use an 
+<p>To abstract the connection between tables and objects, many Python 
+developers use an 
 <a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a> with 
 to turn relational data from PostgreSQL into objects that can be used in
 their Python application. For example, while PostgreSQL provides a 
@@ -4550,8 +4555,10 @@ The post is an inside look at the evolution of Braintree's usage of the database
   during a query.</p>
 </li>
 <li>
-<p>This article explains how and why PostgreSQL can handle <a href="http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/">full text searching</a>
-  for many use cases.</p>
+<p>This article explains how and why PostgreSQL can handle 
+  <a href="http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/">full text searching</a>
+  for many use cases. If you're going down this route, read
+  <a href="http://blog.garage-coding.com/2015/12/18/postgres-fulltext-search.html">this blog post that explains how one developer implemented PostgreSQL full text search with SQLAlchemy</a>.</p>
 </li>
 <li>
 <p>If you're just getting started with PostgreSQL here are 
@@ -4562,8 +4569,13 @@ The post is an inside look at the evolution of Braintree's usage of the database
   <a href="http://engineering.tilt.com/7-postgresql-data-migration-hacks/">7 PostgreSQL data migration hacks you should be using, but aren't</a>.</p>
 </li>
 <li>
-<p>This guide to 
-  <a href="http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/">PostgreSQL monitoring</a>
+<p><a href="https://github.com/dhamaniasad/awesome-postgres">awesome-postgres</a>
+  is a list of code libraries, tutorials and newsletters focused 
+  specifically on PostgreSQL.</p>
+</li>
+<li>
+<p>This 
+  <a href="http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/">guide to PostgreSQL monitoring</a>
   is handy for knowing what to measure and how to do it.</p>
 </li>
 <li>
@@ -4572,15 +4584,15 @@ The post is an inside look at the evolution of Braintree's usage of the database
   <a href="http://phili.pe/posts/postgresql-on-the-command-line/">comfortable with the command-line interface</a>.</p>
 </li>
 <li>
-<p>Backing up databases is important because data loss can and does happen. This
-  article explains 
+<p>Backing up databases is important because data loss can and does happen. 
+  This article explains 
   <a href="http://www.n2ws.com/blog/how-to-backup-your-aws-cloud-based-postgresql-database.html">how to back up a PostgreSQL database hosted on an Amazon Web Services EC2 instance</a>
   if managing your own database on a cloud server is your preferred setup.</p>
 </li>
 <li>
 <p><a href="https://tech.zalando.com/blog/hack-to-terminate-tcp-conn-postgres/">How to fix undead PostgreSQL queries</a>
-  shows a bit of a hack for when what to do when you can't kill certain PostgreSQL
-  queries.</p>
+  shows a bit of a hack for when what to do when you can't kill certain 
+  PostgreSQL queries.</p>
 </li>
 <li>
 <p><a href="http://sdf.org/~riley/blog/2016/01/04/is-bi-directional-replication-bdr-in-postgres-transactional/">Is bi-directional replication (BDR) in PostgreSQL transactional?</a>
