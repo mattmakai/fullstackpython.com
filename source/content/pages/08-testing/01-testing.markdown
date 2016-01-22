@@ -66,3 +66,8 @@ correctness.
   [top answer on Stack Overflow](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test) 
   to that very question.
 
+* [Using pytest with Django](http://engineroom.trackmaven.com/blog/using-pytest-with-django/)
+  shows how to get a basic [pytest](http://pytest.org/latest/) test
+  running for a Django project and explains why the author prefers pytest 
+  over standard unittest testing.
+
