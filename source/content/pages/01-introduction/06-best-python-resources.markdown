@@ -147,6 +147,11 @@ topics.
   is a good read to begin learning about development environments, 
   application dependencies and project structure.
 
+* The [Python module of the week](https://pymotw.com/2/contents.html) 
+  chapters are a good way to get up to speed with the standard library.
+  Doug Hellmann is also now updating the list for changes brought about 
+  from the upgrade to Python 3 from 2.x.
+
 * Kenneth Reitz's 
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
   contains a wealth of information both on the Python programming language and the community.
