@@ -42,11 +42,13 @@ typically easier to knock out a prototype or start a web application using
 a single programming language.
 
 ORMs also make it theoretically possible to switch an application between
-various relational databases. For example, a developer could use SQLite for
-local development and MySQL in production. A production application could
-be switched from MySQL to PostgreSQL with minimal code modifications.
+various relational databases. For example, a developer could use 
+[SQLite](/sqlite.html) for
+local development and [MySQL](/mysql.html) in production. A production 
+application could be switched from MySQL to [PostgreSQL](/postgresql.html) with 
+minimal code modifications.
 
-In reality however, it's best to use the same database for local development
+In practice however, it's best to use the same database for local development
 as is used in production. Otherwise unexpected errors could hit in production
 that were not seen in a local development environment. Also, it's rare that
 a project would switch from one database in production to another one unless

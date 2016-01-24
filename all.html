@@ -4154,10 +4154,12 @@ developers may not mind switching back and forth between languages, it's
 typically easier to knock out a prototype or start a web application using
 a single programming language.</p>
 <p>ORMs also make it theoretically possible to switch an application between
-various relational databases. For example, a developer could use SQLite for
-local development and MySQL in production. A production application could
-be switched from MySQL to PostgreSQL with minimal code modifications.</p>
-<p>In reality however, it's best to use the same database for local development
+various relational databases. For example, a developer could use 
+<a href="/sqlite.html">SQLite</a> for
+local development and <a href="/mysql.html">MySQL</a> in production. A production 
+application could be switched from MySQL to <a href="/postgresql.html">PostgreSQL</a> with 
+minimal code modifications.</p>
+<p>In practice however, it's best to use the same database for local development
 as is used in production. Otherwise unexpected errors could hit in production
 that were not seen in a local development environment. Also, it's rare that
 a project would switch from one database in production to another one unless
@@ -8111,6 +8113,11 @@ the
 <h2>2016</h2>
 <h3>January</h3>
 <ul>
+<li>Added initial page for <a href="/sqlite.html">SQLite</a> that will be built out over
+  the next few weeks.</li>
+<li>Added a couple of new resources to the 
+  <a href="/object-relational-mappers-orms.html">ORMs</a>
+  page.</li>
 <li>More resources on the <a href="/postgresql.html">PostgreSQL page</a> and now grouped
   into Python-specific and general sections.</li>
 <li>Major update to <a href="/databases.html">relational databases</a> page with new

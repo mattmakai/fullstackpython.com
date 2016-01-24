@@ -13,6 +13,11 @@ the
 
 ## 2016
 ### January
+* Added initial page for [SQLite](/sqlite.html) that will be built out over
+  the next few weeks.
+* Added a couple of new resources to the 
+  [ORMs](/object-relational-mappers-orms.html)
+  page.
 * More resources on the [PostgreSQL page](/postgresql.html) and now grouped
   into Python-specific and general sections.
 * Major update to [relational databases](/databases.html) page with new
