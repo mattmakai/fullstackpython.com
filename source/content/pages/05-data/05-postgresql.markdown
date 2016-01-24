@@ -24,15 +24,23 @@ bugs for typical usage scenarios. If you try to use an Oracle database with
 Django, you'll see there is far less example code for that setup compared
 to PostgreSQL backend setups.
 
+<div class="well see-also">
+PostgreSQL is an implementation of the 
+<a href="/databases.html">relational database</a> concept. Learn
+more in the <a href="/data.html">data</a> chapter or view the
+<a href="/table-of-contents.html">table of contents</a> for all topics.
+</div>
 
 
 ## Why is PostgreSQL a good database choice?
 PostgreSQL's open source license allows developers to operate one or
-more databases without licensing cost in their applications. That operating 
-model is much less expensive compared to Oracle or other proprietary
-databases. In addition, because so many people ranging from independent
-developers to multinational organizations use PostgreSQL, it's often easier
-to find developers with PostgreSQL experience than other relational databases.
+more databases without licensing cost in their applications. The open 
+source license operating model is much less expensive compared to Oracle 
+or other proprietary databases, especially as replication and sharding
+become necessary at large scale. In addition, because so many people 
+ranging from independent developers to multinational organizations use 
+PostgreSQL, it's often easier to find developers with PostgreSQL experience 
+than other relational databases.
 
 The PostgreSQL core team also releases frequent updates that greatly enhance 
 the database's capabilities. For example, in the 
@@ -65,11 +73,30 @@ Learn more about
 [Python ORMs on that dedicated topic page](/object-relational-mappers-orms.html).
 
 
-### PostgreSQL resources
+### Python-specific PostgreSQL resources
 * This post on 
   [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
   is a great quickstart guide for either framework.
 
+* This article explains how and why PostgreSQL can handle 
+  [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
+  for many use cases. If you're going down this route, read
+  [this blog post that explains how one developer implemented PostgreSQL full text search with SQLAlchemy](http://blog.garage-coding.com/2015/12/18/postgres-fulltext-search.html).
+
+* [django-postgres-copy](http://django-postgres-copy.californiacivicdata.org/en/latest/)
+  is a tool for bulk loading data into a PostgreSQL database based on Django models.
+  [Say hello to our new open-source software for loading bulk data into PostgreSQL](http://www.californiacivicdata.org/2015/07/17/hello-django-postgres-copy/)
+  is an introduction to using the tool in your own projects.
+
+* [How to speed up tests in Django and PostgreSQL](http://nemesisdesign.net/blog/coding/how-to-speed-up-tests-django-postgresql/)
+  explains some hacks for making your schema migration-backed run quicker.
+
+* [Full Text Search in Django using Database Back-Ends](http://www.machinalis.com/blog/full-text-search-on-django-with-database-back-ends/)
+  provides code for both PostgreSQL and [MySQL](/mysql.html) for adding simple
+  full text search into your application.
+
+
+### General PostgreSQL resources
 * [PostgreSQL: The Nice Bits](https://russ.garrett.co.uk/talks/postgres-gds/) is a 
   good overview slideshow of why PostgreSQL is a great relational database.
 
@@ -84,7 +111,8 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * There is no such thing as total security but this IBM article covers 
   [hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
 
-* Craig Kerstiens wrote a detailed post about [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
+* Craig Kerstiens wrote a detailed post about 
+  [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
 
 * [Handling growth with Postgres](http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram)
   provides 5 specific tips from Instagram's engineering team on how to scale
@@ -97,11 +125,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * [Following a Select Statement Through Postgres Internals](http://patshaughnessy.net/2014/10/13/following-a-select-statement-through-postgres-internals)
   provides a fascinating look into the internal workings of PostgreSQL
   during a query.
-
-* This article explains how and why PostgreSQL can handle 
-  [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
-  for many use cases. If you're going down this route, read
-  [this blog post that explains how one developer implemented PostgreSQL full text search with SQLAlchemy](http://blog.garage-coding.com/2015/12/18/postgres-fulltext-search.html).
 
 * If you're just getting started with PostgreSQL here are 
   [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
@@ -139,3 +162,4 @@ The post is an inside look at the evolution of Braintree's usage of the database
   tool built by Spotify's engineers that extracts and outputs metrics from 
   an existing PostgreSQL database. There's also a way to extend the tools
   to pull custom metrics as well.
+
