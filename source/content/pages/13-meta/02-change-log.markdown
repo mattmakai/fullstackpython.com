@@ -13,6 +13,8 @@ the
 
 ## 2016
 ### January
+* More resources on the [PostgreSQL page](/postgresql.html) and now grouped
+  into Python-specific and general sections.
 * Major update to [relational databases](/databases.html) page with new
   sections and resources.
 * Updated the [Jinja2](/jinja2.html) page with new sections and resources.
