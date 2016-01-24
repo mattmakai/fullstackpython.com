@@ -293,6 +293,10 @@ For now, we'll lump schema migration resources under ORM links below.
   shows a simple example with code for how to use the migrations integrated
   into Django 1.7.
 
+* [Sorting querysets with NULLs in Django](https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/)
+  shows what to do if you're struggling with the common issue of sorting
+  columns that contain NULL values.
+
 
 ### SQLAlchemy resources
 * If you're interested in the differences between SQLAlchemy and the Django

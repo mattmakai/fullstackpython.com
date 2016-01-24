@@ -11,6 +11,8 @@ pronounced "Poss-gres", is an open source
 [relational database](/databases.html) implementation frequently used by 
 Python applications as a backed for data storage and retrieval.
 
+<img src="/img/postgresql.jpg" width="100%" alt="PostgreSQL logo." class="technical-diagram" />
+
 
 ## How does PostgreSQL fit within the Python stack?
 PostgreSQL is the default database choice for many Python developers, 

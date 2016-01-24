@@ -3535,14 +3535,21 @@ ones listed here are primarily coded in Python.</p>
 </li>
 </ul>
           <h1>Jinja2</h1>
-<p>Jinja2 is a Python <a href="/template-engines.html">template engine</a> used to create
-HTML, XML or other markup formats that are returned to the user via an
-HTTP response.</p>
+<p><a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a> is a Python 
+<a href="/template-engines.html">template engine</a> used to create HTML, XML or 
+other markup formats that are returned to the user via an HTTP response.</p>
 <h2>Why is Jinja2 useful?</h2>
 <p>Jinja2 is useful because it has consistent template tag syntax and the
 project is cleanly extracted as 
 <a href="https://github.com/mitsuhiko/jinja2">an independent open source project</a> so
 it can be used a dependency by other code libraries.</p>
+<div class="well see-also">
+Jinja2 is an implementation of the 
+<a href="/template-engines.html">template engines</a> concept. Learn
+more in the <a href="/web-development.html">web development</a> chapter or 
+view the <a href="/table-of-contents.html">table of contents</a> for all topics.
+</div>
+
 <p>Jinja2 strikes a thoughtful balance on the template engine spectrum where
 on one end you can embed arbitrary code in the templates and the other
 end a developer can code whatever she wants.</p>
@@ -4381,6 +4388,11 @@ For now, we'll lump schema migration resources under ORM links below.</p>
   shows a simple example with code for how to use the migrations integrated
   into Django 1.7.</p>
 </li>
+<li>
+<p><a href="https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/">Sorting querysets with NULLs in Django</a>
+  shows what to do if you're struggling with the common issue of sorting
+  columns that contain NULL values.</p>
+</li>
 </ul>
 <h3>SQLAlchemy resources</h3>
 <ul>
@@ -4474,6 +4486,7 @@ For now, we'll lump schema migration resources under ORM links below.</p>
 pronounced "Poss-gres", is an open source
 <a href="/databases.html">relational database</a> implementation frequently used by 
 Python applications as a backed for data storage and retrieval.</p>
+<p><img src="/img/postgresql.jpg" width="100%" alt="PostgreSQL logo." class="technical-diagram" /></p>
 <h2>How does PostgreSQL fit within the Python stack?</h2>
 <p>PostgreSQL is the default database choice for many Python developers, 
 including the Django team when testing the 
@@ -4651,6 +4664,13 @@ applications. MySQL has a slightly easier initial learning curve than
 <a href="/postgresql.html">PostgreSQL</a>. However, PostgreSQL's design is often 
 preferred by Python web developers, especially when data migrations are
 run as an application evolves.</p>
+<div class="well see-also">
+PostgreSQL is an implementation of the 
+<a href="/databases.html">relational database</a> concept. Learn
+more in the <a href="/data.html">data</a> chapter or view the
+<a href="/table-of-contents.html">table of contents</a> for all topics.
+</div>
+
 <h2>What organizations use MySQL?</h2>
 <p>The database is deployed in production at some of the highest 
 trafficked sites such as 
@@ -4693,6 +4713,46 @@ developers learn PostgreSQL if they do not already know MySQL.</p>
 <p><a href="http://blog.ionelmc.ro/2014/12/28/terrible-choices-mysql/">Terrible Choices: MySQL</a>
   is a blog post about specific deficiencies in MySQL's implementation that
   hinder its usage with Django's ORM.</p>
+</li>
+</ul>
+          <h1>SQLite</h1>
+<p>SQLite is an open source relational database included with the Python standard
+library as of Python 2.5. The pysqlite database driver is also included with
+the standard library so that no further external dependencies are required to
+access a SQLite database from within Python applications.</p>
+<p><img src="/img/sqlite.jpg" width="100%" alt="SQLite logo." class="technical-diagram" /></p>
+<div class="well see-also">
+SQLite is an implementation of the 
+<a href="/databases.html">relational database</a> concept. Learn
+more in the <a href="/data.html">data</a> chapter or view the
+<a href="/table-of-contents.html">table of contents</a> for all topics.
+</div>
+
+<h3>SQLite resources</h3>
+<ul>
+<li>
+<p><a href="https://pymotw.com/2/sqlite3/">sqlite3 - embedded relational database</a> is an
+  extensive tutorial showing many of the common create, read, update and delete 
+  operations a developer would want to do with SQLite.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/my-list-of-python-and-sqlite-resources/">My list of SQLite resources</a>
+  is a nice roundup of useful tools to use with SQLite and tutorials for
+  learning more about the database.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/extending-sqlite-with-python/">Extending SQLite with Python</a>
+  uses the Peewee 
+  <a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a>
+  to implement virtual tables and aggregates on top of SQLite.</p>
+</li>
+<li>
+<p><a href="http://flask.pocoo.org/docs/0.10/patterns/sqlite3/">Using SQLite with Flask</a>
+  explains how Flask code can directly query a SQLite database without an ORM.</p>
+</li>
+<li>
+<p><a href="http://sqlitebrowser.org/">SQLite Browser</a> is an open source graphical user 
+  interface for working with SQLite.</p>
 </li>
 </ul>
           <h1>Application Programming Interfaces</h1>
