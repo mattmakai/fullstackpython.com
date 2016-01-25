@@ -26,6 +26,10 @@ more in the <a href="/data.html">data</a> chapter or view the
   extensive tutorial showing many of the common create, read, update and delete 
   operations a developer would want to do with SQLite.
 
+* [A simple step-by-step SQLite tutorial](http://www.blog.pythonlibrary.org/2012/07/18/python-a-simple-step-by-step-sqlite-tutorial/)
+  walks through creating databases as well as inserting, updating, querying and
+  deleting data.
+
 * [My list of SQLite resources](http://charlesleifer.com/blog/my-list-of-python-and-sqlite-resources/)
   is a nice roundup of useful tools to use with SQLite and tutorials for
   learning more about the database.
@@ -40,4 +44,5 @@ more in the <a href="/data.html">data</a> chapter or view the
 
 * [SQLite Browser](http://sqlitebrowser.org/) is an open source graphical user 
   interface for working with SQLite.
-  
+
+
