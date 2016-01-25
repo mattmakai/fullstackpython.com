@@ -4,12 +4,10 @@
   {% include "email-for-book-sidebar.html" %}
   <div class="panel panel-success">
       <div class="panel-heading">
-        <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Table of Contents</a></h3>
+        <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Chapters</a></h3>
       </div>
       <div class="list-group">
-          {% for p in pages|sort(attribute='sort-order') %}
-              <a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}" style='font-family: "Helvetica Neue",sans-serif;'>{{ p.title }}</a>
-          {% endfor %}
+        {% include "sidebar-toc.html" %}
       </div>
   </div>
   {% endif %}

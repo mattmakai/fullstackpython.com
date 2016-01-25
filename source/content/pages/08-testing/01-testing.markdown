@@ -2,6 +2,8 @@ title: Testing
 category: page
 slug: testing
 sort-order: 0801
+toc: True
+sidebartitle: 9. Testing
 meta: Testing code is a vital part of developing Python applications. Learn more about testing on Full Stack Python.
 
 

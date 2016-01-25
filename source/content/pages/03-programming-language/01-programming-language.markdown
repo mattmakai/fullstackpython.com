@@ -2,6 +2,8 @@ title: Python Programming Language
 category: page
 slug: python-programming-language
 sort-order: 0301
+toc: True
+sidebartitle: 3. Core Language
 meta: The core Python programming language includes an implementation, interpreter, standard code library and documentation.
 
 
