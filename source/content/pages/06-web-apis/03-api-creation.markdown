@@ -85,6 +85,14 @@ equivalent of browser testing in the web application world.
   documented then developers who have options to use something else will
   just skip it.
 
+* [Adventures in running a free, public API](http://www.cambus.net/adventures-in-running-a-free-public-api/)
+  is a quick story of a developer's geolocation API being abused and his 
+  lack of resources for preventing further abuse. Eventually he had to shut
+  down the free plan and only provide a paid plan in addition to allowing
+  others to host the open source code. Fraud and malware prevention are 
+  difficult problems so keep an eye on server utilization and endpoint calls 
+  growth to separate legitimate from illegitimate traffic. 
+
 * [API Doc JS](http://apidocjs.com/) allows a developer to embed markup
   in their documentation that will generate a site based on the endpoints
   available in the API.
