@@ -162,10 +162,6 @@ provider.
 * [DB Weekly](http://dbweekly.com/) is a weekly roundup of general database 
   articles and resources.
 
-* [A different view](http://blog.isotoma.com/2014/05/a-different-view/) 
-  provides some perspective on the impedance mismatch between ORMs and
-  traditional SQL queries.
-
 * [Databases integration testing strategies](https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python)
   covers a difficult topic that comes up on every real world project.
 

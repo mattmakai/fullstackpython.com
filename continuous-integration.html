@@ -32,18 +32,32 @@
 </div><div class="row">
     <div class="col-md-8">
           <h1>Continuous Integration</h1>
-<p>Continuous integration (CI) automates building, testing and deploying 
-applications.</p>
+<p>Continuous integration automates the building, testing and deploying of applications.
+Software projects, whether created by a single individual or entire teams, typically
+use continuous integration as a hub to ensure important steps such as unit testing
+are automated rather than manual processes.</p>
 <h2>Why is continuous integration important?</h2>
-<p>When CI is set up well it can dramatically reduce deployment times by 
-eliminating manual steps and ensure code does not have bugs that are being
-checked by automated tests. Source code changes as a project evolves.
-CI combined with unit and integration tests check that code modifications 
-do not break existing tests ensure the software works as intended.</p>
+<p>When continuous integration (CI) is established as a step in a software project's 
+development cycle it can dramatically reduce deployment times by minimizing steps
+that require human intervention. The only minor downside to using CI is that it
+takes some initial time by a developer to set up and then there is some ongoing 
+maintainence if a project is broken into multiple parts, such as going from a
+monolith architecture to <a href="/microservices.html">microservices</a>.</p>
+<h2>Automated testing</h2>
+<p>Another major advantage with CI is that testing can be an automated step in the
+deployment process. Broken deployments can be prevented by running a comprehensive 
+test suite of <a href="/unit-testing.html">unit</a> and 
+<a href="/integration-testing.html">integration tests</a> when developers check in code to a 
+source code repository. Any bugs accidentally introduced during a check-in that are 
+caught by the test suite are reported and prevent the deployment from proceeding.</p>
+<p>The automated testing on checked in source code can be thought of like the bumper
+guards in bowling that prevent code quality from going too far off track.
+CI combined with unit and integration tests check that any code modifications 
+do not break existing tests to ensure the software works as intended.</p>
 <h2>Continuous integration example</h2>
 <p>The following picture represents a high level perspective on how continuous
 integration and deployment can work. </p>
-<p><img src="/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." /></p>
+<p><img src="/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work with source control and a deployment environment." /></p>
 <p>In the above diagram, when new code is committed to a source repository 
 there is a hook that notifies the continuous integration server that new 
 code needs to be built (the continuous integration server could also
@@ -85,40 +99,52 @@ relatively simple set up.</p>
   CI server that requires a license to use.</p>
 </li>
 </ul>
-<h2>Hosted CI services</h2>
+<h2>Jenkins CI resources</h2>
 <ul>
 <li>
-<p><a href="https://travis-ci.org/">Travis CI</a> provides free CI for open source 
-  projects and has a <a href="https://travis-ci.com/">commercial version</a> for 
-  private repositories.</p>
+<p><a href="https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184">Assembling a continuous integration service for a Django project on Jenkins</a>
+  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
+  <a href="/django.html">Django</a> project.</p>
 </li>
 <li>
-<p><a href="https://www.atlassian.com/software/bamboo">Bamboo</a> is 
-  <a href="https://www.atlassian.com/">Atlassian</a>'s hosted continuous integration that
-  is also free for open source projects.</p>
+<p>My book on <a href="http://www.deploypython.com/">deploying Python web applications</a> walks
+  through every step of setting up a Jenkins project with a WSGI application to
+  enable continuous delivery. Take a look if you're not grokking all of the steps 
+  provided in these other blog posts.</p>
 </li>
 <li>
-<p><a href="https://circleci.com/">Circle CI</a> works with open or closed source projects
-  on GitHub and can deploy them to Heroku if builds are successful.</p>
+<p><a href="http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/">Setting up Jenkins as a continuous integration server for Django</a>
+  is another solid tutorial that also shows how to send email notifications as part
+  of the build process.</p>
 </li>
 <li>
-<p><a href="https://www.shippable.com/">Shippable</a> uses Docker containers to speed 
-  the build and integration process. It's free for public repositories.</p>
+<p>If you're running into difficulty adding an SSH key to your Jenkins system account 
+  so you can connect to another server or Git repository
+  <a href="http://dcycleproject.org/blog/51/connecting-jenkins-and-git">this blog post on connecting Jenkins with Git</a>
+  to get the steps to solve that problem.</p>
 </li>
 <li>
-<p><a href="https://drone.io/">Drone</a> is another CI service that also provides free
-  builds for open source projects.</p>
+<p><a href="http://chromaticsites.com/blog/automated-servers-and-deployments-ansible-jenkins">Automated Servers and Deployments with Ansible &amp; Jenkins</a></p>
 </li>
 <li>
-<p><a href="https://www.codeship.io/">Codeship</a> provides continuous integration for
-  Python 2.7.</p>
+<p><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a>
+  is a short tutorial showing how to use the official 
+  <a href="https://registry.hub.docker.com/_/jenkins/">Jenkins container</a> on the
+  Docker hub.</p>
 </li>
 <li>
-<p><a href="https://snap-ci.com/">Snap</a> is a CI server and build pipeline tool for
-  both integrating and deploying code.</p>
+<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins">Securing Jenkins</a>
+  is the landing page for Jenkins security. If you're deploying your own
+  instance, you'll need to lock it down against unauthorized users.</p>
+</li>
+<li>
+<p><a href="http://engineering.simondata.com/can-we-use-jenkins-for-that/">Can we use Jenkins for that?</a>
+  looks at how one team uses Jenkins for more than typical continuous integration
+  situations - they also use it as an administrative interface, cron jobs, data 
+  analytics pipelines and long-running scripts.</p>
 </li>
 </ul>
-<h2>Continuous integration resources</h2>
+<h2>General continuous integration resources</h2>
 <ul>
 <li>
 <p><a href="http://martinfowler.com/articles/continuousIntegration.html">What is continuous integration?</a>
@@ -144,12 +170,6 @@ relatively simple set up.</p>
   lists a slew of hosted CI services roughly ranked by user upvotes.</p>
 </li>
 <li>
-<p><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a>
-  is a short tutorial showing how to use the official 
-  <a href="https://registry.hub.docker.com/_/jenkins/">Jenkins container</a> on the
-  Docker hub.</p>
-</li>
-<li>
 <p><a href="http://buildoutcoredev.readthedocs.org/en/latest/continous-integration.html">Good practices for continuous integration</a>
   includes advice on checking in code, commit tests and reverting to
   previous revisions.</p>
@@ -158,11 +178,6 @@ relatively simple set up.</p>
 <p><a href="http://blog.bwhaley.com/deploying-to-aws-using-ansible-docker-and-teamcity">Deploying to AWS using Ansible, Docker and Teamcity</a>
   is an example walking through one potential way to use the Teamcity CI
   server for automated deployments.</p>
-</li>
-<li>
-<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins">Securing Jenkins</a>
-  is the landing page for Jenkins security. If you're deploying your own
-  instance, you'll need to lock it down against unauthorized users.</p>
 </li>
 </ul>
 <h3>What do you want to work on next for your deployment?</h3>

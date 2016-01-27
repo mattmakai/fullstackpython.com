@@ -164,7 +164,7 @@ when scaling out a large deployment of distributed task queues.
   He gives an overview of Celery followed by specific code to set up the task
   queue and integrate it with Flask.
 
-* [3 Gotchas for Working with Celery](http://wiredcraft.com/posts/2015/02/04/3-gotchas-for-celery.html)
+* [3 Gotchas for Working with Celery](https://wiredcraft.com/blog/3-gotchas-for-celery/)
   are things to keep in mind when you're new to the Celery task queue 
   implementation.
 
@@ -176,7 +176,7 @@ when scaling out a large deployment of distributed task queues.
   is a straightforward tutorial for setting up the Celery task queue for 
   Django web applications using the Redis broker on the back end.
 
-* [Background jobs with Django and Celery](http://django.zone/posts/background-jobs-django-and-celery)
+* [Background jobs with Django and Celery](http://django.zone/blog/posts/background-jobs-django-and-celery/)
   shows the code and a simple explanation of how to use Celery with 
   [Django](/django.html).
 

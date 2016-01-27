@@ -35,10 +35,6 @@ Model-View-Controller (MVC) architectural pattern.
   [rapid development projects](http://www.sixfeetup.com/blog/pyramid-for-rapid-development-projects)
   in that blog post.
 
-* [Pyramid is awesome for beginners](http://ruslanspivak.com/2012/02/05/pyramid-is-awesome-for-beginners/)
-  shows a simple "hello world" app for Pyramid and explains the framework
-  isn't necessarily as complex as people believe it is.
-
 * [Build a chat app with Pyramid, SQLDB, and Bluemix](http://www.ibm.com/developerworks/cloud/library/cl-chatapp-bluemix-app/index.html)
   is a Pyramid application walkthrough specific to IBM's Bluemix platform.
 

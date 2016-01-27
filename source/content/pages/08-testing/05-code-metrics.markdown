@@ -35,10 +35,6 @@ system are occurring.
 
 
 ## Hosted code metrics services
-* [Landscape](https://landscape.io/) provides free code metrics for open 
-  source Python projects. Pricing is available for analyzing private 
-  repositories as well.
-
 * [Coveralls](https://coveralls.io) shows code coverage from test suites 
   and other metrics to help developers improve the quality of their code.
 

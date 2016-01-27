@@ -50,7 +50,7 @@ Jinja2 is a commonly-used templating engine for
 [Bottle](/bottle.html) [Morepath](/morepath.html) and, as of its 1.8 update,
 optionally [Django](/django.html) as well. Jinja2 is also used as a template
 language by [configuration management](/configuration-management.html) tool 
-Ansible and the [static site generator](/static-site-generators.html) Pelican,
+Ansible and the [static site generator](/static-site-generator.html) Pelican,
 among many other similar tools.
 
 The idea is that if a developer already knows Jinja2 from working with one 

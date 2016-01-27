@@ -123,8 +123,6 @@ Python library for working with Amazon Web Services.
 * [Poseidon](https://github.com/changhiskhan/poseidon) is a Python commandline
   interface for managing Digital Ocean droplets (servers).
 
-* Rackspace also has [official documentation for Python](http://docs.rackspace.com/sdks/guide/content/python.html).
-
 
 ## Servers learning checklist
 1. Sign up for a hosting provider. I recommend getting a 

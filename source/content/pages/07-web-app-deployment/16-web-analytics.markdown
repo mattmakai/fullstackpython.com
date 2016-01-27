@@ -24,10 +24,7 @@ the numerous types of data points collected. Focus on just a handful of
 metrics when you're just starting out. As your application scales and you 
 understand more about your users add additional analytics services 
 to gain further insight into their behavior with advanced visualizations such
-as heatmaps and action funnels. The
-[seven stages of startup analytics grief](http://spenczar.com/posts/2013/Sep/07/seven-stages-analytics-grief/) 
-post is an amusing read and provides context for how to begin and then grow 
-tracked metrics over time.
+as heatmaps and action funnels.
 
 
 ### User funnels
@@ -100,9 +97,6 @@ application before taking some action, such as purchasing your service.
 
 * This post provides context for determining if a given metric is
   ["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
-
-* [Heap vs MixPanel](http://substantial.com/blog/2014/04/03/heap-analytics-vs-mixpanel/)
-  compares the two analytics services.
 
 
 ## Web analytics learning checklist

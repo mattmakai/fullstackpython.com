@@ -40,10 +40,7 @@ with project structure based on model-view-controller patterns.
 from the perspective of the amount of code needed to write a web application
 using the framework. The project has a 
 [long history](http://w3techs.com/technologies/details/ws-cherrypy/all/all) 
-and made a major transition between the second and third release. There's an 
-[interesting recent discussion](https://groups.google.com/forum/#!msg/cherrypy-users/lT1cxovGyy8/JKCPrE51CXIJ) 
-about moving the project forward, especially the number of open outstanding
-issues that exist in the tracker.
+and made a major transition between the second and third release.
 
 
 ## Muffin

@@ -99,47 +99,11 @@ is provided by W3C.
   [part two](http://ruslanspivak.com/lsbaws-part2/) and [part three](http://ruslanspivak.com/lsbaws-part3/) 
   of a great tutorial that shows how to code a web server in Python.
 
-
-## Nginx resources
-* The [Nginx chapter](http://www.aosabook.org/en/nginx.html) in the
-  [Architecture of Open Source Applications book](http://www.aosabook.org/en/index.html)
-  has a great chapter devoted to why Nginx is built to scale a certain way
-  and lessons learned along the development journey.
-
-* [Inside Nginx: How we designed for performance and scale](http://nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
-  is a blog post from the developers behind Nginx on why they believe their
-  architecture model is more performant and scalable than other approaches
-  used to build web servers.
-
-* [Nginx web server tutorials](http://articles.slicehost.com/nginx) are oldies
-  but goodies on setting up previous versions of Nginx. 
-
-* [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
-
-* An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/).
-
-* [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
-  explains how Nginx can be used instead of Apache in some cases for
-  better performance.
-
 * [rwasa](https://2ton.com.au/rwasa/) is a newly released web server written
   in Assembly with no external dependencies that tuned to be faster than Nginx.
   The benchmarks are worth taking a look at to see if this server could fit
   your needs if you need the fastest performance trading off for as of yet
   untested web server.
-
-* [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
-  covers how to mitigate against brute force password guessing attempts using
-  Nginx rate limits.
-
-* [Nginx with dynamic upstreams](http://tenzer.dk/nginx-with-dynamic-upstreams/)
-  is an important note for setting up your upstream WSGI server(s) if you're
-  using Nginx as a reverse proxy with hostnames that change.
-
-* [Nginx Caching](https://serversforhackers.com/nginx-caching/) shows how
-  to set up Nginx for caching HTTP requests, which is often done by Varnish
-  but can also be handled by Nginx with the `proxy_cache` and related
-  directives.
 
 
 ## Web servers learning checklist

@@ -89,15 +89,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
   to do voice calling with three participants. It's a fun introduction
   to Python and Flask I wrote for the Twilio blog.
 
-* [Building a blog using Flask and AngularJS Part 1](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-1/)
-  is the first of a multipart series on working with Flask and an AngularJS 
-  front end. 
-  [Part 2](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-2/)
-  and
-  [part 3](http://tutsbucket.com/tutorials/building-a-blog-using-flask-and-angularjs-part-3/)
-  are also available 
-  [along with the source code](https://github.com/basco-johnkevin/building-a-blog-using-flask-and-angularjs).
-
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
   to look through when you're wondering how to do something that's not in the
@@ -113,10 +104,6 @@ how to <a href="/deployment.html">deploy web applications</a>.
   for his Flask applications.
 
 * Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
-
-* [Building Websites in Python with Flask](http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J)
-  is another walkthrough tutorial from first steps through 
-  [getting bigger with Flask](http://maximebf.com/blog/2012/11/getting-bigger-with-flask/).
 
 * The Plank & Whittle blog has two posts, one on 
   [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/) 

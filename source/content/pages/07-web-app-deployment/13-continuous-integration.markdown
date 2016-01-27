@@ -6,23 +6,40 @@ meta: Continuous integration automatically rebuilds and deploys applications as 
 
 
 # Continuous Integration
-Continuous integration (CI) automates building, testing and deploying 
-applications.
+Continuous integration automates the building, testing and deploying of applications.
+Software projects, whether created by a single individual or entire teams, typically
+use continuous integration as a hub to ensure important steps such as unit testing
+are automated rather than manual processes.
 
 
 ## Why is continuous integration important?
-When CI is set up well it can dramatically reduce deployment times by 
-eliminating manual steps and ensure code does not have bugs that are being
-checked by automated tests. Source code changes as a project evolves.
-CI combined with unit and integration tests check that code modifications 
-do not break existing tests ensure the software works as intended.
+When continuous integration (CI) is established as a step in a software project's 
+development cycle it can dramatically reduce deployment times by minimizing steps
+that require human intervention. The only minor downside to using CI is that it
+takes some initial time by a developer to set up and then there is some ongoing 
+maintainence if a project is broken into multiple parts, such as going from a
+monolith architecture to [microservices](/microservices.html).
+
+
+## Automated testing
+Another major advantage with CI is that testing can be an automated step in the
+deployment process. Broken deployments can be prevented by running a comprehensive 
+test suite of [unit](/unit-testing.html) and 
+[integration tests](/integration-testing.html) when developers check in code to a 
+source code repository. Any bugs accidentally introduced during a check-in that are 
+caught by the test suite are reported and prevent the deployment from proceeding.
+
+The automated testing on checked in source code can be thought of like the bumper
+guards in bowling that prevent code quality from going too far off track.
+CI combined with unit and integration tests check that any code modifications 
+do not break existing tests to ensure the software works as intended.
 
 
 ## Continuous integration example
 The following picture represents a high level perspective on how continuous
 integration and deployment can work. 
 
-<img src="/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work." />
+<img src="/img/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work with source control and a deployment environment." />
 
 In the above diagram, when new code is committed to a source repository 
 there is a hook that notifies the continuous integration server that new 
@@ -63,32 +80,43 @@ relatively simple set up.
   CI server that requires a license to use.
 
 
-## Hosted CI services
-* [Travis CI](https://travis-ci.org/) provides free CI for open source 
-  projects and has a [commercial version](https://travis-ci.com/) for 
-  private repositories.
+## Jenkins CI resources
+* [Assembling a continuous integration service for a Django project on Jenkins](https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184)
+  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
+  [Django](/django.html) project.
 
-* [Bamboo](https://www.atlassian.com/software/bamboo) is 
-  [Atlassian](https://www.atlassian.com/)'s hosted continuous integration that
-  is also free for open source projects.
+* My book on [deploying Python web applications](http://www.deploypython.com/) walks
+  through every step of setting up a Jenkins project with a WSGI application to
+  enable continuous delivery. Take a look if you're not grokking all of the steps 
+  provided in these other blog posts.
 
-* [Circle CI](https://circleci.com/) works with open or closed source projects
-  on GitHub and can deploy them to Heroku if builds are successful.
+* [Setting up Jenkins as a continuous integration server for Django](http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/)
+  is another solid tutorial that also shows how to send email notifications as part
+  of the build process.
 
-* [Shippable](https://www.shippable.com/) uses Docker containers to speed 
-  the build and integration process. It's free for public repositories.
+* If you're running into difficulty adding an SSH key to your Jenkins system account 
+  so you can connect to another server or Git repository
+  [this blog post on connecting Jenkins with Git](http://dcycleproject.org/blog/51/connecting-jenkins-and-git)
+  to get the steps to solve that problem.
 
-* [Drone](https://drone.io/) is another CI service that also provides free
-  builds for open source projects.
+* [Automated Servers and Deployments with Ansible & Jenkins](http://chromaticsites.com/blog/automated-servers-and-deployments-ansible-jenkins)
+  
+* [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
+  is a short tutorial showing how to use the official 
+  [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
+  Docker hub.
 
-* [Codeship](https://www.codeship.io/) provides continuous integration for
-  Python 2.7.
+* [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins)
+  is the landing page for Jenkins security. If you're deploying your own
+  instance, you'll need to lock it down against unauthorized users.
 
-* [Snap](https://snap-ci.com/) is a CI server and build pipeline tool for
-  both integrating and deploying code.
+* [Can we use Jenkins for that?](http://engineering.simondata.com/can-we-use-jenkins-for-that/)
+  looks at how one team uses Jenkins for more than typical continuous integration
+  situations - they also use it as an administrative interface, cron jobs, data 
+  analytics pipelines and long-running scripts.
 
 
-## Continuous integration resources
+## General continuous integration resources
 * [What is continuous integration?](http://martinfowler.com/articles/continuousIntegration.html)
   is a classic detailed article by Martin Fowler on the concepts behind CI
   and how to implement it.
@@ -107,11 +135,6 @@ relatively simple set up.
 * [StackShare's Continuous Integration tag](http://stackshare.io/continuous-integration) 
   lists a slew of hosted CI services roughly ranked by user upvotes.
 
-* [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
-  is a short tutorial showing how to use the official 
-  [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
-  Docker hub.
-
 * [Good practices for continuous integration](http://buildoutcoredev.readthedocs.org/en/latest/continous-integration.html)
   includes advice on checking in code, commit tests and reverting to
   previous revisions.
@@ -119,7 +142,3 @@ relatively simple set up.
 * [Deploying to AWS using Ansible, Docker and Teamcity](http://blog.bwhaley.com/deploying-to-aws-using-ansible-docker-and-teamcity)
   is an example walking through one potential way to use the Teamcity CI
   server for automated deployments.
-
-* [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins)
-  is the landing page for Jenkins security. If you're deploying your own
-  instance, you'll need to lock it down against unauthorized users.

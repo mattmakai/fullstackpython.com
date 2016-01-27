@@ -46,7 +46,3 @@ during development so they can be addressed immediately.
   coded in Java but still relevant when you're learning about integration
   testing.
 
-* [The false dichotomy of tests](http://gojko.net/2011/01/12/the-false-dichotomy-of-tests/)
-  brings up a good point that tests are code - each one should have a single
-  purpose, regardless of whether it's a unit or integration test, so
-  that it's useful for finding defects in the system under test.
