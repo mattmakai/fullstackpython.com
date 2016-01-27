@@ -14,7 +14,7 @@ are automated rather than manual processes.
 
 ## Why is continuous integration important?
 When continuous integration (CI) is established as a step in a software project's 
-development cycle it can dramatically reduce deployment times by minimizing steps
+development process it can dramatically reduce deployment times by minimizing steps
 that require human intervention. The only minor downside to using CI is that it
 takes some initial time by a developer to set up and then there is some ongoing 
 maintainence if a project is broken into multiple parts, such as going from a
@@ -58,6 +58,15 @@ relatively simple set up.
 
 
 ## Open source CI projects
+There are a variety of free and open source continuous integration servers 
+that are configurable based on a project's needs. 
+
+Note that many of these servers are not written in Python but work 
+just fine for Python applications. Polyglot organizations (ones that 
+use more than a single language and ecosystem) often use a single CI 
+server for all of their  projects regardless of the programming language 
+the application was written in.
+
 * [Jenkins](http://jenkins-ci.org/) is a common CI server for building and
   deploying to test and production servers. 
   [Jenkins source code is on GitHub](https://github.com/jenkinsci/jenkins).
