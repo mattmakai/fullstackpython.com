@@ -150,13 +150,19 @@ ones listed here are primarily coded in Python.
   is a fantastic read that really gets into the details throughout the 
   walkthrough. 
 
-* [Getting Started with Pelican and GitHub Pages](http://www.mattmakai.com/introduction-to-pelican.html)
-  is a tutorial I wrote for getting up and running with Full Stack Python's
-  source code, which uses Pelican to generate the site.
-
 * [Staticgen](https://www.staticgen.com/) lists static website generators
   of all programming languages sorted by various attributes such as the
   number of GitHub stars, forks and issues.
+
+* [Static site hosting with S3 and Cloudflare](https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/)
+  shows how to set up an S3 bucket with Cloudflare in front as a CDN that
+  serves the content with HTTPS. You should be able to accomplish roughly 
+  the same situation with Amazon Cloudfront, but as a Cloudflare user I
+  like their service for these static site configurations.
+
+* [Getting Started with Pelican and GitHub Pages](http://www.mattmakai.com/introduction-to-pelican.html)
+  is a tutorial I wrote for getting up and running with Full Stack Python's
+  source code, which uses Pelican to generate the site.
 
 * The title is a big grandiose, but there's some solid detail in this article
   on 
@@ -175,3 +181,4 @@ ones listed here are primarily coded in Python.
 * [Ditching Wordpress and becoming one of the cool kids](http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/)
   is one developer's experience moving away from Wordpress and onto
   Pelican with reStructuredText for his personal blog.
+
