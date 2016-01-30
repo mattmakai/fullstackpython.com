@@ -4512,7 +4512,9 @@ architecture.</p>
 <p>To work with relational databases in Python you need to use a database 
 driver, which is also referred to as a database connector. The most common 
 driver library for working with PostgreSQL is 
-<a href="http://initd.org/psycopg/">psycopg2</a>.</p>
+<a href="http://initd.org/psycopg/">psycopg2</a>. There is 
+<a href="https://wiki.postgresql.org/wiki/Python">a list of all drivers on the PostgreSQL wiki</a>,
+including several libraries that are no longer maintained.</p>
 <p>To abstract the connection between tables and objects, many Python 
 developers use an 
 <a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a> with 
@@ -4524,7 +4526,37 @@ table below.</p>
 <p><img src="/img/postgresql-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with PostgreSQL and the psycopg2 connector." class="technical-diagram" /></p>
 <p>Learn more about 
 <a href="/object-relational-mappers-orms.html">Python ORMs on that dedicated topic page</a>.</p>
-<h3>Python-specific PostgreSQL resources</h3>
+<h2>PostgreSQL data safety</h2>
+<p>If you're on Linux it's easy to get PostgreSQL installed using a package manager.
+However, once the database is installed and running your responsibility is just beginning.
+Before you go live with a production application, make sure to:</p>
+<ol>
+<li>Lock down access with 
+   <a href="http://www.postgresql.org/docs/9.3/static/auth-pg-hba-conf.html">a whitelist</a> 
+   in the <code>pg_hba.conf</code> file </li>
+<li>Enable <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-on-postgresql-on-an-ubuntu-12-04-vps">replication</a>
+   to another database that's preferrably on different infrastructure in 
+   a separate location</li>
+<li>Perform regular 
+   <a href="http://www.postgresql.org/docs/current/static/backup.html">backups and test the restoration process</a></li>
+<li>Ensure your application prevents 
+   <a href="https://www.owasp.org/index.php/SQL_Injection">SQL injection attacks</a></li>
+</ol>
+<p>When possible have someone qualified do a 
+<a href="http://security.stackexchange.com/questions/2517/postgresql-security-audit">PostgreSQL security audit</a>
+to identify the biggest risks to your database. Small applications and 
+bootstrapped companies often cannot afford a full audit in the beginning but
+as an application grows over time it becomes a bigger target.</p>
+<p>The data stored in your database is the lifeblood of your application. If you have
+ever 
+<a href="https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html">accidentally dropped a production database</a> 
+or been the victim of malicious activity such as SQL injection attacks, you'll
+know it's far easier to recover when a bit of work has been performed 
+beforehand on backups, replication and security measures.</p>
+<h2>Python-specific PostgreSQL resources</h2>
+<p>Many quickstarts and tutorials exist specifically for Django, Flask and 
+other web application frameworks. The ones below are some of the best
+walkthroughs I've read.</p>
 <ul>
 <li>
 <p>This post on 
@@ -4553,7 +4585,9 @@ table below.</p>
   full text search into your application.</p>
 </li>
 </ul>
-<h3>General PostgreSQL resources</h3>
+<h2>General PostgreSQL resources</h2>
+<p>PostgreSQL tutorials not specific to Python are also really helpful
+for properly handling your data.</p>
 <ul>
 <li>
 <p><a href="https://russ.garrett.co.uk/talks/postgres-gds/">PostgreSQL: The Nice Bits</a> is a 

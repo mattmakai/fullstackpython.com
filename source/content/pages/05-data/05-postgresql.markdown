@@ -58,7 +58,9 @@ architecture.
 To work with relational databases in Python you need to use a database 
 driver, which is also referred to as a database connector. The most common 
 driver library for working with PostgreSQL is 
-[psycopg2](http://initd.org/psycopg/).
+[psycopg2](http://initd.org/psycopg/). There is 
+[a list of all drivers on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Python),
+including several libraries that are no longer maintained.
 
 To abstract the connection between tables and objects, many Python 
 developers use an 
@@ -75,7 +77,41 @@ Learn more about
 [Python ORMs on that dedicated topic page](/object-relational-mappers-orms.html).
 
 
-### Python-specific PostgreSQL resources
+## PostgreSQL data safety
+If you're on Linux it's easy to get PostgreSQL installed using a package manager.
+However, once the database is installed and running your responsibility is just beginning.
+Before you go live with a production application, make sure to:
+
+1. Lock down access with 
+   [a whitelist](http://www.postgresql.org/docs/9.3/static/auth-pg-hba-conf.html) 
+   in the `pg_hba.conf` file 
+1. Enable [replication](https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-on-postgresql-on-an-ubuntu-12-04-vps)
+   to another database that's preferrably on different infrastructure in 
+   a separate location
+1. Perform regular 
+   [backups and test the restoration process](http://www.postgresql.org/docs/current/static/backup.html)
+1. Ensure your application prevents 
+   [SQL injection attacks](https://www.owasp.org/index.php/SQL_Injection)
+
+When possible have someone qualified do a 
+[PostgreSQL security audit](http://security.stackexchange.com/questions/2517/postgresql-security-audit)
+to identify the biggest risks to your database. Small applications and 
+bootstrapped companies often cannot afford a full audit in the beginning but
+as an application grows over time it becomes a bigger target.
+
+The data stored in your database is the lifeblood of your application. If you have
+ever 
+[accidentally dropped a production database](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html) 
+or been the victim of malicious activity such as SQL injection attacks, you'll
+know it's far easier to recover when a bit of work has been performed 
+beforehand on backups, replication and security measures.
+
+
+## Python-specific PostgreSQL resources
+Many quickstarts and tutorials exist specifically for Django, Flask and 
+other web application frameworks. The ones below are some of the best
+walkthroughs I've read.
+
 * This post on 
   [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
   is a great quickstart guide for either framework.
@@ -98,7 +134,10 @@ Learn more about
   full text search into your application.
 
 
-### General PostgreSQL resources
+## General PostgreSQL resources
+PostgreSQL tutorials not specific to Python are also really helpful
+for properly handling your data.
+
 * [PostgreSQL: The Nice Bits](https://russ.garrett.co.uk/talks/postgres-gds/) is a 
   good overview slideshow of why PostgreSQL is a great relational database.
 
