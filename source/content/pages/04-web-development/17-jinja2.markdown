@@ -87,3 +87,6 @@ open source project author from having to reinvent a new templating style.
   [LaTeX templates with Python and Jinja2 to generate PDFs](http://eosrei.net/articles/2015/11/latex-templates-python-and-jinja2-generate-pdfs)
   to resolve those issues.
 
+* When you use Jinja2 for long enough, eventually you'll want to escape
+  large blocks of Jinja2-like text in your templates. To do so, you'll
+  need the ["raw" template tag](http://stackoverflow.com/questions/25359898/escape-jinja2-syntax-in-a-jinja2-template).
