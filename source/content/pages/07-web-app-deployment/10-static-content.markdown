@@ -42,6 +42,10 @@ CDNs send content responses from data centers with the closest proximity to the 
   shows how to use django-compressor and a CDN to scale static and media
   file serving.
 
+* [Uploading with Django and Amazon S3](http://pritishc.com/blog/2015/09/06/uploading-with-django-and-amazon-s3/)
+  walks through each step in getting buckets set up so you can upload
+  files to them via Django.
+
 * [Using Amazon S3 to host your Django static files](http://blog.doismellburning.co.uk/2012/07/14/using-amazon-s3-to-host-your-django-static-files/)
 
 * [CDNs fail, but your scripts don't have to](http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx)
