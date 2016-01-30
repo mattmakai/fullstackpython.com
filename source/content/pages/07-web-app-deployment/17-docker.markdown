@@ -84,6 +84,12 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is an extensive tutorial that uses a Flask application and deploys it
   using a Docker container.
 
+* The [Docker is awesome](http://pritishc.com/blog/2015/09/03/docker-is-awesome/) 
+  miniseries explains how to get a Django + AngularJS application running 
+  under Docker. 
+  [Part 2](http://pritishc.com/blog/2015/09/04/docker-is-awesome-part-ii/) 
+  continues the tutorial.
+
 * [Docker in Action - Fitter, Happier, More Productive ](https://realpython.com/blog/python/docker-in-action-fitter-happier-more-productive/)
   is a killer tutorial that shows how to combine Docker with CircleCI to
   continuously deploy a Flask application.
