@@ -92,6 +92,10 @@ web application's design.
   is one of the largest collections of valuable resources for frontend
   learning both in CSS as well as JavaScript.
 
+* [CSS refresher notes](https://github.com/vasanthk/css-refresher-notes) is
+  incredibly helpful if you've learned CSS in bits and pieces along the way
+  and you now want to fill in the gaps in your knowledge.
+
 * [Mozilla Developer Network's CSS page](https://developer.mozilla.org/en-US/docs/Web/CSS)
   contains an extensive set of resources, tutorials and demos for learning
   CSS.
