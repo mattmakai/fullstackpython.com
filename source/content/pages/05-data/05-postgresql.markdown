@@ -60,7 +60,12 @@ driver, which is also referred to as a database connector. The most common
 driver library for working with PostgreSQL is 
 [psycopg2](http://initd.org/psycopg/). There is 
 [a list of all drivers on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Python),
-including several libraries that are no longer maintained.
+including several libraries that are no longer maintained. If you're
+working with the 
+[asyncio Python stdlib module](https://docs.python.org/3.4/library/asyncio.html) 
+you should also take a look at the 
+[aiopg](https://github.com/aio-libs/aiopg) library which
+wraps psycopg2's asychronouos features together.
 
 To abstract the connection between tables and objects, many Python 
 developers use an 
