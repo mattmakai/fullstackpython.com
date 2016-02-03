@@ -175,6 +175,11 @@ properly.
   is a good place to find documentation and tools for developing with 
   WebSockets.
 
+* [WebSockets from Scratch](https://blog.pusher.com/websockets-from-scratch/) 
+  gives a nice overview of the protocol then shows how the lower-level pieces
+  work with WebSockets, which are often a black box to developers who only
+  use libraries like SocketIO.
+
 * [websocketd](http://websocketd.com/) is a WebSockets server aiming to be
   the "CGI of WebSockets". Worth a look.
 
@@ -220,3 +225,4 @@ properly.
 * [Creating Websockets Chat with Python](http://pawelmhm.github.io/python/websockets/2016/01/02/playing-with-websockets.html)
   shows code for a Twisted server that handles WebSockets connections
   on the server side along with the JavaScript code for the client side.
+
