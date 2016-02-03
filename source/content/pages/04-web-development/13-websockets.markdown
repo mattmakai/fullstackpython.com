@@ -178,7 +178,7 @@ properly.
 * [WebSockets from Scratch](https://blog.pusher.com/websockets-from-scratch/) 
   gives a nice overview of the protocol then shows how the lower-level pieces
   work with WebSockets, which are often a black box to developers who only
-  use libraries like SocketIO.
+  use libraries like Socket.IO.
 
 * [websocketd](http://websocketd.com/) is a WebSockets server aiming to be
   the "CGI of WebSockets". Worth a look.
@@ -225,4 +225,9 @@ properly.
 * [Creating Websockets Chat with Python](http://pawelmhm.github.io/python/websockets/2016/01/02/playing-with-websockets.html)
   shows code for a Twisted server that handles WebSockets connections
   on the server side along with the JavaScript code for the client side.
+
+* [Synchronize clients of a Flask application with WebSockets](http://www.matthieuamiguet.ch/blog/synchronize-clients-flask-application-websockets)
+  is a quick tutorial showing how to use Flask, the Flask-SocketIO extension 
+  and Socket.IO to update values between web browser clients when changes
+  occur.
 
