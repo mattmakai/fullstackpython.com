@@ -14,6 +14,9 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2016
+### February
+* Added a couple of new resources to the [WebSockets](/websockets.html) page.
+
 ### January
 * Added initial page for [SQLite](/sqlite.html) that will be built out over
   the next few weeks.
