@@ -233,6 +233,10 @@ for Django and web development on the
   corresponding [GitHub repo](https://github.com/mouradmourafiq/django-angular-blog)
   for the project code.
 
+* [Django-angular](https://github.com/jrief/django-angular) is a code 
+  library that aims to make it easier to pair Django with AngularJS on
+  the front end.
+
 
 ## Django ORM resources
 Django comes with its own custom object-relational mapper (ORM) typically
