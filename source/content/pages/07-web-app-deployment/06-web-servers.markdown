@@ -105,6 +105,8 @@ is provided by W3C.
   your needs if you need the fastest performance trading off for as of yet
   untested web server.
 
+* [Reverse proxies](http://www.apachetutor.org/admin/reverseproxies) shows
+  how to set up Apache as a reverse proxy using `mod_proxy`.
 
 ## Web servers learning checklist
 1. Choose a web server. [Nginx](http://nginx.org/en/) is often recommended 
