@@ -49,4 +49,7 @@ more in the <a href="/data.html">data</a> chapter or view the
 * [SQLite Browser](http://sqlitebrowser.org/) is an open source graphical user 
   interface for working with SQLite.
 
-
+* The official 
+  [sqlite3 module in the Python stdlib docs](https://docs.python.org/3/library/sqlite3.html)
+  contains a bunch of scenarios with code for how to use the database from
+  a Python application.
