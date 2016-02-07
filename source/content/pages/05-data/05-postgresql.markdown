@@ -138,6 +138,11 @@ walkthroughs I've read.
   provides code for both PostgreSQL and [MySQL](/mysql.html) for adding simple
   full text search into your application.
 
+* [Records](https://pypi.python.org/pypi/records/) is a wrapper around the psycopg2
+  driver that allows easy access to direct SQL access. It's worth a look if
+  you prefer writing SQL over using an 
+  [ORM](/object-relational-mappers-orms.html) like SQLAlchemy.
+
 
 ## General PostgreSQL resources
 PostgreSQL tutorials not specific to Python are also really helpful
