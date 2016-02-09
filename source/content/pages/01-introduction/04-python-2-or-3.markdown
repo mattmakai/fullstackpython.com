@@ -64,3 +64,7 @@ using Django, there is also a wall specifically for
   plan is for supporting Python 3 and why it has taken so long to make it 
   happen.
 
+* [Python 3 Readiness](http://py3readiness.org/) is a visualization of
+  which most popular 360 libraries (by downloads) are ready to be
+  used with Python 3.
+
