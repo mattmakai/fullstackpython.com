@@ -76,6 +76,8 @@ require for ongoing maintenance such as persistent storage backups.
 * [How to set up your Linode for maximum awesomeness](http://feross.org/how-to-setup-your-linode/)
   shows how to work with a VPS once you've got the server up and running.
 
+* [CPU Load Averages](http://jvns.ca/blog/2016/02/07/cpu-load-averages/)
+  explains how to measure CPU load and what to do about it.
 
 ## Infrastructure-as-a-service
 Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
