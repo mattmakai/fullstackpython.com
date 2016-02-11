@@ -26,8 +26,9 @@ to learn more about web development.
 
 ## Live Coding
 Learn by watching developers code. Follow my account on 
-[Twitch Creative](https://www.twitch.tv/mattmakai) and enable 
-email alerts when I live code Python and Swift on Wednesdays. 
+[Twitch Creative](https://www.twitch.tv/mattmakai) then enable 
+email alerts when I go live. On Wednesdays I code Python and Swift 
+applications, answering any chat questions along the way.
 I also hold office hours on Fridays where you can drop in and ask 
 questions about your coding issues.
 
