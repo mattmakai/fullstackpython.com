@@ -24,15 +24,12 @@ to learn more about web development.
 </div>
 
 
-## Livecoding
-* Learn by watching a Python developer code live. Follow my
-  account on [livecoding.tv](https://www.livecoding.tv/mattmakai/) and 
-  you'll receive an email alert when I 
-  [compare Python web frameworks](https://github.com/makaimc/compare-python-web-frameworks), 
-  [build a web API with Django and Django REST Framework](https://github.com/makaimc/plapi) 
-  and 
-  write new pages for 
-  [Full Stack Python](https://github.com/makaimc/fullstackpython.com).
+## Live Coding
+* Learn by watching developers code. Follow my account on 
+  [Twitch Creative](https://www.twitch.tv/mattmakai) and enable 
+  email alerts when I live code Python and Swift on Wednesdays. 
+  I also hold office hours on Fridays where you can drop in and ask 
+  questions about your coding issues.
 
 
 ## Web development with Django, Flask and other frameworks
