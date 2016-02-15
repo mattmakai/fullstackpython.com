@@ -1,7 +1,9 @@
 title: Monitoring
 category: page
 slug: monitoring
-sort-order: 0715
+sortorder: 0715
+toc: False
+sidebartitle: Monitoring
 meta: Monitoring tools capture and visualize data from an application's execution. Learn more about monitoring on Full Stack Python.
 
 

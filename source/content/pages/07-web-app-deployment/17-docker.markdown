@@ -1,7 +1,9 @@
 title: Docker
 category: page
 slug: docker
-sort-order: 0717
+sortorder: 0717
+toc: False
+sidebartitle: Docker
 meta: Docker is a container management system often used for deploying web applications. Learn more about Docker on Full Stack Python.
 
 

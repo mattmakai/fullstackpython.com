@@ -1,7 +1,9 @@
 title: Microservices
 category: page
 slug: microservices
-sort-order: 0719
+sortorder: 0719
+toc: False
+sidebartitle: Microservices
 meta: Microservices are an architecture where independent, functionality-contained programs communicate via network calls.
 
 

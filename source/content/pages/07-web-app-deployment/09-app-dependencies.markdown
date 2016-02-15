@@ -1,8 +1,10 @@
 title: Application Dependencies
 category: page
 slug: application-dependencies
+sortorder: 0709
+toc: False
+sidebartitle: Application Dependencies
 meta: Python web applications depend on many code libraries. Learn more about application dependencies on Full Stack Python.
-sort-order: 0709
 
 
 # Application Dependencies

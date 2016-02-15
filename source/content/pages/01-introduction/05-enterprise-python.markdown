@@ -1,8 +1,10 @@
 title: Enterprise Python
 category: page
 slug: enterprise-python
-sort-order: 0105
-meta: Python is widely used for software development in large enterprise organizations around the world. Learn more on Full Stack Python.
+sortorder: 0105
+toc: False
+sidebartitle: Enterprise Python
+meta: Python is widely used to build enterprise application in large organizations around the world.
 
 
 # Enterprise Python

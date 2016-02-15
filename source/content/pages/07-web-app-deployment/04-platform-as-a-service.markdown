@@ -1,7 +1,9 @@
 title: Platform-as-a-service
 category: page
 slug: platform-as-a-service
-sort-order: 0704
+sortorder: 0704
+toc: False
+sidebartitle: Platform-as-a-Service
 meta: A platform-as-a-service simplifies the deployment of application code while risking other tradeoffs. Learn more on Full Stack Python.
 
 

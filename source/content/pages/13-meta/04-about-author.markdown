@@ -1,7 +1,9 @@
 title: About the Author
 category: page
 slug: about-author
-sort-order: 1404
+sortorder: 1404
+toc: False
+sidebartitle: About the Author
 meta: Learn more about the author of Full Stack Python, Matt Makai.
 
 
@@ -10,7 +12,7 @@ This website was coded and written by
 [Matt Makai](http://www.mattmakai.com/) 
 ([@mattmakai](http://twitter.com/mattmakai)), currently a 
 [Developer Evangelist](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html)
-at [Twilio](https://www.twilio.com/).
+at [Twilio](https://www.twilio.com/) in San Francisco, California.
 
 Other projects by Matt include 
 [The Full Stack Python Guide to Deployments book](http://www.deploypython.com/), 

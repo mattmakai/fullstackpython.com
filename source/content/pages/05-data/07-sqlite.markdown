@@ -1,7 +1,9 @@
 title: SQLite
 category: page
 slug: sqlite
-sort-order: 0507
+sortorder: 0507
+toc: False
+sidebartitle: SQLite
 meta: SQLite is an relational database built into the Python standard library that uses a single file to store data. 
 
 

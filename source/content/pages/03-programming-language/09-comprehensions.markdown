@@ -1,8 +1,10 @@
 title: Comprehensions
 category: page
 slug: comprehensions
-sort-order: 0302
-meta: Python comprehensions concisely create data for lists, dictionaries and sets. Learn more about comprehensions on Full Stack Python.
+sortorder: 0309
+toc: False
+sidebartitle: Comprehensions
+meta: Python comprehensions concisely create data for lists, dictionaries and sets. Read more on Full Stack Python.
 
 
 # Comprehensions

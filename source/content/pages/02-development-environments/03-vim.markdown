@@ -1,8 +1,10 @@
 title: Vim
 category: page
 slug: vim
-sort-order: 0208
-meta: Vim is a text editor with powerful string manipulation capabilities. Learn more about Vim on Full Stack Python.
+sortorder: 0203
+toc: False
+sidebartitle: Vim
+meta: Vim is a text editor with powerful string manipulation capabilities. Find out more about Vim on Full Stack Python.
 
 
 # Vim

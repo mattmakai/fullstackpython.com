@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8">
-        {% for page in pages|sort(attribute='sort-order') %}
+        {% for page in pages|sort(attribute='sortorder') %}
           {{ page.content }}
         {% endfor %}
     </div>

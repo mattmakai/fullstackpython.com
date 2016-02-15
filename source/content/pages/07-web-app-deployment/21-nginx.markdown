@@ -1,7 +1,9 @@
 title: Nginx
 category: page
 slug: nginx
-sort-order: 0721
+sortorder: 0721
+toc: False
+sidebartitle: Nginx
 meta: Nginx is a commonly deployed web server that also functions well as a reverse proxy for WSGI Python web apps.
 
 

@@ -1,8 +1,10 @@
 title: Generators
 category: page
 slug: generators
-sort-order: 0301
-meta: Generators allow a function's return value to behave as an iterator via the yield keyword. Learn more about generators at Full Stack Python.
+sortorder: 0308
+toc: False
+sidebartitle: Generators
+meta: Python generators allow a function's return value to behave as an iterator via the yield keyword. 
 
 
 # Generators

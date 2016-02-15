@@ -1,7 +1,9 @@
 title: What "Full Stack" Means
 category: page
 slug: what-full-stack-means
-sort-order: 1301
+sortorder: 1301
+toc: False
+sidebartitle: What "Full Stack" Means
 meta: Full stack is an ambiguous term so on this Full Stack Python page I describe its meaning and usage for this site.
 
 

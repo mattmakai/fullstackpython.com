@@ -1,7 +1,9 @@
 title: Databases
 category: page
 slug: databases
-sort-order: 0502
+sortorder: 0502
+toc: False
+sidebartitle: Relational Databases
 meta: Relational databases serve the critical role of persisting data in many Python applications.
 
 

@@ -1,7 +1,9 @@
 title: Continuous Integration
 category: page
 slug: continuous-integration
-sort-order: 0713
+sortorder: 0713
+toc: False
+sidebartitle: Continuous Integration
 meta: Continuous integration automatically rebuilds and deploys applications as developers commit code. Learn more on Full Stack Python.
 
 

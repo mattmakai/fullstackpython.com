@@ -1,7 +1,9 @@
 title: Web Design
 category: page
 slug: web-design
-sort-order: 0410
+sortorder: 0410
+toc: False
+sidebartitle: Web Design
 meta: Web design creates a compelling user experience for your Python web app. Learn more about web design on Full Stack Python.
 
 

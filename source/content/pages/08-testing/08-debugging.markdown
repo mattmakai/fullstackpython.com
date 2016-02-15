@@ -1,7 +1,9 @@
 title: Debugging
 category: page
 slug: debugging
-sort-order: 0808
+sortorder: 0808
+toc: False
+sidebartitle: Debugging
 meta: Debugging involves instrumenting, isolating and hunting defects in running code. Learn more about debugging on Full Stack Python.
 
 

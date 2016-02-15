@@ -1,7 +1,9 @@
 title: Object-relational Mappers (ORMs)
 category: page
 slug: object-relational-mappers-orms
-sort-order: 0504
+sortorder: 0504
+toc: False
+sidebartitle: Object-relational Mappers (ORMs)
 meta: Object-relational mappers (ORMs) bridge relational databases and object-oriented code. Learn more on Full Stack Python.
 
 

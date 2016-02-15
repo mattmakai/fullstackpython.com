@@ -1,7 +1,9 @@
 title: Flask
 category: page
 slug: flask
-sort-order: 0404
+sortorder: 0404
+toc: False
+sidebartitle: Flask
 meta: Flask is a popular, extensible web microframework for building web applications with Python.
 
 

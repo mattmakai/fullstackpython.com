@@ -1,7 +1,9 @@
 title: Operating Systems
 category: page
 slug: operating-systems
-sort-order: 0705
+sortorder: 0705
+toc: False
+sidebartitle: Operating Systems
 meta: Learn what operating system you should be using for you web application and resources to configure the OS on Full Stack Python.
 
 

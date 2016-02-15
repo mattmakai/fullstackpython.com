@@ -1,8 +1,10 @@
 title: Logging
 category: page
 slug: logging
-sort-order: 0714
-meta: Logging saves error, warning and event output to persistent storage for debugging purposes. Learn more about logging on Full Stack Python.
+sortorder: 0714
+toc: False
+sidebartitle: Logging
+meta: Logging saves error, warning and event output to storage for debugging purposes. Learn about logging on Full Stack Python.
 
 
 # Logging

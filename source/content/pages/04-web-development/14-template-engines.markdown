@@ -1,7 +1,9 @@
 title: Template Engines
 category: page
 slug: template-engines
-sort-order: 0414
+sortorder: 0414
+toc: False
+sidebartitle: Template Engines
 meta: Template engines provide programmatic output of formatted content such as HTML, XML or PDF.
 
 

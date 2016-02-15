@@ -1,7 +1,9 @@
 title: Static Content
 category: page
 slug: static-content
-sort-order: 0710
+sortorder: 0710
+toc: False
+sidebartitle: Static Content
 meta: Serving static and media files are an important part of Python deployments. Learn about static content on Full Stack Python.
 
 

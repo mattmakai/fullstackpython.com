@@ -1,7 +1,9 @@
 title: Static Site Generators
 category: page
 slug: static-site-generator
-sort-order: 0416
+sortorder: 0416
+toc: False
+sidebartitle: Static Site Generators
 meta: A static site generator combines a markup language with a templating engine to produce HTML files. Learn more on Full Stack Python.
 
 

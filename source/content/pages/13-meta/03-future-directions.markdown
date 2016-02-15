@@ -1,7 +1,9 @@
 title: Future Directions
 category: page
 slug: future-directions
-sort-order: 1303
+sortorder: 1303
+toc: False
+sidebartitle: Future Directions
 meta: In the future directions page on Full Stack Python I give some insight into what my current priorities are for enhancing the site.
 
 
@@ -10,7 +12,7 @@ Full Stack Python has completely blown away my expectations for what I could
 accomplish with a side project. I really appreciate all the in-person feedback,
 emails and pull requests I've received from the community. Keep them coming!
 
-For 2015 I'm building out the scope of the site beyond web development into
+For 2016 I'm building out the scope of the site beyond web development into
 core Python concepts, data analysis and visualization and some hardware 
 hacking such as with the Raspberry Pi and Arduino Yun.
 

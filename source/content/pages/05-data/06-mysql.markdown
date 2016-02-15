@@ -1,7 +1,9 @@
 title: MySQL
 category: page
 slug: mysql
-sort-order: 0506
+sortorder: 0506
+toc: False
+sidebartitle: MySQL
 meta: MySQL is an open source database often used by Python developers for storing and retrieving data.
 
 

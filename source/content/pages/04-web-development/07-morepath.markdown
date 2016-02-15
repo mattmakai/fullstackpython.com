@@ -1,7 +1,9 @@
 title: Morepath
 category: page
 slug: morepath
-sort-order: 0407
+sortorder: 0407
+toc: False
+sidebartitle: Morepath
 meta: Morepath is a Python web framework with a model-driven design approach. Learn more about Morepath on Full Stack Python. 
 
 

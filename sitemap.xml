@@ -51,10 +51,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/generators.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/learning-programming.html</loc>
     <priority>1.0</priority>
   </url>
@@ -67,10 +63,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/vim.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
@@ -79,15 +71,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/comprehensions.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/django.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/emacs.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -103,11 +87,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/vim.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/why-use-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.fullstackpython.com/about-author.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/emacs.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -147,10 +139,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>http://www.fullstackpython.com/mysql.html</loc>
     <priority>1.0</priority>
   </url>
@@ -160,10 +148,6 @@
   </url>
   <url>
     <loc>http://www.fullstackpython.com/web-servers.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -183,11 +167,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/generators.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/source-control.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.fullstackpython.com/application-dependencies.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/comprehensions.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -203,11 +195,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>http://www.fullstackpython.com/best-python-resources.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>http://www.fullstackpython.com/cascading-style-sheets.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.fullstackpython.com/task-queues.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.fullstackpython.com/best-python-videos.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

@@ -1,7 +1,9 @@
 title: WSGI Servers
 category: page
 slug: wsgi-servers
-sort-order: 0707
+sortorder: 0707
+toc: False
+sidebartitle: WSGI Servers
 meta: A Web Server Gateway Interface (WSGI) server runs Python code to create a web application. Learn more about WSGI servers on Full Stack Python.
 
 

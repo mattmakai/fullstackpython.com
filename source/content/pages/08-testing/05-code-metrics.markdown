@@ -1,7 +1,9 @@
 title: Code Metrics
 category: page
 slug: code-metrics
-sort-order: 0805
+sortorder: 0805
+toc: False
+sidebartitle: Code Metrics
 meta: Code metrics provide insight into the quality of a code base via analysis tools. Learn more about code metrics on Full Stack Python.
 
 

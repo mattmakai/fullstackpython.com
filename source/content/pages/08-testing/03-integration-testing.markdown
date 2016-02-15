@@ -1,7 +1,9 @@
 title: Integration Testing
 category: page
 slug: integration-testing
-sort-order: 0803
+sortorder: 0803
+toc: False
+sidebartitle: Integration Testing
 meta: Integration testing determines the correctness for several parts of a system under test at once. Learn more on Full Stack Python.
 
 

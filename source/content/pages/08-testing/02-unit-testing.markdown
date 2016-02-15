@@ -1,7 +1,9 @@
 title: Unit Testing
 category: page
 slug: unit-testing
-sort-order: 0802
+sortorder: 0802
+toc: False
+sidebartitle: Unit Testing
 meta: Unit testing exercises one function isolated from a program. Learn more about unit testing on Full Stack Python.
 
 

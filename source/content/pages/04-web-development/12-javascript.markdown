@@ -1,7 +1,9 @@
 title: JavaScript
 category: page
 slug: javascript
-sort-order: 0412
+sortorder: 0412
+toc: False
+sidebartitle: JavaScript
 meta: Learn about JavaScript and MVC frameworks for web applications on Full Stack Python.
 
 

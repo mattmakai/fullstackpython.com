@@ -1,7 +1,9 @@
 title: Web Servers
 category: page
 slug: web-servers
-sort-order: 0706
+sortorder: 0706
+toc: False
+sidebartitle: Web Servers
 meta: Web servers respond to HTTP requests for static content and serve as reverse proxies for Python web applications.
 
 

@@ -1,7 +1,9 @@
 title: API Creation
 category: page
 slug: api-creation
-sort-order: 0603
+sortorder: 0603
+toc: False
+sidebartitle: API Creation
 meta: Web APIs enable machine-to-machine communication. Learn more about creating web APIs on Full Stack Python.
 
 

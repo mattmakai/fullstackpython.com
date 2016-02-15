@@ -1,7 +1,7 @@
 title: Introduction
 category: page
 slug: introduction
-sort-order: 0101
+sortorder: 0101
 toc: True
 sidebartitle: 1. Introduction
 meta: Full Stack Python helps you learn Python programming through plain language explanations along with links to other great resources.

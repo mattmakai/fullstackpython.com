@@ -1,7 +1,9 @@
 title: Caching
 category: page
 slug: caching
-sort-order: 0718
+sortorder: 0718
+toc: False
+sidebartitle: Caching
 meta: Caching reduces load on servers by pre-calculating the results of common operations. Learn more about caching on Full Stack Python.
 
 

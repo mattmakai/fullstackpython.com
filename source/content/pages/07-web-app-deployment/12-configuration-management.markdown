@@ -1,7 +1,9 @@
 title: Configuration Management
 category: page
 slug: configuration-management
-sort-order: 0712
+sortorder: 0712
+toc: False
+sidebartitle: Configuration Management
 meta: Configuration management tools allow developers to automate deployment and environment setting. Learn more about configuration management on Full Stack Python.
 
 

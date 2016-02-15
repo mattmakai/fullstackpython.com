@@ -1,7 +1,9 @@
 title: Jinja2
 category: page
 slug: jinja2
-sort-order: 0417
+sortorder: 0417
+toc: False
+sidebartitle: Jinja2
 meta: Jinja2 is a template engine written in Python for outputting formats such as HTML and XML.
 
 

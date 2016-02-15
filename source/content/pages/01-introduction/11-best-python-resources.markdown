@@ -1,7 +1,9 @@
 title: Best Python Resources
 category: page
 slug: best-python-resources
-sort-order: 0106
+sortorder: 0111
+toc: False
+sidebartitle: Best Python Resources
 meta: Get recommendations for dozens of great programming tutorials via Full Stack Python's Best Python Resources page.
 
 

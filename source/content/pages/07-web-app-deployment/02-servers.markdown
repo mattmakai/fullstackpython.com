@@ -1,7 +1,9 @@
 title: Servers
 category: page
 slug: servers
-sort-order: 0702
+sortorder: 0702
+toc: False
+sidebartitle: Servers
 meta: Servers are required to run web applications. Learn more about setting up servers on Full Stack Python.
 
 
