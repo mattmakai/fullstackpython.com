@@ -46,6 +46,11 @@ using Django, there is also a wall specifically for
   implementations. There is also a 
   [quick reference for writting code with Python 2 and 3 compatibility](https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef).
 
+* [Python 3 in 2016](https://hynek.me/articles/python3-2016/) explains
+  that many newer Python developers have only used Python 3 and as that
+  cohort continues to grow it will have an outsized impact on further
+  adoption.
+
 * [The stages of the Python 3 transition](http://www.snarky.ca/the-stages-of-the-python-3-transition)
   provides perspective from a core Python developer on how the transition from
   Python 2 to 3 is going as of the end of 2015.
