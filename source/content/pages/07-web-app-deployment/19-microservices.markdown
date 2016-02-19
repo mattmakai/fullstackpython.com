@@ -57,6 +57,10 @@ ease further development and deployment. This approach is called the
   good high-level overview of the topics many developers aren't aware of when they
   embark on converting a monolith to microservices.
 
+* [How Microservices have changed and why they matter](http://thenewstack.io/microservices-changed-matter/)
+  is a high level overview of the topic with some quotes from
+  various developers around the industry.
+
 * [The State of Microservices Today](http://blog.codeship.com/the-state-of-microservices-today/)
   provides some general trends and broad data showing the increasing 
   popularity of microservices heading into 2016. This is more of an
