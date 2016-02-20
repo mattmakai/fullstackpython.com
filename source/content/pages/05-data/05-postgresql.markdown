@@ -28,12 +28,7 @@ bugs for typical usage scenarios. If you try to use an Oracle database with
 Django, you'll see there is far less example code for that setup compared
 to PostgreSQL backend setups.
 
-<div class="well see-also">
-PostgreSQL is an implementation of the 
-<a href="/databases.html">relational database</a> concept. Learn
-more in the <a href="/data.html">data</a> chapter or view the
-<a href="/table-of-contents.html">table of contents</a> for all topics.
-</div>
+<div class="well see-also">PostgreSQL is an implementation of the <a href="/databases.html">relational database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 ## Why is PostgreSQL a good database choice?

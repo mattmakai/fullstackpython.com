@@ -22,6 +22,15 @@ running on top of any type of server, regardless of whether that server is
 on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 
 
+## Python projects within Docker images
+* This Docker image contains 
+  [a Flask application configured to run with uWSGI and Nginx](https://github.com/tiangolo/uwsgi-nginx-flask-docker).
+  You can also see the [image on Docker hub](https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/).
+
+* [minimal-docker-python-setup](https://github.com/OrangeTux/minimal-docker-python-setup) 
+  contains an image with Nginx, uWSGI, Redis and Flask.
+
+
 ## Docker resources
 * [What is Docker and When to Use It](http://www.centurylinklabs.com/what-is-docker-and-when-to-use-it/)
   clearly delineates what Docker is and what it isn't. This is a good article

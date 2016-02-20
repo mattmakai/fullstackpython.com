@@ -57,11 +57,7 @@ However, that criticism is invalid if you take the time to learn the Python
 syntax and language semantics first before diving into web development.
 
 
-<div class="well see-also">
-While you're learning about Django you should also read up on
-<a href="/web-frameworks.html">web frameworks</a> and check out the
-<a href="/bottle.html">Bottle framework</a>.
-</div>
+<div class="well see-also">While you're learning about Django you should also read up on <a href="/web-frameworks.html">web frameworks</a> and check out the <a href="/bottle.html">Bottle framework</a>.</div>
 
 
 ## Django books and tutorials
@@ -165,11 +161,8 @@ as of Django 1.7.
 
 
 ## Django videos
-<div class="well" style="margin-top: 20px;">
-Looking for Django videos instead of just articles? There's a special section
-for Django and web development on the 
-<a href="/best-python-videos.html">Best Python Videos</a> page.
-</div>
+Are you looking for Django videos in addition to articles? There is a special section
+for Django and web development on the [best Python videos](/best-python-videos.html) page.
 
 
 ## Django migrations

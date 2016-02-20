@@ -15,12 +15,7 @@ access a SQLite database from within Python applications.
 
 <img src="/img/sqlite.jpg" width="100%" alt="SQLite logo." class="technical-diagram" />
 
-<div class="well see-also">
-SQLite is an implementation of the 
-<a href="/databases.html">relational database</a> concept. Learn
-more in the <a href="/data.html">data</a> chapter or view the
-<a href="/table-of-contents.html">table of contents</a> for all topics.
-</div>
+<div class="well see-also">SQLite is an implementation of the <a href="/databases.html">relational database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
 
 ### SQLite resources 

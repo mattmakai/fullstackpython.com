@@ -19,12 +19,7 @@ project is cleanly extracted as
 [an independent open source project](https://github.com/mitsuhiko/jinja2) so
 it can be used a dependency by other code libraries.
 
-<div class="well see-also">
-Jinja2 is an implementation of the 
-<a href="/template-engines.html">template engines</a> concept. Learn
-more in the <a href="/web-development.html">web development</a> chapter or 
-view the <a href="/table-of-contents.html">table of contents</a> for all topics.
-</div>
+<div class="well see-also">Jinja2 is an implementation of the <a href="/template-engines.html">template engines</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 Jinja2 strikes a thoughtful balance on the template engine spectrum where

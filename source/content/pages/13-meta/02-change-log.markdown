@@ -15,6 +15,7 @@ the
 
 ## 2016
 ### February
+* Added a new section for [Python images within Docker containers](/docker.html).
 * Added a couple of new resources to the [WebSockets](/websockets.html) page.
 
 ### January

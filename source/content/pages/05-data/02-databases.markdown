@@ -24,15 +24,7 @@ mental framework for how the data should be saved and retrieved instead of
 having to figure out what to do with the data every time you build a new 
 application.
 
-<div class="well see-also">
-Databases are a concept with many implementations, 
-including <a href="/postgresql.html">PostgreSQL</a>,
-<a href="/mysql.html">MySQL</a> and 
-<a href="/sqlite.html">SQLite</a>. Non-relational databases
-called <a href="/no-sql-datastore.html">NoSQL data stores</a> also exist. 
-Learn more in the <a href="/data.html">data</a> chapter or view the
-<a href="/table-of-contents.html">table of contents</a> for all topics.
-</div>
+<div class="well see-also">Databases are a concept with many implementations, including <a href="/postgresql.html">PostgreSQL</a>, <a href="/mysql.html">MySQL</a> and <a href="/sqlite.html">SQLite</a>. Non-relational databases called <a href="/no-sql-datastore.html">NoSQL data stores</a> also exist.  Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 ## Relational databases

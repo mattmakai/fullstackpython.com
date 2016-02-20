@@ -17,13 +17,7 @@ This page links to the best free videos as well as other video lists so you
 can do your own searching through the huge backlog of conference and meetup 
 talks from the past several years. 
 
-<div class="well see-also">
-Be sure to read the
-<a href="/best-python-resources.html">best Python resources</a> for
-links to books and articles as well as 
-<a href="/web-frameworks.html">web frameworks</a>
-to learn more about web development.
-</div>
+<div class="well see-also">Be sure to read the <a href="/best-python-resources.html">best Python resources</a> for links to books and articles as well as <a href="/web-frameworks.html">web frameworks</a> to learn more about web development.</div>
 
 
 ## Live Coding

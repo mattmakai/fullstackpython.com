@@ -56,11 +56,7 @@ that were not seen in a local development environment. Also, it's rare that
 a project would switch from one database in production to another one unless
 there was a pressing reason.
 
-<div class="well see-also">
-While you're learning about ORMs you should also read up on
-<a href="/deployment.html">deployment</a> and check out the
-<a href="/application-dependencies.html">application dependencies</a> page.
-</div>
+<div class="well see-also">While you're learning about ORMs you should also read up on <a href="/deployment.html">deployment</a> and check out the <a href="/application-dependencies.html">application dependencies</a> page.</div>
 
 
 ## Do I have to use an ORM for my web application?

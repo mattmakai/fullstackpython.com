@@ -64,11 +64,7 @@ frameworks, templating engines and
 [object-relational mappers](/object-relational-mappers-orms.html).
 
 
-<div class="well see-also">
-While you're learning about web frameworks you should also study
-<a href="/deployment.html">web application deployment</a> and 
-<a href="/application-programming-interfaces.html">web APIs</a>.
-</div>
+<div class="well see-also">While you're learning about web frameworks you should also study <a href="/deployment.html">web application deployment</a> and <a href="/application-programming-interfaces.html">web APIs</a>.</div>
 
 
 ## Do I have to use a web framework?

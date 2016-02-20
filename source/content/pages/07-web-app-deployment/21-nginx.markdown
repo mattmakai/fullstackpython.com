@@ -16,13 +16,7 @@ reverse proxy to handle requests and pass back responses for Python
 <img src="/img/web-servers-map.png" width="100%" alt="Python web application deployments rely on Nginx either as a web server or reverse proxy for WSGI servers." class="technical-diagram" />
 
 
-<div class="well see-also">
-Nginx is an implementation of the 
-<a href="/web-servers.html">web server</a> concept. Learn how these pieces 
-fit together in the <a href="/deployment.html">deployment</a> 
-chapter or view the <a href="/table-of-contents.html">table of contents</a> 
-for all topics.
-</div>
+<div class="well see-also">Nginx is an implementation of the <a href="/web-servers.html">web server</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 ## Should I use Nginx or the Apache HTTP Server?
