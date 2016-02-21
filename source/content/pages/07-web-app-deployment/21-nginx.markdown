@@ -57,6 +57,10 @@ that set up Nginx with HTTPS and SSL/TLS certificates
   explains how Nginx can be used instead of Apache in some cases for
   better performance.
 
+* [Nginx vs Apache: Our view](https://www.nginx.com/blog/nginx-vs-apache-our-view/)
+  is a first-party perspective written by the developers behind Nginx
+  as to the differences between the web servers.
+
 * [Rate Limiting with Nginx](http://lincolnloop.com/blog/rate-limiting-nginx/)
   covers how to mitigate against brute force password guessing attempts using
   Nginx rate limits.
