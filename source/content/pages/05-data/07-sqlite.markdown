@@ -50,3 +50,9 @@ access a SQLite database from within Python applications.
   [sqlite3 module in the Python stdlib docs](https://docs.python.org/3/library/sqlite3.html)
   contains a bunch of scenarios with code for how to use the database from
   a Python application.
+
+* [Using the SQLite JSON1 and FTS5 Extensions with Python](http://charlesleifer.com/blog/using-the-sqlite-json1-and-fts5-extensions-with-python/)
+  shows how to compile SQLite 3.9.0+ with json1 and fts5 (full-text search)
+  support to use these new features.
+
+
