@@ -62,12 +62,18 @@ You can transition away from the service at a later time by moving your
 repositories if your needs change. A couple of recommended hosted version
 control services are:
 
-* [GitHub](https://github.com/) is currently the most commonly used source
-  control platform for using Git.
+* [GitLab](https://about.gitlab.com/) has both a self-hosted version of its
+  open source software as well as their hosted version with 
+  [pricing](https://about.gitlab.com/pricing/) for businesses that need
+  additional hosting support.
 
-* [BitBucket](https://bitbucket.org/) provides free Git and Mercurial 
-  repositories for open projects and private repositories for up to five
-  users. Users pay for hosting private repositories with more than five users.
+* [GitHub](https://github.com/) provides free open source repositories 
+  and paid private repositories for Git.
+
+* [BitBucket](https://bitbucket.org/) also has free Git and Mercurial 
+  repositories for open projects, but adds private repositories for up to 
+  five users. Users pay for hosting private repositories with more than 
+  five users.
 
 
 ## General source control resources
