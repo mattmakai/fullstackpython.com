@@ -211,3 +211,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
   an existing PostgreSQL database. There's also a way to extend the tools
   to pull custom metrics as well.
 
+* This article on [performance tuning PostgreSQL](http://www.geekytidbits.com/performance-tuning-postgres/)
+  covers how to find slow queries, tune indexes and modify your queries
+  to run faster.
