@@ -14,7 +14,7 @@ a PaaS removes the need to know as much about the underlying servers,
 operating system, web server, and often the WSGI server. 
 
 *Note*: If you are not interested in deploying to a PaaS you can move 
-ahead to the [WSGI servers](../wsgi-servers.html) section.
+ahead to the [WSGI servers](/wsgi-servers.html) section.
 
 The PaaS layer defines how the application accesses resources such as 
 computing time, files, and external services. The PaaS provides a 
@@ -45,7 +45,7 @@ securing the operating system and server level. However, web applications deploy
 to a PaaS are just as vulnerable to security breaches at the application level
 as a standard LAMP stack. It's still your responsibility to ensure the web
 application framework and your app itself is up to date and secured. See the
-[security section](../web-application-security.html) for further information.
+[security section](/web-application-security.html) for further information.
 
 
 ## Platforms-as-a-service that support Python
