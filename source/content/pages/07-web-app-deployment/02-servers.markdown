@@ -22,7 +22,7 @@ Production servers hold real data (again as opposed to test data) and must be
 secure against unauthorized access.
 
 
-## "Bare metal" servers
+## Bare metal servers
 The term *bare metal* refers to purchasing the actual hardware and hooking 
 it up to the Internet either through a business-class internet service 
 provider (ISP) or 
@@ -34,9 +34,9 @@ volume but if your site serves a lot of traffic it will alert an ISP's
 filters.
 
 The bare metal option offers the most control over the server configuration,
-usually has the highest performance for the price, but also is the most 
+usually has the highest performance for the price, but also is the most
 expensive upfront option and the highest ongoing maintenance. With bare
-metal servers the ongoing operating cost is the electricity the server(s) 
+metal servers the ongoing operating cost is the electricity the server(s)
 use as well as handling repairs when server components malfunction. You're
 taking on manual labor working with hardware as well as the rest of the
 software stack.

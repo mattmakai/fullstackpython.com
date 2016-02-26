@@ -214,3 +214,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * This article on [performance tuning PostgreSQL](http://www.geekytidbits.com/performance-tuning-postgres/)
   covers how to find slow queries, tune indexes and modify your queries
   to run faster.
+
+* [Creating a Document-Store Hybrid in Postgres 9.5](https://blog.andyet.com/2016/02/04/postgres-9.5-document-store-hybrid/)
+  explains how to store and query JSON data, similar to how
+  [NoSQL data stores](/no-sql-datastore.html) operate.
