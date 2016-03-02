@@ -4,7 +4,7 @@ slug: configuration-management
 sortorder: 0712
 toc: False
 sidebartitle: Configuration Management
-meta: Configuration management tools allow developers to automate deployment and environment setting. Learn more about configuration management on Full Stack Python.
+meta: Configuration management tools automate application deployments and environment settings.
 
 
 # Configuration Management
@@ -37,7 +37,11 @@ operations, such as querying the database from the Django manage.py shell.
   provides some perspective on why a configuration management tool is better
   than old venerable shell scripts.
 
-* [Ansible and Salt: A Detailed Comparison](http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/)
+* [Ansible vs. Chef](http://tjheeta.github.io/2015/04/15/ansible-vs-chef/)
+  is a comparsion of Ansible with the Chef configuration management tool.
+
+* This post on [Ansible and Salt: A Detailed Comparison](http://missingm.co/2013/06/ansible-and-salt-a-detailed-comparison/)
+  shows the differences between these two Python-powered tools.
 
 
 ## Ansible
