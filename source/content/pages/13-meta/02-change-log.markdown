@@ -13,7 +13,11 @@ inception in December 2012. Another way to view the modifications is through
 the 
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
+
 ## 2016
+### March
+* Added some new awesome [deployment](/deployment.html) resources.
+
 ### February
 * Added a new section for [Python images within Docker containers](/docker.html).
 * Added a couple of new resources to the [WebSockets](/websockets.html) page.
