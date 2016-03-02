@@ -64,6 +64,9 @@ guide as they are considered advanced deployment techniques.
   walks through stages of deployment with source control, planning, 
   continuous deployment and monitoring the results.
 
+* [Deploying Software](https://zachholman.com/posts/deploying-software)
+  is a long must-read for understanding how to deploy software properly.
+
 * [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
