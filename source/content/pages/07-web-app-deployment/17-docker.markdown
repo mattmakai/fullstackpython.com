@@ -85,6 +85,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is a short tutorial for creating a Docker container with a specific
   configuration.
 
+* [10 things to avoid in Docker containers](http://developerblog.redhat.com/2016/02/24/10-things-to-avoid-in-docker-containers/)
+  provides a lot of "don'ts" that you'll want to consider before bumping
+  up against the limitations of how containers should be used.
+
 
 ## Python-specific Docker resources
 * [Hosting Python WSGI applications using Docker](http://blog.dscpl.com.au/2014/12/hosting-python-wsgi-applications-using.html)
