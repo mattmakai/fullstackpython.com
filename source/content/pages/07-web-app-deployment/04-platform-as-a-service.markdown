@@ -113,6 +113,10 @@ application framework and your app itself is up to date and secured. See the
   application from 10 to 100 to 1000 to 500,000 and beyond to millions 
   of users.
 
+* [How to Separate Your AWS Production and Development Accounts](http://blog.codeship.com/separate-aws-production-and-development-accounts/)
+  is a basic post on keeping developer sandbox accounts separate from
+  production AWS environments.
+
 
 ## Platform-as-a-service learning checklist
 1. Review the potential Python platform-as-a-service options listed above.
