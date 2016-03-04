@@ -126,7 +126,7 @@ the browser. </p>
 Nginx should handle static assets (such as images, JavaScript, and CSS
 files) under the /static directory and pass all other requests to the WSGI
 server running on port 8000:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">specifies</span> <span class="nt">that</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
+<div class="highlight"><pre><span></span><span class="err">#</span> <span class="nt">this</span> <span class="nt">specifies</span> <span class="nt">that</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
 <span class="nt">upstream</span> <span class="nt">app_server_djangoapp</span> <span class="p">{</span>
     <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -135,8 +135,8 @@ server running on port 8000:</p>
 <span class="nt">server</span> <span class="p">{</span>
   <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
 
-  <span class="err">#</span> <span class="n">nginx</span> <span class="n">should</span> <span class="n">serve</span> <span class="n">up</span> <span class="k">static</span> <span class="n">files</span> <span class="n">and</span> <span class="n">never</span> <span class="n">send</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span> <span class="n">server</span>
-  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="err">{</span>
+  <span class="err">#</span> <span class="n">nginx</span> <span class="n">should</span> <span class="n">serve</span> <span class="n">up</span> <span class="nb">static</span> <span class="n">files</span> <span class="n">and</span> <span class="n">never</span> <span class="n">send</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span> <span class="n">server</span>
+  <span class="n">location</span> <span class="o">/</span><span class="nb">static</span> <span class="err">{</span>
     <span class="n">autoindex</span> <span class="n">on</span><span class="p">;</span>
     <span class="n">alias</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">assets</span><span class="p">;</span>
   <span class="p">}</span>

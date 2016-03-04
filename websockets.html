@@ -112,7 +112,7 @@ passed through Nginx to your WSGI server. It can be tricky to set this up
 the first time. </p>
 <p>Here are the configuration settings I use in my Nginx file as part of my
 WebSockets proxy.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">where</span> <span class="nt">my</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">sits</span> <span class="nt">answering</span> <span class="nt">only</span> <span class="nt">on</span> <span class="nt">localhost</span>
+<div class="highlight"><pre><span></span><span class="err">#</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">where</span> <span class="nt">my</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">sits</span> <span class="nt">answering</span> <span class="nt">only</span> <span class="nt">on</span> <span class="nt">localhost</span>
 <span class="err">#</span> <span class="nt">usually</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">Gunicorn</span> <span class="nt">monkey</span> <span class="nt">patched</span> <span class="nt">with</span> <span class="nt">gevent</span>
 <span class="nt">upstream</span> <span class="nt">app_server_wsgiapp</span> <span class="p">{</span>
   <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
