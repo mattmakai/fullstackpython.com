@@ -65,6 +65,11 @@ understand how to use the project.
   uses Redis on the backend but otherwise does not depend on other libraries. 
   The project was previously known as Invoker and the author changed the name.
 
+* [Huey](http://huey.readthedocs.org/en/latest/) is a Redis-based task 
+  queue that aims to provide a simple, yet flexible framework for 
+  executing tasks. Huey supports task scheduling, crontab-like repeating 
+  tasks, result storage and automatic retry in the event of failure.
+
 
 ## Hosted message and task queue services
 Task queue third party services aim to solve the complexity issues that arise
