@@ -114,6 +114,11 @@ ones listed here are primarily coded in Python.
   structure so the site can be generated. The project remains in the
   "experimental" phase.
 
+* [Lektor](https://www.getlektor.com/) 
+  ([source code](https://github.com/lektor/lektor)) is a Python static 
+  content management system that can deploy to any webserver. It uses 
+  [Jinja2](/jinja2.html) as a [template engine](/template-engines.html).
+
 * [Complexity](http://complexity.readthedocs.org/en/latest/)
   ([source code](https://github.com/audreyr/complexity)) is a site generator
   for users who like to work in HTML. It uses HTML for templating but
