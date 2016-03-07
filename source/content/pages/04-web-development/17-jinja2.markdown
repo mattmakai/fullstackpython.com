@@ -38,7 +38,7 @@ syntax is inspired by Django's built-in template engine, which was released
 several years earlier. There were many template systems, such as 
 [JavaServer Pages (JSPs)](https://en.wikipedia.org/wiki/JavaServer_Pages),
 that originated almost a decade before Jinja2. Jinja2 built upon the concepts
-of other templat engines and today is widely used by the Python community.
+of other template engines and today is widely used by the Python community.
 
 
 ## What projects depend on Jinja2?
