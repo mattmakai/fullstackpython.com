@@ -117,6 +117,11 @@ application framework and your app itself is up to date and secured. See the
   is a basic post on keeping developer sandbox accounts separate from
   production AWS environments.
 
+* [How much is Spotify Paying Google Cloud?](https://medium.com/@davidmytton/how-much-is-spotify-paying-google-cloud-ebb3bf180f15)
+  provides some insight into how Spotify runs all of their infrastructure
+  on Google Cloud and posits what they may be paying to run their
+  service.
+
 
 ## Platform-as-a-service learning checklist
 1. Review the potential Python platform-as-a-service options listed above.
