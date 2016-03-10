@@ -218,3 +218,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * [Creating a Document-Store Hybrid in Postgres 9.5](https://blog.andyet.com/2016/02/04/postgres-9.5-document-store-hybrid/)
   explains how to store and query JSON data, similar to how
   [NoSQL data stores](/no-sql-datastore.html) operate.
+
+* [PostgreSQL Indexes: First Principles](http://eftimov.net/postgresql-indexes-first-principles)
+  is a detailed look at what indexes are, what they are good for and
+  how to use them in PostgreSQL.
