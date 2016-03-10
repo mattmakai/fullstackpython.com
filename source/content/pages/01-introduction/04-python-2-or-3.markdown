@@ -51,6 +51,11 @@ using Django, there is also a wall specifically for
   cohort continues to grow it will have an outsized impact on further
   adoption.
 
+* [Python 3 is winning](https://blogs.msdn.microsoft.com/pythonengineering/2016/03/08/python-3-is-winning/)
+  presents data and graphs from PyPI to show that at the current rate,
+  by mid-2016 overall Python 3 library support will overtake Python 2 
+  support.
+
 * [The stages of the Python 3 transition](http://www.snarky.ca/the-stages-of-the-python-3-transition)
   provides perspective from a core Python developer on how the transition from
   Python 2 to 3 is going as of the end of 2015.
