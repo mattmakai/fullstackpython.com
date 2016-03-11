@@ -88,8 +88,6 @@ possible.
 
 * [How to set up a safe and secure Web server](http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/)
 
-* [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
-
 * A reference with the full list of 
 [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 is provided by W3C.
@@ -107,8 +105,6 @@ is provided by W3C.
   your needs if you need the fastest performance trading off for as of yet
   untested web server.
 
-* [Reverse proxies](http://www.apachetutor.org/admin/reverseproxies) shows
-  how to set up Apache as a reverse proxy using `mod_proxy`.
 
 ## Web servers learning checklist
 1. Choose a web server. [Nginx](http://nginx.org/en/) is often recommended 

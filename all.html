@@ -5868,9 +5868,6 @@ possible.</p>
 <p><a href="http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/">How to set up a safe and secure Web server</a></p>
 </li>
 <li>
-<p><a href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
-</li>
-<li>
 <p>A reference with the full list of 
 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP status codes</a>
 is provided by W3C.</p>
@@ -5890,10 +5887,6 @@ is provided by W3C.</p>
   The benchmarks are worth taking a look at to see if this server could fit
   your needs if you need the fastest performance trading off for as of yet
   untested web server.</p>
-</li>
-<li>
-<p><a href="http://www.apachetutor.org/admin/reverseproxies">Reverse proxies</a> shows
-  how to set up Apache as a reverse proxy using <code>mod_proxy</code>.</p>
 </li>
 </ul>
 <h2>Web servers learning checklist</h2>
@@ -7935,6 +7928,37 @@ that set up Nginx with HTTPS and SSL/TLS certificates </p>
   to set up Nginx for caching HTTP requests, which is often done by Varnish
   but can also be handled by Nginx with the <code>proxy_cache</code> and related
   directives.</p>
+</li>
+</ul>
+          <h1>Apache HTTP Server</h1>
+<p>The <a href="https://httpd.apache.org/">Apache HTTP Server</a> is a widely deployed web server
+that can be used in combination with a WSGI module, such as mod_wsgi or a
+stand-alone <a href="/wsgi-servers.html">WSGI server</a> to run Python web applications.</p>
+<h2>Why is the Apache HTTP Server important?</h2>
+<p>Apache remains the most commonly deployed web server with a reign of
+20+ years. Its wide usage contributes to the large number of tutorials
+and open source modules created by developers for anyone to use.</p>
+<p>Apache's development began in mid-1994 as a fork of the
+<a href="https://en.wikipedia.org/wiki/NCSA_HTTPd">NCSA HTTP Server</a> project.
+By early 1996, Apache overtook the previously dominant but suddenly stagnant 
+NCSA server as NCSA's progress stalled due to signficantly reduced 
+development attention.</p>
+<div class="well see-also">The Apache HTTP Server is an implementation of the <a href="/web-servers.html">web server</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h3>Apache HTTP Server resources</h3>
+<ul>
+<li>
+<p><a href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
+</li>
+<li>
+<p>The 
+  <a href="http://httpd.apache.org/docs/current/">official project documentation page</a>
+  contains a section with How-Tos and Tutorials to handle authentication,
+  security and dynamic content.</p>
+</li>
+<li>
+<p><a href="http://www.apachetutor.org/admin/reverseproxies">Reverse proxies</a> shows
+  how to set up Apache as a reverse proxy using <code>mod_proxy</code>.</p>
 </li>
 </ul>
           <h1>Testing</h1>
