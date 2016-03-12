@@ -1,9 +1,9 @@
 title: Change Log
 category: page
 slug: change-log
-sortorder: 1302
+sortorder: 0902
 toc: True
-sidebartitle: 13. Change Log
+sidebartitle: 9. Change Log
 meta: If you're interested in what's new to learn on Full Stack Python, the change log is the right place to look.
 
 

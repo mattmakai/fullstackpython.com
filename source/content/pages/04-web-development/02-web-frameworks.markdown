@@ -2,8 +2,8 @@ title: Web Frameworks
 category: page
 slug: web-frameworks
 sortorder: 0402
-toc: True
-sidebartitle: 5. Web Frameworks
+toc: False
+sidebartitle: Web Frameworks
 meta: Find out about Python web frameworks, which are code libraries that solve common web application creation challenges.
 
 

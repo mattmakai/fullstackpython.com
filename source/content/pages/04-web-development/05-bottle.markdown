@@ -3,7 +3,7 @@ category: page
 slug: bottle
 sortorder: 0405
 toc: False
-sidebartitle: Flask
+sidebartitle: Bottle
 meta: Bottle is a Python web framework contained within a single source file. Learn more about Bottle on Full Stack Python.
 
 

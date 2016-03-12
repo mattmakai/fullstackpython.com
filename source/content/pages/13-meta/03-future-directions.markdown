@@ -1,7 +1,7 @@
 title: Future Directions
 category: page
 slug: future-directions
-sortorder: 1303
+sortorder: 0903
 toc: False
 sidebartitle: Future Directions
 meta: In the future directions page on Full Stack Python I give some insight into what my current priorities are for enhancing the site.

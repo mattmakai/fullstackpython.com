@@ -3,7 +3,7 @@ category: page
 slug: data
 sortorder: 0501
 toc: True
-sidebartitle: 6. Data
+sidebartitle: 5. Data
 meta: Python make it possible to work with data through analysis, visualization and persistence. Learn more about data on Full Stack Python.
 
 
