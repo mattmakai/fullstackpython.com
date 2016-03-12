@@ -29,8 +29,6 @@ development attention.
 
 
 ### Apache HTTP Server resources
-* [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
-
 * The 
   [official project documentation page](http://httpd.apache.org/docs/current/)
   contains a section with How-Tos and Tutorials to handle authentication,
@@ -39,4 +37,9 @@ development attention.
 * [Reverse proxies](http://www.apachetutor.org/admin/reverseproxies) shows
   how to set up Apache as a reverse proxy using `mod_proxy`.
 
+* [Deploy Django on Apache with Virtualenv and mod\_wsgi](http://thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/)
+  provides instructions for what packages to install to get Apache up
+  and running with mod\_wsgi on Ubuntu.
+
+* [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
 
