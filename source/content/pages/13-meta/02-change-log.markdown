@@ -16,6 +16,10 @@ the
 
 ## 2016
 ### March
+* Made a huge improvement to the layout of the full-sized table of contents
+  that appears on pages that are above 768px wide (the collapsed table of
+  contents for mobile stays the same).
+* Began work on an [Apache HTTP Server page](/apache-http-server.html).
 * Added some new awesome [deployment](/deployment.html) resources.
 
 ### February
