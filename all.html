@@ -7966,6 +7966,33 @@ development attention.</p>
 <p><a href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
 </li>
 </ul>
+          <h1>Caddy</h1>
+<p><a href="https://caddyserver.com/">Caddy</a> is a relatively new HTTP server created 
+in 2015 and written in <a href="https://golang.org/">Go</a>. The server's philosophy
+and design emphasize HTTPS-everywhere along with the HTTP/2 protocol.</p>
+<h2>How can Caddy be used with Python deployments?</h2>
+<p>Caddy can be used both for testing during local development or as part
+of a production deployment as an HTTP server and a reverse proxy with
+the <a href="https://caddyserver.com/docs/proxy">proxy directive</a>.</p>
+<div class="well see-also">Caddy is an implementation of the <a href="/web-servers.html">web server</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h3>General Caddy resources</h3>
+<ul>
+<li>
+<p><a href="https://blog.gopheracademy.com/caddy-a-look-inside/">A look inside Caddy</a>
+  shows and explains some of the Go code written to build the server.</p>
+</li>
+<li>
+<p>The <a href="https://caddyserver.com/docs">official Caddy server docs</a> are the
+  spot to look for what directives can be placed into a Caddy configuration
+  file</p>
+</li>
+<li>
+<p><a href="http://engineeredweb.com/blog/2015/caddy-web-server/">Caddy a modern web server supporting HTTP/2</a>
+  is a quick synopsis on installing Caddy along with a short example
+  configuration file.</p>
+</li>
+</ul>
           <h1>Testing</h1>
 <p>Testing determines whether software runs correctly based on specific inputs 
 and identifies defects that need to be fixed.</p>
