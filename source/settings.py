@@ -13,13 +13,13 @@ DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email', 'all')
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
-BYLINE = '&copy; 2015 Matt Makai. All Rights Reserved.'
+BYLINE = '&copy; 2016 Matt Makai. All Rights Reserved.'
 LINKS = ()
 
 MARKUP = ('rst', 'markdown',)
 
 SOCIAL = (
-    ('Email', 'mailto:makaimc@gmail.com'),
+    ('Email', 'mailto:matthew.makai@gmail.com'),
     ('GitHub', 'https://github.com/makaimc'),
     ('Twitter', 'http://twitter.com/mattmakai'),
 )
