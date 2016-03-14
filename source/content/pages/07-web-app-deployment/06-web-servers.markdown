@@ -34,12 +34,16 @@ The conceptual web server idea can be implemented in various ways. The
 following web server implementations each have varying features, extensions
 and configurations.
 
-* [Apache HTTP Server](https://httpd.apache.org/)
+* The [Apache HTTP Server](/apache-http-server.html) has been the most 
+  commonly deployed web server on the Internet for 20+ years.
 
-* [Nginx](http://nginx.org/en/)
+* [Nginx](/nginx.html) is the second most commonly used server for the
+  top 100,000 websites and often serves as a reverse proxy for 
+  [Python WSGI servers](/wsgi-servers.html).
 
-* [Caddy](https://caddyserver.com/) is a newcomer to the web server scene
+* [Caddy](/caddy.html) is a newcomer to the web server scene
   and is focused on serving the HTTP/2 protocol with HTTPS. 
+
 
 ## Client requests
 A client that sends a request to a web server is usually a browser such 
