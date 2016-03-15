@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### March
+* Removed unfortunate dead links from the [Django](/django.html) page.
 * Made a huge improvement to the layout of the full-sized table of contents
   that appears on pages that are above 768px wide (the collapsed table of
   contents for mobile stays the same).

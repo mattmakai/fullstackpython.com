@@ -94,16 +94,7 @@ as of Django 1.7.
   the latest resources for learning Django and is also a good spot to ask 
   questions about it.
 
-* Lincoln Loop wrote a 
-  [Django Best Practices guide](http://lincolnloop.com/django-best-practices/)
-  for the community.
-
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
-
-* [Django by Example](http://lightbird.net/dbe2/) is a set of tutorials for
-  creating Django projects such as a blog, forum, issue tracker and portfolio.
-  This is a good site if you want to dive right into the code with minimal
-  prose.
 
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
   has several nice examples for breaking Django into smaller simpler 
@@ -119,9 +110,6 @@ as of Django 1.7.
 
 * This [step-by-step guide for Django](http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/)
   shows how to transmit data via AJAX with JQuery.
-
-* [Deploying Django on AWS](http://www.nickpolet.com/blog/deploying-django-on-aws/1/)
-  is another walkthrough for deploying Django to AWS.
 
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
@@ -140,10 +128,6 @@ as of Django 1.7.
 * This [Python Social Auth for Django tutorial](https://github.com/davisfreeman1015/SocialAuthDjangoTutorial)
   will show you how to integrate social media sign in buttons into your Django
   application.
-
-* [Django: Wall of Superpowers!](http://djangowos.com/) shows packages that
-  are Python 3 compatible in green and ones that are not yet compatible with
-  Python 3 in red.
 
 * Luke Plant writes about 
   [his approach to class based views](http://lukeplant.me.uk/blog/posts/my-approach-to-class-based-views/) (CBVs),
