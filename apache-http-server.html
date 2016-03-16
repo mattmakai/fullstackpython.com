@@ -59,12 +59,22 @@ development attention.</p>
   how to set up Apache as a reverse proxy using <code>mod_proxy</code>.</p>
 </li>
 <li>
+<p><a href="https://www.linode.com/docs/websites/apache/apache-web-server-on-ubuntu-14-04">Apache Web Server on Ubuntu 14.04 LTS</a>
+  explains how to install Apache on Ubuntu 14.04, which is still a supported
+  release. Note however, do <em>not</em> install mod_python because it is now insecure
+  and made obsolete by <a href="/wsgi-servers.html">mod_wsgi and WSGI servers</a>.</p>
+</li>
+<li>
 <p><a href="http://thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/">Deploy Django on Apache with Virtualenv and mod_wsgi</a>
   provides instructions for what packages to install to get Apache up
   and running with mod_wsgi on Ubuntu.</p>
 </li>
 <li>
-<p><a href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a></p>
+<p><a href="http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid">Apache and mod_wsgi on Ubuntu 10.04</a>
+  is an older post that shows how to set up Apache on the now out-of-support
+  Ubuntu 10.04 LTS release. This setup isn't recommended in 2016 and beyond
+  but if you are already using 10.04 as your base operating system you might
+  need to reference this material.</p>
 </li>
 </ul>
 <h3>Continue learning about web servers or move to a new topic?</h3>
