@@ -169,9 +169,16 @@ for Django and web development on the [best Python videos](/best-python-videos.h
   [part 4](http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/)
   are now all available to read.
 
+* Channels are a new mechanism in Django 1.9 (as a standalone app, later
+  for incorporation into the core framework) for real-time full-duplex
+  communication between the browser and the server based on 
+  [WebSockets](/websockets.html). This 
+  [tutorial shows how to get started with Django Channels in your project](https://blog.heroku.com/archives/2016/3/17/in_deep_with_django_channels_the_future_of_real_time_apps_in_django).
+
 * [Django migrations without downtimes](http://pankrat.github.io/2015/django-migrations-without-downtimes/)
   shows one potential way of performing on-line schema migrations with
   Django.
+
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
