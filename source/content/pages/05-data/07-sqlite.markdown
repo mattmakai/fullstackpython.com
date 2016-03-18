@@ -56,3 +56,6 @@ access a SQLite database from within Python applications.
   support to use these new features.
 
 
+* [SQLite with a fine-toothed comb](http://blog.regehr.org/archives/1292)
+  digs into the internals of SQLite and shows some bugs found (and 
+  since fixed) while the author was researching the SQLite source code.
