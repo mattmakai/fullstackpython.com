@@ -34,3 +34,8 @@ the [proxy directive](https://caddyserver.com/docs/proxy).
   is a quick synopsis on installing Caddy along with a short example
   configuration file.
 
+* [Is Caddy free?](https://caddyserver.com/blog/is-caddy-free) explains
+  the donation and sponsorships model that Caddy uses to continue development
+  on the server. The gist is that the server is free to clone, download and
+  use. Sponsors and optional donations are currently used to fund ongoing
+  development.
