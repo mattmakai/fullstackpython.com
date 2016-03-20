@@ -31,7 +31,7 @@ to serve the site and didn't have any issues even with close to 400
 concurrent connections at a time, as shown in the following Google Analytics 
 screenshot captured during that traffic burst.
 
-<img src="/img/hacker-news-traffic.jpg" width="100%" alt="Example of how static websites scale with a CDN based on Full Stack Python on Hacker News front page traffic." class="technical-diagram"></a>
+<img src="/img/hacker-news-traffic.jpg" width="100%" alt="Example of how static websites scale with a CDN based on Full Stack Python on Hacker News front page traffic." class="technical-diagram">
 
 
 ## How do static website generators work?
@@ -45,7 +45,7 @@ For example, as shown in the diagram below, the Pelican static site
 generator can take in reStructuredText files and Jinja2 template files 
 as input then combine them to output a set of static HTML files.
 
-<img src="/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram"></a>
+<img src="/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram">
 
 
 ## What's the downside to using static site generators?
