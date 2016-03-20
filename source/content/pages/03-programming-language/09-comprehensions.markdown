@@ -54,6 +54,12 @@ Dictionary comprehension:
   [comprehensions](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Comprehensions.html)
   including code examples and diagrams to explain how they work.
 
+* [Idiomatic Python: Comprehensions](https://blogs.msdn.microsoft.com/pythonengineering/2016/03/14/idiomatic-python-comprehensions/)
+  explains how Python's comprehensions were inspired by Haskell's list
+  comprehensions. It also provides clear examples that show how comprehensions
+  are shorthand for common iteration code, such as copying one list into
+  another while performing some operation on the contained elements.
+
 * [Learning Python by example: list comprehensions](http://blog.cdleary.com/2010/04/learning-python-by-example-list-comprehensions/)
   gives an example of an incorrect list comprehension then shows how to
   correct its issues.
