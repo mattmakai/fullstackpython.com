@@ -34,8 +34,13 @@ the [proxy directive](https://caddyserver.com/docs/proxy).
   is a quick synopsis on installing Caddy along with a short example
   configuration file.
 
+* [HTTP 2.0 on localhost with Caddy](http://tobias.is/blog/test-http2-localhost-caddy-ssl/)
+  shows how to use a self-signed certificate with Caddy to do local 
+  development with an HTTP/2 web server.
+
 * [Is Caddy free?](https://caddyserver.com/blog/is-caddy-free) explains
   the donation and sponsorships model that Caddy uses to continue development
   on the server. The gist is that the server is free to clone, download and
   use. Sponsors and optional donations are currently used to fund ongoing
   development.
+
