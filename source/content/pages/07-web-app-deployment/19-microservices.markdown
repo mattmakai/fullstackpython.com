@@ -57,6 +57,12 @@ ease further development and deployment. This approach is called the
   good high-level overview of the topics many developers aren't aware of when they
   embark on converting a monolith to microservices.
 
+* [Using Nginx to Load Balance Microservices](https://hagbarddenstore.se/posts/2016-03-11/using-nginx-to-load-balance-microservices/)
+  explains how an Nginx instance can use configuration values from etcd
+  updated by confd as the values are modified. This setup can be useful for
+  load balancing microservices as the backend services are brought up
+  and taken down.
+
 * [How Microservices have changed and why they matter](http://thenewstack.io/microservices-changed-matter/)
   is a high level overview of the topic with some quotes from
   various developers around the industry.
@@ -66,4 +72,3 @@ ease further development and deployment. This approach is called the
   popularity of microservices heading into 2016. This is more of an
   overview of the term than a tutorial but useful context for both
   developers and non-developers.
-
