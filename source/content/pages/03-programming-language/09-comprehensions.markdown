@@ -54,6 +54,10 @@ Dictionary comprehension:
   [comprehensions](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Comprehensions.html)
   including code examples and diagrams to explain how they work.
 
+* [Comprehensions in Python the Jedi way](https://gist.github.com/bearfrieze/a746c6f12d8bada03589)
+  shows off comprehensions with a Star Wars theme to walk through the nuts
+  and bolts. All examples use Python 3.5.
+
 * [Idiomatic Python: Comprehensions](https://blogs.msdn.microsoft.com/pythonengineering/2016/03/14/idiomatic-python-comprehensions/)
   explains how Python's comprehensions were inspired by Haskell's list
   comprehensions. It also provides clear examples that show how comprehensions
