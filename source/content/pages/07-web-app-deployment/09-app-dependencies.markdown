@@ -132,6 +132,12 @@ further clarification.
   one of Linux's dependency managers comes up. This provides
   [one perspective on that debate](http://notes.pault.ag/debian-python/).
 
+* [Open source trust scaling](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/)
+  is a good piece for the Python community (and other communities) that is
+  based on the 
+  [left-pad NPM situation](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)
+  that broke many dependent packages in the Node.JS community.
+
 * This Stack Overflow question details how to set up a 
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
 
