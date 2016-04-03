@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Matt Makai</title><link>http://www.fullstackpython.com/</link><description></description><atom:link href="http://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 31 Mar 2016 00:00:00 -0400</lastBuildDate><item><title>The Full Stack Python Blog</title><link>http://www.fullstackpython.com/full-stack-python-blog.html</link><description>&lt;h1&gt;The Full Stack Python Blog&lt;/h1&gt;
+&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
+the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, &lt;a href="/servers.html"&gt;server&lt;/a&gt;, 
+operating system, web server and WSGI server pages. Since then, the pages
+have expanded out into a 
+&lt;a href="http://www.fullstackpython.com/table-of-contents.html"&gt;boatload of other areas&lt;/a&gt;
+including subjects outside the deployment topics I originally started the
+site to explain.&lt;/p&gt;
+&lt;p&gt;Frequently though I wanted to write a Python walkthrough that wasn't a
+good fit for the page format I use for each topic.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Thu, 31 Mar 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-03-31:full-stack-python-blog.html</guid></item></channel></rss>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block meta_header %}
+<meta name="description" content="A blog with tutorials for Full Stack Python developers.">
+{% endblock %}
+
+{% block title %}Blog - {% endblock %}
+
+{% block banner %}
+    {% include "banner.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+      {% for a in articles %}
+        {{ a.content }}
+      {% endfor %}
+      {% include "email-for-book.html" %}
+    </div>
+    {% include "sidebar.html" %}
+</div>
+{% endblock %}

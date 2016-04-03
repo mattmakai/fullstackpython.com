@@ -178,5 +178,5 @@ p.banner {font-family:"Helvetica Neue","Arial Narrow Bold",sans-serif;font-weigh
 @media (max-width:767px){#full-toc{display:none;}}
 @media (min-width:768px){#full-toc{display:block;} #mobile-toc{display:none;}}
 .subnav {font-family: 'Helvetica Neue', 'Arial Narrow Bold',sans-serif;}
-a.submenu-item-first {margin-right: 12px;} 
+a.submenu-item-first {margin-right: 12px;}
 a.submenu-item {margin-left: 12px; margin-right: 12px;}
