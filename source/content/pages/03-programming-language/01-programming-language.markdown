@@ -88,4 +88,6 @@ the very beginner topics.
   is a list of quirky queries on rare Python features and why certain syntax
   was or was not built into the language.
 
-
+* [A practical introduction to Functional Programming for Python coders](https://codesachin.wordpress.com/2016/04/03/a-practical-introduction-to-functional-programming-for-python-coders/)
+  is a good starter for developers looking to learn the functional 
+  programming paradigm side of the language.
