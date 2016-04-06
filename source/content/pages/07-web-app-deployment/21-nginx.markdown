@@ -51,8 +51,6 @@ that set up Nginx with HTTPS and SSL/TLS certificates
 
 * [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
 
-* An example of an [Nginx security configuration](http://tautt.com/best-nginx-configuration-for-security/).
-
 * [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
   explains how Nginx can be used instead of Apache in some cases for
   better performance.
