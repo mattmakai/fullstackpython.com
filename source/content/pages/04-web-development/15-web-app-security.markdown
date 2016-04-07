@@ -20,6 +20,10 @@ request forgery and usage of public-private keypairs.
 * [quick NIX secure script](https://github.com/marshyski/quick-secure) for
 securing Linux distributions.
 
+* [lynis](https://github.com/CISOfy/lynis) is a really cool security audit
+  tool that can be run as a shell script on a Linux system to find out
+  its vulnerabilities so that you can fix them instead of allowing them
+  to be exploited by malicious actors.
 
 ## HTTPS resources
 * [How does HTTPS actually work?](http://robertheaton.com/2014/03/27/how-does-https-actually-work/)
