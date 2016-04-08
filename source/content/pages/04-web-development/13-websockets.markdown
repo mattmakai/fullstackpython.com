@@ -233,3 +233,8 @@ properly.
   and Socket.IO to update values between web browser clients when changes
   occur.
 
+* [Can WebSockets and HTTP/2 Co-exist?](http://www.infoq.com/articles/websocket-and-http2-coexist)
+  compares and contrasts the two protocols and shows how they have 
+  differences which will likely lead to WebSockets sticking around for
+  awhile longer.
+
