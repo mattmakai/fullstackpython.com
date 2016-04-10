@@ -72,3 +72,7 @@ that set up Nginx with HTTPS and SSL/TLS certificates
   but can also be handled by Nginx with the `proxy_cache` and related
   directives.
 
+* [Secture Web Deployment with Let's Encrypt and Nginx](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/ )
+  is a detailed walkthrough for setting up HTTPS under Ubuntu 14.04 with
+  Nginx.
+
