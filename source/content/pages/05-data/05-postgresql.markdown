@@ -222,3 +222,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * [PostgreSQL Indexes: First Principles](http://eftimov.net/postgresql-indexes-first-principles)
   is a detailed look at what indexes are, what they are good for and
   how to use them in PostgreSQL.
+
+* This [slideshow on high availability for web applications](http://thebuild.com/presentations/pgha-fosdem-2016.pdf)
+  has a good overview of various database setups common in production
+  web applications.
