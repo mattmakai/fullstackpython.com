@@ -152,6 +152,10 @@ topics.
   [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
   contains a wealth of information both on the Python programming language and the community.
 
+* [Composing Programs](http://composingprograms.com/) shows how to build 
+  compilers with Python 3, which is a good undertaking if you're looking
+  to learn both more about the Python language and how compiles work.
+
 * [Good to Great Python Reads](http://jessenoller.com/good-to-great-python-reads/)
   is a collection of intermediate and advanced Python articles around the web
   focused on nuances and details of the Python language itself.
