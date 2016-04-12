@@ -91,3 +91,7 @@ the very beginner topics.
 * [A practical introduction to Functional Programming for Python coders](https://codesachin.wordpress.com/2016/04/03/a-practical-introduction-to-functional-programming-for-python-coders/)
   is a good starter for developers looking to learn the functional 
   programming paradigm side of the language.
+
+* [Getting Started with the Python Internals](http://akaptur.com/blog/2014/08/03/getting-started-with-python-internals/)
+  takes a slice of the huge CPython codebase and deconstructs some of
+  it to see what we can learn about how Python itself is built.
