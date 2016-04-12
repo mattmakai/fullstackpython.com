@@ -120,7 +120,7 @@ further clarification.
 
 ## Application dependency resources
 * [Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
-  [virtualenv and pip basics](http://www.jontourage.com/2011/02/09/virtualenv-pip-basics/).
+  [virtualenv and pip basics](http://jonathanchu.is/posts/virtualenv-and-pip-basics/).
 
 * [A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
   breaks down what problems these tools solve and how to use them.
