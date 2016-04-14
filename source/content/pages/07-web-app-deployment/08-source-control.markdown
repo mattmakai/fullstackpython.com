@@ -116,6 +116,10 @@ reviews the basics of distributed version control systems.
   covers the basics as well as more advanced Git commands while explaining each
   step along the way.
 
+* [Think like a Git](http://think-like-a-git.net/) is another introduction
+  that focuses more on the graph theory and conceptual ideas behind Git
+  to help the reader understand what's happening as they use Git commands.
+
 * [A practical git introduction](http://mrchlblng.me/2014/09/practical-git-introduction/)
   is exactly what the title says it is. This is a well written guide with 
   plenty of code snippets to get you up to speed with Git.
