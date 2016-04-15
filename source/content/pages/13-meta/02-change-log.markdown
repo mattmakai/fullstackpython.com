@@ -15,6 +15,11 @@ the
 
 
 ## 2016
+### April
+* Clean up on some existing pages to remove broken links.
+* Added new subnav under the logo and title so readers can more easily 
+  access the [table of contents](/table-of-contents.html).
+
 ### March
 * Added new [DevOps](/devops.html) resources.
 * Removed unfortunate dead links from the [Django](/django.html) page.

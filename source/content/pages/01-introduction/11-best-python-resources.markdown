@@ -199,3 +199,9 @@ the [best Python videos](/best-python-videos.html) page.
   often pulls from different sources than the other two. It's well worth 
   subscribing to all three so you don't miss anything.
 
+* The [Full Stack Python monthly newsletter](https://www.fullstackpython.com/email.html) 
+  is a monthly newsletter that focuses on a single topic each month. For 
+  example, one month will aggregate great Flask resources, while another 
+  month will provide WSGI server configurations.
+
+
