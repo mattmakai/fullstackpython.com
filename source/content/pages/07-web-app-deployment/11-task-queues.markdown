@@ -107,10 +107,6 @@ when scaling out a large deployment of distributed task queues.
   is a detailed walkthrough for setting up Celery with Django (although
   Celery can also be used without a problem with other frameworks).
 
-* [Distributing work without Celery](http://justcramer.com/2012/05/04/distributing-work-without-celery/)
-  provides a scenario in which Celery and RabbitMQ are not the right tool
-  for scheduling asynchronous jobs.
-
 * [International Space Station notifications with Python and Redis Queue (RQ)](https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html)
   shows how to combine the RQ task queue library with Flask to send 
   text message notifications every time a condition is met - in this blog
