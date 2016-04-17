@@ -62,3 +62,6 @@ developers learn PostgreSQL if they do not already know MySQL.
   is a blog post about specific deficiencies in MySQL's implementation that
   hinder its usage with Django's ORM.
 
+* [Growing up with MySQL](https://nylas.com/blog/growing-up-with-mysql/) is
+  a story about how one company went through dramatic growth and had to keep
+  up with it by quickly scaling their MySQL database.
