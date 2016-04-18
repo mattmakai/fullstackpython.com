@@ -65,3 +65,12 @@ developers learn PostgreSQL if they do not already know MySQL.
 * [Growing up with MySQL](https://nylas.com/blog/growing-up-with-mysql/) is
   a story about how one company went through dramatic growth and had to keep
   up with it by quickly scaling their MySQL database.
+
+* [Monitoring MySQL metrics](https://www.datadoghq.com/blog/monitoring-mysql-performance-metrics/)
+  is the first of a three part series, with the other parts on 
+  [collecting metrics](https://www.datadoghq.com/blog/collecting-mysql-statistics-and-metrics/)
+  and 
+  [monitoring & collecting specifically with the DataDog tool](https://www.datadoghq.com/blog/mysql-monitoring-with-datadog/). The series explains what
+  metrics you should be collecting and monitoring in your production
+  database along with the purpose for why those metrics are important.
+
