@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### April
+* Added new Channels section to [Django](/django.html) page.
 * Clean up on some existing pages to remove broken links.
 * Added new subnav under the logo and title so readers can more easily 
   access the [table of contents](/table-of-contents.html).
