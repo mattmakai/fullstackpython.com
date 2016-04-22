@@ -79,6 +79,13 @@ guide as they are considered advanced deployment techniques.
   overview of deployment concepts and as an introduction to the other videos
   on those subjects in that series.
 
+* [Continuous deployment at Instagram](http://engineering.instagram.com/posts/1125308487520335/continuous-deployment-at-instagram/)
+  is the story of how their deployment process evolved over time from a 
+  large Fabric script to continous deployments. Along the way they 
+  encountered issues with code reviews, test failures, canary builds and
+  rollbacks. It's a great read that sheds some light on how Python 
+  deployments can be done well at large scale.
+
 * If you're using Flask this 
   [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
   is a great way to familiarize yourself with the deployment process.
