@@ -75,8 +75,15 @@ HTTP(S) configurations.
   architecture model is more performant and scalable than other approaches
   used to build web servers.
 
-* [Nginx web server tutorials](http://articles.slicehost.com/nginx) are oldies
-  but goodies on setting up previous versions of Nginx. 
+* [Test-driving web server configuration](https://gdstechnology.blog.gov.uk/2015/03/25/test-driving-web-server-configuration/)
+  is a good story for how to iteratively apply configuration changes, such
+  as routing traffic to [Piwik](http://piwik.org/) for 
+  [web analytics](/web-analytics.html), reverse proxying to backend
+  application servers and terminately TLS connections appropriately.
+  It is impressive to read a well-written softare development article like
+  this from a government agency, although UK's Government Digital Service as
+  well as USA's 18F and US Digital Service foster a far more credible
+  culture than most typical agencies.
 
 * [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
   provides the first steps to getting an initial Nginx configuration up and
@@ -102,5 +109,8 @@ HTTP(S) configurations.
   to set up Nginx for caching HTTP requests, which is often done by Varnish
   but can also be handled by Nginx with the `proxy_cache` and related
   directives.
+
+* [Nginx web server tutorials](http://articles.slicehost.com/nginx) are oldies
+  but goodies on setting up previous versions of Nginx. 
 
 
