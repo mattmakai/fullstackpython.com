@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### April
+* Updated the [Nginx](/nginx.html) page with a security section.
 * Added new Channels section to [Django](/django.html) page.
 * Clean up on some existing pages to remove broken links.
 * Added new subnav under the logo and title so readers can more easily 

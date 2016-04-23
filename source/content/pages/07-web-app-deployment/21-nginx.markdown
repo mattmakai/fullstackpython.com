@@ -34,8 +34,37 @@ me problems. So I stick with my battle-tested
 Ansible [configuration management](/configuration-management.html) files
 that set up Nginx with HTTPS and SSL/TLS certificates 
 
+## Securing Nginx
+Nginx's default configuration after a standard installation through a
+system package manager or compiling from source is a good base for security.
+However, setting up ciphers and redirects can be confusing the first few
+times you try it. It's a really good idea to read some of these tutorials
+to make sure you are avoiding the most common security errors that plague
+HTTP(S) configurations.
 
-## Nginx resources
+* [Hacker News broke our site – how Nginx and PageSpeed fixed the problem](https://www.airport-parking-shop.co.uk/blog/hacker-news-broke-site-nginx-pagespeed-fixed-problem/)
+  is primarily about optimizing Nginx's configuration for more efficient 
+  SSL connections. The post also covers 
+  [configuration management](/configuration-management.html) with Ansible
+  as well as the Pagespeed module that Google released for both Nginx
+  and the [Apache HTTP Server](/apache-http-server.html).
+
+* [Secure Web Deployment with Let's Encrypt and Nginx](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/ )
+  is a detailed walkthrough for setting up HTTPS under Ubuntu 14.04 with
+  Nginx.
+
+* [How To Secure Nginx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-on-ubuntu-14-04)
+  explains SSL configurations and IP address blacklisting then provides
+  several other tutorials for more advanced security modules.
+
+* [Strong SSL Security on Nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)
+  shows how to mitigate high profile SSL attacks like 
+  [Logjam](https://weakdh.org/),
+  [Heartbleed](http://heartbleed.com/)
+  and [FREAK](https://freakattack.com/).
+
+
+## General Nginx resources
 * The [Nginx chapter](http://www.aosabook.org/en/nginx.html) in the
   [Architecture of Open Source Applications book](http://www.aosabook.org/en/index.html)
   has a great chapter devoted to why Nginx is built to scale a certain way
@@ -50,6 +79,8 @@ that set up Nginx with HTTPS and SSL/TLS certificates
   but goodies on setting up previous versions of Nginx. 
 
 * [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
+  provides the first steps to getting an initial Nginx configuration up and
+  running. 
 
 * [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
   explains how Nginx can be used instead of Apache in some cases for
@@ -72,7 +103,4 @@ that set up Nginx with HTTPS and SSL/TLS certificates
   but can also be handled by Nginx with the `proxy_cache` and related
   directives.
 
-* [Secture Web Deployment with Let's Encrypt and Nginx](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/ )
-  is a detailed walkthrough for setting up HTTPS under Ubuntu 14.04 with
-  Nginx.
 
