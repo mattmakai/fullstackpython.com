@@ -38,7 +38,7 @@ learned from the Python community's reactions as the framework evolved.
 Jökull Sólberg wrote a great piece articulating to this effect in his 
 [experience switching between Flask and Django](http://jokull.calepin.co/my-flask-to-django-experience.html).
 
-<div class="well see-also">If you're learning about Flask you should also understand <a href="/web-frameworks.html">web frameworks</a> and read how to <a href="/deployment.html">deploy web applications</a>.</div>
+<div class="well see-also">Flask is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these pieces fit together in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 ## Flask resources

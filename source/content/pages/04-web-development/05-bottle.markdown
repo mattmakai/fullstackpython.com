@@ -10,8 +10,42 @@ meta: Bottle is a Python web framework contained within a single source file. Le
 # Bottle
 [Bottle](http://bottlepy.org/docs/dev/index.html) is a WSGI-compliant
 [single source file](https://github.com/defnull/bottle/blob/master/bottle.py)
-web framework with no external dependencies except for the standard library
-included with Python.
+web framework with no external dependencies other than the Python
+[standard library (stdlib)](https://docs.python.org/3/library/).
+
+<a href="http://bottlepy.org/docs/dev/index.html" style="border: none;"><img src="/img/bottle-logo.png" width="100%" alt="Official Bottle logo." class="technical-diagram"></a>
+
+
+## Should I use Bottle for web development?
+Bottle is awesome in several particular web development situations:
+1. Prototyping ideas 
+1. Learning how web frameworks are built
+1. Building and running simple personal web applications 
+
+Prototyping simple ideas is often easier with Bottle than a more
+opinionated web framework like [Django](/django.html) because Django
+projects start with a significant amount of boilerplate code. The
+[Model-View-Template](https://docs.djangoproject.com/en/1.9/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)
+structure for Django apps within projects makes maintaining projects
+easier, but it can be cumbersome on starter projects where you're
+just playing with random ideas so you aren't worried about your 
+application's long-term code structure.
+
+Bottle is contained 
+[within a single large source file](https://github.com/bottlepy/bottle/blob/master/bottle.py) 
+named `bottle.py` so it provides great reading when learning how 
+[WSGI](/wsgi-servers.html) web frameworks work. Everything you need to learn 
+about how your web application's code connects with the Bottle framework is 
+contained within that single source code.
+
+Personal projects can be deployed with Bottle as the only dependency.
+If you've never performed a [Python web app deployment](/deployment.html)
+before, the number of concepts and steps can be daunting. By packaging
+`bottle.py` with your app's source code, you can skip some of the
+steps to more easily get your web application up and running. 
+
+
+<div class="well see-also">Bottle is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these pieces fit together in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 ## Bottle resources
@@ -58,6 +92,8 @@ included with Python.
 * [Decanter](http://gengo.github.io/decanter/) is a library for structuring
   Bottle projects.
 
+* [compare-python-web-frameworks](https://github.com/makaimc/compare-python-web-frameworks)
+  provides an example application using Bottle as one of the implementations.
 
 
 ## Bottle framework learning checklist

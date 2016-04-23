@@ -34,6 +34,8 @@ The batteries-included and extensibility philosophies are simply two different
 ways to tackle framework building. Neither philosophy is inherently better 
 than the other one.
 
+<div class="well see-also">Django is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these pieces fit together in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
 
 ## Why is Django a good web framework choice?
 The Django project's stability, performance and community have grown 
@@ -55,9 +57,6 @@ There's some debate on whether
 [learning Python by using Django is a bad idea](http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/). 
 However, that criticism is invalid if you take the time to learn the Python
 syntax and language semantics first before diving into web development.
-
-
-<div class="well see-also">While you're learning about Django you should also read up on <a href="/web-frameworks.html">web frameworks</a> and check out the <a href="/bottle.html">Bottle framework</a>.</div>
 
 
 ## Django books and tutorials
