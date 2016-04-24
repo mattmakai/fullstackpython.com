@@ -17,7 +17,8 @@ web framework with no external dependencies other than the Python
 
 
 ## Should I use Bottle for web development?
-Bottle is awesome in several particular web development situations:
+Bottle is awesome for a few web development situations:
+
 1. Prototyping ideas 
 1. Learning how web frameworks are built
 1. Building and running simple personal web applications 
