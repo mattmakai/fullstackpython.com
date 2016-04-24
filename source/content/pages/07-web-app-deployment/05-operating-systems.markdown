@@ -14,8 +14,8 @@ programs necessary for running your Python web application.
 
 
 ## Why are operating systems necessary?
-An operating system makes many of the computing tasks we take for granted easy.
-For example, the operating system enables writing to files, 
+An operating system makes many of the computing tasks we take for granted 
+easy. For example, the operating system enables writing to files, 
 communicating over a network and running multiple programs at once. 
 Otherwise you'd need to control the CPU, memory, network, graphics card, 
 and many other components with your own low-level implementation.
@@ -53,9 +53,11 @@ are the recommended versions to use for deployments. LTS versions receive
 five years of post-release updates from Canonical. Every two years, Canonical 
 creates a new LTS release, which allows for an easy upgrade path as well 
 as flexibility in skipping every other LTS release if necessary. As of
-November 2014, 
-[14.04 Trusty Tahr](http://releases.ubuntu.com/14.04/)
-is the latest Ubuntu LTS release.
+April 2016, 
+[16.04 Xenial Xerus](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes)
+is the latest Ubuntu LTS release. Xenial Xerus includes 
+[Python 3.5](/python-2-or-3.html) as its default Python version, which is
+a major update compared with 2.7 in Ubuntu 14.04 LTS.
 
 
 #### Ubuntu Python Packages
