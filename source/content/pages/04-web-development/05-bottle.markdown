@@ -23,6 +23,7 @@ Bottle is awesome for a few web development situations:
 1. Learning how web frameworks are built
 1. Building and running simple personal web applications 
 
+#### Prototyping
 Prototyping simple ideas is often easier with Bottle than a more
 opinionated web framework like [Django](/django.html) because Django
 projects start with a significant amount of boilerplate code. The
@@ -32,6 +33,7 @@ easier, but it can be cumbersome on starter projects where you're
 just playing with random ideas so you aren't worried about your 
 application's long-term code structure.
 
+#### Learning about frameworks
 Bottle is contained 
 [within a single large source file](https://github.com/bottlepy/bottle/blob/master/bottle.py) 
 named `bottle.py` so it provides great reading when learning how 
@@ -39,6 +41,7 @@ named `bottle.py` so it provides great reading when learning how
 about how your web application's code connects with the Bottle framework is 
 contained within that single source code.
 
+#### Personal projects
 Personal projects can be deployed with Bottle as the only dependency.
 If you've never performed a [Python web app deployment](/deployment.html)
 before, the number of concepts and steps can be daunting. By packaging
