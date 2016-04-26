@@ -79,3 +79,12 @@ ease further development and deployment. This approach is called the
   popularity of microservices heading into 2016. This is more of an
   overview of the term than a tutorial but useful context for both
   developers and non-developers.
+
+* [bla bla microservices bla bla](http://jonasboner.com/bla-bla-microservices-bla-bla/) 
+  is a transcript for a killer talk on microservices that breaks down the
+  important first principles of distributed systems, including asynchronous 
+  communication, isolation, autonomicity, single responsibility, 
+  exclusive state, and mobility. The slides along with the accompanying
+  text go into how reality gets messy and how to embrace the constraints
+  inherent in distributed systems.
+
