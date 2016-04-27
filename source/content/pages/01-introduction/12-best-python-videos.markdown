@@ -58,9 +58,6 @@ questions about your coding issues.
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
   videos for learning how to build Django applications.
 
-* [Getting Started with Django](http://gettingstartedwithdjango.com/) is a
-  series of video tutorials for the framework.
-
 * The videos and slides from 
   [Django: Under the Hood 2014](http://www.djangounderthehood.com/talks/)
   are from Django core committers and provide insight into the ORM, 
