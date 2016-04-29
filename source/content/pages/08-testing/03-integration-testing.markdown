@@ -40,7 +40,7 @@ during development so they can be addressed immediately.
   [thoughts on integration testing](http://eigenhombre.com/2013/04/18/thoughts-on-integration-testing/)
   and [processes vs. threads for integration testing](http://eigenhombre.com/2013/04/19/processes-vs-threads-for-testing/).
 
-* Pytest has a page on [integration good practices](https://pytest.org/latest/goodpractises.html) 
+* Pytest has a page on [integration good practices](https://pytest.org/latest/goodpractices.html)
   that you'll likely want to follow when testing your application.
 
 * [Integration testing, or how to sleep well at night](http://enterprisecraftsmanship.com/2015/07/13/integration-testing-or-how-to-sleep-well-at-nights/)
