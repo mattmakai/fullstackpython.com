@@ -10,6 +10,7 @@ meta: Flask is a popular, extensible web microframework for building web applica
 # Flask
 [Flask](http://flask.pocoo.org/) is a Python web framework built with a 
 [small core and easy-to-extend philosophy](http://flask.pocoo.org/docs/design/). 
+
 <a href="http://flask.pocoo.org/" style="border: none;"><img src="/img/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a>
 
 
