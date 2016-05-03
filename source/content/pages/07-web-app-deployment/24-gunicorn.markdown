@@ -88,10 +88,22 @@ perform the request handling. Each worker is independent of the controller.
   to serve up a Flask application.
 
 * The answers to the question "[what's the best practice for running Django with Gunicorn?](http://stackoverflow.com/questions/16857955/running-django-with-gunicorn-best-practice)"
-  provide some nuance for how Gunicorn should be invokin the callable application
-  variable provided by Django within a deployment.
+  provide some nuance for how Gunicorn should be invokin the callable 
+  application variable provided by Django within a deployment.
 
 * [How to Install Django with Gunicorn and Nginx on FreeBSD 10.2](http://linoxide.com/linux-how-to/install-django-gunicorn-nginx-freebsd-10-2/)
-  is a tutorial for FreeBSD, which is not often used in walkthroughs compared to
-  the frequency that Ubuntu and CentOS tutorials appear.
+  is a tutorial for FreeBSD, which is not often used in walkthroughs compared 
+  to the frequency that Ubuntu and CentOS tutorials appear.
+
+* [How to make a Scalable Python Web App using Flask, Gunicorn, NGINX on Ubuntu 14.04](http://www.philchen.com/2015/08/08/how-to-make-a-scalable-python-web-app-using-flask-and-gunicorn-nginx-on-ubuntu-14-04)
+  and
+  [Deploy a Flask App on Ubuntu](https://github.com/defshine/flaskblog/wiki/Deploy-Flask-App-on-Ubuntu(Virtualenv-Gunicorn-Nginx-Supervisor))
+  both provide steps for setting up a Flask web app using Gunicorn. There 
+  isn't much explanation provided with each tutorial but they can still be
+  good concise references in case you're having issues with Ubuntu.
+
+* The [Django](https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/gunicorn/) 
+  and [Flask](http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/) 
+  documentation each contain instructions for deploying the respective
+  frameworks with Gunicorn.
 
