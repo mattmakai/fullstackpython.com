@@ -4,7 +4,7 @@ slug: green-unicorn-gunicorn
 sortorder: 0724
 toc: False
 sidebartitle: Green Unicorn (Gunicorn)
-meta: Green Unicorn (Gunicorn) is a Python WSGI server that runs Python code for web applications.
+meta: Green Unicorn (Gunicorn) is a Python WSGI server that runs Python web application code.
 
 
 # Green Unicorn (Gunicorn)
