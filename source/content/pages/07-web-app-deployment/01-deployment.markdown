@@ -86,6 +86,11 @@ guide as they are considered advanced deployment techniques.
   rollbacks. It's a great read that sheds some light on how Python 
   deployments can be done well at large scale.
 
+* Stack Overflow's guide on 
+  [how they do deployment](http://nickcraver.com/blog/2016/05/03/stack-overflow-how-we-do-deployment-2016-edition/)
+  is an awesome in-depth read covering topics ranging from git branching
+  to database migrations.
+
 * If you're using Flask this 
   [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
   is a great way to familiarize yourself with the deployment process.
