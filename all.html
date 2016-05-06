@@ -8235,6 +8235,8 @@ interface. For example, if you write a web application with a
 <a href="/web-frameworks.html">web framework</a> such as <a href="/django.html">Django</a>, 
 <a href="/flask.html">Flask</a> or <a href="/bottle.html">Bottle</a>, then your application 
 implements the WSGI specification. </p>
+<div class="well see-also">Gunicorn is an implementation of the <a href="/wsgi-servers.html">WSGI servers</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all Python topics.</div>
+
 <h2>How does Gunicorn know how to run my web app?</h2>
 <p>Gunicorn knows how to run a web application based on the hook between the 
 WSGI server and the WSGI-compliant web app.</p>
@@ -8313,6 +8315,11 @@ perform the request handling. Each worker is independent of the controller.</p>
   and <a href="http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/">Flask</a> 
   documentation each contain instructions for deploying the respective
   frameworks with Gunicorn.</p>
+</li>
+<li>
+<p><a href="https://gist.github.com/Atem18/4696071">Set up Django, Nginx and Gunicorn in a Virtualenv controled by Supervisor</a>
+  is a GitHub Gist with some great explanations for why we're setting up
+  virtualenv and what to watch out for while you're doing the deployment.</p>
 </li>
 </ul>
           <h1>Testing</h1>

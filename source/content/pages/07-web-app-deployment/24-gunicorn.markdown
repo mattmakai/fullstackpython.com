@@ -30,6 +30,8 @@ interface. For example, if you write a web application with a
 [Flask](/flask.html) or [Bottle](/bottle.html), then your application 
 implements the WSGI specification. 
 
+<div class="well see-also">Gunicorn is an implementation of the <a href="/wsgi-servers.html">WSGI servers</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all Python topics.</div>
+
 
 ## How does Gunicorn know how to run my web app?
 Gunicorn knows how to run a web application based on the hook between the 
@@ -106,4 +108,8 @@ perform the request handling. Each worker is independent of the controller.
   and [Flask](http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/) 
   documentation each contain instructions for deploying the respective
   frameworks with Gunicorn.
+
+* [Set up Django, Nginx and Gunicorn in a Virtualenv controled by Supervisor](https://gist.github.com/Atem18/4696071)
+  is a GitHub Gist with some great explanations for why we're setting up
+  virtualenv and what to watch out for while you're doing the deployment.
 
