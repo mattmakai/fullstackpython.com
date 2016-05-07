@@ -35,6 +35,9 @@ into that hook to perform necessary actions before the exiting completes.
 * [GNU Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
   provides an official in-depth review for how to use Emacs.
 
+* [Emacs as a Python IDE](http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/)
+  is a detailed walkthrough of setting up Emacs for Python development.
+
 * [Emacs - the Best Python Editor?](https://realpython.com/blog/python/emacs-the-best-python-editor/)
   continues the excellent Real Python series showing how to get started
   with editors. In addition to this Emacs post, there are also posts on 

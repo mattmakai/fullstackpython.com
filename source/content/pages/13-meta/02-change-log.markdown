@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### May
+* Added new resources to the [Vim](/vim.html) and [Emacs](/emacs.html)
+  pages.
 * New [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) page added.
   Still a bit sparse at the moment but starting to get filled in.
 
