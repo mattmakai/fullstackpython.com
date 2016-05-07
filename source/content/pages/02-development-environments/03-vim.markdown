@@ -92,9 +92,6 @@ editor.
 Vim has a reputation for a difficult learning curve, but it's much easier
 to get started with these tutorials.
 
-* [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
-  game that helps you learn Vim commands by playing through the adventure.
-
 * [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
   is a wonderful tutorial that follows the path I took when learning Vim:
   learn just enough to survive with it as your day-to-day editor then begin
@@ -102,6 +99,16 @@ to get started with these tutorials.
 
 * [A vim Tutorial and Primer](https://danielmiessler.com/study/vim/) is an
   incredibly deep study in how to go from beginner to knowledgeable in Vim.
+
+* [Why Atom Can't Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
+  discusses one of Vim's core principles: command composability. Vim has 
+  a language where simple commands are combined to execute more advanced 
+  operations. For example, in command mode,`$` moves to the end of a line.
+  When `$` is preceded by `d` then everything to the end of the line is
+  deleted. Over time the simple commands become intuitive and the 
+  combinations become more powerful than having distinct commands such as
+  a drop-down menu with a specific option to delete all text until the end
+  of the line.
 
 * [Vim as a Language](http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/)
   explains the language syntax and how you can build up over time to master
@@ -111,6 +118,9 @@ to get started with these tutorials.
   along with [How to use Vim for advanced editing of code on a VPS](https://www.digitalocean.com/community/tutorials/how-to-use-vim-for-advanced-editing-of-plain-text-or-code-on-a-vps--2)
   are two detailed Digital Ocean guides for getting up and running with Vim,
   regardless of whether you're using it locally or on a cloud server.
+
+* [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
+  game that helps you learn Vim commands by playing through the adventure.
 
 * In [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/) the
   author explains his on-again off-again relationship with using Vim. He then
@@ -137,6 +147,7 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.
 * For people who are having trouble getting started with Vim, check out this
   blog post on the
   [two simple steps that helped this author learn Vim](http://adamdelong.com/two-simple-steps-helped-me-learn-vim/).
+
 
 ## Vim installation guides
 These installation guides will help you get Vim up and running on Mac OS X,

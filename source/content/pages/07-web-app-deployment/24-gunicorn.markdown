@@ -30,7 +30,7 @@ interface. For example, if you write a web application with a
 [Flask](/flask.html) or [Bottle](/bottle.html), then your application 
 implements the WSGI specification. 
 
-<div class="well see-also">Gunicorn is an implementation of the <a href="/wsgi-servers.html">WSGI servers</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all Python topics.</div>
+<div class="well see-also">Gunicorn is an implementation of the <a href="/wsgi-servers.html">WSGI servers</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
 ## How does Gunicorn know how to run my web app?
