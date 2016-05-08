@@ -159,9 +159,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * There is no such thing as total security but this IBM article covers 
   [hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
 
-* Craig Kerstiens wrote a detailed post about 
-  [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
-
 * [Handling growth with Postgres](http://instagram-engineering.tumblr.com/post/40781627982/handling-growth-with-postgres-5-tips-from-instagram)
   provides 5 specific tips from Instagram's engineering team on how to scale
   the design of your PostgreSQL database.
@@ -183,10 +180,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   is a list of code libraries, tutorials and newsletters focused 
   specifically on PostgreSQL.
-
-* This 
-  [guide to PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
-  is handy for knowing what to measure and how to do it.
 
 * While you can use a graphical interface for working with PostgreSQL, it's
   best to spend some time getting 
@@ -211,10 +204,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
   an existing PostgreSQL database. There's also a way to extend the tools
   to pull custom metrics as well.
 
-* This article on [performance tuning PostgreSQL](http://www.geekytidbits.com/performance-tuning-postgres/)
-  covers how to find slow queries, tune indexes and modify your queries
-  to run faster.
-
 * [Creating a Document-Store Hybrid in Postgres 9.5](https://blog.andyet.com/2016/02/04/postgres-9.5-document-store-hybrid/)
   explains how to store and query JSON data, similar to how
   [NoSQL data stores](/no-sql-datastore.html) operate.
@@ -226,3 +215,27 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * This [slideshow on high availability for web applications](http://thebuild.com/presentations/pgha-fosdem-2016.pdf)
   has a good overview of various database setups common in production
   web applications.
+
+
+### PostgreSQL monitoring and performance
+Monitoring one or more PostgreSQL instances and trying to performance tune
+them is a rare skillset. Here are some resources to get you started if you
+have to handle these issues in your applications.
+
+* This 
+  [guide to PostgreSQL monitoring](http://russ.garrett.co.uk/2015/10/02/postgres-monitoring-cheatsheet/)
+  is handy for knowing what to measure and how to do it.
+
+* Craig Kerstiens wrote a detailed post about 
+  [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
+
+* This article on [performance tuning PostgreSQL](http://www.geekytidbits.com/performance-tuning-postgres/)
+  covers how to find slow queries, tune indexes and modify your queries
+  to run faster.
+
+* [What PostgreSQL tells you about its performance](http://okigiveup.net/what-postgresql-tells-you-about-its-performance/)
+  explains how to gather general performance metrics and provides the exact
+  queries you should run to get them. The article also covers performance
+  monitoring and how to analyze trigger functions.
+
+
