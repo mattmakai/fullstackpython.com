@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block meta_header %}{% if article and article.meta %}
+    <meta name="description" content="{{ article.meta }}">
+{% endif %}{% endblock %}
+
+{% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+      {% if article %}
+          <h1 class="blog-h1">{{ article.title }}</h1>
+          {{ article.content }}
+          <hr>
+          {% include "email-for-book.html" %}
+      {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block lower_banner %}
+    {% include "banner.html" %}
+{% endblock %}

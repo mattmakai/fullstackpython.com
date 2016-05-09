@@ -1,11 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-03-31T00:00:00-04:00</updated><entry><title>The Full Stack Python Blog</title><link href="http://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2016-03-31T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-03-31:full-stack-python-blog.html</id><summary type="html">&lt;h1&gt;The Full Stack Python Blog&lt;/h1&gt;
-&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-09T00:00:00-04:00</updated><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
+&lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; in April 2016. The update
+brings Ubuntu to version 16.04 and its latest code name is 
+"Xenial Xerus". 16.04 is the first Ubuntu release to include 
+&lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; as the default Python installation.&lt;/p&gt;
+&lt;p&gt;Let's use this newest Ubuntu release along with Python version 3.5 to 
+start a new &lt;a href="/django.html"&gt;Django&lt;/a&gt; web application project and run it with 
+&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Tools We'll Need&lt;/h2&gt;
+&lt;p&gt;We will need a few tools to complete our project. Don't worry about 
+installing and their current versions as of May 9, 2016:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
+  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
+  (default in Ubuntu 16.04)&lt;/li&gt;
+&lt;li&gt;&lt;a href="/django.html"&gt;Django&lt;/a&gt; web framework version 
+  &lt;a href="https://docs.djangoproject.com/en/1.9/releases/1.9/"&gt;1.9.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you're running on Mac OS X or Windows, use virtualization software such
+as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; 
+(this is what I use, but it's Mac OS X-only) or 
+&lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;VirtualBox&lt;/a&gt; with the 
+&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu .iso file&lt;/a&gt;. Either the amd64 or
+i386 version of 16.04 is fine, but I use amd64 for development and testing
+in this blog post.&lt;/p&gt;
+&lt;p&gt;When we boot up for the first time, we should see a desktop screen like this 
+one.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Open up terminal to proceed with the setup.&lt;/p&gt;
+&lt;h2&gt;System Packages&lt;/h2&gt;
+&lt;p&gt;We can see the python3 version Ubuntu comes with, as well as where its
+executable is stored.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python3 --version
+which python3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our Ubuntu installation first needs system packages for Python development.
+You'll be prompted for your superuser password because restricted system
+access is required to install packages through apt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Enter &lt;code&gt;y&lt;/code&gt; and let the system package installation process run.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The basic system packages we need are now installed so we can proceed to
+our Python-specific dependencies.&lt;/p&gt;
+&lt;h2&gt;Virtualenv&lt;/h2&gt;
+&lt;p&gt;Virtualenv and pip for isolating and handling 
+&lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt; were just 
+installed via system packages so we can now use them to obtain Django and 
+Gunicorn.&lt;/p&gt;
+&lt;p&gt;Create a directory to store virtualenvs then put a new virtualenv in it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
+cd ~
+mkdir venvs
+# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/djproject
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/djangoproject/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We should see our prompt change so that we know the virtualenv is properly 
+activated.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our virtualenv with Python 3 is activated so we can install whatever
+dependencies we want, such as Django and Gunicorn. &lt;/p&gt;
+&lt;h2&gt;Django and Gunicorn&lt;/h2&gt;
+&lt;p&gt;Time to install Django and Green Unicorn into our virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install django gunicorn
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;No errors is a good sign everything worked for us.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Create a new Django project named &lt;code&gt;djproject&lt;/code&gt;, or whatever you want to name
+your project. Then change into the directory for the new project.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;django-admin startproject djproject
+cd djproject
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We could run Django with the development server using the 
+&lt;code&gt;python manage.py runserver&lt;/code&gt; command. However, start Django up with
+Gunicorn instead.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;gunicorn djproject.wsgi
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Awesome, now we can bring up our shell project in the web browser at
+the &lt;code&gt;localhost:8000&lt;/code&gt; or &lt;code&gt;127.0.0.1:8000&lt;/code&gt; address.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160509-ubuntu-django-gunicorn/it-worked.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Ready for development!&lt;/p&gt;
+&lt;h2&gt;Ready for Development&lt;/h2&gt;
+&lt;p&gt;Those are the basics for starting development with Django and Gunicorn on 
+Ubuntu 16.04. If you need an even more in-depth step-by-step tutorial to 
+deploy your Python web application to a production environment, check out the 
+&lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To figure out what to do next for your Python project, read the topics 
+found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="http://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2016-05-08T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
 the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, &lt;a href="/servers.html"&gt;server&lt;/a&gt;, 
 operating system, web server and WSGI server pages. Since then, the pages
 have expanded out into a 
-&lt;a href="http://www.fullstackpython.com/table-of-contents.html"&gt;boatload of other areas&lt;/a&gt;
+&lt;a href="/table-of-contents.html"&gt;boatload of other areas&lt;/a&gt;
 including subjects outside the deployment topics I originally started the
 site to explain.&lt;/p&gt;
-&lt;p&gt;Frequently though I wanted to write a Python walkthrough that wasn't a
-good fit for the page format I use for each topic.&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;Frequently though I wanted to write a Python walkthrough that was not a
+good fit for the page format I use for each topic. Many of those walkthroughs
+became &lt;a href="https://www.twilio.com/blog/author/mmakai"&gt;Twilio blog posts&lt;/a&gt;
+but not all of them were quite the right fit on there. I'll still be writing
+plenty more Twilio tutorials, but this &lt;a href="/blog.html"&gt;Full Stack Python blog&lt;/a&gt;
+is the spot for technical posts that fall outside the Twilio domain.&lt;/p&gt;
+&lt;p&gt;Let me know what you think and what tutorials you'd like to see in the future. 
+Hit me up on Twitter &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="/https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>

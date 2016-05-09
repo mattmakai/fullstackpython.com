@@ -14,10 +14,14 @@
 <div class="row">
     <div class="col-md-8">
       {% for a in articles %}
-        {{ a.content }}
+        <h2 style="line-height: 1.5em;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h2>
+        <span class="post-byline">
+            Posted by <a href="/about-author.html">Matt Makai</a> on 
+            {{ a.date.strftime('%B %d, %Y') }}.
+        </span>
+        {{ a.content|truncate(350) }} (<a href="/blog/{{ a.slug }}.html">read more</a>)
       {% endfor %}
-      {% include "email-for-book.html" %}
     </div>
-    {% include "sidebar.html" %}
+    {% include "sidebar-blog.html" %}
 </div>
 {% endblock %}

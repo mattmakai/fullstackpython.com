@@ -12,6 +12,8 @@ PDF_GENERATOR = False
 DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email',
                     'blog', 'all')
 
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
+
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
 BYLINE = '&copy; 2016 Matt Makai. All Rights Reserved.'
