@@ -187,6 +187,11 @@ communication between the browser and the server based on
   contains a couple of good starter projects such as a live blog and a 
   chat application to use as base code.
 
+* Channnels currently use Django's existing authentication scheme, but
+  this blog post [JSON Web Tokens authentication on Django Channels](http://www.machinalis.com/blog/jwt-django-channels/)
+  shows how to use a custom [JSON Web Token (JWT)](https://jwt.io/)
+  implementation in Django Channels instead.
+
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
