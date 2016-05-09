@@ -9,7 +9,8 @@ start a new &lt;a href="/django.html"&gt;Django&lt;/a&gt; web application projec
 &lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Tools We'll Need&lt;/h2&gt;
 &lt;p&gt;We will need a few tools to complete our project. Don't worry about 
-installing and their current versions as of May 9, 2016:&lt;/p&gt;
+installing these just yet as we'll get to them as we progres through the
+tutorials. The tools and their current versions as of May 9, 2016 are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 

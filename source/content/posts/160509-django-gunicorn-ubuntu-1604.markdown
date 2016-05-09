@@ -18,7 +18,8 @@ start a new [Django](/django.html) web application project and run it with
 
 ## Tools We'll Need
 We will need a few tools to complete our project. Don't worry about 
-installing and their current versions as of May 9, 2016:
+installing these just yet as we'll get to them as we progres through the
+tutorials. The tools and their current versions as of May 9, 2016 are:
 
 * [Ubuntu 16.04 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/)
 * [Python](/why-use-python.html) version 
