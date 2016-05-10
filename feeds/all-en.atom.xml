@@ -1,5 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-09T00:00:00-04:00</updated><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-10T00:00:00-04:00</updated><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu's latest Long Term Support (LTS) 
+&lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last month, in 
+April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
+it's the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 
+as the default Python installation.&lt;/p&gt;
+&lt;p&gt;We can use this new Ubuntu release along with Python version 3.5 to 
+start a new &lt;a href="/flask.html"&gt;Flask&lt;/a&gt; web application project and run it with 
+&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Tools We'll Need&lt;/h2&gt;
+&lt;p&gt;We'll need the Ubuntu 16.04 release along with a few other libraries to 
+complete our project. You don't have to install these tools just yet, 
+we will get to them as we progress through the walkthrough. Our requirements
+and their current versions as of May 10, 2016 are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
+  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
+  (default in Ubuntu 16.04)&lt;/li&gt;
+&lt;li&gt;&lt;a href="/flask.html"&gt;Flask&lt;/a&gt; web framework version 
+  &lt;a href="http://flask.pocoo.org/docs/0.10/"&gt;0.10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you're running on Mac OS X or Windows, use virtualization software such
+as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; or
+&lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;VirtualBox&lt;/a&gt; with the 
+&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu .iso file&lt;/a&gt;. Either the amd64 or
+i386 version of 16.04 is fine. I'm using amd64 for development and testing
+in this tutorial.&lt;/p&gt;
+&lt;p&gt;Once you boot up Ubuntu, you should see a screen like this one.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Open up a terminal window to proceed with the setup.&lt;/p&gt;
+&lt;h2&gt;System Packages&lt;/h2&gt;
+&lt;p&gt;We can see the python3 system version Ubuntu comes with and where its
+executable is stored using these commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python3 --version
+which python3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our Ubuntu installation requires a few system packages. We will get prompted 
+for the superuser password because restricted system access is needed 
+to install packages through 
+&lt;a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool"&gt;apt&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Enter &lt;code&gt;y&lt;/code&gt; to let the system package installation process do its job.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The packages we need are now installed. We can continue on to install our 
+Python-specific dependencies.&lt;/p&gt;
+&lt;h2&gt;Virtualenv&lt;/h2&gt;
+&lt;p&gt;In the previous section, &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; 
+and &lt;a href="https://pypi.python.org/pypi/pip"&gt;pip&lt;/a&gt; were installed to handle our 
+&lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;.
+We can now use them to download and install Flask and Gunicorn.&lt;/p&gt;
+&lt;p&gt;Create a directory for the virtualenvs. Then create a new virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
+cd ~
+mkdir venvs
+# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/flaskproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/flaskproj/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Our prompt will change after we properly activate the virtualenv.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our virtualenv is now activated with Python 3. We can install whatever
+dependencies we want, in our case Flask and Gunicorn. &lt;/p&gt;
+&lt;h2&gt;Flask and Gunicorn&lt;/h2&gt;
+&lt;p&gt;We can finally install Flask and Green Unicorn via the pip command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install flask gunicorn
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It's a good sign if we receive no errors like we see in the following 
+screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Create a new directory under our home directory that will store our
+Flask project. Change directory into the new folder.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mkdir ~/flaskproj
+cd ~/flaskproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a new file named &lt;code&gt;__init__.py&lt;/code&gt; within our &lt;code&gt;flaskproj&lt;/code&gt; directory so
+we can test to make sure Flask is working properly. I prefer to use
+&lt;a href="/vim.html"&gt;Vim&lt;/a&gt; but &lt;a href="/emacs.html"&gt;Emacs&lt;/a&gt; and other 
+&lt;a href="/development-environments.html"&gt;development environments&lt;/a&gt; work great as
+well.&lt;/p&gt;
+&lt;p&gt;Within &lt;code&gt;app.py&lt;/code&gt; write the following code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;
+
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;It works!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We could run our app with the Flask development server using the 
+&lt;code&gt;python app.py&lt;/code&gt; command. Let's instead run our Flask app with
+Gunicorn.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;gunicorn flaskproj:app
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Sweet, we can bring up our shell Flask app in the web browser at
+the &lt;code&gt;localhost:8000&lt;/code&gt; or &lt;code&gt;127.0.0.1:8000&lt;/code&gt; address.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/it-works.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Now ready for some real &lt;a href="/flask.html"&gt;Flask&lt;/a&gt; development!&lt;/p&gt;
+&lt;h2&gt;Ready for Development&lt;/h2&gt;
+&lt;p&gt;That's a simple setup for developing with Flask and Gunicorn on 
+Ubuntu 16.04. If you need an in-depth step-by-step tutorial to 
+deploy your &lt;a href="/wsgi-servers.html"&gt;WSGI-powered web application&lt;/a&gt; to a 
+production environment, check out the 
+&lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To determine what to code next for your Python project, read the topics 
+found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; in April 2016. The update
 brings Ubuntu to version 16.04 and its latest code name is 
 "Xenial Xerus". 16.04 is the first Ubuntu release to include 
@@ -9,8 +141,8 @@ start a new &lt;a href="/django.html"&gt;Django&lt;/a&gt; web application projec
 &lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Tools We'll Need&lt;/h2&gt;
 &lt;p&gt;We will need a few tools to complete our project. Don't worry about 
-installing these just yet as we'll get to them as we progres through the
-tutorials. The tools and their current versions as of May 9, 2016 are:&lt;/p&gt;
+installing these just yet as we'll get to them as we progress through the
+tutorial. The tools and their current versions as of May 9, 2016 are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
@@ -68,7 +200,7 @@ virtualenv --python=/usr/bin/python3 venvs/djproject
 
 
 &lt;p&gt;Activate the virtualenv.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/djangoproject/bin/activate
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/djproject/bin/activate
 &lt;/pre&gt;&lt;/div&gt;
 
 

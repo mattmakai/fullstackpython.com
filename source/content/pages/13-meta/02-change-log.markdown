@@ -16,6 +16,10 @@ the
 
 ## 2016
 ### May
+* Wrote another blog post, this time on 
+  [How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html).
+* Wrote a new [blog post](/blog.html) on 
+  [Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS](/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html).
 * Added new resources to the [Vim](/vim.html) and [Emacs](/emacs.html)
   pages.
 * New [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) page added.

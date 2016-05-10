@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matt Makai">
+    <meta name="description" content="Instructions for setting up Ubuntu 16.04 with Python 3, Flask and Green Unicorn (Gunicorn).">
+    <link rel="shortcut icon" href="/img/fsp-fav.png">
+    <title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS - Full Stack Python</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="/theme/css/f.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/fork.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="/theme/img/logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
+            <span class="logo-title"><a href="/">Full Stack Python</a></span>
+        </div>
+<div class="subnav">
+    <!--<a href="/blog.html" class="submenu-item-first">Blog</a> |
+    <a href="/books.html" class="submenu-item">Books</a> | -->
+    <a href="/table-of-contents.html" class="submenu-item-first">Table of contents</a> | 
+    <a href="/blog.html" class="submenu-item">Blog</a> |
+    <a href="/email.html" class="submenu-item">Email newsletter</a> |
+    <a href="https://twitter.com/fullstackpython" class="submenu-item">@fullstackpython</a> |
+    <a href="https://github.com/makaimc/fullstackpython.com/tree/gh-pages/source" class="submenu-item">Source</a> 
+</div>    </div>
+</div><div class="row">
+    <div class="col-md-12">
+          <h1 class="blog-h1">How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</h1>
+          <p>Ubuntu's latest Long Term Support (LTS) 
+<a href="/operating-systems.html">operating system</a> was released last month, in 
+April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
+it's the first Ubuntu release to include <a href="/python-2-or-3.html">Python 3</a> 
+as the default Python installation.</p>
+<p>We can use this new Ubuntu release along with Python version 3.5 to 
+start a new <a href="/flask.html">Flask</a> web application project and run it with 
+<a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a>.</p>
+<h2>Tools We'll Need</h2>
+<p>We'll need the Ubuntu 16.04 release along with a few other libraries to 
+complete our project. You don't have to install these tools just yet, 
+we will get to them as we progress through the walkthrough. Our requirements
+and their current versions as of May 10, 2016 are:</p>
+<ul>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS (Xenial Xerus)</a></li>
+<li><a href="/why-use-python.html">Python</a> version 
+  <a href="https://docs.python.org/3/whatsnew/3.5.html">3.5</a> 
+  (default in Ubuntu 16.04)</li>
+<li><a href="/flask.html">Flask</a> web framework version 
+  <a href="http://flask.pocoo.org/docs/0.10/">0.10</a></li>
+<li><a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a> version 
+  <a href="http://docs.gunicorn.org/en/stable/news.html">19.4</a></li>
+</ul>
+<p>If you're running on Mac OS X or Windows, use virtualization software such
+as <a href="https://www.parallels.com/products/desktop/">Parallels</a> or
+<a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> with the 
+<a href="http://releases.ubuntu.com/16.04/">Ubuntu .iso file</a>. Either the amd64 or
+i386 version of 16.04 is fine. I'm using amd64 for development and testing
+in this tutorial.</p>
+<p>Once you boot up Ubuntu, you should see a screen like this one.</p>
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>Open up a terminal window to proceed with the setup.</p>
+<h2>System Packages</h2>
+<p>We can see the python3 system version Ubuntu comes with and where its
+executable is stored using these commands.</p>
+<div class="highlight"><pre>python3 --version
+which python3
+</pre></div>
+
+
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Our Ubuntu installation requires a few system packages. We will get prompted 
+for the superuser password because restricted system access is needed 
+to install packages through 
+<a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool">apt</a>.</p>
+<div class="highlight"><pre>sudo apt-get install virtualenv python-pip python3-dev
+</pre></div>
+
+
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Enter <code>y</code> to let the system package installation process do its job.</p>
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>The packages we need are now installed. We can continue on to install our 
+Python-specific dependencies.</p>
+<h2>Virtualenv</h2>
+<p>In the previous section, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> 
+and <a href="https://pypi.python.org/pypi/pip">pip</a> were installed to handle our 
+<a href="/application-dependencies.html">application dependencies</a>.
+We can now use them to download and install Flask and Gunicorn.</p>
+<p>Create a directory for the virtualenvs. Then create a new virtualenv.</p>
+<div class="highlight"><pre># the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
+cd ~
+mkdir venvs
+# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/flaskproj
+</pre></div>
+
+
+<p>Activate the virtualenv.</p>
+<div class="highlight"><pre>source ~/venvs/flaskproj/bin/activate
+</pre></div>
+
+
+<p>Our prompt will change after we properly activate the virtualenv.</p>
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Our virtualenv is now activated with Python 3. We can install whatever
+dependencies we want, in our case Flask and Gunicorn. </p>
+<h2>Flask and Gunicorn</h2>
+<p>We can finally install Flask and Green Unicorn via the pip command.</p>
+<div class="highlight"><pre>pip install flask gunicorn
+</pre></div>
+
+
+<p>It's a good sign if we receive no errors like we see in the following 
+screenshot.</p>
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Create a new directory under our home directory that will store our
+Flask project. Change directory into the new folder.</p>
+<div class="highlight"><pre>mkdir ~/flaskproj
+cd ~/flaskproj
+</pre></div>
+
+
+<p>Create a new file named <code>__init__.py</code> within our <code>flaskproj</code> directory so
+we can test to make sure Flask is working properly. I prefer to use
+<a href="/vim.html">Vim</a> but <a href="/emacs.html">Emacs</a> and other 
+<a href="/development-environments.html">development environments</a> work great as
+well.</p>
+<p>Within <code>app.py</code> write the following code.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">Response</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;It works!&quot;</span><span class="p">),</span> <span class="mi">200</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+
+<p>We could run our app with the Flask development server using the 
+<code>python app.py</code> command. Let's instead run our Flask app with
+Gunicorn.</p>
+<div class="highlight"><pre>gunicorn flaskproj:app
+</pre></div>
+
+
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Sweet, we can bring up our shell Flask app in the web browser at
+the <code>localhost:8000</code> or <code>127.0.0.1:8000</code> address.</p>
+<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/it-works.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>Now ready for some real <a href="/flask.html">Flask</a> development!</p>
+<h2>Ready for Development</h2>
+<p>That's a simple setup for developing with Flask and Gunicorn on 
+Ubuntu 16.04. If you need an in-depth step-by-step tutorial to 
+deploy your <a href="/wsgi-servers.html">WSGI-powered web application</a> to a 
+production environment, check out the 
+<a href="http://www.deploypython.com/">Full Stack Python Guide to Deployments book</a>.</p>
+<p>To determine what to code next for your Python project, read the topics 
+found on the <a href="/table-of-contents.html">table of contents</a> page.</p>
+          <hr>
+<div id="mc_embed_signup">
+<form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+        <h4>Sign up here to receive a monthly email with major updates to this site, tutorials and discount codes for Python books.</h4>
+        <div class="row">
+            <div class="col-md-9">
+                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_b7e774f0c4f05dcebbfee183d_b22335388d" tabindex="-1" value=""></div>
+            </div>
+            <div class="col-md-3">
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="font-family: 'Helvetica Neue';"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+    </div>
+</div>
+        <hr/>
+    </div> 
+<div style="padding: 0 0 20px 0; margin: 0 0 20px 0; background-color: #22B24C;">
+    <div class="container">
+        <p class="banner"><a href="https://www.gumroad.com/l/python-deployments" style="color: #fff">Learning web development? Check out The Full Stack Python Guide to Deployments book</a>!</p>
+    </div>
+</div>    <div class="container">
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2016
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-19910497-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+    var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+</body>
+</html>
