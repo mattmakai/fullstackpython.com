@@ -142,3 +142,7 @@ deploy your Python web application to a production environment, check out the
 To figure out what to do next for your Python project, read the topics 
 found on the [table of contents](/table-of-contents.html) page.
 
+Questions? Contact me via Twitter 
+[@fullstackpython](https://twitter.com/fullstackpython)
+or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
+the username [makaimc](https://github.com/makaimc).

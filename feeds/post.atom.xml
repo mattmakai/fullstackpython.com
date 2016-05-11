@@ -1,5 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-10T00:00:00-04:00</updated><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu's latest Long Term Support (LTS) 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-11T00:00:00-04:00</updated><entry><title>How to Send SMS Text Messages with Python</title><link href="http://www.fullstackpython.com/send-sms-text-messages-python.html" rel="alternate"></link><updated>2016-05-11T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</id><summary type="html">&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
+all over the world. It is easy to send SMS text messages from a 
+&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; application using a 
+&lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
+Let's take a look at the tools we need to quickly add SMS capability to our
+Python apps.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;This guide works with both Python 2 and 3, so make sure you have one of those
+two versions installed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle
+  &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
+  &lt;a href="https://www.twilio.com/docs/api/rest/sending-messages"&gt;SMS web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open source 
+  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need assistance getting pip and virtualenv installed, check out the
+first few steps of the 
+&lt;a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide that'll show how to install system packages for those tools.&lt;/p&gt;
+&lt;h2&gt;Using a Web API&lt;/h2&gt;
+&lt;p&gt;We're going to use a web API to make sending SMS easier and more reliable.
+Head to the 
+&lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio website and sign up for a free trial account&lt;/a&gt;. If you already have a Twilio account (and you should - it's awesome
+for more than just sending text messages!) then sign into your existing
+account.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/try-twilio.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The Twilio trial account allows you to send text messages to your own 
+validated phone number.  When you want to send SMS to any phone number in 
+your country or other countries then you can upgrade your account to send 
+messages for fractions of a cent.&lt;/p&gt;
+&lt;p&gt;After signing up, you will get a free phone number in your country. We can
+use that phone number without any configuration to send outbound text 
+messsages. You can also receive text messages but that requires changing
+the Request URL webhook in the phone number configuration screen - we'll
+cover that in a future blog post.&lt;/p&gt;
+&lt;h2&gt;Installing Our Dependency&lt;/h2&gt;
+&lt;p&gt;Our code will use a helper library to make it easier to send text messages
+from Python. We are going to install the helper library from 
+&lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt; into a virtualenv. First we need to
+create the virtualenv. In your terminal use the following command to create
+a new virtualenv. If you need to install virtualenv take a look at the
+&lt;a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv sendsms
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source sendsms/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The command prompt will change after we properly activate the virtualenv
+to something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(sendsms)$
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now install the Twilio Python helper library.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The helper library is now installed and we can use it with the Python code 
+we create and execute.&lt;/p&gt;
+&lt;h2&gt;Sending An SMS From Python&lt;/h2&gt;
+&lt;p&gt;Fire up the Python interpreter in the terminal using the &lt;code&gt;python&lt;/code&gt; command,
+or create a new file named &lt;code&gt;send_sms.py&lt;/code&gt;. Enter the following code into
+the interpreter or into the new Python file.&lt;/p&gt;
+&lt;p&gt;We need to grab our account credentials from the Twilio Console to connect 
+our Python code to our Twilio account. Go to the 
+&lt;a href="https://www.twilio.com/console"&gt;Twilio Console&lt;/a&gt; and copy the Account SID
+and Authentication Token into your Python code.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# we import the Twilio client from the dependency we just installed&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
+
+&lt;span class="c"&gt;# the following line needs your Twilio Account SID and Auth Token&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ACxxxxxxxxxxxxxx&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;zzzzzzzzzzzzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# change the &amp;quot;from_&amp;quot; number to your Twilio number and the &amp;quot;to&amp;quot; number&lt;/span&gt;
+&lt;span class="c"&gt;# to the phone number you signed up for Twilio with, or upgrade your&lt;/span&gt;
+&lt;span class="c"&gt;# account to send SMS to any phone number&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+19732644152&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from_&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+12023358536&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                       &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello from Python!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;All the lines above that start with &lt;code&gt;#&lt;/code&gt; are comments. Once you enter that 
+code into the interpreter or run the Python script using 
+&lt;code&gt;python send_sms.py&lt;/code&gt; the SMS will be sent.&lt;/p&gt;
+&lt;p&gt;In a few seconds you should see a message appear on your phone. I'm on
+iOS so here's how the text message I received looked.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/hello-from-python.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;That's it! You can add this code to any Python code to send text messages.
+Just keep your Auth Token secret as it'll allow anyone that has it to use
+your account to send and receive messages.&lt;/p&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu's latest Long Term Support (LTS) 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last month, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
 it's the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 
@@ -131,7 +235,11 @@ deploy your &lt;a href="/wsgi-servers.html"&gt;WSGI-powered web application&lt;/
 production environment, check out the 
 &lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To determine what to code next for your Python project, read the topics 
-found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
+found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; in April 2016. The update
 brings Ubuntu to version 16.04 and its latest code name is 
 "Xenial Xerus". 16.04 is the first Ubuntu release to include 
@@ -242,7 +350,11 @@ Ubuntu 16.04. If you need an even more in-depth step-by-step tutorial to
 deploy your Python web application to a production environment, check out the 
 &lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To figure out what to do next for your Python project, read the topics 
-found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="http://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2016-05-08T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
+found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="http://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2016-05-08T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
 the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, &lt;a href="/servers.html"&gt;server&lt;/a&gt;, 
 operating system, web server and WSGI server pages. Since then, the pages
 have expanded out into a 
@@ -257,4 +369,4 @@ plenty more Twilio tutorials, but this &lt;a href="/blog.html"&gt;Full Stack Pyt
 is the spot for technical posts that fall outside the Twilio domain.&lt;/p&gt;
 &lt;p&gt;Let me know what you think and what tutorials you'd like to see in the future. 
 Hit me up on Twitter &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
-or &lt;a href="/https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>

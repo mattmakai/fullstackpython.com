@@ -164,3 +164,7 @@ production environment, check out the
 To determine what to code next for your Python project, read the topics 
 found on the [table of contents](/table-of-contents.html) page.
 
+Questions? Contact me via Twitter 
+[@fullstackpython](https://twitter.com/fullstackpython)
+or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
+the username [makaimc](https://github.com/makaimc).

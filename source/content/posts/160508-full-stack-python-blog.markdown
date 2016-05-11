@@ -22,4 +22,4 @@ is the spot for technical posts that fall outside the Twilio domain.
 
 Let me know what you think and what tutorials you'd like to see in the future. 
 Hit me up on Twitter [@fullstackpython](https://twitter.com/fullstackpython)
-or [@mattmakai](/https://twitter.com/mattmakai).
+or [@mattmakai](https://twitter.com/mattmakai).
