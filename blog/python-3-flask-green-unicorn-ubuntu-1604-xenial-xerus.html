@@ -138,7 +138,7 @@ we can test to make sure Flask is working properly. I prefer to use
 <a href="/vim.html">Vim</a> but <a href="/emacs.html">Emacs</a> and other 
 <a href="/development-environments.html">development environments</a> work great as
 well.</p>
-<p>Within <code>app.py</code> write the following code.</p>
+<p>Within <code>__init__.py</code> write the following code.</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">Response</span>
 
 
@@ -154,8 +154,9 @@ well.</p>
 
 
 <p>We could run our app with the Flask development server using the 
-<code>python app.py</code> command. Let's instead run our Flask app with
-Gunicorn.</p>
+<code>python __init__.py</code> command. Instead run the Flask app with
+Gunicorn. Go to the directory above the <code>flaskproj</code> folder, in our
+case we can enter <code>cd ~</code> then use the <code>gunicorn</code> command:</p>
 <div class="highlight"><pre>gunicorn flaskproj:app
 </pre></div>
 

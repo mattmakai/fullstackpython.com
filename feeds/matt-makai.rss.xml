@@ -201,7 +201,7 @@ we can test to make sure Flask is working properly. I prefer to use
 &lt;a href="/vim.html"&gt;Vim&lt;/a&gt; but &lt;a href="/emacs.html"&gt;Emacs&lt;/a&gt; and other 
 &lt;a href="/development-environments.html"&gt;development environments&lt;/a&gt; work great as
 well.&lt;/p&gt;
-&lt;p&gt;Within &lt;code&gt;app.py&lt;/code&gt; write the following code.&lt;/p&gt;
+&lt;p&gt;Within &lt;code&gt;__init__.py&lt;/code&gt; write the following code.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;
 
 
@@ -217,8 +217,9 @@ well.&lt;/p&gt;
 
 
 &lt;p&gt;We could run our app with the Flask development server using the 
-&lt;code&gt;python app.py&lt;/code&gt; command. Let's instead run our Flask app with
-Gunicorn.&lt;/p&gt;
+&lt;code&gt;python __init__.py&lt;/code&gt; command. Instead run the Flask app with
+Gunicorn. Go to the directory above the &lt;code&gt;flaskproj&lt;/code&gt; folder, in our
+case we can enter &lt;code&gt;cd ~&lt;/code&gt; then use the &lt;code&gt;gunicorn&lt;/code&gt; command:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;gunicorn flaskproj:app
 &lt;/pre&gt;&lt;/div&gt;
 

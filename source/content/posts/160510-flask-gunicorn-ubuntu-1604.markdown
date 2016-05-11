@@ -123,7 +123,7 @@ we can test to make sure Flask is working properly. I prefer to use
 [development environments](/development-environments.html) work great as
 well.
 
-Within `app.py` write the following code.
+Within `__init__.py` write the following code.
 
     from flask import Flask, Response
 
@@ -139,8 +139,9 @@ Within `app.py` write the following code.
 
 
 We could run our app with the Flask development server using the 
-`python app.py` command. Let's instead run our Flask app with
-Gunicorn.
+`python __init__.py` command. Instead run the Flask app with
+Gunicorn. Go to the directory above the `flaskproj` folder, in our
+case we can enter `cd ~` then use the `gunicorn` command:
 
     gunicorn flaskproj:app
 
