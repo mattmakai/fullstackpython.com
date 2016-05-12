@@ -73,7 +73,7 @@ Activate the virtualenv.
 The command prompt will change after we properly activate the virtualenv
 to something like this:
 
-    (sendsms)$  
+<img src="/source/static/img/160511-send-sms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded">
 
 
 Now install the Twilio Python helper library.
