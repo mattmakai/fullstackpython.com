@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="A how-to guide for sending SMS (text messages) using the Python programming language.">
+    <meta name="description" content="A tutorial on how to send MMS (picture multimedia messages) using the Python programming language.">
     <link rel="shortcut icon" href="/img/fsp-fav.png">
-    <title>How to Send SMS Text Messages with Python - Full Stack Python</title>
+    <title>How to Send MMS Picture Messages with Python - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -35,35 +35,35 @@
 </div>    </div>
 </div><div class="row">
     <div class="col-md-12">
-          <h1 class="blog-h1">How to Send SMS Text Messages with Python</h1>
+          <h1 class="blog-h1">How to Send MMS Picture Messages with Python</h1>
           <div class="post-byline">
             Posted by <a href="/about-author.html">Matt Makai</a> on 
-            May 11, 2016.
+            May 15, 2016.
           </div>
-          <p>Short Message Service (SMS) text messages are ubiquitous for communication
-all over the world. It is easy to send SMS text messages from a 
-<a href="/why-use-python.html">Python</a> application using a 
-<a href="/application-programming-interfaces.html">web application programming interface (API)</a>. 
-Let's take a look at the tools we need to quickly add SMS capability to our
-Python apps.</p>
+          <p>Multimedia Message Service (MMS) picture and video messages are a common 
+extension to the Short Message Service (SMS) system for sending text 
+messages. Using a 
+<a href="/application-programming-interfaces.html">web application programming interface (API)</a>
+with Python makes it easy to send MMS messages from a web application or
+script. In this short tutorial we'll learn how to add MMS sending capability
+to a new or existing Python application.</p>
 <h2>Tools We Need</h2>
-<p>This guide works with both Python 2 and 3, so make sure you have one of those
-two versions installed.</p>
+<p>Either <a href="/python-2-or-3.html">Python 2 or 3</a> works for this tutorial, just
+make sure you have one of those two versions installed on your system.</p>
 <ul>
-<li>Either <a href="/python-2-or-3.html">Python 2 or 3</a></li>
+<li><a href="https://www.python.org/">Python</a> version 2 or 3</li>
 <li><a href="https://pip.pypa.io/en/stable/">pip</a> and 
-  <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> to handle
-  <a href="/application-dependencies.html">application dependencies</a></li>
+  <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> to handle one
+  <a href="/application-dependencies.html">application dependency</a></li>
 <li>A free <a href="https://www.twilio.com/try-twilio">Twilio account</a> to use their 
-  <a href="https://www.twilio.com/docs/api/rest/sending-messages">SMS web API</a></li>
-<li>Open source 
-  <a href="https://pypi.python.org/pypi/twilio">Twilio Python helper library</a></li>
+  <a href="https://www.twilio.com/docs/api/rest/sending-messages">MMS web API</a></li>
+<li><a href="https://pypi.python.org/pypi/twilio">Twilio Python helper library</a></li>
 </ul>
-<p>If you need assistance getting pip and virtualenv installed, check out the
-first few steps of the 
+<p>If you are unsure of how to get pip and virtualenv installed, take a look
+at the first few steps of the 
 <a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html">how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</a>
-guide that'll show how to install system packages for those tools.</p>
-<h2>Using a Web API</h2>
+guide.</p>
+<h2>Twilio Web API</h2>
 <p>We're going to use a web API to make sending SMS easier and more reliable.
 Head to the 
 <a href="https://www.twilio.com/try-twilio">Twilio website and sign up for a free trial account</a>. If you already have a Twilio account (and you should - it's awesome
