@@ -16,6 +16,10 @@ the
 
 ## 2016
 ### May
+* Two new tutorial blog posts: 
+  [How to Send SMS Text Messages with Python](/blog/send-sms-text-messages-python.html)
+  and
+  [Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html).
 * Wrote another blog post, this time on 
   [How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html).
 * Wrote a new [blog post](/blog.html) on 

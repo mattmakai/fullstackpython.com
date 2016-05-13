@@ -53,10 +53,16 @@ steps to more easily get your web application up and running.
 
 
 ## Bottle resources
-* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html)
-  provides a thorough view of basic concepts and features for the framework.
+* [Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)
+  is a quick tutorial for getting an out-of-the-box default Ubuntu 16.04
+  image ready for Bottle development with 
+  [Green Unicorn](/green-unicorn-gunicorn.html) as the 
+  [WSGI server](/wsgi-servers.html).
 
 * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps).
+
+* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html)
+  provides a thorough view of basic concepts and features for the framework.
 
 * [Developing With Bottle](https://realpython.com/blog/python/developing-with-bottle-part-1/) details how to create a basic application with Bottle.
 
