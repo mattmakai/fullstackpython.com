@@ -3,7 +3,7 @@ category: page
 slug: bots
 sortorder: 0901
 toc: False
-sidebartitle: 9. Bots
+sidebartitle: Bots
 meta: Bots are applications that combine text input with contextual data to handle and respond to requests.
 
 
@@ -14,7 +14,26 @@ information, to appropriately handle the request and respond. Bots are
 often also called "chatbots", "assistants" or "agents."
 
 
-## Bots resources
+## Python-specific Bots resources
+* [How to Buid an SMS Slack Bot](https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html)
+  is a tutorial on using 
+  [SMS text messages](http://www.fullstackpython.com/blog/send-sms-text-messages-python.html) 
+  to communicate with a Slack bot that can post and receive messages. The
+  bot is a good base for a more complicated Slack bot that could use
+  natural language processing or other more advanced parsing techniques.
+  Either Python 2 or 3 can be used 
+  [with the code which is also available on GitHub](https://github.com/makaimc/slack-api-python-examples).
+
+* [How to write a Slack bot in Python](https://medium.com/@julianmartinez/how-to-write-a-slack-bot-with-python-code-examples-4ed354407b98)
+  is a solid code tutorial for building your first bot on the Slack
+  platform.
+
+* [A Slack bot with Python’s 3.5 asyncio](https://medium.com/@greut/a-slack-bot-with-pythons-3-5-asyncio-ad766d8b5d8f)
+  shows how to connect a bot to Slack via the web API using the Python 3
+  [asyncio standard library](https://docs.python.org/3/library/asyncio.html).
+
+
+## General Bots resources
 * The Economist wrote a general piece on 
   [why bots look like they'll gain adoption in various market segments](http://www.economist.com/news/business-and-finance/21696477-market-apps-maturing-now-one-text-based-services-or-chatbots-looks-poised).
   The piece doesn't have much technical depth but it's a good overview of
@@ -26,9 +45,4 @@ often also called "chatbots", "assistants" or "agents."
   apps with automated responses, user data and basic web browser 
   functionality are what has allowed bot concepts to bloom in Asian markets.
   There's a lot of good information in this post to unpack.
-
-* [How to write a Slack bot in Python](https://medium.com/@julianmartinez/how-to-write-a-slack-bot-with-python-code-examples-4ed354407b98)
-  is a solid code tutorial for building your first bot on the Slack
-  platform.
-
 
