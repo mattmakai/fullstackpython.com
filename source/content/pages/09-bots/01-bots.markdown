@@ -33,7 +33,12 @@ often also called "chatbots", "assistants" or "agents."
   [asyncio standard library](https://docs.python.org/3/library/asyncio.html).
 
 
-## General Bots resources
+## Additional Bots resources
+* [Slack bot token leakage exposing business critical information](https://labs.detectify.com/2016/04/28/slack-bot-token-leakage-exposing-business-critical-information/)
+  is a detailed look at a search on GitHub for Slack tokens that are used
+  mostly for bots but must be kept secret. Otherwise those tokens expose 
+  the entire Slack team's messaging to outside parties.
+
 * The Economist wrote a general piece on 
   [why bots look like they'll gain adoption in various market segments](http://www.economist.com/news/business-and-finance/21696477-market-apps-maturing-now-one-text-based-services-or-chatbots-looks-poised).
   The piece doesn't have much technical depth but it's a good overview of
