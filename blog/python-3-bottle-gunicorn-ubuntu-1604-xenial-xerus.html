@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="Instructions for setting up Ubuntu 16.04 with Python 3, Flask and Green Unicorn (Gunicorn).">
+    <meta name="description" content="Instructions for developing Bottle web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).">
     <link rel="shortcut icon" href="/img/fsp-fav.png">
-    <title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS - Full Stack Python</title>
+    <title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -36,43 +36,44 @@
 </div>    </div>
 </div><div class="row">
     <div class="col-md-12">
-          <h1 class="blog-h1">How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</h1>
+          <h1 class="blog-h1">Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</h1>
           <div class="post-byline">
             Posted by <a href="/about-author.html">Matt Makai</a> on 
-            May 10, 2016.
+            May 13, 2016.
           </div>
-          <p>Ubuntu's latest Long Term Support (LTS) 
-<a href="/operating-systems.html">operating system</a> was released last month, in 
-April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
-it's the first Ubuntu release to include <a href="/python-2-or-3.html">Python 3</a> 
-as the default Python installation.</p>
-<p>We can use this new Ubuntu release along with Python version 3.5 to 
-start a new <a href="/flask.html">Flask</a> web application project and run it with 
-<a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a>.</p>
-<h2>Tools We'll Need</h2>
-<p>We'll need the Ubuntu 16.04 release along with a few other libraries to 
-complete our project. You don't have to install these tools just yet, 
-we will get to them as we progress through the walkthrough. Our requirements
-and their current versions as of May 10, 2016 are:</p>
+          <p>The Ubuntu 16.04 Long Term Support (LTS) Linux
+<a href="/operating-systems.html">operating system</a> was released in April 2016.
+This latest Ubuntu release is named "Xenial Xerus" and
+it is the first Ubuntu release to include <a href="/python-2-or-3.html">Python 3</a>,
+instead of Python 2.x, as the default Python installation.</p>
+<p>We can quickly start a new <a href="/bottle.html">Bottle</a> web application project 
+and run it with <a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a> on
+Ubuntu 16.04.</p>
+<h2>Tools We Need</h2>
+<p>Our setup requires the Ubuntu 16.04 release along with a few other code 
+libraries. Don't install these tools just yet since we'll get to them as 
+we go through the walkthrough. Our requirements and their current versions 
+as of May 13, 2016 are:</p>
 <ul>
 <li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS (Xenial Xerus)</a></li>
 <li><a href="/why-use-python.html">Python</a> version 
   <a href="https://docs.python.org/3/whatsnew/3.5.html">3.5</a> 
   (default in Ubuntu 16.04)</li>
-<li><a href="/flask.html">Flask</a> web framework version 
-  <a href="http://flask.pocoo.org/docs/0.10/">0.10</a></li>
+<li><a href="/bottle.html">Botle</a> web framework version 
+  <a href="http://bottlepy.org/docs/0.12/">0.12</a></li>
 <li><a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a> version 
-  <a href="http://docs.gunicorn.org/en/stable/news.html">19.4</a></li>
+  <a href="http://docs.gunicorn.org/en/stable/news.html">19.5</a></li>
 </ul>
-<p>If you're running on Mac OS X or Windows, use virtualization software such
+<p>If you are developing on Mac OS X or Windows, make sure to use 
+virtualization software such
 as <a href="https://www.parallels.com/products/desktop/">Parallels</a> or
 <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> with the 
 <a href="http://releases.ubuntu.com/16.04/">Ubuntu .iso file</a>. Either the amd64 or
-i386 version of 16.04 is fine. I'm using amd64 for development and testing
-in this tutorial.</p>
-<p>Once you boot up Ubuntu, you should see a screen like this one.</p>
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"></p>
-<p>Open up a terminal window to proceed with the setup.</p>
+i386 version of 16.04 is fine. I use the amd64 version for my own local 
+development.</p>
+<p>A desktop screen like this one appears when you boot up Ubuntu.</p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>Open a terminal window to install the system packages.</p>
 <h2>System Packages</h2>
 <p>We can see the python3 system version Ubuntu comes with and where its
 executable is stored using these commands.</p>
@@ -81,7 +82,7 @@ which python3
 </pre></div>
 
 
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"></p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Our Ubuntu installation requires a few system packages. We will get prompted 
 for the superuser password because restricted system access is needed 
 to install packages through 
@@ -90,95 +91,93 @@ to install packages through
 </pre></div>
 
 
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"></p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Enter <code>y</code> to let the system package installation process do its job.</p>
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"></p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>The packages we need are now installed. We can continue on to install our 
 Python-specific dependencies.</p>
 <h2>Virtualenv</h2>
 <p>In the previous section, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> 
 and <a href="https://pypi.python.org/pypi/pip">pip</a> were installed to handle our 
 <a href="/application-dependencies.html">application dependencies</a>.
-We can now use them to download and install Flask and Gunicorn.</p>
+We can now use them to download and install Bottle and Gunicorn.</p>
 <p>Create a directory for the virtualenvs. Then create a new virtualenv.</p>
 <div class="highlight"><pre># the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
 cd ~
 mkdir venvs
 # specify the system python3 installation
-virtualenv --python=/usr/bin/python3 venvs/flaskproj
+virtualenv --python=/usr/bin/python3 venvs/bottleproj
 </pre></div>
 
 
 <p>Activate the virtualenv.</p>
-<div class="highlight"><pre>source ~/venvs/flaskproj/bin/activate
+<div class="highlight"><pre>source ~/venvs/bottleproj/bin/activate
 </pre></div>
 
 
 <p>Our prompt will change after we properly activate the virtualenv.</p>
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"></p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Our virtualenv is now activated with Python 3. We can install whatever
-dependencies we want, in our case Flask and Gunicorn. </p>
-<h2>Flask and Gunicorn</h2>
-<p>We can finally install Flask and Green Unicorn via the pip command.</p>
-<div class="highlight"><pre>pip install flask gunicorn
+dependencies we want, in our case Bottle and Gunicorn. </p>
+<h2>Bottle and Gunicorn</h2>
+<p>We can now install Bottle and Green Unicorn via the <code>pip</code> command.</p>
+<div class="highlight"><pre>pip install bottle gunicorn
 </pre></div>
 
 
-<p>It's a good sign if we receive no errors like we see in the following 
-screenshot.</p>
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Create a new directory under our home directory that will store our
-Flask project. Change directory into the new folder.</p>
-<div class="highlight"><pre>mkdir ~/flaskproj
-cd ~/flaskproj
+<p>No errors like we see in the following screenshot is a good sign.</p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Use the <code>mkdir</code> command to create a new directory to keep our Bottle 
+project then use the <code>cd</code> (change directory) command to move into the
+new folder.</p>
+<div class="highlight"><pre>mkdir ~/bottleproj
+cd ~/bottleproj
 </pre></div>
 
 
-<p>Create a new file named <code>__init__.py</code> within our <code>flaskproj</code> directory so
-we can test to make sure Flask is working properly. I prefer to use
+<p>Create a new file named <code>app.py</code> within our <code>bottleproj</code> directory so
+we can test to make sure Bottle is working properly. I prefer to use
 <a href="/vim.html">Vim</a> but <a href="/emacs.html">Emacs</a> and other 
 <a href="/development-environments.html">development environments</a> work great as
 well.</p>
-<p>Within <code>__init__.py</code> write the following code.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">Response</span>
+<p>Within the new <code>app.py</code> file write the following code.</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">bottle</span>
+<span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">Response</span>
 
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-
-<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="c"># a basic URL route to test whether Bottle is responding properly</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;It works!&quot;</span><span class="p">),</span> <span class="mi">200</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;It works!&quot;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># these two lines are only used for python app.py</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c"># this is the hook for Gunicorn to run Bottle</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">bottle</span><span class="o">.</span><span class="n">default_app</span><span class="p">()</span>
 </pre></div>
 
 
-<p>We could run our app with the Flask development server using the 
-<code>python __init__.py</code> command. Instead run the Flask app with
-Gunicorn. Go to the directory above the <code>flaskproj</code> folder, in our
-case we can enter <code>cd ~</code> then use the <code>gunicorn</code> command:</p>
-<div class="highlight"><pre>gunicorn flaskproj:app
+<p>We could run our app with the Bottle development server using the 
+<code>python app.py</code> command. Let's instead run our Bottle app with
+Gunicorn.</p>
+<div class="highlight"><pre>gunicorn -w 2 app:app
 </pre></div>
 
 
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Sweet, we can bring up our shell Flask app in the web browser at
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Sweet, we can bring up our shell Bottle app in the web browser at
 the <code>localhost:8000</code> or <code>127.0.0.1:8000</code> address.</p>
-<p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/it-works.jpg" width="100%" class="technical-diagram img-rounded"></p>
-<p>Now ready for some real <a href="/flask.html">Flask</a> development!</p>
+<p><img src="/source/static/img/160513-ubuntu-bottle-gunicorn/it-works.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>Time to develop a full-fledged web application with <a href="/bottle.html">Bottle</a>!</p>
 <h2>Ready for Development</h2>
-<p>That's a simple setup for developing with Flask and Gunicorn on 
-Ubuntu 16.04. If you need an in-depth step-by-step tutorial to 
-deploy your <a href="/wsgi-servers.html">WSGI-powered web application</a> to a 
+<p>Now you have a simple setup to develop Bottle web apps using Gunicorn as
+the <a href="/wsgi-servers.html">WSGI server</a> on Ubuntu 16.04. If you need a
+full step-by-step tutorial to deploy your Python web application to a
 production environment, check out the 
 <a href="http://www.deploypython.com/">Full Stack Python Guide to Deployments book</a>.</p>
-<p>To determine what to code next for your Python project, read the topics 
-found on the <a href="/table-of-contents.html">table of contents</a> page.</p>
-<p>Questions? Contact me via Twitter 
-<a href="https://twitter.com/fullstackpython">@fullstackpython</a>
-or <a href="https://twitter.com/mattmakai">@mattmakai</a>. I'm also on GitHub with
-the username <a href="https://github.com/makaimc">makaimc</a>.</p>
+<p>To decide what to do next with your Python project, check out the
+<a href="/table-of-contents.html">Full Stack Python table of contents</a> page.</p>
           <hr>
 <div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

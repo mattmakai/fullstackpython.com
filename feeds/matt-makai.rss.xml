@@ -1,5 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Matt Makai</title><link>http://www.fullstackpython.com/</link><description></description><atom:link href="http://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 11 May 2016 00:00:00 -0400</lastBuildDate><item><title>How to Send SMS Text Messages with Python</title><link>http://www.fullstackpython.com/send-sms-text-messages-python.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Matt Makai</title><link>http://www.fullstackpython.com/</link><description></description><atom:link href="http://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 13 May 2016 00:00:00 -0400</lastBuildDate><item><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link>http://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;The Ubuntu 16.04 Long Term Support (LTS) Linux
+&lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released in April 2016.
+This latest Ubuntu release is named "Xenial Xerus" and
+it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt;,
+instead of Python 2.x, as the default Python installation.&lt;/p&gt;
+&lt;p&gt;We can quickly start a new &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; web application project 
+and run it with &lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; on
+Ubuntu 16.04.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;Our setup requires the Ubuntu 16.04 release along with a few other code 
+libraries. Don't install these tools just yet since we'll get to them as 
+we go through the walkthrough. Our requirements and their current versions 
+as of May 13, 2016 are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
+  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
+  (default in Ubuntu 16.04)&lt;/li&gt;
+&lt;li&gt;&lt;a href="/bottle.html"&gt;Botle&lt;/a&gt; web framework version 
+  &lt;a href="http://bottlepy.org/docs/0.12/"&gt;0.12&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are developing on Mac OS X or Windows, make sure to use 
+virtualization software such
+as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; or
+&lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;VirtualBox&lt;/a&gt; with the 
+&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu .iso file&lt;/a&gt;. Either the amd64 or
+i386 version of 16.04 is fine. I use the amd64 version for my own local 
+development.&lt;/p&gt;
+&lt;p&gt;A desktop screen like this one appears when you boot up Ubuntu.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Open a terminal window to install the system packages.&lt;/p&gt;
+&lt;h2&gt;System Packages&lt;/h2&gt;
+&lt;p&gt;We can see the python3 system version Ubuntu comes with and where its
+executable is stored using these commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python3 --version
+which python3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our Ubuntu installation requires a few system packages. We will get prompted 
+for the superuser password because restricted system access is needed 
+to install packages through 
+&lt;a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool"&gt;apt&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Enter &lt;code&gt;y&lt;/code&gt; to let the system package installation process do its job.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The packages we need are now installed. We can continue on to install our 
+Python-specific dependencies.&lt;/p&gt;
+&lt;h2&gt;Virtualenv&lt;/h2&gt;
+&lt;p&gt;In the previous section, &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; 
+and &lt;a href="https://pypi.python.org/pypi/pip"&gt;pip&lt;/a&gt; were installed to handle our 
+&lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;.
+We can now use them to download and install Bottle and Gunicorn.&lt;/p&gt;
+&lt;p&gt;Create a directory for the virtualenvs. Then create a new virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
+cd ~
+mkdir venvs
+# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/bottleproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/bottleproj/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Our prompt will change after we properly activate the virtualenv.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our virtualenv is now activated with Python 3. We can install whatever
+dependencies we want, in our case Bottle and Gunicorn. &lt;/p&gt;
+&lt;h2&gt;Bottle and Gunicorn&lt;/h2&gt;
+&lt;p&gt;We can now install Bottle and Green Unicorn via the &lt;code&gt;pip&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install bottle gunicorn
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;No errors like we see in the following screenshot is a good sign.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;mkdir&lt;/code&gt; command to create a new directory to keep our Bottle 
+project then use the &lt;code&gt;cd&lt;/code&gt; (change directory) command to move into the
+new folder.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mkdir ~/bottleproj
+cd ~/bottleproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a new file named &lt;code&gt;app.py&lt;/code&gt; within our &lt;code&gt;bottleproj&lt;/code&gt; directory so
+we can test to make sure Bottle is working properly. I prefer to use
+&lt;a href="/vim.html"&gt;Vim&lt;/a&gt; but &lt;a href="/emacs.html"&gt;Emacs&lt;/a&gt; and other 
+&lt;a href="/development-environments.html"&gt;development environments&lt;/a&gt; work great as
+well.&lt;/p&gt;
+&lt;p&gt;Within the new &lt;code&gt;app.py&lt;/code&gt; file write the following code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;
+
+&lt;span class="c"&gt;# a basic URL route to test whether Bottle is responding properly&lt;/span&gt;
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;It works!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# these two lines are only used for python app.py&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;0.0.0.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# this is the hook for Gunicorn to run Bottle&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;default_app&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We could run our app with the Bottle development server using the 
+&lt;code&gt;python app.py&lt;/code&gt; command. Let's instead run our Bottle app with
+Gunicorn.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;gunicorn -w 2 app:app
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Sweet, we can bring up our shell Bottle app in the web browser at
+the &lt;code&gt;localhost:8000&lt;/code&gt; or &lt;code&gt;127.0.0.1:8000&lt;/code&gt; address.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160513-ubuntu-bottle-gunicorn/it-works.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Time to develop a full-fledged web application with &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;Ready for Development&lt;/h2&gt;
+&lt;p&gt;Now you have a simple setup to develop Bottle web apps using Gunicorn as
+the &lt;a href="/wsgi-servers.html"&gt;WSGI server&lt;/a&gt; on Ubuntu 16.04. If you need a
+full step-by-step tutorial to deploy your Python web application to a
+production environment, check out the 
+&lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To decide what to do next with your Python project, check out the
+&lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Fri, 13 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>How to Send SMS Text Messages with Python</title><link>http://www.fullstackpython.com/send-sms-text-messages-python.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
 all over the world. It is easy to send SMS text messages from a 
 &lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; application using a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
