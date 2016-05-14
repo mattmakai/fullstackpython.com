@@ -85,10 +85,9 @@ The helper library is now installed and we can use it with the Python code
 we create and execute.
 
 
-## Sending An SMS From Python
+## Sending SMS From Python
 Fire up the Python interpreter in the terminal using the `python` command,
-or create a new file named `send_sms.py`. Enter the following code into
-the interpreter or into the new Python file.
+or create a new file named `send_sms.py`. 
 
 We need to grab our account credentials from the Twilio Console to connect 
 our Python code to our Twilio account. Go to the 
@@ -96,6 +95,8 @@ our Python code to our Twilio account. Go to the
 and Authentication Token into your Python code.
 
 <img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded">
+
+Enter the following code into the interpreter or into the new Python file.
 
     # we import the Twilio client from the dependency we just installed
     from twilio.rest import TwilioRestClient
