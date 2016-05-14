@@ -133,9 +133,9 @@ I use an iPhone so here is what the message looked like when I received it:
 
 <img src="/source/static/img/160515-mms-python/mms-result.jpg" width="100%" class="technical-diagram img-rounded">
 
-That is everything need to send MMS to a phone. Pretty awesome for a few
-lines of Python code, right? This code can be added to any Python program
-to send outbound MMS.
+That is everything need to send MMS to a phone. Pretty awesome result for 
+a few lines of Python code, right? This code can be added to any Python 
+program to send outbound MMS.
 
 One final note: keep your Twilio Auth Token secret otherwise anyone who
 gets it will be able to send and receive messages through your account.

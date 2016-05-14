@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://www.fullstackpython.com/send-mms-picture-messages-python.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
     <priority>0.8</priority>
   </url>

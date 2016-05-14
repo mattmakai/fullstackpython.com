@@ -1,5 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-13T00:00:00-04:00</updated><entry><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-13T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;The Ubuntu 16.04 Long Term Support (LTS) Linux
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-15T00:00:00-04:00</updated><entry><title>How to Send MMS Picture Messages with Python</title><link href="http://www.fullstackpython.com/send-mms-picture-messages-python.html" rel="alternate"></link><updated>2016-05-15T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-15:send-mms-picture-messages-python.html</id><summary type="html">&lt;p&gt;Multimedia Message Service (MMS) picture and video messages are a common 
+extension to the Short Message Service (SMS) system for sending text 
+messages. Using a 
+&lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;
+with Python makes it easy to send MMS messages from a web application or
+script. In this short tutorial we'll learn how to add MMS sending capability
+to a new or existing Python application.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;Either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt; works for the code in this 
+tutorial. Just make sure you have one of those two versions installed on 
+your system by going to the terminal and typing &lt;code&gt;python --version&lt;/code&gt;.
+The other dependencies for this tutorial include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; version &lt;a href="/python-2-or-3.html"&gt;2 or 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle one
+  &lt;a href="/application-dependencies.html"&gt;application dependency&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
+  &lt;a href="https://www.twilio.com/docs/api/rest/sending-messages"&gt;MMS web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are unsure of how to get pip and virtualenv installed, take a look
+at the first few steps of the 
+&lt;a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide.&lt;/p&gt;
+&lt;h2&gt;Twilio Web API&lt;/h2&gt;
+&lt;p&gt;Our simple Python example application will use the Twilio web API to send
+picture messages.
+Go to the Twilio website
+&lt;a href="https://www.twilio.com/try-twilio"&gt;sign up for a free trial account&lt;/a&gt;. If 
+you already have a Twilio account (and you should because it makes it easy to
+add almost any type of communications to applications!) then sign into 
+your existing account.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160515-mms-python/try-twilio.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;In trial mode Twilio can send MMS to a validated phone number associated with
+the account. When you're ready to send MMS messages to any phone in any 
+country then you will have to upgrade your account.&lt;/p&gt;
+&lt;p&gt;After signing up for a Twilio account, you will receive your own phone 
+number that'll be used to send messages. That phone number can send outbound
+MMS messages without any configuration. It can also receive messages but 
+that requires 
+&lt;a href="https://www.twilio.com/docs/quickstart/python/sms/hello-monkey"&gt;modifying the Request URL webhook&lt;/a&gt; 
+in the phone number details screen.&lt;/p&gt;
+&lt;h2&gt;Installing Our Dependency&lt;/h2&gt;
+&lt;p&gt;We'll use the &lt;a href="https://pypi.python.org/pypi/twilio"&gt;twilio helper library&lt;/a&gt; 
+as a dependency for our Python code. The helper library can be installed
+via the &lt;code&gt;pip&lt;/code&gt; command, which pulls the code from 
+&lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt; into our local virtualenv. In this
+tutorial we'll call our virtualenv &lt;code&gt;pymms&lt;/code&gt; but you can name it whatever
+you want for your application.&lt;/p&gt;
+&lt;p&gt;We have to create the virtualenv before using it. In your terminal enter:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv pymms
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you need to install virtualenv take a look at the
+&lt;a href="/blog/python-3-django-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide.&lt;/p&gt;
+&lt;p&gt;Activate the virtualenv with the &lt;code&gt;source&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source pymms/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The command prompt will change to look like this after it is activated:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160515-mms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Now install the Twilio Python helper library.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once the helper library installs we can use it in our Python code.&lt;/p&gt;
+&lt;h2&gt;Sending MMS From Python&lt;/h2&gt;
+&lt;p&gt;Launch the the Python interpreter by executing the &lt;code&gt;python&lt;/code&gt; command in
+your terminal. You can also create a new file named &lt;code&gt;send_mms.py&lt;/code&gt; if you
+want to re-use the code after we give it a try. &lt;/p&gt;
+&lt;p&gt;We need to grab our account credentials from the Twilio Console to connect 
+our Python code to our Twilio account. Go to the 
+&lt;a href="https://www.twilio.com/console"&gt;Twilio Console&lt;/a&gt; and copy the Account SID
+and Authentication Token into your Python code.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160515-mms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Enter the following code into the interpreter or into the new Python file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# we import the Twilio client from the dependency we just installed&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
+
+&lt;span class="c"&gt;# the following line needs your Twilio Account SID and Auth Token&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ACxxxxxxxxxxxxxx&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;zzzzzzzzzzzzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# this is the URL to an image file we&amp;#39;re going to send in the MMS&lt;/span&gt;
+&lt;span class="n"&gt;media&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;http://www.mattmakai.com/source/static/img/work/fsp-logo.png&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# change the &amp;quot;from_&amp;quot; number to your Twilio number and the &amp;quot;to&amp;quot; number&lt;/span&gt;
+&lt;span class="c"&gt;# to the phone number you signed up for Twilio with, or upgrade your&lt;/span&gt;
+&lt;span class="c"&gt;# account to send MMS to any phone number that MMS is available&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+19732644152&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from_&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+12023358536&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                       &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;MMS via Python? Nice!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;media_url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;media&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;All the lines above that start with &lt;code&gt;#&lt;/code&gt; are comments to give you some
+context for what each line is doing. After entering that code into the
+interpreter or running the Python script with &lt;code&gt;python send_mms.py&lt;/code&gt;
+Twilio will send your MMS.&lt;/p&gt;
+&lt;p&gt;In a few seconds you should see a message appear on your phone - note that
+MMS can take a little longer because your phone has to download the image. 
+I use an iPhone so here is what the message looked like when I received it:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160515-mms-python/mms-result.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;That is everything need to send MMS to a phone. Pretty awesome result for 
+a few lines of Python code, right? This code can be added to any Python 
+program to send outbound MMS.&lt;/p&gt;
+&lt;p&gt;One final note: keep your Twilio Auth Token secret otherwise anyone who
+gets it will be able to send and receive messages through your account.&lt;/p&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-13T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;The Ubuntu 16.04 Long Term Support (LTS) Linux
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released in April 2016.
 This latest Ubuntu release is named "Xenial Xerus" and
 it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt;,
@@ -201,15 +315,15 @@ to something like this:&lt;/p&gt;
 
 &lt;p&gt;The helper library is now installed and we can use it with the Python code 
 we create and execute.&lt;/p&gt;
-&lt;h2&gt;Sending An SMS From Python&lt;/h2&gt;
+&lt;h2&gt;Sending SMS From Python&lt;/h2&gt;
 &lt;p&gt;Fire up the Python interpreter in the terminal using the &lt;code&gt;python&lt;/code&gt; command,
-or create a new file named &lt;code&gt;send_sms.py&lt;/code&gt;. Enter the following code into
-the interpreter or into the new Python file.&lt;/p&gt;
+or create a new file named &lt;code&gt;send_sms.py&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;We need to grab our account credentials from the Twilio Console to connect 
 our Python code to our Twilio account. Go to the 
 &lt;a href="https://www.twilio.com/console"&gt;Twilio Console&lt;/a&gt; and copy the Account SID
 and Authentication Token into your Python code.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Enter the following code into the interpreter or into the new Python file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# we import the Twilio client from the dependency we just installed&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
 
