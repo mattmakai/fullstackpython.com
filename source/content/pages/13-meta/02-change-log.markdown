@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### May
+* Added fifth blog post, this time on [Sending MMS Picture Messages with Python](/blog/send-mms-picture-messages-python.html).
 * Two new tutorial blog posts: 
   [How to Send SMS Text Messages with Python](/blog/send-sms-text-messages-python.html)
   and
