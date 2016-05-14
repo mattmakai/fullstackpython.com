@@ -77,6 +77,13 @@ perform the request handling. Each worker is independent of the controller.
 
 
 ### Gunicorn resources
+* There are three framework-specific posts on the 
+  [Full Stack Python blog](/blog.html) for configuring Gunicorn for 
+  development on Ubuntu: 
+    1. [Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS](/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html)
+    1. [How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html)
+    1. [Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)
+
 * [Deploying Django 1.7 on Ubuntu with DigitalOcean with PostgreSQL, Nginx, and Gunicorn](http://adambeagle.com/blog/deploying-django-17-ubuntu/) 
   is a detailed walkthrough that uses Green Unicorn as the WSGI server part of
   the deployment.
