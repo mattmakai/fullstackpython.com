@@ -4,37 +4,41 @@ slug: continuous-integration
 sortorder: 0713
 toc: False
 sidebartitle: Continuous Integration
-meta: Continuous integration automatically rebuilds and deploys applications as developers commit code. Learn more on Full Stack Python.
+meta: Continuous integration (CI) automatically rebuilds, tests and deploys applications as developers commit code.
 
 
 # Continuous Integration
-Continuous integration automates the building, testing and deploying of applications.
-Software projects, whether created by a single individual or entire teams, typically
-use continuous integration as a hub to ensure important steps such as unit testing
-are automated rather than manual processes.
+Continuous integration automates the building, testing and deploying of 
+applications. Software projects, whether created by a single individual or 
+entire teams, typically use continuous integration as a hub to ensure 
+important steps such as unit testing are automated rather than manual 
+processes.
 
 
 ## Why is continuous integration important?
-When continuous integration (CI) is established as a step in a software project's 
-development process it can dramatically reduce deployment times by minimizing steps
-that require human intervention. The only minor downside to using CI is that it
-takes some initial time by a developer to set up and then there is some ongoing 
-maintainence if a project is broken into multiple parts, such as going from a
-monolith architecture to [microservices](/microservices.html).
+When continuous integration (CI) is established as a step in a software 
+project's development process it can dramatically reduce deployment times 
+by minimizing steps that require human intervention. The only minor downside 
+to using CI is that it takes some initial time by a developer to set up and 
+then there is some ongoing maintainence if a project is broken into multiple 
+parts, such as going from a monolith architecture to 
+[microservices](/microservices.html).
 
 
 ## Automated testing
-Another major advantage with CI is that testing can be an automated step in the
-deployment process. Broken deployments can be prevented by running a comprehensive 
-test suite of [unit](/unit-testing.html) and 
-[integration tests](/integration-testing.html) when developers check in code to a 
-source code repository. Any bugs accidentally introduced during a check-in that are 
-caught by the test suite are reported and prevent the deployment from proceeding.
+Another major advantage with CI is that testing can be an automated step in 
+the deployment process. Broken deployments can be prevented by running a 
+comprehensive test suite of [unit](/unit-testing.html) and 
+[integration tests](/integration-testing.html) when developers check in code 
+to a source code repository. Any bugs accidentally introduced during a 
+check-in that are caught by the test suite are reported and prevent the 
+deployment from proceeding.
 
-The automated testing on checked in source code can be thought of like the bumper
-guards in bowling that prevent code quality from going too far off track.
-CI combined with unit and integration tests check that any code modifications 
-do not break existing tests to ensure the software works as intended.
+The automated testing on checked in source code can be thought of like the 
+bumper guards in bowling that prevent code quality from going too far off 
+track. CI combined with unit and integration tests check that any code 
+modifications do not break existing tests to ensure the software works as 
+intended.
 
 
 ## Continuous integration example
@@ -96,17 +100,17 @@ the application was written in.
   shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
   [Django](/django.html) project.
 
-* My book on [deploying Python web applications](http://www.deploypython.com/) walks
-  through every step of setting up a Jenkins project with a WSGI application to
-  enable continuous delivery. Take a look if you're not grokking all of the steps 
-  provided in these other blog posts.
+* My book on [deploying Python web applications](http://www.deploypython.com/)
+  walks through every step of setting up a Jenkins project with a WSGI 
+  application to enable continuous delivery. Take a look if you're not 
+  grokking all of the steps provided in these other blog posts.
 
 * [Setting up Jenkins as a continuous integration server for Django](http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/)
-  is another solid tutorial that also shows how to send email notifications as part
-  of the build process.
+  is another solid tutorial that also shows how to send email notifications 
+  as part of the build process.
 
-* If you're running into difficulty adding an SSH key to your Jenkins system account 
-  so you can connect to another server or Git repository
+* If you're running into difficulty adding an SSH key to your Jenkins system 
+  account so you can connect to another server or Git repository
   [this blog post on connecting Jenkins with Git](http://dcycleproject.org/blog/51/connecting-jenkins-and-git)
   to get the steps to solve that problem.
 
@@ -122,9 +126,9 @@ the application was written in.
   instance, you'll need to lock it down against unauthorized users.
 
 * [Can we use Jenkins for that?](http://engineering.simondata.com/can-we-use-jenkins-for-that/)
-  looks at how one team uses Jenkins for more than typical continuous integration
-  situations - they also use it as an administrative interface, cron jobs, data 
-  analytics pipelines and long-running scripts.
+  looks at how one team uses Jenkins for more than typical continuous 
+  integration situations - they also use it as an administrative interface, 
+  cron jobs, data analytics pipelines and long-running scripts.
 
 
 ## General continuous integration resources
@@ -153,3 +157,11 @@ the application was written in.
 * [Deploying to AWS using Ansible, Docker and Teamcity](http://blog.bwhaley.com/deploying-to-aws-using-ansible-docker-and-teamcity)
   is an example walking through one potential way to use the Teamcity CI
   server for automated deployments.
+
+* [Why Continuous Integration Is Important](https://blog.codeship.com/continuous-integration-important/)
+  is a high-level overview of how CI can build trust both among developers
+  and between developers and non-technical people in an organization. The
+  post also discusses tasks related to setting up reliable CI such as test 
+  environments, [integration testing](/integration-testing.html) and 
+  visibility into the CI results.
+
