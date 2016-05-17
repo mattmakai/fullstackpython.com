@@ -32,6 +32,9 @@ often also called "chatbots", "assistants" or "agents."
   shows how to connect a bot to Slack via the web API using the Python 3
   [asyncio standard library](https://docs.python.org/3/library/asyncio.html).
 
+* [Facebook-Message-Bot](https://github.com/enginebai/Facebook-Message-Bot)
+  is an open source Facebook Messenger bot written in Python.
+
 
 ## Additional Bots resources
 * [Slack bot token leakage exposing business critical information](https://labs.detectify.com/2016/04/28/slack-bot-token-leakage-exposing-business-critical-information/)
