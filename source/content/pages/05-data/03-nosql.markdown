@@ -48,6 +48,9 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 
 
 ### Redis resources
+* [How to Use Redis with Python 3 and redis-py on Ubuntu 16.04](/blog/install-redis-use-python-3-ubuntu-1604.html)
+  contains detailed steps to install and start using Redis in Python.
+
 * "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
   is a guide for getting up with the extremely useful in-memory data store.
 
