@@ -53,11 +53,11 @@ and running on Ubuntu and then start using it in a simple Python application.</p
 <p>This tutorial is tested with Python 3.5 but either 
 <a href="/python-2-or-3.html">Python 2 or 3</a> should work for everything written 
 here. Just make sure one version is installed on your system by going to 
-the terminal and typing <code>python --version</code>.</p>
+the terminal and typing <code>python --version</code>. Other than Python itself,
+here is the software we are going to use throughout the rest of this post:</p>
 <ul>
-<li><a href="https://docs.python.org/3/">Python 3</a></li>
-<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a>, although these 
-  instructions should work fine with earlier Ubuntu versions as well</li>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a> (these 
+  instructions should work fine with earlier Ubuntu versions as well)</li>
 <li><a href="https://pip.pypa.io/en/stable/">pip</a> and 
   <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> to handle the
   redis-py <a href="/application-dependencies.html">application dependency</a></li>
@@ -79,13 +79,14 @@ the following command:</p>
 </pre></div>
 
 
-<p>When you're prompted whether you want to install the new package enter
-'yes'.</p>
+<p>Enter your <code>sudo</code> password and when you are prompted whether you want 
+to install the new package enter 'yes'.</p>
 <p><img src="/source/static/img/160516-redis-ubuntu-1604/apt-get-redis.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>After a few moments the downloading and processing should be complete
 and you will be back at the prompt.</p>
-<p><img src="/source/static/img/160516-redis-ubuntu-1604/apt-get-redis.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Redis is now installed. Even though we installed the <code>redis-server</code> package,
+<p><img src="/source/static/img/160516-redis-ubuntu-1604/apt-get-redis-done.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Redis is now installed and the Redis server is running in the background 
+as a system service. Even though we installed the <code>redis-server</code> package,
 the installation also comes with the Redis command line client. The client
 is useful for connecting directly to the Redis server without any Python
 code. Give <code>redis-cli</code> a try by typing this into the command prompt:</p>
@@ -100,8 +101,8 @@ to show it's ready for commands:</p>
 The full list of Redis commands is provided in the 
 <a href="http://redis.io/commands">project documentation</a>.</p>
 <h2>Virtualenv and Install redis-py</h2>
-<p>We will first figure out our python3 location, then create a virtualenv,
-activate the virtualenv and and then install redis-py with <code>pip</code>.
+<p>We need to figure out our <code>python3</code> location, then create a virtualenv,
+activate the virtualenv and then install redis-py with <code>pip</code>.
 Determine your <code>python3</code> executable location with the <code>which</code> command.</p>
 <div class="highlight"><pre>which python3
 </pre></div>
@@ -110,7 +111,7 @@ Determine your <code>python3</code> executable location with the <code>which</co
 <p>You'll see some output like the following screenshot.</p>
 <p><img src="/source/static/img/160516-redis-ubuntu-1604/which-python-3.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Create a new virtualenv either in your home directory or wherever you
-store your project virtualenvs. Specify the full path to your python3
+store your project virtualenvs. Specify the full path to your <code>python3</code>
 installation. </p>
 <div class="highlight"><pre># specify the system python3 installation
 virtualenv --python=/usr/bin/python3 venvs/redistest
@@ -122,18 +123,19 @@ virtualenv --python=/usr/bin/python3 venvs/redistest
 </pre></div>
 
 
-<p>Next we can install the redis-py from <a href="https://pypi.python.org/pypi">PyPI</a>
-using the pip command.</p>
+<p>Next we can install the redis-py Python package from 
+<a href="https://pypi.python.org/pypi">PyPI</a> using the <code>pip</code> command.</p>
 <div class="highlight"><pre>pip install redis
 </pre></div>
 
 
 <p><img src="/source/static/img/160516-redis-ubuntu-1604/pip-install-redis.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Alright, now it's installed in our virtualenv. Let's write some Python
-code to give it a try!</p>
+<p>Alright, now it is installed in our virtualenv. Let's write some simple 
+Python code to try out give redis-py!</p>
 <h2>Working with Redis from Python</h2>
-<p>Fire up the Python REPL with the <code>python</code> command or write the following
-code in a Python file such as "testredis.py".</p>
+<p>Fire up the Python REPL with the <code>python</code> or <code>python3</code> command. You can also 
+write the following code in a Python file such as "testredis.py" then
+execute it with <code>python testredis.py</code>.</p>
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">redis</span>
 <span class="c"># create a connection to the localhost Redis server instance, by</span>
 <span class="c"># default it runs on port 6379</span>
@@ -160,9 +162,9 @@ code in a Python file such as "testredis.py".</p>
 </pre></div>
 
 
-<p>That's a quick introduction to some of the commonly used Redis commands
-with their Python bindings through the redis-py library. Take a look at
-the 
+<p>That is a quick introduction to some commonly-used Redis commands
+invoked by their Python bindings through the redis-py library. Take a look 
+at the 
 <a href="https://redis-py.readthedocs.io/en/latest/">redis-py official documentation</a>
 to learn more about the extensive command list you can use to create,
 read, modify and delete keys and values in Redis.</p>
