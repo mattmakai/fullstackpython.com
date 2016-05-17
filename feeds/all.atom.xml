@@ -186,7 +186,7 @@ you want for your application.&lt;/p&gt;
 
 
 &lt;p&gt;If you need to install virtualenv take a look at the
-&lt;a href="/blog/python-3-django-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+&lt;a href="/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
 guide.&lt;/p&gt;
 &lt;p&gt;Activate the virtualenv with the &lt;code&gt;source&lt;/code&gt; command.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;source pymms/bin/activate

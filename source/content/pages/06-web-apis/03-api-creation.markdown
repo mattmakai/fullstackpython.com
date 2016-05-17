@@ -196,10 +196,6 @@ equivalent of browser testing in the web application world.
 
 
 ## Django REST Framework resources
-* To create an API to export your data in comma-separated values,
-  check out this 
-  [blog post on exporting data as CSV format with Django REST framework](http://codingpole.com/using-django-rest-framework-for-csv-export/).
-
 * This multi-part series on 
   [getting started with Django REST framework and AngularJS (part 1)](http://engineroom.trackmaven.com/blog/getting-started-drf-angularjs-part-1/)
   along with its [second part](http://engineroom.trackmaven.com/blog/getting-started-drf-angularjs-part-2/)

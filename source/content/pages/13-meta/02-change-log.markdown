@@ -16,6 +16,9 @@ the
 
 ## 2016
 ### May
+* Fixed a few broken and old links throughout the site. Darn link rot.
+* New blog post published: 
+  [How to Use Redis with Python 3 and redis-py on Ubuntu 16.04](/blog/install-redis-use-python-3-ubuntu-1604.html).
 * Added fifth blog post, this time on [Sending MMS Picture Messages with Python](/blog/send-mms-picture-messages-python.html).
 * Two new tutorial blog posts: 
   [How to Send SMS Text Messages with Python](/blog/send-sms-text-messages-python.html)

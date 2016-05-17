@@ -66,7 +66,7 @@ on the number's page on Twilio as shown below.
   does a fantastic job of laying out the REST principles in plain language
   terms while giving some history on how they came to be.
 
-* [What is a webhook?](http://sendgrid.com/blog/whats-webhook/) by 
+* [What is a webhook?](https://sendgrid.com/blog/whats-webhook/) by 
   [Nick Quinlan](https://twitter.com/YayNickQ) is a plain English explanation
   for what webhooks are and why they are necessary in the API world.
 

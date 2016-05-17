@@ -70,7 +70,7 @@ We have to create the virtualenv before using it. In your terminal enter:
     virtualenv pymms
 
 If you need to install virtualenv take a look at the
-[how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-django-green-unicorn-ubuntu-1604-xenial-xerus.html)
+[how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html)
 guide.
 
 Activate the virtualenv with the `source` command.

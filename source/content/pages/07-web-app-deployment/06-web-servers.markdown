@@ -90,8 +90,6 @@ possible.
 ## Web server resources
 * [HTTP/1.1 Specification](http://www.w3.org/Protocols/rfc2616/rfc2616.html)
 
-* [How to set up a safe and secure Web server](http://arstechnica.com/gadgets/2012/11/how-to-set-up-a-safe-and-secure-web-server/)
-
 * A reference with the full list of 
 [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 is provided by W3C.
