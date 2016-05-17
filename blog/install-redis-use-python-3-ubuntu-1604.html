@@ -8,7 +8,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Step-by-step instructions to install Redis and use it with Python 3 and redis-py on Ubuntu 16.04 Xenial Xerus.">
     <link rel="shortcut icon" href="/img/fsp-fav.png">
-    <title>Installing Redis to use with Python 3 and redis-py on Ubuntu 16.04 - Full Stack Python</title>
+    <title>How to Use Redis with Python 3 and redis-py on Ubuntu 16.04 - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -36,7 +36,7 @@
 </div>    </div>
 </div><div class="row">
     <div class="col-md-12">
-          <h1 class="blog-h1">Installing Redis to use with Python 3 and redis-py on Ubuntu 16.04</h1>
+          <h1 class="blog-h1">How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</h1>
           <div class="post-byline">
             Posted by <a href="/about-author.html">Matt Makai</a> on 
             May 16, 2016.
@@ -55,10 +55,14 @@ and running on Ubuntu and then start using it in a simple Python application.</p
 here. Just make sure one version is installed on your system by going to 
 the terminal and typing <code>python --version</code>.</p>
 <ul>
-<li>Python 3</li>
+<li><a href="https://docs.python.org/3/">Python 3</a></li>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a>, although these 
+  instructions should work fine with earlier Ubuntu versions as well</li>
 <li><a href="https://pip.pypa.io/en/stable/">pip</a> and 
   <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> to handle the
   redis-py <a href="/application-dependencies.html">application dependency</a></li>
+<li><a href="http://redis.io">Redis</a></li>
+<li><a href="https://redis-py.readthedocs.io/en/latest/">redis-py</a></li>
 </ul>
 <p>If you aren't sure how how to install pip and virtualenv, review the 
 first few steps of the 
@@ -89,9 +93,79 @@ code. Give <code>redis-cli</code> a try by typing this into the command prompt:<
 </pre></div>
 
 
+<p>The Redis client connects to the localhost server and gives a new prompt
+to show it's ready for commands:</p>
 <p><img src="/source/static/img/160516-redis-ubuntu-1604/redis-cli.png" width="100%" class="technical-diagram img-rounded"></p>
-<h2>Install redis-py</h2>
+<p>Give the prompt a try by using Redis commands such as <code>keys *</code> or <code>set a 1</code>.
+The full list of Redis commands is provided in the 
+<a href="http://redis.io/commands">project documentation</a>.</p>
+<h2>Virtualenv and Install redis-py</h2>
+<p>We will first figure out our python3 location, then create a virtualenv,
+activate the virtualenv and and then install redis-py with <code>pip</code>.
+Determine your <code>python3</code> executable location with the <code>which</code> command.</p>
+<div class="highlight"><pre>which python3
+</pre></div>
+
+
+<p>You'll see some output like the following screenshot.</p>
+<p><img src="/source/static/img/160516-redis-ubuntu-1604/which-python-3.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Create a new virtualenv either in your home directory or wherever you
+store your project virtualenvs. Specify the full path to your python3
+installation. </p>
+<div class="highlight"><pre># specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/redistest
+</pre></div>
+
+
+<p>Activate the virtualenv.</p>
+<div class="highlight"><pre>source ~/venvs/redistest/bin/activate
+</pre></div>
+
+
+<p>Next we can install the redis-py from <a href="https://pypi.python.org/pypi">PyPI</a>
+using the pip command.</p>
+<div class="highlight"><pre>pip install redis
+</pre></div>
+
+
+<p><img src="/source/static/img/160516-redis-ubuntu-1604/pip-install-redis.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Alright, now it's installed in our virtualenv. Let's write some Python
+code to give it a try!</p>
 <h2>Working with Redis from Python</h2>
+<p>Fire up the Python REPL with the <code>python</code> command or write the following
+code in a Python file such as "testredis.py".</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">redis</span>
+<span class="c"># create a connection to the localhost Redis server instance, by</span>
+<span class="c"># default it runs on port 6379</span>
+<span class="n">redis_db</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c"># see what keys are in Redis</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="c"># output for keys() should be an empty list &quot;[]&quot;</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s">&#39;full stack&#39;</span><span class="p">,</span> <span class="s">&#39;python&#39;</span><span class="p">)</span>
+<span class="c"># output should be &quot;True&quot;</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="c"># now we have one key so the output will be &quot;[b&#39;full stack&#39;]&quot;</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;full stack&#39;</span><span class="p">)</span>
+<span class="c"># output is &quot;b&#39;python&#39;&quot;, the key and value still exist in Redis</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c"># output is &quot;1&quot;, we just incremented even though the key did not</span>
+<span class="c"># previously exist</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c"># output is &quot;b&#39;1&#39;&quot; again, since we just obtained the value from</span>
+<span class="c"># the existing key</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c"># output is &quot;1&quot; because the command was successful</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c"># nothing is returned because the key and value no longer exist</span>
+</pre></div>
+
+
+<p>That's a quick introduction to some of the commonly used Redis commands
+with their Python bindings through the redis-py library. Take a look at
+the 
+<a href="https://redis-py.readthedocs.io/en/latest/">redis-py official documentation</a>
+to learn more about the extensive command list you can use to create,
+read, modify and delete keys and values in Redis.</p>
 <p>Questions? Tweet <a href="https://twitter.com/fullstackpython">@fullstackpython</a>
 or post a message on the 
 <a href="https://www.facebook.com/fullstackpython">Full Stack Python Facebook page</a>. 

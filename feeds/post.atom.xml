@@ -1,5 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-15T00:00:00-04:00</updated><entry><title>How to Send MMS Picture Messages with Python</title><link href="http://www.fullstackpython.com/send-mms-picture-messages-python.html" rel="alternate"></link><updated>2016-05-15T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-15:send-mms-picture-messages-python.html</id><summary type="html">&lt;p&gt;Multimedia Message Service (MMS) picture and video messages are a common 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-16T00:00:00-04:00</updated><entry><title>How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/install-redis-use-python-3-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-16T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-16:install-redis-use-python-3-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="http://redis.io"&gt;Redis&lt;/a&gt; is an in-memory key-value pair 
+&lt;a href="/no-sql-datastore.html"&gt;NoSQL data store&lt;/a&gt; often used in Python applications
+for &lt;a href="/web-frameworks.html"&gt;web application&lt;/a&gt; sessions and caching, 
+transient &lt;a href="/data.html"&gt;data&lt;/a&gt; storage and as a broker for 
+&lt;a href="/task-queues.html"&gt;task queues&lt;/a&gt;. 
+&lt;a href="https://pypi.python.org/pypi/redis"&gt;redis-py&lt;/a&gt; is a common Python code 
+library for interacting with Redis. Let's learn how to get Redis up
+and running on Ubuntu and then start using it in a simple Python application.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;This tutorial is tested with Python 3.5 but either 
+&lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt; should work for everything written 
+here. Just make sure one version is installed on your system by going to 
+the terminal and typing &lt;code&gt;python --version&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/"&gt;Python 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04&lt;/a&gt;, although these 
+  instructions should work fine with earlier Ubuntu versions as well&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle the
+  redis-py &lt;a href="/application-dependencies.html"&gt;application dependency&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://redis.io"&gt;Redis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://redis-py.readthedocs.io/en/latest/"&gt;redis-py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you aren't sure how how to install pip and virtualenv, review the 
+first few steps of the 
+&lt;a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide.&lt;/p&gt;
+&lt;h2&gt;Install Redis&lt;/h2&gt;
+&lt;p&gt;There are a few ways to install Redis, such as 
+&lt;a href="http://redis.io/topics/quickstart"&gt;downloading and compiling from source&lt;/a&gt;.
+However, on Ubuntu we can install a system package through &lt;code&gt;apt&lt;/code&gt;. The
+advantage of this method is that the &lt;code&gt;apt&lt;/code&gt; process will take care of 
+installing &lt;code&gt;redis-server&lt;/code&gt; as a system service. Open the terminal and run 
+the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install redis-server
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When you're prompted whether you want to install the new package enter
+'yes'.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160516-redis-ubuntu-1604/apt-get-redis.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;After a few moments the downloading and processing should be complete
+and you will be back at the prompt.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160516-redis-ubuntu-1604/apt-get-redis.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Redis is now installed. Even though we installed the &lt;code&gt;redis-server&lt;/code&gt; package,
+the installation also comes with the Redis command line client. The client
+is useful for connecting directly to the Redis server without any Python
+code. Give &lt;code&gt;redis-cli&lt;/code&gt; a try by typing this into the command prompt:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;redis-cli
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The Redis client connects to the localhost server and gives a new prompt
+to show it's ready for commands:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160516-redis-ubuntu-1604/redis-cli.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Give the prompt a try by using Redis commands such as &lt;code&gt;keys *&lt;/code&gt; or &lt;code&gt;set a 1&lt;/code&gt;.
+The full list of Redis commands is provided in the 
+&lt;a href="http://redis.io/commands"&gt;project documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Virtualenv and Install redis-py&lt;/h2&gt;
+&lt;p&gt;We will first figure out our python3 location, then create a virtualenv,
+activate the virtualenv and and then install redis-py with &lt;code&gt;pip&lt;/code&gt;.
+Determine your &lt;code&gt;python3&lt;/code&gt; executable location with the &lt;code&gt;which&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;which python3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You'll see some output like the following screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160516-redis-ubuntu-1604/which-python-3.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Create a new virtualenv either in your home directory or wherever you
+store your project virtualenvs. Specify the full path to your python3
+installation. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/redistest
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/redistest/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next we can install the redis-py from &lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt;
+using the pip command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install redis
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160516-redis-ubuntu-1604/pip-install-redis.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Alright, now it's installed in our virtualenv. Let's write some Python
+code to give it a try!&lt;/p&gt;
+&lt;h2&gt;Working with Redis from Python&lt;/h2&gt;
+&lt;p&gt;Fire up the Python REPL with the &lt;code&gt;python&lt;/code&gt; command or write the following
+code in a Python file such as "testredis.py".&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;redis&lt;/span&gt;
+&lt;span class="c"&gt;# create a connection to the localhost Redis server instance, by&lt;/span&gt;
+&lt;span class="c"&gt;# default it runs on port 6379&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;redis&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StrictRedis&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;6379&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# see what keys are in Redis&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c"&gt;# output for keys() should be an empty list &amp;quot;[]&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;full stack&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# output should be &amp;quot;True&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c"&gt;# now we have one key so the output will be &amp;quot;[b&amp;#39;full stack&amp;#39;]&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;full stack&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# output is &amp;quot;b&amp;#39;python&amp;#39;&amp;quot;, the key and value still exist in Redis&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;incr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;twilio&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# output is &amp;quot;1&amp;quot;, we just incremented even though the key did not&lt;/span&gt;
+&lt;span class="c"&gt;# previously exist&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;twilio&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# output is &amp;quot;b&amp;#39;1&amp;#39;&amp;quot; again, since we just obtained the value from&lt;/span&gt;
+&lt;span class="c"&gt;# the existing key&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;twilio&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# output is &amp;quot;1&amp;quot; because the command was successful&lt;/span&gt;
+&lt;span class="n"&gt;redis_db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;twilio&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# nothing is returned because the key and value no longer exist&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That's a quick introduction to some of the commonly used Redis commands
+with their Python bindings through the redis-py library. Take a look at
+the 
+&lt;a href="https://redis-py.readthedocs.io/en/latest/"&gt;redis-py official documentation&lt;/a&gt;
+to learn more about the extensive command list you can use to create,
+read, modify and delete keys and values in Redis.&lt;/p&gt;
+&lt;p&gt;Questions? Tweet &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or post a message on the 
+&lt;a href="https://www.facebook.com/fullstackpython"&gt;Full Stack Python Facebook page&lt;/a&gt;. 
+Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160516-install-redis-use-python-3-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to Send MMS Picture Messages with Python</title><link href="http://www.fullstackpython.com/send-mms-picture-messages-python.html" rel="alternate"></link><updated>2016-05-15T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-15:send-mms-picture-messages-python.html</id><summary type="html">&lt;p&gt;Multimedia Message Service (MMS) picture and video messages are a common 
 extension to the Short Message Service (SMS) system for sending text 
 messages. Using a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;
