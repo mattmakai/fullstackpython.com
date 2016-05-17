@@ -153,7 +153,7 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.
 These installation guides will help you get Vim up and running on Mac OS X,
 Linux and Windows.
 
-* [Upgrading Vim on OS X](http://prioritized.net/blog/upgrading-vim-on-os-x/)
+* [Upgrading Vim on OS X](http://www.prioritized.net/blog/upgrading-vim-on-os-x)
   explains why to upgrade from Vim 7.2 to 7.3+ and how to do it using
   [Homebrew](http://brew.sh/).
 

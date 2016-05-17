@@ -56,7 +56,7 @@ into that hook to perform necessary actions before the exiting completes.
 
 
 ## Notable Elisp Packages
-* [Magit](http://magit.github.io/) allows the user to inspect and modify
+* [Magit](https://magit.vc/) allows the user to inspect and modify
   Git repositories from within Emacs.
 
 * [company-mode](http://company-mode.github.io/) creates a modular in-buffer
