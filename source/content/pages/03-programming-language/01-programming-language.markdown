@@ -30,11 +30,6 @@ tested was not written in Python.
 * [Python Module of the Week](http://pymotw.com/2/index.html) is a tour
   through the Python standard library.
 
-* [What the heck does "pythonic" mean?](http://halitalptekin.tumblr.com/post/30028271874/pythonic-syntax)
-  explains the difference in accepted Python coding style compared to other
-  ways to write Python code that, while syntactically correct, are less
-  maintainable and therefore should not be used.
-
 * [A Python interpreter written in Python](http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html)
   is incredibly meta but really useful for wrapping your head around some
   of the lower level stuff going on in the language.

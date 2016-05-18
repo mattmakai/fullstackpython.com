@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-16T00:00:00-04:00</updated><entry><title>How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/install-redis-use-python-3-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-16T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-16:install-redis-use-python-3-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="http://redis.io"&gt;Redis&lt;/a&gt; is an in-memory key-value pair 
-&lt;a href="/no-sql-datastore.html"&gt;NoSQL data store&lt;/a&gt; often used in Python applications
-for &lt;a href="/web-frameworks.html"&gt;web application&lt;/a&gt; sessions and caching, 
-transient &lt;a href="/data.html"&gt;data&lt;/a&gt; storage and as a broker for 
-&lt;a href="/task-queues.html"&gt;task queues&lt;/a&gt;. 
-&lt;a href="https://pypi.python.org/pypi/redis"&gt;redis-py&lt;/a&gt; is a common Python code 
+&lt;a href="/no-sql-datastore.html"&gt;NoSQL data store&lt;/a&gt; often used 
+for &lt;a href="/web-frameworks.html"&gt;web application&lt;/a&gt; sessions,
+transient &lt;a href="/data.html"&gt;data&lt;/a&gt; and as a broker for 
+&lt;a href="/task-queues.html"&gt;task queues&lt;/a&gt;. redis-py is a common Python code 
 library for interacting with Redis. Let's learn how to get Redis up
 and running on Ubuntu and then start using it in a simple Python application.&lt;/p&gt;
 &lt;h2&gt;Tools We Need&lt;/h2&gt;

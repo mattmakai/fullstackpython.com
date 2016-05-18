@@ -59,9 +59,10 @@ questions about your coding issues.
   videos for learning how to build Django applications.
 
 * The videos and slides from 
-  [Django: Under the Hood 2014](http://www.djangounderthehood.com/talks/)
+  [Django: Under the Hood 2015](https://www.youtube.com/channel/UC9T1dhIlL_8Va9DxvKRowBw)
   are from Django core committers and provide insight into the ORM, 
-  internationalization, templates and other topics.
+  internationalization, templates and other important 
+  [web framework](/web-frameworks.html) topics.
 
 * DjangoCon US videos from 
   [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 

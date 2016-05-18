@@ -6,11 +6,10 @@ date: 2016-05-16
 
 
 [Redis](http://redis.io) is an in-memory key-value pair 
-[NoSQL data store](/no-sql-datastore.html) often used in Python applications
-for [web application](/web-frameworks.html) sessions and caching, 
-transient [data](/data.html) storage and as a broker for 
-[task queues](/task-queues.html). 
-[redis-py](https://pypi.python.org/pypi/redis) is a common Python code 
+[NoSQL data store](/no-sql-datastore.html) often used 
+for [web application](/web-frameworks.html) sessions,
+transient [data](/data.html) and as a broker for 
+[task queues](/task-queues.html). redis-py is a common Python code 
 library for interacting with Redis. Let's learn how to get Redis up
 and running on Ubuntu and then start using it in a simple Python application.
 
