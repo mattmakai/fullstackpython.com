@@ -35,7 +35,7 @@ the Python interpreter, here are the other components we'll use:
 
 If you aren't sure how how to install pip and virtualenv, review the 
 first few steps of the 
-[how to set up Python 3, Bottle and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-bottle-green-unicorn-ubuntu-1604-xenial-xerus.html)
+[how to set up Python 3, Bottle and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)
 guide.
 
 

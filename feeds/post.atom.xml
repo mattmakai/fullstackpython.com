@@ -26,7 +26,7 @@ the Python interpreter, here are the other components we'll use:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you aren't sure how how to install pip and virtualenv, review the 
 first few steps of the 
-&lt;a href="/blog/python-3-bottle-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Bottle and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+&lt;a href="/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Bottle and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
 guide.&lt;/p&gt;
 &lt;h2&gt;Install PostgreSQL&lt;/h2&gt;
 &lt;p&gt;We'll install PostgreSQL via the &lt;code&gt;apt&lt;/code&gt; package manager. There are a few
