@@ -4817,6 +4817,52 @@ preferred by Python web developers, especially when data migrations are
 run as an application evolves.</p>
 <div class="well see-also">MySQL is an implementation of the <a href="/databases.html">relational database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
+<h2>Python Drivers for MySQL</h2>
+<p>Accessing MySQL from a Python application requires a database driver (also
+called a "connector"). While it is possible to write a driver as part of
+your application, in practice most developers use an existing open source 
+driver.</p>
+<p>There was a major issue with MySQL drivers since the introduction of 
+Python 3. One of the most popular libraries called 
+<a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQLdb</a> did not work
+in its existing form with Python 3 and there were no plans to update it.
+Therefore a fork of MySQLdb named 
+<a href="https://pypi.python.org/pypi/mysqlclient">mysqlclient</a> added Python 3
+compatibility. </p>
+<p>The mysqlclient fork was good in that existing MySQLdb users could drop
+mysqlclient into existing projects that were upgrading to Python 3. However,
+the fork often causes confusion when searching for which Python driver to
+use with MySQL. Many developer simply decide to use 
+<a href="/postgresql.html">PostgreSQL</a> because there is better support for Python
+drivers in the PostgreSQL community. </p>
+<p>With that driver support context in mind, it's absolutely possible to build
+a Python 3 web application with MySQL as a backend. Here is a list of
+drivers along with whether it supports Python 2, 3 or both.</p>
+<ul>
+<li>
+<p><a href="https://mysqlclient.readthedocs.io/en/latest/">mysqlclient</a> is a fork
+  of MySQLdb that supports Python 2 and 3.</p>
+</li>
+<li>
+<p><a href="http://dev.mysql.com/doc/connector-python/en/">MySQL Connector</a>
+  is Oracle's "official" (Oracle currently owns MySQL) Python connector.
+  The driver supports Python 2 and 3, just make sure to check the 
+  <a href="http://dev.mysql.com/doc/connector-python/en/">version guide</a> for what
+  releases work with which Python versions.</p>
+</li>
+<li>
+<p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQLdb</a> supports
+  Python 2 and was frequently used by Python web applications before the
+  mass migration to Python 3 began.</p>
+</li>
+<li>
+<p><a href="https://github.com/PyMySQL/PyMySQL">PyMySQL</a> is a pure Python 
+  (no C low-level code) implementation that attempts to be a drop-in
+  replacement for MySQLdb. However, some MySQL APIs are not supported
+  by the driver so whether or not your application can use this connector
+  will depend on what you're building.</p>
+</li>
+</ul>
 <h2>What organizations use MySQL?</h2>
 <p>The database is deployed in production at some of the highest 
 trafficked sites such as 
@@ -4832,7 +4878,32 @@ database by
 and <a href="http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb">Google</a>. 
 MySQL remains a viable database option but I always recommend new Python 
 developers learn PostgreSQL if they do not already know MySQL.</p>
-<h3>MySQL resources</h3>
+<h3>Python-specific MySQL resources</h3>
+<ul>
+<li>
+<p><a href="http://stackoverflow.com/questions/23376103/python-3-4-0-with-mysql-database">Python 3.4.0 with MySQL database</a>
+  and 
+  <a href="http://stackoverflow.com/questions/4960048/python-3-and-mysql">Python 3 and MySQL</a>
+  provide context for the commonly asked question about which database
+  MySQL driver to use with Python 3.</p>
+</li>
+<li>
+<p><a href="http://blog.ionelmc.ro/2014/12/28/terrible-choices-mysql/">Terrible Choices: MySQL</a>
+  is a blog post about specific deficiencies in MySQL's implementation that
+  hinder its usage with Django's ORM.</p>
+</li>
+<li>
+<p><a href="http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/">Graph Data From MySQL Database in Python</a>
+  is an interesting study with code of how to pull data out of MySQL and graph
+  the data with Plotly.</p>
+</li>
+<li>
+<p><a href="http://zetcode.com/db/mysqlpython/">MySQL Python tutorial</a> uses the
+  MySQLdb driver to connect to a MySQL server instance and shows some
+  examples for inserting and querying data.</p>
+</li>
+</ul>
+<h3>General MySQL resources</h3>
 <ul>
 <li>
 <p><a href="http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/">28 Beginner's Tutorials for Learning about MySQL Databases</a> 
@@ -4842,11 +4913,6 @@ developers learn PostgreSQL if they do not already know MySQL.</p>
 <p>This tutorial shows how to install <a href="http://www.cs.wcupa.edu/rkline/index/mysql-lin.html">MySQL on Ubuntu</a>.</p>
 </li>
 <li>
-<p><a href="http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/">Graph Data From MySQL Database in Python</a>
-  is an interesting study with code of how to pull data out of MySQL and graph
-  the data with Plotly.</p>
-</li>
-<li>
 <p><a href="https://engineering.pinterest.com/blog/open-sourcing-pinterest-mysql-management-tools">Pinterest open sourced many of their MySQL tools</a>
   to manage instances of the database.</p>
 </li>
@@ -4854,11 +4920,6 @@ developers learn PostgreSQL if they do not already know MySQL.</p>
 <p><a href="https://www.userlike.com/en/blog/2015/10/09/bye-by-mysql-and-mongodb-guten-tag-postgresql">Bye Bye MySQL &amp; MongoDB, Guten Tag PostgreSQL</a>
   goes into details for why the company Userlike migrated from their MySQL
   database setup to PostgreSQL.</p>
-</li>
-<li>
-<p><a href="http://blog.ionelmc.ro/2014/12/28/terrible-choices-mysql/">Terrible Choices: MySQL</a>
-  is a blog post about specific deficiencies in MySQL's implementation that
-  hinder its usage with Django's ORM.</p>
 </li>
 <li>
 <p><a href="https://nylas.com/blog/growing-up-with-mysql/">Growing up with MySQL</a> is
@@ -8751,6 +8812,7 @@ the
 <h2>2016</h2>
 <h3>May</h3>
 <ul>
+<li>Added bunches of new content and links to the <a href="/mysql.html">MySQL</a> page.</li>
 <li>Redirected several links that were still available but changed URLs.
   Make sure to 301 Redirect your old links that still have traffic! :)</li>
 <li>Fixed a few broken and old links throughout the site. Darn link rot.</li>

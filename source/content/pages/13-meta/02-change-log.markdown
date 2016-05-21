@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### May
+* Added bunches of new content and links to the [MySQL](/mysql.html) page.
 * Redirected several links that were still available but changed URLs.
   Make sure to 301 Redirect your old links that still have traffic! :)
 * Fixed a few broken and old links throughout the site. Darn link rot.
