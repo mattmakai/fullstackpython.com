@@ -31,7 +31,6 @@ the Python interpreter, here are the other components we'll use:
   [psycopg2](https://pypi.python.org/pypi/psycopg2/2.6.1) 
   [application dependency](/application-dependencies.html)
 * [PostgreSQL](http://www.postgresql.org/)
-* [redis-py](https://redis-py.readthedocs.io/en/latest/)
 
 If you aren't sure how how to install pip and virtualenv, review the 
 first few steps of the 
