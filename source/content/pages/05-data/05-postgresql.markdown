@@ -114,6 +114,10 @@ Many quickstarts and tutorials exist specifically for Django, Flask and
 other web application frameworks. The ones below are some of the best
 walkthroughs I've read.
 
+* [Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04](/blog/postgresql-python-3-psycopg2-ubuntu-1604.html)
+  provides instructions for getting a fresh Ubuntu install working with 
+  PostgreSQL and Python 3.
+
 * This post on 
   [using PostgreSQL with Django or Flask](http://killtheyak.com/use-postgresql-with-django-flask/)
   is a great quickstart guide for either framework.

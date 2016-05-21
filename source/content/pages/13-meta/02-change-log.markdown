@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### May
+* Redirected several links that were still available but changed URLs.
+  Make sure to 301 Redirect your old links that still have traffic! :)
 * Fixed a few broken and old links throughout the site. Darn link rot.
 * New blog post published: 
   [How to Use Redis with Python 3 and redis-py on Ubuntu 16.04](/blog/install-redis-use-python-3-ubuntu-1604.html).

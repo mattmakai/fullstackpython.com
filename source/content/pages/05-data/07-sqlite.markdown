@@ -31,10 +31,6 @@ access a SQLite database from within Python applications.
   is a nice roundup of useful tools to use with SQLite and tutorials for
   learning more about the database.
 
-* [Introduction to SQLite3 with Python's Flask](http://byteacademy.co/index.php/blog/item/124-intro-to-sqlite3-with-python-s-flask)
-  shows how to write SQL within a Flask application to work with a SQLite
-  backend.
-
 * [Extending SQLite with Python](http://charlesleifer.com/blog/extending-sqlite-with-python/)
   uses the Peewee 
   [object-relational mapper (ORM)](/object-relational-mappers-orms.html)

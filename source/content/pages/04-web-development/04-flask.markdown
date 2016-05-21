@@ -98,7 +98,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   being open sourced. The book explains best practices and patterns for 
   building Flask apps.
 
-* [How I Structure My Flask Application](http://mattupstate.com/python/2013/06/26/how-i-structure-my-flask-applications.html)
+* [How I Structure My Flask Application](http://mattupstate.com/blog/how-i-structure-my-flask-applications/)
   walks through how this developer organizes the components and architecture
   for his Flask applications.
 
