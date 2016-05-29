@@ -1,5 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-18T00:00:00-04:00</updated><entry><title>Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/postgresql-python-3-psycopg2-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-18T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-18:postgresql-python-3-psycopg2-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="/postgresql.html"&gt;PostgreSQL&lt;/a&gt; is a powerful open source 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-21T00:00:00-04:00</updated><entry><title>How to Install and Use MySQL with Python 3 on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/mysql-python-3-psycopg2-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-21T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-21:mysql-python-3-psycopg2-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="/mysql.html"&gt;MySQL&lt;/a&gt; is a common open source 
+&lt;a href="/databases.html"&gt;relational database&lt;/a&gt; for creating, reading, updating 
+and deleting data in &lt;a href="/web-frameworks.html"&gt;Python web applications&lt;/a&gt;.
+&lt;a href="https://pypi.python.org/pypi/mysqlclient"&gt;mysqlclient&lt;/a&gt; is a MySQL database 
+driver that serves as a Python client for access to the MySQL server. 
+Let's learn how to install MySQL on Ubuntu 16.04 and then run a few 
+SQL queries within a Python program.&lt;/p&gt;
+&lt;p&gt;We will not go over
+&lt;a href="/object-relational-mappers-orms.html"&gt;object-relational mappers (ORMs)&lt;/a&gt; 
+but these steps can be used as a prerequisite to working with an ORM such 
+as SQLAlchemy or Peewee.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;Our walkthrough should work with either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt; 
+because mysqlclient is a Python 3-enhanced fork of the Python 2-only 
+&lt;a href="https://pypi.python.org/pypi/MySQL-python"&gt;MySQLdb&lt;/a&gt; driver. Other than 
+the Python interpreter, we will also use these components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04&lt;/a&gt; (this tutorial 
+  should also work on other Ubuntu versions)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle the
+  &lt;a href="https://mysqlclient.readthedocs.io/en/latest/"&gt;mysqlclient&lt;/a&gt; 
+  &lt;a href="/application-dependencies.html"&gt;application dependency&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://dev.mysql.com/doc/"&gt;MySQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you aren't sure how how to install pip and virtualenv, review the 
+first few steps of the 
+&lt;a href="/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide.&lt;/p&gt;
+&lt;h2&gt;Install MySQL&lt;/h2&gt;
+&lt;p&gt;We can install MySQL by using the &lt;code&gt;apt&lt;/code&gt; package manager. First make sure
+your packages list are up to date. Open the terminal and run this &lt;code&gt;apt&lt;/code&gt;
+command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get update
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We need to install the &lt;code&gt;mysql-server&lt;/code&gt; package, which downloads the required
+files, configures the initial database set up and handles running MySQL
+as a system service. Run this &lt;code&gt;apt&lt;/code&gt; command to get the process started.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install mysql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Enter 'y' when prompted with whether or not you want to install the
+new package.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160528-mysql-ubuntu-1604/apt-install-prompt.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;An administrative screen asking for a new root password will appear in the 
+middle of the package installation process. Enter your chosen new password 
+twice and the installation will continue.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160528-mysql-ubuntu-1604/new-root-password.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;In a moment the installation will finish and you'll be back at the command
+prompt.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160528-mysql-ubuntu-1604/apt-finished.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;MySQL is now installed with a root user. However, default settings for a 
+MySQL installation are configured for development and leave open many
+security holes in production environments. Run the &lt;code&gt;mysql_secure_installation&lt;/code&gt; 
+command to plug some of the most glaring security concerns.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo mysql_secure_installation
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When you run the command you'll be asked several questions. If you're working
+on a development or test server you may want to leave one or more settings
+in their default values. In a production environment though you should most
+likely specify yes to every question.&lt;/p&gt;
+&lt;p&gt;After you run through the &lt;code&gt;mysql_secure_installation&lt;/code&gt; program you can have
+it immediately reload the MySQL privilege tables and then you'll be back
+at the command prompt.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160528-mysql-ubuntu-1604/mysql-secure-installation.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;We do not yet have any non-root MySQL accounts for our applications to use
+to connect to our databases.&lt;/p&gt;
+&lt;h2&gt;Creating MySQL Users&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mysql -u root -p
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Installing mysqlclient&lt;/h2&gt;
+&lt;h2&gt;What's next?&lt;/h2&gt;
+&lt;h2&gt;Using MySQL from Python&lt;/h2&gt;
+&lt;p&gt;Start the Python REPL with the &lt;code&gt;python&lt;/code&gt; or &lt;code&gt;python3&lt;/code&gt; command. You can also 
+write the following code in a Python file such as "test_mysql.py" then
+execute it with &lt;code&gt;python test_mysql.py&lt;/code&gt;. Make sure to replace the "user"
+and "password" strings with your own values.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;psycopg2&lt;/span&gt;
+
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;connect_str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;dbname=&amp;#39;testpython&amp;#39; user=&amp;#39;matt&amp;#39; host=&amp;#39;localhost&amp;#39; &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; \
+                  &lt;span class="s"&gt;&amp;quot;password=&amp;#39;myOwnPassword&amp;#39;&amp;quot;&lt;/span&gt;
+    &lt;span class="c"&gt;# use our connection values to establish a connection&lt;/span&gt;
+    &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;psycopg2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;connect_str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# create a psycopg2 cursor that can execute queries&lt;/span&gt;
+    &lt;span class="n"&gt;cursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c"&gt;# create a new table with a single column called &amp;quot;name&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;CREATE TABLE tutorials (name char(40));&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# run a SELECT statement - no data in there, but we can try it&lt;/span&gt;
+    &lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;SELECT * from tutorials&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;rows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetchall&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Uh oh, can&amp;#39;t connect. Invalid dbname, user or password?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When we run the above code we won't get anything fancy, just an empty
+list printed out. However, in those few lines of code we've ensured our 
+connection to our new database works and we can create new tables in it as 
+well as query them.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160518-postgresql-ubuntu-1604/output.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;That's just enough of a hook to get started writing more complicated SQL 
+queries using psycopg2 and PostgreSQL. Make sure to check out the 
+&lt;a href="/postgresql.html"&gt;PostgreSQL&lt;/a&gt;,
+&lt;a href="/databases.html"&gt;relational databases&lt;/a&gt; and 
+&lt;a href="/object-relational-mappers-orms.html"&gt;object-relational mappers (ORMs)&lt;/a&gt;
+pages for more tutorials.&lt;/p&gt;
+&lt;p&gt;Questions? Tweet &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or post a message on the 
+&lt;a href="https://www.facebook.com/fullstackpython"&gt;Full Stack Python Facebook page&lt;/a&gt;. 
+Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/postgresql-python-3-psycopg2-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-18T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-18:postgresql-python-3-psycopg2-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="/postgresql.html"&gt;PostgreSQL&lt;/a&gt; is a powerful open source 
 &lt;a href="/databases.html"&gt;relational database&lt;/a&gt; frequently used to create, read,
 update and delete &lt;a href="/web-frameworks.html"&gt;Python web application&lt;/a&gt; data.
 &lt;a href="http://pythonhosted.org/psycopg2/"&gt;Psycopg2&lt;/a&gt; is a PostgreSQL database 

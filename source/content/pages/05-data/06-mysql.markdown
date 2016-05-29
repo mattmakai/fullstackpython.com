@@ -112,6 +112,10 @@ developers learn PostgreSQL if they do not already know MySQL.
 
 * This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
 
+* [A Basic MySQL Tutorial](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial)
+  doesn't have the most original title but it's a good walkthrough of your
+  first few steps in MySQL for creating users and working with tables.
+
 * [Pinterest open sourced many of their MySQL tools](https://engineering.pinterest.com/blog/open-sourcing-pinterest-mysql-management-tools)
   to manage instances of the database.
 
