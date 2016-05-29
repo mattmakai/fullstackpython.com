@@ -95,36 +95,72 @@ twice and the installation will continue.</p>
 <p>In a moment the installation will finish and you'll be back at the command
 prompt.</p>
 <p><img src="/source/static/img/160528-mysql-ubuntu-1604/apt-finished.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>MySQL is now installed with a root user. However, default settings for a 
-MySQL installation are configured for development and leave open many
-security holes in production environments. Run the <code>mysql_secure_installation</code> 
-command to plug some of the most glaring security concerns.</p>
+<p>MySQL is now installed with a root user. However, we do not want to have our
+applications connect to the database with that user, so next we will 
+create a new non-root user.</p>
+<h2>Securing MySQL</h2>
 <div class="highlight"><pre>sudo mysql_secure_installation
 </pre></div>
 
 
-<p>When you run the command you'll be asked several questions. If you're working
-on a development or test server you may want to leave one or more settings
-in their default values. In a production environment though you should most
-likely specify yes to every question.</p>
-<p>After you run through the <code>mysql_secure_installation</code> program you can have
-it immediately reload the MySQL privilege tables and then you'll be back
-at the command prompt.</p>
-<p><img src="/source/static/img/160528-mysql-ubuntu-1604/mysql-secure-installation.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>We do not yet have any non-root MySQL accounts for our applications to use
-to connect to our databases.</p>
-<h2>Creating MySQL Users</h2>
-<div class="highlight"><pre>mysql -u root -p
+<h2>MySQL Users</h2>
+<h2>Installing mysqlclient</h2>
+<h2>What's next?</h2>
+<h2>Interacting with PostgreSQL</h2>
+<p>The <code>psql</code> command line client is useful for connecting directly to our
+PostgreSQL server without any Python code. Try out <code>psql</code> by using this
+command at the prompt: </p>
+<div class="highlight"><pre>psql
 </pre></div>
 
 
-<h2>Installing mysqlclient</h2>
-<h2>What's next?</h2>
-<h2>Using MySQL from Python</h2>
-<p>Start the Python REPL with the <code>python</code> or <code>python3</code> command. You can also 
-write the following code in a Python file such as "test_mysql.py" then
-execute it with <code>python test_mysql.py</code>. Make sure to replace the "user"
-and "password" strings with your own values.</p>
+<p>The PostgreSQL client will connect to the localhost server. The client is
+now ready for input:</p>
+<p><img src="/source/static/img/160518-postgresql-ubuntu-1604/postgresql-cli.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Try out PostgreSQL's command prompt a try with commands such as <code>\dt</code> and
+<code>\dd</code>. We can also run SQL queries such as "SELECT * from testpython", 
+although that won't give us back any data yet because we have not inserted
+any into the database. A full list of PostgreSQL commands can be found in the
+<a href="http://www.postgresql.org/docs/9.6/static/app-psql.html">psql documentation</a>.</p>
+<h2>Installing psycopg2</h2>
+<p>Now that PostgreSQL is installed and we have a non-superuser account, we
+can install the <a href="http://initd.org/psycopg/">psycopg2</a> package. Let's
+figure out where our <code>python3</code> executable is located, create a virtualenv
+with <code>python3</code>, activate the virtualenv and then install the psycopg2 package
+with <code>pip</code>. Find your <code>python3</code> executable using the <code>which</code> command.</p>
+<div class="highlight"><pre>which python3
+</pre></div>
+
+
+<p>We will see output like what is in this screenshot.</p>
+<p><img src="/source/static/img/160518-postgresql-ubuntu-1604/which-python-3.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Create a new virtualenv in either your home directory or wherever you
+store your Python virtualenvs. Specify the full path to your <code>python3</code>
+installation. </p>
+<div class="highlight"><pre># specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/postgrestest
+</pre></div>
+
+
+<p>Activate the virtualenv.</p>
+<div class="highlight"><pre>source ~/venvs/postgrestest/bin/activate
+</pre></div>
+
+
+<p>Next we can install the psycopg2 Python package from 
+<a href="https://pypi.python.org/pypi">PyPI</a> using the <code>pip</code> command.</p>
+<div class="highlight"><pre>pip install psycopg2
+</pre></div>
+
+
+<p><img src="/source/static/img/160518-postgresql-ubuntu-1604/pip-install-psycopg2.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Sweet, we've got our PostgreSQL driver installed in our virtualenv! We can 
+now test out the installation by writing a few lines of Python code.</p>
+<h2>Using PostgreSQL from Python</h2>
+<p>Launch the Python REPL with the <code>python</code> or <code>python3</code> command. You can also 
+write the following code in a Python file such as "testpostgres.py" then
+execute it with <code>python testpostgres.py</code>. Make sure to replace the "user"
+and "password" values with your own.</p>
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">psycopg2</span>
 
 <span class="k">try</span><span class="p">:</span>
