@@ -18,7 +18,7 @@ implementation that is commonly used to run Python web applications.
 ## Why is Gunicorn important?
 Gunicorn is one of many WSGI server implementations, but it's particularly
 important because it is a stable, commonly-used part of
-[web app deployments](/deployments.html) that's powered some of the
+[web app deployments](/deployment.html) that's powered some of the
 largest Python-powered web applications in the world, such as 
 [Instagram](http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances).
 
@@ -84,9 +84,9 @@ perform the request handling. Each worker is independent of the controller.
     1. [How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html)
     1. [Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)
 
-* [Deploying Django 1.7 on Ubuntu with DigitalOcean with PostgreSQL, Nginx, and Gunicorn](http://adambeagle.com/blog/deploying-django-17-ubuntu/) 
-  is a detailed walkthrough that uses Green Unicorn as the WSGI server part of
-  the deployment.
+* [gunicorn as your Django development server](https://vxlabs.com/2015/12/08/gunicorn-as-your-django-development-server/)
+  is a short post with a few good tips on using Gunicorn for local
+  application development.
 
 * The [Full Stack Python Guide to Deployments](http://www.deploypython.com/)
   provides detailed step-by-step instructions for deploying Gunicorn as part

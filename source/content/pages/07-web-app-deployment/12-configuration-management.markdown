@@ -76,8 +76,6 @@ from PyCon UK 2013
 
 * [Introducing Ansible into Legacy Projects](http://benlopatin.com/getting-started-with-ansible/)
 
-* [Automating your development environment with Ansible](http://www.nickhammond.com/automating-your-development-environment-with-ansible/)
-
 * [Post-install steps with Ansible](http://devopsu.com/guides/ansible-post-install.html) 
 
 * [First Five (and a half) Minutes on a Server with Ansible](http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible) 

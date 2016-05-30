@@ -16,6 +16,9 @@ the
 
 ## 2016
 ### May
+* Removed or redirected a few broken links on various deployment pages.
+* One more new blog post tutorial before the month ends: 
+  [Responding to SMS Text Messages with Python & Flask](/blog/respond-sms-text-messages-python-flask.html).
 * Added bunches of new content and links to the [MySQL](/mysql.html) page.
 * Redirected several links that were still available but changed URLs.
   Make sure to 301 Redirect your old links that still have traffic! :)

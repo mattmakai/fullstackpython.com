@@ -125,7 +125,7 @@ the application was written in.
   is the landing page for Jenkins security. If you're deploying your own
   instance, you'll need to lock it down against unauthorized users.
 
-* [Can we use Jenkins for that?](http://engineering.simondata.com/can-we-use-jenkins-for-that/)
+* [Can we use Jenkins for that?](http://engineering.simondata.com/can-we-use-jenkins-for-that)
   looks at how one team uses Jenkins for more than typical continuous 
   integration situations - they also use it as an administrative interface, 
   cron jobs, data analytics pipelines and long-running scripts.
