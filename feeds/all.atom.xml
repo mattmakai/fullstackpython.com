@@ -1,5 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-28T00:00:00-04:00</updated><entry><title>How to Install and Use MySQL on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/install-mysql-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-28T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-28:install-mysql-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="/mysql.html"&gt;MySQL&lt;/a&gt; is a common open source 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Makai</title><link href="http://www.fullstackpython.com/" rel="alternate"></link><link href="http://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>http://www.fullstackpython.com/</id><updated>2016-05-30T00:00:00-04:00</updated><entry><title>Responding to SMS Text Messages with Python &amp; Flask</title><link href="http://www.fullstackpython.com/respond-sms-text-messages-python-flask.html" rel="alternate"></link><updated>2016-05-30T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-30:respond-sms-text-messages-python-flask.html</id><summary type="html">&lt;p&gt;Short Message Service (SMS) text messages are 
+&lt;a href="/blog/send-sms-text-messages-python.html"&gt;easy to send from Python applications&lt;/a&gt; 
+with a
+&lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
+Flask applications can also receive incoming text messages and respond
+back to the sender with just a few lines of Python code.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;This tutorial is fine for both Python 2 and 3. Make sure you have one of 
+those two versions installed on your system.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle
+  &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;a href="/flask.html"&gt;Flask&lt;/a&gt; micro web framework&lt;/li&gt;
+&lt;li&gt;A free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
+  &lt;a href="https://www.twilio.com/docs/api/rest/sending-messages"&gt;SMS web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open source 
+  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ngrok.com/"&gt;Ngrok&lt;/a&gt; for localhost tunneling to our Flask 
+  application while it's running on our local development environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you need assistance getting pip and virtualenv installed, take a look at 
+the first few steps in the 
+&lt;a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+guide, which shows how to install system packages for those tools.&lt;/p&gt;
+&lt;h2&gt;Installing Our Dependencies&lt;/h2&gt;
+&lt;p&gt;Our code will use a helper library to make it easier to respond to text 
+messages from Python. The helper library dependency along with the Flask
+code library can be installed from &lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt; into 
+a virtualenv. In your terminal use the following command to generate a new 
+virtualenv. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv respondsms
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source respondsms/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The command prompt will change after we properly activate the virtualenv
+to something like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Install Flask and the Twilio Python helper library into the virtualenv with
+the &lt;code&gt;pip&lt;/code&gt; command. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install flask twilio
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The dependencies are installed so that we can use it with our Python code.
+Now we can write our Python application.&lt;/p&gt;
+&lt;h2&gt;Building Our Flask Web App&lt;/h2&gt;
+&lt;p&gt;Our Flask application will have two routes: one to make sure the web app
+is running and another that handles incoming HTTP POST requests. Create
+a new file named &lt;code&gt;app.py&lt;/code&gt; in your home directory or where you choose to
+store your Python project files.&lt;/p&gt;
+&lt;p&gt;Within &lt;code&gt;app.py&lt;/code&gt; write the following code. You can also see 
+&lt;a href="https://gist.github.com/makaimc/8ab434ccb604d3ba5bde817a183e0bde"&gt;this code in a GitHub Gist&lt;/a&gt; 
+if that's easier to copy and paste.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;
+
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;check_app&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c"&gt;# returns a simple string stating the app is working&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;It works!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/twilio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;POST&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;inbound_sms&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c"&gt;# we get the SMS message from the request. we could also get the &lt;/span&gt;
+    &lt;span class="c"&gt;# &amp;quot;To&amp;quot; and the &amp;quot;From&amp;quot; phone number as well&lt;/span&gt;
+    &lt;span class="n"&gt;inbound_message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Body&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# we can now use the incoming message text in our Python application&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;inbound_message&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello back to you!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hi! Not quite sure what you meant, but okay.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# we return back the mimetype because Twilio needs an XML response&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;mimetype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;application/xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The inline comments on the lines starting with &lt;code&gt;#&lt;/code&gt; explain what the lines
+below them do. Flask applications define URL routes with the &lt;code&gt;@app.route&lt;/code&gt;
+decorator. Our application needs two routes therefore we have two of those
+decorators defined.&lt;/p&gt;
+&lt;p&gt;Give the application a try by running it with &lt;code&gt;python app.py&lt;/code&gt;. If you have
+trouble running the program, make sure your virtualenv is still active so
+that the application can use the Flask and Twilio code libraries we installed
+earlier.&lt;/p&gt;
+&lt;p&gt;Open a web browser and go to localhost:5000 (or 127.0.0.1:5000). We should
+see "It works!" on the screen.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/app-local.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;There is one problem with our application running on our local development
+environment: there's no way for our server to receive HTTP POST requests 
+unless we use a localhost tunnel.&lt;/p&gt;
+&lt;h2&gt;Localhost Tunneling with Ngrok&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://ngrok.com"&gt;Ngrok&lt;/a&gt; provides a localhost tunnel so that outside
+services can connect to a server running in your local development 
+environment. Download and install Ngrok.&lt;/p&gt;
+&lt;p&gt;We can now run Ngrok locally and connect our Flask app running on port 5000. 
+Within the directory where you extracted Ngrok, run this command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;./ngrok http 5000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/start-ngrok.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Awesome, now we can use that Ngrok Forwarding URL to access our application
+from any machine that has an internet connection. Replace the URL in the
+web browser with your own Forwarding URL, like I did in this screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/access-ngrok.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;We just need a phone number that'll hit our application with a POST request
+to respond to text messages.&lt;/p&gt;
+&lt;h2&gt;Obtaining Our Phone Number&lt;/h2&gt;
+&lt;p&gt;We can use our Flask application's route to respond to incoming web API 
+requests based on incoming SMS messages to a Twilio phone number. Go to the
+&lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio website and sign up for a free trial account&lt;/a&gt;
+to use their API. If you already have a Twilio account then sign into your 
+existing account.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/try-twilio.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The Twilio trial account allows you to send and receive text messages to 
+your own validated phone number. To send and respond to SMS to and from any 
+phone number then you need to upgrade your account. Trial accounts are 
+great for initial development before your application goes live.&lt;/p&gt;
+&lt;p&gt;When you sign up, you receive a free Twilio phone number. We can
+configure that phone number to forward the SMS information to our web 
+application by setting up the response webhook.&lt;/p&gt;
+&lt;p&gt;Go to the 
+&lt;a href="https://www.twilio.com/console/phone-numbers"&gt;manage phone numbers screen&lt;/a&gt; 
+and click on the phone number you want to configure for responding to 
+inbound text messages.&lt;/p&gt;
+&lt;p&gt;Scroll down to near the bottom of the page and look for the "Messaging"
+header. Modify the "A Message Comes in" text box so that it has your
+ngrok Forwarding URL plus the "/twilio" route, as shown in this screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/number-configuration.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Now press the red "Save" button at the bottom to make our changes take
+effect.&lt;/p&gt;
+&lt;p&gt;Our application is ready to go - time to give our phone number a try! 
+Send "Hello" or whatever text you want to your phone number. Here is what 
+the result looks like on my iPhone.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160530-respond-sms-python-flask/success.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;This simple Flask application is a good start to build more complicated
+responses such as
+&lt;a href="https://www.twilio.com/blog/2014/06/using-natural-language-processing-for-better-sms-interfaces-using-twilio-and-pythons-textblob.html"&gt;adding natural language processing&lt;/a&gt;,
+&lt;a href="https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html"&gt;building SMS Slack bots&lt;/a&gt;
+or 
+&lt;a href="https://www.twilio.com/blog/2015/08/romram-hacking-building-an-sms-powered-game-genie-with-lua-and-python.html"&gt;coding SMS-powered NES Game Genies&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;What's next?&lt;/h2&gt;
+&lt;p&gt;Sweet, now our Flask web app automatically responds to incoming SMS text
+messages! It's pretty crazy to think that entire businesses such as 
+&lt;a href="http://techcrunch.com/2016/03/07/superphone/"&gt;SuperPhone&lt;/a&gt; and 
+&lt;a href="https://www.remind.com/"&gt;Remind&lt;/a&gt; are built off code that started out very
+similar to the code we just wrote.&lt;/p&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160530-respond-sms-text-messages-python-flask.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to Install and Use MySQL on Ubuntu 16.04</title><link href="http://www.fullstackpython.com/install-mysql-ubuntu-1604.html" rel="alternate"></link><updated>2016-05-28T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-28:install-mysql-ubuntu-1604.html</id><summary type="html">&lt;p&gt;&lt;a href="/mysql.html"&gt;MySQL&lt;/a&gt; is a common open source 
 &lt;a href="/databases.html"&gt;relational database&lt;/a&gt; for creating, reading, updating 
 and deleting data in &lt;a href="/web-frameworks.html"&gt;Python web applications&lt;/a&gt;.
 Let's learn how to install MySQL on Ubuntu 16.04 and then run a few 
@@ -531,7 +700,9 @@ gets it will be able to send and receive messages through your account.&lt;/p&gt
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-13T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;The Ubuntu 16.04 Long Term Support (LTS) Linux
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160515-sending-mms-picture-messages-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-13T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;The Ubuntu 16.04 Long Term Support (LTS) Linux
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released in April 2016.
 This latest Ubuntu release is named "Xenial Xerus" and
 it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt;,
@@ -667,7 +838,10 @@ full step-by-step tutorial to deploy your Python web application to a
 production environment, check out the 
 &lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To decide what to do next with your Python project, check out the
-&lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;</summary></entry><entry><title>How to Send SMS Text Messages with Python</title><link href="http://www.fullstackpython.com/send-sms-text-messages-python.html" rel="alternate"></link><updated>2016-05-11T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</id><summary type="html">&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
+&lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;See something wrong in this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160513-bottle-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>How to Send SMS Text Messages with Python</title><link href="http://www.fullstackpython.com/send-sms-text-messages-python.html" rel="alternate"></link><updated>2016-05-11T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</id><summary type="html">&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
 all over the world. It is easy to send SMS text messages from a 
 &lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; application using a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
@@ -768,7 +942,10 @@ your account to send and receive messages.&lt;/p&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu's latest Long Term Support (LTS) 
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See something wrong in this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160511-send-sms-text-message-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu's latest Long Term Support (LTS) 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last month, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
 it's the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 
@@ -905,7 +1082,9 @@ found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="http://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-05-09T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;Ubuntu released the newest Long Term Support (LTS) version of its 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; in April 2016. The update
 brings Ubuntu to version 16.04 and its latest code name is 
 "Xenial Xerus". 16.04 is the first Ubuntu release to include 
@@ -1020,7 +1199,10 @@ found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="http://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2016-05-08T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See something wrong in this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="http://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2016-05-08T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
 the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, &lt;a href="/servers.html"&gt;server&lt;/a&gt;, 
 operating system, web server and WSGI server pages. Since then, the pages
 have expanded out into a 

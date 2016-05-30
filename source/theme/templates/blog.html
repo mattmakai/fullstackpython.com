@@ -6,13 +6,13 @@
 
 {% block title %}Blog - {% endblock %}
 
-{% block banner %}
+{% block lower_banner %}
     {% include "banner.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
       {% for a in articles %}
         <h2 style="line-height: 1.5em;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h2>
         <div class="post-byline">
@@ -22,6 +22,5 @@
         {{ a.content|truncate(350) }} (<a href="/blog/{{ a.slug }}.html">read more</a>)
       {% endfor %}
     </div>
-    {% include "sidebar-blog.html" %}
 </div>
 {% endblock %}
