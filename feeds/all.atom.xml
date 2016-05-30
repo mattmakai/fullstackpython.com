@@ -80,7 +80,7 @@ with your new username.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img src="/source/static/img/160528-mysql-ubuntu-1604/grant-privileges.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160528-mysql-ubuntu-1604/grant-all.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
 &lt;p&gt;It's a good idea to reload the privileges to make sure our new user's
 permissions are in place.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;FLUSH PRIVILEGES;
