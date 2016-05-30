@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matt Makai">
+    <meta name="description" content="A quick tutorial on installing and use MySQL on Ubuntu 16.04 Xenial Xerus.">
+    <link rel="shortcut icon" href="/img/fsp-fav.png">
+    <title>How to Install and Use MySQL on Ubuntu 16.04 - Full Stack Python</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="/theme/css/f.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/fork.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="/theme/img/logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
+            <span class="logo-title"><a href="https://www.fullstackpython.com/">Full Stack Python</a></span>
+        </div>
+<div class="subnav">
+    <!--<a href="/blog.html" class="submenu-item-first">Blog</a> |
+    <a href="/books.html" class="submenu-item">Books</a> | -->
+    <a href="/table-of-contents.html" class="submenu-item-first">All topics</a> | 
+    <a href="/blog.html" class="submenu-item">Blog</a> |
+    <a href="/email.html" class="submenu-item">Newsletter</a> |
+    <a href="https://twitter.com/fullstackpython" class="submenu-item">@fullstackpython</a> |
+    <a href="https://www.facebook.com/fullstackpython" class="submenu-item">Facebook</a> |
+    <a href="https://github.com/makaimc/fullstackpython.com/tree/gh-pages/source" class="submenu-item">Source</a> 
+</div>    </div>
+</div><div class="row">
+    <div class="col-md-12">
+          <h1 class="blog-h1">How to Install and Use MySQL on Ubuntu 16.04</h1>
+          <div class="post-byline">
+            Posted by <a href="/about-author.html">Matt Makai</a> on 
+            May 28, 2016.
+          </div>
+          <p><a href="/mysql.html">MySQL</a> is a common open source 
+<a href="/databases.html">relational database</a> for creating, reading, updating 
+and deleting data in <a href="/web-frameworks.html">Python web applications</a>.
+Let's learn how to install MySQL on Ubuntu 16.04 and then run a few 
+SQL queries within the command line client.</p>
+<p>We will not go over connecting via Python applications using
+<a href="/object-relational-mappers-orms.html">object-relational mappers (ORMs)</a> 
+but these steps can be used as a prerequisite to working with an ORM such 
+as SQLAlchemy or Peewee.</p>
+<h2>Tools We Need</h2>
+<p>In this tutorial we'll use the following components:</p>
+<ul>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04</a> (this tutorial 
+  should also work on other Ubuntu versions)</li>
+<li><a href="http://dev.mysql.com/doc/">MySQL</a></li>
+</ul>
+<h2>Install MySQL</h2>
+<p>We can install MySQL by using the <code>apt</code> package manager. First make sure
+your packages list are up to date. Open the terminal and run this <code>apt</code>
+command.</p>
+<div class="highlight"><pre>sudo apt-get update
+</pre></div>
+
+
+<p>We need to install the <code>mysql-server</code> package, which downloads the required
+files, configures the initial database set up and handles running MySQL
+as a system service. Run this <code>apt</code> command to get the process started.</p>
+<div class="highlight"><pre>sudo apt-get install mysql
+</pre></div>
+
+
+<p>Enter 'y' when prompted with whether or not you want to install the
+new package.</p>
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/apt-install-prompt.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>An administrative screen asking for a new root password will appear in the 
+middle of the package installation process. Enter your chosen new password 
+twice and the installation will continue.</p>
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/new-root-password.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>In a moment the installation will finish and you'll be back at the command
+prompt.</p>
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/apt-finished.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>MySQL is now installed with a root user. However, we do not want to have our
+applications connect to the database with that user, so next we will 
+create a new non-root user.</p>
+<h2>Securing MySQL</h2>
+<p>MySQL is installed with a basic configuration meant for development and testing
+purposes. However, the configuration is not secure for production enviroments,
+therefore it comes with a utility to handle basic security. Run the
+following command and answer the questions based on your environment 
+requirements.</p>
+<div class="highlight"><pre>sudo mysql_secure_installation
+</pre></div>
+
+
+<p>When you finish running the script you should see the following output and
+be back at the command prompt.</p>
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/mysql-secure-installation.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Our MySQL instance has basic security in place but we need to create a 
+non-root user for applications to interact with the database.</p>
+<h2>Creating MySQL Users</h2>
+<p>To create a non-root user, connect to the MySQL instance with the 
+<code>mysql</code> command line client.</p>
+<div class="highlight"><pre>mysql -u root -p
+</pre></div>
+
+
+<p>Now use the <code>CREATE USER</code> command to generate a new user. Make sure to
+change "mynewuser" and "goodPassword" with your own values.</p>
+<div class="highlight"><pre>CREATE USER &#39;mynewuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;goodPassword&#39;;
+</pre></div>
+
+
+<p>No output after the command is good - that means the command succeeded.</p>
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/create-user.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>We need to apply privileges to the new user so it can handle basic database
+operations. Again, make sure to replace the default username in this command
+with your new username.</p>
+<div class="highlight"><pre>GRANT ALL PRIVILEGES ON * . * TO &#39;mynewuser&#39;@&#39;localhost&#39;;
+</pre></div>
+
+
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/grant-privileges.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>It's a good idea to reload the privileges to make sure our new user's
+permissions are in place.</p>
+<div class="highlight"><pre>FLUSH PRIVILEGES;
+</pre></div>
+
+
+<p>Now that our permissions are reloaded we can connect with the new user.</p>
+<h2>New User Connection</h2>
+<p>We're set to connect to the database with our new user. Exit the MySQL
+client with "Ctrl-d". Reconnect using a slightly different command than
+we used earlier.</p>
+<div class="highlight"><pre>mysql -u mynewuser -p
+</pre></div>
+
+
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/mysql-new-user.png" width="100%" class="technical-diagram img-rounded" alt="Connect to MySQL as the new user we just created."></p>
+<p>Create a new database with the <code>CREATE DATABASE</code> command.</p>
+<div class="highlight"><pre>CREATE DATABASE fullstackpython;
+</pre></div>
+
+
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/create-database.png" width="100%" class="technical-diagram img-rounded" alt="Create a new MySQL database with our new user."></p>
+<p>Connect to the new database with the <code>USE</code> command.</p>
+<div class="highlight"><pre>use fullstackpython;
+</pre></div>
+
+
+<p><img src="/source/static/img/160528-mysql-ubuntu-1604/use-command.png" width="100%" class="technical-diagram img-rounded" alt="Connect to the newly-created database with the USE command."></p>
+<p>Create a simple new table with the <code>CREATE TABLE</code> command.</p>
+<div class="highlight"><pre>CREATE TABLE pages (name VARCHAR(50), url VARCHAR(1024));
+</pre></div>
+
+
+<p>Our table is ready to go - we can interact with it using the 
+<code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code> and <code>DELETE</code> SQL commands.</p>
+<h2>What's next?</h2>
+<p>We now have our MySQL instance installed and ready for interaction.
+Take a look at the <a href="/mysql.html">MySQL</a>, 
+<a href="/databases.html">relational databases</a> and 
+<a href="/object-relational-mappers-orms.html">object-relational mappers (ORMs)</a>
+pages for more tutorials.</p>
+<p>Questions? Tweet <a href="https://twitter.com/fullstackpython">@fullstackpython</a>
+or post a message on the 
+<a href="https://www.facebook.com/fullstackpython">Full Stack Python Facebook page</a>. 
+Something wrong with this post? Fork 
+<a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160528-install-mysql-ubuntu-1604.markdown">this page's source on GitHub</a>.</p>
+          <hr>
+<div id="mc_embed_signup">
+<form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+        <h4>Sign up here to receive a monthly email with major updates to this site, tutorials and discount codes for Python books.</h4>
+        <div class="row">
+            <div class="col-md-9">
+                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_b7e774f0c4f05dcebbfee183d_b22335388d" tabindex="-1" value=""></div>
+            </div>
+            <div class="col-md-3">
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="font-family: 'Helvetica Neue';"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+    </div>
+</div>
+        <hr/>
+    </div> 
+<div style="padding: 0 0 20px 0; margin: 0 0 20px 0; background-color: #22B24C;">
+    <div class="container">
+        <p class="banner"><a href="https://www.gumroad.com/l/python-deployments" style="color: #fff">Learning web development? Check out The Full Stack Python Guide to Deployments book</a>!</p>
+    </div>
+</div>    <div class="container">
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2016
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-19910497-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+    var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+</body>
+</html>
