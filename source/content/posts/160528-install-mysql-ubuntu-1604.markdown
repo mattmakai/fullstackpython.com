@@ -98,7 +98,7 @@ with your new username.
 
     GRANT ALL PRIVILEGES ON * . * TO 'mynewuser'@'localhost';
 
-<img src="/source/static/img/160528-mysql-ubuntu-1604/grant-privileges.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160528-mysql-ubuntu-1604/grant-all.png" width="100%" class="technical-diagram img-rounded">
 
 It's a good idea to reload the privileges to make sure our new user's
 permissions are in place.
