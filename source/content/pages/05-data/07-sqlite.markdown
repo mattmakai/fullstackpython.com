@@ -27,6 +27,13 @@ access a SQLite database from within Python applications.
   walks through creating databases as well as inserting, updating, querying and
   deleting data.
 
+* [SQLite: The art of keep it simple](http://www.jarchitect.com/Blog/?p=2392)
+  uses C code examples from SQLite's codebase to show how its design has been
+  kept consistent and tight throughout 15+ years of active development.
+  There's also a 
+  [great design document on the SQLite site](http://sqlite.org/src4/doc/trunk/www/design.wiki) 
+  that covers many of these principles.
+
 * [My list of SQLite resources](http://charlesleifer.com/blog/my-list-of-python-and-sqlite-resources/)
   is a nice roundup of useful tools to use with SQLite and tutorials for
   learning more about the database.

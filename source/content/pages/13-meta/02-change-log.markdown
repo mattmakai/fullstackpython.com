@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### May
+* New [SQLite](/sqlite.html) resources.
 * Removed or redirected a few broken links on various deployment pages.
 * One more new blog post tutorial before the month ends: 
   [Responding to SMS Text Messages with Python & Flask](/blog/respond-sms-text-messages-python-flask.html).
