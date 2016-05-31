@@ -34,7 +34,7 @@ system. [Ubuntu 14.04 LTS](/operating-systems.html) is virtualized on top
 with [Parallels](https://www.parallels.com/). My code is written in 
 [vim](http://www.vim.org/) and executed with the 
 [Python 2.7.x](https://www.python.org/download/releases/2.7.8/) interpreter
-via the command line. I use virtualenv to create separate Python interpreters
+via the command line. I use [virtualenv](https://virtualenv.pypa.io/en/latest/) to create separate Python interpreters
 with their own isolated
 [application dependencies](/application-dependencies.html) and
 [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/)

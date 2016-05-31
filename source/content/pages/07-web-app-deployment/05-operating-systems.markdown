@@ -70,7 +70,7 @@ packages found on Linux servers running a Python stack. These packages are:
 
 * [python-virtualenv](http://packages.ubuntu.com/precise/python-virtualenv)
   for creating and managing Python 
-  [virtualenvs](http://www.virtualenv.org/en/latest/) to isolate library
+  [virtualenvs](https://virtualenv.pypa.io/en/latest/) to isolate library
   dependencies
 
 
