@@ -117,7 +117,7 @@ up your application.
 
 * JetBrains' [PyCharm Blog](http://blog.jetbrains.com/pycharm/) is required
   reading if you're using the IDE or considering trying it. One of the
-  core developers also an interview on the 
+  core developers also has an interview on the 
   [Talk Python to Me podcast](http://talkpython.fm/episodes/show/36/python-ides-with-the-pycharm-teama) 
   that's worth listening to.
 
