@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 AUTHOR = u'Matt Makai'
-SITENAME = u'Matt Makai'
+SITENAME = u'Full Stack Python'
 SITEURL = 'http://www.fullstackpython.com'
 TIMEZONE = 'America/New_York'
 
@@ -15,6 +15,7 @@ DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email',
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
+FEED_RSS = 'feed'
 
 BYLINE = '&copy; 2016 Matt Makai. All Rights Reserved.'
 LINKS = ()
