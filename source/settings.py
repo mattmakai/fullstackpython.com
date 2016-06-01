@@ -16,7 +16,7 @@ ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
-FEED_DOMAIN = 'https://www.fullstackpython.com/'
+FEED_DOMAIN = 'https://www.fullstackpython.com'
 FEED_RSS = 'feed'
 
 BYLINE = '&copy; 2016 Matt Makai. All Rights Reserved.'
