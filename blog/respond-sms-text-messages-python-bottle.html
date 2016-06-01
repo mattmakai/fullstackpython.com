@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matt Makai">
+    <meta name="description" content="A walkthrough for responding to SMS text messages in a Bottle application built with Python.">
+    <link rel="shortcut icon" href="/img/fsp-fav.png">
+    <title>Responding to SMS Text Messages in a Python & Bottle Web Application - Full Stack Python</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="/theme/css/f.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/fork.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="/theme/img/logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
+            <span class="logo-title"><a href="https://www.fullstackpython.com/">Full Stack Python</a></span>
+        </div>
+<div class="subnav">
+    <!--<a href="/blog.html" class="submenu-item-first">Blog</a> |
+    <a href="/books.html" class="submenu-item">Books</a> | -->
+    <a href="/table-of-contents.html" class="submenu-item-first">All topics</a> | 
+    <a href="/blog.html" class="submenu-item">Blog</a> |
+    <a href="/email.html" class="submenu-item">Newsletter</a> |
+    <a href="https://twitter.com/fullstackpython" class="submenu-item">@fullstackpython</a> |
+    <a href="https://www.facebook.com/fullstackpython" class="submenu-item">Facebook</a> |
+    <a href="https://github.com/makaimc/fullstackpython.com/tree/gh-pages/source" class="submenu-item">Source</a> 
+</div>    </div>
+</div><div class="row">
+    <div class="col-md-12">
+          <h1 class="blog-h1">Responding to SMS Text Messages in a Python & Bottle Web Application</h1>
+          <div class="post-byline">
+            Posted by <a href="/about-author.html">Matt Makai</a> on 
+            June 02, 2016.
+          </div>
+          <p>SMS text messages are 
+<a href="/blog/send-sms-text-messages-python.html">easy to send from a Python application</a> 
+when we use
+<a href="/application-programming-interfaces.html">web application programming interfaces (APIs)</a>. 
+In addition to sending messages from our code, Bottle web 
+applications can also respond to incoming text messages with a few lines of 
+Python.</p>
+<h2>Tools We Need</h2>
+<p>This walkthrough works with both Python 2 and 3. Make sure you have one of 
+those two versions installed on your system. We'll also be using these
+components in this tutorial:</p>
+<ul>
+<li><a href="https://pip.pypa.io/en/stable/">pip</a> and 
+  <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> to handle
+  <a href="/application-dependencies.html">application dependencies</a></li>
+<li>The <a href="/bottle.html">Bottle</a> web framework</li>
+<li>A free <a href="https://www.twilio.com/try-twilio">Twilio account</a> </li>
+<li>Open source 
+  <a href="https://pypi.python.org/pypi/twilio">Twilio Python helper library</a> to
+  generate responses to the Twilio API</li>
+<li><a href="https://ngrok.com/">Ngrok</a> for localhost tunneling to our Bottle 
+  application while it's running on our local development environment</li>
+</ul>
+<p>If you need assistance getting pip and virtualenv installed, take a look at 
+the first few steps in the 
+<a href="/blog/python-3-bottle-green-unicorn-ubuntu-1604-xenial-xerus.html">how to set up Python 3, Bottle and Green Unicorn on Ubuntu 16.04 LTS</a>
+guide, which shows how to install system packages for those tools.</p>
+<h2>Installing Our Dependencies</h2>
+<p>Our code will use a helper library to make it easier to respond to text 
+messages from Python. The helper library dependency along with the Flask
+code library can be installed from <a href="https://pypi.python.org/pypi">PyPI</a> into 
+a virtualenv. In your terminal use the following command to generate a new 
+virtualenv. </p>
+<div class="highlight"><pre>virtualenv respondsms
+</pre></div>
+
+
+<p>Activate the virtualenv.</p>
+<div class="highlight"><pre>source respondsms/bin/activate
+</pre></div>
+
+
+<p>The command prompt will change after we properly activate the virtualenv
+to something like this:</p>
+<p><img src="/source/static/img/160530-respond-sms-python-flask/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Install Flask and the Twilio Python helper library into the virtualenv with
+the <code>pip</code> command. </p>
+<div class="highlight"><pre>pip install flask twilio
+</pre></div>
+
+
+<p>The dependencies are installed so that we can use it with our Python code.
+Now we can write our Python application.</p>
+<h2>Building Our Flask Web App</h2>
+<p>Our Flask application will have two routes: one to make sure the web app
+is running and another that handles incoming HTTP POST requests. Create
+a new file named <code>app.py</code> in your home directory or where you choose to
+store your Python project files.</p>
+<p>Within <code>app.py</code> write the following code. You can also see 
+<a href="https://gist.github.com/makaimc/8ab434ccb604d3ba5bde817a183e0bde">this code in a GitHub Gist</a> 
+if that's easier to copy and paste.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">Response</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">twilio</span> <span class="kn">import</span> <span class="n">twiml</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">check_app</span><span class="p">():</span>
+    <span class="c"># returns a simple string stating the app is working</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;It works!&quot;</span><span class="p">),</span> <span class="mi">200</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/twilio&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;POST&quot;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">inbound_sms</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">twiml</span><span class="o">.</span><span class="n">Response</span><span class="p">()</span>
+    <span class="c"># we get the SMS message from the request. we could also get the </span>
+    <span class="c"># &quot;To&quot; and the &quot;From&quot; phone number as well</span>
+    <span class="n">inbound_message</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;Body&quot;</span><span class="p">)</span>
+    <span class="c"># we can now use the incoming message text in our Python application</span>
+    <span class="k">if</span> <span class="n">inbound_message</span> <span class="o">==</span> <span class="s">&quot;Hello&quot;</span><span class="p">:</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s">&quot;Hello back to you!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s">&quot;Hi! Not quite sure what you meant, but okay.&quot;</span><span class="p">)</span>
+    <span class="c"># we return back the mimetype because Twilio needs an XML response</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">response</span><span class="p">),</span> <span class="n">mimetype</span><span class="o">=</span><span class="s">&quot;application/xml&quot;</span><span class="p">),</span> <span class="mi">200</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The inline comments on the lines starting with <code>#</code> explain what the lines
+below them do. Flask applications define URL routes with the <code>@app.route</code>
+decorator. Our application needs two routes therefore we have two of those
+decorators defined.</p>
+<p>Give the application a try by running it with <code>python app.py</code>. If you have
+trouble running the program, make sure your virtualenv is still active so
+that the application can use the Flask and Twilio code libraries we installed
+earlier.</p>
+<p>Open a web browser and go to localhost:5000 (or 127.0.0.1:5000). We should
+see "It works!" on the screen.</p>
+<p><img src="/source/static/img/160530-respond-sms-python-flask/app-local.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>There is one problem with our application running on our local development
+environment: there's no way for our server to receive HTTP POST requests 
+unless we use a localhost tunnel.</p>
+<h2>Localhost Tunneling with Ngrok</h2>
+<p><a href="https://ngrok.com">Ngrok</a> provides a localhost tunnel so that outside
+services can connect to a server running in your local development 
+environment. Download and install Ngrok.</p>
+<p>We can now run Ngrok locally and connect our Flask app running on port 5000. 
+Within the directory where you extracted Ngrok, run this command.</p>
+<div class="highlight"><pre>./ngrok http 5000
+</pre></div>
+
+
+<p><img src="/source/static/img/160530-respond-sms-python-flask/start-ngrok.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>Awesome, now we can use that Ngrok Forwarding URL to access our application
+from any machine that has an internet connection. Replace the URL in the
+web browser with your own Forwarding URL, like I did in this screenshot.</p>
+<p><img src="/source/static/img/160530-respond-sms-python-flask/access-ngrok.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>We just need a phone number that'll hit our application with a POST request
+to respond to text messages.</p>
+<h2>Obtaining Our Phone Number</h2>
+<p>We can use our Flask application's route to respond to incoming web API 
+requests based on incoming SMS messages to a Twilio phone number. Go to the
+<a href="https://www.twilio.com/try-twilio">Twilio website and sign up for a free trial account</a>
+to use their API. If you already have a Twilio account then sign into your 
+existing account.</p>
+<p><img src="/source/static/img/160530-respond-sms-python-flask/try-twilio.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>The Twilio trial account allows you to send and receive text messages to 
+your own validated phone number. To send and respond to SMS to and from any 
+phone number then you need to upgrade your account. Trial accounts are 
+great for initial development before your application goes live.</p>
+<p>When you sign up, you receive a free Twilio phone number. We can
+configure that phone number to forward the SMS information to our web 
+application by setting up the response webhook.</p>
+<p>Go to the 
+<a href="https://www.twilio.com/console/phone-numbers">manage phone numbers screen</a> 
+and click on the phone number you want to configure for responding to 
+inbound text messages.</p>
+<p>Scroll down to near the bottom of the page and look for the "Messaging"
+header. Modify the "A Message Comes in" text box so that it has your
+ngrok Forwarding URL plus the "/twilio" route, as shown in this screenshot.</p>
+<p><img src="/source/static/img/160530-respond-sms-python-flask/number-configuration.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Now press the red "Save" button at the bottom to make our changes take
+effect.</p>
+<p>Our application is ready to go - time to give our phone number a try! 
+Send "Hello" or whatever text you want to your phone number. Here is what 
+the result looks like on my iPhone.</p>
+<p><img src="/source/static/img/160530-respond-sms-python-flask/success.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>This simple Flask application is a good start to build more complicated
+responses such as
+<a href="https://www.twilio.com/blog/2014/06/using-natural-language-processing-for-better-sms-interfaces-using-twilio-and-pythons-textblob.html">adding natural language processing</a>,
+<a href="https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html">building SMS Slack bots</a>
+or 
+<a href="https://www.twilio.com/blog/2015/08/romram-hacking-building-an-sms-powered-game-genie-with-lua-and-python.html">coding SMS-powered NES Game Genies</a>.</p>
+<h2>What's next?</h2>
+<p>Sweet, now our Flask web app automatically responds to incoming SMS text
+messages! It's pretty crazy to think that entire businesses such as 
+<a href="http://techcrunch.com/2016/03/07/superphone/">SuperPhone</a> and 
+<a href="https://www.remind.com/">Remind</a> are built off code that started out very
+similar to the code we just wrote.</p>
+<p>Questions? Contact me via Twitter 
+<a href="https://twitter.com/fullstackpython">@fullstackpython</a>
+or <a href="https://twitter.com/mattmakai">@mattmakai</a>. I'm also on GitHub with
+the username <a href="https://github.com/makaimc">makaimc</a>.</p>
+<p>Something wrong with this post? Fork 
+<a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160530-respond-sms-text-messages-python-flask.markdown">this page's source on GitHub</a>.</p>
+          <hr>
+<div id="mc_embed_signup">
+<form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+        <h4>Sign up here to receive a monthly email with major updates to this site, tutorials and discount codes for Python books.</h4>
+        <div class="row">
+            <div class="col-md-9">
+                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_b7e774f0c4f05dcebbfee183d_b22335388d" tabindex="-1" value=""></div>
+            </div>
+            <div class="col-md-3">
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="font-family: 'Helvetica Neue';"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+    </div>
+</div>
+        <hr/>
+    </div> 
+<div style="padding: 0 0 20px 0; margin: 0 0 20px 0; background-color: #22B24C;">
+    <div class="container">
+        <p class="banner"><a href="https://www.gumroad.com/l/python-deployments" style="color: #fff">Learning web development? Check out The Full Stack Python Guide to Deployments book</a>!</p>
+    </div>
+</div>    <div class="container">
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2016
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-19910497-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+    var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+</body>
+</html>

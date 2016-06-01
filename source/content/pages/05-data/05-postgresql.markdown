@@ -248,4 +248,7 @@ have to handle these issues in your applications.
   queries you should run to get them. The article also covers performance
   monitoring and how to analyze trigger functions.
 
+* [PostgreSQL monitoring queries](https://github.com/nilenso/postgresql-monitoring)
+  is a simple GitHub repository of SQL queries that can be run against
+  a PostgreSQL instance to determine usage, caching and bloat.
 

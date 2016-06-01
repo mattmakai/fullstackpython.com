@@ -15,6 +15,9 @@ the
 
 
 ## 2016
+### June
+* New [PostgreSQL](/postgresql.html) monitoring resources.
+
 ### May
 * New [SQLite](/sqlite.html) resources.
 * Removed or redirected a few broken links on various deployment pages.
