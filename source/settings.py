@@ -2,7 +2,7 @@
 
 AUTHOR = u'Matt Makai'
 SITENAME = u'Full Stack Python'
-SITEURL = 'http://www.fullstackpython.com'
+SITEURL = 'https://www.fullstackpython.com'
 TIMEZONE = 'America/New_York'
 
 GITHUB_URL = 'https://github.com/makaimc/fullstackpython.com'
