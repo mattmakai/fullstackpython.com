@@ -205,7 +205,7 @@ ready to take that step.
   as a plugin manager for Vim.
 
 * [Pathogen](https://github.com/tpope/vim-pathogen) is a widely used
-  used plugin manager.
+  plugin manager.
 
 * [Vim-plug](https://github.com/junegunn/vim-plug) bills itself as a
   minimalistic Vim plugin manager.
