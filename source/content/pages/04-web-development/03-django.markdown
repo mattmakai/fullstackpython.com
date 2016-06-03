@@ -175,8 +175,8 @@ for Django and web development on the [best Python videos](/best-python-videos.h
 
 ## Channels in 1.9+
 Channels are a new mechanism in Django 1.9 (as a standalone app, later
-for incorporation into the core framework) for real-time full-duplex
-communication between the browser and the server based on 
+for incorporation into the core framework in 1.10) for real-time 
+full-duplex communication between the browser and the server based on 
 [WebSockets](/websockets.html). 
   
 * This 
@@ -191,6 +191,12 @@ communication between the browser and the server based on
   this blog post [JSON Web Tokens authentication on Django Channels](http://www.machinalis.com/blog/jwt-django-channels/)
   shows how to use a custom [JSON Web Token (JWT)](https://jwt.io/)
   implementation in Django Channels instead.
+
+* [Offloading work using Django Channels](http://www.machinalis.com/blog/offloading-work-using-django-channels/)
+  is a short post that builds on a previous example to add a shared 
+  canvas with group updates via Channels, which would otherwise be difficult 
+  to accomplish in a Django web app without a persistent data transfer
+  mechanism.
 
 
 ## Django testing
