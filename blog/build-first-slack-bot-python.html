@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matt Makai">
-    <meta name="description" content="How to build a simple Slack bot in Python tutorial.">
+    <meta name="description" content="Learn how to build a simple Slack bot in Python, no prior bot experience needed.">
     <link rel="shortcut icon" href="/img/fsp-fav.png">
-    <title>How to Build A Simple Slack Bot in Python - Full Stack Python</title>
+    <title>How to Build Your First Slack Bot with Python - Full Stack Python</title>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -36,14 +36,15 @@
 </div>    </div>
 </div><div class="row">
     <div class="col-md-12">
-          <h1 class="blog-h1">How to Build A Simple Slack Bot in Python</h1>
+          <h1 class="blog-h1">How to Build Your First Slack Bot with Python</h1>
           <div class="post-byline">
             Posted by <a href="/about-author.html">Matt Makai</a> on 
-            June 01, 2016.
+            June 04, 2016.
           </div>
-          <p>Bots are a useful way to interact with chat services such as Slack.
-If you have never built a bot before, this post provides an easy starter 
-tutorial for combining the Slack API with Python to code your first bot.</p>
+          <p>Bots are a useful way to interact with chat services such as 
+<a href="https://slack.com/">Slack</a>. If you have never built a bot before, this 
+post provides an easy starter tutorial for combining the 
+<a href="https://api.slack.com/">Slack API</a> with Python to create your first bot.</p>
 <p>We will walk through setting up your development environment, obtaining a
 Slack API bot token and coding our simple bot in Python.</p>
 <h2>Tools We Need</h2>
@@ -51,20 +52,28 @@ Slack API bot token and coding our simple bot in Python.</p>
 To run our Python code we need:</p>
 <ul>
 <li>Either <a href="/python-2-or-3.html">Python 2 or 3</a></li>
-<li>pip and virtualenv to handle Python application dependencies.</li>
-<li>Free Slack account with a team on which you have API access or sign up 
-  for the Slack Developer Hangout team</li>
-<li>Official Python slackclient code library built by the Slack team</li>
-<li>Slack API testing token</li>
+<li><a href="https://pip.pypa.io/en/stable/">pip</a> and 
+  <a href="https://virtualenv.pypa.io/en/stable/">virtualenv</a> to handle Python 
+  <a href="/application-dependencies.html">application dependencies</a></li>
+<li><a href="https://slack.com/">Free Slack account</a> with a team on which you have 
+  API access or sign up for the 
+  <a href="http://dev4slack.xoxco.com/">Slack Developer Hangout team</a></li>
+<li>Official Python 
+  <a href="https://github.com/slackhq/python-slackclient">slackclient</a> code 
+  library built by the Slack team</li>
+<li><a href="https://api.slack.com/tokens">Slack API testing token</a></li>
 </ul>
-<p>It is also useful to have the Slack API docs handy while you're building this
-tutorial.</p>
+<p>It is also useful to have the <a href="https://api.slack.com/">Slack API docs</a> handy 
+while you're building this tutorial.</p>
+<p>All the code for this tutorial is available open source under the MIT license
+in the <a href="https://github.com/makaimc/slack-starterbot">slack-starterbot</a> public
+repository.</p>
 <h2>Establishing Our Environment</h2>
-<p>We now know what tools we need for our project so let's dig in. Go to the 
-terminal (or Command Prompt on Windows) and change into the directory 
-where you want to store this project. Within that directory, create a new 
-virtualenv to isolate our application dependencies from other Python 
-projects.</p>
+<p>We now know what tools we need for our project so let's get our development
+environment set up. Go to the terminal (or Command Prompt on Windows) and 
+change into the directory where you want to store this project. Within 
+that directory, create a new virtualenv to isolate our application 
+dependencies from other Python projects.</p>
 <div class="highlight"><pre>virtualenv starterbot
 </pre></div>
 
@@ -75,7 +84,7 @@ projects.</p>
 
 
 <p>Your prompt should now look like the one in this screenshot.</p>
-<p><img src="/source/static/img/160601-simple-python-slack-bot/virtualenv-activate.png" width="100%" class="technical-diagram img-rounded"></p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/virtualenv-activate.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>The official slackclient API helper library built by Slack can send and 
 receive messages from a Slack channel. Install the slackclient library with 
 the <code>pip</code> command:</p>
@@ -83,22 +92,27 @@ the <code>pip</code> command:</p>
 </pre></div>
 
 
+<p>When <code>pip</code> is finished you should see output like this and you'll be
+back at the prompt.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/pip-install-slackclient.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>We also need to obtain an access token for our Slack team so our bot can
 use it to connect to the Slack API.</p>
 <h2>Slack Real Time Messaging (RTM) API</h2>
 <p>Slack grants programmatic access to their messaging channels via a
 <a href="/application-programming-interfaces.html">web API</a>. Go to the 
-Slack web API page and sign up to create your own Slack team. You can
-also sign into an existing account where you have administrative privileges.</p>
-<p><img src="/source/static/img/160601-simple-python-slack-bot/sign-in-slack.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>After you have signed in go to the Bot Users page.</p>
-<p><img src="/source/static/img/160601-simple-python-slack-bot/custom-bot-users.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Call your bot "starterbot" then click the “Add bot integration” button.</p>
-<p><img src="/source/static/img/160601-simple-python-slack-bot/starterbot.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<a href="https://api.slack.com/">Slack web API page</a> and sign up to create your own 
+Slack team. You can also sign into an existing account where you have 
+administrative privileges.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/sign-in-slack.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>After you have signed in go to the 
+<a href="https://api.slack.com/bot-users">Bot Users page</a>.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/custom-bot-users.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Name your bot "starterbot" then click the “Add bot integration” button.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/starterbot.jpg" width="100%" class="technical-diagram img-rounded"></p>
 <p>The page will reload and you will see a newly-generated access token. You 
 can also change the logo to a custom design. For example, I gave this bot
 the Full Stack Python logo.</p>
-<p><img src="/source/static/img/160601-simple-python-slack-bot/slack-token.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/slack-token.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Click the "Save Integration" button at the bottom of the page. Your bot is 
 now ready to connect to Slack's API.</p>
 <p>A common practice for Python developers is to export secret tokens as 
@@ -112,7 +126,7 @@ environment variables. Export the Slack token with the name
 <p>There is one more piece of information we need to build our bot: our bot's 
 ID. Next we will write a short script to obtain that ID from the Slack API.</p>
 <h2>Obtaining Our Bot’s ID</h2>
-<p>Finally, it's time to write some Python code! We'll get warmed up by coding 
+<p>It is <em>finally</em> time to write some Python code! We'll get warmed up by coding 
 a short Python script to obtain StarterBot's ID. The ID varies based on the 
 Slack team. </p>
 <p>We need the ID because it allows our application to determine if messages 
@@ -153,8 +167,9 @@ all Slack users and get the ID for the one that matches the name "starterbot".</
 
 <p>The script prints a single line of output when it is run that provides
 us with our bot's ID.</p>
-<p><img src="/source/static/img/160601-simple-python-slack-bot/print-bot-id.jpg" width="100%" class="technical-diagram img-rounded"></p>
-<p>Copy the ID. Export the ID as an environment variable named <code>BOT_ID</code>.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/printed-bot-id.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Copy the unique ID that your script prints out. Export the ID as an 
+environment variable named <code>BOT_ID</code>.</p>
 <div class="highlight"><pre>(starterbot)$ export BOT_ID=&#39;bot id returned by script&#39;
 </pre></div>
 
@@ -179,6 +194,7 @@ variable values and then instantiate the Slack client.</p>
 
 <span class="cp"># constants</span>
 <span class="n">AT_BOT</span> <span class="o">=</span> <span class="s">&quot;&lt;@&quot;</span> <span class="o">+</span> <span class="n">BOT_ID</span> <span class="o">+</span> <span class="s">&quot;&gt;:&quot;</span>
+<span class="n">EXAMPLE_COMMAND</span> <span class="o">=</span> <span class="s">&quot;do&quot;</span>
 
 <span class="cp"># instantiate Slack &amp; Twilio clients</span>
 <span class="n">slack_client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="err">&#39;</span><span class="n">SLACK_BOT_TOKEN</span><span class="err">&#39;</span><span class="p">))</span>
@@ -190,7 +206,7 @@ exported as an environment variable. </p>
 <div class="highlight"><pre>if __name__ == &quot;__main__&quot;:
     READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
     if slack_client.rtm_connect():
-        print(&quot;CallBot connected and running!&quot;)
+        print(&quot;StarterBot connected and running!&quot;)
         while True:
             command, channel = parse_slack_output(slack_client.rtm_read())
             if command and channel:
@@ -203,7 +219,7 @@ exported as an environment variable. </p>
 
 <p>The Slack client connects to the Slack RTM API WebSocket then constantly 
 loops while parsing messages from the firehose. If any of those messages are 
-directed at our StarterBot, a function named <code>handle_command</code> determines what 
+directed at StarterBot, a function named <code>handle_command</code> determines what 
 to do.</p>
 <p>Next add two new functions to parse Slack output and handle commands.</p>
 <div class="highlight"><pre><span class="nx">def</span> <span class="nx">handle_command</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span> <span class="nx">channel</span><span class="p">)</span><span class="o">:</span>
@@ -212,17 +228,17 @@ to do.</p>
 <span class="s2">        are valid commands. If so, then acts on the commands. If not,</span>
 <span class="s2">        returns back what it needs for clarification.</span>
 <span class="s2">    &quot;&quot;&quot;</span>
-    <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Not sure what you mean. Use the *&quot;</span> <span class="o">+</span> <span class="err">\</span> 
-               <span class="nx">CALL_COMMAND</span> <span class="o">+</span> <span class="s2">&quot;* command with numbers, delimited by spaces.&quot;</span>
-    <span class="k">if</span> <span class="nx">command</span><span class="p">.</span><span class="nx">startswith</span><span class="p">(</span><span class="nx">CALL_COMMAND</span><span class="p">)</span><span class="o">:</span>
-        <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;calling stub...&quot;</span>
+    <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Not sure what you mean. Use the *&quot;</span> <span class="o">+</span> <span class="nx">EXAMPLE_COMMAND</span> <span class="o">+</span> <span class="o">\</span>
+               <span class="s2">&quot;* command with numbers, delimited by spaces.&quot;</span>
+    <span class="k">if</span> <span class="nx">command</span><span class="p">.</span><span class="nx">startswith</span><span class="p">(</span><span class="nx">EXAMPLE_COMMAND</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Sure...write some more code then I can do that!&quot;</span>
     <span class="nx">slack_client</span><span class="p">.</span><span class="nx">api_call</span><span class="p">(</span><span class="s2">&quot;chat.postMessage&quot;</span><span class="p">,</span> <span class="nx">channel</span><span class="o">=</span><span class="nx">channel</span><span class="p">,</span>
                           <span class="nx">text</span><span class="o">=</span><span class="nx">response</span><span class="p">,</span> <span class="nx">as_user</span><span class="o">=</span><span class="nx">True</span><span class="p">)</span>
 
 
 <span class="nx">def</span> <span class="nx">parse_slack_output</span><span class="p">(</span><span class="nx">slack_rtm_output</span><span class="p">)</span><span class="o">:</span>
     <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        The Slack Real Time Messaging API is a firehose of data, so</span>
+<span class="s2">        The Slack Real Time Messaging API is an events firehose.</span>
 <span class="s2">        this parsing function returns None unless a message is</span>
 <span class="s2">        directed at the Bot, based on its ID.</span>
 <span class="s2">    &quot;&quot;&quot;</span>
@@ -231,7 +247,7 @@ to do.</p>
         <span class="k">for</span> <span class="nx">output</span> <span class="k">in</span> <span class="nx">output_list</span><span class="o">:</span>
             <span class="k">if</span> <span class="nx">output</span> <span class="nx">and</span> <span class="s1">&#39;text&#39;</span> <span class="k">in</span> <span class="nx">output</span> <span class="nx">and</span> <span class="nx">AT_BOT</span> <span class="k">in</span> <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;text&#39;</span><span class="cp">]</span><span class="o">:</span>
                 <span class="err">#</span> <span class="k">return</span> <span class="nx">text</span> <span class="nx">after</span> <span class="nx">the</span> <span class="err">@</span> <span class="nx">mention</span><span class="p">,</span> <span class="nx">whitespace</span> <span class="nx">removed</span>
-                <span class="k">return</span> <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;text&#39;</span><span class="cp">]</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">AT_BOT</span><span class="p">)</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span><span class="p">.</span><span class="nx">strip</span><span class="p">(),</span> 
+                <span class="k">return</span> <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;text&#39;</span><span class="cp">]</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">AT_BOT</span><span class="p">)</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span><span class="p">.</span><span class="nx">strip</span><span class="p">().</span><span class="nx">lower</span><span class="p">(),</span> <span class="o">\</span>
                        <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;channel&#39;</span><span class="cp">]</span>
     <span class="k">return</span> <span class="nx">None</span><span class="p">,</span> <span class="nx">None</span>
 </pre></div>
@@ -240,20 +256,103 @@ to do.</p>
 <p>The <code>parse_slack_output</code> function takes messages from Slack and determines 
 if they are directed at our StarterBot. Messages that start with a direct
 command to our bot ID are then handled by our code - which is currently
-just a stub function.</p>
+just posts a message back in the Slack channel telling the user to write
+some more Python code!</p>
+<p>Here is how the entire program should look when it's all put together
+(you can also 
+<a href="https://github.com/makaimc/slack-starterbot/blob/master/starterbot.py">view the file in GitHub</a>):</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">slackclient</span> <span class="kn">import</span> <span class="n">SlackClient</span>
+
+
+<span class="c"># starterbot&#39;s ID as an environment variable</span>
+<span class="n">BOT_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;BOT_ID&quot;</span><span class="p">)</span>
+
+<span class="c"># constants</span>
+<span class="n">AT_BOT</span> <span class="o">=</span> <span class="s">&quot;&lt;@&quot;</span> <span class="o">+</span> <span class="n">BOT_ID</span> <span class="o">+</span> <span class="s">&quot;&gt;:&quot;</span>
+<span class="n">EXAMPLE_COMMAND</span> <span class="o">=</span> <span class="s">&quot;do&quot;</span>
+
+<span class="c"># instantiate Slack &amp; Twilio clients</span>
+<span class="n">slack_client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;SLACK_BOT_TOKEN&#39;</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">handle_command</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Receives commands directed at the bot and determines if they</span>
+<span class="sd">        are valid commands. If so, then acts on the commands. If not,</span>
+<span class="sd">        returns back what it needs for clarification.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="s">&quot;Not sure what you mean. Use the *&quot;</span> <span class="o">+</span> <span class="n">EXAMPLE_COMMAND</span> <span class="o">+</span> \
+               <span class="s">&quot;* command with numbers, delimited by spaces.&quot;</span>
+    <span class="k">if</span> <span class="n">command</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">EXAMPLE_COMMAND</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="s">&quot;Sure...write some more code then I can do that!&quot;</span>
+    <span class="n">slack_client</span><span class="o">.</span><span class="n">api_call</span><span class="p">(</span><span class="s">&quot;chat.postMessage&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">,</span>
+                          <span class="n">text</span><span class="o">=</span><span class="n">response</span><span class="p">,</span> <span class="n">as_user</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">parse_slack_output</span><span class="p">(</span><span class="n">slack_rtm_output</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The Slack Real Time Messaging API is an events firehose.</span>
+<span class="sd">        this parsing function returns None unless a message is</span>
+<span class="sd">        directed at the Bot, based on its ID.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">output_list</span> <span class="o">=</span> <span class="n">slack_rtm_output</span>
+    <span class="k">if</span> <span class="n">output_list</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">output_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">output_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">output</span> <span class="ow">and</span> <span class="s">&#39;text&#39;</span> <span class="ow">in</span> <span class="n">output</span> <span class="ow">and</span> <span class="n">AT_BOT</span> <span class="ow">in</span> <span class="n">output</span><span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">]:</span>
+                <span class="c"># return text after the @ mention, whitespace removed</span>
+                <span class="k">return</span> <span class="n">output</span><span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">AT_BOT</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> \
+                       <span class="n">output</span><span class="p">[</span><span class="s">&#39;channel&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">READ_WEBSOCKET_DELAY</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># 1 second delay between reading from firehose</span>
+    <span class="k">if</span> <span class="n">slack_client</span><span class="o">.</span><span class="n">rtm_connect</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;StarterBot connected and running!&quot;</span><span class="p">)</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">command</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="n">parse_slack_output</span><span class="p">(</span><span class="n">slack_client</span><span class="o">.</span><span class="n">rtm_read</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">command</span> <span class="ow">and</span> <span class="n">channel</span><span class="p">:</span>
+                <span class="n">handle_command</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">channel</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">READ_WEBSOCKET_DELAY</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Connection failed. Invalid Slack token or bot ID?&quot;</span><span class="p">)</span>
+</pre></div>
+
+
 <p>Now that all of our code is in place we can run our StarterBot on the 
 command line with the <code>python starterbot.py</code> command.</p>
-<p>starterbot-running.png</p>
-<p>In Slack, start giving StarterBot commands.</p>
-<p>working-starterbot</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/starterbot-running.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>In Slack, create a new channel and invite StarterBot or invite it to an
+existing channel.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/create-channel.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Now start giving StarterBot commands in your channel.</p>
+<p><img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded"></p>
 <h2>Wrapping Up</h2>
-<p>Alright, our simple StarterBot is all done! There's a lot more that we
-could do using the Slack RTM API and our Python code. Check out these posts 
-to learn what you could do:</p>
-<p>Implement a persistent backend like PostgreSQL and use it to store a phone number for each username
-Add SMS capability to the bot
-Use Twilio Lookup to determine if a number is truly valid instead of just parseable
-Boost the parser with better parsing and natural language processing so it’s more natural for Slack users to interact with</p>
+<p>Alright, now you've got a simple StarterBot with a bunch of places in the 
+code you can add whatever features you want to build. </p>
+<p>There is a whole lot more that could be done using the Slack RTM API and Python.
+Check out these posts to learn what you could do:</p>
+<ul>
+<li>Attach a persistent <a href="/databases.html">relational database</a> or 
+  <a href="/no-sql-datastore.html">NoSQL back-end</a> such as 
+  <a href="/postgresql.html">PostgreSQL</a>, <a href="/mysql.html">MySQL</a> or <a href="/sqlite.html">SQLite</a>
+  to save and retrieve user data</li>
+<li>Add another channel to interact with the bot 
+  <a href="https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html">via SMS</a> 
+  or 
+  <a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html">phone calls</a></li>
+<li><a href="/api-integration.html">Integrate other web APIs</a> such as 
+  <a href="https://developer.github.com/v3/">GitHub</a>, 
+  <a href="https://www.twilio.com/docs">Twilio</a> or <a href="https://docs.api.ai/">api.ai</a></li>
+</ul>
+<p>Questions? Contact me via Twitter 
+<a href="https://twitter.com/fullstackpython">@fullstackpython</a>
+or <a href="https://twitter.com/mattmakai">@mattmakai</a>. I'm also on GitHub with
+the username <a href="https://github.com/makaimc">makaimc</a>.</p>
+<p>Something wrong with this post? Fork 
+<a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown">this page's source on GitHub</a>.</p>
           <hr>
 <div id="mc_embed_signup">
 <form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

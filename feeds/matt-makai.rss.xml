@@ -1,5 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 30 May 2016 00:00:00 -0400</lastBuildDate><item><title>Responding to SMS Text Messages with Python &amp; Flask</title><link>https://www.fullstackpython.com/respond-sms-text-messages-python-flask.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are 
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 04 Jun 2016 00:00:00 -0400</lastBuildDate><item><title>How to Build Your First Slack Bot with Python</title><link>https://www.fullstackpython.com/build-first-slack-bot-python.html</link><description>&lt;p&gt;Bots are a useful way to interact with chat services such as 
+&lt;a href="https://slack.com/"&gt;Slack&lt;/a&gt;. If you have never built a bot before, this 
+post provides an easy starter tutorial for combining the 
+&lt;a href="https://api.slack.com/"&gt;Slack API&lt;/a&gt; with Python to create your first bot.&lt;/p&gt;
+&lt;p&gt;We will walk through setting up your development environment, obtaining a
+Slack API bot token and coding our simple bot in Python.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;Our bot, which we will name "StarterBot", requires Python and the Slack API.
+To run our Python code we need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/stable/"&gt;virtualenv&lt;/a&gt; to handle Python 
+  &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://slack.com/"&gt;Free Slack account&lt;/a&gt; with a team on which you have 
+  API access or sign up for the 
+  &lt;a href="http://dev4slack.xoxco.com/"&gt;Slack Developer Hangout team&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Official Python 
+  &lt;a href="https://github.com/slackhq/python-slackclient"&gt;slackclient&lt;/a&gt; code 
+  library built by the Slack team&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://api.slack.com/tokens"&gt;Slack API testing token&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is also useful to have the &lt;a href="https://api.slack.com/"&gt;Slack API docs&lt;/a&gt; handy 
+while you're building this tutorial.&lt;/p&gt;
+&lt;p&gt;All the code for this tutorial is available open source under the MIT license
+in the &lt;a href="https://github.com/makaimc/slack-starterbot"&gt;slack-starterbot&lt;/a&gt; public
+repository.&lt;/p&gt;
+&lt;h2&gt;Establishing Our Environment&lt;/h2&gt;
+&lt;p&gt;We now know what tools we need for our project so let's get our development
+environment set up. Go to the terminal (or Command Prompt on Windows) and 
+change into the directory where you want to store this project. Within 
+that directory, create a new virtualenv to isolate our application 
+dependencies from other Python projects.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv starterbot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source starterbot/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Your prompt should now look like the one in this screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/virtualenv-activate.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The official slackclient API helper library built by Slack can send and 
+receive messages from a Slack channel. Install the slackclient library with 
+the &lt;code&gt;pip&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install slackclient
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When &lt;code&gt;pip&lt;/code&gt; is finished you should see output like this and you'll be
+back at the prompt.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/pip-install-slackclient.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;We also need to obtain an access token for our Slack team so our bot can
+use it to connect to the Slack API.&lt;/p&gt;
+&lt;h2&gt;Slack Real Time Messaging (RTM) API&lt;/h2&gt;
+&lt;p&gt;Slack grants programmatic access to their messaging channels via a
+&lt;a href="/application-programming-interfaces.html"&gt;web API&lt;/a&gt;. Go to the 
+&lt;a href="https://api.slack.com/"&gt;Slack web API page&lt;/a&gt; and sign up to create your own 
+Slack team. You can also sign into an existing account where you have 
+administrative privileges.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/sign-in-slack.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;After you have signed in go to the 
+&lt;a href="https://api.slack.com/bot-users"&gt;Bot Users page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/custom-bot-users.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Name your bot "starterbot" then click the “Add bot integration” button.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/starterbot.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The page will reload and you will see a newly-generated access token. You 
+can also change the logo to a custom design. For example, I gave this bot
+the Full Stack Python logo.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/slack-token.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Click the "Save Integration" button at the bottom of the page. Your bot is 
+now ready to connect to Slack's API.&lt;/p&gt;
+&lt;p&gt;A common practice for Python developers is to export secret tokens as 
+environment variables. Export the Slack token with the name 
+&lt;code&gt;SLACK_BOT_TOKEN&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;export SLACK_BOT_TOKEN=&amp;#39;your slack token pasted here&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nice, now we are authorized to use the Slack API as a bot.&lt;/p&gt;
+&lt;p&gt;There is one more piece of information we need to build our bot: our bot's 
+ID. Next we will write a short script to obtain that ID from the Slack API.&lt;/p&gt;
+&lt;h2&gt;Obtaining Our Bot’s ID&lt;/h2&gt;
+&lt;p&gt;It is &lt;em&gt;finally&lt;/em&gt; time to write some Python code! We'll get warmed up by coding 
+a short Python script to obtain StarterBot's ID. The ID varies based on the 
+Slack team. &lt;/p&gt;
+&lt;p&gt;We need the ID because it allows our application to determine if messages 
+parsed from the Slack RTM are directed at StarterBot. Our script also 
+tests that our &lt;code&gt;SLACK_BOT_TOKEN&lt;/code&gt; environment variable is properly set. &lt;/p&gt;
+&lt;p&gt;Create a new file named &lt;code&gt;print_bot_id.py&lt;/code&gt; and fill it with the following 
+code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;slackclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;
+
+
+&lt;span class="n"&gt;BOT_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;starterbot&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;slack_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;SLACK_BOT_TOKEN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;api_call&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;slack_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;api_call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;users.list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;api_call&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ok&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c"&gt;# retrieve all users so we can find our bot&lt;/span&gt;
+        &lt;span class="n"&gt;users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api_call&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;members&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;name&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;BOT_NAME&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Bot ID for &amp;#39;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;#39; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;could not find bot user with the name &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_NAME&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Our code imports the SlackClient and instantiates it with our 
+&lt;code&gt;SLACK_BOT_TOKEN&lt;/code&gt;, which we set as an environment variable. When the 
+script is executed by the &lt;code&gt;python&lt;/code&gt; command we call the Slack API to list
+all Slack users and get the ID for the one that matches the name "starterbot".&lt;/p&gt;
+&lt;p&gt;We only need to run this script once to obtain our bot’s ID.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python print_bot_id.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The script prints a single line of output when it is run that provides
+us with our bot's ID.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/printed-bot-id.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Copy the unique ID that your script prints out. Export the ID as an 
+environment variable named &lt;code&gt;BOT_ID&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(starterbot)$ export BOT_ID=&amp;#39;bot id returned by script&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The script only needs to be run once to get the bot ID. We can now use
+that ID in our Python application that will run StarterBot.&lt;/p&gt;
+&lt;h2&gt;Coding Our StarterBot&lt;/h2&gt;
+&lt;p&gt;We've got everything we need to write the StarterBot code. Create a new file 
+named &lt;code&gt;starterbot.py&lt;/code&gt; and include the following code in it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;slackclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;os&lt;/code&gt; and &lt;code&gt;SlackClient&lt;/code&gt; imports will look familiar because we used them 
+in the &lt;code&gt;print_bot_id.py&lt;/code&gt; program.&lt;/p&gt;
+&lt;p&gt;With our dependencies imported we can use them to obtain the environment 
+variable values and then instantiate the Slack client.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# starterbot&amp;#39;s ID as an environment variable&lt;/span&gt;
+&lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;BOT_ID&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="cp"&gt;# constants&lt;/span&gt;
+&lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;@&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;gt;:&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;EXAMPLE_COMMAND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;do&amp;quot;&lt;/span&gt;
+
+&lt;span class="cp"&gt;# instantiate Slack &amp;amp; Twilio clients&lt;/span&gt;
+&lt;span class="n"&gt;slack_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;SLACK_BOT_TOKEN&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The code instantiates the &lt;code&gt;SlackClient&lt;/code&gt; client with our &lt;code&gt;SLACK_BOT_TOKEN&lt;/code&gt; 
+exported as an environment variable. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;if __name__ == &amp;quot;__main__&amp;quot;:
+    READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
+    if slack_client.rtm_connect():
+        print(&amp;quot;StarterBot connected and running!&amp;quot;)
+        while True:
+            command, channel = parse_slack_output(slack_client.rtm_read())
+            if command and channel:
+                handle_command(command, channel)
+            time.sleep(READ_WEBSOCKET_DELAY)
+    else:
+        print(&amp;quot;Connection failed. Invalid Slack token or bot ID?&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The Slack client connects to the Slack RTM API WebSocket then constantly 
+loops while parsing messages from the firehose. If any of those messages are 
+directed at StarterBot, a function named &lt;code&gt;handle_command&lt;/code&gt; determines what 
+to do.&lt;/p&gt;
+&lt;p&gt;Next add two new functions to parse Slack output and handle commands.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;handle_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s2"&gt;        Receives commands directed at the bot and determines if they&lt;/span&gt;
+&lt;span class="s2"&gt;        are valid commands. If so, then acts on the commands. If not,&lt;/span&gt;
+&lt;span class="s2"&gt;        returns back what it needs for clarification.&lt;/span&gt;
+&lt;span class="s2"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="nx"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Not sure what you mean. Use the *&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;EXAMPLE_COMMAND&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="o"&gt;\&lt;/span&gt;
+               &lt;span class="s2"&gt;&amp;quot;* command with numbers, delimited by spaces.&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;startswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;EXAMPLE_COMMAND&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Sure...write some more code then I can do that!&amp;quot;&lt;/span&gt;
+    &lt;span class="nx"&gt;slack_client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;api_call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chat.postMessage&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                          &lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;as_user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;parse_slack_output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;slack_rtm_output&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s2"&gt;        The Slack Real Time Messaging API is an events firehose.&lt;/span&gt;
+&lt;span class="s2"&gt;        this parsing function returns None unless a message is&lt;/span&gt;
+&lt;span class="s2"&gt;        directed at the Bot, based on its ID.&lt;/span&gt;
+&lt;span class="s2"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="nx"&gt;output_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;slack_rtm_output&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;output_list&lt;/span&gt; &lt;span class="nx"&gt;and&lt;/span&gt; &lt;span class="nx"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;output_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;output_list&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="nx"&gt;and&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;text&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt; &lt;span class="nx"&gt;and&lt;/span&gt; &lt;span class="nx"&gt;AT_BOT&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;text&lt;/span&gt; &lt;span class="nx"&gt;after&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="nx"&gt;mention&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;whitespace&lt;/span&gt; &lt;span class="nx"&gt;removed&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;output&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;AT_BOT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="o"&gt;\&lt;/span&gt;
+                       &lt;span class="nx"&gt;output&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;channel&amp;#39;&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;None&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;parse_slack_output&lt;/code&gt; function takes messages from Slack and determines 
+if they are directed at our StarterBot. Messages that start with a direct
+command to our bot ID are then handled by our code - which is currently
+just posts a message back in the Slack channel telling the user to write
+some more Python code!&lt;/p&gt;
+&lt;p&gt;Here is how the entire program should look when it's all put together
+(you can also 
+&lt;a href="https://github.com/makaimc/slack-starterbot/blob/master/starterbot.py"&gt;view the file in GitHub&lt;/a&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;slackclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;
+
+
+&lt;span class="c"&gt;# starterbot&amp;#39;s ID as an environment variable&lt;/span&gt;
+&lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;BOT_ID&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# constants&lt;/span&gt;
+&lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;@&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;gt;:&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;EXAMPLE_COMMAND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;do&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# instantiate Slack &amp;amp; Twilio clients&lt;/span&gt;
+&lt;span class="n"&gt;slack_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;SLACK_BOT_TOKEN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;handle_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Receives commands directed at the bot and determines if they&lt;/span&gt;
+&lt;span class="sd"&gt;        are valid commands. If so, then acts on the commands. If not,&lt;/span&gt;
+&lt;span class="sd"&gt;        returns back what it needs for clarification.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Not sure what you mean. Use the *&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;EXAMPLE_COMMAND&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; \
+               &lt;span class="s"&gt;&amp;quot;* command with numbers, delimited by spaces.&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;startswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXAMPLE_COMMAND&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Sure...write some more code then I can do that!&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;slack_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;api_call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;chat.postMessage&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                          &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;as_user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parse_slack_output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slack_rtm_output&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        The Slack Real Time Messaging API is an events firehose.&lt;/span&gt;
+&lt;span class="sd"&gt;        this parsing function returns None unless a message is&lt;/span&gt;
+&lt;span class="sd"&gt;        directed at the Bot, based on its ID.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;output_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;slack_rtm_output&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;output_list&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;output_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;output_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;text&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+                &lt;span class="c"&gt;# return text after the @ mention, whitespace removed&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AT_BOT&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; \
+                       &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;channel&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;READ_WEBSOCKET_DELAY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="c"&gt;# 1 second delay between reading from firehose&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;slack_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rtm_connect&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;StarterBot connected and running!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parse_slack_output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slack_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rtm_read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;handle_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;READ_WEBSOCKET_DELAY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Connection failed. Invalid Slack token or bot ID?&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now that all of our code is in place we can run our StarterBot on the 
+command line with the &lt;code&gt;python starterbot.py&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/starterbot-running.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;In Slack, create a new channel and invite StarterBot or invite it to an
+existing channel.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/create-channel.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Now start giving StarterBot commands in your channel.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;h2&gt;Wrapping Up&lt;/h2&gt;
+&lt;p&gt;Alright, now you've got a simple StarterBot with a bunch of places in the 
+code you can add whatever features you want to build. &lt;/p&gt;
+&lt;p&gt;There is a whole lot more that could be done using the Slack RTM API and Python.
+Check out these posts to learn what you could do:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Attach a persistent &lt;a href="/databases.html"&gt;relational database&lt;/a&gt; or 
+  &lt;a href="/no-sql-datastore.html"&gt;NoSQL back-end&lt;/a&gt; such as 
+  &lt;a href="/postgresql.html"&gt;PostgreSQL&lt;/a&gt;, &lt;a href="/mysql.html"&gt;MySQL&lt;/a&gt; or &lt;a href="/sqlite.html"&gt;SQLite&lt;/a&gt;
+  to save and retrieve user data&lt;/li&gt;
+&lt;li&gt;Add another channel to interact with the bot 
+  &lt;a href="https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html"&gt;via SMS&lt;/a&gt; 
+  or 
+  &lt;a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html"&gt;phone calls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/api-integration.html"&gt;Integrate other web APIs&lt;/a&gt; such as 
+  &lt;a href="https://developer.github.com/v3/"&gt;GitHub&lt;/a&gt;, 
+  &lt;a href="https://www.twilio.com/docs"&gt;Twilio&lt;/a&gt; or &lt;a href="https://docs.api.ai/"&gt;api.ai&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sat, 04 Jun 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</guid></item><item><title>Responding to SMS Text Messages with Python &amp; Flask</title><link>https://www.fullstackpython.com/respond-sms-text-messages-python-flask.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;easy to send from Python applications&lt;/a&gt; 
 with a
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
