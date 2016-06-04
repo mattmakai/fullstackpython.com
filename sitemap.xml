@@ -3,47 +3,47 @@
 
   <url>
     <loc>https://www.fullstackpython.com/build-first-slack-bot-python.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/respond-sms-text-messages-python-flask.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/install-mysql-ubuntu-1604.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/postgresql-python-3-psycopg2-ubuntu-1604.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/install-redis-use-python-3-ubuntu-1604.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/send-mms-picture-messages-python.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/send-sms-text-messages-python.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/full-stack-python-blog.html</loc>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
 
   <url>
