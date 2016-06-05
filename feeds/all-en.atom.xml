@@ -1,5 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-06-04T00:00:00-04:00</updated><entry><title>How to Build Your First Slack Bot with Python</title><link href="https://www.fullstackpython.com/build-first-slack-bot-python.html" rel="alternate"></link><updated>2016-06-04T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</id><summary type="html">&lt;p&gt;Bots are a useful way to interact with chat services such as 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-06-05T00:00:00-04:00</updated><entry><title>Replying to SMS Text Messages with Python and Bottle</title><link href="https://www.fullstackpython.com/reply-sms-text-messages-python-bottle.html" rel="alternate"></link><updated>2016-06-05T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-05:reply-sms-text-messages-python-bottle.html</id><summary type="html">&lt;p&gt;Python applications can easily 
+&lt;a href="/blog/send-sms-text-messages-python.html"&gt;easily send SMS&lt;/a&gt; 
+by using a &lt;a href="/application-programming-interfaces.html"&gt;web API&lt;/a&gt;. 
+Web apps built with the &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; framework can also reply
+to incoming text messages by handling inbound HTTP POST webhooks. In
+this post we'll quickly walk through how to set up a Bottle web app to
+handle SMS data in the form of HTTP POST requests.&lt;/p&gt;
+&lt;h2&gt;Tools We'll Need&lt;/h2&gt;
+&lt;p&gt;This tutorial works with either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt;, 
+although Python 3 is recommended by the community for new applications. 
+Install one of those two Python versions on your system to use for this
+walkthrough. We also need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle
+  &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; web framework&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ngrok.com/"&gt;Ngrok&lt;/a&gt; for localhost tunneling to our Bottle
+  application while it's running on our local development environment&lt;/li&gt;
+&lt;li&gt;Free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
+  &lt;a href="https://www.twilio.com/docs/api/rest/sending-messages"&gt;SMS web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open source 
+  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check out the guide on 
+&lt;a href="/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html"&gt;how to set up Python 3, Bottle and Gunicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+if you need help getting your 
+&lt;a href="/development-environments.html"&gt;development environment&lt;/a&gt; 
+configured.&lt;/p&gt;
+&lt;h2&gt;Application Dependency Installation&lt;/h2&gt;
+&lt;p&gt;Our application will use a helper code library to reply to inbound SMS.
+Bottle and the helper library are installable from 
+&lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt; into a virtualenv. Open your terminal 
+and use the &lt;code&gt;virtualenv&lt;/code&gt; command to create a new virtualenv:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv replysms
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Invoke the virtualenv's &lt;code&gt;activate&lt;/code&gt; script, which makes it the "active" 
+Python installation. Note that you need to do this in every terminal window
+that you want this virtualenv to be used.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source replysms/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The command prompt will change after activating the virtualenv:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;pip&lt;/code&gt; command to install the &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; and 
+&lt;a href="https://www.twilio.com/docs/libraries/python"&gt;Twilio Python&lt;/a&gt; packages
+into your virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install bottle twilio
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We have installed the required dependencies so now Python code that is run 
+with the virtualenv activated will be able to use those packages. It's time 
+to build our Bottle web app and reply to incoming text messages.&lt;/p&gt;
+&lt;h2&gt;Coding Our Bottle App&lt;/h2&gt;
+&lt;p&gt;The Bottle web app will have two routes. One route will allow us to test
+that the app is running. The other route will handle and respond to incoming
+HTTP POST requests from Twilio. Create a new file named &lt;code&gt;app.py&lt;/code&gt; in your 
+in the directory where you want to store this Python project.&lt;/p&gt;
+&lt;p&gt;Write the following code in the new &lt;code&gt;app.py&lt;/code&gt; file. There is also
+&lt;a href="https://gist.github.com/makaimc/6ec3b46e40a1020a3ea9c772c601199a"&gt;a GitHub Gist&lt;/a&gt; 
+with the code that you can copy and paste.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;check_app&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c"&gt;# returns a simple string stating the app is working&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;It works!&amp;quot;&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/twilio&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;inbound_sms&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;twiml_response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="c"&gt;# grab message from the request. could also get the &amp;quot;To&amp;quot; and &lt;/span&gt;
+    &lt;span class="c"&gt;# &amp;quot;From&amp;quot; phone numbers as well from parameters with those names&lt;/span&gt;
+    &lt;span class="n"&gt;inbound_message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Body&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# we can now use the incoming message text in our Python application&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;inbound_message&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;twiml_response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello from Bottle right back at you!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;twiml_response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hi! Not quite sure what you meant, but okay.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# we return back the mimetype because Twilio needs an XML response&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;application/xml&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;twiml_response&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The lines starting with &lt;code&gt;#&lt;/code&gt; are comments that give explanations for what
+the code lines below them are doing. Bottle web apps define URL routes with 
+the &lt;code&gt;@route&lt;/code&gt; and &lt;code&gt;@post&lt;/code&gt; decorators, depending on the type of HTTP request
+the route should handle. &lt;/p&gt;
+&lt;p&gt;Make sure your virtualenv is still active so that the application can use 
+the Bottle and Twilio code libraries we installed earlier. Give the 
+application a try by running it with &lt;code&gt;python app.py&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Open a web browser and go to localhost:5000 (or 127.0.0.1:5000). We should
+see "It works!" on the screen.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/bottle-app-local.jpg" width="100%" class="technical-diagram img-rounded" alt="Bottle application running locally on Ubuntu."&gt;&lt;/p&gt;
+&lt;p&gt;However, there is an issue with our web app running on our local development
+environment. Twilio cannot send a the HTTP POST request to the web app
+server unless a localhost tunnel is created.&lt;/p&gt;
+&lt;h2&gt;Ngrok Localhost Tunneling&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://ngrok.com"&gt;Ngrok&lt;/a&gt; is a localhost tunneling tool that bridges
+your local development environment to an external URL. 
+&lt;a href="https://ngrok.com/download"&gt;Download and install&lt;/a&gt; the Ngrok version that's
+appropriate for your operating system.&lt;/p&gt;
+&lt;p&gt;We can run Ngrok locally and expose our Bottle app that is running on 
+port 5000. Run this command within the directory where the Ngrok executable is
+located.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;./ngrok http 5000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/start-ngrok.jpg" width="100%" class="technical-diagram img-rounded" alt="Ngrok started and running to serve as a localhost tunnel."&gt;&lt;/p&gt;
+&lt;p&gt;Cool, now we can use the Forwarding URL so Twilio can send POST requests
+to our application when there is an inbound SMS. Replace the URL in the
+text box with your own Forwarding URL, like I did in this screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/access-ngrok.jpg" width="100%" class="technical-diagram img-rounded" alt="Paste the ngrok Forwarding URL into the Twilio webhook configuration text box."&gt;&lt;/p&gt;
+&lt;p&gt;Now we just need a Twilio phone number that will send POST request to our
+application when there is an inbound SMS.&lt;/p&gt;
+&lt;h2&gt;Obtain a Phone Number&lt;/h2&gt;
+&lt;p&gt;Our Bottle web app's route can respond to incoming POST requests but we
+need to use Twilio to have a phone number that will convert the inbound SMS
+data into the POST request. In your web browser go to the
+&lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio website and sign up for a free account&lt;/a&gt;. 
+You can also sign into your existing Twilio account if you already have one.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/try-twilio.png" width="100%" class="technical-diagram img-rounded" alt="Twilio sign up screen."&gt;&lt;/p&gt;
+&lt;p&gt;The Twilio trial account allows you to send and receive text messages to 
+your own validated phone number. To send and reply to SMS to and from any 
+phone number then you need to upgrade your account. Trial accounts are 
+great for initial development before your application goes live.&lt;/p&gt;
+&lt;p&gt;When you sign up, you receive a free Twilio phone number. We can
+configure that phone number to forward the SMS information to our web 
+application by setting up the response webhook.&lt;/p&gt;
+&lt;p&gt;Go to the 
+&lt;a href="https://www.twilio.com/console/phone-numbers"&gt;manage phone numbers screen&lt;/a&gt; 
+and click on the phone number you want to configure for replying to 
+text messages.&lt;/p&gt;
+&lt;p&gt;Scroll down and look for the "Messaging" header. Change the 
+"A Message Comes in" text box to input the ngrok Forwarding URL plus 
+the "/twilio" route, as shown in the screenshot below.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/webhook-ngrok.jpg" width="100%" class="technical-diagram img-rounded" alt="Paste the ngrok Forwarding URL into the Twilio webhook configuration text box."&gt;&lt;/p&gt;
+&lt;p&gt;Click the "Save" button so that our changes take effect.&lt;/p&gt;
+&lt;p&gt;Our application is ready to go - time to give our phone number a try! 
+Send "Hello" or whatever text you want to your phone number. Here is what 
+the result looks like on my iPhone.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160605-reply-sms-python-bottle/bottle-success.png" width="100%" class="technical-diagram img-rounded" alt="Example screenshot of what SMS replies look like on the iPhone."&gt;&lt;/p&gt;
+&lt;p&gt;The concise Bottle web app is a good start to build more complicated
+programs such as 
+&lt;a href="https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html"&gt;Choose Your Own Adventure Presentations&lt;/a&gt;
+or
+&lt;a href="https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html"&gt;SMS Slack bots&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;What's next?&lt;/h2&gt;
+&lt;p&gt;Awesome, our Bottle application now replies to inbound SMS text
+messages! &lt;/p&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160605-reply-sms-python-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to Build Your First Slack Bot with Python</title><link href="https://www.fullstackpython.com/build-first-slack-bot-python.html" rel="alternate"></link><updated>2016-06-04T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</id><summary type="html">&lt;p&gt;Bots are a useful way to interact with chat services such as 
 &lt;a href="https://slack.com/"&gt;Slack&lt;/a&gt;. If you have never built a bot before, this 
 post provides an easy starter tutorial for combining the 
 &lt;a href="https://api.slack.com/"&gt;Slack API&lt;/a&gt; with Python to create your first bot.&lt;/p&gt;
