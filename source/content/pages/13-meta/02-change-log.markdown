@@ -16,6 +16,10 @@ the
 
 ## 2016
 ### June
+* Two new tutorial blog posts: 
+  [How to Build Your First Slack Bot with Python](/blog/build-first-slack-bot-python.html) 
+  and
+  [Replying to SMS Text Messages with Python and Bottle](/blog/reply-sms-text-messages-python-bottle.html).
 * New [PostgreSQL](/postgresql.html) monitoring resources.
 
 ### May
