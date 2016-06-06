@@ -53,7 +53,7 @@ Activate the virtualenv:
 
 Your prompt should now look like the one in this screenshot.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/virtualenv-activate.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/virtualenv-activate.png" width="100%" class="technical-diagram img-rounded" alt="Command prompt with starterbot's virtualenv activated.">
 
 The official slackclient API helper library built by Slack can send and 
 receive messages from a Slack channel. Install the slackclient library with 
@@ -64,7 +64,7 @@ the `pip` command:
 When `pip` is finished you should see output like this and you'll be
 back at the prompt.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/pip-install-slackclient.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/pip-install-slackclient.png" width="100%" class="technical-diagram img-rounded" alt="Output from using the pip install slackclient command with a virtualenv activated.">
 
 We also need to obtain an access token for our Slack team so our bot can
 use it to connect to the Slack API.
@@ -77,22 +77,22 @@ Slack grants programmatic access to their messaging channels via a
 Slack team. You can also sign into an existing account where you have 
 administrative privileges.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/sign-in-slack.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/sign-in-slack.png" width="100%" class="technical-diagram img-rounded" alt="Use the sign in button on the top right corner of the Slack API page.">
 
 After you have signed in go to the 
 [Bot Users page](https://api.slack.com/bot-users).
 
-<img src="/source/static/img/160604-simple-python-slack-bot/custom-bot-users.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/custom-bot-users.png" width="100%" class="technical-diagram img-rounded" alt="Custom bot users webpage.">
 
 Name your bot "starterbot" then click the “Add bot integration” button.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/starterbot.jpg" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/starterbot.jpg" width="100%" class="technical-diagram img-rounded" alt="Add a bot integration named starterbot.">
 
 The page will reload and you will see a newly-generated access token. You 
 can also change the logo to a custom design. For example, I gave this bot
 the Full Stack Python logo.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/slack-token.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/slack-token.png" width="100%" class="technical-diagram img-rounded" alt="Copy and paste the access token for your new Slack bot.">
 
 Click the "Save Integration" button at the bottom of the page. Your bot is 
 now ready to connect to Slack's API.
@@ -155,7 +155,7 @@ We only need to run this script once to obtain our bot’s ID.
 The script prints a single line of output when it is run that provides
 us with our bot's ID.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/printed-bot-id.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/printed-bot-id.png" width="100%" class="technical-diagram img-rounded" alt="Use the Python script to print the Slack bot's ID in your Slack team.">
 
 Copy the unique ID that your script prints out. Export the ID as an 
 environment variable named `BOT_ID`.
@@ -324,16 +324,16 @@ if __name__ == "__main__":
 Now that all of our code is in place we can run our StarterBot on the 
 command line with the `python starterbot.py` command.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/starterbot-running.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/starterbot-running.png" width="100%" class="technical-diagram img-rounded" alt="Console output when the StarterBot is running and connected to the API.">
 
 In Slack, create a new channel and invite StarterBot or invite it to an
 existing channel.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/create-channel.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/create-channel.png" width="100%" class="technical-diagram img-rounded" alt="In the Slack user interface create a new channel and invite StarterBot.">
 
 Now start giving StarterBot commands in your channel.
 
-<img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded">
+<img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded" alt="Give StarterBot commands in your Slack channel.">
 
 
 ## Wrapping Up
