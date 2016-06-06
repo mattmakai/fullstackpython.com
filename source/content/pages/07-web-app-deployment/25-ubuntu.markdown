@@ -19,6 +19,8 @@ development and server deployments. Some
 Ubuntu as the base operating system, so as a Python developer you'll often
 have to work with Ubuntu or a similar Debian-based Linux operating system.
 
+<div class="well see-also">Ubuntu is an implementation of the <a href="/operating-systems.html">operating systems</a> concept. Learn more in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
 
 ## What does "LTS" mean for Ubuntu?
 Every two years Ubuntu releases a Long-Term Support (LTS) version that
