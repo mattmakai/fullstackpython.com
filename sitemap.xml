@@ -338,5 +338,9 @@
     <loc>https://www.fullstackpython.com/green-unicorn-gunicorn.html</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://www.fullstackpython.com/ubuntu.html</loc>
+    <priority>1.0</priority>
+  </url>
 
 </urlset>

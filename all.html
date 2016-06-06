@@ -8480,6 +8480,55 @@ perform the request handling. Each worker is independent of the controller.</p>
   virtualenv and what to watch out for while you're doing the deployment.</p>
 </li>
 </ul>
+          <h1>Ubuntu</h1>
+<p>Ubuntu is a Debian Linux-based operating system distribution often used for 
+Python development and application deployment.</p>
+<h2>Why is Ubuntu important for Python?</h2>
+<p>Ubuntu is one of the most commonly used Linux distributions for both local
+development and server deployments. Some 
+<a href="/platform-as-a-service.html">platforms-as-a-service</a> such as Heroku run 
+Ubuntu as the base operating system, so as a Python developer you'll often
+have to work with Ubuntu or a similar Debian-based Linux operating system.</p>
+<h2>What does "LTS" mean for Ubuntu?</h2>
+<p>Every two years Ubuntu releases a Long-Term Support (LTS) version that
+receives five years of updates instead of only two years for non-LTS
+releases. However, there are some issues with the current LTS model,
+in that you 
+<a href="http://www.wilderssecurity.com/threads/ubuntu-lts-many-vulnerabilities-despite-long-term-support.385386/">must only use packages from the main repository</a> 
+unless you're going to manually handle security updates for non-main
+repository system packages.</p>
+<h2>Additional Ubuntu resources</h2>
+<ul>
+<li>
+<p>Get your Python <a href="/development-environments.html">development environment</a>
+  set up with one of these quick tutorials for Ubuntu 16.04 LTS:</p>
+<ul>
+<li><a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html">How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</a></li>
+<li><a href="/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html">Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</a></li>
+<li><a href="/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html">Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</a></li>
+</ul>
+</li>
+<li>
+<p>There are also walkthroughs for configuring relational databases and Redis 
+  on Ubuntu:</p>
+<ul>
+<li><a href="/blog/postgresql-python-3-psycopg2-ubuntu-1604.html">Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04</a></li>
+<li><a href="/blog/install-mysql-ubuntu-1604.html">How to Install and Use MySQL on Ubuntu 16.04</a></li>
+<li><a href="/blog/install-redis-use-python-3-ubuntu-1604.html">How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</a></li>
+</ul>
+</li>
+<li>
+<p>Canonical, the organization that produces Ubuntu, typically pushes the 
+  boundaries on non-LTS releases, but occasionally rocks the boat with
+  major changes for an LTS release. 16.04 LTS was one such version, which
+  is described in this article about how 
+  <a href="http://arstechnica.com/information-technology/2016/05/ubuntu-16-04-proves-even-an-lts-release-can-live-at-linuxs-bleeding-edge/">Ubuntu 16.04 proves even an LTS release can live at Linux's bleeding edge</a>.</p>
+</li>
+<li>Ubuntu has been a target operating system for Docker since the beginning of
+  the project. Here's a guide for 
+  <a href="http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/">how to install Docker on Ubuntu 14.04 LTS</a>,
+  one of the older operating system releases that supports containers.</li>
+</ul>
           <h1>Testing</h1>
 <p>Testing determines whether software runs correctly based on specific inputs 
 and identifies defects that need to be fixed.</p>
