@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### June
+* Start of new page on [Ubuntu](/ubuntu.html).
 * Two new tutorial blog posts: 
   [How to Build Your First Slack Bot with Python](/blog/build-first-slack-bot-python.html) 
   and
