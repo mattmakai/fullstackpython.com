@@ -14,6 +14,16 @@ information, to appropriately handle the request and respond. Bots are
 often also called "chatbots", "assistants" or "agents."
 
 
+## Open source Slack bot examples
+* [Limbo](https://github.com/llimllib/limbo) is an awesome Slack chatbot 
+  that provides a base for Python code that otherwise would require 
+  boilerplate to handle the Slack API events firehose.
+
+* [python-rtmbot](https://github.com/slackhq/python-rtmbot) is the bot
+  framework for building Slack bots with the Real Time Messaging (RTM) API
+  over [WebSockets](/websockets.html).
+
+
 ## Python-specific Bots resources
 * [How to Buid an SMS Slack Bot](https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html)
   is a tutorial on using 
