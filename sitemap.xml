@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://www.fullstackpython.com/reply-sms-text-messages-python-bottle.html</loc>
+    <loc>https://www.fullstackpython.com/blog/reply-sms-text-messages-python-bottle.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/build-first-slack-bot-python.html</loc>
+    <loc>https://www.fullstackpython.com/blog/build-first-slack-bot-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/respond-sms-text-messages-python-flask.html</loc>
+    <loc>https://www.fullstackpython.com/blog/respond-sms-text-messages-python-flask.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/install-mysql-ubuntu-1604.html</loc>
+    <loc>https://www.fullstackpython.com/blog/install-mysql-ubuntu-1604.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/postgresql-python-3-psycopg2-ubuntu-1604.html</loc>
+    <loc>https://www.fullstackpython.com/blog/postgresql-python-3-psycopg2-ubuntu-1604.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/install-redis-use-python-3-ubuntu-1604.html</loc>
+    <loc>https://www.fullstackpython.com/blog/install-redis-use-python-3-ubuntu-1604.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/send-mms-picture-messages-python.html</loc>
+    <loc>https://www.fullstackpython.com/blog/send-mms-picture-messages-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
+    <loc>https://www.fullstackpython.com/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/send-sms-text-messages-python.html</loc>
+    <loc>https://www.fullstackpython.com/blog/send-sms-text-messages-python.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</loc>
+    <loc>https://www.fullstackpython.com/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
+    <loc>https://www.fullstackpython.com/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/full-stack-python-blog.html</loc>
+    <loc>https://www.fullstackpython.com/blog/full-stack-python-blog.html</loc>
     <priority>1.0</priority>
   </url>
 
