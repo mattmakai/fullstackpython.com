@@ -92,6 +92,11 @@ provides a command-line interface for interacting with the RPM system.
 
 * Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
 
+* [Linux Journey](https://linuxjourney.com/) is a really well designed
+  curriculum for learning Linux basics such as the command line, package
+  management, text handling. There are also courses for more advanced topics
+  such as how the kernel works, setting up logging and device management.
+
 * The [Ops School curriculum](http://www.opsschool.org/en/latest/) is a
   comprehensive resource for learning about Linux fundamentals and how to
   perform the work that system administrators typically handle.
