@@ -9,7 +9,7 @@ meta: Python generators allow a function's return value to behave as an iterator
 
 # Generators
 Generators are a Python core language construct that allow a function's return
-value to to behave as an iterator. A generator can allow more efficient 
+value to behave as an iterator. A generator can allow more efficient 
 memory usage by allocating and deallocating memory during the context of a 
 large number of iterations. Generators are defined in 
 [PEP255](https://www.python.org/dev/peps/pep-0255/) and included in the
