@@ -92,9 +92,15 @@ but it'll make most developers' lives easier in many cases.
 
 
 ## Web framework resources
-* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
-  is an in-depth explanation of what web frameworks are and their relation
-  to web servers.
+* When you are learning how to use one or more web frameworks it's helpful
+  to have an idea of what the code under the covers is doing. This post on
+  building a 
+  [simple Python framework from scratch](http://mattscodecave.com/posts/simple-python-framework-from-scratch.html)
+  shows how HTTP connections, routing, and requests can work in just 
+  320 lines of code. This post is awesome even though the resulting framework
+  is a simplification of what frameworks such as [Django](/django.html), 
+  [Flask](/flask.html) and [Pyramid](/pyramid.html) allow developers to 
+  accomplish.
 
 * Check out the answer to the 
   "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
@@ -106,13 +112,13 @@ but it'll make most developers' lives easier in many cases.
   I agree although I've found sessions and database ORMs to be a helpful
   part of a framework when done well.
 
+* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
+  is an in-depth explanation of what web frameworks are and their relation
+  to web servers.
+
 * [Django vs Flask vs Pyramid: Choosing a Python Web Framework](https://www.airpair.com/python/posts/django-flask-pyramid)
   contains background information and code comparisons for similar
   web applications built in these three big Python frameworks.
-
-* This [Python web framework roundup](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
-  covers Django, Flask and Bottle as well as several other lesser known Python
-  frameworks.
 
 * This fascinating blog post takes a look at the 
   [code complexity of several Python web frameworks](http://grokcode.com/864/snakefooding-python-code-for-complexity-visualization/)
@@ -132,6 +138,7 @@ but it'll make most developers' lives easier in many cases.
 * This user-voted question & answer site asked "[What are the best general purpose Python web frameworks usable in production?](http://www.slant.co/topics/426/~what-are-the-best-general-purpose-python-web-frameworks-usable-in-production-sites)".
   The votes aren't as important as the list of the many frameworks
   that are available to Python developers.
+
 
 
 ## Web frameworks learning checklist
