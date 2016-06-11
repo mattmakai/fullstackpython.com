@@ -50,8 +50,15 @@ repository system packages.
   major changes for an LTS release. 16.04 LTS was one such version, which
   is described in this article about how 
   [Ubuntu 16.04 proves even an LTS release can live at Linux's bleeding edge](http://arstechnica.com/information-technology/2016/05/ubuntu-16-04-proves-even-an-lts-release-can-live-at-linuxs-bleeding-edge/).
+
 * Ubuntu has been a target operating system for Docker since the beginning of
   the project. Here's a guide for 
   [how to install Docker on Ubuntu 14.04 LTS](http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/),
   one of the older operating system releases that supports containers.
+
+* [What I learned while securing Ubuntu](https://major.io/2015/10/14/what-i-learned-while-securing-ubuntu/)
+  explains how difficult it can be just to find correct information
+  on how to secure an operating system. In this case, the author goes over
+  how he went about securing package management, security standards and 
+  file integrity on Ubuntu 14.04 LTS.
 
