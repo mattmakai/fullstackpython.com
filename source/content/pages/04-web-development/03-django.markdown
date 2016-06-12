@@ -64,7 +64,7 @@ There are a slew of free or low cost resources out there for Django. Since
 Django was released over 10 years ago and has had a huge number of updates
 since then, when you're looking for an up-to-date Django book check out the
 list below or read this post showing [current Django books](http://twoscoopspress.org/pages/current-django-books)
-as of Django 1.7.
+as of Django 1.8, 1.9.
 
 * [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 
@@ -114,7 +114,7 @@ as of Django 1.7.
   list of Django libraries and resources.
 
 * [Starting a Django Project](https://realpython.com/learn/start-django/) 
-  answers the question, “How do I set up a Django (1.5, 1.6, or 1.7) project 
+  answers the question, “How do I set up a Django (1.5, 1.6, 1.7, or 1.8) project 
   from scratch?”
 
 * This Django tutorial shows how to 
@@ -133,7 +133,7 @@ as of Django 1.7.
   which often provoke heated debate in the Django community for whether they
   are a time saver or "too much magic" for the framework.
 
-* [How to serve Django apps with uWSGI and Nginx on 14.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-14-04)
+* [How to serve Django apps with uWSGI and Nginx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-14-04)
   and 
   [how to set up Django with PostgreSQL, Nginx and Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-centos-7) 
   are detailed tutorials that walk through each step in the deployment process.
