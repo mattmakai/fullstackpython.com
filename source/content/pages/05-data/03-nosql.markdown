@@ -70,6 +70,9 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   shows a detailed example for how to use the new Asyncio standard library in
   Python 3.4+ for working with Redis.
 
+* [How to collect Redis metrics](https://www.datadoghq.com/blog/how-to-collect-redis-metrics/)
+  shows how to use the Redis CLI client to grab key metrics on latency.
+
 * [Pentesting Redis servers](http://averagesecurityguy.info/2015/09/17/pentesting-redis-servers/)
   shows that security is important not only on your application but also
   the databases you're using as well.
