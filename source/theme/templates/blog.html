@@ -12,14 +12,25 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
       {% for a in articles %}
-        <h2 style="line-height: 1.5em;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h2>
+        {% if a.headerimage and a.headeralt %}
+        <div class="row" style="padding-top: 30px;">
+          <div class="col-md-3">
+            <img src="{{ a.headerimage }}" alt="{{ a.headeralt }}" width="100%" style="padding: 4px 0 6px 0; border-radius: 12px;">
+          </div>
+          <div class="col-md-9">
+        {% endif %}
+        <h2 style="padding-top: 0px; margin-top: 0px;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h2>
         <div class="post-byline">
             Posted by <a href="/about-author.html">Matt Makai</a> on 
             {{ a.date.strftime('%B %d, %Y') }}.
         </div>
         {{ a.content|truncate(350) }} (<a href="/blog/{{ a.slug }}.html">read more</a>)
+        {% if a.headerimage and a.headeralt %}
+          </div>
+        </div>
+        {% endif %}
       {% endfor %}
     </div>
 </div>
