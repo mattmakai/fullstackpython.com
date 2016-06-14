@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### June
+* Created little images for each of the posts on the 
+  [blog post list page](/blog.html).
 * Start of new page on [Ubuntu](/ubuntu.html).
 * Two new tutorial blog posts: 
   [How to Build Your First Slack Bot with Python](/blog/build-first-slack-bot-python.html) 
