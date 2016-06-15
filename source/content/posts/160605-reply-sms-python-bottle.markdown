@@ -7,7 +7,7 @@ headeralt: Twilio, Python and Bottle logos. Copyright their respective owners.
 date: 2016-06-05
 
 
-Python applications can easily 
+Python applications can 
 [easily send SMS](/blog/send-sms-text-messages-python.html) 
 by using a [web API](/application-programming-interfaces.html). 
 Web apps built with the [Bottle](/bottle.html) framework can also reply
