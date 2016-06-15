@@ -10,8 +10,8 @@ headeralt: MySQL and Ubuntu logos. Copyright their respective owners.
 [MySQL](/mysql.html) is a common open source 
 [relational database](/databases.html) for creating, reading, updating 
 and deleting data in [Python web applications](/web-frameworks.html).
-Let's learn how to install MySQL on Ubuntu 16.04 and then run a few 
-SQL queries within the command line client.
+Let's learn how to install MySQL on [Ubuntu 16.04](/ubuntu.html) and then 
+run a few SQL queries within the command line client.
 
 We will not go over connecting via Python applications using
 [object-relational mappers (ORMs)](/object-relational-mappers-orms.html) 

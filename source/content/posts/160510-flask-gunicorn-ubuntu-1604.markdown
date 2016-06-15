@@ -7,7 +7,7 @@ headerimage: /source/static/img/160510-ubuntu-flask-gunicorn/header.jpg
 headeralt: Flask, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
 
-Ubuntu's latest Long Term Support (LTS) 
+[Ubuntu](/ubuntu.html)'s latest Long Term Support (LTS) 
 [operating system](/operating-systems.html) was released last month, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
 it's the first Ubuntu release to include [Python 3](/python-2-or-3.html) 

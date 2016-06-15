@@ -7,7 +7,7 @@ headerimage: /source/static/img/160513-ubuntu-bottle-gunicorn/header.jpg
 headeralt: Bottle, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
 
-The Ubuntu 16.04 Long Term Support (LTS) Linux
+The [Ubuntu 16.04 Long Term Support (LTS)](/ubuntu.html) Linux
 [operating system](/operating-systems.html) was released in April 2016.
 This latest Ubuntu release is named "Xenial Xerus" and
 it is the first Ubuntu release to include [Python 3](/python-2-or-3.html),

@@ -13,7 +13,8 @@ for [web application](/web-frameworks.html) sessions,
 transient [data](/data.html) and as a broker for 
 [task queues](/task-queues.html). redis-py is a common Python code 
 library for interacting with Redis. Let's learn how to get Redis up
-and running on Ubuntu and then start using it in a simple Python application.
+and running on [Ubuntu](/ubuntu.html) and then start using it in a simple 
+Python application.
 
 
 ## Tools We Need

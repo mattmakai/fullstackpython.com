@@ -12,8 +12,8 @@ headeralt: PostgreSQL and Ubuntu logos. Copyright their respective owners.
 update and delete [Python web application](/web-frameworks.html) data.
 [Psycopg2](http://pythonhosted.org/psycopg2/) is a PostgreSQL database 
 driver that serves as a Python client for access to the PostgreSQL server. 
-This post explains how to install PostgreSQL on Ubuntu 16.04 and run a few 
-basic SQL queries within a Python program.
+This post explains how to install PostgreSQL on [Ubuntu 16.04](/ubuntu.html) 
+and run a few basic SQL queries within a Python program.
 
 We won't cover 
 [object-relational mappers (ORMs)](/object-relational-mappers-orms.html) 

@@ -7,9 +7,9 @@ headerimage: /source/static/img/160509-ubuntu-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
 
-Ubuntu released the newest Long Term Support (LTS) version of its 
-[operating system](/operating-systems.html) in April 2016. The update
-brings Ubuntu to version 16.04 and its latest code name is 
+[Ubuntu](/ubuntu.html) released the newest Long Term Support (LTS) 
+version of its [operating system](/operating-systems.html) in April 2016. 
+The update brings Ubuntu to version 16.04 and its latest code name is 
 "Xenial Xerus". 16.04 is the first Ubuntu release to include 
 [Python 3](/python-2-or-3.html) as the default Python installation.
 
