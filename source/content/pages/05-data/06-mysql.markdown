@@ -107,6 +107,9 @@ developers learn PostgreSQL if they do not already know MySQL.
 
 
 ### General MySQL resources
+* [How to Install and Use MySQL on Ubuntu 16.04](/blog/install-mysql-ubuntu-1604.html)
+  is a quick tutorial for getting up and running on Ubuntu Linux.
+
 * [28 Beginner's Tutorials for Learning about MySQL Databases](http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/) 
   is a curated collection on various introductory MySQL topics.
 
