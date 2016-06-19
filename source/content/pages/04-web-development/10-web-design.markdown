@@ -40,10 +40,6 @@ width.
 
 
 ## Design resources
-* [Web Design Repo](http://www.webdesignrepo.com/) is a one stop shop for 
-  links to blogs, podcasts, inspiration, tutorials and tools related to
-  web design.
-
 * [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) is
   an amazing write up of good practices for HTML, CSS and JS.
 
