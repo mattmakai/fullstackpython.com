@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matt Makai">
+    <meta name="description" content="Instructions for developing Pyramid web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).">
+    <link rel="shortcut icon" href="/img/fsp-fav.png">
+    <title>Configuring Python 3, Pyramid and Gunicorn on Ubuntu 16.04 - Full Stack Python</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="/theme/css/f.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/fork.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="/theme/img/logo.png" height="52" width="52" class="logo-image" style="padding-top: 1px;" alt="Full Stack Python logo"></a>
+            <span class="logo-title"><a href="https://www.fullstackpython.com/">Full Stack Python</a></span>
+        </div>
+<div class="subnav">
+    <!--<a href="/blog.html" class="submenu-item-first">Blog</a> |
+    <a href="/books.html" class="submenu-item">Books</a> | -->
+    <a href="/table-of-contents.html" class="submenu-item-first">All topics</a> | 
+    <a href="/blog.html" class="submenu-item">Blog</a> |
+    <a href="/email.html" class="submenu-item">Newsletter</a> |
+    <a href="https://twitter.com/fullstackpython" class="submenu-item">@fullstackpython</a> |
+    <a href="https://www.facebook.com/fullstackpython" class="submenu-item">Facebook</a> |
+    <a href="https://github.com/makaimc/fullstackpython.com/tree/gh-pages/source" class="submenu-item">Source</a> 
+</div>    </div>
+</div><div class="row">
+    <div class="col-md-12">
+          <h1 class="blog-h1">Configuring Python 3, Pyramid and Gunicorn on Ubuntu 16.04</h1>
+          <div class="post-byline">
+            Posted by <a href="/about-author.html">Matt Makai</a> on 
+            June 19, 2016.
+          </div>
+          <p><a href="/ubuntu.html">Canonical's Ubuntu 16.04 Long Term Support (LTS)</a> Linux
+<a href="/operating-systems.html">operating system</a>, also known as "Xenial Xerus",
+was released in April 2016. It is the first Ubuntu release to include 
+<a href="/python-2-or-3.html">Python 3</a> instead of Python 2 as its default Python 
+installation.</p>
+<p>The <a href="/pyramid.html">Pyramid</a> web framework has long supported Python 3.
+With just a few short steps we can start a new <a href="/pyramid.html">Pyramid</a> 
+project and run it with 
+<a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a> on Ubuntu 16.04.</p>
+<h2>Required Tools</h2>
+<p>Our project requires Ubuntu 16.04 plus several code libraries. You do not
+need to install these tools yet - we will get to them in turn as the
+walkthrough progresses. Our requirements and their current versions are:</p>
+<ul>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS (Xenial Xerus)</a></li>
+<li><a href="/why-use-python.html">Python version 3.5</a> (default in Ubuntu 16.04)</li>
+<li><a href="/pyramid.html">Pyramid web framework</a> version 
+  <a href="http://docs.pylonsproject.org/projects/pyramid/en/1.7-branch/">1.7</a></li>
+<li><a href="/green-unicorn-gunicorn.html">Gunicorn</a> version 
+  <a href="http://docs.gunicorn.org/en/stable/news.html">19.6</a></li>
+<li><a href="http://docs.pylonsproject.org/projects/waitress/en/latest/">Waitress</a>
+  version 0.9.0</li>
+</ul>
+<p>If you are developing on Mac OS X or Windows, you can use
+virtualization software such
+as <a href="https://www.parallels.com/products/desktop/">Parallels</a> or
+<a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> with the 
+<a href="http://releases.ubuntu.com/16.04/">Ubuntu .iso file</a>. Either the amd64 or
+i386 version of 16.04 is fine. While creating this I used the amd64 version. </p>
+<p>A desktop screen like this one appears when you boot up Ubuntu.</p>
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"></p>
+<p>Open a new terminal window so we can be ready to install required system 
+packages.</p>
+<h2>Install System Packages</h2>
+<p>The precise Python version can be shown using the <code>python</code> command with the
+<code>--version</code> argument.</p>
+<div class="highlight"><pre>python3 --version
+</pre></div>
+
+
+<p>We can also view where the <code>python3</code> program is installed on Ubuntu using the
+<code>which</code> command.</p>
+<div class="highlight"><pre>which python3
+</pre></div>
+
+
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Ubuntu requires a few system packages before we can properly install Pyramid
+and Gunicorn. When we run the <code>apt</code> command to install system packages we 
+will be prompted for the superuser password. Restricted system access is 
+necessary to modify files within the system folders.</p>
+<div class="highlight"><pre>sudo apt-get install virtualenv python-pip python3-dev
+</pre></div>
+
+
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Press <code>y</code> then return to let the system package installation run.</p>
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>The required system packages are installed. We can now install the
+Python-specific dependencies.</p>
+<h2>Set up Virtualenv</h2>
+<p>In the previous section, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> 
+and <a href="https://pypi.python.org/pypi/pip">pip</a> were installed to handle our 
+<a href="/application-dependencies.html">application dependencies</a>.</p>
+<p>Create a directory for the virtualenvs. Then create a new virtualenv.</p>
+<div class="highlight"><pre># the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
+cd ~
+mkdir venvs
+# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/pyramidproj
+</pre></div>
+
+
+<p>Activate the virtualenv.</p>
+<div class="highlight"><pre>source ~/venvs/pyramidproj/bin/activate
+</pre></div>
+
+
+<p>Our prompt will change after we properly activate the virtualenv to
+something like <code>(pyramidproj) matt@ubuntu:~$</code>.</p>
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Our virtualenv is activated with Python 3. We can install whatever
+dependencies we want, in our case Pyramid and Gunicorn. </p>
+<h2>Install Python Packages</h2>
+<p>We can install Pyramid, Gunicorn and Waitress into our virtualenv using 
+the <code>pip</code> command.</p>
+<div class="highlight"><pre>pip install pyramid gunicorn waitress
+</pre></div>
+
+
+<p>No errors like we see in the following screenshot is a good sign.</p>
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Pyramid comes with a project starter template creation tool named <code>pcreate</code>.
+Run <code>pcreate</code> to generate the boilerplate for a new Pyramid project named
+"pyramidproj".</p>
+<div class="highlight"><pre>pcreate -s starter pyramidproj
+</pre></div>
+
+
+<p>Use the <code>cd</code> (change directory) command to move into the new folder.</p>
+<div class="highlight"><pre>cd ~/pyramidproj
+</pre></div>
+
+
+<p>A slew of new files have been created within the "pyramidproj" directory.
+These are the basic files you can customize for the web application you want
+to build. A good resource for understanding and modifying these files is
+to follow the 
+<a href="http://pyramid-stevepiercy.readthedocs.io/en/stable/quick_tutorial/index.html">quick tutorial for Pyramid</a>.</p>
+<p>For now, we just want to use Gunicorn to run our starter pyramidproj app.
+Install pyramidproj into your virtualenv using the <code>python</code> command on
+<code>setup.py</code>.</p>
+<div class="highlight"><pre>python setup.py develop
+</pre></div>
+
+
+<p>Now we can run our app with Gunicorn. Pyramid is a 
+<a href="http://docs.pylonsproject.org/projects/pyramid/en/latest/api/paster.html">paste</a>-compatible
+framework, so we use the <code>--paste</code> argument to run the WSGI server with
+the "development.ini" configuration file. In addition, the <code>-b</code> argument 
+tells Gunicorn which port number to bind on when the server starts.</p>
+<div class="highlight"><pre>gunicorn --paste development.ini -b :8080
+</pre></div>
+
+
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Cool, we can bring up our starter Pyramid project up in the web browser at
+the <code>localhost:8000</code> or <code>127.0.0.1:8000</code> address.</p>
+<p><img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/it-works.png" width="100%" class="technical-diagram img-rounded"></p>
+<p>Time to develop a full-fledged web application with <a href="/pyramid.html">Pyramid</a>!</p>
+<h2>Ready to Develop with Pyramid</h2>
+<p>Now you have a simple setup to develop Pyramid web apps using Gunicorn as
+the <a href="/wsgi-servers.html">WSGI server</a> on Ubuntu 16.04. If you need a
+full step-by-step tutorial to deploy your Python web application to a
+production environment, check out the 
+<a href="http://www.deploypython.com/">Full Stack Python Guide to Deployments book</a>.</p>
+<p>To decide what to do next with your Python project, check out the
+<a href="/table-of-contents.html">Full Stack Python table of contents</a> page.</p>
+<p>See something wrong in this post? Fork 
+<a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160619-pyramid-gunicorn-ubuntu-1604.markdown">this page's source on GitHub</a>
+and submit a pull request.</p>
+          <hr>
+<div id="mc_embed_signup">
+<form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+        <h4>Sign up here to receive a monthly email with major updates to this site, tutorials and discount codes for Python books.</h4>
+        <div class="row">
+            <div class="col-md-9">
+                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_b7e774f0c4f05dcebbfee183d_b22335388d" tabindex="-1" value=""></div>
+            </div>
+            <div class="col-md-3">
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="font-family: 'Helvetica Neue';"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+    </div>
+</div>
+        <hr/>
+    </div> 
+<div style="padding: 0 0 20px 0; margin: 0 0 20px 0; background-color: #22B24C;">
+    <div class="container">
+        <p class="banner"><a href="https://www.gumroad.com/l/python-deployments" style="color: #fff">Learning web development? Check out The Full Stack Python Guide to Deployments book</a>!</p>
+    </div>
+</div>    <div class="container">
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2016
+        </div>
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-19910497-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script type='text/javascript'>
+    var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+</body>
+</html>

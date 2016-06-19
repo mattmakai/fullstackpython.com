@@ -1,5 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-06-05T00:00:00-04:00</updated><entry><title>Replying to SMS Text Messages with Python and Bottle</title><link href="https://www.fullstackpython.com/reply-sms-text-messages-python-bottle.html" rel="alternate"></link><updated>2016-06-05T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-05:reply-sms-text-messages-python-bottle.html</id><summary type="html">&lt;p&gt;Python applications can easily 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-06-19T00:00:00-04:00</updated><entry><title>Configuring Python 3, Pyramid and Gunicorn on Ubuntu 16.04</title><link href="https://www.fullstackpython.com/python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-06-19T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-19:python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Canonical's Ubuntu 16.04 Long Term Support (LTS)&lt;/a&gt; Linux
+&lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt;, also known as "Xenial Xerus",
+was released in April 2016. It is the first Ubuntu release to include 
+&lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; instead of Python 2 as its default Python 
+installation.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="/pyramid.html"&gt;Pyramid&lt;/a&gt; web framework has long supported Python 3.
+With just a few short steps we can start a new &lt;a href="/pyramid.html"&gt;Pyramid&lt;/a&gt; 
+project and run it with 
+&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; on Ubuntu 16.04.&lt;/p&gt;
+&lt;h2&gt;Required Tools&lt;/h2&gt;
+&lt;p&gt;Our project requires Ubuntu 16.04 plus several code libraries. You do not
+need to install these tools yet - we will get to them in turn as the
+walkthrough progresses. Our requirements and their current versions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python version 3.5&lt;/a&gt; (default in Ubuntu 16.04)&lt;/li&gt;
+&lt;li&gt;&lt;a href="/pyramid.html"&gt;Pyramid web framework&lt;/a&gt; version 
+  &lt;a href="http://docs.pylonsproject.org/projects/pyramid/en/1.7-branch/"&gt;1.7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Gunicorn&lt;/a&gt; version 
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.pylonsproject.org/projects/waitress/en/latest/"&gt;Waitress&lt;/a&gt;
+  version 0.9.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are developing on Mac OS X or Windows, you can use
+virtualization software such
+as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; or
+&lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;VirtualBox&lt;/a&gt; with the 
+&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu .iso file&lt;/a&gt;. Either the amd64 or
+i386 version of 16.04 is fine. While creating this I used the amd64 version. &lt;/p&gt;
+&lt;p&gt;A desktop screen like this one appears when you boot up Ubuntu.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Open a new terminal window so we can be ready to install required system 
+packages.&lt;/p&gt;
+&lt;h2&gt;Install System Packages&lt;/h2&gt;
+&lt;p&gt;The precise Python version can be shown using the &lt;code&gt;python&lt;/code&gt; command with the
+&lt;code&gt;--version&lt;/code&gt; argument.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python3 --version
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We can also view where the &lt;code&gt;python3&lt;/code&gt; program is installed on Ubuntu using the
+&lt;code&gt;which&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;which python3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/which-python.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu requires a few system packages before we can properly install Pyramid
+and Gunicorn. When we run the &lt;code&gt;apt&lt;/code&gt; command to install system packages we 
+will be prompted for the superuser password. Restricted system access is 
+necessary to modify files within the system folders.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Press &lt;code&gt;y&lt;/code&gt; then return to let the system package installation run.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The required system packages are installed. We can now install the
+Python-specific dependencies.&lt;/p&gt;
+&lt;h2&gt;Set up Virtualenv&lt;/h2&gt;
+&lt;p&gt;In the previous section, &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; 
+and &lt;a href="https://pypi.python.org/pypi/pip"&gt;pip&lt;/a&gt; were installed to handle our 
+&lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Create a directory for the virtualenvs. Then create a new virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
+cd ~
+mkdir venvs
+# specify the system python3 installation
+virtualenv --python=/usr/bin/python3 venvs/pyramidproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/pyramidproj/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Our prompt will change after we properly activate the virtualenv to
+something like &lt;code&gt;(pyramidproj) matt@ubuntu:~$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Our virtualenv is activated with Python 3. We can install whatever
+dependencies we want, in our case Pyramid and Gunicorn. &lt;/p&gt;
+&lt;h2&gt;Install Python Packages&lt;/h2&gt;
+&lt;p&gt;We can install Pyramid, Gunicorn and Waitress into our virtualenv using 
+the &lt;code&gt;pip&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install pyramid gunicorn waitress
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;No errors like we see in the following screenshot is a good sign.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Pyramid comes with a project starter template creation tool named &lt;code&gt;pcreate&lt;/code&gt;.
+Run &lt;code&gt;pcreate&lt;/code&gt; to generate the boilerplate for a new Pyramid project named
+"pyramidproj".&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pcreate -s starter pyramidproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Use the &lt;code&gt;cd&lt;/code&gt; (change directory) command to move into the new folder.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cd ~/pyramidproj
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A slew of new files have been created within the "pyramidproj" directory.
+These are the basic files you can customize for the web application you want
+to build. A good resource for understanding and modifying these files is
+to follow the 
+&lt;a href="http://pyramid-stevepiercy.readthedocs.io/en/stable/quick_tutorial/index.html"&gt;quick tutorial for Pyramid&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For now, we just want to use Gunicorn to run our starter pyramidproj app.
+Install pyramidproj into your virtualenv using the &lt;code&gt;python&lt;/code&gt; command on
+&lt;code&gt;setup.py&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python setup.py develop
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we can run our app with Gunicorn. Pyramid is a 
+&lt;a href="http://docs.pylonsproject.org/projects/pyramid/en/latest/api/paster.html"&gt;paste&lt;/a&gt;-compatible
+framework, so we use the &lt;code&gt;--paste&lt;/code&gt; argument to run the WSGI server with
+the "development.ini" configuration file. In addition, the &lt;code&gt;-b&lt;/code&gt; argument 
+tells Gunicorn which port number to bind on when the server starts.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;gunicorn --paste development.ini -b :8080
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/gunicorn-run.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Cool, we can bring up our starter Pyramid project up in the web browser at
+the &lt;code&gt;localhost:8000&lt;/code&gt; or &lt;code&gt;127.0.0.1:8000&lt;/code&gt; address.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/it-works.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Time to develop a full-fledged web application with &lt;a href="/pyramid.html"&gt;Pyramid&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;Ready to Develop with Pyramid&lt;/h2&gt;
+&lt;p&gt;Now you have a simple setup to develop Pyramid web apps using Gunicorn as
+the &lt;a href="/wsgi-servers.html"&gt;WSGI server&lt;/a&gt; on Ubuntu 16.04. If you need a
+full step-by-step tutorial to deploy your Python web application to a
+production environment, check out the 
+&lt;a href="http://www.deploypython.com/"&gt;Full Stack Python Guide to Deployments book&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To decide what to do next with your Python project, check out the
+&lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;See something wrong in this post? Fork 
+&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160619-pyramid-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>Replying to SMS Text Messages with Python and Bottle</title><link href="https://www.fullstackpython.com/reply-sms-text-messages-python-bottle.html" rel="alternate"></link><updated>2016-06-05T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-05:reply-sms-text-messages-python-bottle.html</id><summary type="html">&lt;p&gt;Python applications can 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;easily send SMS&lt;/a&gt; 
 by using a &lt;a href="/application-programming-interfaces.html"&gt;web API&lt;/a&gt;. 
 Web apps built with the &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; framework can also reply
@@ -1200,7 +1340,7 @@ as of May 13, 2016 are:&lt;/p&gt;
 &lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
   &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
   (default in Ubuntu 16.04)&lt;/li&gt;
-&lt;li&gt;&lt;a href="/bottle.html"&gt;Botle&lt;/a&gt; web framework version 
+&lt;li&gt;&lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; web framework version 
   &lt;a href="http://bottlepy.org/docs/0.12/"&gt;0.12&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
   &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.5&lt;/a&gt;&lt;/li&gt;
