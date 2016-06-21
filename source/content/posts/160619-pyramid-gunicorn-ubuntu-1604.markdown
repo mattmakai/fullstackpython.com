@@ -67,7 +67,7 @@ and Gunicorn. When we run the `apt` command to install system packages we
 will be prompted for the superuser password. Restricted system access is 
 necessary to modify files within the system folders.
 
-    sudo apt-get install virtualenv python-pip python3-dev
+    sudo apt-get install python3-dev
 
 <img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded">
 
@@ -79,37 +79,37 @@ The required system packages are installed. We can now install the
 Python-specific dependencies.
 
 
-## Set up Virtualenv
-In the previous section, [virtualenv](https://virtualenv.pypa.io/en/latest/) 
-and [pip](https://pypi.python.org/pypi/pip) were installed to handle our 
-[application dependencies](/application-dependencies.html).
-
-Create a directory for the virtualenvs. Then create a new virtualenv.
+## Set up a virtual environment
+Create a directory for the virtual environments. Then create a new virtual environment.
 
     # the tilde "~" specifies the user's home directory, like /home/matt
     cd ~
     mkdir venvs
     # specify the system python3 installation
-    virtualenv --python=/usr/bin/python3 venvs/pyramidproj
+    /usr/bin/python3 -m venv venvs/pyramidproj
 
-Activate the virtualenv.
+Activate the virtual environment.
 
     source ~/venvs/pyramidproj/bin/activate
 
-Our prompt will change after we properly activate the virtualenv to
+Our prompt will change after we properly activate the virtual environment to
 something like `(pyramidproj) matt@ubuntu:~$`.
 
 <img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded">
 
-Our virtualenv is activated with Python 3. We can install whatever
-dependencies we want, in our case Pyramid and Gunicorn. 
+Our virtual environment is activated with Python 3.
 
+We should update pip and venv to the latest versions in our virtual environment.
+
+    pip install --upgrade pip setuptools
+
+We can install whatever dependencies we want, in our case Pyramid and Gunicorn. 
 
 ## Install Python Packages
-We can install Pyramid, Gunicorn and Waitress into our virtualenv using 
+We can install Pyramid, Gunicorn and Waitress into our virtual environment using 
 the `pip` command.
 
-    pip install pyramid gunicorn waitress
+    pip install pip install "pyramid==1.7" gunicorn waitress
 
 
 No errors like we see in the following screenshot is a good sign.
@@ -132,10 +132,10 @@ A slew of new files have been created within the "pyramidproj" directory.
 These are the basic files you can customize for the web application you want
 to build. A good resource for understanding and modifying these files is
 to follow the 
-[quick tutorial for Pyramid](http://pyramid-stevepiercy.readthedocs.io/en/stable/quick_tutorial/index.html).
+[quick tutorial for Pyramid](http://docs.pylonsproject.org/projects/pyramid/en/1.7-branch/quick_tutorial/index.html).
 
 For now, we just want to use Gunicorn to run our starter pyramidproj app.
-Install pyramidproj into your virtualenv using the `python` command on
+Install pyramidproj into your virtual environment using the `python` command on
 `setup.py`.
 
     python setup.py develop
