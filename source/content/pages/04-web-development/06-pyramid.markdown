@@ -26,9 +26,9 @@ Model-View-Controller (MVC) architectural pattern.
 
 
 ## Pyramid resources
-* [Try Pyramid](http://trypyramid.com/) is a landing page that explains the
-  advantages of the Pyramid framework. It also provides some sample "hello
-  world!" code.
+* [Try Pyramid](https://trypyramid.com/) is the official marketing website for 
+  Pyramid, with resources for extending your Pyramid apps. It also provides 
+  some sample "hello world!" code.
 
 * The [first Pyramid app](http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/firstapp.html)
   is a good place to start getting your hands dirty with an example project.
