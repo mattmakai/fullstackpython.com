@@ -56,6 +56,11 @@ repository system packages.
   [how to install Docker on Ubuntu 14.04 LTS](http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/),
   one of the older operating system releases that supports containers.
 
+* [My First 10 Minutes On a Server - Primer for Securing Ubuntu](http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/)
+  is based off an earlier post of the first five minutes on a Linux server.
+  This one is specific to Ubuntu Linux and goes into user accounts, sudo
+  privileges, SSH keys, security updates and 2-factor authentication.
+
 * [What I learned while securing Ubuntu](https://major.io/2015/10/14/what-i-learned-while-securing-ubuntu/)
   explains how difficult it can be just to find correct information
   on how to secure an operating system. In this case, the author goes over
