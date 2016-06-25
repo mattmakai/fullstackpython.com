@@ -50,7 +50,7 @@ packages.&lt;/p&gt;
 and Gunicorn. When we run the &lt;code&gt;apt&lt;/code&gt; command to install system packages we 
 will be prompted for the superuser password. Restricted system access is 
 necessary to modify files within the system folders.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install python3-dev
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -59,33 +59,35 @@ necessary to modify files within the system folders.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/packages-installed.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
 &lt;p&gt;The required system packages are installed. We can now install the
 Python-specific dependencies.&lt;/p&gt;
-&lt;h2&gt;Set up Virtualenv&lt;/h2&gt;
-&lt;p&gt;In the previous section, &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; 
-and &lt;a href="https://pypi.python.org/pypi/pip"&gt;pip&lt;/a&gt; were installed to handle our 
-&lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Create a directory for the virtualenvs. Then create a new virtualenv.&lt;/p&gt;
+&lt;h2&gt;Set up a virtual environment&lt;/h2&gt;
+&lt;p&gt;Create a directory for the virtual environments. Then create a new virtual environment.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
 cd ~
 mkdir venvs
 # specify the system python3 installation
-virtualenv --python=/usr/bin/python3 venvs/pyramidproj
+/usr/bin/python3 -m venv venvs/pyramidproj
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Activate the virtualenv.&lt;/p&gt;
+&lt;p&gt;Activate the virtual environment.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;source ~/venvs/pyramidproj/bin/activate
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Our prompt will change after we properly activate the virtualenv to
+&lt;p&gt;Our prompt will change after we properly activate the virtual environment to
 something like &lt;code&gt;(pyramidproj) matt@ubuntu:~$&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160619-ubuntu-pyramid-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
-&lt;p&gt;Our virtualenv is activated with Python 3. We can install whatever
-dependencies we want, in our case Pyramid and Gunicorn. &lt;/p&gt;
+&lt;p&gt;Our virtual environment is activated with Python 3.&lt;/p&gt;
+&lt;p&gt;We should update pip and venv to the latest versions in our virtual environment.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install --upgrade pip setuptools
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We can install whatever dependencies we want, in our case Pyramid and Gunicorn. &lt;/p&gt;
 &lt;h2&gt;Install Python Packages&lt;/h2&gt;
-&lt;p&gt;We can install Pyramid, Gunicorn and Waitress into our virtualenv using 
+&lt;p&gt;We can install Pyramid, Gunicorn and Waitress into our virtual environment using 
 the &lt;code&gt;pip&lt;/code&gt; command.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;pip install pyramid gunicorn waitress
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install pip install &amp;quot;pyramid==1.7&amp;quot; gunicorn waitress
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -107,9 +109,9 @@ Run &lt;code&gt;pcreate&lt;/code&gt; to generate the boilerplate for a new Pyram
 These are the basic files you can customize for the web application you want
 to build. A good resource for understanding and modifying these files is
 to follow the 
-&lt;a href="http://pyramid-stevepiercy.readthedocs.io/en/stable/quick_tutorial/index.html"&gt;quick tutorial for Pyramid&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="http://docs.pylonsproject.org/projects/pyramid/en/1.7-branch/quick_tutorial/index.html"&gt;quick tutorial for Pyramid&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For now, we just want to use Gunicorn to run our starter pyramidproj app.
-Install pyramidproj into your virtualenv using the &lt;code&gt;python&lt;/code&gt; command on
+Install pyramidproj into your virtual environment using the &lt;code&gt;python&lt;/code&gt; command on
 &lt;code&gt;setup.py&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python setup.py develop
 &lt;/pre&gt;&lt;/div&gt;

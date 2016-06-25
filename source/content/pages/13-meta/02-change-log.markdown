@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### June
+* New blog post for 
+  [Configuring Python 3, Pyramid and Gunicorn on Ubuntu](/blog/python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html).
 * Created little images for each of the posts on the 
   [blog post list page](/blog.html).
 * Start of new page on [Ubuntu](/ubuntu.html).
