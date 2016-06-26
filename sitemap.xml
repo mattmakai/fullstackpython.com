@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://www.fullstackpython.com/blog/python-3-django-gunicorn-linux-mint-17.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/blog/python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html</loc>
     <priority>1.0</priority>
   </url>

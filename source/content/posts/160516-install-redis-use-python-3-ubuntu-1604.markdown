@@ -3,6 +3,7 @@ slug: install-redis-use-python-3-ubuntu-1604
 meta: Step-by-step instructions to install Redis and use it with Python 3 and redis-py on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-16
+modified: 2016-05-16
 headerimage: /source/static/img/160516-redis-ubuntu-1604/header.jpg
 headeralt: Redis and Ubuntu logos. Copyright their respective owners.
 

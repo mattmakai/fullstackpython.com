@@ -25,6 +25,8 @@
         <div class="post-byline">
             Posted by <a href="/about-author.html">Matt Makai</a> on 
             {{ a.date.strftime('%B %d, %Y') }}.
+            {% if a.modified != a.date %}Last updated 
+            {{ a.modified.strftime('%B %d, %Y') }}.{% endif %}
         </div>
         {{ a.content|truncate(350) }} (<a href="/blog/{{ a.slug }}.html">read more</a>)
         {% if a.headerimage and a.headeralt %}

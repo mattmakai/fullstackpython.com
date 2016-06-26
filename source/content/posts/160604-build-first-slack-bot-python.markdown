@@ -3,6 +3,7 @@ slug: build-first-slack-bot-python
 meta: Learn how to build a simple Slack bot in Python, no prior bot experience needed. 
 category: post
 date: 2016-06-04
+modified: 2016-06-04
 headerimage: /source/static/img/160604-simple-python-slack-bot/header.jpg
 headeralt: Slack and Python logos. Copyright their respective owners.
 

@@ -3,7 +3,7 @@ slug: python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus
 meta: Instructions for developing Pyramid web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).
 category: post
 date: 2016-06-19
-lastupdated: 
+modified: 2016-06-21
 headerimage: /source/static/img/160619-ubuntu-pyramid-gunicorn/header.jpg
 headeralt: Pyramid, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
