@@ -1,4 +1,4 @@
-title: Configuring Python 3, Django & Gunicorn on Linux Mint 17.3
+title: Setting Up Python 3, Django & Gunicorn on Linux Mint 17.3
 slug: python-3-django-gunicorn-linux-mint-17
 meta: A step-by-step walkthrough on configuring Linux Mint 17.3 with Python 3, Django and Green Unicorn (Gunicorn).
 category: post
