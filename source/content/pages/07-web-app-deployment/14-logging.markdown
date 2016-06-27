@@ -92,13 +92,13 @@ certain threshold.
   [intro to logging](http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/)
   presents the Python logging module and how to use it.
 
-* [Logging as Storytelling](http://www.hybridcluster.com/blog/logging-storytelling/)
+* [Logging as Storytelling](https://clusterhq.com/2013/12/04/logging-storytelling/)
   is a multi-part series working the analogy that logs should read like
   a story so you can better understand what's taking place in your web
   application. 
-  [Part 2 describes actions](http://www.hybridcluster.com/blog/logging-storytelling-lets-add-action/)
+  [Part 2 describes actions](https://clusterhq.com/2014/01/21/logging-storytelling-lets-add-action/)
   and 
-  [part 3 talks about types](http://www.hybridcluster.com/blog/logging-storytelling-3-types/).
+  [part 3 talks about types](https://clusterhq.com/2014/03/25/logging-storytelling-3-types/).
 
 * [A Brief Digression About Logging](https://lukasa.co.uk/2014/05/A_Brief_Digression_About_Logging/)
   is a short post that gets Python logging up and running quickly.
