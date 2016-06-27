@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### June
+* Added another new blog post, this time on 
+  [Setting Up Python 3, Django & Gunicorn on Linux Mint 17.3](/blog/python-3-django-gunicorn-linux-mint-17.html).
 * New blog post for 
   [Configuring Python 3, Pyramid and Gunicorn on Ubuntu](/blog/python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html).
 * Created little images for each of the posts on the 
