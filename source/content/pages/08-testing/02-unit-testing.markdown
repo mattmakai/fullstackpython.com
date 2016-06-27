@@ -42,6 +42,12 @@ by writing the test cases to exercise multiple parts of code at once.
 * [nose](https://nose.readthedocs.org/en/latest/) is an extension to
   unittest that makes it easier to create and execute test cases.
 
+* [Hypothesis](http://hypothesis.readthedocs.io/en/latest/index.html) is a 
+  unit test-generation tool that assists developers in creating tests that
+  exercise edge cases in code blocks. The best way to get started using 
+  Hypothesis is by going through the well-written
+  [quickstart](http://hypothesis.readthedocs.io/en/latest/quickstart.html).
+
 * [testify](https://github.com/Yelp/Testify/) was a testing framework
   meant to replace the common unittest+nose combination. However, the team
   behind testify is transitioning to pytest so it's recommended you do
