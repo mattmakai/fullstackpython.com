@@ -1,0 +1,35 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="707" measuredH="334" mockupW="636" mockupH="215">
+  <controls>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="71" y="119" w="250" h="215" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>28</size>
+        <text>%20%0A%20%20%0AWSGI%20Server%20/%20%0AGateway</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="__group__" x="429" y="119" w="278" h="215" measuredW="278" measuredH="215" zOrder="1" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="278" h="215" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="9">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text>%20%0A%20%0AWSGI%20Application%20/%20%0AFramework</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="12" w="159" h="47" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="9">
+          <controlProperties>
+            <size>20</size>
+            <text>%20Callable%20object</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="321" y="151" w="108" h="49" measuredW="150" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text>Invokes</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

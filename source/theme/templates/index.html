@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block meta_header %}
+<meta name="description" content="Full Stack Python explains programming concepts in plain language and provides links to the best tutorials for those topics.">
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        {% for page in pages|sort(attribute='sortorder') %}
+          {% if page.slug == 'introduction' %}
+              {{ page.content }}
+              <p>This guide branches out on topic because your learning 
+                 requirements depend on what you're working on. Select one 
+                 of the buttons below or check out the full
+                 <a href="/table-of-contents.html">table of contents</a>. 
+              </p>
+              <h3>What do you need to learn to create your application?</h3>
+              {% include "choices/index.html" %}
+          {% endif %}
+        {% endfor %}
+    </div>
+    {% include "index-sidebar.html" %}
+</div>
+{% endblock %}

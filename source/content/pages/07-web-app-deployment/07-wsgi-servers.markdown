@@ -1,0 +1,224 @@
+title: WSGI Servers
+category: page
+slug: wsgi-servers
+sortorder: 0707
+toc: False
+sidebartitle: WSGI Servers
+meta: A Web Server Gateway Interface (WSGI) server runs Python code to create a web application. Learn more about WSGI servers on Full Stack Python.
+
+
+# WSGI Servers
+A [Web Server Gateway Interface](http://wsgi.readthedocs.org/en/latest/)
+(WSGI) server implements the web server side of the WSGI interface for
+running Python web applications. 
+
+
+## Why is WSGI necessary?
+A traditional web server does not understand or have any way to run Python 
+applications. In the late 1990s, a developer named Grisha Trubetskoy 
+[came up with an Apache module called mod\_python](http://grisha.org/blog/2013/10/25/mod-python-the-long-story/) 
+to execute arbitrary Python code. For several years in the late 1990s 
+and early 2000s, Apache configured with mod\_python ran most Python web 
+applications.
+
+However, mod\_python wasn't a standard specification. It was just an 
+implementation that allowed Python code to run on a server. As mod\_python's 
+development stalled and security vulnerabilities were discovered there 
+was recognition by the community that a consistent way to execute Python 
+code for web applications was needed.
+
+Therefore the Python community came up with WSGI as a standard interface that
+modules and containers could implement. WSGI is now the accepted approach 
+for running Python web applications.
+
+<img src="/img/wsgi-interface.png" alt="WSGI server invoking a WSGI application." width="100%" class="technical-diagram" />
+
+As shown in the above diagram, a WSGI server simply invokes a callable object
+on the WSGI application as defined by the PEP 3333 standard.
+
+
+## WSGI's Purpose
+Why use WSGI and not just point a web server directly at an application?
+
+* **WSGI gives you flexibility**. Application developers can swap out
+  web stack components for others. For example, a developer can switch from 
+  Green Unicorn to uWSGI without modifying the application or framework 
+  that implements WSGI. 
+  From [PEP 3333](http://www.python.org/dev/peps/pep-3333/):
+
+    The availability and widespread use of such an API in web servers for 
+    Python [...] would separate choice of framework from choice of web 
+    server, freeing users to choose a pairing that suits them, while 
+    freeing framework and server developers to focus on their preferred 
+    area of specialization.
+
+* **WSGI servers promote scaling**. Serving thousands of requests for dynamic
+  content at once is the domain of WSGI servers, not frameworks.
+  WSGI servers handle processing requests from the web server and deciding
+  how to communicate those requests to an application framework's process.
+  The segregation of responsibilities is important for efficiently scaling 
+  web traffic.
+
+<img src="/img/web-browser-server-wsgi.png" alt="WSGI Server - Web server - Browser" width="100%" class="technical-diagram" />
+
+WSGI is by design a simple standard interface for running Python code. As
+a web developer you won't need to know much more than
+
+* what WSGI stands for (Web Server Gateway Inteface)
+
+* that a WSGI container is a separate running process that runs on a
+  different port than your web server
+
+* your web server is configured to pass requests to the WSGI container which
+  runs your web application, then pass the response (in the form of HTML)
+  back to the requester
+
+If you're using a standard web framework such as Django, Flask, or
+Bottle, or almost any other current Python framework, you don't need to worry
+about how frameworks implement the application side of the WSGI standard.
+Likewise, if you're using a standard WSGI container such as Green Unicorn,
+uWSGI, mod\_wsgi, or gevent, you can get them running without worrying about
+how they implement the WSGI standard.
+
+However, knowing the WSGI standard and how these frameworks and containers
+implement WSGI should be on your learning checklist though as you become
+a more experienced Python web developer.
+
+
+## Official WSGI specifications
+The WSGI standard v1.0 is specified in
+[PEP 0333](http://www.python.org/dev/peps/pep-0333/). As of September 2010,
+WSGI v1.0 is superseded by
+[PEP 3333](http://www.python.org/dev/peps/pep-3333/), which defines the
+v1.0.1 WSGI standard. If you're working with Python 2.x and you're compliant
+with PEP 0333, then you're also compliant with 3333. The newer version is
+simply an update for Python 3 and has instructions for how unicode should
+be handled.
+
+[wsgiref in Python 2.x](https://docs.python.org/2/library/wsgiref.html) and
+[wsgiref in Python 3.x](https://docs.python.org/3.4/library/wsgiref.html)
+are the reference implementations of the WSGI specification built into
+Python's standard library so it can be used to build WSGI servers and
+applications.
+
+
+## Example web server configuration
+A web server's configuration specifies what requests should be passed to
+the WSGI server to process. Once a request is processed and generated by the
+WSGI server, the response is passed back through the web server and onto
+the browser. 
+
+For example, this Nginx web server's configuration specifies that
+Nginx should handle static assets (such as images, JavaScript, and CSS
+files) under the /static directory and pass all other requests to the WSGI
+server running on port 8000:
+
+    # this specifies that there is a WSGI server running on port 8000
+    upstream app_server_djangoapp {
+        server localhost:8000 fail_timeout=0;
+    }
+
+    # Nginx is set up to run on the standard HTTP port and listen for requests
+    server {
+      listen 80;
+
+      # nginx should serve up static files and never send to the WSGI server
+      location /static {
+        autoindex on;
+        alias /srv/www/assets;
+      }
+
+      # requests that do not fall under /static are passed on to the WSGI
+      # server that was specified above running on port 8000
+      location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+
+        if (!-f $request_filename) {
+          proxy_pass http://app_server_djangoapp;
+          break;
+        }
+      }
+    }
+
+Note that the above code is a simplified version of a production-ready Nginx
+configuration. For real SSL and non-SSL templates, take a look at the
+[Underwear web server templates](https://github.com/makaimc/underwear/tree/master/underwear/roles/web/templates) on GitHub.
+
+
+## WSGI servers
+There is a comprehensive list of WSGI servers on the 
+[WSGI Read the Docs](http://wsgi.readthedocs.org/en/latest/servers.html) page.
+The following are WSGI servers based on community recommendations.
+
+* [Green Unicorn](http://gunicorn.org/) is a pre-fork worker model based
+  server ported from the Ruby [Unicorn](http://unicorn.bogomips.org/) project.
+
+* [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/) is gaining steam as
+  a highly-performant WSGI server implementation.
+
+* [mod\_wsgi](https://github.com/GrahamDumpleton/mod_wsgi) is an Apache 
+  module implementing the WSGI specification.
+
+* [CherryPy](https://github.com/cherrypy/cherrypy) is a pure Python web 
+  server that also functions as a WSGI server.
+
+
+## WSGI resources
+* [PEP 0333 WSGI v1.0](http://www.python.org/dev/peps/pep-0333/)
+  and
+  [PEP 3333 WSGI v1.0.1](http://www.python.org/dev/peps/pep-3333/)
+  specifications.
+
+* This [basics of WSGI](http://agiliq.com/blog/2013/07/basics-wsgi/) post
+  contains a simple example of how a WSGI-compatible application works.
+
+* [A comparison of web servers for Python web apps](https://www.digitalocean.com/community/tutorials/a-comparison-of-web-servers-for-python-based-web-applications)
+  is a good read to understand basic information about various WSGI server
+  implementations.
+
+* A thorough and informative post for LAMP-stack hosting choices is 
+  presented in the 
+  "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/)." 
+
+* The Python community made a long effort to 
+  [transition from mod\_python](http://blog.dscpl.com.au/2010/05/modpython-project-soon-to-be-officially.html) 
+  to the WSGI standard. That transition period is now complete and an 
+  implementation of WSGI should always be used instead mod\_python.
+
+* Nicholas Piël wrote an interesting benchmark blog post of 
+  [Python WSGI servers](http://nichol.as/benchmark-of-python-web-servers).
+  Note that the post is a few years old. Benchmarks should be considered
+  for their specific tested scenarios and not quickly extrapolated as general
+  "this server is faster than this other server" results.
+
+* [How to Deploy Python WSGI Applications with CherryPy](https://www.digitalocean.com/community/articles/how-to-deploy-python-wsgi-applications-using-a-cherrypy-web-server-behind-nginx)
+  answers why CherryPy is a simple combination web and WSGI server along with 
+  how to use it.
+
+* Another Digital Ocean walkthrough goes into
+  [How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx).
+
+* [The uWSGI Swiss Army Knife](https://lincolnloop.com/blog/uwsgi-swiss-army-knife/)
+  shows how uWSGI can potentially be used for more than just running the
+  Python web application - it can also serve static files and handle
+  caching in a deployment.
+
+
+## WSGI servers learning checklist
+1. Understand that WSGI is a standard Python specification for applications 
+   and servers to implement. 
+
+1. Pick a WSGI server based on available documentation and tutorials. Green 
+   Unicorn is a good one to start with since it's been around for awhile.
+
+1. Add the WSGI server to your server deployment.
+
+1. Configure the web server to pass requests to the WSGI server for 
+   appropriate URL patterns.
+
+1. Test that the WSGI server responds to local requests but not direct 
+   requests outside your infrastructure. The web server should be the pass 
+   through for requests to and responses from the WSGI server.
+

@@ -1,0 +1,76 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="766" measuredH="648" mockupW="722" mockupH="591">
+  <controls>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextArea" x="87" y="180" w="250" h="143" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>28</size>
+        <text>%20%0AWSGI%20Server%20/%20%0AGateway</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Arrow" x="164" y="321" w="74" h="57" measuredW="150" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>Invokes</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Canvas" x="44" y="57" w="722" h="591" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::SubTitle" x="59" y="72" w="-1" h="-1" measuredW="75" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Server</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="59" y="114" w="693" h="512" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::SubTitle" x="74" y="129" w="-1" h="-1" measuredW="58" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Linux</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::TextArea" x="454" y="171" w="269" h="106" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>28</size>
+        <text>%20%0AWeb%20Server</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Arrow" x="337" y="188" w="116" h="45" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <rightArrow>false</rightArrow>
+        <text>Pass%20requests</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Canvas" x="454" y="378" w="250" h="215" measuredW="100" measuredH="70" zOrder="10" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::TextArea" x="87" y="378" w="278" h="215" measuredW="200" measuredH="140" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>28</size>
+        <text>%20%0A%20%0AWSGI%20Application%20/%20%0AFramework</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::TextArea" x="87" y="378" w="159" h="38" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>%20Callable%20object</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Arrow" x="365" y="454" w="110" h="22" measuredW="150" measuredH="100" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text>Relies%20on</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::SubTitle" x="469" y="398" w="-1" h="-1" measuredW="108" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>virtualenv</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::List" x="472" y="438" w="217" h="126" measuredW="100" measuredH="126" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Django%3D%3D1.6.5%0Adj-database-url%3D%3D0.3%0Atwilio%3D3.3.36%0A...</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

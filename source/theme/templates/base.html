@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matt Makai">
+{% block meta_header %}{% endblock %}
+    <link rel="shortcut icon" href="/img/fsp-fav.png">
+    <title>{% block title %}{% endblock %}Full Stack Python</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="/theme/css/f.min.css" rel="stylesheet">
+</head>
+<body>
+    {% block banner %}{% endblock %}
+    <a href="https://github.com/makaimc/fullstackpython.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/fork.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+        {% include "nav.html" %}
+        {% block content %}{% endblock %}
+        <hr/>
+    </div> 
+    {% block lower_banner %}{% endblock %}
+    <div class="container">
+        <div class="footer pull-right">
+            <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a>
+            2016
+        </div>
+    </div>
+{% include "googleanalytics.html" %}
+
+{% block js %}{% endblock %}
+
+<script type='text/javascript'>
+    var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+</body>
+</html>

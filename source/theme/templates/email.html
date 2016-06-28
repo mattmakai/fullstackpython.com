@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Email sign up - {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+      <h1>Email Newsletter</h1>
+      {% include "email-for-book.html" %}
+    </div>
+    {% include "sidebar.html" %}
+</div>
+{% endblock %}

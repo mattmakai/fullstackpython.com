@@ -1,0 +1,59 @@
+{% if page.title == 'Django' %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-head">Sponsored By</h3>
+  </div>
+  <div class="panel-body">
+    <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=django"><img src="/img/sponsored/realpython.jpg" alt="Real Python logo" width="100%"></a>
+    <p style="font-size: .8em;">If you're searching for step-by-step Django 
+       tutorials then I highly recommend
+       <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=django" onclick="trackOutboundLink('https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=django'); return false;">checking out Real Python</a>.
+    </p>
+  </div>
+</div>
+{% elif page.title == 'Flask' %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-head">Sponsored By</h3>
+  </div>
+  <div class="panel-body">
+    <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=flask"><img src="/img/sponsored/realpython.jpg" alt="Real Python logo" width="100%"></a>
+    <p style="font-size: .8em;">If you're searching for step-by-step Flask 
+       tutorials then I highly recommend
+       <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=flask" onclick="trackOutboundLink('https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=flask'); return false;">checking out Real Python</a>.
+    </p>
+  </div>
+</div>
+{% elif page.title == 'Best Python Resources' %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-head">Sponsored By</h3>
+  </div>
+  <div class="panel-body">
+    <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=bestresources"><img src="/img/sponsored/realpython.jpg" alt="Real Python logo" width="100%"></a>
+    <p style="font-size: .8em;">If you want to learn Python then
+       I highly recommend
+       <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=bestresources" onclick="trackOutboundLink('https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=bestresources'); return false;">checking out Real Python</a>'s
+       courses.
+    </p>
+  </div>
+</div>
+{% elif page.title == 'Web Frameworks' %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-head">Sponsored By</h3>
+  </div>
+  <div class="panel-body">
+    <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=webframeworks" onclick="trackOutboundLink('https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=webframeworks'); return false;"><img src="/img/sponsored/realpython.jpg" alt="Real Python logo" width="100%"></a>
+    <p style="font-size: .8em;">If you want to learn Python web development then
+       I highly recommend
+       <a href="https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=webframeworks" onclick="trackOutboundLink('https://realpython.com/?utm_source=fsp&amp;utm_medium=promo&amp;utm_campaign=webframeworks'); return false;">checking out Real Python</a>'s
+       courses.
+    </p>
+  </div>
+</div>
+{% elif page.title == 'Introduction' %}
+    {% include "rp-advert.html" %}
+{% else %}
+    {% include "fsp-guide-advert.html" %}
+{% endif %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block meta_header %}{% if page.meta %}
+    <meta name="description" content="{{ page.meta }}">
+{% endif %}{% endblock %}
+
+{% block title %}{{ page.title }} - {% endblock %}
+
+{% block lower_banner %}
+    {% include "banner.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+          {{ page.content }}
+          {% include "choices/" + page.slug + ".html" %}
+      {% include "email-for-book.html" %}
+    </div>
+    {% include "sidebar.html" %}
+</div>
+{% endblock %}
+
+{% block js %}
+{% if page.slug == 'flask' %}
+    <div style="display: none;"><img src="https://www.linkedin.com/in/matthewmakai?authType=name&authToken=thoI" /></div>
+{% endif %}
+{% endblock %}

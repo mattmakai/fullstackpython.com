@@ -1,0 +1,14 @@
+<div class="panel panel-success" id="mobile-toc">
+  <div class="panel-heading">
+    <h3 class="panel-head"><a href="/table-of-contents.html" style="color: #fff;">Chapters</a></h3>
+  </div>
+  <div class="list-group">
+    {% for p in pages|sort(attribute='sortorder') %}
+      {% if p %}
+        {% if p.slug == page.slug %}  <a href="/{{ p.slug }}.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>&raquo; {% if p.toc %}{{ p.sidebartitle }}{% else %}{{ p.title }}{% endif %}</a>
+        {% elif p.toc == "True" %}<a href="/{{ p.slug }}.html" class="list-group-item smaller-item {% if page and p.slug == page.slug %}active{% endif %}" style='font-family: "Helvetica Neue",sans-serif;'>{{ p.sidebartitle }}</a>{% endif %}
+      {% endif %}
+    {% endfor %}
+    <a href="/table-of-contents.html" class="list-group-item smaller-item" style='font-family: "Helvetica Neue",san-serif;background-color:#22B24C; color: #fff;'>...or <span style="border-bottom: 1px dotted;">view the full table of contents</span>.</a>
+  </div>
+</div>
