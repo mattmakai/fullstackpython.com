@@ -62,6 +62,10 @@ on the number's page on Twilio as shown below.
   [APIs 101](https://zapier.com/blog/apis-101/) free guide for what APIs 
   are, why they are valuable and how to use them properly. 
 
+* [GET PUT POST](https://medium.com/get-put-post) is a newsletter just
+  about APIs. Past issues have included interviews with the developers 
+  behind Stripe, Dropbox and Coinbase.
+
 * [What RESTful actually means](https://codewords.recurse.com/issues/five/what-restful-actually-means)
   does a fantastic job of laying out the REST principles in plain language
   terms while giving some history on how they came to be.
