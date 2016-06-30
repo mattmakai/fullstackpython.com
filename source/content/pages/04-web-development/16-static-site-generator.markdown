@@ -48,7 +48,7 @@ as input then combine them to output a set of static HTML files.
 <img src="/img/pelican-flow.jpg" width="100%" alt="Example of how static site generators work with a markup language and templates." class="technical-diagram">
 
 
-## What's the downside to using static site generators?
+## What's the downside of using static site generators?
 The major downside is that code cannot be executed after a site is created. 
 You are stuck with the output files so if you're used to building web 
 applications with a traditional [web framework](/web-frameworks.html) you'll
