@@ -317,6 +317,9 @@ For now, we'll lump schema migration resources under ORM links below.
   [what's the difference between flush and commit?](http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit)
   that are important to understand as you build out your app.
 
+* [SQLAlchemy and Django](https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/)
+  explains how one development team uses the Django ORM for most of their
+  standard queries but relies on SQLAlchemy for really advanced queries.
 
 ### Peewee resources
 * [Managing database connections with Peewee](http://charlesleifer.com/blog/managing-database-connections-with-peewee/)
