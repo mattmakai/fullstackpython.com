@@ -123,6 +123,11 @@ nested data.
   Talk Python to Me podcast has a great interview with the maintainer of the 
   Python driver for MongoDB.
 
+* [MongoDB queries don’t always return all matching documents!](https://engineering.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827)
+  is a walkthrough of discovering how MongoDB queries actually work, and
+  shows some potential pitfalls of relying on technologies where you do
+  not fully understand how they operate.
+
 
 ## Column-family table
 A the column-family table class of NoSQL data stores builds on the key-value
