@@ -122,6 +122,13 @@ application framework and your app itself is up to date and secured. See the
   on Google Cloud and posits what they may be paying to run their
   service.
 
+* Two blog posts on using AWS Autoscaling in [Automatic replacement of Autoscaling nodes with equivalent spot instances](https://mcristi.wordpress.com/2016/04/21/my-approach-at-making-aws-ec2-affordable-automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances/)
+  and
+  [Autoscaling nodes: seeing it in action](https://mcristi.wordpress.com/2016/04/27/automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances-seeing-it-in-action/)
+  provides a fairly complicated but potential approach for making AWS 
+  cheaper, depending on whether the majority of your cost is in compute
+  nodes.
+
 
 ## Platform-as-a-service learning checklist
 1. Review the potential Python platform-as-a-service options listed above.
