@@ -44,7 +44,7 @@ of other template engines and today is widely used by the Python community.
 ## What projects depend on Jinja2?
 Jinja2 is a commonly-used templating engine for
 [web frameworks](/web-frameworks.html) such as [Flask](/flask.html), 
-[Bottle](/bottle.html) [Morepath](/morepath.html) and, as of its 1.8 update,
+[Bottle](/bottle.html), [Morepath](/morepath.html) and, as of its 1.8 update,
 optionally [Django](/django.html) as well. Jinja2 is also used as a template
 language by [configuration management](/configuration-management.html) tool 
 Ansible and the [static site generator](/static-site-generator.html) Pelican,
