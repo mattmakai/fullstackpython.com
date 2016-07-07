@@ -68,7 +68,7 @@ created the incredible mix of data code libraries available today.
 
 ### General Python data resources
 * [PyData](http://pydata.org/) is a community for developer and users of 
-  Python data tools. They put on fantastic conferences around the and fund 
+  Python data tools. They put on fantastic conferences around the world and fund 
   the continued development of open source data-related libraries.
 
 * [Continuum Analytics](http://continuum.io/) is one of the leading Python
