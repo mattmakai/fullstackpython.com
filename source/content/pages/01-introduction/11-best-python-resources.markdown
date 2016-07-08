@@ -83,7 +83,7 @@ should skip down to the next section for "experienced developers".
   is a book of Python exercises to help you learn the basic language syntax.
 
 * Looking for ideas about what projects to use to learn to code? Check out 
-  [this list of 5 programming project for Python beginners](https://medium.com/learning-journalism-tech/five-mini-programming-projects-for-the-python-beginner-21492f6ce0f3).
+  [this list of 5 programming projects for Python beginners](https://medium.com/learning-journalism-tech/five-mini-programming-projects-for-the-python-beginner-21492f6ce0f3).
 
 * There's a Udacity course by one of the creators of Reddit that shows how to 
   [use Python to build a blog](https://www.udacity.com/course/web-development--cs253).
