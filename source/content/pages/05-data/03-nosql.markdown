@@ -122,7 +122,7 @@ nested data.
 
 
 ## Column-family table
-A the column-family table class of NoSQL data stores builds on the key-value
+A column-family table class of NoSQL data stores builds on the key-value
 pair type. Each key-value pair is considered a row in the store while the
 column family is similar to a table in the relational database model.
 
