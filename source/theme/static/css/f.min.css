@@ -164,12 +164,13 @@ h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
 @media (max-width:1200px){h3.panel-head{font-size:22px} .select-next{min-height:300px}}@media (max-width:750px){.choose-next{margin-left:0} .select-next{min-height:100px} .smaller-item{font-size:1em;padding:15px 0 15px 10px}}@media (max-width:720px){.logo-header-section{margin:20px 40px 0 0}}.technical-diagram{margin:10px 0 5px 0}
 .see-also{margin-top: 20px; background: #22B24C; color: #eee;}
 .see-also a{color: #fff;}
-h4.toc-subsection{padding-left: 25px; margin-bottom: 2px; margin-top: 15px;}
+h4.toc-subsection{padding-left: 25px; margin-bottom: 3px; margin-top: 15px;}
 h4.toc-more-subsection{padding-left: 38px; margin-bottom: 2px; margin-top: 15px;}
 .indent{margin-left: 25px; padding-bottom: 1px;}
-.subsection{margin-left: 56px; padding-bottom: 1px;}
+.subsection{font-family:"Helvetica Neue","Arial Narrow Bold",sans-serif; margin-left: 56px; padding-bottom: 1px;}
+.coming-soon{color: #999;}
 .more-subsection{margin-left: 78px; padding-bottom: 1px;}
-.toc-indent {padding-left: 25px; padding-bottom: 1px;}
+.toc-indent {padding-left: 25px; padding-bottom: 1px; font-family:"Helvetica Neue","Arial Narrow Bold",sans-serif;}
 .toc-indent-link {margin-left: 25px; padding-bottom: 1px;}
 .toc-subsection-link {margin-left: 56px; padding-bottom: 1px;}
 .toc-indent-subsection {padding-left: 55px; padding-bottom: 1px;}
