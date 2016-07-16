@@ -55,10 +55,6 @@ should skip down to the next section for "experienced developers".
   [Choose Your Own Adventures Presentations using Flask and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
   and [Martianify Photos with OpenCV](https://www.twilio.com/blog/2015/11/getting-started-with-opencv-and-python-featuring-the-martian-2.html).
 
-* [Dive into Python 3](http://www.diveinto.org/python3/) is an open source
-  book provided under the Creative Commons license and available in HTML or
-  PDF form.
-
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
