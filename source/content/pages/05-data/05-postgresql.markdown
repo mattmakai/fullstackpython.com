@@ -201,7 +201,7 @@ The post is an inside look at the evolution of Braintree's usage of the database
   if managing your own database on a cloud server is your preferred setup.
 
 * [How to fix undead PostgreSQL queries](https://tech.zalando.com/blog/hack-to-terminate-tcp-conn-postgres/)
-  shows a bit of a hack for when what to do when you can't kill certain 
+  shows a bit of a hack for what to do when you can't kill certain 
   PostgreSQL queries.
 
 * [Is bi-directional replication (BDR) in PostgreSQL transactional?](http://sdf.org/~riley/blog/2016/01/04/is-bi-directional-replication-bdr-in-postgres-transactional/)
