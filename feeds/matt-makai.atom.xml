@@ -111,8 +111,8 @@ python3.5 -m venv djangoproj
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;We should see our prompt change so that we know the virtualenv is properly 
-activated.&lt;/p&gt;
+&lt;p&gt;Our virtual environment is properly activated when we see &lt;code&gt;(djangoproj)&lt;/code&gt;
+prepended to our prompt. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160626-mint-django-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded" alt="Output from the virtualenv environment activation."&gt;&lt;/p&gt;
 &lt;p&gt;Our virtualenv with Python 3.5.1 is activated so we can install whatever
 dependencies we want, such as Django and Gunicorn. Our default &lt;code&gt;python&lt;/code&gt;

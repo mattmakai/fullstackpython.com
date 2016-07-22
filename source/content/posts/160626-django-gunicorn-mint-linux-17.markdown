@@ -127,8 +127,8 @@ Activate the virtualenv.
 
     source ~/venvs/djangoproj/bin/activate
 
-We should see our prompt change so that we know the virtualenv is properly 
-activated.
+Our virtual environment is properly activated when we see `(djangoproj)`
+prepended to our prompt. 
 
 <img src="/source/static/img/160626-mint-django-gunicorn/venv-activated.png" width="100%" class="technical-diagram img-rounded" alt="Output from the virtualenv environment activation.">
 
