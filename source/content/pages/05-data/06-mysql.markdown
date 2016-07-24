@@ -38,7 +38,7 @@ Therefore a fork of MySQLdb named
 [mysqlclient](https://pypi.python.org/pypi/mysqlclient) added Python 3
 compatibility. 
 
-The mysqlclient fork was good in that existing MySQLdb users could drop
+The mysqlclient fork was good that existing MySQLdb users could drop
 mysqlclient into existing projects that were upgrading to Python 3. However,
 the fork often causes confusion when searching for which Python driver to
 use with MySQL. Many developer simply decide to use 
