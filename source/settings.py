@@ -10,7 +10,7 @@ DISQUS_SITENAME = 'makaimc'
 PDF_GENERATOR = False
 
 DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email',
-                    'blog', 'all')
+                    'blog', 'all',) #'pdf-book', 'epub-book')
 
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 

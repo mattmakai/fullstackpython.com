@@ -6,6 +6,11 @@
 
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
 
+{% block banner %}
+    {% include "kickstarter-banner.html" %}
+{% endblock %}
+
+
 {% block content %}
 <div class="row">
     <div class="col-md-12">

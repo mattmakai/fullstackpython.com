@@ -1,0 +1,4 @@
+@page {
+    @top { text-align: right; content: "Full Stack Python" }
+    @bottom { text-align: right; font-size: 8pt; content: counter(page) }
+} 

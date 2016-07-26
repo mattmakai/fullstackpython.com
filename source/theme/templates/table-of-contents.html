@@ -6,6 +6,10 @@
 
 {% block title %}Table of Contents for {% endblock %}
 
+{% block banner %}
+    {% include "kickstarter-banner.html" %}
+{% endblock %}
+
 {% block content %}
 <div class="row">
     <div class="col-md-8">
@@ -379,7 +383,4 @@
 </div>
 {% endblock %}
 
-{% block lower_banner %}
-    {% include "banner.html" %}
-{% endblock %}
 
