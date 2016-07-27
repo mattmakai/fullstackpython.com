@@ -102,6 +102,10 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   walks through how this developer organizes the components and architecture
   for his Flask applications.
 
+* [Adding phone calling to your web application](https://www.twilio.com/docs/tutorials/walkthrough/browser-calls/python/flask)
+  is a killer Flask tutorial with all the code needed to create a
+  web app that can dial phones and receive inbound calls.
+
 * Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
 * The Plank & Whittle blog has two posts, one on 

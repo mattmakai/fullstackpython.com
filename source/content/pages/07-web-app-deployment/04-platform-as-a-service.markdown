@@ -117,6 +117,10 @@ application framework and your app itself is up to date and secured. See the
   is a basic post on keeping developer sandbox accounts separate from
   production AWS environments.
 
+* [Deploying a Django app on Amazon EC2 instance](http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/)
+  is a detailed walkthrough for deploying an example Django app to Amazon
+  Web Services.
+
 * [How much is Spotify Paying Google Cloud?](https://medium.com/@davidmytton/how-much-is-spotify-paying-google-cloud-ebb3bf180f15)
   provides some insight into how Spotify runs all of their infrastructure
   on Google Cloud and posits what they may be paying to run their

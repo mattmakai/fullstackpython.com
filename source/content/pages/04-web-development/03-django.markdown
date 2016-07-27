@@ -86,6 +86,12 @@ as of Django 1.8, 1.9.
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
 
+* This tutorial shows how to create
+  [a Django web app that can make phone calls and send text messages for automated surveys](https://www.twilio.com/docs/tutorials/walkthrough/automated-survey/python/django). 
+  The code is a really good example of a full Django project and is also
+  available 
+  [open source on GitHub](https://github.com/TwilioDevEd/automated-survey-django).
+
 * [Effective Django](http://effectivedjango.com/) is another free introduction
   to the web framework.
 
@@ -102,10 +108,6 @@ as of Django 1.8, 1.9.
 * The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
   explains the architecture of the resulting set up and includes Chef scripts
   to automate the deployment.
-
-* [Deploying a Django app on Amazon EC2 instance](http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/)
-  is a detailed walkthrough for deploying an example Django app to Amazon
-  Web Services.
 
 * This [step-by-step guide for Django](http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/)
   shows how to transmit data via AJAX with JQuery.
