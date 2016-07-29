@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### July
+* Added new [Why Use Python](why-use-python.html) resources to that page.
 * Updated the [NoSQL](/no-sql-datastore.html) page with a couple of new
   resources.
 

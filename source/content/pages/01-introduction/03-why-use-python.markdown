@@ -28,8 +28,9 @@ possible to criticize that these guides are not exact, every ranking shows
 Python as a top programming language within the top ten, if not the top five
 of all languages.  
 
-Most recently, the 
-[RedMonk January 2015 ranking](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/) had Python at #4.
+The IEEE ranked [Python as the #3 top programming language](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages)
+in 2016, while
+[RedMonk's January 2015 ranking](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/) had Python at #4.
 
 The 
 [TIOBE Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html),
@@ -105,3 +106,9 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   system versus statically typed languages, be sure to 
   [read this thorough explanation of the topic](http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html).
 
+* [Why I swapped C#.NET for Python as my default language and platform (and won’t be going back)](https://medium.com/@anthonypjshaw/why-i-swapped-c-net-for-python-as-my-default-language-and-platform-and-wont-be-going-back-e0063a25e491)
+  provides a viewpoint from someone who is not a professional developer but
+  uses coding to hack out some projects. He found Microsoft's .NET ecosystem
+  lacking when it came to satisfying his needs and Python filled the gap for
+  him with its wide array of open source code libraries, package management
+  and ability to work well on platforms other than Windows.
