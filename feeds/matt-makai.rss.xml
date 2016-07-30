@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 22 Jul 2016 00:00:00 -0400</lastBuildDate><item><title>Setting Up Python 3, Django &amp; Gunicorn on Linux Mint 17.3</title><link>https://www.fullstackpython.com/python-3-django-gunicorn-linux-mint-17.html</link><description>&lt;p&gt;Linux Mint 17.3 "Rosa" is December 2015 release of the polished and 
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 30 Jul 2016 00:00:00 -0400</lastBuildDate><item><title>Python for Entrepreneurs</title><link>https://www.fullstackpython.com/python-entrepreneurs.html</link><description>&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
+is a new video course by the creators of 
+&lt;a href="https://talkpython.fm/"&gt;Talk Python to Me&lt;/a&gt; and 
+&lt;a href="https://fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are creating this course and running a Kickstarter for it based on 
+feedback that it's still too damn difficult to turn basic Python programming 
+knowledge into a business to generate income as a side or full time project. 
+Both Michael and I have been able to make that happen for ourselves and we 
+want to share every difficult lesson we've learned through this course.&lt;/p&gt;
+&lt;p&gt;The Python for Entrepreneurs videos and content will dive into building 
+and deploying a real-world web application, marketing it to prospective 
+customers, handling search engine optimization, making money through credit 
+card payments, getting help from part-time contractors for niche tasks and 
+scaling up to meet traffic demands.&lt;/p&gt;
+&lt;p&gt;If this course hits the mark for what you want to do with Python,
+&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;check out the Kickstarter&lt;/a&gt; - we've 
+set up steep discounts for early backers.&lt;/p&gt;
+&lt;p&gt;If you have any questions, please reach out to 
+&lt;a href="https://twitter.com/mkennedy"&gt;Michael Kennedy&lt;/a&gt; 
+or me, &lt;a href="https://twitter.com/mattmakai"&gt;Matt Makai&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sat, 30 Jul 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-07-30:python-entrepreneurs.html</guid></item><item><title>Setting Up Python 3, Django &amp; Gunicorn on Linux Mint 17.3</title><link>https://www.fullstackpython.com/python-3-django-gunicorn-linux-mint-17.html</link><description>&lt;p&gt;Linux Mint 17.3 "Rosa" is December 2015 release of the polished and 
 widely-used Linux distribution. This Mint release includes both Python 2.7 
 and 3.4 by default, but in this tutorial we will download and install the 
 latest Python 3.5.1 version to run our Django application. &lt;/p&gt;
