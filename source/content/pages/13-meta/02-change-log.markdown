@@ -15,7 +15,16 @@ the
 
 
 ## 2016
+### August
+* Made a slew of improvements and added more resources to the 
+  [Python 2 or 3?](/python-2-or-3.html) page.
+
 ### July
+* New blog post with some background information on the 
+  [Python for Entrepreneurs Kickstarter](/blog/python-entrepreneurs.html).
+* Launched a 
+  [Kickstarter with Michael Kennedy to create a Python for Entrepreneurs](https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course)
+  video course!
 * Added new [Why Use Python](why-use-python.html) resources to that page.
 * Updated the [NoSQL](/no-sql-datastore.html) page with a couple of new
   resources.
