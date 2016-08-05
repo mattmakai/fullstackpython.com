@@ -127,6 +127,10 @@ to get started with these tutorials.
   shows how he configures and uses the editor so it sticks as his primary
   code editing tool.
 
+* [Why Atom Can't Replace Vim](https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1)
+  explains how the composability of Vim and the extensibility of Emacs
+  allow both editors to remain relevant and very useful in the 21st century.
+
 
 ## Vimrc resources
 These are a few resources for learning how to structure a `.vimrc` file. I
