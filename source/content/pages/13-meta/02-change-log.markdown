@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### August
+* Additional [Bottle](/bottle.html) resources.
 * New [Vim](/vim.html) resources.
 * Made a slew of improvements and added more resources to the 
   [Python 2 or 3?](/python-2-or-3.html) page.

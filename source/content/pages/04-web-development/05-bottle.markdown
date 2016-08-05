@@ -61,13 +61,21 @@ steps to more easily get your web application up and running.
 
 * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps).
 
-* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html)
-  provides a thorough view of basic concepts and features for the framework.
-
-* [Developing With Bottle](https://realpython.com/blog/python/developing-with-bottle-part-1/) details how to create a basic application with Bottle.
+* [Getting Started with Python, Bottle and Twilio SMS / MMS](https://www.twilio.com/blog/2016/08/getting-started-python-bottle-twilio-sms-mms.html)
+  shows how to build a simple Bottle web application that can send and 
+  receive text and picture messages.
 
 * This tutorial provides a walkthrough for
 [getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598).
+
+* [Developing With Bottle](https://realpython.com/blog/python/developing-with-bottle-part-1/) details how to create a basic application with Bottle.
+
+* The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html)
+  provides a thorough view of basic concepts and features for the framework.
+
+* [Running a Bottle app with Gunicorn](http://blog.yprez.com/running-a-bottle-app-with-gunicorn.html)
+  shows how to execute a simple Bottle web app with 
+  [Green Unicorn](/green-unicorn-gunicorn.html).
 
 * Here's a short code snippet for
   [creating a RESTful API with Bottle and MongoDB](http://myadventuresincoding.wordpress.com/2011/01/02/creating-a-rest-api-in-python-using-bottle-and-mongodb/).
