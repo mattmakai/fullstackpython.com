@@ -66,6 +66,11 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   is a higher-level Python wrapper for Redis with some caching, querying
   and data structure components build into the library.
 
+* [Real World Redis Tips](https://blog.heroku.com/real-world-redis-tips)
+  provides some guidance from Heroku's engineers from deploying Redis at
+  scale. The tips include setting an explicit idle connection timeout,
+  using a connection pooler and avoiding using `KEYS` in favor of `SCAN`.
+
 * [Writing Redis in Python with Asyncio](http://jamesls.com/writing-redis-in-python-with-asyncio-part-1.html)
   shows a detailed example for how to use the new Asyncio standard library in
   Python 3.4+ for working with Redis.
