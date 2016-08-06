@@ -41,6 +41,7 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   key-value pair storage system.
 
 
+
 ### Key-value pair resources
 * [What is a key-value store database?](http://dba.stackexchange.com/questions/607/what-is-a-key-value-store-database)
   is a Stack Overflow Q&A that straight on answers this subject.
@@ -78,6 +79,11 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 * [How to collect Redis metrics](https://www.datadoghq.com/blog/how-to-collect-redis-metrics/)
   shows how to use the Redis CLI client to grab key metrics on latency.
 
+### Redis Security
+Redis should be customized out of its default configuration to secure it
+against unauthorized and unauthenticated users. These resources provide
+some advice on Reids security and guarding against data breaches.
+
 * [Pentesting Redis servers](http://averagesecurityguy.info/2015/09/17/pentesting-redis-servers/)
   shows that security is important not only on your application but also
   the databases you're using as well.
@@ -87,6 +93,11 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   also a post where the main author of Redis 
   [cracks its security](http://www.antirez.com/news/96) to show the tradeoffs
   purposely made between ease of use and security in the default settings.
+
+* [Is your Redis server safe?](https://www.isredisallsafe.com/) is a tool
+  to test that your Redis instances are locked down. The tool is based on 
+  the blog post 
+  [a few things about Redis security](http://www.antirez.com/news/96).
 
 
 ## Document-oriented
