@@ -22,6 +22,9 @@ solution (like Django) or as a micro framework.
 [Falcon](http://falconframework.org/) is a minimalist web framework designed
 with web application speed as a top priority.
 
+* [Building a rate limiter in Python 3 with Falcon and run it via Docker](http://www.giantflyingsaucer.com/blog/?p=5910)
+  is an introductory tutorial for creating and running a simple but useful 
+  Falcon app.
 
 ## web.py
 [web.py](http://webpy.org/) is a Python web framework designed for simplicity
