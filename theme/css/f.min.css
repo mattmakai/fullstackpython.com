@@ -160,7 +160,7 @@ a.list-group-item.active:hover{background:#444;border:1px solid #222}
 .btn-full{width:100%;box-shadow:1px 2px 1px #222; padding-bottom: 4px;}
 p.under-btn{text-align:left;margin-top:20px}
 h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
-.smaller-item{font-size:.8em;padding:5px 0 5px 10px}
+.smaller-item{font-size:.8em;padding:5px 0 5px 10px;font-family: 'Helvetica Neue',sans-serif;}
 @media (max-width:1200px){h3.panel-head{font-size:22px} .select-next{min-height:300px}}@media (max-width:750px){.choose-next{margin-left:0} .select-next{min-height:100px} .smaller-item{font-size:1em;padding:15px 0 15px 10px}}@media (max-width:720px){.logo-header-section{margin:20px 40px 0 0}}.technical-diagram{margin:10px 0 5px 0}
 .see-also{margin-top: 20px; background: #22B24C; color: #eee;}
 .see-also a{color: #fff;}
@@ -183,3 +183,4 @@ a.submenu-item-first {margin-right: 12px;}
 a.submenu-item {margin-left: 12px; margin-right: 12px;}
 h1.blog-h1 {font-size: 36px;}
 .post-byline {font-size: 12px; color: #666; margin-bottom: 10px;}
+.list-group-link {

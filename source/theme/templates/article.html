@@ -12,22 +12,28 @@
 
 
 {% block content %}
-<div class="row">
-    <div class="col-md-12">
-      {% if article %}
-          <h1 class="blog-h1">{{ article.title }}</h1>
-          <div class="post-byline">
-            Posted by <a href="/about-author.html">Matt Makai</a> on 
-            {{ article.date.strftime('%B %d, %Y') }}.
-            {% if article.modified != article.date %}Last updated
-            {{ article.modified.strftime('%B %d, %Y') }}.{% endif %}
-          </div>
-          {{ article.content }}
-          <hr>
-          {% include "email-for-book.html" %}
+{% if article %}
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="blog-h1">{{ article.title }}</h1>
+      <div class="post-byline">
+        Posted by <a href="/about-author.html">Matt Makai</a> on 
+        {{ article.date.strftime('%B %d, %Y') }}.
+        {% if article.modified != article.date %}Last updated
+        {{ article.modified.strftime('%B %d, %Y') }}.{% endif %}
+      </div>
+      <!--<div width="100%" style="margin: 5px 0 10px 0; height: 250px; overflow: hidden; border-radius: 12px;">
+          <img src="{{ article.headerimage }}" alt="{{ article.headeralt }}" width="100%" style="height: 500px; margin: -100px 0 -100px 0;">
+      </div>-->
+      {{ article.content }}
+      <hr>
+        {% include "email-for-book.html" %}
       {% endif %}
     </div>
-</div>
+    <div class="col-md-offset-1 col-md-3">
+      {% include "article-sidebar.html" %}
+    </div>
+  </div>
 {% endblock %}
 
 {% block lower_banner %}
