@@ -5,8 +5,7 @@ SITENAME = u'Full Stack Python'
 SITEURL = 'https://www.fullstackpython.com'
 TIMEZONE = 'America/New_York'
 
-GITHUB_URL = 'https://github.com/makaimc/fullstackpython.com'
-DISQUS_SITENAME = 'makaimc'
+GITHUB_URL = 'https://github.com/mattmakai/fullstackpython.com'
 PDF_GENERATOR = False
 
 DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email',
@@ -26,7 +25,7 @@ MARKUP = ('rst', 'markdown',)
 
 SOCIAL = (
     ('Email', 'mailto:matthew.makai@gmail.com'),
-    ('GitHub', 'https://github.com/makaimc'),
+    ('GitHub', 'https://github.com/mattmakai'),
     ('Twitter', 'http://twitter.com/mattmakai'),
 )
 
