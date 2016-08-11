@@ -110,7 +110,7 @@ steps to more easily get your web application up and running.
 * [Decanter](http://gengo.github.io/decanter/) is a library for structuring
   Bottle projects.
 
-* [compare-python-web-frameworks](https://github.com/makaimc/compare-python-web-frameworks)
+* [compare-python-web-frameworks](https://github.com/mattmakai/compare-python-web-frameworks)
   provides an example application using Bottle as one of the implementations.
 
 

@@ -143,7 +143,7 @@ properly.
 
 ## Open source Python examples with WebSockets
 * The 
-  [python-websockets-example](https://github.com/makaimc/python-websockets-example)
+  [python-websockets-example](https://github.com/mattmakai/python-websockets-example)
   contains code to create a simple web application that provides WebSockets
   using Flask, Flask-SocketIO and gevent.
 

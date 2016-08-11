@@ -186,9 +186,9 @@ found on the [table of contents](/table-of-contents.html) page.
 Questions? Contact me via Twitter 
 [@fullstackpython](https://twitter.com/fullstackpython)
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
-the username [makaimc](https://github.com/makaimc).
+the username [mattmakai](https://github.com/mattmakai).
 
 See something wrong in this post? Fork 
-[this page's source on GitHub](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160626-django-gunicorn-mint-linux-17.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160626-django-gunicorn-mint-linux-17.markdown)
 and submit a pull request.
 

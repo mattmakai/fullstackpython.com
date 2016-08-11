@@ -39,9 +39,9 @@ WSGI server and the WSGI-compliant web app.
 
 Here is an example of a typical Django web application and how it is run
 by Gunicorn. We'll use the 
-[django\_defaults](https://github.com/makaimc/compare-python-web-frameworks/tree/master/django_defaults) 
-as an example Django project. Within the [django\_defaults](https://github.com/makaimc/compare-python-web-frameworks/tree/master/django_defaults/django_defaults) 
-project subdirectory, there is a short [wsgi.py](https://github.com/makaimc/compare-python-web-frameworks/blob/master/django_defaults/django_defaults/wsgi.py)
+[django\_defaults](https://github.com/mattmakai/compare-python-web-frameworks/tree/master/django_defaults) 
+as an example Django project. Within the [django\_defaults](https://github.com/mattmakai/compare-python-web-frameworks/tree/master/django_defaults/django_defaults) 
+project subdirectory, there is a short [wsgi.py](https://github.com/mattmakai/compare-python-web-frameworks/blob/master/django_defaults/django_defaults/wsgi.py)
 file with the following contents:
 
     """

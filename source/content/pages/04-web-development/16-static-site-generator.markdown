@@ -75,7 +75,7 @@ ones listed here are primarily coded in Python.
 * [Pelican](http://blog.getpelican.com/) 
   ([source code](https://github.com/getpelican/pelican)) 
   is a commonly used Python static website generator which is used to create 
-  [Full Stack Python](https://github.com/makaimc/fullstackpython.com). The
+  [Full Stack Python](https://github.com/mattmakai/fullstackpython.com). The
   primary templating engine is Jinja and Markdown, reStructuredText and
   AsciiDoc are supported with the default configuration.
 
@@ -132,7 +132,7 @@ ones listed here are primarily coded in Python.
 
 ### Open source Python static site generator examples
 * This site is 
-  [all open source in its own GitHub repository](https://github.com/makaimc/fullstackpython.com) 
+  [all open source in its own GitHub repository](https://github.com/mattmakai/fullstackpython.com) 
   under the MIT license. Fork away!
 
 * [Django REST Framework](https://github.com/tomchristie/django-rest-framework/tree/master/docs)

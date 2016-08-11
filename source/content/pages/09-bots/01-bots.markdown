@@ -32,7 +32,7 @@ often also called "chatbots", "assistants" or "agents."
   bot is a good base for a more complicated Slack bot that could use
   natural language processing or other more advanced parsing techniques.
   Either Python 2 or 3 can be used 
-  [with the code which is also available on GitHub](https://github.com/makaimc/slack-api-python-examples).
+  [with the code which is also available on GitHub](https://github.com/mattmakai/slack-api-python-examples).
 
 * [How to write a Slack bot in Python](https://medium.com/@julianmartinez/how-to-write-a-slack-bot-with-python-code-examples-4ed354407b98)
   is a solid code tutorial for building your first bot on the Slack

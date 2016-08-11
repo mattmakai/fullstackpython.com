@@ -71,7 +71,7 @@ Mac OS X while editing the markdown for this webpage (how meta!).
 
 Take a look at another example using these configuration options, this time
 with a light background and editing Python code from my
-[Choose Your Own Adventures Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations)
+[Choose Your Own Adventures Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations)
 project.
 
 <img src="/img/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;">

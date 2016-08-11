@@ -58,7 +58,7 @@ with Flask? Check out
 and then view [the same application built with Flask](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/flask).
 
 There is also a repository called
-[compare-python-web-frameworks](https://github.com/makaimc/compare-python-web-frameworks)
+[compare-python-web-frameworks](https://github.com/mattmakai/compare-python-web-frameworks)
 where the same web application is being coded with varying Python web 
 frameworks, templating engines and 
 [object-relational mappers](/object-relational-mappers-orms.html).

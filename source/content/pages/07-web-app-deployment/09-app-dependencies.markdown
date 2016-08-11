@@ -109,7 +109,7 @@ known as
 Setup.py is a standard for distributing and installing Python libraries.
 If you're building a Python library, such as 
 [requests](http://www.python-requests.org/en/latest/) or
-[underwear](https://github.com/makaimc/underwear) you must include setup.py
+[underwear](https://github.com/mattmakai/underwear) you must include setup.py
 so a dependency manager can correctly install both the library as well as
 additional dependencies for the library. There's still quite a bit of 
 confusion in the Python community over the difference between 

@@ -3,7 +3,7 @@ slug: python-3-django-gunicorn-ubuntu-1604-xenial-xerus
 meta: Step-by-step instructions for developing on Ubuntu 16.04 with Python 3, Django and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-09
-modified: 2016-05-09
+modified: 2016-08-10
 headerimage: /source/static/img/160509-ubuntu-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
@@ -19,7 +19,7 @@ start a new [Django](/django.html) web application project and run it with
 [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html).
 
 
-## Tools We'll Need
+## Tools We Need
 We will need a few tools to complete our project. Don't worry about 
 installing these just yet as we'll get to them as we progress through the
 tutorial. The tools and their current versions as of May 9, 2016 are:
@@ -33,7 +33,7 @@ tutorial. The tools and their current versions as of May 9, 2016 are:
 * [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) version 
   [19.4](http://docs.gunicorn.org/en/stable/news.html)
 
-If you're running on Mac OS X or Windows, use virtualization software such
+If you are running Mac OS X or Windows, use virtualization software such
 as [Parallels](https://www.parallels.com/products/desktop/) 
 (this is what I use, but it's Mac OS X-only) or 
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) with the 
@@ -148,9 +148,9 @@ found on the [table of contents](/table-of-contents.html) page.
 Questions? Contact me via Twitter 
 [@fullstackpython](https://twitter.com/fullstackpython)
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
-the username [makaimc](https://github.com/makaimc).
+the username [mattmakai](https://github.com/mattmakai).
 
 See something wrong in this post? Fork 
-[this page's source on GitHub](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown)
 and submit a pull request.
 

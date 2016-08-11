@@ -79,9 +79,9 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   and [part 3](https://www.twilio.com/blog/2015/07/choose-your-own-adventure-presentations-flask-reveal-js-websockets.html) 
   that'll show you how to use forms and SQLAlchemy. There is also a 
   companion open source 
-  [GitHub repository](https://github.com/makaimc/choose-your-own-adventure-presentations) 
+  [GitHub repository](https://github.com/mattmakai/choose-your-own-adventure-presentations) 
   for the app with 
-  [tags for each step](https://github.com/makaimc/choose-your-own-adventure-presentations/releases) 
+  [tags for each step](https://github.com/mattmakai/choose-your-own-adventure-presentations/releases) 
   in the blog posts.
 
 * This [simple Flask app uses Twilio Voice](https://www.twilio.com/blog/2015/09/warm-phone-call-transfers-with-python-flask-and-twilio-voice.html)
@@ -179,7 +179,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 
 
 ## Open source Flask example projects
-* [Choose Your Own Adventure Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations)
+* [Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations)
   combines Flask with [Reveal.js](http://lab.hakim.se/reveal-js/) and text 
   messages to create presentations where the audience can vote on how the 
   story should proceed. The code is all open source under an MIT license

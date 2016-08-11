@@ -36,7 +36,7 @@ Every one of the HTML lines above is standard for each page on Full Stack Python
 with the exception of the `<meta name="description"...` line which provides
 a unique short description of what the individual page contains.
 
-The [base.html Jinja template](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/theme/templates/base.html) used to generate Full Stack Python
+The [base.html Jinja template](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/theme/templates/base.html) used to generate Full Stack Python
 allows every page on the site to have consistent HTML but 
 dynamically generate the pieces that need to change between pages when 
 the [static site generator](/static-site-generator.html) executes. The below

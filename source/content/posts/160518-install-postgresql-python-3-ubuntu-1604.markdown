@@ -3,7 +3,7 @@ slug: postgresql-python-3-psycopg2-ubuntu-1604
 meta: A guide for installing and using PostgreSQL with Python 3 and psycopg2 on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-18
-modified: 2016-05-18
+modified: 2016-08-10
 headerimage: /source/static/img/160518-postgresql-ubuntu-1604/header.jpg
 headeralt: PostgreSQL and Ubuntu logos. Copyright their respective owners.
 
@@ -185,5 +185,5 @@ Questions? Tweet [@fullstackpython](https://twitter.com/fullstackpython)
 or post a message on the 
 [Full Stack Python Facebook page](https://www.facebook.com/fullstackpython). 
 Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown).
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown).
 

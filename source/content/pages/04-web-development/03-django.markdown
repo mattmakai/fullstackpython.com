@@ -274,7 +274,7 @@ to handle these files properly.
   [Twilio Client](https://www.twilio.com/client) to turn a user's web 
   browser into a full-fledged phone. Pretty awesome!
 
-* [Txt 2 React](https://github.com/makaimc/txt2react) is a full Django web
+* [Txt 2 React](https://github.com/mattmakai/txt2react) is a full Django web
   app that allows audiences to text in during a presentation with feedback
   or questions.
 

@@ -115,7 +115,7 @@ questions about your coding issues.
 * [PyVideo](http://www.pyvideo.org/) organizes and indexes thousands of Python
   videos from both major conferences and meetups.
 
-* [Incredible Technical Speakers](https://github.com/makaimc/incredible-technical-speakers)
+* [Incredible Technical Speakers](https://github.com/mattmakai/incredible-technical-speakers)
   is a repository I put together that features software developer speakers
   talking about programming language agnostic topics. The list is intended
   to emphasize professional software developers who also have the ability to

@@ -179,9 +179,9 @@ found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160626-django-gunicorn-mint-linux-17.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160626-django-gunicorn-mint-linux-17.markdown"&gt;this page's source on GitHub&lt;/a&gt;
 and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Fri, 22 Jul 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-26:python-3-django-gunicorn-linux-mint-17.html</guid></item><item><title>Configuring Python 3, Pyramid and Gunicorn on Ubuntu 16.04</title><link>https://www.fullstackpython.com/python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Canonical's Ubuntu 16.04 Long Term Support (LTS)&lt;/a&gt; Linux
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt;, also known as "Xenial Xerus",
 was released in April 2016. It is the first Ubuntu release to include 
@@ -323,8 +323,8 @@ production environment, check out the
 &lt;p&gt;To decide what to do next with your Python project, check out the
 &lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160619-pyramid-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Tue, 21 Jun 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-19:python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>Replying to SMS Text Messages with Python and Bottle</title><link>https://www.fullstackpython.com/reply-sms-text-messages-python-bottle.html</link><description>&lt;p&gt;Python applications can 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160619-pyramid-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-19:python-3-pyramid-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>Replying to SMS Text Messages with Python and Bottle</title><link>https://www.fullstackpython.com/reply-sms-text-messages-python-bottle.html</link><description>&lt;p&gt;Python applications can 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;easily send SMS&lt;/a&gt; 
 by using a &lt;a href="/application-programming-interfaces.html"&gt;web API&lt;/a&gt;. 
 Web apps built with the &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; framework can also reply
@@ -387,7 +387,7 @@ that the app is running. The other route will handle and respond to incoming
 HTTP POST requests from Twilio. Create a new file named &lt;code&gt;app.py&lt;/code&gt; in your 
 in the directory where you want to store this Python project.&lt;/p&gt;
 &lt;p&gt;Write the following code in the new &lt;code&gt;app.py&lt;/code&gt; file. There is also
-&lt;a href="https://gist.github.com/makaimc/6ec3b46e40a1020a3ea9c772c601199a"&gt;a GitHub Gist&lt;/a&gt; 
+&lt;a href="https://gist.github.com/mattmakai/6ec3b46e40a1020a3ea9c772c601199a"&gt;a GitHub Gist&lt;/a&gt; 
 with the code that you can copy and paste.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;
@@ -490,9 +490,9 @@ messages! &lt;/p&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160605-reply-sms-python-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sun, 05 Jun 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-05:reply-sms-text-messages-python-bottle.html</guid></item><item><title>How to Build Your First Slack Bot with Python</title><link>https://www.fullstackpython.com/build-first-slack-bot-python.html</link><description>&lt;p&gt;&lt;a href="/bots.html"&gt;Bots&lt;/a&gt; are a useful way to interact with chat services such as 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160605-reply-sms-python-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-05:reply-sms-text-messages-python-bottle.html</guid></item><item><title>How to Build Your First Slack Bot with Python</title><link>https://www.fullstackpython.com/build-first-slack-bot-python.html</link><description>&lt;p&gt;&lt;a href="/bots.html"&gt;Bots&lt;/a&gt; are a useful way to interact with chat services such as 
 &lt;a href="https://slack.com/"&gt;Slack&lt;/a&gt;. If you have never built a bot before, this 
 post provides an easy starter tutorial for combining the 
 &lt;a href="https://api.slack.com/"&gt;Slack API&lt;/a&gt; with Python to create your first bot.&lt;/p&gt;
@@ -517,7 +517,7 @@ To run our Python code we need:&lt;/p&gt;
 &lt;p&gt;It is also useful to have the &lt;a href="https://api.slack.com/"&gt;Slack API docs&lt;/a&gt; handy 
 while you're building this tutorial.&lt;/p&gt;
 &lt;p&gt;All the code for this tutorial is available open source under the MIT license
-in the &lt;a href="https://github.com/makaimc/slack-starterbot"&gt;slack-starterbot&lt;/a&gt; public
+in the &lt;a href="https://github.com/mattmakai/slack-starterbot"&gt;slack-starterbot&lt;/a&gt; public
 repository.&lt;/p&gt;
 &lt;h2&gt;Establishing Our Environment&lt;/h2&gt;
 &lt;p&gt;We now know what tools we need for our project so let's get our development
@@ -711,7 +711,7 @@ just posts a message back in the Slack channel telling the user to write
 some more Python code!&lt;/p&gt;
 &lt;p&gt;Here is how the entire program should look when it's all put together
 (you can also 
-&lt;a href="https://github.com/makaimc/slack-starterbot/blob/master/starterbot.py"&gt;view the file in GitHub&lt;/a&gt;):&lt;/p&gt;
+&lt;a href="https://github.com/mattmakai/slack-starterbot/blob/master/starterbot.py"&gt;view the file in GitHub&lt;/a&gt;):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;slackclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SlackClient&lt;/span&gt;
@@ -801,9 +801,9 @@ Check out these posts to learn what you could do:&lt;/p&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sat, 04 Jun 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</guid></item><item><title>Responding to SMS Text Messages with Python &amp; Flask</title><link>https://www.fullstackpython.com/respond-sms-text-messages-python-flask.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</guid></item><item><title>Responding to SMS Text Messages with Python &amp; Flask</title><link>https://www.fullstackpython.com/respond-sms-text-messages-python-flask.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;easy to send from Python applications&lt;/a&gt; 
 with a
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
@@ -861,7 +861,7 @@ is running and another that handles incoming HTTP POST requests. Create
 a new file named &lt;code&gt;app.py&lt;/code&gt; in your home directory or where you choose to
 store your Python project files.&lt;/p&gt;
 &lt;p&gt;Within &lt;code&gt;app.py&lt;/code&gt; write the following code. You can also see 
-&lt;a href="https://gist.github.com/makaimc/8ab434ccb604d3ba5bde817a183e0bde"&gt;this code in a GitHub Gist&lt;/a&gt; 
+&lt;a href="https://gist.github.com/mattmakai/8ab434ccb604d3ba5bde817a183e0bde"&gt;this code in a GitHub Gist&lt;/a&gt; 
 if that's easier to copy and paste.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;
@@ -970,9 +970,9 @@ similar to the code we just wrote.&lt;/p&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160530-respond-sms-text-messages-python-flask.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Mon, 30 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-30:respond-sms-text-messages-python-flask.html</guid></item><item><title>How to Install and Use MySQL on Ubuntu 16.04</title><link>https://www.fullstackpython.com/install-mysql-ubuntu-1604.html</link><description>&lt;p&gt;&lt;a href="/mysql.html"&gt;MySQL&lt;/a&gt; is a common open source 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160530-respond-sms-text-messages-python-flask.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-30:respond-sms-text-messages-python-flask.html</guid></item><item><title>How to Install and Use MySQL on Ubuntu 16.04</title><link>https://www.fullstackpython.com/install-mysql-ubuntu-1604.html</link><description>&lt;p&gt;&lt;a href="/mysql.html"&gt;MySQL&lt;/a&gt; is a common open source 
 &lt;a href="/databases.html"&gt;relational database&lt;/a&gt; for creating, reading, updating 
 and deleting data in &lt;a href="/web-frameworks.html"&gt;Python web applications&lt;/a&gt;.
 Let's learn how to install MySQL on &lt;a href="/ubuntu.html"&gt;Ubuntu 16.04&lt;/a&gt; and then 
@@ -1099,7 +1099,7 @@ pages for more tutorials.&lt;/p&gt;
 or post a message on the 
 &lt;a href="https://www.facebook.com/fullstackpython"&gt;Full Stack Python Facebook page&lt;/a&gt;. 
 Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160528-install-mysql-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sat, 28 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-28:install-mysql-ubuntu-1604.html</guid></item><item><title>Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04</title><link>https://www.fullstackpython.com/postgresql-python-3-psycopg2-ubuntu-1604.html</link><description>&lt;p&gt;&lt;a href="/postgresql.html"&gt;PostgreSQL&lt;/a&gt; is a powerful open source 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160528-install-mysql-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-28:install-mysql-ubuntu-1604.html</guid></item><item><title>Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04</title><link>https://www.fullstackpython.com/postgresql-python-3-psycopg2-ubuntu-1604.html</link><description>&lt;p&gt;&lt;a href="/postgresql.html"&gt;PostgreSQL&lt;/a&gt; is a powerful open source 
 &lt;a href="/databases.html"&gt;relational database&lt;/a&gt; frequently used to create, read,
 update and delete &lt;a href="/web-frameworks.html"&gt;Python web application&lt;/a&gt; data.
 &lt;a href="http://pythonhosted.org/psycopg2/"&gt;Psycopg2&lt;/a&gt; is a PostgreSQL database 
@@ -1260,7 +1260,7 @@ pages for more tutorials.&lt;/p&gt;
 or post a message on the 
 &lt;a href="https://www.facebook.com/fullstackpython"&gt;Full Stack Python Facebook page&lt;/a&gt;. 
 Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 18 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-18:postgresql-python-3-psycopg2-ubuntu-1604.html</guid></item><item><title>How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</title><link>https://www.fullstackpython.com/install-redis-use-python-3-ubuntu-1604.html</link><description>&lt;p&gt;&lt;a href="http://redis.io"&gt;Redis&lt;/a&gt; is an in-memory key-value pair 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-18:postgresql-python-3-psycopg2-ubuntu-1604.html</guid></item><item><title>How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</title><link>https://www.fullstackpython.com/install-redis-use-python-3-ubuntu-1604.html</link><description>&lt;p&gt;&lt;a href="http://redis.io"&gt;Redis&lt;/a&gt; is an in-memory key-value pair 
 &lt;a href="/no-sql-datastore.html"&gt;NoSQL data store&lt;/a&gt; often used 
 for &lt;a href="/web-frameworks.html"&gt;web application&lt;/a&gt; sessions,
 transient &lt;a href="/data.html"&gt;data&lt;/a&gt; and as a broker for 
@@ -1391,7 +1391,7 @@ read, modify and delete keys and values in Redis.&lt;/p&gt;
 or post a message on the 
 &lt;a href="https://www.facebook.com/fullstackpython"&gt;Full Stack Python Facebook page&lt;/a&gt;. 
 Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160516-install-redis-use-python-3-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Mon, 16 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-16:install-redis-use-python-3-ubuntu-1604.html</guid></item><item><title>How to Send MMS Picture Messages with Python</title><link>https://www.fullstackpython.com/send-mms-picture-messages-python.html</link><description>&lt;p&gt;Multimedia Message Service (MMS) picture and video messages are a common 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160516-install-redis-use-python-3-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-16:install-redis-use-python-3-ubuntu-1604.html</guid></item><item><title>How to Send MMS Picture Messages with Python</title><link>https://www.fullstackpython.com/send-mms-picture-messages-python.html</link><description>&lt;p&gt;Multimedia Message Service (MMS) picture and video messages are a common 
 extension to the Short Message Service (SMS) system for sending text 
 messages. Using a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;
@@ -1505,9 +1505,9 @@ gets it will be able to send and receive messages through your account.&lt;/p&gt
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160515-sending-mms-picture-messages-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sun, 15 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-15:send-mms-picture-messages-python.html</guid></item><item><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;The &lt;a href="/ubuntu.html"&gt;Ubuntu 16.04 Long Term Support (LTS)&lt;/a&gt; Linux
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160515-sending-mms-picture-messages-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-15:send-mms-picture-messages-python.html</guid></item><item><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;The &lt;a href="/ubuntu.html"&gt;Ubuntu 16.04 Long Term Support (LTS)&lt;/a&gt; Linux
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released in April 2016.
 This latest Ubuntu release is named "Xenial Xerus" and
 it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt;,
@@ -1645,8 +1645,8 @@ production environment, check out the
 &lt;p&gt;To decide what to do next with your Python project, check out the
 &lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160513-bottle-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Fri, 13 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>How to Send SMS Text Messages with Python</title><link>https://www.fullstackpython.com/send-sms-text-messages-python.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160513-bottle-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>How to Send SMS Text Messages with Python</title><link>https://www.fullstackpython.com/send-sms-text-messages-python.html</link><description>&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
 all over the world. It is easy to send SMS text messages from a 
 &lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; application using a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
@@ -1747,10 +1747,10 @@ your account to send and receive messages.&lt;/p&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160511-send-sms-text-message-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 11 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</guid></item><item><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt;'s latest Long Term Support (LTS) 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160511-send-sms-text-message-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</guid></item><item><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt;'s latest Long Term Support (LTS) 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last month, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
 it's the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 
@@ -1887,9 +1887,9 @@ found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Tue, 10 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt; released the newest Long Term Support (LTS) 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt; released the newest Long Term Support (LTS) 
 version of its &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; in April 2016. 
 The update brings Ubuntu to version 16.04 and its latest code name is 
 "Xenial Xerus". 16.04 is the first Ubuntu release to include 
@@ -1897,7 +1897,7 @@ The update brings Ubuntu to version 16.04 and its latest code name is
 &lt;p&gt;Let's use this newest Ubuntu release along with Python version 3.5 to 
 start a new &lt;a href="/django.html"&gt;Django&lt;/a&gt; web application project and run it with 
 &lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Tools We'll Need&lt;/h2&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
 &lt;p&gt;We will need a few tools to complete our project. Don't worry about 
 installing these just yet as we'll get to them as we progress through the
 tutorial. The tools and their current versions as of May 9, 2016 are:&lt;/p&gt;
@@ -1911,7 +1911,7 @@ tutorial. The tools and their current versions as of May 9, 2016 are:&lt;/p&gt;
 &lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
   &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you're running on Mac OS X or Windows, use virtualization software such
+&lt;p&gt;If you are running Mac OS X or Windows, use virtualization software such
 as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; 
 (this is what I use, but it's Mac OS X-only) or 
 &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;VirtualBox&lt;/a&gt; with the 
@@ -2004,10 +2004,10 @@ found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt;
 &lt;p&gt;Questions? Contact me via Twitter 
 &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
-the username &lt;a href="https://github.com/makaimc"&gt;makaimc&lt;/a&gt;.&lt;/p&gt;
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
-&lt;a href="https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Mon, 09 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>The Full Stack Python Blog</title><link>https://www.fullstackpython.com/full-stack-python-blog.html</link><description>&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
+and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</guid></item><item><title>The Full Stack Python Blog</title><link>https://www.fullstackpython.com/full-stack-python-blog.html</link><description>&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
 the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, &lt;a href="/servers.html"&gt;server&lt;/a&gt;, 
 operating system, web server and WSGI server pages. Since then, the pages
 have expanded out into a 
@@ -2022,4 +2022,4 @@ plenty more Twilio tutorials, but this &lt;a href="/blog.html"&gt;Full Stack Pyt
 is the spot for technical posts that fall outside the Twilio domain.&lt;/p&gt;
 &lt;p&gt;Let me know what you think and what tutorials you'd like to see in the future. 
 Hit me up on Twitter &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
-or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sun, 08 May 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</guid></item></channel></rss>
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</guid></item></channel></rss>

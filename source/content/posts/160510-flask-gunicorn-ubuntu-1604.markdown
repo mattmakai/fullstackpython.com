@@ -3,7 +3,7 @@ slug: python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus
 meta: Instructions for setting up Ubuntu 16.04 with Python 3, Flask and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-10
-modified: 2016-05-10
+modified: 2016-08-10
 headerimage: /source/static/img/160510-ubuntu-flask-gunicorn/header.jpg
 headeralt: Flask, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
@@ -171,8 +171,8 @@ found on the [table of contents](/table-of-contents.html) page.
 Questions? Contact me via Twitter 
 [@fullstackpython](https://twitter.com/fullstackpython)
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
-the username [makaimc](https://github.com/makaimc).
+the username [mattmakai](https://github.com/mattmakai).
 
 Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown).
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown).
 

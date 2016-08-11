@@ -17,16 +17,16 @@ at [Twilio](https://www.twilio.com/) in San Francisco, California.
 Other projects by Matt include 
 [The Full Stack Python Guide to Deployments book](http://www.deploypython.com/), 
 [Coding Across America](http://www.codingacrossamerica.com/), 
-[Underwear](https://github.com/makaimc/underwear) and
-[Choose Your Own Adventure Presentations](https://github.com/makaimc/choose-your-own-adventure-presentations). You can reach him by 
+[Underwear](https://github.com/mattmakai/underwear) and
+[Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations). You can reach him by 
 email at matthew.makai@gmail.com,
 [Twitter @mattmakai](https://twitter.com/mattmakai)
-or on [GitHub at makaimc](https://github.com/makaimc).
+or on [GitHub at mattmakai](https://github.com/mattmakai).
 
 Read my thoughts on the "full stack" trend in a 
 [post I wrote for O'Reilly Radar](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
 
 Typos, inaccurate statements or general areas for improvement can be handled
 through an issue ticket or pull request on
-[GitHub](https://github.com/makaimc/fullstackpython.com/).
+[GitHub](https://github.com/mattmakai/fullstackpython.com/).
 

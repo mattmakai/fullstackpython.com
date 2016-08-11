@@ -144,7 +144,7 @@ server running on port 8000:
 
 Note that the above code is a simplified version of a production-ready Nginx
 configuration. For real SSL and non-SSL templates, take a look at the
-[Underwear web server templates](https://github.com/makaimc/underwear/tree/master/underwear/roles/web/templates) on GitHub.
+[Underwear web server templates](https://github.com/mattmakai/underwear/tree/master/underwear/roles/web/templates) on GitHub.
 
 
 ## WSGI servers

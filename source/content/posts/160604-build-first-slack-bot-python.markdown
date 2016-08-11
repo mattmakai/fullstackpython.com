@@ -3,7 +3,7 @@ slug: build-first-slack-bot-python
 meta: Learn how to build a simple Slack bot in Python, no prior bot experience needed. 
 category: post
 date: 2016-06-04
-modified: 2016-06-04
+modified: 2016-08-10
 headerimage: /source/static/img/160604-simple-python-slack-bot/header.jpg
 headeralt: Slack and Python logos. Copyright their respective owners.
 
@@ -37,7 +37,7 @@ It is also useful to have the [Slack API docs](https://api.slack.com/) handy
 while you're building this tutorial.
 
 All the code for this tutorial is available open source under the MIT license
-in the [slack-starterbot](https://github.com/makaimc/slack-starterbot) public
+in the [slack-starterbot](https://github.com/mattmakai/slack-starterbot) public
 repository.
 
 
@@ -261,7 +261,7 @@ some more Python code!
 
 Here is how the entire program should look when it's all put together
 (you can also 
-[view the file in GitHub](https://github.com/makaimc/slack-starterbot/blob/master/starterbot.py)):
+[view the file in GitHub](https://github.com/mattmakai/slack-starterbot/blob/master/starterbot.py)):
 
 ```python
 import os
@@ -362,8 +362,8 @@ Check out these posts to learn what you could do:
 Questions? Contact me via Twitter 
 [@fullstackpython](https://twitter.com/fullstackpython)
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
-the username [makaimc](https://github.com/makaimc).
+the username [mattmakai](https://github.com/mattmakai).
 
 Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/makaimc/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown).
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown).
 
