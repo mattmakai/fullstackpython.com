@@ -79,6 +79,12 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 * [How to collect Redis metrics](https://www.datadoghq.com/blog/how-to-collect-redis-metrics/)
   shows how to use the Redis CLI client to grab key metrics on latency.
 
+* [You should revise your Redis max connections setting](https://medium.com/appaloosa-store-engineering/you-should-revise-your-redis-max-connections-setting-8136f063c916)
+  is a retrospective from a hard web application failure due to Redis
+  connections maxing out on Heroku, and how to avoid this in your own
+  applications by modifying your `redis.conf` settings.
+
+
 ### Redis Security
 Redis should be customized out of its default configuration to secure it
 against unauthorized and unauthenticated users. These resources provide
