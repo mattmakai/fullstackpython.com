@@ -31,10 +31,10 @@ speed up their progress in getting their application working.
 Python is not used in a web browser. The language executed in browsers
 such as Chrome, Firefox and Internet Explorer is 
 [JavaScript](/javascript.html). Projects such as [pyjs](http://pyjs.org/) 
-can compile from Python to JavaScript. However, most Python developers are 
-write their web applications in a combination of Python, which is executed
-on the server side and JavaScript, which is downloaded to the web browser
-client and executed there.
+can compile from Python to JavaScript. However, most Python developers 
+write their web applications using a combination of Python and JavaScript.
+Python is executed on the server side while JavaScript is downloaded to
+the client and run by the web browser.
 
 
 ### Web development resources
