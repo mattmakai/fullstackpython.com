@@ -130,6 +130,11 @@ developers learn PostgreSQL if they do not already know MySQL.
   a story about how one company went through dramatic growth and had to keep
   up with it by quickly scaling their MySQL database.
 
+* [Tracker: Ingesting MySQL data at scale - (Part 1)](https://engineering.pinterest.com/blog/tracker-ingesting-mysql-data-scale-part-1)
+  is the first blog post in a series explaining Pinterest's tool to
+  load large volumes of data into MySQL from other internal sources
+  such as Kafka and Redis.
+
 * [Monitoring MySQL metrics](https://www.datadoghq.com/blog/monitoring-mysql-performance-metrics/)
   is the first of a three part series, with the other parts on 
   [collecting metrics](https://www.datadoghq.com/blog/collecting-mysql-statistics-and-metrics/)
