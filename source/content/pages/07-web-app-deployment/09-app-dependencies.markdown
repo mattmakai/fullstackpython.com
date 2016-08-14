@@ -119,6 +119,12 @@ further clarification.
 
 
 ## Application dependency resources
+* [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
+  is a wonderfully written blog post. It provides historical context on why
+  Python's code library packaging was painful for a long time, and what's 
+  been fixed to make building and installing application dependencies so
+  much better.
+
 * [Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
   [virtualenv and pip basics](http://jonathanchu.is/posts/virtualenv-and-pip-basics/).
 
