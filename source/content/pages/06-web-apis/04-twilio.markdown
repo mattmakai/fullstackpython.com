@@ -27,8 +27,25 @@ if you do not know the unique telecommunications protocols such as
 Session Initiation Protocol (SIP). Twilio's API abstracts the 
 telecommunications pieces so as a developer you can simply use your 
 favorite programming languages and frameworks in your application.
-For example, here's how you can send an outbound SMS using a few lines
-of Python code:
+For example, here's how you can send an 
+[outbound SMS](https://www.twilio.com/docs/quickstart/python/sms/sending-via-rest) 
+using a few lines of Python code:
+
+    # import the Twilio helper library (installed with pip install twilio)
+    from twilio.rest import TwilioRestClient
+
+    # replace the placeholder strings in the following code line with 
+    # your Twilio Account SID and Auth Tokenfrom the Twilio Console
+    client = TwilioRestClient("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
+
+    # change the "from_" number to your Twilio number and the "to" number
+    # to any phone number you want to send the message to 
+    client.messages.create(to="+19732644152", from_="+12023358536", 
+                           body="Hello from Python!")
+
+
+Learn more about the above code in the 
+[How to Send SMS Text Messages with Python tutorial](/blog/send-sms-text-messages-python.html).
 
 
 ## How is Twilio's documentation for Python developers?
