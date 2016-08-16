@@ -231,6 +231,10 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   provides another starting project with sign up, log in and password
   reset.
 
+* The company Sunscrapers provides this 
+  [Flask boilerplate project with SQLAlchemy, py.test and Celery](https://github.com/sunscrapers/flask-boilerplate)
+  baked into the Flask project structure.
+
 
 ## Flask framework learning checklist
 1. [Install Flask](http://flask.pocoo.org/docs/installation/) on
