@@ -183,6 +183,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/twilio.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/bottle.html</loc>
     <priority>1.0</priority>
   </url>

@@ -16,6 +16,9 @@ the
 
 ## 2016
 ### August
+* Added a [Twilio API](/twilio.html) page to the APIs chapter. May add more
+  pages that provide Python guidance for using popular APIs like Slack,
+  Google, Sendgrid, etc.
 * Updated GitHub username references to 
   [mattmakai](https://github.com/mattmakai) from makaimc (old username).
 * Additional [Bottle](/bottle.html) resources.
