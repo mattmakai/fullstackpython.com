@@ -184,6 +184,11 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * If you're just getting started with PostgreSQL here are 
   [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
 
+* [Loading Google Analytics data to PostgreSQL using Python](https://www.compose.com/articles/loading-google-analytics-data-to-postgresql-using-python/)
+  is a quality tutorial that combines [API calls](/api-integration.html)
+  with psycopg and PostgreSQL to take data from Google Analytics and save
+  it in a PostgreSQL database.
+
 * The title's a bit presumptuous but here's a useful list of 
   [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
 
