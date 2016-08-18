@@ -42,6 +42,8 @@ questions about your coding issues.
   pieces fit together. 
   The [talk slides](http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html) are also available.
 
+* All of [EuroPython 2016's talks are available on a YouTube playlist](https://www.youtube.com/playlist?list=PL8uoeex94UhE3FDvjacSlHFffoNEoPzzm).
+
 * Kate Heddleston and I gave a talk at DjangoCon 2014 called
   [Choose Your Own Django Deployment Adventure](https://www.youtube.com/watch?v=QrFEKghISEI)
   which walked through many of the scenarios you'd face when deploying your
