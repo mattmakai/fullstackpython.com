@@ -60,6 +60,10 @@ for fellow developers.
   idiomatic Python versions with entire open source applications in
   [Django](/django.html) and [Flask](/flask.html).
 
+* IBM's Bluemix blog contains a nice tutorial on building an 
+  [IoT Python app with a Raspberry Pi and Bluemix](https://developer.ibm.com/bluemix/2015/04/02/tutorial-using-a-raspberry-pi-python-iot-twilio-bluemix/)
+  that uses Twilio to interact with the Raspberry Pi.
+
 * The [Python tag on the Twilio blog](https://www.twilio.com/blog/tag/python)
   provides walkthroughs for 
   [Django](https://www.twilio.com/blog/2015/12/city-chat-with-python-django-and-twilio-ip-messaging.html), 
