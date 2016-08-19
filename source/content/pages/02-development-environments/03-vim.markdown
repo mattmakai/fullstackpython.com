@@ -131,6 +131,13 @@ to get started with these tutorials.
   explains how the composability of Vim and the extensibility of Emacs
   allow both editors to remain relevant and very useful in the 21st century.
 
+* [Things About Vim I Wish I Knew Earlier](https://blog.petrzemek.net/2016/04/06/things-about-vim-i-wish-i-knew-earlier/)
+  explores the lessons one developer learned while exclusively using Vim
+  for several years. The author includes using relative instead of absolute
+  line numbering, setting numerous configuration options and fuzzy finding
+  to quickly open files in other directories rather than expanding the 
+  whole path.
+
 
 ## Vimrc resources
 These are a few resources for learning how to structure a `.vimrc` file. I
