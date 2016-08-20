@@ -58,7 +58,11 @@ less expensive set up or a cloud-based development environment.
 ## Proprietary (closed source) editors
 * [Sublime Text](http://www.sublimetext.com/) versions 2 and 3 (currently
   in beta) are popular text editors that can be extended with code completion,
-  linting, syntax highlighting and other features using plugins.
+  linting, syntax highlighting and other features using plugins. If you
+  are considering using Sublime Text for Python development, check out this
+  [2016 in review - likes and dislikes about Sublime Text](https://dbader.org/blog/sublime-text-for-python-development-2016-review)
+  post that summarizes many of the positives and negatives of using the
+  editor.
 
 * [Komodo](http://komodoide.com/) is a cross-platform text editor and IDE
   for major languages including Python, Ruby, JavaScript, Go and more.
