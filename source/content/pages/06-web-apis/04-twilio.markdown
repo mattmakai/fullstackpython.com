@@ -60,6 +60,11 @@ for fellow developers.
   idiomatic Python versions with entire open source applications in
   [Django](/django.html) and [Flask](/flask.html).
 
+* [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+  includes 
+  [a chapter on sending text messages](https://automatetheboringstuff.com/chapter16/) 
+  that uses Twilio to get the job done.
+
 * IBM's Bluemix blog contains a nice tutorial on building an 
   [IoT Python app with a Raspberry Pi and Bluemix](https://developer.ibm.com/bluemix/2015/04/02/tutorial-using-a-raspberry-pi-python-iot-twilio-bluemix/)
   that uses Twilio to interact with the Raspberry Pi.
@@ -71,14 +76,14 @@ for fellow developers.
   and [Bottle](https://www.twilio.com/blog/2016/08/getting-started-python-bottle-twilio-sms-mms.html) 
   apps to learn from while building your own projects.
 
-* [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
-  includes 
-  [a chapter on sending text messages](https://automatetheboringstuff.com/chapter16/) 
-  that uses Twilio to get the job done.
-
 * [Google Cloud recommends developers use Twilio](https://cloud.google.com/appengine/docs/python/sms/twilio)
   for communications in their apps and provides a short walkthrough for
   Python developers.
+
+* [SMS Tracking Notifications](https://www.easypost.com/sms-tracking-tutorial)
+  is a fun tutorial that combines two APIs together - Twilio and 
+  [Easypost](https://www.easypost.com) to track packages sent through the
+  Easypost service.
 
 
 #### Disclaimer
