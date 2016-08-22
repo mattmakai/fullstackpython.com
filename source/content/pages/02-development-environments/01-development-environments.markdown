@@ -80,21 +80,22 @@ less expensive set up or a cloud-based development environment.
   [Eclipse](https://www.eclipse.org/).
 
 
+## Hosted development environments
+Several cloud-based development environments have popped up over the past
+several years. These hosted environments can work well when you are learning
+or stuck on a machine with a web browser but otherwise no administrative 
+privileges to install your own software. Most of these have free tiers for 
+getting started and then require payment as you scale up your application.
 
-## Hosted development environment services
-In the past couple of years several cloud-based development environments
-have popped up. These can work great for when you're learning or stuck on
-a machine with only a browser but no way to install your own software. Most
-of these have free tiers for getting started and paid tiers as you scale
-up your application.
+* [Nitrous.io](https://www.nitrous.io/) provides a cloud IDE as well as 
+  hosting services that assist with scaling the application as traffic
+  ramps up.
 
-* [Nitrous.io](https://www.nitrous.io/)
+* [Cloud9](https://c9.io/) began as an independent company and is now owned 
+  by Amazon as part of Amazon Web Services.
 
-* [Cloud9](https://c9.io/)
-
-* [Terminal](https://www.terminal.com/)
-
-* [Koding](https://koding.com/)
+* [Terminal](https://www.terminal.com/) is another cloud environment that
+  emphasizes their hosted database services in addition to the IDE.
 
 
 ## Development environment resources

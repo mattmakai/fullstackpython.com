@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-08-21T00:00:00-04:00</updated><entry><title>Python for Entrepreneurs</title><link href="https://www.fullstackpython.com/python-entrepreneurs.html" rel="alternate"></link><updated>2016-08-21T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-07-30:python-entrepreneurs.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-08-22T00:00:00-04:00</updated><entry><title>Python for Entrepreneurs</title><link href="https://www.fullstackpython.com/python-entrepreneurs.html" rel="alternate"></link><updated>2016-08-22T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-07-30:python-entrepreneurs.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
 is a new video course by the creators of 
 &lt;a href="https://talkpython.fm/"&gt;Talk Python to Me&lt;/a&gt; and 
 &lt;a href="https://fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;.&lt;/p&gt;
@@ -16,6 +16,8 @@ scaling up to meet traffic demands.&lt;/p&gt;
 &lt;p&gt;If this course hits the mark for what you want to do with Python,
 &lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;check out the Kickstarter&lt;/a&gt; - we've 
 set up steep discounts for early backers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: only 3 days left until the close of the Kickstarter on August 25
+at 9am Pacific Time!&lt;/p&gt;
 &lt;p&gt;If you have any questions, please reach out to 
 &lt;a href="https://twitter.com/mkennedy"&gt;Michael Kennedy&lt;/a&gt; 
 or me, &lt;a href="https://twitter.com/mattmakai"&gt;Matt Makai&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting Up Python 3, Django &amp; Gunicorn on Linux Mint 17.3</title><link href="https://www.fullstackpython.com/python-3-django-gunicorn-linux-mint-17.html" rel="alternate"></link><updated>2016-07-22T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-26:python-3-django-gunicorn-linux-mint-17.html</id><summary type="html">&lt;p&gt;Linux Mint 17.3 "Rosa" is December 2015 release of the polished and 

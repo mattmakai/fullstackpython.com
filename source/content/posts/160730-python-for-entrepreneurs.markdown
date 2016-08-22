@@ -3,7 +3,7 @@ slug: python-entrepreneurs
 meta: Learn more about Python for Entrepreneurs, the video course on building your side business with Python.
 category: post
 date: 2016-07-30
-modified: 
+modified: 2016-08-22
 headerimage: /source/static/img/160730-python-for-entrepreneurs/header.jpg
 headeralt: Talk Python to Me, Full Stack Python and Python logos. Copyright their respective owners.
 
@@ -28,6 +28,9 @@ scaling up to meet traffic demands.
 If this course hits the mark for what you want to do with Python,
 [check out the Kickstarter](https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course) - we've 
 set up steep discounts for early backers.
+
+*Update*: only 3 days left until the close of the Kickstarter on August 25
+at 9am Pacific Time!
 
 If you have any questions, please reach out to 
 [Michael Kennedy](https://twitter.com/mkennedy) 
