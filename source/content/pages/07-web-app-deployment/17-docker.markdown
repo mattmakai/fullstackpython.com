@@ -77,10 +77,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   shares lessons learned and explains how to work with the containers so you 
   get more use out of them during development.
 
-* [The marriage of Ansible and Docker](https://bildung.xarif.de/xwiki/bin/Articles/The+Marriage+of+Ansible+and+Docker)
-  is a detailed look at how Docker and Ansible complement each other as
-  deployment tools.
-
 * [Building Docker containers from scratch](http://datakurre.pandala.org/2015/07/building-docker-containers-from-scratch.html)
   is a short tutorial for creating a Docker container with a specific
   configuration.
