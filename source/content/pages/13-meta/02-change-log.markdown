@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### August
+* Updates with new resources on the [API Creation](/api-creation.html)
+  and [development environments](/development-environments.html) pages.
 * Added a [Twilio API](/twilio.html) page to the APIs chapter. May add more
   pages that provide Python guidance for using popular APIs like Slack,
   Google, Sendgrid, etc.
