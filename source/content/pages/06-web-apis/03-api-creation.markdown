@@ -155,6 +155,15 @@ equivalent of browser testing in the web application world.
   gives an answer from a Dropbox API developer as to their decision making
   process.
 
+* These two Stack Overflow questions and answers on 
+  [Is it better to place a REST API on a subdomain or in a subfolder?](subdomain vs. subdirectory in web programming) 
+  and
+  [subdomain vs. subdirectory in web programming](http://stackoverflow.com/questions/1965609/subdomain-vs-subdirectory-in-web-programming)
+  provide reasons and opinions on the debate around using a subdomain,
+  for example api.fullstackpython.com versus www.fullstackpython.com/api/.
+  There is also a nice summary of endpoint configurations in 
+  [this article from ProgrammableWeb](http://www.programmableweb.com/news/api-endpoint-versioning-methods-sub-domain-or-directory/2013/08/21).
+
 * This [API Design Guide](https://github.com/interagent/http-api-design) 
   is based on Heroku's best practices for the platform's API.
 
