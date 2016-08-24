@@ -244,6 +244,10 @@ have to handle these issues in your applications.
 * Craig Kerstiens wrote a detailed post about 
   [understanding PostgreSQL performance](http://www.craigkerstiens.com/2012/10/01/understanding-postgres-performance/).
 
+* The [Practical Guide to PostgreSQL Optimizations](https://tech.lendinghome.com/practical-guide-to-postgresql-optimizations-d7b9c2ad6a22)
+  covers using cache sizes, restore configurations and shared buffers
+  to improve database performance.
+
 * This article on [performance tuning PostgreSQL](http://www.geekytidbits.com/performance-tuning-postgres/)
   covers how to find slow queries, tune indexes and modify your queries
   to run faster.
