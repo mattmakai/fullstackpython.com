@@ -16,6 +16,10 @@ the
 
 ## 2016
 ### August
+* Finished the hugely successful 
+  [Python for Entrepreneurs Kickstarter campaign](https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course).
+  Thank you to everyone who contributed as a backer and supporter! Michael
+  and I can't wait to get this new video course out to everyone.
 * Updates with new resources on the [API Creation](/api-creation.html)
   and [development environments](/development-environments.html) pages.
 * Added a [Twilio API](/twilio.html) page to the APIs chapter. May add more
