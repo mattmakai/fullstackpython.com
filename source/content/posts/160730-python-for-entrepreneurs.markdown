@@ -29,8 +29,8 @@ If this course hits the mark for what you want to do with Python,
 [check out the Kickstarter](https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course) - we've 
 set up steep discounts for early backers.
 
-*Update*: only 3 days left until the close of the Kickstarter on August 25
-at 9am Pacific Time!
+*Update*: The Kickstarter is now closed - Michael and I are hard at work
+on the course content. Thank you to everyone who supported us as a backer!
 
 If you have any questions, please reach out to 
 [Michael Kennedy](https://twitter.com/mkennedy) 
