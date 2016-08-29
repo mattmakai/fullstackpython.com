@@ -16,6 +16,9 @@ the
 
 ## 2016
 ### August
+* Merged several pull requests such as 
+  [#106](https://github.com/mattmakai/fullstackpython.com/pull/106) which
+  fixed some bad errors on my part. Pull requests are amazing!
 * Finished the hugely successful 
   [Python for Entrepreneurs Kickstarter campaign](https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course).
   Thank you to everyone who contributed as a backer and supporter! Michael
