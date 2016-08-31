@@ -294,7 +294,7 @@ have to handle these issues in your applications.</p>
 </li>
 <li>
 <p>This article on <a href="http://www.geekytidbits.com/performance-tuning-postgres/">performance tuning PostgreSQL</a>
-  covers how to find slow queries, tune indexes and modify your queries
+  shows how to find slow queries, tune indexes and modify your queries
   to run faster.</p>
 </li>
 <li>
@@ -307,6 +307,14 @@ have to handle these issues in your applications.</p>
 <p><a href="https://github.com/nilenso/postgresql-monitoring">PostgreSQL monitoring queries</a>
   is a simple GitHub repository of SQL queries that can be run against
   a PostgreSQL instance to determine usage, caching and bloat.</p>
+</li>
+<li>
+<p><a href="http://blog.cleverelephant.ca/2016/08/pgsql-text-pattern-ops.html">PgSQL Indexes and "LIKE"</a>
+  examines why LIKE queries do not take advantage of PostgreSQL indexes
+  when the locale is set to something other than the default "C", which is
+  for the North American UNIX default. The gist is that you need to
+  build a special index to support LIKE whenever you use a locale other
+  than "C".</p>
 </li>
 </ul>
 <h3>Do you want to learn more about data or web apps?</h3>
