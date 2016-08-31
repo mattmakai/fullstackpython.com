@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### August
+* Added a new blog post on 
+  [Dialing Outbound Phone Calls with a Bottle Web App](/blog/dial-outbound-phone-calls-python-bottle.html).
 * Merged several pull requests such as 
   [#106](https://github.com/mattmakai/fullstackpython.com/pull/106) which
   fixed some bad errors on my part. Pull requests are amazing!
