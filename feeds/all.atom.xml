@@ -1,5 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-08-22T00:00:00-04:00</updated><entry><title>Python for Entrepreneurs</title><link href="https://www.fullstackpython.com/python-entrepreneurs.html" rel="alternate"></link><updated>2016-08-22T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-07-30:python-entrepreneurs.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-08-30T00:00:00-04:00</updated><entry><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link href="https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html" rel="alternate"></link><updated>2016-08-30T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</id><summary type="html">&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
+&lt;a href="/blog/send-sms-text-messages-python.html"&gt;send&lt;/a&gt; and 
+&lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;receive SMS text messages&lt;/a&gt;,
+In this tutorial we will go beyond texting and learn how to dial outbound 
+phone calls. The calls will read a snippet of text then play an MP3 file,
+but they can then be easily modified to create conference lines and many
+other voice features in your Python web apps.&lt;/p&gt;
+&lt;h2&gt;Tools We Need&lt;/h2&gt;
+&lt;p&gt;You should have either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt; installed to
+create your Bottle app, although Python 3 is recommended for new 
+applications. We also need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle
+  &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ngrok.com/"&gt;Ngrok&lt;/a&gt; for localhost tunneling to our Bottle
+  application while it's running on our local development environment&lt;/li&gt;
+&lt;li&gt;&lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; web framework&lt;/li&gt;
+&lt;li&gt;Free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
+  &lt;a href="https://www.twilio.com/docs/api/rest/making-calls"&gt;phone calling web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twilio's 
+  &lt;a href="https://www.twilio.com/docs/libraries/python"&gt;Python helper library&lt;/a&gt;,
+  which is &lt;a href="https://github.com/twilio/twilio-python"&gt;open source on GitHub&lt;/a&gt; 
+  and &lt;a href="https://pypi.python.org/pypi/twilio"&gt;available for download from PyPI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Take a look at 
+&lt;a href="/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html"&gt;this guide on setting up Python 3, Bottle and Gunicorn on Ubuntu 16.04 LTS&lt;/a&gt;
+if you need help getting your 
+&lt;a href="/development-environments.html"&gt;development environment&lt;/a&gt; 
+configured before continuing on through the remainder of this tutorial.&lt;/p&gt;
+&lt;p&gt;You can snag all the open source code for this tutorial in the 
+&lt;a href="https://github.com/mattmakai/python-bottle-phone"&gt;python-bottle-phone&lt;/a&gt;
+GitHub repository. Use and copy the code however you want - it's all open 
+source under the MIT license.&lt;/p&gt;
+&lt;h2&gt;Installing Our Application Dependencies&lt;/h2&gt;
+&lt;p&gt;Our Bottle app needs a helper code library to make it easy to dial outbound
+phone calls. Bottle and the Twilio helper library are installable from 
+&lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt; into a virtualenv. Open your terminal 
+and use the &lt;code&gt;virtualenv&lt;/code&gt; command to create a new virtualenv:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv bottlephone
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Use the &lt;code&gt;activate&lt;/code&gt; script within the virtualenv, which makes this virtualenv
+the active Python installation. Note that you need to do this in every 
+terminal window that you want this virtualenv to be used.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source bottlephone/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The command prompt will change after activating the virtualenv
+to something like &lt;code&gt;(bottlephone) $&lt;/code&gt;. Here is a screenshot of what my
+environment looked like when I used the &lt;code&gt;activate&lt;/code&gt; script.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;Next use the &lt;code&gt;pip&lt;/code&gt; command to install the &lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; and 
+&lt;a href="https://www.twilio.com/docs/libraries/python"&gt;Twilio Python&lt;/a&gt; packages
+into your virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install bottle twilio
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After the installation script finishing, we will have the required 
+dependencies to build our app. Let's write some Python code to dial outbound
+phone calls.&lt;/p&gt;
+&lt;h2&gt;Bottle and Twilio&lt;/h2&gt;
+&lt;p&gt;Our simple Bottle web app will have three routes: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/&lt;/code&gt; - returns a text string to let us know our Bottle app is running&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/twiml&lt;/code&gt; - responds with &lt;a href="https://www.twilio.com/docs/api/twiml"&gt;TwiML&lt;/a&gt; 
+  (a simple subset of XML) that instructs Twilio what to do when someone
+  picks up the call to them from our Bottle web app&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/dial-phone/&amp;lt;outbound_phone_number&amp;gt;&lt;/code&gt;, where "outbound_phone_number" is
+  a phone number in the format "+12025551234" - this route uses the Twilio
+  helper library to send a POST request to the Twilio Voice API to dial a
+  phone  call&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can build the structure of our Bottle app and the first route right now.
+Create a new file named &lt;code&gt;app.py&lt;/code&gt; with the following contents to start our
+app.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
+
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;default_app&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c"&gt;# plug in account SID and auth token here if they are not already exposed as&lt;/span&gt;
+&lt;span class="c"&gt;# environment variables&lt;/span&gt;
+&lt;span class="n"&gt;twilio_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;TWILIO_NUMBER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;TWILIO_NUMBER&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;+12025551234&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;NGROK_BASE_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;NGROK_BASE_URL&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;https://c6c6d4e8.ngrok.io&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Returns a standard text response to show the app is up and running.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Bottle app running!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Make sure you are in the directory where you created the above &lt;code&gt;app.py&lt;/code&gt;
+file. Run the app via the Bottle development server with the following 
+command. Make sure your virtualenv is still activated so our code can rely 
+on the Bottle code library.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python app.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We should see a successful development server start up like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(bottlevoice) matt@ubuntu:~/bottlephone$ python app.py 
+Bottle v0.12.9 server starting up (using WSGIRefServer())...
+Listening on http://127.0.0.1:8000/
+Hit Ctrl-C to quit.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is what the development server message looks like in my environment 
+on Ubuntu:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/bottle-app-running.png" width="100%" class="technical-diagram img-rounded" alt="Successfully starting the Bottle development server from the command line."&gt;&lt;/p&gt;
+&lt;p&gt;Let's test out the app by going to &lt;a href="http://localhost:8000"&gt;localhost:8000&lt;/a&gt;
+in the web browser. We should get a simple success message that the app
+is running and responding to requests.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/bottle-app-web-browser.png" width="100%" class="technical-diagram img-rounded" alt="Simple success message in the web browser that the Bottle app is running."&gt;&lt;/p&gt;
+&lt;p&gt;Next we need to obtain a phone number that our Bottle app can use to 
+call other phone numbers.&lt;/p&gt;
+&lt;h2&gt;Obtain a Phone Number&lt;/h2&gt;
+&lt;p&gt;Our basic Bottle web app is running but what we really want to do is dial
+outbound calls - which will be handled by &lt;a href="https://www.twilio.com/"&gt;Twilio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In your web browser go to the
+&lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio website and sign up for a free account&lt;/a&gt;. 
+You can also sign into your existing Twilio account if you already have one.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/try-twilio.png" width="100%" class="technical-diagram img-rounded" alt="Twilio sign up screen."&gt;&lt;/p&gt;
+&lt;p&gt;The Twilio trial account allows you to dial and receive phone calls to 
+your own validated phone number. To dial and receive calls from any phone 
+number then you need to upgrade your account (hit the upgrade button on the
+top navigation bar to do that). Trial accounts are great for initial 
+development before your application goes live but upgraded accounts are where
+the real power comes in.&lt;/p&gt;
+&lt;p&gt;Once you are signed into your Twilio account, go to the 
+&lt;a href="https://www.twilio.com/console/phone-numbers"&gt;manage phone numbers screen&lt;/a&gt;.
+On this screen you can 
+&lt;a href="https://www.twilio.com/console/phone-numbers/search"&gt;buy one or more phone numbers&lt;/a&gt;
+or click on an existing phone number in your account to configure it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/manage-phone-numbers.png" width="100%" class="technical-diagram img-rounded" alt="Manage phone numbers screen."&gt;&lt;/p&gt;
+&lt;p&gt;There is nothing for us to configure right now on the phone number 
+configuration page because we are making outbound phone calls for this 
+tutorial. Now that we have a phone number in hand, let's add the final bit
+of code to our Bottle app to get this app working.&lt;/p&gt;
+&lt;h2&gt;Making Phone Calls&lt;/h2&gt;
+&lt;p&gt;We need to add two new routes to our Bottle app so it can dial outbound
+phone calls. Modify your existing app.py file with the two new functions
+below, &lt;code&gt;twiml_response&lt;/code&gt; and &lt;code&gt;outbound_call&lt;/code&gt;. None of the other code in
+this file needs to change other than adding those two new functions to
+what we wrote in the previous section.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
+
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;bottle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;default_app&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="c"&gt;# plug in account SID and auth token here if they are not already exposed as&lt;/span&gt;
+&lt;span class="c"&gt;# environment variables&lt;/span&gt;
+&lt;span class="n"&gt;twilio_client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;# add your Twilio phone number here&lt;/span&gt;
+&lt;span class="n"&gt;TWILIO_NUMBER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;TWILIO_NUMBER&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;+16093002984&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# plug in your Ngrok Forwarding URL - we&amp;#39;ll set it up in a minute&lt;/span&gt;
+&lt;span class="n"&gt;NGROK_BASE_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;NGROK_BASE_URL&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;https://c6c6d4e8.ngrok.io&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Returns a standard text response to show the app is up and running.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Bottle app running!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/twiml&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;twiml_response&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Provides TwiML instructions in response to a Twilio POST webhook&lt;/span&gt;
+&lt;span class="sd"&gt;        event so that Twilio knows how to handle the outbound phone call&lt;/span&gt;
+&lt;span class="sd"&gt;        when someone picks up the phone.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;twiml&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;say&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Sweet, this phone call is answered by your Bottle app!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;play&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://api.twilio.com/cowbell.mp3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;loop&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/dial-phone/&amp;lt;outbound_phone_number&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;outbound_call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outbound_phone_number&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;        Uses the Twilio Python helper library to send a POST request to&lt;/span&gt;
+&lt;span class="sd"&gt;        Twilio telling it to dial an outbound phone call from our specific&lt;/span&gt;
+&lt;span class="sd"&gt;        Twilio phone number (that phone number must be owned by our&lt;/span&gt;
+&lt;span class="sd"&gt;        Twilio account).&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="c"&gt;# the url must match the Ngrok Forwarding URL plus the route defined in&lt;/span&gt;
+    &lt;span class="c"&gt;# the previous function that responds with TwiML instructions&lt;/span&gt;
+    &lt;span class="n"&gt;twilio_client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;calls&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;OUTBOUND_NUMBER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from_&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;BLOG_POST_NUMBER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                               &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;NGROK_BASE_URL&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/twiml&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;phone call placed to &amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;outbound_phone_number&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is just one problem with our current setup if you're developing on
+a local environment: Twilio won't be able to reach that &lt;code&gt;/twiml&lt;/code&gt; route. 
+We need to deploy our app to a reachable server, or just use a localhost 
+tunneling tool like &lt;a href="https://ngrok.com"&gt;Ngrok&lt;/a&gt;. Ngrok provides an external
+URL that connects to a port running on your machine. 
+&lt;a href="https://ngrok.com/download"&gt;Download and install the Ngrok application&lt;/a&gt; 
+that is appropriate for your operating system.&lt;/p&gt;
+&lt;p&gt;We run Ngrok locally and expose our Bottle app that is running on 
+port 8000. Run this command within the directory where the Ngrok executable is
+located.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;./ngrok http 8000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Ngrok will start up and provide us with a Forwarding URL, with both HTTP
+and HTTPS versions.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/start-ngrok.png" width="100%" class="technical-diagram img-rounded" alt="Ngrok started and running to serve as a localhost tunnel."&gt;&lt;/p&gt;
+&lt;p&gt;We can use the Forwarding URL to instruct Twilio how to handle the outbound
+phone call when someone picks up. Insert the Ngrok forwarding URL into the
+&lt;code&gt;app.py&lt;/code&gt; file where &lt;code&gt;NGROK_BASE_URL&lt;/code&gt; is specified.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/access-ngrok.png" width="100%" class="technical-diagram img-rounded" alt="Paste the ngrok Forwarding URL into the Twilio webhook configuration text box."&gt;&lt;/p&gt;
+&lt;p&gt;If Ngrok is useful to you, make sure to read this 
+&lt;a href="https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html"&gt;6 awesome reasons to use Ngrok when testing webhooks post&lt;/a&gt; 
+to learn even more about the tool.&lt;/p&gt;
+&lt;p&gt;Time to test out our app, let's give it a quick spin.&lt;/p&gt;
+&lt;h2&gt;Making Phone Calls&lt;/h2&gt;
+&lt;p&gt;Make sure your Bottle development server is still running or re-run it with
+the &lt;code&gt;python app.py&lt;/code&gt; command in a shell where your virtualenv is still
+activated.&lt;/p&gt;
+&lt;p&gt;Bring up the application in a browser, this time test out the phone calling
+capabilities. Go to "localhost:8000/dial-phone/my-phone-number", where 
+"my-phone-number" is a number in the "+12025551234" format. For example,
+here is what happens when I dialed +12023351278:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/phone-call-placed.png" width="100%" class="technical-diagram img-rounded" alt="Dialing an outbound phone call with Bottle."&gt;&lt;/p&gt;
+&lt;p&gt;And here is the inbound phone call!&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/inbound-call.png" width="100%" class="technical-diagram img-rounded" alt="Receiving an incoming phone call on the iPhone."&gt;&lt;/p&gt;
+&lt;p&gt;When we pick up the phone call we also see the &lt;code&gt;/twiml&lt;/code&gt; route get called via
+Ngrok.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/ngrok-twiml.png" width="100%" class="technical-diagram img-rounded" alt="/twiml route being called via Ngrok."&gt;&lt;/p&gt;
+&lt;p&gt;With just two routes in our Bottle app and Twilio we were able to make
+outbound phone calls. Not bad!&lt;/p&gt;
+&lt;h2&gt;What's next?&lt;/h2&gt;
+&lt;p&gt;Sweet, we can now dial outbound phone calls to &lt;em&gt;any&lt;/em&gt; phone number from
+our Bottle web app. Next you may want to try one of these tutorials to
+add even more features to your app:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgrade your &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;Bottle app to also send and response to text messages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create a &lt;a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html"&gt;phone-calling Slack bot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Implement &lt;a href="https://www.twilio.com/docs/tutorials/walkthrough/call-tracking/python/django"&gt;call tracking&lt;/a&gt;
+  for both inbound and outbound phone calls made through your app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub as
+&lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160830-phone-calls-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Python for Entrepreneurs</title><link href="https://www.fullstackpython.com/python-entrepreneurs.html" rel="alternate"></link><updated>2016-08-22T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-07-30:python-entrepreneurs.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
 is a new video course by the creators of 
 &lt;a href="https://talkpython.fm/"&gt;Talk Python to Me&lt;/a&gt; and 
 &lt;a href="https://fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;.&lt;/p&gt;
