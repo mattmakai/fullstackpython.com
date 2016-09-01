@@ -81,7 +81,7 @@ guide as they are considered advanced deployment techniques.
 
 * [Continuous deployment at Instagram](http://engineering.instagram.com/posts/1125308487520335/continuous-deployment-at-instagram/)
   is the story of how their deployment process evolved over time from a 
-  large Fabric script to continous deployments. Along the way they 
+  large Fabric script to continuous deployments. Along the way they 
   encountered issues with code reviews, test failures, canary builds and
   rollbacks. It's a great read that sheds some light on how Python 
   deployments can be done well at large scale.
