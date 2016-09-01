@@ -15,6 +15,11 @@ the
 
 
 ## 2016
+### September
+* New resources on the 
+  [static site generators](http://www.fullstackpython.com/static-site-generator.html)
+  page focusing on deploying a static site.
+
 ### August
 * Added a new blog post on 
   [Dialing Outbound Phone Calls with a Bottle Web App](/blog/dial-outbound-phone-calls-python-bottle.html).
