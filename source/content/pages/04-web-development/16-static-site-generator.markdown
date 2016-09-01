@@ -161,16 +161,6 @@ ones listed here are primarily coded in Python.
   of all programming languages sorted by various attributes such as the
   number of GitHub stars, forks and issues.
 
-* [Static site hosting with S3 and Cloudflare](https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/)
-  shows how to set up an S3 bucket with Cloudflare in front as a CDN that
-  serves the content with HTTPS. You should be able to accomplish roughly 
-  the same situation with Amazon Cloudfront, but as a Cloudflare user I
-  like their service for these static site configurations.
-
-* [Getting Started with Pelican and GitHub Pages](http://www.mattmakai.com/introduction-to-pelican.html)
-  is a tutorial I wrote for getting up and running with Full Stack Python's
-  source code, which uses Pelican to generate the site.
-
 * The title is a big grandiose, but there's some solid detail in this article
   on 
   [why static website generators are the next big thing](http://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/).
@@ -181,11 +171,28 @@ ones listed here are primarily coded in Python.
   [WeWork on why they use a static site generator](http://engineering.wework.com/engineering/2015/12/08/why-wework-com-uses-a-static-generator-and-why-you-should-too/)
   explains it from the perspective of a large business.
 
+* [Ditching Wordpress and becoming one of the cool kids](http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/)
+  is one developer's experience moving away from Wordpress and onto
+  Pelican with reStructuredText for his personal blog.
+
 * [Getting started with Pelican and GitHub pages](http://www.mattmakai.com/introduction-to-pelican.html)
   is a tutorial I wrote to use the Full Stack Python source code to create
   and deploy your first static site.
 
-* [Ditching Wordpress and becoming one of the cool kids](http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/)
-  is one developer's experience moving away from Wordpress and onto
-  Pelican with reStructuredText for his personal blog.
+
+### Static site deployment resources
+* [Deploying a Static Site on AWS, with S3 and CloudFront](https://www.davidbaumgold.com/tutorials/deploy-static-site-aws-s3-cloudfront/)
+  provides a really nice tutorial with screenshots to get any type of static site
+  configured on AWS using S3 and Cloudfront.
+
+* [Static site hosting with S3 and Cloudflare](https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/)
+  shows how to set up an S3 bucket with Cloudflare in front as a CDN that
+  serves the content with HTTPS. You should be able to accomplish roughly 
+  the same situation with Amazon Cloudfront, but as a Cloudflare user I
+  like their service for these static site configurations.
+
+* Google Cloud provides a tutorial on how to use them to 
+  [host your static site](https://cloud.google.com/storage/docs/hosting-static-website).
+  Note that you cannot currently use HTTPS on Google Storage servers, which is a huge
+  downside.
 
