@@ -231,6 +231,15 @@ The post is an inside look at the evolution of Braintree's usage of the database
   has a good overview of various database setups common in production
   web applications.
 
+* The 
+  [JSONB data type](http://blog.heapanalytics.com/when-to-avoid-jsonb-in-a-postgresql-schema/)
+  was introduced in PostgreSQL 9.4 to make it easier to store 
+  semi-structured data that previously 
+  [NoSQL databases](/no-sql-datastore.html) 
+  such as MongoDB covered. However, there are times when using JSONB
+  isn't a good idea and 
+  [this blog post covers when to avoid the column type](http://blog.heapanalytics.com/when-to-avoid-jsonb-in-a-postgresql-schema/).
+
 
 ### PostgreSQL monitoring and performance
 Monitoring one or more PostgreSQL instances and trying to performance tune
