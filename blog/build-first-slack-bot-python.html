@@ -41,7 +41,7 @@
         Posted by <a href="/about-author.html">Matt Makai</a> on 
         June 04, 2016.
 Last updated
-        August 10, 2016.      </div>
+        September 04, 2016.      </div>
       <!--<div width="100%" style="margin: 5px 0 10px 0; height: 250px; overflow: hidden; border-radius: 12px;">
           <img src="/source/static/img/160604-simple-python-slack-bot/header.jpg" alt="Slack and Python logos. Copyright their respective owners." width="100%" style="height: 500px; margin: -100px 0 -100px 0;">
       </div>-->
@@ -333,6 +333,12 @@ existing channel.</p>
 <p><img src="/source/static/img/160604-simple-python-slack-bot/create-channel.png" width="100%" class="technical-diagram img-rounded" alt="In the Slack user interface create a new channel and invite StarterBot."></p>
 <p>Now start giving StarterBot commands in your channel.</p>
 <p><img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded" alt="Give StarterBot commands in your Slack channel."></p>
+<p>There is one modification you may want to make if you're running into 
+issues getting a response from the bot. As it is written above in this
+tutorial, the line <code>AT_BOT = "&lt;@" + BOT_ID + "&gt;:"</code> requires a colon after
+the "@starter" (or whatever you named your particular bot). Remove the
+<code>:</code> from the end of the <code>AT_BOT</code> string. The Slack clients seem to add a
+colon after an <code>@</code> mention but it seems somewhat inconsistent.</p>
 <h2>Wrapping Up</h2>
 <p>Alright, now you've got a simple StarterBot with a bunch of places in the 
 code you can add whatever features you want to build. </p>

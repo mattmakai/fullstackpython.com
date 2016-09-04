@@ -16,6 +16,9 @@ the
 
 ## 2016
 ### September
+* Updated the [Slack bot tutorial](/blog/build-first-slack-bot-python.html)
+  with a new bit on how to solve a common issue when the bot does not seem
+  to be responding to `@` mentions due to a missing colon in the input.
 * New resources on the 
   [static site generators](http://www.fullstackpython.com/static-site-generator.html)
   page focusing on deploying a static site.
