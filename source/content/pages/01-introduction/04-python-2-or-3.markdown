@@ -110,3 +110,9 @@ gone through the process and have advice for making it less painful.
   plan is for supporting Python 3 and why it has taken so long to make it 
   happen.
 
+* All major scientific Python libraries have 
+  [pledged to drop Python 2 support](https://python3statement.github.io/)
+  no later than 2020, when Python 2's maintenance life is over. The pledge 
+  strongly encourages Python 3 adoption by publicly stating their
+  intentions. 
+
