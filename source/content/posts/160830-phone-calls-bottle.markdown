@@ -140,7 +140,7 @@ python app.py
 We should see a successful development server start up like this:
 
 ```
-(bottlevoice) matt@ubuntu:~/bottlephone$ python app.py 
+(bottlephone) matt@ubuntu:~/bottlephone$ python app.py 
 Bottle v0.12.9 server starting up (using WSGIRefServer())...
 Listening on http://127.0.0.1:8000/
 Hit Ctrl-C to quit.
@@ -317,8 +317,8 @@ outbound phone calls. Not bad!
 
 ## What's next?
 Sweet, we can now dial outbound phone calls to *any* phone number from
-our Bottle web app. Next you may want to try one of these tutorials to
-add even more features to your app:
+our Bottle web application. Next you may want to try one of these tutorials 
+to add even more features to your app:
 
 * Upgrade your [Bottle app to also send and response to text messages](/blog/reply-sms-text-messages-python-bottle.html)
 * Create a [phone-calling Slack bot](https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html)

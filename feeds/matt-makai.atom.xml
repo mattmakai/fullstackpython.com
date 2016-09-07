@@ -116,7 +116,7 @@ on the Bottle code library.&lt;/p&gt;
 
 
 &lt;p&gt;We should see a successful development server start up like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;(bottlevoice) matt@ubuntu:~/bottlephone$ python app.py 
+&lt;div class="highlight"&gt;&lt;pre&gt;(bottlephone) matt@ubuntu:~/bottlephone$ python app.py 
 Bottle v0.12.9 server starting up (using WSGIRefServer())...
 Listening on http://127.0.0.1:8000/
 Hit Ctrl-C to quit.
@@ -263,8 +263,8 @@ Ngrok.&lt;/p&gt;
 outbound phone calls. Not bad!&lt;/p&gt;
 &lt;h2&gt;What's next?&lt;/h2&gt;
 &lt;p&gt;Sweet, we can now dial outbound phone calls to &lt;em&gt;any&lt;/em&gt; phone number from
-our Bottle web app. Next you may want to try one of these tutorials to
-add even more features to your app:&lt;/p&gt;
+our Bottle web application. Next you may want to try one of these tutorials 
+to add even more features to your app:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Upgrade your &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;Bottle app to also send and response to text messages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Create a &lt;a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html"&gt;phone-calling Slack bot&lt;/a&gt;&lt;/li&gt;
