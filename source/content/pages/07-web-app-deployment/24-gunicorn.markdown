@@ -111,6 +111,11 @@ perform the request handling. Each worker is independent of the controller.
   isn't much explanation provided with each tutorial but they can still be
   good concise references in case you're having issues with Ubuntu.
 
+* [Deploying a Flask Site Using Nginx, Gunicorn, Supervisor and Virtualenv on Ubuntu](http://alexandersimoes.com/hints/2015/10/28/deploying-flask-with-nginx-gunicorn-supervisor-virtualenv-on-ubuntu.html)
+  is a similar tutorial to the previous two links. It provides some good
+  screenshots along the way with what to expect while you are configuring
+  the deployment server.
+
 * The [Django](https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/gunicorn/) 
   and [Flask](http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/) 
   documentation each contain instructions for deploying the respective
