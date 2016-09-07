@@ -320,7 +320,7 @@ Sweet, we can now dial outbound phone calls to *any* phone number from
 our Bottle web application. Next you may want to try one of these tutorials 
 to add even more features to your app:
 
-* Upgrade your [Bottle app to also send and response to text messages](/blog/reply-sms-text-messages-python-bottle.html)
+* Upgrade your [Bottle app to also send and respond to text messages](/blog/reply-sms-text-messages-python-bottle.html)
 * Create a [phone-calling Slack bot](https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html)
 * Implement [call tracking](https://www.twilio.com/docs/tutorials/walkthrough/call-tracking/python/django)
   for both inbound and outbound phone calls made through your app

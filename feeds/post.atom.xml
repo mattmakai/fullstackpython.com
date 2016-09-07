@@ -266,7 +266,7 @@ outbound phone calls. Not bad!&lt;/p&gt;
 our Bottle web application. Next you may want to try one of these tutorials 
 to add even more features to your app:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Upgrade your &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;Bottle app to also send and response to text messages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Upgrade your &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;Bottle app to also send and respond to text messages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Create a &lt;a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html"&gt;phone-calling Slack bot&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Implement &lt;a href="https://www.twilio.com/docs/tutorials/walkthrough/call-tracking/python/django"&gt;call tracking&lt;/a&gt;
   for both inbound and outbound phone calls made through your app&lt;/li&gt;
