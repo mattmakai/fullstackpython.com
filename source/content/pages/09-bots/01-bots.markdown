@@ -38,6 +38,11 @@ often also called "chatbots", "assistants" or "agents."
   is a solid code tutorial for building your first bot on the Slack
   platform.
 
+* [Build a Slack Bot that Mimics Your Colleagues with Python](http://hirelofty.com/blog/how-build-slack-bot-mimics-your-colleague/)
+  is a humorous post that uses the 
+  [markovify](https://github.com/jsvine/markovify) Markov Chains library to 
+  generate responses that are similar to ones other Slack users have said.
+
 * [A Slack bot with Python’s 3.5 asyncio](https://medium.com/@greut/a-slack-bot-with-pythons-3-5-asyncio-ad766d8b5d8f)
   shows how to connect a bot to Slack via the web API using the Python 3
   [asyncio standard library](https://docs.python.org/3/library/asyncio.html).
