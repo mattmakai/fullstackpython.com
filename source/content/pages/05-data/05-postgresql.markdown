@@ -164,8 +164,6 @@ for properly handling your data.
 * Braintree wrote about their experiences [scaling PostgreSQL](https://www.braintreepayments.com/braintrust/scaling-postgresql-at-braintree-four-years-of-evolution). 
 The post is an inside look at the evolution of Braintree's usage of the database.
 
-* This post estimates the [costs of a PostgreSQL connection](http://hans.io/blog/2014/02/19/postgresql_connection/index.html).
-
 * There is no such thing as total security but this IBM article covers 
   [hardening a PostgreSQL database](http://www.ibm.com/developerworks/library/os-postgresecurity/). 
 

@@ -32,10 +32,10 @@ operations, such as querying the database from the Django manage.py shell.
 * [Moving away from Puppet: SaltStack or Ansible?](http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/)
   is an openly biased but detailed post on why to choose SaltStack over 
   Ansible in certain situations.
-  
-* [Ansible vs. Shell Scripts](http://devopsu.com/blog/ansible-vs-shell-scripts/)
-  provides some perspective on why a configuration management tool is better
-  than old venerable shell scripts.
+
+* [Ansible vs. Shell Scripts](https://valdhaus.co/writings/ansible-vs-shell-scripts/)
+  provides some perspective on why using a configuration management tool is a 
+  better choice than venerable but brittle shell scripts.
 
 * [Ansible vs. Chef](http://tjheeta.github.io/2015/04/15/ansible-vs-chef/)
   is a comparsion of Ansible with the Chef configuration management tool.
