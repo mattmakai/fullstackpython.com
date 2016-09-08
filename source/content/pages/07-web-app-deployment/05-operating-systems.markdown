@@ -88,8 +88,6 @@ provides a command-line interface for interacting with the RPM system.
 
 
 ## Operating system resources
-* [What is a Linux distribution and how do I choose the right one?](http://www.linux.org/threads/selecting-a-linux-distribution.4087/)
-
 * [Linux Performance](http://www.brendangregg.com/linuxperf.html) is an
   incredible site that links to a number of performance-focused materials
   that are useful when developing on or deploying to any Linux distribution.
