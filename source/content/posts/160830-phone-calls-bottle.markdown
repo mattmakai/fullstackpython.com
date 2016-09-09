@@ -10,7 +10,7 @@ headeralt: Bottle, Python and Twilio logos. Copyright their respective owners.
 
 Python web apps built with the [Bottle web framework](/bottle.html) can 
 [send](/blog/send-sms-text-messages-python.html) and 
-[receive SMS text messages](/blog/reply-sms-text-messages-python-bottle.html),
+[receive SMS text messages](/blog/reply-sms-text-messages-python-bottle.html).
 In this tutorial we will go beyond texting and learn how to dial outbound 
 phone calls. The calls will read a snippet of text then play an MP3 file,
 but they can then be easily modified to create conference lines and many
@@ -43,8 +43,10 @@ configured before continuing on through the remainder of this tutorial.
 
 You can snag all the open source code for this tutorial in the 
 [python-bottle-phone](https://github.com/mattmakai/python-bottle-phone)
-GitHub repository. Use and copy the code however you want - it's all open 
-source under the MIT license.
+GitHub repository under the 
+[outbound directory](https://github.com/mattmakai/python-bottle-phone/tree/master/outbound-calls). 
+Use and copy the code however you want - it's all open source under the 
+MIT license.
 
 
 ## Installing Our Application Dependencies

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 04 Sep 2016 00:00:00 -0400</lastBuildDate><item><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link>https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html</link><description>&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;send&lt;/a&gt; and 
-&lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;receive SMS text messages&lt;/a&gt;,
+&lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;receive SMS text messages&lt;/a&gt;.
 In this tutorial we will go beyond texting and learn how to dial outbound 
 phone calls. The calls will read a snippet of text then play an MP3 file,
 but they can then be easily modified to create conference lines and many
@@ -31,8 +31,10 @@ if you need help getting your
 configured before continuing on through the remainder of this tutorial.&lt;/p&gt;
 &lt;p&gt;You can snag all the open source code for this tutorial in the 
 &lt;a href="https://github.com/mattmakai/python-bottle-phone"&gt;python-bottle-phone&lt;/a&gt;
-GitHub repository. Use and copy the code however you want - it's all open 
-source under the MIT license.&lt;/p&gt;
+GitHub repository under the 
+&lt;a href="https://github.com/mattmakai/python-bottle-phone/tree/master/outbound-calls"&gt;outbound directory&lt;/a&gt;. 
+Use and copy the code however you want - it's all open source under the 
+MIT license.&lt;/p&gt;
 &lt;h2&gt;Installing Our Application Dependencies&lt;/h2&gt;
 &lt;p&gt;Our Bottle app needs a helper code library to make it easy to dial outbound
 phone calls. Bottle and the Twilio helper library are installable from 
