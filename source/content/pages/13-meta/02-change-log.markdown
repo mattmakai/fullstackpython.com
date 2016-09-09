@@ -16,6 +16,9 @@ the
 
 ## 2016
 ### September
+* New update to the 
+  [Full Stack Python Guide to Deployments book](http://www.deploypython.com/)
+  released!
 * Updated the [Slack bot tutorial](/blog/build-first-slack-bot-python.html)
   with a new bit on how to solve a common issue when the bot does not seem
   to be responding to `@` mentions due to a missing colon in the input.
