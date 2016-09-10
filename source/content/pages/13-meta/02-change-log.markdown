@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### September
+* Added new resources to the [Python 2 or 3?](/python-2-or-3.html) page.
 * New update to the 
   [Full Stack Python Guide to Deployments book](http://www.deploypython.com/)
   released!
