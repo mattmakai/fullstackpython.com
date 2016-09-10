@@ -101,6 +101,12 @@ gone through the process and have advice for making it less painful.
   provides perspective from a core Python developer on how the transition from
   Python 2 to 3 is going as of the end of 2015.
 
+* [Rules for Radicals: Changing the Culture of Python at Facebook](https://www.youtube.com/watch?v=nRtp9NgtXiA)
+  is a fascinating look at how Facebook moved from primarily Python 2
+  up to Python 3 due to the efforts of a small passionate group of
+  developers within the company. Definitely worth watching to understand
+  how to shift a large organization with an established codebase.
+
 * [Porting to Python 3 is like eating your vegetables](http://nothingbutsnark.svbtle.com/porting-to-python-3-is-like-eating-your-vegetables)
   explains that there are treats in Python 3 that are worth porting for and
   has some tips on making the transition easier.
