@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### September
+* Removed a ton of unnecessary CSS to make page loads faster.
 * Added new resources to the [Python 2 or 3?](/python-2-or-3.html) page.
 * New update to the 
   [Full Stack Python Guide to Deployments book](http://www.deploypython.com/)
