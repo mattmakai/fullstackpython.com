@@ -5,7 +5,7 @@ input,button{margin:0;font-family:inherit;font-size:100%;line-height:normal;text
 img{border:0; vertical-align:middle}
 .img-rounded{border-radius:6px}
 hr{height:0;box-sizing:content-box;margin:21px 0 21px 0;border:0;border-top:1px solid #eee}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Helvetica Neue","Arial Narrow Bold",sans-serif;font-weight:500;line-height:1.1;color:#000}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Helvetica Neue",sans-serif;font-weight:500;line-height:1.1;color:#000}
 h1,h2,h3{margin-top:32px;margin-bottom:6px}
 h4,h5,h6{margin-top:10.5px;margin-bottom:10.5px}
 h1,.h1{font-size:40px}
@@ -51,7 +51,6 @@ a.list-group-item.active .list-group-item-text,a.list-group-item.active:hover .l
 .panel-body{padding:15px}
 .panel-body:before,.panel-body:after{display:table;content:" "}
 .panel-body:after{clear:both}
-.panel>.list-group{margin-bottom:0}
 .panel>.list-group .list-group-item{border-width:1px 0}
 .panel>.list-group .list-group-item:first-child{border-top-right-radius:0;border-top-left-radius:0}
 .panel>.list-group .list-group-item:last-child{border-bottom:0}
@@ -59,10 +58,6 @@ a.list-group-item.active .list-group-item-text,a.list-group-item.active:hover .l
 .panel>.table,.panel>.table-responsive>.table{margin-bottom:0}
 .panel>.panel-body+.table,.panel>.panel-body+.table-responsive{border-top:1px solid #ddd}
 .panel-heading{padding:10px 15px;border-bottom:1px solid transparent;border-top-right-radius:3px;border-top-left-radius:3px}
-.panel-group .panel{margin-bottom:0;overflow:hidden;border-radius:4px}
-.panel-group .panel+.panel{margin-top:5px}
-.panel-group .panel-heading{border-bottom:0}
-.panel-group .panel-heading+.panel-collapse .panel-body{border-top:1px solid #ddd}
 .panel-success{border-color:#22b24c}
 .panel-success>.panel-heading{color:#468847;background-color:#22b24c;border-color:#22b24c}
 .panel-success>.panel-heading+.panel-collapse .panel-body{border-top-color:#22b24c}
@@ -83,9 +78,9 @@ p.under-btn{text-align:left;margin-top:20px}
 h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
 .smaller-item{font-size:.8em;padding:5px 0 5px 10px;font-family:'Helvetica Neue',sans-serif}
 @media (max-width:1200px){h3.panel-head{font-size:22px} .select-next{min-height:300px}}@media (max-width:750px){ .select-next{min-height:100px} .smaller-item{font-size:1em;padding:15px 0 15px 10px}}@media (max-width:720px){.logo-header-section{margin:20px 40px 0 0}}.technical-diagram{margin:10px 0 5px 0}
-.see-also{margin-top: 20px; background: #22B24C; color: #eee;}
-.see-also a{color: #fff;}
-.indent{margin-left: 25px; padding-bottom: 1px;}
+.see-also{margin-top:20px;background:#22B24C;color:#eee}
+.see-also a{color: #fff}
+.indent{margin-left:25px;padding-bottom:1px}
 .toc-indent{padding:0 0 1px 25px;font-family:"Helvetica Neue",sans-serif}
 .toc-indent-link{margin-left: 25px;padding-bottom: 1px}
 .toc-subsection-link{margin-left: 56px;padding-bottom: 1px}
