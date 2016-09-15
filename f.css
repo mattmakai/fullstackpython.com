@@ -12,11 +12,11 @@ h2{font-size:28px}
 h3{font-size:22px}
 h4{font-size:18px}
 h5,h6{font-size:14px}
-p{margin:0 0 10.5px}
-ul,ol{margin-top:0;margin-bottom:10.5px}
+p{margin:0 0 12px}
+ul,ol{margin-top:0;margin-bottom:10px}
 code,pre{font-family:Menlo,"Courier New",monospace;font-size:1em}
 code{padding:2px 4px;font-size:90%;color:#c7254e;white-space:nowrap;background-color:#f9f2f4;border-radius:4px}
-pre{white-space:pre-wrap;display:block;padding:10px;margin:0 0 10.5px;font-size:14px;line-height:1.4;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
+pre{white-space:pre-wrap;display:block;padding:10px;margin:0 0 11px;font-size:14px;line-height:1.4;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
 .container{padding:0 15px 0 15px;margin-right:auto;margin-left:auto}
 .container:before,.container:after{display:table;content:" "}
@@ -63,7 +63,7 @@ a:hover{text-decoration:none;color:#000}
 .logo-title a,.logo-title a:hover{font-size:72px;font-weight:normal;letter-spacing:.03em;vertical-align:middle;margin-left:5px;color:#000;text-decoration:none;border-bottom:none;font-family:"Helvetica Neue",sans-serif;line-height:.9em}
 .logo-title a:hover{color:#808080}
 .logo-image{vertical-align:middle;border:none}
-.logo-header-section{margin:15px 0 15px 0}
+.logo-header-section{margin:20px 0 15px 0}
 a.list-group-item.active{background:#444;border:1px solid #222}
 a.list-group-item.active:hover{background:#444;border:1px solid #222}
 #sidebar{margin-top:30px}
