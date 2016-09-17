@@ -129,9 +129,9 @@ application framework and your app itself is up to date and secured. See the
 * Two blog posts on using AWS Autoscaling in [Automatic replacement of Autoscaling nodes with equivalent spot instances](https://mcristi.wordpress.com/2016/04/21/my-approach-at-making-aws-ec2-affordable-automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances/)
   and
   [Autoscaling nodes: seeing it in action](https://mcristi.wordpress.com/2016/04/27/automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances-seeing-it-in-action/)
-  provides a fairly complicated but potential approach for making AWS 
-  cheaper, depending on whether the majority of your cost is in compute
-  nodes.
+  provide a potential approach for making AWS cheaper via autoscaling. While
+  these posts may look a bit more dfifficult than the Heroku dyno slider
+  bar, if you're already using AWS this should prove fairly easy to configure.
 
 
 ## Platform-as-a-service learning checklist
