@@ -65,6 +65,11 @@ for fellow developers.
   [a chapter on sending text messages](https://automatetheboringstuff.com/chapter16/) 
   that uses Twilio to get the job done.
 
+* [Build a Simpsons Quote-Bot with Twilio MMS, Frinkiac, and Python](http://tutorials.pluralsight.com/interesting-apis/build-a-simpsons-quote-bot-with-twilio-mms-frinkiac-and-python)
+  combines picture messages sent via Twilio MMS with 
+  [Frinkiac](https://frinkiac.com/) to create and sent Simpons cartoon
+  quotes to any phone number. 
+
 * IBM's Bluemix blog contains a nice tutorial on building an 
   [IoT Python app with a Raspberry Pi and Bluemix](https://developer.ibm.com/bluemix/2015/04/02/tutorial-using-a-raspberry-pi-python-iot-twilio-bluemix/)
   that uses Twilio to interact with the Raspberry Pi.
