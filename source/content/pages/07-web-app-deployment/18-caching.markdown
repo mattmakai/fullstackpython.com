@@ -26,7 +26,9 @@ A cache can be created for multiple layers of the stack.
 
 * [Redis](http://redis.io/) is a key-value in-memory data store that can
   easily be configured for caching with libraries such as 
-  [django-redis-cache](https://github.com/sebleier/django-redis-cache).
+  [django-redis-cache](https://github.com/sebleier/django-redis-cache)
+  and the similarly-named, but separate project 
+  [django-redis](https://github.com/niwinz/django-redis).
 
 
 ## Caching resources
