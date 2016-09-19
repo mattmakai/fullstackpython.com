@@ -69,10 +69,9 @@ questions about your coding issues.
 * DjangoCon US videos from 
   [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
   [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
-  [2012](http://pyvideo.org/category/23/djangocon-2012), 
-  [2011](http://pyvideo.org/category/3/djangocon-2011), as well as  
-  [earlier US and DjangoCon EU conferences](http://pyvideo.org/category) are
-  all available free of charge.
+  [2012](http://pyvideo.org/events/djangocon-2012.html), 
+  [2011](http://pyvideo.org/events/djangocon-2011.html) are all available
+  free of charge.
 
 * DjangoCon EU videos are also available from 
   [2015](https://vimeo.com/channels/952478/videos).
@@ -114,7 +113,7 @@ questions about your coding issues.
 
 
 ## Video compilations
-* [PyVideo](http://www.pyvideo.org/) organizes and indexes thousands of Python
+* [PyVideo](http://pyvideo.org/) organizes and indexes thousands of Python
   videos from both major conferences and meetups.
 
 * [Incredible Technical Speakers](https://github.com/mattmakai/incredible-technical-speakers)
