@@ -31,8 +31,12 @@ as a rock solid free operating system for running our applications.
 
 
 ## Recommended operating systems
-The only recommended operating system for production Python web stack 
-deployments is Linux. There are several Linux distributions commonly used 
+The only recommended operating systems for production Python web stack 
+deployments are 
+[Linux](https://github.com/torvalds/linux)
+and 
+[FreeBSD](https://www.freebsd.org/). 
+There are several Linux distributions commonly used 
 for running production servers. Ubuntu Long Term Support (LTS) releases, 
 Red Hat Enterprise Linux, and CentOS are all viable options. 
 
