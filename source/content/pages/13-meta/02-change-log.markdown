@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### September
+* Broke out [Pelican](/pelican.html) as its own page.
 * Removed a ton of unnecessary CSS to make page loads faster.
 * Added new resources to the [Python 2 or 3?](/python-2-or-3.html) page.
 * New update to the 
