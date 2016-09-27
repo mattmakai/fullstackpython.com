@@ -153,10 +153,6 @@ ones listed here are primarily coded in Python.
 
 
 ### Static site generator resources
-* [The Long Road to Building a Static Blog with Pelican](http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html)
-  is a fantastic read that really gets into the details throughout the 
-  walkthrough. 
-
 * [Staticgen](https://www.staticgen.com/) lists static website generators
   of all programming languages sorted by various attributes such as the
   number of GitHub stars, forks and issues.
@@ -174,10 +170,6 @@ ones listed here are primarily coded in Python.
 * [Ditching Wordpress and becoming one of the cool kids](http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/)
   is one developer's experience moving away from Wordpress and onto
   Pelican with reStructuredText for his personal blog.
-
-* [Getting started with Pelican and GitHub pages](http://www.mattmakai.com/introduction-to-pelican.html)
-  is a tutorial I wrote to use the Full Stack Python source code to create
-  and deploy your first static site.
 
 
 ### Static site deployment resources

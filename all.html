@@ -3679,11 +3679,6 @@ ones listed here are primarily coded in Python.</p>
 <h3>Static site generator resources</h3>
 <ul>
 <li>
-<p><a href="http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html">The Long Road to Building a Static Blog with Pelican</a>
-  is a fantastic read that really gets into the details throughout the 
-  walkthrough. </p>
-</li>
-<li>
 <p><a href="https://www.staticgen.com/">Staticgen</a> lists static website generators
   of all programming languages sorted by various attributes such as the
   number of GitHub stars, forks and issues.</p>
@@ -3704,11 +3699,6 @@ ones listed here are primarily coded in Python.</p>
 <p><a href="http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/">Ditching Wordpress and becoming one of the cool kids</a>
   is one developer's experience moving away from Wordpress and onto
   Pelican with reStructuredText for his personal blog.</p>
-</li>
-<li>
-<p><a href="http://www.mattmakai.com/introduction-to-pelican.html">Getting started with Pelican and GitHub pages</a>
-  is a tutorial I wrote to use the Full Stack Python source code to create
-  and deploy your first static site.</p>
 </li>
 </ul>
 <h3>Static site deployment resources</h3>
@@ -3808,6 +3798,41 @@ open source project author from having to reinvent a new templating style.</p>
 <p>When you use Jinja2 for long enough, eventually you'll want to escape
   large blocks of Jinja2-like text in your templates. To do so, you'll
   need the <a href="http://stackoverflow.com/questions/25359898/escape-jinja2-syntax-in-a-jinja2-template">"raw" template tag</a>.</p>
+</li>
+</ul>
+          <h1>Pelican</h1>
+<p><a href="http://docs.getpelican.com/en/3.6.3/">Pelican</a> is a 
+<a href="/static-site-generator.html">static site generator</a> implemented in Python 
+that combines <a href="/jinja2.html">Jinja</a> templates with content written in 
+Markdown or reStructuredText to produce websites.</p>
+<p><a href="http://docs.getpelican.com/en/3.6.3/" style="border: none;"><img src="/img/pelican-logo.png" width="100%" alt="Pelican static website generator logo." class="technical-diagram" /></a></p>
+<div class="well see-also">Pelican is an implementation of the <a href="/static-site-generator.html">static site generators</a> concept. Learn how the parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
+<h2>Why is Pelican a useful tool?</h2>
+<p>Static websites are easier to <a href="/deployment.html">deploy</a> than full web 
+applications built with a <a href="/web-frameworks.html">web framework</a> that rely 
+on a <a href="/databases.html">persistent database backend</a>. In addition, static
+sites are typically much faster to load because there are no database 
+queries or middleware code to execute during the HTTP request-response
+cycle. </p>
+<p>A web server that hosts a static website simply responds to inbound HTTP 
+requests with the file being requests - no dynamic data is populated on the
+server during the response.</p>
+<h2>Pelican resources</h2>
+<ul>
+<li>
+<p><a href="http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html">The Long Road to Building a Static Blog with Pelican</a>
+  is a fantastic read that really gets into the details throughout the 
+  walkthrough. </p>
+</li>
+<li>
+<p><a href="http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/">How I built this website, using Pelican</a>
+  walks through getting your first Pelican site generated and running.</p>
+</li>
+<li>
+<p><a href="http://www.mattmakai.com/introduction-to-pelican.html">Getting started with Pelican and GitHub pages</a>
+  is a tutorial I wrote to use the Full Stack Python source code to create
+  and deploy your first static site.</p>
 </li>
 </ul>
           <h1>Data</h1>
