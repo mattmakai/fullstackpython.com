@@ -153,6 +153,13 @@ ones listed here are primarily coded in Python.
 
 
 ### Static site generator resources
+* [Static vs Dynamic Websites](https://about.gitlab.com/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/)
+  does an excellent job of showing the differences between a dynamic website
+  that uses a database backend to produce content in response to a request
+  compared with static sites that are pregenerated. There is also a 
+  [second part in the series](https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/) 
+  where generic static site generator concepts are explained.
+
 * [Staticgen](https://www.staticgen.com/) lists static website generators
   of all programming languages sorted by various attributes such as the
   number of GitHub stars, forks and issues.
