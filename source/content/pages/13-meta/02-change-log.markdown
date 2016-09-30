@@ -16,7 +16,9 @@ the
 
 ## 2016
 ### September
-* Broke out [Pelican](/pelican.html) as its own page.
+* Broke out [Pelican](/pelican.html) into its own page and added new content
+  that was not previously found on the 
+  [static website generators](/static-site-generator.html) page.
 * Removed a ton of unnecessary CSS to make page loads faster.
 * Added new resources to the [Python 2 or 3?](/python-2-or-3.html) page.
 * New update to the 
@@ -26,7 +28,7 @@ the
   with a new bit on how to solve a common issue when the bot does not seem
   to be responding to `@` mentions due to a missing colon in the input.
 * New resources on the 
-  [static site generators](http://www.fullstackpython.com/static-site-generator.html)
+  [static site generators](/static-site-generator.html)
   page focusing on deploying a static site.
 
 ### August
