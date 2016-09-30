@@ -32,6 +32,8 @@ instead rendering HTML via a templating system. Morepath appears to have
 been created with the RESTful API model approach in mind and cuts out the 
 assumption that templates will drive the user interface.
 
+<div class="well see-also">Morepath is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
 
 ### Morepath resources
 * [On the Morepath](http://blog.startifact.com/posts/on-the-morepath.html)
