@@ -14,9 +14,9 @@ applications and systems administrators who keep infrastructure running.
 
 
 ## Why is DevOps important?
-When the Agile methodology is properly used to develop software a new
-bottleneck often appears during the [deployment](/deployment.html) and 
-operations phases. New updates and fixes are produced so fast in each 
+When the Agile methodology is properly used to develop software, a new
+bottleneck often appears during the frequent [deployment](/deployment.html) 
+and operations phases. New updates and fixes are produced so fast in each 
 sprint that infrastructure teams can be overwhelmed with deployments and 
 push back on the pace of delivery. To allievate some of these issues, 
 application developers are asked to work closely with operations folks to
@@ -34,6 +34,11 @@ automate the delivery from development to production.
   is a presentation slideshow that explains that while DevOps is a culture, 
   it can be supported by tools such as Fabric, Jenkins, BuildBot and Git
   which when used properly can enable continuous software delivery.
+
+* [A look at DevOps tools landscape](https://devup.co/a-look-at-devops-tools-landscape-7220099c6b81)
+  provides an introductory overview of the tooling that is typically
+  required to perform DevOps. The tools range from source control systems,
+  continuous integration, containers to orchestration.
 
 * [Why are we racing to DevOps?](http://www.cio.com/article/3015237/application-development/why-are-we-racing-to-devops.html)
   is a very high level summary of the benefits of DevOps to IT organizations.
