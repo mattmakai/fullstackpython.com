@@ -15,6 +15,11 @@ the
 
 
 ## 2016
+### October
+* Added stub page that needs to be expanded for 
+  [Python Community](/python-community.html).
+* New resources on the [DevOps](/devops.html) page.
+
 ### September
 * Broke out [Pelican](/pelican.html) into its own page and added new content
   that was not previously found on the 

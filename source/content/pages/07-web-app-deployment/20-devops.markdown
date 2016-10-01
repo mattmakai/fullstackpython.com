@@ -38,7 +38,12 @@ automate the delivery from development to production.
 * [A look at DevOps tools landscape](https://devup.co/a-look-at-devops-tools-landscape-7220099c6b81)
   provides an introductory overview of the tooling that is typically
   required to perform DevOps. The tools range from source control systems,
-  continuous integration, containers to orchestration.
+  continuous integration, containers to orchestration. For an 
+  Atlassian-centric perspective on tooling, take a look at this post on
+  [how to choose the right DevOps tools](http://blogs.atlassian.com/2016/03/how-to-choose-devops-tools/)
+  which is biased towards their tools but still has some good insight
+  such as using automated testing to provide immediate awareness of 
+  defects that require fixing.
 
 * [Why are we racing to DevOps?](http://www.cio.com/article/3015237/application-development/why-are-we-racing-to-devops.html)
   is a very high level summary of the benefits of DevOps to IT organizations.
