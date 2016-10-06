@@ -74,14 +74,14 @@ h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
 @media (max-width:1200px){h3.panel-head{font-size:22px} .select-next{min-height:300px}}@media (max-width:750px){ .select-next{min-height:100px} .smaller-item{font-size:1em;padding:15px 0 15px 10px}}@media (max-width:720px){.logo-header-section{margin:20px 40px 0 0}}.technical-diagram{margin:10px 0 5px 0}
 .see-also{margin-top:20px;background:#22B24C;color:#eee;font-family:"Helvetica Neue",sans-serif}
 .see-also a{color: #fff}
-.indent{margin-left:25px;padding:0 0 1px}
-.toc-indent{padding:0 0 1px 25px;font-family:"Helvetica Neue",sans-serif}
-.toc-indent-link{margin-left: 25px;padding-bottom:1px}
-.toc-subsection-link{margin-left:56px;padding-bottom:1px}
-.toc-indent-subsection{padding-left:55px; padding-bottom:1px}
 .toc-more-indent{padding:0 0 1px 37px;font-family:"Helvetica Neue",sans-serif}
 p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:16px 0 20px 0}
 @media (max-width:767px){#full-toc{display:none;} .subnav{margin-top:10px;} .logo-header-section{padding:8px 0 10px; margin:0} .logo-title a,.logo-title a:hover {font-size: 40px} .logo-image {height: 30px; width: 30px;} pre{font-size:50%}}
 @media (min-width:768px){#full-toc{display:block;} #mobile-toc{display:none;}}
 .post-byline{font-size:12px;color:#666;margin:0 0 10px}
-.sans-font {font-family:"Helvetica Neue",sans-serif;}
+.sans-font{font-family:"Helvetica Neue",sans-serif}
+h4.toc-subsection{margin:15px 0 3px 25px}
+div.toc{margin-left:56px;padding:4px 0 0;font-family:"Helvetica Neue",sans-serif}
+div.two-digit{margin-left:78px}
+h4.two-digit{margin-left:38px}
+.coming-soon{color: #999}
