@@ -61,10 +61,6 @@ understand how to use the project.
 * [Taskmaster](https://github.com/dcramer/taskmaster) is a lightweight simple
   distributed queue for handling large volumes of one-off tasks. 
 
-* [Huey](http://huey.readthedocs.org/en/latest/) is a simple task queue that
-  uses Redis on the backend but otherwise does not depend on other libraries. 
-  The project was previously known as Invoker and the author changed the name.
-
 * [Huey](http://huey.readthedocs.org/en/latest/) is a Redis-based task 
   queue that aims to provide a simple, yet flexible framework for 
   executing tasks. Huey supports task scheduling, crontab-like repeating 
