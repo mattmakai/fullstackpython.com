@@ -16,6 +16,8 @@ the
 
 ## 2016
 ### October
+* Updated [all topics / table of contents](/table-of-contents.html) page 
+  to show future topics I am working to create.
 * Added stub page that needs to be expanded for 
   [Python Community](/python-community.html).
 * New resources on the [DevOps](/devops.html) page.
