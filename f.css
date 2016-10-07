@@ -76,7 +76,7 @@ h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
 .see-also a{color: #fff}
 .toc-more-indent{padding:0 0 1px 37px;font-family:"Helvetica Neue",sans-serif}
 p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:16px 0 20px 0}
-@media (max-width:767px){#full-toc{display:none;} .subnav{margin-top:10px;} .logo-header-section{padding:8px 0 10px; margin:0} .logo-title a,.logo-title a:hover {font-size: 40px} .logo-image {height: 30px; width: 30px;} pre{font-size:50%}}
+@media (max-width:767px){#full-toc{display:none;} .subnav{margin-top:10px;} .logo-header-section{padding:8px 0 10px; margin:0} #forkme {display:none} .logo-title a,.logo-title a:hover {font-size: 40px} .logo-image {height: 30px; width: 30px;} pre{font-size:50%}}
 @media (min-width:768px){#full-toc{display:block;} #mobile-toc{display:none;}}
 .post-byline{font-size:12px;color:#666;margin:0 0 10px}
 .sans-font{font-family:"Helvetica Neue",sans-serif}
