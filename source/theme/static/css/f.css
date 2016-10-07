@@ -61,7 +61,7 @@ a{background:transparent;text-decoration:none;border-bottom:1px dotted;color:#44
 a:hover{text-decoration:none;color:#000}
 .logo-title a,.logo-title a:hover{font:72px "Helvetica Neue",sans-serif;font-weight:normal;letter-spacing:.03em;vertical-align:middle;margin-left:5px;color:#000;text-decoration:none;border-bottom:none;line-height:.9em}
 .logo-title a:hover{color:#808080}
-.logo-image{vertical-align:middle;border:none}
+.logo-image{vertical-align:middle;border:none;height:52px;width:52px;padding:1px}
 .logo-header-section{margin:20px 0 15px 0}
 a.list-group-item.active{background:#444;border:1px solid #222}
 a.list-group-item.active:hover{background:#444;border:1px solid #222}
@@ -76,7 +76,7 @@ h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
 .see-also a{color: #fff}
 .toc-more-indent{padding:0 0 1px 37px;font-family:"Helvetica Neue",sans-serif}
 p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:16px 0 20px 0}
-@media (max-width:767px){#full-toc{display:none;} .subnav{margin-top:10px;} .logo-header-section{padding:8px 0 10px; margin:0} #forkme {display:none} .logo-title a,.logo-title a:hover {font-size: 40px} .logo-image {height: 30px; width: 30px;} pre{font-size:50%}}
+@media (max-width:767px){#full-toc{display:none;} .subnav{margin-top:10px;} .logo-header-section{padding:8px 0 10px; margin:0} #forkme {display:none} .logo-title a,.logo-title a:hover{font-size:34px} h1{font-size:28px} h2{font-size:24px} .logo-image{height:26px;width:26px} pre{font-size:50%}}
 @media (min-width:768px){#full-toc{display:block;} #mobile-toc{display:none;}}
 .post-byline{font-size:12px;color:#666;margin:0 0 10px}
 .sans-font{font-family:"Helvetica Neue",sans-serif}
@@ -84,4 +84,4 @@ h4.toc-subsection{margin:15px 0 3px 25px}
 div.toc{margin-left:56px;padding:4px 0 0;font-family:"Helvetica Neue",sans-serif}
 div.two-digit{margin-left:78px}
 h4.two-digit{margin-left:38px}
-.coming-soon{color: #999}
+.coming-soon{color: #777}
