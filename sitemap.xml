@@ -156,7 +156,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/no-sql-datastore.html</loc>
+    <loc>https://www.fullstackpython.com/postgresql.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -180,7 +180,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/object-relational-mappers-orms.html</loc>
+    <loc>https://www.fullstackpython.com/mysql.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -212,7 +212,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/postgresql.html</loc>
+    <loc>https://www.fullstackpython.com/sqlite.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -220,7 +220,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/mysql.html</loc>
+    <loc>https://www.fullstackpython.com/object-relational-mappers-orms.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -236,7 +236,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/sqlite.html</loc>
+    <loc>https://www.fullstackpython.com/sqlalchemy.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -265,6 +265,10 @@
   </url>
   <url>
     <loc>https://www.fullstackpython.com/other-web-frameworks.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.fullstackpython.com/no-sql-datastore.html</loc>
     <priority>1.0</priority>
   </url>
   <url>

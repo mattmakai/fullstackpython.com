@@ -16,6 +16,7 @@ the
 
 ## 2016
 ### October
+* Added new [SQLAlchemy page](/sqlalchemy.html).
 * Updated [all topics / table of contents](/table-of-contents.html) page 
   to show future topics I am working to create.
 * Added stub page that needs to be expanded for 

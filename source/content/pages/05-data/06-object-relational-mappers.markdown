@@ -12,6 +12,8 @@ An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.
 
+<img src="/img/orms-bridge.png" width="100%" alt="Diagram showing how object-relational mappers bridge the database and Python objects." class="technical-diagram" />
+
 
 ## Why are ORMs useful?
 ORMs provide a high-level abstraction upon a
@@ -132,7 +134,7 @@ the application and the database stored procedures.
 There are numerous ORM implementations written in Python, including
 
 1. [The Django ORM](https://docs.djangoproject.com/en/1.8/topics/db/)
-1. [SQLAlchemy](http://www.sqlalchemy.org/)
+1. [SQLAlchemy](/sqlalchemy.html)
 1. [Peewee](https://peewee.readthedocs.org/en/latest/)
 1. [PonyORM](http://ponyorm.com/)
 1. [SQLObject](http://sqlobject.org/)
@@ -170,9 +172,8 @@ existing framework.
 [SQLAlchemy](http://www.sqlalchemy.org/) is a well-regarded
 Python ORM because it gets the abstraction level "just right" and
 seems to make complex database queries easier to write than the Django
-ORM in most cases. SQLAlchemy is typically used with Flask as the database
-ORM via the [Flask-SQLAlchemy](https://pythonhosted.org/Flask-SQLAlchemy/)
-extension.
+ORM in most cases. There is [an entire page on SQLAlchemy](/sqlalchemy.html) 
+that you should read if you want to learn more about using the library.
 
 
 ### Peewee
@@ -230,6 +231,19 @@ For now, we'll lump schema migration resources under ORM links below.
   [StackOverflow answer](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb)
   on the topic.
 
+* [What ORMs have taught me: just learn SQL](http://wozniak.ca/what-orms-have-taught-me-just-learn-sql)
+  is another angle in the ORM versus embedded SQL / stored procedures debate.
+  The author's conclusion is that while working with ORMs such as SQLAlchemy
+  and Hibernate (a Java-based ORM) can save time up front there are issues
+  as a project evolves such as partial objects and schema redundancies.
+  I think the author makes some valid points that some ORMs can be a shaky
+  foundation for extremely complicated database-backed applications. However,
+  I disagree with the overriding conclusion to eschew ORMs in favor of
+  stored procedures. Stored procedures have their own issues and there are
+  no perfect solutions, but I personally prefer using an ORM at the start
+  of almost every project even if it later needs to be replaced with
+  direct SQL queries.
+ 
 
 ### Django ORM resources
 * [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
@@ -297,29 +311,6 @@ For now, we'll lump schema migration resources under ORM links below.
   shows what to do if you're struggling with the common issue of sorting
   columns that contain NULL values.
 
-
-### SQLAlchemy resources
-* If you're interested in the differences between SQLAlchemy and the Django
-  ORM I recommend reading
-  [SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/)
-  by Armin Ronacher.
-
-* There is an entire chapter in the 
-  [Architecture of Open Source Applications book on SQLAlchemy ](http://aosabook.org/en/sqlalchemy.html).
-  The content is detailed and well worth reading to understand what's 
-  happening under the covers.
-
-* [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
-  provides a detailed comparison of SQLAlchemy against alternatives.
-
-* Most Flask developers use SQLAlchemy as an ORM to relational databases.
-  If you're unfamiliar with SQLAlchemy questions will often come up such as
-  [what's the difference between flush and commit?](http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit)
-  that are important to understand as you build out your app.
-
-* [SQLAlchemy and Django](https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/)
-  explains how one development team uses the Django ORM for most of their
-  standard queries but relies on SQLAlchemy for really advanced queries.
 
 ### Peewee resources
 * [Managing database connections with Peewee](http://charlesleifer.com/blog/managing-database-connections-with-peewee/)

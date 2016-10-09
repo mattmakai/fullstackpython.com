@@ -1762,7 +1762,7 @@ application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as separate
 libraries.</p>
-<p><a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></a></p>
+<p><a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram"></a></p>
 <p>For example, 
 <a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
 <a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
@@ -4436,6 +4436,7 @@ representing a person could have a property of "female" or "male".</p>
 <p>An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.</p>
+<p><img src="/img/orms-bridge.png" width="100%" alt="Diagram showing how object-relational mappers bridge the database and Python objects." class="technical-diagram" /></p>
 <h2>Why are ORMs useful?</h2>
 <p>ORMs provide a high-level abstraction upon a
 <a href="/databases.html">relational database</a> that allows a developer to write
@@ -4536,7 +4537,7 @@ the application and the database stored procedures.</p>
 <p>There are numerous ORM implementations written in Python, including</p>
 <ol>
 <li><a href="https://docs.djangoproject.com/en/1.8/topics/db/">The Django ORM</a></li>
-<li><a href="http://www.sqlalchemy.org/">SQLAlchemy</a></li>
+<li><a href="/sqlalchemy.html">SQLAlchemy</a></li>
 <li><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a></li>
 <li><a href="http://ponyorm.com/">PonyORM</a></li>
 <li><a href="http://sqlobject.org/">SQLObject</a></li>
@@ -4567,9 +4568,8 @@ existing framework.</p>
 <p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> is a well-regarded
 Python ORM because it gets the abstraction level "just right" and
 seems to make complex database queries easier to write than the Django
-ORM in most cases. SQLAlchemy is typically used with Flask as the database
-ORM via the <a href="https://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLAlchemy</a>
-extension.</p>
+ORM in most cases. There is <a href="/sqlalchemy.html">an entire page on SQLAlchemy</a> 
+that you should read if you want to learn more about using the library.</p>
 <h3>Peewee</h3>
 <p><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a> is a Python ORM
 written to be
@@ -4618,6 +4618,20 @@ For now, we'll lump schema migration resources under ORM links below.</p>
   MySQL-python and an ORM like SQLAlchemy, read this
   <a href="http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb">StackOverflow answer</a>
   on the topic.</p>
+</li>
+<li>
+<p><a href="http://wozniak.ca/what-orms-have-taught-me-just-learn-sql">What ORMs have taught me: just learn SQL</a>
+  is another angle in the ORM versus embedded SQL / stored procedures debate.
+  The author's conclusion is that while working with ORMs such as SQLAlchemy
+  and Hibernate (a Java-based ORM) can save time up front there are issues
+  as a project evolves such as partial objects and schema redundancies.
+  I think the author makes some valid points that some ORMs can be a shaky
+  foundation for extremely complicated database-backed applications. However,
+  I disagree with the overriding conclusion to eschew ORMs in favor of
+  stored procedures. Stored procedures have their own issues and there are
+  no perfect solutions, but I personally prefer using an ORM at the start
+  of almost every project even if it later needs to be replaced with
+  direct SQL queries.</p>
 </li>
 </ul>
 <h3>Django ORM resources</h3>
@@ -4701,36 +4715,6 @@ For now, we'll lump schema migration resources under ORM links below.</p>
 <p><a href="https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/">Sorting querysets with NULLs in Django</a>
   shows what to do if you're struggling with the common issue of sorting
   columns that contain NULL values.</p>
-</li>
-</ul>
-<h3>SQLAlchemy resources</h3>
-<ul>
-<li>
-<p>If you're interested in the differences between SQLAlchemy and the Django
-  ORM I recommend reading
-  <a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
-  by Armin Ronacher.</p>
-</li>
-<li>
-<p>There is an entire chapter in the 
-  <a href="http://aosabook.org/en/sqlalchemy.html">Architecture of Open Source Applications book on SQLAlchemy </a>.
-  The content is detailed and well worth reading to understand what's 
-  happening under the covers.</p>
-</li>
-<li>
-<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
-  provides a detailed comparison of SQLAlchemy against alternatives.</p>
-</li>
-<li>
-<p>Most Flask developers use SQLAlchemy as an ORM to relational databases.
-  If you're unfamiliar with SQLAlchemy questions will often come up such as
-  <a href="http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit">what's the difference between flush and commit?</a>
-  that are important to understand as you build out your app.</p>
-</li>
-<li>
-<p><a href="https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/">SQLAlchemy and Django</a>
-  explains how one development team uses the Django ORM for most of their
-  standard queries but relies on SQLAlchemy for really advanced queries.</p>
 </li>
 </ul>
 <h3>Peewee resources</h3>
@@ -5291,6 +5275,177 @@ access a SQLite database from within Python applications.</p>
 <p><a href="http://blog.regehr.org/archives/1292">SQLite with a fine-toothed comb</a>
   digs into the internals of SQLite and shows some bugs found (and 
   since fixed) while the author was researching the SQLite source code.</p>
+</li>
+</ul>
+          <h1>SQLAlchemy</h1>
+<p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> is a well-regarded 
+database toolkit and 
+<a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a>
+implementation written in Python. SQLAlchemy provides a generalized 
+interface for creating and executing database-agnostic code without 
+needing to write SQL statements.</p>
+<p><a href="http://www.sqlalchemy.org/"><img src="/img/sqlalchemy.jpg" width="100%" alt="SQLAlchemy logo." class="technical-diagram"></a></p>
+<h2>Why is SQLAlchemy a good ORM choice?</h2>
+<p>SQLAlchemy isn't just an ORM- it also provides SQLAlchemy Core for performing
+database work that is abstracted from the implementation differences between 
+PostgreSQL, SQLite, etc. In some ways, the ORM is a bonus to Core that
+automates commonly-required create, read, update and delete operations.</p>
+<p>SQLAlchemy can be used with or without the ORM features. Any given project 
+can choose to just use SQLAlchemy Core or both Core and the ORM. The 
+following diagram shows a few example configurations with various 
+application software stacks and backend databases. Any of these 
+configurations can be a valid option depending on what type of application
+you are coding.</p>
+<p><img src="/img/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="technical-diagram"></a></p>
+<p>A benefit many developers enjoy with SQLAlchemy is that it allows developers 
+to write a mapping from the database schema to the Python objects in their 
+project.  The mapping allows SQLAlchemy to handle the underlying database 
+so developers can work with Python objects instead of writing bridge code 
+to get data in and out of relational tables.</p>
+<div class="well see-also">SQLAlchemy is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
+<h2>What's SQLAlchemy look like compared to raw SQL?</h2>
+<p>Here is an example of a SQLAlchemy model definition from the open source 
+<a href="https://github.com/mattmakai/compare-python-web-frameworks/blob/master/flask_jinja_sqlalchemy/app.py">compare-python-web-frameworks project</a>
+that uses Flask, SQLAlchemy and Flask-SQLAlchemy.</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="n">Contact</span>(<span class="n">db</span>.<span class="n">Model</span>):
+    <span class="n">__tablename__</span> = <span class="s">&#39;contacts&#39;</span>
+    <span class="n">id</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">Integer</span>, <span class="n">primary_key</span>=<span class="nb">True</span>)
+    <span class="n">first_name</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">String</span>(<span class="mi">100</span>))
+    <span class="n">last_name</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">String</span>(<span class="mi">100</span>))
+    <span class="n">phone_number</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">String</span>(<span class="mi">32</span>))
+
+    <span class="n">def</span> <span class="n">__repr__</span>(<span class="k">self</span>):
+        <span class="k">return</span> <span class="s">&#39;&lt;Contact {0} {1}: {2}&gt;&#39;</span>.<span class="n">format</span>(<span class="k">self</span>.<span class="n">first_name</span>,
+                                               <span class="k">self</span>.<span class="n">last_name</span>,
+                                               <span class="k">self</span>.<span class="n">phone_number</span>)
+</pre></div>
+
+
+<p>SQLAlchemy handles the table creation that otherwise we would have had
+to write a create table statement like this one to do the work:</p>
+<div class="highlight"><pre>CREATE TABLE CONTACTS(
+   ID INT PRIMARY KEY        NOT NULL,
+   FIRST_NAME     CHAR(100)  NOT NULL,
+   LAST_NAME      CHAR(100)  NOT NULL,
+   PHONE_NUMBER   CHAR(32)   NOT NULL,
+);
+</pre></div>
+
+
+<p>By using SQLAlchemy in our Python code, all records can be obtained with a 
+line like <code>contacts = Contact.query.all()</code> instead of a plain SQL such as 
+<code>SELECT * FROM contacts</code>. That may not look like much of a difference in
+syntax but writing the queries in Python is often faster and easier for
+many Python developers once multiple tables and specific filtering on fields 
+for queries have to be written. In addition, SQLAlchemy abstracts away
+idiosyncratic differences between database implementations in 
+<a href="/sqlite.html">SQLite</a>, <a href="/mysql.html">MySQL</a> and 
+<a href="/postgresql.html">PostgreSQL</a>.</p>
+<h3>Using SQLAlchemy with Web Frameworks</h3>
+<p>There is no reason why you cannot use the SQLAlchemy library in any 
+application that requires a database backend. However, if you are
+building a web app with <a href="/flask.html">Flask</a>, <a href="/bottle.html">Bottle</a> or 
+<a href="/other-web-frameworks.html">another web framework</a> then take
+a look at the following extensions. They provide some glue code along with
+helper functions that can reduce the boilerplate code needed to connect
+your application's code with the SQLAlchemy library.</p>
+<ul>
+<li>
+<p>SQLAlchemy is typically used with Flask as the database
+  ORM via the <a href="https://pythonhosted.org/Flask-SQLAlchemy/">Flask-SQLAlchemy</a>
+  extension.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/iurisilvio/bottle-sqlalchemy">bottle-sqlalchemy</a>
+  extension for <a href="/bottle.html">Bottle</a> provides a bridge between the standard
+  SQLAlchemy library and Bottle. However, from my experience using the library
+  it does not have quite as many helper functions as Flask-SQLAlchemy.</p>
+</li>
+<li>
+<p><a href="/pyramid.html">Pyramid</a> uses the 
+  <a href="http://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/database/sqlalchemy.html">alchemy scaffold</a>
+  to make it easy to add SQLAlchemy to a Pyramid web app.</p>
+</li>
+<li>
+<p>While Django does not yet support easy-swapping of the default Django 
+  backend ORM with SQLAlchemy (like it does for 
+  <a href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TEMPLATES">template engines</a>),
+  there are hacks for 
+  <a href="https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/">using SQLAlchemy within Django projects</a>.</p>
+</li>
+<li>
+<p><a href="/morepath.html">Morepath</a> has easy-to-use support for SQLAlchemy via its
+  <a href="http://blog.startifact.com/posts/racing-the-morepath-sqlalchemy-integration.html">more.transaction</a> 
+  module. There is a 
+  <a href="https://pypi.python.org/pypi/morepath-sqlalchemy/">morepath-sqlalchemy demo</a>
+  that serves as a working example.</p>
+</li>
+</ul>
+<h3>SQLAlchemy resources</h3>
+<p>The best way to get comfortable with SQLAlchemy is to dig in and write
+a database-driven application. The following resources can be helpful if 
+you are having trouble getting started or are starting to run into some 
+edge cases.</p>
+<ul>
+<li>
+<p>If you're interested in the differences between SQLAlchemy and the Django
+  ORM I recommend reading
+  <a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
+  by Armin Ronacher.</p>
+</li>
+<li>
+<p>There is an entire chapter in the 
+  <a href="http://aosabook.org/en/sqlalchemy.html">Architecture of Open Source Applications book on SQLAlchemy</a>.
+  The content is detailed and well worth reading to understand what's 
+  happening under the covers.</p>
+</li>
+<li>
+<p>This 
+  <a href="https://github.com/sloria/PythonORMSleepy">GitHub project named PythonORMSleepy</a> 
+  implements the same Flask application with several different ORMs:
+  SQLAlchemy, Peewee, MongoEngine, stdnet and PonyORM. Looking through the
+  code is helpful for understanding the varying approaches each library
+  takes to accomplish a similar objective. </p>
+</li>
+<li>
+<p><a href="http://pajhome.org.uk/blog/10_reasons_to_love_sqlalchemy.html">10 reasons to love SQLAlchemy</a>
+  is a bit of a non-critical lovefest for the code library. However, the
+  post makes some good points about the quality of SQLAlchemy's 
+  documentation and what a pleasure it can be to use it in a Python project.</p>
+</li>
+<li>
+<p><a href="http://nando.oui.com.br/2014/04/01/large_apps_with_sqlalchemy__architecture.html">Large web apps in Python: A good architecture</a>
+  goes into issues that expanding codebases face, such as where to put
+  business logic and how to automate database testing. Each of the topics 
+  in the article are discussed in the context of a recent project the 
+  author worked on that heavily relied on SQLAlchemy.</p>
+</li>
+<li>
+<p><a href="https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/">SQLAlchemy and Django</a>
+  explains how one development team uses the Django ORM for most of their
+  standard queries but relies on SQLAlchemy for really advanced queries.</p>
+</li>
+<li>
+<p><a href="https://talkpython.fm/episodes/show/5/sqlalchemy-and-data-access-in-python">SQLAlchemy and data access in Python</a>
+  is a podcast interview with the creator of SQLAlchemy that covers the
+  project's history and how it has evolved over the past decade.</p>
+</li>
+<li>
+<p>Most Flask developers use SQLAlchemy as an ORM to relational databases.
+  If you're unfamiliar with SQLAlchemy questions will often come up such as
+  <a href="http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit">what's the difference between flush and commit?</a>
+  that are important to understand as you build out your app.</p>
+</li>
+<li>
+<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
+  provides a detailed comparison of SQLAlchemy against alternatives.</p>
+</li>
+<li>
+<p><a href="https://code.oursky.com/batch-sqlalchemy-generating-top-playlist/">SQLAlchemy in batches</a>
+  shows the code that a popular iOS application runs in background
+  batch scripts which uses SQLAlchemy to generate playlists. They provide
+  some context and advice for using SQLAlchemy in batch scripts.</p>
 </li>
 </ul>
           <h1>Application Programming Interfaces</h1>
@@ -9359,6 +9514,7 @@ the
 <h2>2016</h2>
 <h3>October</h3>
 <ul>
+<li>Added new <a href="/sqlalchemy.html">SQLAlchemy page</a>.</li>
 <li>Updated <a href="/table-of-contents.html">all topics / table of contents</a> page 
   to show future topics I am working to create.</li>
 <li>Added stub page that needs to be expanded for 
