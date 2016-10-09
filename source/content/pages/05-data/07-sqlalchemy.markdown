@@ -8,7 +8,8 @@ meta: SQLAlchemy is a popular Python-based object-relational mapper (ORM) that b
 
 
 # SQLAlchemy
-[SQLAlchemy](http://www.sqlalchemy.org/) is a well-regarded 
+[SQLAlchemy](http://www.sqlalchemy.org/) 
+([source code](https://github.com/zzzeek/sqlalchemy)) is a well-regarded 
 database toolkit and 
 [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
 implementation written in Python. SQLAlchemy provides a generalized 
