@@ -226,6 +226,11 @@ For now, we'll lump schema migration resources under ORM links below.
   in an essay about how ORMs are often misused but that they do provide
   benefits to developers.
 
+* [The Rise and Fall of Object Relational Mapping](http://maetl.net/talks/rise-and-fall-of-orm)
+  is a talk on the history of ORMs that doesn't shy away from some 
+  controversy. Overall I found the critique of conceptual ideas worth
+  the time it took to read the presentation slides and companion text.
+
 * If you're confused about the difference between a connector, such as
   MySQL-python and an ORM like SQLAlchemy, read this
   [StackOverflow answer](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb)
