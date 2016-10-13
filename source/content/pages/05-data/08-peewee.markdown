@@ -46,7 +46,9 @@ compared to
 [2005 for SQLAlchemy](https://github.com/zzzeek/sqlalchemy/commit/ec052c6a1f1fb0236bd367c510d82f076cb67bc9).
 The project is still over five years old though and matured substantially
 in development during that time. However, there are typically less resources
-and examples available to demonstrate how to use Peewee in your projects.
+and examples available to demonstrate how to use Peewee in your projects
+than some other ORMs that have been around for a longer period of time.
+
 Many of the best resources come from the project's author, Charles Leifer,
 on his blog and on the official site. There are also hundreds of questions 
 answered on the 
