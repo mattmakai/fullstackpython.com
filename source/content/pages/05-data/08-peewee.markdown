@@ -40,7 +40,7 @@ every exhaustive use case in order to be useful.
 
 
 ### Peewee resources
-Peewee is a much newer ORM than several other libraries.
+Peewee is a much newer library than several other Python ORMs.
 For example, Peewee's [first public commit was in 2010](https://github.com/coleifer/peewee/commit/4fd56bd35c27861337861233a7f362474157af57), 
 compared to 
 [2005 for SQLAlchemy](https://github.com/zzzeek/sqlalchemy/commit/ec052c6a1f1fb0236bd367c510d82f076cb67bc9).
