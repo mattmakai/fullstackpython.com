@@ -16,7 +16,8 @@ the
 
 ## 2016
 ### October
-* Added new [SQLAlchemy page](/sqlalchemy.html).
+* Added new [Peewee ORM](/peewee.html) page.
+* Added new [SQLAlchemy ORM](/sqlalchemy.html) page.
 * Updated [all topics / table of contents](/table-of-contents.html) page 
   to show future topics I am working to create.
 * Added stub page that needs to be expanded for 

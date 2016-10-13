@@ -133,9 +133,9 @@ the application and the database stored procedures.
 ## Python ORM Implementations
 There are numerous ORM implementations written in Python, including
 
-1. [The Django ORM](https://docs.djangoproject.com/en/1.8/topics/db/)
 1. [SQLAlchemy](/sqlalchemy.html)
-1. [Peewee](https://peewee.readthedocs.org/en/latest/)
+1. [Peewee](/peewee.html)
+1. [The Django ORM](https://docs.djangoproject.com/en/1.8/topics/db/)
 1. [PonyORM](http://ponyorm.com/)
 1. [SQLObject](http://sqlobject.org/)
 
@@ -163,9 +163,9 @@ time before the default ORM is replaced with SQLAlchemy. It will be a large
 effort to get that working though so it's likely to come in
 [Django 1.9 or later](https://github.com/mattmakai/fullstackpython.com/issues/48).
 
-Since the majority of Django projects are tied to the default ORM, it's best to
-read up on advanced use cases and tools for doing your best work within the
-existing framework.
+Since the majority of Django projects are tied to the default ORM, it is 
+best to read up on advanced use cases and tools for doing your best work 
+within the existing framework.
 
 
 ### SQLAlchemy
@@ -178,11 +178,10 @@ that you should read if you want to learn more about using the library.
 
 ### Peewee
 [Peewee](https://peewee.readthedocs.org/en/latest/) is a Python ORM
-written to be
+implementation that is written to be
 "[simpler, smaller and more hackable](http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/)"
-than SQLAlchemy. The analogy used by the core Peewee author is that Peewee
-is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work
-for every exhaustive use case in order to be useful.
+than SQLAlchemy. Read the [full Peewee page](/peewee.html) for more 
+information on the Python ORM implementation.
 
 
 ### Pony
@@ -248,7 +247,13 @@ For now, we'll lump schema migration resources under ORM links below.
   no perfect solutions, but I personally prefer using an ORM at the start
   of almost every project even if it later needs to be replaced with
   direct SQL queries.
- 
+
+
+### SQLAlchemy and Peewee resources
+A comprehensive list of [SQLAlchemy](/sqlalchemy.html) and 
+[Peewee](/peewee.html) ORM resources can be found on their respective 
+pages.
+
 
 ### Django ORM resources
 * [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
@@ -315,31 +320,6 @@ For now, we'll lump schema migration resources under ORM links below.
 * [Sorting querysets with NULLs in Django](https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/)
   shows what to do if you're struggling with the common issue of sorting
   columns that contain NULL values.
-
-
-### Peewee resources
-* [Managing database connections with Peewee](http://charlesleifer.com/blog/managing-database-connections-with-peewee/)
-  explains the connection pool and ExecutionContext of the ORM.
-
-* [An encrypted command-line diary with Python](http://charlesleifer.com/blog/dear-diary-an-encrypted-command-line-diary-with-python/)
-  is an awesome walkthrough explaining how to use SQLite, SQLCipher and
-  Peewee to create an encrypted file with your contents, diary or otherwise.
-
-* The [official Peewee quickstart documentation](http://docs.peewee-orm.com/en/latest/peewee/quickstart.html)
-  along with the 
-  [example Twitter clone app](http://docs.peewee-orm.com/en/latest/peewee/example.html)
-  will walk you through the ins and outs of your first couple Peewee-powered
-  projects.
-
-* [Shortcomings in the Django ORM and a look at Peewee](http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/)
-  from the author of the Peewee ORM explains how some of the design
-  decisions made in Peewee were in reaction to parts of the Django ORM
-  that didn't work so well in practice.
-
-* [How to make a Flask blog in one hour or less](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)
-  is a well written tutorial that uses the
-  [Peewee ORM](https://peewee.readthedocs.org/en/latest/) instead of
-  SQLAlchemy for the blog back end.
 
 
 ### Pony ORM resources

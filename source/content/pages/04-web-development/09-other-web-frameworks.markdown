@@ -12,10 +12,13 @@ Python has a significant number of web frameworks outside the usual Django,
 Flask, Pyramid and Bottle suspects.
 
 
-## TurboGears2
-[TurboGears2](http://www.turbogears.org) born as a full stack layer on top
-of Pylons is now a standalone web framework that can act both as a full stack
-solution (like Django) or as a micro framework.
+## TurboGears
+[TurboGears](http://www.turbogears.org), born as a full stack layer on top
+of Pylons, is now a standalone web framework that can act both as a full 
+stack library (like Django) or as a micro framework.
+
+<a href="http://www.turbogears.org/" style="border: none;"><img src="/img/turbogears-logo.jpg" width="100%" alt="TurboGears logo." class="technical-diagram" style="border-radius: 5px;"></a>
+
 
 
 ## Falcon

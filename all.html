@@ -2653,10 +2653,11 @@ assumption that templates will drive the user interface.</p>
           <h1>Other Web Frameworks</h1>
 <p>Python has a significant number of web frameworks outside the usual Django,
 Flask, Pyramid and Bottle suspects.</p>
-<h2>TurboGears2</h2>
-<p><a href="http://www.turbogears.org">TurboGears2</a> born as a full stack layer on top
-of Pylons is now a standalone web framework that can act both as a full stack
-solution (like Django) or as a micro framework.</p>
+<h2>TurboGears</h2>
+<p><a href="http://www.turbogears.org">TurboGears</a>, born as a full stack layer on top
+of Pylons, is now a standalone web framework that can act both as a full 
+stack library (like Django) or as a micro framework.</p>
+<p><a href="http://www.turbogears.org/" style="border: none;"><img src="/img/turbogears-logo.jpg" width="100%" alt="TurboGears logo." class="technical-diagram" style="border-radius: 5px;"></a></p>
 <h2>Falcon</h2>
 <p><a href="http://falconframework.org/">Falcon</a> is a minimalist web framework designed
 with web application speed as a top priority.</p>
@@ -4536,9 +4537,9 @@ the application and the database stored procedures.</p>
 <h2>Python ORM Implementations</h2>
 <p>There are numerous ORM implementations written in Python, including</p>
 <ol>
-<li><a href="https://docs.djangoproject.com/en/1.8/topics/db/">The Django ORM</a></li>
 <li><a href="/sqlalchemy.html">SQLAlchemy</a></li>
-<li><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a></li>
+<li><a href="/peewee.html">Peewee</a></li>
+<li><a href="https://docs.djangoproject.com/en/1.8/topics/db/">The Django ORM</a></li>
 <li><a href="http://ponyorm.com/">PonyORM</a></li>
 <li><a href="http://sqlobject.org/">SQLObject</a></li>
 </ol>
@@ -4561,9 +4562,9 @@ though that some of the Django core committers believe it is only a matter of
 time before the default ORM is replaced with SQLAlchemy. It will be a large
 effort to get that working though so it's likely to come in
 <a href="https://github.com/mattmakai/fullstackpython.com/issues/48">Django 1.9 or later</a>.</p>
-<p>Since the majority of Django projects are tied to the default ORM, it's best to
-read up on advanced use cases and tools for doing your best work within the
-existing framework.</p>
+<p>Since the majority of Django projects are tied to the default ORM, it is 
+best to read up on advanced use cases and tools for doing your best work 
+within the existing framework.</p>
 <h3>SQLAlchemy</h3>
 <p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> is a well-regarded
 Python ORM because it gets the abstraction level "just right" and
@@ -4572,11 +4573,10 @@ ORM in most cases. There is <a href="/sqlalchemy.html">an entire page on SQLAlch
 that you should read if you want to learn more about using the library.</p>
 <h3>Peewee</h3>
 <p><a href="https://peewee.readthedocs.org/en/latest/">Peewee</a> is a Python ORM
-written to be
+implementation that is written to be
 "<a href="http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/">simpler, smaller and more hackable</a>"
-than SQLAlchemy. The analogy used by the core Peewee author is that Peewee
-is to SQLAlchemy as SQLite is to PostgreSQL. An ORM does not have to work
-for every exhaustive use case in order to be useful.</p>
+than SQLAlchemy. Read the <a href="/peewee.html">full Peewee page</a> for more 
+information on the Python ORM implementation.</p>
 <h3>Pony</h3>
 <p><a href="http://ponyorm.com/">Pony ORM</a> is another Python ORM with a slight twist in
 its licensing model. The project is multi-licensed. Pony is free for use
@@ -4640,6 +4640,10 @@ For now, we'll lump schema migration resources under ORM links below.</p>
   direct SQL queries.</p>
 </li>
 </ul>
+<h3>SQLAlchemy and Peewee resources</h3>
+<p>A comprehensive list of <a href="/sqlalchemy.html">SQLAlchemy</a> and 
+<a href="/peewee.html">Peewee</a> ORM resources can be found on their respective 
+pages.</p>
 <h3>Django ORM resources</h3>
 <ul>
 <li>
@@ -4721,37 +4725,6 @@ For now, we'll lump schema migration resources under ORM links below.</p>
 <p><a href="https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/">Sorting querysets with NULLs in Django</a>
   shows what to do if you're struggling with the common issue of sorting
   columns that contain NULL values.</p>
-</li>
-</ul>
-<h3>Peewee resources</h3>
-<ul>
-<li>
-<p><a href="http://charlesleifer.com/blog/managing-database-connections-with-peewee/">Managing database connections with Peewee</a>
-  explains the connection pool and ExecutionContext of the ORM.</p>
-</li>
-<li>
-<p><a href="http://charlesleifer.com/blog/dear-diary-an-encrypted-command-line-diary-with-python/">An encrypted command-line diary with Python</a>
-  is an awesome walkthrough explaining how to use SQLite, SQLCipher and
-  Peewee to create an encrypted file with your contents, diary or otherwise.</p>
-</li>
-<li>
-<p>The <a href="http://docs.peewee-orm.com/en/latest/peewee/quickstart.html">official Peewee quickstart documentation</a>
-  along with the 
-  <a href="http://docs.peewee-orm.com/en/latest/peewee/example.html">example Twitter clone app</a>
-  will walk you through the ins and outs of your first couple Peewee-powered
-  projects.</p>
-</li>
-<li>
-<p><a href="http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/">Shortcomings in the Django ORM and a look at Peewee</a>
-  from the author of the Peewee ORM explains how some of the design
-  decisions made in Peewee were in reaction to parts of the Django ORM
-  that didn't work so well in practice.</p>
-</li>
-<li>
-<p><a href="http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/">How to make a Flask blog in one hour or less</a>
-  is a well written tutorial that uses the
-  <a href="https://peewee.readthedocs.org/en/latest/">Peewee ORM</a> instead of
-  SQLAlchemy for the blog back end.</p>
 </li>
 </ul>
 <h3>Pony ORM resources</h3>
@@ -5453,6 +5426,91 @@ edge cases.</p>
   shows the code that a popular iOS application runs in background
   batch scripts which uses SQLAlchemy to generate playlists. They provide
   some context and advice for using SQLAlchemy in batch scripts.</p>
+</li>
+</ul>
+          <h1>Peewee</h1>
+<p><a href="http://docs.peewee-orm.com/en/latest/">Peewee</a> 
+(<a href="https://github.com/coleifer/peewee">source code</a>) is a 
+<a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a> 
+implementation for bridging data stored in
+<a href="/databases.html">relational database tables</a> with Python objects.</p>
+<p><a href="http://docs.peewee-orm.com/en/latest/"><img src="/img/peewee-logo.png" width="100%" alt="Peewee logo." class="technical-diagram"></a></p>
+<h2>What makes Peewee a useful ORM?</h2>
+<p>Peewee can be an easier library to wrap your head around than SQLAlchemy
+and other ORMs. It is designed to be easier to hack on and understand, 
+similar to how <a href="/bottle.html">Bottle</a> is a smaller, one-file 
+<a href="/web-frameworks.html">web framework</a> compared to the comprehensive 
+<a href="/django.html">Django</a> framework. If you are just getting started with
+web development, it may be worth using Peewee for your database mapping
+and operations, especially if you use a microframework such as Flask or
+Bottle.</p>
+<div class="well see-also">Peewee is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
+<h2>How does Peewee compare to other Python ORMs?</h2>
+<p>The analogy used by the core Peewee author is that Peewee
+is to <a href="/sqlalchemy.html">SQLAlchemy</a> as <a href="/sqlite.html">SQLite</a> is to 
+<a href="/postgresql.html">PostgreSQL</a>. An 
+<a href="/object-relational-mappers-orms.html">ORM</a> does not have to work for 
+every exhaustive use case in order to be useful.</p>
+<h3>Peewee resources</h3>
+<p>Peewee is a much newer ORM than several other libraries.
+For example, Peewee's <a href="https://github.com/coleifer/peewee/commit/4fd56bd35c27861337861233a7f362474157af57">first public commit was in 2010</a>, 
+compared to 
+<a href="https://github.com/zzzeek/sqlalchemy/commit/ec052c6a1f1fb0236bd367c510d82f076cb67bc9">2005 for SQLAlchemy</a>.
+The project is still over five years old though and matured substantially
+in development during that time. However, there are typically less resources
+and examples available to demonstrate how to use Peewee in your projects.
+Many of the best resources come from the project's author, Charles Leifer,
+on his blog and on the official site. There are also hundreds of questions 
+answered on the 
+<a href="http://stackoverflow.com/questions/tagged/peewee">Stack Overflow peewee tag</a>,
+so as usual that can be a rich source of examples for your Peewee-powered
+Python applications.</p>
+<ul>
+<li>
+<p><a href="http://charlesleifer.com/blog/managing-database-connections-with-peewee/">Managing database connections with Peewee</a>
+  explains the connection pool and ExecutionContext of the ORM.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/dear-diary-an-encrypted-command-line-diary-with-python/">An encrypted command-line diary with Python</a>
+  is an awesome walkthrough explaining how to use SQLite, SQLCipher and
+  Peewee to create an encrypted file with your contents, diary or otherwise.</p>
+</li>
+<li>
+<p><a href="http://www.blog.pythonlibrary.org/2014/07/17/an-intro-to-peewee-another-python-orm/">An Intro to Peewee – Another Python ORM</a>
+  is a short tutorial that walks through creating a database model mapping,
+  adding data, deleting records and querying fields.</p>
+</li>
+<li>
+<p><a href="http://jonathansoma.com/tutorials/webapps/intro-to-peewee/">Introduction to peewee</a>
+  uses an example public dataset, loads it into a <a href="/sqlite.html">SQLite</a>
+  database and shows how to query it using Peewee.</p>
+</li>
+<li>
+<p>The <a href="http://docs.peewee-orm.com/en/latest/peewee/quickstart.html">official Peewee quickstart documentation</a>
+  along with the 
+  <a href="http://docs.peewee-orm.com/en/latest/peewee/example.html">example Twitter clone app</a>
+  will walk you through the ins and outs of your first couple Peewee-powered
+  projects.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/">Shortcomings in the Django ORM and a look at Peewee</a>
+  from the author of the Peewee ORM explains how some of the design
+  decisions made in Peewee were in reaction to parts of the Django ORM
+  that didn't work so well in practice.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/">How to make a Flask blog in one hour or less</a>
+  is a well written tutorial that uses the
+  <a href="https://peewee.readthedocs.org/en/latest/">Peewee ORM</a> instead of
+  SQLAlchemy for the blog back end.</p>
+</li>
+<li>
+<p>These posts on 
+  <a href="http://charlesleifer.com/blog/techniques-for-querying-lists-of-objects-and-determining-the-top-related-item/">querying the top item by group with Peewee ORM</a> 
+  and 
+  <a href="http://charlesleifer.com/blog/querying-the-top-n-objects-per-group-with-peewee-orm/">querying the top N objects per group with Peewee ORM</a>
+  provide working examples on how to properly query your data via Peewee.</p>
 </li>
 </ul>
           <h1>Application Programming Interfaces</h1>
@@ -9521,7 +9579,8 @@ the
 <h2>2016</h2>
 <h3>October</h3>
 <ul>
-<li>Added new <a href="/sqlalchemy.html">SQLAlchemy page</a>.</li>
+<li>Added new <a href="/peewee.html">Peewee ORM</a> page.</li>
+<li>Added new <a href="/sqlalchemy.html">SQLAlchemy ORM</a> page.</li>
 <li>Updated <a href="/table-of-contents.html">all topics / table of contents</a> page 
   to show future topics I am working to create.</li>
 <li>Added stub page that needs to be expanded for 
