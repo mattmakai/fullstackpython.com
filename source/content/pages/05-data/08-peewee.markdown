@@ -93,3 +93,9 @@ Python applications.
   [querying the top N objects per group with Peewee ORM](http://charlesleifer.com/blog/querying-the-top-n-objects-per-group-with-peewee-orm/)
   provide working examples on how to properly query your data via Peewee.
 
+* There was a good discussion in a 
+  [Python subreddit thread](https://www.reddit.com/r/Python/comments/4tnqai/choosing_a_python_ormpeewee_vs_sqlalchemy/)
+  about the differences between Peewee and SQLAlchemy. Charles Leifer 
+  even chimed in to add his own fair assessment of the differences in the
+  ORMs.
+
