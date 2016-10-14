@@ -35,11 +35,12 @@ you are coding.
 
 <img src="/img/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="technical-diagram"></a>
 
-A benefit many developers enjoy with SQLAlchemy is that it allows developers 
-to write a mapping from the database schema to the Python objects in their 
-project.  The mapping allows SQLAlchemy to handle the underlying database 
-so developers can work with Python objects instead of writing bridge code 
-to get data in and out of relational tables.
+A benefit many developers enjoy with SQLAlchemy is that it allows them 
+to write Python code in their project to map from the database schema 
+to the applications' Python objects. No SQL is required to create, 
+maintain and query the database. The mapping allows SQLAlchemy to handle 
+the underlying database so developers can work with their Python objects 
+instead of writing bridge code to get data in and out of relational tables.
 
 <div class="well see-also">SQLAlchemy is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
