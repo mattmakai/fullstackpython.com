@@ -45,10 +45,10 @@ instead of writing bridge code to get data in and out of relational tables.
 <div class="well see-also">SQLAlchemy is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-## What's SQLAlchemy look like compared to raw SQL?
-Here is an example of a SQLAlchemy model definition from the open source 
+## How does SQLAlchemy code compare to raw SQL?
+Below is an example of a SQLAlchemy model definition from the open source 
 [compare-python-web-frameworks project](https://github.com/mattmakai/compare-python-web-frameworks/blob/master/flask_jinja_sqlalchemy/app.py)
-that uses Flask, SQLAlchemy and Flask-SQLAlchemy.
+that uses SQLAlchemy with Flask and Flask-SQLAlchemy.
 
 
     class Contact(db.Model):
@@ -133,8 +133,8 @@ edge cases.
 
 * There is an entire chapter in the 
   [Architecture of Open Source Applications book on SQLAlchemy](http://aosabook.org/en/sqlalchemy.html).
-  The content is detailed and well worth reading to understand what's 
-  happening under the covers.
+  The content is detailed and well worth reading to understand what is 
+  executing under the covers.
 
 * This 
   [GitHub project named PythonORMSleepy](https://github.com/sloria/PythonORMSleepy) 

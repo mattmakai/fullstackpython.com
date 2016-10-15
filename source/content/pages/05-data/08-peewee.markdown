@@ -27,6 +27,20 @@ web development, it may be worth using Peewee for your database mapping
 and operations, especially if you use a microframework such as Flask or
 Bottle.
 
+Peewee can be used with pretty much any web framework (although using it
+with [Django](/django.html) would currently be complicated due to its 
+tight built-in ORM coupling) or without a web framework. In the latter 
+case Peewee is good for pulling data out of a relational database in a
+script or Jupyter notebook. 
+
+Any of the common relational database backends such as 
+[PostgreSQL](/postgresql.html), [MySQL](/mysql.html) or 
+[SQLite](/sqlite.html) are supported, although a database driver is
+still required. The chart below shows a few example configurations
+that could use Peewee as an ORM.
+
+<img src="/img/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="technical-diagram"></a>
+
 <div class="well see-also">Peewee is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 

@@ -5285,10 +5285,10 @@ the underlying database so developers can work with their Python objects
 instead of writing bridge code to get data in and out of relational tables.</p>
 <div class="well see-also">SQLAlchemy is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
-<h2>What's SQLAlchemy look like compared to raw SQL?</h2>
-<p>Here is an example of a SQLAlchemy model definition from the open source 
+<h2>How does SQLAlchemy code compare to raw SQL?</h2>
+<p>Below is an example of a SQLAlchemy model definition from the open source 
 <a href="https://github.com/mattmakai/compare-python-web-frameworks/blob/master/flask_jinja_sqlalchemy/app.py">compare-python-web-frameworks project</a>
-that uses Flask, SQLAlchemy and Flask-SQLAlchemy.</p>
+that uses SQLAlchemy with Flask and Flask-SQLAlchemy.</p>
 <div class="highlight"><pre><span class="k">class</span> <span class="n">Contact</span>(<span class="n">db</span>.<span class="n">Model</span>):
     <span class="n">__tablename__</span> = <span class="s">&#39;contacts&#39;</span>
     <span class="n">id</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">Integer</span>, <span class="n">primary_key</span>=<span class="nb">True</span>)
@@ -5378,8 +5378,8 @@ edge cases.</p>
 <li>
 <p>There is an entire chapter in the 
   <a href="http://aosabook.org/en/sqlalchemy.html">Architecture of Open Source Applications book on SQLAlchemy</a>.
-  The content is detailed and well worth reading to understand what's 
-  happening under the covers.</p>
+  The content is detailed and well worth reading to understand what is 
+  executing under the covers.</p>
 </li>
 <li>
 <p>This 
@@ -5445,6 +5445,17 @@ similar to how <a href="/bottle.html">Bottle</a> is a smaller, one-file
 web development, it may be worth using Peewee for your database mapping
 and operations, especially if you use a microframework such as Flask or
 Bottle.</p>
+<p>Peewee can be used with pretty much any web framework (although using it
+with <a href="/django.html">Django</a> would currently be complicated due to its 
+tight built-in ORM coupling) or without a web framework. In the latter 
+case Peewee is good for pulling data out of a relational database in a
+script or Jupyter notebook. </p>
+<p>Any of the common relational database backends such as 
+<a href="/postgresql.html">PostgreSQL</a>, <a href="/mysql.html">MySQL</a> or 
+<a href="/sqlite.html">SQLite</a> are supported, although a database driver is
+still required. The chart below shows a few example configurations
+that could use Peewee as an ORM.</p>
+<p><img src="/img/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="technical-diagram"></a></p>
 <div class="well see-also">Peewee is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 <h2>How does Peewee compare to other Python ORMs?</h2>
