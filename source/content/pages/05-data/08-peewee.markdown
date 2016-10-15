@@ -85,16 +85,23 @@ Python applications.
   uses an example public dataset, loads it into a [SQLite](/sqlite.html)
   database and shows how to query it using Peewee.
 
+* [Shortcomings in the Django ORM and a look at Peewee](http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/)
+  from the author of the Peewee ORM explains how some of the design
+  decisions made in Peewee were in reaction to parts of the Django ORM
+  that didn't work so well in practice.
+
 * The [official Peewee quickstart documentation](http://docs.peewee-orm.com/en/latest/peewee/quickstart.html)
   along with the 
   [example Twitter clone app](http://docs.peewee-orm.com/en/latest/peewee/example.html)
   will walk you through the ins and outs of your first couple Peewee-powered
   projects.
 
-* [Shortcomings in the Django ORM and a look at Peewee](http://charlesleifer.com/blog/shortcomings-in-the-django-orm-and-a-look-at-peewee-a-lightweight-alternative/)
-  from the author of the Peewee ORM explains how some of the design
-  decisions made in Peewee were in reaction to parts of the Django ORM
-  that didn't work so well in practice.
+* [Flask and Peewee 101](https://benjaminjchapman.wordpress.com/2014/01/14/flask-and-peewee-101/)
+  has some basic code for querying with Peewee and populating a drop-down in
+  a [Jinja2](/jinja2.html) template. Note that the 
+  [Flask-peewee](http://flask-peewee.readthedocs.io/en/latest/) extension
+  is no longer maintained, although you do not need to use it to work with
+  both Flask and Peewee in an application.
 
 * [How to make a Flask blog in one hour or less](http://charlesleifer.com/blog/how-to-make-a-flask-blog-in-one-hour-or-less/)
   is a well written tutorial that uses the
