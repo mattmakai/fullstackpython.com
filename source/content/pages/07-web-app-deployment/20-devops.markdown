@@ -35,6 +35,13 @@ automate the delivery from development to production.
   it can be supported by tools such as Fabric, Jenkins, BuildBot and Git
   which when used properly can enable continuous software delivery.
 
+* [Operations for software developers for beginners](https://jvns.ca/blog/2016/10/15/operations-for-software-developers-for-beginners/)
+  gives advice to developers who have never done operations work and
+  been on call for outages before in their career. The advantage of DevOps
+  is greater ownership for developers who built the applications running
+  in production. The disadvantage of course is the greater ownership
+  also leads to much greater responsibility when something breaks!
+
 * [A look at DevOps tools landscape](https://devup.co/a-look-at-devops-tools-landscape-7220099c6b81)
   provides an introductory overview of the tooling that is typically
   required to perform DevOps. The tools range from source control systems,
