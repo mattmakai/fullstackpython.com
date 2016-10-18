@@ -23,6 +23,6 @@ email at matthew.makai@gmail.com,
 [@mattmakai on Twitter](https://twitter.com/mattmakai)
 or on [GitHub at mattmakai](https://github.com/mattmakai).
 
-Read my thoughts on the "full stack" trend in a 
-[post I wrote for O'Reilly Radar](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
+Read more thoughts on the "full stack" trend in a 
+[post written for O'Reilly](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
 
