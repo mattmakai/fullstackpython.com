@@ -20,13 +20,9 @@ Other projects by Matt include
 [Underwear](https://github.com/mattmakai/underwear) and
 [Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations). You can reach him by 
 email at matthew.makai@gmail.com,
-[Twitter @mattmakai](https://twitter.com/mattmakai)
+[@mattmakai on Twitter](https://twitter.com/mattmakai)
 or on [GitHub at mattmakai](https://github.com/mattmakai).
 
 Read my thoughts on the "full stack" trend in a 
 [post I wrote for O'Reilly Radar](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
-
-Typos, inaccurate statements or general areas for improvement can be handled
-through an issue ticket or pull request on
-[GitHub](https://github.com/mattmakai/fullstackpython.com/).
 

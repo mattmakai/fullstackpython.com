@@ -26,3 +26,7 @@ Note that these plans can change based on
 from the community. I work to integrate PRs within a day or two so please 
 submit one when you see a fix or improvement that needs to be made!
 
+Typos, inaccurate statements or general areas for improvement can also 
+be handled through an issue ticket or pull request on
+[GitHub](https://github.com/mattmakai/fullstackpython.com/).
+

@@ -15,7 +15,18 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8">
+        {% if page.slug == 'about-author' %}
+            <div class="row">
+                <div class="col-md-6">
+                  <img src="/source/theme/static/img/matt-makai-2016.jpg" class="technical-diagram" width="100%" style="border-radius:6px;padding-top:30px">
+                </div>
+                <div class="col-md-6">
+                  {{ page.content }}
+                </div>
+            </div>
+        {% else %}
           {{ page.content }}
+        {% endif %}
           {% include "choices/" + page.slug + ".html" %}
       {% include "email-for-book.html" %}
     </div>
