@@ -185,12 +185,8 @@ information on the Python ORM implementation.
 
 
 ### Pony
-[Pony ORM](http://ponyorm.com/) is another Python ORM with a slight twist in
-its licensing model. The project is multi-licensed. Pony is free for use
-on open source projects but has a
-[commercial license](http://ponyorm.com/license-and-pricing.html) that
-is required for commercial projects. The license is a one-time payment
-and does not necessitate a recurring fee.
+[Pony ORM](http://ponyorm.com/) is another Python ORM available as 
+open source, under the Apache 2.0 license.
 
 
 ### SQLObject
