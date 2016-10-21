@@ -9,9 +9,8 @@ meta: The change log page explains what is new on Full Stack Python.
 
 # Change Log
 This is a running list of the major changes to Full Stack Python since its
-inception in December 2012. Another way to view the modifications is through
-the 
-[source repository's commit log](https://github.com/mattmakai/fullstackpython.github.com/commits/gh-pages) on GitHub.
+inception in December 2012. You can view detailed changes via the 
+[source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/gh-pages) on GitHub.
 
 
 ## 2016
