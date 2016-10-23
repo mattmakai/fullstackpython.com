@@ -8051,8 +8051,8 @@ your application's code with the SQLAlchemy library.</p>
   to make it easy to add SQLAlchemy to a Pyramid web app.</p>
 </li>
 <li>
-<p>While Django does not yet support easy-swapping of the default Django 
-  backend ORM with SQLAlchemy (like it does for 
+<p>While <a href="/django.html">Django</a> does not yet support easy swapping of the 
+  default Django backend ORM with SQLAlchemy (like it does for 
   <a href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TEMPLATES">template engines</a>),
   there are hacks for 
   <a href="https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/">using SQLAlchemy within Django projects</a>.</p>
@@ -8072,24 +8072,10 @@ you are having trouble getting started or are starting to run into some
 edge cases.</p>
 <ul>
 <li>
-<p>If you're interested in the differences between SQLAlchemy and the Django
-  ORM I recommend reading
-  <a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
-  by Armin Ronacher.</p>
-</li>
-<li>
 <p>There is an entire chapter in the 
   <a href="http://aosabook.org/en/sqlalchemy.html">Architecture of Open Source Applications book on SQLAlchemy</a>.
   The content is detailed and well worth reading to understand what is 
   executing under the covers.</p>
-</li>
-<li>
-<p>This 
-  <a href="https://github.com/sloria/PythonORMSleepy">GitHub project named PythonORMSleepy</a> 
-  implements the same Flask application with several different ORMs:
-  SQLAlchemy, Peewee, MongoEngine, stdnet and PonyORM. Looking through the
-  code is helpful for understanding the varying approaches each library
-  takes to accomplish a similar objective. </p>
 </li>
 <li>
 <p><a href="http://pajhome.org.uk/blog/10_reasons_to_love_sqlalchemy.html">10 reasons to love SQLAlchemy</a>
@@ -8121,14 +8107,41 @@ edge cases.</p>
   that are important to understand as you build out your app.</p>
 </li>
 <li>
-<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
-  provides a detailed comparison of SQLAlchemy against alternatives.</p>
-</li>
-<li>
 <p><a href="https://code.oursky.com/batch-sqlalchemy-generating-top-playlist/">SQLAlchemy in batches</a>
   shows the code that a popular iOS application runs in background
   batch scripts which uses SQLAlchemy to generate playlists. They provide
   some context and advice for using SQLAlchemy in batch scripts.</p>
+</li>
+</ul>
+<h3>SQLAlchemy compared to other ORMs</h3>
+<p>SQLAlchemy is one of many 
+<a href="/object-relational-mappers-orms.html">Python object-relational mapper (ORM)</a>
+implementations. Several open source projects and articles are listed here 
+to make it a bit easier to understand the differences between these
+implementations.</p>
+<ul>
+<li>
+<p><a href="http://www.pythoncentral.io/sqlalchemy-vs-orms/">SQLAlchemy vs Other ORMs</a>
+  provides a detailed comparison of SQLAlchemy against alternatives.</p>
+</li>
+<li>
+<p>If you're interested in the differences between SQLAlchemy and the Django
+  ORM I recommend reading
+  <a href="http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/">SQLAlchemy and You</a>
+  by Armin Ronacher.</p>
+</li>
+<li>
+<p>This 
+  <a href="https://github.com/sloria/PythonORMSleepy">GitHub project named PythonORMSleepy</a> 
+  implements the same Flask application with several different ORMs:
+  SQLAlchemy, Peewee, MongoEngine, stdnet and PonyORM. Looking through the
+  code is helpful for understanding the varying approaches each library
+  takes to accomplish a similar objective. </p>
+</li>
+<li>
+<p>Quora has several answers to the question of 
+  <a href="https://www.quora.com/Which-is-better-and-why-Djangos-ORM-or-SQLAlchemy">which is better and why: Django ORM or SQLALchemy</a>
+  based on various developers' experiences.</p>
 </li>
 </ul>
           <h1>Peewee</h1>

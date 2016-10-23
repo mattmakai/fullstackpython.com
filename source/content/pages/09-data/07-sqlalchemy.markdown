@@ -107,8 +107,8 @@ your application's code with the SQLAlchemy library.
   [alchemy scaffold](http://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/database/sqlalchemy.html)
   to make it easy to add SQLAlchemy to a Pyramid web app.
 
-* While Django does not yet support easy-swapping of the default Django 
-  backend ORM with SQLAlchemy (like it does for 
+* While [Django](/django.html) does not yet support easy swapping of the 
+  default Django backend ORM with SQLAlchemy (like it does for 
   [template engines](https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TEMPLATES)),
   there are hacks for 
   [using SQLAlchemy within Django projects](https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/).
@@ -126,22 +126,10 @@ a database-driven application. The following resources can be helpful if
 you are having trouble getting started or are starting to run into some 
 edge cases.
 
-* If you're interested in the differences between SQLAlchemy and the Django
-  ORM I recommend reading
-  [SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/)
-  by Armin Ronacher.
-
 * There is an entire chapter in the 
   [Architecture of Open Source Applications book on SQLAlchemy](http://aosabook.org/en/sqlalchemy.html).
   The content is detailed and well worth reading to understand what is 
   executing under the covers.
-
-* This 
-  [GitHub project named PythonORMSleepy](https://github.com/sloria/PythonORMSleepy) 
-  implements the same Flask application with several different ORMs:
-  SQLAlchemy, Peewee, MongoEngine, stdnet and PonyORM. Looking through the
-  code is helpful for understanding the varying approaches each library
-  takes to accomplish a similar objective. 
 
 * [10 reasons to love SQLAlchemy](http://pajhome.org.uk/blog/10_reasons_to_love_sqlalchemy.html)
   is a bit of a non-critical lovefest for the code library. However, the
@@ -167,11 +155,35 @@ edge cases.
   [what's the difference between flush and commit?](http://stackoverflow.com/questions/4201455/sqlalchemy-whats-the-difference-between-flush-and-commit)
   that are important to understand as you build out your app.
 
-* [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
-  provides a detailed comparison of SQLAlchemy against alternatives.
-
 * [SQLAlchemy in batches](https://code.oursky.com/batch-sqlalchemy-generating-top-playlist/)
   shows the code that a popular iOS application runs in background
   batch scripts which uses SQLAlchemy to generate playlists. They provide
   some context and advice for using SQLAlchemy in batch scripts.
+
+
+### SQLAlchemy compared to other ORMs
+SQLAlchemy is one of many 
+[Python object-relational mapper (ORM)](/object-relational-mappers-orms.html)
+implementations. Several open source projects and articles are listed here 
+to make it a bit easier to understand the differences between these
+implementations.
+
+* [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
+  provides a detailed comparison of SQLAlchemy against alternatives.
+
+* If you're interested in the differences between SQLAlchemy and the Django
+  ORM I recommend reading
+  [SQLAlchemy and You](http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/)
+  by Armin Ronacher.
+
+* This 
+  [GitHub project named PythonORMSleepy](https://github.com/sloria/PythonORMSleepy) 
+  implements the same Flask application with several different ORMs:
+  SQLAlchemy, Peewee, MongoEngine, stdnet and PonyORM. Looking through the
+  code is helpful for understanding the varying approaches each library
+  takes to accomplish a similar objective. 
+
+* Quora has several answers to the question of 
+  [which is better and why: Django ORM or SQLALchemy](https://www.quora.com/Which-is-better-and-why-Djangos-ORM-or-SQLAlchemy)
+  based on various developers' experiences.
 
