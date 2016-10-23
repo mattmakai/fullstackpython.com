@@ -209,8 +209,8 @@ For now, we'll lump schema migration resources under ORM links below.
 
 
 ### General ORM resources
-* There's also a detailed overview of [what ORMs are](http://www.agiledata.org/essays/mappingObjects.html)
-  on another page of the website.
+* This [detailed overview of ORMs](http://www.agiledata.org/essays/mappingObjects.html)
+  is a generic description of how ORMs work and how to use them.
 
 * This [example GitHub project](https://github.com/sloria/PythonORMSleepy) 
   implements the same Flask application with several different ORMs: 
@@ -243,6 +243,18 @@ For now, we'll lump schema migration resources under ORM links below.
   no perfect solutions, but I personally prefer using an ORM at the start
   of almost every project even if it later needs to be replaced with
   direct SQL queries.
+
+* [The Vietnam of Computer Science](http://blogs.tedneward.com/post/the-vietnam-of-computer-science/) 
+  provides the perspective from Ted Neward, the originator of the phrase
+  "Object/relational mapping is the Vietnam of Computer Science" that he
+  first spoke about in 2004. The gist of the argument against ORMs is 
+  captured in Ted's quote that an ORM "represents a quagmire which starts 
+  well, gets more complicated as time passes, and before long entraps its 
+  users in a commitment that has no clear demarcation point, no clear 
+  win conditions, and no clear exit strategy." There are follow up posts on 
+  [Coding Horror](https://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/)
+  and another one from Ted entitled 
+  [thoughts on Vietnam commentary](http://blogs.tedneward.com/post/thoughts-on-vietnam-commentary/).
 
 
 ### SQLAlchemy and Peewee resources
