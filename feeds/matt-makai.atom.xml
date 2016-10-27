@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-09-04T00:00:00-04:00</updated><entry><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link href="https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html" rel="alternate"></link><updated>2016-08-30T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</id><summary type="html">&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-10-27T00:00:00-04:00</updated><entry><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link href="https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html" rel="alternate"></link><updated>2016-10-27T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</id><summary type="html">&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;send&lt;/a&gt; and 
 &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;receive SMS text messages&lt;/a&gt;.
 In this tutorial we will go beyond texting and learn how to dial outbound 
@@ -773,7 +773,7 @@ messages! &lt;/p&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
 the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160605-reply-sms-python-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to Build Your First Slack Bot with Python</title><link href="https://www.fullstackpython.com/build-first-slack-bot-python.html" rel="alternate"></link><updated>2016-09-04T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</id><summary type="html">&lt;p&gt;&lt;a href="/bots.html"&gt;Bots&lt;/a&gt; are a useful way to interact with chat services such as 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160605-reply-sms-python-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to Build Your First Slack Bot with Python</title><link href="https://www.fullstackpython.com/build-first-slack-bot-python.html" rel="alternate"></link><updated>2016-10-27T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-06-04:build-first-slack-bot-python.html</id><summary type="html">&lt;p&gt;&lt;a href="/bots.html"&gt;Bots&lt;/a&gt; are a useful way to interact with chat services such as 
 &lt;a href="https://slack.com/"&gt;Slack&lt;/a&gt;. If you have never built a bot before, this 
 post provides an easy starter tutorial for combining the 
 &lt;a href="https://api.slack.com/"&gt;Slack API&lt;/a&gt; with Python to create your first bot.&lt;/p&gt;
@@ -925,7 +925,7 @@ variable values and then instantiate the Slack client.&lt;/p&gt;
 &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;BOT_ID&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="cp"&gt;# constants&lt;/span&gt;
-&lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;@&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;gt;:&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;@&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;
 &lt;span class="n"&gt;EXAMPLE_COMMAND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;do&amp;quot;&lt;/span&gt;
 
 &lt;span class="cp"&gt;# instantiate Slack &amp;amp; Twilio clients&lt;/span&gt;
@@ -1002,7 +1002,7 @@ some more Python code!&lt;/p&gt;
 &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;BOT_ID&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c"&gt;# constants&lt;/span&gt;
-&lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;@&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;gt;:&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;AT_BOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;@&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;BOT_ID&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;
 &lt;span class="n"&gt;EXAMPLE_COMMAND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;do&amp;quot;&lt;/span&gt;
 
 &lt;span class="c"&gt;# instantiate Slack &amp;amp; Twilio clients&lt;/span&gt;
@@ -1061,12 +1061,11 @@ existing channel.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/create-channel.png" width="100%" class="technical-diagram img-rounded" alt="In the Slack user interface create a new channel and invite StarterBot."&gt;&lt;/p&gt;
 &lt;p&gt;Now start giving StarterBot commands in your channel.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded" alt="Give StarterBot commands in your Slack channel."&gt;&lt;/p&gt;
-&lt;p&gt;There is one modification you may want to make if you're running into 
-issues getting a response from the bot. As it is written above in this
-tutorial, the line &lt;code&gt;AT_BOT = "&amp;lt;@" + BOT_ID + "&amp;gt;:"&lt;/code&gt; requires a colon after
-the "@starter" (or whatever you named your particular bot). Remove the
-&lt;code&gt;:&lt;/code&gt; from the end of the &lt;code&gt;AT_BOT&lt;/code&gt; string. The Slack clients seem to add a
-colon after an &lt;code&gt;@&lt;/code&gt; mention but it seems somewhat inconsistent.&lt;/p&gt;
+&lt;p&gt;As it is currently written above in this tutorial, the 
+line &lt;code&gt;AT_BOT = "&amp;lt;@" + BOT_ID + "&amp;gt;"&lt;/code&gt; does not require a colon after the 
+"@starter" (or whatever you named your particular bot) mention. Previous
+versions of this tutorial did have a colon because Slack clients would
+auto-insert the ":" but that is no longer the case.&lt;/p&gt;
 &lt;h2&gt;Wrapping Up&lt;/h2&gt;
 &lt;p&gt;Alright, now you've got a simple StarterBot with a bunch of places in the 
 code you can add whatever features you want to build. &lt;/p&gt;

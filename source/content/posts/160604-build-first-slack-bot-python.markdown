@@ -3,7 +3,7 @@ slug: build-first-slack-bot-python
 meta: Learn how to build a simple Slack bot in Python, no prior bot experience needed. 
 category: post
 date: 2016-06-04
-modified: 2016-09-04
+modified: 2016-10-27
 headerimage: /source/static/img/160604-simple-python-slack-bot/header.jpg
 headeralt: Slack and Python logos. Copyright their respective owners.
 
@@ -192,7 +192,7 @@ variable values and then instantiate the Slack client.
     BOT_ID = os.environ.get("BOT_ID")
 
     # constants
-    AT_BOT = "<@" + BOT_ID + ">:"
+    AT_BOT = "<@" + BOT_ID + ">"
     EXAMPLE_COMMAND = "do"
 
     # instantiate Slack & Twilio clients
@@ -273,7 +273,7 @@ from slackclient import SlackClient
 BOT_ID = os.environ.get("BOT_ID")
 
 # constants
-AT_BOT = "<@" + BOT_ID + ">:"
+AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "do"
 
 # instantiate Slack & Twilio clients
@@ -338,12 +338,11 @@ Now start giving StarterBot commands in your channel.
 
 <img src="/source/static/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded" alt="Give StarterBot commands in your Slack channel.">
 
-There is one modification you may want to make if you're running into 
-issues getting a response from the bot. As it is written above in this
-tutorial, the line `AT_BOT = "<@" + BOT_ID + ">:"` requires a colon after
-the "@starter" (or whatever you named your particular bot). Remove the
-`:` from the end of the `AT_BOT` string. The Slack clients seem to add a
-colon after an `@` mention but it seems somewhat inconsistent.
+As it is currently written above in this tutorial, the 
+line `AT_BOT = "<@" + BOT_ID + ">"` does not require a colon after the 
+"@starter" (or whatever you named your particular bot) mention. Previous
+versions of this tutorial did have a colon because Slack clients would
+auto-insert the ":" but that is no longer the case.
 
 
 ## Wrapping Up
