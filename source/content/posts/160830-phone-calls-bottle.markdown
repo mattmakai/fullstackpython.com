@@ -80,9 +80,9 @@ into your virtualenv.
     pip install bottle twilio
 
 
-After the installation script finishing, we will have the required 
-dependencies to build our app. Let's write some Python code to dial outbound
-phone calls.
+After the installation script finishes, we will have the required 
+dependencies to build our app. Time to write some Python code to dial 
+outbound phone calls.
 
 
 ## Bottle and Twilio

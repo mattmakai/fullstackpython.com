@@ -62,9 +62,9 @@ into your virtualenv.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;After the installation script finishing, we will have the required 
-dependencies to build our app. Let's write some Python code to dial outbound
-phone calls.&lt;/p&gt;
+&lt;p&gt;After the installation script finishes, we will have the required 
+dependencies to build our app. Time to write some Python code to dial 
+outbound phone calls.&lt;/p&gt;
 &lt;h2&gt;Bottle and Twilio&lt;/h2&gt;
 &lt;p&gt;Our simple Bottle web app will have three routes: &lt;/p&gt;
 &lt;ul&gt;
