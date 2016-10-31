@@ -87,10 +87,6 @@ or stuck on a machine with a web browser but otherwise no administrative
 privileges to install your own software. Most of these have free tiers for 
 getting started and then require payment as you scale up your application.
 
-* [Nitrous.io](https://www.nitrous.io/) provides a cloud IDE as well as 
-  hosting services that assist with scaling the application as traffic
-  ramps up.
-
 * [Cloud9](https://c9.io/) began as an independent company and is now owned 
   by Amazon as part of Amazon Web Services.
 
