@@ -66,6 +66,10 @@ understand how to use the project.
   executing tasks. Huey supports task scheduling, crontab-like repeating 
   tasks, result storage and automatic retry in the event of failure.
 
+* [Kuyruk](https://kuyruk.readthedocs.io) is simple and easy to use task queue
+  system built on top of RabbitMQ. Although feature set is small, new features
+  can be added by extensions.
+
 
 ## Hosted message and task queue services
 Task queue third party services aim to solve the complexity issues that arise
