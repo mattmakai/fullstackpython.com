@@ -14,6 +14,11 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2016
+### November
+* Merge [PR #110](https://github.com/mattmakai/fullstackpython.com/pull/110)
+  to add the new task queue project Kuyruk to the 
+  [task queues](/task-queues.html) page.
+
 ### October
 * Rearranged the individual pages and their meta to match the new
   [table of contents](/table-of-contents.html).
