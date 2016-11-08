@@ -131,6 +131,12 @@ edge cases.
   The content is detailed and well worth reading to understand what is 
   executing under the covers.
 
+* The 
+  [SQLAlchemy cheatsheet](https://github.com/crazyguitar/pysheeet/blob/master/docs/notes/python-sqlalchemy.rst)
+  has many examples for querying, generating database metadata and many
+  other common (and not so common) operations when working with Core and 
+  the ORM.
+  
 * [10 reasons to love SQLAlchemy](http://pajhome.org.uk/blog/10_reasons_to_love_sqlalchemy.html)
   is a bit of a non-critical lovefest for the code library. However, the
   post makes some good points about the quality of SQLAlchemy's 
