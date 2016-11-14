@@ -63,7 +63,10 @@ steps to more easily get your web application up and running.
 
 * [Getting Started with Python, Bottle and Twilio SMS / MMS](https://www.twilio.com/blog/2016/08/getting-started-python-bottle-twilio-sms-mms.html)
   shows how to build a simple Bottle web application that can send and 
-  receive text and picture messages.
+  receive text and picture messages. 
+  [How to Make and Receive Phone Calls with Python, Bottle and Twilio Voice](https://www.twilio.com/blog/2016/11/make-receive-phone-calls-python-bottle-twilio-voice.html)
+  is a similar beginner's tutorial for handling phone calls with a Bottle
+  app using [Twilio](/twilio.html).
 
 * This tutorial provides a walkthrough for
 [getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598).
