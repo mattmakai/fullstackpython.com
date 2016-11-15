@@ -87,6 +87,12 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 
 
 ## Python-specific Docker resources
+* [How to deploy Django using Docker](https://www.stavros.io/posts/how-deploy-django-docker/)
+  assumes you already have the basic grasp of working with Docker and
+  jumps right into a Django deployment. The post shows you how to set up
+  your `Dockerfile` and explains that [GitLab CI](https://about.gitlab.com/) 
+  can be used to to build this Docker image.
+
 * [Hosting Python WSGI applications using Docker](http://blog.dscpl.com.au/2014/12/hosting-python-wsgi-applications-using.html)
   shows how to use Docker in WSGI application deployments specifically using
   mod\_wsgi.
