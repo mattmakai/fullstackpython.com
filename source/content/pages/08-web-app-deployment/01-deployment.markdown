@@ -79,7 +79,7 @@ guide as they are considered advanced deployment techniques.
   overview of deployment concepts and as an introduction to the other videos
   on those subjects in that series.
 
-* [Continuous deployment at Instagram](http://engineering.instagram.com/posts/1125308487520335/continuous-deployment-at-instagram/)
+* [Continuous deployment at Instagram](https://engineering.instagram.com/continuous-deployment-at-instagram-1e18548f01d1)
   is the story of how their deployment process evolved over time from a 
   large Fabric script to continuous deployments. Along the way they 
   encountered issues with code reviews, test failures, canary builds and

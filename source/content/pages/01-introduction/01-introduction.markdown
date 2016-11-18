@@ -4,7 +4,7 @@ slug: introduction
 sortorder: 0101
 toc: True
 sidebartitle: 1. Introduction
-meta: Full Stack Python helps you learn Python programming through plain language explanations along with links to other great resources.
+meta: Full Stack Python provides plain language explanations for Python programming concepts and implementations.
 
 
 # Introduction
