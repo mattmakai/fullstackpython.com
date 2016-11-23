@@ -15,6 +15,9 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2016
 ### November
+* New blog post on 
+  [How to Make Phone Calls in Python](/blog/make-phone-calls-python.html)
+  that does not rely on a web framework for HTTP POST responses.
 * Merge [PR #110](https://github.com/mattmakai/fullstackpython.com/pull/110)
   to add the new task queue project Kuyruk to the 
   [task queues](/task-queues.html) page.
