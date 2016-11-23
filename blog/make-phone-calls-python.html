@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="author" content="Matt Makai">
+    <meta name="description" content="This tutorial shows how to use a Python program and the Twilio API to dial phone calls.">
+ <title>How to Make Phone Calls in Python - Full Stack Python</title>
+ <link href="/f.css" rel="stylesheet">
+ <link rel="shortcut icon" href="/img/fsp-fav.png">
+</head>
+<body>
+<div style="margin: 0 0 12px;background-color: #22B24C;">
+  <div class="container">
+    <p class="banner sans-font">
+      <a href="https://www.gumroad.com/l/python-deployments" style="color: #fff">Learning web development? Check out the newly-updated Guide to Deployments book</a>!
+    </p>
+  </div>
+</div> <div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="logo-header-section">
+            <a href="/" style="text-decoration: none; border: none;"><img src="/img/logo-sm.png" class="logo-image" alt="Full Stack Python logo"></a>
+            <span class="logo-title"><a href="https://www.fullstackpython.com/">Full Stack Python</a></span>
+        </div>
+<div class="sans-font">
+  <!--<a href="/blog.html" class="submenu-item-first">Blog</a> |
+  <a href="/books.html" class="submenu-item">Books</a> | -->
+  <a href="/table-of-contents.html">All topics</a>
+  <span style="margin:0 12px 0 12px">|</span>
+  <a href="/blog.html">Blog</a>
+  <span style="margin:0 12px 0 12px">|</span>
+  <a href="/email.html">Newsletter</a>
+  <span style="margin:0 12px 0 12px">|</span>
+  <a href="https://twitter.com/fullstackpython">@fullstackpython</a>
+  <span style="margin:0 12px 0 12px">|</span>
+  <a href="https://www.facebook.com/fullstackpython">Facebook</a>
+  <span style="margin:0 12px 0 12px">|</span>
+  <a href="https://github.com/mattmakai/fullstackpython.com">Source</a> 
+</div>    </div>
+</div>  <div class="row">
+    <div class="col-md-8">
+      <h1 style="font-size: 36px;">How to Make Phone Calls in Python</h1>
+      <div class="post-byline">
+        Posted by <a href="/about-author.html">Matt Makai</a> on 
+        November 23, 2016.
+      </div>
+      <!--<div width="100%" style="margin: 5px 0 10px 0; height: 250px; overflow: hidden; border-radius: 12px;">
+          <img src="/source/static/img/161123-python-phone-calls/header.jpg" alt="Python and Twilio logos. Copyright their respective owners." width="100%" style="height: 500px; margin: -100px 0 -100px 0;">
+      </div>-->
+      <p>Good old-fashioned phone calls remain one of the best forms of communication
+despite the slew of new smartphone apps that have popped up over the past
+several years. With just a few lines of Python code plus a 
+<a href="/application-programming-interfaces.html">web application programming interface</a> 
+we can make and receive phone calls from any application. </p>
+<p>Our example calls will say a snippet of text and put all incoming callers 
+into a recorded conference call. You can modify the instructions using 
+<a href="https://www.twilio.com/docs/api/twiml">Twilio's TwiML verbs</a> when you 
+perform different actions in your own application's phone calls.</p>
+<h2>Our Tools</h2>
+<p>You should have either <a href="/python-2-or-3.html">Python 2 or 3</a> installed to
+build this application. Throughout the post we will also use:</p>
+<ul>
+<li><a href="https://pip.pypa.io/en/stable/">pip</a> and 
+  <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> to handle
+  <a href="/application-dependencies.html">application dependencies</a></li>
+<li>A free <a href="https://www.twilio.com/try-twilio">Twilio account</a> to use their 
+  <a href="https://www.twilio.com/docs/api/rest/making-calls">phone calling web API</a></li>
+<li>Twilio's 
+  <a href="https://www.twilio.com/docs/libraries/python">Python helper library</a>,
+  which is <a href="https://pypi.python.org/pypi/twilio">available on PyPI</a></li>
+</ul>
+<p>You can snag all the open source code for this tutorial in the 
+<a href="https://github.com/mattmakai/python-twilio-example-apps/tree/master/no-framework/phone-calls">python-twilio-example-apps</a>
+GitHub repository under the 
+<a href="https://github.com/mattmakai/python-twilio-example-apps/tree/master/no-framework/phone-calls">no-framework/phone-calls</a> directory.
+Use and copy the code for your own applications. Everything in that 
+repository and in this blog post are open source under the MIT license.</p>
+<h2>Install App Dependencies</h2>
+<p>Our application will use the <a href="/twilio.html">Twilio</a> 
+<a href="https://www.twilio.com/docs/libraries/python">Python helper library</a>
+to create an HTTP POST request to Twilio's API. The Twilio helper library is 
+installable from <a href="https://pypi.python.org/pypi">PyPI</a> into a virtual 
+environment. Open your terminal and use the <code>virtualenv</code> command to create 
+a new virtualenv:</p>
+<div class="highlight"><pre>virtualenv phoneapp
+</pre></div>
+
+
+<p>Invoke the <code>activate</code> script within the virtualenv <code>bin/</code> directory to make 
+this virtualenv the active Python executable. Note that you will need to 
+perform this step in every terminal window that you want the virtualenv to 
+be active.</p>
+<div class="highlight"><pre>source phoneapp/bin/activate
+</pre></div>
+
+
+<p>The command prompt will change after activating the virtualenv
+to something like <code>(phoneapp) $</code>. </p>
+<p>Next use the <code>pip</code> command to install the 
+<a href="https://www.twilio.com/docs/libraries/python">Twilio Python</a> package
+into the virtualenv.</p>
+<div class="highlight"><pre>pip install twilio
+</pre></div>
+
+
+<p>We will have the required dependency ready for project as soon as the 
+installation script finishes. Now we can write and execute Python code to 
+dial phone numbers.</p>
+<h2>Our Python Script</h2>
+<p>Create a new file named <code>phone_calls.py</code> and copy or type in the following
+lines of code.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
+
+
+<span class="c"># Twilio phone number goes here. Grab one at https://twilio.com/try-twilio</span>
+<span class="c"># and use the E.164 format, for example: &quot;+12025551234&quot;</span>
+<span class="n">TWILIO_PHONE_NUMBER</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+
+<span class="c"># list of one or more phone numbers to dial, in &quot;+19732644210&quot; format</span>
+<span class="n">DIAL_NUMBERS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">,]</span>
+
+<span class="c"># URL location of TwiML instructions for how to handle the phone call</span>
+<span class="n">TWIML_INSTRUCTIONS_URL</span> <span class="o">=</span> \
+  <span class="s">&quot;http://static.fullstackpython.com/phone-calls-python.xml&quot;</span>
+
+<span class="c"># replace the placeholder values with your Account SID and Auth Token</span>
+<span class="c"># found on the Twilio Console: https://www.twilio.com/console</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s">&quot;ACxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s">&quot;yyyyyyyyyy&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">dial_numbers</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Dials one or more phone numbers from a Twilio phone number.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers_list</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Dialing &quot;</span> <span class="o">+</span> <span class="n">number</span><span class="p">)</span>
+        <span class="c"># set the method to &quot;GET&quot; from default POST because Amazon S3 only</span>
+        <span class="c"># serves GET requests on files. Typically POST would be used for apps</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">calls</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="n">number</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="n">TWILIO_PHONE_NUMBER</span><span class="p">,</span>
+                            <span class="n">url</span><span class="o">=</span><span class="n">TWIML_INSTRUCTIONS_URL</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;GET&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">dial_numbers</span><span class="p">(</span><span class="n">DIAL_NUMBERS</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are a few lines that you need to modify in this application before it
+will run. First, insert one or more phone numbers you wish to dial into the 
+DIAL_NUMBERS list. Each one should be a string, separated by a comma. For
+example, <code>DIAL_NUMBERS = ["+12025551234", "+14155559876", "+19735551234"]</code>.</p>
+<p>Next, <code>TWILIO_PHONE_NUMBER</code> and the Account SID and Authentication Token,
+found on the <code>client = TwilioRestClient("ACxxxxxxxxxx", "yyyyyyyyyy")</code> 
+line, need to be set. We can get these values from the 
+<a href="https://www.twilio.com/console">Twilio Console</a>.</p>
+<p>In your web browser go to the
+<a href="https://www.twilio.com/try-twilio">Twilio website and sign up for a free account</a> 
+or sign into your existing Twilio account.</p>
+<p><img src="/source/static/img/161123-python-phone-calls/try-twilio.png" width="100%" class="technical-diagram img-rounded" alt="Twilio sign up screen."></p>
+<p>Copy the Account SID and Auth Token from the Twilio Console and paste them 
+into your application's code: </p>
+<p><img src="/source/static/img/161123-python-phone-calls/twilio-console-tokens.png" width="100%" class="technical-diagram img-rounded" alt="Obtain the Account SID and Auth Token from the Twilio Console."></p>
+<p>The Twilio trial account allows you to dial and receive phone calls to 
+your own validated phone number. To handle calls from any phone 
+number then you need to upgrade your account (hit the upgrade button on the
+top navigation bar). </p>
+<p>Once you are signed into your Twilio account, go to the 
+<a href="https://www.twilio.com/console/phone-numbers">manage phone numbers screen</a>.
+On this screen you can 
+<a href="https://www.twilio.com/console/phone-numbers/search">buy one or more phone numbers</a>
+or click on an existing phone number in your account to configure it.</p>
+<p><img src="/source/static/img/161123-python-phone-calls/manage-numbers.jpg" width="100%" class="technical-diagram img-rounded" alt="Manage phone numbers screen."></p>
+<p>After clicking on a number you will reach the phone number configuration
+screen. Paste in the URL with TwiML instructions and change the dropdown from
+"HTTP POST" to "HTTP GET". In this post we'll use 
+<code>http://static.fullstackpython.com/phone-calls-python.xml</code>, but that URL 
+can be more than just a static XML file. </p>
+<p><img src="/source/static/img/161123-python-phone-calls/twiml-url-number-screen.jpg" width="100%" class="technical-diagram img-rounded" alt="Twilio phone number configuration screen."></p>
+<p>The power of Twilio really comes in when that URL is handled by your web 
+application so it can dynamically respond with TwiML instructions based on 
+the incoming caller number or other properties stored in your database.</p>
+<p>Under the Voice webhook, paste in 
+<code>http://static.fullstackpython.com/phone-calls-python.xml</code> and change the
+drop-down to the right from "HTTP POST" to "HTTP GET". Click the "Save" 
+button at the bottom of the screen.</p>
+<p>Now try calling your phone number. You should hear the snippet of text
+read by the Alice voice and then you will be placed into a conference call.
+If no one else calls the number then hold music should be playing.</p>
+<h2>Making Phone Calls</h2>
+<p>We just handled inbound phone calls to our phone number. Now it's time to 
+dial outbound phone calls. Make sure your <code>phone_calls.py</code> file is saved 
+and that your virtualenv is still activated and then execute the script:</p>
+<div class="highlight"><pre>python phone_calls.py
+</pre></div>
+
+
+<p>In a moment all the phone numbers you write in the <code>DIAL_NUMBERS</code> list
+should light up with calls. Anyone that answers will hear our message read
+by the "Alice" voice and then they'll be placed together into a recorded 
+conference call, just like when someone dials into the number. </p>
+<p>Here is my inbound phone call:</p>
+<p><img src="/source/static/img/161123-python-phone-calls/inbound-call.png" width="100%" class="technical-diagram img-rounded" alt="Receiving an incoming phone call on the iPhone."></p>
+<p>Not bad for just a few lines of Python code!</p>
+<h2>Next Steps</h2>
+<p>Now that we know how to make and receive phone calls from a Twilio number 
+that follows programmatic instructions we can do a whole lot more in our
+applications. Next you can use out one of these tutorials to do more with 
+the phone number:</p>
+<ul>
+<li><a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html">Build a phone-calling Slack bot</a></li>
+<li><a href="https://www.twilio.com/docs/tutorials/walkthrough/masked-numbers/python/flask">Mask phone numbers for anonymous communication</a></li>
+<li><a href="https://www.twilio.com/docs/tutorials/walkthrough/call-tracking/python/django">Add call tracking to see metrics for phone calls</a></li>
+</ul>
+<p>Questions? Contact me via Twitter 
+<a href="https://twitter.com/fullstackpython">@fullstackpython</a>
+or <a href="https://twitter.com/mattmakai">@mattmakai</a>. I'm also on GitHub as
+<a href="https://github.com/mattmakai">mattmakai</a>.</p>
+<p>Something wrong with this post? Fork 
+<a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/161123-make-phone-calls-python.markdown">this page's source on GitHub</a>.</p>
+      <hr>
+<div id="mc_embed_signup">
+<form action="//mattmakai.us2.list-manage.com/subscribe/post?u=b7e774f0c4f05dcebbfee183d&amp;id=b22335388d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+        <h4>Sign up here to receive a monthly email with major updates to this site, tutorials and discount codes for Python books.</h4>
+        <div class="row">
+            <div class="col-md-9">
+                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_b7e774f0c4f05dcebbfee183d_b22335388d" tabindex="-1" value=""></div>
+            </div>
+            <div class="col-md-3">
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" style="font-family: 'Helvetica Neue';"></div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
+<div class="panel" id="sidebar">
+  <div class="panel-heading">
+    <h3 class="panel-head">Learn more about these concepts</h3>
+  </div>
+  <img src="/source/static/img/161123-python-phone-calls/header.jpg" alt="Python and Twilio logos. Copyright their respective owners." width="100%"> 
+  <div class="list-group">
+<a href="/application-programming-interfaces.html" class="list-group-item smaller-item">APIs</a>
+<a href="/api-integration.html" class="list-group-item smaller-item">API Integration</a>
+<a href="/twilio.html" class="list-group-item smaller-item">Twilio API</a>
+<a href="https://www.twilio.com/docs/" class="list-group-item smaller-item">Twilio Docs <svg width="20" height="12" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1408 928v320q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-320q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10l-114-114q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z"/></svg></a>    <a href="/table-of-contents.html" class="list-group-item smaller-item" style='background-color:#444; color: #fff;'>...or <span style="border-bottom: 1px dotted;">view all topics</span>.</a>
+  </div>
+</div>    </div>
+  </div>
+  <hr/>
+ </div> 
+ <div class="container">
+  <div class="footer">
+   <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2016
+  </div>
+ </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-19910497-7', 'auto');
+  ga('send', 'pageview');
+</script><script type='text/javascript'>
+var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+</body>
+</html>

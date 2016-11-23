@@ -1,5 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 27 Oct 2016 00:00:00 -0400</lastBuildDate><item><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link>https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html</link><description>&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 23 Nov 2016 00:00:00 -0500</lastBuildDate><item><title>How to Make Phone Calls in Python</title><link>https://www.fullstackpython.com/make-phone-calls-python.html</link><description>&lt;p&gt;Good old-fashioned phone calls remain one of the best forms of communication
+despite the slew of new smartphone apps that have popped up over the past
+several years. With just a few lines of Python code plus a 
+&lt;a href="/application-programming-interfaces.html"&gt;web application programming interface&lt;/a&gt; 
+we can make and receive phone calls from any application. &lt;/p&gt;
+&lt;p&gt;Our example calls will say a snippet of text and put all incoming callers 
+into a recorded conference call. You can modify the instructions using 
+&lt;a href="https://www.twilio.com/docs/api/twiml"&gt;Twilio's TwiML verbs&lt;/a&gt; when you 
+perform different actions in your own application's phone calls.&lt;/p&gt;
+&lt;h2&gt;Our Tools&lt;/h2&gt;
+&lt;p&gt;You should have either &lt;a href="/python-2-or-3.html"&gt;Python 2 or 3&lt;/a&gt; installed to
+build this application. Throughout the post we will also use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; and 
+  &lt;a href="https://virtualenv.pypa.io/en/latest/"&gt;virtualenv&lt;/a&gt; to handle
+  &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
+  &lt;a href="https://www.twilio.com/docs/api/rest/making-calls"&gt;phone calling web API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twilio's 
+  &lt;a href="https://www.twilio.com/docs/libraries/python"&gt;Python helper library&lt;/a&gt;,
+  which is &lt;a href="https://pypi.python.org/pypi/twilio"&gt;available on PyPI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can snag all the open source code for this tutorial in the 
+&lt;a href="https://github.com/mattmakai/python-twilio-example-apps/tree/master/no-framework/phone-calls"&gt;python-twilio-example-apps&lt;/a&gt;
+GitHub repository under the 
+&lt;a href="https://github.com/mattmakai/python-twilio-example-apps/tree/master/no-framework/phone-calls"&gt;no-framework/phone-calls&lt;/a&gt; directory.
+Use and copy the code for your own applications. Everything in that 
+repository and in this blog post are open source under the MIT license.&lt;/p&gt;
+&lt;h2&gt;Install App Dependencies&lt;/h2&gt;
+&lt;p&gt;Our application will use the &lt;a href="/twilio.html"&gt;Twilio&lt;/a&gt; 
+&lt;a href="https://www.twilio.com/docs/libraries/python"&gt;Python helper library&lt;/a&gt;
+to create an HTTP POST request to Twilio's API. The Twilio helper library is 
+installable from &lt;a href="https://pypi.python.org/pypi"&gt;PyPI&lt;/a&gt; into a virtual 
+environment. Open your terminal and use the &lt;code&gt;virtualenv&lt;/code&gt; command to create 
+a new virtualenv:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;virtualenv phoneapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Invoke the &lt;code&gt;activate&lt;/code&gt; script within the virtualenv &lt;code&gt;bin/&lt;/code&gt; directory to make 
+this virtualenv the active Python executable. Note that you will need to 
+perform this step in every terminal window that you want the virtualenv to 
+be active.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;source phoneapp/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The command prompt will change after activating the virtualenv
+to something like &lt;code&gt;(phoneapp) $&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Next use the &lt;code&gt;pip&lt;/code&gt; command to install the 
+&lt;a href="https://www.twilio.com/docs/libraries/python"&gt;Twilio Python&lt;/a&gt; package
+into the virtualenv.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We will have the required dependency ready for project as soon as the 
+installation script finishes. Now we can write and execute Python code to 
+dial phone numbers.&lt;/p&gt;
+&lt;h2&gt;Our Python Script&lt;/h2&gt;
+&lt;p&gt;Create a new file named &lt;code&gt;phone_calls.py&lt;/code&gt; and copy or type in the following
+lines of code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
+
+
+&lt;span class="c"&gt;# Twilio phone number goes here. Grab one at https://twilio.com/try-twilio&lt;/span&gt;
+&lt;span class="c"&gt;# and use the E.164 format, for example: &amp;quot;+12025551234&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;TWILIO_PHONE_NUMBER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# list of one or more phone numbers to dial, in &amp;quot;+19732644210&amp;quot; format&lt;/span&gt;
+&lt;span class="n"&gt;DIAL_NUMBERS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,]&lt;/span&gt;
+
+&lt;span class="c"&gt;# URL location of TwiML instructions for how to handle the phone call&lt;/span&gt;
+&lt;span class="n"&gt;TWIML_INSTRUCTIONS_URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; \
+  &lt;span class="s"&gt;&amp;quot;http://static.fullstackpython.com/phone-calls-python.xml&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# replace the placeholder values with your Account SID and Auth Token&lt;/span&gt;
+&lt;span class="c"&gt;# found on the Twilio Console: https://www.twilio.com/console&lt;/span&gt;
+&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ACxxxxxxxxxx&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;yyyyyyyyyy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;dial_numbers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numbers_list&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Dials one or more phone numbers from a Twilio phone number.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;numbers_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Dialing &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="c"&gt;# set the method to &amp;quot;GET&amp;quot; from default POST because Amazon S3 only&lt;/span&gt;
+        &lt;span class="c"&gt;# serves GET requests on files. Typically POST would be used for apps&lt;/span&gt;
+        &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;calls&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from_&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;TWILIO_PHONE_NUMBER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;TWIML_INSTRUCTIONS_URL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GET&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;dial_numbers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DIAL_NUMBERS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There are a few lines that you need to modify in this application before it
+will run. First, insert one or more phone numbers you wish to dial into the 
+DIAL_NUMBERS list. Each one should be a string, separated by a comma. For
+example, &lt;code&gt;DIAL_NUMBERS = ["+12025551234", "+14155559876", "+19735551234"]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Next, &lt;code&gt;TWILIO_PHONE_NUMBER&lt;/code&gt; and the Account SID and Authentication Token,
+found on the &lt;code&gt;client = TwilioRestClient("ACxxxxxxxxxx", "yyyyyyyyyy")&lt;/code&gt; 
+line, need to be set. We can get these values from the 
+&lt;a href="https://www.twilio.com/console"&gt;Twilio Console&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In your web browser go to the
+&lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio website and sign up for a free account&lt;/a&gt; 
+or sign into your existing Twilio account.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/161123-python-phone-calls/try-twilio.png" width="100%" class="technical-diagram img-rounded" alt="Twilio sign up screen."&gt;&lt;/p&gt;
+&lt;p&gt;Copy the Account SID and Auth Token from the Twilio Console and paste them 
+into your application's code: &lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/161123-python-phone-calls/twilio-console-tokens.png" width="100%" class="technical-diagram img-rounded" alt="Obtain the Account SID and Auth Token from the Twilio Console."&gt;&lt;/p&gt;
+&lt;p&gt;The Twilio trial account allows you to dial and receive phone calls to 
+your own validated phone number. To handle calls from any phone 
+number then you need to upgrade your account (hit the upgrade button on the
+top navigation bar). &lt;/p&gt;
+&lt;p&gt;Once you are signed into your Twilio account, go to the 
+&lt;a href="https://www.twilio.com/console/phone-numbers"&gt;manage phone numbers screen&lt;/a&gt;.
+On this screen you can 
+&lt;a href="https://www.twilio.com/console/phone-numbers/search"&gt;buy one or more phone numbers&lt;/a&gt;
+or click on an existing phone number in your account to configure it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/161123-python-phone-calls/manage-numbers.jpg" width="100%" class="technical-diagram img-rounded" alt="Manage phone numbers screen."&gt;&lt;/p&gt;
+&lt;p&gt;After clicking on a number you will reach the phone number configuration
+screen. Paste in the URL with TwiML instructions and change the dropdown from
+"HTTP POST" to "HTTP GET". In this post we'll use 
+&lt;code&gt;http://static.fullstackpython.com/phone-calls-python.xml&lt;/code&gt;, but that URL 
+can be more than just a static XML file. &lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/161123-python-phone-calls/twiml-url-number-screen.jpg" width="100%" class="technical-diagram img-rounded" alt="Twilio phone number configuration screen."&gt;&lt;/p&gt;
+&lt;p&gt;The power of Twilio really comes in when that URL is handled by your web 
+application so it can dynamically respond with TwiML instructions based on 
+the incoming caller number or other properties stored in your database.&lt;/p&gt;
+&lt;p&gt;Under the Voice webhook, paste in 
+&lt;code&gt;http://static.fullstackpython.com/phone-calls-python.xml&lt;/code&gt; and change the
+drop-down to the right from "HTTP POST" to "HTTP GET". Click the "Save" 
+button at the bottom of the screen.&lt;/p&gt;
+&lt;p&gt;Now try calling your phone number. You should hear the snippet of text
+read by the Alice voice and then you will be placed into a conference call.
+If no one else calls the number then hold music should be playing.&lt;/p&gt;
+&lt;h2&gt;Making Phone Calls&lt;/h2&gt;
+&lt;p&gt;We just handled inbound phone calls to our phone number. Now it's time to 
+dial outbound phone calls. Make sure your &lt;code&gt;phone_calls.py&lt;/code&gt; file is saved 
+and that your virtualenv is still activated and then execute the script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python phone_calls.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In a moment all the phone numbers you write in the &lt;code&gt;DIAL_NUMBERS&lt;/code&gt; list
+should light up with calls. Anyone that answers will hear our message read
+by the "Alice" voice and then they'll be placed together into a recorded 
+conference call, just like when someone dials into the number. &lt;/p&gt;
+&lt;p&gt;Here is my inbound phone call:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/161123-python-phone-calls/inbound-call.png" width="100%" class="technical-diagram img-rounded" alt="Receiving an incoming phone call on the iPhone."&gt;&lt;/p&gt;
+&lt;p&gt;Not bad for just a few lines of Python code!&lt;/p&gt;
+&lt;h2&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;Now that we know how to make and receive phone calls from a Twilio number 
+that follows programmatic instructions we can do a whole lot more in our
+applications. Next you can use out one of these tutorials to do more with 
+the phone number:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html"&gt;Build a phone-calling Slack bot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.twilio.com/docs/tutorials/walkthrough/masked-numbers/python/flask"&gt;Mask phone numbers for anonymous communication&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.twilio.com/docs/tutorials/walkthrough/call-tracking/python/django"&gt;Add call tracking to see metrics for phone calls&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub as
+&lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/161123-make-phone-calls-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 23 Nov 2016 00:00:00 -0500</pubDate><guid>tag:www.fullstackpython.com,2016-11-23:make-phone-calls-python.html</guid></item><item><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link>https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html</link><description>&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;send&lt;/a&gt; and 
 &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;receive SMS text messages&lt;/a&gt;.
 In this tutorial we will go beyond texting and learn how to dial outbound 
