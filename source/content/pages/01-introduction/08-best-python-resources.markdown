@@ -173,12 +173,9 @@ the [best Python videos](/best-python-videos.html) page.
 
 
 ## Podcasts
-* [Talk Python to Me](http://www.talkpythontome.com/) focuses on the
-  people and organizations coding on Python. Each episode features a
-  different guest interviewee to talk about his or her work.
-
-* [Podcast.\_\_init\_\_](http://podcastinit.com/) is another podcast on
-  "about Python and the people who make it great".
+Take a look at the [best Python podcasts](/best-python-podcasts.html)
+page for a curated list of both Python-specific and general software
+development podcasts.
 
 
 ## Newsletters

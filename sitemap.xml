@@ -280,6 +280,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/best-python-podcasts.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/jinja2.html</loc>
     <priority>1.0</priority>
   </url>
