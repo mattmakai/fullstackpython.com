@@ -8,10 +8,10 @@ meta: Find out the best Python podcasts as well as general software development 
 
 
 # Best Python Podcasts
-The [Python community](/python-community.html) produces an incredible wealth of
-free and low cost resources for both new and experienced software developers.
-These great resources include several Python podcasts that are released
-on a regular schedule.
+The [Python community](/python-community.html) produces an incredible wealth 
+of free and low cost resources for both new and experienced software 
+developers. These great resources include several Python podcasts that are 
+released on a regular schedule.
 
 Note that podcasts that have not been updated in the past twelve months 
 are not included on this page.
@@ -29,6 +29,10 @@ podcast presentation.
   [SQLAlchemy](/sqlalchemy.html) evolved. This episode interviews 
   SQLAlchemy's creator. The show host, Michael Kennedy, asks great questions 
   based on his in-depth research and prior usage of SQLAlchemy.
+
+* [Deploying Python Web Applications](https://talkpython.fm/episodes/show/26/deploying-python-web-applications-updated).
+  *Spoiler alert*: this is the episode I was on Talk Python to Me explaining
+  how [Python web application deployments](/deployments.html) work.
 
 
 ## Python-specific podcasts
@@ -59,5 +63,10 @@ podcast presentation.
 
 * [Full Stack Radio](http://www.fullstackradio.com/)
 
-* [Exponent](http://exponent.fm/)
+* [Exponent](http://exponent.fm/) is not a software development podcast
+  but it covers the intersection of corporate strategy and technology in an
+  in-depth way that allows me to better understand the decisions businesses
+  make when building and releasing software. I listen to every episode 
+  (at 1.5x speed) and it's well worth the 45 to 60 minutes spent 
+  listening to Ben Thompson and James Allworth go deep on a weekly topic.
 
