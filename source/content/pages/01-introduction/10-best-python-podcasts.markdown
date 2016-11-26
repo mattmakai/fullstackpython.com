@@ -8,7 +8,7 @@ meta: Find out the best Python podcasts as well as general software development 
 
 
 # Best Python Podcasts
-The [Python community](/community.html) produces an incredible wealth of
+The [Python community](/python-community.html) produces an incredible wealth of
 free and low cost resources for both new and experienced software developers.
 These great resources include several Python podcasts that are released
 on a regular schedule.
@@ -49,7 +49,7 @@ podcast presentation.
 
 
 
-<div class="well see-also">If you prefer to learn by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/tale-of-contents.html">view all topics</a>.</div>
+<div class="well see-also">If you prefer to learn by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
 
 
 ## General software development podcasts
