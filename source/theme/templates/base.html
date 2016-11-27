@@ -20,11 +20,7 @@
   <hr/>
  </div> 
  {% block lower_banner %}{% endblock %}
- <div class="container">
-  <div class="footer">
-   <a href="http://www.mattmakai.com/" class="underline">Matt Makai</a> 2016
-  </div>
- </div>
+ {% include "footer.html" %}
 {% include "googleanalytics.html" %}
 {% block js %}{% endblock %}
 <script type='text/javascript'>
