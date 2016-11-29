@@ -51,6 +51,9 @@ podcast presentation.
 * [Python Bytes](https://pythonbytes.fm/) is a new podcast from the creators
   of the above mentioned "Talk Python to Me" and "Test and Code Podcast".
 
+* [Import This](https://www.kennethreitz.org/import-this/) is an occasional
+  podcast from Ken Reitz and Alex Gaynor with very in-depth interviews with
+  influential Python community members.
 
 
 <div class="well see-also">If you prefer to learn by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
