@@ -8,10 +8,13 @@ meta: Jinja2 is a template engine written in Python for outputting formats such 
 
 
 # Jinja2
-[Jinja2](http://jinja.pocoo.org/docs/dev/) is a Python 
-[template engine](/template-engines.html) used to create HTML, XML or 
-other markup formats that are returned to the user via an HTTP response.
+Jinja, also commonly referred to as 
+"[Jinja2](http://jinja.pocoo.org/docs/dev/)" to specify the newest 
+release version, is a Python [template engine](/template-engines.html) 
+used to create HTML, XML or other markup formats that are returned to the 
+user via an HTTP response.
 
+<a href="http://jinja.pocoo.org/docs/dev/"  style="border: none;"><img src="/img/jinja-logo.png" width="100%" alt="Logo for the Jinja template engine project." style="border-radius: 5px;" width="100%" class="technical-diagram"></a>
 
 ## Why is Jinja2 useful?
 Jinja2 is useful because it has consistent template tag syntax and the
