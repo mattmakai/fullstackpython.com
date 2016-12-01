@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2016
 ### December
+* Add new [Lektor](/lektor.html) page. Will be expanded upon during the
+  month as I get to use the library.
 * Merged [PR #111](https://github.com/mattmakai/fullstackpython.com/pull/111)
   that fixed some typos on the [Django](/django.html) page, added clarity to 
   a Django Channels statement and provided a new Django resource.
