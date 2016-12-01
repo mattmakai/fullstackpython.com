@@ -14,6 +14,11 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2016
+### December
+* Merged [PR #111](https://github.com/mattmakai/fullstackpython.com/pull/111)
+  that fixed some typos, added clarity to Django Channels statement and
+  provided a new Django resource.
+
 ### November
 * New blog post on 
   [How to Make Phone Calls in Python](/blog/make-phone-calls-python.html)
