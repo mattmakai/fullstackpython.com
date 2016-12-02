@@ -12,7 +12,7 @@ meta: Lektor is a static website generator with content management system (CMS) 
 content management system (CMS) and [web framework](/web-frameworks.html) 
 features for creating websites.
 
-<a href="https://www.getlektor.com/" style="border: none;"><img src="/img/lektor-logo.jpg" width="100%" alt="Lektor static website generator logo." class="technical-diagram"></a>
+<a href="https://www.getlektor.com/" style="border: none;"><img src="/img/lektor-logo.jpg" width="100%" alt="Lektor static website generator logo." class="technical-diagram" style="border-radius:5px"></a>
 
 
 ## How is Lektor different from other static site generators?
