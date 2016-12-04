@@ -8,7 +8,9 @@ meta: Bottle is a Python web framework contained within a single source file. Le
 
 
 # Bottle
-[Bottle](http://bottlepy.org/docs/dev/index.html) is a WSGI-compliant
+[Bottle](http://bottlepy.org/docs/dev/index.html) 
+([source code](https://github.com/bottlepy/bottle)) is a 
+[WSGI-compliant](/wsgi-servers.html)
 [single source file](https://github.com/defnull/bottle/blob/master/bottle.py)
 web framework with no external dependencies other than the Python
 [standard library (stdlib)](https://docs.python.org/3/library/).
@@ -23,6 +25,7 @@ Bottle is awesome for a few web development situations:
 1. Learning how web frameworks are built
 1. Building and running simple personal web applications 
 
+
 #### Prototyping
 Prototyping simple ideas is often easier with Bottle than a more
 opinionated web framework like [Django](/django.html) because Django
@@ -33,6 +36,7 @@ easier, but it can be cumbersome on starter projects where you're
 just playing with random ideas so you aren't worried about your 
 application's long-term code structure.
 
+
 #### Learning about frameworks
 Bottle is contained 
 [within a single large source file](https://github.com/bottlepy/bottle/blob/master/bottle.py) 
@@ -40,6 +44,7 @@ named `bottle.py` so it provides great reading when learning how
 [WSGI](/wsgi-servers.html) web frameworks work. Everything you need to learn 
 about how your web application's code connects with the Bottle framework is 
 contained within that single source code.
+
 
 #### Personal projects
 Personal projects can be deployed with Bottle as the only dependency.
@@ -60,6 +65,11 @@ steps to more easily get your web application up and running.
   [WSGI server](/wsgi-servers.html).
 
 * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps).
+
+* [First Steps with Python and Bottle](https://www.youtube.com/watch?v=qakG9BYJ1tw&list=PLqrz4nXepkz63z1y4-oHfZHWy11gSoAn0)
+  is a quick 4 minute introduction that I created for developers so they
+  can get the simplest possible Bottle web app running. There is also a 
+  [companion blog post with the code](https://www.twilio.com/blog/2016/11/first-steps-python-bottle-web-framework.html).
 
 * [Getting Started with Python, Bottle and Twilio SMS / MMS](https://www.twilio.com/blog/2016/08/getting-started-python-bottle-twilio-sms-mms.html)
   shows how to build a simple Bottle web application that can send and 
@@ -100,10 +110,6 @@ steps to more easily get your web application up and running.
 * [Jinja2 Templates and Bottle](http://reliablybroken.com/b/2013/12/jinja2-templates-and-bottle/)
   shows how to use Jinja instead of the built-in templating engine for
   Bottle page rendering.
-
-* [How to build a web app using Bottle with Jinja2 in Google App Engine](http://joemartaganna.com/jtblog/how-to-build-a-web-app-using-bottle-with-jinja2-in-google-app-engine.html)
-  provides a tutorial for using Bottle on the Google App Engine 
-  [platform-as-a-service](/platform-as-a-service.html).
 
 
 ## Open source Bottle example projects
