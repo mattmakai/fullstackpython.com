@@ -388,6 +388,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/mkdocs.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/websockets.html</loc>
     <priority>1.0</priority>
   </url>
