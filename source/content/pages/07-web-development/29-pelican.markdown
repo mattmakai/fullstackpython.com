@@ -11,7 +11,10 @@ meta: Pelican is a static site generator implemented in Python that uses Markdow
 [Pelican](http://docs.getpelican.com/en/3.6.3/) is a 
 [static site generator](/static-site-generator.html) implemented in Python 
 that combines [Jinja](/jinja2.html) templates with content written in 
-Markdown or reStructuredText to produce websites.
+Markdown or reStructuredText to produce websites. Pelican's 
+[source code is available on GitHub](https://github.com/getpelican/pelican)
+under the 
+[GPL 3 license](https://www.gnu.org/licenses/quick-guide-gplv3.html).
 
 <a href="http://docs.getpelican.com/en/3.6.3/" style="border: none;"><img src="/img/pelican-logo.png" width="100%" alt="Pelican static website generator logo." class="technical-diagram" /></a>
 
