@@ -4675,27 +4675,30 @@ and user data can only be handled through third party services. For example,
 if you want to have comments on a static website you'd need to 
 <a href="https://disqus.com/">embed Disqus's form</a> and be completely reliant upon
 their service.</p>
-<p>Many web applications simply cannot be built with only a static site generator.
-However, a static website generator can create part of a site that will be
-served up by a web server while other pages are handled by the WSGI server. 
-If done right, those web applications have the potential to scale better than
-if every page is rendered by the WSGI server. The complexity may or may not be
-worth it for your specific application.</p>
+<p>Many web applications simply cannot be built with only a static site 
+generator. However, a static website generator can create part of a site 
+that will be served up by a web server while other pages are handled by the 
+WSGI server. If done right, those web applications have the potential to 
+scale better than if every page is rendered by the WSGI server. The 
+complexity may or may not be worth it for your specific application.</p>
 <h2>Python implementations</h2>
 <p>Numerous static website generators exist in many different languages. The
 ones listed here are primarily coded in Python.</p>
 <ul>
 <li>
-<p><a href="http://blog.getpelican.com/">Pelican</a> 
-  (<a href="https://github.com/getpelican/pelican">source code</a>) 
+<p><a href="/pelican.html">Pelican</a>
   is a commonly used Python static website generator which is used to create 
   <a href="https://github.com/mattmakai/fullstackpython.com">Full Stack Python</a>. The
   primary templating engine is Jinja and Markdown, reStructuredText and
   AsciiDoc are supported with the default configuration.</p>
 </li>
 <li>
-<p><a href="http://www.mkdocs.org/">MkDocs</a> 
-  (<a href="https://github.com/mkdocs/mkdocs/">source code</a>) uses a YAML configuration
+<p><a href="/lektor.html">Lektor</a> is a static content management system and site
+  generator that can deploy its output to any webserver. It uses 
+  <a href="/jinja2.html">Jinja2</a> as its <a href="/template-engines.html">template engine</a>.</p>
+</li>
+<li>
+<p><a href="/mkdocs.html">MkDocs</a> uses a YAML configuration
   file to take Markdown files and an optional theme to output a documentation
   site. The templating engine is Jinja, but a user doesn't have to create her
   own templates unless a custom site is desired at which point it might make
@@ -4732,12 +4735,6 @@ ones listed here are primarily coded in Python.</p>
   uses projects, known as pods, which contain a specific file and directory 
   structure so the site can be generated. The project remains in the
   "experimental" phase.</p>
-</li>
-<li>
-<p><a href="https://www.getlektor.com/">Lektor</a> 
-  (<a href="https://github.com/lektor/lektor">source code</a>) is a Python static 
-  content management system that can deploy to any webserver. It uses 
-  <a href="/jinja2.html">Jinja2</a> as a <a href="/template-engines.html">template engine</a>.</p>
 </li>
 <li>
 <p><a href="http://complexity.readthedocs.org/en/latest/">Complexity</a>
@@ -9815,6 +9812,9 @@ inception in December 2012. You can view detailed changes via the
 <h2>2016</h2>
 <h3>December</h3>
 <ul>
+<li>Added a small <a href="/mkdocs.html">MkDocs</a> page that needs to be expanded.</li>
+<li>Updated the <a href="/nginx.html">Nginx</a> page with a better description of reverse
+  proxies.</li>
 <li>Add new <a href="/lektor.html">Lektor</a> page. Will be expanded upon during the
   month as I get to use the library.</li>
 <li>Merged <a href="https://github.com/mattmakai/fullstackpython.com/pull/111">PR #111</a>

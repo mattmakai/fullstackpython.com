@@ -15,6 +15,9 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2016
 ### December
+* Added a small [MkDocs](/mkdocs.html) page that needs to be expanded.
+* Updated the [Nginx](/nginx.html) page with a better description of reverse
+  proxies.
 * Add new [Lektor](/lektor.html) page. Will be expanded upon during the
   month as I get to use the library.
 * Merged [PR #111](https://github.com/mattmakai/fullstackpython.com/pull/111)

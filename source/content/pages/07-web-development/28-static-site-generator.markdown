@@ -60,27 +60,29 @@ if you want to have comments on a static website you'd need to
 [embed Disqus's form](https://disqus.com/) and be completely reliant upon
 their service.
 
-Many web applications simply cannot be built with only a static site generator.
-However, a static website generator can create part of a site that will be
-served up by a web server while other pages are handled by the WSGI server. 
-If done right, those web applications have the potential to scale better than
-if every page is rendered by the WSGI server. The complexity may or may not be
-worth it for your specific application.
+Many web applications simply cannot be built with only a static site 
+generator. However, a static website generator can create part of a site 
+that will be served up by a web server while other pages are handled by the 
+WSGI server. If done right, those web applications have the potential to 
+scale better than if every page is rendered by the WSGI server. The 
+complexity may or may not be worth it for your specific application.
 
 
 ## Python implementations
 Numerous static website generators exist in many different languages. The
 ones listed here are primarily coded in Python.
 
-* [Pelican](http://blog.getpelican.com/) 
-  ([source code](https://github.com/getpelican/pelican)) 
+* [Pelican](/pelican.html)
   is a commonly used Python static website generator which is used to create 
   [Full Stack Python](https://github.com/mattmakai/fullstackpython.com). The
   primary templating engine is Jinja and Markdown, reStructuredText and
   AsciiDoc are supported with the default configuration.
 
-* [MkDocs](http://www.mkdocs.org/) 
-  ([source code](https://github.com/mkdocs/mkdocs/)) uses a YAML configuration
+* [Lektor](/lektor.html) is a static content management system and site
+  generator that can deploy its output to any webserver. It uses 
+  [Jinja2](/jinja2.html) as its [template engine](/template-engines.html).
+
+* [MkDocs](/mkdocs.html) uses a YAML configuration
   file to take Markdown files and an optional theme to output a documentation
   site. The templating engine is Jinja, but a user doesn't have to create her
   own templates unless a custom site is desired at which point it might make
@@ -113,11 +115,6 @@ ones listed here are primarily coded in Python.
   uses projects, known as pods, which contain a specific file and directory 
   structure so the site can be generated. The project remains in the
   "experimental" phase.
-
-* [Lektor](https://www.getlektor.com/) 
-  ([source code](https://github.com/lektor/lektor)) is a Python static 
-  content management system that can deploy to any webserver. It uses 
-  [Jinja2](/jinja2.html) as a [template engine](/template-engines.html).
 
 * [Complexity](http://complexity.readthedocs.org/en/latest/)
   ([source code](https://github.com/audreyr/complexity)) is a site generator
