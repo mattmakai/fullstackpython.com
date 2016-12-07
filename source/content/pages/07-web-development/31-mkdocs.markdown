@@ -9,7 +9,7 @@ meta: MkDocs is a static site generator built in Python that is intended for cre
 
 # MkDocs
 [MkDocs](http://www.mkdocs.org/) 
-([source code](https://github.com/mkdocs/mkdocs/), pronounced 
+([source code](https://github.com/mkdocs/mkdocs/)), pronounced 
 "[McDocs](https://twitter.com/_tomchristie/status/805861272076042241)" with
 a Scottish accent or perhaps "Make Docs" otherwise, is a static site 
 generator that combines Markdown content with 
