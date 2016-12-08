@@ -43,6 +43,11 @@ painless.
   for hosting content. The post also includes details on the differences 
   in the project compared to other static site generators.
 
+* [Hello, Lektor](https://zerokspot.com/weblog/2016/09/16/hello-lektor/) is
+  a wonderful getting started and overview post. The post walks through the
+  files Lektor generates, the admin content management system and pulling
+  data into pages from the Meetup API.
+
 * The [official Lektor quickstart](https://www.getlektor.com/docs/quickstart/)
   contains the first commands to use to generate a new project scaffold.
   There is also a getting started screencast that walks through installing
