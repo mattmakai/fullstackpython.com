@@ -61,3 +61,4 @@ painless.
 * [Lektor Static CMS, put the fun back into Content Management](https://blog.liip.ch/archive/2016/09/21/lektor-static-cms-put-fun-back-content-management.html)
   is a short overview as the first part in what aims to be a continuing
   series on how to use Lektor as a content management system.
+
