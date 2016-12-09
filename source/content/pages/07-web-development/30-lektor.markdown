@@ -62,3 +62,9 @@ painless.
   is a short overview as the first part in what aims to be a continuing
   series on how to use Lektor as a content management system.
 
+* In 
+  [Experiences Migrating to Lektor](https://emptysqua.re/blog/experience-migrating-to-lektor/)
+  the author gives his impression of Lektor after moving his 400+ articles
+  over from a home-grown blogging engine. He talks a bit about how he went
+  from deploying on GitHub Pages to surge.sh and finally over to Netlify.
+ 
