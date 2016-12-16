@@ -7,9 +7,7 @@
 {% block title %}{{ page.title }} - {% endblock %}
 
 {% block banner %}
-  {% if not page.slug == "sqlalchemy" %}
-    {% include "banner.html" %}
-  {% endif %}
+  {% include "banner.html" %}
 {% endblock %}
 
 {% block content %}
@@ -34,8 +32,13 @@
 </div>
 {% endblock %}
 
+{% block lower_banner %}
+  {% include "lower-banner.html" %}
+{% endblock %}
+
 {% block js %}
 {% if page.slug == 'flask' %}
     <div style="display: none;"><img src="https://www.linkedin.com/in/matthewmakai?authType=name&authToken=thoI" /></div>
 {% endif %}
 {% endblock %}
+
