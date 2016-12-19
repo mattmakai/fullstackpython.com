@@ -8,8 +8,8 @@ meta: NoSQL data stores persistent data in different ways than traditional relat
 
 
 # NoSQL Data Stores
-Relational databases store the vast majority of web application 
-persistent data. However, there are several alternative classifications of 
+Relational databases store the vast majority of web application
+persistent data. However, there are several alternative classifications of
 storage representations.
 
 1. Key-value pair
@@ -18,7 +18,7 @@ storage representations.
 1. Graph
 
 These persistent data storage representations are commonly used to augment,
-rather than completely replace, relational databases. The underlying 
+rather than completely replace, relational databases. The underlying
 persistence type used by the NoSQL database often gives it different
 performance characteristics than a relational database, with better results
 on some types of read/writes and worse performance on others.
@@ -30,9 +30,9 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 
 
 ### Key-value pair data stores
-* [Redis](http://redis.io/) is an open source in-memory key-value pair data 
+* [Redis](http://redis.io/) is an open source in-memory key-value pair data
   store. Redis is often called "the Swiss Army Knife of web application
-  development." It can be used for caching, queuing, and storing session data 
+  development." It can be used for caching, queuing, and storing session data
   for faster access than a traditional relational database, among many other
   use cases. [Redis-py](https://github.com/andymccurdy/redis-py) is a solid
   Python client to use with Redis.
@@ -55,7 +55,7 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
 * "[How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)"
   is a guide for getting up with the extremely useful in-memory data store.
 
-* This video on 
+* This video on
   [Scaling Redis at Twitter](https://www.youtube.com/watch?v=rP9EKvWt0zo) is
   a detailed look behind the scenes with a massive Redis deployment.
 
@@ -92,27 +92,27 @@ some advice on Reids security and guarding against data breaches.
 
 * Redis, just as with any relational or NoSQL database, needs to be secured
   based on [security guidelines](http://www.antirez.com/news/96). There is
-  also a post where the main author of Redis 
+  also a post where the main author of Redis
   [cracks its security](http://www.antirez.com/news/96) to show the tradeoffs
   purposely made between ease of use and security in the default settings.
 
 * [Is your Redis server safe?](https://www.isredisallsafe.com/) is a tool
-  to test that your Redis instances are locked down. The tool is based on 
-  the blog post 
+  to test that your Redis instances are locked down. The tool is based on
+  the blog post
   [a few things about Redis security](http://www.antirez.com/news/96).
 
 
 ## Document-oriented
 A document-oriented database provides a semi-structured representation for
-nested data. 
+nested data.
 
 
 ### Document-oriented data stores
-* [MongoDB](http://www.mongodb.org/) is an open source document-oriented 
-  data store with a Binary Object Notation (BSON) storage format that is 
-  JSON-style and familiar to web developers. 
+* [MongoDB](http://www.mongodb.org/) is an open source document-oriented
+  data store with a Binary Object Notation (BSON) storage format that is
+  JSON-style and familiar to web developers.
   [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) is a
-  commonly used client for interfacing with one or more MongoDB 
+  commonly used client for interfacing with one or more MongoDB
   instances through Python code. [MongoEngine](http://mongoengine.org/)
   is a Python ORM specifically written for MongoDB that is built on top
   of PyMongo.
@@ -121,12 +121,12 @@ nested data.
   focused on availability, fault tolerance and large scale deployments.
 
 * [Apache CouchDB](http://couchdb.apache.org/) is also an open source project
-  where the focus is on embracing RESTful-style HTTP access for working with 
+  where the focus is on embracing RESTful-style HTTP access for working with
   stored JSON data.
 
 
 ### Document-oriented data store resources
-* [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/) 
+* [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/)
   is a guide about using non-relational databases in green field environments.
 
 * The creator and maintainers of PyMongo review four decisions they regret
@@ -136,9 +136,9 @@ nested data.
     1. [copy\_database](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/)
     1. [MongoReplicaSetClient](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-mongoreplicasetclient/)
 
-* The 
-  [Python and MongoDB](https://talkpython.fm/episodes/show/2/python-and-mongodb) 
-  Talk Python to Me podcast has a great interview with the maintainer of the 
+* The
+  [Python and MongoDB](https://talkpython.fm/episodes/show/2/python-and-mongodb)
+  Talk Python to Me podcast has a great interview with the maintainer of the
   Python driver for MongoDB.
 
 * [MongoDB queries don’t always return all matching documents!](https://engineering.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827)
@@ -146,6 +146,8 @@ nested data.
   shows some potential pitfalls of relying on technologies where you do
   not fully understand how they operate.
 
+* [Introduction to MongoDB and Python](https://realpython.com/blog/python/introduction-to-mongodb-and-python/)
+  shows how to use Python to interface with MongoDB via PyMongo and MongoEngine.
 
 ## Column-family table
 A column-family table class of NoSQL data stores builds on the key-value
@@ -161,20 +163,20 @@ column family is similar to a table in the relational database model.
 
 ## Graph
 A graph database represents and stores data in three aspects: nodes, edges
-and properties. 
+and properties.
 
-A *node* is an entity, such as a person or business. 
+A *node* is an entity, such as a person or business.
 
-An *edge* is the relationship between two entities. For example, an 
-edge could represent that a node for a person entity is an employee of a 
-business entity. 
+An *edge* is the relationship between two entities. For example, an
+edge could represent that a node for a person entity is an employee of a
+business entity.
 
-A *property* represents information about nodes. For example, an entity 
+A *property* represents information about nodes. For example, an entity
 representing a person could have a property of "female" or "male".
 
 
 ### Graph data stores
-* [Neo4j](http://www.neo4j.org/) is one of the most widely used graph 
+* [Neo4j](http://www.neo4j.org/) is one of the most widely used graph
   databases and runs on the Java Virtual Machine stack.
 
 * [Cayley](https://github.com/google/cayley) is an open source graph data
@@ -186,7 +188,7 @@ representing a person could have a property of "female" or "male".
 
 ### Graph data store resources
 * [Introduction to Graph Databases](http://www.slideshare.net/maxdemarzi/introduction-to-graph-databases-12735789)
-  covers trends in NoSQL data stores and compares graph databases to other 
+  covers trends in NoSQL data stores and compares graph databases to other
   data store types.
 
 
@@ -198,7 +200,7 @@ representing a person could have a property of "female" or "male".
 ## NoSQL data store resources
 * [NoSQL databases: an overview](http://www.thoughtworks.com/insights/blog/nosql-databases-overview)
   explains what NoSQL means, how data is stored differently than in
-  relational systems and what the Consistency, Availability and 
+  relational systems and what the Consistency, Availability and
   Partition-Tolerance (CAP) Theorem means.
 
 * [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
@@ -209,11 +211,11 @@ representing a person could have a property of "female" or "male".
   of NoSQL databases are doing under the covers.
 
 * The [CAP Theorem series](http://blog.thislongrun.com/2015/03/the-cap-theorem-series.html)
-  explains concepts related to NoSQL such as what is ACID compared to CAP, CP 
+  explains concepts related to NoSQL such as what is ACID compared to CAP, CP
   versus CA and high availability in large scale deployments.
 
-* [NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email 
-  newsletter that aggregates articles, tutorials, and videos about 
+* [NoSQL Weekly](http://www.nosqlweekly.com/) is a free curated email
+  newsletter that aggregates articles, tutorials, and videos about
   non-relational data stores.
 
 * [NoSQL comparison](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
@@ -222,24 +224,23 @@ representing a person could have a property of "female" or "male".
 
 * Relational databases such as MySQL and PostgreSQL have added features in
   more recent versions that mimic some of the capabilities of NoSQL data
-  stores. For example, check out this blog post on 
+  stores. For example, check out this blog post on
   [using MySQL as a key-value pair store](http://engineering.wix.com/2015/12/10/scaling-to-100m-mysql-is-a-better-nosql/)
   and this post on
   [storing JSON data in PostgreSQL](https://blog.codeship.com/unleash-the-power-of-storing-json-in-postgres/).
 
 
 ## NoSQL data stores learning checklist
-1. Understand why NoSQL data stores are better for some use cases than 
-   relational databases. In general these benefits are only seen at large 
+1. Understand why NoSQL data stores are better for some use cases than
+   relational databases. In general these benefits are only seen at large
    scale so they may not be applicable to your web application.
 
-1. Integrate Redis into your project for a speed boost over slower persistent 
-   storage. Storing session data in memory is generally much faster than 
-   saving that data in a traditional relational database that uses persistent 
-   storage. Note that when memory is flushed the data goes away so anything 
-   that needs to be persistent must still be backed up to disk on a regular 
+1. Integrate Redis into your project for a speed boost over slower persistent
+   storage. Storing session data in memory is generally much faster than
+   saving that data in a traditional relational database that uses persistent
+   storage. Note that when memory is flushed the data goes away so anything
+   that needs to be persistent must still be backed up to disk on a regular
    basis.
 
-1. Evaluate other use cases such as storing transient logs in a 
+1. Evaluate other use cases such as storing transient logs in a
    document-oriented data store such as MongoDB.
-
