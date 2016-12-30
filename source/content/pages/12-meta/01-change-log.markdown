@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2016
 ### December
+* Crossed 800,000 readers so far in 2016!
 * Added a small [MkDocs](/mkdocs.html) page that needs to be expanded.
 * Updated the [Nginx](/nginx.html) page with a better description of reverse
   proxies.
