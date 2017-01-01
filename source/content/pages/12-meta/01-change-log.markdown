@@ -15,7 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
-* New [Why Python?](/why-python.html) resources.
+* New [Why Python?](/why-use-python.html) resources.
 * Happy New Year!
 
 
