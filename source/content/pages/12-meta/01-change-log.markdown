@@ -13,6 +13,12 @@ inception in December 2012. You can view detailed changes via the
 [source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/gh-pages) on GitHub.
 
 
+## 2017
+### January
+* New [Why Python?](/why-python.html) resources.
+* Happy New Year!
+
+
 ## 2016
 ### December
 * Crossed 800,000 readers so far in 2016!
