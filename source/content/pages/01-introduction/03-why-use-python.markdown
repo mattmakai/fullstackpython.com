@@ -99,7 +99,7 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   Python is a very good option for many use cases.
 
 * [Why I Push for Python](http://lorenabarba.com/blog/why-i-push-for-python/)
-  explains one professor's rationale for promoting Python to teach programming
+  gives one professor's rationale for promoting Python to teach programming
   to undergraduates.
 
 * If you're wondering about the differences in Python's dynamically typed
@@ -112,3 +112,10 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   lacking when it came to satisfying his needs and Python filled the gap for
   him with its wide array of open source code libraries, package management
   and ability to work well on platforms other than Windows.
+
+* [Python, Machine Learning, and Language Wars](http://sebastianraschka.com/blog/2015/why-python.html)
+  compares Python with R, MATLAB and Julia for data science work. While 
+  Python is great for [deployment automation](/deployments.html) and
+  [web development](/web-development.html), many non-developers are first
+  introduced to the language and ecosystem while getting data analysis
+  work done.
