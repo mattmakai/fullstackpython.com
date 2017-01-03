@@ -312,7 +312,7 @@ inception in December 2012. You can view detailed changes via the
 * Added new [source control](/source-control.html) resources.
 * Major site performance improvements. I removed font awesome and replaced
   icons with SVG elements that mimic the font awesome icons.
-* Pushed the [1000th commit](https://github.com/mattmakai/fullstackpython.github.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d) 
+* Pushed the [1000th commit](https://github.com/mattmakai/fullstackpython.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d) 
   to Full Stack Python!
 <img src="/img/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="technical-diagram" />
 * Major update to [Vim](/vim.html) page to add screenshots, a better example
@@ -326,7 +326,7 @@ inception in December 2012. You can view detailed changes via the
 * Added the Muffin framework to the 
   [other web frameworks](/other-web-frameworks.html) page.
 * Added new [Emacs](/emacs.html) page based on 
-  [pull request #49](https://github.com/mattmakai/fullstackpython.github.com/pull/49) 
+  [pull request #49](https://github.com/mattmakai/fullstackpython.com/pull/49) 
   base information. Thank you!
 * Added a new page on [best Python videos](/best-python-videos.html) that 
   breaks out all the videos I had scattered around the site and puts the
@@ -355,7 +355,7 @@ inception in December 2012. You can view detailed changes via the
   content.
 * Major improvements to [Websockets](/websockets.html) page after suggestions
   from 
-  [issue #47 on GitHub repository](https://github.com/mattmakai/fullstackpython.github.com/issues/47).
+  [issue #47 on GitHub repository](https://github.com/mattmakai/fullstackpython.com/issues/47).
 
 ### January
 * Rewrote the Mailchimp sign up form for the email list so it doesn't have
@@ -530,7 +530,7 @@ inception in December 2012. You can view detailed changes via the
 * Added task queues section due to reader feedback. 
 * Rewrote intro section.
 * Merged several pull requests (see closed 
-  [GitHub repo pull requests](https://github.com/mattmakai/fullstackpython.github.com/pulls)). 
+  [GitHub repo pull requests](https://github.com/mattmakai/fullstackpython.com/pulls)). 
 * New resources for platform-as-a-service section. 
 * Added new sections specified by the community as missing. 
 * Reorganized ordering of content. 

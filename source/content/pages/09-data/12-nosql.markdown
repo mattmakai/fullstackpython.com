@@ -126,9 +126,6 @@ nested data.
 
 
 ### Document-oriented data store resources
-* [MongoDB for startups](http://www.optinidus.com/blogs/guide-to-mongodb-for-startups/)
-  is a guide about using non-relational databases in green field environments.
-
 * The creator and maintainers of PyMongo review four decisions they regret
   from building the widely-used Python MongoDB driver.
     1. [start\_request](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-start-request/)
