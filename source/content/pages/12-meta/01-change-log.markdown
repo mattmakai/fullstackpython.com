@@ -15,6 +15,10 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* Fixed all 404 link rot on every page. However, if a page has been rewritten
+  or redirected and is no longer valuable as a link, please 
+  [tweet me](https://twitter.com/fullstackpython) or 
+  [file an issue ticket on GitHub](https://github.com/mattmakai/fullstackpython.com/issues).
 * New [Why Python?](/why-use-python.html) resources.
 * Happy New Year!
 
