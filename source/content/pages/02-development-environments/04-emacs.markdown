@@ -62,7 +62,7 @@ into that hook to perform necessary actions before the exiting completes.
 * [company-mode](http://company-mode.github.io/) creates a modular in-buffer
   completion framework.
 
-* [Flycheck](http://flycheck.github.io/) provides syntax checking.
+* [Flycheck](http://www.flycheck.org/en/latest/) provides syntax checking.
 
 * [anaconda-mode](https://github.com/proofit404/anaconda-mode/) is specific
   to Python development and allows code navigation, documentation lookup 

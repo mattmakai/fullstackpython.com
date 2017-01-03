@@ -32,7 +32,7 @@ podcast presentation.
 
 * [Deploying Python Web Applications](https://talkpython.fm/episodes/show/26/deploying-python-web-applications-updated).
   *Spoiler alert*: this is the episode I was on Talk Python to Me explaining
-  how [Python web application deployments](/deployments.html) work.
+  how [Python web application deployments](/deployment.html) work.
 
 
 ## Python-specific podcasts

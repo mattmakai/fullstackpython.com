@@ -115,7 +115,13 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 
 * [Python, Machine Learning, and Language Wars](http://sebastianraschka.com/blog/2015/why-python.html)
   compares Python with R, MATLAB and Julia for data science work. While 
-  Python is great for [deployment automation](/deployments.html) and
+  Python is great for [deployment automation](/deployment.html) and
   [web development](/web-development.html), many non-developers are first
   introduced to the language and ecosystem while getting data analysis
   work done.
+
+* [Python: Beyond Just Web Apps](https://blog.appdynamics.com/python/python-beyond-just-web-apps/)
+  supplies non-web development project examples that use Python. The article
+  also does a solid job comparing and contrasting Python to other common
+  programming languages such as Java, Ruby and JavaScript.
+
