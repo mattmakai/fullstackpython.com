@@ -94,8 +94,6 @@ possible.
 [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 is provided by W3C.
 
-* [4 HTTP Security Headers You Should Always Be Using](http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using)
-
 * If you're looking to learn about web servers by building one, here's
   [part one](http://ruslanspivak.com/lsbaws-part1/),
   [part two](http://ruslanspivak.com/lsbaws-part2/) and [part three](http://ruslanspivak.com/lsbaws-part3/) 
