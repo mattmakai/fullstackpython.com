@@ -33,12 +33,9 @@ during development so they can be addressed immediately.
 
 
 ### Integration testing resources
-* [Integration testing with Context Managers](http://eigenhombre.com/2013/04/13/integration-testing-in-python-with-context-managers/)
+* [Integration testing with Context Managers](http://eigenhombre.com/introduction-to-context-managers-in-python.html)
   gives an example of a system that needs integration tests and shows how
-  context managers can be used to address the problem. There are a couple
-  other useful posts in this series on testing including 
-  [thoughts on integration testing](http://eigenhombre.com/2013/04/18/thoughts-on-integration-testing/)
-  and [processes vs. threads for integration testing](http://eigenhombre.com/2013/04/19/processes-vs-threads-for-testing/).
+  context managers can be used to address the problem.
 
 * Pytest has a page on [integration good practices](https://pytest.org/latest/goodpractices.html)
   that you'll likely want to follow when testing your application.
