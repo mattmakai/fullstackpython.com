@@ -106,7 +106,7 @@ web application's design.
   is a detailed guide for learning how to do element positioning correctly
   with CSS.
 
-* [CSS3 cheat sheet](http://media.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf)
+* [CSS3 cheat sheet](http://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf)
 
 * [Learn CSS layout](http://learnlayout.com/toc.html) is a simple guide that
   breaks CSS layout topics into chapters so you can learn each part one
