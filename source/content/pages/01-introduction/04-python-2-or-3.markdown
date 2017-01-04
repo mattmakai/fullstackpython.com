@@ -10,9 +10,9 @@ meta: Learn about whether you should use Python version 2 or 3 to build your app
 # Python 2 or 3?
 The Python programming language is currently in the midst of a long-term
 transition from version 2 to version 3. New programmers typically have many
-questions about which version they should learn. It's confusing to hear
+questions about which version they should learn. It is confusing to hear
 that Python 3, which was originally released in 2008, is still not the default
-installation on many operating systems.
+installation on some operating systems.
 
 Here's the good news: you can't go wrong starting with either version. While 
 there are differences in unicode and syntax, for the most part if you 
@@ -20,10 +20,11 @@ start with Python 2 and then learn Python 3 you won't be starting from
 scratch. Likewise, you'll be able to read and write Python 2 code if you 
 started with Python 3.
 
-My personal recommendation for new programmers as of right now is to use
-Python 3. There are enough [great resources](/best-python-resources.html)
+That said, my personal recommendation for new programmers as of right 
+now is to use Python 3, specifically 3.6 as of January 2017. There are 
+enough [great resources](/best-python-resources.html)
 out there that teach version 3 from the ground up. Python 3 is the future
-and you will not regret starting with the "correct" version of the
+and you will not regret starting with the latest version of the
 programming language.
 
 However, if you are interested in DevOps-type work with 
@@ -76,6 +77,12 @@ gone through the process and have advice for making it less painful.
   is a screencast showing how to run both Python 2 and 3 for different
   projects using pyenv.
 
+* [Upgrading to Python 3 with Zero Downtime](https://tech.yplanapp.com/2016/08/24/upgrading-to-python-3-with-zero-downtime/)
+  supplies advice on transitioning a large existing Python 2 web application 
+  to Python 3. Their process involved upgrading dependencies, testing and
+  deploying the new version before going back to clean up unnecessary code
+  created by the transition.
+
 
 ### Python 2 to 3 resources
 * [Why should I use Python 3?](https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/)
@@ -121,4 +128,9 @@ gone through the process and have advice for making it less painful.
   no later than 2020, when Python 2's maintenance life is over. The pledge 
   strongly encourages Python 3 adoption by publicly stating their
   intentions. 
+
+* Only 28% of dependencies still only support Python 2, according to 
+  [this post's analysis of 6000 Python libraries](https://medium.com/broken-window/python-3-support-for-third-party-libraries-dcd7a156e5bd).
+  The other 72% of libraries either support both Python 2 & 3 (14%), or only 
+  support Python 3 (58%).
 
