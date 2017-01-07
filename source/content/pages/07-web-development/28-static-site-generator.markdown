@@ -177,6 +177,19 @@ ones listed here are primarily coded in Python.
 
 
 ### Static site deployment resources
+Deploying a static site is far less complicated than a 
+[traditional web application deployment](/deployment.html), but you still
+need to host the files somewhere accessible. You'll also to set up DNS to
+point a domain name to your site as well as provide HTTPS support.
+These guides walk through various ways of handling the static site 
+deployment.
+
+* Randall Degges' 
+  [Ultimate Guide to Deploying Static Sites to Amazon Web Services](https://stormpath.com/blog/ultimate-guide-deploying-static-site-aws)
+  walks through all the steps you need to get your site up and running on
+  S3. The guide also shows how to set up SSL certificates to ensure
+  your site can be loaded via HTTPS.
+
 * [Deploying a Static Site on AWS, with S3 and CloudFront](https://www.davidbaumgold.com/tutorials/deploy-static-site-aws-s3-cloudfront/)
   provides a really nice tutorial with screenshots to get any type of static site
   configured on AWS using S3 and Cloudfront.
