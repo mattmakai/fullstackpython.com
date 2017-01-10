@@ -16,7 +16,7 @@ p{margin:0 0 12px}
 ul,ol{margin-top:0;margin-bottom:10px}
 code,pre{font:1em Menlo,"Courier New",monospace}
 code{padding:2px 4px;font-size:90%;color:#c7254e;white-space:nowrap;background-color:#f9f2f4;border-radius:4px}
-pre{white-space:pre-wrap;display:block;padding:10px;margin:0 0 11px;font-size:14px;line-height:1.4;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
+pre{white-space:pre-wrap;display:block;padding:10px;margin:0 0 11px;font-size:10px;line-height:1.4;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
 .container{padding:0 15px 0 15px;margin-right:auto;margin-left:auto}
 .container:before,.container:after{display:table;content:" "}
