@@ -329,6 +329,11 @@ pages.
   shows what to do if you're struggling with the common issue of sorting
   columns that contain NULL values.
 
+* [Best Practices working with Django models in Python](http://steelkiwi.com/blog/best-practices-working-django-models-python/)
+  has a ton of great advice on proper model naming conventions, quirks to 
+  avoid with `ForeignKey` field relationships, handling IDs and many other 
+  edge cases that come up when frequently working with Django's ORM.
+
 
 ### Pony ORM resources
 * [Why you should give Pony ORM a chance](http://jakeaustwick.me/why-you-should-give-ponyorm-a-chance/)
