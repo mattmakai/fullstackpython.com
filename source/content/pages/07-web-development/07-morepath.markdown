@@ -36,6 +36,13 @@ assumption that templates will drive the user interface.
 
 
 ### Morepath resources
+Morepath, with 
+[its first commit using the Morepath name in 2013](https://github.com/morepath/morepath/commit/9c4f772dc48658a63ae2b46f6c1863220608f15e), 
+is a much newer web framework than Django, Flask or Pyramid, which results
+in fewer tutorials. There is also a lot of opportunity for newer Python 
+developers to fill the gaps with their own Morepath tutorials. However, 
+these resources below are a good place to get started. 
+
 * [On the Morepath](http://blog.startifact.com/posts/on-the-morepath.html)
   is a blog post by Startifact on how they use Morepath and some of the
   features of the framework.
@@ -49,6 +56,11 @@ assumption that templates will drive the user interface.
   is an introductory post on building a simple web application with the 
   framework. The code for the application is also 
   [open source and available on GitHub](https://github.com/morepath/morepath_batching).
+
+* [podcast.__init__ interviewed Martijn Faassen](https://www.podcastinit.com/episode-91-morepath-with-martijn-faassen/)
+  about Morepath and he described what makes the framework different from
+  other existing web frameworks as well as why someone should be convinced
+  to switch for a new project.
 
 * Morepath's creator gave a 
   [great talk on the motivation and structure for the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
