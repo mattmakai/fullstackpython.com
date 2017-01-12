@@ -57,7 +57,7 @@ these resources below are a good place to get started.
   framework. The code for the application is also 
   [open source and available on GitHub](https://github.com/morepath/morepath_batching).
 
-* [podcast.__init__ interviewed Martijn Faassen](https://www.podcastinit.com/episode-91-morepath-with-martijn-faassen/)
+* [podcast.\_\_init\_\_ interviewed Martijn Faassen](https://www.podcastinit.com/episode-91-morepath-with-martijn-faassen/)
   about Morepath and he described what makes the framework different from
   other existing web frameworks as well as why someone should be convinced
   to switch for a new project.
