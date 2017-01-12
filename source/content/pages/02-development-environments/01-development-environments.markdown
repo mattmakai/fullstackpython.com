@@ -125,3 +125,11 @@ getting started and then require payment as you scale up your application.
 * [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
   has a comparison of several features between the two editors.
 
+* [The Joy of Linux Desktop Environments](https://hackernoon.com/the-joy-of-linux-desktop-environments-365d6cc8de72)
+  talks about *desktop* environments, not specifically development 
+  environments, but provides an explanation for why the core Linux operating
+  system is awesome for being unbundled from the desktop environment itself.
+  You can change your desktop environment from just a command line without
+  a windowing system to a full windowed system provided by Gnome, KDE or 
+  Unity for using the system and getting your programming work done.
+
