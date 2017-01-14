@@ -150,6 +150,10 @@ ones listed here are primarily coded in Python.
 
 
 ### Static site generator resources
+Static site generators can be implemented in any programming language. The
+following resources either are general to any programming ecosystem or
+provide a unique angle on how to use a static site generator.
+
 * [Static vs Dynamic Websites](https://about.gitlab.com/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/)
   does an excellent job of showing the differences between a dynamic website
   that uses a database backend to produce content in response to a request
@@ -174,6 +178,12 @@ ones listed here are primarily coded in Python.
 * [Ditching Wordpress and becoming one of the cool kids](http://razius.com/articles/ditching-wordpress-and-becoming-one-of-the-cool-kids/)
   is one developer's experience moving away from Wordpress and onto
   Pelican with reStructuredText for his personal blog.
+
+* [Static websites with Flask](http://www.dougalmatthews.com/2017/Jan/13/static-websites-with-flask/) 
+  explains how to use [Flask-Frozen](http://pythonhosted.org/Frozen-Flask/)
+  to generate a static site based on content from the web framework and a 
+  data source backend. This approach is an alternative to using a 
+  purpose-built static website generator such as Pelican, Lektor or MkDocs.
 
 
 ### Static site deployment resources

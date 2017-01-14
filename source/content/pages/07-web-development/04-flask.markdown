@@ -177,6 +177,11 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   [deployment](/deployment.html), be sure to read this article on 
   [how Patreon got hacked](http://labs.detectify.com/post/130332638391/how-patreon-got-hacked-publicly-exposed-werkzeug).
 
+* [Static websites with Flask](http://www.dougalmatthews.com/2017/Jan/13/static-websites-with-flask/) 
+  shows how to use Flask with 
+  [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/) to generate a
+  static website from a backend data source.
+
 
 ## Open source Flask example projects
 * [Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations)
