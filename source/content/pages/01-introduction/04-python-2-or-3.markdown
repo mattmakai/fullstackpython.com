@@ -134,3 +134,8 @@ gone through the process and have advice for making it less painful.
   The other 72% of libraries either support both Python 2 & 3 (14%), or only 
   support Python 3 (58%).
 
+* [There isn’t really a Python 2 vs Python 3 Problem](http://pythonforengineers.com/there-isnt-really-a-python-2-vs-python-3-problem/)
+  tries to cut past the concern about the Python 2 vs 3 divide and explain
+  that it's really not a major concern as a Python programmer. The 
+  recommendation to new programmers is to use Python 3 and for experienced 
+  developers to keep your explanation simple: Python 3 is where to begin.
