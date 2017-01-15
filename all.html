@@ -1657,6 +1657,88 @@ reviews the basics of distributed version control systems.</p>
    version if a code deployment goes wrong.</p>
 </li>
 </ol>
+          <h1>Git</h1>
+<p><a href="https://git-scm.com/">Git</a> is a distributed open source 
+<a href="/source-control.html">source control</a> (also referred to as "version 
+control") system commonly used to track and manage file changes. Git is 
+frequently used as the version control system for Python projects.</p>
+<p><a href="https://git-scm.com/" style="border: none;"><img src="/img/git-logo.png" width="100%" alt="Official Git logo." class="technical-diagram"></a></p>
+<div class="well see-also">Git is an implementation of the <a href="/source-control.html">source control</a> concept. Learn how these pieces fit together in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h2>Git tutorials</h2>
+<p>Git can take awhile to wrap your head around, even for experienced software
+developers. The following tutorials can quickly get you up to speed.</p>
+<ul>
+<li>
+<p>The <a href="https://git-scm.com/book/en/v2">official Pro Git</a> book is available
+  online for free. It is awesome both as a step-by-step walkthrough and as
+  a bookmarked reference on specific topics.</p>
+</li>
+<li>
+<p><a href="https://codewords.recurse.com/issues/two/git-from-the-inside-out">Git from the inside out</a>
+  provides a spectacular walkthrough for developers who have used Git before
+  but want to go deeper in understanding what each command does under the 
+  covers instead of simply using the tool as a black box.</p>
+</li>
+<li>
+<p><a href="https://red-badger.com/blog/2016/11/29/gitgithub-in-plain-english">Git and GitHub in plain English</a>
+  is a high-level overview of both Git and GitHub. This guide is intended 
+  for both non-programmers and junior developers who want to learn everything
+  from terminology to workflow.</p>
+</li>
+<li>
+<p><a href="https://blog.marvelapp.com/designers-guide-git/">A Designer's Guide to Git</a>
+  gives a beginner's Git overview for non-programmers. The tutorial also 
+  covers using Git clients such as the GitHub desktop application.</p>
+</li>
+</ul>
+<h2>Specific Git resources</h2>
+<p>Large tutorials are great for getting started with Git. However, sometimes
+you need tactical support or want to learn new tricks to add to your 
+workflow. These resources will come in handy for specific Git subjects.</p>
+<ul>
+<li>
+<p><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a>
+  provides strong advice that will help you write consistent, concise and
+  contextual messages on your commits. Commit messages are especially 
+  important when working with others on a long-lasting project where you
+  dive through the commit history via <code>git log</code> and related commands.</p>
+</li>
+<li>
+<p><a href="http://ohshitgit.com/">Oh shit, Git!</a> is a profanity-filled description
+  of tips to get you out of binds you may find yourself in when you get too 
+  tricky with Git commands. </p>
+</li>
+<li>
+<p><a href="https://philna.sh/">Phil Nash</a> shows how to use the <code>git reflog</code> command 
+  in <a href="https://philna.sh/blog/2017/01/04/git-back-to-the-future/">Git back to the future</a>.</p>
+</li>
+<li>
+<p><a href="http://blog.plover.com/prog/git-tastrophe.html">Another Git catastrophe cleaned up</a> 
+   goes through a difficult merge scenario that required deep Git 
+   understanding to properly fix.</p>
+</li>
+<li>
+<p>Erlang's source code provides a concise explanation on 
+  <a href="https://github.com/erlang/otp/wiki/Writing-good-commit-messages">writing good commit messages</a>
+  that any programming ecosystem can learn from. </p>
+</li>
+<li>
+<p><a href="https://git.wiki.kernel.org/index.php/GitTips">GitTips</a> is a list of 
+  pro tips to clean up common issues and how to dive through Git history
+  to find specific text.</p>
+</li>
+<li>
+<p><a href="http://www.alexkras.com/19-git-tips-for-everyday-use/">19 Tips For Everyday Git Use</a>
+  is a laundry list of helpful Git tips on commands such as <code>git bisect</code>,
+  <code>git stash</code> and <code>git difftool</code>.</p>
+</li>
+<li>
+<p>Git allows command aliasing, which allowed one developer to create his 
+  own list of <a href="https://hackernoon.com/lesser-known-git-commands-151a1918a60">lesser known Git commands</a>
+  that alias more complicated Git lines.</p>
+</li>
+</ul>
           <h1>Application Dependencies</h1>
 <p>Application dependencies are the libraries other than your project code
 that are required to create and run your application. </p>
@@ -10626,15 +10708,23 @@ or on <a href="https://github.com/mattmakai">GitHub at mattmakai</a>.</p>
 <a href="http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html">post written for O'Reilly</a>.</p>
           <h1>Future Directions</h1>
 <p>Full Stack Python has completely blown away my expectations for what I could
-accomplish with a side project. I really appreciate all the in-person feedback,
-emails and pull requests I've received from the community. Keep them coming!</p>
-<p>For 2016 I'm building out the scope of the site beyond web development into
-core Python concepts, data analysis and visualization and (hopefully) some 
-hardware hacking such as with the Raspberry Pi and Arduino Yun.</p>
+accomplish with a side project. I really appreciate all of the in-person 
+feedback, emails and pull requests I've received from the community. Keep 
+them coming!</p>
+<p>For 2017 I am filling in the grayed-out topics on the 
+<a href="/table-of-contents.html">all topics</a> page. I will also address the
+tactical fixes and improvements that need to be made which are listed
+in the "tactical improvements" section below.</p>
+<h2>Other updates</h2>
 <p>A huge update was released in the form of the
 <a href="http://www.deploypython.com/">The Full Stack Python Guide to Deployments</a>,
 a step-by-step tutorial book for learning how to deploy Python web 
 applications.</p>
+<p>I am also working with Michael Kennedy of 
+<a href="https://talkpython.fm">Talk Python to Me</a> on our 
+<a href="https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business">Python for Entrepreneurs</a>
+video course.</p>
+<h2>Pull requests and fixes</h2>
 <p>Note that these plans can change based on 
 <a href="https://github.com/mattmakai/fullstackpython.com/pulls">pull requests</a>
 from the community. I work to integrate PRs within a day or two so please 
@@ -10642,6 +10732,15 @@ submit one when you see a fix or improvement that needs to be made!</p>
 <p>Typos, inaccurate statements or general areas for improvement can also 
 be handled through an issue ticket or pull request on
 <a href="https://github.com/mattmakai/fullstackpython.com/">GitHub</a>.</p>
+<h2>Tactical improvements</h2>
+<p>Every page on Full Stack Python is a work-in-progress that can always
+use improvements. The following items on this list need some love and 
+attention.</p>
+<ul>
+<li><a href="/git.html">Git</a> page: Add "why use git?", "what is a distributed version 
+  control system?", "what's the difference between git and github?" and 
+  "git clients" sections.</li>
+</ul>
     </div>
 <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel">
