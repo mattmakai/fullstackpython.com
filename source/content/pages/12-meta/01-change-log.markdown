@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* New [Git](/git.html) page.
 * New resources and descriptions on the 
   [development environments](/development-environments.html) page.
 * New [static site generator](/static-site-generator.html) resources added.
