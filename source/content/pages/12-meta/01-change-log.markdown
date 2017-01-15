@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* New resources and descriptions on the 
+  [development environments](/development-environments.html) page.
 * New [static site generator](/static-site-generator.html) resources added.
 * Added new resources to the [Python 2 or 3?](/python-2-or-3.html) page.
 * Fixed all 404 link rot on every page. However, if a page has been rewritten
