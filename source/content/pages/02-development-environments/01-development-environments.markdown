@@ -55,6 +55,24 @@ less expensive set up or a cloud-based development environment.
   [GitHub](https://github.com) team.
 
 
+## Python-specific IDEs
+* [PyCharm](https://www.jetbrains.com/pycharm/) is a Python-specific IDE
+  built on [JetBrains](https://www.jetbrains.com/)' platform. There are
+  free editions for students and open source projects.
+
+* [Thonny](http://thonny.org/) is an 
+  [open source](https://bitbucket.org/plas/thonny/src) Python IDE for new 
+  programmers. The tool bakes in syntax highlighting, code completion, a 
+  simple debugger, a beginner-friendly shell and in situ documentation to
+  assist new developers who are just starting to code.
+
+* [Wing IDE](https://wingware.com/) is a paid development environment with
+  integrated debugging and code completion.
+
+* [PyDev](http://pydev.org/) is a Python IDE plug in for 
+  [Eclipse](https://eclipse.org/).
+
+
 ## Proprietary (closed source) editors
 * [Sublime Text](http://www.sublimetext.com/) versions 2 and 3 (currently
   in beta) are popular text editors that can be extended with code completion,
@@ -68,24 +86,15 @@ less expensive set up or a cloud-based development environment.
   for major languages including Python, Ruby, JavaScript, Go and more.
 
 
-## Python-specific IDEs
-* [PyCharm](https://www.jetbrains.com/pycharm/) is a Python-specific IDE
-  built on [JetBrains](https://www.jetbrains.com/)' platform. There are
-  free editions for students and open source projects.
-
-* [Wing IDE](https://wingware.com/) is a paid development environment with
-  integrated debugging and code completion.
-
-* [PyDev](http://pydev.org/) is a Python IDE plug in for 
-  [Eclipse](https://www.eclipse.org/).
-
-
 ## Hosted development environments
 Several cloud-based development environments have popped up over the past
 several years. These hosted environments can work well when you are learning
 or stuck on a machine with a web browser but otherwise no administrative 
 privileges to install your own software. Most of these have free tiers for 
 getting started and then require payment as you scale up your application.
+
+* [CodeAnywhere](https://codeanywhere.com/) is a cloud IDE that can be used
+  in the web browser or on an iOS or Android device.
 
 * [Cloud9](https://c9.io/) began as an independent company and is now owned 
   by Amazon as part of Amazon Web Services.
@@ -95,22 +104,38 @@ getting started and then require payment as you scale up your application.
 
 
 ## Development environment resources
-* If you're considering the cloud-based development environment route, check
-  out this 
-  [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
-  by Lauren Orsini. She also explains more about what a cloud IDE is and is
-  not.
+Development environments are unique to each programmer because Python is
+used for many different purposes. The following guides range from 
+[web development](/web-development.html) to 
+[DevOps](/devops.html) and from 
+[getting started](/learning-programming.html) to [data science](/data.html).
+Even though your environment requirements are unique, you should be able to 
+find someone who has set up something similar to what you need. Use that
+configuration as a starting point and customize it from there.
+
+* [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14)
+  is geared towards using Python for data science but the guide remains
+  useful for configuring your system for any type of Python work. There is
+  some solid advice in the post about not adulterating your global Python
+  installation as well as how to split out many virtual environments for
+  Python 2 & 3.
 
 * Real Python has an awesome, detailed post on 
   [setting up your Sublime Text 3 environment](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
   as a full-fledged IDE.
 
-* The [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/dev/env/)
-  has a page dedicated to development environments.
-
 * [Choosing the best Python IDE](http://pedrokroger.net/choosing-best-python-ide/)
   is a review of six IDEs. PyCharm, Wing IDE and PyDev stand out above the
   other three in this review.
+
+* [Three Ways to Install Python on your Windows Computer](http://blog.yhat.com/posts/installing-python-on-windows.html)
+  provides multiple avenues for Windows users to get Python on their machine
+  before setting up the rest of their development environment. Unlike
+  macOS and Linux, the Windows [operating system](/operating-systems.html) 
+  does not include Python with its default installation.
+
+* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
+  has a comparison of several features between the two editors.
 
 * [PyCharm: The Good Parts](http://nafiulis.me/pycharm-the-good-parts-i.html)
   shows you how to be more efficient and productive with that IDE if it's
@@ -122,9 +147,6 @@ getting started and then require payment as you scale up your application.
   [Talk Python to Me podcast](http://talkpython.fm/episodes/show/36/python-ides-with-the-pycharm-teama) 
   that's worth listening to.
 
-* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
-  has a comparison of several features between the two editors.
-
 * [The Joy of Linux Desktop Environments](https://hackernoon.com/the-joy-of-linux-desktop-environments-365d6cc8de72)
   talks about *desktop* environments, not specifically development 
   environments, but provides an explanation for why the core Linux operating
@@ -132,4 +154,13 @@ getting started and then require payment as you scale up your application.
   You can change your desktop environment from just a command line without
   a windowing system to a full windowed system provided by Gnome, KDE or 
   Unity for using the system and getting your programming work done.
+
+* The [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/dev/env/)
+  has a page dedicated to development environments.
+
+* If you're considering the cloud-based development environment route, check
+  out this 
+  [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
+  by Lauren Orsini. She also explains more about what a cloud IDE is and is
+  not.
 
