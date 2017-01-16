@@ -11,6 +11,7 @@ meta: Source control versions and backs up code for when programming problems oc
 Source control, also known as *version control*, stores software code files
 with a detailed history of every modification made to those files.
 
+
 ## Why is source control necessary?
 Version control systems allow developers to modify code without worrying 
 about permanently screwing something up. Unwanted changes can be easily rolled
@@ -25,6 +26,7 @@ Version control is a necessity on all software projects regardless of
 development time, codebase size or the programming language used. Every
 project should immediately begin by using a version control system such
 as Git or Mercurial.
+
 
 ## Source control during deployment
 Pulling code during a deployment is a potential way source control systems fit
@@ -48,11 +50,15 @@ complicated software projects in existence. There's no reason why your project
 should use anything other than an open source version control system in
 today's Python development world. The two primary choices are:
 
-* [Git](http://git-scm.com/) is a free and open source distributed version
+* [Git](/git.html) is a free and open source distributed version
   control system.
 
 * [Mercurial](http://mercurial.selenic.com/) is similar to Git, also a free
   and open source distributed version control system.
+
+* [Subversion](https://subversion.apache.org/) is a centralized system where
+  developers must check files in and out of the hosted repository to minimize
+  merge conflicts.
 
 
 ## Hosted source control services
@@ -105,8 +111,10 @@ reviews the basics of distributed version control systems.
 
 
 ## Git resources
-* [Pro Git](http://git-scm.com/book) is a free open source book that walks 
-  through all aspects of using the version control system.
+The following resources provide a good start for developers new to source
+control and Git. There is also an 
+[entire page on using Git with Python](/git.html) with many more links
+sorted by categories such as solving tactical issues and Git workflows.
 
 * [Git in Six Hundred Words](http://maryrosecook.com/blog/post/git-in-six-hundred-words)
   is a clear and concise essay explaining the fundamental concepts of
@@ -128,28 +136,6 @@ reviews the basics of distributed version control systems.
   demonstrates how Git's graph-based data structure produces certain behavior 
   through example Git commands. This is a highly recommended read after you've
   grasped the basics and are looking to go deeper with Git.
-
-* [git ready](http://gitready.com/) has a nice collection of blog posts based on
-  beginner, intermediate and advanced Git use cases.
-
-* [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) details
-  a Git branching model for small teams.
-
-* [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html) builds on
-  git-flow, goes over some of the issues that arise with it and presents a
-  few solutions to those problems.
-
-* [Git Workflows That Work](http://blog.endpoint.com/2014/05/git-workflows-that-work.html)
-  is a helpful post with diagrams to show how teams can create a Git workflow
-  that will help their development process.
-
-* "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
-  by Braintree goes over how this payments company uses Git for development
-  and merging source code.
-
-* [Code Sleuthing with Git](https://robots.thoughtbot.com/code-sleuthing-with-git)
-  shows how to review past changes when a deployment goes wrong to figure
-  out what the heck happened.
 
 
 ## Source control learning checklist

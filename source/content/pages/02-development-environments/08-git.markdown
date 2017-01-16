@@ -40,6 +40,14 @@ developers. The following tutorials can quickly get you up to speed.
   gives a beginner's Git overview for non-programmers. The tutorial also 
   covers using Git clients such as the GitHub desktop application.
 
+* [Git in Six Hundred Words](http://maryrosecook.com/blog/post/git-in-six-hundred-words)
+  is a concise essay explaining what happens when you add and commit files
+  in a Git repository.
+
+* A 
+  [practical git introduction](http://marc.helbling.fr/2014/09/practical-git-introduction)
+  is rich with pragmatic examples for Git usage.
+
 
 ## Specific Git resources
 Large tutorials are great for getting started with Git. However, sometimes
@@ -79,5 +87,32 @@ workflow. These resources will come in handy for specific Git subjects.
   own list of [lesser known Git commands](https://hackernoon.com/lesser-known-git-commands-151a1918a60)
   that alias more complicated Git lines.
 
+* [Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out)
+  demonstrates how Git's graph-based data structure produces certain behavior 
+  through example Git commands. This is a highly recommended read after you've
+  grasped the basics and are looking to go deeper with Git.
 
+
+## Git Workflows
+Teams of developers can use Git in varying workflows because of Git's 
+distributed model and lightweight branching. There is no "right way" to 
+use Git, especially because development teams can range in size from a
+single developer up to entire companies with thousands of developers in
+a repository. The only correct answer is to let the developers decide on
+a workflow that maximizes their ability to frequently commit code and
+minimize merge conflicts.
+
+* [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) shows
+  one possible way for small teams to use Git branches.
+  [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html) explains
+  why at GitHub they do not use the git-flow model and provides an 
+  alternative that solves some of the issues they found with git-flow.
   
+* [Git Workflows That Work](http://blog.endpoint.com/2014/05/git-workflows-that-work.html)
+  is a helpful post with diagrams to show how teams can create a Git workflow
+  that will help their development process.
+
+* "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
+  by Braintree goes over how this payments company uses Git for development
+  and merging source code.
+

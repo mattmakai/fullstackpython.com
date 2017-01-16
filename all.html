@@ -1504,12 +1504,17 @@ should use anything other than an open source version control system in
 today's Python development world. The two primary choices are:</p>
 <ul>
 <li>
-<p><a href="http://git-scm.com/">Git</a> is a free and open source distributed version
+<p><a href="/git.html">Git</a> is a free and open source distributed version
   control system.</p>
 </li>
 <li>
 <p><a href="http://mercurial.selenic.com/">Mercurial</a> is similar to Git, also a free
   and open source distributed version control system.</p>
+</li>
+<li>
+<p><a href="https://subversion.apache.org/">Subversion</a> is a centralized system where
+  developers must check files in and out of the hosted repository to minimize
+  merge conflicts.</p>
 </li>
 </ul>
 <h2>Hosted source control services</h2>
@@ -1573,11 +1578,11 @@ reviews the basics of distributed version control systems.</p>
 </li>
 </ul>
 <h2>Git resources</h2>
+<p>The following resources provide a good start for developers new to source
+control and Git. There is also an 
+<a href="/git.html">entire page on using Git with Python</a> with many more links
+sorted by categories such as solving tactical issues and Git workflows.</p>
 <ul>
-<li>
-<p><a href="http://git-scm.com/book">Pro Git</a> is a free open source book that walks 
-  through all aspects of using the version control system.</p>
-</li>
 <li>
 <p><a href="http://maryrosecook.com/blog/post/git-in-six-hundred-words">Git in Six Hundred Words</a>
   is a clear and concise essay explaining the fundamental concepts of
@@ -1603,34 +1608,6 @@ reviews the basics of distributed version control systems.</p>
   demonstrates how Git's graph-based data structure produces certain behavior 
   through example Git commands. This is a highly recommended read after you've
   grasped the basics and are looking to go deeper with Git.</p>
-</li>
-<li>
-<p><a href="http://gitready.com/">git ready</a> has a nice collection of blog posts based on
-  beginner, intermediate and advanced Git use cases.</p>
-</li>
-<li>
-<p><a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a> details
-  a Git branching model for small teams.</p>
-</li>
-<li>
-<p><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a> builds on
-  git-flow, goes over some of the issues that arise with it and presents a
-  few solutions to those problems.</p>
-</li>
-<li>
-<p><a href="http://blog.endpoint.com/2014/05/git-workflows-that-work.html">Git Workflows That Work</a>
-  is a helpful post with diagrams to show how teams can create a Git workflow
-  that will help their development process.</p>
-</li>
-<li>
-<p>"<a href="http://www.braintreepaymentsolutions.com/devblog/our-git-workflow">Our Git Workflow</a>"
-  by Braintree goes over how this payments company uses Git for development
-  and merging source code.</p>
-</li>
-<li>
-<p><a href="https://robots.thoughtbot.com/code-sleuthing-with-git">Code Sleuthing with Git</a>
-  shows how to review past changes when a deployment goes wrong to figure
-  out what the heck happened.</p>
 </li>
 </ul>
 <h2>Source control learning checklist</h2>
@@ -1691,6 +1668,16 @@ developers. The following tutorials can quickly get you up to speed.</p>
   gives a beginner's Git overview for non-programmers. The tutorial also 
   covers using Git clients such as the GitHub desktop application.</p>
 </li>
+<li>
+<p><a href="http://maryrosecook.com/blog/post/git-in-six-hundred-words">Git in Six Hundred Words</a>
+  is a concise essay explaining what happens when you add and commit files
+  in a Git repository.</p>
+</li>
+<li>
+<p>A 
+  <a href="http://marc.helbling.fr/2014/09/practical-git-introduction">practical git introduction</a>
+  is rich with pragmatic examples for Git usage.</p>
+</li>
 </ul>
 <h2>Specific Git resources</h2>
 <p>Large tutorials are great for getting started with Git. However, sometimes
@@ -1737,6 +1724,39 @@ workflow. These resources will come in handy for specific Git subjects.</p>
 <p>Git allows command aliasing, which allowed one developer to create his 
   own list of <a href="https://hackernoon.com/lesser-known-git-commands-151a1918a60">lesser known Git commands</a>
   that alias more complicated Git lines.</p>
+</li>
+<li>
+<p><a href="https://codewords.recurse.com/issues/two/git-from-the-inside-out">Git from the inside out</a>
+  demonstrates how Git's graph-based data structure produces certain behavior 
+  through example Git commands. This is a highly recommended read after you've
+  grasped the basics and are looking to go deeper with Git.</p>
+</li>
+</ul>
+<h2>Git Workflows</h2>
+<p>Teams of developers can use Git in varying workflows because of Git's 
+distributed model and lightweight branching. There is no "right way" to 
+use Git, especially because development teams can range in size from a
+single developer up to entire companies with thousands of developers in
+a repository. The only correct answer is to let the developers decide on
+a workflow that maximizes their ability to frequently commit code and
+minimize merge conflicts.</p>
+<ul>
+<li>
+<p><a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a> shows
+  one possible way for small teams to use Git branches.
+  <a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a> explains
+  why at GitHub they do not use the git-flow model and provides an 
+  alternative that solves some of the issues they found with git-flow.</p>
+</li>
+<li>
+<p><a href="http://blog.endpoint.com/2014/05/git-workflows-that-work.html">Git Workflows That Work</a>
+  is a helpful post with diagrams to show how teams can create a Git workflow
+  that will help their development process.</p>
+</li>
+<li>
+<p>"<a href="http://www.braintreepaymentsolutions.com/devblog/our-git-workflow">Our Git Workflow</a>"
+  by Braintree goes over how this payments company uses Git for development
+  and merging source code.</p>
 </li>
 </ul>
           <h1>Application Dependencies</h1>
