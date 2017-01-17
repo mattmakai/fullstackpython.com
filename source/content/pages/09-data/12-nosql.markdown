@@ -34,9 +34,8 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   store. Redis is often called "the Swiss Army Knife of web application
   development." It can be used for caching, queuing, and storing session data
   for faster access than a traditional relational database, among many other
-  use cases. [Redis-py](https://github.com/andymccurdy/redis-py) is a solid
-  Python client to use with Redis.
-
+  use cases. Learn more on the [Redis page](/redis.html).
+  
 * [Memcached](http://www.memcached.org/) is another widely used in-memory
   key-value pair storage system.
 
@@ -79,27 +78,6 @@ on [hash map](http://en.wikipedia.org/wiki/Hash_table) data structures.
   is a retrospective from a hard web application failure due to Redis
   connections maxing out on Heroku, and how to avoid this in your own
   applications by modifying your `redis.conf` settings.
-
-
-### Redis Security
-Redis should be customized out of its default configuration to secure it
-against unauthorized and unauthenticated users. These resources provide
-some advice on Reids security and guarding against data breaches.
-
-* [Pentesting Redis servers](http://averagesecurityguy.info/2015/09/17/pentesting-redis-servers/)
-  shows that security is important not only on your application but also
-  the databases you're using as well.
-
-* Redis, just as with any relational or NoSQL database, needs to be secured
-  based on [security guidelines](http://www.antirez.com/news/96). There is
-  also a post where the main author of Redis
-  [cracks its security](http://www.antirez.com/news/96) to show the tradeoffs
-  purposely made between ease of use and security in the default settings.
-
-* [Is your Redis server safe?](https://www.isredisallsafe.com/) is a tool
-  to test that your Redis instances are locked down. The tool is based on
-  the blog post
-  [a few things about Redis security](http://www.antirez.com/news/96).
 
 
 ## Document-oriented

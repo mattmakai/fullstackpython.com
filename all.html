@@ -8735,8 +8735,7 @@ on <a href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structure
   store. Redis is often called "the Swiss Army Knife of web application
   development." It can be used for caching, queuing, and storing session data
   for faster access than a traditional relational database, among many other
-  use cases. <a href="https://github.com/andymccurdy/redis-py">Redis-py</a> is a solid
-  Python client to use with Redis.</p>
+  use cases. Learn more on the <a href="/redis.html">Redis page</a>.</p>
 </li>
 <li>
 <p><a href="http://www.memcached.org/">Memcached</a> is another widely used in-memory
@@ -8788,30 +8787,6 @@ on <a href="http://en.wikipedia.org/wiki/Hash_table">hash map</a> data structure
   is a retrospective from a hard web application failure due to Redis
   connections maxing out on Heroku, and how to avoid this in your own
   applications by modifying your <code>redis.conf</code> settings.</p>
-</li>
-</ul>
-<h3>Redis Security</h3>
-<p>Redis should be customized out of its default configuration to secure it
-against unauthorized and unauthenticated users. These resources provide
-some advice on Reids security and guarding against data breaches.</p>
-<ul>
-<li>
-<p><a href="http://averagesecurityguy.info/2015/09/17/pentesting-redis-servers/">Pentesting Redis servers</a>
-  shows that security is important not only on your application but also
-  the databases you're using as well.</p>
-</li>
-<li>
-<p>Redis, just as with any relational or NoSQL database, needs to be secured
-  based on <a href="http://www.antirez.com/news/96">security guidelines</a>. There is
-  also a post where the main author of Redis
-  <a href="http://www.antirez.com/news/96">cracks its security</a> to show the tradeoffs
-  purposely made between ease of use and security in the default settings.</p>
-</li>
-<li>
-<p><a href="https://www.isredisallsafe.com/">Is your Redis server safe?</a> is a tool
-  to test that your Redis instances are locked down. The tool is based on
-  the blog post
-  <a href="http://www.antirez.com/news/96">a few things about Redis security</a>.</p>
 </li>
 </ul>
 <h2>Document-oriented</h2>
@@ -8977,6 +8952,118 @@ representing a person could have a property of "female" or "male".</p>
    document-oriented data store such as MongoDB.</p>
 </li>
 </ol>
+          <h1>Redis</h1>
+<p><a href="https://redis.io/">Redis</a> is an in-memory key-value pair 
+database typically classified as a <a href="/no-sql-datastore.html">NoSQL database</a>. 
+Redis is commonly used for <a href="/caching.html">caching</a>, transient data storage
+and as a holding area for data during analysis in Python applications.</p>
+<p><a href="" style="border: none;"><img src="/source/static/img/logos/redis.jpg" width="100%" alt="Redis logo." class="technical-diagram" /></a></p>
+<div class="well see-also">Redis is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h3>Redis tutorials</h3>
+<p>Redis is easy to install and start using compared to most other persistent
+backends, but it's useful to follow a walkthrough if you have never 
+previously used Redis or any NoSQL data store.</p>
+<ul>
+<li>
+<p><a href="/blog/install-redis-use-python-3-ubuntu-1604.html">How to Use Redis with Python 3 and redis-py on Ubuntu 16.04</a>
+  contains detailed steps to install and start using Redis in Python.</p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis">How To Install and Use Redis</a>
+  is a Redis starter guide.</p>
+</li>
+</ul>
+<h3>Redis with Python</h3>
+<p>Redis is easier to use with Python if you have a code library client that
+bridges from your code to your Redis instace. The following libraries and
+resources provide more information on handling data in a Redis instance
+with your Python code.</p>
+<ul>
+<li>
+<p><a href="https://github.com/andymccurdy/redis-py">Redis-py</a> is a solid
+  Python client to use with Redis.</p>
+</li>
+<li>
+<p><a href="http://charlesleifer.com/blog/walrus-lightweight-python-utilities-for-working-with-redis/">Walrus</a>
+  is a higher-level Python wrapper for Redis with some caching, querying
+  and data structure components build into the library.</p>
+</li>
+<li>
+<p><a href="http://jamesls.com/writing-redis-in-python-with-asyncio-part-1.html">Writing Redis in Python with Asyncio</a>
+  shows a detailed example for how to use the new Asyncio standard library in
+  Python 3.4+ for working with Redis.</p>
+</li>
+</ul>
+<h3>Redis Security</h3>
+<p>Redis should be customized out of its default configuration to secure it
+against unauthorized and unauthenticated users. These resources provide
+some advice on Reids security and guarding against data breaches.</p>
+<ul>
+<li>
+<p><a href="http://averagesecurityguy.info/2015/09/17/pentesting-redis-servers/">Pentesting Redis servers</a>
+  shows that security is important not only on your application but also
+  the databases you're using as well.</p>
+</li>
+<li>
+<p>Redis, just as with any relational or NoSQL database, needs to be secured
+  based on <a href="http://www.antirez.com/news/96">security guidelines</a>. There is
+  also a post where the main author of Redis
+  <a href="http://www.antirez.com/news/96">cracks its security</a> to show the tradeoffs
+  purposely made between ease of use and security in the default settings.</p>
+</li>
+<li>
+<p><a href="https://www.isredisallsafe.com/">Is your Redis server safe?</a> is a tool
+  to test that your Redis instances are locked down. The tool is based on
+  the blog post
+  <a href="http://www.antirez.com/news/96">a few things about Redis security</a>.</p>
+</li>
+<li>
+<p><a href="https://medium.com/@shahinism/for-gods-sake-secure-your-mongo-redis-etc-4f310cf1bed2">For God’s sake, secure your Mongo/Redis/etc!</a>
+  digs into the unfortunate default security settings that come with many
+  NoSQL databases which can be used to compromise your systems. Make sure
+  to not only install your dependencies such as Redis, but automate modifying
+  default settings to lock them down against attackers.</p>
+</li>
+</ul>
+<h3>General Redis resources</h3>
+<p>Once you have configured Redis, become comfortable using it and locked it
+down against malicious actors, you will want to learn more about operating,
+scaling and collecting metrics. The following resources should help you
+get started in those areas.</p>
+<ul>
+<li>
+<p><a href="https://github.com/mikeblum/redis-playbook">Redis-playbook</a> is an Ansible
+  playbook for installing, configuring and securing a Redis instance.</p>
+</li>
+<li>
+<p>GitHub wrote a retrospective on 
+  <a href="http://githubengineering.com/moving-persistent-data-out-of-redis/">moving persistent data out of Redis</a>
+  and into <a href="/mysql.html">MySQL</a> that is worth a read as you scale up your
+  Redis usage.</p>
+</li>
+<li>
+<p>This video on
+  <a href="https://www.youtube.com/watch?v=rP9EKvWt0zo">Scaling Redis at Twitter</a> is
+  a detailed look behind the scenes with a massive Redis deployment.</p>
+</li>
+<li>
+<p><a href="https://blog.heroku.com/real-world-redis-tips">Real World Redis Tips</a>
+  provides some guidance from Heroku's engineers from deploying Redis at
+  scale. The tips include setting an explicit idle connection timeout,
+  using a connection pooler and avoiding using <code>KEYS</code> in favor of <code>SCAN</code>.</p>
+</li>
+<li>
+<p><a href="https://www.datadoghq.com/blog/how-to-collect-redis-metrics/">How to collect Redis metrics</a>
+  shows how to use the Redis CLI client to grab key metrics on latency.</p>
+</li>
+<li>
+<p><a href="https://medium.com/appaloosa-store-engineering/you-should-revise-your-redis-max-connections-setting-8136f063c916">You should revise your Redis max connections setting</a>
+  is a retrospective from a hard web application failure due to Redis
+  connections maxing out on Heroku, and how to avoid this in your own
+  applications by modifying your <code>redis.conf</code> settings.</p>
+</li>
+</ul>
           <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>
@@ -10067,6 +10154,7 @@ inception in December 2012. You can view detailed changes via the
 <h2>2017</h2>
 <h3>January</h3>
 <ul>
+<li>Further work on the <a href="/git.html">Git</a> page.</li>
 <li>New <a href="/git.html">Git</a> page.</li>
 <li>New resources and descriptions on the 
   <a href="/development-environments.html">development environments</a> page.</li>
