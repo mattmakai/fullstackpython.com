@@ -26,6 +26,18 @@ storing, querying and analyzing persistence data in Python applications.
    in MongoDB.
 
 
+### MongoDB security
+* [For God’s sake, secure your Mongo/Redis/etc!](https://medium.com/@shahinism/for-gods-sake-secure-your-mongo-redis-etc-4f310cf1bed2)
+  explains the weak default security settings provided by many NoSQL 
+  databases, including MongoDB. Make sure to automate locking down your
+  NoSQL databases just as you would any other component in your stack.
+
+* [MongoDB Security Basics For Your Deployments in AWS](https://www.mongodb.com/blog/post/mongodb-security-basics-for-your-deployments-in)
+  is primarily a guide on AWS security from the perspective of using 
+  installing and using MongoDB on your own instance. The post covers 
+  authentication, SSL and firewalls.
+
+
 ### Specific MongoDB resources
 * The [PyMongo project](https://api.mongodb.com/python/current/) creators 
   wrote a retrospective focusing on four decisions they would have done 
