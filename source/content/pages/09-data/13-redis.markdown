@@ -13,7 +13,7 @@ database typically classified as a [NoSQL database](/no-sql-datastore.html).
 Redis is commonly used for [caching](/caching.html), transient data storage
 and as a holding area for data during analysis in Python applications.
 
-<a href="" style="border: none;"><img src="/source/static/img/logos/redis.jpg" width="100%" alt="Redis logo." class="technical-diagram" /></a>
+<a href="https://redis.io/" style="border: none;"><img src="/source/static/img/logos/redis.jpg" width="100%" alt="Redis logo." class="technical-diagram" /></a>
 
 <div class="well see-also">Redis is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 

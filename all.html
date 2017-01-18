@@ -8957,7 +8957,7 @@ representing a person could have a property of "female" or "male".</p>
 database typically classified as a <a href="/no-sql-datastore.html">NoSQL database</a>. 
 Redis is commonly used for <a href="/caching.html">caching</a>, transient data storage
 and as a holding area for data during analysis in Python applications.</p>
-<p><a href="" style="border: none;"><img src="/source/static/img/logos/redis.jpg" width="100%" alt="Redis logo." class="technical-diagram" /></a></p>
+<p><a href="https://redis.io/" style="border: none;"><img src="/source/static/img/logos/redis.jpg" width="100%" alt="Redis logo." class="technical-diagram" /></a></p>
 <div class="well see-also">Redis is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 <h3>Redis tutorials</h3>
@@ -9062,6 +9062,49 @@ get started in those areas.</p>
   is a retrospective from a hard web application failure due to Redis
   connections maxing out on Heroku, and how to avoid this in your own
   applications by modifying your <code>redis.conf</code> settings.</p>
+</li>
+</ul>
+          <h1>MongoDB</h1>
+<p><a href="https://github.com/mongodb/mongo">MongoDB</a> is a document-oriented 
+<a href="/no-sql-datastore.html">NoSQL database</a> that is often used for
+storing, querying and analyzing persistence data in Python applications.</p>
+<p><a href="" style="border: none;"><img src="/source/static/img/logos/mongodb.jpg" width="100%" alt="MongoDB logo." class="technical-diagram" /></a></p>
+<div class="well see-also">MongoDB is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h3>Introduction to MongoDB tutorials</h3>
+<ul>
+<li>
+<p><a href="https://realpython.com/blog/python/introduction-to-mongodb-and-python/">Introduction to MongoDB and Python</a>
+  shows how to use Python to interface with MongoDB via PyMongo and MongoEngine.</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?list=PL1Z_7yg6Pa3AhqCOTQKm9X_Sl9xLdMKYo&amp;v=pWbMrx5rVBE">MongoDB In 30 Minutes</a>
+   goes over the basics for creating, querying, updating and deleting data
+   in MongoDB.</p>
+</li>
+</ul>
+<h3>Specific MongoDB resources</h3>
+<ul>
+<li>
+<p>The <a href="https://api.mongodb.com/python/current/">PyMongo project</a> creators 
+  wrote a retrospective focusing on four decisions they would have done 
+  differently with the benefit of hindsight:</p>
+<ol>
+<li><a href="http://emptysqua.re/blog/good-idea-at-the-time-pymongo-start-request/">start_request</a></li>
+<li><a href="http://emptysqua.re/blog/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/">use_greenlets</a></li>
+<li><a href="http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/">copy_database</a></li>
+<li><a href="http://emptysqua.re/blog/good-idea-at-the-time-pymongo-mongoreplicasetclient/">MongoReplicaSetClient</a></li>
+</ol>
+</li>
+<li>
+<p><a href="https://engineering.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827">MongoDB queries do not always return all matching documents!</a>
+  walks through discovering that potential pitfalls on how MongoDB queries 
+  operate that were non-intuitive to some developers.</p>
+</li>
+<li>
+<p><a href="https://talkpython.fm/episodes/show/2/python-and-mongodb">Python and MongoDB</a>
+  on the Talk Python to Me podcast has a great interview with the 
+  MongoDB Python driver maintainer</p>
 </li>
 </ul>
           <h1>Application Programming Interfaces</h1>
@@ -10154,6 +10197,7 @@ inception in December 2012. You can view detailed changes via the
 <h2>2017</h2>
 <h3>January</h3>
 <ul>
+<li>New <a href="/redis.html">Redis</a> and <a href="/mongodb.html">MongoDB</a> pages.</li>
 <li>Further work on the <a href="/git.html">Git</a> page.</li>
 <li>New <a href="/git.html">Git</a> page.</li>
 <li>New resources and descriptions on the 
@@ -10846,9 +10890,14 @@ be handled through an issue ticket or pull request on
 use improvements. The following items on this list need some love and 
 attention.</p>
 <ul>
-<li><a href="/git.html">Git</a> page: Add "why use git?", "what is a distributed version 
+<li>
+<p><a href="/redis.html">Redis</a>: Add "why use redis?" section.</p>
+</li>
+<li>
+<p><a href="/git.html">Git</a>: Add "why use git?", "what is a distributed version 
   control system?", "what's the difference between git and github?" and 
-  "git clients" sections.</li>
+  "git clients" sections.</p>
+</li>
 </ul>
     </div>
 <div class="col-md-offset-1 col-md-3" id="sidebar">

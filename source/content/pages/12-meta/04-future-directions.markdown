@@ -47,7 +47,9 @@ Every page on Full Stack Python is a work-in-progress that can always
 use improvements. The following items on this list need some love and 
 attention.
 
-* [Git](/git.html) page: Add "why use git?", "what is a distributed version 
+* [Redis](/redis.html): Add "why use redis?" section.
+
+* [Git](/git.html): Add "why use git?", "what is a distributed version 
   control system?", "what's the difference between git and github?" and 
   "git clients" sections.
 
