@@ -36,7 +36,7 @@ storing, querying and analyzing persistence data in Python applications.
     1. [copy\_database](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-copy-database/)
     1. [MongoReplicaSetClient](http://emptysqua.re/blog/good-idea-at-the-time-pymongo-mongoreplicasetclient/)
 
-* [MongoDB queries do not always return all matching documents!](https://engineering.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827)
+* [MongoDB queries do not always return all matching documents!](https://blog.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827)
   walks through discovering that potential pitfalls on how MongoDB queries 
   operate that were non-intuitive to some developers.
 
