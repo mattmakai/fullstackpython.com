@@ -18,12 +18,20 @@ storing, querying and analyzing persistence data in Python applications.
 
 
 ### Introduction to MongoDB tutorials
+MongoDB is straightforward to use in a Python application when a driver
+such as PyMongo is installed. The following tutorials show how to install,
+configure and start using MongoDB with Python.
+
 * [Introduction to MongoDB and Python](https://realpython.com/blog/python/introduction-to-mongodb-and-python/)
   shows how to use Python to interface with MongoDB via PyMongo and MongoEngine.
 
 * [MongoDB In 30 Minutes](https://www.youtube.com/watch?list=PL1Z_7yg6Pa3AhqCOTQKm9X_Sl9xLdMKYo&v=pWbMrx5rVBE)
    goes over the basics for creating, querying, updating and deleting data
    in MongoDB.
+
+* A [Gentle Introduction to MongoDB using Pymongo](http://altons.github.io/python/2013/01/21/gentle-introduction-to-mongodb-using-pymongo/)
+  reviews a connection configuration file, the basics for data insertion,
+  aggregation and updating records.
 
 
 ### MongoDB security
