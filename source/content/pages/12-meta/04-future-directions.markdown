@@ -47,7 +47,10 @@ Every page on Full Stack Python is a work-in-progress that can always
 use improvements. The following items on this list need some love and 
 attention.
 
-* [Redis](/redis.html): Add "why use redis?" section.
+* [MongoDB](/mongodb.html): Add "why is mongodb useful?" and 
+  "database drivers" section.
+
+* [Redis](/redis.html): Add "why use redis?", "data drivers" section.
 
 * [Git](/git.html): Add "why use git?", "what is a distributed version 
   control system?", "what's the difference between git and github?" and 
