@@ -300,6 +300,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/mako.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/ubuntu.html</loc>
     <priority>1.0</priority>
   </url>
@@ -309,6 +313,10 @@
   </url>
   <url>
     <loc>https://www.fullstackpython.com/debugging.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.fullstackpython.com/django-templates.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
