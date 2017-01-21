@@ -8,7 +8,7 @@ headerimage: /source/static/img/160516-redis-ubuntu-1604/header.jpg
 headeralt: Redis and Ubuntu logos. Copyright their respective owners.
 
 
-[Redis](http://redis.io) is an in-memory key-value pair 
+[Redis](/redis.html) is an in-memory key-value pair 
 [NoSQL data store](/no-sql-datastore.html) often used 
 for [web application](/web-frameworks.html) sessions,
 transient [data](/data.html) and as a broker for 

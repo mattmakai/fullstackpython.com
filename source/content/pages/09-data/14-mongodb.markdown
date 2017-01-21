@@ -12,7 +12,7 @@ meta: MongoDB is a document-oriented NoSQL database often used as a persistence 
 [NoSQL database](/no-sql-datastore.html) that is often used for
 storing, querying and analyzing persistence data in Python applications.
 
-<a href="" style="border: none;"><img src="/source/static/img/logos/mongodb.jpg" width="100%" alt="MongoDB logo." class="technical-diagram" /></a>
+<a href="https://github.com/mongodb/mongo" style="border: none;"><img src="/source/static/img/logos/mongodb.jpg" width="100%" alt="MongoDB logo." class="technical-diagram" /></a>
 
 <div class="well see-also">MongoDB is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
