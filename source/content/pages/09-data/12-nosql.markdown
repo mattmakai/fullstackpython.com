@@ -124,6 +124,7 @@ nested data.
 * [Introduction to MongoDB and Python](https://realpython.com/blog/python/introduction-to-mongodb-and-python/)
   shows how to use Python to interface with MongoDB via PyMongo and MongoEngine.
 
+
 ## Column-family table
 A column-family table class of NoSQL data stores builds on the key-value
 pair type. Each key-value pair is considered a row in the store while the
@@ -133,7 +134,7 @@ column family is similar to a table in the relational database model.
 ### Column-family table data stores
 * Apache [HBase](https://hbase.apache.org/)
 
-* Apache [Cassandra](http://cassandra.apache.org/)
+* [Apache Cassandra](/apache-cassandra.html)
 
 
 ## Graph

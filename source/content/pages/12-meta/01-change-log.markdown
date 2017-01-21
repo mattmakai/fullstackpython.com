@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* Added stub [Apache Cassandra](/apache-cassandra.html) page with a few
+  resources.
 * New [Redis](/redis.html) and [MongoDB](/mongodb.html) pages.
 * Further work on the [Git](/git.html) page.
 * New [Git](/git.html) page.

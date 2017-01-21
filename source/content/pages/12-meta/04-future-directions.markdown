@@ -47,10 +47,13 @@ Every page on Full Stack Python is a work-in-progress that can always
 use improvements. The following items on this list need some love and 
 attention.
 
-* [MongoDB](/mongodb.html): Add "why is mongodb useful?" and 
-  "database drivers" section.
+* [Apache Cassandra](/apache-cassandra.html): Add "why use cassandra?"
+  and "what is CQL?" sections.
 
-* [Redis](/redis.html): Add "why use redis?", "data drivers" section.
+* [MongoDB](/mongodb.html): Add "why is mongodb useful?" and 
+  "database drivers" sections.
+
+* [Redis](/redis.html): Add "why use redis?", "data drivers" sections.
 
 * [Git](/git.html): Add "why use git?", "what is a distributed version 
   control system?", "what's the difference between git and github?" and 
