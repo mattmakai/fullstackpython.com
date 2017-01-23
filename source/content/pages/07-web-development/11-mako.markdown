@@ -33,4 +33,13 @@ used to generate output HTML, XML and similar formats.
   extension that makes it easier to use Mako as the template engine in your
   Flask web app projects.
 
-
+* The Stack Overflow question on 
+  [What is the fastest template system for Python?](http://stackoverflow.com/questions/1324238/what-is-the-fastest-template-system-for-python)
+   provides some basic benchmarks comparing Mako, Jinja and other template
+   engines. Any benchmark should be taken as a data point rather than a 
+   rule on which engine is actually the fastest in real world scenarios.
+   In addition, if you are using Mako or any other template engine as part
+   of a static website generator then it will not really matter which one
+   is the fastest because the output is created before the website is 
+   deployed rather than during the [web server](/web-servers.html)'s
+   HTTP request-response cycle.
