@@ -21,7 +21,7 @@ libraries.
 For example, 
 [authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
 [URL routing](https://docs.djangoproject.com/en/dev/topics/http/urls/), a 
-[templating system](https://docs.djangoproject.com/en/dev/topics/templates/),
+[template engine](/django-templates.html),
 an [object-relational mapper](/object-relational-mappers-orms.html) (ORM),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
 (as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/). 
@@ -64,7 +64,7 @@ There are a slew of free or low cost resources out there for Django. Since
 Django was released over 10 years ago and has had a huge number of updates
 since then, when you're looking for an up-to-date Django book check out the
 list below or read this post showing [current Django books](http://twoscoopspress.org/pages/current-django-books)
-as of Django 1.8, 1.9.
+as of Django 1.9.
 
 * [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 
@@ -300,6 +300,11 @@ to handle these files properly.
 
 
 ## Django project templates
+Project templates, not to be confused with a 
+[template engine](/template-engines.html), generate boilerplate code for
+a base Django project plus optional libraries that are often used when 
+developing web applications.
+
 * [Caktus Group's Django project template](https://github.com/caktus/django-project-template) 
   is Django 1.6+ ready.
 

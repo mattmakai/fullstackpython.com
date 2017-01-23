@@ -3027,7 +3027,7 @@ libraries.</p>
 <p>For example, 
 <a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
 <a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
-<a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
+<a href="/django-templates.html">template engine</a>,
 an <a href="/object-relational-mappers-orms.html">object-relational mapper</a> (ORM),
 and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
 (as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/">Django framework</a>. 
@@ -3063,7 +3063,7 @@ syntax and language semantics first before diving into web development.</p>
 Django was released over 10 years ago and has had a huge number of updates
 since then, when you're looking for an up-to-date Django book check out the
 list below or read this post showing <a href="http://twoscoopspress.org/pages/current-django-books">current Django books</a>
-as of Django 1.8, 1.9.</p>
+as of Django 1.9.</p>
 <ul>
 <li>
 <p><a href="http://www.obeythetestinggoat.com/">Test-Driven Development with Python</a> 
@@ -3343,6 +3343,10 @@ to handle these files properly.</p>
 </li>
 </ul>
 <h2>Django project templates</h2>
+<p>Project templates, not to be confused with a 
+<a href="/template-engines.html">template engine</a>, generate boilerplate code for
+a base Django project plus optional libraries that are often used when 
+developing web applications.</p>
 <ul>
 <li>
 <p><a href="https://github.com/caktus/django-project-template">Caktus Group's Django project template</a> 
@@ -4193,8 +4197,46 @@ open source project author from having to reinvent a new templating style.</p>
           <h1>Mako</h1>
 <p>Mako is a <a href="/template-engines.html">template engine built in Python</a> that is
 used to generate output HTML, XML and similar formats.</p>
+<p><a href="http://www.makotemplates.org/" style="border: none;"><img src="/source/static/img/logos/mako.jpg" width="100%" alt="Mako template engine logo." style="border-radius: 5px;" width="100%" class="technical-diagram"></a></p>
 <div class="well see-also">Mako is an implementation of the <a href="/template-engines.html">template engines</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h2>Mako resources</h2>
+<ul>
+<li>
+<p><a href="https://beachcoder.wordpress.com/2007/05/11/exploring-mako/">Exploring Mako</a>
+  explains a bit about the template engines Myghty and Mason, which influenced
+  Mako's design. The post then shows a few basic examples for how to use Mako.</p>
+</li>
+<li>
+<p><a href="https://codingnetworker.com/2016/01/configuration-templates-python-mako/">Configuration Templates with Python and Mako</a>
+  shows some basic situations for how to use Mako in an example project.</p>
+</li>
+<li>
+<p>The 
+  <a href="http://pylonsbook.com/en/1.1/using-view-templates.html">Pylons' project documentation on templates</a>
+  provides many examples for using Mako, which is the default template 
+  language for the Pylons <a href="web-frameworks.html">web framework</a>.</p>
+</li>
+<li>
+<p><a href="https://pythonhosted.org/Flask-Mako/">Flask-Mako</a> is a <a href="/flask.html">Flask</a> 
+  extension that makes it easier to use Mako as the template engine in your
+  Flask web app projects.</p>
+</li>
+</ul>
           <h1>Django Templates</h1>
+<p>The <a href="/django.html">Django web framework</a> contains its own 
+<a href="/template-engines.html">template engine</a> for generating HTML, XML and other
+output formats.</p>
+<p><a href="https://docs.djangoproject.com/en/dev/topics/templates/" style="border: none;"><img src="/source/static/img/logos/django.png" width="100%" alt="Django web framework logo. Trademark Django Software Foundation." style="border-radius: 5px;" width="100%" class="technical-diagram"></a></p>
+<h2>What's the difference between a "project template" and Django templates?</h2>
+<p>A project template contains the files and code to start a new web application.
+For example, when you run <code>django-admin.py startproject abc</code>, the Django
+admin script creates a new <code>abc</code> directory along with several Python 
+configuration so the web app can be run by a <a href="/wsgi-servers.html">WSGI server</a>.</p>
+<p>Django templates are different from a project template because they live 
+within a project and are written by the developer to generate output, most
+commonly HTML.</p>
+<div class="well see-also">Django templates are an implementation of the <a href="/template-engines.html">template engines</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
           <h1>Web Design</h1>
 <p>Web design is the creation of a web application's style and user interaction
 using CSS and JavaScript.</p>
