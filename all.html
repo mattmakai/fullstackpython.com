@@ -6242,8 +6242,11 @@ provides a command-line interface for interacting with the RPM system.</p>
 </li>
 </ol>
           <h1>Ubuntu</h1>
-<p>Ubuntu is a Debian Linux-based operating system distribution often used for 
-Python development and application deployment.</p>
+<p><a href="https://www.ubuntu.com/">Ubuntu</a> is a Debian Linux-based 
+<a href="/operating-systems.html">operating system</a> distribution often used for 
+<a href="/learning-programming.html">Python development</a> and 
+<a href="/deployment.html">web application deployment</a>.</p>
+<p><a href="https://www.ubuntu.com/" style="border: none;"><img src="/source/static/img/logos/ubuntu-linux.png" width="100%" alt="Official Ubuntu logo. Copyright Canonical Ltd." class="technical-diagram"></a></p>
 <h2>Why is Ubuntu important for Python?</h2>
 <p>Ubuntu is one of the most commonly used Linux distributions for both local
 development and server deployments. Some 
@@ -7051,7 +7054,7 @@ server for all of their  projects regardless of the programming language
 the application was written in.</p>
 <ul>
 <li>
-<p><a href="http://jenkins-ci.org/">Jenkins</a> is a common CI server for building and
+<p><a href="/jenkins.html">Jenkins</a> is a common CI server for building and
   deploying to test and production servers. 
   <a href="https://github.com/jenkinsci/jenkins">Jenkins source code is on GitHub</a>.</p>
 </li>
@@ -7078,12 +7081,11 @@ the application was written in.</p>
 </li>
 </ul>
 <h2>Jenkins CI resources</h2>
+<p>Jenkins is commonly used as a continuous integration server implementation
+for Python projects because it is open source and programming language
+agnostic. Learn more via the following resources or on 
+<a href="/jenkins.html">the dedicated Jenkins page</a>.</p>
 <ul>
-<li>
-<p><a href="https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184">Assembling a continuous integration service for a Django project on Jenkins</a>
-  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
-  <a href="/django.html">Django</a> project.</p>
-</li>
 <li>
 <p>My book on <a href="http://www.deploypython.com/">deploying Python web applications</a>
   walks through every step of setting up a Jenkins project with a WSGI 
@@ -7091,35 +7093,14 @@ the application was written in.</p>
   grokking all of the steps provided in these other blog posts.</p>
 </li>
 <li>
+<p><a href="https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184">Assembling a continuous integration service for a Django project on Jenkins</a>
+  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
+  <a href="/django.html">Django</a> project.</p>
+</li>
+<li>
 <p><a href="http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/">Setting up Jenkins as a continuous integration server for Django</a>
   is another solid tutorial that also shows how to send email notifications 
   as part of the build process.</p>
-</li>
-<li>
-<p>If you're running into difficulty adding an SSH key to your Jenkins system 
-  account so you can connect to another server or Git repository
-  <a href="http://dcycleproject.org/blog/51/connecting-jenkins-and-git">this blog post on connecting Jenkins with Git</a>
-  to get the steps to solve that problem.</p>
-</li>
-<li>
-<p><a href="http://chromaticsites.com/blog/automated-servers-and-deployments-ansible-jenkins">Automated Servers and Deployments with Ansible &amp; Jenkins</a></p>
-</li>
-<li>
-<p><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a>
-  is a short tutorial showing how to use the official 
-  <a href="https://registry.hub.docker.com/_/jenkins/">Jenkins container</a> on the
-  Docker hub.</p>
-</li>
-<li>
-<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins">Securing Jenkins</a>
-  is the landing page for Jenkins security. If you're deploying your own
-  instance, you'll need to lock it down against unauthorized users.</p>
-</li>
-<li>
-<p><a href="http://engineering.simondata.com/can-we-use-jenkins-for-that">Can we use Jenkins for that?</a>
-  looks at how one team uses Jenkins for more than typical continuous 
-  integration situations - they also use it as an administrative interface, 
-  cron jobs, data analytics pipelines and long-running scripts.</p>
 </li>
 </ul>
 <h2>General continuous integration resources</h2>
@@ -7164,6 +7145,68 @@ the application was written in.</p>
   post also discusses tasks related to setting up reliable CI such as test 
   environments, <a href="/integration-testing.html">integration testing</a> and 
   visibility into the CI results.</p>
+</li>
+<li>
+<p><a href="https://www.blackhat.com/docs/eu-15/materials/eu-15-Mittal-Continuous-Intrusion-Why-CI-Tools-Are-An-Attackers-Best-Friend.pdf">Continuous Intrusion: Why CI tools are a hacker's best friend</a> (PDF)
+  strongly advises securing your continuous integration server just as you
+  would every other part of your production application, unless you want
+  your environment to be vulnerable to malicious actors.</p>
+</li>
+</ul>
+          <h1>Jenkins</h1>
+<p><a href="https://jenkins.io/">Jenkins</a> is a 
+<a href="/continuous-integration.html">continuous integration</a> (CI) server often 
+used to automate building, <a href="/testing.html">testing</a> and 
+<a href="/deployment.html">deploying</a> Python applications.</p>
+<p><a href="https://jenkins.io/" style="border: none;"><img src="/source/static/img/logos/jenkins.png" width="100%" alt="Official Jenkins CI logo. Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License." class="technical-diagram"></a></p>
+<div class="well see-also">Jenkins is an implementation of the <a href="/continuous-integration.html">continuous integration</a> concept. Learn more in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h3>Jenkins resources</h3>
+<ul>
+<li>
+<p><a href="https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184">Assembling a continuous integration service for a Django project on Jenkins</a>
+  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
+  <a href="/django.html">Django</a> project.</p>
+</li>
+<li>
+<p>My book on <a href="http://www.deploypython.com/">deploying Python web applications</a>
+  walks through every step of setting up a Jenkins project with a WSGI 
+  application to enable continuous delivery. Take a look if you're not 
+  grokking all of the steps provided in these other blog posts.</p>
+</li>
+<li>
+<p><a href="http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/">Setting up Jenkins as a continuous integration server for Django</a>
+  is another solid tutorial that also shows how to send email notifications 
+  as part of the build process.</p>
+</li>
+<li>
+<p>If you're running into difficulty adding an SSH key to your Jenkins system 
+  account so you can connect to another server or Git repository
+  <a href="http://dcycleproject.org/blog/51/connecting-jenkins-and-git">this blog post on connecting Jenkins with Git</a>
+  to get the steps to solve that problem.</p>
+</li>
+<li>
+<p><a href="http://chromaticsites.com/blog/automated-servers-and-deployments-ansible-jenkins">Automated Servers and Deployments with Ansible &amp; Jenkins</a>
+  covers the benefits of using the 
+  <a href="/configuration-management.html">configuration management tool</a> Ansible in
+  combination with Jenkins.</p>
+</li>
+<li>
+<p><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a>
+  is a short tutorial showing how to use the official 
+  <a href="https://registry.hub.docker.com/_/jenkins/">Jenkins container</a> on the
+  Docker hub.</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins">Securing Jenkins</a>
+  is the landing page for Jenkins security. If you're deploying your own
+  instance, you'll need to lock it down against unauthorized users.</p>
+</li>
+<li>
+<p><a href="http://engineering.simondata.com/can-we-use-jenkins-for-that">Can we use Jenkins for that?</a>
+  looks at how one team uses Jenkins for more than typical continuous 
+  integration situations - they also use it as an administrative interface, 
+  cron jobs, data analytics pipelines and long-running scripts.</p>
 </li>
 </ul>
           <h1>Configuration Management</h1>

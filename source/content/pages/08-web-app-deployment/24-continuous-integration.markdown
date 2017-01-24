@@ -73,7 +73,7 @@ use more than a single language and ecosystem) often use a single CI
 server for all of their  projects regardless of the programming language 
 the application was written in.
 
-* [Jenkins](http://jenkins-ci.org/) is a common CI server for building and
+* [Jenkins](/jenkins.html) is a common CI server for building and
   deploying to test and production servers. 
   [Jenkins source code is on GitHub](https://github.com/jenkinsci/jenkins).
 
@@ -96,39 +96,23 @@ the application was written in.
 
 
 ## Jenkins CI resources
-* [Assembling a continuous integration service for a Django project on Jenkins](https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184)
-  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
-  [Django](/django.html) project.
+Jenkins is commonly used as a continuous integration server implementation
+for Python projects because it is open source and programming language
+agnostic. Learn more via the following resources or on 
+[the dedicated Jenkins page](/jenkins.html).
 
 * My book on [deploying Python web applications](http://www.deploypython.com/)
   walks through every step of setting up a Jenkins project with a WSGI 
   application to enable continuous delivery. Take a look if you're not 
   grokking all of the steps provided in these other blog posts.
 
+* [Assembling a continuous integration service for a Django project on Jenkins](https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184)
+  shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
+  [Django](/django.html) project.
+
 * [Setting up Jenkins as a continuous integration server for Django](http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/)
   is another solid tutorial that also shows how to send email notifications 
   as part of the build process.
-
-* If you're running into difficulty adding an SSH key to your Jenkins system 
-  account so you can connect to another server or Git repository
-  [this blog post on connecting Jenkins with Git](http://dcycleproject.org/blog/51/connecting-jenkins-and-git)
-  to get the steps to solve that problem.
-
-* [Automated Servers and Deployments with Ansible & Jenkins](http://chromaticsites.com/blog/automated-servers-and-deployments-ansible-jenkins)
-  
-* [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
-  is a short tutorial showing how to use the official 
-  [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
-  Docker hub.
-
-* [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins)
-  is the landing page for Jenkins security. If you're deploying your own
-  instance, you'll need to lock it down against unauthorized users.
-
-* [Can we use Jenkins for that?](http://engineering.simondata.com/can-we-use-jenkins-for-that)
-  looks at how one team uses Jenkins for more than typical continuous 
-  integration situations - they also use it as an administrative interface, 
-  cron jobs, data analytics pipelines and long-running scripts.
 
 
 ## General continuous integration resources
@@ -164,4 +148,9 @@ the application was written in.
   post also discusses tasks related to setting up reliable CI such as test 
   environments, [integration testing](/integration-testing.html) and 
   visibility into the CI results.
+
+* [Continuous Intrusion: Why CI tools are a hacker's best friend](https://www.blackhat.com/docs/eu-15/materials/eu-15-Mittal-Continuous-Intrusion-Why-CI-Tools-Are-An-Attackers-Best-Friend.pdf) (PDF)
+  strongly advises securing your continuous integration server just as you
+  would every other part of your production application, unless you want
+  your environment to be vulnerable to malicious actors.
 
