@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* Major update made to the [template engines](/template-engines.html) page 
+  with a bunch of new resources and explanations.
 * Added stub [Apache Cassandra](/apache-cassandra.html) page with a few
   resources.
 * New [Redis](/redis.html) and [MongoDB](/mongodb.html) pages.
