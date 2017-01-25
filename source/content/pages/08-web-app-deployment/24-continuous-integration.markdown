@@ -60,7 +60,7 @@ services and related deployment activities.
 
 There are many other ways a continuous integration server and its 
 deployments can be structured. The above was just one example of a 
-relatively simple set up.
+relatively simple setup.
 
 
 ## Open source CI projects
@@ -96,9 +96,9 @@ the application was written in.
 
 
 ## Jenkins CI resources
-Jenkins is commonly used as a continuous integration server implementation
-for Python projects because it is open source and programming language
-agnostic. Learn more via the following resources or on 
+[Jenkins](/jenkins.html) is commonly used as a continuous integration 
+server implementation for Python projects because it is open source and 
+programming language agnostic. Learn more via the following resources or on 
 [the dedicated Jenkins page](/jenkins.html).
 
 * My book on [deploying Python web applications](http://www.deploypython.com/)
@@ -130,6 +130,10 @@ agnostic. Learn more via the following resources or on
 * [Diving into continuous integration as a newbie](http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/)
   is a retrospective on learning CI from a Rackspace intern on how she learned
   the subject.
+
+* [6 top continuous integration tools](https://opensource.com/business/15/7/six-continuous-integration-tools)
+  gives a high level overview of six CI tools from a programming language
+  agnostic perspective.
 
 * [StackShare's Continuous Integration tag](http://stackshare.io/continuous-integration) 
   lists a slew of hosted CI services roughly ranked by user upvotes.
