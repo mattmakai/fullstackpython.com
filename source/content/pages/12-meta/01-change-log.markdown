@@ -15,6 +15,9 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* Buffed up the number of [MongoDB](/mongodb.html) resources.
+* Added more specific web frameworks such as Sanic and Tornado to the 
+  [table of contents](/table-of-contents.html). Pages will be created later.
 * Break out [Jenkins](/jenkins.html) page from 
   [continuous integration](/continuous-integration.html) page origins.
 * Major update made to the [template engines](/template-engines.html) page 
