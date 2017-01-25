@@ -232,10 +232,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/morepath.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://www.fullstackpython.com/source-control.html</loc>
     <priority>1.0</priority>
   </url>
@@ -256,7 +252,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/other-web-frameworks.html</loc>
+    <loc>https://www.fullstackpython.com/morepath.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -276,19 +272,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/template-engines.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://www.fullstackpython.com/web-application-security.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.fullstackpython.com/best-python-podcasts.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.fullstackpython.com/jinja2.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -300,7 +288,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/mako.html</loc>
+    <loc>https://www.fullstackpython.com/other-web-frameworks.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -316,15 +304,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/django-templates.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://www.fullstackpython.com/no-sql-datastore.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/template-engines.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/application-dependencies.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.fullstackpython.com/jinja2.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -336,11 +328,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/web-design.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.fullstackpython.com/cascading-style-sheets.html</loc>
+    <loc>https://www.fullstackpython.com/mako.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -352,7 +340,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/django-templates.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/logging.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.fullstackpython.com/web-design.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -364,7 +360,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/javascript.html</loc>
+    <loc>https://www.fullstackpython.com/cascading-style-sheets.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -384,7 +380,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/task-queues.html</loc>
+    <loc>https://www.fullstackpython.com/javascript.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -396,7 +392,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.fullstackpython.com/microservices.html</loc>
+    <loc>https://www.fullstackpython.com/task-queues.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -404,7 +400,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/microservices.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/static-site-generator.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.fullstackpython.com/docker.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
@@ -421,10 +425,6 @@
   </url>
   <url>
     <loc>https://www.fullstackpython.com/websockets.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.fullstackpython.com/docker.html</loc>
     <priority>1.0</priority>
   </url>
 

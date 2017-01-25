@@ -1,7 +1,7 @@
 title: Lektor
 category: page
 slug: lektor
-sortorder: 0730
+sortorder: 0735
 toc: False
 sidebartitle: Lektor
 meta: Lektor is a static website generator with content management system (CMS) and web framework features for creating websites.

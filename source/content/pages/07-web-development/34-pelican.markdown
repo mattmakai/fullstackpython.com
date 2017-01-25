@@ -1,7 +1,7 @@
 title: Pelican
 category: page
 slug: pelican
-sortorder: 0729
+sortorder: 0734
 toc: False
 sidebartitle: Pelican
 meta: Pelican is a static site generator implemented in Python that uses Markdown or reStructuredText to produce websites.

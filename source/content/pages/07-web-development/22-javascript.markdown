@@ -1,15 +1,15 @@
 title: JavaScript
 category: page
 slug: javascript
-sortorder: 0717
+sortorder: 0722
 toc: False
 sidebartitle: JavaScript
 meta: Learn about JavaScript and MVC frameworks for web applications on Full Stack Python.
 
 
 # JavaScript
-JavaScript is a small scripting programming language embedded in web browsers 
-to enable dynamic content and interaction. 
+JavaScript is a scripting programming language interpretted by web 
+browsers that enables dynamic content and interactions in web applications. 
 
 
 ## Why is JavaScript necessary?

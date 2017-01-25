@@ -1,7 +1,7 @@
 title: Django Templates
 category: page
 slug: django-templates
-sortorder: 0712
+sortorder: 0715
 toc: False
 sidebartitle: Django Templates
 meta: Django has its own template engine referred to as Django templates and is similar to Jinja with some minor differences.

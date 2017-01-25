@@ -1,7 +1,7 @@
 title: Task Queues
 category: page
 slug: task-queues
-sortorder: 0721
+sortorder: 0726
 toc: False
 sidebartitle: Task Queues
 meta: Task queues handle asynchronous jobs outside a Python web application HTTP request-response cycle.
