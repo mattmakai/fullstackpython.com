@@ -9262,14 +9262,22 @@ storing, querying and analyzing persistence data in Python applications.</p>
 <p><a href="https://github.com/mongodb/mongo" style="border: none;"><img src="/source/static/img/logos/mongodb.jpg" width="100%" alt="MongoDB logo." class="technical-diagram" /></a></p>
 <div class="well see-also">MongoDB is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
-<h3>Introduction to MongoDB tutorials</h3>
-<p>MongoDB is straightforward to use in a Python application when a driver
-such as PyMongo is installed. The following tutorials show how to install,
-configure and start using MongoDB with Python.</p>
+<h3>General MongoDB introductions</h3>
+<p>It is worth taking some time to learn the ins and outs of MongoDB before
+connecting it to your Python application. The following tutorials are 
+not specific to Python and will have you work directly with the MongoDB
+command line and query language.</p>
 <ul>
 <li>
-<p><a href="https://realpython.com/blog/python/introduction-to-mongodb-and-python/">Introduction to MongoDB and Python</a>
-  shows how to use Python to interface with MongoDB via PyMongo and MongoEngine.</p>
+<p><a href="https://code.tutsplus.com/tutorials/getting-started-with-mongodb-part-1--net-22879">Getting Started with MongoDB - Part 1</a> 
+  and 
+  <a href="https://code.tutsplus.com/tutorials/getting-started-with-mongodb-part-2--net-23636">Part 2</a>
+  are programming language agnostic tutorials that show how to interact
+  via querying and various operators such as <code>$in</code>, <code>$lte</code> and <code>$gte</code>.</p>
+</li>
+<li>
+<p><a href="https://scotch.io/tutorials/an-introduction-to-mongodb">An Introduction to MongoDB</a> 
+  examines common commands frequently used to perform data operations.</p>
 </li>
 <li>
 <p><a href="https://www.youtube.com/watch?list=PL1Z_7yg6Pa3AhqCOTQKm9X_Sl9xLdMKYo&amp;v=pWbMrx5rVBE">MongoDB In 30 Minutes</a>
@@ -9277,18 +9285,34 @@ configure and start using MongoDB with Python.</p>
    in MongoDB.</p>
 </li>
 <li>
-<p>A <a href="http://altons.github.io/python/2013/01/21/gentle-introduction-to-mongodb-using-pymongo/">Gentle Introduction to MongoDB using Pymongo</a>
-  reviews a connection configuration file, the basics for data insertion,
-  aggregation and updating records.</p>
+<p><a href="https://blog.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827">MongoDB queries do not always return all matching documents!</a>
+  walks through discovering that potential pitfalls on how MongoDB queries 
+  operate that were non-intuitive to developers who are new to using this
+  database.</p>
 </li>
 </ul>
 <h3>MongoDB security</h3>
+<p>NoSQL databases can be a weak spot in a production deployment environment,
+especially when default settings are built for ease of development instead
+of proper access control. MongoDB is no exception with its loose default
+security controls so make sure to lock down your instances.</p>
 <ul>
 <li>
-<p><a href="https://medium.com/@shahinism/for-gods-sake-secure-your-mongo-redis-etc-4f310cf1bed2">For God’s sake, secure your Mongo/Redis/etc!</a>
+<p><a href="https://medium.com/@shahinism/for-gods-sake-secure-your-mongo-redis-etc-4f310cf1bed2">For God's sake, secure your Mongo/Redis/etc!</a>
   explains the weak default security settings provided by many NoSQL 
   databases, including MongoDB. Make sure to automate locking down your
   NoSQL databases just as you would any other component in your stack.</p>
+</li>
+<li>
+<p>Before deploying a MongoDB instance to production, be sure to go through
+  each of the items on the 
+  <a href="https://docs.mongodb.com/manual/administration/security-checklist/">official MongoDB security checklist</a>.</p>
+</li>
+<li>
+<p><a href="https://scalegrid.io/blog/10-tips-to-improve-your-mongodb-security/">10 tips to improve your MongoDB security</a>
+  provides concrete steps to take such as disabling the REST interface
+  and other default bits that can be exploited if you are not intentionally
+  using them.</p>
 </li>
 <li>
 <p><a href="https://www.mongodb.com/blog/post/mongodb-security-basics-for-your-deployments-in">MongoDB Security Basics For Your Deployments in AWS</a>
@@ -9297,8 +9321,21 @@ configure and start using MongoDB with Python.</p>
   authentication, SSL and firewalls.</p>
 </li>
 </ul>
-<h3>Specific MongoDB resources</h3>
+<h3>Python with MongoDB resources</h3>
+<p>MongoDB is straightforward to use in a Python application when a driver
+such as PyMongo is installed. The following tutorials show how to install,
+configure and start using MongoDB with Python.</p>
 <ul>
+<li>
+<p><a href="https://realpython.com/blog/python/introduction-to-mongodb-and-python/">Introduction to MongoDB and Python</a>
+  shows how to use Python to interface with MongoDB via PyMongo and 
+  MongoEngine.</p>
+</li>
+<li>
+<p>A <a href="http://altons.github.io/python/2013/01/21/gentle-introduction-to-mongodb-using-pymongo/">Gentle Introduction to MongoDB using Pymongo</a>
+  reviews a connection configuration file, the basics for data insertion,
+  aggregation and updating records.</p>
+</li>
 <li>
 <p>The <a href="https://api.mongodb.com/python/current/">PyMongo project</a> creators 
   wrote a retrospective focusing on four decisions they would have done 
@@ -9311,14 +9348,9 @@ configure and start using MongoDB with Python.</p>
 </ol>
 </li>
 <li>
-<p><a href="https://blog.meteor.com/mongodb-queries-dont-always-return-all-matching-documents-654b6594a827">MongoDB queries do not always return all matching documents!</a>
-  walks through discovering that potential pitfalls on how MongoDB queries 
-  operate that were non-intuitive to some developers.</p>
-</li>
-<li>
 <p><a href="https://talkpython.fm/episodes/show/2/python-and-mongodb">Python and MongoDB</a>
   on the Talk Python to Me podcast has a great interview with the 
-  MongoDB Python driver maintainer</p>
+  MongoDB Python driver maintainer.</p>
 </li>
 </ul>
           <h1>Apache Cassandra</h1>
