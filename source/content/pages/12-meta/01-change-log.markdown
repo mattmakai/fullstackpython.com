@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* Broke out [Celery](/celery.html) into its own page and cleaned up 
+  [task queue](/task-queues.html) resources.
 * Buffed up the number of [MongoDB](/mongodb.html) resources.
 * Added more specific web frameworks such as Sanic and Tornado to the 
   [table of contents](/table-of-contents.html). Pages will be created later.
