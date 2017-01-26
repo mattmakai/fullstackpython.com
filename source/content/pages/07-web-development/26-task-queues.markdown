@@ -42,13 +42,13 @@ Other types of jobs for task queues include
 
 
 ## Task queue projects
-The defacto standard Python task queue is Celery. The other task queue 
-projects that arise tend to come from the perspective that Celery is overly
-complicated for simple use cases. My recommendation is to put the effort into
-Celery's reasonable learning curve as it is worth the time it takes to 
-understand how to use the project.
+The defacto standard Python task queue is [Celery](/celery.html). The other 
+task queue projects that arise tend to come from the perspective that 
+Celery is overly complicated for simple use cases. My recommendation is to 
+put the effort into Celery's reasonable learning curve as it is worth the 
+time it takes to understand how to use the project.
 
-* The [Celery](http://www.celeryproject.org/) distributed task queue is the
+* The [Celery](/celery.html) distributed task queue is the
   most commonly used Python library for handling asynchronous tasks and 
   scheduling.
 
@@ -89,6 +89,7 @@ when scaling out a large deployment of distributed task queues.
   using RabbitMQ and do not want to maintain RabbitMQ installations on your 
   own servers.
 
+
 ## Open source examples that use task queues
 * Take a look at the code in this open source 
   [Flask application](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/flask) 
@@ -103,10 +104,6 @@ when scaling out a large deployment of distributed task queues.
 
 
 ## Task queue resources
-* [Getting Started Scheduling Tasks with Celery](http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/)
-  is a detailed walkthrough for setting up Celery with Django (although
-  Celery can also be used without a problem with other frameworks).
-
 * [International Space Station notifications with Python and Redis Queue (RQ)](https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html)
   shows how to combine the RQ task queue library with Flask to send 
   text message notifications every time a condition is met - in this blog
@@ -124,31 +121,25 @@ when scaling out a large deployment of distributed task queues.
 * [Why Task Queues](http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619) 
   is a presentation for what task queues are and why they are needed. 
 
-* Flask by Example [Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
-  provides a detailed walkthrough of setting up workers to use RQ with
-  Redis.
-
-* [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
-  is a detailed walkthrough for using these tools on an Ubuntu VPS.
-
-* Heroku has a clear walkthrough for using 
-  [RQ for background tasks](https://devcenter.heroku.com/articles/python-rq).
-
-* [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
-  provides an introduction to the Celery task queue.
-
-* [Celery - Best Practices](https://denibertovic.com/posts/celery-best-practices/)
-  explains things you should not do with Celery and shows some underused 
-  features for making task queues easier to work with.
-
-* The "Django in Production" series by 
-  [Rob Golding](https://twitter.com/robgolding63) contains a post 
-  specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/).
-
 * [Asynchronous Processing in Web Applications Part One](http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/) 
   and [Part Two](http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/)
   are great reads for understanding the difference between a task queue and
   why you shouldn't use your database as one.
+
+
+* Flask by Example [Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
+  provides a detailed walkthrough of setting up workers to use RQ with
+  Redis.
+
+* Heroku has a clear walkthrough for using 
+  [RQ for background tasks](https://devcenter.heroku.com/articles/python-rq).
+
+* [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
+  is a detailed walkthrough for using these tools on an Ubuntu VPS.
+
+* [Celery - Best Practices](https://denibertovic.com/posts/celery-best-practices/)
+  explains things you should not do with Celery and shows some underused 
+  features for making task queues easier to work with.
 
 * [Celery in Production](http://www.caktusgroup.com/blog/2014/09/29/celery-production/)
   on the Caktus Group blog contains good practices from their experience 
@@ -178,13 +169,6 @@ when scaling out a large deployment of distributed task queues.
 * [Setting up an asynchronous task queue for Django using Celery and Redis](http://michal.karzynski.pl/blog/2014/05/18/setting-up-an-asynchronous-task-queue-for-django-using-celery-redis/)
   is a straightforward tutorial for setting up the Celery task queue for 
   Django web applications using the Redis broker on the back end.
-
-* [Background jobs with Django and Celery](http://django.zone/blog/posts/background-jobs-django-and-celery/)
-  shows the code and a simple explanation of how to use Celery with 
-  [Django](/django.html).
-
-* [Asynchronous Tasks With Django and Celery](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/)
-  shows how to integrate Celery with [Django](/django.html) and create Periodic Tasks.
 
 * [Three quick tips from two years with Celery](https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb)
   provides some solid advice on retry delays, the -Ofair flag and global
