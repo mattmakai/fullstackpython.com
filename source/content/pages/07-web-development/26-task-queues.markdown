@@ -52,11 +52,10 @@ time it takes to understand how to use the project.
   most commonly used Python library for handling asynchronous tasks and 
   scheduling.
 
-* The [RQ (Redis Queue)](http://python-rq.org/) is a simple Python
-  library for queueing jobs and processing them in the background with workers.
-  RQ is backed by Redis and is designed to have a low barrier to entry.
-  The [intro post](http://nvie.com/posts/introducing-rq/) contains information
-  on design decisions and how to use RQ.
+* The [RQ (Redis Queue)](/redis-queue-rq.html) is a simple Python
+  library for queueing jobs and processing them in the background with 
+  workers. RQ is backed by Redis and is designed to have a low barrier to 
+  entry.
 
 * [Taskmaster](https://github.com/dcramer/taskmaster) is a lightweight simple
   distributed queue for handling large volumes of one-off tasks. 

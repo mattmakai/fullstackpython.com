@@ -4692,11 +4692,10 @@ time it takes to understand how to use the project.</p>
   scheduling.</p>
 </li>
 <li>
-<p>The <a href="http://python-rq.org/">RQ (Redis Queue)</a> is a simple Python
-  library for queueing jobs and processing them in the background with workers.
-  RQ is backed by Redis and is designed to have a low barrier to entry.
-  The <a href="http://nvie.com/posts/introducing-rq/">intro post</a> contains information
-  on design decisions and how to use RQ.</p>
+<p>The <a href="/redis-queue-rq.html">RQ (Redis Queue)</a> is a simple Python
+  library for queueing jobs and processing them in the background with 
+  workers. RQ is backed by Redis and is designed to have a low barrier to 
+  entry.</p>
 </li>
 <li>
 <p><a href="https://github.com/dcramer/taskmaster">Taskmaster</a> is a lightweight simple
@@ -4987,6 +4986,36 @@ then dive into these specific Celery tutorials.</p>
 <p><a href="https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb">Three quick tips from two years with Celery</a>
   provides some solid advice on retry delays, the -Ofair flag and global
   task timeouts for Celery.</p>
+</li>
+</ul>
+          <h1>Redis Queue (RQ)</h1>
+<p><a href="http://python-rq.org/">Redis Queue (RQ)</a> is a Python
+<a href="/task-queues.html">task queue</a> implementation that uses Redis to keep
+track of tasks in the queue that need to be executed.</p>
+<p><a href="http://python-rq.org/" style="border: none;"><img src="/source/static/img/logos/redis-queue.png" width="100%" alt="Redis Queue (RQ) task queue Python project logo." style="border-radius: 5px;" width="100%" class="technical-diagram"></a></p>
+<div class="well see-also">RQ is an implementation of the <a href="/task-queues.html">task queue</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+<h2>RQ resources</h2>
+<ul>
+<li>
+<p>The <a href="http://nvie.com/posts/introducing-rq/">RQ intro post</a> contains 
+  information on design decisions and how to use RQ in your projects.</p>
+</li>
+<li>
+<p><a href="https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html">International Space Station notifications with Python and Redis Queue (RQ)</a>
+  shows how to combine the RQ task queue library with Flask to send 
+  text message notifications every time a condition is met - in this blog
+  post's case that the ISS is currently flying over your location on
+  Earth.</p>
+</li>
+<li>
+<p><a href="https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/">Flask by Example - Implementing a Redis Task Queue</a>
+  explains how to install and use RQ in a <a href="/flask.html">Flask</a> application.</p>
+</li>
+<li>
+<p><a href="http://blog.ashnab.com/task-queues-and-python-rq/">Task Queues and Python RQ</a>
+  provides a good explanation for how to use RQ in a <a href="/django.html">Django</a>
+  project.</p>
 </li>
 </ul>
           <h1>Microservices</h1>
