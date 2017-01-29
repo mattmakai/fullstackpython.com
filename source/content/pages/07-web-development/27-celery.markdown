@@ -68,6 +68,10 @@ then dive into these specific Celery tutorials.
   explains things you should not do with Celery and shows some underused 
   features for making task queues easier to work with.
 
+* [Celery Best Practices](https://blog.balthazar-rouberol.com/celery-best-practices) 
+  is a different author's follow up to the above best practices post that
+  builds upon some of his own learnings from 3+ years using Celery.
+
 * [Asynchronous Processing in Web Applications Part One](http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/) 
   and [Part Two](http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/)
   are great reads for understanding the difference between a task queue and
@@ -99,6 +103,10 @@ then dive into these specific Celery tutorials.
 
 * [Asynchronous Tasks With Django and Celery](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/)
   shows how to integrate Celery with [Django](/django.html) and create Periodic Tasks.
+
+* [Dask and Celery](http://matthewrocklin.com/blog/work/2016/09/13/dask-and-celery) 
+  compares Dask.distributed with Celery for Python projects. The post gives
+  code examples to show how to execute tasks with either task queue.
 
 
 ### Celery deployment resources
