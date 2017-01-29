@@ -15,7 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
-* Add [RQ](/redis-queue-rq.html) stub page.
+* New [Celery](/celery.html) resources.
+* Added [RQ](/redis-queue-rq.html) stub page.
 * Broke out [Celery](/celery.html) into its own page and cleaned up 
   [task queue](/task-queues.html) resources.
 * Buffed up the number of [MongoDB](/mongodb.html) resources.
