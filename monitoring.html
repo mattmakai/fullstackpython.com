@@ -79,6 +79,11 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.</
 <h2>Open source monitoring projects</h2>
 <ul>
 <li>
+<p><a href="https://github.com/getsentry/sentry">Sentry</a> started life as a 
+  Python-only monitoring project but can now be used for any programming
+  language.</p>
+</li>
+<li>
 <p><a href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
   listens for metrics and aggregates them for transfer into another service
   such as Graphite.</p>
@@ -113,17 +118,19 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.</
 </li>
 </ul>
 <h2>Hosted monitoring services</h2>
+<p>Hosted monitoring software takes away the burden of deploying and operating
+the software yourself. However, hosted monitoring costs (often a significant 
+amount of) money and take your application's data out of your hands so
+these services are not the right fit for every project.</p>
 <ul>
+<li>
+<p><a href="https://sentry.io/welcome/">Sentry</a> is the hosted version of the open
+  source tool that is used to monetize and support further development.</p>
+</li>
 <li>
 <p><a href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
   well as plug ins for capturing and analyzing additional data about tools in
   your stack.</p>
-</li>
-<li>
-<p><a href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and 
-  infrastructure. It's popular with DevOps shops that are making changes to
-  their production environments and want immediate feedback on the results
-  of those modifications.</p>
 </li>
 <li>
 <p><a href="http://status.io/">Status.io</a> focuses on uptime and response metrics 
