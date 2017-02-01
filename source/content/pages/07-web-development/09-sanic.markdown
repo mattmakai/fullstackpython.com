@@ -39,3 +39,7 @@ a chance you will have to work through errors as Sanic is regularly updated.
 * [Exploring Asyncio - uvloop, sanic and motor](http://masnun.rocks/2016/11/17/exploring-asyncio-uvloop-sanic-motor/)
   explains why asyncio is important to the Python community and how
   uvloop & sanic fit into the bigger picture.
+
+* [Python Sanic Tutorial](https://www.youtube.com/watch?v=WiGsWfwh0yY) is a
+  video tutorial on how to write your first Sanic web apps.
+

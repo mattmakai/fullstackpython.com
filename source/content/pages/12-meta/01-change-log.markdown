@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### January
+* New [Sanic](/sanic.html) stub page.
 * New [Celery](/celery.html) resources.
 * Added [RQ](/redis-queue-rq.html) stub page.
 * Broke out [Celery](/celery.html) into its own page and cleaned up 
