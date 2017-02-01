@@ -3973,6 +3973,38 @@ these resources below are a good place to get started. </p>
   at EuroPython 2014.</p>
 </li>
 </ul>
+          <h1>Sanic</h1>
+<p><a href="https://github.com/channelcat/sanic">Sanic</a> is a 
+<a href="/web-frameworks.html">Python web framework</a> built on 
+<a href="https://magic.io/blog/uvloop-blazing-fast-python-networking/">uvloop</a> and 
+designed for fast HTTP responses via asynchronous request handling. </p>
+<p><a href="https://github.com/channelcat/sanic" style="border:none"><img src="/source/static/img/logos/sanic.png" width="100%" alt="Sanic web framework logo." class="technical-diagram" style="border-radius:6px"></a></p>
+<h2>What are the tradeoffs of using Sanic?</h2>
+<p>Sanic cannot be developed or deployed on Windows due to its 
+necessary <a href="https://github.com/MagicStack/uvloop">uvloop</a> dependency.</p>
+<div class="well see-also">Sanic is an implementation of the <a href="/web-frameworks.html">web framework</a> concept. Learn how these parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
+<h2>Sanic tutorials</h2>
+<p>Sanic is under very active development and is still in its infancy as a
+web framework. The following tutorials will get you started but there is
+a chance you will have to work through errors as Sanic is regularly updated.</p>
+<ul>
+<li>
+<p><a href="https://www.twilio.com/blog/2016/12/getting-started-with-sanic-the-asynchronous-uvloop-based-web-framework-for-python-3-5.html">Getting started with Sanic: the asynchronous, uvloop based web framework for Python 3.5+</a>
+  is a "Hello, World!" style post for the framework and also shows how
+  to respond to SMS text messages using <a href="/twilio.html">Twilio</a>.</p>
+</li>
+<li>
+<p><a href="https://hackernoon.com/fixing-bugs-and-handling-186k-requests-second-using-python-2e75d2f9f4f6">Fixing bugs and handling 186k requests/second using Python</a>
+  is a fun benchmarking exercise that a developer ran when testing out 
+  Sanic on a Digital Ocean droplet.</p>
+</li>
+<li>
+<p><a href="http://masnun.rocks/2016/11/17/exploring-asyncio-uvloop-sanic-motor/">Exploring Asyncio - uvloop, sanic and motor</a>
+  explains why asyncio is important to the Python community and how
+  uvloop &amp; sanic fit into the bigger picture.</p>
+</li>
+</ul>
           <h1>Other Web Frameworks</h1>
 <p>Python has a significant number of web frameworks outside the usual Django,
 Flask, Pyramid and Bottle suspects.</p>

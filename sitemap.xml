@@ -276,6 +276,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.fullstackpython.com/sanic.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/web-application-security.html</loc>
     <priority>1.0</priority>
   </url>
