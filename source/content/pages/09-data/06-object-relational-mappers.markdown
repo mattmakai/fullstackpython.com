@@ -155,7 +155,7 @@ for simple and medium-complexity database operations. However, there are often
 complaints that the ORM makes complex queries much more complicated than
 writing straight SQL or using [SQLAlchemy](http://www.sqlalchemy.org/).
 
-It's technically possible to drop down to SQL but it ties the queries to a
+It is technically possible to drop down to SQL but it ties the queries to a
 specific database implementation. The ORM is coupled closely with Django so
 replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
 though that some of the Django core committers believe it is only a matter of
@@ -255,6 +255,12 @@ For now, we'll lump schema migration resources under ORM links below.
   [Coding Horror](https://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/)
   and another one from Ted entitled 
   [thoughts on Vietnam commentary](http://blogs.tedneward.com/post/thoughts-on-vietnam-commentary/).
+
+* [Turning the Tables: How to Get Along with your Object-Relational Mapper](https://medium.com/@bradurani/turning-the-tables-how-to-get-along-with-your-object-relational-mapper-e5d2d6a76573)
+  coins the funny but insightful phrase "database denial" to describe how
+  some ORMs provide a usage model that can cause more issues than they
+  solve over straight SQL queries. The post then goes into much more detail
+  about the problems that can arise and how to mitigate or avoid them.
 
 
 ### SQLAlchemy and Peewee resources
