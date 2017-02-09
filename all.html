@@ -242,9 +242,7 @@ programming language.</p>
 Ansible or Fabric, then you'll have to stick to Python 2 because they have
 yet to upgrade to support Python 3. If you know there are libraries you must
 use in a project, check the 
-<a href="https://python3wos.appspot.com/">Python Walls of Superpowers</a>. If you're
-using Django, there is also a wall specifically for 
-<a href="http://djangowos.com/">Python 3 compatibility of popular Django packages</a>.</p>
+<a href="https://python3wos.appspot.com/">Python Walls of Superpowers</a>. </p>
 <h3>Visualizations and Projects</h3>
 <p>Since upgrading from Python 2 to 3 has been such a huge undertaking within
 the community, many projects have sprung up to make the transition easier.</p>
@@ -5801,6 +5799,18 @@ properly.</p>
   differences which will likely lead to WebSockets sticking around for
   awhile longer.</p>
 </li>
+</ul>
+          <h1>uvloop</h1>
+<p><a href="http://uvloop.readthedocs.io/">uvloop</a> is a Cython-based replacement for 
+<a href="https://docs.python.org/3/library/asyncio.html">asyncio</a>'s 
+<a href="https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-event-loop">event loop</a>. 
+uvloop performs 2-4 times faster than the default event loop and is
+required as an <a href="/application-dependencies.html">application dependency</a> by 
+some newer <a href="/web-frameworks.html">web frameworks</a> such as 
+<a href="/sanic.html">Sanic</a>. </p>
+<h3>uvloop resources</h3>
+<ul>
+<li><a href="http://uvloop.readthedocs.io/">Official project documentation</a></li>
 </ul>
           <h1>Deployment</h1>
 <p>Deployment involves packaging up your web application and putting it in a 

@@ -32,9 +32,7 @@ However, if you are interested in DevOps-type work with
 Ansible or Fabric, then you'll have to stick to Python 2 because they have
 yet to upgrade to support Python 3. If you know there are libraries you must
 use in a project, check the 
-[Python Walls of Superpowers](https://python3wos.appspot.com/). If you're
-using Django, there is also a wall specifically for 
-[Python 3 compatibility of popular Django packages](http://djangowos.com/).
+[Python Walls of Superpowers](https://python3wos.appspot.com/). 
 
 
 ### Visualizations and Projects
