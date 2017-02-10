@@ -101,9 +101,11 @@ template engines such as Jinja.
 
 
 ### Mako
-[Mako](/mako.html) is the default templating engine for the 
-[Pyramid web framework](/pyramid.html) and has wide support as a replacement
-template engine for many [other web frameworks](/other-web-frameworks.html).
+[Mako](/mako.html) was the default templating engine for the 
+Pylons web framework and is one of many template engines supported by 
+[Pyramid](/pyramid.html). Mako has wide support as a replacement
+template engine for many [other web frameworks](/other-web-frameworks.html)
+as well.
 
 
 ### Other Python template engine implementations
@@ -126,6 +128,8 @@ engines are listed alphabetically:
 * [Myghty](https://pythonhosted.org/Myghty/whatsitdo.html)
 
 * [pyratemp](https://pypi.python.org/pypi/pyratemp/0.3.2)
+
+* [pystache](https://github.com/defunkt/pystache)
 
 * [SimpleTAL](https://www.owlfish.com/software/simpleTAL/)
 

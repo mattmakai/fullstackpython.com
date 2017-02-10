@@ -18,5 +18,4 @@ some newer [web frameworks](/web-frameworks.html) such as
 
 
 ### uvloop resources
-
 * [Official project documentation](http://uvloop.readthedocs.io/)
