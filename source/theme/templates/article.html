@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block meta_header %}{% if article and article.meta %}
-    <meta name="description" content="{{ article.meta }}">
+<meta name="description" content="{{ article.meta }}">
 {% endif %}{% endblock %}
 
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
+
+{% block css %}
+<link href="/f.css" rel="stylesheet">
+{% endblock %}
 
 {% block banner %}
   {% include "banner.html" %}

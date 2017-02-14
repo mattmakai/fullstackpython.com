@@ -4,6 +4,10 @@
 <meta name="description" content="Full Stack Python explains programming concepts in plain language and provides links to the best tutorials for those topics.">
 {% endblock %}
 
+{% block css %}
+<link href="/f.css" rel="stylesheet">
+{% endblock %}
+
 {% block banner %}
 {% endblock %}
 
@@ -29,4 +33,10 @@
     </div>
     {% include "index-sidebar.html" %}
 </div>
+{% endblock %}
+
+{% block js %}
+<script type='text/javascript'>
+var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
 {% endblock %}

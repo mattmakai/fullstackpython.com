@@ -6,6 +6,10 @@
 
 {% block title %}{{ page.title }} - {% endblock %}
 
+{% block css %}
+<link href="/f.css" rel="stylesheet">
+{% endblock %}
+
 {% block banner %}
   {% include "banner.html" %}
 {% endblock %}
@@ -34,4 +38,10 @@
 
 {% block lower_banner %}
   {% include "lower-banner.html" %}
+{% endblock %}
+
+{% block js %}
+<script type='text/javascript'>
+var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
 {% endblock %}
