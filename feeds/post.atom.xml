@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2016-11-23T00:00:00-05:00</updated><entry><title>How to Make Phone Calls in Python</title><link href="https://www.fullstackpython.com/make-phone-calls-python.html" rel="alternate"></link><updated>2016-11-23T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-11-23:make-phone-calls-python.html</id><summary type="html">&lt;p&gt;Good old-fashioned phone calls remain one of the best forms of communication
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-02-15T00:00:00-05:00</updated><entry><title>Creating SSH Keys on Ubuntu Linux 16.04 LTS</title><link href="https://www.fullstackpython.com/ssh-keys-ubuntu-linux.html" rel="alternate"></link><updated>2017-02-15T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-14:ssh-keys-ubuntu-linux.html</id><summary type="html">&lt;p&gt;SSH keys are a necessity for Python development when you are working with
+&lt;a href="/git.html"&gt;Git&lt;/a&gt;, connecting to remote servers and automating your
+&lt;a href="/deployment.html"&gt;deployments&lt;/a&gt;. Let's walk through how to generate SSH
+key pairs, which contain both a public and a private key within a single 
+pair, on Ubuntu Linux.&lt;/p&gt;
+&lt;h2&gt;Generating the Public and Private Keys&lt;/h2&gt;
+&lt;p&gt;Open up a new terminal window in Ubuntu like we see in the following 
+screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170214-ssh-keys-ubuntu/new-ubuntu-terminal.jpg" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;ssh-keygen&lt;/code&gt; command provides an interactive command line interface for
+generating both the public and private keys. Invoke &lt;code&gt;ssh-keygen&lt;/code&gt; with the
+following &lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-b&lt;/code&gt; arguments to ensure we get a 4096 bit RSA key.
+Optionally, you can also specify your email address with &lt;code&gt;-C&lt;/code&gt; (otherwise 
+one will be generated off your current Linux account):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ssh-keygen -t rsa -b &lt;span class="m"&gt;4096&lt;/span&gt; -C my.email.address@company.com
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The first prompt you will see asks where to save the key. However, there are
+actually two files that will be generated: the public key and the private 
+key. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Generating public/private rsa key pair.
+Enter file in which to save the key &lt;span class="o"&gt;(&lt;/span&gt;/home/matt/.ssh/id_rsa&lt;span class="o"&gt;)&lt;/span&gt;: 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This prompt refers to the private key and whatever you enter will also
+generate a second file for the public key that has the same name and &lt;code&gt;.pub&lt;/code&gt; 
+appended.&lt;/p&gt;
+&lt;p&gt;If you already have a key, you should specify a new filename. I use many
+SSH keys so I typically name them "test-deploy", "prod-deploy", "ci-server"
+along with a unique project name. Naming is one of those hard computer 
+science problems, so take some time to come up with a system that works for
+you and the development team you work with!&lt;/p&gt;
+&lt;p&gt;Next you will see a prompt for an optional passphrase:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Enter passphrase &lt;span class="o"&gt;(&lt;/span&gt;empty &lt;span class="k"&gt;for&lt;/span&gt; no passphrase&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Whether or not you want a passphrase depends on how you will use the key.
+The system will ask you for the passphrase whenever you use the SSH key 
+(although you can 
+&lt;a href="http://manpages.ubuntu.com/manpages/zesty/man1/ssh-agent.1.html"&gt;use ssh-agent to store the passphrase&lt;/a&gt; 
+after you activate it on a system the first time) so it is more secure.
+However, if you are automating deployments with a 
+&lt;a href="/continuous-integration.html"&gt;continuous integration&lt;/a&gt; server like
+&lt;a href="/jenkins.html"&gt;Jenkins&lt;/a&gt; then you will not want a passphrase.&lt;/p&gt;
+&lt;p&gt;Be aware that it is impossible to recover a passphrase if it is lost. Keep 
+that passphrase safe and secure because otherwise a completely new key would 
+have to be generated.&lt;/p&gt;
+&lt;p&gt;Enter the passphrase (or just press enter to not have a passphrase) twice.
+You'll see some output like the following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Your identification has been saved in /home/matt/.ssh/prod_deploy.
+Your public key has been saved in /home/matt/.ssh/prod_deploy.pub.
+The key fingerprint is:
+SHA256:xoCWgk40XfM5mruZQNCVoBKXZ4d0gn09ivVENacb7xw matt@ubuntu
+The key&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;s randomart image is:
++---&lt;span class="o"&gt;[&lt;/span&gt;RSA 2048&lt;span class="o"&gt;]&lt;/span&gt;----+
+&lt;span class="p"&gt;|&lt;/span&gt;.oo*&lt;span class="o"&gt;==&lt;/span&gt;oo..o .    &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;.+*.*** &lt;span class="o"&gt;=&lt;/span&gt;  +     &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;o+.++&lt;span class="o"&gt;=&lt;/span&gt;.B .o      &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;+ .o. +oo  +     &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; . . o  S . E    &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;  .   ..   o .   &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;   . .      o    &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;    . +          &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;     +           &lt;span class="p"&gt;|&lt;/span&gt;
++----&lt;span class="o"&gt;[&lt;/span&gt;SHA256&lt;span class="o"&gt;]&lt;/span&gt;-----+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Your SSH key is now generated and ready to use!&lt;/p&gt;
+&lt;h2&gt;What now?&lt;/h2&gt;
+&lt;p&gt;Now that you have your public and private keys, I recommend setting
+up a &lt;a href="/development-environments.html"&gt;Python development environment&lt;/a&gt; with 
+one of the following tutorials so you can start coding:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html"&gt;Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/blog/install-redis-use-python-3-ubuntu-1604.html"&gt;How to Use Redis with Python 3 and redis-py on Ubuntu 16.04&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/blog/postgresql-python-3-psycopg2-ubuntu-1604.html"&gt;Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional &lt;code&gt;ssh-keygen&lt;/code&gt; command resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html"&gt;ubuntu manuals ssh-keygen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/"&gt;Generating a new SSH key and adding it to the ssh-agent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Questions? Contact me via Twitter 
+&lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
+the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Something wrong with this post? Fork 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/170214-create-ssh-keys-ubuntu.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>How to Make Phone Calls in Python</title><link href="https://www.fullstackpython.com/make-phone-calls-python.html" rel="alternate"></link><updated>2016-11-23T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-11-23:make-phone-calls-python.html</id><summary type="html">&lt;p&gt;Good old-fashioned phone calls remain one of the best forms of communication
 despite the slew of new smartphone apps that have popped up over the past
 several years. With just a few lines of Python code plus a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface&lt;/a&gt; 

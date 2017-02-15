@@ -7,6 +7,10 @@
 </url>
 
   <url>
+    <loc>https://www.fullstackpython.com/blog/ssh-keys-ubuntu-linux.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.fullstackpython.com/blog/make-phone-calls-python.html</loc>
     <priority>1.0</priority>
   </url>
