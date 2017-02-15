@@ -17,27 +17,24 @@
 
 {% block content %}
 {% if article %}
-  <div class="row">
-    <div class="col-md-9">
-      <h1 style="font-size: 36px;">{{ article.title }}</h1>
-      <div class="post-byline">
-        Posted by <a href="/about-author.html">Matt Makai</a> on 
-        {{ article.date.strftime('%B %d, %Y') }}.
-        {% if article.modified != article.date %}Last updated
-        {{ article.modified.strftime('%B %d, %Y') }}.{% endif %}
-      </div>
-      <!--<div width="100%" style="margin: 5px 0 10px 0; height: 250px; overflow: hidden; border-radius: 12px;">
-          <img src="{{ article.headerimage }}" alt="{{ article.headeralt }}" width="100%" style="height: 500px; margin: -100px 0 -100px 0;">
-      </div>-->
-      {{ article.content }}
-      <hr>
-        {% include "email-for-book.html" %}
-      {% endif %}
-    </div>
-    <div class="col-md-3">
-      {% include "article-sidebar.html" %}
-    </div>
+<div class="row">
+ <div class="col-md-9">
+  <h1 style="font-size: 36px;">{{ article.title }}</h1>
+  <div style="font-size:12px;color:#666;margin:0 0 10px">
+   Posted by <a href="/about-author.html">Matt Makai</a> on 
+   {{ article.date.strftime('%B %d, %Y') }}.
+   {% if article.modified != article.date %}Last updated
+   {{ article.modified.strftime('%B %d, %Y') }}.{% endif %}
   </div>
+  {{ article.content }}
+  <hr>
+  {% include "email-for-book.html" %}
+  {% endif %}
+ </div>
+ <div class="col-md-3">
+  {% include "article-sidebar.html" %}
+ </div>
+</div>
 {% endblock %}
 
 {% block lower_banner %}
