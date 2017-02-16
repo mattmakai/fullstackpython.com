@@ -33,3 +33,8 @@ track of tasks in the queue that need to be executed.
 * [Task Queues and Python RQ](http://blog.ashnab.com/task-queues-and-python-rq/)
   provides a good explanation for how to use RQ in a [Django](/django.html)
   project.
+
+* [rq-dashboard](https://github.com/eoranged/rq-dashboard) is an awesome
+  [Flask](/flask.html)-based dashboard for viewing queues, workers and
+  other critical information when using RQ.
+
