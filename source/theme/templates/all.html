@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 
 {% block css %}
-<link href="/f.css" rel="stylesheet">
+{% include "css/all.html" %}
 {% endblock %}
 
 {% block content %}
 <div class="row">
-    <div class="col-md-8">
-        {% for page in pages|sort(attribute='sortorder') %}
-          {{ page.content }}
-        {% endfor %}
-    </div>
-    {% include "sidebar.html" %}
+ <div class="col-md-8">
+  {% for page in pages|sort(attribute='sortorder') %}
+   {{ page.content }}
+  {% endfor %}
+ </div>
 </div>
 {% endblock %}
 

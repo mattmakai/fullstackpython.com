@@ -7,7 +7,48 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="author" content="Matt Makai">
  <title>Full Stack Python</title>
-<link href="/f.css" rel="stylesheet">
+
+<style>
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:18px;-webkit-tap-highlight-color:rgba(0,0,0,0),color:#222;background:#fefefe}
+body{margin:0;font:18px Georgia,serif;line-height:1.4;color:#222;padding:0 0}
+img{border:0;vertical-align:middle}
+hr{height:0;box-sizing:content-box;margin:21px 0 21px 0;border:0;border-top:1px solid #eee}
+h1,h2,h3,h4,h5,h6{font-family:"Helvetica Neue",sans-serif;font-weight:500;line-height:1.1;color:#000}
+h1,h2,h3{margin:32px 0 6px}
+h4,h5,h6{margin:11px 0 11px 0}
+h1{font-size:40px}
+h2{font-size:28px}
+h3{font-size:22px}
+h4,h5,h6{font-size:18px}
+p{margin:0 0 12px}
+ul,ol{margin-top:0;margin-bottom:10px}
+code,pre{font:1em Menlo,"Courier New",monospace}
+code{padding:2px 4px;font-size:90%;color:#c7254e;white-space:nowrap;background-color:#f9f2f4;border-radius:4px}
+pre{white-space:pre-wrap;display:block;padding:10px;margin:0 0 11px;font-size:10px;line-height:1.4;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
+.container{padding:0 15px 0 15px;margin-right:auto;margin-left:auto}
+.container:before,.container:after{display:table;content:" "}
+.container:after{clear:both}
+.row:before,.row:after{display:table;content:" "}
+.row:after{clear:both}
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{position:relative;min-height:1px;padding:0 15px 0 15px}
+@media (min-width:750px){.container{width:730px}}@media (min-width:768px){.container{width:750px}}@media (min-width:940px){.container{width:920px}}@media (min-width:1140px){.container{width:1120px}}.row{margin-right:-15px;margin-left:-15px}
+@media (min-width:768px){.col-md-3,.col-md-8,.col-md-12{float:left} .col-md-12{width:100%} .col-md-8{width:66.66666666666666%} .col-md-3{width:25%} .col-md-offset-1{margin-left:8.333333333333332%}}
+.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.05)}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted;color:#444}
+a:hover{text-decoration:none;color:#000}
+.logo-title a,.logo-title a:hover{font:72px "Helvetica Neue",sans-serif;font-weight:normal;letter-spacing:.03em;vertical-align:middle;margin-left:5px;color:#000;text-decoration:none;border-bottom:none;line-height:.9em}
+.logo-title a:hover{color:#808080}
+.logo-image{vertical-align:middle;border:none;height:52px;width:52px;padding:1px}
+.logo-header-section{margin:20px 0 15px 0}
+#sidebar{margin-top:30px}
+h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
+@media (max-width:1200px){h3.panel-head{font-size:22px}}@media (max-width:720px){.logo-header-section{margin:20px 40px 0 0}}
+.see-also{margin-top:20px;background:#22B24C;color:#eee;font-family:"Helvetica Neue",sans-serif}
+.see-also a{color: #fff}
+@media (max-width:767px){ .logo-header-section{padding:8px 0 10px; margin:0} .logo-title a,.logo-title a:hover{font-size:34px} h1{font-size:28px} h2{font-size:24px} .logo-image{height:26px;width:26px} pre{font-size:50%}}
+.sans-font{font-family:"Helvetica Neue",sans-serif}
+</style>
  <link rel="shortcut icon" href="/img/fsp-fav.png">
 </head>
 <body>
@@ -32,8 +73,8 @@
  <a href="https://github.com/mattmakai/fullstackpython.com">Source</a> 
 </div> </div>
 </div><div class="row">
-    <div class="col-md-8">
-          <h1>Introduction</h1>
+ <div class="col-md-8">
+   <h1>Introduction</h1>
 <p>You're knee deep in learning the <a href="http://www.python.org/">Python</a>
 programming language. The syntax is starting to make sense. The first
 few "<em>ahh-ha</em>!" moments hit you as you learning conditional
@@ -45,7 +86,7 @@ sell as a service to other people. That's where Full Stack Python comes in.
 You've come to the right place to learn everything you need to 
 <a href="/web-development.html">create</a>, <a href="/deployment.html">deploy</a> 
 and <a href="/devops.html">operate</a> production Python web applications.</p>
-          <h1>Learning Programming</h1>
+   <h1>Learning Programming</h1>
 <p>Learning to program is about understanding how to translate thoughts into 
 source code that can be executed on computers to achieve one or more goals.</p>
 <p>There are many steps in learning how to program, including</p>
@@ -103,7 +144,7 @@ Programming languages, and the ecosystems around them, are human-made
 constructs. Find one that appears to match your personal style and give it a
 try, knowing that whatever you choose you'll need to put in many long days and
 nights to really get comfortable as a software developer.</p>
-          <h1>Why Use Python?</h1>
+   <h1>Why Use Python?</h1>
 <p>Python's expansive library of open source data analysis tools, 
 <a href="/web-frameworks.html">web frameworks</a>, 
 and testing instruments make its ecosystem one of the largest out of any 
@@ -218,7 +259,7 @@ displays <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</
   programming languages such as Java, Ruby and JavaScript.</p>
 </li>
 </ul>
-          <h1>Python 2 or 3?</h1>
+   <h1>Python 2 or 3?</h1>
 <p>The Python programming language is currently in the midst of a long-term
 transition from version 2 to version 3. New programmers typically have many
 questions about which version they should learn. It is confusing to hear
@@ -365,7 +406,7 @@ gone through the process and have advice for making it less painful.</p>
   developers to keep your explanation simple: Python 3 is where to begin.</p>
 </li>
 </ul>
-          <h1>Enterprise Python</h1>
+   <h1>Enterprise Python</h1>
 <p>One of the misconceptions around Python and other dynamically-typed languages 
 is that they cannot be reliably used to build enterprise-grade software. 
 However, almost all commercial and government enterprises already use 
@@ -487,7 +528,7 @@ continue delivering business value to their business side customers.</p>
   .NET in enterprise environments.</p>
 </li>
 </ul>
-          <h1>Python Community</h1>
+   <h1>Python Community</h1>
 <p>The Python programming language has a global community with millions of 
 software developers who interact online and offline in thousands of virtual 
 and physical locations.</p>
@@ -524,7 +565,7 @@ growth of a diverse and international community of Python programmers."</p>
   and #distutils.</p>
 </li>
 </ul>
-          <h1>Best Python Resources</h1>
+   <h1>Best Python Resources</h1>
 <p>The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. </p>
@@ -743,7 +784,7 @@ development podcasts.</p>
   month will provide WSGI server configurations.</p>
 </li>
 </ul>
-          <h1>Best Python Videos</h1>
+   <h1>Best Python Videos</h1>
 <p>If you prefer to learn Python programming by watching videos then this is the
 resource for you. I've watched hundreds of live technical talks and combed
 through videos to pick out the ones with great speakers who'll teach you the
@@ -876,7 +917,7 @@ questions about your coding issues.</p>
   engage an audience of peers with an exciting talk.</p>
 </li>
 </ul>
-          <h1>Best Python Podcasts</h1>
+   <h1>Best Python Podcasts</h1>
 <p>The <a href="/python-community.html">Python community</a> produces an incredible wealth 
 of free and low cost resources for both new and experienced software 
 developers. These great resources include several Python podcasts that are 
@@ -952,7 +993,7 @@ podcast presentation.</p>
   listening to Ben Thompson and James Allworth go deep on a weekly topic.</p>
 </li>
 </ul>
-          <h1>Development Environments</h1>
+   <h1>Development Environments</h1>
 <p>A development environment is a combination of a text editor and the Python
 interpreter. The text editor allows you to write the code. The interpreter
 provides a way to execute the code you've written. A text editor can be
@@ -1128,7 +1169,7 @@ configuration as a starting point and customize it from there.</p>
   not.</p>
 </li>
 </ul>
-          <h1>Vim</h1>
+   <h1>Vim</h1>
 <p>Vim, short for Vi IMproved, is a configurable text editor often used as
 a Python development environment. Vim proponents commonly cite the numerous
 plugins, Vimscript and logical command language as major Vim strengths.</p>
@@ -1373,7 +1414,7 @@ ready to take that step.</p>
   plugin for Vim that works with both Python 2 and 3.</p>
 </li>
 </ul>
-          <h1>Emacs</h1>
+   <h1>Emacs</h1>
 <p>Emacs is an extensible text editor that can be customized by writing Lisp
 code.</p>
 <h2>Why is Emacs a good choice for Python coding?</h2>
@@ -1466,7 +1507,7 @@ into that hook to perform necessary actions before the exiting completes.</p>
   extensibility and Vim's ergonomic text editing features.</p>
 </li>
 </ul>
-          <h1>Source control</h1>
+   <h1>Source control</h1>
 <p>Source control, also known as <em>version control</em>, stores software code files
 with a detailed history of every modification made to those files.</p>
 <h2>Why is source control necessary?</h2>
@@ -1630,7 +1671,7 @@ sorted by categories such as solving tactical issues and Git workflows.</p>
    version if a code deployment goes wrong.</p>
 </li>
 </ol>
-          <h1>Git</h1>
+   <h1>Git</h1>
 <p><a href="https://git-scm.com/">Git</a> is a distributed open source 
 <a href="/source-control.html">source control</a> (also referred to as "version 
 control") system commonly used to track and manage file changes. Git is 
@@ -1755,7 +1796,7 @@ minimize merge conflicts.</p>
   and merging source code.</p>
 </li>
 </ul>
-          <h1>Application Dependencies</h1>
+   <h1>Application Dependencies</h1>
 <p>Application dependencies are the libraries other than your project code
 that are required to create and run your application. </p>
 <h2>Why are application dependencies important?</h2>
@@ -1948,7 +1989,7 @@ further clarification.</p>
    only the installed dependencies from the <code>requirements.txt</code> file.</p>
 </li>
 </ol>
-          <h1>Python Programming Language</h1>
+   <h1>Python Programming Language</h1>
 <p>The Python programming language is an 
 <a href="https://www.python.org/downloads/source/">open source</a>, 
 <a href="/why-use-python.html">widely-used</a> tool for 
@@ -2048,7 +2089,7 @@ the very beginner topics.</p>
   it to see what we can learn about how Python itself is built.</p>
 </li>
 </ul>
-          <h1>Generators</h1>
+   <h1>Generators</h1>
 <p>Generators are a Python core language construct that allow a function's return
 value to behave as an iterator. A generator can allow more efficient 
 memory usage by allocating and deallocating memory during the context of a 
@@ -2093,7 +2134,7 @@ language as of Python 2.2 in 2001.</p>
   generators.</p>
 </li>
 </ul>
-          <h1>Comprehensions</h1>
+   <h1>Comprehensions</h1>
 <p>Comprehensions are a Python language construct for concisely creating data
 in lists, dictionaries and sets. List comprehensions are included in Python 2
 while dictionary and set comprehensions were introduced to the language in
@@ -2169,7 +2210,7 @@ readers to properly evaluate.</p>
   list comprehensions.</p>
 </li>
 </ul>
-          <h1>Testing</h1>
+   <h1>Testing</h1>
 <p>Testing determines whether software runs correctly based on specific inputs 
 and identifies defects that need to be fixed.</p>
 <h2>Why is testing important?</h2>
@@ -2236,7 +2277,7 @@ correctness.</p>
   over standard unittest testing.</p>
 </li>
 </ul>
-          <h1>Unit testing</h1>
+   <h1>Unit testing</h1>
 <p>Unit testing is a method of determining the correctness of a single function 
 isolated from a larger codebase. The idea is that if all the atomic units
 of an application work as intended in isolation, then integrating them 
@@ -2328,7 +2369,7 @@ by writing the test cases to exercise multiple parts of code at once.</p>
   how to use nose with your projects.</p>
 </li>
 </ul>
-          <h1>Integration Testing</h1>
+   <h1>Integration Testing</h1>
 <p>Integration testing exercises two or more parts of an application at once, 
 including the interactions between the parts, to determine if they function
 as intended. This type of <a href="/testing.html">testing</a> identifies defects in 
@@ -2366,7 +2407,7 @@ during development so they can be addressed immediately.</p>
   testing.</p>
 </li>
 </ul>
-          <h1>Code Metrics</h1>
+   <h1>Code Metrics</h1>
 <p>Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.</p>
 <h2>Why are code metrics important?</h2>
@@ -2424,7 +2465,7 @@ system are occurring.</p>
   well as some other approaches.</p>
 </li>
 </ul>
-          <h1>Debugging</h1>
+   <h1>Debugging</h1>
 <p>Developers often find themselves in situations where the code they've written
 is not working quite right. When that happens, a developer debugs their code
 by instrumenting, executing and inspecting the code to determine what state
@@ -2457,7 +2498,7 @@ work as correctly as time and budget allow.</p>
   elaborates on what pdb does and how it can be used.</p>
 </li>
 </ul>
-          <h1>Logging</h1>
+   <h1>Logging</h1>
 <p>Logging saves output such as errors, warnings and event information to 
 persistent storage for debugging purposes. </p>
 <h2>Why is logging important?</h2>
@@ -2605,7 +2646,7 @@ certain threshold.</p>
    functions when they are above a certain threshold. </p>
 </li>
 </ol>
-          <h1>Markdown</h1>
+   <h1>Markdown</h1>
 <p>Markdown is a common markup language frequently used by developers to write 
 Python project documention.</p>
 <p><img src="/source/static/img/logos/markdown.png" width="100%" alt="Unofficial Markdown logo." class="technical-diagram"></a></p>
@@ -2634,7 +2675,7 @@ other formats such as HTML and JSON.</p>
   to give insight into the advantages and disadvantages of each one.</p>
 </li>
 </ul>
-          <h1>Web Application Security</h1>
+   <h1>Web Application Security</h1>
 <p>Website security must be thought about while building every level of the web 
 stack. However, this section includes topics that deserve particular
 treatment, such as cross-site scripting (XSS), SQL injection, cross-site 
@@ -2830,7 +2871,7 @@ securing Linux distributions.</p>
    Reevaluate your web application security on a frequent basis.</p>
 </li>
 </ol>
-          <h1>Web Development</h1>
+   <h1>Web Development</h1>
 <p>Web development is the umbrella term for conceptualizing, creating, 
 <a href="/deployment.html">deploying</a> and operating web applications and 
 <a href="/application-programming-interfaces.html">application programming interfaces</a>
@@ -2890,7 +2931,7 @@ the client and run by the web browser.</p>
   is important for keeping your users happy.</p>
 </li>
 </ul>
-          <h1>Web frameworks</h1>
+   <h1>Web frameworks</h1>
 <p>A web framework is a code library that makes a developer's life easier when 
 building reliable, scalable and maintainable web applications.</p>
 <h2>Why are web frameworks useful?</h2>
@@ -3042,7 +3083,7 @@ but it'll make most developers' lives easier in many cases.</p>
    web.</p>
 </li>
 </ol>
-          <h1>Django</h1>
+   <h1>Django</h1>
 <p><a href="http://www.djangoproject.com/">Django</a> is a widely-used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building
@@ -3423,7 +3464,7 @@ developing web applications.</p>
    project on the web.</p>
 </li>
 </ol>
-          <h1>Flask</h1>
+   <h1>Flask</h1>
 <p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
 <a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. </p>
 <p><a href="http://flask.pocoo.org/" style="border: none;"><img src="/img/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a></p>
@@ -3715,7 +3756,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
    Flask project on the web.</p>
 </li>
 </ol>
-          <h1>Bottle</h1>
+   <h1>Bottle</h1>
 <p><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> 
 (<a href="https://github.com/bottlepy/bottle">source code</a>) is a 
 <a href="/wsgi-servers.html">WSGI-compliant</a>
@@ -3859,7 +3900,7 @@ steps to more easily get your web application up and running. </p>
    Bottle application on the web.</p>
 </li>
 </ol>
-          <h1>Pyramid</h1>
+   <h1>Pyramid</h1>
 <p><a href="http://www.pylonsproject.org/projects/pyramid/about">Pyramid</a> is an open 
 source <a href="/wsgi-servers.html">WSGI</a> web framework based on the 
 Model-View-Controller (MVC) architectural pattern.</p>
@@ -3910,7 +3951,7 @@ Model-View-Controller (MVC) architectural pattern.</p>
   modern frameworks.</p>
 </li>
 </ul>
-          <h1>Morepath</h1>
+   <h1>Morepath</h1>
 <p><a href="http://morepath.readthedocs.org/en/latest/">Morepath</a> is a micro web 
 framework with a model-driven approach to creating web applications and web
 APIs.</p>
@@ -3969,7 +4010,7 @@ these resources below are a good place to get started. </p>
   at EuroPython 2014.</p>
 </li>
 </ul>
-          <h1>Sanic</h1>
+   <h1>Sanic</h1>
 <p><a href="https://github.com/channelcat/sanic">Sanic</a> is a 
 <a href="/web-frameworks.html">Python web framework</a> built on 
 <a href="https://magic.io/blog/uvloop-blazing-fast-python-networking/">uvloop</a> and 
@@ -4005,7 +4046,7 @@ a chance you will have to work through errors as Sanic is regularly updated.</p>
   video tutorial on how to write your first Sanic web apps.</p>
 </li>
 </ul>
-          <h1>Other Web Frameworks</h1>
+   <h1>Other Web Frameworks</h1>
 <p>Python has a significant number of web frameworks outside the usual Django,
 Flask, Pyramid and Bottle suspects.</p>
 <h2>TurboGears</h2>
@@ -4076,7 +4117,7 @@ the more common SQLAlchemy ORM.</p>
    those two frameworks then expand your knowledge from there.</p>
 </li>
 </ol>
-          <h1>Template Engines</h1>
+   <h1>Template Engines</h1>
 <p>Template engines take in tokenized strings and produce rendered strings with
 values in place of the tokens as output. Templates are typically used as
 an intermediate format written by developers to programmatically 
@@ -4263,7 +4304,7 @@ when that's necessary for your projects.</p>
   template engines can be used to perform.</p>
 </li>
 </ul>
-          <h1>Jinja2</h1>
+   <h1>Jinja2</h1>
 <p>Jinja, also commonly referred to as 
 "<a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a>" to specify the newest 
 release version, is a Python <a href="/template-engines.html">template engine</a> 
@@ -4344,7 +4385,7 @@ open source project author from having to reinvent a new templating style.</p>
   need the <a href="http://stackoverflow.com/questions/25359898/escape-jinja2-syntax-in-a-jinja2-template">"raw" template tag</a>.</p>
 </li>
 </ul>
-          <h1>Mako</h1>
+   <h1>Mako</h1>
 <p>Mako is a <a href="/template-engines.html">template engine built in Python</a> that is
 used to generate output HTML, XML and similar formats.</p>
 <p><a href="http://www.makotemplates.org/" style="border: none;"><img src="/source/static/img/logos/mako.jpg" width="100%" alt="Mako template engine logo." style="border-radius: 5px;" width="100%" class="technical-diagram"></a></p>
@@ -4385,7 +4426,7 @@ used to generate output HTML, XML and similar formats.</p>
    HTTP request-response cycle.</p>
 </li>
 </ul>
-          <h1>Django Templates</h1>
+   <h1>Django Templates</h1>
 <p>The <a href="/django.html">Django web framework</a> contains its own 
 <a href="/template-engines.html">template engine</a> for generating HTML, XML and other
 output formats.</p>
@@ -4399,7 +4440,7 @@ configuration so the web app can be run by a <a href="/wsgi-servers.html">WSGI s
 within a project and are written by the developer to generate output, most
 commonly HTML.</p>
 <div class="well see-also">Django templates are an implementation of the <a href="/template-engines.html">template engines</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
-          <h1>Web Design</h1>
+   <h1>Web Design</h1>
 <p>Web design is the creation of a web application's style and user interaction
 using CSS and JavaScript.</p>
 <h2>Why is web design important?</h2>
@@ -4455,7 +4496,7 @@ width.</p>
   that will show you how to build a simple rendering engine.</p>
 </li>
 </ul>
-          <h1>Cascading Style Sheets (CSS)</h1>
+   <h1>Cascading Style Sheets (CSS)</h1>
 <p>Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.</p>
 <h2>Why is CSS necessary?</h2>
@@ -4609,7 +4650,7 @@ web application's design.</p>
    have something that looks much better than generic HTML.</p>
 </li>
 </ol>
-          <h1>JavaScript</h1>
+   <h1>JavaScript</h1>
 <p>JavaScript is a scripting programming language interpretted by web 
 browsers that enables dynamic content and interactions in web applications. </p>
 <h2>Why is JavaScript necessary?</h2>
@@ -4713,7 +4754,7 @@ which is defined by the
    JavaScript files.</p>
 </li>
 </ol>
-          <h1>Task queues</h1>
+   <h1>Task queues</h1>
 <p>Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.</p>
 <h2>Why are task queues necessary?</h2>
@@ -4933,7 +4974,7 @@ when scaling out a large deployment of distributed task queues.</p>
    slow running code it originally relied upon.</p>
 </li>
 </ol>
-          <h1>Celery</h1>
+   <h1>Celery</h1>
 <p><a href="http://www.celeryproject.org/">Celery</a> is a <a href="/task-queues.html">task queue</a> 
 implementation for <a href="/web-development.html">Python web applications</a> used
 to asynchronously execute work outside the HTTP request-response cycle.</p>
@@ -5064,7 +5105,7 @@ then dive into these specific Celery tutorials.</p>
   task timeouts for Celery.</p>
 </li>
 </ul>
-          <h1>Redis Queue (RQ)</h1>
+   <h1>Redis Queue (RQ)</h1>
 <p><a href="http://python-rq.org/">Redis Queue (RQ)</a> is a Python
 <a href="/task-queues.html">task queue</a> implementation that uses Redis to keep
 track of tasks in the queue that need to be executed.</p>
@@ -5099,7 +5140,7 @@ track of tasks in the queue that need to be executed.</p>
   other critical information when using RQ.</p>
 </li>
 </ul>
-          <h1>Microservices</h1>
+   <h1>Microservices</h1>
 <p>Microservices are an application architecture style where independent,
 self-contained programs with a single purpose each can communicate with
 each other over a network. Typically, these microservices are able to be
@@ -5186,7 +5227,7 @@ ease further development and deployment. This approach is called the
   inherent in distributed systems.</p>
 </li>
 </ul>
-          <h1>Static Site Generator</h1>
+   <h1>Static Site Generator</h1>
 <p>A static website generator combines a markup language, such as Markdown 
 or reStructuredText, with a templating engine such as 
 <a href="http://jinja.pocoo.org/">Jinja</a>, to produce HTML 
@@ -5406,7 +5447,7 @@ deployment.</p>
   downside.</p>
 </li>
 </ul>
-          <h1>Pelican</h1>
+   <h1>Pelican</h1>
 <p><a href="http://docs.getpelican.com/en/3.6.3/">Pelican</a> is a 
 <a href="/static-site-generator.html">static site generator</a> implemented in Python 
 that combines <a href="/jinja2.html">Jinja</a> templates with content written in 
@@ -5453,7 +5494,7 @@ server during the response.</p>
   and deploy your first static site.</p>
 </li>
 </ul>
-          <h1>Lektor</h1>
+   <h1>Lektor</h1>
 <p><a href="https://www.getlektor.com/">Lektor</a> is a static website generator with 
 content management system (CMS) and <a href="/web-frameworks.html">web framework</a> 
 features for creating websites. </p>
@@ -5515,7 +5556,7 @@ painless.</p>
   from deploying on GitHub Pages to surge.sh and finally over to Netlify.</p>
 </li>
 </ul>
-          <h1>MkDocs</h1>
+   <h1>MkDocs</h1>
 <p><a href="http://www.mkdocs.org/">MkDocs</a> is a Python-based static site generator 
 that combines Markdown content with <a href="/jinja2.html">Jinja2 templates</a> to 
 produce websites. MkDocs can be pronounced "McDocs" or "M-K Docs",
@@ -5562,7 +5603,7 @@ generator.</p>
   theming.</p>
 </li>
 </ul>
-          <h1>WebSockets</h1>
+   <h1>WebSockets</h1>
 <p>A WebSocket is a <a href="http://tools.ietf.org/html/rfc6455">standard protocol</a> for 
 two-way data transfer between a client and server. The WebSockets protocol 
 does not run over HTTP, instead it is a separate implementation on top of 
@@ -5808,7 +5849,7 @@ properly.</p>
   awhile longer.</p>
 </li>
 </ul>
-          <h1>uvloop</h1>
+   <h1>uvloop</h1>
 <p><a href="http://uvloop.readthedocs.io/">uvloop</a> is a Cython-based replacement for 
 <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a>'s 
 <a href="https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-event-loop">event loop</a>. 
@@ -5820,7 +5861,7 @@ some newer <a href="/web-frameworks.html">web frameworks</a> such as
 <ul>
 <li><a href="http://uvloop.readthedocs.io/">Official project documentation</a></li>
 </ul>
-          <h1>Deployment</h1>
+   <h1>Deployment</h1>
 <p>Deployment involves packaging up your web application and putting it in a 
 production environment that can run the app.</p>
 <h2>Why is deployment necessary?</h2>
@@ -5936,7 +5977,7 @@ guide as they are considered advanced deployment techniques.</p>
    Python web application.</p>
 </li>
 </ol>
-          <h1>Servers</h1>
+   <h1>Servers</h1>
 <p>Servers are the physical infrastructure to run all the layers of software
 so your web application can respond to requests from clients such as web 
 browsers.</p>
@@ -6072,7 +6113,7 @@ Python library for working with Amazon Web Services.</p>
    how to load Ubuntu 14.04 LTS as a base OS for Python web applications.</p>
 </li>
 </ol>
-          <h1>Static content</h1>
+   <h1>Static content</h1>
 <p>Some content on a website does not change and therefore should be served
 up either directly through the web server or a content delivery network (CDN).
 Examples include JavaScript, image, and CSS files.</p>
@@ -6150,7 +6191,7 @@ Amazon S3 and other content delivery networks.</p>
    parallel to www HTTP requests.</p>
 </li>
 </ol>
-          <h1>Platform-as-a-service</h1>
+   <h1>Platform-as-a-service</h1>
 <p>A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
 a PaaS removes the need to know as much about the underlying servers, 
@@ -6322,7 +6363,7 @@ application framework and your app itself is up to date and secured. See the
 <p>Check if the application's functionality is working and tweak as necessary.</p>
 </li>
 </ol>
-          <h1>Operating Systems</h1>
+   <h1>Operating Systems</h1>
 <p>An operating system runs on the server or virtual server and controls access 
 to computing resources. The operating system also includes a way to install
 programs necessary for running your Python web application.</p>
@@ -6461,7 +6502,7 @@ provides a command-line interface for interacting with the RPM system.</p>
    next step in the deployment process.</p>
 </li>
 </ol>
-          <h1>Ubuntu</h1>
+   <h1>Ubuntu</h1>
 <p><a href="https://www.ubuntu.com/">Ubuntu</a> is a Debian Linux-based 
 <a href="/operating-systems.html">operating system</a> distribution often used for 
 <a href="/learning-programming.html">Python development</a> and 
@@ -6530,7 +6571,7 @@ repository system packages.</p>
   file integrity on Ubuntu 14.04 LTS.</p>
 </li>
 </ul>
-          <h1>Web servers</h1>
+   <h1>Web servers</h1>
 <p>Web servers respond to 
 <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol</a> (HTTP)
 requests from clients and send back a response containing a status code and
@@ -6647,7 +6688,7 @@ is provided by W3C.</p>
    configure the web server as a pass through for dynamic content.</p>
 </li>
 </ol>
-          <h1>Apache HTTP Server</h1>
+   <h1>Apache HTTP Server</h1>
 <p>The <a href="https://httpd.apache.org/">Apache HTTP Server</a> is a widely deployed web server
 that can be used in combination with a WSGI module, such as mod_wsgi or a
 stand-alone <a href="/wsgi-servers.html">WSGI server</a> to run Python web applications.</p>
@@ -6693,7 +6734,7 @@ development attention.</p>
   need to reference this material.</p>
 </li>
 </ul>
-          <h1>Nginx</h1>
+   <h1>Nginx</h1>
 <p><a href="https://nginx.org/en/">Nginx</a>, pronounced "engine-X", is the 
 <a href="http://w3techs.com/technologies/cross/web_server/ranking">second most common web server among the top 100,000 websites</a>. Nginx also functions well as a 
 reverse proxy to handle requests and pass back responses for Python 
@@ -6836,7 +6877,7 @@ several years.</p>
   could be used for such as advanced debugging. </p>
 </li>
 </ul>
-          <h1>Caddy</h1>
+   <h1>Caddy</h1>
 <p><a href="https://caddyserver.com/">Caddy</a> is a relatively new HTTP server created 
 in 2015 and written in <a href="https://golang.org/">Go</a>. The server's philosophy
 and design emphasize HTTPS-everywhere along with the HTTP/2 protocol.</p>
@@ -6875,7 +6916,7 @@ the <a href="https://caddyserver.com/docs/proxy">proxy directive</a>.</p>
   development.</p>
 </li>
 </ul>
-          <h1>WSGI Servers</h1>
+   <h1>WSGI Servers</h1>
 <p>A <a href="http://wsgi.readthedocs.org/en/latest/">Web Server Gateway Interface</a>
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. </p>
@@ -7100,7 +7141,7 @@ The following are WSGI servers based on community recommendations.</p>
    through for requests to and responses from the WSGI server.</p>
 </li>
 </ol>
-          <h1>Green Unicorn (Gunicorn)</h1>
+   <h1>Green Unicorn (Gunicorn)</h1>
 <p><a href="http://gunicorn.org/">Green Unicorn</a>, commonly shortened to "Gunicorn", 
 is a <a href="/wsgi-servers.html">Web Server Gateway Interface (WSGI) server</a>
 implementation that is commonly used to run Python web applications.</p>
@@ -7221,7 +7262,7 @@ perform the request handling. Each worker is independent of the controller.</p>
   virtualenv and what to watch out for while you're doing the deployment.</p>
 </li>
 </ul>
-          <h1>Continuous Integration</h1>
+   <h1>Continuous Integration</h1>
 <p>Continuous integration automates the building, testing and deploying of 
 applications. Software projects, whether created by a single individual or 
 entire teams, typically use continuous integration as a hub to ensure 
@@ -7378,7 +7419,7 @@ programming language agnostic. Learn more via the following resources or on
   your environment to be vulnerable to malicious actors.</p>
 </li>
 </ul>
-          <h1>Jenkins</h1>
+   <h1>Jenkins</h1>
 <p><a href="https://jenkins.io/">Jenkins</a> is a 
 <a href="/continuous-integration.html">continuous integration</a> (CI) server often 
 used to automate building, <a href="/testing.html">testing</a> and 
@@ -7434,7 +7475,7 @@ used to automate building, <a href="/testing.html">testing</a> and
   cron jobs, data analytics pipelines and long-running scripts.</p>
 </li>
 </ul>
-          <h1>Configuration Management</h1>
+   <h1>Configuration Management</h1>
 <p>Configuration management involves modifying servers from an existing state to 
 a desired state and automating how an application is deployed.</p>
 <h2>Configuration management tools</h2>
@@ -7561,7 +7602,7 @@ from PyCon UK 2013</p>
 <p>Hook the automated deployment tool into your existing deployment process.</p>
 </li>
 </ol>
-          <h1>Docker</h1>
+   <h1>Docker</h1>
 <p>Docker is an <a href="https://github.com/docker/docker">open source</a> 
 infrastructure management platform for running and deploying software. The
 Docker platform is constantly evolving so an exact definition is currently
@@ -7713,7 +7754,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.</
   and how system packages can generally be a safer route to go.</p>
 </li>
 </ul>
-          <h1>Data</h1>
+   <h1>Data</h1>
 <p>Data is an incredibly broad topic but it can be broken down into many
 subsections, including (in no particular order):</p>
 <ul>
@@ -7790,7 +7831,7 @@ created the incredible mix of data code libraries available today.</p>
   as a leader and member in that community.</p>
 </li>
 </ul>
-          <h1>Databases</h1>
+   <h1>Databases</h1>
 <p>A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. </p>
 <h2>Why are databases necessary?</h2>
@@ -7978,7 +8019,7 @@ provider.</p>
    from your web application.</p>
 </li>
 </ol>
-          <h1>PostgreSQL</h1>
+   <h1>PostgreSQL</h1>
 <p><a href="http://www.postgresql.org/">PostgreSQL</a>, often written as "Postgres" and 
 pronounced "Poss-gres", is an open source
 <a href="/databases.html">relational database</a> implementation frequently used by 
@@ -8266,7 +8307,7 @@ have to handle these issues in your applications.</p>
   than "C".</p>
 </li>
 </ul>
-          <h1>MySQL</h1>
+   <h1>MySQL</h1>
 <p>MySQL is an open source <a href="/databases.html">relational database</a> 
 implementation for storing and retrieving data.</p>
 <p><img src="/img/mysql.png" width="100%" alt="MySQL logo." class="technical-diagram" /></p>
@@ -8412,7 +8453,7 @@ developers learn PostgreSQL if they do not already know MySQL.</p>
   database along with the purpose for why those metrics are important.</p>
 </li>
 </ul>
-          <h1>SQLite</h1>
+   <h1>SQLite</h1>
 <p>SQLite is an open source relational database included with the Python standard
 library as of Python 2.5. The pysqlite database driver is also included with
 the standard library so that no further external dependencies are required to
@@ -8476,7 +8517,7 @@ access a SQLite database from within Python applications.</p>
   since fixed) while the author was researching the SQLite source code.</p>
 </li>
 </ul>
-          <h1>Object-relational mappers (ORMs)</h1>
+   <h1>Object-relational mappers (ORMs)</h1>
 <p>An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.</p>
@@ -8823,7 +8864,7 @@ pages.</p>
   <a href="http://www.ianbicking.org/docs/sqlobject-presentation/sqlobject-and-database-programming.html">SQLObject and Database Programming in Python</a>.</p>
 </li>
 </ul>
-          <h1>SQLAlchemy</h1>
+   <h1>SQLAlchemy</h1>
 <p><a href="http://www.sqlalchemy.org/">SQLAlchemy</a> 
 (<a href="https://github.com/zzzeek/sqlalchemy">source code</a>) is a well-regarded 
 database toolkit and 
@@ -9016,7 +9057,7 @@ implementations.</p>
   based on various developers' experiences.</p>
 </li>
 </ul>
-          <h1>Peewee</h1>
+   <h1>Peewee</h1>
 <p><a href="http://docs.peewee-orm.com/en/latest/">Peewee</a> 
 (<a href="https://github.com/coleifer/peewee">source code</a>) is a 
 <a href="/object-relational-mappers-orms.html">object-relational mapper (ORM)</a> 
@@ -9128,7 +9169,7 @@ Python applications.</p>
   ORMs.</p>
 </li>
 </ul>
-          <h1>NoSQL Data Stores</h1>
+   <h1>NoSQL Data Stores</h1>
 <p>Relational databases store the vast majority of web application
 persistent data. However, there are several alternative classifications of
 storage representations.</p>
@@ -9370,7 +9411,7 @@ representing a person could have a property of "female" or "male".</p>
    document-oriented data store such as MongoDB.</p>
 </li>
 </ol>
-          <h1>Redis</h1>
+   <h1>Redis</h1>
 <p><a href="https://redis.io/">Redis</a> is an in-memory key-value pair 
 database typically classified as a <a href="/no-sql-datastore.html">NoSQL database</a>. 
 Redis is commonly used for <a href="/caching.html">caching</a>, transient data storage
@@ -9482,7 +9523,7 @@ get started in those areas.</p>
   applications by modifying your <code>redis.conf</code> settings.</p>
 </li>
 </ul>
-          <h1>MongoDB</h1>
+   <h1>MongoDB</h1>
 <p><a href="https://github.com/mongodb/mongo">MongoDB</a> is a document-oriented 
 <a href="/no-sql-datastore.html">NoSQL database</a> that is often used for
 storing, querying and analyzing persistence data in Python applications.</p>
@@ -9580,7 +9621,7 @@ configure and start using MongoDB with Python.</p>
   MongoDB Python driver maintainer.</p>
 </li>
 </ul>
-          <h1>Apache Cassandra</h1>
+   <h1>Apache Cassandra</h1>
 <p><a href="http://cassandra.apache.org/">Apache Cassandra</a> is a column-family NoSQL 
 data store occasionally used for persisting data in 
 <a href="/web-development.html">Python web applications</a> and 
@@ -9610,7 +9651,7 @@ data store occasionally used for persisting data in
   relevant for newer Django versions as well.</p>
 </li>
 </ul>
-          <h1>Application Programming Interfaces</h1>
+   <h1>Application Programming Interfaces</h1>
 <p>Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.</p>
 <h2>Why are APIs important?</h2>
@@ -9707,7 +9748,7 @@ on the number's page on Twilio as shown below.</p>
    you want to share.</p>
 </li>
 </ol>
-          <h1>Bots</h1>
+   <h1>Bots</h1>
 <p>Bots are software programs that combine requests, which are typically 
 provided as text, with contextual data, such as geolocation and payment 
 information, to appropriately handle the request and respond. Bots are
@@ -9781,7 +9822,7 @@ often also called "chatbots", "assistants" or "agents."</p>
   There's a lot of good information in this post to unpack.</p>
 </li>
 </ul>
-          <h1>API Creation</h1>
+   <h1>API Creation</h1>
 <p>Creating and exposing APIs allows your web application to interact with other
 applications through machine-to-machine communication.</p>
 <h2>API creation frameworks</h2>
@@ -10062,7 +10103,7 @@ equivalent of browser testing in the web application world.</p>
    initial API use case.</p>
 </li>
 </ol>
-          <h1>API Integration</h1>
+   <h1>API Integration</h1>
 <p>The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 
@@ -10177,7 +10218,7 @@ across many implementation areas.</p>
    block the HTTP request-response cycle for your web application.</p>
 </li>
 </ol>
-          <h1>Twilio</h1>
+   <h1>Twilio</h1>
 <p><a href="https://www.twilio.com/docs/quickstart/python/twiml">Twilio</a> is a 
 <a href="/application-programming-interfaces.html">web application programming interface (API)</a>
 that software developers can use to add communications such as 
@@ -10265,7 +10306,7 @@ for fellow developers.</p>
 <h4>Disclaimer</h4>
 <p>I <a href="/about-author.html">currently work at Twilio</a> as a 
 <a href="https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html">Developer Evangelist</a>.</p>
-          <h1>DevOps</h1>
+   <h1>DevOps</h1>
 <p>DevOps is the combination of application development and operations, which
 minimizes or eliminates the disconnect between software developers who build 
 applications and systems administrators who keep infrastructure running.</p>
@@ -10328,7 +10369,7 @@ automate the delivery from development to production. </p>
   hot new topic after adopting an Agile development methodology.</p>
 </li>
 </ul>
-          <h1>Monitoring</h1>
+   <h1>Monitoring</h1>
 <p>Monitoring tools capture, analyze and display information for a web 
 application's execution. Every application has issues arise throughout
 all levels of the web stack. Monitoring tools provide transparency so
@@ -10510,7 +10551,7 @@ these services are not the right fit for every project.</p>
    you're collecting and visualizing.</p>
 </li>
 </ol>
-          <h1>Caching</h1>
+   <h1>Caching</h1>
 <p>Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. </p>
 <p>For example, instead of retrieving data from database tables that rarely 
@@ -10571,7 +10612,7 @@ for future requests.</p>
    accurate when served up to the user.</p>
 </li>
 </ol>
-          <h1>Web analytics</h1>
+   <h1>Web analytics</h1>
 <p>Web analytics involves collecting, processing, visualizing web data to enable
 critical thinking about how users interact with a web application.</p>
 <h2>Why is web analytics important?</h2>
@@ -10700,7 +10741,7 @@ application before taking some action, such as purchasing your service.</p>
    the metrics generated by the web analytics as necessary.</p>
 </li>
 </ol>
-          <h1>Change Log</h1>
+   <h1>Change Log</h1>
 <p>This is a running list of the major changes to Full Stack Python since its
 inception in December 2012. You can view detailed changes via the 
 <a href="https://github.com/mattmakai/fullstackpython.com/commits/gh-pages">source repository's commit log</a> on GitHub.</p>
@@ -11340,7 +11381,7 @@ inception in December 2012. You can view detailed changes via the
   introduction, CDN, web frameworks, and database sections with stubs for 
   other areas.</li>
 </ul>
-          <h1>What "full stack" means</h1>
+   <h1>What "full stack" means</h1>
 <p>The terms "full stack" and "Full Stack Python" are ambiguous but I am using
 a specific definition here on this site. These term can be defined for a 
 web stack either to mean</p>
@@ -11367,7 +11408,7 @@ and advanced Python software developers need to constantly program and learn
 to keep up with our ever evolving ecosystem. I created Full Stack Python to
 be just one of <a href="/best-python-resources.html">many resources</a> that help Python 
 developers build and maintain their programming skills.</p>
-          <h1>About the Author</h1>
+   <h1>About the Author</h1>
 <p>This website was coded and written by
 <a href="http://www.mattmakai.com/">Matt Makai</a>, currently a 
 <a href="https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html">Developer Evangelist</a>
@@ -11383,7 +11424,7 @@ email at matthew.makai@gmail.com,
 or on <a href="https://github.com/mattmakai">GitHub at mattmakai</a>.</p>
 <p>Read more thoughts by Matt on the "full stack" trend in a 
 <a href="http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html">post written for O'Reilly</a>.</p>
-          <h1>Future Directions</h1>
+   <h1>Future Directions</h1>
 <p>Full Stack Python has completely blown away my expectations for what I could
 accomplish with a side project. I really appreciate all of the in-person 
 feedback, emails and pull requests I've received from the community. Keep 
@@ -11439,27 +11480,8 @@ attention.</p>
   "git clients" sections.</p>
 </li>
 </ul>
-    </div>
-<div class="col-md-offset-1 col-md-3" id="sidebar">
-  <div class="panel">
-      <div class="panel-heading"><h3 class="panel-head">Full Stack Python</h3></div>
-      <div class="panel-body">
-          View the 
-          <a href="/table-of-contents.html">table of contents</a> if you're
-          looking for a specific Python topic.
-          <hr/>
-          Major updates are tweeted via
-          <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
-          <hr/>
-          Need more detailed tutorials than you see here?
-          <a href="http://www.deploypython.com/">Learn more about The Full Stack Python Guide to Deployments book.</a>
-          <hr/>
-          <a href="/">Full Stack Python</a> is an open book that explains
-          concepts in plain language and provides the most helpful resources 
-          for those topics.
-      </div>
-  </div>
-</div></div>
+ </div>
+</div>
   <hr/>
  </div> 
 <div class="container">
