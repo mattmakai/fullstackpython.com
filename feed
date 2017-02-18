@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feed" rel="self"></atom:link><lastBuildDate>Wed, 15 Feb 2017 00:00:00 -0500</lastBuildDate><item><title>Creating SSH Keys on Ubuntu Linux 16.04 LTS</title><link>https://www.fullstackpython.com/ssh-keys-ubuntu-linux.html</link><description>&lt;p&gt;SSH keys are a necessity for Python development when you are working with
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feed" rel="self"></atom:link><lastBuildDate>Sat, 18 Feb 2017 00:00:00 -0500</lastBuildDate><item><title>Creating SSH Keys on Ubuntu Linux 16.04 LTS</title><link>https://www.fullstackpython.com/ssh-keys-ubuntu-linux.html</link><description>&lt;p&gt;SSH keys are a necessity for Python development when you are working with
 &lt;a href="/git.html"&gt;Git&lt;/a&gt;, connecting to remote servers and automating your
 &lt;a href="/deployment.html"&gt;deployments&lt;/a&gt;. Let's walk through how to generate SSH
 key pairs, which contain both a public and a private key within a single 
@@ -2562,8 +2562,9 @@ site to explain.&lt;/p&gt;
 good fit for the page format I use for each topic. Many of those walkthroughs
 became &lt;a href="https://www.twilio.com/blog/author/mmakai"&gt;Twilio blog posts&lt;/a&gt;
 but not all of them were quite the right fit on there. I'll still be writing
-plenty more Twilio tutorials, but this &lt;a href="/blog.html"&gt;Full Stack Python blog&lt;/a&gt;
-is the spot for technical posts that fall outside the Twilio domain.&lt;/p&gt;
+plenty more &lt;a href="/twilio.html"&gt;Twilio&lt;/a&gt; tutorials, but this 
+&lt;a href="/blog.html"&gt;Full Stack Python blog&lt;/a&gt; is the spot for technical posts that 
+fall outside the Twilio domain.&lt;/p&gt;
 &lt;p&gt;Let me know what you think and what tutorials you'd like to see in the future. 
 Hit me up on Twitter &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
-or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</guid></item></channel></rss>
+or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Sat, 18 Feb 2017 00:00:00 -0500</pubDate><guid>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</guid></item></channel></rss>

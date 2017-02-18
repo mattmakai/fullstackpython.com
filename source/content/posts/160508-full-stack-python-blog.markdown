@@ -2,8 +2,8 @@ title: The Full Stack Python Blog
 slug: full-stack-python-blog
 category: post
 date: 2016-05-08
-modified: 2016-08-10
-meta: The Full Stack Python blog provides tutorials and walkthroughs for Python programming.
+modified: 2017-02-18
+meta: The Full Stack Python blog provides tutorials and walkthroughs for Python programmers.
 headerimage: /source/static/img/160508-full-stack-python-blog/header.jpg
 headeralt: Full Stack Python and Python logos. Copyright their respective owners.
 
@@ -20,8 +20,9 @@ Frequently though I wanted to write a Python walkthrough that was not a
 good fit for the page format I use for each topic. Many of those walkthroughs
 became [Twilio blog posts](https://www.twilio.com/blog/author/mmakai)
 but not all of them were quite the right fit on there. I'll still be writing
-plenty more Twilio tutorials, but this [Full Stack Python blog](/blog.html)
-is the spot for technical posts that fall outside the Twilio domain.
+plenty more [Twilio](/twilio.html) tutorials, but this 
+[Full Stack Python blog](/blog.html) is the spot for technical posts that 
+fall outside the Twilio domain.
 
 Let me know what you think and what tutorials you'd like to see in the future. 
 Hit me up on Twitter [@fullstackpython](https://twitter.com/fullstackpython)
