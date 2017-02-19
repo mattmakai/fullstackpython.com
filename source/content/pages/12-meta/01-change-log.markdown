@@ -14,6 +14,12 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### Feburary
+* Major performance improvements across the site by reducing CSS load
+  and reducing image sizes.
+* Added blog post on 
+  [Creating SSH Keys on Ubuntu Linux 16.04 LTS](/blog/ssh-keys-ubuntu-linux.html).
+
 ### January
 * New [Sanic](/sanic.html) stub page.
 * New [Celery](/celery.html) resources.
