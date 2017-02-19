@@ -7,7 +7,7 @@
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
 
 {% block css %}
-<link href="/f.css" rel="stylesheet">
+{% include "css/article.html" %}
 {% endblock %}
 
 {% block banner %}
