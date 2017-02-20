@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block meta_header %}{% if page.meta %}
-  <meta name="description" content="{{ page.meta }}">
+<meta name="description" content="{{ page.meta }}">
 {% endif %}{% endblock %}
 
 {% block title %}{{ page.title }} - {% endblock %}
 
 {% block css %}
-<link href="/f.css" rel="stylesheet">
+{% include "css/page.html" %}
 {% endblock %}
 
 {% block banner %}
@@ -16,30 +16,30 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-md-8">
-    {% if page.slug == 'about-author' %}
-      <div class="row">
-        <div class="col-md-6">
-          <img src="/source/theme/static/img/matt-makai-2016.jpg" class="technical-diagram" width="100%" style="border-radius:6px;padding-top:30px">
-        </div>
-        <div class="col-md-6">
-          {{ page.content }}
-        </div>
-      </div>
-    {% else %}
-      {{ page.content }}
-    {% endif %}
-    {% include "choices/" + page.slug + ".html" %}
-    {% include "email-for-book.html" %}
-  </div>
-  <div class="col-md-offset-1 col-md-3" id="sidebar">
-   {% include "sidebar.html" %}
-  </div>
+ <div class="col-md-8">
+  {% if page.slug == 'about-author' %}
+   <div class="row">
+    <div class="col-md-6">
+     <img src="/source/theme/static/img/matt-makai-2016.jpg" class="technical-diagram" width="100%" style="border-radius:6px;padding-top:30px">
+    </div>
+    <div class="col-md-6">
+     {{ page.content }}
+    </div>
+   </div>
+  {% else %}
+   {{ page.content }}
+  {% endif %}
+  {% include "choices/" + page.slug + ".html" %}
+  {% include "email-for-book.html" %}
+ </div>
+ <div class="col-md-offset-1 col-md-3" id="sidebar">
+  {% include "sidebar.html" %}
+ </div>
 </div>
 {% endblock %}
 
 {% block lower_banner %}
-  {% include "lower-banner.html" %}
+{% include "lower-banner.html" %}
 {% endblock %}
 
 {% block js %}

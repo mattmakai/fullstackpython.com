@@ -6,9 +6,76 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="author" content="Matt Makai">
-  <meta name="description" content="Learn how to use Cascading Style Sheets (CSS) to create your web application's user interface design on Full Stack Python.">
+<meta name="description" content="Learn how to use Cascading Style Sheets (CSS) to create your web application's user interface design on Full Stack Python.">
  <title>Cascading Style Sheets - Full Stack Python</title>
-<link href="/f.css" rel="stylesheet">
+
+<style>
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:18px;-webkit-tap-highlight-color:rgba(0,0,0,0),color:#222;background:#fefefe}
+body{margin:0;font:18px Georgia,serif;line-height:1.4;color:#222;padding:0 0}
+img{border:0;vertical-align:middle}
+hr{height:0;box-sizing:content-box;margin:21px 0 21px 0;border:0;border-top:1px solid #eee}
+h1,h2,h3,h4,h5,h6{font-family:"Helvetica Neue",sans-serif;font-weight:500;line-height:1.1;color:#000}
+h1,h2,h3{margin:32px 0 6px}
+h4,h5,h6{margin:11px 0 11px 0}
+h1{font-size:40px}
+h2{font-size:28px}
+h3{font-size:22px}
+h4,h5,h6{font-size:18px}
+p{margin:0 0 12px}
+ul,ol{margin-top:0;margin-bottom:10px}
+code,pre{font:1em Menlo,"Courier New",monospace}
+code{padding:2px 4px;font-size:90%;color:#c7254e;white-space:nowrap;background-color:#f9f2f4;border-radius:4px}
+pre{white-space:pre-wrap;display:block;padding:10px;margin:0 0 11px;font-size:10px;line-height:1.4;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
+.container{padding:0 15px 0 15px;margin-right:auto;margin-left:auto}
+.container:before,.container:after{display:table;content:" "}
+.container:after{clear:both}
+.row:before,.row:after{display:table;content:" "}
+.row:after{clear:both}
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{position:relative;min-height:1px;padding:0 15px 0 15px}
+.form-control{display:block;width:100%;height:39px;padding:8px 12px;font-size:14px;color:#777;vertical-align:middle;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}
+.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)}
+.btn{display:inline-block;padding:8px 12px;margin-bottom:0;font-size:15px;font-weight:normal;line-height:1.4;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;color:#fff;background-color:#22b24c;border-color:#22b24c}
+.btn:active,.btn.active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}
+.list-group{padding-left:0;margin-bottom:20px}
+.list-group-item{position:relative;display:block;padding:10px 15px;margin-bottom:-1px;background-color:#fff;border:1px solid #ddd}
+.list-group-item:first-child{border-top-right-radius:4px;border-top-left-radius:4px}
+.list-group-item:last-child{margin-bottom:0;border-bottom-right-radius:4px;border-bottom-left-radius:4px}
+a.list-group-item{color:#333}
+a.list-group-item:hover,a.list-group-item:focus{text-decoration:none;background-color:#f5f5f5}
+a.list-group-item.active{z-index:2;background:#444;color:#fff;border:1px solid #222}
+.panel{margin-bottom:21px;background-color:#fff;border:1px solid transparent;border-radius:4px;box-shadow:0 1px 1px rgba(0,0,0,0.05);border-color:#22b24c}
+.panel-body{padding:15px}
+.panel-body:before,.panel-body:after{display:table;content:" "}
+.panel-body:after{clear:both}
+.panel>.list-group{margin-bottom:0}
+.panel>.list-group .list-group-item{border-width:1px 0}
+.panel>.list-group .list-group-item:first-child{border-top-right-radius:0;border-top-left-radius:0}
+.panel>.list-group .list-group-item:last-child{border-bottom:0}
+.panel-heading+.list-group .list-group-item:first-child{border-top-width:0}
+.panel-heading{padding:10px 15px;border-bottom:1px solid transparent;border-top-right-radius:3px;border-top-left-radius:3px;color:#468847;background-color:#22b24c;border-color:#22b24c}
+.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.05)}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted;color:#444}
+a:hover{text-decoration:none;color:#000}
+.logo-title a,.logo-title a:hover{font:72px "Helvetica Neue",sans-serif;font-weight:normal;letter-spacing:.03em;vertical-align:middle;margin-left:5px;color:#000;text-decoration:none;border-bottom:none;line-height:.9em}
+.logo-title a:hover{color:#808080}
+.logo-image{vertical-align:middle;border:none;height:52px;width:52px;padding:1px}
+.logo-header-section{margin:20px 0 15px 0}
+#sidebar{margin-top:30px}
+.btn-full{width:100%;box-shadow:1px 2px 1px #222;padding-bottom:4px}
+p.under-btn{text-align:left;margin-top:20px}
+h3.panel-head{margin:5px 0 0 0;font-size:26px;color:#fff}
+.smaller-item{font:.8em 'Helvetica Neue',sans-serif;padding:5px 0 5px 10px}
+@media (max-width:1200px){h3.panel-head{font-size:22px}}@media (max-width:750px){.smaller-item{font-size:1em;padding:15px 0 15px 10px}}@media (max-width:720px){.logo-header-section{margin:20px 40px 0 0}}
+.see-also{margin-top:20px;background:#22B24C;color:#eee;font-family:"Helvetica Neue",sans-serif}
+.see-also a{color: #fff}
+p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:14px 0 18px 0}
+@media (min-width:750px){.container{width:730px}}@media (min-width:768px){.container{width:750px}}@media (min-width:940px){.container{width:920px}}@media (min-width:1140px){.container{width:1120px}}.row{margin-right:-15px;margin-left:-15px}
+@media (min-width:768px){#full-toc{display:block;} #mobile-toc{display:none;} .col-md-3,.col-md-4,.col-md-8,.col-md-9,.col-md-12{float:left} .col-md-12{width:100%} .col-md-9{width:75%} .col-md-8{width:66.66666666666666%} .col-md-4{width:33.33333333333333%} .col-md-3{width:25%} .col-md-offset-1{margin-left:8.333333333333332%} .select-next{min-height:300px}}
+@media (max-width:767px){#full-toc{display:none;} .logo-header-section{padding:8px 0 10px; margin:0} .logo-title a,.logo-title a:hover{font-size:34px} h1{font-size:28px} h2{font-size:24px} .logo-image{height:26px;width:26px} pre{font-size:50%}}
+@media (min-width:1140px){.select-next{min-height:220px}}
+.sans-font{font-family:"Helvetica Neue",sans-serif}
+</style>
  <link rel="shortcut icon" href="/img/fsp-fav.png">
 </head>
 <body>
@@ -40,8 +107,8 @@
  <a href="https://github.com/mattmakai/fullstackpython.com">Source</a> 
 </div> </div>
 </div><div class="row">
-  <div class="col-md-8">
-      <h1>Cascading Style Sheets (CSS)</h1>
+ <div class="col-md-8">
+   <h1>Cascading Style Sheets (CSS)</h1>
 <p>Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.</p>
 <h2>Why is CSS necessary?</h2>
@@ -228,8 +295,8 @@ web application's design.</p>
     </div>
 </form>
 </div>
-  </div>
-  <div class="col-md-offset-1 col-md-3" id="sidebar">
+ </div>
+ <div class="col-md-offset-1 col-md-3" id="sidebar">
 <div class="panel">
   <div class="panel-body">
     <a href="http://www.deploypython.com/"><img src="/img/sponsored/fsp-deployment-guide.png" alt="The Full Stack Python Guide to Deployments" width="100%"></a>
@@ -277,7 +344,7 @@ web application's design.</p>
 <a href="/introduction.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>1. Introduction</a><a href="/development-environments.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>2. Development Environments</a><a href="/python-programming-language.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>3. Core Language</a><a href="/testing.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>4. Testing</a><a href="/web-application-security.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>6. Security</a><a href="/web-development.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>7. Web Development</a>  <a href="/cascading-style-sheets.html" class="list-group-item smaller-item active" style='font-family: "Helvetica Neue",sans-serif;'>&raquo; Cascading Style Sheets (CSS)</a>
 <a href="/deployment.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>8. Deployment</a><a href="/data.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>9. Data</a><a href="/application-programming-interfaces.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>10. Web APIs</a><a href="/devops.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>11. DevOps</a><a href="/change-log.html" class="list-group-item smaller-item " style='font-family: "Helvetica Neue",sans-serif;'>12. Change Log</a>    <a href="/table-of-contents.html" class="list-group-item smaller-item" style='font-family: "Helvetica Neue",san-serif;background-color:#22B24C; color: #fff;'>...or <span style="border-bottom: 1px dotted;">view the full table of contents</span>.</a>
   </div>
-</div>  </div>
+</div> </div>
 </div>
   <hr/>
  </div> 
