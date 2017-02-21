@@ -114,7 +114,7 @@ following <code>-t</code> and <code>-b</code> arguments to ensure we get a 4096 
 that you <em>must</em> use a key with 2048 or more bits in macOS Sierra or the
 system will not allow you to connect to servers with it.</p>
 <p>Optionally, you can also specify your email address with <code>-C</code> (otherwise 
-one will be generated off your current Linux account):</p>
+one will be generated off your current macOS account):</p>
 <div class="highlight"><pre>ssh-keygen -t rsa -b <span class="m">4096</span> -C my.email.address@company.com
 </pre></div>
 
@@ -130,11 +130,11 @@ Enter file in which to save the key <span class="o">(</span>/Users/matt/.ssh/id_
 <p>This prompt refers to the private key and whatever you enter will also
 generate a second file for the public key that has the same name and <code>.pub</code> 
 appended.</p>
-<p>If you already have a key, you should specify a new filename. I use many
-SSH keys so I typically name them "test-deploy", "prod-deploy", "ci-server"
+<p>If you already have a key then specify a new filename. I use many
+SSH keys so I oftne name them "test-deploy", "prod-deploy", "ci-server"
 along with a unique project name. Naming is one of those hard computer 
 science problems, so take some time to come up with a system that works for
-you and the development team you work with!</p>
+you!</p>
 <p>Next you will see a prompt for an optional passphrase:</p>
 <div class="highlight"><pre>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
 </pre></div>

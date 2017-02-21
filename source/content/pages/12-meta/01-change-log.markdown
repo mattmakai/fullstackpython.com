@@ -15,6 +15,10 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### Feburary
+* Add [generating SSH keys on macOS Sierra](/blog/ssh-keys-macos-sierra.html) 
+  blog post.
+* Removed all external CSS file loads and reduced the CSS for all pages and 
+  posts to the minimum amount required for that specific page.
 * Major performance improvements across the site by reducing CSS load
   and reducing image sizes.
 * Added blog post on 

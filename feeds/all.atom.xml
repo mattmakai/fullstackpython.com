@@ -17,7 +17,7 @@ following &lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-b&lt;/code&gt; arguments 
 that you &lt;em&gt;must&lt;/em&gt; use a key with 2048 or more bits in macOS Sierra or the
 system will not allow you to connect to servers with it.&lt;/p&gt;
 &lt;p&gt;Optionally, you can also specify your email address with &lt;code&gt;-C&lt;/code&gt; (otherwise 
-one will be generated off your current Linux account):&lt;/p&gt;
+one will be generated off your current macOS account):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;ssh-keygen -t rsa -b &lt;span class="m"&gt;4096&lt;/span&gt; -C my.email.address@company.com
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -33,11 +33,11 @@ Enter file in which to save the key &lt;span class="o"&gt;(&lt;/span&gt;/Users/m
 &lt;p&gt;This prompt refers to the private key and whatever you enter will also
 generate a second file for the public key that has the same name and &lt;code&gt;.pub&lt;/code&gt; 
 appended.&lt;/p&gt;
-&lt;p&gt;If you already have a key, you should specify a new filename. I use many
-SSH keys so I typically name them "test-deploy", "prod-deploy", "ci-server"
+&lt;p&gt;If you already have a key then specify a new filename. I use many
+SSH keys so I oftne name them "test-deploy", "prod-deploy", "ci-server"
 along with a unique project name. Naming is one of those hard computer 
 science problems, so take some time to come up with a system that works for
-you and the development team you work with!&lt;/p&gt;
+you!&lt;/p&gt;
 &lt;p&gt;Next you will see a prompt for an optional passphrase:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;Enter passphrase &lt;span class="o"&gt;(&lt;/span&gt;empty &lt;span class="k"&gt;for&lt;/span&gt; no passphrase&lt;span class="o"&gt;)&lt;/span&gt;:
 &lt;/pre&gt;&lt;/div&gt;

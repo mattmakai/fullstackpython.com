@@ -31,7 +31,7 @@ that you *must* use a key with 2048 or more bits in macOS Sierra or the
 system will not allow you to connect to servers with it.
 
 Optionally, you can also specify your email address with `-C` (otherwise 
-one will be generated off your current Linux account):
+one will be generated off your current macOS account):
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C my.email.address@company.com
@@ -50,11 +50,11 @@ This prompt refers to the private key and whatever you enter will also
 generate a second file for the public key that has the same name and `.pub` 
 appended.
 
-If you already have a key, you should specify a new filename. I use many
-SSH keys so I typically name them "test-deploy", "prod-deploy", "ci-server"
+If you already have a key then specify a new filename. I use many
+SSH keys so I oftne name them "test-deploy", "prod-deploy", "ci-server"
 along with a unique project name. Naming is one of those hard computer 
 science problems, so take some time to come up with a system that works for
-you and the development team you work with!
+you!
 
 Next you will see a prompt for an optional passphrase:
 
