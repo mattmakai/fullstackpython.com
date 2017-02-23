@@ -38,6 +38,11 @@ often also called "chatbots", "assistants" or "agents."
   is a solid code tutorial for building your first bot on the Slack
   platform.
 
+* [Dropbox open sourced their security Slack bot](https://blogs.dropbox.com/tech/2017/02/meet-securitybot-open-sourcing-automated-security-at-scale/),
+  which is [built in Python](https://github.com/dropbox/securitybot).
+  The bot converses with a user when backend systems detect strange behavior on
+  one of their accounts to check if there has been a security breach.
+
 * [Build a Slack Bot that Mimics Your Colleagues with Python](http://hirelofty.com/blog/how-build-slack-bot-mimics-your-colleague/)
   is a humorous post that uses the 
   [markovify](https://github.com/jsvine/markovify) Markov Chains library to 
