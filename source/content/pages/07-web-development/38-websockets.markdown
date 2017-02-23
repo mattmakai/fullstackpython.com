@@ -238,3 +238,7 @@ properly.
   differences which will likely lead to WebSockets sticking around for
   awhile longer.
 
+* [A Brief Introduction to WebSockets and Socket.io by Saleh Hamadeh](https://www.youtube.com/watch?v=xj58VHRzG_g)
+  is a video on WebSockets basics and using the
+  [Socket.io](https://github.com/socketio/socket.io) JavaScript library
+  to wrap WebSockets functionality in web browsers.
