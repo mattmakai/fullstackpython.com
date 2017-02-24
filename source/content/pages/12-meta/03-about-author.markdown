@@ -18,11 +18,8 @@ Other projects by Matt include
 [Python for Entrepreneurs](https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business),
 [Coding Across America](http://www.codingacrossamerica.com/), 
 [Underwear](https://github.com/mattmakai/underwear) and
-[Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations). You can reach him by 
-email at matthew.makai@gmail.com,
-[@mattmakai on Twitter](https://twitter.com/mattmakai)
-or on [GitHub at mattmakai](https://github.com/mattmakai).
+[Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations). 
 
-Read more thoughts by Matt on the "full stack" trend in a 
-[post written for O'Reilly](http://radar.oreilly.com/2014/05/driving-demand-for-full-stack-developers.html).
-
+You can reach him by email at matthew.makai@gmail.com, although
+he can't respond to every email, so he'll do his best to respond
+when possible.
