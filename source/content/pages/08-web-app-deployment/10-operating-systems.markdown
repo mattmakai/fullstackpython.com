@@ -123,6 +123,12 @@ provides a command-line interface for interacting with the RPM system.
   a series of posts about how Linux works under the covers, starting from the
   low level booting process.
 
+* While not quite necessary to run your Python application, if you want to
+  dig into how operating systems are built, check out this free book
+  [How to Make a Computer Operating System](https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System),
+  which was originally written by a high school student and later updated
+  as he became a professional software developer.
+
 
 ## Operating system learning checklist
 1. Choose either a Debian-based Linux distribution such as Ubuntu or a 
