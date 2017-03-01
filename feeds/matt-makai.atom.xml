@@ -1,5 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-02-20T00:00:00-05:00</updated><entry><title>Creating SSH Keys on macOS Sierra</title><link href="https://www.fullstackpython.com/ssh-keys-macos-sierra.html" rel="alternate"></link><updated>2017-02-20T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-20:ssh-keys-macos-sierra.html</id><summary type="html">&lt;p&gt;&lt;a href="/deployment.html"&gt;Deploying&lt;/a&gt; Python applications typically requires
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/matt-makai.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-02-27T00:00:00-05:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-02-27T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+additional resources from my technical talk that will be given at 
+&lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;,
+&lt;a href="https://devoxx.us/"&gt;Devoxx San Jose 2017&lt;/a&gt; 
+and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
+within the next couple of months.&lt;/p&gt;
+&lt;p&gt;Additional resources to learn more about &lt;a href="/deployments.html"&gt;deployments&lt;/a&gt;,
+&lt;a href="/configuration-management.html"&gt;configuration management&lt;/a&gt; and 
+&lt;a href="/devops.html"&gt;DevOps&lt;/a&gt; are listed at the end of the post.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/title-slide.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Title slide for technical talk."&gt;&lt;/p&gt;
+&lt;p&gt;Hey folks, my name is Matt Makai. I'm a 
+&lt;a href="https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html"&gt;Developer Evangelist with Twilio&lt;/a&gt;
+and the creator of &lt;a href="https://www.fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/python-swift-love.jpg" width="100%" class="technical-diagram img-rounded" alt="Python and Swift logos with the heart eyes emoji."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/java-only.jpg" width="100%" class="technical-diagram img-rounded" alt="Java programming language logo."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/dark-ages.jpg" width="100%" class="technical-diagram img-rounded" alt="2004, the dark ages of software development?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/different-versions.jpg" width="100%" class="technical-diagram img-rounded" alt="Diff two commits on GitHub."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/pat-on-back.jpg" width="100%" class="technical-diagram img-rounded" alt="Give yourself a pat on the back."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/git-logo.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Git logo."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-1.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Do you know a developer who strongly recommends a tool after 4+ years?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-2.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What is the difference between a concept and an implementation?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/devops-1-layer.png" width="100%" class="technical-diagram img-rounded" alt="Source control (version control) as bottom layer in DevOps."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-3.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Question 3: On a 0 (lowest) -&gt; 10 scale, how amenable is your organization to improving the technical environment?"&amp;gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-4.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Question 4: How many people on your team get stoked about making incremental fixes to your technical environment?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/devops-2-layers.png" width="100%" class="technical-diagram img-rounded" alt="CI, automated tests and app dependencies as layer 2 in DevOps."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/continuous-integration-implementations.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Open source and hosted versions of CI, such as Jenkins, GoCD, and StriderCI, along with CircleCI, Travis CI and CodeBuild."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/test-automation.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Test automation concepts and their implementations in Python ecosystem as examples."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/bash.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="$bash."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/python-fabric-logo.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Python Fabric library logo."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/ansible-logo.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Ansible logo."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/devops-3-layers.png" width="100%" class="technical-diagram img-rounded" alt="Configuration management and automated deployments in layer 3 of DevOps."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/configuration-management-tools.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Configuration management implementations such as Ansible, Chef, Puppet and SaltStack."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/ansible-commands.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Example for Ansible YAML command to install packages through apt."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-5.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How many times per day does your team deploy to test? How about production?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-6.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How many times per day do you want to deploy to test? To production?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-7.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What are the top 5 specific impediments to completing automating your deployments?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-8.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Who on your team gets excited about continuous delivery?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-9.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Who on your team is responsible for improving automated deployments and continuous delivery?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/django-logo.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Django logo."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/devops-4-layers.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Monitoring, logging and measuring in layer 4 of DevOps."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-10.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What metrics do you collect that feed into every sprint?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-11.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How many days would it take to put a new code library into production?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/deploys-2016.jpg" width="100%" class="technical-diagram img-rounded" alt="6,643 deploys per year for Twilio in 2015."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-12.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How much money, if any, can you spend to jump start monitoring your environment?"&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/devops-4-layers.png" width="100%" class="technical-diagram img-rounded" alt="Repeat monitoring, loggin and measuring in 4 layer DevOps slide."&gt;&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/contact-info.png" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Contact info end slide."&gt;&lt;/p&gt;
+&lt;p&gt;My name is Matt Makai and I'm a Developer Evangelist with Twilio, a Python
+and Swift developer, as well as the author of 
+&lt;a href="https://www.fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;. You can get in
+touch with me via these channels. Thank you!&lt;/p&gt;</summary></entry><entry><title>Creating SSH Keys on macOS Sierra</title><link href="https://www.fullstackpython.com/ssh-keys-macos-sierra.html" rel="alternate"></link><updated>2017-02-20T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-20:ssh-keys-macos-sierra.html</id><summary type="html">&lt;p&gt;&lt;a href="/deployment.html"&gt;Deploying&lt;/a&gt; Python applications typically requires
 SSH keys. An SSH key has both a public and a private key file. You can 
 use the private key to authenticate when syncing remote &lt;a href="/git.html"&gt;Git&lt;/a&gt; 
 repositories, connect to remote &lt;a href="/servers.html"&gt;servers&lt;/a&gt; and automate 
