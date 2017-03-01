@@ -3,7 +3,7 @@ slug: choose-right-devops-tools
 meta: Talk slides, notes and more resources for a technical talk on choosing appropriate DevOps tools, by Matt Makai.
 category: post
 date: 2017-02-27
-modified: 2017-02-27
+modified: 2017-03-01
 headerimage: /source/static/img/170227-choose-devops-tools/header.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
@@ -31,27 +31,45 @@ and the creator of [Full Stack Python](https://www.fullstackpython.com/).
 
 <img src="/source/static/img/170227-choose-devops-tools/python-swift-love.jpg" width="100%" class="technical-diagram img-rounded" alt="Python and Swift logos with the heart eyes emoji.">
 
-...
+Over the past couple of years I've been coding mostly in Python and Swift. 
+I bring that up because the way we build, deploy and operate applications in 
+either ecosystem is different. It would not make sense to forcefully recommend 
+a single way to work in your own ecosystem if it is different than the ones I 
+work in.
 
 
 <img src="/source/static/img/170227-choose-devops-tools/java-only.jpg" width="100%" class="technical-diagram img-rounded" alt="Java programming language logo.">
 
-...
+I used to do a ton of Java development. That's how I started my professional
+career before I moved mostly into Python and Swift.
 
 
 <img src="/source/static/img/170227-choose-devops-tools/dark-ages.jpg" width="100%" class="technical-diagram img-rounded" alt="2004, the dark ages of software development?">
 
-...
+Back in my own software development dark ages of 2004, I learned about a
+concept that got me interested in DevOps before it was called DevOps: 
+[source control](/source-control.html), also known as version control. We don't 
+talk much about source control being a DevOps tool, but it really
+is the foundational layer for everything you want to automate with code.
 
 
 <img src="/source/static/img/170227-choose-devops-tools/different-versions.jpg" width="100%" class="technical-diagram img-rounded" alt="Diff two commits on GitHub.">
 
-...
+Nowadays we have amazing open source distributed version control systems
+and beautiful web application front ends to visualize our code changes over
+time. Yet there is still a small percentage of developers who don't use source
+control.
 
+It might seem crazy but I know developers at Fortune 500 companies that still
+do not use source control! How do you automate building, deploying, testing
+and operating your application if you don't even have your files versioned?
 
 <img src="/source/static/img/170227-choose-devops-tools/pat-on-back.jpg" width="100%" class="technical-diagram img-rounded" alt="Give yourself a pat on the back.">
 
-...
+Let's start off this discussion of DevOps tools with a pat on your own back
+if you already use source control. Nice work! We've come a long way as an
+industry in the last couple of decades when source control was an exotic 
+concept for most developers.
 
 
 <img src="/source/static/img/170227-choose-devops-tools/git-logo.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Git logo.">

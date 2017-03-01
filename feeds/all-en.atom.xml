@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-02-27T00:00:00-05:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-02-27T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-03-01T00:00:00-05:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
 &lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;,
 &lt;a href="https://devoxx.us/"&gt;Devoxx San Jose 2017&lt;/a&gt; 
@@ -14,15 +14,33 @@ within the next couple of months.&lt;/p&gt;
 &lt;a href="https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html"&gt;Developer Evangelist with Twilio&lt;/a&gt;
 and the creator of &lt;a href="https://www.fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/python-swift-love.jpg" width="100%" class="technical-diagram img-rounded" alt="Python and Swift logos with the heart eyes emoji."&gt;&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Over the past couple of years I've been coding mostly in Python and Swift. 
+I bring that up because the way we build, deploy and operate applications in 
+either ecosystem is different. It would not make sense to forcefully recommend 
+a single way to work in your own ecosystem if it is different than the ones I 
+work in.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/java-only.jpg" width="100%" class="technical-diagram img-rounded" alt="Java programming language logo."&gt;&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;I used to do a ton of Java development. That's how I started my professional
+career before I moved mostly into Python and Swift.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/dark-ages.jpg" width="100%" class="technical-diagram img-rounded" alt="2004, the dark ages of software development?"&gt;&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Back in my own software development dark ages of 2004, I learned about a
+concept that got me interested in DevOps before it was called DevOps: 
+&lt;a href="/source-control.html"&gt;source control&lt;/a&gt;, also known as version control. We don't 
+talk much about source control being a DevOps tool, but it really
+is the foundational layer for everything you want to automate with code.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/different-versions.jpg" width="100%" class="technical-diagram img-rounded" alt="Diff two commits on GitHub."&gt;&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Nowadays we have amazing open source distributed version control systems
+and beautiful web application front ends to visualize our code changes over
+time. Yet there is still a small percentage of developers who don't use source
+control.&lt;/p&gt;
+&lt;p&gt;It might seem crazy but I know developers at Fortune 500 companies that still
+do not use source control! How do you automate building, deploying, testing
+and operating your application if you don't even have your files versioned?&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/pat-on-back.jpg" width="100%" class="technical-diagram img-rounded" alt="Give yourself a pat on the back."&gt;&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Let's start off this discussion of DevOps tools with a pat on your own back
+if you already use source control. Nice work! We've come a long way as an
+industry in the last couple of decades when source control was an exotic 
+concept for most developers.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/git-logo.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Git logo."&gt;&lt;/p&gt;
 &lt;p&gt;...&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/170227-choose-devops-tools/question-1.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Do you know a developer who strongly recommends a tool after 4+ years?"&gt;&lt;/p&gt;
