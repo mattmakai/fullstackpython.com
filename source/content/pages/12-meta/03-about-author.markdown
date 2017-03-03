@@ -20,6 +20,5 @@ Other projects by Matt include
 [Underwear](https://github.com/mattmakai/underwear) and
 [Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations). 
 
-You can reach him by email at matthew.makai@gmail.com. However,
-he can't respond to every email, so he'll do his best to respond
-when possible.
+You can reach him by email at matthew.makai@gmail.com. Matt can't 
+respond to every email, but he will do his best to reply when possible.
