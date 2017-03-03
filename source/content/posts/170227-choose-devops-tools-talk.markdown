@@ -10,8 +10,7 @@ headeralt: Comment bubble with code representing a technical talk-based blog pos
 
 This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
-[Oracle Code SF 2017](https://developer.oracle.com/code/sanfrancisco),
-[Devoxx San Jose 2017](https://devoxx.us/) 
+[Oracle Code SF 2017](https://developer.oracle.com/code/sanfrancisco)
 and [DC Continuous Delivery](https://www.meetup.com/DC-continuous-delivery/) 
 within the next couple of months.
 

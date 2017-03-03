@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-03-01T00:00:00-05:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
-&lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;,
-&lt;a href="https://devoxx.us/"&gt;Devoxx San Jose 2017&lt;/a&gt; 
+&lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;
 and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
 within the next couple of months.&lt;/p&gt;
 &lt;p&gt;Additional resources to learn more about &lt;a href="/deployments.html"&gt;deployments&lt;/a&gt;,
