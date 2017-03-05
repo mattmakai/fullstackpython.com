@@ -14,6 +14,9 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### March
+* New [Git](/git.html) resources.
+
 ### Feburary
 * Add [generating SSH keys on macOS Sierra](/blog/ssh-keys-macos-sierra.html) 
   blog post.
