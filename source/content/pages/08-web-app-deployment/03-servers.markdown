@@ -81,6 +81,14 @@ require for ongoing maintenance such as persistent storage backups.
 * [CPU Load Averages](http://jvns.ca/blog/2016/02/07/cpu-load-averages/)
   explains how to measure CPU load and what to do about it.
 
+* [Which cloud hosting company to choose in 2017?](https://www.webstack.de/blog/e/cloud-hosting-provider-comparison-2017/)
+  compares DigitalOcean, Linode, Vultr, OVH and Scaleway in various 
+  benchmarks such as CPUs, memory, disk space, network performance, traffic 
+  capacity and cost. At the end of the article the author also provides some
+  qualitative feedback on the strengths and weaknesses of each services'
+  offerings.
+
+
 ## Infrastructure-as-a-service
 Infrastructure-as-a-service (IaaS) overlaps with virtualized servers 
 because the resources are often presented in the same way. The 
