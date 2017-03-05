@@ -92,6 +92,11 @@ workflow. These resources will come in handy for specific Git subjects.
   through example Git commands. This is a highly recommended read after you've
   grasped the basics and are looking to go deeper with Git.
 
+* [How I configure my git in a new computer](https://medium.com/@Tiagojdferreira/how-i-set-up-my-git-in-a-new-computer-85bb461b089f)
+  shows how to handle a `.gitconfig` file, with 
+  [an example Gist](https://gist.github.com/Tiagojdferreira/115ecac229e176e48d520c59b022e4fb) 
+  that the author uses for his own environment.
+
 
 ## Git Workflows
 Teams of developers can use Git in varying workflows because of Git's 
