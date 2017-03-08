@@ -1,10 +1,10 @@
-title: Django
-category: page
-slug: django
-sortorder: 0703
-toc: False
-sidebartitle: Django
-meta: Learn more about Django, the popular batteries-included Python web framework, on Full Stack Python.
+Title: Django
+Category: Page
+Dlug: Django
+Sortorder: 0703
+Toc: False
+Sidebartitle: Django
+Meta: Learn more about Django, the popular batteries-included Python web framework, on Full Stack Python.
 
 
 # Django
@@ -60,7 +60,7 @@ syntax and language semantics first before diving into web development.
 
 
 ## Django books and tutorials
-There are a slew of free or low cost resources out there for Django. Since
+There is a  slew of free or low cost resources out there for Django. Since
 Django was released over 10 years ago and has had a huge number of updates
 since then, when you're looking for an up-to-date Django book check out the
 list below or read this post showing [current Django books](http://twoscoopspress.org/pages/current-django-books)
@@ -102,7 +102,7 @@ as of Django 1.9.
 * Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
 
 * [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
-  has several nice examples for breaking Django into smaller simpler 
+  has several nice examples of breaking Django into smaller simpler 
   components.
 
 * The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
@@ -237,8 +237,8 @@ based on [WebSockets](/websockets.html).
   corresponding [GitHub repo](https://github.com/mouradmourafiq/django-angular-blog)
   for the project code.
 
-* [Django-angular](https://github.com/jrief/django-angular) is a code 
-  library that aims to make it easier to pair Django with AngularJS on
+* [Django-angular](https://github.com/jrief/django-angular) is a 
+code library that aims to make it easier to pair Django with AngularJS on
   the front end.
 
 
@@ -279,14 +279,14 @@ to handle these files properly.
   browser into a full-fledged phone. Pretty awesome!
 
 * [Txt 2 React](https://github.com/mattmakai/txt2react) is a full Django web
-  app that allows audiences to text in during a presentation with feedback
+  App that allows audiences to text in during a presentation with feedback
   or questions.
 
 * [Openduty](https://github.com/ustream/openduty) is a website status checking
-  and alert system similar to PagerDuty.
+  and an alert system similar to PagerDuty.
 
-* [Courtside](https://github.com/myusuf3/courtside) is a pick up sports web 
-  application written and maintained by the author of PyCoder's Weekly.
+* [Courtside](https://github.com/myusuf3/courtside) is a pick up sports 
+web application written and maintained by the author of PyCoder's Weekly.
 
 * These two Django Interactive Voice Response (IVR) system web application
   repositories [part 1](https://github.com/phalt/twilio-django-part-1) and

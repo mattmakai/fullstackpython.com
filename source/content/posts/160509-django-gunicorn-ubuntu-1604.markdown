@@ -3,7 +3,7 @@ slug: python-3-django-gunicorn-ubuntu-1604-xenial-xerus
 meta: Step-by-step instructions for developing on Ubuntu 16.04 with Python 3, Django and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-09
-modified: 2016-08-10
+modified: 2017-03-08
 headerimage: /source/static/img/160509-ubuntu-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
@@ -46,7 +46,7 @@ one.
 
 <img src="/source/static/img/160509-ubuntu-django-gunicorn/ubuntu-desktop.jpg" width="100%" class="technical-diagram img-rounded">
 
-Open up terminal to proceed with the setup.
+Open up a terminal to proceed with the setup.
 
 
 ## System Packages
