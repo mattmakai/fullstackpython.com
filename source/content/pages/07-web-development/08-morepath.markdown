@@ -13,7 +13,7 @@ framework with a model-driven approach to creating web applications and web
 APIs.
 
 Morepath's framework philosophy is that the data models should drive the
-creation via the web framework. By default the framework routes URLs directly 
+creation via the web framework. By default, the framework routes URLs directly 
 to model code, unlike for example Django which requires explicit URL routing
 by the developer.
 
@@ -28,7 +28,7 @@ from the creator.
 With the rise of front end JavaScript frameworks, many Python web frameworks 
 are first being used to build 
 [RESTful APIs](/application-programming-interfaces.html) that return JSON
-instead rendering HTML via a templating system. Morepath appears to have 
+instead of rendering HTML via a templating system. Morepath appears to have 
 been created with the RESTful API model approach in mind and cuts out the 
 assumption that templates will drive the user interface.
 
@@ -39,7 +39,7 @@ assumption that templates will drive the user interface.
 Morepath, with 
 [its first commit using the Morepath name in 2013](https://github.com/morepath/morepath/commit/9c4f772dc48658a63ae2b46f6c1863220608f15e), 
 is a much newer web framework than Django, Flask or Pyramid, which results
-in fewer tutorials. There is also a lot of opportunity for newer Python 
+in fewer tutorials. There is also a lot of opportunities for newer Python 
 developers to fill the gaps with their own Morepath tutorials. However, 
 these resources below are a good place to get started. 
 
