@@ -1,6 +1,6 @@
 title: Mako
-category: page
-slug: mako
+category: Page
+slug: Mako
 sortorder: 0714
 toc: False
 sidebartitle: Mako
@@ -19,7 +19,7 @@ used to generate output HTML, XML and similar formats.
 ## Mako resources
 * [Exploring Mako](https://beachcoder.wordpress.com/2007/05/11/exploring-mako/)
   explains a bit about the template engines Myghty and Mason, which influenced
-  Mako's design. The post then shows a few basic examples for how to use Mako.
+  Mako's design. The post then shows a few basic examples of how to use Mako.
 
 * [Configuration Templates with Python and Mako](https://codingnetworker.com/2016/01/configuration-templates-python-mako/)
   shows some basic situations for how to use Mako in an example project.
@@ -31,7 +31,7 @@ used to generate output HTML, XML and similar formats.
 
 * [Flask-Mako](https://pythonhosted.org/Flask-Mako/) is a [Flask](/flask.html) 
   extension that makes it easier to use Mako as the template engine in your
-  Flask web app projects.
+  Flask web App projects.
 
 * The Stack Overflow question on 
   [What is the fastest template system for Python?](http://stackoverflow.com/questions/1324238/what-is-the-fastest-template-system-for-python)
