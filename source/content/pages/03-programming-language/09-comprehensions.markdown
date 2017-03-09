@@ -11,7 +11,9 @@ meta: Python comprehensions concisely create data for lists, dictionaries and se
 Comprehensions are a Python language construct for concisely creating data
 in lists, dictionaries and sets. List comprehensions are included in Python 2
 while dictionary and set comprehensions were introduced to the language in
-Python 3.
+Python 3. However, this three types are different and serves different purpose as
+list keeps order while set and dictionaries doesn't. But dictionaries associate each of its
+key with value while set requires item to be hashable.
 
 
 ## Why are comprehensions important?
