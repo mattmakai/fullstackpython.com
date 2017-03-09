@@ -1,0 +1,754 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1543" measuredH="987" mockupW="1495" mockupH="970">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="414" y="108" w="334" h="665" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>dottedRect</shape>
+        <size>24</size>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="795" y="105" w="691" h="668" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="816" y="166" w="649" h="592" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="419" w="127" h="48" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>agent%20reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="364" w="133" h="40" measuredW="150" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>logs%20to</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="322" w="133" h="27" measuredW="150" measuredH="100" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>logs%20to</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="103" y="419" w="224" h="262" measuredW="450" measuredH="400" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>Web%20Application%0Ahttp%3A//www.webapp.com/</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Arrow" x="327" y="491" w="126" h="23" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text>Sends%20data</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="327" y="131" w="517" h="87" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <leftArrow>false</leftArrow>
+        <text>Access%20web%20APIs</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Arrow" x="327" y="166" w="517" h="67" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <rightArrow>false</rightArrow>
+        <text>HTTP%28S%29%20responses</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Arrow" x="328" y="419" w="125" h="24" measuredW="150" measuredH="100" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text>Sends%20data</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Arrow" x="880" y="322" w="12" h="59" measuredW="150" measuredH="100" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>handle%20certain%20requests</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Arrow" x="1027" y="322" w="33" h="59" measuredW="150" measuredH="100" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>responses</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::iPhone" x="151" y="97" w="176" h="104" measuredW="573" measuredH="282" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <model>IPhone5</model>
+        <orientation>landscape</orientation>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Arrow" x="290" y="295" w="554" h="124" measuredW="150" measuredH="100" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <rightArrow>false</rightArrow>
+        <text>HTTP%28S%29%20responses</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Arrow" x="268" y="281" w="576" h="138" measuredW="150" measuredH="100" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text>Access%20web%20app</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="__group__" x="453" y="394" w="259" h="54" measuredW="259" measuredH="54" zOrder="17" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="259" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="16">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="27" y="7" w="-1" h="-1" measuredW="204" measuredH="40" zOrder="1" locked="false" isInGroup="16">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/web-analytics.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22432%2C384%2C636%2C424%22%20href%3D%22http%3A//www.fullstackpython.com/web-analytics.html%22%20alt%3D%22http%3A//www.fullstackpython.com/web-analytics.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Web%20analytics</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="17" controlTypeID="__group__" x="452" y="461" w="259" h="54" measuredW="259" measuredH="54" zOrder="18" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="259" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="17">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="53" y="7" w="-1" h="-1" measuredW="152" measuredH="40" zOrder="1" locked="false" isInGroup="17">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/monitoring.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22457%2C451%2C609%2C491%22%20href%3D%22http%3A//www.fullstackpython.com/monitoring.html%22%20alt%3D%22http%3A//www.fullstackpython.com/monitoring.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Monitoring</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="18" controlTypeID="__group__" x="844" y="214" w="268" h="110" measuredW="268" measuredH="110" zOrder="19" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="268" h="110" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="18">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="29" y="27" w="210" h="-1" measuredW="210" measuredH="40" zOrder="1" locked="false" isInGroup="18">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/web-servers.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22825%2C224%2C1035%2C264%22%20href%3D%22http%3A//www.fullstackpython.com/web-servers.html%22%20alt%3D%22http%3A//www.fullstackpython.com/web-servers.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Web%20server%28s%29</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Label" x="816" y="114" w="-1" h="-1" measuredW="140" measuredH="40" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/servers.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22768%2C97%2C908%2C137%22%20href%3D%22http%3A//www.fullstackpython.com/servers.html%22%20alt%3D%22http%3A//www.fullstackpython.com/servers.html%22%20id%3D%2219%22%20target%3D%22_blank%22/%3E</map>
+        <size>32</size>
+        <text>Server%28s%29</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Label" x="990" y="114" w="-1" h="-1" measuredW="322" measuredH="40" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/platform-as-a-service.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22942%2C97%2C1264%2C137%22%20href%3D%22http%3A//www.fullstackpython.com/platform-as-a-service.html%22%20alt%3D%22http%3A//www.fullstackpython.com/platform-as-a-service.html%22%20id%3D%2220%22%20target%3D%22_blank%22/%3E</map>
+        <size>32</size>
+        <text>Platform-as-a-Service</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="__group__" x="844" y="381" w="268" h="81" measuredW="268" measuredH="81" zOrder="22" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="268" h="81" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="21">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="18" y="22" w="-1" h="-1" measuredW="233" measuredH="40" zOrder="1" locked="false" isInGroup="21">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/wsgi-servers.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22814%2C386%2C1047%2C426%22%20href%3D%22http%3A//www.fullstackpython.com/wsgi-servers.html%22%20alt%3D%22http%3A//www.fullstackpython.com/wsgi-servers.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>WSGI%20server%28s%29</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Label" x="844" y="170" w="-1" h="-1" measuredW="261" measuredH="40" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/operating-systems.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22796%2C153%2C1057%2C193%22%20href%3D%22http%3A//www.fullstackpython.com/operating-systems.html%22%20alt%3D%22http%3A//www.fullstackpython.com/operating-systems.html%22%20id%3D%2222%22%20target%3D%22_blank%22/%3E</map>
+        <size>32</size>
+        <text>Operating%20system</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::SubTitle" x="966" y="117" w="-1" h="-1" measuredW="24" measuredH="35" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>/%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Arrow" x="1105" y="237" w="71" h="41" measuredW="150" measuredH="100" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text>retrieve%20files</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Arrow" x="1049" y="463" w="35" h="167" measuredW="150" measuredH="100" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>-1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>executes</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Arrow" x="886" y="460" w="27" h="96" measuredW="150" measuredH="100" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>true</rightArrow>
+        <text>executes%20%26%20relies%20upon</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="440" w="133" h="106" measuredW="150" measuredH="100" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>calls</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Arrow" x="714" y="461" w="130" h="107" measuredW="150" measuredH="100" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>-1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>true</rightArrow>
+        <text>responds</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="__group__" x="453" y="608" w="259" h="54" measuredW="259" measuredH="54" zOrder="35" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="259" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="35">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="22" y="7" w="-1" h="-1" measuredW="210" measuredH="40" zOrder="1" locked="false" isInGroup="35">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/source-control.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22427%2C598%2C637%2C638%22%20href%3D%22http%3A//www.fullstackpython.com/source-control.html%22%20alt%3D%22http%3A//www.fullstackpython.com/source-control.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Source%20control</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="36" controlTypeID="__group__" x="1127" y="576" w="303" h="155" measuredW="303" measuredH="155" zOrder="36" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="303" h="155" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="36"/>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Link" x="15" y="66" w="-1" h="-1" measuredW="78" measuredH="30" zOrder="3" locked="false" isInGroup="36">
+          <controlProperties>
+            <href>http%3A//www.fullstackpython.com/django.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221094%2C625%2C1172%2C655%22%20href%3D%22http%3A//www.fullstackpython.com/django.html%22%20alt%3D%22http%3A//www.fullstackpython.com/django.html%22%20id%3D%222%22%20target%3D%22_blank%22/%3E</map>
+            <size>24</size>
+            <text>Django</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="134" y="66" w="-1" h="-1" measuredW="58" measuredH="30" zOrder="4" locked="false" isInGroup="36">
+          <controlProperties>
+            <href>http%3A//www.fullstackpython.com/flask.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221213%2C625%2C1271%2C655%22%20href%3D%22http%3A//www.fullstackpython.com/flask.html%22%20alt%3D%22http%3A//www.fullstackpython.com/flask.html%22%20id%3D%223%22%20target%3D%22_blank%22/%3E</map>
+            <size>24</size>
+            <text>Flask</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="230" y="66" w="-1" h="-1" measuredW="64" measuredH="30" zOrder="5" locked="false" isInGroup="36">
+          <controlProperties>
+            <href>http%3A//www.fullstackpython.com/bottle.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221309%2C625%2C1373%2C655%22%20href%3D%22http%3A//www.fullstackpython.com/bottle.html%22%20alt%3D%22http%3A//www.fullstackpython.com/bottle.html%22%20id%3D%224%22%20target%3D%22_blank%22/%3E</map>
+            <size>24</size>
+            <text>Bottle</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="15" y="94" w="-1" h="-1" measuredW="248" measuredH="30" zOrder="6" locked="false" isInGroup="36">
+          <controlProperties>
+            <href>http%3A//www.fullstackpython.com/other-web-frameworks.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221094%2C653%2C1342%2C683%22%20href%3D%22http%3A//www.fullstackpython.com/other-web-frameworks.html%22%20alt%3D%22http%3A//www.fullstackpython.com/other-web-frameworks.html%22%20id%3D%225%22%20target%3D%22_blank%22/%3E</map>
+            <size>24</size>
+            <text>Other%20web%20frameworks</text>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::TextArea" x="15" y="8" w="277" h="53" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="36">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="25" y="18" w="253" h="-1" measuredW="248" measuredH="40" zOrder="2" locked="false" isInGroup="36">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/web-frameworks.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221104%2C577%2C1357%2C617%22%20href%3D%22http%3A//www.fullstackpython.com/web-frameworks.html%22%20alt%3D%22http%3A//www.fullstackpython.com/web-frameworks.html%22%20id%3D%227%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>WSGI%20framework</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Image" x="103" y="201" w="223" h="182" measuredW="375" measuredH="500" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <borderStyle>square</borderStyle>
+        <filter>true</filter>
+        <size>32</size>
+        <src>http%3A//farm1.staticflickr.com/41/89655730_25a15142a8.jpg</src>
+        <text>Other%20apps</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::SubTitle" x="795" y="54" w="-1" h="-1" measuredW="469" measuredH="43" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Your%20web%20app%20deployment</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::SubTitle" x="126" y="54" w="-1" h="-1" measuredW="127" measuredH="43" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Clients</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::SubTitle" x="414" y="54" w="-1" h="-1" measuredW="147" measuredH="43" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Internet</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="__group__" x="1176" y="281" w="271" h="81" measuredW="271" measuredH="81" zOrder="42" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="271" h="81" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="41">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="29" y="20" w="215" h="-1" measuredW="180" measuredH="40" zOrder="1" locked="false" isInGroup="41">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/databases.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221157%2C284%2C1372%2C324%22%20href%3D%22http%3A//www.fullstackpython.com/databases.html%22%20alt%3D%22http%3A//www.fullstackpython.com/databases.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Database%28s%29</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Arrow" x="327" y="224" w="518" h="25" measuredW="150" measuredH="100" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <leftArrow>false</leftArrow>
+        <text>Access%20web%20APIs</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Arrow" x="327" y="247" w="518" h="20" measuredW="150" measuredH="100" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <rightArrow>false</rightArrow>
+        <text>HTTP%28S%29%20responses</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Arrow" x="1112" y="329" w="64" h="76" measuredW="150" measuredH="100" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>true</rightArrow>
+        <text>accesses</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Canvas" x="102" y="790" w="1384" h="131" measuredW="100" measuredH="70" zOrder="46" locked="false" isInGroup="-1"/>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::LinkBar" x="126" y="865" w="-1" h="-1" measuredW="1285" measuredH="34" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>0</borderColor>
+        <hrefs>http%3A//www.fullstackpython.com/deployment.html%2Chttp%3A//www.fullstackpython.com/configuration-management.html%2Chttp%3A//www.fullstackpython.com/caching.html%2Chttp%3A//www.fullstackpython.com/web-application-security.html%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2278%2C850%2C229%2C878%22%20href%3D%22http%3A//www.fullstackpython.com/deployment.html%22%20alt%3D%22http%3A//www.fullstackpython.com/deployment.html%22%20id%3D%2247%22%20target%3D%22_blank%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22247%2C850%2C589%2C878%22%20href%3D%22http%3A//www.fullstackpython.com/configuration-management.html%22%20alt%3D%22http%3A//www.fullstackpython.com/configuration-management.html%22%20id%3D%2247%22%20target%3D%22_blank%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22607%2C850%2C712%2C878%22%20href%3D%22http%3A//www.fullstackpython.com/caching.html%22%20alt%3D%22http%3A//www.fullstackpython.com/caching.html%22%20id%3D%2247%22%20target%3D%22_blank%22/%3E%3Carea%20shape%3D%22rect%22%20coords%3D%22730%2C850%2C1048%2C878%22%20href%3D%22http%3A//www.fullstackpython.com/web-application-security.html%22%20alt%3D%22http%3A//www.fullstackpython.com/web-application-security.html%22%20id%3D%2247%22%20target%3D%22_blank%22/%3E</map>
+        <size>28</size>
+        <text>Deployment%2C%20Configuration%20Management%2C%20Caching%2C%20Web%20Application%20Security%2C%20Best%20Python%20Resources</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="__group__" x="1191" y="367" w="259" h="81" measuredW="259" measuredH="81" zOrder="48" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="259" h="81" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="48">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="76" y="20" w="107" h="-1" measuredW="106" measuredH="40" zOrder="1" locked="false" isInGroup="48">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/no-sql-datastore.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221219%2C370%2C1326%2C410%22%20href%3D%22http%3A//www.fullstackpython.com/no-sql-datastore.html%22%20alt%3D%22http%3A//www.fullstackpython.com/no-sql-datastore.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>NoSQL</text>
+            <textOrientation>right</textOrientation>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Arrow" x="1112" y="410" w="79" h="23" measuredW="150" measuredH="100" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>true</rightArrow>
+        <text>accesses</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::SubTitle" x="126" y="813" w="-1" h="-1" measuredW="227" measuredH="43" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Other%20topics</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="__group__" x="1191" y="468" w="256" h="81" measuredW="256" measuredH="81" zOrder="51" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="256" h="81" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="51">
+          <controlProperties>
+            <align>center</align>
+            <size>28</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="27" y="20" w="203" h="-1" measuredW="186" measuredH="40" zOrder="1" locked="false" isInGroup="51">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/task-queues.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221170%2C471%2C1373%2C511%22%20href%3D%22http%3A//www.fullstackpython.com/task-queues.html%22%20alt%3D%22http%3A//www.fullstackpython.com/task-queues.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Task%20queues</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Arrow" x="1142" y="491" w="49" h="67" measuredW="150" measuredH="100" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <curvature>1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>executes</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Canvas" x="48" y="17" w="1495" h="970" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="__group__" x="453" y="678" w="259" h="54" measuredW="259" measuredH="54" zOrder="53" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="259" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="59">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="95" y="7" w="-1" h="-1" measuredW="69" measuredH="40" zOrder="1" locked="false" isInGroup="59">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/application-dependencies.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22500%2C668%2C569%2C708%22%20href%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20alt%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>PyPI</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="64" controlTypeID="__group__" x="327" y="531" w="241" h="54" measuredW="241" measuredH="54" zOrder="54" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="126" y="0" w="115" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="64">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="143" y="7" w="81" h="-1" measuredW="68" measuredH="40" zOrder="1" locked="false" isInGroup="64">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/static-content.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22422%2C521%2C503%2C561%22%20href%3D%22http%3A//www.fullstackpython.com/static-content.html%22%20alt%3D%22http%3A//www.fullstackpython.com/static-content.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>CDN</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="5" w="126" h="10" measuredW="150" measuredH="100" zOrder="2" locked="false" isInGroup="64">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <color>40463</color>
+            <direction>bottom</direction>
+            <leftArrow>false</leftArrow>
+            <text>Access%20files</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Arrow" x="0" y="29" w="126" h="10" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="64">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <color>40463</color>
+            <direction>bottom</direction>
+            <leftArrow>true</leftArrow>
+            <rightArrow>false</rightArrow>
+            <text>Sends%20files</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="65" controlTypeID="__group__" x="595" y="531" w="117" h="54" measuredW="117" measuredH="54" zOrder="32" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="117" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="65">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="21" y="7" w="81" h="-1" measuredW="70" measuredH="40" zOrder="1" locked="false" isInGroup="65">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/application-programming-interfaces.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22568%2C521%2C649%2C561%22%20href%3D%22http%3A//www.fullstackpython.com/application-programming-interfaces.html%22%20alt%3D%22http%3A//www.fullstackpython.com/application-programming-interfaces.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>APIs</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="68" controlTypeID="__group__" x="1176" y="184" w="274" h="81" measuredW="274" measuredH="81" zOrder="55" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::FieldSet" x="0" y="0" w="274" h="81" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="68">
+          <controlProperties>
+            <text>File%20system</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="15" y="26" w="165" h="-1" measuredW="154" measuredH="40" zOrder="1" locked="false" isInGroup="68">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/javascript.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221143%2C193%2C1308%2C233%22%20href%3D%22http%3A//www.fullstackpython.com/javascript.html%22%20alt%3D%22http%3A//www.fullstackpython.com/javascript.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>JavaScript</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="195" y="26" w="70" h="-1" measuredW="67" measuredH="40" zOrder="2" locked="false" isInGroup="68">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/cascading-style-sheets.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221323%2C193%2C1393%2C233%22%20href%3D%22http%3A//www.fullstackpython.com/cascading-style-sheets.html%22%20alt%3D%22http%3A//www.fullstackpython.com/cascading-style-sheets.html%22%20id%3D%222%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>CSS</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::SubTitle" x="177" y="25" w="-1" h="-1" measuredW="18" measuredH="43" zOrder="3" locked="false" isInGroup="68">
+          <controlProperties>
+            <size>40</size>
+            <text>/</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::TextArea" x="834" y="559" w="612" h="189" measuredW="200" measuredH="140" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>28</size>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::Label" x="853" y="568" w="164" h="-1" measuredW="144" measuredH="40" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/application-dependencies.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22805%2C551%2C969%2C591%22%20href%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20alt%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20id%3D%2270%22%20target%3D%22_blank%22/%3E</map>
+        <size>32</size>
+        <text>virtualenv</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::Label" x="1240" y="572" w="33" h="-1" measuredW="14" measuredH="40" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>32</size>
+        <text>/</text>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::Label" x="1288" y="572" w="129" h="-1" measuredW="54" measuredH="40" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/application-dependencies.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221240%2C555%2C1369%2C595%22%20href%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20alt%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20id%3D%2273%22%20target%3D%22_blank%22/%3E</map>
+        <size>32</size>
+        <text>app</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="694" w="133" h="14" measuredW="150" measuredH="100" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>retrieved%20from</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Label" x="853" y="687" w="252" h="-1" measuredW="235" measuredH="36" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027263</color>
+        <href>http%3A//www.fullstackpython.com/application-dependencies.html</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22805%2C670%2C1057%2C706%22%20href%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20alt%3D%22http%3A//www.fullstackpython.com/application-dependencies.html%22%20id%3D%2278%22%20target%3D%22_blank%22/%3E</map>
+        <size>28</size>
+        <text>app%20dependencies</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Label" x="853" y="635" w="252" h="-1" measuredW="212" measuredH="36" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>0</color>
+        <size>28</size>
+        <text>app%20source%20code</text>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Arrow" x="711" y="637" w="133" h="14" measuredW="150" measuredH="100" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>40463</color>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text>retrieved%20from</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="__group__" x="568" y="329" w="144" h="54" measuredW="144" measuredH="54" zOrder="26" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="144" h="54" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="81">
+          <controlProperties>
+            <shape>dottedRect</shape>
+            <size>32</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="9" y="8" w="128" h="-1" measuredW="116" measuredH="40" zOrder="1" locked="false" isInGroup="81">
+          <controlProperties>
+            <color>10027263</color>
+            <href>http%3A//www.fullstackpython.com/logging.html</href>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22529%2C320%2C657%2C360%22%20href%3D%22http%3A//www.fullstackpython.com/logging.html%22%20alt%3D%22http%3A//www.fullstackpython.com/logging.html%22%20id%3D%221%22%20target%3D%22_blank%22/%3E</map>
+            <size>32</size>
+            <text>Logging</text>
+            <underline>true</underline>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

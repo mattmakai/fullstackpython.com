@@ -28,3 +28,9 @@ pip-log.txt
 .mr.developer.cfg
 
 .DS_Store
+
+# Emacs backups
+*~
+
+source/cache/
+venv

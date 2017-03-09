@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block meta_header %}{% if article and article.meta %}
+<meta name="description" content="{{ article.meta }}">
+{% endif %}{% endblock %}
+
+{% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
+
+{% block css %}
+{% include "css/article.html" %}
+{% endblock %}
+
+{% block banner %}
+  {% include "banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+{% if article %}
+<div class="row">
+ <div class="col-md-9">
+  <h1 style="font-size: 36px;">{{ article.title }}</h1>
+  <div style="font-size:12px;color:#666;margin:0 0 10px">
+   Posted by <a href="/about-author.html">Matt Makai</a> on 
+   {{ article.date.strftime('%B %d, %Y') }}.
+   {% if article.modified != article.date %}Last updated
+   {{ article.modified.strftime('%B %d, %Y') }}.{% endif %}
+  </div>
+  {{ article.content }}
+  <hr>
+  {% include "email-for-book.html" %}
+  {% endif %}
+ </div>
+ <div class="col-md-3">
+  {% include "article-sidebar.html" %}
+ </div>
+</div>
+{% endblock %}
+
+{% block lower_banner %}
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="panel" id="sidebar">
+  <div class="panel-heading">
+    <h3 class="panel-head">Learn more about these concepts</h3>
+  </div>
+  <img src="{{ article.headerimage }}" alt="{{ article.headeralt }}" width="100%"> 
+  <div class="list-group">
+    {% include "blog/" + article.slug + ".html" %}
+    <a href="/table-of-contents.html" class="list-group-item smaller-item" style='background-color:#444; color: #fff;'>...or <span style="border-bottom: 1px dotted;">view all topics</span>.</a>
+  </div>
+</div>

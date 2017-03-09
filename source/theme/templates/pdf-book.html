@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="theme/css/f.min.css" rel="stylesheet">
+  <link href="theme/css/pdf-book.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {% for page in pages|sort(attribute='sortorder') %}
+          {{ page.content }}
+        {% endfor %}
+      </div>
+    </div>
+  </div> 
+</body>
+</html>

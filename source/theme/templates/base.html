@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="author" content="Matt Makai">
+ {% block meta_header %}{% endblock %}
+ <title>{% block title %}{% endblock %}Full Stack Python</title>
+ {% block css %}{% endblock %}
+ <link rel="shortcut icon" href="/img/fsp-fav.png">
+</head>
+<body>
+ {% block banner %}{% endblock %}
+ <div class="container">
+  {% include "nav.html" %}
+  {% block forkme %}{% endblock %}
+  {% block content %}{% endblock %}
+  <hr/>
+ </div> 
+ {% block lower_banner %}{% endblock %}
+ {% include "footer.html" %}
+{% include "googleanalytics.html" %}
+{% block js %}{% endblock %}
+</body>
+</html>
