@@ -12,6 +12,8 @@ The [Apache HTTP Server](https://httpd.apache.org/) is a widely deployed web ser
 that can be used in combination with a WSGI module, such as mod\_wsgi or a
 stand-alone [WSGI server](/wsgi-servers.html) to run Python web applications.
 
+<a href="https://httpd.apache.org/" style="border: none;"><img src="/source/static/img/logos/apache-http-server.jpg" width="100%" alt="Apache HTTP Server logo." class="technical-diagram"></a>
+
 
 ## Why is the Apache HTTP Server important?
 Apache remains the most commonly deployed web server with a reign of
@@ -52,3 +54,7 @@ development attention.
   but if you are already using 10.04 as your base operating system you might
   need to reference this material.
 
+* [Detecting Bots in Apache & Nginx Logs](http://tech.marksblogg.com/detect-bots-apache-nginx-logs.html)
+  is a great tutorial for filtering out the significant traffic generated
+  by web crawlers and bots when using Apache HTTP Server logs for traffic
+  analytics.

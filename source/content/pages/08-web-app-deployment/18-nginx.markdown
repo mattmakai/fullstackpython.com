@@ -84,7 +84,7 @@ HTTP(S) configurations.
   and [FREAK](https://freakattack.com/).
 
 
-## General Nginx resources
+## Specific Nginx resources
 Nginx can be used without Python so there are a massive number of fantastic
 resources available for installing, configuring and optimizing this 
 [web server](/web-servers.html) implementation. The following resources are
@@ -146,4 +146,7 @@ several years.
   this technique for pixel tracking but there are other purposes this method
   could be used for such as advanced debugging. 
 
+* [Detecting Bots in Apache & Nginx Logs](http://tech.marksblogg.com/detect-bots-apache-nginx-logs.html)
+  is an awesome tutorial that shows how to filter web crawlers and bots
+  from your traffic logs when using them for web traffic analytics.
 
