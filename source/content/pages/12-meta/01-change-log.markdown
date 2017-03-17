@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### March
+* Added new [PostgreSQL](/postgresql.html) and [SQLAlchemy](/sqlalchemy.html)
+  resources.
 * New [Git](/git.html) resources.
 
 ### Feburary
