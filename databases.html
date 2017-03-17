@@ -174,13 +174,22 @@ PostgreSQL but is not as feature rich.</p>
 library. The most common libraries for relational databases are:</p>
 <ul>
 <li>
-<p><a href="http://initd.org/psycopg/">psycopg2</a> for PostgreSQL</p>
+<p><a href="http://initd.org/psycopg/">psycopg2</a> 
+  (<a href="https://github.com/psycopg/psycopg2">source code</a>)
+  for PostgreSQL.</p>
 </li>
 <li>
-<p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQLdb</a> for MySQL</p>
+<p><a href="https://pypi.python.org/pypi/MySQL-python/1.2.5">MySQLdb</a> 
+  (<a href="https://github.com/farcepest/MySQLdb1">source code</a>) 
+  for MySQL. Note that this driver's development is mostly frozen so
+  evaluating alternative drivers is wise if you are using 
+  <a href="/mysql.html">MySQL</a> as a backend.</p>
 </li>
 <li>
-<p><a href="http://cx-oracle.sourceforge.net/">cx_Oracle</a> for Oracle</p>
+<p><a href="https://oracle.github.io/python-cx_Oracle/index.html">cx_Oracle</a> for 
+  Oracle Database (<a href="https://github.com/oracle/python-cx_Oracle">source code</a>).
+  Oracle moved their
+  <a href="https://blogs.oracle.com/developers/oracle-database-python-driver-now-on-github">open source driver code from SourceForge to GitHub in 2017</a>.</p>
 </li>
 </ul>
 <p>SQLite support is built into Python 2.7+ and therefore a separate library

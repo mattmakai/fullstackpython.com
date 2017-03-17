@@ -97,11 +97,21 @@ Find out about Python applications with a MySQL backed on the dedicated
 To work with a relational database using Python, you need to use a code 
 library. The most common libraries for relational databases are:
 
-* [psycopg2](http://initd.org/psycopg/) for PostgreSQL
+* [psycopg2](http://initd.org/psycopg/) 
+  ([source code](https://github.com/psycopg/psycopg2))
+  for PostgreSQL.
 
-* [MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.5) for MySQL
+* [MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.5) 
+  ([source code](https://github.com/farcepest/MySQLdb1)) 
+  for MySQL. Note that this driver's development is mostly frozen so
+  evaluating alternative drivers is wise if you are using 
+  [MySQL](/mysql.html) as a backend.
 
-* [cx\_Oracle](http://cx-oracle.sourceforge.net/) for Oracle
+* [cx\_Oracle](https://oracle.github.io/python-cx_Oracle/index.html) for 
+  Oracle Database ([source code](https://github.com/oracle/python-cx_Oracle)).
+  Oracle moved their
+  [open source driver code from SourceForge to GitHub in 2017](https://blogs.oracle.com/developers/oracle-database-python-driver-now-on-github).
+
 
 SQLite support is built into Python 2.7+ and therefore a separate library
 is not necessary. Simply "import sqlite3" to begin interfacing with the 
