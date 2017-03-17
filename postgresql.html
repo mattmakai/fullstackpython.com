@@ -229,6 +229,14 @@ walkthroughs I've read.</p>
   you prefer writing SQL over using an 
   <a href="/object-relational-mappers-orms.html">ORM</a> like SQLAlchemy.</p>
 </li>
+<li>
+<p><a href="http://lucasroesler.com/2017/02/postgres-joins-and-django-querysets/">Postgres Joins and Django Querysets</a> 
+  is a well done post with a specific example of how a standard 
+  Django ORM query can lead to degraded performance due when obtaining
+  data from many related tables. The <code>prefetch_related</code> command and 
+  database performance monitoring tools can help analyze and alleviate
+  some of the issues in these unoptimized queries.</p>
+</li>
 </ul>
 <h2>General PostgreSQL resources</h2>
 <p>PostgreSQL tutorials not specific to Python are also really helpful
