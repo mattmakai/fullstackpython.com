@@ -15,6 +15,10 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### March
+* Pushed the [2000th commit](https://github.com/mattmakai/fullstackpython.com/commit/3baed0aa82e1b3b7fa0a337e91998018d62a0f23) 
+  to Full Stack Python, just under 2 years after the 
+  [1000th commit](https://github.com/mattmakai/fullstackpython.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d). Here's to the next 1,000 commits!
+<img src="/img/2000th-commit.jpg" width="100%" alt="Screenshot of 2000th commit to Full Stack Python." class="technical-diagram" />
 * Added new [PostgreSQL](/postgresql.html) and [SQLAlchemy](/sqlalchemy.html)
   resources.
 * New [Git](/git.html) resources.
