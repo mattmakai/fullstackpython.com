@@ -22,6 +22,16 @@ necessary [uvloop](https://github.com/MagicStack/uvloop) dependency.
 
 <div class="well see-also">Sanic is an implementation of the <a href="/web-frameworks.html">web framework</a> concept. Learn how these parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
+There was 
+[an excellent discussion on the /r/python subreddit](https://www.reddit.com/r/Python/comments/5ryiq7/sticking_with_flask_vs_switching_to_one_of_the/) 
+about using one of the newer async frameworks such as Sanic or Japronto 
+compared with a traditional [web framework](/web-frameworks.html) like 
+[Django](/django.html). One of the major tradeoff of adopting a newer
+framework is simply that the code library ecosystem has not, and may never,
+grow up around that framework. You have to accept the risk that you will
+need to build a significant amount of the plumbing yourself rather than
+`pip` installing existing, well-tested libraries.
+
 
 ## Sanic tutorials
 Sanic is under very active development and is still in its infancy as a
