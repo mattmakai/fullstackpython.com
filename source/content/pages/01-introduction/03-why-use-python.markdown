@@ -29,8 +29,10 @@ Python as a top programming language within the top ten, if not the top five
 of all languages.  
 
 The IEEE ranked [Python as the #3 top programming language](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages)
-in 2016, while
-[RedMonk's January 2015 ranking](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/) had Python at #4.
+in 2016. 
+[RedMonk's January 2017 ranking](https://redmonk.com/sogrady/2017/03/17/language-rankings-1-17/)
+had Python at #3, which was up one slot from 
+[their same ranking two years earlier](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/).
 
 The 
 [TIOBE Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html),
