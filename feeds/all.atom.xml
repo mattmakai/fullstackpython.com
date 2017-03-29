@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-03-01T00:00:00-05:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-03-29T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
 &lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;
 and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
@@ -453,7 +453,7 @@ the phone number:&lt;/p&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub as
 &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/161123-make-phone-calls.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link href="https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html" rel="alternate"></link><updated>2016-10-27T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</id><summary type="html">&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/161123-make-phone-calls.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Dialing Outbound Phone Calls with a Bottle Web App</title><link href="https://www.fullstackpython.com/dial-outbound-phone-calls-python-bottle.html" rel="alternate"></link><updated>2017-03-29T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</id><summary type="html">&lt;p&gt;Python web apps built with the &lt;a href="/bottle.html"&gt;Bottle web framework&lt;/a&gt; can 
 &lt;a href="/blog/send-sms-text-messages-python.html"&gt;send&lt;/a&gt; and 
 &lt;a href="/blog/reply-sms-text-messages-python-bottle.html"&gt;receive SMS text messages&lt;/a&gt;.
 In this tutorial we will go beyond texting and learn how to dial outbound 
@@ -582,7 +582,7 @@ Hit Ctrl-C to quit.
 &lt;p&gt;Here is what the development server message looks like in my environment 
 on Ubuntu:&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/bottle-app-running.png" width="100%" class="technical-diagram img-rounded" alt="Successfully starting the Bottle development server from the command line."&gt;&lt;/p&gt;
-&lt;p&gt;Let's test out the app by going to &lt;a href="http://localhost:8000"&gt;localhost:8000&lt;/a&gt;
+&lt;p&gt;Let's test out the app by going to "localhost:8000"
 in the web browser. We should get a simple success message that the app
 is running and responding to requests.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/bottle-app-web-browser.png" width="100%" class="technical-diagram img-rounded" alt="Simple success message in the web browser that the Bottle app is running."&gt;&lt;/p&gt;

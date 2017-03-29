@@ -3,7 +3,7 @@ slug: dial-outbound-phone-calls-python-bottle
 meta: A tutorial that shows how to dial outbound phone calls with a Bottle web application built with Python 3.
 category: post
 date: 2016-08-30
-modified: 2016-10-27
+modified: 2017-03-29
 headerimage: /source/static/img/160830-phone-calls-bottle/header.jpg
 headeralt: Bottle, Python and Twilio logos. Copyright their respective owners.
 
@@ -153,7 +153,7 @@ on Ubuntu:
 
 <img src="/source/static/img/160830-phone-calls-bottle/bottle-app-running.png" width="100%" class="technical-diagram img-rounded" alt="Successfully starting the Bottle development server from the command line.">
 
-Let's test out the app by going to [localhost:8000](http://localhost:8000)
+Let's test out the app by going to "localhost:8000"
 in the web browser. We should get a simple success message that the app
 is running and responding to requests.
 

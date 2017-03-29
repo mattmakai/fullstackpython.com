@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 01 Mar 2017 00:00:00 -0500</lastBuildDate><item><title>How to Choose the Right DevOps Tools for You and Your Team</title><link>https://www.fullstackpython.com/choose-right-devops-tools.html</link><description>&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Full Stack Python</title><link>https://www.fullstackpython.com/</link><description></description><atom:link href="https://www.fullstackpython.com/feeds/matt-makai.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 29 Mar 2017 00:00:00 -0400</lastBuildDate><item><title>How to Choose the Right DevOps Tools for You and Your Team</title><link>https://www.fullstackpython.com/choose-right-devops-tools.html</link><description>&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
 &lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;
 and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
@@ -582,7 +582,7 @@ Hit Ctrl-C to quit.
 &lt;p&gt;Here is what the development server message looks like in my environment 
 on Ubuntu:&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/bottle-app-running.png" width="100%" class="technical-diagram img-rounded" alt="Successfully starting the Bottle development server from the command line."&gt;&lt;/p&gt;
-&lt;p&gt;Let's test out the app by going to &lt;a href="http://localhost:8000"&gt;localhost:8000&lt;/a&gt;
+&lt;p&gt;Let's test out the app by going to "localhost:8000"
 in the web browser. We should get a simple success message that the app
 is running and responding to requests.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160830-phone-calls-bottle/bottle-app-web-browser.png" width="100%" class="technical-diagram img-rounded" alt="Simple success message in the web browser that the Bottle app is running."&gt;&lt;/p&gt;
@@ -732,7 +732,7 @@ to add even more features to your app:&lt;/p&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub as
 &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160830-phone-calls-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Thu, 27 Oct 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</guid></item><item><title>Python for Entrepreneurs</title><link>https://www.fullstackpython.com/python-entrepreneurs.html</link><description>&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160830-phone-calls-bottle.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 29 Mar 2017 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-08-30:dial-outbound-phone-calls-python-bottle.html</guid></item><item><title>Python for Entrepreneurs</title><link>https://www.fullstackpython.com/python-entrepreneurs.html</link><description>&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course"&gt;Python for Entrepreneurs&lt;/a&gt;
 is a new video course by the creators of 
 &lt;a href="https://talkpython.fm/"&gt;Talk Python to Me&lt;/a&gt; and 
 &lt;a href="https://fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt;.&lt;/p&gt;
