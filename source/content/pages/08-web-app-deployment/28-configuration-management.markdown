@@ -78,8 +78,6 @@ from PyCon UK 2013
 
 * [Post-install steps with Ansible](http://devopsu.com/guides/ansible-post-install.html) 
 
-* [First Five (and a half) Minutes on a Server with Ansible](http://lattejed.com/first-five-and-a-half-minutes-on-a-server-with-ansible) 
-
 * [6 practices for super smooth Ansible experience](http://hakunin.com/six-ansible-practices)
 
 * [Shippable + Ansible + Docker + Loggly for awesome deployments](http://www.hiddentao.com/archives/2014/06/03/shippable-ansible-docker-loggly-for-awesome-deployments/)
