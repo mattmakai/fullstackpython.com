@@ -14,6 +14,9 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### April
+* New [PostgreSQL](/postgresql.html) page resources.
+
 ### March
 * Pushed the [2000th commit](https://github.com/mattmakai/fullstackpython.com/commit/3baed0aa82e1b3b7fa0a337e91998018d62a0f23) 
   to Full Stack Python, just under 2 years after the 
