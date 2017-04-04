@@ -187,7 +187,7 @@ ever
 or been the victim of malicious activity such as SQL injection attacks, you'll
 know it's far easier to recover when a bit of work has been performed 
 beforehand on backups, replication and security measures.</p>
-<h2>Python-specific PostgreSQL resources</h2>
+<h3>Python-specific PostgreSQL resources</h3>
 <p>Many quickstarts and tutorials exist specifically for Django, Flask and 
 other web application frameworks. The ones below are some of the best
 walkthroughs I've read.</p>
@@ -237,8 +237,14 @@ walkthroughs I've read.</p>
   database performance monitoring tools can help analyze and alleviate
   some of the issues in these unoptimized queries.</p>
 </li>
+<li>
+<p><a href="https://www.compose.com/articles/loading-google-analytics-data-to-postgresql-using-python/">Loading Google Analytics data to PostgreSQL using Python</a>
+  is a quality tutorial that combines <a href="/api-integration.html">API calls</a>
+  with psycopg and PostgreSQL to take data from Google Analytics and save
+  it in a PostgreSQL database.</p>
+</li>
 </ul>
-<h2>General PostgreSQL resources</h2>
+<h3>General PostgreSQL resources</h3>
 <p>PostgreSQL tutorials not specific to Python are also really helpful
 for properly handling your data.</p>
 <ul>
@@ -285,10 +291,13 @@ The post is an inside look at the evolution of Braintree's usage of the database
   <a href="https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/">10 beginner tasks you should know how to execute</a>.</p>
 </li>
 <li>
-<p><a href="https://www.compose.com/articles/loading-google-analytics-data-to-postgresql-using-python/">Loading Google Analytics data to PostgreSQL using Python</a>
-  is a quality tutorial that combines <a href="/api-integration.html">API calls</a>
-  with psycopg and PostgreSQL to take data from Google Analytics and save
-  it in a PostgreSQL database.</p>
+<p><a href="https://blog.hagander.net/locating-the-recovery-point-just-before-a-dropped-table-230/">Locating the recovery point just before a dropped table</a>
+  and 
+  <a href="https://blog.hagander.net/logging-transactions-that-dropped-tables-236/">logging transactions that dropped tables</a>
+  are two posts that show you how to recover from an accidentally dropped
+  table. In the first post the author shows how recovery is possible with
+  recovery points while the second post shows how to put logging in place
+  to assist in future recoveries.</p>
 </li>
 <li>
 <p>The title's a bit presumptuous but here's a useful list of 

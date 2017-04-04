@@ -109,7 +109,7 @@ know it's far easier to recover when a bit of work has been performed
 beforehand on backups, replication and security measures.
 
 
-## Python-specific PostgreSQL resources
+### Python-specific PostgreSQL resources
 Many quickstarts and tutorials exist specifically for Django, Flask and 
 other web application frameworks. The ones below are some of the best
 walkthroughs I've read.
@@ -151,8 +151,13 @@ walkthroughs I've read.
   database performance monitoring tools can help analyze and alleviate
   some of the issues in these unoptimized queries.
 
+* [Loading Google Analytics data to PostgreSQL using Python](https://www.compose.com/articles/loading-google-analytics-data-to-postgresql-using-python/)
+  is a quality tutorial that combines [API calls](/api-integration.html)
+  with psycopg and PostgreSQL to take data from Google Analytics and save
+  it in a PostgreSQL database.
 
-## General PostgreSQL resources
+
+### General PostgreSQL resources
 PostgreSQL tutorials not specific to Python are also really helpful
 for properly handling your data.
 
@@ -189,10 +194,13 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * If you're just getting started with PostgreSQL here are 
   [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
 
-* [Loading Google Analytics data to PostgreSQL using Python](https://www.compose.com/articles/loading-google-analytics-data-to-postgresql-using-python/)
-  is a quality tutorial that combines [API calls](/api-integration.html)
-  with psycopg and PostgreSQL to take data from Google Analytics and save
-  it in a PostgreSQL database.
+* [Locating the recovery point just before a dropped table](https://blog.hagander.net/locating-the-recovery-point-just-before-a-dropped-table-230/)
+  and 
+  [logging transactions that dropped tables](https://blog.hagander.net/logging-transactions-that-dropped-tables-236/)
+  are two posts that show you how to recover from an accidentally dropped
+  table. In the first post the author shows how recovery is possible with
+  recovery points while the second post shows how to put logging in place
+  to assist in future recoveries.
 
 * The title's a bit presumptuous but here's a useful list of 
   [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
