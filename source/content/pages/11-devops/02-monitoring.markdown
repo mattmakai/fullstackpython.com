@@ -97,9 +97,16 @@ these services are not the right fit for every project.
 * [Sentry](https://sentry.io/welcome/) is the hosted version of the open
   source tool that is used to monetize and support further development.
 
-* [New Relic](http://newrelic.com/). Application and database monitoring as
-  well as plug ins for capturing and analyzing additional data about tools in
-  your stack.
+* [New Relic](http://newrelic.com/) provides application and database 
+  monitoring as well as plug ins for capturing and analyzing data about 
+  other devleoper tools in your stack, such as [Twilio](/twilio.html).
+
+* [Rollbar](https://rollbar.com/) instruments both the server side and
+  client side to capture and report exceptions. The 
+  [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) code library
+  provides quick integration for Pyton web applications. There are also
+  specific instructions for common [web frameworks](/web-frameworks.html)
+  such as [Django](/django.html) and [Pyramid](/pyramid.html).
 
 * [Status.io](http://status.io/) focuses on uptime and response metrics 
   transparency for web applications.
@@ -111,10 +118,8 @@ these services are not the right fit for every project.
 * [PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
   if there are stability, performance, or uptime issues with an application.
 
-* [App Enlight](https://appenlight.com/) provides performance, exception and 
-  error monitoring and is currently specific to Python web applications.
-
-* [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance metrics, release tracking, and error logging into a single simple service.
+* [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance 
+  metrics, release tracking, and error logging into a single simple service.
 
 
 ## Monitoring resources
