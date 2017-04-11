@@ -20,15 +20,6 @@ talks from the past several years.
 <div class="well see-also">Be sure to read the <a href="/best-python-resources.html">best Python resources</a> for links to books and articles as well as <a href="/web-frameworks.html">web frameworks</a> to learn more about web development.</div>
 
 
-## Live Coding
-Learn by watching developers code. Follow my account on 
-[Twitch Creative](https://www.twitch.tv/mattmakai) then enable 
-email alerts when I go live. On Wednesdays I code Python and Swift 
-applications, answering any chat questions along the way.
-I also hold office hours on Fridays where you can drop in and ask 
-questions about your coding issues.
-
-
 ## Web development with Django, Flask and other frameworks
 * [Kate Heddleston](https://twitter.com/heddle317) gave a talk at PyCon 2014 
   called 
@@ -97,19 +88,8 @@ questions about your coding issues.
   using threads, event loops and coroutines. David makes the live coding
   look easy but a whole lot of work must've gone into that talk.
 
-
-## Screencasts and class recordings
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
-
-* While there aren't always live streams online, it's worth checking out the 
-  [Python category on Livecoding.tv](https://www.livecoding.tv/livestreams/python/) 
-  to see if anyone is streaming or has a recording of working on a Python 
-  project. Even experienced developers can learn a whole lot from watching 
-  other developer's work on their projects. I also stream a couple times per
-  week so if you 
-  [follow me on my username](https://www.livecoding.tv/mattmakai/) you'll 
-  get an alert when I go online.
 
 
 ## Video compilations
