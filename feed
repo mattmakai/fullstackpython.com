@@ -2640,16 +2640,18 @@ start a new &lt;a href="/django.html"&gt;Django&lt;/a&gt; web application projec
 &lt;h2&gt;Tools We Need&lt;/h2&gt;
 &lt;p&gt;We will need a few tools to complete our project. Don't worry about 
 installing these just yet as we'll get to them as we progress through the
-tutorial. The tools and their current versions as of May 9, 2016 are:&lt;/p&gt;
+tutorial. The tools and their current versions as of April 2017 are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04.2 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
-  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
-  (default in Ubuntu 16.04)&lt;/li&gt;
+  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5.1&lt;/a&gt; 
+  (default in Ubuntu 16.04.2). Python 3.6 has been released but 
+  Ubuntu 16.04.2 comes with 3.5.1 by default so we'll use the version 3.5.1 
+  in this post.&lt;/li&gt;
 &lt;li&gt;&lt;a href="/django.html"&gt;Django&lt;/a&gt; web framework version 
-  &lt;a href="https://docs.djangoproject.com/en/1.9/releases/1.9/"&gt;1.9.6&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="https://docs.djangoproject.com/en/1.11/releases/1.11/"&gt;1.11&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
-  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.4&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.7.1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you are running Mac OS X or Windows, use virtualization software such
 as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; 

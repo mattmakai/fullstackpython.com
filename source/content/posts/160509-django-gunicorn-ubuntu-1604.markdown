@@ -22,16 +22,18 @@ start a new [Django](/django.html) web application project and run it with
 ## Tools We Need
 We will need a few tools to complete our project. Don't worry about 
 installing these just yet as we'll get to them as we progress through the
-tutorial. The tools and their current versions as of May 9, 2016 are:
+tutorial. The tools and their current versions as of April 2017 are:
 
-* [Ubuntu 16.04 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/)
+* [Ubuntu 16.04.2 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/)
 * [Python](/why-use-python.html) version 
-  [3.5](https://docs.python.org/3/whatsnew/3.5.html) 
-  (default in Ubuntu 16.04)
+  [3.5.1](https://docs.python.org/3/whatsnew/3.5.html) 
+  (default in Ubuntu 16.04.2). Python 3.6 has been released but 
+  Ubuntu 16.04.2 comes with 3.5.1 by default so we'll use the version 3.5.1 
+  in this post.
 * [Django](/django.html) web framework version 
-  [1.9.6](https://docs.djangoproject.com/en/1.9/releases/1.9/)
+  [1.11](https://docs.djangoproject.com/en/1.11/releases/1.11/)
 * [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) version 
-  [19.4](http://docs.gunicorn.org/en/stable/news.html)
+  [19.7.1](http://docs.gunicorn.org/en/stable/news.html)
 
 If you are running Mac OS X or Windows, use virtualization software such
 as [Parallels](https://www.parallels.com/products/desktop/) 
@@ -105,7 +107,7 @@ dependencies we want, such as Django and Gunicorn.
 ## Django and Gunicorn
 Time to install Django and Green Unicorn into our virtualenv.
 
-    pip install django gunicorn    
+    pip install django gunicorn
 
 
 No errors is a good sign everything worked for us.
