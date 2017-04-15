@@ -70,6 +70,12 @@ for fellow developers.
   [Frinkiac](https://frinkiac.com/) to create and sent Simpons cartoon
   quotes to any phone number. 
 
+* [Finding free food with Python](http://jamesbvaughan.com/python-twilio-scraping/)
+  is a fun web scraping tutorial that uses Beautiful Soup 4 to obtain
+  some data from websites then uses the 
+  [Twilio SMS API via some Python code](https://www.twilio.com/docs/quickstart/python/sms) 
+  to send a text message with the results.
+
 * IBM's Bluemix blog contains a nice tutorial on building an 
   [IoT Python app with a Raspberry Pi and Bluemix](https://developer.ibm.com/bluemix/2015/04/02/tutorial-using-a-raspberry-pi-python-iot-twilio-bluemix/)
   that uses Twilio to interact with the Raspberry Pi.
