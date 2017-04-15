@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-03-29T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/post.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-04-15T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
 &lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;
 and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
@@ -2629,7 +2629,7 @@ found on the &lt;a href="/table-of-contents.html"&gt;table of contents&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
 the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="https://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-08-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt; released the newest Long Term Support (LTS) 
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160510-flask-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Setting up Python 3, Django and Gunicorn on Ubuntu 16.04 LTS</title><link href="https://www.fullstackpython.com/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2017-04-15T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-09:python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt; released the newest Long Term Support (LTS) 
 version of its &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; in April 2016. 
 The update brings Ubuntu to version 16.04 and its latest code name is 
 "Xenial Xerus". 16.04 is the first Ubuntu release to include 
@@ -2747,20 +2747,22 @@ or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also 
 the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
 &lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="https://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2017-02-18T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;Full Stack Python began way back in December 2012 when I started writing
-the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, &lt;a href="/servers.html"&gt;server&lt;/a&gt;, 
-operating system, web server and WSGI server pages. Since then, the pages
-have expanded out into a 
-&lt;a href="/table-of-contents.html"&gt;boatload of other areas&lt;/a&gt;
-including subjects outside the deployment topics I originally started the
-site to explain.&lt;/p&gt;
-&lt;p&gt;Frequently though I wanted to write a Python walkthrough that was not a
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>The Full Stack Python Blog</title><link href="https://www.fullstackpython.com/full-stack-python-blog.html" rel="alternate"></link><updated>2017-04-15T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-08:full-stack-python-blog.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.fullstackpython.com/"&gt;Full Stack Python&lt;/a&gt; began 
+&lt;a href="/change-log.html"&gt;way back in December 2012&lt;/a&gt;
+when I started writing the initial &lt;a href="/deployment.html"&gt;deployment&lt;/a&gt;, 
+&lt;a href="/servers.html"&gt;server&lt;/a&gt;, &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt;, 
+&lt;a href="/web-servers.html"&gt;web server&lt;/a&gt; and &lt;a href="/wsgi-servers.html"&gt;WSGI server&lt;/a&gt; pages. 
+The site has has broadly expanded out into a 
+&lt;a href="/table-of-contents.html"&gt;many other subjects&lt;/a&gt; outside the deployment 
+topics I originally started this site to explain.&lt;/p&gt;
+&lt;p&gt;However, I frequently wanted to write a Python walkthrough that was not a
 good fit for the page format I use for each topic. Many of those walkthroughs
 became &lt;a href="https://www.twilio.com/blog/author/mmakai"&gt;Twilio blog posts&lt;/a&gt;
-but not all of them were quite the right fit on there. I'll still be writing
-plenty more &lt;a href="/twilio.html"&gt;Twilio&lt;/a&gt; tutorials, but this 
+but not all of them were quite the right fit on there. I'll still write
+more &lt;a href="/twilio.html"&gt;Twilio&lt;/a&gt; tutorials, but this 
 &lt;a href="/blog.html"&gt;Full Stack Python blog&lt;/a&gt; is the spot for technical posts that 
 fall outside the Twilio domain.&lt;/p&gt;
-&lt;p&gt;Let me know what you think and what tutorials you'd like to see in the future. 
-Hit me up on Twitter &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
+&lt;p&gt;Let me know what you think and what tutorials you'd like to see in the 
+future. &lt;/p&gt;
+&lt;p&gt;Hit me up on Twitter &lt;a href="https://twitter.com/fullstackpython"&gt;@fullstackpython&lt;/a&gt;
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>
