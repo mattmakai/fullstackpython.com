@@ -96,29 +96,29 @@ p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:14px 0
    Posted by <a href="/about-author.html">Matt Makai</a> on 
    May 10, 2016.
 Last updated
-   August 10, 2016.  </div>
+   April 16, 2017.  </div>
   <p><a href="/ubuntu.html">Ubuntu</a>'s latest Long Term Support (LTS) 
-<a href="/operating-systems.html">operating system</a> was released last month, in 
+<a href="/operating-systems.html">operating system</a> was released last year, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
-it's the first Ubuntu release to include <a href="/python-2-or-3.html">Python 3</a> 
+it is the first Ubuntu release to include <a href="/python-2-or-3.html">Python 3</a> 
 as the default Python installation.</p>
-<p>We can use this new Ubuntu release along with Python version 3.5 to 
+<p>We can use the Ubuntu release along with Python version 3.5 to 
 start a new <a href="/flask.html">Flask</a> web application project and run it with 
 <a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a>.</p>
 <h2>Tools We'll Need</h2>
-<p>We'll need the Ubuntu 16.04 release along with a few other libraries to 
-complete our project. You don't have to install these tools just yet, 
-we will get to them as we progress through the walkthrough. Our requirements
-and their current versions as of May 10, 2016 are:</p>
+<p>Our project will use the Ubuntu 16.04 release along with a few other 
+libraries. You don't have to install these tools just yet, we will get 
+to them as we progress through the walkthrough. Our requirements
+and their current versions as of April 2017 are:</p>
 <ul>
-<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS (Xenial Xerus)</a></li>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04.2 LTS (Xenial Xerus)</a></li>
 <li><a href="/why-use-python.html">Python</a> version 
-  <a href="https://docs.python.org/3/whatsnew/3.5.html">3.5</a> 
-  (default in Ubuntu 16.04)</li>
+  <a href="https://docs.python.org/3/whatsnew/3.5.html">3.5.1</a> 
+  (default in Ubuntu 16.04.2)</li>
 <li><a href="/flask.html">Flask</a> web framework version 
-  <a href="http://flask.pocoo.org/docs/0.10/">0.10</a></li>
+  <a href="http://flask.pocoo.org/docs/0.12/">0.12</a></li>
 <li><a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a> version 
-  <a href="http://docs.gunicorn.org/en/stable/news.html">19.4</a></li>
+  <a href="http://docs.gunicorn.org/en/stable/news.html">19.7.1</a></li>
 </ul>
 <p>If you're running on Mac OS X or Windows, use virtualization software such
 as <a href="https://www.parallels.com/products/desktop/">Parallels</a> or
@@ -142,7 +142,7 @@ which python3
 for the superuser password because restricted system access is needed 
 to install packages through 
 <a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool">apt</a>.</p>
-<div class="highlight"><pre>sudo apt-get install virtualenv python-pip python3-dev
+<div class="highlight"><pre>sudo apt-get install python3-dev python3-pip
 </pre></div>
 
 
@@ -157,11 +157,13 @@ and <a href="https://pypi.python.org/pypi/pip">pip</a> were installed to handle 
 <a href="/application-dependencies.html">application dependencies</a>.
 We can now use them to download and install Flask and Gunicorn.</p>
 <p>Create a directory for the virtualenvs. Then create a new virtualenv.</p>
-<div class="highlight"><pre># the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
+<div class="highlight"><pre># make sure pip and setuptools are the latest version
+pip3 install --upgrade pip setuptools
+# the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
 cd ~
 mkdir venvs
 # specify the system python3 installation
-virtualenv --python=/usr/bin/python3 venvs/flaskproj
+python3 -m venv venvs/flaskproj
 </pre></div>
 
 
@@ -180,7 +182,7 @@ dependencies we want, in our case Flask and Gunicorn. </p>
 </pre></div>
 
 
-<p>It's a good sign if we receive no errors like we see in the following 
+<p>It is a good sign if we receive no errors like we see in the following 
 screenshot.</p>
 <p><img src="/source/static/img/160510-ubuntu-flask-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Create a new directory under our home directory that will store our

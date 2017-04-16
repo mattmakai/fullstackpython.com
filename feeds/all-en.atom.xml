@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-04-15T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-04-16T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
 &lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;
 and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
@@ -2490,28 +2490,28 @@ or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also 
 the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
 &lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160511-send-sms-text-message-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-08-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt;'s latest Long Term Support (LTS) 
-&lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last month, in 
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link href="https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2017-04-16T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-10:python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt;'s latest Long Term Support (LTS) 
+&lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last year, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
-it's the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 
+it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 
 as the default Python installation.&lt;/p&gt;
-&lt;p&gt;We can use this new Ubuntu release along with Python version 3.5 to 
+&lt;p&gt;We can use the Ubuntu release along with Python version 3.5 to 
 start a new &lt;a href="/flask.html"&gt;Flask&lt;/a&gt; web application project and run it with 
 &lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Tools We'll Need&lt;/h2&gt;
-&lt;p&gt;We'll need the Ubuntu 16.04 release along with a few other libraries to 
-complete our project. You don't have to install these tools just yet, 
-we will get to them as we progress through the walkthrough. Our requirements
-and their current versions as of May 10, 2016 are:&lt;/p&gt;
+&lt;p&gt;Our project will use the Ubuntu 16.04 release along with a few other 
+libraries. You don't have to install these tools just yet, we will get 
+to them as we progress through the walkthrough. Our requirements
+and their current versions as of April 2017 are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04.2 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
-  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
-  (default in Ubuntu 16.04)&lt;/li&gt;
+  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5.1&lt;/a&gt; 
+  (default in Ubuntu 16.04.2)&lt;/li&gt;
 &lt;li&gt;&lt;a href="/flask.html"&gt;Flask&lt;/a&gt; web framework version 
-  &lt;a href="http://flask.pocoo.org/docs/0.10/"&gt;0.10&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="http://flask.pocoo.org/docs/0.12/"&gt;0.12&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
-  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.4&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.7.1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you're running on Mac OS X or Windows, use virtualization software such
 as &lt;a href="https://www.parallels.com/products/desktop/"&gt;Parallels&lt;/a&gt; or
@@ -2535,7 +2535,7 @@ which python3
 for the superuser password because restricted system access is needed 
 to install packages through 
 &lt;a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool"&gt;apt&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install python3-dev python3-pip
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2550,11 +2550,13 @@ and &lt;a href="https://pypi.python.org/pypi/pip"&gt;pip&lt;/a&gt; were installe
 &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;.
 We can now use them to download and install Flask and Gunicorn.&lt;/p&gt;
 &lt;p&gt;Create a directory for the virtualenvs. Then create a new virtualenv.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
+&lt;div class="highlight"&gt;&lt;pre&gt;# make sure pip and setuptools are the latest version
+pip3 install --upgrade pip setuptools
+# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
 cd ~
 mkdir venvs
 # specify the system python3 installation
-virtualenv --python=/usr/bin/python3 venvs/flaskproj
+python3 -m venv venvs/flaskproj
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2573,7 +2575,7 @@ dependencies we want, in our case Flask and Gunicorn. &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;It's a good sign if we receive no errors like we see in the following 
+&lt;p&gt;It is a good sign if we receive no errors like we see in the following 
 screenshot.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160510-ubuntu-flask-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
 &lt;p&gt;Create a new directory under our home directory that will store our
