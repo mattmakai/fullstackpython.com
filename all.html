@@ -7421,6 +7421,11 @@ programming language agnostic. Learn more via the following resources or on
   agnostic perspective.</p>
 </li>
 <li>
+<p><a href="https://gdstechnology.blog.gov.uk/2017/02/10/updating-the-gov-uk-continuous-integration-environment/">Updating the GOV.UK Continuous Integration environment</a>
+  explains the UK's Government Digital Service continuous integration
+  configuration that relies on <a href="/jenkins.html">Jenkins</a>.</p>
+</li>
+<li>
 <p><a href="http://stackshare.io/continuous-integration">StackShare's Continuous Integration tag</a> 
   lists a slew of hosted CI services roughly ranked by user upvotes.</p>
 </li>
@@ -7503,6 +7508,17 @@ used to automate building, <a href="/testing.html">testing</a> and
   looks at how one team uses Jenkins for more than typical continuous 
   integration situations - they also use it as an administrative interface, 
   cron jobs, data analytics pipelines and long-running scripts.</p>
+</li>
+<li>
+<p><a href="https://gdstechnology.blog.gov.uk/2017/02/10/updating-the-gov-uk-continuous-integration-environment/">Updating the GOV.UK Continuous Integration environment</a>
+  describes the configuration improvements one infrastructure team made
+  to Jenkins, where they enabled 
+  <a href="https://jenkins.io/doc/book/pipeline/jenkinsfile/">jenkinsfiles</a>
+  to store CI data within project repositories instead of having to 
+  handle the setup through the Jenkins user interface. The team also
+  published 
+  <a href="https://github.com/alphagov/govuk-puppet/tree/master/modules/govuk_jenkins/manifests">their Puppet files for building</a>
+  Jenkins infrastructure.</p>
 </li>
 </ul>
    <h1>Configuration Management</h1>
@@ -10830,6 +10846,7 @@ inception in December 2012. You can view detailed changes via the
 <h2>2017</h2>
 <h3>April</h3>
 <ul>
+<li>Added new <a href="/continuous-integration.html">continuous integration</a> resources.</li>
 <li>New <a href="/postgresql.html">PostgreSQL</a> page resources.</li>
 </ul>
 <h3>March</h3>

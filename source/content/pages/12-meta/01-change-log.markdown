@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### April
+* Added new [continuous integration](/continuous-integration.html) resources.
 * New [PostgreSQL](/postgresql.html) page resources.
 
 ### March

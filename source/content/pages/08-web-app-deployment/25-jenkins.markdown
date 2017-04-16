@@ -17,6 +17,7 @@ used to automate building, [testing](/testing.html) and
 
 <div class="well see-also">Jenkins is an implementation of the <a href="/continuous-integration.html">continuous integration</a> concept. Learn more in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
+
 ### Jenkins resources
 * [Assembling a continuous integration service for a Django project on Jenkins](https://medium.com/@mondaini/assembling-a-continuous-integration-service-for-a-django-project-on-jenkins-5f979d4c4184)
   shows how to set up a Ubuntu instance with a Jenkins server that'll build a 
@@ -54,3 +55,13 @@ used to automate building, [testing](/testing.html) and
   looks at how one team uses Jenkins for more than typical continuous 
   integration situations - they also use it as an administrative interface, 
   cron jobs, data analytics pipelines and long-running scripts.
+
+* [Updating the GOV.UK Continuous Integration environment](https://gdstechnology.blog.gov.uk/2017/02/10/updating-the-gov-uk-continuous-integration-environment/)
+  describes the configuration improvements one infrastructure team made
+  to Jenkins, where they enabled 
+  [jenkinsfiles](https://jenkins.io/doc/book/pipeline/jenkinsfile/)
+  to store CI data within project repositories instead of having to 
+  handle the setup through the Jenkins user interface. The team also
+  published 
+  [their Puppet files for building](https://github.com/alphagov/govuk-puppet/tree/master/modules/govuk_jenkins/manifests)
+  Jenkins infrastructure.

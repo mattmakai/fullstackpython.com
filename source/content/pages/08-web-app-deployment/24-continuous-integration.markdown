@@ -135,6 +135,10 @@ programming language agnostic. Learn more via the following resources or on
   gives a high level overview of six CI tools from a programming language
   agnostic perspective.
 
+* [Updating the GOV.UK Continuous Integration environment](https://gdstechnology.blog.gov.uk/2017/02/10/updating-the-gov-uk-continuous-integration-environment/)
+  explains the UK's Government Digital Service continuous integration
+  configuration that relies on [Jenkins](/jenkins.html).
+
 * [StackShare's Continuous Integration tag](http://stackshare.io/continuous-integration) 
   lists a slew of hosted CI services roughly ranked by user upvotes.
 
@@ -157,4 +161,3 @@ programming language agnostic. Learn more via the following resources or on
   strongly advises securing your continuous integration server just as you
   would every other part of your production application, unless you want
   your environment to be vulnerable to malicious actors.
-
