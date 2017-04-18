@@ -93,10 +93,10 @@ p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:14px 0
  <div class="col-md-9">
   <h1 style="font-size: 36px;">How to Send SMS Text Messages with Python</h1>
   <div style="font-size:12px;color:#666;margin:0 0 10px">
-   Posted by <a href="/about-author.html">Matt Makai</a> on 
-   May 11, 2016.
-Last updated
-   August 10, 2016.  </div>
+     Post updated by <a href="/about-author.html">Matt Makai</a> on 
+     April 18, 2016. Originally posted
+     on May 11, 2016.
+  </div>
   <p>Short Message Service (SMS) text messages are ubiquitous for communication
 all over the world. It is easy to send SMS text messages from a 
 <a href="/why-use-python.html">Python</a> application using a 
@@ -114,7 +114,8 @@ two versions installed.</p>
 <li>A free <a href="https://www.twilio.com/try-twilio">Twilio account</a> to use their 
   <a href="https://www.twilio.com/docs/api/rest/sending-messages">SMS web API</a></li>
 <li>Open source 
-  <a href="https://pypi.python.org/pypi/twilio">Twilio Python helper library</a></li>
+  <a href="https://pypi.python.org/pypi/twilio">Twilio Python helper library</a>,
+  <a href="https://github.com/twilio/twilio-python/tree/5.7.0">version 5.7.0 or earlier</a></li>
 </ul>
 <p>If you need assistance getting pip and virtualenv installed, check out the
 first few steps of the 
@@ -156,8 +157,10 @@ guide.</p>
 <p>The command prompt will change after we properly activate the virtualenv
 to something like this:</p>
 <p><img src="/source/static/img/160511-send-sms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Now install the Twilio Python helper library.</p>
-<div class="highlight"><pre>pip install twilio
+<p>Now install the Twilio Python helper library. We are using the 5.7.0
+library version because 6.0.0 changed the code quite a bit compared to
+the older version.</p>
+<div class="highlight"><pre>pip install twilio==5.7.0
 </pre></div>
 
 
@@ -171,7 +174,11 @@ our Python code to our Twilio account. Go to the
 <a href="https://www.twilio.com/console">Twilio Console</a> and copy the Account SID
 and Authentication Token into your Python code.</p>
 <p><img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"></p>
-<p>Enter the following code into the interpreter or into the new Python file.</p>
+<p>Enter the following code into the interpreter or into the new Python file.
+You can also copy and paste the code from the 
+<a href="https://github.com/fullstackpython/blog-code-examples/blob/master/send-sms-text-messages-python/send_sms.py">blog-code-examples Git repository</a>
+in the 
+<a href="https://github.com/fullstackpython">Full Stack Python GitHub organization</a>.</p>
 <div class="highlight"><pre><span class="c"># we import the Twilio client from the dependency we just installed</span>
 <span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
 

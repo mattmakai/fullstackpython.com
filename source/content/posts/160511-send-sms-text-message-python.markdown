@@ -3,7 +3,7 @@ slug: send-sms-text-messages-python
 meta: A how-to guide for sending SMS (text messages) using the Python programming language.
 category: post
 date: 2016-05-11
-modified: 2016-08-10
+modified: 2016-04-18
 headerimage: /source/static/img/160511-send-sms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
 
@@ -27,7 +27,8 @@ two versions installed.
 * A free [Twilio account](https://www.twilio.com/try-twilio) to use their 
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
-  [Twilio Python helper library](https://pypi.python.org/pypi/twilio)
+  [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
+  [version 5.7.0 or earlier](https://github.com/twilio/twilio-python/tree/5.7.0)
 
 If you need assistance getting pip and virtualenv installed, check out the
 first few steps of the 
@@ -79,9 +80,11 @@ to something like this:
 <img src="/source/static/img/160511-send-sms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded">
 
 
-Now install the Twilio Python helper library.
+Now install the Twilio Python helper library. We are using the 5.7.0
+library version because 6.0.0 changed the code quite a bit compared to
+the older version.
 
-    pip install twilio
+    pip install twilio==5.7.0
 
 
 The helper library is now installed and we can use it with the Python code 
@@ -100,6 +103,11 @@ and Authentication Token into your Python code.
 <img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded">
 
 Enter the following code into the interpreter or into the new Python file.
+You can also copy and paste the code from the 
+[blog-code-examples Git repository](https://github.com/fullstackpython/blog-code-examples/blob/master/send-sms-text-messages-python/send_sms.py)
+in the 
+[Full Stack Python GitHub organization](https://github.com/fullstackpython).
+
 
     # we import the Twilio client from the dependency we just installed
     from twilio.rest import TwilioRestClient

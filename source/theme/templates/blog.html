@@ -23,10 +23,14 @@
         {% endif %}
         <h2 style="padding-top: 0px; margin-top: 0px;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h2>
         <div style="font-size:12px;color:#666;margin:0 0 10px">
-            Posted by <a href="/about-author.html">Matt Makai</a> on 
-            {{ a.date.strftime('%B %d, %Y') }}.
-            {% if a.modified != a.date %}Last updated 
-            {{ a.modified.strftime('%B %d, %Y') }}.{% endif %}
+           {% if a.modified != a.date %}
+             Post updated by <a href="/about-author.html">Matt Makai</a> on 
+             {{ a.modified.strftime('%B %d, %Y') }}. Originally posted
+             on {{ a.date.strftime('%B %d, %Y') }}.
+           {% else %} 
+             Posted by <a href="/about-author.html">Matt Makai</a> on 
+             {{ a.date.strftime('%B %d, %Y') }}.
+           {% endif %}
         </div>
         {{ a.content|truncate(350) }} (<a href="/blog/{{ a.slug }}.html">read more</a>)
         {% if a.headerimage and a.headeralt %}

@@ -2403,7 +2403,8 @@ two versions installed.&lt;/p&gt;
 &lt;li&gt;A free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
   &lt;a href="https://www.twilio.com/docs/api/rest/sending-messages"&gt;SMS web API&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open source 
-  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;,
+  &lt;a href="https://github.com/twilio/twilio-python/tree/5.7.0"&gt;version 5.7.0 or earlier&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you need assistance getting pip and virtualenv installed, check out the
 first few steps of the 
@@ -2445,8 +2446,10 @@ guide.&lt;/p&gt;
 &lt;p&gt;The command prompt will change after we properly activate the virtualenv
 to something like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
-&lt;p&gt;Now install the Twilio Python helper library.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio
+&lt;p&gt;Now install the Twilio Python helper library. We are using the 5.7.0
+library version because 6.0.0 changed the code quite a bit compared to
+the older version.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio==5.7.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2460,7 +2463,11 @@ our Python code to our Twilio account. Go to the
 &lt;a href="https://www.twilio.com/console"&gt;Twilio Console&lt;/a&gt; and copy the Account SID
 and Authentication Token into your Python code.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
-&lt;p&gt;Enter the following code into the interpreter or into the new Python file.&lt;/p&gt;
+&lt;p&gt;Enter the following code into the interpreter or into the new Python file.
+You can also copy and paste the code from the 
+&lt;a href="https://github.com/fullstackpython/blog-code-examples/blob/master/send-sms-text-messages-python/send_sms.py"&gt;blog-code-examples Git repository&lt;/a&gt;
+in the 
+&lt;a href="https://github.com/fullstackpython"&gt;Full Stack Python GitHub organization&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# we import the Twilio client from the dependency we just installed&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
 
@@ -2490,7 +2497,7 @@ or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also 
 the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
 &lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160511-send-sms-text-message-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</guid></item><item><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt;'s latest Long Term Support (LTS) 
+and submit a pull request.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Mon, 18 Apr 2016 00:00:00 -0400</pubDate><guid>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</guid></item><item><title>How to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</title><link>https://www.fullstackpython.com/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html</link><description>&lt;p&gt;&lt;a href="/ubuntu.html"&gt;Ubuntu&lt;/a&gt;'s latest Long Term Support (LTS) 
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released last year, in 
 April 2016. The 16.04 update for Ubuntu is known as "Xenial Xerus" and
 it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt; 

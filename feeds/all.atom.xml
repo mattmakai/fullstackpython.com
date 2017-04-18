@@ -2386,7 +2386,7 @@ production environment, check out the
 &lt;a href="/table-of-contents.html"&gt;Full Stack Python table of contents&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;See something wrong in this post? Fork 
 &lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160513-bottle-gunicorn-ubuntu-1604.markdown"&gt;this page's source on GitHub&lt;/a&gt;
-and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>How to Send SMS Text Messages with Python</title><link href="https://www.fullstackpython.com/send-sms-text-messages-python.html" rel="alternate"></link><updated>2016-08-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</id><summary type="html">&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
+and submit a pull request.&lt;/p&gt;</summary></entry><entry><title>How to Send SMS Text Messages with Python</title><link href="https://www.fullstackpython.com/send-sms-text-messages-python.html" rel="alternate"></link><updated>2016-04-18T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-11:send-sms-text-messages-python.html</id><summary type="html">&lt;p&gt;Short Message Service (SMS) text messages are ubiquitous for communication
 all over the world. It is easy to send SMS text messages from a 
 &lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; application using a 
 &lt;a href="/application-programming-interfaces.html"&gt;web application programming interface (API)&lt;/a&gt;. 
@@ -2403,7 +2403,8 @@ two versions installed.&lt;/p&gt;
 &lt;li&gt;A free &lt;a href="https://www.twilio.com/try-twilio"&gt;Twilio account&lt;/a&gt; to use their 
   &lt;a href="https://www.twilio.com/docs/api/rest/sending-messages"&gt;SMS web API&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Open source 
-  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="https://pypi.python.org/pypi/twilio"&gt;Twilio Python helper library&lt;/a&gt;,
+  &lt;a href="https://github.com/twilio/twilio-python/tree/5.7.0"&gt;version 5.7.0 or earlier&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you need assistance getting pip and virtualenv installed, check out the
 first few steps of the 
@@ -2445,8 +2446,10 @@ guide.&lt;/p&gt;
 &lt;p&gt;The command prompt will change after we properly activate the virtualenv
 to something like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
-&lt;p&gt;Now install the Twilio Python helper library.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio
+&lt;p&gt;Now install the Twilio Python helper library. We are using the 5.7.0
+library version because 6.0.0 changed the code quite a bit compared to
+the older version.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install twilio==5.7.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2460,7 +2463,11 @@ our Python code to our Twilio account. Go to the
 &lt;a href="https://www.twilio.com/console"&gt;Twilio Console&lt;/a&gt; and copy the Account SID
 and Authentication Token into your Python code.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/source/static/img/160511-send-sms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"&gt;&lt;/p&gt;
-&lt;p&gt;Enter the following code into the interpreter or into the new Python file.&lt;/p&gt;
+&lt;p&gt;Enter the following code into the interpreter or into the new Python file.
+You can also copy and paste the code from the 
+&lt;a href="https://github.com/fullstackpython/blog-code-examples/blob/master/send-sms-text-messages-python/send_sms.py"&gt;blog-code-examples Git repository&lt;/a&gt;
+in the 
+&lt;a href="https://github.com/fullstackpython"&gt;Full Stack Python GitHub organization&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# we import the Twilio client from the dependency we just installed&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;twilio.rest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TwilioRestClient&lt;/span&gt;
 
