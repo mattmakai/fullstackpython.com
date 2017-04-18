@@ -104,7 +104,7 @@ these services are not the right fit for every project.
 * [Rollbar](https://rollbar.com/) instruments both the server side and
   client side to capture and report exceptions. The 
   [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) code library
-  provides quick integration for Pyton web applications. There are also
+  provides quick integration for Python web applications. There are also
   specific instructions for common [web frameworks](/web-frameworks.html)
   such as [Django](/django.html) and [Pyramid](/pyramid.html).
 
