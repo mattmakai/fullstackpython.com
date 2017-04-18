@@ -3,7 +3,7 @@ slug: python-3-django-gunicorn-ubuntu-1604-xenial-xerus
 meta: Step-by-step instructions for developing on Ubuntu 16.04 with Python 3, Django and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-09
-modified: 2017-04-15
+modified: 2017-04-18
 headerimage: /source/static/img/160509-ubuntu-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Ubuntu Linux logos. Copyright their respective owners.
 
@@ -64,7 +64,7 @@ Our Ubuntu installation first needs system packages for Python development.
 You'll be prompted for your superuser password because restricted system
 access is required to install packages through apt.
 
-    sudo apt-get install virtualenv python-pip python3-dev
+    sudo apt-get install python3-pip python3-dev
 
 <img src="/source/static/img/160509-ubuntu-django-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded">
 
@@ -85,11 +85,13 @@ Gunicorn.
 
 Create a directory to store virtualenvs then put a new virtualenv in it.
 
+    # make sure pip and setuptools are the latest version
+    pip3 install --upgrade pip setuptools
     # the tilde "~" specifies the user's home directory, like /home/matt
     cd ~
     mkdir venvs
     # specify the system python3 installation
-    virtualenv --python=/usr/bin/python3 venvs/djproject
+    python3 -m venv venvs/djproject
 
 Activate the virtualenv.
 
