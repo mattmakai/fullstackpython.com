@@ -6,7 +6,7 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="author" content="Matt Makai">
-<meta name="description" content="Instructions for developing Bottle web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).">
+<meta name="description" content="Learn to develop Bottle web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).">
  <title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS - Full Stack Python</title>
 
 <style>
@@ -94,7 +94,7 @@ p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:14px 0
   <h1 style="font-size: 36px;">Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</h1>
   <div style="font-size:12px;color:#666;margin:0 0 10px">
      Post updated by <a href="/about-author.html">Matt Makai</a> on 
-     August 10, 2016. Originally posted
+     April 19, 2017. Originally posted
      on May 13, 2016.
   </div>
   <p>The <a href="/ubuntu.html">Ubuntu 16.04 Long Term Support (LTS)</a> Linux
@@ -109,16 +109,16 @@ Ubuntu 16.04.</p>
 <p>Our setup requires the Ubuntu 16.04 release along with a few other code 
 libraries. Don't install these tools just yet since we'll get to them as 
 we go through the walkthrough. Our requirements and their current versions 
-as of May 13, 2016 are:</p>
+as of April 2017 are:</p>
 <ul>
-<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS (Xenial Xerus)</a></li>
+<li><a href="http://releases.ubuntu.com/16.04/">Ubuntu 16.04.2 LTS (Xenial Xerus)</a></li>
 <li><a href="/why-use-python.html">Python</a> version 
-  <a href="https://docs.python.org/3/whatsnew/3.5.html">3.5</a> 
-  (default in Ubuntu 16.04)</li>
+  <a href="https://docs.python.org/3/whatsnew/3.5.html">3.5.1</a> 
+  (default in Ubuntu 16.04.2)</li>
 <li><a href="/bottle.html">Bottle</a> web framework version 
-  <a href="http://bottlepy.org/docs/0.12/">0.12</a></li>
+  <a href="http://bottlepy.org/docs/0.13/">0.13</a></li>
 <li><a href="/green-unicorn-gunicorn.html">Green Unicorn (Gunicorn)</a> version 
-  <a href="http://docs.gunicorn.org/en/stable/news.html">19.5</a></li>
+  <a href="http://docs.gunicorn.org/en/stable/news.html">19.7.1</a></li>
 </ul>
 <p>If you are developing on Mac OS X or Windows, make sure to use 
 virtualization software such
@@ -143,7 +143,7 @@ which python3
 for the superuser password because restricted system access is needed 
 to install packages through 
 <a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool">apt</a>.</p>
-<div class="highlight"><pre>sudo apt-get install virtualenv python-pip python3-dev
+<div class="highlight"><pre>sudo apt-get install python3-pip python3-dev
 </pre></div>
 
 
@@ -158,11 +158,14 @@ and <a href="https://pypi.python.org/pypi/pip">pip</a> were installed to handle 
 <a href="/application-dependencies.html">application dependencies</a>.
 We can now use them to download and install Bottle and Gunicorn.</p>
 <p>Create a directory for the virtualenvs. Then create a new virtualenv.</p>
-<div class="highlight"><pre># the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
+<div class="highlight"><pre># make sure pip and setuptools are the latest version
+pip3 install --upgrade pip setuptools
+# the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
 cd ~
 mkdir venvs
 # specify the system python3 installation
 virtualenv --python=/usr/bin/python3 venvs/bottleproj
+python3 -m venv venvs/bottleproj
 </pre></div>
 
 

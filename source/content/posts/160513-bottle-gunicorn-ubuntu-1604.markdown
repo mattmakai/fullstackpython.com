@@ -1,9 +1,9 @@
 title: Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS
 slug: python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus
-meta: Instructions for developing Bottle web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).
+meta: Learn to develop Bottle web apps on Ubuntu 16.04 with Python 3 and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-13
-modified: 2016-08-10
+modified: 2017-04-19
 headerimage: /source/static/img/160513-ubuntu-bottle-gunicorn/header.jpg
 headeralt: Bottle, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 
@@ -23,16 +23,16 @@ Ubuntu 16.04.
 Our setup requires the Ubuntu 16.04 release along with a few other code 
 libraries. Don't install these tools just yet since we'll get to them as 
 we go through the walkthrough. Our requirements and their current versions 
-as of May 13, 2016 are:
+as of April 2017 are:
 
-* [Ubuntu 16.04 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/)
+* [Ubuntu 16.04.2 LTS (Xenial Xerus)](http://releases.ubuntu.com/16.04/)
 * [Python](/why-use-python.html) version 
-  [3.5](https://docs.python.org/3/whatsnew/3.5.html) 
-  (default in Ubuntu 16.04)
+  [3.5.1](https://docs.python.org/3/whatsnew/3.5.html) 
+  (default in Ubuntu 16.04.2)
 * [Bottle](/bottle.html) web framework version 
-  [0.12](http://bottlepy.org/docs/0.12/)
+  [0.13](http://bottlepy.org/docs/0.13/)
 * [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) version 
-  [19.5](http://docs.gunicorn.org/en/stable/news.html)
+  [19.7.1](http://docs.gunicorn.org/en/stable/news.html)
 
 If you are developing on Mac OS X or Windows, make sure to use 
 virtualization software such
@@ -63,7 +63,7 @@ for the superuser password because restricted system access is needed
 to install packages through 
 [apt](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool).
 
-    sudo apt-get install virtualenv python-pip python3-dev
+    sudo apt-get install python3-pip python3-dev
 
 <img src="/source/static/img/160513-ubuntu-bottle-gunicorn/install-packages.png" width="100%" class="technical-diagram img-rounded">
 
@@ -84,11 +84,14 @@ We can now use them to download and install Bottle and Gunicorn.
 
 Create a directory for the virtualenvs. Then create a new virtualenv.
 
+    # make sure pip and setuptools are the latest version
+    pip3 install --upgrade pip setuptools
     # the tilde "~" specifies the user's home directory, like /home/matt
     cd ~
     mkdir venvs
     # specify the system python3 installation
     virtualenv --python=/usr/bin/python3 venvs/bottleproj
+    python3 -m venv venvs/bottleproj
 
 Activate the virtualenv.
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-04-18T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Full Stack Python</title><link href="https://www.fullstackpython.com/" rel="alternate"></link><link href="https://www.fullstackpython.com/feeds/all-en.atom.xml" rel="self"></link><id>https://www.fullstackpython.com/</id><updated>2017-04-19T00:00:00-04:00</updated><entry><title>How to Choose the Right DevOps Tools for You and Your Team</title><link href="https://www.fullstackpython.com/choose-right-devops-tools.html" rel="alternate"></link><updated>2017-03-01T00:00:00-05:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2017-02-27:choose-right-devops-tools.html</id><summary type="html">&lt;p&gt;This blog post contains a loose transcript along with the slides and 
 additional resources from my technical talk that will be given at 
 &lt;a href="https://developer.oracle.com/code/sanfrancisco"&gt;Oracle Code SF 2017&lt;/a&gt;
 and &lt;a href="https://www.meetup.com/DC-continuous-delivery/"&gt;DC Continuous Delivery&lt;/a&gt; 
@@ -2247,7 +2247,7 @@ gets it will be able to send and receive messages through your account.&lt;/p&gt
 or &lt;a href="https://twitter.com/mattmakai"&gt;@mattmakai&lt;/a&gt;. I'm also on GitHub with
 the username &lt;a href="https://github.com/mattmakai"&gt;mattmakai&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Something wrong with this post? Fork 
-&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160515-sending-mms-picture-messages-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link href="https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2016-08-10T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;The &lt;a href="/ubuntu.html"&gt;Ubuntu 16.04 Long Term Support (LTS)&lt;/a&gt; Linux
+&lt;a href="https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160515-sending-mms-picture-messages-python.markdown"&gt;this page's source on GitHub&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Configuring Python 3, Bottle and Gunicorn for Development on Ubuntu 16.04 LTS</title><link href="https://www.fullstackpython.com/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html" rel="alternate"></link><updated>2017-04-19T00:00:00-04:00</updated><author><name>Matt Makai</name></author><id>tag:www.fullstackpython.com,2016-05-13:python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html</id><summary type="html">&lt;p&gt;The &lt;a href="/ubuntu.html"&gt;Ubuntu 16.04 Long Term Support (LTS)&lt;/a&gt; Linux
 &lt;a href="/operating-systems.html"&gt;operating system&lt;/a&gt; was released in April 2016.
 This latest Ubuntu release is named "Xenial Xerus" and
 it is the first Ubuntu release to include &lt;a href="/python-2-or-3.html"&gt;Python 3&lt;/a&gt;,
@@ -2259,16 +2259,16 @@ Ubuntu 16.04.&lt;/p&gt;
 &lt;p&gt;Our setup requires the Ubuntu 16.04 release along with a few other code 
 libraries. Don't install these tools just yet since we'll get to them as 
 we go through the walkthrough. Our requirements and their current versions 
-as of May 13, 2016 are:&lt;/p&gt;
+as of April 2017 are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://releases.ubuntu.com/16.04/"&gt;Ubuntu 16.04.2 LTS (Xenial Xerus)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/why-use-python.html"&gt;Python&lt;/a&gt; version 
-  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5&lt;/a&gt; 
-  (default in Ubuntu 16.04)&lt;/li&gt;
+  &lt;a href="https://docs.python.org/3/whatsnew/3.5.html"&gt;3.5.1&lt;/a&gt; 
+  (default in Ubuntu 16.04.2)&lt;/li&gt;
 &lt;li&gt;&lt;a href="/bottle.html"&gt;Bottle&lt;/a&gt; web framework version 
-  &lt;a href="http://bottlepy.org/docs/0.12/"&gt;0.12&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="http://bottlepy.org/docs/0.13/"&gt;0.13&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/green-unicorn-gunicorn.html"&gt;Green Unicorn (Gunicorn)&lt;/a&gt; version 
-  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.5&lt;/a&gt;&lt;/li&gt;
+  &lt;a href="http://docs.gunicorn.org/en/stable/news.html"&gt;19.7.1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you are developing on Mac OS X or Windows, make sure to use 
 virtualization software such
@@ -2293,7 +2293,7 @@ which python3
 for the superuser password because restricted system access is needed 
 to install packages through 
 &lt;a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool"&gt;apt&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install virtualenv python-pip python3-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install python3-pip python3-dev
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2308,11 +2308,14 @@ and &lt;a href="https://pypi.python.org/pypi/pip"&gt;pip&lt;/a&gt; were installe
 &lt;a href="/application-dependencies.html"&gt;application dependencies&lt;/a&gt;.
 We can now use them to download and install Bottle and Gunicorn.&lt;/p&gt;
 &lt;p&gt;Create a directory for the virtualenvs. Then create a new virtualenv.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
+&lt;div class="highlight"&gt;&lt;pre&gt;# make sure pip and setuptools are the latest version
+pip3 install --upgrade pip setuptools
+# the tilde &amp;quot;~&amp;quot; specifies the user&amp;#39;s home directory, like /home/matt
 cd ~
 mkdir venvs
 # specify the system python3 installation
 virtualenv --python=/usr/bin/python3 venvs/bottleproj
+python3 -m venv venvs/bottleproj
 &lt;/pre&gt;&lt;/div&gt;
 
 
