@@ -15,6 +15,11 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### April
+* New [Pelican](/pelican.html) resources.
+* Updated some of the [blog post tutorials](/blog.html) (they are marked 
+  by updated dates) to fix issues with the steps or provide newer versions
+  of libraries like [Green Unicorn](/green-unicorn-gunicorn.html)
+  and operating systems such as [Ubuntu](/ubuntu.html).
 * Added new [continuous integration](/continuous-integration.html) resources.
 * New [PostgreSQL](/postgresql.html) page resources.
 
