@@ -135,7 +135,7 @@ one.</p>
 <h2>System Packages</h2>
 <p>We can see the python3 version Ubuntu comes with, as well as where its
 executable is stored.</p>
-<div class="highlight"><pre>python3 --version
+<div class="highlight"><pre><span></span>python3 --version
 which python3
 </pre></div>
 
@@ -144,7 +144,7 @@ which python3
 <p>Our Ubuntu installation first needs system packages for Python development.
 You'll be prompted for your superuser password because restricted system
 access is required to install packages through apt.</p>
-<div class="highlight"><pre>sudo apt-get install python3-pip python3-dev
+<div class="highlight"><pre><span></span>sudo apt-get install python3-pip python3-dev
 </pre></div>
 
 
@@ -159,7 +159,7 @@ our Python-specific dependencies.</p>
 installed via system packages so we can now use them to obtain Django and 
 Gunicorn.</p>
 <p>Create a directory to store virtualenvs then put a new virtualenv in it.</p>
-<div class="highlight"><pre># make sure pip and setuptools are the latest version
+<div class="highlight"><pre><span></span># make sure pip and setuptools are the latest version
 pip3 install --upgrade pip setuptools
 # the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
 cd ~
@@ -170,7 +170,7 @@ python3 -m venv venvs/djproject
 
 
 <p>Activate the virtualenv.</p>
-<div class="highlight"><pre>source ~/venvs/djproject/bin/activate
+<div class="highlight"><pre><span></span>source ~/venvs/djproject/bin/activate
 </pre></div>
 
 
@@ -181,7 +181,7 @@ activated.</p>
 dependencies we want, such as Django and Gunicorn. </p>
 <h2>Django and Gunicorn</h2>
 <p>Time to install Django and Green Unicorn into our virtualenv.</p>
-<div class="highlight"><pre>pip install django gunicorn
+<div class="highlight"><pre><span></span>pip install django gunicorn
 </pre></div>
 
 
@@ -189,7 +189,7 @@ dependencies we want, such as Django and Gunicorn. </p>
 <p><img src="/source/static/img/160509-ubuntu-django-gunicorn/good-sign.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Create a new Django project named <code>djproject</code>, or whatever you want to name
 your project. Then change into the directory for the new project.</p>
-<div class="highlight"><pre>django-admin startproject djproject
+<div class="highlight"><pre><span></span>django-admin startproject djproject
 cd djproject
 </pre></div>
 
@@ -197,7 +197,7 @@ cd djproject
 <p>We could run Django with the development server using the 
 <code>python manage.py runserver</code> command. However, start Django up with
 Gunicorn instead.</p>
-<div class="highlight"><pre>gunicorn djproject.wsgi
+<div class="highlight"><pre><span></span>gunicorn djproject.wsgi
 </pre></div>
 
 

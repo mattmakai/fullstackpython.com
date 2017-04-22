@@ -134,23 +134,23 @@ instead of writing bridge code to get data in and out of relational tables.</p>
 <p>Below is an example of a SQLAlchemy model definition from the open source 
 <a href="https://github.com/mattmakai/compare-python-web-frameworks/blob/master/flask_jinja_sqlalchemy/app.py">compare-python-web-frameworks project</a>
 that uses SQLAlchemy with Flask and Flask-SQLAlchemy.</p>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">Contact</span>(<span class="n">db</span>.<span class="n">Model</span>):
-    <span class="n">__tablename__</span> = <span class="s">&#39;contacts&#39;</span>
-    <span class="n">id</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">Integer</span>, <span class="n">primary_key</span>=<span class="nb">True</span>)
-    <span class="n">first_name</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">String</span>(<span class="mi">100</span>))
-    <span class="n">last_name</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">String</span>(<span class="mi">100</span>))
-    <span class="n">phone_number</span> = <span class="n">db</span>.<span class="n">Column</span>(<span class="n">db</span>.<span class="n">String</span>(<span class="mi">32</span>))
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">Contact</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nx">Model</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;contacts&#39;</span>
+    <span class="nx">id</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">Column</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nx">Integer</span><span class="p">,</span> <span class="nx">primary_key</span><span class="o">=</span><span class="nx">True</span><span class="p">)</span>
+    <span class="nx">first_name</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">Column</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nb">String</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+    <span class="nx">last_name</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">Column</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nb">String</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+    <span class="nx">phone_number</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">Column</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nb">String</span><span class="p">(</span><span class="mi">32</span><span class="p">))</span>
 
-    <span class="n">def</span> <span class="n">__repr__</span>(<span class="k">self</span>):
-        <span class="k">return</span> <span class="s">&#39;&lt;Contact {0} {1}: {2}&gt;&#39;</span>.<span class="n">format</span>(<span class="k">self</span>.<span class="n">first_name</span>,
-                                               <span class="k">self</span>.<span class="n">last_name</span>,
-                                               <span class="k">self</span>.<span class="n">phone_number</span>)
+    <span class="nx">def</span> <span class="nx">__repr__</span><span class="p">(</span><span class="nx">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;Contact {0} {1}: {2}&gt;&#39;</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">first_name</span><span class="p">,</span>
+                                               <span class="nx">self</span><span class="p">.</span><span class="nx">last_name</span><span class="p">,</span>
+                                               <span class="nx">self</span><span class="p">.</span><span class="nx">phone_number</span><span class="p">)</span>
 </pre></div>
 
 
 <p>SQLAlchemy handles the table creation that otherwise we would have had
 to write a create table statement like this one to do the work:</p>
-<div class="highlight"><pre>CREATE TABLE CONTACTS(
+<div class="highlight"><pre><span></span>CREATE TABLE CONTACTS(
    ID INT PRIMARY KEY        NOT NULL,
    FIRST_NAME     CHAR(100)  NOT NULL,
    LAST_NAME      CHAR(100)  NOT NULL,

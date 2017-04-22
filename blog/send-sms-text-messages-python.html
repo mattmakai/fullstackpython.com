@@ -145,12 +145,12 @@ create the virtualenv. In your terminal use the following command to create
 a new virtualenv. If you need to install virtualenv take a look at the
 <a href="/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html">how to set up Python 3, Flask and Green Unicorn on Ubuntu 16.04 LTS</a>
 guide.</p>
-<div class="highlight"><pre>virtualenv sendsms
+<div class="highlight"><pre><span></span>virtualenv sendsms
 </pre></div>
 
 
 <p>Activate the virtualenv.</p>
-<div class="highlight"><pre>source sendsms/bin/activate
+<div class="highlight"><pre><span></span>source sendsms/bin/activate
 </pre></div>
 
 
@@ -160,7 +160,7 @@ to something like this:</p>
 <p>Now install the Twilio Python helper library. We are using the 5.7.0
 library version because 6.0.0 changed the code quite a bit compared to
 the older version.</p>
-<div class="highlight"><pre>pip install twilio==5.7.0
+<div class="highlight"><pre><span></span>pip install twilio==5.7.0
 </pre></div>
 
 
@@ -179,17 +179,17 @@ You can also copy and paste the code from the
 <a href="https://github.com/fullstackpython/blog-code-examples/blob/master/send-sms-text-messages-python/send_sms.py">blog-code-examples Git repository</a>
 in the 
 <a href="https://github.com/fullstackpython">Full Stack Python GitHub organization</a>.</p>
-<div class="highlight"><pre><span class="c"># we import the Twilio client from the dependency we just installed</span>
+<div class="highlight"><pre><span></span><span class="c1"># we import the Twilio client from the dependency we just installed</span>
 <span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
 
-<span class="c"># the following line needs your Twilio Account SID and Auth Token</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s">&quot;ACxxxxxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s">&quot;zzzzzzzzzzzzz&quot;</span><span class="p">)</span>
+<span class="c1"># the following line needs your Twilio Account SID and Auth Token</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s2">&quot;ACxxxxxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s2">&quot;zzzzzzzzzzzzz&quot;</span><span class="p">)</span>
 
-<span class="c"># change the &quot;from_&quot; number to your Twilio number and the &quot;to&quot; number</span>
-<span class="c"># to the phone number you signed up for Twilio with, or upgrade your</span>
-<span class="c"># account to send SMS to any phone number</span>
-<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s">&quot;+19732644152&quot;</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s">&quot;+12023358536&quot;</span><span class="p">,</span> 
-                       <span class="n">body</span><span class="o">=</span><span class="s">&quot;Hello from Python!&quot;</span><span class="p">)</span>
+<span class="c1"># change the &quot;from_&quot; number to your Twilio number and the &quot;to&quot; number</span>
+<span class="c1"># to the phone number you signed up for Twilio with, or upgrade your</span>
+<span class="c1"># account to send SMS to any phone number</span>
+<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&quot;+19732644152&quot;</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s2">&quot;+12023358536&quot;</span><span class="p">,</span> 
+                       <span class="n">body</span><span class="o">=</span><span class="s2">&quot;Hello from Python!&quot;</span><span class="p">)</span>
 </pre></div>
 
 

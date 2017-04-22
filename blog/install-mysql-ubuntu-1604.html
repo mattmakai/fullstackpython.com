@@ -117,14 +117,14 @@ as SQLAlchemy or Peewee.</p>
 <p>We can install MySQL by using the <code>apt</code> package manager. First make sure
 your packages list are up to date. Open the terminal and run this <code>apt</code>
 command.</p>
-<div class="highlight"><pre>sudo apt-get update
+<div class="highlight"><pre><span></span>sudo apt-get update
 </pre></div>
 
 
 <p>We need to install the <code>mysql-server</code> package, which downloads the required
 files, configures the initial database set up and handles running MySQL
 as a system service. Run this <code>apt</code> command to get the process started.</p>
-<div class="highlight"><pre>sudo apt-get install mysql
+<div class="highlight"><pre><span></span>sudo apt-get install mysql
 </pre></div>
 
 
@@ -147,7 +147,7 @@ purposes. However, the configuration is not secure for production enviroments,
 therefore it comes with a utility to handle basic security. Run the
 following command and answer the questions based on your environment 
 requirements.</p>
-<div class="highlight"><pre>sudo mysql_secure_installation
+<div class="highlight"><pre><span></span>sudo mysql_secure_installation
 </pre></div>
 
 
@@ -159,13 +159,13 @@ non-root user for applications to interact with the database.</p>
 <h2>Creating MySQL Users</h2>
 <p>To create a non-root user, connect to the MySQL instance with the 
 <code>mysql</code> command line client.</p>
-<div class="highlight"><pre>mysql -u root -p
+<div class="highlight"><pre><span></span>mysql -u root -p
 </pre></div>
 
 
 <p>Now use the <code>CREATE USER</code> command to generate a new user. Make sure to
 change "mynewuser" and "goodPassword" with your own values.</p>
-<div class="highlight"><pre>CREATE USER &#39;mynewuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;goodPassword&#39;;
+<div class="highlight"><pre><span></span>CREATE USER &#39;mynewuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;goodPassword&#39;;
 </pre></div>
 
 
@@ -174,14 +174,14 @@ change "mynewuser" and "goodPassword" with your own values.</p>
 <p>We need to apply privileges to the new user so it can handle basic database
 operations. Again, make sure to replace the default username in this command
 with your new username.</p>
-<div class="highlight"><pre>GRANT ALL PRIVILEGES ON * . * TO &#39;mynewuser&#39;@&#39;localhost&#39;;
+<div class="highlight"><pre><span></span>GRANT ALL PRIVILEGES ON * . * TO &#39;mynewuser&#39;@&#39;localhost&#39;;
 </pre></div>
 
 
 <p><img src="/source/static/img/160528-mysql-ubuntu-1604/grant-all.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>It's a good idea to reload the privileges to make sure our new user's
 permissions are in place.</p>
-<div class="highlight"><pre>FLUSH PRIVILEGES;
+<div class="highlight"><pre><span></span>FLUSH PRIVILEGES;
 </pre></div>
 
 
@@ -190,25 +190,25 @@ permissions are in place.</p>
 <p>We're set to connect to the database with our new user. Exit the MySQL
 client with "Ctrl-d". Reconnect using a slightly different command than
 we used earlier.</p>
-<div class="highlight"><pre>mysql -u mynewuser -p
+<div class="highlight"><pre><span></span>mysql -u mynewuser -p
 </pre></div>
 
 
 <p><img src="/source/static/img/160528-mysql-ubuntu-1604/mysql-new-user.png" width="100%" class="technical-diagram img-rounded" alt="Connect to MySQL as the new user we just created."></p>
 <p>Create a new database with the <code>CREATE DATABASE</code> command.</p>
-<div class="highlight"><pre>CREATE DATABASE fullstackpython;
+<div class="highlight"><pre><span></span>CREATE DATABASE fullstackpython;
 </pre></div>
 
 
 <p><img src="/source/static/img/160528-mysql-ubuntu-1604/create-database.png" width="100%" class="technical-diagram img-rounded" alt="Create a new MySQL database with our new user."></p>
 <p>Connect to the new database with the <code>USE</code> command.</p>
-<div class="highlight"><pre>use fullstackpython;
+<div class="highlight"><pre><span></span>use fullstackpython;
 </pre></div>
 
 
 <p><img src="/source/static/img/160528-mysql-ubuntu-1604/use-command.png" width="100%" class="technical-diagram img-rounded" alt="Connect to the newly-created database with the USE command."></p>
 <p>Create a simple new table with the <code>CREATE TABLE</code> command.</p>
-<div class="highlight"><pre>CREATE TABLE pages (name VARCHAR(50), url VARCHAR(1024));
+<div class="highlight"><pre><span></span>CREATE TABLE pages (name VARCHAR(50), url VARCHAR(1024));
 </pre></div>
 
 

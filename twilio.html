@@ -121,17 +121,17 @@ favorite programming languages and frameworks in your application.
 For example, here's how you can send an 
 <a href="https://www.twilio.com/docs/quickstart/python/sms/sending-via-rest">outbound SMS</a> 
 using a few lines of Python code:</p>
-<div class="highlight"><pre><span class="c"># import the Twilio helper library (installed with pip install twilio)</span>
+<div class="highlight"><pre><span></span><span class="c1"># import the Twilio helper library (installed with pip install twilio)</span>
 <span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
 
-<span class="c"># replace the placeholder strings in the following code line with </span>
-<span class="c"># your Twilio Account SID and Auth Token from the Twilio Console</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s">&quot;ACxxxxxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s">&quot;zzzzzzzzzzzzz&quot;</span><span class="p">)</span>
+<span class="c1"># replace the placeholder strings in the following code line with </span>
+<span class="c1"># your Twilio Account SID and Auth Token from the Twilio Console</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s2">&quot;ACxxxxxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s2">&quot;zzzzzzzzzzzzz&quot;</span><span class="p">)</span>
 
-<span class="c"># change the &quot;from_&quot; number to your Twilio number and the &quot;to&quot; number</span>
-<span class="c"># to any phone number you want to send the message to </span>
-<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s">&quot;+19732644152&quot;</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s">&quot;+12023358536&quot;</span><span class="p">,</span> 
-                       <span class="n">body</span><span class="o">=</span><span class="s">&quot;Hello from Python!&quot;</span><span class="p">)</span>
+<span class="c1"># change the &quot;from_&quot; number to your Twilio number and the &quot;to&quot; number</span>
+<span class="c1"># to any phone number you want to send the message to </span>
+<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&quot;+19732644152&quot;</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s2">&quot;+12023358536&quot;</span><span class="p">,</span> 
+                       <span class="n">body</span><span class="o">=</span><span class="s2">&quot;Hello from Python!&quot;</span><span class="p">)</span>
 </pre></div>
 
 

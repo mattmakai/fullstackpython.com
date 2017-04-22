@@ -130,12 +130,12 @@ environment set up. Go to the terminal (or Command Prompt on Windows) and
 change into the directory where you want to store this project. Within 
 that directory, create a new virtualenv to isolate our application 
 dependencies from other Python projects.</p>
-<div class="highlight"><pre>virtualenv starterbot
+<div class="highlight"><pre><span></span>virtualenv starterbot
 </pre></div>
 
 
 <p>Activate the virtualenv:</p>
-<div class="highlight"><pre>source starterbot/bin/activate
+<div class="highlight"><pre><span></span>source starterbot/bin/activate
 </pre></div>
 
 
@@ -144,7 +144,7 @@ dependencies from other Python projects.</p>
 <p>The official slackclient API helper library built by Slack can send and 
 receive messages from a Slack channel. Install the slackclient library with 
 the <code>pip</code> command:</p>
-<div class="highlight"><pre>pip install slackclient
+<div class="highlight"><pre><span></span>pip install slackclient
 </pre></div>
 
 
@@ -174,7 +174,7 @@ now ready to connect to Slack's API.</p>
 <p>A common practice for Python developers is to export secret tokens as 
 environment variables. Export the Slack token with the name 
 <code>SLACK_BOT_TOKEN</code>:</p>
-<div class="highlight"><pre>export SLACK_BOT_TOKEN=&#39;your slack token pasted here&#39;
+<div class="highlight"><pre><span></span>export SLACK_BOT_TOKEN=&#39;your slack token pasted here&#39;
 </pre></div>
 
 
@@ -190,25 +190,25 @@ parsed from the Slack RTM are directed at StarterBot. Our script also
 tests that our <code>SLACK_BOT_TOKEN</code> environment variable is properly set. </p>
 <p>Create a new file named <code>print_bot_id.py</code> and fill it with the following 
 code.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">slackclient</span> <span class="kn">import</span> <span class="n">SlackClient</span>
 
 
-<span class="n">BOT_NAME</span> <span class="o">=</span> <span class="s">&#39;starterbot&#39;</span>
+<span class="n">BOT_NAME</span> <span class="o">=</span> <span class="s1">&#39;starterbot&#39;</span>
 
-<span class="n">slack_client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;SLACK_BOT_TOKEN&#39;</span><span class="p">))</span>
+<span class="n">slack_client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SLACK_BOT_TOKEN&#39;</span><span class="p">))</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">api_call</span> <span class="o">=</span> <span class="n">slack_client</span><span class="o">.</span><span class="n">api_call</span><span class="p">(</span><span class="s">&quot;users.list&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">api_call</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;ok&#39;</span><span class="p">):</span>
-        <span class="c"># retrieve all users so we can find our bot</span>
-        <span class="n">users</span> <span class="o">=</span> <span class="n">api_call</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;members&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">api_call</span> <span class="o">=</span> <span class="n">slack_client</span><span class="o">.</span><span class="n">api_call</span><span class="p">(</span><span class="s2">&quot;users.list&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">api_call</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ok&#39;</span><span class="p">):</span>
+        <span class="c1"># retrieve all users so we can find our bot</span>
+        <span class="n">users</span> <span class="o">=</span> <span class="n">api_call</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;members&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
-            <span class="k">if</span> <span class="s">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">user</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">BOT_NAME</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="s">&quot;Bot ID for &#39;&quot;</span> <span class="o">+</span> <span class="n">user</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s">&quot;&#39; is &quot;</span> <span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;id&#39;</span><span class="p">))</span>
+            <span class="k">if</span> <span class="s1">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">user</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">BOT_NAME</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bot ID for &#39;&quot;</span> <span class="o">+</span> <span class="n">user</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&#39; is &quot;</span> <span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;could not find bot user with the name &quot;</span> <span class="o">+</span> <span class="n">BOT_NAME</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;could not find bot user with the name &quot;</span> <span class="o">+</span> <span class="n">BOT_NAME</span><span class="p">)</span>
 </pre></div>
 
 
@@ -217,7 +217,7 @@ code.</p>
 script is executed by the <code>python</code> command we call the Slack API to list
 all Slack users and get the ID for the one that matches the name "starterbot".</p>
 <p>We only need to run this script once to obtain our bot’s ID.</p>
-<div class="highlight"><pre>python print_bot_id.py
+<div class="highlight"><pre><span></span>python print_bot_id.py
 </pre></div>
 
 
@@ -226,7 +226,7 @@ us with our bot's ID.</p>
 <p><img src="/source/static/img/160604-simple-python-slack-bot/printed-bot-id.png" width="100%" class="technical-diagram img-rounded" alt="Use the Python script to print the Slack bot's ID in your Slack team."></p>
 <p>Copy the unique ID that your script prints out. Export the ID as an 
 environment variable named <code>BOT_ID</code>.</p>
-<div class="highlight"><pre>(starterbot)$ export BOT_ID=&#39;bot id returned by script&#39;
+<div class="highlight"><pre><span></span>(starterbot)$ export BOT_ID=&#39;bot id returned by script&#39;
 </pre></div>
 
 
@@ -235,7 +235,7 @@ that ID in our Python application that will run StarterBot.</p>
 <h2>Coding Our StarterBot</h2>
 <p>We've got everything we need to write the StarterBot code. Create a new file 
 named <code>starterbot.py</code> and include the following code in it.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">slackclient</span> <span class="kn">import</span> <span class="n">SlackClient</span>
 </pre></div>
@@ -245,7 +245,7 @@ named <code>starterbot.py</code> and include the following code in it.</p>
 in the <code>print_bot_id.py</code> program.</p>
 <p>With our dependencies imported we can use them to obtain the environment 
 variable values and then instantiate the Slack client.</p>
-<div class="highlight"><pre><span class="cp"># starterbot&#39;s ID as an environment variable</span>
+<div class="highlight"><pre><span></span><span class="cp"># starterbot&#39;s ID as an environment variable</span>
 <span class="n">BOT_ID</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;BOT_ID&quot;</span><span class="p">)</span>
 
 <span class="cp"># constants</span>
@@ -259,7 +259,7 @@ variable values and then instantiate the Slack client.</p>
 
 <p>The code instantiates the <code>SlackClient</code> client with our <code>SLACK_BOT_TOKEN</code> 
 exported as an environment variable. </p>
-<div class="highlight"><pre>if __name__ == &quot;__main__&quot;:
+<div class="highlight"><pre><span></span>if __name__ == &quot;__main__&quot;:
     READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
     if slack_client.rtm_connect():
         print(&quot;StarterBot connected and running!&quot;)
@@ -278,34 +278,34 @@ loops while parsing messages from the firehose. If any of those messages are
 directed at StarterBot, a function named <code>handle_command</code> determines what 
 to do.</p>
 <p>Next add two new functions to parse Slack output and handle commands.</p>
-<div class="highlight"><pre><span class="nx">def</span> <span class="nx">handle_command</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span> <span class="nx">channel</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        Receives commands directed at the bot and determines if they</span>
-<span class="s2">        are valid commands. If so, then acts on the commands. If not,</span>
-<span class="s2">        returns back what it needs for clarification.</span>
-<span class="s2">    &quot;&quot;&quot;</span>
-    <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Not sure what you mean. Use the *&quot;</span> <span class="o">+</span> <span class="nx">EXAMPLE_COMMAND</span> <span class="o">+</span> <span class="o">\</span>
-               <span class="s2">&quot;* command with numbers, delimited by spaces.&quot;</span>
-    <span class="k">if</span> <span class="nx">command</span><span class="p">.</span><span class="nx">startswith</span><span class="p">(</span><span class="nx">EXAMPLE_COMMAND</span><span class="p">)</span><span class="o">:</span>
-        <span class="nx">response</span> <span class="o">=</span> <span class="s2">&quot;Sure...write some more code then I can do that!&quot;</span>
-    <span class="nx">slack_client</span><span class="p">.</span><span class="nx">api_call</span><span class="p">(</span><span class="s2">&quot;chat.postMessage&quot;</span><span class="p">,</span> <span class="nx">channel</span><span class="o">=</span><span class="nx">channel</span><span class="p">,</span>
-                          <span class="nx">text</span><span class="o">=</span><span class="nx">response</span><span class="p">,</span> <span class="nx">as_user</span><span class="o">=</span><span class="nx">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>def handle_command(command, channel):
+    &quot;&quot;&quot;
+        Receives commands directed at the bot and determines if they
+        are valid commands. If so, then acts on the commands. If not,
+        returns back what it needs for clarification.
+    &quot;&quot;&quot;
+    response = &quot;Not sure what you mean. Use the *&quot; + EXAMPLE_COMMAND + \
+               &quot;* command with numbers, delimited by spaces.&quot;
+    if command.startswith(EXAMPLE_COMMAND):
+        response = &quot;Sure...write some more code then I can do that!&quot;
+    slack_client.api_call(&quot;chat.postMessage&quot;, channel=channel,
+                          text=response, as_user=True)
 
 
-<span class="nx">def</span> <span class="nx">parse_slack_output</span><span class="p">(</span><span class="nx">slack_rtm_output</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        The Slack Real Time Messaging API is an events firehose.</span>
-<span class="s2">        this parsing function returns None unless a message is</span>
-<span class="s2">        directed at the Bot, based on its ID.</span>
-<span class="s2">    &quot;&quot;&quot;</span>
-    <span class="nx">output_list</span> <span class="o">=</span> <span class="nx">slack_rtm_output</span>
-    <span class="k">if</span> <span class="nx">output_list</span> <span class="nx">and</span> <span class="nx">len</span><span class="p">(</span><span class="nx">output_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">:</span>
-        <span class="k">for</span> <span class="nx">output</span> <span class="k">in</span> <span class="nx">output_list</span><span class="o">:</span>
-            <span class="k">if</span> <span class="nx">output</span> <span class="nx">and</span> <span class="s1">&#39;text&#39;</span> <span class="k">in</span> <span class="nx">output</span> <span class="nx">and</span> <span class="nx">AT_BOT</span> <span class="k">in</span> <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;text&#39;</span><span class="cp">]</span><span class="o">:</span>
-                <span class="err">#</span> <span class="k">return</span> <span class="nx">text</span> <span class="nx">after</span> <span class="nx">the</span> <span class="err">@</span> <span class="nx">mention</span><span class="p">,</span> <span class="nx">whitespace</span> <span class="nx">removed</span>
-                <span class="k">return</span> <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;text&#39;</span><span class="cp">]</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">AT_BOT</span><span class="p">)</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span><span class="p">.</span><span class="nx">strip</span><span class="p">().</span><span class="nx">lower</span><span class="p">(),</span> <span class="o">\</span>
-                       <span class="nx">output</span><span class="cp">[</span><span class="s1">&#39;channel&#39;</span><span class="cp">]</span>
-    <span class="k">return</span> <span class="nx">None</span><span class="p">,</span> <span class="nx">None</span>
+def parse_slack_output(slack_rtm_output):
+    &quot;&quot;&quot;
+        The Slack Real Time Messaging API is an events firehose.
+        this parsing function returns None unless a message is
+        directed at the Bot, based on its ID.
+    &quot;&quot;&quot;
+    output_list = slack_rtm_output
+    if output_list and len(output_list) &gt; 0:
+        for output in output_list:
+            if output and &#39;text&#39; in output and AT_BOT in output[&#39;text&#39;]:
+                # return text after the @ mention, whitespace removed
+                return output[&#39;text&#39;].split(AT_BOT)[1].strip().lower(), \
+                       output[&#39;channel&#39;]
+    return None, None
 </pre></div>
 
 
@@ -317,20 +317,20 @@ some more Python code!</p>
 <p>Here is how the entire program should look when it's all put together
 (you can also 
 <a href="https://github.com/mattmakai/slack-starterbot/blob/master/starterbot.py">view the file in GitHub</a>):</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">slackclient</span> <span class="kn">import</span> <span class="n">SlackClient</span>
 
 
-<span class="c"># starterbot&#39;s ID as an environment variable</span>
-<span class="n">BOT_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;BOT_ID&quot;</span><span class="p">)</span>
+<span class="c1"># starterbot&#39;s ID as an environment variable</span>
+<span class="n">BOT_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;BOT_ID&quot;</span><span class="p">)</span>
 
-<span class="c"># constants</span>
-<span class="n">AT_BOT</span> <span class="o">=</span> <span class="s">&quot;&lt;@&quot;</span> <span class="o">+</span> <span class="n">BOT_ID</span> <span class="o">+</span> <span class="s">&quot;&gt;&quot;</span>
-<span class="n">EXAMPLE_COMMAND</span> <span class="o">=</span> <span class="s">&quot;do&quot;</span>
+<span class="c1"># constants</span>
+<span class="n">AT_BOT</span> <span class="o">=</span> <span class="s2">&quot;&lt;@&quot;</span> <span class="o">+</span> <span class="n">BOT_ID</span> <span class="o">+</span> <span class="s2">&quot;&gt;&quot;</span>
+<span class="n">EXAMPLE_COMMAND</span> <span class="o">=</span> <span class="s2">&quot;do&quot;</span>
 
-<span class="c"># instantiate Slack &amp; Twilio clients</span>
-<span class="n">slack_client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;SLACK_BOT_TOKEN&#39;</span><span class="p">))</span>
+<span class="c1"># instantiate Slack &amp; Twilio clients</span>
+<span class="n">slack_client</span> <span class="o">=</span> <span class="n">SlackClient</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SLACK_BOT_TOKEN&#39;</span><span class="p">))</span>
 
 
 <span class="k">def</span> <span class="nf">handle_command</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
@@ -339,11 +339,11 @@ some more Python code!</p>
 <span class="sd">        are valid commands. If so, then acts on the commands. If not,</span>
 <span class="sd">        returns back what it needs for clarification.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="s">&quot;Not sure what you mean. Use the *&quot;</span> <span class="o">+</span> <span class="n">EXAMPLE_COMMAND</span> <span class="o">+</span> \
-               <span class="s">&quot;* command with numbers, delimited by spaces.&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="s2">&quot;Not sure what you mean. Use the *&quot;</span> <span class="o">+</span> <span class="n">EXAMPLE_COMMAND</span> <span class="o">+</span> \
+               <span class="s2">&quot;* command with numbers, delimited by spaces.&quot;</span>
     <span class="k">if</span> <span class="n">command</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">EXAMPLE_COMMAND</span><span class="p">):</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="s">&quot;Sure...write some more code then I can do that!&quot;</span>
-    <span class="n">slack_client</span><span class="o">.</span><span class="n">api_call</span><span class="p">(</span><span class="s">&quot;chat.postMessage&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">,</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="s2">&quot;Sure...write some more code then I can do that!&quot;</span>
+    <span class="n">slack_client</span><span class="o">.</span><span class="n">api_call</span><span class="p">(</span><span class="s2">&quot;chat.postMessage&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">,</span>
                           <span class="n">text</span><span class="o">=</span><span class="n">response</span><span class="p">,</span> <span class="n">as_user</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 
@@ -356,24 +356,24 @@ some more Python code!</p>
     <span class="n">output_list</span> <span class="o">=</span> <span class="n">slack_rtm_output</span>
     <span class="k">if</span> <span class="n">output_list</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">output_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">output_list</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">output</span> <span class="ow">and</span> <span class="s">&#39;text&#39;</span> <span class="ow">in</span> <span class="n">output</span> <span class="ow">and</span> <span class="n">AT_BOT</span> <span class="ow">in</span> <span class="n">output</span><span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">]:</span>
-                <span class="c"># return text after the @ mention, whitespace removed</span>
-                <span class="k">return</span> <span class="n">output</span><span class="p">[</span><span class="s">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">AT_BOT</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> \
-                       <span class="n">output</span><span class="p">[</span><span class="s">&#39;channel&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">output</span> <span class="ow">and</span> <span class="s1">&#39;text&#39;</span> <span class="ow">in</span> <span class="n">output</span> <span class="ow">and</span> <span class="n">AT_BOT</span> <span class="ow">in</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]:</span>
+                <span class="c1"># return text after the @ mention, whitespace removed</span>
+                <span class="k">return</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">AT_BOT</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> \
+                       <span class="n">output</span><span class="p">[</span><span class="s1">&#39;channel&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">READ_WEBSOCKET_DELAY</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># 1 second delay between reading from firehose</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">READ_WEBSOCKET_DELAY</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 1 second delay between reading from firehose</span>
     <span class="k">if</span> <span class="n">slack_client</span><span class="o">.</span><span class="n">rtm_connect</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;StarterBot connected and running!&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;StarterBot connected and running!&quot;</span><span class="p">)</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
             <span class="n">command</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="n">parse_slack_output</span><span class="p">(</span><span class="n">slack_client</span><span class="o">.</span><span class="n">rtm_read</span><span class="p">())</span>
             <span class="k">if</span> <span class="n">command</span> <span class="ow">and</span> <span class="n">channel</span><span class="p">:</span>
                 <span class="n">handle_command</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">channel</span><span class="p">)</span>
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">READ_WEBSOCKET_DELAY</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Connection failed. Invalid Slack token or bot ID?&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Connection failed. Invalid Slack token or bot ID?&quot;</span><span class="p">)</span>
 </pre></div>
 
 

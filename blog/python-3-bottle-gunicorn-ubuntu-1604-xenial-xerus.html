@@ -133,7 +133,7 @@ development.</p>
 <h2>System Packages</h2>
 <p>We can see the python3 system version Ubuntu comes with and where its
 executable is stored using these commands.</p>
-<div class="highlight"><pre>python3 --version
+<div class="highlight"><pre><span></span>python3 --version
 which python3
 </pre></div>
 
@@ -143,7 +143,7 @@ which python3
 for the superuser password because restricted system access is needed 
 to install packages through 
 <a href="https://en.wikipedia.org/wiki/Advanced_Packaging_Tool">apt</a>.</p>
-<div class="highlight"><pre>sudo apt-get install python3-pip python3-dev
+<div class="highlight"><pre><span></span>sudo apt-get install python3-pip python3-dev
 </pre></div>
 
 
@@ -158,7 +158,7 @@ and <a href="https://pypi.python.org/pypi/pip">pip</a> were installed to handle 
 <a href="/application-dependencies.html">application dependencies</a>.
 We can now use them to download and install Bottle and Gunicorn.</p>
 <p>Create a directory for the virtualenvs. Then create a new virtualenv.</p>
-<div class="highlight"><pre># make sure pip and setuptools are the latest version
+<div class="highlight"><pre><span></span># make sure pip and setuptools are the latest version
 pip3 install --upgrade pip setuptools
 # the tilde &quot;~&quot; specifies the user&#39;s home directory, like /home/matt
 cd ~
@@ -170,7 +170,7 @@ python3 -m venv venvs/bottleproj
 
 
 <p>Activate the virtualenv.</p>
-<div class="highlight"><pre>source ~/venvs/bottleproj/bin/activate
+<div class="highlight"><pre><span></span>source ~/venvs/bottleproj/bin/activate
 </pre></div>
 
 
@@ -180,7 +180,7 @@ python3 -m venv venvs/bottleproj
 dependencies we want, in our case Bottle and Gunicorn. </p>
 <h2>Bottle and Gunicorn</h2>
 <p>We can now install Bottle and Green Unicorn via the <code>pip</code> command.</p>
-<div class="highlight"><pre>pip install bottle gunicorn
+<div class="highlight"><pre><span></span>pip install bottle gunicorn
 </pre></div>
 
 
@@ -189,7 +189,7 @@ dependencies we want, in our case Bottle and Gunicorn. </p>
 <p>Use the <code>mkdir</code> command to create a new directory to keep our Bottle 
 project then use the <code>cd</code> (change directory) command to move into the
 new folder.</p>
-<div class="highlight"><pre>mkdir ~/bottleproj
+<div class="highlight"><pre><span></span>mkdir ~/bottleproj
 cd ~/bottleproj
 </pre></div>
 
@@ -200,19 +200,19 @@ we can test to make sure Bottle is working properly. I prefer to use
 <a href="/development-environments.html">development environments</a> work great as
 well.</p>
 <p>Within the new <code>app.py</code> file write the following code.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">bottle</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bottle</span>
 <span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">Response</span>
 
-<span class="c"># a basic URL route to test whether Bottle is responding properly</span>
-<span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="c1"># a basic URL route to test whether Bottle is responding properly</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;It works!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;It works!&quot;</span><span class="p">)</span>
 
-<span class="c"># these two lines are only used for python app.py</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># these two lines are only used for python app.py</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="c"># this is the hook for Gunicorn to run Bottle</span>
+<span class="c1"># this is the hook for Gunicorn to run Bottle</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">bottle</span><span class="o">.</span><span class="n">default_app</span><span class="p">()</span>
 </pre></div>
 
@@ -220,7 +220,7 @@ well.</p>
 <p>We could run our app with the Bottle development server using the 
 <code>python app.py</code> command. Let's instead run our Bottle app with
 Gunicorn.</p>
-<div class="highlight"><pre>gunicorn -w 2 app:app
+<div class="highlight"><pre><span></span>gunicorn -w 2 app:app
 </pre></div>
 
 

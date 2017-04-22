@@ -116,14 +116,14 @@ that you <em>must</em> use a key with 2048 or more bits in macOS Sierra or the
 system will not allow you to connect to servers with it.</p>
 <p>Optionally, you can also specify your email address with <code>-C</code> (otherwise 
 one will be generated off your current macOS account):</p>
-<div class="highlight"><pre>ssh-keygen -t rsa -b <span class="m">4096</span> -C my.email.address@company.com
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa -b <span class="m">4096</span> -C my.email.address@company.com
 </pre></div>
 
 
 <p>The first prompt you will see asks where to save the key. However, there are
 actually two files that will be generated: the public key and the private 
 key. </p>
-<div class="highlight"><pre>Generating public/private rsa key pair.
+<div class="highlight"><pre><span></span>Generating public/private rsa key pair.
 Enter file in which to save the key <span class="o">(</span>/Users/matt/.ssh/id_rsa<span class="o">)</span>:
 </pre></div>
 
@@ -137,7 +137,7 @@ along with a unique project name. Naming is one of those hard computer
 science problems, so take some time to come up with a system that works for
 you!</p>
 <p>Next you will see a prompt for an optional passphrase:</p>
-<div class="highlight"><pre>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
+<div class="highlight"><pre><span></span>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
 </pre></div>
 
 
@@ -153,14 +153,14 @@ that passphrase safe and secure because otherwise a completely new key would
 have to be generated.</p>
 <p>Enter the passphrase (or just press enter to not have a passphrase) twice.
 You'll see some output like the following:</p>
-<div class="highlight"><pre>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: 
+<div class="highlight"><pre><span></span>Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: 
 Enter same passphrase again: 
 Your identification has been saved in /Users/matt/.ssh/deploy_prod.
 Your public key has been saved in /Users/matt/.ssh/deploy_prod.pub.
 The key fingerprint is:
 SHA256:UnRGH/nzYzxUFS9jjd0wOl1ScFGKgW3pU60sSxGnyHo matthew.makai@gmail.com
 The key<span class="err">&#39;</span>s randomart image is:
-+---<span class="o">[</span>RSA 4096<span class="o">]</span>----+
++---<span class="o">[</span>RSA <span class="m">4096</span><span class="o">]</span>----+
 <span class="p">|</span>        ..+o++**@<span class="p">|</span>
 <span class="p">|</span>       . +.o*O.@<span class="o">=</span><span class="p">|</span>
 <span class="p">|</span>        . oo*<span class="o">=</span>B.*<span class="p">|</span>

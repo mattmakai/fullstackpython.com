@@ -131,14 +131,14 @@ configured.</p>
 Bottle and the helper library are installable from 
 <a href="https://pypi.python.org/pypi">PyPI</a> into a virtualenv. Open your terminal 
 and use the <code>virtualenv</code> command to create a new virtualenv:</p>
-<div class="highlight"><pre>virtualenv replysms
+<div class="highlight"><pre><span></span>virtualenv replysms
 </pre></div>
 
 
 <p>Invoke the virtualenv's <code>activate</code> script, which makes it the "active" 
 Python installation. Note that you need to do this in every terminal window
 that you want this virtualenv to be used.</p>
-<div class="highlight"><pre>source replysms/bin/activate
+<div class="highlight"><pre><span></span>source replysms/bin/activate
 </pre></div>
 
 
@@ -147,7 +147,7 @@ that you want this virtualenv to be used.</p>
 <p>Use the <code>pip</code> command to install the <a href="/bottle.html">Bottle</a> and 
 <a href="https://www.twilio.com/docs/libraries/python">Twilio Python</a> packages
 into your virtualenv.</p>
-<div class="highlight"><pre>pip install bottle twilio
+<div class="highlight"><pre><span></span>pip install bottle twilio
 </pre></div>
 
 
@@ -162,34 +162,34 @@ in the directory where you want to store this Python project.</p>
 <p>Write the following code in the new <code>app.py</code> file. There is also
 <a href="https://gist.github.com/mattmakai/6ec3b46e40a1020a3ea9c772c601199a">a GitHub Gist</a> 
 with the code that you can copy and paste.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="p">(</span><span class="n">post</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="p">(</span><span class="n">post</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">twilio</span> <span class="kn">import</span> <span class="n">twiml</span>
 
 
-<span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">check_app</span><span class="p">():</span>
-    <span class="c"># returns a simple string stating the app is working</span>
-    <span class="k">return</span> <span class="s">&quot;It works!&quot;</span>
+    <span class="c1"># returns a simple string stating the app is working</span>
+    <span class="k">return</span> <span class="s2">&quot;It works!&quot;</span>
 
 
-<span class="nd">@post</span><span class="p">(</span><span class="s">&#39;/twilio&#39;</span><span class="p">)</span>
+<span class="nd">@post</span><span class="p">(</span><span class="s1">&#39;/twilio&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">inbound_sms</span><span class="p">():</span>
     <span class="n">twiml_response</span> <span class="o">=</span> <span class="n">twiml</span><span class="o">.</span><span class="n">Response</span><span class="p">()</span>
-    <span class="c"># grab message from the request. could also get the &quot;To&quot; and </span>
-    <span class="c"># &quot;From&quot; phone numbers as well from parameters with those names</span>
-    <span class="n">inbound_message</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;Body&quot;</span><span class="p">)</span>
-    <span class="c"># we can now use the incoming message text in our Python application</span>
-    <span class="k">if</span> <span class="n">inbound_message</span> <span class="o">==</span> <span class="s">&quot;Hello&quot;</span><span class="p">:</span>
-        <span class="n">twiml_response</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s">&quot;Hello from Bottle right back at you!&quot;</span><span class="p">)</span>
+    <span class="c1"># grab message from the request. could also get the &quot;To&quot; and </span>
+    <span class="c1"># &quot;From&quot; phone numbers as well from parameters with those names</span>
+    <span class="n">inbound_message</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Body&quot;</span><span class="p">)</span>
+    <span class="c1"># we can now use the incoming message text in our Python application</span>
+    <span class="k">if</span> <span class="n">inbound_message</span> <span class="o">==</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span>
+        <span class="n">twiml_response</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">&quot;Hello from Bottle right back at you!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">twiml_response</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s">&quot;Hi! Not quite sure what you meant, but okay.&quot;</span><span class="p">)</span>
-    <span class="c"># we return back the mimetype because Twilio needs an XML response</span>
-    <span class="n">response</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s">&quot;application/xml&quot;</span>
+        <span class="n">twiml_response</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s2">&quot;Hi! Not quite sure what you meant, but okay.&quot;</span><span class="p">)</span>
+    <span class="c1"># we return back the mimetype because Twilio needs an XML response</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;application/xml&quot;</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">twiml_response</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 
@@ -214,7 +214,7 @@ appropriate for your operating system.</p>
 <p>We can run Ngrok locally and expose our Bottle app that is running on 
 port 5000. Run this command within the directory where the Ngrok executable is
 located.</p>
-<div class="highlight"><pre>./ngrok http 5000
+<div class="highlight"><pre><span></span>./ngrok http 5000
 </pre></div>
 
 

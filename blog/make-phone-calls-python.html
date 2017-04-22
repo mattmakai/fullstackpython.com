@@ -132,7 +132,7 @@ to create an HTTP POST request to Twilio's API. The Twilio helper library is
 installable from <a href="https://pypi.python.org/pypi">PyPI</a> into a virtual 
 environment. Open your terminal and use the <code>virtualenv</code> command to create 
 a new virtualenv:</p>
-<div class="highlight"><pre>virtualenv phoneapp
+<div class="highlight"><pre><span></span>virtualenv phoneapp
 </pre></div>
 
 
@@ -140,7 +140,7 @@ a new virtualenv:</p>
 this virtualenv the active Python executable. Note that you will need to 
 perform this step in every terminal window that you want the virtualenv to 
 be active.</p>
-<div class="highlight"><pre>source phoneapp/bin/activate
+<div class="highlight"><pre><span></span>source phoneapp/bin/activate
 </pre></div>
 
 
@@ -149,7 +149,7 @@ to something like <code>(phoneapp) $</code>. </p>
 <p>Next use the <code>pip</code> command to install the 
 <a href="https://www.twilio.com/docs/libraries/python">Twilio Python</a> package
 into the virtualenv.</p>
-<div class="highlight"><pre>pip install twilio
+<div class="highlight"><pre><span></span>pip install twilio
 </pre></div>
 
 
@@ -159,36 +159,36 @@ dial phone numbers.</p>
 <h2>Our Python Script</h2>
 <p>Create a new file named <code>phone_calls.py</code> and copy or type in the following
 lines of code.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
 
 
-<span class="c"># Twilio phone number goes here. Grab one at https://twilio.com/try-twilio</span>
-<span class="c"># and use the E.164 format, for example: &quot;+12025551234&quot;</span>
-<span class="n">TWILIO_PHONE_NUMBER</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="c1"># Twilio phone number goes here. Grab one at https://twilio.com/try-twilio</span>
+<span class="c1"># and use the E.164 format, for example: &quot;+12025551234&quot;</span>
+<span class="n">TWILIO_PHONE_NUMBER</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-<span class="c"># list of one or more phone numbers to dial, in &quot;+19732644210&quot; format</span>
-<span class="n">DIAL_NUMBERS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;&quot;</span><span class="p">,]</span>
+<span class="c1"># list of one or more phone numbers to dial, in &quot;+19732644210&quot; format</span>
+<span class="n">DIAL_NUMBERS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,]</span>
 
-<span class="c"># URL location of TwiML instructions for how to handle the phone call</span>
+<span class="c1"># URL location of TwiML instructions for how to handle the phone call</span>
 <span class="n">TWIML_INSTRUCTIONS_URL</span> <span class="o">=</span> \
-  <span class="s">&quot;http://static.fullstackpython.com/phone-calls-python.xml&quot;</span>
+  <span class="s2">&quot;http://static.fullstackpython.com/phone-calls-python.xml&quot;</span>
 
-<span class="c"># replace the placeholder values with your Account SID and Auth Token</span>
-<span class="c"># found on the Twilio Console: https://www.twilio.com/console</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s">&quot;ACxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s">&quot;yyyyyyyyyy&quot;</span><span class="p">)</span>
+<span class="c1"># replace the placeholder values with your Account SID and Auth Token</span>
+<span class="c1"># found on the Twilio Console: https://www.twilio.com/console</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s2">&quot;ACxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s2">&quot;yyyyyyyyyy&quot;</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">dial_numbers</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Dials one or more phone numbers from a Twilio phone number.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers_list</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Dialing &quot;</span> <span class="o">+</span> <span class="n">number</span><span class="p">)</span>
-        <span class="c"># set the method to &quot;GET&quot; from default POST because Amazon S3 only</span>
-        <span class="c"># serves GET requests on files. Typically POST would be used for apps</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dialing &quot;</span> <span class="o">+</span> <span class="n">number</span><span class="p">)</span>
+        <span class="c1"># set the method to &quot;GET&quot; from default POST because Amazon S3 only</span>
+        <span class="c1"># serves GET requests on files. Typically POST would be used for apps</span>
         <span class="n">client</span><span class="o">.</span><span class="n">calls</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="n">number</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="n">TWILIO_PHONE_NUMBER</span><span class="p">,</span>
-                            <span class="n">url</span><span class="o">=</span><span class="n">TWIML_INSTRUCTIONS_URL</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;GET&quot;</span><span class="p">)</span>
+                            <span class="n">url</span><span class="o">=</span><span class="n">TWIML_INSTRUCTIONS_URL</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">dial_numbers</span><span class="p">(</span><span class="n">DIAL_NUMBERS</span><span class="p">)</span>
 </pre></div>
 
@@ -238,7 +238,7 @@ If no one else calls the number then hold music should be playing.</p>
 <p>We just handled inbound phone calls to our phone number. Now it's time to 
 dial outbound phone calls. Make sure your <code>phone_calls.py</code> file is saved 
 and that your virtualenv is still activated and then execute the script:</p>
-<div class="highlight"><pre>python phone_calls.py
+<div class="highlight"><pre><span></span>python phone_calls.py
 </pre></div>
 
 

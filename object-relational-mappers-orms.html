@@ -116,13 +116,13 @@ statements or stored procedures.</p>
 <p>For example, without an ORM a developer would write the following SQL
 statement to retrieve every row in the USERS table where the
 <code>zip_code</code> column is 94107:</p>
-<div class="highlight"><pre>SELECT * FROM USERS WHERE zip_code=94107;
+<div class="highlight"><pre><span></span>SELECT * FROM USERS WHERE zip_code=94107;
 </pre></div>
 
 
 <p>The equivalent Django ORM query would instead look like the following Python
 code:</p>
-<div class="highlight"><pre># obtain everyone in the 94107 zip code and assign to users variable
+<div class="highlight"><pre><span></span># obtain everyone in the 94107 zip code and assign to users variable
 users = Users.objects.filter(zip_code=94107)
 </pre></div>
 

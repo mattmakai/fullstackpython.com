@@ -196,31 +196,31 @@ the browser. </p>
 Nginx should handle static assets (such as images, JavaScript, and CSS
 files) under the /static directory and pass all other requests to the WSGI
 server running on port 8000:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">specifies</span> <span class="nt">that</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
+<div class="highlight"><pre><span></span><span class="err">#</span> <span class="nt">this</span> <span class="nt">specifies</span> <span class="nt">that</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">a</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
 <span class="nt">upstream</span> <span class="nt">app_server_djangoapp</span> <span class="p">{</span>
-    <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
+    <span class="err">server</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="err">#</span> <span class="nt">Nginx</span> <span class="nt">is</span> <span class="nt">set</span> <span class="nt">up</span> <span class="nt">to</span> <span class="nt">run</span> <span class="nt">on</span> <span class="nt">the</span> <span class="nt">standard</span> <span class="nt">HTTP</span> <span class="nt">port</span> <span class="nt">and</span> <span class="nt">listen</span> <span class="nt">for</span> <span class="nt">requests</span>
 <span class="nt">server</span> <span class="p">{</span>
-  <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
+  <span class="err">listen</span> <span class="err">80</span><span class="p">;</span>
 
-  <span class="err">#</span> <span class="n">nginx</span> <span class="n">should</span> <span class="n">serve</span> <span class="n">up</span> <span class="k">static</span> <span class="n">files</span> <span class="n">and</span> <span class="n">never</span> <span class="n">send</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WSGI</span> <span class="n">server</span>
-  <span class="n">location</span> <span class="o">/</span><span class="k">static</span> <span class="err">{</span>
-    <span class="n">autoindex</span> <span class="n">on</span><span class="p">;</span>
-    <span class="n">alias</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">assets</span><span class="p">;</span>
+  <span class="err">#</span> <span class="err">nginx</span> <span class="err">should</span> <span class="err">serve</span> <span class="err">up</span> <span class="err">static</span> <span class="err">files</span> <span class="err">and</span> <span class="err">never</span> <span class="err">send</span> <span class="err">to</span> <span class="err">the</span> <span class="err">WSGI</span> <span class="err">server</span>
+  <span class="err">location</span> <span class="err">/static</span> <span class="err">{</span>
+    <span class="err">autoindex</span> <span class="err">on</span><span class="p">;</span>
+    <span class="err">alias</span> <span class="err">/srv/www/assets</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="err">#</span> <span class="nt">requests</span> <span class="nt">that</span> <span class="nt">do</span> <span class="nt">not</span> <span class="nt">fall</span> <span class="nt">under</span> <span class="o">/</span><span class="nt">static</span> <span class="nt">are</span> <span class="nt">passed</span> <span class="nt">on</span> <span class="nt">to</span> <span class="nt">the</span> <span class="nt">WSGI</span>
   <span class="err">#</span> <span class="nt">server</span> <span class="nt">that</span> <span class="nt">was</span> <span class="nt">specified</span> <span class="nt">above</span> <span class="nt">running</span> <span class="nt">on</span> <span class="nt">port</span> <span class="nt">8000</span>
   <span class="nt">location</span> <span class="o">/</span> <span class="p">{</span>
-    <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">http_host</span><span class="p">;</span>
-    <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Forwarded-For</span> <span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">Host</span> <span class="err">$http_host</span><span class="p">;</span>
+    <span class="err">proxy_redirect</span> <span class="err">off</span><span class="p">;</span>
 
-    <span class="n">if</span> <span class="p">(</span><span class="o">!-</span><span class="n">f</span> <span class="err">$</span><span class="n">request_filename</span><span class="p">)</span> <span class="err">{</span>
-      <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">app_server_djangoapp</span><span class="p">;</span>
-      <span class="n">break</span><span class="p">;</span>
+    <span class="err">if</span> <span class="err">(!-f</span> <span class="err">$request_filename)</span> <span class="err">{</span>
+      <span class="err">proxy_pass</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">app_server_djangoapp</span><span class="p">;</span>
+      <span class="err">break</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="err">}</span>
 <span class="err">}</span>

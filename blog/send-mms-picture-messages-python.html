@@ -148,7 +148,7 @@ via the <code>pip</code> command, which pulls the code from
 tutorial we'll call our virtualenv <code>pymms</code> but you can name it whatever
 you want for your application.</p>
 <p>We have to create the virtualenv before using it. In your terminal enter:</p>
-<div class="highlight"><pre>virtualenv pymms
+<div class="highlight"><pre><span></span>virtualenv pymms
 </pre></div>
 
 
@@ -156,14 +156,14 @@ you want for your application.</p>
 <a href="/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html">how to set up Python 3, Django and Green Unicorn on Ubuntu 16.04 LTS</a>
 guide.</p>
 <p>Activate the virtualenv with the <code>source</code> command.</p>
-<div class="highlight"><pre>source pymms/bin/activate
+<div class="highlight"><pre><span></span>source pymms/bin/activate
 </pre></div>
 
 
 <p>The command prompt will change to look like this after it is activated:</p>
 <p><img src="/source/static/img/160515-mms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Now install the Twilio Python helper library.</p>
-<div class="highlight"><pre>pip install twilio
+<div class="highlight"><pre><span></span>pip install twilio
 </pre></div>
 
 
@@ -178,20 +178,20 @@ our Python code to our Twilio account. Go to the
 and Authentication Token into your Python code.</p>
 <p><img src="/source/static/img/160515-mms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded"></p>
 <p>Enter the following code into the interpreter or into the new Python file.</p>
-<div class="highlight"><pre><span class="c"># we import the Twilio client from the dependency we just installed</span>
+<div class="highlight"><pre><span></span><span class="c1"># we import the Twilio client from the dependency we just installed</span>
 <span class="kn">from</span> <span class="nn">twilio.rest</span> <span class="kn">import</span> <span class="n">TwilioRestClient</span>
 
-<span class="c"># the following line needs your Twilio Account SID and Auth Token</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s">&quot;ACxxxxxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s">&quot;zzzzzzzzzzzzz&quot;</span><span class="p">)</span>
+<span class="c1"># the following line needs your Twilio Account SID and Auth Token</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">(</span><span class="s2">&quot;ACxxxxxxxxxxxxxx&quot;</span><span class="p">,</span> <span class="s2">&quot;zzzzzzzzzzzzz&quot;</span><span class="p">)</span>
 
-<span class="c"># this is the URL to an image file we&#39;re going to send in the MMS</span>
-<span class="n">media</span> <span class="o">=</span> <span class="s">&quot;http://www.mattmakai.com/source/static/img/work/fsp-logo.png&quot;</span>
+<span class="c1"># this is the URL to an image file we&#39;re going to send in the MMS</span>
+<span class="n">media</span> <span class="o">=</span> <span class="s2">&quot;http://www.mattmakai.com/source/static/img/work/fsp-logo.png&quot;</span>
 
-<span class="c"># change the &quot;from_&quot; number to your Twilio number and the &quot;to&quot; number</span>
-<span class="c"># to the phone number you signed up for Twilio with, or upgrade your</span>
-<span class="c"># account to send MMS to any phone number that MMS is available</span>
-<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s">&quot;+19732644152&quot;</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s">&quot;+12023358536&quot;</span><span class="p">,</span> 
-                       <span class="n">body</span><span class="o">=</span><span class="s">&quot;MMS via Python? Nice!&quot;</span><span class="p">,</span> <span class="n">media_url</span><span class="o">=</span><span class="n">media</span><span class="p">)</span>
+<span class="c1"># change the &quot;from_&quot; number to your Twilio number and the &quot;to&quot; number</span>
+<span class="c1"># to the phone number you signed up for Twilio with, or upgrade your</span>
+<span class="c1"># account to send MMS to any phone number that MMS is available</span>
+<span class="n">client</span><span class="o">.</span><span class="n">messages</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&quot;+19732644152&quot;</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s2">&quot;+12023358536&quot;</span><span class="p">,</span> 
+                       <span class="n">body</span><span class="o">=</span><span class="s2">&quot;MMS via Python? Nice!&quot;</span><span class="p">,</span> <span class="n">media_url</span><span class="o">=</span><span class="n">media</span><span class="p">)</span>
 </pre></div>
 
 

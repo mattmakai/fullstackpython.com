@@ -131,7 +131,7 @@ packages we need since we want to both run PostgreSQL and use the psycopg2
 driver with our Python programs. PostgreSQL will also be installed as a
 system service so we can start, stop and reload its configuration when
 necessary with the <code>service</code> command. Open the terminal and run: </p>
-<div class="highlight"><pre>sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common
+<div class="highlight"><pre><span></span>sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common
 </pre></div>
 
 
@@ -145,14 +145,14 @@ processing.</p>
 in the background. However, we need to create a user and a database instance
 to really start using it. Use the <code>sudo</code> command to switch to the new
 "postgres" account.</p>
-<div class="highlight"><pre>sudo -i -u postgres
+<div class="highlight"><pre><span></span>sudo -i -u postgres
 </pre></div>
 
 
 <p>Within the "postgres" account, create a user from the command line with the
 <code>createuser</code> command. PostgreSQL will prompt you with several questions.
 Answer "n" to superuser and "y" to the other questions.</p>
-<div class="highlight"><pre>createuser matt -P --interactive
+<div class="highlight"><pre><span></span>createuser matt -P --interactive
 </pre></div>
 
 
@@ -162,7 +162,7 @@ account. Exit out of the postgres account by pressing the "Ctrl" key along
 with "d" into the shell. We're back in our own user account.</p>
 <p>Create a new database we can use for testing. You can name it "testpython"
 or whatever you want for your application.</p>
-<div class="highlight"><pre>createdb testpython
+<div class="highlight"><pre><span></span>createdb testpython
 </pre></div>
 
 
@@ -171,7 +171,7 @@ or whatever you want for your application.</p>
 <p>The <code>psql</code> command line client is useful for connecting directly to our
 PostgreSQL server without any Python code. Try out <code>psql</code> by using this
 command at the prompt: </p>
-<div class="highlight"><pre>psql
+<div class="highlight"><pre><span></span>psql
 </pre></div>
 
 
@@ -189,7 +189,7 @@ can install the <a href="http://initd.org/psycopg/">psycopg2</a> package. Let's
 figure out where our <code>python3</code> executable is located, create a virtualenv
 with <code>python3</code>, activate the virtualenv and then install the psycopg2 package
 with <code>pip</code>. Find your <code>python3</code> executable using the <code>which</code> command.</p>
-<div class="highlight"><pre>which python3
+<div class="highlight"><pre><span></span>which python3
 </pre></div>
 
 
@@ -198,19 +198,19 @@ with <code>pip</code>. Find your <code>python3</code> executable using the <code
 <p>Create a new virtualenv in either your home directory or wherever you
 store your Python virtualenvs. Specify the full path to your <code>python3</code>
 installation. </p>
-<div class="highlight"><pre># specify the system python3 installation
+<div class="highlight"><pre><span></span># specify the system python3 installation
 virtualenv --python=/usr/bin/python3 venvs/postgrestest
 </pre></div>
 
 
 <p>Activate the virtualenv.</p>
-<div class="highlight"><pre>source ~/venvs/postgrestest/bin/activate
+<div class="highlight"><pre><span></span>source ~/venvs/postgrestest/bin/activate
 </pre></div>
 
 
 <p>Next we can install the psycopg2 Python package from 
 <a href="https://pypi.python.org/pypi">PyPI</a> using the <code>pip</code> command.</p>
-<div class="highlight"><pre>pip install psycopg2
+<div class="highlight"><pre><span></span>pip install psycopg2
 </pre></div>
 
 
@@ -222,23 +222,23 @@ now test out the installation by writing a few lines of Python code.</p>
 write the following code in a Python file such as "testpostgres.py" then
 execute it with <code>python testpostgres.py</code>. Make sure to replace the "user"
 and "password" values with your own.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">psycopg2</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">psycopg2</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">connect_str</span> <span class="o">=</span> <span class="s">&quot;dbname=&#39;testpython&#39; user=&#39;matt&#39; host=&#39;localhost&#39; &quot;</span> <span class="o">+</span> \
-                  <span class="s">&quot;password=&#39;myOwnPassword&#39;&quot;</span>
-    <span class="c"># use our connection values to establish a connection</span>
+    <span class="n">connect_str</span> <span class="o">=</span> <span class="s2">&quot;dbname=&#39;testpython&#39; user=&#39;matt&#39; host=&#39;localhost&#39; &quot;</span> <span class="o">+</span> \
+                  <span class="s2">&quot;password=&#39;myOwnPassword&#39;&quot;</span>
+    <span class="c1"># use our connection values to establish a connection</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">connect_str</span><span class="p">)</span>
-    <span class="c"># create a psycopg2 cursor that can execute queries</span>
+    <span class="c1"># create a psycopg2 cursor that can execute queries</span>
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-    <span class="c"># create a new table with a single column called &quot;name&quot;</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;&quot;&quot;CREATE TABLE tutorials (name char(40));&quot;&quot;&quot;</span><span class="p">)</span>
-    <span class="c"># run a SELECT statement - no data in there, but we can try it</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;&quot;&quot;SELECT * from tutorials&quot;&quot;&quot;</span><span class="p">)</span>
+    <span class="c1"># create a new table with a single column called &quot;name&quot;</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;CREATE TABLE tutorials (name char(40));&quot;&quot;&quot;</span><span class="p">)</span>
+    <span class="c1"># run a SELECT statement - no data in there, but we can try it</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT * from tutorials&quot;&quot;&quot;</span><span class="p">)</span>
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
     <span class="k">print</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Uh oh, can&#39;t connect. Invalid dbname, user or password?&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Uh oh, can&#39;t connect. Invalid dbname, user or password?&quot;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
 

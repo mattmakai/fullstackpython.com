@@ -138,14 +138,14 @@ MIT license.</p>
 phone calls. Bottle and the Twilio helper library are installable from 
 <a href="https://pypi.python.org/pypi">PyPI</a> into a virtualenv. Open your terminal 
 and use the <code>virtualenv</code> command to create a new virtualenv:</p>
-<div class="highlight"><pre>virtualenv bottlephone
+<div class="highlight"><pre><span></span>virtualenv bottlephone
 </pre></div>
 
 
 <p>Use the <code>activate</code> script within the virtualenv, which makes this virtualenv
 the active Python installation. Note that you need to do this in every 
 terminal window that you want this virtualenv to be used.</p>
-<div class="highlight"><pre>source bottlephone/bin/activate
+<div class="highlight"><pre><span></span>source bottlephone/bin/activate
 </pre></div>
 
 
@@ -156,7 +156,7 @@ environment looked like when I used the <code>activate</code> script.</p>
 <p>Next use the <code>pip</code> command to install the <a href="/bottle.html">Bottle</a> and 
 <a href="https://www.twilio.com/docs/libraries/python">Twilio Python</a> packages
 into your virtualenv.</p>
-<div class="highlight"><pre>pip install bottle twilio
+<div class="highlight"><pre><span></span>pip install bottle twilio
 </pre></div>
 
 
@@ -178,7 +178,7 @@ outbound phone calls.</p>
 <p>We can build the structure of our Bottle app and the first route right now.
 Create a new file named <code>app.py</code> with the following contents to start our
 app.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">bottle</span>
 <span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">Response</span>
 <span class="kn">from</span> <span class="nn">twilio</span> <span class="kn">import</span> <span class="n">twiml</span>
@@ -186,24 +186,24 @@ app.</p>
 
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">bottle</span><span class="o">.</span><span class="n">default_app</span><span class="p">()</span>
-<span class="c"># plug in account SID and auth token here if they are not already exposed as</span>
-<span class="c"># environment variables</span>
+<span class="c1"># plug in account SID and auth token here if they are not already exposed as</span>
+<span class="c1"># environment variables</span>
 <span class="n">twilio_client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">()</span>
 
-<span class="n">TWILIO_NUMBER</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;TWILIO_NUMBER&#39;</span><span class="p">,</span> <span class="s">&#39;+12025551234&#39;</span><span class="p">)</span>
-<span class="n">NGROK_BASE_URL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;NGROK_BASE_URL&#39;</span><span class="p">,</span> <span class="s">&#39;https://c6c6d4e8.ngrok.io&#39;</span><span class="p">)</span>
+<span class="n">TWILIO_NUMBER</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWILIO_NUMBER&#39;</span><span class="p">,</span> <span class="s1">&#39;+12025551234&#39;</span><span class="p">)</span>
+<span class="n">NGROK_BASE_URL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NGROK_BASE_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;https://c6c6d4e8.ngrok.io&#39;</span><span class="p">)</span>
 
 
-<span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a standard text response to show the app is up and running.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;Bottle app running!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;Bottle app running!&quot;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 
@@ -211,12 +211,12 @@ app.</p>
 file. Run the app via the Bottle development server with the following 
 command. Make sure your virtualenv is still activated so our code can rely 
 on the Bottle code library.</p>
-<div class="highlight"><pre>python app.py
+<div class="highlight"><pre><span></span>python app.py
 </pre></div>
 
 
 <p>We should see a successful development server start up like this:</p>
-<div class="highlight"><pre>(bottlephone) matt@ubuntu:~/bottlephone$ python app.py 
+<div class="highlight"><pre><span></span>(bottlephone) matt@ubuntu:~/bottlephone$ python app.py 
 Bottle v0.12.9 server starting up (using WSGIRefServer())...
 Listening on http://127.0.0.1:8000/
 Hit Ctrl-C to quit.
@@ -261,7 +261,7 @@ phone calls. Modify your existing app.py file with the two new functions
 below, <code>twiml_response</code> and <code>outbound_call</code>. None of the other code in
 this file needs to change other than adding those two new functions to
 what we wrote in the previous section.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">bottle</span>
 <span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">Response</span>
 <span class="kn">from</span> <span class="nn">twilio</span> <span class="kn">import</span> <span class="n">twiml</span>
@@ -269,25 +269,25 @@ what we wrote in the previous section.</p>
 
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">bottle</span><span class="o">.</span><span class="n">default_app</span><span class="p">()</span>
-<span class="c"># plug in account SID and auth token here if they are not already exposed as</span>
-<span class="c"># environment variables</span>
+<span class="c1"># plug in account SID and auth token here if they are not already exposed as</span>
+<span class="c1"># environment variables</span>
 <span class="n">twilio_client</span> <span class="o">=</span> <span class="n">TwilioRestClient</span><span class="p">()</span>
 
-<span class="c"># add your Twilio phone number here</span>
-<span class="n">TWILIO_NUMBER</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;TWILIO_NUMBER&#39;</span><span class="p">,</span> <span class="s">&#39;+16093002984&#39;</span><span class="p">)</span>
-<span class="c"># plug in your Ngrok Forwarding URL - we&#39;ll set it up in a minute</span>
-<span class="n">NGROK_BASE_URL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;NGROK_BASE_URL&#39;</span><span class="p">,</span> <span class="s">&#39;https://c6c6d4e8.ngrok.io&#39;</span><span class="p">)</span>
+<span class="c1"># add your Twilio phone number here</span>
+<span class="n">TWILIO_NUMBER</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWILIO_NUMBER&#39;</span><span class="p">,</span> <span class="s1">&#39;+16093002984&#39;</span><span class="p">)</span>
+<span class="c1"># plug in your Ngrok Forwarding URL - we&#39;ll set it up in a minute</span>
+<span class="n">NGROK_BASE_URL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NGROK_BASE_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;https://c6c6d4e8.ngrok.io&#39;</span><span class="p">)</span>
 
 
-<span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a standard text response to show the app is up and running.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&quot;Bottle app running!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s2">&quot;Bottle app running!&quot;</span><span class="p">)</span>
 
 
-<span class="nd">@post</span><span class="p">(</span><span class="s">&#39;/twiml&#39;</span><span class="p">)</span>
+<span class="nd">@post</span><span class="p">(</span><span class="s1">&#39;/twiml&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">twiml_response</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Provides TwiML instructions in response to a Twilio POST webhook</span>
@@ -295,12 +295,12 @@ what we wrote in the previous section.</p>
 <span class="sd">        when someone picks up the phone.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">twiml</span><span class="o">.</span><span class="n">Response</span><span class="p">()</span>
-    <span class="n">response</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s">&quot;Sweet, this phone call is answered by your Bottle app!&quot;</span><span class="p">)</span>
-    <span class="n">response</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s">&quot;https://api.twilio.com/cowbell.mp3&quot;</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Sweet, this phone call is answered by your Bottle app!&quot;</span><span class="p">)</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s2">&quot;https://api.twilio.com/cowbell.mp3&quot;</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">response</span><span class="p">))</span>
 
 
-<span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/dial-phone/&lt;outbound_phone_number&gt;&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/dial-phone/&lt;outbound_phone_number&gt;&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">outbound_call</span><span class="p">(</span><span class="n">outbound_phone_number</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Uses the Twilio Python helper library to send a POST request to</span>
@@ -308,15 +308,15 @@ what we wrote in the previous section.</p>
 <span class="sd">        Twilio phone number (that phone number must be owned by our</span>
 <span class="sd">        Twilio account).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c"># the url must match the Ngrok Forwarding URL plus the route defined in</span>
-    <span class="c"># the previous function that responds with TwiML instructions</span>
+    <span class="c1"># the url must match the Ngrok Forwarding URL plus the route defined in</span>
+    <span class="c1"># the previous function that responds with TwiML instructions</span>
     <span class="n">twilio_client</span><span class="o">.</span><span class="n">calls</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="n">OUTBOUND_NUMBER</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="n">BLOG_POST_NUMBER</span><span class="p">,</span>
-                               <span class="n">url</span><span class="o">=</span><span class="n">NGROK_BASE_URL</span> <span class="o">+</span> <span class="s">&#39;/twiml&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">&#39;phone call placed to &#39;</span> <span class="o">+</span> <span class="n">outbound_phone_number</span> <span class="o">+</span> <span class="s">&#39;!&#39;</span><span class="p">)</span>
+                               <span class="n">url</span><span class="o">=</span><span class="n">NGROK_BASE_URL</span> <span class="o">+</span> <span class="s1">&#39;/twiml&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s1">&#39;phone call placed to &#39;</span> <span class="o">+</span> <span class="n">outbound_phone_number</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 
@@ -330,7 +330,7 @@ that is appropriate for your operating system.</p>
 <p>We run Ngrok locally and expose our Bottle app that is running on 
 port 8000. Run this command within the directory where the Ngrok executable is
 located.</p>
-<div class="highlight"><pre>./ngrok http 8000
+<div class="highlight"><pre><span></span>./ngrok http 8000
 </pre></div>
 
 

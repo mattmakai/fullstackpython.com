@@ -131,7 +131,7 @@ However, on Ubuntu we can install a system package through <code>apt</code>. The
 advantage of this method is that the <code>apt</code> process will take care of 
 installing <code>redis-server</code> as a system service. Open the terminal and run 
 the following command:</p>
-<div class="highlight"><pre>sudo apt-get install redis-server
+<div class="highlight"><pre><span></span>sudo apt-get install redis-server
 </pre></div>
 
 
@@ -146,7 +146,7 @@ as a system service. Even though we installed the <code>redis-server</code> pack
 the installation also comes with the Redis command line client. The client
 is useful for connecting directly to the Redis server without any Python
 code. Give <code>redis-cli</code> a try by typing this into the command prompt:</p>
-<div class="highlight"><pre>redis-cli
+<div class="highlight"><pre><span></span>redis-cli
 </pre></div>
 
 
@@ -160,7 +160,7 @@ The full list of Redis commands is provided in the
 <p>We need to figure out our <code>python3</code> location, then create a virtualenv,
 activate the virtualenv and then install redis-py with <code>pip</code>.
 Determine your <code>python3</code> executable location with the <code>which</code> command.</p>
-<div class="highlight"><pre>which python3
+<div class="highlight"><pre><span></span>which python3
 </pre></div>
 
 
@@ -169,19 +169,19 @@ Determine your <code>python3</code> executable location with the <code>which</co
 <p>Create a new virtualenv either in your home directory or wherever you
 store your project virtualenvs. Specify the full path to your <code>python3</code>
 installation. </p>
-<div class="highlight"><pre># specify the system python3 installation
+<div class="highlight"><pre><span></span># specify the system python3 installation
 virtualenv --python=/usr/bin/python3 venvs/redistest
 </pre></div>
 
 
 <p>Activate the virtualenv.</p>
-<div class="highlight"><pre>source ~/venvs/redistest/bin/activate
+<div class="highlight"><pre><span></span>source ~/venvs/redistest/bin/activate
 </pre></div>
 
 
 <p>Next we can install the redis-py Python package from 
 <a href="https://pypi.python.org/pypi">PyPI</a> using the <code>pip</code> command.</p>
-<div class="highlight"><pre>pip install redis
+<div class="highlight"><pre><span></span>pip install redis
 </pre></div>
 
 
@@ -192,29 +192,29 @@ Python code to try out give redis-py!</p>
 <p>Fire up the Python REPL with the <code>python</code> or <code>python3</code> command. You can also 
 write the following code in a Python file such as "testredis.py" then
 execute it with <code>python testredis.py</code>.</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">redis</span>
-<span class="c"># create a connection to the localhost Redis server instance, by</span>
-<span class="c"># default it runs on port 6379</span>
-<span class="n">redis_db</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="c"># see what keys are in Redis</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">redis</span>
+<span class="c1"># create a connection to the localhost Redis server instance, by</span>
+<span class="c1"># default it runs on port 6379</span>
+<span class="n">redis_db</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># see what keys are in Redis</span>
 <span class="n">redis_db</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="c"># output for keys() should be an empty list &quot;[]&quot;</span>
-<span class="n">redis_db</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s">&#39;full stack&#39;</span><span class="p">,</span> <span class="s">&#39;python&#39;</span><span class="p">)</span>
-<span class="c"># output should be &quot;True&quot;</span>
+<span class="c1"># output for keys() should be an empty list &quot;[]&quot;</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;full stack&#39;</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">)</span>
+<span class="c1"># output should be &quot;True&quot;</span>
 <span class="n">redis_db</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="c"># now we have one key so the output will be &quot;[b&#39;full stack&#39;]&quot;</span>
-<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;full stack&#39;</span><span class="p">)</span>
-<span class="c"># output is &quot;b&#39;python&#39;&quot;, the key and value still exist in Redis</span>
-<span class="n">redis_db</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
-<span class="c"># output is &quot;1&quot;, we just incremented even though the key did not</span>
-<span class="c"># previously exist</span>
-<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
-<span class="c"># output is &quot;b&#39;1&#39;&quot; again, since we just obtained the value from</span>
-<span class="c"># the existing key</span>
-<span class="n">redis_db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
-<span class="c"># output is &quot;1&quot; because the command was successful</span>
-<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;twilio&#39;</span><span class="p">)</span>
-<span class="c"># nothing is returned because the key and value no longer exist</span>
+<span class="c1"># now we have one key so the output will be &quot;[b&#39;full stack&#39;]&quot;</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;full stack&#39;</span><span class="p">)</span>
+<span class="c1"># output is &quot;b&#39;python&#39;&quot;, the key and value still exist in Redis</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="s1">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c1"># output is &quot;1&quot;, we just incremented even though the key did not</span>
+<span class="c1"># previously exist</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c1"># output is &quot;b&#39;1&#39;&quot; again, since we just obtained the value from</span>
+<span class="c1"># the existing key</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c1"># output is &quot;1&quot; because the command was successful</span>
+<span class="n">redis_db</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;twilio&#39;</span><span class="p">)</span>
+<span class="c1"># nothing is returned because the key and value no longer exist</span>
 </pre></div>
 
 

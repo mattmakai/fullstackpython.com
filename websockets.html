@@ -182,29 +182,29 @@ passed through Nginx to your WSGI server. It can be tricky to set this up
 the first time. </p>
 <p>Here are the configuration settings I use in my Nginx file as part of my
 WebSockets proxy.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">where</span> <span class="nt">my</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">sits</span> <span class="nt">answering</span> <span class="nt">only</span> <span class="nt">on</span> <span class="nt">localhost</span>
+<div class="highlight"><pre><span></span><span class="err">#</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">where</span> <span class="nt">my</span> <span class="nt">WSGI</span> <span class="nt">server</span> <span class="nt">sits</span> <span class="nt">answering</span> <span class="nt">only</span> <span class="nt">on</span> <span class="nt">localhost</span>
 <span class="err">#</span> <span class="nt">usually</span> <span class="nt">this</span> <span class="nt">is</span> <span class="nt">Gunicorn</span> <span class="nt">monkey</span> <span class="nt">patched</span> <span class="nt">with</span> <span class="nt">gevent</span>
 <span class="nt">upstream</span> <span class="nt">app_server_wsgiapp</span> <span class="p">{</span>
-  <span class="n">server</span> <span class="n">localhost</span><span class="o">:</span><span class="m">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
+  <span class="err">server</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">5000</span> <span class="n">fail_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">server</span> <span class="p">{</span>
 
-  <span class="err">#</span> <span class="n">typical</span> <span class="n">web</span> <span class="n">server</span> <span class="n">configuration</span> <span class="n">goes</span> <span class="n">here</span>
+  <span class="err">#</span> <span class="err">typical</span> <span class="err">web</span> <span class="err">server</span> <span class="err">configuration</span> <span class="err">goes</span> <span class="err">here</span>
 
-  <span class="err">#</span> <span class="n">this</span> <span class="n">section</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">the</span> <span class="n">WebSockets</span> <span class="n">proxying</span>
-  <span class="n">location</span> <span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span> <span class="err">{</span>
-    <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">app_server_wsgiapp</span><span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span><span class="p">;</span>
-    <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
+  <span class="err">#</span> <span class="err">this</span> <span class="err">section</span> <span class="err">is</span> <span class="err">specific</span> <span class="err">to</span> <span class="err">the</span> <span class="err">WebSockets</span> <span class="err">proxying</span>
+  <span class="err">location</span> <span class="err">/socket.io</span> <span class="err">{</span>
+    <span class="err">proxy_pass</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">app_server_wsgiapp</span><span class="o">/</span><span class="n">socket</span><span class="o">.</span><span class="n">io</span><span class="p">;</span>
+    <span class="err">proxy_redirect</span> <span class="err">off</span><span class="p">;</span>
 
-    <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span> <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">Host</span> <span class="err">$host</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Real-IP</span> <span class="err">$remote_addr</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">X-Forwarded-For</span> <span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span>
 
-    <span class="n">proxy_http_version</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">Upgrade</span> <span class="err">$</span><span class="n">http_upgrade</span><span class="p">;</span>
-    <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
-    <span class="n">proxy_read_timeout</span> <span class="m">600</span><span class="p">;</span>
+    <span class="err">proxy_http_version</span> <span class="err">1.1</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">Upgrade</span> <span class="err">$http_upgrade</span><span class="p">;</span>
+    <span class="err">proxy_set_header</span> <span class="err">Connection</span> <span class="err">&quot;upgrade&quot;</span><span class="p">;</span>
+    <span class="err">proxy_read_timeout</span> <span class="err">600</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="err">}</span>
 </pre></div>
