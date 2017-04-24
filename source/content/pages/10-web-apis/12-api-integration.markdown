@@ -80,6 +80,11 @@ across many implementation areas.
   is a good post on how to potentially limit the number of HTTP calls 
   required when accessing an external web API via the Requests library.
 
+* [Working with APIs the Pythonic way](https://medium.com/@hakibenita/working-with-apis-the-pythonic-way-484784ed1ce0)
+  does a nice job walking through creating a naive web API client, building on
+  it with better error handling and then explaining how to test it by mocking
+  out the service.
+
 
 ## API integration learning checklist
 1. Pick an API known for top notch documentation. Here's a list of 
