@@ -34,3 +34,9 @@ pip-log.txt
 
 source/cache/
 venv
+
+generated/
+output/
+
+__pycache__/
+.env

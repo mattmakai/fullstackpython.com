@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block meta_header %}{% if page.meta %}
+<meta name="description" content="{{ page.meta }}">
+{% endif %}{% endblock %}
+
+{% block title %}{{ page.title }} - {% endblock %}
+
+{% block css %}
+{% include "css/page.html" %}
+{% endblock %}
+
+{% block banner %}
+  {% include "banner.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+ <div class="col-md-8">
+  {% if page.slug == 'about-author' %}
+   <div class="row">
+    <div class="col-md-6">
+     <img src="/img/visuals/matt-makai-2017.jpg" class="technical-diagram" width="100%" style="border-radius:6px;padding-top:30px">
+    </div>
+    <div class="col-md-6">
+     {{ page.content }}
+    </div>
+   </div>
+  {% else %}
+   {{ page.content }}
+  {% endif %}
+  {% include "choices/" + page.slug + ".html" %}
+  {% include "email-for-book.html" %}
+ </div>
+ <div class="col-md-offset-1 col-md-3" id="sidebar">
+  {% include "sidebar.html" %}
+ </div>
+</div>
+{% endblock %}
+
+{% block lower_banner %}
+{% include "lower-banner.html" %}
+{% endblock %}
+
+{% block js %}
+<script type='text/javascript'>
+var trackOutboundLink = function(url) { ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } }); }
+</script>
+{% endblock %}

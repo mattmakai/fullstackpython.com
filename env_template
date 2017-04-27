@@ -1,0 +1,4 @@
+# fill in these values then copy this to .env, invoke as shell script
+export S3_BUCKET_NAME='' # S3 bucket name
+export CURRENT_SITE_DIR='/generated/current_site' # existing site files
+export UPDATED_SITE_DIR='/generated/updated_site' # regenerated new site files
