@@ -52,7 +52,7 @@ if __name__ == "__main__":
                                           shallow=False)
             except FileNotFoundError:
                 pass # files_match already set to False
-            if True: #not files_match:
+            if not files_match:
                 with open(os.path.join(root, file), "rb") as auto:
                     full_key = file
                     if subdir:
