@@ -3,7 +3,7 @@ slug: install-mysql-ubuntu-1604
 meta: A quick tutorial to install and use MySQL on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-28
-modified: 2016-08-10
+modified: 2017-04-28
 headerimage: /img/160528-mysql-ubuntu-1604/header.jpg
 headeralt: MySQL and Ubuntu logos. Copyright their respective owners.
 
@@ -23,7 +23,7 @@ as SQLAlchemy or Peewee.
 ## Tools We Need
 In this tutorial we'll use the following components:
 
-* [Ubuntu 16.04](http://releases.ubuntu.com/16.04/) (this tutorial 
+* [Ubuntu 16.04.2](http://releases.ubuntu.com/16.04/) (this tutorial 
   should also work on other Ubuntu versions)
 * [MySQL](http://dev.mysql.com/doc/)
 
@@ -153,6 +153,7 @@ pages for more tutorials.
 Questions? Tweet [@fullstackpython](https://twitter.com/fullstackpython)
 or post a message on the 
 [Full Stack Python Facebook page](https://www.facebook.com/fullstackpython). 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160528-install-mysql-ubuntu-1604.markdown).
 
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160528-install-mysql-ubuntu-1604.markdown)
+and submit a pull request.

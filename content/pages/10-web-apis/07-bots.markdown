@@ -1,7 +1,7 @@
 title: Bots
 category: page
 slug: bots
-sortorder: 1006
+sortorder: 1007
 toc: False
 sidebartitle: Bots
 meta: Bots are applications that combine text input with contextual data to handle and respond to requests.

@@ -361,8 +361,7 @@ Check out these posts to learn what you could do:
   or 
   [phone calls](https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html)
 * [Integrate other web APIs](/api-integration.html) such as 
-  [GitHub](https://developer.github.com/v3/), 
-  [Twilio](https://www.twilio.com/docs) or [api.ai](https://docs.api.ai/)
+  [GitHub](https://developer.github.com/v3/) or [Twilio](/twilio.html)
 
 
 Questions? Contact me via Twitter 
@@ -370,6 +369,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160604-build-first-slack-bot-python.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160604-build-first-slack-bot-python.markdown)
+and submit a pull request.

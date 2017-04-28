@@ -1,7 +1,7 @@
 title: API Integration
 category: page
 slug: api-integration
-sortorder: 1012
+sortorder: 1013
 toc: False
 sidebartitle: API Integration
 meta: Integrating web APIs into an application is necessary for both mobile and web applications. Learn more about API integration on Full Stack Python.

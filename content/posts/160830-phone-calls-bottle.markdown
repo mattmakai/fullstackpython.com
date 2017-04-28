@@ -332,6 +332,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub as
 [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160830-phone-calls-bottle.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160830-phone-calls-bottle.markdown)
+and submit a pull request.

@@ -3,7 +3,7 @@ slug: ssh-keys-ubuntu-linux
 meta: Learn how to quickly generate new SSH keys on Ubuntu Linux 16.04 LTS.
 category: post
 date: 2017-02-14
-modified: 2017-02-15
+modified: 2017-04-28
 headerimage: /img/170214-ssh-keys-ubuntu/header.jpg
 headeralt: Ubuntu Linux logo, copyright Canonical Ltd.
 
@@ -114,6 +114,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/170214-create-ssh-keys-ubuntu.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170214-create-ssh-keys-ubuntu.markdown)
+and submit a pull request.

@@ -3,7 +3,7 @@ slug: python-3-django-gunicorn-ubuntu-1604-xenial-xerus
 meta: Step-by-step instructions for developing on Ubuntu 16.04 with Python 3, Django and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-09
-modified: 2017-04-25
+modified: 2017-04-28
 headerimage: /img/160509-ubuntu-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Ubuntu Linux logos. Copyright their respective owners.
 
@@ -155,6 +155,5 @@ or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
 See something wrong in this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160509-django-gunicorn-ubuntu-1604.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160509-django-gunicorn-ubuntu-1604.markdown)
 and submit a pull request.
-

@@ -3,7 +3,7 @@ slug: send-mms-picture-messages-python
 meta: A tutorial on how to send MMS (picture multimedia messages) using the Python programming language.
 category: post
 date: 2016-05-15
-modified: 2016-08-10
+modified: 2017-04-28
 headerimage: /img/160515-mms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
 
@@ -29,7 +29,9 @@ The other dependencies for this tutorial include:
   [application dependency](/application-dependencies.html)
 * A free [Twilio account](https://www.twilio.com/try-twilio) to use their 
   [MMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
-* [Twilio Python helper library](https://pypi.python.org/pypi/twilio)
+* [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
+  [version 6.0.0](https://github.com/twilio/twilio-python/tree/6.0.0) 
+  or later
 
 If you are unsure of how to get pip and virtualenv installed, take a look
 at the first few steps of the 
@@ -42,15 +44,15 @@ Our simple Python example application will use the Twilio web API to send
 picture messages.
 Go to the Twilio website
 [sign up for a free trial account](https://www.twilio.com/try-twilio). If 
-you already have a Twilio account (and you should because it makes it easy to
-add almost any type of communications to applications!) then sign into 
+you already have a Twilio account (and you should because it makes it easy 
+to add almost any type of communications to applications!) then sign into 
 your existing account.
 
 <img src="/img/160515-mms-python/try-twilio.png" width="100%" class="technical-diagram img-rounded">
 
-In trial mode Twilio can send MMS to a validated phone number associated with
-the account. When you're ready to send MMS messages to any phone in any 
-country then you will have to upgrade your account.
+In trial mode Twilio can send MMS to a validated phone number associated 
+with the account. When you're ready to send MMS messages to any phone in 
+any country then you will have to upgrade your account.
 
 After signing up for a Twilio account, you will receive your own phone 
 number that'll be used to send messages. That phone number can send outbound
@@ -86,9 +88,13 @@ The command prompt will change to look like this after it is activated:
 <img src="/img/160515-mms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded">
 
 
-Now install the Twilio Python helper library.
+Now install the 
+[Twilio Python helper library](https://www.twilio.com/docs/libraries/python). 
+Make sure you install the
+version 6.0.0 or later current version because the syntax for this
+code changed a bit from earlier helper library versions before 6.0.0.
 
-    pip install twilio
+    pip install twilio>=6.0.0
 
 
 Once the helper library installs we can use it in our Python code.
@@ -107,22 +113,26 @@ and Authentication Token into your Python code.
 
 <img src="/img/160515-mms-python/console-tokens.png" width="100%" class="technical-diagram img-rounded">
 
-Enter the following code into the interpreter or into the new Python file.
+Enter the following code into the new Python file, or copy it from
+[this GitHub repository that contains all blog code examples](https://github.com/fullstackpython/blog-code-examples).
+
 
     # we import the Twilio client from the dependency we just installed
-    from twilio.rest import TwilioRestClient
+    from twilio.rest import Client
 
     # the following line needs your Twilio Account SID and Auth Token
-    client = TwilioRestClient("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
+    client = Client("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
 
     # this is the URL to an image file we're going to send in the MMS
-    media = "http://www.mattmakai.com/img/work/fsp-logo.png"
+    media = "https://raw.githubusercontent.com/mattmakai/fullstackpython.com/master/static/img/logos/f.png"
 
     # change the "from_" number to your Twilio number and the "to" number
     # to the phone number you signed up for Twilio with, or upgrade your
     # account to send MMS to any phone number that MMS is available
-    client.messages.create(to="+19732644152", from_="+12023358536", 
-                           body="MMS via Python? Nice!", media_url=media)
+    client.api.account.messages.create(to="+19732644152",
+                                       from_="+12023351278",
+                                       body="MMS via Python? Nice!",
+                                       media_url=media)
 
 
 All the lines above that start with `#` are comments to give you some
@@ -148,6 +158,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160515-sending-mms-picture-messages-python.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160515-sending-mms-picture-messages-python.markdown)
+and submit a pull request.

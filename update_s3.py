@@ -17,6 +17,18 @@ def upload_with_content_type(file, full_key, auto):
         print("uploading \"{}\" as css".format(full_key))
         bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
                           ContentType="text/css")
+    elif ".jpg" in file:
+        print("uploading \"{}\" as jpeg".format(full_key))
+        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
+                          ContentType="image/jpeg")
+    elif ".png" in file:
+        print("uploading \"{}\" as png".format(full_key))
+        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
+                          ContentType="image/png")
+    elif ".xml" in file:
+        print("uploading \"{}\" as xml".format(full_key))
+        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
+                          ContentType="application/xml")
     else:
         print("uploading \"{}\"".format(full_key))
         bucket.put_object(Key=full_key, Body=auto,
@@ -40,7 +52,7 @@ if __name__ == "__main__":
                                           shallow=False)
             except FileNotFoundError:
                 pass # files_match already set to False
-            if not files_match:
+            if True: #not files_match:
                 with open(os.path.join(root, file), "rb") as auto:
                     full_key = file
                     if subdir:

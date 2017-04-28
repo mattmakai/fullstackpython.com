@@ -3,7 +3,7 @@ slug: send-sms-text-messages-python
 meta: A how-to guide for sending SMS (text messages) using the Python programming language.
 category: post
 date: 2016-05-11
-modified: 2016-04-25
+modified: 2017-04-28
 headerimage: /img/160511-send-sms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
 
@@ -17,8 +17,8 @@ Python apps.
 
 
 ## Tools We Need
-This guide works with both Python 2 and 3, so make sure you have one of those
-two versions installed.
+This guide works with both Python 2 and 3, so make sure you have one of 
+those two versions installed.
 
 * Either [Python 2 or 3](/python-2-or-3.html)
 * [pip](https://pip.pypa.io/en/stable/) and 
@@ -28,7 +28,8 @@ two versions installed.
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
   [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
-  [version 5.7.0 or earlier](https://github.com/twilio/twilio-python/tree/5.7.0)
+  [version 6.0.0](https://github.com/twilio/twilio-python/tree/6.0.0) 
+  or later
 
 If you need assistance getting pip and virtualenv installed, check out the
 first few steps of the 
@@ -39,9 +40,9 @@ guide that'll show how to install system packages for those tools.
 ## Using a Web API
 We're going to use a web API to make sending SMS easier and more reliable.
 Head to the 
-[Twilio website and sign up for a free trial account](https://www.twilio.com/try-twilio). If you already have a Twilio account (and you should - it's awesome
-for more than just sending text messages!) then sign into your existing
-account.
+[Twilio website and sign up for a free trial account](https://www.twilio.com/try-twilio). If you already have a Twilio account (and you should - it's 
+awesome for more than just sending text messages!) then sign into your 
+existing account.
 
 <img src="/img/160511-send-sms-python/try-twilio.png" width="100%" class="technical-diagram img-rounded">
 
@@ -80,11 +81,12 @@ to something like this:
 <img src="/img/160511-send-sms-python/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded">
 
 
-Now install the Twilio Python helper library. We are using the 5.7.0
-library version because 6.0.0 changed the code quite a bit compared to
-the older version.
+Now install the Twilio Python helper library. We are using the 6.0.0
+or above library version, which is important because the syntax in
+this post is backwards-incompatible with 5.x and previous Twilio helper
+library versions.
 
-    pip install twilio==5.7.0
+    pip install twilio>=6.0.0
 
 
 The helper library is now installed and we can use it with the Python code 
@@ -110,16 +112,17 @@ in the
 
 
     # we import the Twilio client from the dependency we just installed
-    from twilio.rest import TwilioRestClient
+    from twilio.rest import Client
 
     # the following line needs your Twilio Account SID and Auth Token
-    client = TwilioRestClient("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
+    client = Client("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
 
     # change the "from_" number to your Twilio number and the "to" number
     # to the phone number you signed up for Twilio with, or upgrade your
     # account to send SMS to any phone number
-    client.messages.create(to="+19732644152", from_="+12023358536", 
-                           body="Hello from Python!")
+    client.api.account.messages.create(to="+19732644152", 
+                                       from_="+12023351278", 
+                                       body="Hello from Python!")
 
 
 All the lines above that start with `#` are comments. Once you enter that 
@@ -141,6 +144,5 @@ or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
 See something wrong in this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160511-send-sms-text-message-python.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160511-send-sms-text-message-python.markdown)
 and submit a pull request.
-

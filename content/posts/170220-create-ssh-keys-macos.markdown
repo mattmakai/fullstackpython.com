@@ -3,7 +3,7 @@ slug: ssh-keys-macos-sierra
 meta: Learn how to quickly create new SSH keys on macOS Sierra.
 category: post
 date: 2017-02-20
-modified: 2017-02-20
+modified: 2017-04-28
 headerimage: /img/170220-ssh-keys-macos/header.jpg
 headeralt: Apple logo, copyright Apple.
 
@@ -121,6 +121,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/170220-create-ssh-keys-macos.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170220-create-ssh-keys-macos.markdown)
+and submit a pull request.

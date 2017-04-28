@@ -3,7 +3,7 @@ slug: postgresql-python-3-psycopg2-ubuntu-1604
 meta: A guide for installing and using PostgreSQL with Python 3 and psycopg2 on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-18
-modified: 2016-08-10
+modified: 2017-04-28
 headerimage: /img/160518-postgresql-ubuntu-1604/header.jpg
 headeralt: PostgreSQL and Ubuntu logos. Copyright their respective owners.
 
@@ -27,7 +27,7 @@ Our walkthrough should work with either [Python 2 or 3](/python-2-or-3.html)
 although all the steps were tested specifically with Python 3.5. Besides 
 the Python interpreter, here are the other components we'll use:
 
-* [Ubuntu 16.04](http://releases.ubuntu.com/16.04/) (these 
+* [Ubuntu 16.04.2](http://releases.ubuntu.com/16.04/) (these 
   steps should also work fine with other Ubuntu versions)
 * [pip](https://pip.pypa.io/en/stable/) and 
   [virtualenv](https://virtualenv.pypa.io/en/latest/) to handle the
@@ -102,7 +102,8 @@ now ready for input:
 Try out PostgreSQL's command prompt a try with commands such as `\dt` and
 `\dd`. We can also run SQL queries such as "SELECT * from testpython", 
 although that won't give us back any data yet because we have not inserted
-any into the database. A full list of PostgreSQL commands can be found in the
+any into the database. A full list of PostgreSQL commands can be 
+found in the
 [psql documentation](http://www.postgresql.org/docs/9.6/static/app-psql.html).
 
 
@@ -184,6 +185,7 @@ pages for more tutorials.
 Questions? Tweet [@fullstackpython](https://twitter.com/fullstackpython)
 or post a message on the 
 [Full Stack Python Facebook page](https://www.facebook.com/fullstackpython). 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown).
 
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160518-install-postgresql-python-3-ubuntu-1604.markdown)
+and submit a pull request.

@@ -3,7 +3,7 @@ slug: install-redis-use-python-3-ubuntu-1604
 meta: Step-by-step instructions to install Redis and use it with Python 3 and redis-py on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-16
-modified: 2016-08-10
+modified: 2017-04-28
 headerimage: /img/160516-redis-ubuntu-1604/header.jpg
 headeralt: Redis and Ubuntu logos. Copyright their respective owners.
 
@@ -150,7 +150,6 @@ read, modify and delete keys and values in Redis.
 Questions? Tweet [@fullstackpython](https://twitter.com/fullstackpython)
 or post a message on the 
 [Full Stack Python Facebook page](https://www.facebook.com/fullstackpython). 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160516-install-redis-use-python-3-ubuntu-1604.markdown).
-
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160516-install-redis-use-python-3-ubuntu-1604.markdown)
+and submit a pull request.

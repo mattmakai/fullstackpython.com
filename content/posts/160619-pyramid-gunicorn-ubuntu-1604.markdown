@@ -169,6 +169,5 @@ To decide what to do next with your Python project, check out the
 [Full Stack Python table of contents](/table-of-contents.html) page.
 
 See something wrong in this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160619-pyramid-gunicorn-ubuntu-1604.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160619-pyramid-gunicorn-ubuntu-1604.markdown)
 and submit a pull request.
-

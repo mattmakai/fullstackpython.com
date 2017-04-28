@@ -32,7 +32,8 @@ walkthrough. We also need:
 * Free [Twilio account](https://www.twilio.com/try-twilio) to use their 
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
-  [Twilio Python helper library](https://pypi.python.org/pypi/twilio)
+  [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
+  version 5.7.0 or earlier
 
 Check out the guide on 
 [how to set up Python 3, Bottle and Gunicorn on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)
@@ -66,7 +67,7 @@ Use the `pip` command to install the [Bottle](/bottle.html) and
 [Twilio Python](https://www.twilio.com/docs/libraries/python) packages
 into your virtualenv.
 
-    pip install bottle twilio
+    pip install bottle twilio==5.7.0
 
 
 We have installed the required dependencies so now Python code that is run 
@@ -211,6 +212,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/160605-reply-sms-python-bottle.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/160605-reply-sms-python-bottle.markdown)
+and submit a pull request.

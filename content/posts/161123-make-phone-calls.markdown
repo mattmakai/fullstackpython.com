@@ -3,7 +3,7 @@ slug: make-phone-calls-python
 meta: This tutorial shows how to use a Python program and the Twilio API to dial phone calls.
 category: post
 date: 2016-11-23
-modified: 2016-11-23
+modified: 2017-04-28
 headerimage: /img/161123-python-phone-calls/header.jpg
 headeralt: Python and Twilio logos. Copyright their respective owners.
 
@@ -31,7 +31,8 @@ build this application. Throughout the post we will also use:
   [phone calling web API](https://www.twilio.com/docs/api/rest/making-calls)
 * Twilio's 
   [Python helper library](https://www.twilio.com/docs/libraries/python),
-  which is [available on PyPI](https://pypi.python.org/pypi/twilio)
+  version 5.7.0, which is 
+  [available on PyPI](https://pypi.python.org/pypi/twilio)
 
 You can snag all the open source code for this tutorial in the 
 [python-twilio-example-apps](https://github.com/mattmakai/python-twilio-example-apps/tree/master/no-framework/phone-calls)
@@ -70,7 +71,7 @@ Next use the `pip` command to install the
 into the virtualenv.
 
 ```
-pip install twilio
+pip install twilio==5.7.0
 ```
 
 We will have the required dependency ready for project as soon as the 
@@ -209,6 +210,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub as
 [mattmakai](https://github.com/mattmakai).
 
-Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/gh-pages/source/content/posts/161123-make-phone-calls.markdown).
-
+See something wrong in this post? Fork 
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/161123-make-phone-calls.markdown)
+and submit a pull request.
