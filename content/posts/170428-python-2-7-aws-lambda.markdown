@@ -3,7 +3,7 @@ slug: aws-lambda-python-2-7
 meta: Learn how to create and deploy your first Amazon Web Services (AWS) Lambda function with Python 2.7.
 category: post
 date: 2017-04-28
-modified: 2017-04-28
+modified: 2017-04-29
 headerimage: /img/170428-aws-lambda-python-2-7/header.jpg
 headeralt: AWS, AWS Lambda and Python logos, copyright their respective owners.
 
@@ -107,11 +107,11 @@ that provides a hook for the Lambda service to know where to begin executing
 the Python code. Think of `lambda_handler` as a `main` function when you're
 using this service.
 
-Our Python code expects and reads two environment variables, which we will
-set in just a moment, and then prints a message zero to many times, based
-on the amount defined in the `how_many_times` variable. If a message is
-printed then the function returns the `what_to_print` string, if nothing
-is printed then `None` is returned.
+Our Python code expects and reads two environment variables and then the
+code prints a message zero to many times, based on the amount defined in 
+the `how_many_times` variable. If a message is printed then the function 
+returns the `what_to_print` string, if nothing is printed then `None` is 
+returned.
 
 Just below the code input text box there are environment variable key-value
 pairs that can be set. Our code will use two environment variables, named
