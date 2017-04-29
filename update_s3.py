@@ -9,30 +9,25 @@ BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
 
 
 def upload_with_content_type(file, full_key, auto):
-    if ".html" in file:
-        print("uploading \"{}\" as html".format(full_key))
-        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
-                          ContentType="text/html")
-    elif ".css" in file:
-        print("uploading \"{}\" as css".format(full_key))
-        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
-                          ContentType="text/css")
-    elif ".jpg" in file:
-        print("uploading \"{}\" as jpeg".format(full_key))
-        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
-                          ContentType="image/jpeg")
-    elif ".png" in file:
-        print("uploading \"{}\" as png".format(full_key))
-        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
-                          ContentType="image/png")
-    elif ".xml" in file:
-        print("uploading \"{}\" as xml".format(full_key))
-        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
-                          ContentType="application/xml")
-    else:
-        print("uploading \"{}\"".format(full_key))
+    content_type = "default"
+    if file.endswith(".html"):
+        content_type = "text/html"
+    elif file.endswith(".css"):
+        content_type = "text/css"
+    elif file.endswith(".jpg"):
+        content_type = "image/jpeg"
+    elif file.endswith(".png"):
+        content_type = "image/png"
+    elif file.endswith(".xml"):
+        content_type = "application/xml"
+
+    print("uploading \"{}\" as {}".format(full_key, content_type))
+    if content_type is "default":
         bucket.put_object(Key=full_key, Body=auto,
                           ACL='public-read')
+    else:
+        bucket.put_object(Key=full_key, Body=auto, ACL='public-read',
+                          ContentType=content_type)
 
 
 if __name__ == "__main__":
