@@ -15,10 +15,9 @@ comes in to API Gateway or a new file is uploaded to
 [AWS S3](https://aws.amazon.com/s3/) then AWS Lambda can execute a function
 to respond to that API call or manipulate the file on S3.
 
-AWS Lambda is not related in any way to Python's `lambda` syntax. The 
-`lambda` keyword in Python is used to create anonymous functions within the 
-programming language and AWS Lambda's name just happens to collide with
-the existing Python feature.
+AWS Lambdas are not related to the Python languages' `lambda` expressions. 
+The AWS Lambda name just happens to collide with the the `lambda` keyword 
+name in Python that is used to create anonymous functions.
 
 Let's learn how to quickly write and run a Lambda function to execute 
 basic Python 3.6 code which uses environment variables as input.
@@ -29,9 +28,14 @@ changed so that you can build much more complicated Python programs.
 ## Our Tools
 No local [development environment](/development-environments.html) tools 
 are required for this tutorial, other than a web browser. All the work will
-happen on AWS via their Console. All of these steps can also be completed
-from the command line via the [boto3](https://boto3.readthedocs.io/en/latest/)
-library, but we won't cover that in this post.
+happen on AWS via their Console. 
+
+These steps can also be completed from the command line via the 
+[boto3](https://boto3.readthedocs.io/en/latest/) library, but we won't 
+cover that in this post.
+
+If using Python 2 is still your jam rather than Python 3, take a look at
+[this other post which shows how to execute Python 2.7 code on AWS Lambda](/blog/aws-lambda-python-2-7.html).
 
 Sign up for a new [Amazon Web Services account](https://aws.amazon.com/) 
 (which provides a generous free tier), or use your existing AWS account.
@@ -149,7 +153,7 @@ required function configuration items.
 
 Keep the default handler set to `lambda_function.lambda_handler`. Select 
 "Create a new Role from template(s)" from the drop-down then for the
-"Role name" field enter "dynamodb_permissions". Under "Policy templates" 
+"Role name" field enter "dynamodb_access". Under "Policy templates" 
 select the "Simple Microservice permissions". 
 
 The "Simple Microservice permissions" allows our Lambda to access
@@ -159,40 +163,47 @@ temporary storage for Lambda functions.
 
 <img src="/img/170429-aws-lambda-python-3-6/lambda-handler-and-role.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="For the final configuration, keep the default handler, create a new role from a template for Simple Microservice permissions and save it with a unique name.">
 
-Now that our code and configuration is in place, click the "Next" button
+Our code and configuration is in place so click the "Next" button
 at the bottom right corner of the page.
 
-<img src="/img/170428-aws-lambda-python-2-7/review-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="We can review the values set during our configuration.">
+<img src="/img/170429-aws-lambda-python-3-6/review-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Review Lambda configuration.">
 
-The review screen will show us our configuration settings. Scroll down
-to the bottom and click the "Create function" button to continue.
+The review screen shows us our configuration settings to make sure we 
+selected the appropriate values for our new Lambda function. Scroll down
+press "Create function".
 
-<img src="/img/170428-aws-lambda-python-2-7/create-function.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Click the create function button to continue.">
+<img src="/img/170429-aws-lambda-python-3-6/create-function.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Click the create function button to continue.">
 
-We should see a success message on the next page just below the 
-"Save and test" button.
+Success message should appear on the next page below the "Test" button.
 
-<img src="/img/170428-aws-lambda-python-2-7/save-and-test.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Save and test button.">
+<img src="/img/170429-aws-lambda-python-3-6/test.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Test button on the execution screen.">
 
-Click that "Save and test" button to execute the Lambda. At first it
-may appear that nothing happened but scroll down to the "Execution result"
-section where we can see our output.
+Click the "Test" button to execute the Lambda. Lambda will prompt us for
+some data to simulate an event that would kick off our function. Select
+the "Hello World" sample event template, which contains some keys but our
+Lambda will not use that in its execution. Click the "Save and test" button
+at the bottom of the modal.
 
-<img src="/img/170428-aws-lambda-python-2-7/execution-results.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Execution results from running our Lambda function.">
+<img src="/img/170429-aws-lambda-python-3-6/sample-event-template.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Sample event template for Lambda execution.">
 
-We get the log output that shows us the return value of our function. In
-this case it is the string message from `what_to_print`. We can also see
-down below that our print function produced output five times. 
+Scroll down to the "Execution result" section where we can see our output.
+
+<img src="/img/170429-aws-lambda-python-3-6/execution-results.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Results from executing our new Lambda function.">
+
+The log output shows us the return value of our function, which in this 
+execution was the string message from `what_to_print`. We can also see
+our print function produced output five times as expected based on the
+amount set in the `how_many_times` environment variable.
 
 
 ## Next Steps
-Awesome, you just configured, wrote and executed your first Python 3.6
-code on AWS Lambda! The real power of Lambda comes in when you connect a
-trigger to it so your code executes based on events. We'll take a look
-at that in the next tutorial.
+You just configured, coded and executed your first Python 3.6 AWS Lambda
+function! The real power of Lambda comes in when you use triggers to
+your Lambda function so it executes based on events that happen.
+We will take a look at that in the next tutorial.
 
-What else can you do with Python and Lambda? Take a look at the 
-[AWS Lambda](/aws-lambda.html) page for more examples and tutorials. 
+Take a look at the [AWS Lambda](/aws-lambda.html) page for additional 
+examples and tutorials that other folks have shared for Lambda with Python.
 
 Questions? Contact me via Twitter 
 [@fullstackpython](https://twitter.com/fullstackpython)
@@ -200,5 +211,5 @@ or [@mattmakai](https://twitter.com/mattmakai). I am also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
 Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170428-python-2-7-aws-lambda.markdown).
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170429-python-3-6-aws-lambda.markdown).
 

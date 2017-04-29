@@ -160,9 +160,15 @@ We should see a success message on the next page just below the
 
 <img src="/img/170428-aws-lambda-python-2-7/save-and-test.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Save and test button.">
 
-Click that "Save and test" button to execute the Lambda. At first it
-may appear that nothing happened but scroll down to the "Execution result"
-section where we can see our output.
+Press the "Test" button to execute the Lambda. Lambda prompts us for
+some data to simulate an event that would trigger our function. Select
+the "Hello World" sample event template, which contains some example keys. 
+Our Lambda will not those keys in its execution so it does not matter what
+they are. Click the "Save and test" button at the bottom of the modal.
+
+<img src="/img/170428-aws-lambda-python-2-7/sample-event-template.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Sample event template for our Lambda execution.">
+
+Scroll down to the "Execution result" section where we can see our output.
 
 <img src="/img/170428-aws-lambda-python-2-7/execution-results.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Execution results from running our Lambda function.">
 

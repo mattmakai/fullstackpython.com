@@ -15,15 +15,18 @@ uploads to [AWS' Simple Storage Service (S3)](https://aws.amazon.com/s3/).
 
 <a href="https://aws.amazon.com/lambda/" style="border:none"><img src="/img/logos/aws-lambda.jpg" width="100%" alt="AWS Lambda logo." class="technical-diagram" style="border-radius:6px"></a>
 
+
 ## Why is Lambda useful?
 Lambda is often used as a "serverless" compute architecture, which 
 allows developers to upload their Python code instead of spinning and
 configuring servers, deploying their code and scaling based on traffic. 
 
+
 ## Python on AWS Lambda
-Lambda only had support for JavaScript when it was first released in 
-late 2014. Python 2 developers were welcomed to the platform less than a
-year after its release, in October 2015. Now that Lambda has support for both Python 2.7 and 3.6
+Lambda only had support for JavaScript, specifically Node.JS, when it was 
+first released in late 2014. Python 2 developers were welcomed to the 
+platform less than a year after its release, in October 2015. Lambda now 
+has support for both Python 2.7 and 3.6.
 
 
 ### Python-specific AWS Lambda resources
@@ -35,10 +38,8 @@ year after its release, in October 2015. Now that Lambda has support for both Py
 ### General AWS Lambda resources
 * [The Serverless Start-Up - Down With Servers!](http://highscalability.com/blog/2015/12/7/the-serverless-start-up-down-with-servers.html)
 
-* [](http://www.allthingsdistributed.com/2016/06/aws-lambda-serverless-reference-architectures.html)
+* [AWS Lambda Serverless Reference Architectures](http://www.allthingsdistributed.com/2016/06/aws-lambda-serverless-reference-architectures.html)
 
 * The 
   [AWS Lambda tag](https://aws.amazon.com/blogs/aws/category/aws-lambda/)
   on the official AWS blog contains all the related first-party tutorials 
-  and announcement
-
