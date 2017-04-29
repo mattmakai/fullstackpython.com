@@ -20,7 +20,13 @@ Lambda is often used as a "serverless" compute architecture, which
 allows developers to upload their Python code instead of spinning and
 configuring servers, deploying their code and scaling based on traffic. 
 
+## Python on AWS Lambda
+Lambda only had support for JavaScript when it was first released in 
+late 2014. Python 2 developers were welcomed to the platform less than a
+year after its release, in October 2015. Now that Lambda has support for both Python 2.7 and 3.6
 
-### Python on AWS Lambda
+
+### Python-specific AWS Lambda resources
 * [Building Scikit-Learn For AWS Lambda](https://serverlesscode.com/post/scikitlearn-with-amazon-linux-container/)
+
 
