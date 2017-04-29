@@ -29,4 +29,16 @@ year after its release, in October 2015. Now that Lambda has support for both Py
 ### Python-specific AWS Lambda resources
 * [Building Scikit-Learn For AWS Lambda](https://serverlesscode.com/post/scikitlearn-with-amazon-linux-container/)
 
+* [Going Serverless with AWS Lambda and API Gateway](http://blog.ryankelly.us/2016/08/07/going-serverless-with-aws-lambda-and-api-gateway.html)
+
+
+### General AWS Lambda resources
+* [The Serverless Start-Up - Down With Servers!](http://highscalability.com/blog/2015/12/7/the-serverless-start-up-down-with-servers.html)
+
+* [](http://www.allthingsdistributed.com/2016/06/aws-lambda-serverless-reference-architectures.html)
+
+* The 
+  [AWS Lambda tag](https://aws.amazon.com/blogs/aws/category/aws-lambda/)
+  on the official AWS blog contains all the related first-party tutorials 
+  and announcement
 
