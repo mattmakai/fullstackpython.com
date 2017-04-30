@@ -3,7 +3,7 @@ slug: aws-lambda-python-3-6
 meta: Code, create and execute your first Amazon Web Services (AWS) Lambda function with Python 3.6.
 category: post
 date: 2017-04-29
-modified: 2017-04-29
+modified: 2017-04-30
 headerimage: /img/170429-aws-lambda-python-3-6/header.jpg
 headeralt: AWS, AWS Lambda and Python logos are copyright their respective owners.
 
