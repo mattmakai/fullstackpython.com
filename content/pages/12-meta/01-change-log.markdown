@@ -19,7 +19,7 @@ inception in December 2012. You can view detailed changes via the
   [Python 2.7 on AWS Lambda](/blog/aws-lambda-python-2-7.html) 
   and another on
   [Python 3.6 on AWS Lambda](/blog/aws-lambda-python-3-6.html). Also
-  added an [AWS Lambda page](/aws-lambda.html).
+  added a page for [AWS Lambda](/aws-lambda.html).
 * Updated [Apache Cassandra page](/apache-cassandra.html) with a slew of
   new general and Python-specific resources.
 * New [Pelican](/pelican.html) resources.
