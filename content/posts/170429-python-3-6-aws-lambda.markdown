@@ -15,9 +15,9 @@ comes in to API Gateway or a new file is uploaded to
 [AWS S3](https://aws.amazon.com/s3/) then AWS Lambda can execute a function
 to respond to that API call or manipulate the file on S3.
 
-AWS Lambdas are not related to the Python languages' `lambda` expressions. 
-The AWS Lambda name just happens to collide with the the `lambda` keyword 
-name in Python that is used to create anonymous functions.
+AWS Lambdas are not related to the Python languages' `lambda` expressions,
+which are used to create anonymous functions. The AWS Lambda name just 
+happens to collide with the the `lambda` keyword's name.
 
 Let's learn how to quickly write and run a Lambda function to execute 
 basic Python 3.6 code which uses environment variables as input.
@@ -37,15 +37,10 @@ cover that in this post.
 If using Python 2 is still your jam rather than Python 3, take a look at
 [this other post which shows how to execute Python 2.7 code on AWS Lambda](/blog/aws-lambda-python-2-7.html).
 
-Sign up for a new [Amazon Web Services account](https://aws.amazon.com/) 
-(which provides a generous free tier), or use your existing AWS account.
-
 
 ## First Steps with AWS Lambda
-In your web browser go to the 
-[AWS Lambda landing page](https://aws.amazon.com/lambda/).
-Log in to your account, or sign up for a new account which
-comes with a free tier so you don't have to pay.
+Sign up for a new [Amazon Web Services account](https://aws.amazon.com/),
+which provides a generous free tier, or use your existing AWS account.
 
 <img src="/img/170429-aws-lambda-python-3-6/aws-amazon-com.jpg" width="100%" class="technical-diagram img-rounded" alt="AWS Lambda landing and sign in screen.">
 
@@ -53,7 +48,7 @@ After signing up a few tutorials may pop up, but skip past them and
 go to the main Console. AWS has tons of services, with more being added
 every month, so using the search box is the best way to get around. 
 Select the search text box, enter "lambda" and select "Lambda" to get to
-the right starting page.
+the Lambda starting page.
 
 <img src="/img/170429-aws-lambda-python-3-6/search-for-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Search for lambda in the dashboard text box.">
 
@@ -63,16 +58,17 @@ will appear.
 <img src="/img/170429-aws-lambda-python-3-6/select-blueprint.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="The Select Blueprint Lambda screen.">
 
 Select "Blank Function" and the "Configure triggers" page will come up. 
-It's non-obvious at first, but you don't actually need to configure a 
+It was non-obvious to me at first, but you don't actually need to configure a 
 trigger to move on. A trigger is how the Lambda function typically knows 
-when to execute based on an event from another AWS service such as API 
-Gateway or Cloudwatch.
+when to execute based on an event from another AWS service such as 
+[API Gateway](https://aws.amazon.com/api-gateway/) or 
+[Cloudwatch](https://aws.amazon.com/cloudwatch/).
 
 <img src="/img/170429-aws-lambda-python-3-6/configure-triggers.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Configure Lambda trigger screen.">
 
 We won't configure a trigger for this function because we can manually 
-kick off the Lambda later to test it. Leave the trigger icon blank and 
-click the "Next" button to move along. 
+kick off the Lambda to test it when we are finished configuring it. Leave 
+the trigger icon blank and click the "Next" button to move along. 
 
 <img src="/img/170429-aws-lambda-python-3-6/blank-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="The Lambda configuration screen.">
 
@@ -137,7 +133,8 @@ Enter the keys named `what_to_print` and `how_many_times` then enter their
 values. Use a string message for `what_to_print`'s value and an integer 
 whole number above 0 for `how_many_times`. Our Python code's error handling
 is not very robust so a value other than a number in the `how_many_times`
-variable will cause the script to throw an error when it is executed.
+variable will cause the script to throw an error when it is executed due
+to the forced casting of `how_many_times` via the `int()` function.
 
 <img src="/img/170429-aws-lambda-python-3-6/environment-variables.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Section to set environment variables for the Lambda function.">
 
@@ -202,7 +199,7 @@ function! The real power of Lambda comes in when you use triggers to
 your Lambda function so it executes based on events that happen.
 We will take a look at that in the next tutorial.
 
-Take a look at the [AWS Lambda](/aws-lambda.html) page for additional 
+View the [AWS Lambda Full Stack Python page](/aws-lambda.html) for additional 
 examples and tutorials that other folks have shared for Lambda with Python.
 
 Questions? Contact me via Twitter 
@@ -211,5 +208,5 @@ or [@mattmakai](https://twitter.com/mattmakai). I am also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
 Something wrong with this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170429-python-3-6-aws-lambda.markdown).
-
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170429-python-3-6-aws-lambda.markdown)
+and submit a pull request.
