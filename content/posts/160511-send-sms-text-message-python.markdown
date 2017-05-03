@@ -120,9 +120,9 @@ in the
     # change the "from_" number to your Twilio number and the "to" number
     # to the phone number you signed up for Twilio with, or upgrade your
     # account to send SMS to any phone number
-    client.api.account.messages.create(to="+19732644152", 
-                                       from_="+12023351278", 
-                                       body="Hello from Python!")
+    client.messages.create(to="+19732644152", 
+                           from_="+12023351278", 
+                           body="Hello from Python!")
 
 
 All the lines above that start with `#` are comments. Once you enter that 

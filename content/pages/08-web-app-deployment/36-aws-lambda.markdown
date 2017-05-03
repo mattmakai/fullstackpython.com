@@ -1,7 +1,7 @@
 title: AWS Lambda
 category: page
 slug: aws-lambda
-sortorder: 0731
+sortorder: 0836
 toc: False
 sidebartitle: AWS Lambda
 meta: AWS Lambda is a serverless compute service that can execute arbitrary Python 2.7 and 3.6 code.

@@ -53,13 +53,12 @@ application framework and your app itself is up to date and secured. See the
 
 * [Google App Engine](https://developers.google.com/appengine/)
 
-* [Gondor](https://gondor.io/)
-
 * [PythonAnywhere](https://www.pythonanywhere.com/)
 
 * [OpenShift](https://openshift.redhat.com/community/get-started/python)
 
-* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
+* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/),
+  [AWS CodeStar](https://aws.amazon.com/codestar/)
 
 
 ## Platform-as-a-service resources
