@@ -148,6 +148,9 @@ when scaling out a large deployment of distributed task queues.
 * [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
   a short introductory task queue screencast.
 
+* This [Celery tasks checklist](http://celerytaskschecklist.com/) has
+  some nice tips and resources for using Celery in your applications.
+
 * Heroku wrote about how to 
   [secure Celery](https://engineering.heroku.com/blogs/2014-09-15-securing-celery)
   when tasks are otherwise sent over unencrypted networks.
