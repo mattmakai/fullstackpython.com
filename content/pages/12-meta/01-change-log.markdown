@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### April
+* New [Serverless compute](/serverless.html) concept page.
 * Two new blog posts, one for 
   [Python 2.7 on AWS Lambda](/blog/aws-lambda-python-2-7.html) 
   and another on
