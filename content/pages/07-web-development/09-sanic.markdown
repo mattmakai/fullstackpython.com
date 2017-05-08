@@ -53,3 +53,36 @@ a chance you will have to work through errors as Sanic is regularly updated.
 * [Python Sanic Tutorial](https://www.youtube.com/watch?v=WiGsWfwh0yY) is a
   video tutorial on how to write your first Sanic web apps.
 
+
+## Sanic open source projects and examples
+There are not many example applications and extensions for Sanic 
+compared to [Flask](/flask.html), [Django](/django.html) or 
+[other web frameworks](/other-web-frameworks.html) because Sanic is 
+still so new. However, there are some initial projects that are
+useful for figuring out how to build your first applications with
+this framework.
+
+* [Gutenberg-HTTP](https://github.com/c-w/gutenberg-http/) is a
+  web application and API built with Sanic. It's a solid clean example
+  of how to build a decent-sized project with Sanic. There is even
+  [a demo that was deployed to Azure](https://c-w.github.io/gutenberg-http/)
+  to show how it works.
+
+* Sanic comes with 
+  [a slew of examples](https://github.com/channelcat/sanic/tree/master/examples) 
+  in the official repository.
+
+* [Sanic starter](https://github.com/seanpar203/sanic-starter)
+  bundles Sanic with [SQLAlchemy](/sqlalchemy.html) and Alembic
+  (for data migrations) as a starter project.
+
+* [Sanic-limiter](https://github.com/bohea/sanic-limiter) is an extension
+  for rate-limiting the number of requests from a single user on Sanic
+  [APIs](/application-programming-interfaces.html).
+
+* [Sanic-GraphQL](https://github.com/graphql-python/sanic-graphql) adds
+  GraphQL support to a Sanic web application.
+
+* [Sanic OpenAPI](https://github.com/channelcat/sanic-openapi) provides
+  a user interface for Sanic APIs.
+
