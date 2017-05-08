@@ -21,6 +21,8 @@ Lambda is often used as a "serverless" compute architecture, which
 allows developers to upload their Python code instead of spinning and
 configuring servers, deploying their code and scaling based on traffic. 
 
+<div class="well see-also">Lambda is an implementation of the <a href="/serverless.html">serverless</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
 
 ## Python on AWS Lambda
 Lambda only had support for JavaScript, specifically Node.JS, when it was 
@@ -30,9 +32,24 @@ has support for both Python 2.7 and 3.6.
 
 
 ### Python-specific AWS Lambda resources
+* [Going Serverless with AWS Lambda and API Gateway](http://blog.ryankelly.us/2016/08/07/going-serverless-with-aws-lambda-and-api-gateway.html)
+
+* [Zappa](https://github.com/Miserlou/Zappa) is a serverless framework
+  for deploying Python web applications. It's a really slick project
+  and used even by internal AWS developers for their own application 
+  deployments. Be sure to [read the Zappa blog](https://blog.zappa.io/)
+  as well for walkthroughs and new feature announcements.
+
+* [First Steps with AWS Lambda, Zappa, Flask and Python 3](https://andrich.blog/2017/02/12/first-steps-with-aws-lambda-zappa-flask-and-python/)
+  shows how to use Zappa to deploy applications built with
+  Flask and Python 3.
+
+* [Deploying a serverless flask app to AWS lambda using Zappa](https://asciinema.org/a/98560)
+  provides a screen capture of one developer deploying their
+  application to Lambda.
+
 * [Building Scikit-Learn For AWS Lambda](https://serverlesscode.com/post/scikitlearn-with-amazon-linux-container/)
 
-* [Going Serverless with AWS Lambda and API Gateway](http://blog.ryankelly.us/2016/08/07/going-serverless-with-aws-lambda-and-api-gateway.html)
 
 
 ### General AWS Lambda resources

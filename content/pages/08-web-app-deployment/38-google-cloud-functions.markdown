@@ -15,3 +15,5 @@ does not work with Python.
 
 [Amazon Web Services (AWS) Lambda](/aws-lambda.html) is currently a good 
 alternative until Google Cloud Functions supports Python.
+
+<div class="well see-also">The Google Cloud Functions service is an implementation of the <a href="/serverless.html">serverless</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
