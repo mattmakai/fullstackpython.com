@@ -94,6 +94,9 @@ out how to structure and operate serverless applications.
 * [Cloud first, serverless second](https://hackernoon.com/cloud-first-serverless-second-1c086f282326)
 
 * [Serverless architectures, five design patterns](https://thenewstack.io/serverless-architecture-five-design-patterns/)
+  goes over the four main principles of serverless infrastructure and the
+  five major usage patterns the AWS Lambda team is seeing from initial
+  serverless deployments.
 
 
 ### Serverless vendor lock-in?
