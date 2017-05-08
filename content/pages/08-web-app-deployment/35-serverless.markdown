@@ -36,6 +36,8 @@ out how to structure and operate serverless applications.
 
 * [The (fixable) problem with serverless](https://www.iopipe.com/2016/06/the-fixable-problem-with-serverless/)
 
+* [On Serverless, Multi-Cloud, and Vendor Lock In](https://blog.symphonia.io/on-serverless-multi-cloud-and-vendor-lock-in-da930b3993f)
+
 * [Serverless architectures](http://martinfowler.com/articles/serverless.html)
 
 * [Why the fuss about serverless?](https://hackernoon.com/why-the-fuss-about-serverless-4370b1596da0)
