@@ -90,6 +90,10 @@ out how to structure and operate serverless applications.
   architectures and the advantages that can provide.
 
 * [Serverless architectures in short](https://specify.io/concepts/serverless-architecture)
+  lays out some of the initial thoughts behind what the advantages
+  and disadvantages of serverless may be. However, it's early days for
+  serverless so these strengths and weaknesses may change as the
+  architectures and good practices evolve.
 
 * [Cloud first, serverless second](https://hackernoon.com/cloud-first-serverless-second-1c086f282326)
 
@@ -97,6 +101,8 @@ out how to structure and operate serverless applications.
   goes over the four main principles of serverless infrastructure and the
   five major usage patterns the AWS Lambda team is seeing from initial
   serverless deployments.
+
+* [Serverless computing: If there is no server, where does my application run?](https://devup.co/serverless-computing-if-there-is-no-server-where-does-my-application-run-a369c3699730)
 
 
 ### Serverless vendor lock-in?
