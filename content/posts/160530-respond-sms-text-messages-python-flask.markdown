@@ -3,7 +3,7 @@ slug: respond-sms-text-messages-python-flask
 meta: A quick tutorial on receiving and responding to SMS text messages in a Flask application built with Python.
 category: post
 date: 2016-05-30
-modified: 2017-04-28
+modified: 2017-05-11
 headerimage: /img/160530-respond-sms-python-flask/header.jpg
 headeralt: Twilio, Python and Flask logos. Copyright their respective owners.
 
@@ -62,7 +62,7 @@ to something like this:
 Install Flask and the Twilio Python helper library into the virtualenv with
 the `pip` command. 
 
-    pip install flask twilio
+    pip install flask twilio==5.7.0
 
 
 The dependencies are installed so that we can use it with our Python code.
