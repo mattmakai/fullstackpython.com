@@ -14,6 +14,12 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### May
+* New blog post with my answer to the question of 
+  [How to become a successful self-taught professional software developer](/blog/become-successful-self-taught-software-developer.html).
+* New very short stub page for [Google Cloud Functions](https://www.fullstackpython.com/google-cloud-functions.html). 
+  Hopefully they add proper Python support to their platform soon.
+
 ### April
 * Updated many existing blog posts with fixes based on reader feedback
   and re-ran them to check what changes were needed.
