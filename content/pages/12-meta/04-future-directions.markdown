@@ -47,7 +47,7 @@ Every page on Full Stack Python is a work-in-progress that can always
 use improvements. The following items on this list need some love and 
 attention.
 
-* [RQ](/redis-queue.html): Add "Comparing Celery and RQ" and 
+* [RQ](/redis-queue-rq.html): Add "Comparing Celery and RQ" and 
   "when is RQ useful?" sections.
 
 * [Celery](/celery.html): Add graphics to show how Celeryd and Celerybeat
