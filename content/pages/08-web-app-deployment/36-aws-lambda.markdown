@@ -60,3 +60,7 @@ has support for both Python 2.7 and 3.6.
 * The 
   [AWS Lambda tag](https://aws.amazon.com/blogs/aws/category/aws-lambda/)
   on the official AWS blog contains all the related first-party tutorials 
+
+* [Serverless Cost Calculator](http://serverlesscalc.com/) estimates
+  the amount that AWS would charge based on Lambda exeuctions, 
+  average execution time and memory needed per execution. 

@@ -104,6 +104,13 @@ out how to structure and operate serverless applications.
 
 * [Serverless computing: If there is no server, where does my application run?](https://devup.co/serverless-computing-if-there-is-no-server-where-does-my-application-run-a369c3699730)
 
+* [Serverless Cost Calculator](http://serverlesscalc.com/) estimates
+  the amount each serverless platform would charge based on executions,
+  average execution time and memory needed per execution. 
+  [AWS Lambda](/aws-lambda.html), 
+  [Google Cloud Functions](/google-cloud-functions.html),
+  Azure Functions and IBM OpenWhisk are all included in the results.
+
 
 ### Serverless vendor lock-in?
 There is some concern by organizations and developers about vendor lock-in
