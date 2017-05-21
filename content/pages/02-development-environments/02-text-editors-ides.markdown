@@ -12,8 +12,13 @@ Text editors and integrated development environments (IDEs) are applications
 for [writing code](/learning-programming.html). These applications are the
 primary user interface for developers to create their own programs.
 
+<img src="/img/visuals/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;">
 
-## Why do I need a text editor or IDE?
+[Vim](/vim.html) is an example of a text editor implementation that can be 
+expanded into a full Python IDE using configuration files and plugins.
+
+
+## Why is a text editor or IDE necessary?
 Where will you write your code if you do not have a text editor? Your
 [development environment](/development-environments.html) must include
 a text editor so you can enter, edit and delete characters to create
@@ -23,7 +28,7 @@ Preferrably your editor will have a monospace font. It will also get out
 of your way, so no "smart" correction or automatic letter capitalization.
 
 
-## What's the difference between a text editor and an IDE?
+## What's the difference between text editors and IDEs?
 IDEs contain text editors but many text editors, for example Notepad included
 with Windows, do not include IDE features. Many text editors such as
 Vim or Emacs have IDE features by default but then can be further customized

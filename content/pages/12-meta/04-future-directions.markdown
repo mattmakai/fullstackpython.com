@@ -47,6 +47,10 @@ Every page on Full Stack Python is a work-in-progress that can always
 use improvements. The following items on this list need some love and 
 attention.
 
+* Update newer pages such as [AWS Lambda](/aws-lambda.html), 
+  [Text editors and IDEs](/text-editors-ides.html) and
+  [Falcon](/falcon.html) pages with additional sections and resources.
+
 * [RQ](/redis-queue-rq.html): Add "Comparing Celery and RQ" and 
   "when is RQ useful?" sections.
 

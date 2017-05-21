@@ -4,12 +4,28 @@ slug: other-web-frameworks
 sortorder: 0711
 toc: False
 sidebartitle: Other Web Frameworks
-meta: Python has dozens of web frameworks with differing philosophies. Learn more about frameworks on Full Stack Python.
+meta: Python has many web frameworks with differing philosophies. Learn more about frameworks on Full Stack Python.
 
 
 # Other Web Frameworks
-Python has a significant number of web frameworks outside the usual Django,
-Flask, Pyramid and Bottle suspects.
+Python has a significant number of newer and less frequently-used 
+[web frameworks](/web-frameworks.html) that are still worth your time to 
+investigate. The list on this page does not include the following web 
+frameworks that have their own dedicated pages:
+
+* [Django](/django.html)
+
+* [Flask](/flask.html)
+
+* [Pyramid](/pyramid.html)
+
+* [Bottle](/bottle.html)
+
+* [Falcon](/falcon.html)
+
+* [Morepath](/morepath.html)
+
+* [Sanic](/sanic.html)
 
 
 ## TurboGears
@@ -19,15 +35,6 @@ stack library (like Django) or as a micro framework.
 
 <a href="http://www.turbogears.org/" style="border: none;"><img src="/img/logos/turbogears.jpg" width="100%" alt="TurboGears logo." class="technical-diagram" style="border-radius: 5px;"></a>
 
-
-
-## Falcon
-[Falcon](http://falconframework.org/) is a minimalist web framework designed
-with web application speed as a top priority.
-
-* [Building a rate limiter in Python 3 with Falcon and run it via Docker](http://www.giantflyingsaucer.com/blog/?p=5910)
-  is an introductory tutorial for creating and running a simple but useful 
-  Falcon app.
 
 ## web.py
 [web.py](http://webpy.org/) is a Python web framework designed for simplicity
