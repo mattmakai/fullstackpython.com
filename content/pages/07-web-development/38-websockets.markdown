@@ -69,24 +69,7 @@ However, a JavaScript wrapper library can make a developer's life easier by
 implementing graceful degradation (often falling back to long-polling when 
 WebSockets are not supported) and by providing a wrapper around 
 browser-specific WebSocket quirks. Examples of JavaScript client libraries 
-and Python implementations are found below.
-
-
-## JavaScript client libraries
-* [Socket.io](http://socket.io/)'s client side JavaScript library can be 
-  used to connect to a server side WebSockets implementation.
-
-* [web-socket-js](https://github.com/gimite/web-socket-js) is a Flash-based
-  client-side WebSockets implementation.
-
-
-## Python implementations
-* [Autobahn](http://autobahn.ws/python/) uses Twisted or asyncio to implement
-  the WebSockets protocol.
-
-* [Crossbar.io](http://crossbar.io/) builds upon Autobahn and includes a
-  separate server for handling the WebSockets connections if desired by
-  the web app developer.
+and Python implementations are shown in a section below.
 
 
 ## Nginx WebSocket proxying
@@ -141,7 +124,7 @@ properly.
   shows how to proxy with Socket.io.
 
 
-## Open source Python WebSockets projects
+## Python WebSockets implementations
 The following projects either implement WebSockets in Python or provide
 example code you can follow to use WebSockets in your own projects.
 
@@ -149,6 +132,45 @@ example code you can follow to use WebSockets in your own projects.
   create the server-side WebSockets component while 
   [AutobahnJS](https://github.com/crossbario/autobahn-js) assists on the
   client web browser side.
+
+* [Django Channels](https://channels.readthedocs.io/en/stable/) is built
+  on top of WebSockets and is easy to integrate with existing or new 
+  [Django](/django.html) projects.
+
+* [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) is 
+  a [Flask](/flask.html) extension that relies upon eventlet or gevent to 
+  create server-side WebSockets connections.
+
+* [websocket-client](https://github.com/websocket-client/websocket-client)
+  provides low level APIs for WebSockets and works with both 
+  [Python 2 and 3](/python-2-or-3.html).
+
+* [Crossbar.io](http://crossbar.io/) builds upon Autobahn and includes a
+  separate server for handling the WebSockets connections if desired by
+  the web app developer.
+
+
+## JavaScript client libraries
+JavaScript is used to create the client side of the WebSocket connection
+because the client is typically a web browser. While you do not need one
+of these client-side libraries to use WebSockets, they are useful for 
+minimizing the amount of boilerplate code to establish and handle your
+connections.
+
+* [Socket.io](http://socket.io/)'s client side JavaScript library can be 
+  used to connect to a server side WebSockets implementation.
+
+* [web-socket-js](https://github.com/gimite/web-socket-js) is a Flash-based
+  client-side WebSockets implementation.
+  
+* [AutobahnJS](https://github.com/crossbario/autobahn-js) assists on the
+  client web browser side.
+
+
+### Example code for WebSockets in Python
+There are numerous Python-based implementations for WebSockets so sometimes
+it's just easiest to examine an example so you can build something for your
+own project.
 
 * The Flask-SocketIO project has a 
   [chat web application](https://github.com/miguelgrinberg/Flask-SocketIO/tree/master/example) 
@@ -161,46 +183,7 @@ example code you can follow to use WebSockets in your own projects.
   using Flask, Flask-SocketIO and gevent.
 
 
-## General WebSockets resources
-WebSockets have wide browser support and therefore many 
-[web frameworks](/web-frameworks.html) across all major programming languages
-have libraries to make creating WebSockets connections easier. The following
-resources are general guides and tutorials that provide context for the
-protocol without getting into the weeds of how to use WebSockets in
-Python.
-
-* The official W3C 
-  [candidate draft for WebSockets API](http://www.w3.org/TR/websockets/) 
-  and the 
-  [working draft for WebSockets](http://dev.w3.org/html5/websockets/) are 
-  good reference material but can be tough for those new to the WebSockets
-  concepts. I recommend reading the working draft after looking through some
-  of the more beginner-friendly resources list below.
-
-* [WebSockets 101](http://lucumr.pocoo.org/2012/9/24/websockets-101/) by
-  Armin Ronacher provides a detailed assessment of the subpar state of HTTP
-  proxying in regards to WebSockets. He also discusses the complexities of
-  the WebSockets protocol including the packet implementation.
-
-* The "Can I Use?" website has a 
-  [handy WebSockets reference chart](http://caniuse.com/#feat=websockets) 
-  for which web browsers and specific versions support WebSockets.
-
-* Mozilla's 
-  [Developer Resources for WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets)
-  is a good place to find documentation and tools for developing with 
-  WebSockets.
-
-* [WebSockets from Scratch](https://blog.pusher.com/websockets-from-scratch/) 
-  gives a nice overview of the protocol then shows how the lower-level pieces
-  work with WebSockets, which are often a black box to developers who only
-  use libraries like Socket.IO.
-
-* [websocketd](http://websocketd.com/) is a WebSockets server aiming to be
-  the "CGI of WebSockets". Worth a look.
-
-
-## Python-specific WebSockets resources
+### Python-specific WebSockets resources
 * The 
   "[Async Python Web Apps with WebSockets & gevent](https://youtu.be/L5YQbNrFfyw)"
   talk I gave at San Francisco Python in January 2015 is a live-coded example
@@ -247,6 +230,51 @@ Python.
   and Socket.IO to update values between web browser clients when changes
   occur.
 
+
+## General WebSockets resources
+WebSockets have wide browser support and therefore many 
+[web frameworks](/web-frameworks.html) across all major programming languages
+have libraries to make creating WebSockets connections easier. The following
+resources are general guides and tutorials that provide context for the
+protocol without getting into the weeds of how to use WebSockets in
+Python.
+
+* The official W3C 
+  [candidate draft for WebSockets API](http://www.w3.org/TR/websockets/) 
+  and the 
+  [working draft for WebSockets](http://dev.w3.org/html5/websockets/) are 
+  good reference material but can be tough for those new to the WebSockets
+  concepts. I recommend reading the working draft after looking through some
+  of the more beginner-friendly resources list below.
+
+* [WebSockets 101](http://lucumr.pocoo.org/2012/9/24/websockets-101/) by
+  Armin Ronacher provides a detailed assessment of the subpar state of HTTP
+  proxying in regards to WebSockets. He also discusses the complexities of
+  the WebSockets protocol including the packet implementation.
+
+* The "Can I Use?" website has a 
+  [handy WebSockets reference chart](http://caniuse.com/#feat=websockets) 
+  for which web browsers and specific versions support WebSockets.
+
+* Mozilla's 
+  [Developer Resources for WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets)
+  is a good place to find documentation and tools for developing with 
+  WebSockets.
+
+* [WebSockets from Scratch](https://blog.pusher.com/websockets-from-scratch/) 
+  gives a nice overview of the protocol then shows how the lower-level pieces
+  work with WebSockets, which are often a black box to developers who only
+  use libraries like Socket.IO.
+
+* [websocketd](http://websocketd.com/) is a WebSockets server aiming to be
+  the "CGI of WebSockets". Worth a look.
+
+* [How WebSockets Work – With Socket.io Demo](https://thesocietea.org/2016/04/how-websockets-work-with-socket-io-demo/)
+  walks through the HTTP-to-WebSocket upgrade handshake and explains a
+  bit about how WebSockets work. The provided code is NodeJS on the backend
+  but the SocketIO client side JavaScript is the same as you would implement
+  in a Python-backed web application.
+
 * [Can WebSockets and HTTP/2 Co-exist?](http://www.infoq.com/articles/websocket-and-http2-coexist)
   compares and contrasts the two protocols and shows how they have 
   differences which will likely lead to WebSockets sticking around for
@@ -256,3 +284,8 @@ Python.
   is a video on WebSockets basics and using the
   [Socket.io](https://github.com/socketio/socket.io) JavaScript library
   to wrap WebSockets functionality in web browsers.
+
+* [Benchmarking and Scaling WebSockets: Handling 60000 concurrent connections](http://kemalcr.com/blog/2016/11/13/benchmarking-and-scaling-websockets-handling-60000-concurrent-connections/)
+  is a detailed examination of how WebSockets connections can scale to tens
+  of thousands of users.
+

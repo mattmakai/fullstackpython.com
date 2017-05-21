@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### May
+* Major updates to the [WebSockets page](/websockets.html) with new Python
+  projects, explanations and resources.
 * New blog post with my answer to the question of 
   [How to become a successful self-taught professional software developer](/blog/become-successful-self-taught-software-developer.html).
 * New very short stub page for [Google Cloud Functions](https://www.fullstackpython.com/google-cloud-functions.html). 
