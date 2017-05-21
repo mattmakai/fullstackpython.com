@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### May
+* New [Falcon](/falcon.html) page to round out web frameworks pages.
 * Major updates to the [WebSockets page](/websockets.html) with new Python
   projects, explanations and resources.
 * New blog post with my answer to the question of 
