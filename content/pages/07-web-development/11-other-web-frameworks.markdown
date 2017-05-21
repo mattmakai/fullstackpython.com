@@ -66,6 +66,13 @@ Flask with URL routes defined as decorators upon view functions. The
 [Peewee ORM](https://peewee.readthedocs.org/en/latest/) is used instead of 
 the more common SQLAlchemy ORM.
 
+## Ray
+[Ray](https://rayframework.github.io/site/)
+is a framework for building RESTful APIs, similar to [Falcon](/falcon.html). 
+The [introductory post](https://medium.com/@felipevolpone/ray-a-new-python-web-framework-e5ec9d74bfb4) 
+provides some initial code to get started with creating endpoints, adding 
+authentication and protecting against malicious clients.
+
 
 ## Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)

@@ -86,3 +86,8 @@ this framework.
 * [Sanic OpenAPI](https://github.com/channelcat/sanic-openapi) provides
   a user interface for Sanic APIs.
 
+* This 
+  [Sanic & Nginx & docker-compose example](https://github.com/itielshwartz/sanic-nginx-docker-example)
+  has boilerplate code for setting up a Sanic project using 
+  [Docker](/docker.html) and [Nginx](/nginx.html).
+
