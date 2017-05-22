@@ -71,14 +71,14 @@ guide as they are considered advanced deployment techniques.
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
 
-* In [this free video by Neal Ford](http://player.oreilly.com/videos/9781491908181?toc_id=210188),
-  he talks about engineering practices for continuous delivery. He explains
-  the difference between 
-  [continuous integration](/continuous-integration.html),
-  continuous deployment and continuous delivery. Highly recommended for an
-  overview of deployment concepts and as an introduction to the other videos
-  on those subjects in that series.
-
+* [5 ways to deploy your Python application in 2017](https://www.youtube.com/watch?v=vGphzPLemZE)
+  is a talk from 
+  [PyCon US 2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos)
+  where Andrew Baker deploys the getting started [Flask](/flask.html) 
+  app using Ngrok, Heroku, Zappa on the [serverless](/serverless.html)
+  [AWS Lambda](/aws-lambda.html) platform, a virtual machine on Google Cloud
+  and [Docker](/docker.html).
+  
 * [Continuous deployment at Instagram](https://engineering.instagram.com/continuous-deployment-at-instagram-1e18548f01d1)
   is the story of how their deployment process evolved over time from a 
   large Fabric script to continuous deployments. Along the way they 
@@ -90,6 +90,14 @@ guide as they are considered advanced deployment techniques.
   [how they do deployment](http://nickcraver.com/blog/2016/05/03/stack-overflow-how-we-do-deployment-2016-edition/)
   is an awesome in-depth read covering topics ranging from git branching
   to database migrations.
+
+* In [this free video by Neal Ford](http://player.oreilly.com/videos/9781491908181?toc_id=210188),
+  he talks about engineering practices for continuous delivery. He explains
+  the difference between 
+  [continuous integration](/continuous-integration.html),
+  continuous deployment and continuous delivery. Highly recommended for an
+  overview of deployment concepts and as an introduction to the other videos
+  on those subjects in that series.
 
 * If you're using Flask this 
   [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
