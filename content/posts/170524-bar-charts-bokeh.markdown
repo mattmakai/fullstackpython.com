@@ -21,14 +21,17 @@ but Python 3 is strongly recommended for new applications. In addition
 to Python throughout this tutorial we will also use the following 
 [application dependencies](/application-dependencies.html): 
 
-* [Flask](/flask.html) web framework, 0.12
-* [Bokeh](/bokeh.html) data visualization library, version 0.12.5
+* [Flask](/flask.html) web framework, 
+  [version 0.12.2](https://github.com/pallets/flask/releases/tag/0.12.2)
+* [Bokeh](/bokeh.html) data visualization library, 
+  [version 0.12.5](https://github.com/bokeh/bokeh/releases/tag/0.12.5)
 * [pandas](/pandas.html) data structures and analysis library, 
-  version 0.20.1
+  [version 0.20.1](https://github.com/pandas-dev/pandas/releases/tag/v0.20.1)
 * [pip](https://pip.pypa.io/en/stable/) and 
   [virtualenv](https://virtualenv.pypa.io/en/latest/), which come
-  packaged with Python 3, to install and isolate the Flask and Bokeh 
-  libraries from any other Python projects you might be working on
+  packaged with Python 3, to install and isolate the Flask, Bokeh,
+  and pandas libraries from any other Python projects you might be 
+  working on
 
 If you need help getting your 
 [development environment](/development-environments.html) configured
@@ -36,8 +39,9 @@ before running this code, take a look at
 [this guide for setting up Python 3 and Flask on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html)
 
 All code in this blog post is available open source under the MIT license 
-on GitHub under the blog-code-examples repository. Use it and abuse it
-as you like for your own applications.
+on GitHub under the 
+[bar-charts-bokeh-flask-python-3 directory of the blog-code-examples repository](https://github.com/fullstackpython/blog-code-examples). 
+Use the source code and abuse it as you like for your own applications.
 
 
 ## Installing Bokeh and Flask
@@ -92,4 +96,74 @@ Now we can start building our web application.
 We are going to first code a basic Flask application then add our bar 
 chart to the rendered page.
 
+
+`app.py`:
+
+```python
+from flask import Flask, render_template
+
+
+app = Flask(__name__)
+
+
+@app.route("/<int:bars_count>/")
+def chart(bars_count):
+    return render_template("chart.html", bars_count=bars_count)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+...explain code...
+
+`templates/chart.html`:
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bar charts with Bokeh!</title>
+  </head>
+  <body>
+    <h1>Bugs found over the past {{ bars_count }} days</h1>
+  </body>
+</html>
+```
+
+Short explanation of above HTML.
+
+```
+$(barchart) python app.py
+```
+
+Go to "localhost:5000" in your web browser. 
+
+...Screenshots of it working...
+
+
+## Generating the Bar Chart
+
+
+
+## What's next?
+Nice work creating a nifty configurable bar chart in Bokeh! Next
+up you can modify the color scheme, change the input data source or try 
+to create other types of charts.
+
+There is a lot more than Bokeh can do, so be sure to check out the 
+[official project documentation](http://bokeh.pydata.org/en/latest/) , 
+[GitHub repository](https://github.com/bokeh/bokeh), 
+the [Full Stack Python Bokeh page](/bokeh.html) or take a look at 
+[other topics on Full Stack Python](/table-of-contents.html).
+
+Questions? Let me know via 
+[a GitHub issue ticket on the Full Stack Python repository](https://github.com/mattmakai/fullstackpython.com/issues), 
+on Twitter 
+[@fullstackpython](https://twitter.com/fullstackpython)
+or [@mattmakai](https://twitter.com/mattmakai).
+
+See something wrong in this blog post? Fork
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170524-bar-charts-bokeh.markdown)
+and submit a pull request.
 
