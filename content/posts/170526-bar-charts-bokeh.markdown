@@ -1,16 +1,23 @@
-title: Building Bar Charts with Bokeh, Flask and Python 3
-slug: bar-charts-bokeh-flask-python-3
-meta: How to build bar charts with the Bokeh data visualization library, Flask and Pyton 3.
+title: Building Responsive Bar Charts with Bokeh, Flask and Python 3
+slug: responsive-bar-charts-bokeh-flask-python-3
+meta: How to build responsive bar charts with the Bokeh data visualization library, Flask and Pyton 3.
 category: post
-date: 2017-05-24
-modified: 2017-05-24
-headerimage: /img/170524-bar-charts-bokeh-flask/header.jpg
+date: 2017-05-26
+modified: 2017-05-26
+headerimage: /img/170526-bar-charts-bokeh-flask/header.jpg
 headeralt: Python, Flask and Bokeh logos.
 
 
 [Bokeh](/bokeh.html) is a powerful open source Python library that allows 
 developers to generate JavaScript data visualizations for their web 
-applications *without writing any JavaScript*. Let's use the 
+applications *without writing any JavaScript*. With Bokeh we can create 
+incredibly varied visualizations, or traditional ones like the following
+bar chart.
+
+<img src="/img/170526-bar-charts-bokeh-flask/bar-chart-64.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #aaa" alt="Responsive bar chart with 64 bars.">
+
+
+Let's use the 
 [Flask](/flask.html) [web framework](/web-frameworks.html) with Bokeh to 
 create custom bar charts in a Python web app.
 
@@ -62,7 +69,7 @@ source barchart/bin/activate
 
 The command prompt will change after activating the virtualenv:
 
-<img src="/img/170524-bar-charts-bokeh-flask/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #aaa">
+<img src="/img/170526-bar-charts-bokeh-flask/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #aaa" alt="Activating our Python virtual environment on the command line.">
 
 Keep in mind that you need to activate the virtualenv in every new terminal 
 window that you want this virtualenv to be used for your project.
@@ -166,6 +173,6 @@ on Twitter
 or [@mattmakai](https://twitter.com/mattmakai).
 
 See something wrong in this blog post? Fork
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170524-bar-charts-bokeh.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170526-bar-charts-bokeh.markdown)
 and submit a pull request.
 
