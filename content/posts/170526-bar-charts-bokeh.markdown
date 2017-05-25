@@ -1,4 +1,4 @@
-title: Building Responsive Bar Charts with Bokeh, Flask and Python 3
+title: Responsive Bar Charts with Bokeh, Flask and Python 3
 slug: responsive-bar-charts-bokeh-flask-python-3
 meta: How to build responsive bar charts with the Bokeh data visualization library, Flask and Pyton 3.
 category: post
@@ -10,11 +10,15 @@ headeralt: Python, Flask and Bokeh logos.
 
 [Bokeh](/bokeh.html) is a powerful open source Python library that allows 
 developers to generate JavaScript data visualizations for their web 
-applications *without writing any JavaScript*. With Bokeh we can create 
-incredibly varied visualizations, or traditional ones like the following
-bar chart.
+applications *without writing any JavaScript*. While learning a 
+JavaScript-based data visualization library like [d3.js](https://d3js.org/)
+can be useful, it's often far easier to knock out a few lines of Python
+code that get the job done.
 
-<img src="/img/170526-bar-charts-bokeh-flask/bar-chart-64.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #aaa" alt="Responsive bar chart with 64 bars.">
+With Bokeh we can create incredibly detailed interactive visualizations, 
+or just traditional ones like the following bar chart.
+
+<img src="/img/170526-bar-charts-bokeh-flask/chart-example-64.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Responsive bar chart with 64 bars.">
 
 
 Let's use the 
@@ -69,7 +73,7 @@ source barchart/bin/activate
 
 The command prompt will change after activating the virtualenv:
 
-<img src="/img/170526-bar-charts-bokeh-flask/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #aaa" alt="Activating our Python virtual environment on the command line.">
+<img src="/img/170526-bar-charts-bokeh-flask/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Activating our Python virtual environment on the command line.">
 
 Keep in mind that you need to activate the virtualenv in every new terminal 
 window that you want this virtualenv to be used for your project.

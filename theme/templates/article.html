@@ -18,7 +18,7 @@
 {% block content %}
 {% if article %}
 <div class="row">
- <div class="col-md-9">
+ <div class="col-md-12">
   <h1 style="font-size: 36px;">{{ article.title }}</h1>
   <div style="font-size:12px;color:#666;margin:0 0 10px">
    {% if article.modified != article.date %}
@@ -30,6 +30,10 @@
      {{ article.date.strftime('%B %d, %Y') }}.
    {% endif %}
   </div>
+ </div>
+</div>
+<div class="row">
+ <div class="col-md-9">
   {{ article.content }}
   <hr>
   {% include "email-for-book.html" %}
