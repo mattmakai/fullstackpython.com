@@ -320,6 +320,29 @@ and added labels to both axes. I recommend keeping the
 documentation open to know what your options are for customizing your
 visualizations.
 
+We just need a few updates to our `templates/chart.html` file to display
+the visualization. Open the file and add the folloiwng 6 lines to the file.
+Two of these lines are for the required CSS, two are JavaScript Bokeh
+files and the remaining two are the generated chart.
+
+```jinja2
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bar charts with Bokeh!</title>
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" rel="stylesheet">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Bugs found over the past {{ bars_count }} days</h1>
+    {{ the_div|safe }}
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.js"></script>
+    {{ the_script|safe }}
+  </body>
+</html>
+```
+
 Alright, let's give our app a try with a simple chart of 4 bars. The
 Flask app should automatically reload when you save `app.py` with the new
 code but if you shut down the development server fire it back up with the
