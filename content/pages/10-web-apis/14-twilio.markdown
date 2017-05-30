@@ -96,6 +96,13 @@ for fellow developers.
   [Easypost](https://www.easypost.com) to track packages sent through the
   Easypost service.
 
+* This video titled 
+  "[We're No Strangers to VoIP: Building the National Rick Astley Hotline)](https://www.youtube.com/watch?v=LgKshQoGh64)"
+  presents a hilarious hack that uses Python and 
+  [AWS Lambda](/aws-lambda.html) as a [serverless](/serverless.html) 
+  backend to power thousands of Rick Rolling calls in several countries 
+  with Twilio.
+
 
 #### Disclaimer
 I [currently work at Twilio](/about-author.html) as a 

@@ -95,6 +95,42 @@ favorite [retro synthwave](https://www.youtube.com/watch?v=uYRZV8dV10w)
 artists as examples, but of course your site can contain whatever subjects 
 that you want.
 
+```bash
+(staticsite) $ pelican-quickstart
+```
+
+```bash
+(staticsite) $ pelican-quickstart
+Welcome to pelican-quickstart v3.7.1.
+
+This script will help you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+    
+> Where do you want to create your new web site? [.]  
+> What will be the title of this web site? RetroSynthwave
+> Who will be the author of this web site? Matt Makai
+> What will be the default language of this web site? [en] 
+> Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) n
+> Do you want to enable article pagination? (Y/n) n
+> What is your time zone? [Europe/Paris] America/New_York
+> Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)y
+> Do you want an auto-reload & simpleHTTP script to assist with theme and site development? (Y/n) y
+> Do you want to upload your website using FTP? (y/N) n
+> Do you want to upload your website using SSH? (y/N) n
+> Do you want to upload your website using Dropbox? (y/N) n
+> Do you want to upload your website using S3? (y/N) y
+> What is the name of your S3 bucket? [my_s3_bucket] 
+> Do you want to upload your website using Rackspace Cloud Files? (y/N) n
+> Do you want to upload your website using GitHub Pages? (y/N) n
+Done. Your new project is available at /Users/matt/devel/py/retrosynth
+(staticsite) $ 
+```
+
+
+## Serve your site
 
 
 ## What's next?

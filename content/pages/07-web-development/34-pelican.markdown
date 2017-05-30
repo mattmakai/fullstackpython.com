@@ -71,3 +71,6 @@ server during the response.
   is a tutorial I wrote to use the Full Stack Python source code to create
   and deploy your first static site.
 
+* [Moving blogs to Pelican](http://arunrocks.com/moving-blogs-to-pelican/)
+  talks about one developer's transition from Jekyll to Pelican for his
+  own sites.
