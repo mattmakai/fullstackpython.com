@@ -14,6 +14,10 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### June
+* Updates to [Twilio](/twilio.html) and [Pelican](/pelican.html) pages
+  with more resources.
+
 ### May
 * New [Falcon](/falcon.html) page to round out web frameworks pages.
 * Major updates to the [WebSockets page](/websockets.html) with new Python

@@ -2,9 +2,9 @@ title: Generating Static Websites with Pelican, Jinja2 and Markdown
 slug: generating-static-websites-pelican-jinja2-markdown
 meta: Learn how to generate static websites with Python, the Pelican static site generator, Jinja2 and Markdown.
 category: post
-date: 2017-05-31
-modified: 2017-05-31
-headerimage: /img/170531-static-sites-pelican/header.jpg
+date: 2017-06-05
+modified: 2017-06-05
+headerimage: /img/170605-static-sites-pelican/header.jpg
 headeralt: Pelican, Jinja2 and Markdown logos.
 
 
@@ -62,7 +62,7 @@ Start by creating a new virtual environment for your project.
 python3 -m venv 
 ```
  
-<img src="/img/170531-static-sites-pelican/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
+<img src="/img/170605-static-sites-pelican/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
 
 Install the appropriate dependencies after your virtualenv is activated. 
 The text `(staticsite)` should be prepended to your command prompt. Install
@@ -173,9 +173,10 @@ Done: Processed 0 articles, 0 drafts, 0 pages and 0 hidden pages in 0.07 seconds
 
 
 ## Serve the site
-A major issue with Fabric is that it is still only compatible with
-Python 2.x. Python 3 support is supposed to come in Fabric 2, but 
-that is not yet released.
+A major issue with Fabric is that it is 
+[still only compatible with Python 2.x](https://github.com/fabric/fabric/issues/1017). 
+Python 3 support is supposed to come in Fabric 2, but that has not yet 
+been released.
 
 Therefore I recommend skipping the Fabric file and running commands
 directly with Python 3.
@@ -192,10 +193,17 @@ application bound to port 8000.
 python -m http.server 8005
 ```
 
+## Create Content
+
+
 
 ## Edit Configuration
 Change the time zone to your zone. Wikipedia has 
 [a handy look up table of valid time zones values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+
+## Modify the Theme
+
 
 
 ## What's next?
@@ -215,6 +223,6 @@ on Twitter
 or [@mattmakai](https://twitter.com/mattmakai).
 
 See something wrong in this blog post? Fork
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170531-static-sites-pelican.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170605-static-sites-pelican.markdown)
 and submit a pull request.
 
