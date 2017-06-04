@@ -129,8 +129,73 @@ Done. Your new project is available at /Users/matt/devel/py/retrosynth
 (staticsite) $ 
 ```
 
+What did we just create using the Pelican quickstart script?
 
-## Serve your site
+
+## Building the site
+
+
+```bash
+make
+```
+
+```
+Makefile for a pelican Web site                                           
+                                                                          
+Usage:                                                                    
+   make html                           (re)generate the web site          
+   make clean                          remove the generated files         
+   make regenerate                     regenerate files upon modification 
+   make publish                        generate using production settings 
+   make serve [PORT=8000]              serve site at http://localhost:8000
+   make serve-global [SERVER=0.0.0.0]  serve (as root) to :80    
+   make devserver [PORT=8000]          start/restart develop_server.sh    
+   make stopserver                     stop local server                  
+   make ssh_upload                     upload the web site via SSH        
+   make rsync_upload                   upload the web site via rsync+ssh  
+   make dropbox_upload                 upload the web site via Dropbox    
+   make ftp_upload                     upload the web site via FTP        
+   make s3_upload                      upload the web site via S3         
+   make cf_upload                      upload the web site via Cloud Files
+   make github                         upload the web site via gh-pages   
+                                                                          
+Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   
+Set the RELATIVE variable to 1 to enable relative urls
+```
+
+```
+make html
+
+pelican /Users/matt/devel/py/retrosynth/content -o /Users/matt/devel/py/retrosynth/output -s /Users/matt/devel/py/retrosynth/pelicanconf.py 
+WARNING: No valid files found in content.
+Done: Processed 0 articles, 0 drafts, 0 pages and 0 hidden pages in 0.07 seconds.
+```
+
+
+## Serve the site
+A major issue with Fabric is that it is still only compatible with
+Python 2.x. Python 3 support is supposed to come in Fabric 2, but 
+that is not yet released.
+
+Therefore I recommend skipping the Fabric file and running commands
+directly with Python 3.
+
+```
+python -m http.server
+```
+
+You can change the port binding by adding a number after the command, if you 
+want to serve more than one static site at a time or you already have an 
+application bound to port 8000.
+
+```
+python -m http.server 8005
+```
+
+
+## Edit Configuration
+Change the time zone to your zone. Wikipedia has 
+[a handy look up table of valid time zones values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 
 ## What's next?
