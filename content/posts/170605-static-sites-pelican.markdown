@@ -1,4 +1,4 @@
-title: Generating Static Websites with Pelican, Jinja2 and Markdown
+title: How to Create Your First Static Website with Pelican and Jinja2 
 slug: generating-static-websites-pelican-jinja2-markdown
 meta: Learn how to generate static websites with Python, the Pelican static site generator, Jinja2 and Markdown.
 category: post
@@ -24,20 +24,20 @@ can further customize and expand with your own design and content.
 
 
 ## Our Tools
-This tutorial will with with either [Python 2 or 3](/python-2-or-3.html), 
-but Python 3 is strongly recommended for new applications. I used
+This tutorial should work with either [Python 2 or 3](/python-2-or-3.html), 
+but Python 3 is strongly recommended for all new applications. I used
 [Python 3.6.1](https://www.python.org/downloads/release/python-361/) to 
 write this post. In addition to Python, throughout this tutorial we 
 will also use the following 
 [application dependencies](/application-dependencies.html): 
 
-* [pelican](/pelican.html) 
+* [Pelican](/pelican.html) 
   [static site generator](/static-site-generator.html), 
   [version 3.7.1](https://github.com/getpelican/pelican/releases/tag/3.7.1)
-* [markdown](/markdown.html) parsing library to handle Markdown as a content 
+* [Markdown](/markdown.html) parsing library to handle Markdown as a content 
   input format, version 
   [2.6.8](https://github.com/waylan/Python-Markdown/releases/tag/2.6.8-final)
-* [jinja2](/jinja2.html), a Python [template engine](/template-engines.html), 
+* [Jinja2](/jinja2.html), a Python [template engine](/template-engines.html), 
   version [2.9.6](https://github.com/pallets/jinja/releases/tag/2.9.6)
 * [pip](https://pip.pypa.io/en/stable/) and 
   [virtualenv](https://virtualenv.pypa.io/en/latest/), which come
@@ -56,25 +56,36 @@ Use and abuse the source code as you like for your own applications.
 
 
 ## Install the Pelican and Markdown libraries
-Start by creating a new virtual environment for your project.
+Start by creating a new virtual environment for your project. My virtualenv
+is named `staticsite` with the following command but you can name yours
+whatever matches the project you are creating.
 
 ```bash
-python3 -m venv 
+python3 -m venv staticsite
 ```
- 
+
+Activate the virtualenv.
+
+```
+source staticsite/bin/activate
+```
+
+When activated the virtualenv should prepend its name to your command prompt,
+as shown in the following screenshot of my terminal.
+
 <img src="/img/170605-static-sites-pelican/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
 
 Install the appropriate dependencies after your virtualenv is activated. 
-The text `(staticsite)` should be prepended to your command prompt. Install
-the Pelican and Markdown Python libraries. Jinja2 will also be installed 
-because Pelican specifies it as a dependency.
+Use the `pip` command to install Pelican and Markdown, which will also 
+install Jinja2 because Pelican specifies it as a dependency.
+
 
 ```bash
 pip install pelican==3.7.1 markdown==2.6.8
 ```
 
-Run the command and after everything is installed you should see output
-similar to the following "Sucessfully installed" message.
+Run the `pip` command and after everything is installed you should see output
+similar to the following "Successfully installed" message.
 
 ```bash
 Installing collected packages: pygments, pytz, six, feedgenerator, blinker, unidecode, MarkupSafe, jinja2, python-dateutil, docutils, pelican, markdown
@@ -85,8 +96,8 @@ Installing collected packages: pygments, pytz, six, feedgenerator, blinker, unid
 Successfully installed MarkupSafe-1.0 blinker-1.4 docutils-0.13.1 feedgenerator-1.9 jinja2-2.9.6 markdown-2.6.8 pelican-3.7.1 pygments-2.2.0 python-dateutil-2.6.0 pytz-2017.2 six-1.10.0 unidecode-0.4.20
 ```
 
-Now that our dependencies are installed we can start building our
-static site.
+Now that our dependencies are installed into the virtualenv we can start 
+building our static site.
 
 
 ## Generate a Basic Site
@@ -95,12 +106,25 @@ favorite [retro synthwave](https://www.youtube.com/watch?v=uYRZV8dV10w)
 artists as examples, but of course your site can contain whatever subjects 
 that you want.
 
+Create a new directory for our static site project and change into the
+directory.
+
+```
+mkdir retrosynth
+cd retrosynth
+```
+
+Run the `pelican-quickstart` command within the new project directory.
+
 ```bash
 (staticsite) $ pelican-quickstart
 ```
 
+The quickstart script will rattle off a bunch of questions. Follow
+along with the answers below or modify them for your own site name and
+desired configuration.
+
 ```bash
-(staticsite) $ pelican-quickstart
 Welcome to pelican-quickstart v3.7.1.
 
 This script will help you create a new Pelican-based website.
@@ -129,10 +153,54 @@ Done. Your new project is available at /Users/matt/devel/py/retrosynth
 (staticsite) $ 
 ```
 
-What did we just create using the Pelican quickstart script?
+What did we just create using the Pelican quickstart script? Check out
+the new files in the directory.
+
+```bash
+(staticsite) $ ls
+Makefile        develop_server.sh   pelicanconf.py
+content         fabfile.py          publishconf.py
+```
+
+The quickstart created five files and one new directory:
+
+* `Makefile`: Make convenience tasks for common operations such as running a
+  development server, building a site and cleaning extraneous build files
+* `develop_server.sh`
+* `pelicanconf.py`
+* `fabfile.py`
+* `publishconf.py`
+* `content`: location for your markup files, which should be stored under
+  `pages` and `posts` directories
+
+We can use these files as the base for our new static site. Let's see what
+it looks like by default by running it via the `devserver` task in the 
+Makefile.
+
+```bash
+make devserver
+```
+
+The Pelican development server will start serving up your site with a 
+daeman process. Go to [localhost:8000](http://localhost:8000) in your web 
+browser and you will see the first version of your static site.
+
+<img src="/img/170605-static-sites-pelican/default-style.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Default styling on the Pelican static site.">
+
+It is up to you whether you want to use the development server or not
+while creating your site. Every time I want to view my changes for 
+Full Stack Python I actually regenerate the site using my own Makefile that 
+wraps the `pelican` command. The `python -m http.server` command constantly 
+serves up each build's changes.
+
+Alright, now that we have our starter files we can get to work creating
+some initial content.
 
 
 ## Building the site
+Pelican can accept both [Markdown](/markdown.html) and reStructureText
+markup files as input.
+
 
 
 ```bash
