@@ -19,8 +19,9 @@ site is pre-generated before deployment and a web server simply responds
 with existing files rather than executing any code on the server during
 the HTTP request-response cycle.
 
-In this tutorial you will learn how to create a basic static site that you
-can further customize and expand with your own design and content.
+In this tutorial you will learn how to create a 
+[basic static website](/static-site-generator.html) that you can further 
+customize and expand with your own design and content.
 
 
 ## Our Tools
@@ -164,12 +165,19 @@ content         fabfile.py          publishconf.py
 
 The quickstart created five files and one new directory:
 
-* `Makefile`: Make convenience tasks for common operations such as running a
-  development server, building a site and cleaning extraneous build files
-* `develop_server.sh`
-* `pelicanconf.py`
-* `fabfile.py`
-* `publishconf.py`
+* `Makefile`: `make` command convenience tasks for common operations such as 
+  running a development server, building a site and cleaning extraneous 
+  build files
+* `fabfile.py`: A Fabric file that has some of the same types of commands
+  as the `Makefile`. Fabric is a wonderful code library but for now I 
+  recommend skipping the Fabric file because unfortunately Fabric does not 
+  yet support Python 3.
+* `develop_server.sh`: shell script for running the development server
+* `pelicanconf.py`: settings file for your Pelican project. If you are used
+  to earlier versions of Pelican this file was instead named `settings.py`
+* `publishconf.py`: another (optional) settings file that can be considered 
+  as a "production" settings file when you move past the development phase
+  and want to deploy your site
 * `content`: location for your markup files, which should be stored under
   `pages` and `posts` directories
 
@@ -187,6 +195,28 @@ browser and you will see the first version of your static site.
 
 <img src="/img/170605-static-sites-pelican/default-style.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Default styling on the Pelican static site.">
 
+If you want to kill the development server, Pelican creates a file named
+`pelican.pid` under your project directory with the development server's 
+process ID.
+
+```
+(staticsite) $ cat pelican.pid 
+1365
+```
+
+Use the `ps` and `grep` commands to view the process then stop the process
+with the `kill` command as follows. Remember that your process ID will almost
+definitely be different from the `1365` ID for my process.
+
+```
+(staticsite) $ ps -A | grep 1365
+ 1365 ttys003    0:01.43 /Library/Frameworks/Python.framework/Versions/3.6/Resources/Python.app/Contents/MacOS/Python /Users/matt/Envs/staticsite/bin/pelican --debug --autoreload -r /Users/matt/devel/py/retrosynth/content -o /Users/matt/devel/py/retrosynth/output -s /Users/matt/devel/py/retrosynth/pelicanconf.py
+ 1411 ttys003    0:00.00 grep 1365
+(staticsite) $ kill 1365
+(staticsite) $ ps -A | grep 1365
+ 1413 ttys003    0:00.00 grep 1365
+```
+
 It is up to you whether you want to use the development server or not
 while creating your site. Every time I want to view my changes for 
 Full Stack Python I actually regenerate the site using my own Makefile that 
@@ -197,10 +227,15 @@ Alright, now that we have our starter files we can get to work creating
 some initial content.
 
 
-## Building the site
+## Write Some Content
 Pelican can accept both [Markdown](/markdown.html) and reStructureText
 markup files as input.
 
+Create a new subdirectory under the `content` named `posts`.
+
+
+We used the `make devserver` command earlier, but what other commands are
+available to us?
 
 
 ```bash
@@ -239,15 +274,7 @@ WARNING: No valid files found in content.
 Done: Processed 0 articles, 0 drafts, 0 pages and 0 hidden pages in 0.07 seconds.
 ```
 
-
-## Serve the site
-A major issue with Fabric is that it is 
-[still only compatible with Python 2.x](https://github.com/fabric/fabric/issues/1017). 
-Python 3 support is supposed to come in Fabric 2, but that has not yet 
-been released.
-
-Therefore I recommend skipping the Fabric file and running commands
-directly with Python 3.
+We can serve up the generated site using Python's built-in HTTP server
 
 ```
 python -m http.server
@@ -261,16 +288,17 @@ application bound to port 8000.
 python -m http.server 8005
 ```
 
-## Create Content
+Note that if you are using Python 2 the equivalent HTTP server command is
+`python -m SimpleHTTPServer`.
 
 
 
-## Edit Configuration
+## Edit the Configuration
 Change the time zone to your zone. Wikipedia has 
 [a handy look up table of valid time zones values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 
-## Modify the Theme
+## Modify the Site Theme
 
 
 
@@ -280,9 +308,14 @@ You just generated your first [Pelican](/pelican.html) static website using
 make additional modifications to the Jinja2 templates, build new pages and 
 add more content via Markdown files.
 
-Looking to get even more advanced with Pelican? Check out the open source
+Do you want to deploy your new static website to GitHub Pages or an S3 bucket?
+That's a story for another Full Stack Python tutorial...
+
+Looking to build a far more complicated static site with Pelican? Check 
+out the open source
 [Full Stack Python code](https://github.com/mattmakai/fullstackpython.com)
-to see how a fairly large 100+ pages and 100,000+ words site can be built.
+to see how a reasonably large 100+ pages and 100,000+ words site is 
+structured.
 
 Questions? Let me know via 
 [a GitHub issue ticket on the Full Stack Python repository](https://github.com/mattmakai/fullstackpython.com/issues), 
