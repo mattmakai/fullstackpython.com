@@ -195,9 +195,13 @@ browser and you will see the first version of your static site.
 
 <img src="/img/170605-static-sites-pelican/default-style.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Default styling on the Pelican static site.">
 
-If you want to kill the development server, Pelican creates a file named
-`pelican.pid` under your project directory with the development server's 
-process ID.
+What if you don't have `make` installed on your system? Change into the
+`output` directory and use the `python -m http.server` command to use the
+built-in Python 3 HTTP server for your generated files.
+
+When you want to kill the development server look for a file named 
+`pelican.pid`under your project directory. The `pelican.pid` file is created
+by Pelican and contains the process ID for your development server.
 
 ```
 (staticsite) $ cat pelican.pid 
@@ -231,11 +235,18 @@ some initial content.
 Pelican can accept both [Markdown](/markdown.html) and reStructureText
 markup files as input.
 
-Create a new subdirectory under the `content` named `posts`.
+Create a new subdirectory under the `content` named `posts`. Change into
+the `posts` directory. Create a new file named `first_post.markdown` with
+the following content.
 
+```markdown
+...
+```
+
+What does our server look like now that we wrote our first post?
 
 We used the `make devserver` command earlier, but what other commands are
-available to us?
+available to us via the `Makefile`?
 
 
 ```bash
@@ -274,7 +285,8 @@ WARNING: No valid files found in content.
 Done: Processed 0 articles, 0 drafts, 0 pages and 0 hidden pages in 0.07 seconds.
 ```
 
-We can serve up the generated site using Python's built-in HTTP server
+If you used the `make devserver` command earlier then give Python's built-in
+HTTP server a shot with the following command.
 
 ```
 python -m http.server
@@ -294,8 +306,13 @@ Note that if you are using Python 2 the equivalent HTTP server command is
 
 
 ## Edit the Configuration
-Change the time zone to your zone. Wikipedia has 
-[a handy look up table of valid time zones values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+Pelican's quickstart assumes a bunch of defaults that may or may not be
+applicable to your site. Open up the `pelicanconf.py` file to change some
+of the defaults.
+
+Look for the `TIMEZONE` variable. If it's not right for your location
+then modify it to your zone. Wikipedia has a handy
+[table of valid time zones values](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 
 ## Modify the Site Theme
@@ -303,27 +320,20 @@ Change the time zone to your zone. Wikipedia has
 
 
 ## What's next?
-You just generated your first [Pelican](/pelican.html) static website using
-[Markdown](/markdown.html) and [Jinja2](/jinja2.html). Next you can 
-make additional modifications to the Jinja2 templates, build new pages and 
-add more content via Markdown files.
+You generated your first [Pelican](/pelican.html) static website using
+[Markdown](/markdown.html) and [Jinja2](/jinja2.html). You can 
+now make additional modifications to the Jinja2 templates, build new pages 
+and add more content via Markdown files.
 
 Do you want to deploy your new static website to GitHub Pages or an S3 bucket?
-That's a story for another Full Stack Python tutorial...
-
-Looking to build a far more complicated static site with Pelican? Check 
-out the open source
-[Full Stack Python code](https://github.com/mattmakai/fullstackpython.com)
-to see how a reasonably large 100+ pages and 100,000+ words site is 
-structured.
+Well, that's a story for another Full Stack Python tutorial...
 
 Questions? Let me know via 
 [a GitHub issue ticket on the Full Stack Python repository](https://github.com/mattmakai/fullstackpython.com/issues), 
 on Twitter 
 [@fullstackpython](https://twitter.com/fullstackpython)
-or [@mattmakai](https://twitter.com/mattmakai).
+or [@mattmakai](https://twitter.com/mattmakai).  
 
 See something wrong in this blog post? Fork
 [this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170605-static-sites-pelican.markdown)
 and submit a pull request.
-
