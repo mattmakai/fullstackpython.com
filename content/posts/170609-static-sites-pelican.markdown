@@ -9,19 +9,19 @@ headeralt: Pelican, Jinja2 and Markdown logos.
 
 
 [Pelican](/pelican.html) is an incredibly well-built Python tool for 
-[generating static sites](/static-site-generator.html). 
+[creating static sites](/static-site-generator.html). 
 
-[Full Stack Python](https://www.fullstackpython.com/) is built with Pelican, 
-[Jinja2 templates](/jinja2.html) and [Markdown](/markdown.html).
+[Full Stack Python](https://www.fullstackpython.com/) is generated with 
+Pelican, [Jinja2 templates](/jinja2.html) and [Markdown](/markdown.html).
 This site is deployed to Amazon S3 and currently handles over one hundred 
 thousand readers per month. There are never scaling concerns because a static
 site is pre-generated before deployment and a web server simply responds
 with existing files rather than executing any code on the server during
 the HTTP request-response cycle.
 
-In this tutorial you will learn how to create a 
-[static website](/static-site-generator.html) from scratch 
-using [Pelican](/pelican.html).
+In this tutorial you will learn how to create your own
+[static website](/static-site-generator.html) from scratch using 
+[Pelican](/pelican.html).
 
 <img src="/img/170609-static-sites-pelican/gunship-bootstrap-css.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles page after Bootstrap CSS has been added.">
 
@@ -58,14 +58,14 @@ look at
 
 All code in this blog post is available open source under the MIT license 
 on GitHub under the 
-[generating-static-websites-pelican-jinja2-markdown directory of the blog-code-examples repository](https://github.com/fullstackpython/blog-code-examples). 
+[generating-static-websites-pelican-jinja2-markdown directory of the blog-code-examples repository](https://github.com/fullstackpython/blog-code-examples/tree/master/generating-static-websites-pelican-jinja2-markdown).
 Use and abuse the source code as you like for your own applications.
 
 
 ## Install the Pelican and Markdown libraries
 Start by creating a new virtual environment for your project. My virtualenv
-is named `staticsite` with the following command but you can name yours
-whatever matches the project you are creating.
+is named `staticsite` but you can name yours whatever matches the project 
+you are creating.
 
 ```bash
 python3 -m venv staticsite
@@ -77,8 +77,8 @@ Activate the virtualenv.
 source staticsite/bin/activate
 ```
 
-When activated the virtualenv should prepend its name to your command prompt,
-as shown in the following screenshot of my terminal.
+The virtualenv will prepend its name to your command prompt when it is
+activated.
 
 <img src="/img/170609-static-sites-pelican/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
 
@@ -108,13 +108,12 @@ building our static site.
 
 
 ## Generate a Basic Site
-Create a new directory for your project. My site will contain some of my
-favorite [retro synthwave](https://www.youtube.com/watch?v=uYRZV8dV10w) 
+Create a new directory to store your project. My site will contain some of 
+my favorite [retro synthwave](https://www.youtube.com/watch?v=uYRZV8dV10w) 
 artists as examples, but of course your site can contain whatever subjects 
 that you want.
 
-Create a new directory for our static site project and change into the
-directory.
+Change into the project directory after creating it.
 
 ```
 mkdir retrosynth
@@ -160,7 +159,7 @@ Done. Your new project is available at /Users/matt/devel/py/retrosynth
 (staticsite) $ 
 ```
 
-What did we just create using the Pelican quickstart script? Check out
+What did we just create using Pelican's quickstart script? Check out
 the new files in the directory.
 
 ```bash
@@ -174,10 +173,10 @@ The quickstart created five files and one new directory:
 * `Makefile`: `make` command convenience tasks for common operations such as 
   running a development server, building a site and cleaning extraneous 
   build files
-* `fabfile.py`: A Fabric file that has some of the same types of commands
-  as the `Makefile`. Fabric is a wonderful code library but for now I 
-  recommend skipping the Fabric file because unfortunately Fabric does not 
-  yet support Python 3.
+* `fabfile.py`: A [Fabric](http://www.fabfile.org/) file that has some of 
+  the same types of commands as the `Makefile`. Fabric is a wonderful code 
+  library but for now I recommend skipping the Fabric file because 
+  unfortunately Fabric does not yet support Python 3.
 * `develop_server.sh`: shell script for running the development server
 * `pelicanconf.py`: settings file for your Pelican project. If you are used
   to earlier versions of Pelican this file was instead named `settings.py`
@@ -196,7 +195,7 @@ make devserver
 ```
 
 The Pelican development server will start serving up your site with a 
-daeman process. Go to [localhost:8000](http://localhost:8000) in your web 
+daemon process. Go to [localhost:8000](http://localhost:8000) in your web 
 browser and you will see the first version of your static site.
 
 <img src="/img/170609-static-sites-pelican/default-style.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Default styling on the Pelican static site.">
@@ -232,7 +231,7 @@ serve our site after we create our initial content.
 
 It is up to you whether you want to use the development server or not
 while creating your site. Every time I want to view my changes for 
-Full Stack Python I actually regenerate the site using my own Makefile that 
+Full Stack Python I regenerate the site using my own Makefile that 
 wraps the `pelican` command. The `python -m http.server` command constantly 
 serves up each build's changes.
 
@@ -244,7 +243,7 @@ some initial content.
 Pelican can accept both [Markdown](/markdown.html) and reStructureText
 markup files as input.
 
-Create a new subdirectory under the `content` named `posts`. Change into
+Make a new subdirectory under the `content` named `posts`. Change into
 the `posts` directory. Create a new file named `gunship.markdown` with
 the following content.
 
@@ -272,9 +271,6 @@ Also take a look at other retro synthwave artists such as
 and 
 [Daniel Deluxe](https://danieldeluxe.bandcamp.com/).
 ```
-
-What does our server look like now that we wrote our first post? 
-
 
 Our `make` file can also help us regenerate the site when changes occur
 if we choose to not use the development server.
@@ -347,8 +343,9 @@ python -m http.server 8005
 Note that if you are using Python 2 the equivalent HTTP server command is
 `python -m SimpleHTTPServer`.
 
-We now have some very basic site content. We could expand this start into many
-more posts and pages but let's learn how to modify the site configuration.
+Our site now has some very basic content. We could expand this start into 
+many more posts and pages but let's learn how to modify the site 
+configuration.
 
 
 ## Edit Site Configuration
