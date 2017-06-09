@@ -2,9 +2,9 @@ title: How to Create Your First Static Site with Pelican and Jinja2
 slug: generating-static-websites-pelican-jinja2-markdown
 meta: Learn how to generate static websites with Python, the Pelican static site generator, Jinja2 and Markdown.
 category: post
-date: 2017-06-05
-modified: 2017-06-07
-headerimage: /img/170605-static-sites-pelican/header.jpg
+date: 2017-06-09
+modified: 2017-06-09
+headerimage: /img/170609-static-sites-pelican/header.jpg
 headeralt: Pelican, Jinja2 and Markdown logos.
 
 
@@ -23,7 +23,7 @@ In this tutorial you will learn how to create a
 [static website](/static-site-generator.html) from scratch 
 using [Pelican](/pelican.html).
 
-<img src="/img/170605-static-sites-pelican/gunship-bootstrap-css.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles page after Bootstrap CSS has been added.">
+<img src="/img/170609-static-sites-pelican/gunship-bootstrap-css.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles page after Bootstrap CSS has been added.">
 
 Our simple static site will have pages that look like the above screenshot
 but the entire site can be easily customized and expanded with your own design 
@@ -80,7 +80,7 @@ source staticsite/bin/activate
 When activated the virtualenv should prepend its name to your command prompt,
 as shown in the following screenshot of my terminal.
 
-<img src="/img/170605-static-sites-pelican/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
+<img src="/img/170609-static-sites-pelican/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
 
 Install the appropriate dependencies after your virtualenv is activated. 
 Use the `pip` command to install Pelican and Markdown, which will also 
@@ -199,7 +199,7 @@ The Pelican development server will start serving up your site with a
 daeman process. Go to [localhost:8000](http://localhost:8000) in your web 
 browser and you will see the first version of your static site.
 
-<img src="/img/170605-static-sites-pelican/default-style.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Default styling on the Pelican static site.">
+<img src="/img/170609-static-sites-pelican/default-style.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Default styling on the Pelican static site.">
 
 What if you don't have `make` installed on your system? Change into the
 `output` directory and use the `python -m http.server` command to use the
@@ -252,8 +252,8 @@ the following content.
 title: Gunship
 slug: gunship
 category: bands
-date: 2017-06-05
-modified: 2017-06-06
+date: 2017-06-09
+modified: 2017-06-09
 
 
 [Gunship](https://www.gunshipmusic.com/) is a *retro synthwave* artist out of the UK.
@@ -334,7 +334,7 @@ python -m http.server
 
 Our first post in all its glory...
 
-<img src="/img/170605-static-sites-pelican/gunship-first-post.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Gunship as our first band post on retro synthwave static site.">
+<img src="/img/170609-static-sites-pelican/gunship-first-post.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Gunship as our first band post on retro synthwave static site.">
 
 You can change the HTTP server port binding by adding a number after the 
 command, if you want to serve more than one static site at a time or you 
@@ -391,13 +391,13 @@ python -m http.server
 
 Head back to the browser and refresh to view the updated configuration.
 
-<img src="/img/170605-static-sites-pelican/updated-configuration.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="New links created by the pelicanconf.py configuration settings file.">
+<img src="/img/170609-static-sites-pelican/updated-configuration.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="New links created by the pelicanconf.py configuration settings file.">
 
 What happens when we click on the blog post title? It takes us to a 
 very similar-looking page with the
 [localhost:8000/gunship.html](http://localhost:8000/gunship.html) URL.
 
-<img src="/img/170605-static-sites-pelican/gunship-post.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Gunship subpage for the site.">
+<img src="/img/170609-static-sites-pelican/gunship-post.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Gunship subpage for the site.">
 
 Alright, we updated some basic site-wide data, but our site really could 
 use a change of paint.
@@ -414,9 +414,21 @@ Create a new directory under your project directory that is named
 `templates` is where our [Jinja2](/jinja2.html) templates will be stored and
 can override the default theme.
 
-...base.html...
+Start by creating a file named `base.html` which will store the boilerplate
+used by templates across the site. 
 
 ```jinja2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+ <div class="container">
+  {% block content %}{% endblock %}
+ </div> 
+</body>
+</html>
 ```
 
 Within `theme/templates` create a file named `article.html` that will have a
@@ -424,23 +436,19 @@ different theme for blog posts than the rest of the site. Fill `article.html`
 with the following Jinja2 markup.
 
 ```jinja2
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <title>{{ article.title }}</title>
-</head>
-<body>
- <div class="container">
-  <div class="row">
-   <div class="col-md-8">
-    <h1>{{ article.title }}</h1>
-    <label>Posted on <strong>{{ article.date }}</strong></label>
-    {{ article.content }}
-   </div>
-  </div>
- </div> 
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+ <div class="col-md-8">
+  <h1>{{ article.title }}</h1>
+  <label>Posted on <strong>{{ article.date }}</strong></label>
+  {{ article.content }}
+ </div>
+</div>
+{% endblock %}
 ```
 
 Next we will use a Jinja2 template to override the default `index.html` main
@@ -448,30 +456,24 @@ page. Again within the `theme/templates` directory, create a file named
 `index.html` with the following markup.
 
 ```jinja2
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <title>{{ SITENAME }}</title>
- <!-- Latest compiled and minified Bootstrap CSS -->
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head>
-<body>
- <div class="container">
-  <div class="row">
-   <div class="col-md-8">
-    <h1>{{ SITENAME }}</1>
-    {% for article in articles %}
-     <h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
-     <label>Posted on <strong>{{ article.date }}</strong></label>
-     {{ article.content|truncate(110) }}
-    {% else %}
-     No posts yet!
-    {% endfor %}
-   </div>
-  </div>
- </div> 
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="row">
+ <div class="col-md-8">
+  <h1>{{ SITENAME }}</h1>
+  {% for article in articles %}
+   <h2><a href="/{{ article.slug }}.html">{{ article.title }}</a></h2>
+   <label>Posted on <strong>{{ article.date }}</strong></label>
+   {{ article.content|truncate(110) }}
+  {% else %}
+   No posts yet!
+  {% endfor %}
+ </div>
+</div>
+{% endblock %}
 ```
 
 Regenerate the site and make sure you are serving it with the development
@@ -485,21 +487,22 @@ pelican -s pelicanconf.py -o output -t theme content
 ```
 
 Go to [localhost:8000](http://localhost:8000) and refresh the page.
-The styling on the main page remains the same because it is not a
-blog post, but a page with a collection of the blog articles.
+The styling on the main page is now different because it uses the `index.html`
+theme.
 
-<img src="/img/170605-static-sites-pelican/basic-theme.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Basic theme remains unchanged.">
+<img src="/img/170609-static-sites-pelican/index-no-styling.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="The index.html page without any styling applied.">
 
-Click on the Gunship post however and we see that the `article.html`
-"styling" has been applied to the page.
+Click on the title of the Gunship post. This page uses the `article.html` 
+template, although it's hard to tell because there is no 
+[CSS](/cascading-style-sheets.html) applied to the page.
 
-<img src="/img/170605-static-sites-pelican/gunship-no-styling.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles have an entirely different theme based on article.html markup.">
+<img src="/img/170609-static-sites-pelican/gunship-no-styling.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles have an entirely different theme based on article.html markup.">
 
 Pretty sparse! We can at least add the Bootstrap CSS to the HTML to 
 align our content.
 
-Within `article.html`, add the following line for Bootstrap under 
-`<title>{{ article.title }}</title>`.
+Within `base.html`, add the following line for Bootstrap under 
+`<title>{% block title %}{% endblock %}</title>` and above `</head>`.
 
 ```jinja2
 <!-- Latest compiled and minified Bootstrap CSS -->
@@ -508,13 +511,13 @@ Within `article.html`, add the following line for Bootstrap under
 
 Regenerate the site and refresh the Gunship page.
 
-<img src="/img/170605-static-sites-pelican/gunship-bootstrap-css.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles page after Bootstrap CSS has been added.">
+<img src="/img/170609-static-sites-pelican/gunship-bootstrap-css.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Articles page after Bootstrap CSS has been added.">
 
 Well at least our design has moved from 1996 to 2001. I am sure you can 
 do a whole lot more to improve your own site's design.
 
-The new `article.html` is not much of a theme for now but it at least 
-provides a fresh start for completely customized blog posts.
+The new `base.html` does not provide much of a theme yet but it at least 
+provides a fresh start for completely customized sites.
 
 
 ## What's next?
@@ -533,5 +536,5 @@ on Twitter
 or [@mattmakai](https://twitter.com/mattmakai).  
 
 See something wrong in this blog post? Fork
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170605-static-sites-pelican.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170609-static-sites-pelican.markdown)
 and submit a pull request.
