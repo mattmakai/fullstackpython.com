@@ -2,6 +2,9 @@
 
 {% block meta_header %}{% if article and article.meta %}
 <meta name="description" content="{{ article.meta }}">
+<meta name="twitter:card" content="{{ article.title }}" />
+<meta name="twitter:site" content="@fullstackpython" />
+<meta name="twitter:creator" content="@mattmakai" />
 <meta property="og:url" content="{{ SITEURL }}/blog/{{ article.slug }}.html" />
 <meta property="og:title" content="{{ article.title }}" />
 <meta property="og:description" content="{{ article.meta }}" />
