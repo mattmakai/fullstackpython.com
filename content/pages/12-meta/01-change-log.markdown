@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### June
+* New blog post on 
+  [How to Create Your First Static Site with Pelican and Jinja2](/blog/generating-static-websites-pelican-jinja2-markdown.html).
 * Updates to [Twilio](/twilio.html) and [Pelican](/pelican.html) pages
   with more resources.
 

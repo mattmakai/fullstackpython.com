@@ -2,6 +2,10 @@
 
 {% block meta_header %}{% if article and article.meta %}
 <meta name="description" content="{{ article.meta }}">
+<meta property="og:url" content="{{ SITEURL }}/blog/{{ article.slug }}.html" />
+<meta property="og:title" content="{{ article.title }}" />
+<meta property="og:description" content="{{ article.meta }}" />
+<meta property="og:image" content="{{ SITEURL }}{{ article.headerimage }}" />
 {% endif %}{% endblock %}
 
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}

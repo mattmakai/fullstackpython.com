@@ -36,7 +36,16 @@ requests with the file being requests - no dynamic data is populated on the
 server during the response.
 
 
-## Pelican resources
+### Pelican resources
+Static site generators like Pelican are a simple compared to 
+[web frameworks](/web-frameworks.html) so most tutorials focus on
+creating simple sites that you can style yourself, as well as deploying
+to hosting services such as Amazon S3 and GitHub Pages.
+
+* [How to Create Your First Static Site with Pelican and Jinja2](/blog/generating-static-websites-pelican-jinja2-markdown.html)
+  walks through installing, generating the boilerplate and customizing
+  your first static site using Pelican.
+
 * [The Long Road to Building a Static Blog with Pelican](http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html)
   is a fantastic read that really gets into the details throughout the 
   walkthrough. 
