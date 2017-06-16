@@ -3,7 +3,7 @@ slug: dial-outbound-phone-calls-python-bottle
 meta: A tutorial that shows how to dial outbound phone calls with a Bottle web application built with Python 3.
 category: post
 date: 2016-08-30
-modified: 2017-05-11
+modified: 2017-06-16
 headerimage: /img/160830-phone-calls-bottle/header.jpg
 headeralt: Bottle, Python and Twilio logos. Copyright their respective owners.
 
@@ -121,7 +121,7 @@ NGROK_BASE_URL = os.environ.get('NGROK_BASE_URL', 'https://c6c6d4e8.ngrok.io')
 @route('/')
 def index():
     """
-        Returns a standard text response to show the app is up and running.
+    Returns a standard text response to show the app is up and running.
     """
     return Response("Bottle app running!")
 
@@ -223,7 +223,7 @@ NGROK_BASE_URL = os.environ.get('NGROK_BASE_URL', 'https://c6c6d4e8.ngrok.io')
 @route('/')
 def index():
     """
-        Returns a standard text response to show the app is up and running.
+    Returns a standard text response to show the app is up and running.
     """
     return Response("Bottle app running!")
 
@@ -231,9 +231,9 @@ def index():
 @post('/twiml')
 def twiml_response():
     """
-        Provides TwiML instructions in response to a Twilio POST webhook
-        event so that Twilio knows how to handle the outbound phone call
-        when someone picks up the phone.
+    Provides TwiML instructions in response to a Twilio POST webhook
+    event so that Twilio knows how to handle the outbound phone call
+    when someone picks up the phone.
     """
     response = twiml.Response()
     response.say("Sweet, this phone call is answered by your Bottle app!")
@@ -244,14 +244,15 @@ def twiml_response():
 @route('/dial-phone/<outbound_phone_number>')
 def outbound_call(outbound_phone_number):
     """
-        Uses the Twilio Python helper library to send a POST request to
-        Twilio telling it to dial an outbound phone call from our specific
-        Twilio phone number (that phone number must be owned by our
-        Twilio account).
+    Uses the Twilio Python helper library to send a POST request to
+    Twilio telling it to dial an outbound phone call from our specific
+    Twilio phone number (that phone number must be owned by our Twilio 
+    account).
     """
     # the url must match the Ngrok Forwarding URL plus the route defined in
     # the previous function that responds with TwiML instructions
-    twilio_client.calls.create(to=OUTBOUND_NUMBER, from_=BLOG_POST_NUMBER,
+    twilio_client.calls.create(to=outbound_phone_number, 
+                               from_=BLOG_POST_NUMBER,
                                url=NGROK_BASE_URL + '/twiml')
     return Response('phone call placed to ' + outbound_phone_number + '!')
 
