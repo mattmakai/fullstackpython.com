@@ -215,3 +215,7 @@ deployment.
   Note that you cannot currently use HTTPS on Google Storage servers, which is a huge
   downside.
 
+* [Deploying a Static Blog with Continuous Integration](https://www.loxodrome.io/post/hugo-on-ci/)
+  uses a Hugo (a Golang-based static site generator) generated site
+  as an example but the instructions can easily be used to deploy
+  a Python-based static site generator output as well.
