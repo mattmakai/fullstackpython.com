@@ -161,6 +161,11 @@ walkthroughs I've read.
 PostgreSQL tutorials not specific to Python are also really helpful
 for properly handling your data.
 
+* [Why PostgreSQL? (5 years later)](http://www.craigkerstiens.com/2017/04/30/why-postgres-five-years-later/)
+  covers the improvements that have been made to PostgreSQL over the
+  past five years. It's amazing to see how far this project has come and
+  how it continues to evolve.
+
 * [PostgreSQL: The Nice Bits](https://russ.garrett.co.uk/talks/postgres-gds/) is a 
   good overview slideshow of why PostgreSQL is a great relational database.
 
