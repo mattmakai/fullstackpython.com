@@ -101,6 +101,12 @@ then dive into these specific Celery tutorials.
   is a straightforward tutorial for setting up the Celery task queue for 
   Django web applications using the Redis broker on the back end.
 
+* [A Guide to Sending Scheduled Reports Via Email Using Django And Celery](https://hashedin.com/2017/05/30/email-scheduled-reports-with-django/)
+  shows you how to use 
+  [django-celery](https://github.com/celery/django-celery)
+  in your application. Note however there are other ways of integrating
+  Celery with Django that do not require the django-celery dependency.
+
 * [Asynchronous Tasks With Django and Celery](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/)
   shows how to integrate Celery with [Django](/django.html) and create Periodic Tasks.
 
