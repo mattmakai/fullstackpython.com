@@ -87,6 +87,10 @@ workflow. These resources will come in handy for specific Git subjects.
   own list of [lesser known Git commands](https://hackernoon.com/lesser-known-git-commands-151a1918a60)
   that alias more complicated Git lines.
 
+* [Little things I like to do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
+  has some nice tips such as easily viewing branches you recently worked
+  on and generating a changelog from your commits.
+
 * [Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out)
   demonstrates how Git's graph-based data structure produces certain behavior 
   through example Git commands. This is a highly recommended read after you've
