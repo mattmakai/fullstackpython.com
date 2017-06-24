@@ -70,9 +70,6 @@ answered on the
 so as usual that can be a rich source of examples for your Peewee-powered
 Python applications.
 
-* [Managing database connections with Peewee](http://charlesleifer.com/blog/managing-database-connections-with-peewee/)
-  explains the connection pool and ExecutionContext of the ORM.
-
 * [An encrypted command-line diary with Python](http://charlesleifer.com/blog/dear-diary-an-encrypted-command-line-diary-with-python/)
   is an awesome walkthrough explaining how to use SQLite, SQLCipher and
   Peewee to create an encrypted file with your contents, diary or otherwise.
