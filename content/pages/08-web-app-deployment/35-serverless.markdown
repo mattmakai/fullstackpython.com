@@ -75,6 +75,11 @@ iterations so there are many ideas and good practices yet to be
 discovered. These resources are the first attempts at figuring
 out how to structure and operate serverless applications.
 
+* [Serverless software](https://talkpython.fm/episodes/show/118/serverless-software)
+  covers a range of topics under serverless and how deployments have
+  changed as new options such as [PaaS](/platform-as-a-service.html) 
+  have become widespread.
+
 * [What's this serverless thing, anyway?](https://read.acloud.guru/whats-this-serverless-thing-anyway-b101cb72c7e6)
 
 * [Serverless architectures - let's ditch the servers?](https://codeahoy.com/2016/06/25/serverless-architectures-lets-ditch-the-servers/)
