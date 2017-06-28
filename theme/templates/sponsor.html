@@ -127,7 +127,9 @@
 </div>
 
 {% elif page.title == 'Introduction' %}
-    {% include "rp-advert.html" %}
+  {% include "rp-advert.html" %}
+{% elif page.slug == 'monitoring' %}
+  {% include "rollbar.html" %}
 {% else %}
-    {% include "fsp-guide-advert.html" %}
+  {% include "fsp-guide-advert.html" %}
 {% endif %}
