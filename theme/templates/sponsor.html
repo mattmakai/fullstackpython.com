@@ -128,7 +128,7 @@
 
 {% elif page.title == 'Introduction' %}
   {% include "rp-advert.html" %}
-{% elif page.slug == 'monitoring' %}
+{% elif page.slug == 'monitoring' or page.slug == 'devops' or page.slug == 'caching' or page.slug == 'web-analytics' or page.slug == 'servers' or page.slug == 'docker' %}
   {% include "rollbar.html" %}
 {% else %}
   {% include "fsp-guide-advert.html" %}
