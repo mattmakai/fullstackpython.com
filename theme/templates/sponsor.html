@@ -128,7 +128,7 @@
 
 {% elif page.title == 'Introduction' %}
   {% include "rp-advert.html" %}
-{% elif page.slug == 'monitoring' or page.slug == 'devops' or page.slug == 'caching' or page.slug == 'web-analytics' or page.slug == 'servers' or page.slug == 'docker' %}
+{% elif page.slug == 'monitoring' or page.slug == 'devops' or page.slug == 'caching' or page.slug == 'web-analytics' or page.slug == 'servers' or page.slug == 'docker' or page.slug == 'continuous-integration' or page.slug == 'wsgi-servers' or page.slug == 'green-unicorn-gunicorn' %}
   {% include "rollbar.html" %}
 {% else %}
   {% include "fsp-guide-advert.html" %}
