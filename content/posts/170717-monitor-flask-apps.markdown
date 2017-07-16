@@ -20,15 +20,46 @@ to catch errors and visualize our application is running properly.
 
 
 ## Our Tools 
+We can use either [Python 2 or 3](/python-2-or-3.html) to build this
+tutorial, but Python 3 is *strongly* recommended for all new applications. 
+I used 
+[Python 3.6.1](https://www.python.org/downloads/release/python-361/) to 
+execute my code. We will also use the following 
+[application dependencies](/application-dependencies.html) throughout
+the post: 
+
+* [Flask](/flask.html) web framework, 
+  [version 0.12.2](https://github.com/pallets/flask/releases/tag/0.12.2)
+* [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) monitoring 
+  instrumentation library,
+  [version 0.13.12](https://github.com/rollbar/pyrollbar/tree/v0.13.12)
+* [pip](https://pip.pypa.io/en/stable/) and 
+  [virtualenv](https://virtualenv.pypa.io/en/latest/), which come
+  packaged with Python 3, to install and isolate the Flask and Rollbar
+  libraries from other Python projects you are working on
+
+
+If you need help getting your 
+[development environment](/development-environments.html) configured
+before running this code, take a look at
+[this guide for setting up Python 3 and Flask on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html)
+
+All code in this blog post is available open source under the MIT license 
+on GitHub under the 
+[monitor-flask-apps directory of the blog-code-examples repository](https://github.com/fullstackpython/blog-code-examples). 
+Use and abuse the source code as you like for your own applications.
 
 
 ## Installing Dependencies
 
 ```
-pip install flask==0.12.2 rollbar
+pip install flask==0.12.2 pyrollbar==0.13.12
 ```
 
-## Running the Flask App
+## Building Our Flask App
+
+
+Create a new directory 
 (error occurs but we dont see it)
 
 ## Handling Errors
