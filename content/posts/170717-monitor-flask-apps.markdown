@@ -38,7 +38,6 @@ the post:
   packaged with Python 3, to install and isolate the Flask and Rollbar
   libraries from other Python projects you are working on
 
-
 If you need help getting your 
 [development environment](/development-environments.html) configured
 before running this code, take a look at
@@ -47,7 +46,7 @@ before running this code, take a look at
 All code in this blog post is available open source under the MIT license 
 on GitHub under the 
 [monitor-flask-apps directory of the blog-code-examples repository](https://github.com/fullstackpython/blog-code-examples). 
-Use and abuse the source code as you like for your own applications.
+Use and abuse the source code as you desire for your own applications.
 
 
 ## Installing Dependencies
@@ -56,15 +55,34 @@ Use and abuse the source code as you like for your own applications.
 pip install flask==0.12.2 pyrollbar==0.13.12
 ```
 
+
 ## Building Our Flask App
 
 
 Create a new directory 
 (error occurs but we dont see it)
 
+
 ## Handling Errors
-(sign up for Rollbar)
+Head to [Rollbar's homepage](https://rollbar.com/) so we can add their
+hosted monitoring tools to our oft-erroring Flask app.
+
+<img src="/img/170717-monitor-flask-apps/rollbar-homepage.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar homepage in the web browser.">
+
+Click the "Sign Up" button in the upper right-hand corner. Enter your 
+email address, a username and the password you want on the sign up page.
+
+<img src="/img/170717-monitor-flask-apps/sign-up.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Enter your basic account information on the sign up page.">
+
+After the sign up page you'll get to the onboarding flow where you can
+enter a project name and select a programming language. For project
+name enter "Echo" and select that you are monitoring a Python app.
+
+<img src="/img/170717-monitor-flask-apps/create-new-project.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create a new project named 'echo' and select Python as the programming language.">
+
+
 (links to Python docs)
+
 
 ## Testing Error Handling
 
@@ -75,7 +93,8 @@ Flask application. Next you will want to add monitoring to your more
 complicated web apps. You can also check out some of Rollbar's more 
 advanced features such as:
 
-* cool feature 1
+* tracking and 
+  [debugging deployment issues](https://rollbar.com/docs/deploy-tracking/)
 * cool feature 2
 * cool feature 3
 
