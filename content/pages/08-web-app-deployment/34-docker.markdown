@@ -32,7 +32,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 
 
 ## Docker resources
-* [What is Docker and When to Use It](http://www.centurylinklabs.com/what-is-docker-and-when-to-use-it/)
+* [What is Docker and When to Use It](https://www.ctl.io/developers/blog/post/what-is-docker-and-when-to-use-it/)
   clearly delineates what Docker is and what it isn't. This is a good article
   for when you're first wrapping your head around Docker conceptually.
 
