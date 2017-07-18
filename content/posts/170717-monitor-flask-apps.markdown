@@ -52,7 +52,15 @@ Use and abuse the source code as you desire for your own applications.
 ## Installing Dependencies
 
 ```
-pip install flask==0.12.2 pyrollbar==0.13.12
+pip install flask==0.12.2 rollbar==0.13.12
+```
+
+```
+Installing collected packages: MarkupSafe, Jinja2, itsdangerous, click, Werkzeug, flask, idna, urllib3, chardet, certifi, requests, six, rollbar
+  Running setup.py install for MarkupSafe ... done
+  Running setup.py install for itsdangerous ... done
+  Running setup.py install for rollbar ... done
+Successfully installed Jinja2-2.9.6 MarkupSafe-1.0 Werkzeug-0.12.2 certifi-2017.4.17 chardet-3.0.4 click-6.7 flask-0.12.2 idna-2.5 itsdangerous-0.24 requests-2.18.1 rollbar-0.13.12 six-1.10.0 urllib3-1.21.1
 ```
 
 
@@ -88,15 +96,14 @@ name enter "Echo" and select that you are monitoring a Python app.
 
 
 ## What's Next?
-We just learned how to catch and handle errors that occur in a simple
-Flask application. Next you will want to add monitoring to your more
-complicated web apps. You can also check out some of Rollbar's more 
-advanced features such as:
+We just learned how to catch and handle errors with Rollbar as a hosted
+monitoring platform in a simple Flask application. Next you will want to 
+add monitoring to your more complicated web apps. You can also check out 
+some of Rollbar's more advanced features such as:
 
-* tracking and 
-  [debugging deployment issues](https://rollbar.com/docs/deploy-tracking/)
-* cool feature 2
-* cool feature 3
+* [tracking and debugging deployment issues](https://rollbar.com/docs/deploy-tracking/)
+* [sorting and viewing errors by user](https://rollbar.com/docs/person-tracking/)
+* [setting up custom rules to group errors](https://rollbar.com/docs/custom-grouping/)
 
 There is a lot more to learn about [web development](/web-development.html)
 and [deployments](/deployments.html) so keep learning by reading up on 
