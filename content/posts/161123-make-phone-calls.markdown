@@ -197,8 +197,8 @@ Not bad for just a few lines of Python code!
 ## Next Steps
 Now that we know how to make and receive phone calls from a Twilio number 
 that follows programmatic instructions we can do a whole lot more in our
-applications. Next you can use out one of these tutorials to do more with 
-the phone number:
+applications. Next you can use one of these tutorials to do more with 
+your phone number:
 
 * [Build a phone-calling Slack bot](https://www.twilio.com/blog/2016/05/add-phone-calling-slack-python.html)
 * [Mask phone numbers for anonymous communication](https://www.twilio.com/docs/tutorials/walkthrough/masked-numbers/python/flask)
