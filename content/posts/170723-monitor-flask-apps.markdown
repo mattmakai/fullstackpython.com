@@ -2,9 +2,9 @@ title: How to Add Hosted Monitoring to Flask Web Applications
 slug: hosted-monitoring-flask-web-apps
 meta: 
 category: post
-date: 2017-07-17
-modified: 2017-07-17
-headerimage: /img/170717-monitor-flask-apps/header.jpg
+date: 2017-07-23
+modified: 2017-07-23
+headerimage: /img/170723-monitor-flask-apps/header.jpg
 headeralt: Flask, Python and Rollbar logos, copyright their respective owners.
 
 
@@ -119,18 +119,18 @@ errors that occur for our users.
 Head to [Rollbar's homepage](https://rollbar.com/) so we can add their
 hosted monitoring tools to our oft-erroring Flask app.
 
-<img src="/img/170717-monitor-flask-apps/rollbar-homepage.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar homepage in the web browser.">
+<img src="/img/170723-monitor-flask-apps/rollbar-homepage.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar homepage in the web browser.">
 
 Click the "Sign Up" button in the upper right-hand corner. Enter your 
 email address, a username and the password you want on the sign up page.
 
-<img src="/img/170717-monitor-flask-apps/sign-up.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Enter your basic account information on the sign up page.">
+<img src="/img/170723-monitor-flask-apps/sign-up.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Enter your basic account information on the sign up page.">
 
 After the sign up page you'll get to the onboarding flow where you can
 enter a project name and select a programming language. For project
 name enter "Echo" and select that you are monitoring a Python app.
 
-<img src="/img/170717-monitor-flask-apps/create-new-project.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create a new project named 'echo' and select Python as the programming language.">
+<img src="/img/170723-monitor-flask-apps/create-new-project.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create a new project named 'echo' and select Python as the programming language.">
 
 
 (links to Python docs)
@@ -162,5 +162,5 @@ on Twitter
 or [@mattmakai](https://twitter.com/mattmakai).
 
 See something wrong in this blog post? Fork
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170717-monitor-flask-apps.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170723-monitor-flask-apps.markdown)
 and submit a pull request with a fix.
