@@ -160,13 +160,20 @@ command as follows:
 python app.py
 ```
 
-We can see the error because we are testing our application locally,
-but what happens when our application is deployed and a user gets the
-error? They will typically quit out of frustration and you will never
-know what happened unless you add some error tracking and application
-monitoring.
+The Flask development server should start up and display a few lines
+of output.
 
-We'll now modify our code to add Rollbar to catch and report those
+<img src="/img/170723-monitor-flask-apps/python-app-py.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Run the Flask development server locally.">
+
+**Test app out... happy path, error 404 and error 500.***
+
+The error is obvious to us because we are testing the application locally,
+but what happens when the application is deployed and a user gets the
+error in their own web browser? They will typically quit out of 
+frustration and you will never know what happened unless you add some 
+error tracking and application monitoring.
+
+We will now modify our code to add Rollbar to catch and report those
 errors that occur for our users.
 
 
