@@ -33,10 +33,10 @@ the post:
 * [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) monitoring 
   instrumentation library,
   [version 0.13.12](https://github.com/rollbar/pyrollbar/tree/v0.13.12)
-* [pip](https://pip.pypa.io/en/stable/) and 
-  [virtualenv](https://virtualenv.pypa.io/en/latest/), which come
-  packaged with Python 3, to install and isolate the Flask and Rollbar
-  libraries from other Python projects you are working on
+* [pip](https://pip.pypa.io/en/stable/) and the 
+  [virtualenv](https://virtualenv.pypa.io/en/latest/) virtual environment
+  library, which come packaged with Python 3, to install and isolate the 
+  Flask and Rollbar libraries from other Python projects you are working on
 
 If you need help getting your 
 [development environment](/development-environments.html) configured
@@ -50,10 +50,36 @@ Use and abuse the source code as you desire for your own applications.
 
 
 ## Installing Dependencies
+Change into the directory where you keep your Python virtualenvs. 
+Create a new virtual environment for this project using the following
+command.
+
+```bash
+python3 -m venv monitorflask
+```
+
+Activate the virtualenv.
+
+```bash
+source monitorflask/bin/activate
+```
+
+The command prompt will change after activating the virtualenv:
+
+<img src="/img/170723-monitor-flask-apps/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Activating our Python virtual environment on the command line.">
+
+Remember that you need to activate the virtualenv in every new terminal 
+window where you want to use the virtualenv to run the project.
+
+Flask and Rollbar can now be installed into the now-activated virtualenv.
 
 ```
 pip install flask==0.12.2 rollbar==0.13.12
 ```
+
+Our required dependencies should be installed within our virtualenv 
+after a short installation period. Look for output like the following to 
+confirm everything worked.
 
 ```
 Installing collected packages: MarkupSafe, Jinja2, itsdangerous, click, Werkzeug, flask, idna, urllib3, chardet, certifi, requests, six, rollbar
@@ -63,12 +89,30 @@ Installing collected packages: MarkupSafe, Jinja2, itsdangerous, click, Werkzeug
 Successfully installed Jinja2-2.9.6 MarkupSafe-1.0 Werkzeug-0.12.2 certifi-2017.4.17 chardet-3.0.4 click-6.7 flask-0.12.2 idna-2.5 itsdangerous-0.24 requests-2.18.1 rollbar-0.13.12 six-1.10.0 urllib3-1.21.1
 ```
 
+Now that we have our Python dependencies installed into our virtualenv
+we can create the initial version of our application.
+
 
 ## Building Our Flask App
+Create a folder for your project named `monitor-flask-apps`. Change into
+the folder and then create a file named `app.py` with the following
+code.
+
+```python
+
+```
 
 
-Create a new directory 
-(error occurs but we dont see it)
+Test it out.
+
+We can see the error because we are testing our application locally,
+but what happens when our application is deployed and a user gets the
+error? They will typically quit out of frustration and you will never
+know what happened unless you add some error tracking and application
+monitoring.
+
+We'll now modify our code to add Rollbar to catch and report those
+errors that occur for our users.
 
 
 ## Handling Errors
