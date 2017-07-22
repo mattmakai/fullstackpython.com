@@ -14,6 +14,15 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### July
+* Added new blog post on how to
+  [monitor Flask applications](/blog/hosted-monitoring-flask-web-apps.html).
+* Fixed a typo in the 
+  [Make Phone Calls in Python](/blog/make-phone-calls-python.html) 
+  blog post thanks to my [colleague Greg Baugues'](http://baugues.com/) 
+  sharp eyes. 
+
+
 ### June
 * New blog post on 
   [How to Create Your First Static Site with Pelican and Jinja2](/blog/generating-static-websites-pelican-jinja2-markdown.html).
