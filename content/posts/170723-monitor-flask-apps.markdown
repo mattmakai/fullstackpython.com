@@ -99,11 +99,66 @@ the folder and then create a file named `app.py` with the following
 code.
 
 ```python
+import re
+from flask import Flask, render_template
+from werkzeug.exceptions import NotFound
 
+
+app = Flask(__name__)
+
+MIN_PAGE_NAME_LENGTH = 2
+
+
+@app.route("/<string:page>/")
+def show_page(page):
+    valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
+    valid_name = re.match('^[a-z]+$', page.lower()) is not None
+    if valid_length and valid_name:
+        return render_template("{}.html".format(page))
+    else:
+        msg = "Sorry, couldn't find page with name {}".format(page)
+        raise NotFound(msg)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
 ```
 
+The above application code has some standard Flask imports so we can
+create a Flask web app and render template files. We have a single
+function named `show_page` to serve a single Flask route. `show_page`
+checks if the URL path contains only lowercase alpha characters for a
+potential page name. If the page name can be found in the `templates`
+folder then the page is rendered, otherwise an exception is thrown
+that the page could not be found. We need to create at least one template
+file if our function is ever going to return a non-error reponse.
 
-Test it out.
+Save `app.py` and make a new subdirectory named `templates` under your
+project directory. Create a new file named `battlegrounds.html` and put
+the following [Jinja2](/jinja2.html) template markup into it.
+
+```jinja2
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>You found the Battlegrounds GIF!</title>
+  </head>
+  <body>
+    <h1>PUBG so good.</h1>
+    <img src="https://media.giphy.com/media/3ohzdLMlhId2rJuLUQ/giphy.gif">
+  </body>
+</html>
+```
+
+**The above template does...**
+
+Time to run and test our code. Change into the base directory of your
+project where `app.py` is located. Execute `app.py` using the `python`
+command as follows:
+
+```bash
+python app.py
+```
 
 We can see the error because we are testing our application locally,
 but what happens when our application is deployed and a user gets the
