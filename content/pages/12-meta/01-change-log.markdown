@@ -15,6 +15,9 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### July
+* Added a way to highlight blog post code changes such as in the new
+  [monitoring Flask apps](/blog/hosted-monitoring-flask-web-apps.html) post
+  under the "Handling Errors" section.
 * Added new blog post on how to
   [monitor Flask applications](/blog/hosted-monitoring-flask-web-apps.html).
 * Fixed a typo in the 
