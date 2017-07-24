@@ -33,6 +33,8 @@ the post:
 * [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) monitoring 
   instrumentation library,
   [version 0.13.12](https://github.com/rollbar/pyrollbar/tree/v0.13.12)
+* [blinker](https://pypi.python.org/pypi/blinker) for signaling support
+  in Flask applications so pyrollbar can report on all errors
 * A [free Rollbar account](https://rollbar.com/) where we will send error
   data and view it when it is captured
 * [pip](https://pip.pypa.io/en/stable/) and the 
@@ -43,7 +45,7 @@ the post:
 If you need help getting your 
 [development environment](/development-environments.html) configured
 before running this code, take a look at
-[this guide for setting up Python 3 and Flask on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html)
+[this guide for setting up Python 3 and Flask on Ubuntu 16.04 LTS](/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html).
 
 All code in this blog post is available open source under the MIT license 
 on GitHub under the 
@@ -73,10 +75,11 @@ The command prompt will change after activating the virtualenv:
 Remember that you need to activate the virtualenv in every new terminal 
 window where you want to use the virtualenv to run the project.
 
-Flask and Rollbar can now be installed into the now-activated virtualenv.
+Flask, Rollbar and Blinker can now be installed into the now-activated 
+virtualenv.
 
 ```
-pip install flask==0.12.2 rollbar==0.13.12
+pip install flask==0.12.2 rollbar==0.13.12 blinker==1.4
 ```
 
 Our required dependencies should be installed within our virtualenv 
@@ -84,11 +87,12 @@ after a short installation period. Look for output like the following to
 confirm everything worked.
 
 ```
-Installing collected packages: MarkupSafe, Jinja2, itsdangerous, click, Werkzeug, flask, idna, urllib3, chardet, certifi, requests, six, rollbar
-  Running setup.py install for MarkupSafe ... done
+Installing collected packages: blinker, itsdangerous, click, MarkupSafe, Jinja2, Werkzeug, Flask, idna, urllib3, chardet, certifi, requests, six, rollbar
+  Running setup.py install for blinker ... done
   Running setup.py install for itsdangerous ... done
+  Running setup.py install for MarkupSafe ... done
   Running setup.py install for rollbar ... done
-Successfully installed Jinja2-2.9.6 MarkupSafe-1.0 Werkzeug-0.12.2 certifi-2017.4.17 chardet-3.0.4 click-6.7 flask-0.12.2 idna-2.5 itsdangerous-0.24 requests-2.18.1 rollbar-0.13.12 six-1.10.0 urllib3-1.21.1
+Successfully installed Flask-0.12.2 Jinja2-2.9.6 MarkupSafe-1.0 Werkzeug-0.12.2 blinker-1.4 certifi-2017.4.17 chardet-3.0.4 click-6.7 idna-2.5 itsdangerous-0.24 requests-2.18.1 rollbar-0.13.12 six-1.10.0 urllib3-1.21.1
 ```
 
 Now that we have our Python dependencies installed into our virtualenv
@@ -102,24 +106,26 @@ code.
 
 ```python
 import re
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 from werkzeug.exceptions import NotFound
 
 
 app = Flask(__name__)
-
 MIN_PAGE_NAME_LENGTH = 2
 
 
 @app.route("/<string:page>/")
 def show_page(page):
-    valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
-    valid_name = re.match('^[a-z]+$', page.lower()) is not None
-    if valid_length and valid_name:
-        return render_template("{}.html".format(page))
-    else:
-        msg = "Sorry, couldn't find page with name {}".format(page)
-        raise NotFound(msg)
+    try:
+        valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
+        valid_name = re.match('^[a-z]+$', page.lower()) is not None
+        if valid_length and valid_name:
+            return render_template("{}.html".format(page))
+        else:
+            msg = "Sorry, couldn't find page with name {}".format(page)
+            raise NotFound(msg)
+    except:
+        return Response("404 Not Found")
 
 
 if __name__ == "__main__":
@@ -235,26 +241,32 @@ lines.
 ~~import os
 import re
 ~~import rollbar
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 from werkzeug.exceptions import NotFound
 
 
 app = Flask(__name__)
-~~rollbar.init(os.environ.get('ROLLBAR_SECRET'))
-~~rollbar.report_message('Rollbar is configured correctly')
-
 MIN_PAGE_NAME_LENGTH = 2
+
+
+~~@app.before_first_request
+~~def add_monitoring():
+~~    rollbar.init(os.environ.get('ROLLBAR_SECRET'))
+~~    rollbar.report_message('Rollbar is configured correctly')
 
 
 @app.route("/<string:page>/")
 def show_page(page):
-    valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
-    valid_name = re.match('^[a-z]+$', page.lower()) is not None
-    if valid_length and valid_name:
-        return render_template("{}.html".format(page))
-    else:
-        msg = "Sorry, couldn't find page with name {}".format(page)
-        raise NotFound(msg)
+    try:
+        valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
+        valid_name = re.match('^[a-z]+$', page.lower()) is not None
+        if valid_length and valid_name:
+            return render_template("{}.html".format(page))
+        else:
+            msg = "Sorry, couldn't find page with name {}".format(page)
+            raise NotFound(msg)
+    except:
+        return Response("404 Not Found")
 
 
 if __name__ == "__main__":
@@ -305,9 +317,66 @@ all the errors from our application, not a test event.
 
 
 ## Testing Error Handling
+How do we make sure real errors are reported rather than just a simple
+test event? We just need to add a few more lines of code to our app.
+
+```python
+import os
+import re
+import rollbar
+~~import rollbar.contrib.flask
+from flask import Flask, render_template, Response
+~~from flask import got_request_exception
+from werkzeug.exceptions import NotFound
 
 
-(links to Python docs)
+app = Flask(__name__)
+MIN_PAGE_NAME_LENGTH = 2
+
+
+@app.before_first_request
+def add_monitoring():
+    rollbar.init(os.environ.get('ROLLBAR_SECRET'))
+~~	  ## delete the next line if you dont want this event anymore
+    rollbar.report_message('Rollbar is configured correctly')
+~~    got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
+
+
+@app.route("/<string:page>/")
+def show_page(page):
+    try:
+        valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
+        valid_name = re.match('^[a-z]+$', page.lower()) is not None
+        if valid_length and valid_name:
+            return render_template("{}.html".format(page))
+        else:
+            msg = "Sorry, couldn't find page with name {}".format(page)
+            raise NotFound(msg)
+    except:
+~~        rollbar.report_exc_info()
+        return Response("404 Not Found")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+``` 
+
+The above highlighted code modifies the application so it reports all Flask
+errors as well as our HTTP 404 not found issues that happen within the
+`show_page` function. 
+
+Make sure your Flask development server is running and try to go to 
+[localhost:5000/b/](http://localhost:5000/b/). You will receive an HTTP
+404 exception and it will be reported to Rollbar. Next go to 
+[localhost:5000/fullstackpython/](http://localhost:5000/fullstackpython/) and 
+an HTTP 500 error will occur.
+
+You should see an aggregation of errors as you test out these errors:
+
+<img src="/img/170723-monitor-flask-apps/error-aggregation.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar dashboard showing aggregations of errors.">
+
+Woohoo, we finally have our Flask app reporting all errors that occur
+for any user back to the hosted Rollbar monitoring service!
 
 
 ## What's Next?
