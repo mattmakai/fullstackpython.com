@@ -393,7 +393,9 @@ There is a lot more to learn about [web development](/web-development.html)
 and [deployments](/deployments.html) so keep learning by reading up on 
 [Flask](/flask.html) and other [web frameworks](/web-frameworks.html) 
 such as [Django](/django.html), [Pyramid](/pyramid.html) and 
-[Sanic](/sanic.html).
+[Sanic](/sanic.html). You can also learn more about integrating Rollbar
+with Python applications via 
+[their Python documentation](https://rollbar.com/docs/notifier/pyrollbar/).
 
 Questions? Let me know via 
 [a GitHub issue ticket on the Full Stack Python repository](https://github.com/mattmakai/fullstackpython.com/issues), 
