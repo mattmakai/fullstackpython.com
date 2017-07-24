@@ -5,6 +5,8 @@ run:
 	cp -R static/* generated/updated_site/
 	cp generated/updated_site/pages/* generated/updated_site/
 	rm -rf generated/updated_site/pages/
+	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/blog/*.html
+	sed -i '' 's/~~//g' generated/updated_site/blog/*.html
 
 
 update:

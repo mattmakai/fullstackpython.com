@@ -33,6 +33,8 @@ the post:
 * [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) monitoring 
   instrumentation library,
   [version 0.13.12](https://github.com/rollbar/pyrollbar/tree/v0.13.12)
+* A [free Rollbar account](https://rollbar.com/) where we will send error
+  data and view it when it is captured
 * [pip](https://pip.pypa.io/en/stable/) and the 
   [virtualenv](https://virtualenv.pypa.io/en/latest/) virtual environment
   library, which come packaged with Python 3, to install and isolate the 
@@ -150,11 +152,16 @@ the following [Jinja2](/jinja2.html) template markup into it.
 </html>
 ```
 
-**The above template does...**
+The above [Jinja2](/jinja2.html) template is basic HTML without any
+[embedded template tags](http://jinja.pocoo.org/docs/latest/templates/). 
+The template creates a very plain page with a header description of
+"PUBG so good" and a GIF from this
+[excellent computer game](http://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/).
 
 Time to run and test our code. Change into the base directory of your
-project where `app.py` is located. Execute `app.py` using the `python`
-command as follows:
+project where `app.py` file is located. Execute `app.py` using the `python`
+command as follows (make sure your virtualenv is still activated in the
+terminal where you are running this command):
 
 ```bash
 python app.py
@@ -165,13 +172,33 @@ of output.
 
 <img src="/img/170723-monitor-flask-apps/python-app-py.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Run the Flask development server locally.">
 
-**Test app out... happy path, error 404 and error 500.***
+What happens when we access the application running on 
+[localhost port 5000](http://localhost:5000)?
 
-The error is obvious to us because we are testing the application locally,
-but what happens when the application is deployed and a user gets the
-error in their own web browser? They will typically quit out of 
-frustration and you will never know what happened unless you add some 
-error tracking and application monitoring.
+<img src="/img/170723-monitor-flask-apps/localhost-base-url.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Testing our Flask application at the base URL receives an HTTP 404 error.">
+
+HTTP status 404 page not found, which is what we expected because we only
+defined a single route and it did not live at the base path.
+
+We created a template named `battlegrounds.html` that should be accessible
+when we go to 
+[localhost:5000/battlegrounds/](http://localhost:5000/battlegrounds/).
+
+<img src="/img/170723-monitor-flask-apps/localhost-pubg-gif.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Testing our Flask application at /battlegrounds/ gets the proper template with a GIF.">
+
+The application successfully found the `battlegrounds.html` template but
+that is the only one available. What if we try 
+[localhost:5000/fullstackpython/](http://localhost:5000/fullstackpython/)?
+
+<img src="/img/170723-monitor-flask-apps/localhost-no-template.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="If no template is found we receive a 500 error.">
+
+HTTP 500 error. That's no good.
+
+The 404 and 500 errors are obvious to us right now because we are 
+testing the application locally. However, what happens when the app is 
+deployed and a user gets the error in their own web browser? They will 
+typically quit out of frustration and you will never know what happened 
+unless you add some error tracking and application monitoring.
 
 We will now modify our code to add Rollbar to catch and report those
 errors that occur for our users.
@@ -188,17 +215,99 @@ email address, a username and the password you want on the sign up page.
 
 <img src="/img/170723-monitor-flask-apps/sign-up.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Enter your basic account information on the sign up page.">
 
-After the sign up page you'll get to the onboarding flow where you can
+After the sign up page you will see the onboarding flow where you can
 enter a project name and select a programming language. For project
-name enter "Echo" and select that you are monitoring a Python app.
+name enter "Battlegrounds" and select that you are monitoring a Python app.
 
-<img src="/img/170723-monitor-flask-apps/create-new-project.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create a new project named 'echo' and select Python as the programming language.">
+<img src="/img/170723-monitor-flask-apps/create-new-project.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create a new project named 'Battlegrounds' and select Python as the programming language.">
+
+Press the "Continue" button at the bottom to move along. The next
+screen shows us a few quick instructions to add monitoring to our Flask
+application.
+
+<img src="/img/170723-monitor-flask-apps/project-setup.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Set up your project using your server-side access token.">
+
+Let's modify our Flask application to test whether we can properly connect
+to Rollbar's service. Change `app.py` to include the following highlighted
+lines. 
+
+```python
+~~import os
+import re
+~~import rollbar
+from flask import Flask, render_template
+from werkzeug.exceptions import NotFound
 
 
-(links to Python docs)
+app = Flask(__name__)
+~~rollbar.init(os.environ.get('ROLLBAR_SECRET'))
+~~rollbar.report_message('Rollbar is configured correctly')
+
+MIN_PAGE_NAME_LENGTH = 2
+
+
+@app.route("/<string:page>/")
+def show_page(page):
+    valid_length = len(page) >= MIN_PAGE_NAME_LENGTH
+    valid_name = re.match('^[a-z]+$', page.lower()) is not None
+    if valid_length and valid_name:
+        return render_template("{}.html".format(page))
+    else:
+        msg = "Sorry, couldn't find page with name {}".format(page)
+        raise NotFound(msg)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+We added a couple of new imports, `os` and `rollbar`. `os` allows us to
+grab environment variable values, such as our Rollbar secret key. `rollbar`
+is the library we installed earlier. The two lines below the Flask app
+instantiation are to initialize Rollbar using the Rollbar secret token and
+send a message to the service that it started correctly.
+
+The `ROLLBAR_SECRET` token needs to be set in an environment variable.
+Save an quit the `app.py`. Run `export ROLLBAR_SECRET='token here'` on the
+command line where your virtualenv is activated. This token can be found
+on the Rollbar onboarding screen. 
+
+I typically store all my environment variables in a file like 
+[template.env](https://github.com/fullstackpython/blog-code-examples/blob/master/monitor-flask-apps/template.env) and invoke it from the terminal using
+the `. ./template.env` command. Make sure to avoid committing your secret
+tokens to a source control repository, especially if the repository is 
+public!
+
+After exporting your `ROLLBAR_SECRET` key as an environment variable
+we can test that Rollbar is working as we run our application. Run it
+now using `python`:
+
+```bash
+python app.py
+```
+
+Back in your web browser press the "Done! Go to Dashboard" button. Don't 
+worry about the "Report an Error" section code, we can get back to that in a 
+moment.
+
+If the event hasn't been reported yet we'll see a waiting screen like this
+one:
+
+<img src="/img/170723-monitor-flask-apps/waiting.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Waiting for data on the dashboard.">
+
+Once Flask starts up though, the first event will be populated on the 
+dashboard.
+
+<img src="/img/170723-monitor-flask-apps/first-event.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="First event populated on our dashboard for this project.">
+
+Okay, our first test event has been populated, but we really want to see
+all the errors from our application, not a test event.
 
 
 ## Testing Error Handling
+
+
+(links to Python docs)
 
 
 ## What's Next?
