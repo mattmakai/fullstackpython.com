@@ -16,7 +16,9 @@ integrate one of the many available fantastic hosted
 [monitoring](/monitoring.html) tools.
 
 In this post we will quickly add [Rollbar monitoring](https://rollbar.com)
-to catch errors and visualize our application is running properly.
+to catch errors and visualize our application is running properly. There
+are also many other great hosted monitoring tools, which you can check
+out on the [monitoring](/monitoring.html) page.
 
 
 ## Our Tools 
