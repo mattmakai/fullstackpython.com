@@ -1,6 +1,6 @@
 title: How to Add Hosted Monitoring to Flask Web Applications
 slug: hosted-monitoring-flask-web-apps
-meta: 
+meta: Learn to add hosted monitoring to Flask web applications using Rollbar.
 category: post
 date: 2017-07-23
 modified: 2017-07-23
