@@ -50,7 +50,7 @@ management and application deployment tool built in Python.
 
 
 ### Ansible Resources
-* [An Ansible tutorial](https://serversforhackers.com/editions/2014/08/26/getting-started-with-ansible/)
+* [An Ansible Tutorial](https://serversforhackers.com/an-ansible-tutorial)
   is a fantastically detailed introduction to using Ansible to set up
   servers.
 
