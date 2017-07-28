@@ -45,7 +45,7 @@ operations, such as querying the database from the Django manage.py shell.
 
 
 ## Ansible
-[Ansible](http://www.ansibleworks.com/) is an open source configuration
+[Ansible](http://www.ansible.com/) is an open source configuration
 management and application deployment tool built in Python.
 
 
