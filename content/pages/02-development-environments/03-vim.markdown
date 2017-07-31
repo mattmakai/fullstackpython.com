@@ -12,6 +12,8 @@ Vim, short for Vi IMproved, is a configurable text editor often used as
 a Python development environment. Vim proponents commonly cite the numerous
 plugins, Vimscript and logical command language as major Vim strengths.
 
+<a href="http://www.vim.org/" style="border:none"><img src="/img/logos/vim-the-editor.jpg" width="100%" alt="Vim logo." class="technical-diagram" style="border:1px solid #999; border-radius:6px"></a>
+
 
 ## Why is Vim a good Python development environment?
 Vim's philosophy is that developers are more productive when they avoid
