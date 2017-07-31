@@ -3,7 +3,7 @@ slug: responsive-bar-charts-bokeh-flask-python-3
 meta: How to build responsive bar charts with the Bokeh data visualization library, Flask and Pyton 3.
 category: post
 date: 2017-05-26
-modified: 2017-05-26
+modified: 2017-07-30
 headerimage: /img/170526-bar-charts-bokeh-flask/header.jpg
 headeralt: Python, Flask and Bokeh logos.
 
@@ -88,8 +88,8 @@ pip install bokeh==0.12.5 flask==0.12.2 pandas==0.20.1
 ```
 
 After a brief download and installation period our required dependencies
-should be installed within our virtualenv. Look for output like the 
-following to confirm everything worked.
+should be installed within our virtualenv. Look for output to confirm 
+everything worked.
 
 ```
 Installing collected packages: six, requests, PyYAML, python-dateutil, MarkupSafe, Jinja2, numpy, tornado, bokeh, Werkzeug, itsdangerous, click, flask, pytz, pandas
@@ -109,7 +109,7 @@ We are going to first code a basic Flask application then add our bar
 chart to the rendered page.
 
 Create a folder for your project then within it create a file named
-`app.py` with the following initial contents:
+`app.py` with these initial contents:
 
 ```python
 from flask import Flask, render_template
@@ -321,7 +321,7 @@ documentation open to know what your options are for customizing your
 visualizations.
 
 We just need a few updates to our `templates/chart.html` file to display
-the visualization. Open the file and add the folloiwng 6 lines to the file.
+the visualization. Open the file and add these 6 lines to the file.
 Two of these lines are for the required CSS, two are JavaScript Bokeh
 files and the remaining two are the generated chart.
 
@@ -367,7 +367,7 @@ in the `create_hover_tool` function.
 
 
 ## Adding a Hover Tool
-Within `app.py` modify the `create_hover`_tool to match the following
+Within `app.py` modify the `create_hover_tool` to match the following
 code.
 
 ```python
