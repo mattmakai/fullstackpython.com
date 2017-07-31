@@ -3,7 +3,7 @@ slug: python-bottle-bokeh-bar-charts
 meta: Learn to create responsive bar charts using Bokeh, Bottle and Python 3.
 category: post
 date: 2017-07-25
-modified: 2017-07-25
+modified: 2017-07-30
 headerimage: /img/170725-bottle-bokeh-bar-charts/header.jpg
 headeralt: Python, Bottle and Bokeh logos.
 

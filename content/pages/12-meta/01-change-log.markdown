@@ -15,6 +15,9 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### July
+* Added new 
+  [Bokeh+Bottle bar charts post](/blog/python-bottle-bokeh-bar-charts.html)
+  blog post.
 * Added a way to highlight blog post code changes such as in the new
   [monitoring Flask apps](/blog/hosted-monitoring-flask-web-apps.html) post
   under the "Handling Errors" section.
