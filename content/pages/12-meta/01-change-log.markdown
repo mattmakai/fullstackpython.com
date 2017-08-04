@@ -14,6 +14,10 @@ inception in December 2012. You can view detailed changes via the
 
 
 ## 2017
+### August
+* Fixed diagram mistake on [Peewee](/peewee.html) ORM page that was 
+  referencing SQLAlchemy instead of Peewee.
+
 ### July
 * Added new 
   [Bokeh+Bottle bar charts post](/blog/python-bottle-bokeh-bar-charts.html)
@@ -27,7 +31,6 @@ inception in December 2012. You can view detailed changes via the
   [Make Phone Calls in Python](/blog/make-phone-calls-python.html) 
   blog post thanks to my [colleague Greg Baugues'](http://baugues.com/) 
   sharp eyes. 
-
 
 ### June
 * New blog post on 
