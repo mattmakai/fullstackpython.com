@@ -39,7 +39,7 @@ Any of the common relational database backends such as
 still required. The chart below shows a few example configurations
 that could use Peewee as an ORM.
 
-<img src="/img/visuals/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="technical-diagram"></a>
+<img src="/img/visuals/peewee-orm-example.png" width="100%" alt="Example Peewee configurations with different web frameworks." class="technical-diagram"></a>
 
 <div class="well see-also">Peewee is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
