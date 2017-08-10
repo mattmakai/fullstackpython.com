@@ -18,12 +18,46 @@ programmers than some other applications like [Vim](/vim.html) and
 <a href="https://www.sublimetext.com/" style="border:none"><img src="/img/logos/sublime-text.jpg" width="100%" alt="Sublime Text logo." class="technical-diagram" style="border:1px solid #999; border-radius:6px"></a>
 
 
+### Python-specific Sublime Text resources
+* [Sublime Text 3 Heaven](https://www.kennethreitz.org/essays/sublime-text-3-heaven)
+  is a quick overview of the extensions, packages and bonus toys that
+  one developer uses for his own Sublime Text development setup.
+
+* [Setting Up Sublime Text 3 for Full Stack Python Development](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
+  is a spectacular tutorial that covers installing Sublime Text and 
+  configuring a multitude of helpful Python programming plugins.
+
+* [Sublime Tutor](https://sublimetutor.com/) is an interactive in-editor 
+  keyboard shortcuts tutorial that plugs into Sublime so you can learn and
+  become more productive as you use the editor.
+
+* [Using Generators for Fun and Profit - Utility for developers](http://www.sublimetext.com/forum/viewtopic.php?f=6&t=17671)
+  isn't about setting up your Sublime Text environment but instead how to
+  create your own plugins using Python. The tutorial is written by the
+  author of a Sublime Text plugin who uses [generators](/generators.html)
+  to implement features with Sublime's API.
+
+* [Turning Sublime Text Into a Lightweight Python IDE](https://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html)
+  shows the basic settings and configuration specific to using Sublime with
+  Python as more than just a text editor.
+
+* [Setting up Sublime Text 3 for Python Type Checking](https://medium.com/@erika_dike/setting-up-sublime-text-3-for-python-type-checking-85af5ce1a1ee)
+  shows one way of setting up support for Python 3.6 static type checking in 
+  Sublime.
+
+
 ### Sublime Text resources
-* http://thume.ca/2016/12/03/disassembling-sublime-text/
-* https://hackernoon.com/super-charge-your-sublime-text-3-to-increase-your-productivity-5d02c2c1b356
-* https://medium.com/@arshamshirvani/sync-your-sublime-text-3-configurations-safely-and-easy-b493021c80da
-* https://www.kennethreitz.org/essays/sublime-text-3-heaven
-* http://www.sublimetext.com/forum/viewtopic.php?f=6&t=17671
-* https://sublimetutor.com/
-* https://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html
-* https://medium.com/@erika_dike/setting-up-sublime-text-3-for-python-type-checking-85af5ce1a1ee
+Sublime Text can be used for much more than Python development and there are
+many useful tutorials that are not targeted at a specific programming language
+which are still useful.
+
+* [Super charge your Sublime Text 3 to increase your productivity](https://hackernoon.com/super-charge-your-sublime-text-3-to-increase-your-productivity-5d02c2c1b356)
+  provides many shortcuts and tricks for using the editor.
+
+* [Disassembling Sublime Text](http://thume.ca/2016/12/03/disassembling-sublime-text/) uses a binary disassembler to dive into the reverse engineered 
+  source code of Sublime Text because it is not open source software.
+
+* [Sync your sublime text 3 configurations safely and easy](https://medium.com/@arshamshirvani/sync-your-sublime-text-3-configurations-safely-and-easy-b493021c80da)
+  explains how to mitigate configuration conflicts that can arise when trying
+  to use copied files from one computer to another.
+
