@@ -92,6 +92,9 @@ gone through the process and have advice for making it less painful.
   [an official guide to Python 3 changes](https://docs.python.org/3/whatsnew/index.html)
   you'll want to read.
 
+* [Why Python 3?](http://whypy3.com/) randomly outputs valid reasons to
+  use Python 3 over 2.x.
+
 * [Python 3 in 2016](https://hynek.me/articles/python3-2016/) explains
   that many newer Python developers have only used Python 3 and as that
   cohort continues to grow it will have an outsized impact on further

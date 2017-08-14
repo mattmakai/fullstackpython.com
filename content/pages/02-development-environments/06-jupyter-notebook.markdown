@@ -19,13 +19,23 @@ sharing documents that contain embedded code and execution results.
 
 
 ### Jupyter Notebook resources
-* http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/
-* http://norvig.com/ipython/README.html
-* http://pbpython.com/amortization-model.html
-* https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
-* https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-and-IPython-Notebooks
-* https://gist.github.com/5agado/ee95008f25730d04bfd0eedd5c36f0ee#file-pandas-and-seaborn-ipynb
-* https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html
-* http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb
-* http://nbviewer.jupyter.org/github/akittas/presentations/blob/master/pythess/meta_alltheway/meta_alltheway.ipynb
-* http://nbviewer.jupyter.org/github/akittas/presentations/blob/master/pythess/func_py/func_py.ipynb
+* [Peter Norvig's collection of Jupyter Notebooks](http://norvig.com/ipython/README.html)
+  is a an incredible resource for example projects.
+
+* This 
+  [gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
+  provides many great examples across numerous programming languages.
+
+* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+  explains many of the lesser-known keyboard shortcuts and mechanisms
+  to output settings.
+
+* [r](https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html)
+* [r](http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb)
+* [r](http://nbviewer.jupyter.org/github/akittas/presentations/blob/master/pythess/meta_alltheway/meta_alltheway.ipynb)
+* [r](http://nbviewer.jupyter.org/github/akittas/presentations/blob/master/pythess/func_py/func_py.ipynb)
+
+* [JupyterLab](http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/)
+  is an upcoming new computational environment built on what the Jupyter
+  Notebook creators have learned over the past several years. In the
+  future JupyterLab may be the future for the project.
