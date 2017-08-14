@@ -27,7 +27,7 @@ the editor she may feel like it is impossible to understand all the key
 commands. However, the commands stack together in a logical way so that over
 time the editor becomes predictable.
 
-<div class="well see-also">If you're interested in Vim you'll also want to read about <a href="/development-environments.html">development environments for coding</a> and learn <a href="/why-use-python.html">what makes Python a great programming language</a>.</div>
+<div class="well see-also">Vim is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
 ## Configuring Vim with a Vimrc file

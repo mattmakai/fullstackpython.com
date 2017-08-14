@@ -17,6 +17,8 @@ sharing documents that contain embedded code and execution results.
 
 <a href="http://jupyter.org/" style="border:none"><img src="/img/logos/jupyter.png" width="100%" alt="Jupyter Notebook project logo." class="technical-diagram"></a>
 
+<div class="well see-also">Jupyter Notebook is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
 
 ### Jupyter Notebook resources
 * [Peter Norvig's collection of Jupyter Notebooks](http://norvig.com/ipython/README.html)
@@ -30,10 +32,19 @@ sharing documents that contain embedded code and execution results.
   explains many of the lesser-known keyboard shortcuts and mechanisms
   to output settings.
 
-* [r](https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html)
-* [r](http://nbviewer.jupyter.org/url/norvig.com/ipython/Probability.ipynb)
-* [r](http://nbviewer.jupyter.org/github/akittas/presentations/blob/master/pythess/meta_alltheway/meta_alltheway.ipynb)
-* [r](http://nbviewer.jupyter.org/github/akittas/presentations/blob/master/pythess/func_py/func_py.ipynb)
+* [Advanced Jupyter Notebook Tricks — Part I](https://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/)
+  and 
+  [Building Interactive Dashboards with Jupyter (Part 2)](https://blog.dominodatalab.com/interactive-dashboards-in-jupyter/)
+  have a ton more details on ways to set up Jupyter Notebooks as dashboards
+  and export results to other formats.
+
+* [Hacking my way to a Jupyter notebook powered blog](https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html)
+  explores how the author created a blog using Jupyter but ran into some
+  issues along the way, along with how to solve those problems.
+
+* [Making Publication Ready Python Notebooks](http://blog.juliusschulz.de/blog/ultimate-ipython-notebook)
+  explores the plugins that the author uses when creating and exporting
+  reports from Jupyter.
 
 * [JupyterLab](http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/)
   is an upcoming new computational environment built on what the Jupyter

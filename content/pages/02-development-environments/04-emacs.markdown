@@ -28,7 +28,7 @@ provide an extension mechanism for Emacs. For example,
 ``kill-emacs-hook`` runs before exiting Emacs so functions can be loaded
 into that hook to perform necessary actions before the exiting completes.
 
-<div class="well see-also">While you're reading about coding Python in Emacs be sure to also learn about which <a href="/web-frameworks.html">web frameworks</a> to use as well as <a href="/deployment.html">how to deploy an application</a>.</div>
+<div class="well see-also">Emacs is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
 ## General Emacs resources
