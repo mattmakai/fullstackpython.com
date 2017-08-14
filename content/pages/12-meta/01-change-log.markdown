@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### August
+* Updated [future directions](/future-directions.html) with more context on
+  page maturity.
 * New starter pages for [Companies Using Python](/companies-using-python.html),
   [Sublime Text](/sublime-text.html), 
   [Apache Subversion](/apache-subversion.html)
