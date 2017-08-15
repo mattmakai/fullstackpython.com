@@ -61,6 +61,8 @@ There are roughly one of four buckets of "maturity" a page could fall into:
    [development environments](/development-environments.html).
 4. Stellar: a shining example of a well-written, detailed page that 
    contains numerous explanations and descriptions for the topic. 
+   Where applicable there should be digrams and visualizations that augment
+   the text to help the reader better understand the topic.
    There are also typically multiple categories of resources and links
    for further research.
    Examples: 
