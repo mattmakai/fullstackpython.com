@@ -45,9 +45,7 @@ wants that kind of functionality.
 
 * [Emacs](/emacs.html)
 
-* Sublime Text
-
-* Windows Notepad
+* [Sublime Text](/sublime-text.html)
 
 
 ### IDE implementations

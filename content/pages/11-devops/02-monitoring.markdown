@@ -94,19 +94,19 @@ the software yourself. However, hosted monitoring costs (often a significant
 amount of) money and take your application's data out of your hands so
 these services are not the right fit for every project.
 
-* [Sentry](https://sentry.io/welcome/) is the hosted version of the open
-  source tool that is used to monetize and support further development.
-
-* [New Relic](http://newrelic.com/) provides application and database 
-  monitoring as well as plug ins for capturing and analyzing data about 
-  other devleoper tools in your stack, such as [Twilio](/twilio.html).
-
 * [Rollbar](https://rollbar.com/) instruments both the server side and
   client side to capture and report exceptions. The 
   [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) code library
   provides quick integration for Python web applications. There are also
   specific instructions for common [web frameworks](/web-frameworks.html)
   such as [Django](/django.html) and [Pyramid](/pyramid.html).
+
+* [Sentry](https://sentry.io/welcome/) is the hosted version of the open
+  source tool that is used to monetize and support further development.
+
+* [New Relic](http://newrelic.com/) provides application and database 
+  monitoring as well as plug ins for capturing and analyzing data about 
+  other devleoper tools in your stack, such as [Twilio](/twilio.html).
 
 * [Status.io](http://status.io/) focuses on uptime and response metrics 
   transparency for web applications.
@@ -123,6 +123,10 @@ these services are not the right fit for every project.
 
 
 ## Monitoring resources
+* [How to Add Hosted Monitoring to Flask Web Applications](https://www.fullstackpython.com/blog/hosted-monitoring-flask-web-apps.html)
+  is the first post in a series showing how to add hosted monitoring to
+  Python web apps built with any of the major Python frameworks.
+
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
 
 * [Effortless Monitoring with collectd, Graphite, and Docker](http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/)
