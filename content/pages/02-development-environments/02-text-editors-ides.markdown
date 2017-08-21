@@ -17,6 +17,7 @@ primary user interface for developers to create their own programs.
 [Vim](/vim.html) is an example of a text editor implementation that can be 
 expanded into a full Python IDE using configuration files and plugins.
 
+<div class="well see-also">Text editors and IDEs are a concept implemented by <a href="/vim.html">Vim</a>, <a href="/emacs.html">Emacs</a>, <a href="/sublime-text.html">Sublime Text</a>, <a href="/jupyter-notebook.html">Jupyter Notebook</a> and several other applications. Learn how the parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 ## Why is a text editor or IDE necessary?
 Where will you write your code if you do not have a text editor? Your

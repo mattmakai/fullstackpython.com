@@ -11,7 +11,7 @@ meta: Learn more about the author of Full Stack Python, Matt Makai.
 This website was coded and written by
 [Matt Makai](http://www.mattmakai.com/), currently a 
 [Developer Evangelist](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html)
-at [Twilio](https://www.twilio.com/) in San Francisco, California.
+at [Twilio](https://www.twilio.com/) in Washington, D.C.
 
 Other projects by Matt include 
 [The Full Stack Python Guide to Deployments](http://www.deploypython.com/), 
