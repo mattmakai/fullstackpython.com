@@ -137,7 +137,7 @@ There are numerous ORM implementations written in Python, including
 1. [Peewee](/peewee.html)
 1. [The Django ORM](/django-orm.html)
 1. [PonyORM](http://ponyorm.com/)
-1. [SQLObject](http://sqlobject.org/)
+1. [SQLObject](/sqlobject.html)
 
 There are other ORMs, such as Canonical's
 [Storm](https://storm.canonical.com/), but most of them do not appear to
@@ -189,7 +189,7 @@ open source, under the Apache 2.0 license.
 
 
 ### SQLObject
-[SQLObject](http://sqlobject.org/) is an ORM that has been under active
+[SQLObject](/sqlobject.html) is an ORM that has been under active
 open source development since
 [before 2003](http://sqlobject.org/News1.html#sqlobject-0-5).
 
@@ -288,10 +288,5 @@ A curated list of resources can be found on the dedicated
 
 
 ### SQLObject resources
-* This post on
-  [Object-Relational Mapping with SQLObject](http://www.andypatterns.com/index.php/blog/object_relational_mapping_pattern_-_using_sqlobj/)
-  explains the concept behind ORMs and shows the Python code for how they
-  can be used.
+SQLObject resources can be found on the [SQLObject ORM page](/sqlobject.html).
 
-* Ian Bicking presented on SQLObject back in 2004 with a talk on
-  [SQLObject and Database Programming in Python](http://www.ianbicking.org/docs/sqlobject-presentation/sqlobject-and-database-programming.html).
