@@ -30,8 +30,8 @@ statement to retrieve every row in the USERS table where the
     SELECT * FROM USERS WHERE zip_code=94107;
 
 
-The equivalent Django ORM query would instead look like the following Python
-code:
+The equivalent [Django ORM](/django-orm.html) query would instead look like 
+the following Python code:
 
     # obtain everyone in the 94107 zip code and assign to users variable
     users = Users.objects.filter(zip_code=94107)
@@ -135,7 +135,7 @@ There are numerous ORM implementations written in Python, including
 
 1. [SQLAlchemy](/sqlalchemy.html)
 1. [Peewee](/peewee.html)
-1. [The Django ORM](https://docs.djangoproject.com/en/1.8/topics/db/)
+1. [The Django ORM](/django-orm.html)
 1. [PonyORM](http://ponyorm.com/)
 1. [SQLObject](http://sqlobject.org/)
 
@@ -147,8 +147,8 @@ ORMs below.
 
 ### Django's ORM
 The [Django](/django.html) web framework comes with
-its own built-in object-relational mapping module, generally referred to
-as "the Django ORM" or "Django's ORM".
+[its own built-in object-relational mapping module](/django-orm.html), 
+generally referred to as "the Django ORM" or "Django's ORM".
 
 [Django's ORM](https://docs.djangoproject.com/en/dev/topics/db/) works well
 for simple and medium-complexity database operations. However, there are often
@@ -157,11 +157,10 @@ writing straight SQL or using [SQLAlchemy](http://www.sqlalchemy.org/).
 
 It is technically possible to drop down to SQL but it ties the queries to a
 specific database implementation. The ORM is coupled closely with Django so
-replacing the default ORM with SQLAlchemy is currently a hack workaround. Note
-though that some of the Django core committers believe it is only a matter of
-time before the default ORM is replaced with SQLAlchemy. It will be a large
-effort to get that working though so it's likely to come in
-[Django 1.9 or later](https://github.com/mattmakai/fullstackpython.com/issues/48).
+replacing the default ORM with SQLAlchemy is currently a hack workaround. 
+Note though it is possible that swappable ORM backends will be possible
+in the future as it is now possible to change the 
+[template engine](/template-engines.html) for rendering output in Django.
 
 Since the majority of Django projects are tied to the default ORM, it is 
 best to read up on advanced use cases and tools for doing your best work 
@@ -270,75 +269,8 @@ pages.
 
 
 ### Django ORM resources
-* [Django models, encapsulation and data integrity](http://www.dabapps.com/blog/django-models-and-encapsulation/)
-  is a detailed article by Tom Christie on encapsulating Django models for
-  data integrity.
-
-* [Django Debug Toolbar](http://django-debug-toolbar.readthedocs.org/en/1.2/)
-  is a powerful Django ORM database query inspection tool. Highly recommended
-  during development to ensure you're writing reasonable query code.
-  [Django Silk](http://mtford.co.uk/blog/2/) is another inspection tool and
-  has capabilities to do more than just SQL inspection.
-
-* [Making a specific Django app faster](http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html)
-  is a Django performance blog post with some tips on measuring performance
-  and optimizing based on the measured results.
-
-* [Why I Hate the Django ORM](https://speakerdeck.com/alex/why-i-hate-the-django-orm)
-  is Alex Gaynor's overview of the bad designs decisions, some of which he
-  made, while building the Django ORM.
-
-* [Going Beyond Django ORM with Postgres](https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres)
-  is specific to using PostgreSQL with Django.
-
-* [Migrating a Django app from MySQL to PostgreSQL](http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/)
-  is a quick look at how to move from MySQL to PostgreSQL. However, my guess
-  is that any Django app that's been running for awhile on one
-  [relational database](/databases.html) will require a lot more work to
-  port over to another backend even with the power of the ORM.
-
-* [Django Model Descriptors](http://blog.kevinastone.com/django-model-descriptors.html)
-  discusses and shows how to incorporate business logic into Django models
-  to reduce complexity from the views and make the code easier to reuse across
-  separate views.
-
-* [Supporting both Django 1.7 and South](http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/)
-  explains the difficulty of supporting Django 1.7 and maintaining South
-  migrations for Django 1.6 then goes into how it can be done.
-
-* [Adding basic search to your Django site](https://www.calazan.com/adding-basic-search-to-your-django-site/)
-  shows how to write generic queries that'll allow you to provide site
-  search via the Django ORM without relying on another tool like
-  ElasticSearch. This is great for small sites before you scale them up with
-  a more robust search engine.
-
-* [How to use Django's Proxy Models](https://www.wellfireinteractive.com/blog/using-django-proxy-models)
-  is a solid post on a Django ORM concept that doesn't frequently get a lot
-  of love or explanation.
-
-* [Tightening Django Admin Logins](http://tech.marksblogg.com/django-admin-logins.html)
-  shows you how to log authentication failures, create an IP addresses white
-  list and combine fail2ban with the authentication failures list.
-
-* [Django Migrations - a Primer](https://realpython.com/blog/python/django-migrations-a-primer/)
-  takes you through the new migrations system integrated in the Django core as of Django 1.7, looking specifically at a solid workflow that you can use for creating and applying migrations.
-
-* [Django 1.7: Database Migrations Done Right](https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/)
-  explains why South was not directly integrated into Django, how migrations
-  are built and shows how backwards migrations work.
-
-* [Squashing and optimizing migrations in Django](http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/)
-  shows a simple example with code for how to use the migrations integrated
-  into Django 1.7.
-
-* [Sorting querysets with NULLs in Django](https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/)
-  shows what to do if you're struggling with the common issue of sorting
-  columns that contain NULL values.
-
-* [Best Practices working with Django models in Python](http://steelkiwi.com/blog/best-practices-working-django-models-python/)
-  has a ton of great advice on proper model naming conventions, quirks to 
-  avoid with `ForeignKey` field relationships, handling IDs and many other 
-  edge cases that come up when frequently working with Django's ORM.
+A curated list of resources can be found on the dedicated 
+[Django ORM resources](/django-orm.html) page.
 
 
 ### Pony ORM resources
