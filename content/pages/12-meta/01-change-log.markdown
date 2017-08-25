@@ -15,6 +15,9 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### August
+* Added a new [Django ORM](/django-orm.html) page with updated resources.
+* Add new [page statuses](/page-statuses.html) by chapter to make it easier
+  to track what's being worked on.
 * Updated [future directions](/future-directions.html) with more context on
   page maturity.
 * New starter pages for [Companies Using Python](/companies-using-python.html),
