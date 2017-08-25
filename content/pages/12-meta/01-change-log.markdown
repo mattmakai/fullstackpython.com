@@ -15,8 +15,11 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### August
-* Added a new [Django ORM](/django-orm.html) page with updated resources.
-* Add new [page statuses](/page-statuses.html) by chapter to make it easier
+* Split out from the [ORMs](/object-relational-mapper-orms.html) and created 
+  dedicated pages for [Django ORM](/django-orm.html),
+  [Pony](/pony-orm.html) and [SQLObject](/sqlobject.html). Also included 
+  updated resources for each page.
+* Added new [page statuses](/page-statuses.html) by chapter to make it easier
   to track what's being worked on.
 * Updated [future directions](/future-directions.html) with more context on
   page maturity.

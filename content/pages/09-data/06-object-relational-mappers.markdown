@@ -136,7 +136,7 @@ There are numerous ORM implementations written in Python, including
 1. [SQLAlchemy](/sqlalchemy.html)
 1. [Peewee](/peewee.html)
 1. [The Django ORM](/django-orm.html)
-1. [PonyORM](http://ponyorm.com/)
+1. [PonyORM](/pony-orm.html)
 1. [SQLObject](/sqlobject.html)
 
 There are other ORMs, such as Canonical's
@@ -189,7 +189,7 @@ open source, under the Apache 2.0 license.
 
 
 ### SQLObject
-[SQLObject](/sqlobject.html) is an ORM that has been under active
+[SQLObject](http://sqlobject.org/) is an ORM that has been under active
 open source development since
 [before 2003](http://sqlobject.org/News1.html#sqlobject-0-5).
 
@@ -274,17 +274,8 @@ A curated list of resources can be found on the dedicated
 
 
 ### Pony ORM resources
-* [Why you should give Pony ORM a chance](http://jakeaustwick.me/why-you-should-give-ponyorm-a-chance/)
-  explains some of the benefits of Pony ORM that make it worth trying out.
-
-* [An intro to Pony ORM](http://www.blog.pythonlibrary.org/2014/07/21/python-101-an-intro-to-pony-orm/)
-  shows the basics of how to use the library, such as creating databases
-  and manipulating data.
-
-* The Pony ORM author explains on a Stack Overflow answer
-  [how Pony ORM works behind the scenes](http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks).
-  Worth a read whether or not you're using the ORM just to find out how
-  some of the magic coding works.
+All Pony ORM resources are listed on the dedicated 
+[Pony ORM page](/pony-orm.html).
 
 
 ### SQLObject resources
