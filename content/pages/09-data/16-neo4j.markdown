@@ -19,14 +19,34 @@ of the database.
 
 <a href="https://neo4j.com/product/" style="border: none;"><img src="/img/logos/neo4j.png" width="100%" alt="Neo4j logo." class="technical-diagram" /></a>
 
-<div class="well see-also">Neo4j is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+<div class="well see-also">Neo4j is an implementation of the <a href="/no-sql-datastore.html">NoSQL graph database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
+
+### Comparing Neo4j with relational databases
+* [RDBMS & Graphs: Relational vs. Graph Data Modeling](https://neo4j.com/blog/rdbms-vs-graph-data-modeling/)
+
+* [Building social network with Neo4j and Python](https://www.youtube.com/watch?v=hDuy8Qj6Q-k)
+  explores varying approaches for performing social data analysis in
+  relational databases and graph databases.
+
+* [The Newest RDBMS-to-Neo4j ETL Tool](https://neo4j.com/blog/rdbms-neo4j-etl-tool/)
+  explains the differences between traditional 
+  [relational database models](/databases.html) and the graph-based
+  structure Neo4j provides. The article also covers how to use an Extract,
+  Transform and Load (ETL) tool to move your data from one database such as
+  [MySQL](/mysql.html) into Neo4j.
 
 
 ### Neo4j resources
-* [1](https://www.youtube.com/watch?v=ILjTikVhT9k)
-* [2](http://neo4j.com/blog/rdbms-drivers-for-graph-database/)
-* [3](http://neo4j.com/blog/technical-documentation-graph/)
-* [4](https://neo4j.com/blog/rdbms-neo4j-etl-tool/)
-* [5](https://neo4j.com/blog/rdbms-vs-graph-data-modeling/)
-* [6](https://www.youtube.com/watch?v=hDuy8Qj6Q-k)
-* [7](https://github.com/JPCERTCC/aa-tools/tree/master/impfuzzy/impfuzzy_for_Neo4j)
+* [Building a Recommendation Engine with Neo4j and Python](https://www.youtube.com/watch?v=ILjTikVhT9k)
+  shows how to use Neo4j's Cypher query language to retrieve and process data. 
+
+* [Using Neo4j from Python](https://neo4j.com/developer/python/) is the 
+  official page with Python-based database drivers.
+
+* [Getting started with Neo4j and Python](https://marcobonzanini.com/2015/04/06/getting-started-with-neo4j-and-python/)
+  is a short tutorial for installing Neo4j and running your first query.
+
+* [impfuzzy for Neo4j](https://github.com/JPCERTCC/aa-tools/tree/master/impfuzzy/impfuzzy_for_Neo4j)
+  is a Python script that uses Neo4j as a backend to analyze malware.
+
