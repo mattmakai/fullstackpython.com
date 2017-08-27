@@ -15,6 +15,8 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### August
+* Updated the [Redis](/redis.html) page with loads of new resources.
+* New [Neo4j](/neo4j.html) starter page.
 * Loads of new [Bokeh](/bokeh.html) resources and some new descriptions.
 * Split out from the [ORMs](/object-relational-mapper-orms.html) and created 
   dedicated pages for [Django ORM](/django-orm.html),

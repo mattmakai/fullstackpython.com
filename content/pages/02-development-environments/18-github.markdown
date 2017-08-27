@@ -10,8 +10,8 @@ meta: GitHub is a software-as-a-service platform that provides a user interface,
 # GitHub
 [GitHub](https://github.com) is a software-as-a-service platform that 
 provides a user interface, tools and backup for developers to use with their 
-Git projects. Accounts are free for public open source development and private
-Git repositories can also be hosted for 
+[Git](/git.html) repositories. Accounts are free for public open source 
+development and private Git repositories can also be hosted for 
 [$7 per month](https://github.com/pricing).
 
 <a href="https://github.com/" style="border:none"><img src="/img/logos/github.png" width="100%" alt="GitHub logo." class="technical-diagram"></a>
