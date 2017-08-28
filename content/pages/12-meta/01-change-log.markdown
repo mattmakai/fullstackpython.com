@@ -15,6 +15,7 @@ inception in December 2012. You can view detailed changes via the
 
 ## 2017
 ### August
+* Added [responsive design](/responsive-design.html) starter page.
 * Updated the [Redis](/redis.html) page with loads of new resources.
 * New [Neo4j](/neo4j.html) starter page.
 * Loads of new [Bokeh](/bokeh.html) resources and some new descriptions.
