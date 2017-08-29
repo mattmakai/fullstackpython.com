@@ -1,0 +1,69 @@
+title: d3.js
+category: page
+slug: d3-js
+sortorder: 0924
+toc: False
+sidebartitle: d3.js
+meta: d3.js is a JavaScript visualization library for creating interactive visuals for web browsers.
+
+
+# Data-Driven Documents (d3.js)
+[Data-Driven Documents (d3.js)](https://d3js.org/) is a 
+[JavaScript](/javascript.html) visualization library used to create 
+interactive visuals for web browsers.
+
+<img src="/img/logos/d3js.png" width="100%" alt="Data-Driven Documents (d3.js) logo." class="technical-diagram">
+
+
+### d3.js tutorials
+d3.js has a steep learning curve so it is a good idea to read several 
+tutorials before diving in and trying to create your own visualization
+from scratch.
+
+* [The Hitchhiker’s Guide to d3.js](https://medium.com/@enjalot/the-hitchhikers-guide-to-d3-js-a8552174733a)
+  is a wonderfully-written resource that explains the context for how
+  d3.js works and how all the pieces can be used to create your desired
+  visualizations.
+
+* [d3.js first steps](https://www.dashingd3js.com/d3js-first-steps)
+  contains the code and markup for building your first d3.js visual.
+
+* [Let's Make a D3 Plugin](https://bost.ocks.org/mike/d3-plugin/) shows
+  you how to create your own reusable plugin that you can use across
+  multiple visualizations as a separate JavaScript library. d3.js 
+  version 4 is now widely used so don't worry about the note at the
+  start of the article.
+
+* [Reusable and extendable d3 charts](https://537.io/reusable-and-extendable-d3-charts/)
+  is a natural extension of the d3 plugin post. It shows how to reuse
+  visualization code between multiple visuals.
+
+* [Visualizing Movement Data - Part I](https://omid.al/posts/2016-08-23-MocapVis-D3.html)
+  provides a detailed example of how to draw a complex visualization.
+
+* This [Fantasy Map Generator](https://bl.ocks.org/Azgaar/b845ce22ea68090d43a4ecfb914f51bd)
+  is such a cool example of what d3.js can procedurally generate based on 
+  a set of inputs.
+
+* [Building dashboards with Django and D3](http://www.dreisbach.us/blog/building-dashboards-with-django-and-d3/)
+
+* [Argyle](http://bl.ocks.org/veltman/f24fba4f6549639cacfd4d0a50e9d4b8) in
+  d3? Oh yes, the library can do that, and here is the code to prove it.
+
+
+### Charts with d3.js
+* [Responsive D3js Charts](http://ablesense.com/responsive-d3js-charts/)
+  shows how to take a static line chart and make it 
+  [responsive](/responsive-design.html) when the browser size changes.
+
+* [Resize to Scale with d3.js](http://www.thesoftwaresimpleton.com/blog/2015/11/16/resize-d3/)
+  gives code for a render function that adjusts the size of the viewing
+  window based on the parent element for the visualization.
+
+* [Make great-looking d3.js charts in Python without coding a line of JavaScript](http://dataviztalk.blogspot.com/2016/01/make-great-looking-d3js-charts-in.html)
+  combines a Python backend with the 
+  [python-nvd3](https://github.com/areski/python-nvd3) library to
+  generate d3.js charts without having to hand-write the JavaScript code.
+  If you are interested in a solution like this for your own visualizations
+  then you should also check out [Bokeh](/bokeh.html).
+

@@ -36,6 +36,10 @@ developers. The following tutorials can quickly get you up to speed.
   for both non-programmers and junior developers who want to learn everything
   from terminology to workflow.
 
+* [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
+  is a free ebook written for experienced developers that contains both
+  the syntax and the conceptual ideas behind how Git works.
+
 * [A Designer's Guide to Git](https://blog.marvelapp.com/designers-guide-git/)
   gives a beginner's Git overview for non-programmers. The tutorial also 
   covers using Git clients such as the GitHub desktop application.
