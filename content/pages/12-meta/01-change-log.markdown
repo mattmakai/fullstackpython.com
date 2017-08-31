@@ -8,13 +8,16 @@ meta: The change log page explains what is new on Full Stack Python.
 
 
 # Change Log
-This is a running list of the major changes to Full Stack Python since its
-inception in December 2012. You can view detailed changes via the 
-[source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/) on GitHub.
+Here are the major changes to Full Stack Python in reverse chronological
+order since its inception in December 2012. You can view commit-level
+changes via the 
+[source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/) 
+on GitHub.
 
 
 ## 2017
 ### August
+* Updated subnav with a link to [changelog](/change-log.html).
 * Added [d3.js](/d3-js.html) starter page.
 * Added [responsive design](/responsive-design.html) starter page.
 * Updated the [Redis](/redis.html) page with loads of new resources.
