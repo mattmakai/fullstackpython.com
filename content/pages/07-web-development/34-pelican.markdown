@@ -16,7 +16,7 @@ Markdown or reStructuredText to produce websites.
 Pelican's 
 [source code is available on GitHub](https://github.com/getpelican/pelican)
 under the 
-[GPL 3 license](https://www.gnu.org/licenses/quick-guide-gplv3.html).
+[AGPL 3 license](https://www.gnu.org/licenses/why-affero-gpl.html).
 
 <a href="http://docs.getpelican.com/en/3.6.3/" style="border: none;"><img src="/img/logos/pelican.png" width="100%" alt="Pelican static website generator logo." class="technical-diagram" /></a>
 
