@@ -14,9 +14,7 @@ behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as separate
 libraries.
 
-
 <a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram"></a>
-
 
 For example, 
 [authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
