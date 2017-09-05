@@ -221,10 +221,6 @@ based on [WebSockets](/websockets.html).
 * [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
   is a very detailed introduction to Djangular with example code. 
 
-* [Building Web Applications with Django and AngularJS](https://thinkster.io/brewer/angular-django-tutorial/)
-  is a very detailed guide for using Django as an API layer and AngularJS
-  as the MVC front end in the browser.
-
 * This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://mourafiq.com/2013/07/01/end-to-end-web-app-with-django-angular-1.html)
   tutorial along with 
   [part 2](http://mourafiq.com/2013/07/15/end-to-end-web-app-with-django-angular-2.html),
