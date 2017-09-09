@@ -130,11 +130,6 @@ gone through the process and have advice for making it less painful.
   strongly encourages Python 3 adoption by publicly stating their
   intentions. 
 
-* Only 28% of dependencies still only support Python 2, according to 
-  [this post's analysis of 6000 Python libraries](https://medium.com/broken-window/python-3-support-for-third-party-libraries-dcd7a156e5bd).
-  The other 72% of libraries either support both Python 2 & 3 (14%), or only 
-  support Python 3 (58%).
-
 * [There isn’t really a Python 2 vs Python 3 Problem](http://pythonforengineers.com/there-isnt-really-a-python-2-vs-python-3-problem/)
   tries to cut past the concern about the Python 2 vs 3 divide and explain
   that it's really not a major concern as a Python programmer. The 
