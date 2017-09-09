@@ -16,6 +16,12 @@ on GitHub.
 
 
 ## 2017
+### September
+* Modifying and favoring links to original sources rather than Medium links
+  due to their new pop-ups that are really annoying for readers, especially
+  when you're in the middle of trying to figure out a solution to a coding
+  problem.
+
 ### August
 * Updated subnav with a link to [changelog](/change-log.html).
 * Added [d3.js](/d3-js.html) starter page.
