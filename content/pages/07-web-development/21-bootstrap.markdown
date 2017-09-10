@@ -18,6 +18,14 @@ is especially useful as a base layer of
 
 
 ### Bootstrap resources
+* [Getting Started with Bootstrap](https://realpython.com/blog/python/getting-started-with-bootstrap-3/)
+  provides a walkthrough of a sample starter template so you can understand
+  the [CSS](/cascading-style-sheets.html) classes that Bootstrap uses.
+
+* [What is Bootstrap and how do I use it?](https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/)
+  is an awesome tutorial that goes through many of the main Bootstrap
+  elements such as icons, navigation bars and "jumbotron"-style webpages.
+
 * [Bootstrap 4: What's New?](https://medium.com/wdstack/bootstrap-4-whats-new-visual-guide-c84dd81d8387)
   shows a slew of comparisons for how user interface elements have changed
   design over the past several Bootstrap major version iterations.
