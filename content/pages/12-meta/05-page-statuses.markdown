@@ -47,30 +47,78 @@ category.
 | [Emacs](/emacs.html)                                       | intermediate |
 | [Sublime Text](/sublime-text.html)                         | starter      |
 | [Jupyter Notebook](/jupyter-notebook.html)                 | starter      |
+| Shells                                                     | not yet      | 
+| Bash                                                       | not yet      | 
+| zsh                                                        | not yet      | 
+| PowerShell                                                 | not yet      | 
+| Environment configuration                                  | not yet      | 
+| [Application dependencies](/application-dependencies.html) | intermediate | 
+| Dependency isolation                                       | not yet      |
+| virtual environments (virtualenvs)                         | not yet      |
+| Environment variables                                      | not yet      |
+| Localhost tunnels                                          | not yet      |
 | [Source Control](/source-control.html)                     | intermediate |
 | [Git](/git.html)                                           | starter      |
 | [Mercurial](/mercurial.html)                               | starter      |
 | [Apache Subversion](/apache-subversion.html)               | starter      |
-| [Local development](/local-development.html)               | starter      |
+| [Hosted source control](/hosted-source-control-services.html) | starter   |
+| [GitHub](/github.html)                                     | starter      |
+| [BitBucket](/bitbucket.html)                               | starter      |
+| [GitLab](/gitlab.html)                                     | starter      |
 
 
 ## Chapter 3: Core Python Language
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+| [Programming language](/python-programming-language.html)  | starter      |
+| Language concepts                                          | not yet      |
+
 
 ## Chapter 4: Testing
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 5: Documentation
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 6: Security
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 7: Web Development
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 8: Web App Deployment
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 9: Data
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 10: Web APIs
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 11: DevOps
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+
 
 ## Chapter 12: Meta
-
+| Page                                                       | Status       |
+|------------------------------------------------------------|--------------|
+| [Change log](change-log.html)                              | intermediate | 
+| [What "full stack" means](/what-full-stack-means.html)     | intermediate | 
+| [About the author](/about-author.html)                     | complete     | 
+| [Page statuses](/page-statuses.html)                       | intermediate | 
+| [Future directions](/future-directions.html)               | intermediate | 
