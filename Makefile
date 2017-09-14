@@ -9,6 +9,21 @@ run:
 	sed -i '' 's/~~//g' generated/updated_site/blog/*.html
 
 
+bookbuild:                                                                   
+	pelican -t theme -s book_settings.py -o generated/book content
+	cp -R static-html/* generated/book/
+	cp -R static/* generated/book/
+	rm -rf generated/book/pages
+
+
+pdf: bookbuild
+	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight-line">\1<\/span>/g' generated/book/pdf-book.html
+	sed -i '' 's/"\/img\//"img\//g' generated/book/pdf-book.html
+	sed -i '' 's/~~//g' generated/book/pdf-book.html
+	cd generated/book; prince pdf-book.html -o full_stack_python.pdf
+
+
+
 update:
 	python update_s3.py
 	rm -rf generated/current_site

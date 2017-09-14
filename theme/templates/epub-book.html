@@ -2,11 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="theme/css/pdf-book.css" rel="stylesheet">
+  <link href="theme/css/epub-book.css" rel="stylesheet">
 </head>
 <body>
-  <img src="img/covers/cover-a4.png" width="100%">
-  <br/>
   {% for page in pages|sort(attribute='sortorder') %}
     {% if page.sortorder[0:2] == "00" %}
       {{ page.content }}

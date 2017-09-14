@@ -17,7 +17,7 @@ that software developers can use to add communications such as
 [two-factor authentication](https://www.twilio.com/docs/tutorials/walkthrough/two-factor-authentication/python/flask)
 into their [Python](/learning-programming.html) applications.
 
-<img src="/img/twilio-logo.png" width="100%" alt="Twilio logo." class="technical-diagram" style="padding: 10px 0 10px 0;"/>
+<img src="/img/logos/twilio.png" width="100%" alt="Twilio logo." class="technical-diagram" style="padding: 10px 0 10px 0;"/>
 
 
 ## Why is Twilio a good API choice?
