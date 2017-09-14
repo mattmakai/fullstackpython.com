@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2017
 ### September
+* Added new [minification](/minification.html) starter page.
 * Modifying and favoring links to original sources rather than Medium links
   due to their new pop-ups that are really annoying for readers, especially
   when you're in the middle of trying to figure out a solution to a coding
