@@ -11,6 +11,8 @@ meta: Learn how to use Cascading Style Sheets (CSS) to create your web applicati
 Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.
 
+<img src="/img/logos/css.jpg" width="100%" alt="CSS3 logo." class="technical-diagram" />
+
 
 ## Why is CSS necessary?
 CSS separates the content contained in HTML files from how the content 
