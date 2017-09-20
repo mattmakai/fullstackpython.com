@@ -111,7 +111,11 @@ workflow. These resources will come in handy for specific Git subjects.
   that the author uses for his own environment.
 
 * [How to Quickly and Correctly Generate a Git Log in HTML](http://www.oilshell.org/blog/2017/09/19.html)
-  
+  is an interesting look at how string processing on \*nix systems works
+  by generating an HTML page from a Git log. If you need to output your
+  Git commits somewhere and are having trouble writing your own script
+  you should check out some of the interesting solutions the author
+  presents.
 
 
 ## Git Workflows
