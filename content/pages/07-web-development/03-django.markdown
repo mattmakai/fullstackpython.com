@@ -83,6 +83,9 @@ as of Django 1.9.
 * [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-8) 
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
+  
+* [Django OverIQ](https://overiq.com/django/1.10/intro-to-django) 
+  is project based Django tutorial for beginners. Although, a entry level course, it goes into much more depth.
 
 * This tutorial shows how to create
   [a Django web app that can make phone calls and send text messages for automated surveys](https://www.twilio.com/docs/tutorials/walkthrough/automated-survey/python/django). 
