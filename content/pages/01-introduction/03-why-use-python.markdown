@@ -19,7 +19,9 @@ language is also widely taught in universities and used for working with
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).
 
-<div class="well see-also">If you're learning about why to use Python you should also take a look at <a href="/best-python-resources.html">the best Python resources</a> and read <a href="/what-full-stack-means.html">what "full stack" means</a>.</div>
+<img src="/img/logos/python-wide.png" width="100%" class="technical-diagram" alt="Python logo." style="margin-top:20px">
+
+<div class="well see-also">If you're learning about why to use Python you should also take a look at <a href="/best-python-resources.html">the best Python resources</a> and read <a href="/web-development.html">more about web development</a>.</div>
 
 
 ## Python's programming language popularity

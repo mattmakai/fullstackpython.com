@@ -110,6 +110,9 @@ workflow. These resources will come in handy for specific Git subjects.
   [an example Gist](https://gist.github.com/Tiagojdferreira/115ecac229e176e48d520c59b022e4fb) 
   that the author uses for his own environment.
 
+* [How to Quickly and Correctly Generate a Git Log in HTML](http://www.oilshell.org/blog/2017/09/19.html)
+  
+
 
 ## Git Workflows
 Teams of developers can use Git in varying workflows because of Git's 
