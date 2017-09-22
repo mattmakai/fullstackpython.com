@@ -129,5 +129,5 @@ or [@mattmakai](https://twitter.com/mattmakai). I'm also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
 See something wrong in this post? Fork 
-[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170920-provision-ubuntu-linux-servers-linode.markdown)
+[this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/170920-provision-ubuntu-16-04-server-linode.markdown)
 and submit a pull request.
