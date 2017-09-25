@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### September
+* New short blog post showing how to 
+  [Provision Ubuntu 16.04 Linux Servers on Linode](/blog/provision-ubuntu-linux-servers-linode.html).
 * Added new [minification](/minification.html) and 
   [data analysis](/data-analysis.html) starter pages.
 * Modifying and favoring links to original sources rather than Medium links
