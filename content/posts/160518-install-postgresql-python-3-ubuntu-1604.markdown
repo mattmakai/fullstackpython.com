@@ -3,7 +3,7 @@ slug: postgresql-python-3-psycopg2-ubuntu-1604
 meta: A guide for installing and using PostgreSQL with Python 3 and psycopg2 on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-18
-modified: 2017-04-28
+modified: 2017-09-27
 headerimage: /img/160518-postgresql-ubuntu-1604/header.jpg
 headeralt: PostgreSQL and Ubuntu logos. Copyright their respective owners.
 
@@ -35,7 +35,7 @@ the Python interpreter, here are the other components we'll use:
   [application dependency](/application-dependencies.html)
 * [PostgreSQL](http://www.postgresql.org/)
 
-If you aren't sure how how to install pip and virtualenv, review the 
+If you aren't sure how to install pip and virtualenv, review the 
 first few steps of the 
 [how to set up Python 3, Bottle and Green Unicorn on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)
 guide.
