@@ -50,7 +50,7 @@ has support for both Python 2.7 and 3.6.
 
 * [Building Scikit-Learn For AWS Lambda](https://serverlesscode.com/post/scikitlearn-with-amazon-linux-container/)
 
-
+* [Code Evaluation With AWS Lambda and API Gateway](https://realpython.com/blog/python/code-evaluation-with-aws-lambda-and-api-gateway/) shows how to develop a code evaluation API, to execute arbitrary code, with AWS Lambda and API Gateway.
 
 ### General AWS Lambda resources
 * [The Serverless Start-Up - Down With Servers!](http://highscalability.com/blog/2015/12/7/the-serverless-start-up-down-with-servers.html)
