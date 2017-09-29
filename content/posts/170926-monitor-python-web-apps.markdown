@@ -162,16 +162,8 @@ of output.
 
 <img src="/img/170926-monitor-python-web-apps/run-bottle-app.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Run the local Bottle development server.">
 
-What if we try to access the application running on 
-[localhost port 8080](http://localhost:8080)?
-
-<img src="/img/170926-monitor-python-web-apps/localhost-404.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Testing our Bottle web app at the base URL gets an HTTP 404 error.">
-
-HTTP status 404 page not found, which is what we expected because we only
-defined a single route and it did not live at the base path.
-
-Try a URL with a path that contains only alphabetic characters and hyphens,
-such as 
+Try to access a URL with a path that contains only alphabetic characters and 
+hyphens, such as 
 [localhost:8080/hello-world/](http://localhost:8080/hello-world/).
 
 <img src="/img/170926-monitor-python-web-apps/localhost-hello-world.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Testing at /hello-world/ returns an HTTP 200 response.">
