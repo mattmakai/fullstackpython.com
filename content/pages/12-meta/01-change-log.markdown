@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2017
 ### September
+* New blog post on 
+  [Monitoring Python Web Apps](/blog/monitor-python-web-applications.html)
+  that uses [Bottle](/bottle.html) as the example 
+  [web framework](/web-frameworks.html) with a simple application.
 * New short blog post showing how to 
   [Provision Ubuntu 16.04 Linux Servers on Linode](/blog/provision-ubuntu-linux-servers-linode.html).
 * Added new [minification](/minification.html) and 
