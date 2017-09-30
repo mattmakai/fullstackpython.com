@@ -64,6 +64,14 @@ steps to more easily get your web application up and running.
   [Green Unicorn](/green-unicorn-gunicorn.html) as the 
   [WSGI server](/wsgi-servers.html).
 
+* Check out these Full Stack Python Bottle tutorials that'll teach you 
+  how to write a few small but very useful Bottle web apps:
+
+    * [Creating Bar Chart Visuals with Bokeh, Bottle and Python 3](/blog/python-bottle-bokeh-bar-charts.html)
+    * [Dialing Outbound Phone Calls with a Bottle Web App](/blog/dial-outbound-phone-calls-python-bottle.html)
+    * [How to Monitor Python / Bottle Web Apps](/blog/monitor-python-web-applications.html)
+    * [Replying to SMS Text Messages with Python and Bottle](/blog/reply-sms-text-messages-python-bottle.html)
+
 * Digital Ocean provides an extensive [introductory post on Bottle](https://www.digitalocean.com/community/articles/how-to-use-the-bottle-micro-framework-to-develop-python-web-apps).
 
 * [First Steps with Python and Bottle](https://www.youtube.com/watch?v=qakG9BYJ1tw&list=PLqrz4nXepkz63z1y4-oHfZHWy11gSoAn0)
