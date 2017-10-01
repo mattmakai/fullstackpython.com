@@ -125,6 +125,10 @@ further clarification.
   been fixed to make building and installing application dependencies so
   much better.
 
+* [Alice in Python projectland](https://veekaybee.github.io/2017/09/26/python-packaging/)
+  is an amazing post that takes the reader from simple Python script
+  into a complete Python package.
+
 * [Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
   [virtualenv and pip basics](http://jonathanchu.is/posts/virtualenv-and-pip-basics/).
 
