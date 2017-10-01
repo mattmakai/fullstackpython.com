@@ -16,6 +16,10 @@ on GitHub.
 
 
 ## 2017
+### October
+* New starter page for [Rollbar](/rollbar.html) as part of the hosted
+  monitoring services series.
+
 ### September
 * New blog post on 
   [Monitoring Python Web Apps](/blog/monitor-python-web-applications.html)
