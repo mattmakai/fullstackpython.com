@@ -29,7 +29,7 @@ Looking forward to seeing you all at PyCon US in Cleveland early next year!
 Speaking of folks who will definitely be at PyCon, 
 [**Python Bytes**](https://pythonbytes.fm/) is an awesome weekly Python
 podcast by [Michael Kennedy](https://twitter.com/mkennedy) of 
-[Talk Python to Me](httpshttps://talkpython.fm/) and 
+[Talk Python to Me](https://talkpython.fm/) and 
 [Brian Okken](https://twitter.com/brianokken) of 
 [Test and Code](http://testandcode.com/). Michael and Brian teamed up to
 host and produce Python Bytes. I really enjoy listening to the rapid-fire 
@@ -40,20 +40,20 @@ Michael and Brian were kind enough to invite me on as a co-host for the
 while Michael was on vacation. 
 The [following episode "The new PyPI"](https://pythonbytes.fm/episodes/show/39/the-new-pypi) 
 also had a great discussion of the 
-[Object-Relational Mappers (ORMs) page on Full Stack Python](https://www.fullstackpython.com/object-relational-mappers-orms.html).
+[Object-Relational Mappers (ORMs) page on Full Stack Python](/object-relational-mappers-orms.html).
 
 
 One of the projects I talked about on the Python Bytes podcast episode that
 I guest hosted is [**Pelican**](http://docs.getpelican.com/en/stable/), the
-[static site generator](https://www.fullstackpython.com/static-site-generator.html) 
-that turns [Markdown](https://www.fullstackpython.com/markdown.html) and some 
-[Jinja templates](https://www.fullstackpython.com/jinja2.html) into the 
+[static site generator](/static-site-generator.html) 
+that turns [Markdown](/markdown.html) and some 
+[Jinja templates](/jinja2.html) into the 
 Full Stack Python site. Here are some additional tutorials and resources
 to get started using Pelican if you've been meaning to build a static site 
 yourself:
 
-1. [How to Create Your First Static Site with Pelican and Jinja2](https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html)
-1. [An overview of the Pelican static site generator](https://www.fullstackpython.com/pelican.html)
+1. [How to Create Your First Static Site with Pelican and Jinja2](/blog/generating-static-websites-pelican-jinja2-markdown.html)
+1. [An overview of the Pelican static site generator](/pelican.html)
 1. [The Ultimate Guide to Deploying Static Sites on AWS](https://stormpath.com/blog/ultimate-guide-deploying-static-site-aws)
 
 
