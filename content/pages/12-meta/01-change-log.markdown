@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### October
+* Added blog post version of mid-October email newsletter 
+  [PyCon US 2018 CFP, Python Bytes and Pelican](/blog/pycon-us-2018-cfp-python-bytes-pelican.html).
 * New starter page for [Rollbar](/rollbar.html) as part of the hosted
   monitoring services series.
 

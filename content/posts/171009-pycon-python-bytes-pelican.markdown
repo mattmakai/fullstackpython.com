@@ -62,3 +62,4 @@ is now fully released with all 20 hours of content. Got non-developer
 friends who wants you to build them an app? Send them the 
 [Python for Entrepreneurs course](https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business) 
 so they can stop bugging you and build it themselves :)
+
