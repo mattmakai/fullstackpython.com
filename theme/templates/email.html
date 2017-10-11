@@ -8,20 +8,20 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-8">
-      <h1>Email Newsletter</h1>
-      {% include "email-for-book.html" %}
-      <h2>Previous issues</h2>
-      <p>Past email issues 
-         <a href="https://fullstackpython.ongoodbits.com/">can be viewed in the archive.</a>
-      </p>
-      <ul>
-        <li><a href="https://fullstackpython.ongoodbits.com/2016/08/24/less-than-24-hours-to-back-python-for-entrepreneurs">Less than 24 hours to back Python for Entrepreneurs</a> - Aug 24, 2016</li>
-        <li><a href="https://fullstackpython.ongoodbits.com/2016/07/26/python-for-entrepreneurs-kickstarter-launch">Python for Entrepreneurs Launch!</a> - Jul 26, 2016</li>
-        <li><a href="https://fullstackpython.ongoodbits.com/2016/03/21/21-new-python-django-flask-tutorials">21 new Python+Django & Flask tutorials</a> - Mar 21, 2016</li>
-    </div>
-    <div class="col-md-offset-1 col-md-3" id="sidebar">
+  <div class="col-md-8">
+    <h1>Email Newsletter</h1>
+    {% include "email-for-book.html" %}
+    <h2>Previous issues</h2>
+    <p>Past email issues are posted on the 
+       <a href="/blog.html">Full Stack Python blog</a> and are also
+       listed here:
+    </p>
+    <ul>
+      <li><a href="/blog/pycon-us-2018-cfp-python-bytes-pelican.html">PyCon US 2018 CFP, Python Bytes and Pelican</a> - October 9, 2017</li>
+    </ul>
+  </div>
+  <div class="col-md-offset-1 col-md-3" id="sidebar">
     {% include "sidebar.html" %}
-    </div>
+  </div>
 </div>
 {% endblock %}
