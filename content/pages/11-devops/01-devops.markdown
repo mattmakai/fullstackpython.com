@@ -20,7 +20,8 @@ and operations phases. New updates and fixes are produced so fast in each
 sprint that infrastructure teams can be overwhelmed with deployments and 
 push back on the pace of delivery. To allievate some of these issues, 
 application developers are asked to work closely with operations folks to
-automate the delivery from development to production. 
+automate the delivery of code from development to production. 
+
 
 ## DevOps tooling resources
 * [DevOps: Python tools to get started](https://speakerdeck.com/victorneo/devops-python-tools-to-get-started)
