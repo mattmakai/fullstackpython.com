@@ -47,8 +47,8 @@ category.
 | [Emacs](/emacs.html)                                       | intermediate |
 | [Sublime Text](/sublime-text.html)                         | starter      |
 | [Jupyter Notebook](/jupyter-notebook.html)                 | starter      |
-| Shells                                                     | not yet      | 
-| Bash                                                       | not yet      | 
+| [Shells](/shells.html)                                     | starter      | 
+| [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | not yet      | 
 | zsh                                                        | not yet      | 
 | PowerShell                                                 | not yet      | 
 | Terminal multiplexers                                      | not yet      | 
