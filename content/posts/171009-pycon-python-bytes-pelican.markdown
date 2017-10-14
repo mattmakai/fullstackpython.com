@@ -4,7 +4,7 @@ meta: Read about PyCon US 2018's Call for Proposals, Python Bytes podcast and Pe
 category: post
 date: 2017-10-09
 modified: 2017-10-09
-headerimage: /img/171009-pycon-bytes-pelican/header.jpg
+headerimage: /img/visuals/email-post-header.jpg
 headeralt: PyCon US 2018 Call for Proposals now open, the awesome Python Bytes and using Pelican to generate static sites.
 
 

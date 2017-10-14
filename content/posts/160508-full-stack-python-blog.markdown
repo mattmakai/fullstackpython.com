@@ -2,9 +2,9 @@ title: The Full Stack Python Blog
 slug: full-stack-python-blog
 category: post
 date: 2016-05-08
-modified: 2017-04-25
+modified: 2017-10-14
 meta: The Full Stack Python blog provides detailed tutorials for Python programmers.
-headerimage: /img/160508-full-stack-python-blog/header.jpg
+headerimage: /img/visuals/email-post-header.jpg
 headeralt: Full Stack Python and Python logos. Copyright their respective owners.
 
 
