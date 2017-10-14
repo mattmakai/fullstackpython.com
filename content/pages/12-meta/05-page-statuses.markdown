@@ -51,6 +51,10 @@ category.
 | Bash                                                       | not yet      | 
 | zsh                                                        | not yet      | 
 | PowerShell                                                 | not yet      | 
+| Terminal multiplexers                                      | not yet      | 
+| tmux                                                       | not yet      | 
+| screen                                                     | not yet      | 
+| pymux                                                      | not yet      | 
 | Environment configuration                                  | not yet      | 
 | [Application dependencies](/application-dependencies.html) | intermediate | 
 | Dependency isolation                                       | not yet      |
