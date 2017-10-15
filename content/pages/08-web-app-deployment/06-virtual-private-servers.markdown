@@ -22,3 +22,20 @@ overhead in the virtualization process. But for our web application
 deployment, a single well-configured virtual private server provides 
 more than enough performance and represents a huge cost savings over 
 purchasing dedicated hardware. 
+
+
+### VPS providers
+There are many VPS providers and their cost ranges dramatically based on
+reliability, support, security and uptime. Make sure to choose a provider
+that has a solid reputation unless you are willing to rebuild your server
+on another provider whenever issues hit your service. 
+
+A few providers I currently use to host my Python web applications:
+
+* [Linode](https://www.linode.com/)
+
+* [Digital Ocean](https://www.digitalocean.com/)
+
+* [Amazon Web Services' Lightsail](https://amazonlightsail.com/)
+
+
