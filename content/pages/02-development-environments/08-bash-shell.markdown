@@ -19,6 +19,11 @@ during Python software development as part of a programmer's
 
 
 ### Bash resources
+* [Bash Guide for beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
+  is an entire book for those new to working with commandlines. It covers
+  commands, paths, Bash shell scripting, variables and many other critical
+  topics that are necessary to move from beginner to advanced Bash user. 
+
 * [Advancing in the Bash shell](http://samrowe.com/wordpress/advancing-in-the-bash-shell/)
   covers important concepts such as bang syntax, movement commands, 
   tab completion and aliases.
