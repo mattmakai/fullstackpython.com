@@ -48,8 +48,8 @@ category.
 | [Sublime Text](/sublime-text.html)                         | starter      |
 | [Jupyter Notebook](/jupyter-notebook.html)                 | starter      |
 | [Shells](/shells.html)                                     | starter      | 
-| [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | not yet      | 
-| zsh                                                        | not yet      | 
+| [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | starter      | 
+| [Zsh](/zsh-shell.html)                                     | starter      | 
 | PowerShell                                                 | not yet      | 
 | Terminal multiplexers                                      | not yet      | 
 | tmux                                                       | not yet      | 
