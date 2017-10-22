@@ -8,10 +8,15 @@ meta: Docker is a container management system often used for deploying web appli
 
 
 # Docker
-Docker is an [open source](https://github.com/docker/docker) 
-infrastructure management platform for running and deploying software. The
-Docker platform is constantly evolving so an exact definition is currently
-a moving target.
+[Docker](https://docs.docker.com/) 
+([source code for core Docker project](https://github.com/docker/docker))
+is an infrastructure management platform for running and deploying software. 
+The Docker platform is evolving so an exact definition is currently
+a moving target, but the core idea behind Docker is that operating 
+system-level containers are used as an abstraction layer on top of regular
+servers for deployment and application operations.
+
+<a href="https://docs.docker.com/" style="border: none;"><img src="/img/logos/docker-wide.png" width="100%" alt="Official Docker logo. Copyright Docker." class="technical-diagram"></a>
 
 
 ## Why is Docker important?
