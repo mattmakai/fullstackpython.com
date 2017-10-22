@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2017
 ### October
+* New resources on the [SQLite](/sqlite.html) and [Vim](/vim.html) pages.
 * New [shells](/shells.html), [Bash](/bourne-again-shell-bash.html) 
   and [Zsh](/zsh-shell.html) starter pages.
 * Added blog post version of mid-October email newsletter 
