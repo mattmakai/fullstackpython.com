@@ -237,3 +237,6 @@ ready to take that step.
 * [Powerline](https://github.com/powerline/powerline) is a popular statusline
   plugin for Vim that works with both Python 2 and 3.
 
+* [VimAwesome](https://vimawesome.com/) is a directory of Vim plugins sourced 
+  from Vim.org, GitHub and user submissions.
+
