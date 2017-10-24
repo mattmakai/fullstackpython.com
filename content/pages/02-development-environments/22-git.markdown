@@ -1,7 +1,7 @@
 title: Git
 category: page
 slug: git
-sortorder: 0222
+sortorder: 0208
 toc: False
 sidebartitle: Git
 meta: Git is an implementation of the source (version) control concept. Learn more about Git and source control on Full Stack Python.
@@ -55,6 +55,10 @@ developers. The following tutorials can quickly get you up to speed.
 * A 
   [practical git introduction](http://marc.helbling.fr/2014/09/practical-git-introduction)
   is rich with pragmatic examples for Git usage.
+
+* [git ready](http://gitready.com/) presents beginner, intermediate and 
+  advanced tips for how to use Git. The example commands and their results
+  are great for learning Git piece-by-piece.
 
 
 ## Specific Git resources
@@ -120,6 +124,10 @@ workflow. These resources will come in handy for specific Git subjects.
   Git commits somewhere and are having trouble writing your own script
   you should check out some of the interesting solutions the author
   presents.
+
+* [Better Git configuration](https://blog.scottnonnenberg.com/better-git-configuration/)
+  explains global config options, revisions and merging along with several
+  other commands that can be customized to your taste.
 
 
 ## Git Workflows
