@@ -1,7 +1,7 @@
 title: Source Control
 category: page
 slug: source-control
-sortorder: 0207
+sortorder: 0221
 toc: False
 sidebartitle: Source Control
 meta: Source control versions and backs up code for when programming problems occur. Learn more about source control on Full Stack Python.
@@ -63,7 +63,8 @@ today's Python development world. The two primary choices are:
 
 ## Hosted source control services
 Git and Mercurial can be downloaded and run on your own server. However,
-it's easy and cheap to get started with a hosted version control service.
+it's easy and cheap to get started with a 
+[hosted version control service](/hosted-source-control-services.html).
 You can transition away from the service at a later time by moving your 
 repositories if your needs change. A couple of recommended hosted version
 control services are:
@@ -109,33 +110,23 @@ control services are:
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
+* [Monorepo, Manyrepo, Metarepo](http://notes.burke.libbey.me/metarepo/)
+  is an awesome guide to varying ways of structuring your source repositories
+  that contain more than one project. The guide covers advantages and
+  disadvantages of common approaches used in both small and large 
+  organizations.
 
-## Git resources
-The following resources provide a good start for developers new to source
-control and Git. There is also an 
-[entire page on using Git with Python](/git.html) with many more links
-sorted by categories such as solving tactical issues and Git workflows.
+* [In which I discuss Monorepos](https://storify.com/samnewman/in-which-i-discuss-monorepos)
+  provides detail behind a series of tweets that explains source control
+  monorepos.
 
-* [Git in Six Hundred Words](http://maryrosecook.com/blog/post/git-in-six-hundred-words)
-  is a clear and concise essay explaining the fundamental concepts of
-  Git.
 
-* [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
-  covers the basics as well as more advanced Git commands while explaining each
-  step along the way.
-
-* [Think like a Git](http://think-like-a-git.net/) is another introduction
-  that focuses more on the graph theory and conceptual ideas behind Git
-  to help the reader understand what's happening as they use Git commands.
-
-* [A practical git introduction](http://mrchlblng.me/2014/09/practical-git-introduction/)
-  is exactly what the title says it is. This is a well written guide with 
-  plenty of code snippets to get you up to speed with Git.
-
-* [Git from the inside out](https://codewords.recurse.com/issues/two/git-from-the-inside-out)
-  demonstrates how Git's graph-based data structure produces certain behavior 
-  through example Git commands. This is a highly recommended read after you've
-  grasped the basics and are looking to go deeper with Git.
+### Git
+[Git](/git.html) is the most widely-used source control system currently
+in use. Its distributed design eliminates the need to check files in
+and out of a centralized repository, which is a problem when using
+[Subversion](/apache-subversion.html) without a network connection. There is
+[a full page on Git](/git.html) with further details and resources.
 
 
 ## Source control learning checklist

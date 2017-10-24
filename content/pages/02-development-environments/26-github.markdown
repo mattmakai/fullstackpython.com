@@ -1,7 +1,7 @@
 title: GitHub
 category: page
 slug: github
-sortorder: 0218
+sortorder: 0226
 toc: False
 sidebartitle: GitHub
 meta: GitHub is a software-as-a-service platform that provides a user interface, tools and backup for Git projects.

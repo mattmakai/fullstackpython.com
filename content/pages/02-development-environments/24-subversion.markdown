@@ -1,7 +1,7 @@
 title: Apache Subversion
 category: page
 slug: apache-subversion
-sortorder: 0210
+sortorder: 0224
 toc: False
 sidebartitle: Apache Subversion
 meta: Apache Subversion is an implementation of the source (version) control concept and is often used with Python code.
