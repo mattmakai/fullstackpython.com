@@ -1,7 +1,7 @@
 title: Git
 category: page
 slug: git
-sortorder: 0208
+sortorder: 0222
 toc: False
 sidebartitle: Git
 meta: Git is an implementation of the source (version) control concept. Learn more about Git and source control on Full Stack Python.
