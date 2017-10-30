@@ -16,7 +16,7 @@ they have for beginners. Mike was kind enough to
 [interview me in the latest PyDev of the Week post](https://www.blog.pythonlibrary.org/2017/10/30/pydev-of-the-week-matthew-makai/).
 
 In the PyDev interview I gave a big shoutout to the fine folks working on the
-[Django project](https://www.fullstackpython.com/django.html), which is 
+[Django project](/django.html), which is 
 currently beta testing the major upcoming
 [**Django 2.0 release**](https://docs.djangoproject.com/en/2.0/releases/2.0/).
 Django 2.0 is the first release to support only Python 3, specifically 
@@ -47,9 +47,7 @@ As always, send me an email or [submit an issue ticket on GitHub](https://github
 to let me know how to improve 
 [Full Stack Python](https://www.fullstackpython.com/) 
 as I continue to 
-[fill in the table of contents](https://www.fullstackpython.com/table-of-contents.html) 
-with [new pages](https://www.fullstackpython.com/change-log.html)
+[fill in the table of contents](/table-of-contents.html) 
+with [new pages](/change-log.html)
 and 
-[new tutorials](https://www.fullstackpython.com/blog.html).
-
-
+[new tutorials](/blog.html).
