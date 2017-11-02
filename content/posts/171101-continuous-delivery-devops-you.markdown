@@ -12,14 +12,8 @@ This blog post contains the slides along with a loose transcript and
 additional resources from my technical talk on DevOps and Continuous
 Delivery concepts given at my alma mater, the University of Virginia,
 to the [M.S. in Management of Information Technology program](https://www.commerce.virginia.edu/ms-mit) on November 2nd and 4th of 2017.
-
-Additional resources to learn more about the following topics can be found
-on their respective pages:
-
-* [DevOps](/devops.html)
-* [deployments](/deployments.html)
-* [configuration management](/configuration-management.html) 
-
+Links to learn more about the concepts presented in this talk can
+be found at the bottom of the page.
 
 ----
 
@@ -239,3 +233,94 @@ where over 125,000 developers read each month to learn how to
 ...
 
 
+<img src="/img/171101-devops-cd-you/devops-cd-you.045.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="The situation did not have reasonable deployments to dev or to production.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.046.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Start somewhere, automate your deployments to dev environment.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.047.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Some environments have tricky issues with automated prod deployments like disconnected networks.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.048.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'Tools and concepts'.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.049.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Several development teams commit to a Git repository.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.050.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'continuous integration' with a screenshot of Jenkins dashboard in the background.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.051.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Add a continuous integration server to build the code that is committed to your source control repository.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.052.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How do we automate the building of these environments and the deployments themselves?">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.053.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'configuration management' with a screenshot of Ansible AWX in the background.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.054.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Agile sprints deliver code to a development environment and then automate the deployment into production.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.055.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Review list of continuous delivery tools.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.056.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="A list of more concepts and tools for continuous delivery.">
+
+...
+
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.057.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Thank you slide.">
+
+That's all for today. My name is [Matt Makai](/about-author.html)
+and I'm a software developer at [Twilio](/twilio.html) and the
+author of [Full Stack Python](https://www.fullstackpython.com/),
+thank you very much.
+
+
+----
+
+Additional resources to learn more about the following topics can be found
+on their respective pages:
+
+* [Deployments](/deployments.html)
+* [Continuous integration](/continuous-integration.html)
+* [Serverless computing](/serverless.html)
+* [AWS Lambda](/aws-lambda.html)
+* [Static site generators](/static-site-generator.html)
+* [Monitoring](/monitoring.html)
+* [DevOps](/devops.html)
+* [Configuration management](/configuration-management.html)
+* [Platform-as-a-Service (PaaS)](/platform-as-a-service.html)
+* [Docker](/docker.html)
+* [Web application security](/web-application-security.html)
+* [Testing](/testing.html)
+* [Source control](/source-control.html)
+* [Git](/git.html)
+* [Hosted source control services](/hosted-source-control-services.html)
+* [GitHub](/github.html)
+* [Code metrics](/code-metrics.html)
+* [NoSQL](/no-sql-datastore.html)
