@@ -3,7 +3,7 @@ slug: devops-continuous-delivery-you
 meta: Talk slides, notes and more resources for a technical talk on basic DevOps and continuous delivery concepts, by Matt Makai.
 category: post
 date: 2017-11-01
-modified: 2017-11-01
+modified: 2017-11-04
 headerimage: /img/visuals/talk-header.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
@@ -202,12 +202,26 @@ concepts and tools that fall in this domain.
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.018.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="San Francisco skyline at night.">
 
-...
+Here is a beautiful evening picture of the city I just moved away from, San 
+Francisco.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.019.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio billboard, ask your developer!">
 
-...
+The company I work for, [Twilio](https://www.twilio.com/) is located in
+San Francisco. If you ever fly into the SFO airport and catch a ride towards
+downtown, you will see our billboard on the right side of the road. 
+
+Twilio makes it easy for software developers to add communications, such as
+phone calling, messaging and video, into their applications. We are a 
+telecommunications company built with the power of software that eliminates
+the need for customers to buy all the expensive legacy hardware that they
+used to have to acquire. As a telecomm company, we can never go down, or
+our customers are hosed and then our business is hosed.
+
+However, we have had challenges in our history that have forced us to 
+confront the fork in the road between manual processes and moving faster via 
+trust in our automation.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.020.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="August 2013.">
