@@ -133,22 +133,71 @@ production.
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.014.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What DevOps is NOT.">
 
-...
+We are going to use the terms "DevOps" and "Continuous Delivery" a lot today,
+so let's start by defining what they mean. In fact, the term "DevOps" has 
+already accumulated a lot of buzzword baggage, so we'll start by defining
+what DevOps is *not*.
+
+First,DevOps is not a new role. If you go hire a bunch of people and call them
+"DevOps engineers" then sit them in the middle of your developers and system
+admin/ops folks, you are going to have a bad time. You just added a new layer
+between the two groups you need to pull closer together.
+
+Second, DevOps is not a specific tool or application. You do not need to
+use Docker or Puppet to do DevOps in your organization. The processes that
+make DevOps work are made much easier by some tools such as cloud platforms
+where infrastructure is transient, but even those platforms are not required
+to do DevOps right.
+
+Third, DevOps is not tied to a specific programming language ecosystem. You
+do not need to use Node.js or Ruby on Rails. You can still use DevOps
+in a COBOL- or J2EE-only organization.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.015.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What DevOps IS.">
 
-...
+With those misconceptions out of the way, let's talk about what DevOps IS.
+First, at the risk of being way too obvious, DevOps is the combination of the
+two words Development and Operations. This combination is not a random
+pairing, it's an intentional term. 
+
+Second, DevOps means your application developers handle operations. Not 
+necessarily *all* operations work, but ops work that deals with the code they
+write and deploy as part of their sprints. The developers also will likely
+become intimately familiar with the underlying infrastructure such as the
+web application servers, [web servers](/web-servers.html) and 
+[deployment](/deployment.html) code for 
+[configuration management](/configuration-management.html) tools.
+
+Third, DevOps allows your organization to be more efficient in handling
+issues by ensuring the correct person is handling errors and application
+failures.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.016.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What Continuous Delivery is.">
 
-...
+We are not going to go through Continuous Delivery (CD) by defining what it is
+not, but there are a couple bits to say about it. First, CD is a collection of 
+engineering practices aimed at automating the delivery of code from 
+version control check-in until it is running in a production environment.
+
+The benefit of the automation CD approach is that your organization will have
+far greater confidence in the code running in production even as the code
+itself changes more frequently with every deployment.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.017.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Move fast and BUILD things.">
 
-...
+Facebook's original motto changed a few years ago to "Move Fast and Build 
+Things" because they realized that breaking production was not a byproduct
+of moving fast, it was a result of immature organizational processes and
+tools. DevOps and Continuous Delivery are why organizations can now deploy
+hundreds or thousands of times to production every day but have increasing,
+not decreasing, confidence in their systems as they continue to move faster.
+
+Let's take a look at a couple of example scenarios that drive home what
+DevOps and CD are all about, as well as learn about some of the processes, 
+concepts and tools that fall in this domain.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.018.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="San Francisco skyline at night.">
