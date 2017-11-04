@@ -20,24 +20,21 @@ be found in the sidebar and at the bottom of this page.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.001.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Title slide for technical talk.">
-
-Hey folks, my name is Matt Makai. I'm a 
+Hey folks, my name is [Matt Makai](/about-author.html). I am a 
 [software developer at Twilio](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html)
 and the creator of [Full Stack Python](https://www.fullstackpython.com/),
-where over 125,000 developers read each month to learn how to 
+which over 125,000 developers read each month to learn how to 
 [build](/web-development.html), [deploy](/deployment.html) and 
-[operate](/devops.html) Python-based applications.
+[operate](/devops.html) [Python-based applications](/why-use-python.html).
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.004.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What's the point of Agile?">
-
 You've talked about using the Agile software development methodology
 on your teams, but what's the purpose? Why does Agile development matter 
 to you and your organization?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.005.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Cargo ship with containers.">
-
 Agile matters because it allows you to ship more code, faster than 
 traditional "waterfall" methodology approaches. 
 
@@ -51,33 +48,28 @@ not create more value until it is executing in production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.006.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Docker logo.">
-
 Shipping code is so important to high functioning companies that the
 maritime theme is used across all sorts of projects, including in the Docker
 logo.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.007.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Kubernetes logo.">
-
 As well as in the Kubernetes logo in the form of a ship steering wheel.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.008.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Agile sprints need to ship code into production to create anything of value.">
-
 Here is a super high-level diagram of the ideal scenario we need for
 Agile development teams. Create working code and get it shipped as soon
 as possible into production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.009.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Move fast and break things.">
-
 Facebook's internal motto used to be "Move fast and break things." They 
 thought that if you aren't breaking things then you aren't moving fast 
 enough. 
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.010.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="If you do not have the right processes and tools in place eventually production will break.">
-
 And eventually if you're constantly shipping to production and you do not
 have the appropriate processes and tools in place, your applications
 will break. The breakage has nothing to do with the Agile methodology
@@ -88,7 +80,6 @@ end up with a broken environment.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.011.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Fight the urge to put manual processes in place that slow you down. You must automate.">
-
 Traditionally, organizations have tried to prevent breakage by putting
 more manual tools and processes in place. Manual labor slows... down...
 your... ability... to... execute.
@@ -106,7 +97,6 @@ to ship a small change to a critical application?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.012.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Some teams try to get around the production problem by shipping to dev, but they still are not creating value.">
-
 Some development teams try to get around the manual production challenges
 by shipping everything to a development environment. The dev environment is
 under their control.
@@ -119,7 +109,6 @@ but the organization still suffers due to the manual controls.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.013.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="This session is about DevOps and Continuous Delivery.">
-
 The problems we are talking about are created by the Agile methodology
 because they become acute when your development team is producing code at
 high velocity. Once code is created faster, you need a way to reliably,
@@ -132,7 +121,6 @@ production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.014.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What DevOps is NOT.">
-
 We are going to use the terms "DevOps" and "Continuous Delivery" a lot today,
 so let's start by defining what they mean. In fact, the term "DevOps" has 
 already accumulated a lot of buzzword baggage, so we'll start by defining
@@ -155,7 +143,6 @@ in a COBOL- or J2EE-only organization.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.015.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What DevOps IS.">
-
 With those misconceptions out of the way, let's talk about what DevOps IS.
 First, at the risk of being way too obvious, DevOps is the combination of the
 two words Development and Operations. This combination is not a random
@@ -175,7 +162,6 @@ failures.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.016.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What Continuous Delivery is.">
-
 We are not going to go through Continuous Delivery (CD) by defining what it is
 not, but there are a couple bits to say about it. First, CD is a collection of 
 engineering practices aimed at automating the delivery of code from 
@@ -187,7 +173,6 @@ itself changes more frequently with every deployment.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.017.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Move fast and BUILD things.">
-
 Facebook's original motto changed a few years ago to "Move Fast and Build 
 Things" because they realized that breaking production was not a byproduct
 of moving fast, it was a result of immature organizational processes and
@@ -201,13 +186,11 @@ concepts and tools that fall in this domain.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.018.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="San Francisco skyline at night.">
-
 Here is a beautiful evening picture of the city I just moved away from, San 
 Francisco.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.019.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio billboard, ask your developer!">
-
 The company I work for, [Twilio](https://www.twilio.com/) is located in
 San Francisco. If you ever fly into the SFO airport and catch a ride towards
 downtown, you will see our billboard on the right side of the road. 
@@ -225,18 +208,22 @@ trust in our automation.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.020.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="August 2013.">
-
-...
+In August 2013, Twilio faced an infrastructure failure.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.021.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How customers pay for Twilio.">
-
-...
+First, some context. When a developer signs up for Twilio, she puts some 
+credit on their account and the credit is drawn upon by making phone calls,
+sending messages and such. When credit runs low we can re-charge your card
+so you get more credit.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.022.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Hacker News post on Twilio not billing correctly.">
+There was a major production issue with the recurring charges in August 2013.
+Our engineers were alerted to the errors and the issue blew up on the top of
+[Hacker News](https://news.ycombinator.com/), drawing widespread atttention.
 
-...
+So now there is a major production error... what do we do?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.023.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Billing incident update blog post.">
