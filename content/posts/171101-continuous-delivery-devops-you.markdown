@@ -12,8 +12,9 @@ This blog post contains the slides along with a loose transcript and
 additional resources from my technical talk on DevOps and Continuous
 Delivery concepts given at my alma mater, the University of Virginia,
 to the [M.S. in Management of Information Technology program](https://www.commerce.virginia.edu/ms-mit) on November 2nd and 4th of 2017.
+
 Links to learn more about the concepts presented in this talk can
-be found at the bottom of the page.
+be found in the sidebar and at the bottom of this page.
 
 ----
 
@@ -30,52 +31,104 @@ where over 125,000 developers read each month to learn how to
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.004.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What's the point of Agile?">
 
-...
+You've talked about using the Agile software development methodology
+on your teams, but what's the purpose? Why does Agile development matter 
+to you and your organization?
 
 
-<img src="/img/171101-devops-cd-you/devops-cd-you.005.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Docker logo.">
+<img src="/img/171101-devops-cd-you/devops-cd-you.005.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Cargo ship with containers.">
 
-...
+Agile matters because it allows you to ship more code, faster than 
+traditional "waterfall" methodology approaches. 
+
+Shipping is a common allegory in software development nowadays, because 
+code that is not in production, in the hands of your users, doesn't create
+value for anyone.
+
+If code is not running in production, it's not creating value. New
+code created by your Agile development teams every couple of weeks does
+not create more value until it is executing in production.
 
 
-<img src="/img/171101-devops-cd-you/devops-cd-you.006.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Cargo ship with containers.">
+<img src="/img/171101-devops-cd-you/devops-cd-you.006.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Docker logo.">
 
-...
+Shipping code is so important to high functioning companies that the
+maritime theme is used across all sorts of projects, including in the Docker
+logo.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.007.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Kubernetes logo.">
 
-...
+As well as in the Kubernetes logo in the form of a ship steering wheel.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.008.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Agile sprints need to ship code into production to create anything of value.">
 
-...
+Here is a super high-level diagram of the ideal scenario we need for
+Agile development teams. Create working code and get it shipped as soon
+as possible into production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.009.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Move fast and break things.">
 
-...
+Facebook's internal motto used to be "Move fast and break things." They 
+thought that if you aren't breaking things then you aren't moving fast 
+enough. 
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.010.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="If you do not have the right processes and tools in place eventually production will break.">
 
-...
+And eventually if you're constantly shipping to production and you do not
+have the appropriate processes and tools in place, your applications
+will break. The breakage has nothing to do with the Agile methodology
+itself.
+
+Your team and organization will come to a fork in the road when you
+end up with a broken environment.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.011.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Fight the urge to put manual processes in place that slow you down. You must automate.">
 
-...
+Traditionally, organizations have tried to prevent breakage by putting
+more manual tools and processes in place. Manual labor slows... down...
+your... ability... to... execute.
+
+This is one path provided by the fork in the road. Put your "Enterprise
+Change Review Boards" in place. Require production sign-offs by some 
+Executive Vice President who has never written a line of code in his life.
+Put several dozen "technical architects" in a room together to argue over
+who gets to deploy their changes to production that month.
+
+The manual path is insanity. Eventually the best developers in your
+organization will get frustrated and leave. Executives will ask why
+nothing ever gets done. Why does it take our organization three years
+to ship a small change to a critical application?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.012.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Some teams try to get around the production problem by shipping to dev, but they still are not creating value.">
 
-...
+Some development teams try to get around the manual production challenges
+by shipping everything to a development environment. The dev environment is
+under their control.
+
+But what's the huge glaring problem in this situation?
+
+If you are not shipping to production, then you are not creating any value
+for your users. The teams have made a rational decision to ship to development
+but the organization still suffers due to the manual controls.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.013.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="This session is about DevOps and Continuous Delivery.">
 
-...
+The problems we are talking about are created by the Agile methodology
+because they become acute when your development team is producing code at
+high velocity. Once code is created faster, you need a way to reliably,
+consistently put the code into production so that it can create value for
+its users.
+
+DevOps and Continuous Delivery are the broad terms that encompass how to
+reliably ship code to production and operate it when the code is running in 
+production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.014.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="What DevOps is NOT.">
