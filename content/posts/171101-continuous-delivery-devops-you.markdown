@@ -223,32 +223,48 @@ There was a major production issue with the recurring charges in August 2013.
 Our engineers were alerted to the errors and the issue blew up on the top of
 [Hacker News](https://news.ycombinator.com/), drawing widespread atttention.
 
-So now there is a major production error... what do we do?
+So now there is a major production error... what do we do? 
+
+(Reader note: this section is primarily audience discussion based on their 
+own experiences handling these difficult technical situations.)
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.023.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Billing incident update blog post.">
 
-...
+One step is to figure out when the problem started and whether or not it
+is over. If it's not over, triage the specific problems and start 
+communicating with customers. Be as accurate and transparent as possible.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.024.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Redis logo.">
 
-...
+The specific technical issue in this case was due to our misconfiguration of
+Redis instances.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.025.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'Root cause?'">
 
-...
+We know the particular technical failure was due to our Redis mishandling,
+but how do we look past the specific bit and get to a broader understanding
+of the processes that caused the issue?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.026.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Billing incident response from Twilio developer evangelist.">
 
-...
+Let's take a look at the resolution of the situation and then learn about
+the concepts and tools that could prevent future problems.
+
+In this case, we communicated with our customers as much about the problem
+as possible. As a developer-focused company, we were fortunate that by being
+transparent about the specific technical issue, many of our customers gained
+respect for us because they had also faced similar misconfigurations in their 
+own environments.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.027.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio status page.">
 
-...
+Twilio became more transparent with the status of services, especially with
+showing partial failures and outages.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.028.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio number of production deployments.">
