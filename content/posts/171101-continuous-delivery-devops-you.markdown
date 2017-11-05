@@ -3,7 +3,7 @@ slug: devops-continuous-delivery-you
 meta: Talk slides, notes and more resources for a technical talk on basic DevOps and continuous delivery concepts, by Matt Makai.
 category: post
 date: 2017-11-01
-modified: 2017-11-04
+modified: 2017-11-05
 headerimage: /img/visuals/talk-header.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
@@ -269,12 +269,16 @@ showing partial failures and outages.
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.028.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio number of production deployments.">
 
-...
+Twilio was also deliberate in avoiding the accumulation of manual processes
+and controls that other organizations often put in place after failures. We
+doubled down on resiliency through automation to increase our ability to
+deploy to production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.029.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'tools and concepts'.">
 
-...
+What are some of the tools and concepts we use at Twilio to prevent future
+failure scenarios?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.030.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Eventually you ship code into production that breaks your application.">
