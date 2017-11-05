@@ -16,6 +16,11 @@ on GitHub.
 
 
 ## 2017
+### November
+* New 
+  [blog post based on my DevOps, Continuous Delivery... and You talk](/blog/devops-continuous-delivery-you.html)
+  with the slides and rough transcript from the sessions.
+
 ### October
 * New resources on the [SQLite](/sqlite.html) and [Vim](/vim.html) pages.
 * New [shells](/shells.html), [Bash](/bourne-again-shell-bash.html) 
