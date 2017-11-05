@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### November
+* Merge [PR#143](https://github.com/mattmakai/fullstackpython.com/pull/143)
+  to create new [Dramatiq](/dramatiq.html) task queue starter page.
 * New 
   [blog post based on my DevOps, Continuous Delivery... and You talk](/blog/devops-continuous-delivery-you.html)
   with the slides and rough transcript from the sessions.
