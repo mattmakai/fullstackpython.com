@@ -283,32 +283,59 @@ failure scenarios?
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.030.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Eventually you ship code into production that breaks your application.">
 
-...
+If you do not have the right tools and processes in place, eventually you
+end up with a broken production environment after shipping code. What is
+one tool we can use to be confident that the code going into production is
+not broken?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.031.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'automated testing' with example code coverage in the background.">
 
-...
+Automated testing, in its many forms, such as unit testing, integration
+testing, security testing and performance testing, helps to ensure the
+integrity of the code. You need to automate because manual testing is too
+slow.
+
+Other important tools that fall into the automated testing bucket but are
+not traditionally thought of as a "test case" include code coverage and
+code metrics (such as Cyclomatic Complexity).
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.032.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Automated tests in dev only deploy to production when they are successful.">
 
-...
+Awesome, now you only deploy to production when a big batch of automated
+test cases ensure the integrity of your code. All good, right?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.033.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Bugs can still occur in production.">
 
-...
+Err, well no. Stuff can still break in production, espcially in environments
+where for various reasons you do not have the same exact data in test
+that you do in production. Your automated tests and code metrics will
+simply not catch every last scenario that could go wrong in production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.034.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'monitoring and alerting' with New Relic dashboard in the background.">
 
-...
+When something goes wrong with your application, you need monitoring to
+know what the problem is, and alerting to tell the right folks. Traditionally,
+the "right" people were in operations. But over time many organizations 
+realized the ops folks ended up having to call the original application 
+developers who wrote the code that had the problem. 
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.035.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="When something breaks in prod, your developers know about it and can fix the problem.">
 
-...
+A critical piece to DevOps is about ensuring the appropriate developers 
+are carrying the pagers. It sucks to carry the pager and get woken up in the
+middle of the night, but it's a heck of a lot easier to debug the code that
+your team wrote than if you are a random ops person who's never seen the
+code before in her life.
+
+Another by-product of having application developers carry the "pagers" for
+alerts on production issues is that over time the code they write is more
+defensive. Errors are handled more appropriately, because otherwise you know
+something will blow up on you later on at a less convenient time.  
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.036.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="When production is running smoothly with many tests, do that increase the chance of black swan-type events?">
