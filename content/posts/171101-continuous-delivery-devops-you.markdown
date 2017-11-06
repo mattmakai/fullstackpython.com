@@ -230,27 +230,23 @@ own experiences handling these difficult technical situations.)
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.023.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Billing incident update blog post.">
-
 One step is to figure out when the problem started and whether or not it
 is over. If it's not over, triage the specific problems and start 
 communicating with customers. Be as accurate and transparent as possible.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.024.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Redis logo.">
-
 The specific technical issue in this case was due to our misconfiguration of
 Redis instances.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.025.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'Root cause?'">
-
 We know the particular technical failure was due to our Redis mishandling,
 but how do we look past the specific bit and get to a broader understanding
 of the processes that caused the issue?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.026.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Billing incident response from Twilio developer evangelist.">
-
 Let's take a look at the resolution of the situation and then learn about
 the concepts and tools that could prevent future problems.
 
@@ -262,13 +258,11 @@ own environments.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.027.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio status page.">
-
 Twilio became more transparent with the status of services, especially with
 showing partial failures and outages.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.028.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Twilio number of production deployments.">
-
 Twilio was also deliberate in avoiding the accumulation of manual processes
 and controls that other organizations often put in place after failures. We
 doubled down on resiliency through automation to increase our ability to
@@ -276,13 +270,11 @@ deploy to production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.029.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'tools and concepts'.">
-
 What are some of the tools and concepts we use at Twilio to prevent future
 failure scenarios?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.030.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Eventually you ship code into production that breaks your application.">
-
 If you do not have the right tools and processes in place, eventually you
 end up with a broken production environment after shipping code. What is
 one tool we can use to be confident that the code going into production is
@@ -290,25 +282,22 @@ not broken?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.031.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'automated testing' with example code coverage in the background.">
-
-Automated testing, in its many forms, such as unit testing, integration
-testing, security testing and performance testing, helps to ensure the
-integrity of the code. You need to automate because manual testing is too
-slow.
+Automated [testing](/testing.html), in its many forms, such as unit testing, 
+integration testing, security testing and performance testing, helps to 
+ensure the integrity of the code. You need to automate because manual 
+testing is too slow.
 
 Other important tools that fall into the automated testing bucket but are
 not traditionally thought of as a "test case" include code coverage and
-code metrics (such as Cyclomatic Complexity).
+[code metrics](/code-metrics.html) (such as Cyclomatic Complexity).
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.032.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Automated tests in dev only deploy to production when they are successful.">
-
 Awesome, now you only deploy to production when a big batch of automated
 test cases ensure the integrity of your code. All good, right?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.033.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Bugs can still occur in production.">
-
 Err, well no. Stuff can still break in production, espcially in environments
 where for various reasons you do not have the same exact data in test
 that you do in production. Your automated tests and code metrics will
@@ -316,7 +305,6 @@ simply not catch every last scenario that could go wrong in production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.034.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'monitoring and alerting' with New Relic dashboard in the background.">
-
 When something goes wrong with your application, you need monitoring to
 know what the problem is, and alerting to tell the right folks. Traditionally,
 the "right" people were in operations. But over time many organizations 
@@ -325,7 +313,6 @@ developers who wrote the code that had the problem.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.035.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="When something breaks in prod, your developers know about it and can fix the problem.">
-
 A critical piece to DevOps is about ensuring the appropriate developers 
 are carrying the pagers. It sucks to carry the pager and get woken up in the
 middle of the night, but it's a heck of a lot easier to debug the code that
@@ -339,14 +326,12 @@ something will blow up on you later on at a less convenient time.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.036.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="When production is running smoothly with many tests, do that increase the chance of black swan-type events?">
-
 Typically you find though that there are still plenty of production errors
 even when you have defensive code in place with a huge swath of the most 
 important parts of your codebase being constantly tested.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.037.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'Chaos engineering' with the chaos engineering monkey logo in the background.">
-
 That's where a concept known as "chaos engineering" can come in. Chaos
 engineering breaks parts of your production environment on a schedule and
 even unscheduled basis. This is a very advanced technique- you are not going
@@ -355,27 +340,23 @@ or appropriate controls in place.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.038.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Chaos engineering introduces intentional failures in your infrastructure both on a scheduled and unschedule basis.">
-
 By deliberately introducing failures, especially during the day when your
 well-caffeinated team can address the issues and put further safeguards in
 place, you make your production environment more resilient.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.039.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads '1. other peoples money' with money in the background.">
-
 We talked about the failure in Twilio's payments infrastructure several years 
 ago that led us to ultimately become more resilient to failure by putting 
 appropriate automation in place.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.040.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads '2. other peoples lives' with people in the background.">
-
 Screwing with other people's money is really bad, and so is messing with
 people's lives.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.041.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'War on Terror' with an exploded vehicle in the background.">
-
 Let's discuss a scenario where human lives were at stake. 
 
 To be explicit about this next scenario, I'm only going to talk about public 
@@ -383,93 +364,112 @@ information, so my cleared folks in the audience can relax.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.042.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="U.S. military and civilian casualties in Iraq.">
-
 During the height of U.S forces' Iraq surge in 2007, more improvised explosive
 devices were killing and maiming soldiers and civilians than ever before. It
 was an incredible tragedy that contributed to the uncertainty of the time in
 the country.
 
+
+<img src="/img/171101-devops-cd-you/devops-cd-you.043.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Biometrics devices.">
 However, efforts in biometrics were one part of the puzzle that helped to
 prevent more attacks, as shown in this picture from General Petraeus' report
 to Congress.
 
 
-<img src="/img/171101-devops-cd-you/devops-cd-you.043.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Biometrics devices.">
-
-...
-
-
 <img src="/img/171101-devops-cd-you/devops-cd-you.044.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Eclipse IDE.">
-
-...
+One major challenge with the project was a terrible manual build process that
+literally involved clicking buttons in an integrated 
+[development environment](/development-environments.html) to create the
+application artifacts. The process was too manual and the end result was that
+the latest version of the software took far too long to get into production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.045.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="The situation did not have reasonable deployments to dev or to production.">
-
-...
+We did not have automated deployments to a development environment, staging
+or production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.046.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Start somewhere, automate your deployments to dev environment.">
+Our team had to start somewhere, but with a lack of approved tools, all we
+had available to us was shell scripts. But shell scripts were a start. We were
+able to make a very brittle but repeatable, automated deployment process to
+a development environment?
 
-...
+There is still a huge glaring issue though: until the code is actually 
+deployed to production it does not provide any value for the users.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.047.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Some environments have tricky issues with automated prod deployments like disconnected networks.">
+In this case, we could never fully automate the deployment because we had to
+burn to a CD before moving to a physically different computer network. The
+team could automate just about everything else though, and that really mattered
+for iteration and speed to deployment.
 
-...
+You do the best you can with the tools at your disposal.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.048.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'Tools and concepts'.">
-
-...
+What are the tools and concepts behind automating deployments?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.049.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Several development teams commit to a Git repository.">
-
-...
+Source code is stored in a 
+[source control (or version control)](/source-control.html) repository.
+Source control is the start of the automation process, but what do we need
+to get the code into various environments using a repeatable, automated
+process?
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.050.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'continuous integration' with a screenshot of Jenkins dashboard in the background.">
-
-...
+This is where [continuous integration](/continuous-integration.html) comes
+in. Continuous integration takes your code from the version control system,
+builds it, tests it and calculate the appropriate code metrics before the
+code is deployed to an environment.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.051.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Add a continuous integration server to build the code that is committed to your source control repository.">
-
-...
+Now we have a continuous integration server hooked up to source control, but
+this picture still looks odd.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.052.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="How do we automate the building of these environments and the deployments themselves?">
-
-...
+Technically, continuous integration does not handle the details of the build
+and how to configure individual execution environments.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.053.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'configuration management' with a screenshot of Ansible AWX in the background.">
-
-...
+[Configuration management](/configuration-management.html) tools handle the
+setup of application code and environments.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.054.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Agile sprints deliver code to a development environment and then automate the deployment into production.">
-
-...
+Those two scenarios provided some context for why DevOps and Continuous 
+Delivery matter to organizations in varying industries. When you have high
+performing teams working via the Agile development methodology, you will
+encounter a set of problems that are not solvable by doing Agile "better". You
+need the tools and concepts we talked about today as well as a slew of other
+engineering practices to get that new code into production.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.055.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Review list of continuous delivery tools.">
-
-...
+The tools and concepts we covered today were 
+[automated testing](/testing.html), [monitoring](/monitoring.html), chaos
+engineering, [continuous integration](/continuous-integration.html) and
+[configuration management](/configuration-management.html).
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.056.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="A list of more concepts and tools for continuous delivery.">
-
-...
+There are many other practices you will need as you continue your journey.
+You can learn about 
+[all of them on Full Stack Python](/table-of-contents.html).
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.057.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Thank you slide.">
 
 That's all for today. My name is [Matt Makai](/about-author.html)
 and I'm a software developer at [Twilio](/twilio.html) and the
-author of [Full Stack Python](https://www.fullstackpython.com/),
-thank you very much.
+author of [Full Stack Python](https://www.fullstackpython.com/).
+Thank you very much.
 
 
 ----
