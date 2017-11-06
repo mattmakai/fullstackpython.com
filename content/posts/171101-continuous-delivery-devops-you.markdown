@@ -340,37 +340,58 @@ something will blow up on you later on at a less convenient time.
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.036.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="When production is running smoothly with many tests, do that increase the chance of black swan-type events?">
 
-...
+Typically you find though that there are still plenty of production errors
+even when you have defensive code in place with a huge swath of the most 
+important parts of your codebase being constantly tested.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.037.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'Chaos engineering' with the chaos engineering monkey logo in the background.">
 
-...
+That's where a concept known as "chaos engineering" can come in. Chaos
+engineering breaks parts of your production environment on a schedule and
+even unscheduled basis. This is a very advanced technique- you are not going
+to sell this in an environment that has no existing automated test coverage
+or appropriate controls in place.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.038.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Chaos engineering introduces intentional failures in your infrastructure both on a scheduled and unschedule basis.">
 
-...
+By deliberately introducing failures, especially during the day when your
+well-caffeinated team can address the issues and put further safeguards in
+place, you make your production environment more resilient.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.039.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads '1. other peoples money' with money in the background.">
 
-...
+We talked about the failure in Twilio's payments infrastructure several years 
+ago that led us to ultimately become more resilient to failure by putting 
+appropriate automation in place.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.040.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads '2. other peoples lives' with people in the background.">
 
-...
+Screwing with other people's money is really bad, and so is messing with
+people's lives.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.041.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Text that reads 'War on Terror' with an exploded vehicle in the background.">
 
-...
+Let's discuss a scenario where human lives were at stake. 
+
+To be explicit about this next scenario, I'm only going to talk about public 
+information, so my cleared folks in the audience can relax.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.042.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="U.S. military and civilian casualties in Iraq.">
 
-...
+During the height of U.S forces' Iraq surge in 2007, more improvised explosive
+devices were killing and maiming soldiers and civilians than ever before. It
+was an incredible tragedy that contributed to the uncertainty of the time in
+the country.
+
+However, efforts in biometrics were one part of the puzzle that helped to
+prevent more attacks, as shown in this picture from General Petraeus' report
+to Congress.
 
 
 <img src="/img/171101-devops-cd-you/devops-cd-you.043.jpg" width="100%" class="technical-diagram img-rounded" style="border: 1px solid #aaa" alt="Biometrics devices.">
