@@ -41,3 +41,7 @@ libraries from scratch.
   write these analysis libraries, so there is a wealth of information
   not necessarily captured anywhere else.
 
+* [Python Plotting for Exploratory Data Analysis](http://pythonplot.com/)
+  is a great tutorial on how to use simple data visualizations to bootstrap
+  your understanding of a data set. The walkthrough covers histograms, time
+  series analysis, scatter plots and various forms of bar charts.
