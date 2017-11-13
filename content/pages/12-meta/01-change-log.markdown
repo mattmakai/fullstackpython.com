@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2017
 ### November
+* Added new 
+  [blog post for latest newsletter on "DevOps, Thank You Maintainers and Contributing to Open Source"](/blog/devops-python-maintaining-contributing-open-source.html).
+* Cleaned up some unfortunately broken links to websites that now 404.
 * Merge [PR#143](https://github.com/mattmakai/fullstackpython.com/pull/143)
   to create new [Dramatiq](/dramatiq.html) task queue starter page.
 * New 

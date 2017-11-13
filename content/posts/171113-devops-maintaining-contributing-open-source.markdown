@@ -8,11 +8,11 @@ headerimage: /img/visuals/email-post-header.jpg
 headeralt: Python programming language and Full Stack Python logos.
 
 
-[**DevOps, Continuous Delivery... and You**](https://www.fullstackpython.com/blog/devops-continuous-delivery-you.html)
+[**DevOps, Continuous Delivery... and You**](/blog/devops-continuous-delivery-you.html)
 is a blog post with the slides and notes based on a class I taught at
 the [University of Virginia](http://www.virginia.edu/) this past week. The
 talk is relevant as a brief introduction to 
-[DevOps](https://www.fullstackpython.com/devops.html) and Continuous Delivery, 
+[DevOps](/devops.html) and Continuous Delivery, 
 especially for junior developers and less-technical managers of software 
 teams. I'm experimenting with the "talk as blog post" style so let me know 
 via email or a tweet if you enjoy it and would want to see future technical 
@@ -43,7 +43,7 @@ As always, send me an email or [submit an issue ticket on GitHub](https://github
 to let me know how to improve 
 [Full Stack Python](https://www.fullstackpython.com/) 
 as I continue to 
-[fill in the table of contents](https://www.fullstackpython.com/table-of-contents.html) 
-with [new pages](https://www.fullstackpython.com/change-log.html)
+[fill in the table of contents](/table-of-contents.html) 
+with [new pages](/change-log.html)
 and 
-[new tutorials](https://www.fullstackpython.com/blog.html).
+[new tutorials](/blog.html).

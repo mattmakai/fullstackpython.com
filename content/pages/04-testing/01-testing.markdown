@@ -56,10 +56,6 @@ correctness.
 * [Python Testing](http://pythontesting.net/) is a site devoted to testing
   in - you guessed it - the Python programming language.
 
-* [The case for test-driven development](http://michaeldehaan.net/post/120522567217/the-case-for-test-driven-development)
-  by Michael DeHaan explains how automation is the only way to build software
-  at a large scale.
-
 * Google has a [testing blog](http://googletesting.blogspot.com/) where
   they write about various aspects of testing software at scale.
 
