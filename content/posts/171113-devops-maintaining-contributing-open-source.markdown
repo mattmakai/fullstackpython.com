@@ -1,4 +1,4 @@
-title: DevOps with Python, Maintaining and Contributing to Open Source
+title: DevOps, Thank You Maintainers and Contributing to Open Source
 slug: devops-python-maintaining-contributing-open-source
 meta: Read about using Python for DevOps, maintaining open source projects and contributing to open source.
 category: post
@@ -10,14 +10,15 @@ headeralt: Python programming language and Full Stack Python logos.
 
 [**DevOps, Continuous Delivery... and You**](https://www.fullstackpython.com/blog/devops-continuous-delivery-you.html)
 is a blog post with the slides and notes based on a class I taught at
-the [University of Virginia](http://www.virginia.edu/) this past week. Most 
-of the content is relevant as a brief introduction to 
+the [University of Virginia](http://www.virginia.edu/) this past week. The
+talk is relevant as a brief introduction to 
 [DevOps](https://www.fullstackpython.com/devops.html) and Continuous Delivery, 
 especially for junior developers and less-technical managers of software 
-teams. Let me know via an email or tweet if you enjoy the format and I will 
-do the same style blog post with future technical talks.
+teams. I'm experimenting with the "talk as blog post" style so let me know 
+via email or a tweet if you enjoy it and would want to see future technical 
+talks in that format.
 
-Speaking of feedback on open source projects, 
+Speaking of feedback on projects, 
 [this GitHub issue thread named "**thank you**"](https://github.com/jhund/filterrific/issues/147#issuecomment-341867147)
 is incredible to read. The issue ticket blew up on the front page of Hacker
 News as an example of how powerful genuine positive comments can be for 
