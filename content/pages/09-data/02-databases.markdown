@@ -11,6 +11,8 @@ meta: Relational databases serve the critical role of persisting data in many Py
 A database is an abstraction on top of an operating system's file system to 
 ease creating, reading, updating, and deleting persistent data. 
 
+<img src="/img/logos/databases.jpg" width="100%" alt="PostgreSQL, SQLite and MySQL logos, copyright their respective owners." class="technical-diagram"  style="border-radius:5px;border:1px solid #999" />
+
 
 ## Why are databases necessary?
 At a high level web applications store data and present it to users in a 
