@@ -56,7 +56,7 @@ on GitHub.
 * Updated the [Redis](/redis.html) page with loads of new resources.
 * New [Neo4j](/neo4j.html) starter page.
 * Loads of new [Bokeh](/bokeh.html) resources and some new descriptions.
-* Split out from the [ORMs](/object-relational-mapper-orms.html) and created 
+* Split out from the [ORMs](/object-relational-mappers-orms.html) and created 
   dedicated pages for [Django ORM](/django-orm.html),
   [Pony](/pony-orm.html) and [SQLObject](/sqlobject.html). Also included 
   updated resources for each page.
