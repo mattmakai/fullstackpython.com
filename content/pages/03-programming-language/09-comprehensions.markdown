@@ -41,6 +41,10 @@ Dictionary comprehension:
 
 
 ## Comprehension resources
+* [Comprehending Python’s Comprehensions](https://dbader.org/blog/list-dict-set-comprehensions-in-python#intro)
+  is an awesome post by Dan Bader with a slew of examples that explain
+  how list, dictionary and set comprehensions should be used.
+
 * Intermediate Python's 
   [Python Comprehensions](http://intermediatepythonista.com/python-comprehensions)
   post gives a well written overview of comprehensions for the three core 

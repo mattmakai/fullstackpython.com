@@ -17,13 +17,17 @@ language as of Python 2.2 in 2001.
 
 
 ## Python generator resources
-* [An introduction to Python generators](http://intermediatepythonista.com/python-generators)
-  by Intermediate Pythonista is a well done post with code examples.
-
 * This blog post entitled 
   [Python Generators](http://rdrewd.blogspot.com/2014/02/python-generators.html)
   specifically focuses on generating dictionaries. It provides a good 
   introduction for those new to Python.
+
+* [Generator Expressions in Python: An Introduction](https://dbader.org/blog/python-generator-expressions#intro)
+  is the best all-around introduction to how to use generators and
+  provides numerous code examples to learn from.
+
+* [An introduction to Python generators](http://intermediatepythonista.com/python-generators)
+  by Intermediate Pythonista is a well done post with code examples.
 
 * [Python 201: An Intro to Generators](http://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
   is another short but informative read with example generators code.
