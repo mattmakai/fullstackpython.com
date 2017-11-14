@@ -261,10 +261,6 @@ to handle these files properly.
 * [Loading Django FileField and ImageFields from the file system](http://www.revsys.com/blog/2014/dec/03/loading-django-files-from-code/)
   shows how to load a model field with a file from the file system.
 
-* [Restricting access to user-uploaded files in Django](http://blog.wearefarm.com/2015/02/09/contact-form-uploads/)
-  provides a protection mechanism for media files.
-
-
 
 ## Open source Django example projects
 * [Browser calls with Django and Twilio](https://www.twilio.com/docs/howto/walkthrough/browser-calls/python/django)
