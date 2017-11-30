@@ -172,23 +172,37 @@ def print_commit(commit):
 
 ```
 
+The `print_commit` function takes in a GitPython commit object and
+prints the 40-character SHA-1 hash for the commit followed by:
 
+1. the commit summary
+1. author name 
+1. author email
+1. commit date and time
+1. count and update size
+
+Below the `print_commit` function, create another function named 
+`print_repository` to print details of the `Repo` object:
 
 ```python
 def print_repository(repo):
-    print('Repo active branch is {}'.format(repo.active_branch))
     print('Repo description: {}'.format(repo.description))
     print('Repo active branch is {}'.format(repo.active_branch))
     for remote in repo.remotes:
         print('Remote named "{}" with URL "{}"'.format(remote, remote.url))
     print('Last commit for repo is {}.'.format(str(repo.head.commit.hexsha)))
+
+
 ```
+
+`print_repository` is similar to `print_commit` but instead prints the
+repository description, active branch, all remote Git URLs configured
+for this repository and the latest commit.
 
 Finally, we need a "main" function for when we invoke the script from the
 terminal using the `python` command. Round out our 
 
 ```python
-
 if __name__ == "__main__":
     repo_path = os.getenv('GIT_REPO_PATH')
     # Repo object used to programmatically interact with Git repositories
@@ -206,7 +220,12 @@ if __name__ == "__main__":
         print('Could not load repository at {} :('.format(repo_path))
 ```
 
+The main function handles grabbing the `GIT_REPO_PATH` environment variable
+and creates a Repo object based on the path if possible.
 
+If the repository is not empty, which indicates a failure to find the 
+repository, then the `print_repository` and `print_commit` functions are 
+called to show the repository data.
 
 If you want to copy and paste all of the code found above at once, take a
 look at the 
@@ -223,13 +242,16 @@ If the virtualenv is activated and the `GIT_REPO_PATH` environment variable
 is set properly, we should see output similar to the following.
 
 ```bash
-(gitpy) $ python read_repo.py 
 Repo at ~/devel/py/fsp/ successfully loaded.
-Repo active branch is master
 Repo description: Unnamed repository; edit this file 'description' to name the repository.
 Repo active branch is master
 Remote named "origin" with URL "git@github.com:mattmakai/fullstackpython.com"
-Last commit for repo is 1b026e4268d3ee1bd55f1979e9c397ca99bb5864.
+Last commit for repo is 1fa2de70aeb2ea64315f69991ccada51afac1ced.
+----
+1fa2de70aeb2ea64315f69991ccada51afac1ced
+"update latest blog post with code" by Matt Makai (matthew.makai@gmail.com)
+2017-11-30 17:15:14-05:00
+count: 2256 and size: 254
 ----
 1b026e4268d3ee1bd55f1979e9c397ca99bb5864
 "new blog post, just needs completed code section" by Matt Makai (matthew.makai@gmail.com)
@@ -250,11 +272,6 @@ count: 2253 and size: 256
 "add databases logos to relational databases pagem" by Matt Makai (matthew.makai@gmail.com)
 2017-11-14 13:28:02-05:00
 count: 2252 and size: 270
-----
-c76810c85387d2d63edd83ea715d8d46f294c63b
-"fix broken changelog link" by Matt Makai (matthew.makai@gmail.com)
-2017-11-14 13:17:45-05:00
-count: 2251 and size: 246
 ```
 
 The specific commits you see will vary based on the last 5 commits I've
