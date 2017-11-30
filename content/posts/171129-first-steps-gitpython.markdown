@@ -133,7 +133,133 @@ the Python code that uses GitPython.
 
 
 ## Read Repository and Commit Data
+Create a new Python file named `read_repo.py` and open it so we can start
+to code up a simple script.
 
+Start with a couple of imports and a constant:
+
+```python
+import os
+from git import Repo
+
+
+COMMITS_TO_PRINT = 5
+
+```
+
+The `os` module makes it easy to read environment variables, such as our
+`GIT_REPO_PATH` variable we set earlier. `from git import Repo` gives our
+application access to the GitPython library when we create the `Repo` object.
+`COMMITS_TO_PRINT` is a constant that limits the number of lines of output
+based on the amount of commits we want our script to print information on.
+Full Stack Python has over 2,250 commits so there'd be a whole lot of output
+if we printed every commit.
+
+Next within our `read_repo.py` file create a function to print individual
+commit information:
+
+```python
+def print_commit(commit):
+    print('----')
+    print(str(commit.hexsha))
+    print("\"{}\" by {} ({})".format(commit.summary,
+                                     commit.author.name,
+                                     commit.author.email))
+    print(str(commit.authored_datetime))
+    print(str("count: {} and size: {}".format(commit.count(),
+                                              commit.size)))
+
+
+```
+
+
+
+```python
+def print_repository(repo):
+    print('Repo active branch is {}'.format(repo.active_branch))
+    print('Repo description: {}'.format(repo.description))
+    print('Repo active branch is {}'.format(repo.active_branch))
+    for remote in repo.remotes:
+        print('Remote named "{}" with URL "{}"'.format(remote, remote.url))
+    print('Last commit for repo is {}.'.format(str(repo.head.commit.hexsha)))
+```
+
+Finally, we need a "main" function for when we invoke the script from the
+terminal using the `python` command. Round out our 
+
+```python
+
+if __name__ == "__main__":
+    repo_path = os.getenv('GIT_REPO_PATH')
+    # Repo object used to programmatically interact with Git repositories
+    repo = Repo(repo_path)
+    # check that the repository loaded correctly
+    if not repo.bare:
+        print('Repo at {} successfully loaded.'.format(repo_path))
+        print_repository(repo)
+        # create list of commits then print some of them to stdout
+        commits = list(repo.iter_commits('master'))[:COMMITS_TO_PRINT]
+        for commit in commits:
+            print_commit(commit)
+            pass
+    else:
+        print('Could not load repository at {} :('.format(repo_path))
+```
+
+
+
+If you want to copy and paste all of the code found above at once, take a
+look at the 
+[`read_repo.py` file on GitHub](https://github.com/fullstackpython/blog-code-examples/blob/master/first-steps-gitpython/read_repo.py).
+
+Time to test our GitPython-using script. Invoke the `read_repo.py` file using
+the following command.
+
+```bash
+(gitpy) $ python read_repo.py
+```
+
+If the virtualenv is activated and the `GIT_REPO_PATH` environment variable
+is set properly, we should see output similar to the following.
+
+```bash
+(gitpy) $ python read_repo.py 
+Repo at ~/devel/py/fsp/ successfully loaded.
+Repo active branch is master
+Repo description: Unnamed repository; edit this file 'description' to name the repository.
+Repo active branch is master
+Remote named "origin" with URL "git@github.com:mattmakai/fullstackpython.com"
+Last commit for repo is 1b026e4268d3ee1bd55f1979e9c397ca99bb5864.
+----
+1b026e4268d3ee1bd55f1979e9c397ca99bb5864
+"new blog post, just needs completed code section" by Matt Makai (matthew.makai@gmail.com)
+2017-11-30 09:00:06-05:00
+count: 2255 and size: 269
+----
+2136d845de6f332505c3df38efcfd4c7d84a45e2
+"change previous email newsletters list style" by Matt Makai (matthew.makai@gmail.com)
+2017-11-20 11:44:13-05:00
+count: 2254 and size: 265
+----
+9df077a50027d9314edba7e4cbff6bb05c433257
+"ensure picture sizes are reasonable" by Matt Makai (matthew.makai@gmail.com)
+2017-11-14 13:29:39-05:00
+count: 2253 and size: 256
+----
+3f6458c80b15f58a6e6c85a46d06ade72242c572
+"add databases logos to relational databases pagem" by Matt Makai (matthew.makai@gmail.com)
+2017-11-14 13:28:02-05:00
+count: 2252 and size: 270
+----
+c76810c85387d2d63edd83ea715d8d46f294c63b
+"fix broken changelog link" by Matt Makai (matthew.makai@gmail.com)
+2017-11-14 13:17:45-05:00
+count: 2251 and size: 246
+```
+
+The specific commits you see will vary based on the last 5 commits I've
+pushed to the GitHub repository, but if you see something like the output
+above that is a good sign everything worked as expected.
 
 
 ## What's next?
