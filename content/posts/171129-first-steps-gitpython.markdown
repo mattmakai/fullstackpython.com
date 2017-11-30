@@ -3,7 +3,7 @@ slug: first-steps-gitpython
 meta: Learn to use the GitPython library to programmatically interact with Git repositories.
 category: post
 date: 2017-11-29
-modified: 2017-11-29
+modified: 2017-11-30
 headerimage: /img/171129-gitpython/header.jpg
 headeralt: Python and Git logos, copyright their respective owners.
 
