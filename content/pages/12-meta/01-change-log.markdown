@@ -16,7 +16,14 @@ on GitHub.
 
 
 ## 2017
+### December
+* Merged [PR#144](https://github.com/mattmakai/fullstackpython.com/pull/144)
+  which fixes an issue with the wrong `psql` command in the blog post on 
+  [Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04](/blog/postgresql-python-3-psycopg2-ubuntu-1604.html).
+
 ### November
+* New blog post on 
+  [First Steps with GitPython](/blog/first-steps-gitpython.html).
 * Added new 
   [blog post for latest newsletter on "DevOps, Thank You Maintainers and Contributing to Open Source"](/blog/devops-python-maintaining-contributing-open-source.html).
 * Cleaned up some unfortunately broken links to websites that now 404.
