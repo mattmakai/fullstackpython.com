@@ -92,7 +92,7 @@ The `psql` command line client is useful for connecting directly to our
 PostgreSQL server without any Python code. Try out `psql` by using this
 command at the prompt: 
 
-    psql
+    psql testpython
 
 The PostgreSQL client will connect to the localhost server. The client is
 now ready for input:
