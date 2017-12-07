@@ -52,6 +52,7 @@ has support for both Python 2.7 and 3.6.
 
 * [Code Evaluation With AWS Lambda and API Gateway](https://realpython.com/blog/python/code-evaluation-with-aws-lambda-and-api-gateway/) shows how to develop a code evaluation API, to execute arbitrary code, with AWS Lambda and API Gateway.
 
+
 ### General AWS Lambda resources
 * [The Serverless Start-Up - Down With Servers!](http://highscalability.com/blog/2015/12/7/the-serverless-start-up-down-with-servers.html)
 
@@ -64,3 +65,8 @@ has support for both Python 2.7 and 3.6.
 * [Serverless Cost Calculator](http://serverlesscalc.com/) estimates
   the amount that AWS would charge based on Lambda exeuctions, 
   average execution time and memory needed per execution. 
+
+* [Serverless at Nordstrom](https://www.youtube.com/watch?v=8HHdEMWcvMI&index=9&list=PLnwBrRU5CSTmruZzR8Z06j3pGglBZcdDr)
+  is an awesome real-world story with the architecture behind a serverless
+  AWS Lambda application deployment at Nordstrom.
+

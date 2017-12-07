@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2017
 ### December
+* Crossed the 120k words mark for content, thanks to a slew of new tutorials 
+  and pages.
+* New [serverless](/serverless-architectures.html) and 
+  [AWS Lambda](/aws-lambda.html) resources.
 * Merged [PR#144](https://github.com/mattmakai/fullstackpython.com/pull/144)
   which fixes an issue with the wrong `psql` command in the blog post on 
   [Setting up PostgreSQL with Python 3 and psycopg on Ubuntu 16.04](/blog/postgresql-python-3-psycopg2-ubuntu-1604.html).
