@@ -106,7 +106,7 @@ statement which may not be tuned properly.
 
 ORMs are also often easy to try but difficult to master. For example, a
 beginner using Django might not know about the
-[`select_related()` function](https://docs.djangoproject.com/en/1.8/ref/models/querysets/#select-related)
+[`select_related()` function](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#select-related)
 and how it can improve some queries' foreign key relationship performance.
 There are dozens of performance tips and tricks for every ORM. It's possible
 that investing time in learning those quirks may be better spent just

@@ -58,11 +58,10 @@ syntax and language semantics first before diving into web development.
 
 
 ## Django books and tutorials
-There are a slew of free or low cost resources out there for Django. Since
+There are a slew of free or low cost resources out there for Django. Make
+sure to check the version numbers used in each post you read because 
 Django was released over 10 years ago and has had a huge number of updates
-since then, when you're looking for an up-to-date Django book check out the
-list below or read this post showing [current Django books](http://twoscoopspress.org/pages/current-django-books)
-as of Django 1.9.
+since then.
 
 * [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 
@@ -71,16 +70,16 @@ as of Django 1.9.
   also coverage of NoSQL, WebSockets and asynchronous responses. The book can
   be read online for free or purchased in hard copy via O'Reilly.
 
-* [Tango with Django](http://www.tangowithdjango.com/book17/) is an extensive 
+* [Tango with Django](http://www.tangowithdjango.com/) is an extensive 
   set of free introductions to using the most popular Python web framework. 
   Several current developers said this book really helped them get over the 
-  initial framework learning curve. It's recently been updated for Django 1.7!
+  initial framework learning curve.
 
 * The [Django Girls Tutorial](http://tutorial.djangogirls.org/en/index.html)
   is a great tutorial that doesn't assume any prior knowledge of Python or
   Django while helping you build your first web application.
 
-* [2 Scoops of Django](http://twoscoopspress.com/products/two-scoops-of-django-1-8) 
+* [2 Scoops of Django](https://www.twoscoopspress.com/collections/django/products/two-scoops-of-django-1-11)
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
 

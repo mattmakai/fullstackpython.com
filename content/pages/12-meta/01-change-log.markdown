@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### December
+* Working on revamping older pages such as [Django](/django.html) by 
+  eliminating outdated resources and adding the latest and greatest.
 * Removing <a href="http://www.deploypython.com/">Guide to Deployments</a> 
   links until the next version is out (estimated Spring 2018 after 
   Ubuntu 18.04 LTS releases).
