@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2017
 ### December
+* Removing <a href="http://www.deploypython.com/">Guide to Deployments</a> 
+  links until the next version is out (estimated Spring 2018 after 
+  Ubuntu 18.04 LTS releases).
 * Crossed the 120k words mark for content, thanks to a slew of new tutorials 
   and pages.
 * New [serverless](/serverless-architectures.html) and 
