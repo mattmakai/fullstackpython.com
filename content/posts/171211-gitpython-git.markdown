@@ -8,7 +8,7 @@ headerimage: /img/visuals/email-post-header.jpg
 headeralt: Python programming language and Full Stack Python logos.
 
 
-[**First Steps with GitPython**](https://www.fullstackpython.com/blog/first-steps-gitpython.html)
+[**First Steps with GitPython**](/blog/first-steps-gitpython.html)
 is a quick tutorial that shows how to get started using the awesome
 [GitPython](https://gitpython.readthedocs.io/en/stable/) library for
 programmatically interacting with Git repositories in your Python 
@@ -19,9 +19,9 @@ issue ticket I wrote about last newsletter, I opened a quick
 to thank them. Give them a thank you +1 if you've used the project and also 
 found it useful.
 
-The [**Git**](https://www.fullstackpython.com/git.html) page on Full Stack
+The [**Git**](/git.html) page on Full Stack
 Python has also just been updated with new resources. A few of my favorite
-new tutorials list on the [Git page](https://www.fullstackpython.com/git.html) 
+new tutorials list on the [Git page](/git.html) 
 are:
 
 * [Flight rules for Git](https://github.com/k88hudson/git-flight-rules)
