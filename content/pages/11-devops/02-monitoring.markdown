@@ -123,9 +123,12 @@ these services are not the right fit for every project.
 
 
 ## Monitoring resources
-* [How to Add Hosted Monitoring to Flask Web Applications](https://www.fullstackpython.com/blog/hosted-monitoring-flask-web-apps.html)
-  is the first post in a series showing how to add hosted monitoring to
-  Python web apps built with any of the major Python frameworks.
+* [How to Add Hosted Monitoring to Flask Web Applications](/blog/hosted-monitoring-flask-web-apps.html)
+  and
+  [How to Monitor Bottle Web Applications](/blog/monitor-python-web-applications.html)
+  are a couple of posts in a series showing how to add hosted monitoring to
+  Python web apps built with any of the major Python 
+  [web frameworks](/web-frameworks.html).
 
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
 

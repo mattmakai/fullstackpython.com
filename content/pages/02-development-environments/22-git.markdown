@@ -18,7 +18,7 @@ frequently used as the version control system for Python projects.
 <div class="well see-also">Git is an implementation of the <a href="/source-control.html">source control</a> concept. Learn how these pieces fit together in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
-## Git tutorials
+## Beginner Git tutorials
 Git can take awhile to wrap your head around, even for experienced software
 developers. The following tutorials can quickly get you up to speed.
 
@@ -52,6 +52,10 @@ developers. The following tutorials can quickly get you up to speed.
   is a concise essay explaining what happens when you add and commit files
   in a Git repository.
 
+* [19 Tips For Everyday Git Use](http://www.alexkras.com/19-git-tips-for-everyday-use/)
+  is a laundry list of helpful Git tips on commands such as `git bisect`,
+  `git stash` and `git difftool`.
+
 * A 
   [practical git introduction](http://marc.helbling.fr/2014/09/practical-git-introduction)
   is rich with pragmatic examples for Git usage.
@@ -59,6 +63,28 @@ developers. The following tutorials can quickly get you up to speed.
 * [git ready](http://gitready.com/) presents beginner, intermediate and 
   advanced tips for how to use Git. The example commands and their results
   are great for learning Git piece-by-piece.
+
+
+## Advanced Git tutorials and resources
+You won't learn Git in an afternoon or even a few months of usage. After
+six-plus years of working with Git I still get tripped up and have a lot to
+learn. These tutorials have taught me some of the beyond-the-basics edge
+cases.
+
+* [Flight rules for git](https://github.com/k88hudson/git-flight-rules) 
+  contains common commands that answer specific desired tasks such as 
+  "I want to discard specific unstaged files" (`git checkout filename`) and
+  "I want to rename a branch" (`git branch -m newname`).
+
+* [Shadows Of The Past: Analysis Of Git Repositories](https://jqassistant.org/shadows-of-the-past-analysis-of-git-repositories/)
+  explains how you can extract some surprising data from Git repositories'
+  commit history, such as which developers are domain experts in certain
+  tools, potential hot spots in the code and coupling between source code
+  files. This is a great read once you get past the basics of using Git.
+
+* [Phil Nash](https://philna.sh/) shows how to use the `git reflog` command 
+  in [Git back to the future](https://philna.sh/blog/2017/01/04/git-back-to-the-future/).
+  
 
 
 ## Specific Git resources
@@ -76,9 +102,6 @@ workflow. These resources will come in handy for specific Git subjects.
   of tips to get you out of binds you may find yourself in when you get too 
   tricky with Git commands. 
 
-* [Phil Nash](https://philna.sh/) shows how to use the `git reflog` command 
-  in [Git back to the future](https://philna.sh/blog/2017/01/04/git-back-to-the-future/).
-  
  * [Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html) 
    goes through a difficult merge scenario that required deep Git 
    understanding to properly fix.
@@ -90,10 +113,6 @@ workflow. These resources will come in handy for specific Git subjects.
 * [GitTips](https://git.wiki.kernel.org/index.php/GitTips) is a list of 
   pro tips to clean up common issues and how to dive through Git history
   to find specific text.
-
-* [19 Tips For Everyday Git Use](http://www.alexkras.com/19-git-tips-for-everyday-use/)
-  is a laundry list of helpful Git tips on commands such as `git bisect`,
-  `git stash` and `git difftool`.
 
 * Git allows command aliasing, which allowed one developer to create his 
   own list of [lesser known Git commands](https://hackernoon.com/lesser-known-git-commands-151a1918a60)
@@ -129,6 +148,18 @@ workflow. These resources will come in handy for specific Git subjects.
   explains global config options, revisions and merging along with several
   other commands that can be customized to your taste.
 
+* [Why does Git use a cryptographic hash function?](https://stackoverflow.com/questions/28792784/why-does-git-use-a-cryptographic-hash-function)
+  explains that the SHA-1 hash isn't used for security on Git, it's a
+  consistency check. [SHA-1 has been broken](https://shattered.io/)
+  in practice so Git needs to transition to a stronger hash without proven
+  collisions but it's not quite as big of a concern compared to 
+  security-related projects that use SHA-1.
+
+* [The anatomy of a git commit](https://blog.thoughtram.io/git/2014/11/18/the-anatomy-of-a-git-commit.html)
+  digs into the tree and commit objects that underpin the Git source control
+  system. This is an awesome read to get a view on how Git works under the
+  commands you're using to manipulate these objects.
+
 
 ## Git Workflows
 Teams of developers can use Git in varying workflows because of Git's 
@@ -152,4 +183,5 @@ minimize merge conflicts.
 * "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
   by Braintree goes over how this payments company uses Git for development
   and merging source code.
+
 
