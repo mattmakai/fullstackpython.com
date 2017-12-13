@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2017
 ### December
+* Merged pull request for
+  [How to Build Your First Slack Bot with Python](/blog/build-first-slack-bot-python.html)
+  tutorial from Slack dev advocates because bot building has changed since
+  I originally wrote the post with custom integrations. Thanks Ankur and Bear!
 * Added new blog post based on latest email newsletter on
   [GitPython and new Git tutorials](/blog/gitpython-git-tutorials.html).
 * Working on revamping older pages such as [Django](/django.html) by 
