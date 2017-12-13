@@ -1,0 +1,7 @@
+{
+  "[markdown]": {
+    "editor.rulers": [
+      80
+    ]
+  }
+}
