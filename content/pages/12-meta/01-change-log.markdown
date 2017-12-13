@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### December
+* Added new blog post based on latest email newsletter on
+  [GitPython and new Git tutorials](/blog/gitpython-git-tutorials.html).
 * Working on revamping older pages such as [Django](/django.html) by 
   eliminating outdated resources and adding the latest and greatest.
 * Removing <a href="http://www.deploypython.com/">Guide to Deployments</a> 
