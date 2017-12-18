@@ -11,15 +11,15 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-12">
+    <div class="c12">
       <h1 style="display:none">Blog Tutorials</h1>
       {% for a in articles %}
         {% if a.headerimage and a.headeralt %}
         <div class="row" style="padding-top: 30px;">
-          <div class="col-md-3">
+          <div class="c3">
             <img src="{{ a.headerimage }}" alt="{{ a.headeralt }}" width="100%" style="padding: 4px 0 6px 0; border-radius: 12px;">
           </div>
-          <div class="col-md-9">
+          <div class="c9">
         {% endif %}
         <h2 style="padding-top: 0px; margin-top: 0px;"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h2>
         <div style="font-size:12px;color:#666;margin:0 0 10px">
