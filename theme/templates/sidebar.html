@@ -1,37 +1,37 @@
-  {% if page %}
-  {% include "sponsor.html" %}
-    <div class="panel">
-      <div class="panel-heading"><h3 class="panel-head">Full Stack Python</h3></div>
-      <div class="panel-body">
-      <a href="/table-of-contents.html">Full Stack Python</a> 
-      is an open book that explains concepts in plain language and provides 
-      helpful resources for those topics.
-      </div>
-    </div>
-  {% if not page.slug == "about-author" %}
-    {% include "full-toc.html" %}
-  {% endif %}
-  {% endif %}
-  {% if not page %}
-  <div class="panel">
-    {% if page and page.slug == "about-author" %}
-      <div class="panel-heading"><h3 class="panel-head">Updates</h3></div>
-    {% else %}
-      <div class="panel-heading"><h3 class="panel-head">{% for p in pages|sort(attribute='sortorder') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
-    {% endif %}
-      <div class="panel-body">
-          View the 
-          <a href="/table-of-contents.html">table of contents</a> if you're
-          looking for a specific Python topic.
-          <hr/>
-          Major updates are tweeted via
-          <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
-          <hr/>
-          <a href="/">Full Stack Python</a> is an open book that explains
-          concepts in plain language and provides the most helpful resources 
-          for those topics.
-      </div>
+{% if page %}
+ {% include "sponsor.html" %}
+ <div class="pn">
+  <div class="pnh"><h3>Full Stack Python</h3></div>
+  <div class="pnb">
+   <a href="/table-of-contents.html">Full Stack Python</a> 
+   is an open book that explains concepts in plain language and provides 
+   helpful resources for those topics.
   </div>
+ </div>
+ {% if not page.slug == "about-author" %}
+  {% include "full-toc.html" %}
+ {% endif %}
+{% endif %}
+{% if not page %}
+ <div class="pn">
+  {% if page and page.slug == "about-author" %}
+   <div class="pnh"><h3>Updates</h3></div>
   {% else %}
-    {% include "mobile-toc.html" %}
+   <div class="pnh"><h3>{% for p in pages|sort(attribute='sortorder') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
   {% endif %}
+  <div class="pnb">
+   View the 
+   <a href="/table-of-contents.html">table of contents</a> if you're
+   looking for a specific Python topic.
+   <hr>
+   Major updates are tweeted via
+   <a href="https://twitter.com/fullstackpython">@fullstackpython</a>.
+   <hr>
+   <a href="/">Full Stack Python</a> is an open book that explains
+   concepts in plain language and provides the most helpful resources 
+   for those topics.
+  </div>
+ </div>
+ {% else %}
+  {% include "mobile-toc.html" %}
+{% endif %}
