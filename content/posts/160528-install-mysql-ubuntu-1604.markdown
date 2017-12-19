@@ -39,7 +39,7 @@ We need to install the `mysql-server` package, which downloads the required
 files, configures the initial database set up and handles running MySQL
 as a system service. Run this `apt` command to get the process started.
 
-    sudo apt-get install mysql
+    sudo apt-get install mysql-server
 
 Enter 'y' when prompted with whether or not you want to install the
 new package.
