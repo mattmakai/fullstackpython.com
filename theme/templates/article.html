@@ -15,13 +15,9 @@
 
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
 
-{% block css %}
-{% include "css.html" %}
-{% endblock %}
+{% block css %}{% include "css.html" %}{% include "css/panel.html" %}{% endblock %}
 
-{% block banner %}
-  {% include "banner.html" %}
-{% endblock %}
+{% block banner %}{% include "banner.html" %}{% endblock %}
 
 
 {% block content %}

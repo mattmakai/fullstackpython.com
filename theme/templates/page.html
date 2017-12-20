@@ -6,13 +6,9 @@
 
 {% block title %}{{ page.title }} - {% endblock %}
 
-{% block css %}
-{% include "css.html" %}
-{% endblock %}
+{% block css %}{% include "css.html" %}{% include "css/panel.html" %}{% endblock %}
 
-{% block banner %}
-  {% include "banner.html" %}
-{% endblock %}
+{% block banner %}{% include "banner.html" %}{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -20,7 +16,7 @@
   {% if page.slug == 'about-author' %}
    <div class="row">
     <div class="c6">
-     <img src="/img/visuals/matt-makai-2017.jpg" class="technical-diagram" width="100%" style="border-radius:6px;padding-top:30px">
+     <img src="/img/visuals/matt-makai-2017.jpg" width="100%" style="border-radius:6px;padding-top:30px">
     </div>
     <div class="c6">
      {{ page.content }}
