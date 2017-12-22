@@ -201,10 +201,6 @@ ready to take that step.
   set up Vim for greater productivity once you learn the initial Vim language
   for using the editor.
 
-* [Vim as a Python IDE](http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/)
-  goes through the steps necessary to make Vim into a more comfortable
-  environment for Python development.
-
 * [Setting up Vim for Python](http://stackoverflow.com/questions/9172802/setting-up-vim-for-python)
   has a well written answer on Stack Overflow for getting started with Vim.
 

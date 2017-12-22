@@ -1,0 +1,15 @@
+{% raw %}.btn-full{width:100%;box-shadow:1px 2px 1px #222;padding-bottom:4px}
+p.under-btn{text-align:left;margin-top:20px}
+p.banner{font-weight:500;line-height:1.1;color:#fff;font-size:22px;margin:14px 0 18px 0}
+th{text-align:left;font-family:"Helvetica Neue",sans-serif}
+td{padding-right:20px}
+img.bordered{border:1px solid #ccc}
+blockquote{border-left:4px solid #aaa;padding-left:10px;font-family:"Helvetica Neue"}
+.well{min-height:20px;padding:19px;margin:0 0 20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.05)}
+.see-also{margin-top:20px;background:#22B24C;color:#eee;font-family:"Helvetica Neue",sans-serif}
+.see-also a{color: #fff}
+.highlight{background:#ffff00}
+.form-control{display:block;width:100%;height:39px;padding:8px 12px;font-size:14px;color:#777;vertical-align:middle;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}
+.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)}
+.btn{display:inline-block;padding:8px 12px;margin-bottom:0;font-size:15px;line-height:1.4;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;border:1px solid transparent;border-radius:4px;color:#fff;background-color:#22b24c;border-color:#22b24c}
+.btn:active,.btn.active{background-image:none;outline:0;box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}{% endraw %}

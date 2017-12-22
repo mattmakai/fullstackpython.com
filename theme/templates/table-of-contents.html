@@ -6,7 +6,7 @@
 
 {% block title %}Table of Contents for {% endblock %}
 
-{% block css %}{% include "css.html" %}{% include "css/toc.html" %}{% endblock %}
+{% block css %}<style>{% include "css/base.css" %}{% include "css/toc.css" %}{% include "css/responsive.css" %}</style>{% endblock %}
 
 {% block banner %}
 {% endblock %}
@@ -37,17 +37,17 @@
 <h4>2.2 <a href="/shells.html">Shells</a></h4>
 <div class="tc"><a href="/bourne-again-shell-bash.html">Bourne-again shell (Bash)</a></div>
 <div class="tc"><a href="zsh-shell.html">Zsh</a></div>
-<div class="tc soon">PowerShell</div>
-<h4>2.3 <span class="soon">Terminal multiplexers</a></h4>
-<div class="tc soon">tmux</div>
-<div class="tc soon">screen</div>
-<div class="tc soon">pymux</div>
-<h4>2.4 <span class="soon">Environment configuration</span></h4>
+<div class="tc sn">PowerShell</div>
+<h4>2.3 <span class="sn">Terminal multiplexers</a></h4>
+<div class="tc sn">tmux</div>
+<div class="tc sn">screen</div>
+<div class="tc sn">pymux</div>
+<h4>2.4 <span class="sn">Environment configuration</span></h4>
 <div class="tc"><a href="/application-dependencies.html">Application dependencies</a></div>
-<div class="tc soon">Dependency isolation</div>
-<div class="tc soon">virtual environments (virtualenv)</div>
-<div class="tc soon">Environment variables</div>
-<div class="tc soon">Localhost tunnels</div>
+<div class="tc sn">Dependency isolation</div>
+<div class="tc sn">virtual environments (virtualenv)</div>
+<div class="tc sn">Environment variables</div>
+<div class="tc sn">Localhost tunnels</div>
 <h4>2.5 <a href="/source-control.html">Source Control</a></h4>
 <div class="tc"><a href="/git.html">Git</a></div>
 <div class="tc"><a href="/mercurial.html">Mercurial</a></div>
@@ -58,61 +58,61 @@
 <div class="tc"><a href="/gitlab.html">GitLab</a></div>
 
 <h3>3. <a href="/python-programming-language.html">Programming Language</a></h3>
-<h4>3.1 <span class="soon">Language Concepts</span></h4>
+<h4>3.1 <span class="sn">Language Concepts</span></h4>
 <div class="tc"><a href="/generators.html">Generators</a></div>
 <div class="tc"><a href="/comprehensions.html">Comprehensions</a></div>
-<div class="tc soon">Decorators</div>
-<h4>3.2 <span class="soon">Runtimes</span></h4>
-<div class="tc soon">CPython</div>
-<div class="tc soon">PyPy</div>
-<div class="tc soon">MicroPython</div>
-<div class="tc soon">IronPython</div>
-<div class="tc soon">Jython</div>
+<div class="tc sn">Decorators</div>
+<h4>3.2 <span class="sn">Runtimes</span></h4>
+<div class="tc sn">CPython</div>
+<div class="tc sn">PyPy</div>
+<div class="tc sn">MicroPython</div>
+<div class="tc sn">IronPython</div>
+<div class="tc sn">Jython</div>
 
 <h3>4. <a href="/testing.html">Testing</a></h3>
-<h4>4.1 <span class="soon">Testing Approaches</span></h4>
+<h4>4.1 <span class="sn">Testing Approaches</span></h4>
 <div class="tc"><a href="/unit-testing.html">Unit testing</a></div>
 <div class="tc"><a href="/integration-testing.html">Integration testing</a></div>
-<div class="tc soon">Database testing</div>
-<div class="tc soon">Load testing</div>
-<div class="tc soon">Test-driven development</div>
-<h4>4.2 <span class="soon">Testing Concepts</span></h4>
+<div class="tc sn">Database testing</div>
+<div class="tc sn">Load testing</div>
+<div class="tc sn">Test-driven development</div>
+<h4>4.2 <span class="sn">Testing Concepts</span></h4>
 <div class="tc"><a href="/code-metrics.html">Code Metrics</a></div>
-<div class="tc soon">Code coverage</div>
-<div class="tc soon">Mocking</div>
+<div class="tc sn">Code coverage</div>
+<div class="tc sn">Mocking</div>
 <h4>4.3 <a href="/debugging.html">Debugging</a></h4>
-<div class="tc soon">pdb</div>
-<div class="tc soon">ipdb</div>
-<div class="tc soon">pudb</div>
-<div class="tc soon">wdb</div>
+<div class="tc sn">pdb</div>
+<div class="tc sn">ipdb</div>
+<div class="tc sn">pudb</div>
+<div class="tc sn">wdb</div>
 <h4>4.4 <a href="/logging.html">Logging</a></h4>
-<div class="tc soon">stdlib logging</div>
-<div class="tc soon">DTrace</div>
-<div class="tc soon">logbook</div>
+<div class="tc sn">stdlib logging</div>
+<div class="tc sn">DTrace</div>
+<div class="tc sn">logbook</div>
 
-<h3>5. <span class="soon">Documentation</span></h3>
-<h4>5.1 <span class="soon">Markup Languages</span></h4>
+<h3>5. <span class="sn">Documentation</span></h3>
+<h4>5.1 <span class="sn">Markup Languages</span></h4>
 <div class="tc"><a href="/markdown.html">Markdown</a></div>
-<div class="tc soon">reStructuredText</div>
-<div class="tc soon">AsciiDoc</div>
-<h4>5.2 <span class="soon">Documentation Tools</span></h4>
-<div class="tc soon">Docstrings</div>
-<div class="tc soon">Sphinx</div>
-<div class="tc soon">pandoc</div>
-<div class="tc soon">reportlab</div>
+<div class="tc sn">reStructuredText</div>
+<div class="tc sn">AsciiDoc</div>
+<h4>5.2 <span class="sn">Documentation Tools</span></h4>
+<div class="tc sn">Docstrings</div>
+<div class="tc sn">Sphinx</div>
+<div class="tc sn">pandoc</div>
+<div class="tc sn">reportlab</div>
 
-<h3>6. <span class="soon">Security</span></h3>
-<h4>6.1 <span class="soon">Scanning and Probing</span></h4>
-<div class="tc soon">Network scanning</div>
-<div class="tc soon">Pentesting</div>
-<h4>6.2 <span class="soon">Server security</span></h4>
-<div class="tc soon">Public key infrastructure</div>
-<div class="tc soon">Firewalls</div>
-<div class="tc soon">Symmetric keys</div>
+<h3>6. <span class="sn">Security</span></h3>
+<h4>6.1 <span class="sn">Scanning and Probing</span></h4>
+<div class="tc sn">Network scanning</div>
+<div class="tc sn">Pentesting</div>
+<h4>6.2 <span class="sn">Server security</span></h4>
+<div class="tc sn">Public key infrastructure</div>
+<div class="tc sn">Firewalls</div>
+<div class="tc sn">Symmetric keys</div>
 <h4>6.3 <a href="/web-application-security.html">Web application security</a></h4>
-<div class="tc soon">Cross-Site Scripting</div>
-<div class="tc soon">SQL injection</div>
-<div class="tc soon">Cross Site Request Forgery</div>
+<div class="tc sn">Cross-Site Scripting</div>
+<div class="tc sn">SQL injection</div>
+<div class="tc sn">Cross Site Request Forgery</div>
 </div>
 
 <div class="c4 toc">
@@ -135,28 +135,28 @@
 <div class="tc"><a href="/cascading-style-sheets.html">CSS</a></div>
 <div class="tc"><a href="/responsive-design.html">Responsive Design</a></div>
 <div class="tc"><a href="/minification.html">Minification</a></div>
-<h4>7.4 <span class="soon">CSS Frameworks</span></h4>
+<h4>7.4 <span class="sn">CSS Frameworks</span></h4>
 <div class="tc"><a href="/bootstrap-css.html">Bootstrap</a></div>
-<div class="tc soon">Foundation</div>
-<div class="tc soon">Materialize</div>
-<div class="tc soon">Concise</div>
+<div class="tc sn">Foundation</div>
+<div class="tc sn">Materialize</div>
+<div class="tc sn">Concise</div>
 <h4>7.5 <a href="/javascript.html">JavaScript</a></h4>
-<div class="tc soon">React</div>
-<div class="tc soon">Vue.js</div>
-<div class="tc soon">AngularJS</div>
-<div class="tc soon">Ember</div>
+<div class="tc sn">React</div>
+<div class="tc sn">Vue.js</div>
+<div class="tc sn">AngularJS</div>
+<div class="tc sn">Ember</div>
 <h4>7.6 <a href="/task-queues.html">Task queues</a></h4>
 <div class="tc"><a href="/celery.html">Celery</a></div>
 <div class="tc"><a href="/redis-queue-rq.html">Redis Queue (RQ)</a></div>
 <div class="tc"><a href="/dramatiq.html">Dramatiq</a></div>
-<div class="tc soon">Huey</div>
+<div class="tc sn">Huey</div>
 <h4>7.7 <a href="/static-site-generator.html">Static site generators</a></h4>
 <div class="tc"><a href="/pelican.html">Pelican</a></div>
 <div class="tc"><a href="/lektor.html">Lektor</a></div>
 <div class="tc"><a href="/mkdocs.html">MkDocs</a></div>
-<h4>7.8 <span class="soon">Networking</span></h4>
+<h4>7.8 <span class="sn">Networking</span></h4>
 <div class="tc"><a href="/websockets.html">WebSockets</a></div>
-<div class="tc soon">WebRTC</div>
+<div class="tc sn">WebRTC</div>
 <div class="tc"><a href="/uvloop.html">uvloop</a></div>
 
 <h3>8. <a href="/deployment.html">Web App Deployment</a></h3>
@@ -165,56 +165,56 @@ There is also an
 <a href="http://www.deploypython.com/">entire book</a>
 dedicated to Python web application deployment.
 </div>
-<h4>8.1 <span class="soon">Hosting</span></h4>
+<h4>8.1 <span class="sn">Hosting</span></h4>
 <div class="tc"><a href="/servers.html">Servers</a></div>
 <div class="tc"><a href="/static-content.html">Static content</a></div>
-<div class="tc soon">Content Delivery Networks</div>
+<div class="tc sn">Content Delivery Networks</div>
 <h4>8.2 <a href="/virtual-private-servers-vps.html">Virtual Private Servers (VPSs)</a></h4>
-<div class="tc soon">Linode</div>
-<div class="tc soon">Digital Ocean</div>
-<div class="tc soon">Lightsail</div>
+<div class="tc sn">Linode</div>
+<div class="tc sn">Digital Ocean</div>
+<div class="tc sn">Lightsail</div>
 <h4>8.3 <a href="/platform-as-a-service.html">Platform-as-a-Service</a></h4>
-<div class="tc soon">Heroku</div>
-<div class="tc soon">PythonAnywhere</div>
-<div class="tc soon">Codestar</div>
-<div class="tc soon">Google App Engine</div>
+<div class="tc sn">Heroku</div>
+<div class="tc sn">PythonAnywhere</div>
+<div class="tc sn">Codestar</div>
+<div class="tc sn">Google App Engine</div>
 <h4>8.4 <a href="/operating-systems.html">Operating systems</a></h4>
 <div class="tc"><a href="/ubuntu.html">Ubuntu Linux</a></div>
-<div class="tc soon">Mint Linux</div>
-<div class="tc soon">Mac OS X</div>
-<div class="tc soon">Windows</div>
+<div class="tc sn">Mint Linux</div>
+<div class="tc sn">Mac OS X</div>
+<div class="tc sn">Windows</div>
 <h4>8.5 <a href="/web-servers.html">Web servers</a></h4>
 <div class="tc"><a href="/apache-http-server.html">Apache HTTP Server</a></div>
 <div class="tc"><a href="/nginx.html">Nginx</a></div>
 <div class="tc"><a href="/caddy.html">Caddy</a></div>
-<div class="tc soon">Lighttpd</div>
+<div class="tc sn">Lighttpd</div>
 <h4>8.6 <a href="/wsgi-servers.html">WSGI servers</a></h4>
 <div class="tc"><a href="/green-unicorn-gunicorn.html">Green Unicorn</a></div>
-<div class="tc soon">mod_wsgi</div>
-<div class="tc soon">uWSGI</div>
-<div class="tc soon">Waitress</div>
+<div class="tc sn">mod_wsgi</div>
+<div class="tc sn">uWSGI</div>
+<div class="tc sn">Waitress</div>
 <h4>8.7 <a href="/continuous-integration.html">Continuous integration</a></h4>
 <div class="tc"><a href="/jenkins.html">Jenkins</a></div>
-<div class="tc soon">GoCD</div>
-<div class="tc soon">BuildBot</div>
-<h4>8.8 <span class="soon">Hosted Continuous Integration</span></h4>
-<div class="tc soon">CircleCI</div>
-<div class="tc soon">Codeship</div>
-<div class="tc soon">Semaphore</div>
-<div class="tc soon">Travis CI</div>
+<div class="tc sn">GoCD</div>
+<div class="tc sn">BuildBot</div>
+<h4>8.8 <span class="sn">Hosted Continuous Integration</span></h4>
+<div class="tc sn">CircleCI</div>
+<div class="tc sn">Codeship</div>
+<div class="tc sn">Semaphore</div>
+<div class="tc sn">Travis CI</div>
 <h4>8.9 <a href="/configuration-management.html">Configuration management</a></h4>
-<div class="tc soon">Ansible</div>
-<div class="tc soon">Salt</div>
-<div class="tc soon">Fabric</div>
-<h4>8.10 <span class="soon">Containers</span></h4>
+<div class="tc sn">Ansible</div>
+<div class="tc sn">Salt</div>
+<div class="tc sn">Fabric</div>
+<h4>8.10 <span class="sn">Containers</span></h4>
 <div class="tc tds"><a href="/docker.html">Docker</a></div>
-<div class="tc tds soon">Kubernetes</div>
+<div class="tc tds sn">Kubernetes</div>
 <h4>8.11 <a href="/serverless.html">Serverless Architectures</a></h4>
 <div class="tc tds"><a href="/aws-lambda.html">AWS Lambda</a></div>
-<div class="tc soon tds">Twilio Functions</div>
-<div class="tc soon tds">Azure Functions</div>
+<div class="tc sn tds">Twilio Functions</div>
+<div class="tc sn tds">Azure Functions</div>
 <div class="tc tds"><a href="/google-cloud-functions.html">Google Cloud Functions</a></div>
-<div class="tc soon tds">Bluemix OpenWhisk</div>
+<div class="tc sn tds">Bluemix OpenWhisk</div>
 </div>
 
 <div class="c4 toc">
@@ -236,82 +236,82 @@ dedicated to Python web application deployment.
 <div class="tc"><a href="/neo4j.html">Neo4j</a></div>
 <h4>9.4 <a href="/data-analysis.html">Data analysis</a></h4>
 <div class="tc"><a href="/pandas.html">pandas</a></div>
-<div class="tc soon">NumPy</div>
-<div class="tc soon">SciPy</div>
-<div class="tc soon">Blaze</div>
-<h4>9.5 <span class="soon">Data visualization</span></h4>
+<div class="tc sn">NumPy</div>
+<div class="tc sn">SciPy</div>
+<div class="tc sn">Blaze</div>
+<h4>9.5 <span class="sn">Data visualization</span></h4>
 <div class="tc"><a href="/bokeh.html">Bokeh</a></div>
 <div class="tc"><a href="/d3-js.html">d3.js</a></div>
-<div class="tc soon">matplotlib</div>
-<div class="tc soon">Seaborn</div>
-<h4>9.6 <span class="soon">Natural Language Processing</span></h4>
-<div class="tc soon">NLTK</div>
-<div class="tc soon">TextBlob</div>
-<div class="tc soon">spaCy</div>
-<h4>9.7 <span class="soon">Machine Learning</span></h4>
-<div class="tc soon">scikit-learn</div>
-<div class="tc soon">pattern</div>
-<div class="tc soon">Chainer</div>
-<h4>9.8 <span class="soon">Web Scraping</span></h4>
-<div class="tc soon">Scrapy</div>
-<div class="tc soon">MechnicalSoup</div>
-<div class="tc soon">RoboBrowser</div>
-<h4>9.9 <span class="soon">Search</span></h4>
-<div class="tc soon">Elastic Search</div>
-<div class="tc soon">Whoosh</div>
-<div class="tc soon">Solr</div>
+<div class="tc sn">matplotlib</div>
+<div class="tc sn">Seaborn</div>
+<h4>9.6 <span class="sn">Natural Language Processing</span></h4>
+<div class="tc sn">NLTK</div>
+<div class="tc sn">TextBlob</div>
+<div class="tc sn">spaCy</div>
+<h4>9.7 <span class="sn">Machine Learning</span></h4>
+<div class="tc sn">scikit-learn</div>
+<div class="tc sn">pattern</div>
+<div class="tc sn">Chainer</div>
+<h4>9.8 <span class="sn">Web Scraping</span></h4>
+<div class="tc sn">Scrapy</div>
+<div class="tc sn">MechnicalSoup</div>
+<div class="tc sn">RoboBrowser</div>
+<h4>9.9 <span class="sn">Search</span></h4>
+<div class="tc sn">Elastic Search</div>
+<div class="tc sn">Whoosh</div>
+<div class="tc sn">Solr</div>
 
 <h3>10. <a href="/application-programming-interfaces.html">Web APIs</a></h3>
-<h4 class="td">10.1 <span class="soon">API concepts</span></h4>
+<h4 class="td">10.1 <span class="sn">API concepts</span></h4>
 <div class="tc tdi"><a href="/microservices.html">Microservices</a></div>
-<div class="tc tdi soon">REST</div>
-<div class="tc tdi soon">Helper libraries</div>
-<div class="tc tdi soon">Webhooks</div>
+<div class="tc tdi sn">REST</div>
+<div class="tc tdi sn">Helper libraries</div>
+<div class="tc tdi sn">Webhooks</div>
 <div class="tc tdi"><a href="/bots.html">Bots</a></div>
 <h4 class="td">10.2 <a href="/api-creation.html">API creation</a></h4>
-<div class="tc tdi soon">Django REST Framework</div>
-<div class="tc tdi soon">Flask-RESTful</div>
-<div class="tc tdi soon">API Star</div>
-<div class="tc tdi soon">Flask API</div>
+<div class="tc tdi sn">Django REST Framework</div>
+<div class="tc tdi sn">Flask-RESTful</div>
+<div class="tc tdi sn">API Star</div>
+<div class="tc tdi sn">Flask API</div>
 <h4 class="td">10.3 <a href="/api-integration.html">API integration</a></h4>
 <div class="tc tdi"><a href="/twilio.html">Twilio</a></div>
-<div class="tc tdi soon">Stripe</div>
-<div class="tc tdi soon">Slack</div>
-<div class="tc tdi soon">Google APIs</div>
+<div class="tc tdi sn">Stripe</div>
+<div class="tc tdi sn">Slack</div>
+<div class="tc tdi sn">Google APIs</div>
 
 <h3>11. <a href="/devops.html">DevOps</a></h3>
 <h4 class="td">11.1 <a href="/monitoring.html">Monitoring</a></h4>
-<div class="tc tdi soon">Graphite</div>
-<div class="tc tdi soon">Prometheus</div>
-<div class="tc tdi soon">Service Canary</div>
-<h4 class="td">11.2 <span class="soon">Hosted Monitoring Services</span></h4>
+<div class="tc tdi sn">Graphite</div>
+<div class="tc tdi sn">Prometheus</div>
+<div class="tc tdi sn">Service Canary</div>
+<h4 class="td">11.2 <span class="sn">Hosted Monitoring Services</span></h4>
 <div class="tc tdi"><a href="/rollbar.html">Rollbar</a></div>
-<div class="tc tdi soon">Sentry</div>
-<div class="tc tdi soon">New Relic</div>
-<div class="tc tdi soon">DataDog</div>
-<h4 class="td">11.3 <span class="soon">Web App Performance</span></h4>
+<div class="tc tdi sn">Sentry</div>
+<div class="tc tdi sn">New Relic</div>
+<div class="tc tdi sn">DataDog</div>
+<h4 class="td">11.3 <span class="sn">Web App Performance</span></h4>
 <div class="tc tdi"><a href="/caching.html">Caching</a></div>
-<div class="tc tdi soon">Vertical scaling</div>
-<div class="tc tdi soon">Horizontal scaling</div>
-<div class="tc tdi soon">Load balancing</div>
+<div class="tc tdi sn">Vertical scaling</div>
+<div class="tc tdi sn">Horizontal scaling</div>
+<div class="tc tdi sn">Load balancing</div>
 <h4 class="td">11.4 <a href="/web-analytics.html">Web Analytics</a></h4>
-<div class="tc tdi soon">Google Analytics</div>
-<div class="tc tdi soon">Piwik</div>
-<div class="tc tdi soon">Heap</div>
-<div class="tc tdi soon">MixPanel</div>
+<div class="tc tdi sn">Google Analytics</div>
+<div class="tc tdi sn">Piwik</div>
+<div class="tc tdi sn">Heap</div>
+<div class="tc tdi sn">MixPanel</div>
 
-<h3>12. <span class="soon">Blockchain</a></h3>
-<h4 class="td">12.1 <span class="soon">Cryptocurrency</span></h4>
-<div class="tc tdi soon">Bitcoin</div>
-<div class="tc tdi soon">Ethereum</div>
-<div class="tc tdi soon">Initial Coin Offerings (ICOs)</div>
+<h3>12. <span class="sn">Blockchain</a></h3>
+<h4 class="td">12.1 <span class="sn">Cryptocurrency</span></h4>
+<div class="tc tdi sn">Bitcoin</div>
+<div class="tc tdi sn">Ethereum</div>
+<div class="tc tdi sn">Initial Coin Offerings (ICOs)</div>
 
 <h3>13. Meta</h3>
-<h4 class="td">13.1 <span class="soon">About</span></h4>
+<h4 class="td">13.1 <span class="sn">About</span></h4>
 <div class="tc tdi"><a href="/change-log.html">Change log</a></div>
 <div class="tc tdi"><a href="/about-author.html">About the author</a></div>
 <div class="tc tdi"><a href="/what-full-stack-means.html">What "full stack" means</a></div>
-<h4 class="td">13.2 <span class="soon">Contributing</span></h4>
+<h4 class="td">13.2 <span class="sn">Contributing</span></h4>
 <div class="tc tdi"><a href="/page-statuses.html">Page Statuses</a></div>
 <div class="tc tdi"><a href="/future-directions.html">Future directions</a></div>
 </div>

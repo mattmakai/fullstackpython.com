@@ -6,7 +6,7 @@
 
 {% block title %}{{ page.title }} - {% endblock %}
 
-{% block css %}{% include "css.html" %}{% include "css/panel.html" %}{% endblock %}
+{% block css %}<style>{% include "css/base.css" %}{% include "css/panel.css" %}{% include "css/page-article.css" %}{% include "css/responsive.css" %}</style>{% endblock %}
 
 {% block banner %}{% include "banner.html" %}{% endblock %}
 
