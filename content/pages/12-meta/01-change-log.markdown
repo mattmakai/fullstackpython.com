@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### December
+* Major performance improvements by reducing all page sizes by 15-20%. Split apart
+  the CSS, tuned it and minified the classes.
 * Merged pull request for
   [How to Build Your First Slack Bot with Python](/blog/build-first-slack-bot-python.html)
   tutorial from Slack dev advocates because bot building has changed since
