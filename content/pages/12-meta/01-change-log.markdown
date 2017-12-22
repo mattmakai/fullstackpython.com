@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### December
+* Merged [PR#147](https://github.com/mattmakai/fullstackpython.com/pull/147) to
+  fix an issue installing [MySQL](/mysql.html) server package.
 * Major performance improvements by reducing all page sizes by 15-20%. Split apart
   the CSS, tuned it and minified the classes.
 * Merged pull request for
