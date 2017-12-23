@@ -69,7 +69,7 @@ If you'll be at PyCon in April, I'll definitely be there at the
 [Twilio](https://www.twilio.com/) booth or around the community
 booths where [Michael Kennedy of Talk Python to Me](https://talkpython.fm/) 
 and other Python community folks such as [Dan Bader](https://dbader.org/), 
-[Adrian Rosebrock of PyImageSearch](https://www.pyimagesearch.com/)
+[Adrian Rosebrock of PyImageSearch](https://www.pyimagesearch.com/),
 [Bob Belderbos of PyBites](https://pybit.es/) and the 
 [Real Python](https://realpython.com) guys will also be hanging out.
 
