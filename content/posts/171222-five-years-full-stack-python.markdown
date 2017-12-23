@@ -60,7 +60,7 @@ it took a long time to get to that milestone. In fact there were only a few
 hundred readers within the first year. Over time with daily updates I have
 been fortunate to grow the readership to around 125,000 developers per month.
 
-<img src="https://www.fullstackpython.com/img/visuals/traffic.jpg" width="100%" class="rnd" alt="Full Stack Python traffic growth via Google Analytics.">
+<img src="https://www.fullstackpython.com/img/visuals/traffic.png" width="100%" class="rnd" alt="Full Stack Python traffic growth via Google Analytics.">
 
 Watching the numbers go up has been fun but the best part is receiving 
 "thank you" emails and tweets, as well as talking to readers in person at 
