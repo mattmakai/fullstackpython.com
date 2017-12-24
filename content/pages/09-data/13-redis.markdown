@@ -121,3 +121,6 @@ get started in those areas.
   connections maxing out on Heroku, and how to avoid this in your own
   applications by modifying your `redis.conf` settings.
 
+* [A Speed Guide To Redis Lua Scripting](https://www.compose.com/articles/a-quick-guide-to-redis-lua-scripting/)
+  shows how to use the Lua programming language to create extensions
+  for Redis.
