@@ -46,11 +46,6 @@ sharing documents that contain embedded code and execution results.
   explores the plugins that the author uses when creating and exporting
   reports from Jupyter.
 
-* [JupyterLab](http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/)
-  is an upcoming new computational environment built on what the Jupyter
-  Notebook creators have learned over the past several years. In the
-  future JupyterLab may be the future for the project.
-
 * PyData has an extensive
   [list of Jupyter Notebook talks](https://www.youtube.com/user/PyDataTV/search?query=jupyter)
   from past events.

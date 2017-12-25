@@ -68,8 +68,7 @@ into that hook to perform necessary actions before the exiting completes.
 
 * [anaconda-mode](https://github.com/proofit404/anaconda-mode/) is specific
   to Python development and allows code navigation, documentation lookup 
-  and code completion. The [jedi](http://jedi.jedidjah.ch/en/latest/) library 
-  is used under the hood.
+  and code completion.
 
 * [Tern](http://ternjs.net/) is a stand-alone code-analysis engine for
   JavaScript. It can be integrated within a Django project

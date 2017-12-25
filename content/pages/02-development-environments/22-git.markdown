@@ -56,10 +56,6 @@ developers. The following tutorials can quickly get you up to speed.
   is a laundry list of helpful Git tips on commands such as `git bisect`,
   `git stash` and `git difftool`.
 
-* A 
-  [practical git introduction](http://marc.helbling.fr/2014/09/practical-git-introduction)
-  is rich with pragmatic examples for Git usage.
-
 * [git ready](http://gitready.com/) presents beginner, intermediate and 
   advanced tips for how to use Git. The example commands and their results
   are great for learning Git piece-by-piece.

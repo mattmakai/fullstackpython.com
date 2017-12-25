@@ -99,9 +99,6 @@ getting started and then require payment as you scale up your application.
 * [Cloud9](https://c9.io/) began as an independent company and is now owned 
   by Amazon as part of Amazon Web Services.
 
-* [Terminal](https://www.terminal.com/) is another cloud environment that
-  emphasizes their hosted database services in addition to the IDE.
-
 
 ## Development environment resources
 Development environments are unique to each programmer because Python is

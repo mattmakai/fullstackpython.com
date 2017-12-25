@@ -132,9 +132,6 @@ securing Linux distributions.
   [securing Yosemite guide](https://github.com/drduh/OS-X-Yosemite-Security-and-Privacy-Guide)
   which covers that environment.
 
-* [TLS and Nginx Web Server Hardening](https://www.moses.io/2015/09/tls-and-server-hardening-post-nginx/)
-  explains a secure server configuration for the Nginx web server.
-
 * [Timing attacks are one form of vulnerability](http://arstechnica.com/security/2015/10/new-attacks-on-network-time-protocol-can-defeat-https-and-create-chaos/) 
   that can be used to defeat HTTPS in certain configurations. Understanding
   how those attacks work is important in keeping your users' connections

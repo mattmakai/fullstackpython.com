@@ -43,7 +43,3 @@ programmer's [development environment](/development-environments.html).
   is a wonderfully-written detailed post on the setup that the author
   uses along with why he enjoys using Zsh for development.
 
-* [Configuring Your Linux for Development With Zsh, Tmux, and Vim](https://www.codementor.io/lukemurphy/configuring-your-linux-for-development-with-zsh-tmux-and-vim-8s9r0fza5)
-  combines Zsh, tmux and [Vim](/vim.html) under Linux. This configuration
-  involving multiple tools is common among advanced Vim users.
-

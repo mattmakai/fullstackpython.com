@@ -56,7 +56,7 @@ today's Python development world. The two primary choices are:
 * [Mercurial](/mercurial.html) is similar to Git, also a free
   and open source distributed version control system.
 
-* [Subversion](/subversion.html) is a centralized system where
+* [Subversion](/apache-subversion.html) is a centralized system where
   developers must check files in and out of the hosted repository to minimize
   merge conflicts.
 
