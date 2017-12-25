@@ -200,10 +200,6 @@ deployment.
   S3. The guide also shows how to set up SSL certificates to ensure
   your site can be loaded via HTTPS.
 
-* [Deploying a Static Site on AWS, with S3 and CloudFront](https://www.davidbaumgold.com/tutorials/deploy-static-site-aws-s3-cloudfront/)
-  provides a really nice tutorial with screenshots to get any type of static site
-  configured on AWS using S3 and Cloudfront.
-
 * [Static site hosting with S3 and Cloudflare](https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/)
   shows how to set up an S3 bucket with Cloudflare in front as a CDN that
   serves the content with HTTPS. You should be able to accomplish roughly 

@@ -117,11 +117,6 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
 
-* [Create Your Own Obnoxiously Simple Messaging App Just Like Yo](http://readwrite.com/2014/07/11/one-click-messaging-app)
-  is a silly walkthrough of very basic Flask web application that uses
-  [Nitrous.io](https://www.nitrous.io/) to get started and 
-  [Twilio](https://www.twilio.com/) for SMS.
-
 * The blog post series "Things which aren't magic" covers how Flask's 
   ubiquitous @app.route decorator works under the covers. There are two 
   parts in the series,

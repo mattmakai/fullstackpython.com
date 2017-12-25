@@ -104,10 +104,6 @@ steps to more easily get your web application up and running.
 * This [tutorial](http://gotofritz.net/blog/weekly-challenge/restful-python-api-bottle/)
   is another Bottle walkthrough for creating a RESTful web API.
 
-* [BAM! A Web Framework "Short Stack"](http://reachtim.com/articles/BAM-Short-Stack.html)
-  is a walkthrough of using Bottle, Apache and MongoDB to create a web
-  application.
-
 * [Bottle, full stack without Django](http://www.avelino.xxx/2014/12/bottle-full-stack-without-django)
   does a nice job of connecting SQLAlchemy with Bottle and building an example
   application using the framework.
