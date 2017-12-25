@@ -40,11 +40,7 @@ has support for both Python 2.7 and 3.6.
   deployments. Be sure to [read the Zappa blog](https://blog.zappa.io/)
   as well for walkthroughs and new feature announcements.
 
-* [First Steps with AWS Lambda, Zappa, Flask and Python 3](https://andrich.blog/2017/02/12/first-steps-with-aws-lambda-zappa-flask-and-python/)
-  shows how to use Zappa to deploy applications built with
-  Flask and Python 3.
-
-* [Deploying a serverless flask app to AWS lambda using Zappa](https://asciinema.org/a/98560)
+* [Deploying a serverless Flask app to AWS Lambda using Zappa](https://asciinema.org/a/98560)
   provides a screen capture of one developer deploying their
   application to Lambda.
 

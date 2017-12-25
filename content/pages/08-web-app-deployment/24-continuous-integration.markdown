@@ -146,10 +146,6 @@ programming language agnostic. Learn more via the following resources or on
   includes advice on checking in code, commit tests and reverting to
   previous revisions.
 
-* [Deploying to AWS using Ansible, Docker and Teamcity](http://blog.bwhaley.com/deploying-to-aws-using-ansible-docker-and-teamcity)
-  is an example walking through one potential way to use the Teamcity CI
-  server for automated deployments.
-
 * [Why Continuous Integration Is Important](https://blog.codeship.com/continuous-integration-important/)
   is a high-level overview of how CI can build trust both among developers
   and between developers and non-technical people in an organization. The

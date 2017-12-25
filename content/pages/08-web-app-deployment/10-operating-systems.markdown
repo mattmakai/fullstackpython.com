@@ -66,7 +66,7 @@ a major update compared with 2.7 in Ubuntu 14.04 LTS.
 
 #### Ubuntu Python Packages
 There are several 
-[Aptitude](https://help.ubuntu.com/12.04/serverguide/aptitude.html)
+[Aptitude](https://help.ubuntu.com/16.04/serverguide/aptitude.html)
 packages found on Linux servers running a Python stack. These packages are: 
 
 * [python-dev](http://packages.ubuntu.com/precise/python-dev) for header

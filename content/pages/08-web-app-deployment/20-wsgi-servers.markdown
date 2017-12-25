@@ -187,12 +187,6 @@ The following are WSGI servers based on community recommendations.
   to the WSGI standard. That transition period is now complete and an 
   implementation of WSGI should always be used instead mod\_python.
 
-* Nicholas Piël wrote an interesting benchmark blog post of 
-  [Python WSGI servers](http://nichol.as/benchmark-of-python-web-servers).
-  Note that the post is a few years old. Benchmarks should be considered
-  for their specific tested scenarios and not quickly extrapolated as general
-  "this server is faster than this other server" results.
-
 * [How to Deploy Python WSGI Applications with CherryPy](https://www.digitalocean.com/community/articles/how-to-deploy-python-wsgi-applications-using-a-cherrypy-web-server-behind-nginx)
   answers why CherryPy is a simple combination web and WSGI server along with 
   how to use it.

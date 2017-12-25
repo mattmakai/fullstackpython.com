@@ -44,10 +44,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 * [Andrew Baker](https://github.com/atbaker) presented a fantastic tutorial 
   at [PyOhio](http://andrewtorkbaker.com/pyohio-docker-101-tutorial) on 
   [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial). 
-  Andrew also wrote the article [what containers can do for you](http://radar.oreilly.com/2015/01/what-containers-can-do-for-you.html)
-  and created the
-  [O'Reilly Introduction to Docker video](http://shop.oreilly.com/product/0636920035732.do) 
-  that's well worth buying.
+  Andrew also wrote the article [what containers can do for you](http://radar.oreilly.com/2015/01/what-containers-can-do-for-you.html).
 
 * [Docker curriculum](http://prakhar.me/docker-curriculum/) is a detailed
   tutorial created by a developer to show the exact steps for deploying an 

@@ -76,7 +76,7 @@ from PyCon UK 2013
 
 * [Introducing Ansible into Legacy Projects](http://benlopatin.com/getting-started-with-ansible/)
 
-* [Post-install steps with Ansible](http://devopsu.com/guides/ansible-post-install.html) 
+* [Post-install steps with Ansible](https://hvops.com/articles/ansible-post-install/)
 
 * [6 practices for super smooth Ansible experience](http://hakunin.com/six-ansible-practices)
 
@@ -87,8 +87,6 @@ from PyCon UK 2013
 * [Create a Couchbase Cluster with Ansible](http://blog.couchbase.com/create-couchbase-cluster-with-ansible)
 
 * [Idempotence, convergence, and other silly fancy words we often use](https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ)
-
-* [How to Write an Ansible Role for Ansible Galaxy](http://probablyfine.co.uk/2014/03/27/how-to-write-an-ansible-role-for-ansible-galaxy/)
 
 * [Testing with Jenkins, Docker and Ansible](http://blog.mist.io/post/82383668190/move-fast-and-dont-break-things-testing-with)
 
