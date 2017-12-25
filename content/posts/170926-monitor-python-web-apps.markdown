@@ -44,7 +44,7 @@ the post:
 If you need help getting your 
 [development environment](/development-environments.html) configured
 before running this code, take a look at
-[this guide for setting up Python 3 and Bottle on Ubuntu 16.04 LTS](/blog/python-3-bottle-green-unicorn-ubuntu-1604-xenial-xerus.html).
+[this guide for setting up Python 3 and Bottle on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html).
 
 All code in this blog post is available open source under the MIT license 
 on GitHub under the 

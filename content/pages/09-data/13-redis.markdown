@@ -78,11 +78,6 @@ some advice on Reids security and guarding against data breaches.
   [cracks its security](http://www.antirez.com/news/96) to show the tradeoffs
   purposely made between ease of use and security in the default settings.
 
-* [Is your Redis server safe?](https://www.isredisallsafe.com/) is a tool
-  to test that your Redis instances are locked down. The tool is based on
-  the blog post
-  [a few things about Redis security](http://www.antirez.com/news/96).
-
 * [For God’s sake, secure your Mongo/Redis/etc!](https://medium.com/@shahinism/for-gods-sake-secure-your-mongo-redis-etc-4f310cf1bed2)
   digs into the unfortunate default security settings that come with many
   NoSQL databases which can be used to compromise your systems. Make sure

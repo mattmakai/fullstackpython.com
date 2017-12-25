@@ -49,7 +49,7 @@ With that driver support context in mind, it's absolutely possible to build
 a Python 3 web application with MySQL as a backend. Here is a list of
 drivers along with whether it supports Python 2, 3 or both.
 
-* [mysqlclient](https://mysqlclient.readthedocs.io/en/latest/) is a fork
+* [mysqlclient](https://pypi.python.org/pypi/mysqlclient) is a fork
   of MySQLdb that supports Python 2 and 3.
 
 * [MySQL Connector](http://dev.mysql.com/doc/connector-python/en/)
@@ -112,8 +112,6 @@ developers learn PostgreSQL if they do not already know MySQL.
 
 * [28 Beginner's Tutorials for Learning about MySQL Databases](http://designm.ag/tutorials/28-beginners-tutorials-for-learning-about-mysql-databases/) 
   is a curated collection on various introductory MySQL topics.
-
-* This tutorial shows how to install [MySQL on Ubuntu](http://www.cs.wcupa.edu/rkline/index/mysql-lin.html).
 
 * [A Basic MySQL Tutorial](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial)
   doesn't have the most original title but it's a good walkthrough of your

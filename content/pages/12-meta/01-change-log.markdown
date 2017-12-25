@@ -17,7 +17,7 @@ on GitHub.
 
 ## 2017
 ### December
-* Cleaned up broken and redirected links in first chapter.
+* Cleaned up broken and redirected links on all pages including blog posts.
 * Merged [PR#147](https://github.com/mattmakai/fullstackpython.com/pull/147) to
   fix an issue installing [MySQL](/mysql.html) server package.
 * Major performance improvements by reducing all page sizes by 15-20%. Split apart
@@ -35,7 +35,7 @@ on GitHub.
   Ubuntu 18.04 LTS releases).
 * Crossed the 120k words mark for content, thanks to a slew of new tutorials 
   and pages.
-* New [serverless](/serverless-architectures.html) and 
+* New [serverless](/serverless.html) and 
   [AWS Lambda](/aws-lambda.html) resources.
 * Merged [PR#144](https://github.com/mattmakai/fullstackpython.com/pull/144)
   which fixes an issue with the wrong `psql` command in the blog post on 

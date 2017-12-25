@@ -136,9 +136,6 @@ equivalent of browser testing in the web application world.
   has their recommendations list for building an API based on their recent
   experiences.
 
-* [Some REST Best Practices](https://bourgeois.me/rest/) is a high level
-  summary of rules to follow while creating your API.
-
 * Hacker News had a discussion on 
   [what's the best way to write an API spec?](https://news.ycombinator.com/item?id=8912897)
   that provides a few different viewpoints on this topic.

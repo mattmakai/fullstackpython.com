@@ -43,10 +43,6 @@ these sites:
 * [Bokeh Applications](https://demo.bokehplots.com/) hosts numerous
   data visualizations built with Bokeh.
 
-* [bokeh-notebooks](https://github.com/bokeh/bokeh-notebooks/tree/master/gallery)
-  has a nice collection of Bokeh visualizations within 
-  [Jupyter Noteboks](/jupyter-notebook.html).
-
 
 ### Bokeh resources
 Bokeh is under heavy development ahead of the upcoming 1.0 release. Note that

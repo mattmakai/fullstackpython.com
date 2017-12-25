@@ -30,7 +30,7 @@ as of April 2017 are:
   [3.5.1](https://docs.python.org/3/whatsnew/3.5.html) 
   (default in Ubuntu 16.04.2)
 * [Bottle](/bottle.html) web framework version 
-  [0.13](http://bottlepy.org/docs/0.13/)
+  [0.13](http://bottlepy.org/docs/stable/)
 * [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) version 
   [19.7.1](http://docs.gunicorn.org/en/stable/news.html)
 

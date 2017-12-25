@@ -196,9 +196,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
   provides a fascinating look into the internal workings of PostgreSQL
   during a query.
 
-* If you're just getting started with PostgreSQL here are 
-  [10 beginner tasks you should know how to execute](https://eye.raze.mx/10-beginner-postgresql-tasks-you-should-know/).
-
 * [Locating the recovery point just before a dropped table](https://blog.hagander.net/locating-the-recovery-point-just-before-a-dropped-table-230/)
   and 
   [logging transactions that dropped tables](https://blog.hagander.net/logging-transactions-that-dropped-tables-236/)
@@ -206,9 +203,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
   table. In the first post the author shows how recovery is possible with
   recovery points while the second post shows how to put logging in place
   to assist in future recoveries.
-
-* The title's a bit presumptuous but here's a useful list of 
-  [7 PostgreSQL data migration hacks you should be using, but aren't](http://engineering.tilt.com/7-postgresql-data-migration-hacks/).
 
 * [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   is a list of code libraries, tutorials and newsletters focused 
@@ -240,10 +234,6 @@ The post is an inside look at the evolution of Braintree's usage of the database
 * [Creating a Document-Store Hybrid in Postgres 9.5](https://blog.andyet.com/2016/02/04/postgres-9.5-document-store-hybrid/)
   explains how to store and query JSON data, similar to how
   [NoSQL data stores](/no-sql-datastore.html) operate.
-
-* [PostgreSQL Indexes: First Principles](http://eftimov.net/postgresql-indexes-first-principles)
-  is a detailed look at what indexes are, what they are good for and
-  how to use them in PostgreSQL.
 
 * This [slideshow on high availability for web applications](http://thebuild.com/presentations/pgha-fosdem-2016.pdf)
   has a good overview of various database setups common in production

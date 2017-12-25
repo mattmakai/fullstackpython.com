@@ -11,7 +11,7 @@ meta: Pony is an object-relational mapper (ORM) library for Python applications.
 [Pony](https://ponyorm.com/) 
 ([source code](https://github.com/ponyorm/pony)) is 
 a Python 
-[object-relational mapper (ORM) library](/object-relational-mapper-orms.html)
+[object-relational mapper (ORM) library](/object-relational-mappers-orms.html)
 ([database module source code](https://github.com/django/django/tree/master/django/db)).
 Pony can be used to interact and manipulate data in 
 [relational databases](/databases.html), including 

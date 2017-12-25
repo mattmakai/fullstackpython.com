@@ -34,12 +34,6 @@ access a SQLite database from within Python applications.
   [great design document on the SQLite site](http://sqlite.org/src4/doc/trunk/www/design.wiki) 
   that covers many of these principles.
 
-* [Getting the Most out of Sqlite3 with Python](https://remusao.github.io/posts/2017-10-21-few-tips-sqlite-perf.html)
-  has a bunch of useful tips for working with SQLite such as how to use
-  the connection object, favoring the `executemany` call instead of `execute`
-  for bulk inserts and delaying index creation until bulk inserts are 
-  completed.
-
 * [My list of SQLite resources](http://charlesleifer.com/blog/my-list-of-python-and-sqlite-resources/)
   is a nice roundup of useful tools to use with SQLite and tutorials for
   learning more about the database.

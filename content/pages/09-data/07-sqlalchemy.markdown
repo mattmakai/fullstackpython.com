@@ -142,12 +142,6 @@ edge cases.
   post makes some good points about the quality of SQLAlchemy's 
   documentation and what a pleasure it can be to use it in a Python project.
 
-* [Large web apps in Python: A good architecture](http://nando.oui.com.br/2014/04/01/large_apps_with_sqlalchemy__architecture.html)
-  goes into issues that expanding codebases face, such as where to put
-  business logic and how to automate database testing. Each of the topics 
-  in the article are discussed in the context of a recent project the 
-  author worked on that heavily relied on SQLAlchemy.
-
 * [SQLAlchemy and Django](https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/)
   explains how one development team uses the Django ORM for most of their
   standard queries but relies on SQLAlchemy for really advanced queries.
