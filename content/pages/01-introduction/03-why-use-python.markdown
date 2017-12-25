@@ -19,7 +19,7 @@ language is also widely taught in universities and used for working with
 beginner-friendly devices such as the 
 [Raspberry Pi](http://www.raspberrypi.org/).
 
-<img src="/img/logos/python-wide.png" width="100%" class="technical-diagram" alt="Python logo." style="margin-top:20px">
+<img src="/img/logos/py.png" width="100%" alt="Python logo.">
 
 <div class="well see-also">If you're learning about why to use Python you should also take a look at <a href="/best-python-resources.html">the best Python resources</a> and read <a href="/web-development.html">more about web development</a>.</div>
 
@@ -95,9 +95,6 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 
 
 ### More perspectives on why to use Python
-* The Python documentation has a HOWTO section specifically for 
-  [Python advocacy](https://docs.python.org/2/howto/advocacy.html).
-
 * [How to argue for Python’s use](http://nothingbutsnark.svbtle.com/how-to-argue-for-pythons-use)
   explains that choosing a programming language can be complicated but that
   Python is a very good option for many use cases.

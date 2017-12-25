@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2017
 ### December
+* Cleaned up broken and redirected links in first chapter.
 * Merged [PR#147](https://github.com/mattmakai/fullstackpython.com/pull/147) to
   fix an issue installing [MySQL](/mysql.html) server package.
 * Major performance improvements by reducing all page sizes by 15-20%. Split apart

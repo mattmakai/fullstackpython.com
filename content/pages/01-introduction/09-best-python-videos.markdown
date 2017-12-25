@@ -58,14 +58,17 @@ talks from the past several years.
   [web framework](/web-frameworks.html) topics.
 
 * DjangoCon US videos from 
+  [2017](https://www.youtube.com/playlist?list=PL2NFhrDSOxgXmA215-fo02djziShwLa6T),
+  [2016](https://www.youtube.com/playlist?list=PL2NFhrDSOxgX-A4qpaf3rRaEnEe7166Ac),
+  [2015](https://www.youtube.com/playlist?list=PL2NFhrDSOxgWvzf40lYJ8gohFciQqRx3K),
   [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
-  [2013](http://www.youtube.com/user/TheOpenBastion/videos), 
-  [2012](http://pyvideo.org/events/djangocon-2012.html), 
-  [2011](http://pyvideo.org/events/djangocon-2011.html) are all available
+  [2013](http://www.youtube.com/user/TheOpenBastion/videos), are all available
   free of charge.
 
 * DjangoCon EU videos are also available from 
-  [2015](https://vimeo.com/channels/952478/videos).
+  [2017](https://www.youtube.com/user/djangoconeurope/videos),
+  [2016](http://pyvideo.org/events/djangocon-europe-2016.html),
+  and [2015](https://vimeo.com/channels/952478/videos).
 
 
 ## Core Python language videos

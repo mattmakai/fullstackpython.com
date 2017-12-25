@@ -136,7 +136,7 @@ gone through the process and have advice for making it less painful.
   recommendation to new programmers is to use Python 3 and for experienced 
   developers to keep your explanation simple: Python 3 is where to begin.
 
-* [10 awesome features of Python that you can't use because you refuse to upgrade to Python 3](http://www.asmeurer.com/python3-presentation/slides.html#1)
+* [10 awesome features of Python that you can't use because you refuse to upgrade to Python 3](http://www.asmeurer.com/python3-presentation/slides.html)
   is a great slideshow with code snippets that show useful new features
   of Python 3 that are not available in 2.x such as keyword-only
   arguments, chained exceptions and the `yield from` keyword.

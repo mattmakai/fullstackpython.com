@@ -12,6 +12,8 @@ The Python programming language has a global community with millions of
 software developers who interact online and offline in thousands of virtual 
 and physical locations.
 
+<img src="/img/logos/py.png" width="100%" alt="Python logo.">
+
 
 ## Who drives the Python community?
 There are tens of thousands of Python developers who help steer the

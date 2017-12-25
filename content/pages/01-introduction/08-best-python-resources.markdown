@@ -152,10 +152,6 @@ topics.
   compilers with Python 3, which is a good undertaking if you're looking
   to learn both more about the Python language and how compiles work.
 
-* [Good to Great Python Reads](http://jessenoller.com/good-to-great-python-reads/)
-  is a collection of intermediate and advanced Python articles around the web
-  focused on nuances and details of the Python language itself.
-
 
 ## Videos, screencasts and presentations
 Videos from conferences and meetups along with screencasts are listed on
