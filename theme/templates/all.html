@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block css %}{% include "css/base.css" %}{% include "css/page-article.css" %}{% endblock %}
+{% block css %}<style>{% include "css/base.css" %}{% include "css/page-article.css" %}{% include "css/responsive.css" %}</style>{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -10,7 +10,4 @@
   {% endfor %}
  </div>
 </div>
-{% endblock %}
-
-{% block js %}
 {% endblock %}
