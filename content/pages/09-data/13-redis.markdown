@@ -85,7 +85,7 @@ some advice on Reids security and guarding against data breaches.
   default settings to lock them down against attackers.
 
 
-### General Redis resources
+### Specific Redis topics
 Once you have configured Redis, become comfortable using it and locked it
 down against malicious actors, you will want to learn more about operating,
 scaling and collecting metrics. The following resources should help you
@@ -93,6 +93,10 @@ get started in those areas.
 
 * [Redis-playbook](https://github.com/mikeblum/redis-playbook) is an Ansible
   playbook for installing, configuring and securing a Redis instance.
+
+* [Monitoring Redis](http://www.mikeperham.com/2017/04/20/monitoring-redis/)
+  shows common commands for accessing meta data about your Redis databases,
+  such as `info` and `slowlog`.
 
 * GitHub wrote a retrospective on 
   [moving persistent data out of Redis](http://githubengineering.com/moving-persistent-data-out-of-redis/)
