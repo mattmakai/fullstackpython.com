@@ -4,6 +4,7 @@ meta: Talk slides, notes and more resources for a technical talk on choosing app
 category: post
 date: 2017-02-27
 modified: 2017-03-01
+newsletter: False
 headerimage: /img/170227-choose-devops-tools/header.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 

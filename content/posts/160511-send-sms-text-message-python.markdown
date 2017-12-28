@@ -4,6 +4,7 @@ meta: A how-to guide for sending SMS (text messages) using the Python programmin
 category: post
 date: 2016-05-11
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/160511-send-sms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
 

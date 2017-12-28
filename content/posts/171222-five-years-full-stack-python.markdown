@@ -4,6 +4,7 @@ meta: Full Stack Python was started five years ago on December 23, 2012.
 category: post
 date: 2017-12-23
 modified: 2017-12-23
+newsletter: True
 headerimage: /img/visuals/email-post-header.jpg
 headeralt: Python programming language and Full Stack Python logos.
 

@@ -4,6 +4,7 @@ meta: Step-by-step instructions for developing on Ubuntu 16.04 with Python 3, Dj
 category: post
 date: 2016-05-09
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/160509-ubuntu-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Ubuntu Linux logos. Copyright their respective owners.
 

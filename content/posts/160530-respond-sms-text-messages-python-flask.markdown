@@ -4,6 +4,7 @@ meta: A quick tutorial on receiving and responding to SMS text messages in a Fla
 category: post
 date: 2016-05-30
 modified: 2017-05-11
+newsletter: False
 headerimage: /img/160530-respond-sms-python-flask/header.jpg
 headeralt: Twilio, Python and Flask logos. Copyright their respective owners.
 

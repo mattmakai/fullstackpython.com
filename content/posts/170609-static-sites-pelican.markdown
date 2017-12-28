@@ -4,6 +4,7 @@ meta: Learn how to generate static websites with Python, the Pelican static site
 category: post
 date: 2017-06-09
 modified: 2017-06-09
+newsletter: False
 headerimage: /img/170609-static-sites-pelican/header.jpg
 headeralt: Pelican, Jinja2 and Markdown logos.
 

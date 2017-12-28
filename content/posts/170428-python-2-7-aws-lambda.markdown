@@ -4,6 +4,7 @@ meta: Learn how to create and deploy your first Amazon Web Services (AWS) Lambda
 category: post
 date: 2017-04-28
 modified: 2017-04-29
+newsletter: False
 headerimage: /img/170428-aws-lambda-python-2-7/header.jpg
 headeralt: AWS, AWS Lambda and Python logos, copyright their respective owners.
 

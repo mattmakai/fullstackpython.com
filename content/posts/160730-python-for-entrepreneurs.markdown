@@ -4,6 +4,7 @@ meta: Learn more about Python for Entrepreneurs, the video course on building yo
 category: post
 date: 2016-07-30
 modified: 2017-04-25
+newsletter: False
 headerimage: /img/160730-python-for-entrepreneurs/header.jpg
 headeralt: Talk Python to Me, Full Stack Python and Python logos. Copyright their respective owners.
 

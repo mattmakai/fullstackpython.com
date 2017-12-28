@@ -4,6 +4,7 @@ meta: Learn to develop Bottle web apps on Ubuntu 16.04 with Python 3 and Green U
 category: post
 date: 2016-05-13
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/160513-ubuntu-bottle-gunicorn/header.jpg
 headeralt: Bottle, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 

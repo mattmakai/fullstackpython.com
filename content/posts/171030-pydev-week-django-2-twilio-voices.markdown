@@ -4,6 +4,7 @@ meta: Read about PyDev of the Week, the upcoming Django 2 release and Twilio Voi
 category: post
 date: 2017-10-30
 modified: 2017-10-30
+newsletter: True
 headerimage: /img/visuals/email-post-header.jpg
 headeralt: Python programming language and Full Stack Python logos.
 

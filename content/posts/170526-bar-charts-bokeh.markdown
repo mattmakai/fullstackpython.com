@@ -4,6 +4,7 @@ meta: How to build responsive bar charts with the Bokeh data visualization libra
 category: post
 date: 2017-05-26
 modified: 2017-07-30
+newsletter: False
 headerimage: /img/170526-bar-charts-bokeh-flask/header.jpg
 headeralt: Python, Flask and Bokeh logos.
 

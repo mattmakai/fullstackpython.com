@@ -4,6 +4,7 @@ meta: A quick tutorial to install and use MySQL on Ubuntu 16.04 Xenial Xerus.
 category: post
 date: 2016-05-28
 modified: 2017-12-22
+newsletter: False
 headerimage: /img/160528-mysql-ubuntu-1604/header.jpg
 headeralt: MySQL and Ubuntu logos. Copyright their respective owners.
 

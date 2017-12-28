@@ -4,6 +4,7 @@ meta: An answer to the question of the ideal path to becoming a self-taught deve
 category: post
 date: 2017-05-14
 modified: 2017-05-14
+newsletter: False
 headerimage: /img/170514-self-taught-developer/header.jpg
 headeralt: Header image for the blog post.
 

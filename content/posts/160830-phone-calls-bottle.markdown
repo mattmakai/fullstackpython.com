@@ -4,6 +4,7 @@ meta: A tutorial that shows how to dial outbound phone calls with a Bottle web a
 category: post
 date: 2016-08-30
 modified: 2017-06-16
+newsletter: False
 headerimage: /img/160830-phone-calls-bottle/header.jpg
 headeralt: Bottle, Python and Twilio logos. Copyright their respective owners.
 

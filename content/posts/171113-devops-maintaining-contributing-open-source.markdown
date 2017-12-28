@@ -4,6 +4,7 @@ meta: Read about using Python for DevOps, maintaining open source projects and c
 category: post
 date: 2017-11-13
 modified: 2017-11-13
+newsletter: True
 headerimage: /img/visuals/email-post-header.jpg
 headeralt: Python programming language and Full Stack Python logos.
 

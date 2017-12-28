@@ -4,6 +4,7 @@ meta: Learn how to add monitoring to a Python web application using a hosted mon
 category: post
 date: 2017-09-26
 modified: 2017-09-29
+newsletter: False
 headerimage: /img/170926-monitor-python-web-apps/header.jpg
 headeralt: Python, Rollbar and Bottle logos, copyright their respective owners.
 

@@ -4,6 +4,7 @@ meta: Instructions for setting up Ubuntu 16.04 with Python 3, Flask and Green Un
 category: post
 date: 2016-05-10
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/160510-ubuntu-flask-gunicorn/header.jpg
 headeralt: Flask, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 

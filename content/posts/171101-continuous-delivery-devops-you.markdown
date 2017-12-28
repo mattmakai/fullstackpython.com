@@ -4,6 +4,7 @@ meta: Talk slides, notes and more resources for a technical talk on basic DevOps
 category: post
 date: 2017-11-01
 modified: 2017-11-05
+newsletter: False
 headerimage: /img/visuals/talk-header.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 

@@ -4,6 +4,7 @@ meta: Learn to add hosted monitoring to Flask web applications using Rollbar.
 category: post
 date: 2017-07-23
 modified: 2017-07-23
+newsletter: False
 headerimage: /img/170723-monitor-flask-apps/header.jpg
 headeralt: Flask, Python and Rollbar logos, copyright their respective owners.
 

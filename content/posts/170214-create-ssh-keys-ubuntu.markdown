@@ -4,6 +4,7 @@ meta: Learn how to quickly generate new SSH keys on Ubuntu Linux 16.04 LTS.
 category: post
 date: 2017-02-14
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/170214-ssh-keys-ubuntu/header.jpg
 headeralt: Ubuntu Linux logo, copyright Canonical Ltd.
 

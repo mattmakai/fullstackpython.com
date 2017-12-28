@@ -4,6 +4,7 @@ meta: A tutorial on how to send MMS (picture multimedia messages) using the Pyth
 category: post
 date: 2016-05-15
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/160515-mms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
 

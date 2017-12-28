@@ -4,6 +4,7 @@ meta: Instructions for developing Pyramid web apps on Ubuntu 16.04 with Python 3
 category: post
 date: 2016-06-19
 modified: 2016-08-10
+newsletter: False
 headerimage: /img/160619-ubuntu-pyramid-gunicorn/header.jpg
 headeralt: Pyramid, Green Unicorn and Ubuntu logos. Copyright their respective owners.
 

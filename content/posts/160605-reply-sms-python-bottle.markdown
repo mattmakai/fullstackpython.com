@@ -4,6 +4,7 @@ meta: A short walkthrough for how to reply to SMS text messages in a Bottle web 
 category: post
 date: 2016-06-05
 modified: 2016-08-10
+newsletter: False
 headerimage: /img/160605-reply-sms-python-bottle/header.jpg
 headeralt: Twilio, Python and Bottle logos. Copyright their respective owners.
 

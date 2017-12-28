@@ -4,6 +4,7 @@ meta: Learn how to quickly create new SSH keys on macOS Sierra.
 category: post
 date: 2017-02-20
 modified: 2017-04-28
+newsletter: False
 headerimage: /img/170220-ssh-keys-macos/header.jpg
 headeralt: Apple logo, copyright Apple.
 

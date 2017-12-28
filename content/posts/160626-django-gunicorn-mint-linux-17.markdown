@@ -4,6 +4,7 @@ meta: A step-by-step walkthrough on configuring Linux Mint 17.3 with Python 3, D
 category: post
 date: 2016-06-26
 modified: 2016-07-22
+newsletter: False
 headerimage: /img/160626-mint-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Linux Mint logos. Copyright their respective owners.
 

@@ -4,6 +4,7 @@ meta: Learn to provision Ubuntu 16.04 LTS servers on Linode for your web applica
 category: post
 date: 2017-09-20
 modified: 2017-09-20
+newsletter: False
 headerimage: /img/170920-provision-ubuntu-linode/header.jpg
 headeralt: Ubuntu Linux logo, copyright Canonical Ltd. and Linode logo.
 

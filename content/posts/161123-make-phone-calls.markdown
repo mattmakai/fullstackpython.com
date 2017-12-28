@@ -4,6 +4,7 @@ meta: This tutorial shows how to use a Python program and the Twilio API to dial
 category: post
 date: 2016-11-23
 modified: 2017-07-22
+newsletter: False
 headerimage: /img/161123-python-phone-calls/header.jpg
 headeralt: Python and Twilio logos. Copyright their respective owners.
 

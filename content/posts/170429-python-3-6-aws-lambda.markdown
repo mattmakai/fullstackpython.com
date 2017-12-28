@@ -4,6 +4,7 @@ meta: Code, create and execute your first Amazon Web Services (AWS) Lambda funct
 category: post
 date: 2017-04-29
 modified: 2017-04-30
+newsletter: False
 headerimage: /img/170429-aws-lambda-python-3-6/header.jpg
 headeralt: AWS, AWS Lambda and Python logos are copyright their respective owners.
 

@@ -4,6 +4,7 @@ meta: A guide for installing and using PostgreSQL with Python 3 and psycopg2 on 
 category: post
 date: 2016-05-18
 modified: 2017-12-25
+newsletter: False
 headerimage: /img/160518-postgresql-ubuntu-1604/header.jpg
 headeralt: PostgreSQL and Ubuntu logos. Copyright their respective owners.
 

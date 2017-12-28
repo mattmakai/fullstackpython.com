@@ -4,6 +4,7 @@ meta: Learn about the awesome GitPython project and take a look at a slew of gre
 category: post
 date: 2017-12-11
 modified: 2017-12-11
+newsletter: True
 headerimage: /img/visuals/email-post-header.jpg
 headeralt: Python programming language and Full Stack Python logos.
 
