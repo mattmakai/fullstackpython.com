@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2017
 ### December
+* Passed 1,000,000 characters written on Full Stack Python according to 
+  [wc](https://stackoverflow.com/questions/25348406/whats-is-the-behaviour-of-the-wc-command) 
+  on my [Markdown](markdown.html) content files. It's a super arbitrary but 
+  fun little milestone.
 * Removed a couple of [Best Python Resources](/best-python-resources.html)
   and added new resources to the [Morepath](/morepath.html) page.
 * Added a ton of new [SQLite](/sqlite.html) resources.
