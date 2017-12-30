@@ -66,3 +66,13 @@ these resources below are a good place to get started.
   [great talk on the motivation and structure for the new framework](https://www.youtube.com/watch?v=gyDKMAWPyuY) 
   at EuroPython 2014.
 
+* [Is Morepath Fast Yet?](https://blog.startifact.com/posts/is-morepath-fast-yet.html)
+  includes some benchmarks and discusses performance implications of using a 
+  Python-based [web framework](/web-frameworks.html) for your web application.
+
+* The 
+  [Morepath-cookiecutter](https://github.com/morepath/morepath-cookiecutter)
+  project handles project creation templates using  
+  [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) and
+  recommended file structure from the Morepath documentation.
+

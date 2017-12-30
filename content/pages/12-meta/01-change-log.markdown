@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2017
 ### December
+* Removed a couple of [Best Python Resources](/best-python-resources.html)
+  and added new resources to the [Morepath](/morepath.html) page.
 * Added a ton of new [SQLite](/sqlite.html) resources.
 * Cleaned up broken and redirected links on all pages including blog posts.
 * Added [5 years of Full Stack Python](/blog/five-years-full-stack-python.html)
