@@ -45,9 +45,6 @@ should skip down to the next section for "experienced developers".
   incredible job of breaking down the steps beginners should take when 
   they're uncertain about where to begin.
 
-* [Learn Python the Hard Way](http://learnpythonthehardway.org/book/) is a
-  free book by Zed Shaw.
-
 * The [Python projects tag](https://www.twilio.com/blog/tag/python) on the 
   Twilio blog is constantly updated with fun tutorials you can build to
   learn Python, such as the
