@@ -23,11 +23,6 @@ If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
 should skip down to the next section for "experienced developers".
 
-* To get an introduction to Python, Django and Flask at the same time, 
-  consider purchasing the 
-  <a href="https://realpython.com/?utm_source=fsp&utm_medium=promo&utm_campaign=bestresources">Real Python</a> 
-  course by Fletcher, Michael and Jeremy.
-
 * This [short 5 minute video](https://www.youtube.com/watch?v=mvK0UzFNw1Q)
   explains why it's better to think of projects you'd like to build and
   problems you want to solve with programming. Start working on those projects
