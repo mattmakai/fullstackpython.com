@@ -49,6 +49,10 @@ repository system packages.
     * [How to Install and Use MySQL on Ubuntu 16.04](/blog/install-mysql-ubuntu-1604.html)
     * [How to Use Redis with Python 3 and redis-py on Ubuntu 16.04](/blog/install-redis-use-python-3-ubuntu-1604.html)
 
+* [Configuring Ubuntu for deep learning with Python](https://www.pyimagesearch.com/2017/09/25/configuring-ubuntu-for-deep-learning-with-python/)
+  is a great tutorial on which packages you should install and why to 
+  use [Python 3](/python-2-or-3.html), OpenCV and Keras on Ubuntu Linux.
+
 * Canonical, the organization that produces Ubuntu, typically pushes the 
   boundaries on non-LTS releases, but occasionally rocks the boat with
   major changes for an LTS release. 16.04 LTS was one such version, which
