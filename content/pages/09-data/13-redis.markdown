@@ -27,7 +27,7 @@ previously used Redis or any NoSQL data store.
   contains detailed steps to install and start using Redis in Python.
 
 * [How To Install and Use Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)
-  is a Redis starter guide.
+  is a straightforward starter guide that includes installation instructions.
 
 
 ### Redis with Python
@@ -52,6 +52,11 @@ with your Python code.
 * [Cache_deco](https://github.com/alexk307/cache_deco) is a generic Python
   caching decorator library.
 
+* [Write your own miniature Redis with Python](http://charlesleifer.com/blog/building-a-simple-redis-server-with-python/)
+  doesn't actually use Redis but shows how you can write a simplified
+  version of Redis' in-memory data store with Python. It's a good article
+  to understand more about how NoSQL data stores can work under the covers.
+
 
 ### Redis examples
 Redis' wide applicability can be a downside if you don't know what to start
@@ -61,6 +66,10 @@ use cases for Redis.
 * [redis-labs-use-cases](https://github.com/Altoros/redis-labs-use-cases)
   has a couple of examples of using Redis to analyze geospatial data and
   tweets.
+
+* [redis-migrate-tool](https://github.com/vipshop/redis-migrate-tool)
+  is a library to make it easier to move data between redis clusters
+  and groups.
 
 
 ### Redis Security
