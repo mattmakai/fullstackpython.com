@@ -32,3 +32,8 @@ during Python software development as part of a programmer's
   shows methods for repeating commands, changing directories and
   handling background processes.
 
+* [Ten Things I Wish I’d Known About Bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/)
+  covers some edge cases that are very useful to know about such as
+  proper exit code usage and configuration options through the `set`
+  command.
+

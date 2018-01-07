@@ -12,3 +12,7 @@ meta: Ansible is configuration management tool used for application deployment a
 [configuration management tool](/configuration-management.html) used for 
 [application deployment](/deployment.html) and 
 [environment setup](/development-environments.html).
+
+<a href="http://docs.ansible.com/ansible/latest/index.html"><img src="/img/logos/ansible-wide.png" width="100%" alt="Official Ansible logo. Copyright Redhat." class="technical-diagram"></a>
+
+
