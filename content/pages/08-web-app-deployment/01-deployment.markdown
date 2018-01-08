@@ -71,6 +71,14 @@ guide as they are considered advanced deployment techniques.
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
 
+* [Automation for the People](https://gist.github.com/classam/9e07a36aa63624ca2dda75a1367a53c6)
+  provides an awesome overview of one developer's story for how he gradually
+  learned about deployment automation. The story follows my own journey in
+  many ways, from starting with brittle [Bash](/bourne-again-shell-bash.html) 
+  scripts, moving to Fabric and then on to [Ansible](/ansible.html) for 
+  higher-level [configuration management](/configuration-management.html)
+  and continuous deployment pipelines.
+
 * [5 ways to deploy your Python application in 2017](https://www.youtube.com/watch?v=vGphzPLemZE)
   is a talk from 
   [PyCon US 2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos)

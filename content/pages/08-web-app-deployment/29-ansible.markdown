@@ -16,3 +16,10 @@ meta: Ansible is configuration management tool used for application deployment a
 <a href="http://docs.ansible.com/ansible/latest/index.html"><img src="/img/logos/ansible-wide.png" width="100%" alt="Official Ansible logo. Copyright Redhat." class="technical-diagram"></a>
 
 
+### Example Ansible playbooks
+
+* [ansible-nginx-haproxy-elasticsearch](https://github.com/gp187/ansible-nginx-haproxy-elasticsearch)
+
+* [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
+
+
