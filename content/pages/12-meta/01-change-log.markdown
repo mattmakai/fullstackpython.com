@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2018
 ### January
+* Add [Ansible](/ansible.html) stub page with a few links.
 * New [Redis](/redis.html) and [Ubuntu](/ubuntu.html) resources.
 * Happy New Year! This is the 6th year of Full Stack Python, coming after a
   wonderful [first five years](/blog/five-years-full-stack-python.html).
