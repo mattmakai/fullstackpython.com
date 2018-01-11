@@ -1,3 +1,5 @@
 boto3==1.4.4
 Markdown==2.6.10
 Pelican==3.7.1
+requests==2.18.4
+urllib3==1.22
