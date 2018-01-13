@@ -16,6 +16,10 @@ on GitHub.
 
 ## 2018
 ### January
+* Merged [PR#148](https://github.com/mattmakai/fullstackpython.com/pull/148)
+  that added a health check script. Fixed all URLs raised as issues with
+  link rot, expired domains and redirects. Thanks 
+  [Samuel](https://github.com/huangsam)!
 * Add [Ansible](/ansible.html) stub page with a few links.
 * New [Redis](/redis.html) and [Ubuntu](/ubuntu.html) resources.
 * Happy New Year! This is the 6th year of Full Stack Python, coming after a
