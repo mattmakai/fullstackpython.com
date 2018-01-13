@@ -111,7 +111,10 @@ guide as they are considered advanced deployment techniques.
   [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
   is a great way to familiarize yourself with the deployment process.
   
-* [Part 5](http://testdriven.io/part-five-intro/) of *Microservices with Docker, Flask, and React* dives into Docker container orchestration with Amazon ECS. 
+* [TestDriven.io](https://testdriven.io/) shows how to deploy a
+  [microservices](/microservices.html) architecture that uses 
+  [Docker](/docker.html), [Flask](/flask.html), and React with 
+  container orchestration on Amazon ECS. 
 
 
 ## Deployment learning checklist

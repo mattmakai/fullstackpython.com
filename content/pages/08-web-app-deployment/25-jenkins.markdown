@@ -47,7 +47,7 @@ used to automate building, [testing](/testing.html) and
   [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
   Docker hub.
 
-* [Securing Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Securing+Jenkins)
+* [Securing Jenkins](https://wiki.jenkins.io/display/JENKINS/Securing+Jenkins)
   is the landing page for Jenkins security. If you're deploying your own
   instance, you'll need to lock it down against unauthorized users.
 

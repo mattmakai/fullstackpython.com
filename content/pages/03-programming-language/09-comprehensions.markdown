@@ -45,11 +45,6 @@ Dictionary comprehension:
   is an awesome post by Dan Bader with a slew of examples that explain
   how list, dictionary and set comprehensions should be used.
 
-* Intermediate Python's 
-  [Python Comprehensions](http://intermediatepythonista.com/python-comprehensions)
-  post gives a well written overview of comprehensions for the three core 
-  Python data structures.
-
 * [Python List Comprehensions: Explained Visually](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/)
   explains how the common idiom for iteration became syntactic sugar in
   the language itself and how you can use it in your own programs.

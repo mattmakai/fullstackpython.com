@@ -54,7 +54,7 @@ with project structure based on model-view-controller patterns.
 [CherryPy](http://www.cherrypy.org/) is billed as a minimalist web framework,
 from the perspective of the amount of code needed to write a web application
 using the framework. The project has a 
-[long history](http://w3techs.com/technologies/details/ws-cherrypy/all/all) 
+[long history](https://w3techs.com/technologies/details/ws-cherrypy/all/all)
 and made a major transition between the second and third release.
 
 

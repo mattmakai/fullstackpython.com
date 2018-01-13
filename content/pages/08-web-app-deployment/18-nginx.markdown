@@ -9,7 +9,7 @@ meta: Nginx is a commonly deployed web server that also functions well as a reve
 
 # Nginx
 [Nginx](https://nginx.org/en/), pronounced "engine-X", is the 
-[second most common web server among the top 100,000 websites](http://w3techs.com/technologies/cross/web_server/ranking). Nginx also functions well as a 
+[second most common web server among the top 100,000 websites](https://w3techs.com/technologies/cross/web_server/ranking). Nginx also functions well as a 
 reverse proxy to handle requests and pass back responses for Python 
 [WSGI servers](/wsgi-servers.html) or even other web servers such as Apache.
 

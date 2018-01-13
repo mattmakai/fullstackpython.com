@@ -34,8 +34,8 @@ should skip down to the next section for "experienced developers".
   using Python. It's an accessible read and perfect for programming beginners.
 
 * If you've never programmed before check out the 
-  [Getting Started](http://learntocodewith.me/getting-started/) page on 
-  [Learn To Code with Me](http://learntocodewith.me/)
+  [Getting Started](https://learntocodewith.me/getting-started/) page on 
+  [Learn To Code with Me](https://learntocodewith.me/)
   by [Laurence Bradford](https://twitter.com/lebdev). She's done an 
   incredible job of breaking down the steps beginners should take when 
   they're uncertain about where to begin.

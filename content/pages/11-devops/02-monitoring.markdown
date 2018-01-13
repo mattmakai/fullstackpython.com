@@ -78,10 +78,6 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 * [Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
   Graphite-based dashboard with added features and a slick design.
 
-* [PacketBeat](http://packetbeat.com/) sniffs protocol packets. Elasticsearch
-  then allows developers to search the collected data and visualize what's 
-  happening inside their web application using the Kibana user interface.
-
 * [Munin](http://munin-monitoring.org/) is a client plugin-based monitoring 
   system that sends monitoring traffic to the Munin node where the data can
   be analyzed and visualized. Note this project is written in Perl so Perl 5
