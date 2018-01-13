@@ -39,7 +39,10 @@ or other proprietary databases, especially as replication and sharding
 become necessary at large scale. In addition, because so many people 
 ranging from independent developers to multinational organizations use 
 PostgreSQL, it's often easier to find developers with PostgreSQL experience 
-than other relational databases.
+than other relational databases. There is also 
+[ancedotal evidence that PostgreSQL fixes bugs faster than MySQL](https://blog.2ndquadrant.com/postgresql-better-mysql-1/), 
+although to be fair there has not been a comprehensive study comparing
+how the two projects handle defect resolution.
 
 The PostgreSQL core team also releases frequent updates that greatly enhance 
 the database's capabilities. For example, in the 
