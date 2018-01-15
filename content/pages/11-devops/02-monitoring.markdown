@@ -116,6 +116,10 @@ these services are not the right fit for every project.
 
 * [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance 
   metrics, release tracking, and error logging into a single simple service.
+  
+* [Monkey Test It](https://monkeytest.it) tailored for websites and sends
+  notifications if there are any broken links, javascript issues, or
+  missing resources.
 
 
 ## Monitoring resources
