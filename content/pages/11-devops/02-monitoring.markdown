@@ -57,32 +57,29 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 
 
 ## Open source monitoring projects
-* [Sentry](https://github.com/getsentry/sentry) started life as a 
+
+* Error Tracking
+  * [Sentry](https://github.com/getsentry/sentry) started life as a 
   Python-only monitoring project but can now be used for any programming
   language.
-
-* [statsd](https://github.com/etsy/statsd/) is a node.js network daemon that
+* Metrics
+  * [statsd](https://github.com/etsy/statsd/) is a node.js network daemon that
   listens for metrics and aggregates them for transfer into another service
   such as Graphite.
-
-* [Graphite](https://graphite.readthedocs.org/en/latest/overview.html) stores
+  * [Graphite](https://graphite.readthedocs.org/en/latest/overview.html) stores
   time-series data and displays them in graphs through a Django web application.
-
-* [Bucky](http://github.hubspot.com/bucky/) measures the performance of a
-  web application from end user's browsers and sends that data back to the
-  server for collection.
-
-* [Sensu](http://sensuapp.org/) is an open source monitoring framework
-  written in Ruby but applicable to any programming language web application.
-
-* [Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
+  * [Sensu](http://sensuapp.org/) is an open source monitoring framework
+  written in Ruby but applicable to any programming language web application. 
+  * [Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
   Graphite-based dashboard with added features and a slick design.
-
-* [Munin](http://munin-monitoring.org/) is a client plugin-based monitoring 
+  * [Munin](http://munin-monitoring.org/) is a client plugin-based monitoring 
   system that sends monitoring traffic to the Munin node where the data can
   be analyzed and visualized. Note this project is written in Perl so Perl 5
   must be installed on the node collecting the data.
-
+* Real User Monitoring (RUM)
+  * [Bucky](http://github.hubspot.com/bucky/) measures the performance of a
+  web application from end user's browsers and sends that data back to the
+  server for collection.
 
 ## Hosted monitoring services
 Hosted monitoring software takes away the burden of deploying and operating
@@ -90,33 +87,30 @@ the software yourself. However, hosted monitoring costs (often a significant
 amount of) money and take your application's data out of your hands so
 these services are not the right fit for every project.
 
-* [Rollbar](https://rollbar.com/) instruments both the server side and
+* Error Tracking
+  * [Rollbar](https://rollbar.com/) instruments both the server side and
   client side to capture and report exceptions. The 
   [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) code library
   provides quick integration for Python web applications. There are also
   specific instructions for common [web frameworks](/web-frameworks.html)
   such as [Django](/django.html) and [Pyramid](/pyramid.html).
-
-* [Sentry](https://sentry.io/welcome/) is the hosted version of the open
+  * [Sentry](https://sentry.io/welcome/) is the hosted version of the open
   source tool that is used to monetize and support further development.
-
-* [New Relic](http://newrelic.com/) provides application and database 
+* Application Performance Monitoring (APM)
+  * [New Relic](http://newrelic.com/) provides application and database 
   monitoring as well as plug ins for capturing and analyzing data about 
   other devleoper tools in your stack, such as [Twilio](/twilio.html).
-
-* [Status.io](http://status.io/) focuses on uptime and response metrics 
+  * [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance 
+  metrics, release tracking, and error logging into a single simple service.
+* Status Pages
+  * [Status.io](http://status.io/) focuses on uptime and response metrics 
   transparency for web applications.
-
-* [StatusPage.io](https://www.statuspage.io/) (yes, there's both a Status and
+  * [StatusPage.io](https://www.statuspage.io/) (yes, there's both a Status and
   StatusPage.io) provides easy set up status pages for monitoring application
   up time.
-
-* [PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
+* Incident Management
+  * [PagerDuty](http://www.pagerduty.com/) alerts a designated person or group
   if there are stability, performance, or uptime issues with an application.
-
-* [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance 
-  metrics, release tracking, and error logging into a single simple service.
-
 
 ## Monitoring resources
 * [How to Add Hosted Monitoring to Flask Web Applications](/blog/hosted-monitoring-flask-web-apps.html)
