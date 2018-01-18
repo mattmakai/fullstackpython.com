@@ -14,13 +14,15 @@ changes via the
 [source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/) 
 on GitHub.
 
+
 ## 2018
 ### January
 * Merged [PR#148](https://github.com/mattmakai/fullstackpython.com/pull/148)
   that added a health check script. Fixed all URLs raised as issues with
   link rot, expired domains and redirects. Thanks 
   [Samuel](https://github.com/huangsam)!
-* Add [Ansible](/ansible.html) stub page with a few links.
+* Add [Ansible](/ansible.html) and [Matplotlib](/matplotlib.html) stub 
+  pages with a few links, to be fleshed out later.
 * New [Redis](/redis.html) and [Ubuntu](/ubuntu.html) resources.
 * Happy New Year! This is the 6th year of Full Stack Python, coming after a
   wonderful [first five years](/blog/five-years-full-stack-python.html).
