@@ -17,6 +17,8 @@ during Python software development as part of a programmer's
 
 <a href="https://www.gnu.org/software/bash/" style="border:none"><img src="/img/logos/bash-wide.jpg" width="100%" alt="Bourne-again shell (Bash) logo." class="technical-diagram"></a>
 
+<div class="well see-also">Bash is an implementation of the <a href="/shells.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
+
 
 ### Bash resources
 * [Bash Guide for beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)

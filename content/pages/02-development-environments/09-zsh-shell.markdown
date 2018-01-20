@@ -16,6 +16,8 @@ programmer's [development environment](/development-environments.html).
 
 <a href="http://zsh.sourceforge.net/" style="border:none"><img src="/img/logos/zsh.jpg" width="100%" alt="Zsh logo." class="technical-diagram" style="border-radius:5px"></a>
 
+<div class="well see-also">Zsh is an implementation of the <a href="/shells.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
+
 
 ### Zsh beginner's resources
 * [Getting Started with Zshell](https://blog.gtmanfred.com/intro-zsh.html)
