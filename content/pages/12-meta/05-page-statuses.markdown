@@ -50,7 +50,7 @@ category.
 | [Shells](/shells.html)                                     | starter      | 
 | [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | starter      | 
 | [Zsh](/zsh-shell.html)                                     | starter      | 
-| PowerShell                                                 | not yet      | 
+| [PowerShell](/powershell.html)                             | starter      | 
 | Terminal multiplexers                                      | not yet      | 
 | tmux                                                       | not yet      | 
 | screen                                                     | not yet      | 
@@ -76,6 +76,7 @@ category.
 |------------------------------------------------------------|--------------|
 | [Programming language](/python-programming-language.html)  | starter      |
 | Language concepts                                          | not yet      |
+| [Generators](/generators.html)                             | intermediate |
 
 
 ## Chapter 4: Testing
