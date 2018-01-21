@@ -51,7 +51,7 @@ category.
 | [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | starter      | 
 | [Zsh](/zsh-shell.html)                                     | starter      | 
 | [PowerShell](/powershell.html)                             | starter      | 
-| Terminal multiplexers                                      | not yet      | 
+| [Terminal multiplexers](/terminal-multiplexers.html)       | starter      |
 | tmux                                                       | not yet      | 
 | screen                                                     | not yet      | 
 | pymux                                                      | not yet      | 
@@ -77,11 +77,39 @@ category.
 | [Programming language](/python-programming-language.html)  | starter      |
 | Language concepts                                          | not yet      |
 | [Generators](/generators.html)                             | intermediate |
+| [Comprehensions](/comprehensions.html)                     | intermediate |
+| Decorators                                                 | not yet      |
+| Runtimes                                                   | not yet      |
+| CPython                                                    | not yet      |
+| PyPy                                                       | not yet      |
+| MicroPython                                                | not yet      |
+| IronPython                                                 | not yet      |
+| Jython                                                     | not yet      |
 
 
 ## Chapter 4: Testing
 | Page                                                       | Status       |
 |------------------------------------------------------------|--------------|
+| [Testing](/testing.html)                                   | starter      |
+| Testing approaches                                         | not yet      |
+| [Unit testing](/unit-testing.html)                         | starter      |
+| [Integration testing](/integration-testing.html)           | starter      |
+| Database testing                                           | not yet      |
+| Load testing                                               | not yet      |
+| Test-driven development                                    | not yet      |
+| Testing concepts                                           | not yet      |
+| [Code metrics](/code-metrics.html)                         | starter      |
+| Code coverage                                              | not yet      |
+| Mocking                                                    | not yet      |
+| [Debugging](/debugging.html)                               | starter      |
+| pdb                                                        | not yet      |
+| ipdb                                                       | not yet      |
+| pudb                                                       | not yet      |
+| wdb                                                        | not yet      |
+| [Logging](/logging.html)                                   | intermediate |
+| stdlib logging                                             | not yet      |
+| DTrace                                                     | not yet      |
+| logbook                                                    | not yet      |
 
 
 ## Chapter 5: Documentation

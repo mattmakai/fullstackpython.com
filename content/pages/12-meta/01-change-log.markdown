@@ -22,8 +22,9 @@ on GitHub.
   link rot, expired domains and redirects. Thanks 
   [Samuel](https://github.com/huangsam)!
 * Add [Ansible](/ansible.html), [Matplotlib](/matplotlib.html) and 
-  [PowerShell](/powershell.html) stub pages with a few links, to be fleshed 
-  out later.
+  [PowerShell](/powershell.html), 
+  [terminal multiplexers](/terminal-multiplexers.html) stub pages with 
+  a few links, to be fleshed out later.
 * New [Redis](/redis.html) and [Ubuntu](/ubuntu.html) resources.
 * Happy New Year! This is the 6th year of Full Stack Python, coming after a
   wonderful [first five years](/blog/five-years-full-stack-python.html).
