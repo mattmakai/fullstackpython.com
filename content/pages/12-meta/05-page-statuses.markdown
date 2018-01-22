@@ -52,7 +52,7 @@ category.
 | [Zsh](/zsh-shell.html)                                     | starter      | 
 | [PowerShell](/powershell.html)                             | starter      | 
 | [Terminal multiplexers](/terminal-multiplexers.html)       | starter      |
-| tmux                                                       | not yet      | 
+| [tmux](/tmux.html)                                         | starter      |
 | screen                                                     | not yet      | 
 | pymux                                                      | not yet      | 
 | Environment configuration                                  | not yet      | 
