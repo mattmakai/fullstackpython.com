@@ -19,7 +19,7 @@ easier to use many shells at once and attaching to both local and remote
 
 <a href="https://github.com/tmux/tmux/wiki" style="border:none"><img src="/img/logos/tmux.png" width="100%" alt="tmux unofficial logo." class="shot"></a>
 
-<div class="well see-also">tmux is an implementation of the <a href="/terminal-multiplexers.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
+<div class="well see-also">tmux is an implementation of the <a href="/terminal-multiplexers.html">terminal multiplexers</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
 
 ### tmux resources
