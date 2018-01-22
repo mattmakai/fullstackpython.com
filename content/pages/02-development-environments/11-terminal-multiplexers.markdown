@@ -40,9 +40,12 @@ be persisted and moved while running from one computer to another.
 ### Terminal multiplexer implementations
 Many terminal multiplexer implementations exist, including:
 
-* tmux
+* [tmux](/tmux.html)
+
 * screen
+
 * byobu
+
 * pymux
 
 
