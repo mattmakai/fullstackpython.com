@@ -46,6 +46,7 @@ category.
 | [Vim](/vim.html)                                           | complete     |
 | [Emacs](/emacs.html)                                       | intermediate |
 | [Sublime Text](/sublime-text.html)                         | starter      |
+| PyCharm                                                    | not yet      |
 | [Jupyter Notebook](/jupyter-notebook.html)                 | starter      |
 | [Shells](/shells.html)                                     | starter      | 
 | [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | starter      | 
@@ -53,11 +54,10 @@ category.
 | [PowerShell](/powershell.html)                             | starter      | 
 | [Terminal multiplexers](/terminal-multiplexers.html)       | starter      |
 | [tmux](/tmux.html)                                         | starter      |
-| screen                                                     | not yet      | 
-| pymux                                                      | not yet      | 
+| [Screen](/screen.html)                                     | starter      |
+| [Pymux](/pymux.html)                                       | starter      |
 | Environment configuration                                  | not yet      | 
 | [Application dependencies](/application-dependencies.html) | intermediate | 
-| Dependency isolation                                       | not yet      |
 | virtual environments (virtualenvs)                         | not yet      |
 | Environment variables                                      | not yet      |
 | Localhost tunnels                                          | not yet      |
