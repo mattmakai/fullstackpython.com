@@ -11,7 +11,7 @@ meta: Screen is a terminal multiplexer implementation frequently used for develo
 [Screen](https://www.gnu.org/software/screen/)
 ([source code](https://savannah.gnu.org/git/?group=screen)) is a 
 [terminal multiplexer](/terminal-multiplexers.html) implementation 
-often used during Python development on Linux 
+often used during Python development on Linux and macOS
 [operating systems](/operating-systems.html). Screen makes it easier for
 programmers to use many shells within a single terminal window while
 developing their applications.
@@ -23,3 +23,6 @@ developing their applications.
 ### Screen resources
 * [Learn to use screen, a terminal multiplexer](https://dev.to/thiht/learn-to-use-screen-a-terminal-multiplexer-gl)
 
+* [SCREEN - the terminal multiplexer](https://michael-prokop.at/screen/index.php3)
+
+* [Using GNU Screen to Manage Persistent Terminal Sessions](https://linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions/)
