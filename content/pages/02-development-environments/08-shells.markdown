@@ -1,7 +1,7 @@
 title: Shells
 category: page
 slug: shells
-sortorder: 0207
+sortorder: 0208
 toc: False
 sidebartitle: Shells
 meta: A shell is a computer user interface and often refers to a text-only or primarily text command line terminal.
@@ -11,7 +11,7 @@ meta: A shell is a computer user interface and often refers to a text-only or pr
 Shells are computer user interfaces that typically refer to a text-only or 
 primarily text-based command prompt.
 
-<img src="/img/visuals/terminal-shell.png" width="100%" alt="My macOS terminal window showing the bash shell with an active virtualenv." class="technical-diagram" style="border-radius:5px;border:1px solid #999">
+<img src="/img/visuals/terminal-shell.png" width="100%" alt="My macOS terminal window showing the bash shell with an active virtualenv." class="shot outl">
 
 The above screenshot shows the bash shell with an active Python virtual 
 environment named `fullstackpython` within the macOS Terminal application.

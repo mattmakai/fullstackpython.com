@@ -17,4 +17,15 @@ Python code.
 <div class="well see-also">PyCharm is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
+### PyCharm resources
+* JetBrains provides [courses for the PyCharm Educational Edition](https://github.com/JetBrains/pycharm-courses)
+  that can be used to learn any edition of the IDE.
 
+* The 
+  [Mastering PyCharm](https://training.talkpython.fm/courses/explore_pycharm/mastering-pycharm-ide)
+  Talk Python to Me course is awesome when you want to invest in your skills 
+  for using the IDE well.
+  
+* [Worth the switch to Pycharm?](https://www.reddit.com/r/Python/comments/6ac5pk/worth_the_switch_to_pycharm/)
+  is a solid discussion thread with different developers' perspectives
+  on using PyCharm for coding their applications.

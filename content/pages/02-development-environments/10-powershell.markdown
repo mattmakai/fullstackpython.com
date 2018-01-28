@@ -13,7 +13,7 @@ user interface for Windows that is often used as part
 of a Python programmer's 
 [development environment](/development-environments.html).
 
-<a href="https://docs.microsoft.com/en-us/powershell/" style="border:none"><img src="/img/logos/powershell.png" width="100%" alt="PowerShell logo."></a>
+<a href="https://docs.microsoft.com/en-us/powershell/" class="nob"><img src="/img/logos/powershell.png" width="100%" alt="PowerShell logo."></a>
 
 <div class="well see-also">PowerShell is an implementation of the <a href="/shells.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
