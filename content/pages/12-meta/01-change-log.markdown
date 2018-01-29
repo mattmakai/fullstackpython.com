@@ -23,7 +23,7 @@ on GitHub.
   [Samuel](https://github.com/huangsam)!
 * Add [Ansible](/ansible.html), [Matplotlib](/matplotlib.html),
   [PowerShell](/powershell.html), [tmux](/tmux.html), [Screen](/screen.html),
-  [Pymux](/pymux.html) and 
+  [Pymux](/pymux.html), [PyCharm](/pycharm.html) and 
   [terminal multiplexers](/terminal-multiplexers.html) starter pages with 
   a few links, to be fleshed out later.
 * New [Redis](/redis.html) and [Ubuntu](/ubuntu.html) resources.

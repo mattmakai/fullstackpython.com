@@ -46,7 +46,7 @@ category.
 | [Vim](/vim.html)                                           | complete     |
 | [Emacs](/emacs.html)                                       | intermediate |
 | [Sublime Text](/sublime-text.html)                         | starter      |
-| PyCharm                                                    | not yet      |
+| [PyCharm](/pycharm.html)                                   | starter      |
 | [Jupyter Notebook](/jupyter-notebook.html)                 | starter      |
 | [Shells](/shells.html)                                     | starter      | 
 | [Bourne-again shell (Bash)](/bourne-again-shell-bash.html) | starter      | 
