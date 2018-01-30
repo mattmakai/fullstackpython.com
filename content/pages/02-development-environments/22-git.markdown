@@ -81,6 +81,9 @@ cases.
 * [Phil Nash](https://philna.sh/) shows how to use the `git reflog` command 
   in [Git back to the future](https://philna.sh/blog/2017/01/04/git-back-to-the-future/).
   
+* [On undoing, fixing, or removing commits in git](https://sethrobertson.github.io/GitFixUm/fixup.html)
+  is a fantastic overview of how to unscrew a whole slew of bad situations
+  you may find yourself in if you use Git for long enough.
 
 
 ## Specific Git resources
