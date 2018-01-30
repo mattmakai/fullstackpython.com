@@ -128,7 +128,7 @@ variable values and then instantiate the Slack client.
     # constants
     RTM_READ_DELAY = 1 # 1 second delay between reading from RTM
     EXAMPLE_COMMAND = "do"
-    MENTION_REGEX = "^<@(|[WU].+)>(.*)"
+    MENTION_REGEX = "^<@(|[WU].+?)>(.*)"
 
 
 The code instantiates the `SlackClient` client with our `SLACK_BOT_TOKEN`
@@ -263,7 +263,7 @@ starterbot_id = None
 # constants
 RTM_READ_DELAY = 1 # 1 second delay between reading from RTM
 EXAMPLE_COMMAND = "do"
-MENTION_REGEX = "^<@(|[WU].+)>(.*)"
+MENTION_REGEX = "^<@(|[WU].+?)>(.*)"
 
 def parse_bot_commands(slack_events):
     """
