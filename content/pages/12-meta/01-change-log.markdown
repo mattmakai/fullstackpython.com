@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### January
+* Merged [PR#151](https://github.com/mattmakai/fullstackpython.com/pull/151)
+  that fixed an issue with the Slack bot and URLs in conversations.
 * Merged [PR#148](https://github.com/mattmakai/fullstackpython.com/pull/148)
   that added a health check script. Fixed all URLs raised as issues with
   link rot, expired domains and redirects. Thanks 
