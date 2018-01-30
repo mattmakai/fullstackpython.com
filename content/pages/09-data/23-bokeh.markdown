@@ -91,3 +91,10 @@ basic syntax will change as the library's API is not yet stable.
   shows how to use themes and style dictionaries to customize your Bokeh
   visuals.
 
+* [Bokeh vs Dash — Which is the Best Dashboard Framework for Python?](https://blog.sicara.com/bokeh-dash-best-dashboard-framework-python-shiny-alternative-c5b576375f7f)
+  contains a single project that was written in both Dash and Bokeh. The
+  author gives his subjective view on the implementation difficulty 
+  although the web application only contained a single type of data 
+  visualization so it is hard to drawn any real conclusions from his
+  opinion.
+
