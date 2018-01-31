@@ -30,22 +30,31 @@ possible to criticize that these guides are not exact, every ranking shows
 Python as a top programming language within the top ten, if not the top five
 of all languages.  
 
-The IEEE ranked [Python as the #3 top programming language](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages)
-in 2016. 
-[RedMonk's January 2017 ranking](https://redmonk.com/sogrady/2017/03/17/language-rankings-1-17/)
+The IEEE ranked Python as the
+[#1 programming language in 2017](http://spectrum.ieee.org/static/interactive-the-top-programming-languages-2017)
+after ranking as the 
+[#3 top programming language the previous year](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages).
+[RedMonk's June 2017 ranking](http://redmonk.com/sogrady/2017/06/08/language-rankings-6-17/),
 had Python at #3, which was up one slot from 
 [their same ranking two years earlier](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/).
 
+Stack Overflow's community-created question and answer data confirms the
+[incredible growth of the Python ecosystem](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
+and tries to determine
+[why it growing so quickly](https://stackoverflow.blog/2017/09/14/python-growing-quickly/)
+with their own analysis.
+
 The 
 [TIOBE Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html),
-a long-running language ranking, has Python steady at #8. 
+a long-running language ranking, has Python moving up the charts to #4,
+climbing from #8 just a couple years ago.
 
 The [PopularitY of Programming Language](http://pypl.github.io/PYPL.html) 
 (PYPL), based on leading indicators from Google Trends search keyword 
-analysis, shows Python at #3.
+analysis, shows Python at #2.
 
 [GitHut](http://githut.info/), a visualization of GitHub language popularity, 
-pegs Python at #3 overall as well.
+pegs Python at #3 overall.
 
 These rankings provide a rough measure for language popularity. They are not 
 intended as a precise measurement tool to determine exactly how many 
@@ -125,4 +134,3 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   supplies non-web development project examples that use Python. The article
   also does a solid job comparing and contrasting Python to other common
   programming languages such as Java, Ruby and JavaScript.
-

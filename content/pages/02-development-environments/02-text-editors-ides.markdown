@@ -57,3 +57,10 @@ wants that kind of functionality.
 
 * Wing Python IDE
 
+
+### Text editor & IDE resources
+* [Xi: an editor for the next 20 years](https://www.recurse.com/events/localhost-raph-levien)
+  is an awesome technical talk about designing a text editor with the
+  current (2018) set of tools available to a developer.
+
+
