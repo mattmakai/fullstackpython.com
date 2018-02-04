@@ -16,7 +16,12 @@ on GitHub.
 
 
 ## 2018
+### February
+
 ### January
+* Incorporated new data from Stack Overflow and updated programming language
+  rankings as evidence of reasons for 
+  [why to use Python](/why-use-python.html).
 * Merged [PR#151](https://github.com/mattmakai/fullstackpython.com/pull/151)
   that fixed an issue with the Slack bot and URLs in conversations.
 * Merged [PR#148](https://github.com/mattmakai/fullstackpython.com/pull/148)

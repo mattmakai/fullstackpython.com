@@ -24,7 +24,7 @@ on the [monitoring page](/monitoring.html).
 ## Our Tools 
 We can use either [Python 2 or 3](/python-2-or-3.html) to build this
 tutorial, but Python 3 is *strongly* recommended for all new applications. 
-[Python 3.6.2](https://www.python.org/downloads/release/python-362/) to 
+[Python 3.6.2](https://www.python.org/downloads/release/python-362/) 
 was used to build this tutorial. We will also use the following 
 [application dependencies](/application-dependencies.html) throughout
 the post: 
