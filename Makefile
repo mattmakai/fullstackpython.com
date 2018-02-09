@@ -30,5 +30,9 @@ update:
 	cp -R generated/updated_site generated/current_site
 
 
+wc:
+	wc content/pages/*/* content/posts/*
+
+
 init:
 	pip install -r requirements.txt
