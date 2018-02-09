@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### February
+* Added new [enterprise Python](/enterprise-python.html) resources.
 
 ### January
 * Incorporated new data from Stack Overflow and updated programming language

@@ -112,6 +112,14 @@ continue delivering business value to their business side customers.
   They rebuke many of the myths around Python for large scale projects
   including the variable typing system and scalability.
 
+* [The end of enterprise IT](http://www.leanessays.com/2017/01/the-end-of-enterprise-it.html)
+  is a fascinating essay that actually does not talk about Python in 
+  particular but shows how large enterprise IT departments such as the
+  one at ING Bank have to evolve their structure, processes and tools to
+  successfully ship software. Programming languages such as Python are more
+  likely to be used in these updated polyglot and 
+  [DevOps](/devops.html)-driven environments.
+
 * There are a couple of solid demystifying articles in CIO magazine including
   [this broad overview of Python in enterprises](http://www.cio.com/article/2437137/developer/you-used-python-to-write-what-.html)
   and this article on
