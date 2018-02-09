@@ -23,6 +23,10 @@ If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
 should skip down to the next section for "experienced developers".
 
+* [Real Python's tricks newsletter](https://realpython.com/python-tricks/)
+  provides a ton of free content to show you how to get started and continue
+  to improve your programming skills over time.
+
 * This [short 5 minute video](https://www.youtube.com/watch?v=mvK0UzFNw1Q)
   explains why it's better to think of projects you'd like to build and
   problems you want to solve with programming. Start working on those projects
@@ -170,6 +174,15 @@ development podcasts.
 * [Python Weekly](http://www.pythonweekly.com/) is a free weekly roundup
   of the latest Python articles, videos, projects and upcoming events.
 
+* The [Full Stack Python monthly newsletter](https://www.fullstackpython.com/email.html) 
+  is a monthly newsletter that focuses on a single topic each month. For 
+  example, one month will aggregate great Flask resources, while another 
+  month will provide WSGI server configurations.
+
+* The [Python Tricks newsletter](https://realpython.com/python-tricks/)
+  contains code snippets and stories every few days to teach you new ways to 
+  code Python.
+
 * [PyCoder's Weekly](http://pycoders.com/) is another great free weekly
   email newsletter similar to Python Weekly. The best resources are generally
   covered in both newsletters but they often cover different articles
@@ -179,10 +192,4 @@ development podcasts.
   than Python Weekly and PyCoder's Weekly. So far I've found this newsletter
   often pulls from different sources than the other two. It's well worth 
   subscribing to all three so you don't miss anything.
-
-* The [Full Stack Python monthly newsletter](https://www.fullstackpython.com/email.html) 
-  is a monthly newsletter that focuses on a single topic each month. For 
-  example, one month will aggregate great Flask resources, while another 
-  month will provide WSGI server configurations.
-
 
