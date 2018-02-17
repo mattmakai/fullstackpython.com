@@ -41,7 +41,7 @@ If you're not familiar with `Pelican <http://docs.getpelican.com/>`_, check out 
 
 4. Install the requirements::
 
-    $ pip install -r source/requirements.txt
+    $ pip install -r requirements.txt
 
 Note: make changes to the source/content/pages/\*.rst files then execute a
 *make run* command from the source/ directory.
