@@ -177,6 +177,12 @@ own project.
   that demos sending server generated events as well as input from users
   via a text box input on a form.
 
+* The [realtime codenames game](https://github.com/joshporter1/codenames) 
+  source code is a full-featured example for using WebSockets via 
+  Flask-SocketIO. There is also a 
+  [multi-part tutorial](https://secdevops.ai/weekend-project-part-1-creating-a-real-time-web-based-application-using-flask-vue-and-socket-b71c73f37df7)
+  that walks through the code.
+
 * The 
   [python-websockets-example](https://github.com/mattmakai/python-websockets-example)
   contains code to create a simple web application that provides WebSockets
@@ -190,6 +196,13 @@ own project.
   Flask web app implementation that allows the audience to interact with
   WebSockets as I built out the application.
 
+* [Creating a Real-time Web-based Application using Flask, Vue, and Socket.io: part 1](https://secdevops.ai/weekend-project-part-1-creating-a-real-time-web-based-application-using-flask-vue-and-socket-b71c73f37df7),
+  [part 2](https://secdevops.ai/weekend-project-part-2-turning-flask-into-a-real-time-websocket-server-using-flask-socketio-ab6b45f1d896)
+  and
+  [part 3](https://secdevops.ai/weekend-project-part-3-centralizing-state-management-with-vuex-5f4387ebc144)
+  are a complete front-to-backend WebSockets, Python and JavaScript front
+  end framework example with open source code.
+
 * [Real-time in Python](http://mrjoes.github.io/2013/06/21/python-realtime.html)
   provides Python-specific context for how the server push updates were 
   implemented in the past and how Python's tools have evolved to perform
@@ -200,6 +213,13 @@ own project.
   [asyncio](https://docs.python.org/3.4/library/asyncio.html) module (or with 
   [Tulip](https://code.google.com/p/tulip/) if you're working with 
   Python 3.3).
+
+* [Speeding up Websockets 60X](https://www.willmcgugan.com/blog/tech/post/speeding-up-websockets-60x/)
+  is a cool experiment in coding loops different ways to eek out more 
+  performance from WebSockets connections. It is unclear how generalizable
+  the results in the blog post are to other programs but it is a good example
+  of how tweaking and tuning can produce outsized returns in some 
+  applications.
 
 * The [Choose Your Own Adventure Presentations](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
   tutorial uses WebSockets via gevent on the server and socketio.js for 
@@ -288,4 +308,8 @@ Python.
 * [Benchmarking and Scaling WebSockets: Handling 60000 concurrent connections](http://kemalcr.com/blog/2016/11/13/benchmarking-and-scaling-websockets-handling-60000-concurrent-connections/)
   is a detailed examination of how WebSockets connections can scale to tens
   of thousands of users.
+
+* [Writing WebSocket servers](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+  gets into the nitty-gritty of how WebSockets work. Well worth reading to
+  get a deep understanding of WebSockets connections.
 

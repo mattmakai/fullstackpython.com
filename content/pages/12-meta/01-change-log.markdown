@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### February
+* New [WebSockets](/websockets.html) resources.
 * New starter page on [CSS frameworks](/css-frameworks.html).
 * Added new [enterprise Python](/enterprise-python.html) resources.
 
