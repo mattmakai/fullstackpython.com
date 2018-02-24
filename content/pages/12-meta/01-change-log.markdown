@@ -17,8 +17,11 @@ on GitHub.
 
 ## 2018
 ### February
+* Added a slew of new practice problems and teaching resources on the 
+  [Learning Programming](/learning-programming.html) page.
 * New [WebSockets](/websockets.html) resources.
-* New starter page on [CSS frameworks](/css-frameworks.html).
+* New starter page on [CSS frameworks](/css-frameworks.html) and 
+  [Foundation CSS](/foundation-css.html).
 * Added new [enterprise Python](/enterprise-python.html) resources.
 
 ### January

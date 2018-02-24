@@ -17,6 +17,7 @@ is especially useful as a base layer of
 <a href="http://getbootstrap.com/" style="border: none;"><img src="/img/logos/bootstrap.png" width="100%" alt="Bootstrap logo." class="technical-diagram" style="border-radius:5px"></a>
 
 
+
 ### Bootstrap resources
 * [Getting Started with Bootstrap](https://realpython.com/blog/python/getting-started-with-bootstrap-3/)
   provides a walkthrough of a sample starter template so you can understand

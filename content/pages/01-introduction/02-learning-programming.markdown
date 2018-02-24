@@ -54,6 +54,7 @@ that expand a programmer's abilities are the units of progress. Extra value
 is placed on making the projects open source and working with experienced 
 mentors to learn what he or she can improve on in their programs. 
 
+
 ## Should I learn Python first?
 Python is good choice in the project-based approach because of the extensive 
 availability of 
@@ -74,3 +75,72 @@ constructs. Find one that appears to match your personal style and give it a
 try, knowing that whatever you choose you'll need to put in many long days and
 nights to really get comfortable as a software developer.
 
+
+### Practice problems
+Working on practice programming challenges and studying their solutions in
+Python or another language is a great way to learn whether you are just
+starting or an experienced developer. Here are numerous open source 
+repositories and sites with practice problems and solutions:
+
+* [Code problems](https://github.com/blakeembrey/code-problems) provides
+  common algorithm and data structures challenges with solutions in several
+  programming languages including Python.
+
+* [Python basics](https://pythonbasics.org/) contains materials and
+  exercises to learn basic Python 3 syntax such as variables, functions
+  and lists.
+
+* [Interactive Python coding interview challenges](https://github.com/donnemartin/interactive-coding-challenges)
+  is an awesome [Jupyter Notebook](/jupyter-notebook.html) to learn and
+  test your data structures and algorithms knowledge in Python.
+
+* [TeachCraft](https://teachcraft.net/) combines Minecraft with Python to
+  learn coding.
+
+* [500 Data Structures and Algorithms practice problems and their solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
+  covers a large swath of the computer science space. It is not important
+  to know all of these algorithms and data structures but experience with
+  many of them will be greatly beneficial in becoming a better developer.
+
+
+### First-hand advice
+These articles are written by programmers who explain how they learned to
+code. They should not be taken as "this is how you must learn" but instead
+give example paths you can think about taking as a beginner:
+
+* [Learning to program](http://danluu.com/learning-to-program/) 
+  is a long read but goes through Dan's experience in math and engineering
+  before fully committing to software development.
+
+* [Developing as a developer](https://blog.ragnarson.com/2016/10/07/developing-as-a-developer.html)
+  gives general advice on qualities necessary to become a programmer, 
+  including persistence, respecting others and considering ideas that are
+  outside your comfort zone.
+
+* [Mastering programming](https://www.facebook.com/notes/kent-beck/mastering-programming/1184427814923414)
+  by [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) contains
+  patterns and observations for how experienced programmers he has worked
+  with in the past became great software developers.
+
+
+### Teaching perspectives
+Are you an experienced programmer working with new and junior programmers?
+These articles give some insight into how you may want to structure
+your teaching experience:
+
+* [Five Principles For Programming Languages For Learners](https://cacm.acm.org/blogs/blog-cacm/203554-five-principles-for-programming-languages-for-learners/fulltext)
+  is a perspective on teaching children to program but is good advice 
+  for an audience of any age.
+
+* [Teach tech with cartoons](https://jvns.ca/teach-tech-with-cartoons/)
+  is an awesome resource that explains how you can use simple but fun
+  drawings to teach otherwise difficult technical concepts to students.
+
+* [Teaching programming to working professionals](http://pgbovine.net/PG-Podcast-21-Trey-Hunner.htm)
+  is a video podcast with [Trey Hunter](https://twitter.com/treyhunner)
+  about his experience teaching Python to experienced professionals.
+
+* [Teach Yourself Computer Science](https://teachyourselfcs.com/) is
+  intended as a self-teaching tool with many resources that are classic
+  computer science textbooks. There are also nice explanations for why
+  each resource is useful in your learning and teaching journey.

@@ -134,3 +134,7 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
   supplies non-web development project examples that use Python. The article
   also does a solid job comparing and contrasting Python to other common
   programming languages such as Java, Ruby and JavaScript.
+
+* [Python or Ruby for web development](https://opensource.com/article/17/4/python-or-ruby-web-development)
+  gives reasons for one language compared to the other just focused on the
+  web development space.
