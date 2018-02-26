@@ -108,12 +108,6 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 
 * Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
-* The Plank & Whittle blog has two posts, one on 
-  [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/) 
-  and another on 
-  [Packaging a Flask app in a Debian package](http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/)
-  once you've built an app and want to deploy it.
-
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
 
