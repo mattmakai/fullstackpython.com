@@ -84,6 +84,8 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   [tags for each step](https://github.com/mattmakai/choose-your-own-adventure-presentations/releases) 
   in the blog posts.
 
+* [Microservices with Flask, Docker, and React](https://testdriven.io/) is nice tutoriel to learn how to spin up a reproducible Flask development environment with Docker. It shows also how to deploy it to an Amazon EC2 instance and how to scale the services on Amazon EC2 Container Service (ECS). It covers also test-driven development (TDD) and server-side unit, functional, and integration tests along with end-to-end tests.
+
 * This [simple Flask app uses Twilio Voice](https://www.twilio.com/blog/2015/09/warm-phone-call-transfers-with-python-flask-and-twilio-voice.html)
   to do voice calling with three participants. It's a fun introduction
   to Python and Flask I wrote for the Twilio blog.
