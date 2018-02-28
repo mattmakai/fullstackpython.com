@@ -18,11 +18,11 @@ track of tasks in the queue that need to be executed.
 
 
 ## RQ resources
-* The [RQ intro post](http://nvie.com/posts/introducing-rq/) contains 
+* The [RQ intro post](http://nvie.com/posts/introducing-rq/) contains
   information on design decisions and how to use RQ in your projects.
 
 * [International Space Station notifications with Python and Redis Queue (RQ)](https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html)
-  shows how to combine the RQ task queue library with Flask to send 
+  shows how to combine the RQ task queue library with Flask to send
   text message notifications every time a condition is met - in this blog
   post's case that the ISS is currently flying over your location on
   Earth.
@@ -38,3 +38,5 @@ track of tasks in the queue that need to be executed.
   [Flask](/flask.html)-based dashboard for viewing queues, workers and
   other critical information when using RQ.
 
+* [Asynchronous Tasks with Flask and Redis Queue](https://testdriven.io/asynchronous-tasks-with-flask-and-redis-queue)
+  looks at how to configure RQ to handle long-running tasks in a Flask app.
