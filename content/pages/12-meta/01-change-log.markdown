@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### February
+* Merged [PR #153](https://github.com/mattmakai/fullstackpython.com/pull/153)
+  that removed some out-of-date links and added some new ones to the 
+  [Flask](/flask.html) page.
 * Added a slew of new practice problems and teaching resources on the 
   [Learning Programming](/learning-programming.html) page.
 * New [WebSockets](/websockets.html) resources.
