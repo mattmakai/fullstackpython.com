@@ -84,6 +84,8 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   [tags for each step](https://github.com/mattmakai/choose-your-own-adventure-presentations/releases) 
   in the blog posts.
 
+* [Microservices with Flask, Docker, and React](https://testdriven.io/) is nice tutoriel to learn how to spin up a reproducible Flask development environment with Docker. It shows also how to deploy it to an Amazon EC2 instance and how to scale the services on Amazon EC2 Container Service (ECS). It covers also test-driven development (TDD) and server-side unit, functional, and integration tests along with end-to-end tests.
+
 * This [simple Flask app uses Twilio Voice](https://www.twilio.com/blog/2015/09/warm-phone-call-transfers-with-python-flask-and-twilio-voice.html)
   to do voice calling with three participants. It's a fun introduction
   to Python and Flask I wrote for the Twilio blog.
@@ -107,12 +109,6 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   web app that can dial phones and receive inbound calls.
 
 * Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
-
-* The Plank & Whittle blog has two posts, one on 
-  [Packaging a Flask web app](http://www.plankandwhittle.com/packaging-a-flask-web-app/) 
-  and another on 
-  [Packaging a Flask app in a Debian package](http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/)
-  once you've built an app and want to deploy it.
 
 * The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
   is another great walkthrough for getting started with the framework.
