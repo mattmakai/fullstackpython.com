@@ -184,6 +184,8 @@ when scaling out a large deployment of distributed task queues.
   provides some solid advice on retry delays, the -Ofair flag and global
   task timeouts for Celery.
 
+* [Asynchronous Tasks with Flask and Redis Queue](https://testdriven.io/asynchronous-tasks-with-flask-and-redis-queue)
+  looks at how to configure Redis Queue to handle long-running tasks in a Flask app.
 
 ## Task queue learning checklist
 1. Pick a slow function in your project that is called during an HTTP
