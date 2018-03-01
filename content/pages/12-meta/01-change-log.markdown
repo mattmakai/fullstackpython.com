@@ -16,6 +16,11 @@ on GitHub.
 
 
 ## 2018
+### March
+* Merged [PR #154](https://github.com/mattmakai/fullstackpython.com/pull/154)
+  with a new [RQ](/redis-queue-rq.html) resource. Thanks again 
+  [Michael](https://github.com/mjhea0)!
+
 ### February
 * Merged [PR #153](https://github.com/mattmakai/fullstackpython.com/pull/153)
   that removed some out-of-date links and added some new ones to the 
