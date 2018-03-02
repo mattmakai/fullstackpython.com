@@ -86,6 +86,11 @@ repositories and sites with practice problems and solutions:
   common algorithm and data structures challenges with solutions in several
   programming languages including Python.
 
+* [Pytudes](https://github.com/norvig/pytudes) are an awesome collection
+  of Python programs to practice and demonstrate skills. These problems
+  go above and beyond the common data structures and algorithm questions 
+  often found in other practice problem sets.
+
 * [Python basics](https://pythonbasics.org/) contains materials and
   exercises to learn basic Python 3 syntax such as variables, functions
   and lists.

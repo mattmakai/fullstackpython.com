@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### March
+* Added new [learning programming](/learning-programming.html) practice 
+  problem sets.
 * Merged [PR #154](https://github.com/mattmakai/fullstackpython.com/pull/154)
   with a new [RQ](/redis-queue-rq.html) resource. Thanks again 
   [Michael](https://github.com/mjhea0)!
