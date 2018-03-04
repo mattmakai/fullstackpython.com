@@ -65,3 +65,9 @@ used to automate building, [testing](/testing.html) and
   published 
   [their Puppet files for building](https://github.com/alphagov/govuk-puppet/tree/master/modules/govuk_jenkins/manifests)
   Jenkins infrastructure.
+
+* [Jenkins configuration as code](https://www.praqma.com/stories/jenkins-configuration-as-code/)
+  details the launch of a new Jenkins tool for programmatically configuring
+  Jenkins so you can automate the setup of this part of your deployment
+  infrastructure. The post goes into the motivations behind creating another
+  tool for code configuration when other similar libraries already exist.
