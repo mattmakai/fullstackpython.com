@@ -33,3 +33,7 @@ toolkits.
 * [Matplotlib Cheat Sheet: Plotting in Python](https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet)
   contains some handy snippets of code to perform common plotting operations
   in Matplotlib.
+
+* [5 Quick and Easy Data Visualizations in Python](https://towardsdatascience.com/5-quick-and-easy-data-visualizations-in-python-with-code-a2284bae952f)
+  shows several code examples with explanations for performing exploratory
+  data analysis using Matplotlib.
