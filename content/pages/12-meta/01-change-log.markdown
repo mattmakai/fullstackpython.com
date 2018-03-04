@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### March
+* New blog post on 
+  [ReportLab and Future Community Project Launches](/blog/python-community-project-launches.html)
+  that also went out as an email newsletter for March.
 * Added new [learning programming](/learning-programming.html) practice 
   problem sets.
 * Merged [PR #154](https://github.com/mattmakai/fullstackpython.com/pull/154)
