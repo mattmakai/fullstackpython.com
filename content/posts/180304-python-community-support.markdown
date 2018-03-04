@@ -12,7 +12,7 @@ headeralt: Python programming language and Full Stack Python logos.
 Congratulations to fellow Python developer 
 [Mike Driscoll](https://github.com/driscollis) for his successful 
 **[ReportLab: PDF Processing with Python Kickstarter](https://www.kickstarter.com/projects/34257246/reportlab-pdf-processing-with-python/)** 
-that just concluded with over double the funds goal he requested.
+that just concluded with over double his funding goal.
 
 I was excited to back Mike's project for a couple of reasons. First, I've
 used [ReportLab](https://www.reportlab.com/opensource/) on past projects 
@@ -25,7 +25,7 @@ me know via email (matthew.makai@gmail.com or mattmakai@fullstackguides.com)
 when you are getting ready to launch a Python project so I can help give a 
 boost.
 
-Michael Kennedy and I know from our 
+[Michael Kennedy](https://talkpython.fm/) and I know from our 
 [own Kickstarter experience](https://www.kickstarter.com/projects/mikeckennedy/python-for-entrepreneurs-video-course) 
 how much work goes into making these ideas come to fruition. It's a big 
 confidence boost to have a community tailwind at your back and I am always 
