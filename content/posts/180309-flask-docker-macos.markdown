@@ -63,30 +63,43 @@ Docker version 17.12.0-ce, build c97c6d6
 ## Dockerfile
 
 ```
+# this is an official Python runtime, used as the parent image
 FROM python:3.6.4-slim
 
+# set the working directory in the container to /app
 WORKDIR /app
 
+# add the current directory to the container as /app
 ADD . /app
 
+# execute everyone's favorite pip command, pip install -r
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
+# unblock port 80 for the Flask app to run on
 EXPOSE 80
 
-ENV DEBUG True
-
+# execute the Flask app
 CMD ["python", "app.py"]
 ```
+
+Save the Dockerfile so that we can run our next command with the completed
+contents of the file. On the commandline run:
 
 ```
 docker build -t flaskdock .
 ```
 
+The above `docker build` file uses the `-t` flag to tag the image with
+the name of `flaskdock`.
+
 
 ## Running the Container
-Make sure to replace the absolute path for the volume to your own directory. 
+Now that we have our image in hand we can run it as a container with the
+`docker run` command. Execute the following command, making sure to replace 
+the absolute path for the volume to your own directory.
+
 ```
-docker run -p 4000:80 --volume=/Users/matt/devel/py/flaskdocker:/app flaskdock
+docker run -p 5000:80 --volume=/Users/matt/devel/py/flaskdocker:/app flaskdock
 ```
 
 ## What's Next?
