@@ -30,3 +30,8 @@ can be used as the version control system for Python projects.
 * [Mercurial: The Definitive Guide](http://hgbook.red-bean.com/read/)
   is a free online version of the 
   [O'Reilly book](https://www.amazon.com/gp/product/0596800673).
+
+* [Monoroke](https://github.com/facebookexperimental/mononoke) is a
+  Mercurial server written in Rust designed to be used for very large
+  monorepos that have thousands of commits affecting millions of files
+  per hour.
