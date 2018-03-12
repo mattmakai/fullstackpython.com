@@ -11,9 +11,9 @@ headeralt: Flask, Docker and Apple logos, copyright their respective owners.
 
 Adding [Docker](/docker.html) to your [Python](/why-use-python.html) and 
 [Flask](/flask.html) [development environment's](/development-environments.html) 
-workflow can be a bit confusing when you are just getting started working with
-containers. Let's quickly get Docker configured for developing Flask web 
-applications on your local system.
+workflow can be a bit confusing when you are just getting started with
+containers. Let's quickly get Docker installed and configured for developing 
+Flask web applications on your local system.
 
 
 ## Our Tools
