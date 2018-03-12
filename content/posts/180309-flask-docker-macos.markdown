@@ -49,6 +49,8 @@ On your Mac,
 [download the Docker Community Edition (CE) for Mac](https://www.docker.com/community-edition#/download)
 installer.
 
+<img src="/img/180309-flask-docker/docker-ce.jpg" width="100%" class="shot rnd" alt="Download the Docker Community Edition for Mac.">
+
 Find the newly-downloaded install within Finder and double click on the file.
 Follow the installation process, which includes granting administrative privileges
 to the installer.
@@ -66,7 +68,16 @@ If Docker is installed correctly you should see the following output:
 Docker version 17.12.0-ce, build c97c6d6
 ```
 
+Note that Docker runs through a system agent you can find in the menu bar.
+
 <img src="/img/180309-flask-docker/docker-agent.png" width="100%" class="shot rnd" alt="Docker agent in the menu bar.">
+
+I have found the Docker agent to take up some precious battery life
+on my Macbook Pro. If I am not developing and need to max battery time I will
+close down the agent and start it back up again when I am ready to code. 
+
+Now that Docker is installed let's get to running a container and writing
+our Flask application.
 
 
 ## Dockerfile
