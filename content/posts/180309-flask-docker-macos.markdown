@@ -49,18 +49,29 @@ On your Mac,
 [download the Docker Community Edition (CE) for Mac](https://www.docker.com/community-edition#/download)
 installer.
 
-Install Docker.
+Find the newly-downloaded install within Finder and double click on the file.
+Follow the installation process, which includes granting administrative privileges
+to the installer.
 
-Open Terminal.
+Open Terminal when the installer is done. Test your Docker installation with the 
+`--version` flag:
 
-Test your Docker installation with the `docker --version` command.
+```
+docker --version
+```
+
+If Docker is installed correctly you should see the following output:
 
 ```
 Docker version 17.12.0-ce, build c97c6d6
 ```
 
+<img src="/img/180309-flask-docker/docker-agent.png" width="100%" class="shot rnd" alt="Docker agent in the menu bar.">
+
 
 ## Dockerfile
+Docker needs to know what we want in a container, which is where the 
+`Dockerfile` comes in. 
 
 ```
 # this is an official Python runtime, used as the parent image
