@@ -49,7 +49,8 @@ On your Mac,
 [download the Docker Community Edition (CE) for Mac](https://www.docker.com/community-edition#/download)
 installer.
 
-<img src="/img/180309-flask-docker/docker-ce.jpg" width="100%" class="shot rnd" alt="Download the Docker Community Edition for Mac.">
+<img src="/img/180309-flask-docker/docker-ce.jpg" width="100%" 
+ class="shot rnd" alt="Download the Docker Community Edition for Mac.">
 
 Find the newly-downloaded install within Finder and double click on the file.
 Follow the installation process, which includes granting administrative privileges
@@ -70,7 +71,8 @@ Docker version 17.12.0-ce, build c97c6d6
 
 Note that Docker runs through a system agent you can find in the menu bar.
 
-<img src="/img/180309-flask-docker/docker-agent.png" width="100%" class="shot rnd" alt="Docker agent in the menu bar.">
+<img src="/img/180309-flask-docker/docker-agent.png" width="100%" 
+ class="shot rnd" alt="Docker agent in the menu bar.">
 
 I have found the Docker agent to take up some precious battery life
 on my Macbook Pro. If I am not developing and need to max battery time I will
@@ -115,14 +117,53 @@ The above `docker build` file uses the `-t` flag to tag the image with
 the name of `flaskdock`.
 
 
+## Coding A Simple Flask app
+Time to put together a super simple "Hello, World!" Flask web app to test
+running Python code within our Docker container. Within the current
+project directory, create a file named `app.py` with the following
+contents:
+
+```python
+from flask import Flask, Response
+
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello():
+    return Response("Hi from your Flask app running in your Docker container!")
+
+
+if __name__ == "__main__":
+    app.run("0.0.0.0", port=80, debug=True)
+```
+
+The above 7 lines of code (not counting blank PEP8-compliant lines) allow our
+application to return a simple message when run with the Flask development
+server.
+
+Save the file and we can give the code a try.
+
+
 ## Running the Container
-Now that we have our image in hand we can run it as a container with the
-`docker run` command. Execute the following command, making sure to replace 
-the absolute path for the volume to your own directory.
+Now that we have our image in hand along with the Python code in a file 
+we can run the image as a container with the `docker run` command. Execute 
+the following command, making sure to replace the absolute path for the 
+volume to your own directory.
 
 ```
 docker run -p 5000:80 --volume=/Users/matt/devel/py/flaskdocker:/app flaskdock
 ```
+
+If you receive the error 
+`python: can't open file 'app.py': [Errno 2] No such file or directory` then
+you likely forgot to chance `/Users/matt/devel/py/flaskdocker` to the 
+directory where your project files, especially `app.py`, are located.
+
+
+<img src="/img/180309-flask-docker/flask-app-response.png" width="100%" 
+ class="shot rnd" alt="Flask app responding to requests from within a Docker container.">
 
 ## What's Next?
 We just installed Docker and configured a Flask application to run inside a 
