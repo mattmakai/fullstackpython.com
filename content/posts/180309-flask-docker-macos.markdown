@@ -3,21 +3,21 @@ slug: develop-flask-web-apps-docker-containers-macos
 meta: Learn how to set up and develop a new Flask web application within a Docker container.
 category: post
 date: 2018-03-09
-modified: 2018-03-09
+modified: 2018-03-14
 newsletter: False
 headerimage: /img/180309-flask-docker/header.jpg
 headeralt: Flask, Docker and Apple logos, copyright their respective owners.
 
 
 Adding [Docker](/docker.html) to your [Python](/why-use-python.html) and 
-[Flask](/flask.html) [development environment's](/development-environments.html) 
-workflow can be a bit confusing when you are just getting started with
-containers. Let's quickly get Docker installed and configured for developing 
-Flask web applications on your local system.
+[Flask](/flask.html) [development environment](/development-environments.html) 
+can be confusing when you are just getting started with containers. Let's 
+quickly get Docker installed and configured for developing Flask web 
+applications on your local system.
 
 
 ## Our Tools
-This tutorial is written for [Python 3](/python-2-or-3.html). It may work with
+This tutorial is written for [Python 3](/python-2-or-3.html). It will work with
 Python 2 but I have not tested it with the 
 [soon-to-be deprecated 2.7 version](https://pythonclock.org/). 
 
@@ -116,12 +116,29 @@ docker build -t flaskdock .
 The above `docker build` file uses the `-t` flag to tag the image with
 the name of `flaskdock`.
 
+If the build worked successfully we can see the image in with the 
+`docker image ls` command. Give that a try now:
+
+```
+docker image ls
+```
+
+We should then see our tag name in the images list:
+
+```
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+flaskdock           latest              24045e0464af        2 minutes ago       165MB
+```
+
+Our image is ready to load up as a container so we can write a quick
+Flask app that we will use to test our environment by running it within
+the container.
+
 
 ## Coding A Simple Flask app
 Time to put together a super simple "Hello, World!" Flask web app to test
 running Python code within our Docker container. Within the current
-project directory, create a file named `app.py` with the following
-contents:
+project directory, create a file named `app.py` with the following contents:
 
 ```python
 from flask import Flask, Response
@@ -139,9 +156,10 @@ if __name__ == "__main__":
     app.run("0.0.0.0", port=80, debug=True)
 ```
 
-The above 7 lines of code (not counting blank PEP8-compliant lines) allow our
-application to return a simple message when run with the Flask development
-server.
+The above 7 lines of code (not counting blank PEP8-compliant lines) in 
+[app.py](https://github.com/fullstackpython/blog-code-examples/blob/master/docker-flask-mac/app.py) 
+allow our application to return a simple message when run with the 
+Flask development server.
 
 Save the file and we can give the code a try.
 
@@ -165,10 +183,19 @@ directory where your project files, especially `app.py`, are located.
 <img src="/img/180309-flask-docker/flask-app-response.png" width="100%" 
  class="shot rnd" alt="Flask app responding to requests from within a Docker container.">
 
+Everything worked when you see a simple text-based HTTP response like what
+is shown above in the screenshot of my Chrome browser.
+
+
 ## What's Next?
 We just installed Docker and configured a Flask application to run inside a 
 container. That is just the beginning of how you can integrate Docker into 
-your workflow. Next up take a look at the [Docker](/docker.html) and 
+your workflow. I strongly recommend reading the 
+[Django with PostgreSQL quickstart](https://docs.docker.com/compose/django/)
+that will introduce you to Docker Swarm as well as the core Docker container
+service.
+
+Next up take a look at the [Docker](/docker.html) and 
 [deployment](/deployment.html) pages for more related tutorials.
 
 Questions? Let me know via a GitHub

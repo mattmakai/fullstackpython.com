@@ -43,15 +43,16 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 
 * [Andrew Baker](https://github.com/atbaker) presented a fantastic tutorial 
   at [PyOhio](http://andrewtorkbaker.com/pyohio-docker-101-tutorial) on 
-  [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial). 
-  Andrew also wrote the article [what containers can do for you](http://radar.oreilly.com/2015/01/what-containers-can-do-for-you.html).
+  [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial).
+  Andrew also wrote the article 
+  [what containers can do for you](http://radar.oreilly.com/2015/01/what-containers-can-do-for-you.html).
 
 * [Docker curriculum](http://prakhar.me/docker-curriculum/) is a detailed
   tutorial created by a developer to show the exact steps for deploying an 
   application that relies on [Elasticsearch](https://www.elastic.co/). 
 
-* [How to install Docker and get started](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-getting-started)
-  provides a walkthrough for Ubuntu 13.04 for installing and beginning to
+* [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
+  provides a walkthrough for Ubuntu 16.04 for installing and beginning to
   use Docker for development.
 
 * [It Really is the Future](http://blog.circleci.com/it-really-is-the-future/)
