@@ -19,6 +19,10 @@ on GitHub.
 ### March
 * New blog post on 
   [Developing Flask Apps in Docker Containers on macOS](https://www.fullstackpython.com/blog/develop-flask-web-apps-docker-containers-macos.html).
+* Merged 
+  [pull request #156](https://github.com/mattmakai/fullstackpython.com/pull/156)
+  to remove a duplicated [Vim](/vim.html) page resource. Thanks 
+  [Xurxo](https://github.com/xurxof)!
 * New blog post on 
   [ReportLab and Future Community Project Launches](/blog/python-community-project-launches.html)
   that also went out as an email newsletter for March.
