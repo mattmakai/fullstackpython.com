@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### March
+* New resources and explanations added to the [Markdown](/markdown.html) 
+  page.
 * New blog post on 
   [Developing Flask Apps in Docker Containers on macOS](https://www.fullstackpython.com/blog/develop-flask-web-apps-docker-containers-macos.html).
 * Merged 
