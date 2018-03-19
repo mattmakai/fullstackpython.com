@@ -82,22 +82,26 @@ Python or another language is a great way to learn whether you are just
 starting or an experienced developer. Here are numerous open source 
 repositories and sites with practice problems and solutions:
 
-* [Code problems](https://github.com/blakeembrey/code-problems) provides
-  common algorithm and data structures challenges with solutions in several
-  programming languages including Python.
-
 * [Pytudes](https://github.com/norvig/pytudes) are an awesome collection
   of Python programs to practice and demonstrate skills. These problems
   go above and beyond the common data structures and algorithm questions 
   often found in other practice problem sets.
 
-* [Python basics](https://pythonbasics.org/) contains materials and
-  exercises to learn basic Python 3 syntax such as variables, functions
-  and lists.
-
 * [Interactive Python coding interview challenges](https://github.com/donnemartin/interactive-coding-challenges)
   is an awesome [Jupyter Notebook](/jupyter-notebook.html) to learn and
   test your data structures and algorithms knowledge in Python.
+
+* [Python Programming Exercises](http://joaoventura.net/static/files/python_exercises_book.pdf)
+  is a free short PDF book with exercises across many standard Python 
+  language features such as dictionaries, classes and functions.
+
+* [Code problems](https://github.com/blakeembrey/code-problems) provides
+  common algorithm and data structures challenges with solutions in several
+  programming languages including Python.
+
+* [Python basics](https://pythonbasics.org/) contains materials and
+  exercises to learn basic Python 3 syntax such as variables, functions
+  and lists.
 
 * [TeachCraft](https://teachcraft.net/) combines Minecraft with Python to
   learn coding.
