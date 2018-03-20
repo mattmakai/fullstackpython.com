@@ -68,4 +68,5 @@ correctness.
   shows how to get a basic [pytest](http://pytest.org/latest/) test
   running for a Django project and explains why the author prefers pytest 
   over standard unittest testing.
-
+  
+* [Distributed Testing with Selenium Grid and Docker](https://testdriven.io/distributed-testing-with-selenium-grid) shows how to distribute automated, browser tests with Selenium Grid and Docker Swarm. It also looks at how to run tests against a number of browsers and automate the provisioning and deprovisioning of machines to keep costs down.
