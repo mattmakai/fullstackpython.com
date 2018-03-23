@@ -1,7 +1,7 @@
 title: Shells
 category: page
 slug: shells
-sortorder: 0208
+sortorder: 0207
 toc: False
 sidebartitle: Shells
 meta: A shell is a computer user interface and often refers to a text-only or primarily text command line terminal.

@@ -1,7 +1,7 @@
 title: Sublime Text
 category: page
 slug: sublime-text
-sortorder: 0205
+sortorder: 0204
 toc: False
 sidebartitle: Sublime Text
 meta: Sublime Text is a commonly-used text editor with development extensions for the Python programming language.

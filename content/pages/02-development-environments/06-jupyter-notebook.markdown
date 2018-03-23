@@ -1,7 +1,7 @@
 title: Jupyter Notebook
 category: page
 slug: jupyter-notebook
-sortorder: 0207
+sortorder: 0206
 toc: False
 sidebartitle: Jupyter Notebook
 meta: Jupyter Notebook, formerly named iPython Notebook, is a powerful Python code execution environment often used for data analysis.

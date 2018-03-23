@@ -1,7 +1,7 @@
 title: GitLab
 category: page
 slug: gitlab
-sortorder: 0228
+sortorder: 0227
 toc: False
 sidebartitle: GitLab
 meta: GitLab is a software-as-a-service platform that provides tools and backup for Git repositories.

@@ -1,7 +1,7 @@
 title: Emacs
 category: page
 slug: emacs
-sortorder: 0204
+sortorder: 0203
 toc: False
 sidebartitle: Emacs
 meta: Emacs is an extensible, customizable text editor often used for coding. Read more about Emacs on Full Stack Python.

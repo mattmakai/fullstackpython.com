@@ -1,7 +1,7 @@
 title: Text Editors and IDEs
 category: page
 slug: text-editors-ides
-sortorder: 0202
+sortorder: 0201
 toc: False
 sidebartitle: Text Editors & IDEs
 meta: Text editors and integrated development environments (IDEs) are applications for writing Python code.

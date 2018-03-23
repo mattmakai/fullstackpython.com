@@ -1,7 +1,7 @@
 title: PyCharm
 category: page
 slug: pycharm
-sortorder: 0206
+sortorder: 0205
 toc: False
 sidebartitle: PyCharm
 meta: PyCharm is a text editor and integrated development environment specifically designed for writing Python code.
