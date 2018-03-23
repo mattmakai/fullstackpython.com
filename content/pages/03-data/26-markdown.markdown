@@ -11,7 +11,7 @@ meta: Markdown is a type of markup language often used to document Python projec
 Markdown is a common markup language frequently used by developers to write 
 Python project documention.
 
-<img src="/img/logos/markdown.png" width="100%" alt="Unofficial Markdown logo." class="technical-diagram"></a>
+<img src="/img/logos/markdown.png" width="100%" alt="Unofficial Markdown logo.">
 
 
 ## Markdown's origin
