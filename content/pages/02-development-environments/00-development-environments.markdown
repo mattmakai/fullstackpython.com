@@ -1,10 +1,10 @@
 title: Development Environments
 category: page
 slug: development-environments
-sortorder: 0201
+sortorder: 0200
 toc: True
 sidebartitle: 2. Development Environments
-meta: Development environments allow programmers to work with code. Learn more about development environments on Full Stack Python.
+meta: Development environments allow programmers to read, write and work with code.
 
 
 # Development Environments
