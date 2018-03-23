@@ -4,7 +4,7 @@ slug: numpy
 sortorder: 0318
 toc: False
 sidebartitle: NumPy
-meta: NumPy
+meta: NumPy is a code library that adds scientific computing capabilities to the Python programming language.
 
 
 # NumPy
