@@ -1,7 +1,7 @@
 title: Django ORM
 category: page
 slug: django-orm
-sortorder: 0909
+sortorder: 0308
 toc: False
 sidebartitle: Django ORM
 meta: Django comes with a default object-relational mapping layer for multiple backends in Python web apps.

@@ -1,7 +1,7 @@
 title: PostgreSQL
 category: page
 slug: postgresql
-sortorder: 0903
+sortorder: 0302
 toc: False
 sidebartitle: PostgreSQL
 meta: PostgreSQL is an open source relational database commonly used with Python applications.

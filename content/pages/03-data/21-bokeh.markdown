@@ -1,7 +1,7 @@
 title: Bokeh
 category: page
 slug: bokeh
-sortorder: 0923
+sortorder: 0321
 toc: False
 sidebartitle: Bokeh
 meta: Bokeh is a data visualization library that builds visuals in Python and outputs them in JavaScript.

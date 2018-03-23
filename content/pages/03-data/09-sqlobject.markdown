@@ -1,7 +1,7 @@
 title: SQLObject
 category: page
 slug: sqlobject
-sortorder: 0910
+sortorder: 0309
 toc: False
 sidebartitle: SQLObject
 meta: SQLObject is an object-relational mapper (ORM) library for Python applications.

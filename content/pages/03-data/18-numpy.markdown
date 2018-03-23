@@ -1,7 +1,7 @@
 title: NumPy
 category: page
 slug: numpy
-sortorder: 0918
+sortorder: 0318
 toc: False
 sidebartitle: NumPy
 meta: NumPy

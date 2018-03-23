@@ -1,7 +1,7 @@
 title: d3.js
 category: page
 slug: d3-js
-sortorder: 0924
+sortorder: 0322
 toc: False
 sidebartitle: d3.js
 meta: d3.js is a JavaScript visualization library for creating interactive visuals for web browsers.

@@ -1,7 +1,7 @@
 title: Redis
 category: page
 slug: redis
-sortorder: 0913
+sortorder: 0312
 toc: False
 sidebartitle: Redis
 meta: Redis is an in-memory key-value pair data store classified as a NoSQL database and used with Python applications.

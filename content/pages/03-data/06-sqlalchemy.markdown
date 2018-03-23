@@ -1,7 +1,7 @@
 title: SQLAlchemy
 category: page
 slug: sqlalchemy
-sortorder: 0907
+sortorder: 0306
 toc: False
 sidebartitle: SQLAlchemy
 meta: SQLAlchemy is a popular Python-based object-relational mapper (ORM) that bridges database relations into objects.

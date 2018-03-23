@@ -1,7 +1,7 @@
 title: Peewee
 category: page
 slug: peewee
-sortorder: 0908
+sortorder: 0307
 toc: False
 sidebartitle: Peewee
 meta: Peewee is a object-relational mapper (ORM) implementation for bridging relational data and Python objects.

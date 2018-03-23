@@ -1,7 +1,7 @@
 title: Data analysis
 category: page
 slug: data-analysis
-sortorder: 0917
+sortorder: 0316
 toc: False
 sidebartitle: Data analysis
 meta: Data analysis is a broad set of activities that involves cleaning, processing, transforming and understanding a data collection.
