@@ -1,7 +1,7 @@
 title: Learning Programming
 category: page
 slug: learning-programming
-sortorder: 0102
+sortorder: 0101
 toc: False
 sidebartitle: Learning Programming
 meta: Want to learn how to code but don't know where to start? Read up on approaches to learning programming on Full Stack Python.

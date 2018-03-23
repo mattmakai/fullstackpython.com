@@ -1,7 +1,7 @@
 title: Introduction
 category: page
 slug: introduction
-sortorder: 0101
+sortorder: 0100
 toc: True
 sidebartitle: 1. Introduction
 meta: Full Stack Python provides plain language explanations for Python programming concepts and implementations.

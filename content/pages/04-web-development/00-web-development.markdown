@@ -1,9 +1,9 @@
 title: Web Development
 category: page
 slug: web-development
-sortorder: 0701
+sortorder: 0400
 toc: True
-sidebartitle: 7. Web Development
+sidebartitle: 4. Web Development
 meta: Web development is the catch-all term for activities involved with websites and web apps. Learn more on Full Stack Python.
 
 

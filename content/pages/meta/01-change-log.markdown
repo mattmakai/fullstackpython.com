@@ -3,7 +3,7 @@ category: page
 slug: change-log
 sortorder: 1201
 toc: True
-sidebartitle: 12. Change Log
+sidebartitle: Change Log
 meta: The change log page explains what is new on Full Stack Python.
 
 
@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### March
+* Revamped the [table of contents / all topics](/table-of-contents.html) 
+  to match vision for the site.
 * New resources and explanations added to the [Markdown](/markdown.html) 
   page.
 * New blog post on 

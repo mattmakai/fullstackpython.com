@@ -1,9 +1,9 @@
 title: Deployment
 category: page
 slug: deployment
-sortorder: 0801
+sortorder: 0500
 toc: True
-sidebartitle: 8. Deployment
+sidebartitle: 5. Deployment
 meta: Web application deployment involves packaging and running your app on a server. Learn more about deployments on Full Stack Python.
 
 

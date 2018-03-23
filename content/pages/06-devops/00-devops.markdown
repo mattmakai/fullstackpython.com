@@ -1,9 +1,9 @@
 title: DevOps
 category: page
 slug: devops
-sortorder: 1101
+sortorder: 0600
 toc: True
-sidebartitle: 11. DevOps
+sidebartitle: 6. DevOps
 meta: DevOps combines software development and application operations. Python is often used in the DevOps toolchain.
 
 

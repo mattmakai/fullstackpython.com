@@ -2,8 +2,8 @@ title: Web Application Security
 category: page
 slug: web-application-security
 sortorder: 0609
-toc: True
-sidebartitle: 6. Security
+toc: False
+sidebartitle: Security
 meta: Web applications can be attacked many ways by malicious actors. Learn more on Full Stack Python.
 
 
