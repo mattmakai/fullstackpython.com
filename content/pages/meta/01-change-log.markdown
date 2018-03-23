@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2018
 ### March
+* Added starter pages for [localhost tunnels](/localhost-tunnels.html), 
+  [virtual environments (virtualenvs)](/virtual-environments-virtualenvs-venvs.html),
+  [environment variables](/environment-variables.html) and 
+  [NumPy](/numpy.html).
 * Revamped the [table of contents / all topics](/table-of-contents.html) 
   to match vision for the site.
 * New resources and explanations added to the [Markdown](/markdown.html) 
