@@ -9,3 +9,7 @@ meta: SciPy
 
 # SciPy
 
+
+### SciPy resources
+* [SciPy Lecture notes](http://www.scipy-lectures.org/)
+

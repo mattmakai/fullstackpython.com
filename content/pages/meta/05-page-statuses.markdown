@@ -84,6 +84,14 @@ kept up to date with accurate descriptions and resources.
 |[ORMs](/object-relational-mappers-orms.html)               | maintain     |
 |[SQLAlchemy](/sqlalchemy.html)                             | intermediate |
 |[Peewee](/peewee.html)                                     | starter      |
+|[Django ORM](/django-orm.html)                             | starter      |
+|[SQLObject](/sqlobject.html)                               | starter      |
+|[Pony ORM](/pony-orm.html)                                 | starter      |
+|[NoSQL](/no-sql-datastore.html)                            | starter      |
+|[Redis](/redis.html)                                       | starter      |
+|[MongoDB](/mongodb.html)                                   | starter      |
+|[Apache Cassandra](/apache-cassandra.html)                 | starter      |
+|[Neo4j](/neo4j.html)                                       | starter      |
 
 
 
