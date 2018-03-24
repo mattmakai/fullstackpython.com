@@ -412,7 +412,7 @@ window size to see what the graph looks like under different conditions.
 
 The chart gets crowded with more than 100. However, you can try to create
 as many bars as you want if your computer can handle the rendering.
-This screenshot shows what the completely impactical amount of 40,000
+This screenshot shows what the completely impractical amount of 40,000
 bars looks like:
 
 <img src="/img/170725-bottle-bokeh-bar-charts/chart-example-40000.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Responsive Bokeh bar chart with 40000 bars.">
