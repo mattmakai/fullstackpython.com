@@ -92,8 +92,19 @@ kept up to date with accurate descriptions and resources.
 |[MongoDB](/mongodb.html)                                   | starter      |
 |[Apache Cassandra](/apache-cassandra.html)                 | starter      |
 |[Neo4j](/neo4j.html)                                       | starter      |
-
-
+|[Data analysis](/data-analysis.html)                       | starter      |
+|[pandas](/pandas.html)                                     | starter      |
+|[NumPy](/numpy.html)                                       | starter      |
+|[SciPy](/scipy.html)                                       | starter      |
+|Data visualization                                         | not yet      |
+|[Bokeh](/bokeh.html)                                       | starter      |
+|[d3.js](d3-js.html)                                        | starter      |
+|[Matplotlib](matplotlib.html)                              | starter      |
+|Seaborn                                                    | not yet      |
+|Markup Languages                                           | not yet      |
+|[Markdown](/markdown.html)                                 | starter      |
+|reStructuredText                                           | not yet      |
+|AsciiDoc                                                   | not yet      |
 
 
 ## Chapter 4: Web Development

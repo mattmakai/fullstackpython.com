@@ -1,7 +1,7 @@
 title: Django
 category: page
 slug: django
-sortorder: 0703
+sortorder: 0402
 toc: False
 sidebartitle: Django
 meta: Learn more about Django, the popular batteries-included Python web framework, on Full Stack Python.
