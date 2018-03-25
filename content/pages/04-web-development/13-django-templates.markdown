@@ -1,7 +1,7 @@
 title: Django Templates
 category: page
 slug: django-templates
-sortorder: 0715
+sortorder: 0413
 toc: False
 sidebartitle: Django Templates
 meta: Django has its own template engine referred to as Django templates and is similar to Jinja with some minor differences.
@@ -26,6 +26,5 @@ within a project and are written by the developer to generate output, most
 commonly HTML.
 
 <div class="well see-also">Django templates are an implementation of the <a href="/template-engines.html">template engines</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
-
 
 

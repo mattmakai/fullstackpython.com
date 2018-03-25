@@ -1,7 +1,7 @@
 title: Hypertext Markup Language (HTML)
 category: page
 slug: hypertext-markup-language-html
-sortorder: 0717
+sortorder: 0415
 toc: False
 sidebartitle: HTML
 meta: Hypertext Markup Language (HTML) is the standard markup language interpreted by browsers to display websites and web applications.

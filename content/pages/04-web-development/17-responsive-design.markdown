@@ -1,7 +1,7 @@
 title: Responsive Design
 category: page
 slug: responsive-design
-sortorder: 0718
+sortorder: 0417
 toc: False
 sidebartitle: Responsive Design
 meta: Responsive design is a method of using media queries in Cascading Style Sheets (CSS) to ensure a site is usable on all screen sizes.

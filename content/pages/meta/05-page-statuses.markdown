@@ -8,7 +8,7 @@ meta: Many pages on Full Stack Python are a work-in-progress. This page aggregat
 
 
 # Page Statuses
-There are 207 pages on Full Stack Python, not including blog posts, the
+There are 204 pages on Full Stack Python, not including blog posts, the
 table of contents, and the meta pages (like this one). Many pages are a 
 work-in-progress. This page aggregates the status of each page on the site.
 
@@ -104,13 +104,25 @@ kept up to date with accurate descriptions and resources.
 |Markup Languages                                           | not yet      |
 |[Markdown](/markdown.html)                                 | starter      |
 |reStructuredText                                           | not yet      |
-|AsciiDoc                                                   | not yet      |
 
 
 ## Chapter 4: Web Development
 |Page                                                       | Status       |
 |-----------------------------------------------------------|--------------|
-|[Web development](/web-development.html)                   | starter      | 
+|[Web development](/web-development.html)                   | starter      |
+|[Web frameworks](/web-frameworks.html)                     | intermediate |
+|[Django](/django.html)                                     | intermediate |
+|[Flask](/flask.html)                                       | intermediate |
+|[Bottle](/bottle.html)                                     | intermediate |
+|[Pyramid](/pyramid.html)                                   | starter      |
+|[Falcon](/falcon.html)                                     | starter      |
+|[Morepath](/morepath.html)                                 | starter      |
+|[Sanic](/sanic.html)                                       | starter      |
+|[Other web frameworks](/other-web-frameworks.html)         | intermediate |
+|[Template engines](/template-engines.html)                 | maintain     |
+|[Jinja2](/jinja2.html)                                     | intermediate |
+|[Mako](/mako.html)                                         | starter      |
+|[Django templates](/django-templates.html)                 | starter      |
 |[Testing](/testing.html)                                   | starter      |
 |[Unit testing](/unit-testing.html)                         | starter      |
 |[Integration testing](/integration-testing.html)           | starter      |

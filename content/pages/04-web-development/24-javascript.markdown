@@ -1,7 +1,7 @@
 title: JavaScript
 category: page
 slug: javascript
-sortorder: 0722
+sortorder: 0424
 toc: False
 sidebartitle: JavaScript
 meta: Learn about JavaScript and MVC frameworks for web applications on Full Stack Python.
@@ -27,6 +27,8 @@ document object model or data is retrieved through an API call then displayed
 on the existing page.
 
 Examples of these front end frameworks include:
+
+* [React](https://reactjs.org/)
 
 * [Angular.js](https://angularjs.org/)
 

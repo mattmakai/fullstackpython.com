@@ -1,7 +1,7 @@
 title: Sanic
 category: page
 slug: sanic
-sortorder: 0709
+sortorder: 0408
 toc: False
 sidebartitle: Sanic
 meta: Sanic is a Python web framework built with uvloop and designed for fast HTTP responses via asynchronous request handling. 
