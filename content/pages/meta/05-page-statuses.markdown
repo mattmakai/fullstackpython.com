@@ -8,9 +8,9 @@ meta: Many pages on Full Stack Python are a work-in-progress. This page aggregat
 
 
 # Page Statuses
-There are 204 pages on Full Stack Python, not including blog posts, the
-table of contents, and the meta pages (like this one). Many pages are a 
-work-in-progress. This page aggregates the status of each page on the site.
+There are 210 pages on Full Stack Python, not including blog posts. Many 
+pages are a work-in-progress. This page aggregates the status of each page 
+on the site.
 
 Each page can be in one of four levels of maturity:
 
@@ -123,6 +123,11 @@ kept up to date with accurate descriptions and resources.
 |[Jinja2](/jinja2.html)                                     | intermediate |
 |[Mako](/mako.html)                                         | starter      |
 |[Django templates](/django-templates.html)                 | starter      |
+|[Web design](/web-design.html)                             | starter      |
+|[HTML](/hypertext-markup-language.html)                    | starter      |
+|[CSS](/cascading-style-sheets.html)                        | starter      |
+|[Responsive design](/responsive-design.html)               | starter      |
+|[Minification](/minification.html)                         | starter      |
 |[Testing](/testing.html)                                   | starter      |
 |[Unit testing](/unit-testing.html)                         | starter      |
 |[Integration testing](/integration-testing.html)           | starter      |
