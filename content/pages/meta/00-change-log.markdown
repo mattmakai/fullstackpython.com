@@ -1,7 +1,7 @@
 title: Change Log
 category: page
 slug: change-log
-sortorder: 1201
+sortorder: 0700
 toc: True
 sidebartitle: Change Log
 meta: The change log page explains what is new on Full Stack Python.

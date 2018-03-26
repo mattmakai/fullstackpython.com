@@ -1,14 +1,14 @@
 title: Page Statuses
 category: page
 slug: page-statuses
-sortorder: 1205
+sortorder: 0704
 toc: False
 sidebartitle: Page Statuses
 meta: Many pages on Full Stack Python are a work-in-progress. This page aggregates the status of each other page.
 
 
 # Page Statuses
-There are 210 pages on Full Stack Python, not including blog posts. Many 
+There are 205 pages on Full Stack Python, not including blog posts. Many 
 pages are a work-in-progress. This page aggregates the status of each page 
 on the site.
 
@@ -100,7 +100,6 @@ kept up to date with accurate descriptions and resources.
 |[Bokeh](/bokeh.html)                                       | starter      |
 |[d3.js](d3-js.html)                                        | starter      |
 |[Matplotlib](matplotlib.html)                              | starter      |
-|Seaborn                                                    | not yet      |
 |Markup Languages                                           | not yet      |
 |[Markdown](/markdown.html)                                 | starter      |
 |reStructuredText                                           | not yet      |
@@ -147,11 +146,28 @@ kept up to date with accurate descriptions and resources.
 
 
 ## Chapter 6: DevOps
-| Page                                                       | Status       |
+|Page                                                        | Status       |
 |------------------------------------------------------------|--------------|
 |[DevOps](/devops.html)                                      | starter      |
+|[Monitoring](/monitoring.html)                              | intermediate |
+|Graphite                                                    | not yet      |
+|Prometheus                                                  | not yet      |
+|Service Canary                                              | not yet      |
+|Hosted Monitoring Services                                  | not yet      |
+|[Rollbar](/rollbar.html)                                    | starter      |
+|Sentry                                                      | not yet      |
+|New Relic                                                   | not yet      |
+|Scout                                                       | not yet      |
+|Web App Performance                                         | not yet      |
+|[Caching](/caching.html)                                    | starter      |
+|Load testing                                                | not yet      |
+|Scaling                                                     | not yet      |
 |[Logging](/logging.html)                                    | intermediate |
 |stdlib logging                                              | not yet      |
 |DTrace                                                      | not yet      |
 |logbook                                                     | not yet      |
+|[Web analytics](/web-analytics.html)                        | starter      |
+|Google Analytics                                            | not yet      |
+|Piwik                                                       | not yet      |
+|MixPanel                                                    | not yet      |
 
