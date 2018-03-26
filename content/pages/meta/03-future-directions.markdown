@@ -2,7 +2,7 @@ title: Future Directions
 category: page
 slug: future-directions
 sortorder: 0703
-toc: False
+toc: True
 sidebartitle: Future Directions
 meta: The future directions page on Full Stack Python gives some insight into in-progress site enhancements.
 

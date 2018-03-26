@@ -2,7 +2,7 @@ title: Page Statuses
 category: page
 slug: page-statuses
 sortorder: 0704
-toc: False
+toc: True
 sidebartitle: Page Statuses
 meta: Many pages on Full Stack Python are a work-in-progress. This page aggregates the status of each other page.
 

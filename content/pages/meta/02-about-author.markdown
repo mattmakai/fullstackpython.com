@@ -2,7 +2,7 @@ title: About the Author
 category: page
 slug: about-author
 sortorder: 0702
-toc: False
+toc: True
 sidebartitle: About the Author
 meta: Learn more about the author of Full Stack Python, Matt Makai.
 
