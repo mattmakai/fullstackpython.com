@@ -3,7 +3,7 @@ slug: send-mms-picture-messages-python
 meta: A tutorial on how to send MMS (picture multimedia messages) using the Python programming language.
 category: post
 date: 2016-05-15
-modified: 2017-04-28
+modified: 2018-03-28
 newsletter: False
 headerimage: /img/160515-mms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
@@ -117,24 +117,24 @@ and Authentication Token into your Python code.
 Enter the following code into the new Python file, or copy it from
 [this GitHub repository that contains all blog code examples](https://github.com/fullstackpython/blog-code-examples).
 
+```python
+# import the Twilio client from the dependency we just installed
+from twilio.rest import Client
 
-    # we import the Twilio client from the dependency we just installed
-    from twilio.rest import Client
+# the following line needs your Twilio Account SID and Auth Token
+client = Client("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
 
-    # the following line needs your Twilio Account SID and Auth Token
-    client = Client("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
+# this is the URL to an image file we're going to send in the MMS
+media = "https://raw.githubusercontent.com/mattmakai/fullstackpython.com/master/static/img/logos/f.png"
 
-    # this is the URL to an image file we're going to send in the MMS
-    media = "https://raw.githubusercontent.com/mattmakai/fullstackpython.com/master/static/img/logos/f.png"
-
-    # change the "from_" number to your Twilio number and the "to" number
-    # to the phone number you signed up for Twilio with, or upgrade your
-    # account to send MMS to any phone number that MMS is available
-    client.api.account.messages.create(to="+19732644152",
-                                       from_="+12023351278",
-                                       body="MMS via Python? Nice!",
-                                       media_url=media)
-
+# change the "from_" number to your Twilio number and the "to" number
+# to the phone number you signed up for Twilio with, or upgrade your
+# account to send MMS to any phone number that MMS is available
+client.api.account.messages.create(to="+19732644152",
+                                   from_="+12023351278",
+                                   body="MMS via Python? Nice!",
+                                   media_url=media)
+```
 
 All the lines above that start with `#` are comments to give you some
 context for what each line is doing. After entering that code into the

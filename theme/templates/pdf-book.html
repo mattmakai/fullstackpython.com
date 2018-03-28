@@ -15,7 +15,7 @@
   <p style="page-break-after:always;"></p>
 
   <h1>Table of Contents</h1>
-  {% include "toc.html" %}
+  {% include "book-toc.html" %}
 
   {% for page in pages|sort(attribute='sortorder') %}
     {% if not page.sortorder[0:2] == "00" %}
