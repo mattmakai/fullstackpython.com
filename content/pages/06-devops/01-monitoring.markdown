@@ -111,6 +111,7 @@ Application Performance Monitoring (APM)
   other devleoper tools in your stack, such as [Twilio](/twilio.html).
 * [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance 
   metrics, release tracking, and error logging into a single simple service.
+* [Scout](https://scoutapp.com/python-monitoring) monitors the performance of Django and Flask apps, auto-instrumenting views, SQL queries, templates, and more.
 
 Status Pages
 
