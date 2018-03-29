@@ -1,0 +1,65 @@
+*,*:before,*:after{box-sizing:border-box}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+html{font-size:18px;color:#222}
+body{margin:0;color:#222;font-family:Georgia;line-height:1.43;padding-top:0px}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted;color:#444}
+hr{height:0;box-sizing:content-box;margin-top:21px;margin-bottom:21px;border:0;border-top:1px solid #eee}
+code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}
+pre{white-space:pre-wrap}
+img{border:0;vertical-align:middle}
+legend{padding:0;border:0}
+table{border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Helvetica Neue","Arial Narrow Bold",sans-serif;font-weight:500;line-height:1.1;color:#000}
+h1,h2,h3{margin-top:32px;margin-bottom:6px}
+h4,h5,h6{margin-top:10.5px;margin-bottom:10.5px}
+h1,.h1{font-size:40px}
+h2,.h2{font-size:28px}
+h3,.h3{font-size:22px}
+h4,.h4{font-size:18px}
+h5,.h5{font-size:14px}
+h6,.h6{font-size:13px}
+p{margin:0 0 10.5px}
+ul,ol{margin-top:0;margin-bottom:10.5px}
+ul ul,ol ul,ul ol,ol ol{margin-bottom:0}
+blockquote{padding:10.5px 21px;margin:0 0 21px;border-left:5px solid #eee}
+blockquote p{font-size:18.75px;font-weight:300;line-height:1.25}
+code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
+code{padding:2px 4px;font-size:90%;color:#c7254e;white-space:nowrap;background-color:#f9f2f4;border-radius:4px}
+pre{display:block;padding:10px;margin:0 0 10.5px;font-size:14px;line-height:1.428571429;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
+pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
+.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+.container:before,.container:after{display:table;content:" "}
+.container:after{clear:both}
+.row:before,.row:after{display:table;content:" "}
+.row:after{clear:both}
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}
+.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px}
+.well blockquote{border-color:#ddd;border-color:rgba(0,0,0,0.15)}
+.clearfix:before,.clearfix:after{display:table;content:" "}
+.clearfix:after{clear:both}
+table.hidden-md{display:table}
+ol.toc a::after{content: leader('.') target-counter(attr(href), page);font-family:"Courier"}
+div.chapter{page:standard;prince-page-group:start}
+ol.toc li a{border-bottom:none;font-family:"Courier"}
+ol.toc{list-style-type:none;margin-left:10px}
+ul.toc2{list-style-type:none;margin-left:18px}
+ul.toc3{list-style-type:none;margin-left:27px}
+pre{font-size:10px}
+.highlight-line{background:#ffff00}
+img.chapter-cover{margin:0;padding:0;width:100%}
+img.shot{width:100%;margin:6px 0 6px 0}
+@page:first {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  size: A4;
+  @top { content: ""}
+  @bottom { content: ""}
+}
+@page {
+ @top {text-align:right;font-size:9pt;
+       content:"Full Stack Python: April 2018 Edition"}
+ @bottom { text-align: right; font-size: 9pt; content: counter(page) }
+ margin: 0.9in;
+ size: A4;
+} 
