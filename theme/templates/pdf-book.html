@@ -32,6 +32,22 @@
        <div class="chapter">
         <img src="img/book/03-data/03-cover.png" class="chapter-cover">
        </div>
+      {% elif page.sortorder == "0400" %}
+       <div class="chapter">
+        <img src="img/book/04-web-development/04-cover.png" class="chapter-cover">
+       </div>
+      {% elif page.sortorder == "0500" %}
+       <div class="chapter">
+        <img src="img/book/05-deployments/05-cover.png" class="chapter-cover">
+       </div>
+      {% elif page.sortorder == "0600" %}
+       <div class="chapter">
+        <img src="img/book/06-devops/06-cover.png" class="chapter-cover">
+       </div>
+      {% elif page.sortorder == "0700" %}
+       <div class="chapter">
+        <img src="img/book/07-meta/07-cover.png" class="chapter-cover">
+       </div>
       {% endif %}
       {{ page.content }}
     {% endif %}
