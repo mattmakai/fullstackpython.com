@@ -49,7 +49,9 @@
         <img src="img/book/07-meta/07-cover.png" class="chapter-cover">
        </div>
       {% endif %}
+      {% if page.slug != "change-log" and page.slug != "page-statuses" and page.slug != "future-directions" %}
       {{ page.content }}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </body>
