@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### March
+* Fixed up a slew of link rot across the site.
 * New resources on the [Pelican](/pelican.html) static site generator
   page.
 * Added starter pages for [localhost tunnels](/localhost-tunnels.html), 
