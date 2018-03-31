@@ -230,7 +230,7 @@ For now, we'll lump schema migration resources under ORM links below.
   [StackOverflow answer](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb)
   on the topic.
 
-* [What ORMs have taught me: just learn SQL](http://wozniak.ca/what-orms-have-taught-me-just-learn-sql)
+* [What ORMs have taught me: just learn SQL](https://wozniak.ca/blog/2014/08/03/What-ORMs-have-taught-me-just-learn-SQL/index.html)
   is another angle in the ORM versus embedded SQL / stored procedures debate.
   The author's conclusion is that while working with ORMs such as SQLAlchemy
   and Hibernate (a Java-based ORM) can save time up front there are issues

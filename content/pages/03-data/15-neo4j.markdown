@@ -47,6 +47,6 @@ of the database.
 * [Getting started with Neo4j and Python](https://marcobonzanini.com/2015/04/06/getting-started-with-neo4j-and-python/)
   is a short tutorial for installing Neo4j and running your first query.
 
-* [impfuzzy for Neo4j](https://github.com/JPCERTCC/aa-tools/tree/master/impfuzzy/impfuzzy_for_Neo4j)
+* [impfuzzy for Neo4j](https://github.com/JPCERTCC/impfuzzy)
   is a Python script that uses Neo4j as a backend to analyze malware.
 

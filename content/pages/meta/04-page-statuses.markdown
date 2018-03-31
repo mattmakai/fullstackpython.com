@@ -123,7 +123,7 @@ kept up to date with accurate descriptions and resources.
 |[Mako](/mako.html)                                         | starter      |
 |[Django templates](/django-templates.html)                 | starter      |
 |[Web design](/web-design.html)                             | starter      |
-|[HTML](/hypertext-markup-language.html)                    | starter      |
+|[HTML](/hypertext-markup-language-html.html)               | starter      |
 |[CSS](/cascading-style-sheets.html)                        | starter      |
 |[Responsive design](/responsive-design.html)               | starter      |
 |[Minification](/minification.html)                         | starter      |

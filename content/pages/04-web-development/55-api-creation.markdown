@@ -166,7 +166,7 @@ equivalent of browser testing in the web application world.
 
 
 ## Python-specific API creation resources
-* [Choosing an API framework for Django](http://pydanny.com/choosing-an-api-framework-for-django.html)
+* [Choosing an API framework for Django](https://www.pydanny.com/choosing-api-framework-for-django.html)
   by [PyDanny](https://twitter.com/pydanny) contains questions and insight
   into what makes a good API framework and which one you should currently
   choose for Django.

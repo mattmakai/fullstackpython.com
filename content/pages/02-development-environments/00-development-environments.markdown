@@ -121,10 +121,6 @@ configuration as a starting point and customize it from there.
   [setting up your Sublime Text 3 environment](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
   as a full-fledged IDE.
 
-* [Choosing the best Python IDE](http://pedrokroger.net/choosing-best-python-ide/)
-  is a review of six IDEs. PyCharm, Wing IDE and PyDev stand out above the
-  other three in this review.
-
 * [Three Ways to Install Python on your Windows Computer](http://blog.yhat.com/posts/installing-python-on-windows.html)
   provides multiple avenues for Windows users to get Python on their machine
   before setting up the rest of their development environment. Unlike

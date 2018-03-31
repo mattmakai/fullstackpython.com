@@ -20,6 +20,15 @@
 
   {% for page in pages|sort(attribute='sortorder') %}
     {% if not page.sortorder[0:2] == "00" %}
+      {% if page.sortorder == "0100" %}
+       <div class="chapter">
+        <img src="img/book/01-introduction/01-cover.png" class="chapter-cover">
+       </div>
+      {% elif page.sortorder == "0200" %}
+       <div class="chapter">
+        <img src="img/book/02-dev-environments/02-cover.png" class="chapter-cover">
+       </div>
+      {% endif %}
       {{ page.content }}
     {% endif %}
   {% endfor %}

@@ -37,9 +37,6 @@ CDNs send content responses from data centers with the closest proximity to the 
 
 
 ## Static Content Resources
-* [The super stupid idiot's guide to getting started with Django, Pipeline, and S3](http://blog.iambob.me/the-super-stupid-idiots-guide-to-getting-started-with-django-pipeline-and-s3/)
-  shows how to host static content on S3 and use those files with Django.
-
 * [Crushing, caching and CDN deployment in Django](http://tech.marksblogg.com/crushing-caching-cdn-django.html)
   shows how to use django-compressor and a CDN to scale static and media
   file serving.

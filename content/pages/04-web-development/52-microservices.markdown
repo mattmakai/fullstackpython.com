@@ -21,8 +21,7 @@ Microservices follow in a long trend of software architecture patterns
 that become all the rage. Previously, 
 [CORBA](https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture) 
 and (mostly XML-based) service-oriented architectures (SOA) were the
-hip buzzword among 
-[ivory tower architects](http://www.igloocoder.com/2271/ivory-tower-architect).
+hip buzzword among ivory tower architects.
 
 However, microservices have more substance because they are typically based
 on [RESTful APIs](/application-programming-interfaces.html) that are far

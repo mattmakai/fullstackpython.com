@@ -57,10 +57,6 @@ across many implementation areas.
   on the amount of code you have to write and maintain so you can launch your
   application faster.
 
-* [Safe Sex with Third Party APIs](http://www.slideshare.net/SmartBear_Software/safe-sex-with-thirdparty-apis)
-  is a funny high level overview of what you should do to protect your 
-  application when relying on third party services.
-
 * [Retries in Requests](http://www.coglib.com/~icordasc/blog/2014/12/retries-in-requests.html)
   is a nice tutorial for easily re-executing failed HTTP requests with the
   Requests library.

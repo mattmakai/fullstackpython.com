@@ -160,10 +160,6 @@ edge cases.
   batch scripts which uses SQLAlchemy to generate playlists. They provide
   some context and advice for using SQLAlchemy in batch scripts.
 
-* [Fake Data for your Flask SQLAlchemy App](http://www.ergo.io/blog/generating-fake-sqlalchemy-data-with-mixer-for-your-flask-app/)
-  shows how to use [Mixer](http://mixer.readthedocs.io/en/latest/) to
-  generate a slew of random data to test your SQLAlchemy models.
-
 * [Getting PostgreSQL transactions under control with SQLAlchemy](http://layer0.authentise.com/getting-postgresql-transactions-under-control-with-sqlalchemy.html)
   provides a quick introduction to the tool 
   [Chryso](https://pypi.python.org/pypi/chryso/) that they are working on

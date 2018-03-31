@@ -57,11 +57,6 @@ security controls so make sure to lock down your instances.
   each of the items on the 
   [official MongoDB security checklist](https://docs.mongodb.com/manual/administration/security-checklist/).
 
-* [10 tips to improve your MongoDB security](https://scalegrid.io/blog/10-tips-to-improve-your-mongodb-security/)
-  provides concrete steps to take such as disabling the REST interface
-  and other default bits that can be exploited if you are not intentionally
-  using them.
-
 * [MongoDB Security Basics For Your Deployments in AWS](https://www.mongodb.com/blog/post/mongodb-security-basics-for-your-deployments-in)
   is primarily a guide on AWS security from the perspective of using 
   installing and using MongoDB on your own instance. The post covers 
