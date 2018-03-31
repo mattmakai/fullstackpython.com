@@ -41,9 +41,10 @@ table.hidden-md{display:table}
 ol.toc a::after{content: leader('.') target-counter(attr(href), page);font-family:"Courier"}
 div.chapter{page:standard;prince-page-group:start}
 ol.toc li a{border-bottom:none;font-family:"Courier"}
-ol.toc{list-style-type:none;margin-left:10px}
-ul.toc2{list-style-type:none;margin-left:18px}
-ul.toc3{list-style-type:none;margin-left:27px}
+ol.toc{list-style-type:none;margin-left:10px;font-family:"Courier"}
+ul.toc2{list-style-type:none;margin-left:32px}
+ul.toc3{list-style-type:none;margin-left:43px}
+ul.toc3-more{margin-left:54px}
 pre{font-size:10px}
 .highlight-line{background:#ffff00}
 img.chapter-cover{margin:0;padding:0;width:100%}
