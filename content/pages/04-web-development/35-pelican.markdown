@@ -10,8 +10,9 @@ meta: Pelican is a static site generator implemented in Python that uses Markdow
 # Pelican
 [Pelican](http://docs.getpelican.com/en/3.6.3/) is a 
 [static site generator](/static-site-generator.html) implemented in Python 
-that combines [Jinja](/jinja2.html) templates with content written in 
-Markdown or reStructuredText to produce websites. 
+that combines [Jinja](/jinja2.html) [templates](/template-engines.html) 
+with content written in [Markdown](/markdown.html) or reStructuredText to 
+produce websites. 
 
 Pelican's 
 [source code is available on GitHub](https://github.com/getpelican/pelican)
@@ -61,6 +62,14 @@ to hosting services such as Amazon S3 and GitHub Pages.
   [CloudFlare](https://www.cloudflare.com/) as a 
   [content delivery network (CDN) to server the static content](/static-content.html).
 
+* [A Pelican Tutorial to Build A Static, Python-Powered Blog with Search & Comments](https://snipcart.com/blog/pelican-blog-tutorial-search-comments)
+  provides a walkthrough for how to build a great combination of useful 
+  features into your static site such as search and comments with the
+  [Staticman](https://github.com/eduardoboucas/staticman) library. Bonus 
+  points at the end for showing how to deploy to 
+  [Netlify](https://www.netlify.com/) as an alternative to GitHub Pages
+  or S3.
+
 * [Creating your own blog with Pelican](http://chdoig.github.io/create-pelican-blog.html)
   covers the decision-making process with building a static versus dynamic
   website. The post then dives into using Pelican as a static site 
@@ -75,6 +84,10 @@ to hosting services such as Amazon S3 and GitHub Pages.
   gives a great starting point for building your own plugins that can
   take in new input markup formats, modify the generator process and
   add handy features such as a custom table of contents.
+
+* [Pelican Sitemap and Pagination](http://www.vcheng.org/2014/02/22/pelican-sitemap-pagination/)
+  explains how to generate a `sitemap.xml` file for your static site that 
+  includes all pages instead of just auto-included top-level pages.
 
 * [Getting started with Pelican and GitHub pages](http://www.mattmakai.com/introduction-to-pelican.html)
   is a tutorial I wrote to use the Full Stack Python source code to create

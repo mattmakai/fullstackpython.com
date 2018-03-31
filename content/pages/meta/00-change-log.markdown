@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### March
+* New resources on the [Pelican](/pelican.html) static site generator
+  page.
 * Added starter pages for [localhost tunnels](/localhost-tunnels.html), 
   [virtual environments (virtualenvs)](/virtual-environments-virtualenvs-venvs.html),
   [environment variables](/environment-variables.html) and 
