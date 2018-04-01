@@ -61,7 +61,7 @@ today's Python development world. The two primary choices are:
   merge conflicts.
 
 
-## Hosted source control services
+## Hosted version control services
 Git and Mercurial can be downloaded and run on your own server. However,
 it's easy and cheap to get started with a 
 [hosted version control service](/hosted-source-control-services.html).
