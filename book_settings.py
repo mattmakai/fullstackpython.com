@@ -6,11 +6,10 @@ TIMEZONE = 'America/New_York'
 
 GITHUB_URL = 'https://github.com/mattmakai/fullstackpython.com'
 PDF_GENERATOR = False
-
 DIRECT_TEMPLATES = ('pdf-book', )#'epub-book')
+PLUGINS = ['plugins.pelican-toc',]
 
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
-
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
 FEED_DOMAIN = 'https://www.fullstackpython.com'

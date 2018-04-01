@@ -1,7 +1,7 @@
 title: Python Programming Language
 category: page
 slug: python-programming-language
-sortorder: 0202
+sortorder: 0102
 toc: False
 sidebartitle: Core Language
 meta: The core Python programming language includes a combination of features not found in many other languages.
