@@ -16,6 +16,9 @@ on GitHub.
 
 
 ## 2018
+### April
+* More broken or expired link clean up.
+
 ### March
 * Fixed up a slew of link rot across the site.
 * New resources on the [Pelican](/pelican.html) static site generator
