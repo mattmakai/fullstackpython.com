@@ -54,14 +54,6 @@ to hosting services such as Amazon S3 and GitHub Pages.
 * [How I built this website, using Pelican](http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/)
   walks through getting your first Pelican site generated and running.
 
-* [Setting up a blog with Pelican and Amazon S3](http://lexual.com/blog/setup-pelican-blog-on-s3/)
-  lays out the basic steps for installing Pelican, creating your first 
-  site and then uploading the generated results to S3. A good next 
-  exercise not covered in the post is using 
-  [CloudFront](https://aws.amazon.com/cloudfront/) or 
-  [CloudFlare](https://www.cloudflare.com/) as a 
-  [content delivery network (CDN) to server the static content](/static-content.html).
-
 * [A Pelican Tutorial to Build A Static, Python-Powered Blog with Search & Comments](https://snipcart.com/blog/pelican-blog-tutorial-search-comments)
   provides a walkthrough for how to build a great combination of useful 
   features into your static site such as search and comments with the
