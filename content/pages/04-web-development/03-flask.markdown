@@ -21,18 +21,25 @@ than Django because Flask web application code is in most cases more explicit.
 Flask is easy to get started with as a beginner because there is little 
 boilerplate code for getting a simple app up and running. 
 
-For example, here's a valid "hello world" web application with Flask (the
-equivalent in Django would be significantly more code):
+For example, here is a valid "Hello, world!" web application with Flask:
 
-    from flask import Flask
-    app = Flask(__name__)
+```python
+from flask import Flask
+app = Flask(__name__)
 
-    @app.route('/')
-    def hello_world():
-        return 'Hello World!'
 
-    if __name__ == '__main__':
-        app.run()
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+
+if __name__ == '__main__':
+    app.run()
+```
+
+The equivalent "Hello, World!" web application using the [Django](/django.html)
+[web framework](/web-frameworks.html) would involve significantly more boilerplate
+code.
 
 Flask was also written several years after Django and therefore
 learned from the Python community's reactions as the framework evolved.
@@ -66,9 +73,10 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   [#17 Deployment on Linux](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi)
   and 
   [#18 Deployment on the Heroku Cloud](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud). 
-  Miguel also wrote the 
-  [O'Reilly Flask Web Development](http://shop.oreilly.com/product/0636920031116.do)
-  book which is also an excellent learning resource.
+  Miguel also wrote and recorded numerous
+  [Flask Web Development content including a great book and video](https://flaskbook.com/)
+  book that are excellent resources worth the price, especially to support
+  his continuous revisions to the content. 
 
 * If you're looking for a fun tutorial with Flask and WebSockets, check out
   my blog post on creating 
