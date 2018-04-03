@@ -109,15 +109,12 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 
 * Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
-* The Tuts+ [Flask tutorial](http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822) 
-  is another great walkthrough for getting started with the framework.
-
 * The blog post series "Things which aren't magic" covers how Flask's 
   ubiquitous @app.route decorator works under the covers. There are two 
   parts in the series,
-  [part 1](http://ains.co/blog/things-which-arent-magic-flask-part-1.html)
+  [part 1](https://ains.co/blog/things-which-arent-magic-flask-part-1.html)
   and 
-  [part 2](http://ains.co/blog/things-which-arent-magic-flask-part-2.html).
+  [part 2](https://ains.co/blog/things-which-arent-magic-flask-part-2.html).
 
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project. 
@@ -127,12 +124,6 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   describes text processing with BeautifulSoup and NLTK. 
   [Part 4](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   shows how to build a task queue with Flask and Redis.
-
-* [Branded MMS Coupon Generation with Python and Twilio](https://www.twilio.com/blog/2014/10/branded-mms-coupon-generation-with-python-and-twilio.html)
-  is a Flask tutorial I wrote for building a web application that can send
-  branded barcode coupons via MMS. The post goes through every step from
-  a blank directory until you have a working app that you can deploy to
-  Heroku.
 
 * [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
   covers a subject that comes up quickly once you begin adding significant
@@ -156,7 +147,6 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   for the app with 
   [tags for each step](https://github.com/mattmakai/choose-your-own-adventure-presentations/releases) 
   in the blog posts.
-
 
 * [One line of code cut our Flask page load times by 60%](https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679)
   is an important note about optimizing Flask template cache size to 
@@ -184,15 +174,11 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   static website from a backend data source.
 
 
-### Open source Flask example projects
-* [Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations)
-  combines Flask with [Reveal.js](http://lab.hakim.se/reveal-js/) and text 
-  messages to create presentations where the audience can vote on how the 
-  story should proceed. The code is all open source under an MIT license
-  and also uses the 
-  [Flask-SocketIO](https://flask-socketio.readthedocs.org/en/latest/) and 
-  [Flask-WTF](https://flask-wtf.readthedocs.org/en/latest/) projects to
-  support voting and form input.
+### Open Source Flask Example Code
+Flask's lack of standard boilerplate project structure can be a double
+edged sword when you are figuring out how to scale the lines of code in
+your application. The following open source projects range from simple
+to complex and can give you ideas about how to working on your codebase.
 
 * [Skylines](https://github.com/skylines-project/skylines) is an open source 
   flight tracking web application built with Flask. You can check out a 
@@ -205,7 +191,8 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 * [Flaskr TDD](https://github.com/mjhea0/flaskr-tdd) takes the official Flask
   tutorial and adds test driven development and JQuery to the project. 
 
-* Here is a 
+* Charles Leifer (author of [Peewee](/peewee.html) and [Pony ORM](/pony-orm.html)) 
+  built a 
   [note-taking app](http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/)
   along with the 
   [source code in Gists](https://gist.github.com/coleifer/632d3c9aa6b2ea519384).
