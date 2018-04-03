@@ -38,10 +38,32 @@ the client and run by the web browser.
 
 
 ### Web development resources
+To become an experienced web developer you need to know the foundation
+principles that the web is built with, such as HTTP requests and responses,
+client (typically web browsers) and server ([web servers](/web-servers.html) 
+such as [Nginx](/nginx.html) and [Apache](/apache-http-server.html) 
+architectures, [HTML](/hypertext-markup-language-html.html), 
+[CSS](/cascading-style-sheets.html) and [JavaScript](/javascript.html), among
+many other topics. The following resources provide a range of perspectives
+and when combined together should get you oriented in the web development
+world.
+
 * [Web application development is different and better](http://radar.oreilly.com/2014/01/web-application-development-is-different-and-better.html)
   provides some context for how web development has evolved from writing
   static HTML files into the complex JavaScript client-side applications
   produced today.
+
+* [Build a web application from scratch](https://defn.io/2018/02/25/web-app-from-scratch-01/)
+  and its follow on posts for 
+  [request handling](https://defn.io/2018/03/04/web-app-from-scratch-02/)
+  [middleware](https://defn.io/2018/03/20/web-app-from-scratch-03/) explores
+  the fundamentals of web development. Learning these foundational concepts
+  is critical for a web developer even though you should still plan to use an
+  established [web framework](/web-frameworks.html) such as 
+  [Django](/django.html) or [Flask](/flask.html) to build real-world 
+  applications. The 
+  [open source code](https://github.com/Bogdanp/web-app-from-scratch) 
+  for these posts is available on GitHub.
 
 * While not Python-specific, Mozilla put together a 
   [Learning the Web](https://developer.mozilla.org/en-US/Learn) tutorial

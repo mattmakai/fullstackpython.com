@@ -53,7 +53,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 <div class="well see-also">Flask is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these parts fit together in the <a href="/web-development.html">web development</a> chapter or <a href="/table-of-contents.html">view all topics</a>.</div>
 
 
-## Flask resources
+### Flask Tutorials
 * The Flask mega tutorial by 
   [Miguel Grinberg](https://twitter.com/miguelgrinberg) is a perfect 
   starting resource for using this web framework. Each post focuses on a 
@@ -229,7 +229,7 @@ to complex and can give you ideas about how to working on your codebase.
   baked into the Flask project structure.
 
 
-## Flask framework learning checklist
+### Flask framework learning checklist
 1. [Install Flask](http://flask.pocoo.org/docs/installation/) on
    your local development machine.
 
