@@ -66,4 +66,10 @@ or block quotes.
   view of Markdown and the reasons it provides are one reason why I use
   both Markdown and reStructuredText depending on the project.
   
+* The Python Package Index (PyPI) 
+  [supports Markdown as of 2018](https://dustingram.com/articles/2018/03/16/markdown-descriptions-on-pypi)
+  although there are still some tweaks being made to the flavors that can be
+  used such as 
+  [GitHub-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
+
 

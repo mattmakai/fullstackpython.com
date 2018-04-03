@@ -8,18 +8,20 @@ meta: Flask is a popular, extensible web microframework for building web applica
 
 
 # Flask
-[Flask](http://flask.pocoo.org/) is a Python web framework built with a 
+[Flask](http://flask.pocoo.org/) ([source code](https://github.com/pallets/flask))
+is a Python [web framework](/web-frameworks.html) built with a 
 [small core and easy-to-extend philosophy](http://flask.pocoo.org/docs/design/). 
 
 <a href="http://flask.pocoo.org/" style="border: none;"><img src="/img/logos/flask.jpg" width="100%" alt="Official Flask logo. Flask Artwork License." class="technical-diagram"></a>
 
 
-## Why is Flask a good web framework choice?
+### Why is Flask a good web framework choice?
 Flask is considered more 
 [Pythonic](http://blog.startifact.com/posts/older/what-is-pythonic.html)
-than Django because Flask web application code is in most cases more explicit. 
-Flask is easy to get started with as a beginner because there is little 
-boilerplate code for getting a simple app up and running. 
+than the [Django](/django.html) web framework because in common situations the
+equivalent Flask web application is more explicit. Flask is also easy to get 
+started with as a beginner because there is little boilerplate code for getting a 
+simple app up and running. 
 
 For example, here is a valid "Hello, world!" web application with Flask:
 
@@ -30,12 +32,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
-
+    return 'Hello, World!'
 
 if __name__ == '__main__':
     app.run()
 ```
+
+The above code shows "Hello, World!" on localhost port 5000 in a web browser 
+when run with the `python app.py` command and the Flask library installed.
 
 The equivalent "Hello, World!" web application using the [Django](/django.html)
 [web framework](/web-frameworks.html) would involve significantly more boilerplate
@@ -78,28 +82,10 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   book that are excellent resources worth the price, especially to support
   his continuous revisions to the content. 
 
-* If you're looking for a fun tutorial with Flask and WebSockets, check out
-  my blog post on creating 
-  [Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html).
-  Follow up that tutorial by 
-  [building an admin interface in part 1](https://www.twilio.com/blog/2015/03/choose-your-own-adventures-presentations-wizard-mode-part-1-of-3.html),
-  [part 2](https://www.twilio.com/blog/2015/05/choose-your-own-adventure-presentations-wizard-mode-part-2-of-3.html)
-  and [part 3](https://www.twilio.com/blog/2015/07/choose-your-own-adventure-presentations-flask-reveal-js-websockets.html) 
-  that'll show you how to use forms and SQLAlchemy. There is also a 
-  companion open source 
-  [GitHub repository](https://github.com/mattmakai/choose-your-own-adventure-presentations) 
-  for the app with 
-  [tags for each step](https://github.com/mattmakai/choose-your-own-adventure-presentations/releases) 
-  in the blog posts.
-
 * [Microservices with Flask, Docker, and React](https://testdriven.io/) 
   teaches how to spin up a reproducible Flask development environment with 
   [Docker](/docker.html). It shows how to deploy it to an Amazon EC2 instance 
   then scale the services on Amazon EC2 Container Service (ECS).
-
-* This [simple Flask app uses Twilio Voice](https://www.twilio.com/blog/2015/09/warm-phone-call-transfers-with-python-flask-and-twilio-voice.html)
-  to do voice calling with three participants. It's a fun introduction
-  to Python and Flask I wrote for the Twilio blog.
 
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
@@ -155,9 +141,20 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   [blueprints](http://flask.pocoo.org/docs/0.10/blueprints/) for large
   projects.
 
-* [Video streaming with Flask](http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
-  is another fantastic tutorial by Miguel Grinberg that covers video 
-  streaming.
+* If you're looking for a fun tutorial with Flask and WebSockets, check out
+  my blog post on creating 
+  [Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html).
+  Follow up that tutorial by 
+  [building an admin interface in part 1](https://www.twilio.com/blog/2015/03/choose-your-own-adventures-presentations-wizard-mode-part-1-of-3.html),
+  [part 2](https://www.twilio.com/blog/2015/05/choose-your-own-adventure-presentations-wizard-mode-part-2-of-3.html)
+  and [part 3](https://www.twilio.com/blog/2015/07/choose-your-own-adventure-presentations-flask-reveal-js-websockets.html) 
+  that'll show you how to use forms and SQLAlchemy. There is also a 
+  companion open source 
+  [GitHub repository](https://github.com/mattmakai/choose-your-own-adventure-presentations) 
+  for the app with 
+  [tags for each step](https://github.com/mattmakai/choose-your-own-adventure-presentations/releases) 
+  in the blog posts.
+
 
 * [One line of code cut our Flask page load times by 60%](https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679)
   is an important note about optimizing Flask template cache size to 
@@ -185,7 +182,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   static website from a backend data source.
 
 
-## Open source Flask example projects
+### Open source Flask example projects
 * [Choose Your Own Adventure Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations)
   combines Flask with [Reveal.js](http://lab.hakim.se/reveal-js/) and text 
   messages to create presentations where the audience can vote on how the 
@@ -220,7 +217,7 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
   psutils to display information about the computer it is running on.
 
 
-## Flask project templates
+### Flask project templates
 * Use the 
   [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
   for getting set up on Google App Engine with Flask.
