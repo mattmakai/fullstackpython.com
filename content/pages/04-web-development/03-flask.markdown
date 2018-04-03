@@ -84,8 +84,10 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 
 * [Microservices with Flask, Docker, and React](https://testdriven.io/) 
   teaches how to spin up a reproducible Flask development environment with 
-  [Docker](/docker.html). It shows how to deploy it to an Amazon EC2 instance 
-  then scale the services on Amazon EC2 Container Service (ECS).
+  [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
+  Amazon EC2 instance then scale the services on Amazon EC2 Container Service (ECS).
+  The [Flask Blueprints](https://testdriven.io/part-one-flask-blueprints) page
+  is particularly handy for learning how to structure a large Flask project.
 
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
