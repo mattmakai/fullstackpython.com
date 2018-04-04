@@ -61,7 +61,7 @@ an alternative to Django projects with their monolithic structure and
 dependencies.
 
 
-### Flask Tutorials
+### Flask beginner tutorials
 * The Flask mega tutorial by 
   [Miguel Grinberg](https://twitter.com/miguelgrinberg) is a perfect 
   starting resource for using this web framework. Each post focuses on a 
@@ -90,32 +90,10 @@ dependencies.
   book that are excellent resources worth the price, especially to support
   his continuous revisions to the content. 
 
-* [Microservices with Flask, Docker, and React](https://testdriven.io/) 
-  teaches how to spin up a reproducible Flask development environment with 
-  [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
-  Amazon EC2 instance then scale the services on Amazon EC2 Container Service (ECS).
-  The [Flask Blueprints](https://testdriven.io/part-one-flask-blueprints) page
-  is particularly handy for learning how to structure a large Flask project.
-
-* [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
-  curated list of the best packages that extend Flask. It's the first location
-  to look through when you're wondering how to do something that's not in the
-  core framework.
-
 * [Explore Flask](http://exploreflask.com/) is a public domain book that
   was previously backed on Kickstarter and cost money for about a year before
   being open sourced. The book explains best practices and patterns for 
   building Flask apps.
-
-* [How I Structure My Flask Application](http://mattupstate.com/blog/how-i-structure-my-flask-applications/)
-  walks through how this developer organizes the components and architecture
-  for his Flask applications.
-
-* [Adding phone calling to your web application](https://www.twilio.com/docs/tutorials/walkthrough/browser-calls/python/flask)
-  is a killer Flask tutorial with all the code needed to create a
-  web app that can dial phones and receive inbound calls.
-
-* Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
 * The blog post series "Things which aren't magic" covers how Flask's 
   ubiquitous @app.route decorator works under the covers. There are two 
@@ -141,6 +119,34 @@ dependencies.
   shows a way of structuring your `__init__.py` file with 
   [blueprints](http://flask.pocoo.org/docs/0.10/blueprints/) for large
   projects.
+
+* If you're not sure why `DEBUG` should be set to `False` in a production
+  [deployment](/deployment.html), be sure to read this article on 
+  [how Patreon got hacked](http://labs.detectify.com/post/130332638391/how-patreon-got-hacked-publicly-exposed-werkzeug).
+
+
+### Intermediate to advanced Flask resources
+* [Microservices with Flask, Docker, and React](https://testdriven.io/) 
+  teaches how to spin up a reproducible Flask development environment with 
+  [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
+  Amazon EC2 instance then scale the services on Amazon EC2 Container Service (ECS).
+  The [Flask Blueprints](https://testdriven.io/part-one-flask-blueprints) page
+  is particularly handy for learning how to structure a large Flask project.
+
+* [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
+  curated list of the best packages that extend Flask. It's the first location
+  to look through when you're wondering how to do something that's not in the
+  core framework.
+
+* [How I Structure My Flask Application](http://mattupstate.com/blog/how-i-structure-my-flask-applications/)
+  walks through how this developer organizes the components and architecture
+  for his Flask applications.
+
+* [Adding phone calling to your web application](https://www.twilio.com/docs/tutorials/walkthrough/browser-calls/python/flask)
+  is a killer Flask tutorial with all the code needed to create a
+  web app that can dial phones and receive inbound calls.
+
+* Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
 * If you're looking for a fun tutorial with Flask and WebSockets, check out
   my blog post on creating 
@@ -172,10 +178,6 @@ dependencies.
   is a great walkthrough for a common use case of ensuring an email address
   matches with the user's login information.
 
-* If you're not sure why `DEBUG` should be set to `False` in a production
-  [deployment](/deployment.html), be sure to read this article on 
-  [how Patreon got hacked](http://labs.detectify.com/post/130332638391/how-patreon-got-hacked-publicly-exposed-werkzeug).
-
 * [Static websites with Flask](http://www.dougalmatthews.com/2017/Jan/13/static-websites-with-flask/) 
   shows how to use Flask with 
   [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/) to generate a
@@ -183,10 +185,12 @@ dependencies.
 
 
 ### Open Source Flask Example Code
-Flask's lack of standard boilerplate project structure can be a double
-edged sword when you are figuring out how to scale the lines of code in
-your application. The following open source projects range from simple
-to complex and can give you ideas about how to working on your codebase.
+Flask's lack of standard boilerplate via a commandline interface for
+setting up your project structure is a double edged sword. When you
+get started with Flask you will have to figure out how to scale the 
+files and modules for the code in your application. The following open 
+source projects range from simple to complex and can give you ideas 
+about how to working on your codebase.
 
 * [Skylines](https://github.com/skylines-project/skylines) is an open source 
   flight tracking web application built with Flask. You can check out a 
@@ -215,6 +219,11 @@ to complex and can give you ideas about how to working on your codebase.
 
 
 ### Flask project templates
+Flask's wide array of extension libraries comes at the cost of having a more
+complicated project setup. The following project templates provide a starter
+base that you can either use for your own applications or just learn various
+ways to structure your code.
+
 * Use the 
   [Flask App Engine Template](https://github.com/kamalgill/flask-appengine-template)
   for getting set up on Google App Engine with Flask.
