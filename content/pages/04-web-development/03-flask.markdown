@@ -60,8 +60,22 @@ Despite the origin as a joke, the Flask framework became wildly popular as
 an alternative to Django projects with their monolithic structure and 
 dependencies.
 
+Flask's success created a lot of additional work in issue tickets and pull 
+requests. Armin eventually created 
+[The Pallets Projects](https://www.palletsprojects.com/) collection of open
+source code libraries after he had been managing Flask under his own GitHub 
+account for several years. The Pallets Project now serves as the 
+community-driven organization that handles Flask and other related Python
+libraries such as [Lektor](/lektor.html), [Jinja](/jinja2.html) and
+several others.
+
 
 ### Flask beginner tutorials
+The "Hello, World!" code for Flask is just seven lines of code but learning how
+to build full-featured web applications with any framework takes a lot of work.
+These resources listed below are the best up-to-date tutorials and references
+for getting started.
+
 * The Flask mega tutorial by 
   [Miguel Grinberg](https://twitter.com/miguelgrinberg) is a perfect 
   starting resource for using this web framework. Each post focuses on a 
@@ -90,17 +104,15 @@ dependencies.
   book that are excellent resources worth the price, especially to support
   his continuous revisions to the content. 
 
+* Armin Ronacher, the creator of Flask, presented the technical talk
+  [Flask for Fun and Profit](https://www.youtube.com/watch?v=1ByQhAM5c1I)
+  at PyBay 2016 where he discusses using the framework to build web apps
+  and [APIs](/application-programming-interfaces.html).
+
 * [Explore Flask](http://exploreflask.com/) is a public domain book that
   was previously backed on Kickstarter and cost money for about a year before
   being open sourced. The book explains best practices and patterns for 
   building Flask apps.
-
-* The blog post series "Things which aren't magic" covers how Flask's 
-  ubiquitous @app.route decorator works under the covers. There are two 
-  parts in the series,
-  [part 1](https://ains.co/blog/things-which-arent-magic-flask-part-1.html)
-  and 
-  [part 2](https://ains.co/blog/things-which-arent-magic-flask-part-2.html).
 
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project. 
@@ -111,14 +123,21 @@ dependencies.
   [Part 4](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   shows how to build a task queue with Flask and Redis.
 
+* The blog post series "Things which aren't magic" covers how Flask's 
+  ubiquitous @app.route decorator works under the covers. There are two 
+  parts in the series,
+  [part 1](https://ains.co/blog/things-which-arent-magic-flask-part-1.html)
+  and 
+  [part 2](https://ains.co/blog/things-which-arent-magic-flask-part-2.html).
+
 * [How to Structure Large Flask Applications](https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications)
   covers a subject that comes up quickly once you begin adding significant
   functionality to your Flask application.
 
 * [Flask Blueprint templates](http://fewstreet.com/2015/01/16/flask-blueprint-templates.html)
   shows a way of structuring your `__init__.py` file with 
-  [blueprints](http://flask.pocoo.org/docs/0.10/blueprints/) for large
-  projects.
+  [blueprints](http://flask.pocoo.org/docs/0.10/blueprints/) for expanding
+  projects into many files and modules.
 
 * If you're not sure why `DEBUG` should be set to `False` in a production
   [deployment](/deployment.html), be sure to read this article on 
@@ -126,6 +145,14 @@ dependencies.
 
 
 ### Intermediate to advanced Flask resources
+Once you move past the beginner tutorials and have created a few Flask
+projects you will want to learn how to use Flask extensions, 
+[deploy](/deployment.html) your code and integrate 
+[web APIs](/application-programming-interfaces.html) to build more
+extensive functionality. The following tutorials will guide you through
+more advanced topics and provide solid learning materials, especially when 
+combined with the example real-world projects listed in the next section.
+
 * [Microservices with Flask, Docker, and React](https://testdriven.io/) 
   teaches how to spin up a reproducible Flask development environment with 
   [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
@@ -184,7 +211,7 @@ dependencies.
   static website from a backend data source.
 
 
-### Open Source Flask Example Code
+### Open source Flask example projects
 Flask's lack of standard boilerplate via a commandline interface for
 setting up your project structure is a double edged sword. When you
 get started with Flask you will have to figure out how to scale the 
@@ -244,6 +271,11 @@ ways to structure your code.
 * The company Sunscrapers provides this 
   [Flask boilerplate project with SQLAlchemy, py.test and Celery](https://github.com/sunscrapers/flask-boilerplate)
   baked into the Flask project structure.
+
+* [flask-webpack-cookiecutter](https://github.com/mattfinnell/flask-webpack-cookiecutter/)
+  combines a Flask framework project structure with 
+  [Webpack](https://webpack.js.org/), a module bundler frequently used
+  in the JavaScript world.
 
 
 ### Flask framework learning checklist
