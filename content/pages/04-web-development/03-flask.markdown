@@ -53,6 +53,14 @@ Jökull Sólberg wrote a great piece articulating to this effect in his
 <div class="well see-also">Flask is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these parts fit together in the <a href="/web-development.html">web development</a> chapter or <a href="/table-of-contents.html">view all topics</a>.</div>
 
 
+### How does Flask relate to the Pallets Projects?
+Flask was originally designed and developed by Armin Ronacher as an 
+[April Fool's Day joke in 2010](http://lucumr.pocoo.org/2010/4/3/april-1st-post-mortem/).
+Despite the origin as a joke, the Flask framework became wildly popular as 
+an alternative to Django projects with their monolithic structure and 
+dependencies.
+
+
 ### Flask Tutorials
 * The Flask mega tutorial by 
   [Miguel Grinberg](https://twitter.com/miguelgrinberg) is a perfect 

@@ -1,9 +1,13 @@
-{% if page.slug == 'introduction' or page.slug == 'django' or page.slug == 'flask' or page.slug == 'bottle' or page.slug == 'web-development' or page.slug == 'web-frameworks' or page.slug =='morepath' or page.slug == 'python-programming-language' or page.slug == 'comprehensions' or page.slug == 'generators' or page.slug == 'best-python-resources' or page.slug == 'best-python-videos' or page.slug == 'learning-programming' or page.slug == 'why-use-python' or page.slug == 'best-python-podcasts' or page.slug == 'development-environments' or page.slug == 'vim' or page.slug == 'emacs' or page.slug == 'shells' %}
- {% include "rp-advert.html" %}
-{% endif %}
-{% if page.sortorder[0:2] == "04" or page.sortorder[0:2] == "05" or page.sortorder[0:2] == "06" %}
- {% include "rollbar.html" %}
-{% endif %}
-{% if page.sortorder[0:2] == "01" or page.sortorder[0:2] == "02" or page.sortorder[0:2] == "03" or page.sortorder[0:2] == "04" %}
- {% include "mapbox.html" %}
+{% if page.sortorder[0:2] == "01" or page.sortorder[0:2] == "02" %}
+ {% include "sponsor/dual-premium-standard.html" %}
+{% elif page.sortorder[0:2] == "03" %}
+ {% include "sponsor/begin-sponsor-panel.html" %}
+ {% include "sponsor/mapbox.html" %}
+ {% include "sponsor/end-sponsor-panel.html" %}
+{% elif page.sortorder[0:2] == "04" %}
+ {% include "sponsor/all-sponsor.html" %}
+{% elif page.sortorder[0:2] == "05" or page.sortorder == "06" %}
+ {% include "sponsor/begin-sponsor-panel.html" %}
+ {% include "sponsor/rollbar.html" %}
+ {% include "sponsor/end-sponsor-panel.html" %}
 {% endif %}

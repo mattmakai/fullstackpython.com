@@ -53,6 +53,11 @@ world.
   static HTML files into the complex JavaScript client-side applications
   produced today.
 
+* [The Browser Hacker's Guide to Instantly Loading Everything](https://www.youtube.com/watch?v=7vUs5yOuv-o)
+  is a spectacular technical talk given by Addy Osmani at JSConf EU 2017
+  that has great bits of developer knowledge for both beginner and 
+  experienced web developers alike.
+
 * [Build a web application from scratch](https://defn.io/2018/02/25/web-app-from-scratch-01/)
   and its follow on posts for 
   [request handling](https://defn.io/2018/03/04/web-app-from-scratch-02/)
@@ -81,6 +86,13 @@ world.
   how web browsers works is important as a developer, so take a look at
   this article on 
   [what's in a web browser](https://medium.com/@camaelon/what-s-in-a-web-browser-83793b51df6c).
+
+* [Ping at the speed of light](http://blog.wesleyac.com/posts/ping-lightspeed)
+  dives into the computer networking weeds with how fast packets travel through
+  the internet plumbing. The author created a 
+  [Python script that scrapes network speeds](https://github.com/WesleyAC/toybox/blob/42262bf81ac226ca83addea2c340017f8ea0e60f/misc/scrape_network_speeds.py)
+  from disparate locations to see what the network speed is in fiber optic
+  cables as a percentage of the speed of light.
 
 * [Three takeaways for web developers after two weeks of painfully slow Internet](https://medium.com/@zengabor/three-takeaways-for-web-developers-after-two-weeks-of-painfully-slow-internet-9e7f6d47726e)
   is a must-read for every web developer. Not everyone has fast Internet

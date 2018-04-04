@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### April
+* Reworking [web development](/web-development.html) page with new
+  descriptions and resources.
 * Major updates to [Flask](/flask.html) resources, example code and 
   descriptions.
 * More broken or expired link clean up.
