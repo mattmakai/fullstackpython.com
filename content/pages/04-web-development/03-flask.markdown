@@ -153,6 +153,12 @@ extensive functionality. The following tutorials will guide you through
 more advanced topics and provide solid learning materials, especially when 
 combined with the example real-world projects listed in the next section.
 
+* [Visualize your trip with Flask and Mapbox](http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/)
+  along with the 
+  [open source flask_mapbox GitHub repository](https://github.com/kazuar/flask_mapbox)
+  provides a fantastic example visualization of a trip to Iceland with 
+  Flask as the backend web framework.
+
 * [Microservices with Flask, Docker, and React](https://testdriven.io/) 
   teaches how to spin up a reproducible Flask development environment with 
   [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
@@ -200,6 +206,12 @@ combined with the example real-world projects listed in the next section.
 * The Flask documentation has some quick examples for how to deploy Flask
   with 
   [standalone WSGI containers](http://flask.pocoo.org/docs/deploying/wsgi-standalone/).
+
+* [How to use Flask to upload files to Amazon S3](http://zabana.me/notes/upload-files-amazon-s3-flask.html)
+  provides all the code with detailed explanations on how to store files 
+  using [boto](https://boto3.readthedocs.io/en/latest/) and 
+  [Amazon Web Services' S3](https://aws.amazon.com/s3/) with a Flask 
+  application.
 
 * [Handling Email Confirmation in Flask](https://realpython.com/blog/python/handling-email-confirmation-in-flask/)
   is a great walkthrough for a common use case of ensuring an email address

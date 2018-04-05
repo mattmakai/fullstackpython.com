@@ -8,11 +8,16 @@ meta: Find out about Python web frameworks, which are code libraries that solve 
 
 
 # Web frameworks
-A web framework is a code library that makes a developer's life easier when 
-building reliable, scalable and maintainable web applications.
+A web framework is a code library that makes 
+[web development](/web-development.html) faster and easier by providing 
+common patterns for building reliable, scalable and maintainable web
+applications. After the early 2000s, professional web development projects
+always use an existing web framework except in very unusual situations.
+
+<img src="/img/visuals/web-frameworks.jpg" width="100%" alt="Django, Bottle, Flask, Pyramid, Falcon and Sanic logos, copyright their respective owners." class="shot rnd outl">
 
 
-## Why are web frameworks useful?
+### Why are web frameworks useful?
 Web frameworks encapsulate what developers have learned over the past twenty
 years while programming sites and applications for the web. Frameworks make 
 it easier to reuse code for common HTTP operations and to structure projects 
@@ -22,16 +27,21 @@ maintain the application.
 <div class="well see-also">Web frameworks are a concept implemented by <a href="/django.html">Django</a>, <a href="/flask.html">Flask</a>, <a href="/bottle.html">Bottle</a>, <a href="/pyramid.html">Pyramid</a>, <a href="/morepath.html">Morepath</a> and <a href="/other-web-frameworks.html">several other libraries</a>. Learn how the parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-## Common web framework functionality
+### Common web framework functionality
 Frameworks provide functionality in their code or through extensions to 
 perform common operations required to run web applications. These common 
 operations include:
 
 1. URL routing
-2. HTML, XML, JSON, and other output format templating
-3. Database manipulation
-4. Security against Cross-site request forgery (CSRF) and other attacks
-5. Session storage and retrieval
+1. Input form handling and validation
+1. [HTML](/hypertext-markup-language-html.html), XML, JSON, and other output 
+   formats with a [templating engine](/template-engines.html)
+1. Database connection configuration and persistent data manipulation through
+   an [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
+1. [Web security](/web-application-security.html) against 
+   Cross-site request forgery (CSRF), SQL Injection, 
+   Cross-site Scripting (XSS) and other common malicious attacks
+1. Session storage and retrieval
 
 Not all web frameworks include code for all of the above functionality. 
 Frameworks fall on the spectrum from executing a single use case to providing 
@@ -40,11 +50,13 @@ the "batteries-included" approach where everything possible comes bundled
 with the framework while others have a minimal core package that is amenable
 to extensions provided by other packages.
 
-For example, the [Django web application framework](/django.html) includes an 
-Object-Relational Mapping (ORM) layer that abstracts relational database 
-read, write, query, and delete operations. However, Django's ORM
-cannot work without significant modification on non-relational databases 
-such as [MongoDB](http://www.mongodb.org/).
+For example, the [Django web application framework](/django.html) includes
+[the Django ORM](/django-orm.html) layer that allows a deveoper to write
+[relational database](/databases.html)
+read, write, query, and delete operations in Python code rather than SQL. 
+However, Django's ORM cannot work without significant modification on 
+[non-relational (NoSQL) databases](/no-sql-datastore.html) such as 
+[MongoDB](/mongodb.html) or [Cassandra](/cassandra.html).
 
 Some other web frameworks such as [Flask](/flask.html) and 
 [Pyramid](/pyramid.html) are easier to
@@ -53,23 +65,8 @@ There is a spectrum between minimal functionality with easy extensibility on
 one end and including everything in the framework with tight integration on
 the other end.
 
-## Comparing web frameworks
-Are you curious about how the code in a Django project is structured compared 
-with Flask? Check out 
-[this Django web application tutorial](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/django) 
-and then view [the same application built with Flask](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/flask).
 
-There is also a repository called
-[compare-python-web-frameworks](https://github.com/mattmakai/compare-python-web-frameworks)
-where the same web application is being coded with varying Python web 
-frameworks, templating engines and 
-[object-relational mappers](/object-relational-mappers-orms.html).
-
-
-<div class="well see-also">While you're learning about web frameworks you should also study <a href="/deployment.html">web application deployment</a> and <a href="/application-programming-interfaces.html">web APIs</a>.</div>
-
-
-## Do I have to use a web framework?
+### Do I have to use a web framework?
 Whether or not you use a web framework in your project depends on your 
 experience with web development and what you're trying to accomplish. If you 
 are a beginner programmer and just want to work on a web application as a 
@@ -93,7 +90,20 @@ Using a web framework to build a web application certainly isn't required,
 but it'll make most developers' lives easier in many cases.
 
 
-## Web framework resources
+### Comparing web frameworks
+Are you curious about how the code in a Django project is structured compared 
+with Flask? Check out 
+[this Django web application tutorial](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-python-django)
+and then view [the same application built with Flask](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-python-flask).
+
+There is also a repository called
+[compare-python-web-frameworks](https://github.com/mattmakai/compare-python-web-frameworks)
+where the same web application is being coded with varying Python web 
+frameworks, templating engines and 
+[object-relational mappers](/object-relational-mappers-orms.html).
+
+
+### Web framework resources
 * When you are learning how to use one or more web frameworks it's helpful
   to have an idea of what the code under the covers is doing. This post on
   building a 
@@ -142,8 +152,7 @@ but it'll make most developers' lives easier in many cases.
   that are available to Python developers.
 
 
-
-## Web frameworks learning checklist
+### Web frameworks learning checklist
 1. Choose a major Python web framework ([Django](/django.html) or 
    [Flask](/flask.html) are recommended) and stick with it. When you're just
    starting it's best to learn one framework first instead of bouncing around

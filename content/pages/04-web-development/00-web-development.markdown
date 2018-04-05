@@ -48,6 +48,22 @@ many other topics. The following resources provide a range of perspectives
 and when combined together should get you oriented in the web development
 world.
 
+* If you want to be a web developer it's important to know the foundational
+  tools used to build websites and web applications. It is also important to
+  understand that the core concepts such as 
+  HTTP, URLs and [HTML](/hypertext-markup-language-html.html) were all there
+  at the beginning and then were expanded with new specifications over time.
+  This article on the
+  [History of the Web](https://webfoundation.org/about/vision/history-of-the-web/)
+  succinctly explains the origins of the web starting from Tim Berners-Lee's
+  origin vision and release at CERN.
+
+* The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
+  how web browsers and related technologies have changed over time as well as
+  the overall growth of the Internet in the amount of data transferred. Note 
+  that the visualization unfortunately stops around the beginning of 2013 but
+  it's a good way to explore what happened in the first 24 years.
+
 * [Web application development is different and better](http://radar.oreilly.com/2014/01/web-application-development-is-different-and-better.html)
   provides some context for how web development has evolved from writing
   static HTML files into the complex JavaScript client-side applications
@@ -74,12 +90,6 @@ world.
   [Learning the Web](https://developer.mozilla.org/en-US/Learn) tutorial
   for beginners and intermediate web users who want to build websites.
   It's worth a look for general web development learning.
-
-* The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
-  how web browsers and related technologies have changed over time as well as
-  the overall growth of the Internet in the amount of data transferred. Note 
-  that the visualization unfortunately stops around the beginning of 2013 but
-  it's a good way to explore what happened in the first 24 years.
 
 * Web development involves HTTP communication between the server, hosting
   a website or web application, and the client, a web browser. Knowing

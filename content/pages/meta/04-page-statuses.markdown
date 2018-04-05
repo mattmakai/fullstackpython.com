@@ -109,9 +109,9 @@ kept up to date with accurate descriptions and resources.
 |Page                                                       | Status       |
 |-----------------------------------------------------------|--------------|
 |[Web development](/web-development.html)                   | starter      |
-|[Web frameworks](/web-frameworks.html)                     | intermediate |
+|[Web frameworks](/web-frameworks.html)                     | maintain     |
 |[Django](/django.html)                                     | intermediate |
-|[Flask](/flask.html)                                       | intermediate |
+|[Flask](/flask.html)                                       | maintain     |
 |[Bottle](/bottle.html)                                     | intermediate |
 |[Pyramid](/pyramid.html)                                   | starter      |
 |[Falcon](/falcon.html)                                     | starter      |
