@@ -166,6 +166,12 @@ combined with the example real-world projects listed in the next section.
   The [Flask Blueprints](https://testdriven.io/part-one-flask-blueprints) page
   is particularly handy for learning how to structure a large Flask project.
 
+* [Why and how to handle exceptions in Python Flask](https://opensource.com/article/17/3/python-flask-exceptions)
+  has some great example code and reasons why you should code defensively
+  by anticipating and handling the unhappy path exceptions in your Flask
+  applications. The examples are relevant to any web framework you will use
+  and are easy to copy and paste to test in your own applications.
+
 * [The Flask Extensions Registry](http://flask.pocoo.org/extensions/) is a
   curated list of the best packages that extend Flask. It's the first location
   to look through when you're wondering how to do something that's not in the
@@ -179,7 +185,8 @@ combined with the example real-world projects listed in the next section.
   is a killer Flask tutorial with all the code needed to create a
   web app that can dial phones and receive inbound calls.
 
-* Nice post by Jeff Knupp on [Productionizing a Flask App](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
+* Jeff Knupp provides some solid advice on how to 
+  [productionize a Flask app](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
 
 * If you're looking for a fun tutorial with Flask and WebSockets, check out
   my blog post on creating 
