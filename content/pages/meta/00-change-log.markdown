@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### April
+* New [Jupyter Notebook](/jupyter-notebook.html) resources.
 * Reworking [web development](/web-development.html) page with new
   descriptions and resources.
 * Major updates to [Flask](/flask.html) resources, example code and 
