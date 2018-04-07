@@ -18,25 +18,25 @@ links = {"/introduction.html":
          "#python-2-or-3",
          "/enterprise-python.html":
          "#enterprise-python",
-
+         "/python-community.html":
+         "#python-community",
+         "/companies-using-python.html":
+         "#companies-using-python",
          "/best-python-resources.html":
          "#best-python-resources",
          "/best-python-videos.html":
-         "../01-introduction/12-best-python-videos.markdown",
+         "#best-python-videos",
+         "/best-python-podcasts.html":
+         "#best-python-podcasts",
 
          "/development-environments.html":
-         "../02-development-environments/01-development-environments.markdown",
+         "#development-environments",
          "/vim.html":
-         "../02-development-environments/03-vim.markdown",
+         "#vim",
          "/emacs.html":
-         "../02-development-environments/04-emacs.markdown",
-
-         "/python-programming-language.html":
-         "../03-programming-language/01-programming-language.markdown",
-         "/generators.html":
-         "../03-programming-language/08-generators.markdown",
-         "/comprehensions.html":
-         "../03-programming-language/09-comprehensions.markdown",
+         "#emacs",
+         "/sublime-text.html":
+         "#sublime-text",
 
          "/web-development.html":
          "../04-web-development/01-web-development.markdown",
