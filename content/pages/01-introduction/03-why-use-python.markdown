@@ -24,7 +24,7 @@ beginner-friendly devices such as the
 <div class="well see-also">If you're learning about why to use Python you should also take a look at <a href="/best-python-resources.html">the best Python resources</a> and read <a href="/web-development.html">more about web development</a>.</div>
 
 
-## Python's programming language popularity
+### Python's programming language popularity
 Several programming language popularity rankings exist. While it's
 possible to criticize that these guides are not exact, every ranking shows 
 Python as a top programming language within the top ten, if not the top five
@@ -42,7 +42,11 @@ Stack Overflow's community-created question and answer data confirms the
 [incredible growth of the Python ecosystem](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 and tries to determine
 [why it growing so quickly](https://stackoverflow.blog/2017/09/14/python-growing-quickly/)
-with their own analysis.
+with their own analysis. In the 2018 Stack Overflow developer survey the
+data indicated that 
+[Python was the fastest growing major programming language](https://insights.stackoverflow.com/survey/2018/#technology-programming-scripting-and-markup-languages)
+and that there is a close alignment between the languages and tools that 
+developers choose to learn and the usage in developers' professional work.
 
 The 
 [TIOBE Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html),
@@ -62,7 +66,7 @@ developers are using a language. However, the aggregate view shows that Python
 remains a stable programming language with a growing ecosystem.
 
 
-## Why does the choice of programming language matter?
+### Why does the choice of programming language matter?
 Programming languages have unique ecosystems, cultures and philosophies
 built around them. You will find friction with a community and difficulty 
 in learning if your approach to programming varies from the philosophy of 
