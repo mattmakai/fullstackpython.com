@@ -3,7 +3,7 @@ import os
 from os.path import isdir, isfile
 
 
-BASE_DIR = './tempcontent/'
+BASE_DIR = './tempcontent/pages/'
 BASE_FSP = "https://www.fullstackpython.com/"
 
 links = {"/introduction.html":
@@ -191,7 +191,7 @@ def transform(output_format='pdf'):
 
                 with open(BASE_DIR + d + '/' + f, 'w') as write_f:
                     for l in all_lines[8:]:
-                        for k, v in links.iteritems():
+                        for k, v in links.items():
                             l = l.replace(k, v)
                         if "<div class=\"well see-also\">" in l:
                             write_f.write("")
