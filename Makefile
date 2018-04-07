@@ -10,10 +10,13 @@ run:
 
 
 bookbuild:                                                                   
-	pelican -t theme -s book_settings.py -o generated/book content
+	cp -R content tempcontent
+	python ./utilities/transform_book.py
+	pelican -t theme -s book_settings.py -o generated/book tempcontent
 	cp -R static-html/* generated/book/
 	cp -R static/* generated/book/
 	rm -rf generated/book/pages
+	rm -rf tempcontent
 
 
 pdf: bookbuild
@@ -21,7 +24,6 @@ pdf: bookbuild
 	sed -i '' 's/"\/img\//"img\//g' generated/book/pdf-book.html
 	sed -i '' 's/~~//g' generated/book/pdf-book.html
 	cd generated/book; prince pdf-book.html -o full_stack_python.pdf
-
 
 
 update:
