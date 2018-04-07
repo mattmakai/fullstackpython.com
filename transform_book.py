@@ -190,7 +190,7 @@ def transform(output_format='pdf'):
                     all_lines = read_f.readlines()
 
                 with open(BASE_DIR + d + '/' + f, 'w') as write_f:
-                    for l in all_lines[8:]:
+                    for l in all_lines:
                         for k, v in links.items():
                             l = l.replace(k, v)
                         if "<div class=\"well see-also\">" in l:
