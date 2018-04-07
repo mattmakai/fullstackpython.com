@@ -20,7 +20,7 @@ sharing documents that contain embedded code and execution results.
 <div class="well see-also">Jupyter Notebook is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-### Jupyter Notebook tutorials
+### Jupyter Notebook beginner tutorials
 Jupyter Notebook's powerful analysis and visualization environment can be 
 intimidating even for experienced developers that are new to the tool. The
 following tutorials will explain the basics so you can quickly figure out
@@ -33,11 +33,35 @@ your own productive workflow.
   through some of the more confusing bits as you are getting up
   and running.
 
+* [First Python Notebook](http://www.firstpythonnotebook.org/) is a free
+  guide on analyzing data with Python and Jupyter Notebook. It covers
+  many "Hello, World!"-style examples in both data analysis topics and
+  more general software development areas like Git, GitHub and Markdown.
+
+
+### Intermediate to advanced Jupyter Notebook tutorials
+Once you get the hang of the basics there are a slew of ways to connect
+your notebooks to third party [APIs](/application-programming-interfaces.html)
+and use more advanced Python libraries with your code. These walkthroughs
+cover a range of topics from niche tricks to common but advanced situations
+like advanced interactive visualizations.
+
 * [Advanced Jupyter Notebook Tricks — Part I](https://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/)
   and 
   [Building Interactive Dashboards with Jupyter (Part 2)](https://blog.dominodatalab.com/interactive-dashboards-in-jupyter/)
   have a ton more details on ways to set up Jupyter Notebooks as dashboards
   and export results to other formats.
+
+* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+  explains many of the lesser-known keyboard shortcuts and mechanisms
+  to output settings.
+
+* [Reproducible Data Analysis in Jupyter](https://jakevdp.github.io/blog/2017/03/03/reproducible-data-analysis-in-jupyter/)
+  is a fantastic series of videos by 
+  [Jake Vanderplas](https://github.com/jakevdp) that shows how to move your
+  code from the interactive Jupyter environment into packaged, tested Python
+  code that is suitable for [deployment](/deployment.html) to a production 
+  environment.
 
 * [Hacking my way to a Jupyter notebook powered blog](https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html)
   explores how the author created a blog using Jupyter but ran into some
@@ -49,11 +73,15 @@ your own productive workflow.
 
 * PyData has an extensive
   [list of Jupyter Notebook talks](https://www.youtube.com/user/PyDataTV/search?query=jupyter)
-  from past events.
+  from past events. 
+  [JupyterCon](https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi)
+  has a similarly extensive talks list that is also worth watching.
 
-* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
-  explains many of the lesser-known keyboard shortcuts and mechanisms
-  to output settings.
+* [Integrate Google Sheets and Jupyter Notebooks](http://www.countingcalculi.com/explanations/google_sheets_and_jupyter_notebooks/)
+  answers the common question of how to extract data directly from a Google
+  Sheet and start working with it in your Jupyter Notebook. The screenshots 
+  help a lot to make sure you avoid getting lost in the sea of menus along
+  the way.
 
 
 ### Example Notebooks
@@ -63,6 +91,10 @@ and play around with the tool.
 
 * [Peter Norvig's collection of Jupyter Notebooks](http://norvig.com/ipython/README.html)
   is a an incredible resource for example projects.
+
+* [Building and Exploring a Map of Reddit with Python](https://lmcinnes.github.io/subreddit_mapping/)
+  is a detailed notebook that digs into public Reddit data while explaining
+  the "what" and "why" along the way.
 
 * This 
   [gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
