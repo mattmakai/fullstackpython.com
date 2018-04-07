@@ -11,7 +11,7 @@ run:
 
 bookbuild:                                                                   
 	cp -R content tempcontent
-	python ./utilities/transform_book.py
+	python transform_book.py pdf
 	pelican -t theme -s book_settings.py -o generated/book tempcontent
 	cp -R static-html/* generated/book/
 	cp -R static/* generated/book/

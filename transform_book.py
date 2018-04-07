@@ -180,7 +180,7 @@ links = {"/introduction.html":
 
 def transform(output_format='pdf'):
     dirs = os.listdir(BASE_DIR)
-    print os.listdir(BASE_DIR)
+    print(os.listdir(BASE_DIR))
     for d in dirs:
         if isdir(BASE_DIR + d):
             # modify all markdown files in directory
@@ -197,7 +197,7 @@ def transform(output_format='pdf'):
                             write_f.write("")
                         else:
                             write_f.write(l)
-                    print 'prepared file ' + str(d) + '/' + str(f)
+                    print('prepared file ' + str(d) + '/' + str(f))
 
 
 if __name__ == '__main__':
