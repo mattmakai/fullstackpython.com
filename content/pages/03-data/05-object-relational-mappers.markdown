@@ -4,7 +4,7 @@ slug: object-relational-mappers-orms
 sortorder: 0305
 toc: False
 sidebartitle: Object-relational Mappers
-meta: Object-relational mappers (ORMs) bridge relational databases and object-oriented code. Learn more on Full Stack Python.
+meta: Object-relational mappers (ORMs) bridge relational databases and data represented in Python code.
 
 
 # Object-relational mappers (ORMs)
@@ -15,7 +15,7 @@ are more commonly used in application code.
 <img src="/img/visuals/orms-bridge.png" width="100%" alt="Diagram showing how object-relational mappers bridge the database and Python objects." class="technical-diagram" />
 
 
-## Why are ORMs useful?
+### Why are ORMs useful?
 ORMs provide a high-level abstraction upon a
 [relational database](/databases.html) that allows a developer to write
 Python code instead of SQL to create, read, update and delete data and
@@ -167,7 +167,7 @@ best to read up on advanced use cases and tools for doing your best work
 within the existing framework.
 
 
-### SQLAlchemy
+### SQLAlchemy ORM
 [SQLAlchemy](http://www.sqlalchemy.org/) is a well-regarded
 Python ORM because it gets the abstraction level "just right" and
 seems to make complex database queries easier to write than the Django
@@ -175,7 +175,7 @@ ORM in most cases. There is [an entire page on SQLAlchemy](/sqlalchemy.html)
 that you should read if you want to learn more about using the library.
 
 
-### Peewee
+### Peewee ORM
 [Peewee](https://peewee.readthedocs.org/en/latest/) is a Python ORM
 implementation that is written to be
 "[simpler, smaller and more hackable](http://charlesleifer.com/blog/the-case-for-peewee-small-hackable-and-fun/)"
@@ -188,7 +188,7 @@ information on the Python ORM implementation.
 open source, under the Apache 2.0 license.
 
 
-### SQLObject
+### SQLObject ORM
 [SQLObject](http://sqlobject.org/) is an ORM that has been under active
 open source development since
 [before 2003](http://sqlobject.org/News1.html#sqlobject-0-5).

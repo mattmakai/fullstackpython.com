@@ -6,7 +6,8 @@ from os.path import isdir, isfile
 BASE_DIR = './tempcontent/pages/'
 BASE_FSP = "https://www.fullstackpython.com/"
 
-links = {"/introduction.html":
+links = {# chapter 1
+         "/introduction.html":
          "#introduction",
          "/learning-programming.html":
          "#learning-programming",
@@ -29,6 +30,7 @@ links = {"/introduction.html":
          "/best-python-podcasts.html":
          "#best-python-podcasts",
 
+         # chapter 2
          "/development-environments.html":
          "#development-environments",
          "/vim.html":
@@ -37,15 +39,78 @@ links = {"/introduction.html":
          "#emacs",
          "/sublime-text.html":
          "#sublime-text",
+         "/pycharm.html":
+         "#pycharm",
+         "/jupyter-notebook.html":
+         "#jupyter-notebook",
+         "/shells.html":
+         "#shells",
+         "/bourne-again-shell-bash.html":
+         "#bourne-again-shell-bash",
+         "/zsh-shell.html":
+         "#zsh",
+         "/powershell.html":
+         "#powershell",
+         "/terminal-multiplexers.html":
+         "#terminal-multiplexers",
+         "/tmux.html":
+         "#tmux",
+         "/screen.html":
+         "#screen",
+         "/pymux.html":
+         "#pymux",
+         "/environment-configuration.html":
+         "#environment-configuration",
+         "/application-dependencies.html":
+         "#application-dependencies",
+         "/virtual-environments-virtualenvs-venvs.html":
+         "#virtual-environments-virtualenvs",
+         "/environment-variables.html":
+         "#environment-variables",
+         "/localhost-tunnels.html":
+         "#localhost-tunnels",
+         "/source-control.html":
+         "#source-control",
+         "/git.html":
+         "#git",
+         "/mercurial.html":
+         "#mercurial",
+         "/apache-subversion.html":
+         "#apache-subversion",
+         "/hosted-source-control-services.html":
+         "#hosted-source-control-services",
+         "/github.html":
+         "#github",
+         "/bitbucket.html":
+         "#bitbucket",
+         "/gitlab.html":
+         "#gitlab",
 
+         # chapter 3
+         "/data.html":
+         "#data",
+         "/databases.html":
+         "#relational-databases",
+         "/no-sql-datastore.html":
+         "#nosql-data-stores",
+         "/object-relational-mappers-orms.html":
+         "#object-relational-mappers-orms",
+         "/postgresql.html":
+         "#postgresql",
+         "/mysql.html":
+         "#mysql",
+         "/sqlite.html":
+         "#sqlite",
+
+         # chapter 4
          "/web-development.html":
-         "../04-web-development/01-web-development.markdown",
+         "#web-development",
          "/web-frameworks.html":
-         "../04-web-development/02-web-frameworks.markdown",
+         "#web-frameworks",
          "/django.html":
-         "../04-web-development/03-django.markdown",
+         "#django",
          "/flask.html":
-         "../04-web-development/04-flask.markdown",
+         "#flask",
          "/bottle.html":
          "../04-web-development/05-bottle.markdown",
          "/pyramid.html":
@@ -70,22 +135,16 @@ links = {"/introduction.html":
          "../04-web-development/16-static-site-generator.markdown",
          "/jinja2.html":
          "../04-web-development/17-jinja2.markdown",
-
-         "/data.html":
-         "../05-data/01-data.markdown",
-         "/databases.html":
-         "../05-data/02-databases.markdown",
-         "/no-sql-datastore.html":
-         "../05-data/03-nosql.markdown",
-         "/object-relational-mappers-orms.html":
-         "../05-data/04-object-relational-mappers.markdown",
-         "/postgresql.html":
-         "../05-data/05-postgresql.markdown",
-         "/mysql.html":
-         "../05-data/06-mysql.markdown",
-         "/sqlite.html":
-         "../05-data/07-sqlite.markdown",
-
+         "/testing.html":
+         "../08-testing/01-testing.markdown",
+         "/unit-testing.html":
+         "../08-testing/02-unit-testing.markdown",
+         "/integration-testing.html":
+         "../08-testing/03-integration-testing.markdown",
+         "/code-metrics.html":
+         "../08-testing/05-code-metrics.markdown",
+         "/debugging.html":
+         "../08-testing/08-debugging.markdown",
          "/application-programming-interfaces.html":
          "../06-web-apis/01-application-programming-interfaces.markdown",
          "/api-integration.html":
@@ -93,6 +152,7 @@ links = {"/introduction.html":
          "/api-creation.html":
          "../06-web-apis/03-api-creation.markdown",
 
+         # chapter 5
          "/deployment.html":
          "../07-web-app-deployment/01-deployment.markdown",
          "/servers.html":
@@ -117,10 +177,6 @@ links = {"/introduction.html":
          "../07-web-app-deployment/12-configuration-management.markdown",
          "/continuous-integration.html":
          "../07-web-app-deployment/13-continuous-integration.markdown",
-         "/logging.html":
-         "../07-web-app-deployment/14-logging.markdown",
-         "/monitoring.html":
-         "../07-web-app-deployment/15-monitoring.markdown",
          "/web-analytics.html":
          "../07-web-app-deployment/16-web-analytics.markdown",
          "/docker.html":
@@ -129,8 +185,6 @@ links = {"/introduction.html":
          "../07-web-app-deployment/18-caching.markdown",
          "/microservices.html":
          "../07-web-app-deployment/19-microservices.markdown",
-         "/devops.html":
-         "../07-web-app-deployment/20-devops.markdown",
          "/nginx.html":
          "../07-web-app-deployment/21-nginx.markdown",
          "/apache-http-server.html":
@@ -140,26 +194,23 @@ links = {"/introduction.html":
          "/green-unicorn-gunicorn.html":
          "../07-web-app-deployment/24-gunicorn.markdown",
 
+         # chapter 6
+         "/devops.html":
+         "../07-web-app-deployment/20-devops.markdown",
+         "/logging.html":
+         "../07-web-app-deployment/14-logging.markdown",
+         "/monitoring.html":
+         "../07-web-app-deployment/15-monitoring.markdown",
 
-         "/testing.html":
-         "../08-testing/01-testing.markdown",
-         "/unit-testing.html":
-         "../08-testing/02-unit-testing.markdown",
-         "/integration-testing.html":
-         "../08-testing/03-integration-testing.markdown",
-         "/code-metrics.html":
-         "../08-testing/05-code-metrics.markdown",
-         "/debugging.html":
-         "../08-testing/08-debugging.markdown",
-
+         # meta (chapter 7)
          "/what-full-stack-means.html":
-         "../13-meta/01-what-full-stack-means.markdown",
-         "/change-log.html":
-         "../13-meta/02-change-log.markdown",
-         "/future-directions.html":
-         "../13-meta/03-future-directions.markdown",
+         "#what-full-stack-means",
          "/about-author.html":
-         "../13-meta/04-about-author.markdown",
+         "#about-author",
+         "/change-log.html":
+         BASE_FSP + "change-log.html",
+         "/future-directions.html":
+         BASE_FSP + "future-directions.html",
 
          "/email.html":
          BASE_FSP + "email.html",
