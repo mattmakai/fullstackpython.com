@@ -7,17 +7,20 @@ BASE_DIR = './tempcontent/pages/'
 BASE_FSP = "https://www.fullstackpython.com/"
 
 links = {"/introduction.html":
-         "../01-introduction/02-learning-programming.markdown",
+         "#introduction",
          "/learning-programming.html":
-         "../01-introduction/02-learning-programming.markdown",
+         "#learning-programming",
+         "/python-programming-language":
+         "#python-programming-language",
          "/why-use-python.html":
-         "../01-introduction/03-why-use-python.markdown",
+         "#why-use-python",
          "/python-2-or-3.html":
-         "../01-introduction/04-python-2-or-3.markdown",
+         "#python-2-or-3",
          "/enterprise-python.html":
-         "../01-introduction/05-enterprise-python.markdown",
+         "#enterprise-python",
+
          "/best-python-resources.html":
-         "../01-introduction/11-best-python-resources.markdown",
+         "#best-python-resources",
          "/best-python-videos.html":
          "../01-introduction/12-best-python-videos.markdown",
 
