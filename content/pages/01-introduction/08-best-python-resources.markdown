@@ -166,11 +166,18 @@ the [best Python videos](/best-python-videos.html) page.
 
 ## Podcasts
 Take a look at the [best Python podcasts](/best-python-podcasts.html)
-page for a curated list of both Python-specific and general software
+section for a curated list of both Python-specific and general software
 development podcasts.
 
 
-## Newsletters
+### Newsletters
+Python's active community constantly publishes new tutorials and 
+walkthroughs. It is easier to keep up if you follow along by subscribing
+to several email newsletters that round up and curate the best new 
+resources. I subscribe to all of the following newsletters and find that
+each one has its own unique take on what resources are most important
+to send out to the community.
+
 * [Python Weekly](http://www.pythonweekly.com/) is a free weekly roundup
   of the latest Python articles, videos, projects and upcoming events.
 
@@ -183,13 +190,18 @@ development podcasts.
   contains code snippets and stories every few days to teach you new ways to 
   code Python.
 
-* [PyCoder's Weekly](http://pycoders.com/) is another great free weekly
-  email newsletter similar to Python Weekly. The best resources are generally
-  covered in both newsletters but they often cover different articles
-  and projects from around the web.
+* [Awesome Python Newsletter](https://python.libhunt.com/newsletter) provides
+  another solid selection of new and existing tutorials along with an extensive
+  [issues archive](https://python.libhunt.com/newsletter/archive) with previous 
+  links to resources.
 
 * [Import Python](http://importpython.com/newsletter/) is a newer newsletter
   than Python Weekly and PyCoder's Weekly. So far I've found this newsletter
   often pulls from different sources than the other two. It's well worth 
   subscribing to all three so you don't miss anything.
+
+* [PyCoder's Weekly](http://pycoders.com/) is another great free weekly
+  email newsletter similar to Python Weekly. The best resources are generally
+  covered in both newsletters but they often cover different articles
+  and projects from around the web.
 
