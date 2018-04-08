@@ -10,14 +10,35 @@ meta: Jupyter Notebook, formerly named iPython Notebook, is a powerful Python co
 # Jupyter Notebook
 [Jupyter Notebook](http://jupyter.org/) 
 ([open source code](https://github.com/jupyter/notebook)), which began 
-as the iPython Notebook project, is a programming language agnostic code 
-execution environment that is often used for data analysis and visualization. 
-The key piece of Jupyter Notebook is a web application for creating and 
-sharing documents that contain embedded code and execution results.
+as the iPython Notebook project, is a 
+[development environment](/development-environments.html) for writing
+and executing Python code. Jupyter Notebook can also run code for
+other programming languages such as Julia and R, and Jupyter is often
+used for exploratory [data analysis](/data-analysis.html) and visualization. 
 
-<a href="http://jupyter.org/" style="border:none"><img src="/img/logos/jupyter.png" width="100%" alt="Jupyter Notebook project logo." class="technical-diagram"></a>
+<a href="http://jupyter.org/" style="border:none"><img src="/img/logos/jupyter.png" width="100%" alt="Jupyter Notebook project logo." class="shot"></a>
+
+
+### How does Jupyter Notebook work?
+The key piece of Jupyter Notebook infrastructure is a web application that
+runs locally for creating and sharing documents that contain embedded code and 
+execution results.
 
 <div class="well see-also">Jupyter Notebook is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
+
+
+### How are IPython Notebook and Jupyter Notebook related?
+IPython Notebook was the original project that proved that there was great
+demand among data scientists and programmers for an interactive, repeatable
+development environment. Jupyter Notebook became the new official name for the
+overall project during 
+[The Big Split](https://blog.jupyter.org/the-big-split-9d7b88a031a7)
+after the IPython Notebook project matured into distinct submodules such as the 
+interactive shell, notebook document format and user interface widgets tools.
+However, the IPython Notebook name sticks around as the Python backend for
+Jupyter Notebook which is seriously confusing if you are searching the internet
+and come across both current and old articles that use all of these names
+interchangeably.
 
 
 ### Jupyter Notebook beginner tutorials
@@ -37,6 +58,36 @@ your own productive workflow.
   guide on analyzing data with Python and Jupyter Notebook. It covers
   many "Hello, World!"-style examples in both data analysis topics and
   more general software development areas like Git, GitHub and Markdown.
+
+* [IPython Or Jupyter?](https://www.datacamp.com/community/blog/ipython-jupyter)
+  covers the evolution of the Notebook concept from its origins in the IPython
+  Notebook implementation through the 
+  [IPython and Jupyter split](https://blog.jupyter.org/the-big-split-9d7b88a031a7)
+  that happened in 2015 that separated IPython Notebook into logical subprojects.
+  The post kicks off with some fun lesser-known historical context on other
+  data science notebook projects such as MATLAB and Mathematica to set the stage 
+  for IPython and Jupyter's creation.
+
+
+### Example Notebooks
+Example Notebooks are easy to fire up and see how other people are working.
+These resources are highly recommended after you read a couple of tutorials
+and play around with the tool.
+
+* [Peter Norvig's collection of Jupyter Notebooks](http://norvig.com/ipython/README.html)
+  is a an incredible resource for example projects.
+
+* [Building and Exploring a Map of Reddit with Python](https://lmcinnes.github.io/subreddit_mapping/)
+  is a detailed notebook that digs into public Reddit data while explaining
+  the "what" and "why" along the way.
+
+* This 
+  [gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
+  provides many great examples across numerous programming languages.
+
+* [jupyter-samples](https://github.com/ibm-et/jupyter-samples) 
+  contains an extensive set of notebooks along with public data
+  sets that can be used for analysis.
 
 
 ### Intermediate to advanced Jupyter Notebook tutorials
@@ -63,6 +114,11 @@ like advanced interactive visualizations.
   code that is suitable for [deployment](/deployment.html) to a production 
   environment.
 
+* [Boost Your Jupyter Notebook Productivity](https://towardsdatascience.com/jupyter-notebook-hints-1f26b08429ad)
+  covers hotkeys, data plotting, shell commands, timing and other topics
+  you will eventually want to handle within your notebooks as you get 
+  comfortable in the environment.
+
 * [Hacking my way to a Jupyter notebook powered blog](https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html)
   explores how the author created a blog using Jupyter but ran into some
   issues along the way, along with how to solve those problems.
@@ -83,24 +139,12 @@ like advanced interactive visualizations.
   help a lot to make sure you avoid getting lost in the sea of menus along
   the way.
 
+* [A Jupyter Notebook That Will Analyze Cryptocurrency Portfolios For You](http://grantbartel.com/blog/jupyter-notebook-that-will-analyze-cryptocurrency-portfolios/)
+  uses a freely-available large cryptocurrency data set as source material
+  for a data analysis and visualization project.
 
-### Example Notebooks
-Example Notebooks are easy to fire up and see how other people are working.
-These resources are highly recommended after you read a couple of tutorials
-and play around with the tool.
-
-* [Peter Norvig's collection of Jupyter Notebooks](http://norvig.com/ipython/README.html)
-  is a an incredible resource for example projects.
-
-* [Building and Exploring a Map of Reddit with Python](https://lmcinnes.github.io/subreddit_mapping/)
-  is a detailed notebook that digs into public Reddit data while explaining
-  the "what" and "why" along the way.
-
-* This 
-  [gallery of interesting Jupyter Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
-  provides many great examples across numerous programming languages.
-
-* [jupyter-samples](https://github.com/ibm-et/jupyter-samples) 
-  contains an extensive set of notebooks along with public data
-  sets that can be used for analysis.
+* [Running Jupyter Notebooks on GPU on AWS: a starter guide](https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html)
+  explains how to run notebooks on Amazon Web Services using a 
+  graphics-processing unit (video card), which for some machine learning
+  situations can result in significantly faster execution times.
 

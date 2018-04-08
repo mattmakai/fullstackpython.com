@@ -112,13 +112,13 @@ links = {# chapter 1
          "/flask.html":
          "#flask",
          "/bottle.html":
-         "../04-web-development/05-bottle.markdown",
+         "#bottle",
          "/pyramid.html":
-         "../04-web-development/06-pyramid.markdown",
+         "#pyramid",
          "/morepath.html":
-         "../04-web-development/07-morepath.markdown",
+         "#morepath",
          "/other-web-frameworks.html":
-         "../04-web-development/09-other-web-frameworks.markdown",
+         "#other-web-frameworks",
          "/web-design.html":
          "../04-web-development/10-web-design.markdown",
          "/cascading-style-sheets.html":
