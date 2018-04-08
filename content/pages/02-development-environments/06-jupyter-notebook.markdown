@@ -114,16 +114,16 @@ like advanced interactive visualizations.
   [quickstart](https://github.com/mapbox/mapboxgl-jupyter/blob/master/docs-markdown/viz.md) 
   show you how to visualize geospatial data within your notebooks.
 
-* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
-  explains many of the lesser-known keyboard shortcuts and mechanisms
-  to output settings.
-
 * [Reproducible Data Analysis in Jupyter](https://jakevdp.github.io/blog/2017/03/03/reproducible-data-analysis-in-jupyter/)
   is a fantastic series of videos by 
   [Jake Vanderplas](https://github.com/jakevdp) that shows how to move your
   code from the interactive Jupyter environment into packaged, tested Python
   code that is suitable for [deployment](/deployment.html) to a production 
   environment.
+
+* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+  explains many of the lesser-known keyboard shortcuts and mechanisms
+  to output settings.
 
 * [Boost Your Jupyter Notebook Productivity](https://towardsdatascience.com/jupyter-notebook-hints-1f26b08429ad)
   covers hotkeys, data plotting, shell commands, timing and other topics

@@ -50,7 +50,7 @@ kept up to date with accurate descriptions and resources.
 |[Emacs](/emacs.html)                                          | intermediate |
 |[Sublime Text](/sublime-text.html)                            | starter      |
 |[PyCharm](/pycharm.html)                                      | starter      |
-|[Jupyter Notebook](/jupyter-notebook.html)                    | starter      |
+|[Jupyter Notebook](/jupyter-notebook.html)                    | intermediate |
 |[Shells](/shells.html)                                        | starter      | 
 |[Bourne-again shell (Bash)](/bourne-again-shell-bash.html)    | starter      | 
 |[Zsh](/zsh-shell.html)                                        | starter      | 

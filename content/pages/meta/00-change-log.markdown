@@ -17,8 +17,8 @@ on GitHub.
 
 ## 2018
 ### April
-* A slew of new resources for the [Jupyter Notebook](/jupyter-notebook.html)
-  page.
+* A slew of new resources and descriptions for the 
+  [Jupyter Notebook](/jupyter-notebook.html) page.
 * Reworking [web development](/web-development.html) page with new
   descriptions and resources.
 * Major updates to [Flask](/flask.html) resources, example code and 
