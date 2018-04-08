@@ -12,17 +12,23 @@ meta: Jupyter Notebook, formerly named iPython Notebook, is a powerful Python co
 ([open source code](https://github.com/jupyter/notebook)), which began 
 as the iPython Notebook project, is a 
 [development environment](/development-environments.html) for writing
-and executing Python code. Jupyter Notebook can also run code for
-other programming languages such as Julia and R, and Jupyter is often
-used for exploratory [data analysis](/data-analysis.html) and visualization. 
+and executing Python code. Jupyter Notebook is often used for exploratory 
+[data analysis](/data-analysis.html) and visualization. 
 
 <a href="http://jupyter.org/" style="border:none"><img src="/img/logos/jupyter.png" width="100%" alt="Jupyter Notebook project logo." class="shot"></a>
+
+Project Jupyter is the top-level project name for all of the subprojects under 
+development, which includes Jupyter Notebook. Jupyter Notebooks can also run 
+code for other programming languages such as [Julia](https://julialang.org/) and 
+[R](https://www.r-project.org/).
 
 
 ### How does Jupyter Notebook work?
 The key piece of Jupyter Notebook infrastructure is a web application that
 runs locally for creating and sharing documents that contain embedded code and 
 execution results.
+
+<img src="/img/visuals/jupyter-screenshot.jpg" width="100%" alt="Screenshot of Jupyter Notebook running in the browser and server in terminal." class="shot">
 
 <div class="well see-also">Jupyter Notebook is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
@@ -102,6 +108,11 @@ like advanced interactive visualizations.
   [Building Interactive Dashboards with Jupyter (Part 2)](https://blog.dominodatalab.com/interactive-dashboards-in-jupyter/)
   have a ton more details on ways to set up Jupyter Notebooks as dashboards
   and export results to other formats.
+
+* [mapboxgl-jupyter](https://github.com/mapbox/mapboxgl-jupyter) library along
+  with the 
+  [quickstart](https://github.com/mapbox/mapboxgl-jupyter/blob/master/docs-markdown/viz.md) 
+  show you how to visualize geospatial data within your notebooks.
 
 * [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
   explains many of the lesser-known keyboard shortcuts and mechanisms
