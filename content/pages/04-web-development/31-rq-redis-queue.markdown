@@ -27,6 +27,9 @@ track of tasks in the queue that need to be executed.
   post's case that the ISS is currently flying over your location on
   Earth.
 
+* [Asynchronous Tasks with Flask and Redis Queue](https://testdriven.io/asynchronous-tasks-with-flask-and-redis-queue)
+  looks at how to configure RQ to handle long-running tasks in a Flask app.
+
 * [Flask by Example - Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   explains how to install and use RQ in a [Flask](/flask.html) application.
 
@@ -38,5 +41,6 @@ track of tasks in the queue that need to be executed.
   [Flask](/flask.html)-based dashboard for viewing queues, workers and
   other critical information when using RQ.
 
-* [Asynchronous Tasks with Flask and Redis Queue](https://testdriven.io/asynchronous-tasks-with-flask-and-redis-queue)
-  looks at how to configure RQ to handle long-running tasks in a Flask app.
+* [Sending Confirmation Emails with Flask, Redis Queue, and Amazon SES](https://testdriven.io/sending-confirmation-emails-with-flask-rq-and-ses)
+  shows how RQ fits into a real-world application that uses many
+  libraries and third party APIs.

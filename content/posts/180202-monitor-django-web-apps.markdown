@@ -198,10 +198,13 @@ urlpatterns = [
 ]
 ```
 
-Save `djmonitor/billions/urls.py` to test that our URL routes can be properly
-discovered by Django. Execute `app.py` using the `python`
-command as follows (make sure your virtualenv is still activated in the
-terminal where you are running this command):
+Save `djmonitor/billions/urls.py`. One more file before we can test that
+our simple Django app works. Open `djmonitor/billions/views.py`.
+
+```python
+
+```
+
 
 ```bash
 python manage.py runserver
@@ -224,8 +227,6 @@ Django version 2.0.4, using settings 'djmonitor.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
-
-<img src="/img/170926-monitor-python-web-apps/run-bottle-app.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Run the local Bottle development server.">
 
 Try to access a URL with a path that contains only alphabetic characters and 
 hyphens, such as 

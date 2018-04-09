@@ -91,16 +91,56 @@ links = {# chapter 1
          "#data",
          "/databases.html":
          "#relational-databases",
-         "/no-sql-datastore.html":
-         "#nosql-data-stores",
-         "/object-relational-mappers-orms.html":
-         "#object-relational-mappers-orms",
          "/postgresql.html":
          "#postgresql",
          "/mysql.html":
          "#mysql",
          "/sqlite.html":
          "#sqlite",
+         "/object-relational-mappers-orms.html":
+         "#object-relational-mappers-orms",
+         "/sqlalchemy.html":
+         "#sqlalchemy",
+         "/peewee.html":
+         "#peewee",
+         "/django-orm.html":
+         "#django-orm",
+         "/sqlobject.html":
+         "#sqlobject",
+         "/pony-orm.html":
+         "#pony-orm",
+         "/no-sql-datastore.html":
+         "#nosql-data-stores",
+         "/redis.html":
+         "#redis",
+         "/mongodb.html":
+         "#mongodb",
+         "/apache-cassandra.html":
+         "#apache-cassandra",
+         "/neo4j.html":
+         "#neo4j",
+         "/data-analysis.html":
+         "#data-analysis",
+         "/pandas.html":
+         "#pandas",
+         "/numpy.html":
+         "#numpy",
+         "/scipy.html":
+         "#scipy",
+         #"/.html":
+         #"#",
+         "/bokeh.html":
+         "#bokeh",
+         "/d3-js.html":
+         "#data-driven-documents-d3js",
+         "/matplotlib.html":
+         "#matplotlib",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/markdown.html":
+         "#markdown",
 
          # chapter 4
          "/web-development.html":
@@ -119,60 +159,130 @@ links = {# chapter 1
          "#morepath",
          "/other-web-frameworks.html":
          "#other-web-frameworks",
-         "/web-design.html":
-         "../04-web-development/10-web-design.markdown",
-         "/cascading-style-sheets.html":
-         "../04-web-development/11-css.markdown",
-         "/javascript.html":
-         "../04-web-development/12-javascript.markdown",
-         "/websockets.html":
-         "../04-web-development/13-websockets.markdown",
          "/template-engines.html":
-         "../04-web-development/14-template-engines.markdown",
-         "/web-application-security.html":
-         "../04-web-development/15-web-app-security.markdown",
-         "/static-site-generator.html":
-         "../04-web-development/16-static-site-generator.markdown",
+         "#template-engines",
          "/jinja2.html":
-         "../04-web-development/17-jinja2.markdown",
+         "#jinja2",
+         "/mako.html":
+         "#mako",
+         "/django-templates.html":
+         "#django-templates",
+         "/web-design.html":
+         "#web-design",
+         "/hypertext-markup-language-html.html":
+         "#hypertext-markup-language-html",
+         "/cascading-style-sheets.html":
+         "#cascading-style-sheets-css",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/javascript.html":
+         "#javascript",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/task-queues.html":
+         "#task-queues",
+         "/celery.html":
+         "#celery",
+         "/redis-queue-rq.html":
+         "#redis-queue-rq",
+         "/dramatiq.html":
+         "#dramatiq",
+         #"/.html":
+         #"#",
+         "/static-site-generator.html":
+         "#static-site-generator",
+         "/pelican.html":
+         "#pelican",
+         "/lektor.html":
+         "#lektor",
+         "/mkdocs.html":
+         "#mkdocs",
          "/testing.html":
-         "../08-testing/01-testing.markdown",
+         "#testing",
          "/unit-testing.html":
-         "../08-testing/02-unit-testing.markdown",
+         "#unit-testing",
          "/integration-testing.html":
-         "../08-testing/03-integration-testing.markdown",
+         "#integration-testing",
+         #"/.html":
+         #"#",
          "/code-metrics.html":
-         "../08-testing/05-code-metrics.markdown",
+         "#code-metrics",
          "/debugging.html":
-         "../08-testing/08-debugging.markdown",
+         "#debugging",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/websockets.html":
+         "#websockets",
+         #"/.html":
+         #"#",
+         "/uvloop.html":
+         "#uvloop",
          "/application-programming-interfaces.html":
-         "../06-web-apis/01-application-programming-interfaces.markdown",
-         "/api-integration.html":
-         "../06-web-apis/02-api-integration.markdown",
+         "application-programming-interfaces",
+         "/microservices.html":
+         "#microservices",
+         #"/.html":
+         #"#",
+         "/bots.html":
+         "#bots",
          "/api-creation.html":
-         "../06-web-apis/03-api-creation.markdown",
+         "#api-creation",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/api-integration.html":
+         "#api-integration",
+         "/twilio.html":
+         "#twilio",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/web-application-security.html":
+         "#web-application-security",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
 
          # chapter 5
          "/deployment.html":
-         "../07-web-app-deployment/01-deployment.markdown",
-         "/servers.html":
-         "../07-web-app-deployment/02-servers.markdown",
-         "/platform-as-a-service.html":
-         "../07-web-app-deployment/04-platform-as-a-service.markdown",
-         "/operating-systems.html":
-         "../07-web-app-deployment/05-operating-systems.markdown",
-         "/web-servers.html":
-         "../07-web-app-deployment/06-web-servers.markdown",
-         "/wsgi-servers.html":
-         "../07-web-app-deployment/07-wsgi-servers.markdown",
-         "/source-control.html":
-         "../07-web-app-deployment/08-source-control.markdown",
-         "/application-dependencies.html":
-         "../07-web-app-deployment/09-app-dependencies.markdown",
+         "#deployment",
+         "servers.html":
+         "#servers",
          "/static-content.html":
-         "../07-web-app-deployment/10-static-content.markdown",
-         "/task-queues.html":
-         "../07-web-app-deployment/11-task-queues.markdown",
+         "#static-content",
+         "/virtual-private-servers-vps.html":
+         "#virtual-private-servers-vps",
+         "/platform-as-a-service.html":
+         "#platform-as-a-service",
+         "/operating-systems.html":
+         "#operating-systems",
+         "/ubuntu.html":
+         "#ubuntu",
+         "/web-servers.html":
+         "#web-servers",
+         "/wsgi-servers.html":
+         "#wsgi-servers",
          "/configuration-management.html":
          "../07-web-app-deployment/12-configuration-management.markdown",
          "/continuous-integration.html":
@@ -183,8 +293,6 @@ links = {# chapter 1
          "../07-web-app-deployment/17-docker.markdown",
          "/caching.html":
          "../07-web-app-deployment/18-caching.markdown",
-         "/microservices.html":
-         "../07-web-app-deployment/19-microservices.markdown",
          "/nginx.html":
          "../07-web-app-deployment/21-nginx.markdown",
          "/apache-http-server.html":
@@ -196,11 +304,17 @@ links = {# chapter 1
 
          # chapter 6
          "/devops.html":
-         "../07-web-app-deployment/20-devops.markdown",
-         "/logging.html":
-         "../07-web-app-deployment/14-logging.markdown",
+         "#devops",
          "/monitoring.html":
-         "../07-web-app-deployment/15-monitoring.markdown",
+         "#monitoring",
+         "/rollbar.html":
+         "#rollbar",
+         "/caching.html":
+         "#caching",
+         "/logging.html":
+         "#logging",
+         "/web-analytics.html":
+         "#web-analytics",
 
          # meta (chapter 7)
          "/what-full-stack-means.html":
