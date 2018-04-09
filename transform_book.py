@@ -267,40 +267,88 @@ links = {# chapter 1
          # chapter 5
          "/deployment.html":
          "#deployment",
+         #"/.html":
+         #"#",
          "servers.html":
          "#servers",
          "/static-content.html":
          "#static-content",
+         #"/.html":
+         #"#",
          "/virtual-private-servers-vps.html":
          "#virtual-private-servers-vps",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
          "/platform-as-a-service.html":
          "#platform-as-a-service",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
          "/operating-systems.html":
          "#operating-systems",
          "/ubuntu.html":
          "#ubuntu",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
          "/web-servers.html":
          "#web-servers",
+         "/apache-http-server.html":
+         "#apache-http-server",
+         "/nginx.html":
+         "#nginx",
+         "/caddy.html":
+         "#caddy",
+         #"/.html":
+         #"#",
          "/wsgi-servers.html":
          "#wsgi-servers",
-         "/configuration-management.html":
-         "../07-web-app-deployment/12-configuration-management.markdown",
-         "/continuous-integration.html":
-         "../07-web-app-deployment/13-continuous-integration.markdown",
-         "/web-analytics.html":
-         "../07-web-app-deployment/16-web-analytics.markdown",
-         "/docker.html":
-         "../07-web-app-deployment/17-docker.markdown",
-         "/caching.html":
-         "../07-web-app-deployment/18-caching.markdown",
-         "/nginx.html":
-         "../07-web-app-deployment/21-nginx.markdown",
-         "/apache-http-server.html":
-         "../07-web-app-deployment/22-apache-http-server.markdown",
-         "/caddy.html":
-         "../07-web-app-deployment/23-caddy.markdown",
          "/green-unicorn-gunicorn.html":
-         "../07-web-app-deployment/24-gunicorn.markdown",
+         "#green-unicorn-gunicorn",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/continuous-integration.html":
+         "#continuous-integration",
+         "/jenkins.html":
+         "#jenkins",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/configuration-management.html":
+         "#configuration-management",
+         "/ansible.html":
+         "#ansible",
+         #"/.html":
+         #"#",
+         #"/.html":
+         #"#",
+         "/docker.html":
+         "#docker",
+         #"/.html":
+         #"#",
+         "/serverless.html":
+         "#serverless",
+         "/aws-lambda.html":
+         "#aws-lambda",
+         #"/.html":
+         #"#",
+         "/google-cloud-functions.html":
+         "#google-cloud-functions",
 
          # chapter 6
          "/devops.html":
