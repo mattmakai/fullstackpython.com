@@ -175,20 +175,30 @@ links = {# chapter 1
          "(#hypertext-markup-language-html)",
          "(/cascading-style-sheets.html)":
          "(#cascading-style-sheets-css)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/responsive-design.html)":
+         "(#responsive-design)",
+         "(/minification.html)":
+         "(#minification)",
+         "(/css-frameworks.html)":
+         "(#css-frameworks)",
+         "(/bootstrap-css.html)":
+         "(#bootstrap)",
+         "(/foundation-css.html)":
+         "(#foundation)",
+         #"(/.html)":
+         #"(#)",
+         #"(/.html)":
+         #"(#)",
          "(/javascript.html)":
          "(#javascript)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         #"(/.html)":
+         #"(#)",
+         #"(/.html)":
+         #"(#)",
+         #"(/.html)":
+         #"(#)",
+         #"(/.html)":
+         #"(#)",
          "(/task-queues.html)":
          "(#task-queues)",
          "(/celery.html)":
