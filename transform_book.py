@@ -7,10 +7,10 @@ BASE_DIR = './tempcontent/pages/'
 BASE_FSP = "https://www.fullstackpython.com/"
 
 links = {# chapter 1
-         "/introduction.html":
-         "#introduction",
-         "/learning-programming.html":
-         "#learning-programming",
+         '<a href="/introduction.html':
+         '<a href="#introduction',
+         '<a href="/learning-programming.html':
+         '<a href="#learning-programming',
          "/python-programming-language":
          "#python-programming-language",
          "/why-use-python.html":
@@ -232,7 +232,7 @@ links = {# chapter 1
          "/uvloop.html":
          "#uvloop",
          "/application-programming-interfaces.html":
-         "application-programming-interfaces",
+         "#application-programming-interfaces",
          "/microservices.html":
          "#microservices",
          #"/.html":
@@ -402,7 +402,8 @@ def transform(output_format='pdf'):
             # modify all markdown files in directory
             files = os.listdir(BASE_DIR + d)
             for f in files:
-                with open(BASE_DIR + d + '/' + f, 'r') as read_f:
+                with open(BASE_DIR + d + '/' + f, 'r',
+                          encoding="utf-8") as read_f:
                     all_lines = read_f.readlines()
 
                 with open(BASE_DIR + d + '/' + f, 'w') as write_f:

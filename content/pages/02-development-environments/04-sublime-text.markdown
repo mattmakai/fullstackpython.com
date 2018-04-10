@@ -42,7 +42,7 @@ links should get your editor customized with linters,
 * [Using Generators for Fun and Profit - Utility for developers](http://www.sublimetext.com/forum/viewtopic.php?f=6&t=17671)
   isn't about setting up your Sublime Text environment but instead how to
   create your own plugins using Python. The tutorial is written by the
-  author of a Sublime Text plugin who uses [generators](/generators.html)
+  author of a Sublime Text plugin who uses generators
   to implement features with Sublime's API.
 
 * [Turning Sublime Text Into a Lightweight Python IDE](https://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html)
