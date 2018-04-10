@@ -393,7 +393,7 @@ links = {# chapter 1
          "(" + BASE_FSP + "blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html",
          "(/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html)":
          "(" + BASE_FSP + "blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html",
-        }
+         }
 
 
 def transform(output_format='pdf'):

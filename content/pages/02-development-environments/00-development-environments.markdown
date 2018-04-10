@@ -156,4 +156,3 @@ configuration as a starting point and customize it from there.
   [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
   by Lauren Orsini. She also explains more about what a cloud IDE is and is
   not.
-

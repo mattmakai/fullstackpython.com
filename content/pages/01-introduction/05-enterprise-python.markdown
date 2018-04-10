@@ -84,7 +84,7 @@ However, Microsoft's enterprise products often have expensive licensing fees
 for their application servers and associated software. In addition, Microsoft 
 is also a major backer of open source, [especially Python](http://www.hanselman.com/blog/OneOfMicrosoftsBestKeptSecretsPythonToolsForVisualStudioPTVS.aspx),
 and their 
-[Python tools for Visual Studio](https://www.visualstudio.com/en-us/features/python-vs.aspx) 
+[Python tools for Visual Studio](https://www.visualstudio.com/vs/features/python/)
 provide a top-notch [development environment](/development-environments.html).
 
 The end result is that enterprise software development has changed 

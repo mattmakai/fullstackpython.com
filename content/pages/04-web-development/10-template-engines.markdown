@@ -174,10 +174,6 @@ when that's necessary for your projects.
   template engine in 252 lines of Python that can be used to understand how
   template engines work under the cover.
 
-* [Template fragment gotchas](http://agiliq.com/blog/2015/08/template-fragment-caching-gotchas/) 
-  is a collection of situations that can trip up a developer or designer when
-  working with templates.
-
 * [The world's simplest Python template engine](https://makina-corpus.com/blog/metier/2016/the-worlds-simplest-python-template-engine)
   shows how the `format()` function can implement a simple template engine
   with conditionals, loops and method invocations.

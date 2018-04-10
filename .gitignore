@@ -45,3 +45,4 @@ output/
 
 __pycache__/
 .env
+tempcontent/
