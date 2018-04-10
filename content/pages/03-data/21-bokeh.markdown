@@ -59,7 +59,7 @@ basic syntax will change as the library's API is not yet stable.
 
 * [Integrating Pandas, Django REST Framework and Bokeh](http://www.machinalis.com/blog/pandas-django-rest-framework-bokeh/)
   has a full example of integrating a 
-  [web API](application-programming-interfaces.html) with a Bokeh
+  [web API](/application-programming-interfaces.html) with a Bokeh
   front end visual.
 
 * [Visualization with Bokeh](http://www.blog.pythonlibrary.org/2016/07/27/python-visualization-with-bokeh/)
@@ -97,4 +97,3 @@ basic syntax will change as the library's API is not yet stable.
   although the web application only contained a single type of data 
   visualization so it is hard to drawn any real conclusions from his
   opinion.
-

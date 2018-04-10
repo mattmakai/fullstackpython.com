@@ -56,7 +56,7 @@ For example, the [Django web application framework](/django.html) includes
 read, write, query, and delete operations in Python code rather than SQL. 
 However, Django's ORM cannot work without significant modification on 
 [non-relational (NoSQL) databases](/no-sql-datastore.html) such as 
-[MongoDB](/mongodb.html) or [Cassandra](/cassandra.html).
+[MongoDB](/mongodb.html) or [Cassandra](/apache-cassandra.html).
 
 Some other web frameworks such as [Flask](/flask.html) and 
 [Pyramid](/pyramid.html) are easier to
