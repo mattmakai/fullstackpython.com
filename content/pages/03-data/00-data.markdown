@@ -86,4 +86,3 @@ created the incredible mix of data code libraries available today.
   give historical perspective on how the Python data tools
   have evolved over the past 20ish years based on his first-hand experience
   as a leader and member in that community.
-

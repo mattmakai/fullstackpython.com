@@ -106,7 +106,7 @@ links = {# chapter 1
          "(/peewee.html)":
          "(#peewee)",
          "(/django-orm.html)":
-         "(#django-orm)",
+         "(#django-object-relational-mapper)",
          "(/sqlobject.html)":
          "(#sqlobject)",
          "(/pony-orm.html)":
@@ -157,8 +157,12 @@ links = {# chapter 1
          "(#bottle)",
          "(/pyramid.html)":
          "(#pyramid)",
+         "(/falcon.html)":
+         "(#falcon)",
          "(/morepath.html)":
          "(#morepath)",
+         "(/sanic.html)":
+         "(#sanic)",
          "(/other-web-frameworks.html)":
          "(#other-web-frameworks)",
          "(/template-engines.html)":
@@ -281,7 +285,7 @@ links = {# chapter 1
          "(#deployment)",
          #("/.html)":
          #("#)",
-         "(servers.html)":
+         "(/servers.html)":
          "(#servers)",
          "(/static-content.html)":
          "(#static-content)",
@@ -380,7 +384,7 @@ links = {# chapter 1
          "(/what-full-stack-means.html)":
          "(#what-full-stack-means)",
          "(/about-author.html)":
-         "(#about-author)",
+         "(#about-the-author)",
          "(/change-log.html)":
          "(" + BASE_FSP + "change-log.html)",
          "(/future-directions.html)":
