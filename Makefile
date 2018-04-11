@@ -26,6 +26,16 @@ pdf: bookbuild
 	cd generated/book; prince pdf-book.html -o full_stack_python.pdf
 
 
+epub: bookbuild
+	sed -i '' 's/\(^.*~~.*$$\)/<\/pre><pre class="highlight-line">\1<\/pre><pre>/g' generated/book/epub-book.html
+	sed -i '' 's/~~//g' generated/book/epub-book.html
+	cd generated/book; pandoc -f html epub-book.html -t epub3 --epub-metadata=epub-metadata.xml --epub-cover-image=img/book/cover-a4.jpg --toc-depth=2 --epub-stylesheet=theme/css/epub.css -o full_stack_python.epub
+
+
+mobi: epub
+	cd generated/book; kindlegen full_stack_python.epub -o full_stack_python.mobi
+
+
 update:
 	python update_s3.py
 	rm -rf generated/current_site

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-AUTHOR = u'Matt Makai'
+AUTHOR = u'Matthew Makai'
 SITENAME = u'Full Stack Python'
 SITEURL = 'https://www.fullstackpython.com'
 TIMEZONE = 'America/New_York'
 
 GITHUB_URL = 'https://github.com/mattmakai/fullstackpython.com'
 PDF_GENERATOR = False
-DIRECT_TEMPLATES = ('pdf-book', )#'epub-book')
+DIRECT_TEMPLATES = ('pdf-book', 'epub-book')
 PLUGINS = ['plugins.pelican-toc',]
 
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
