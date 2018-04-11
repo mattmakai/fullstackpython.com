@@ -72,7 +72,7 @@ front end code.
   team environment to what apps you can use to aid your workflow.
 
 
-## CSS frameworks
+## CSS libraries and frameworks
 CSS frameworks provide structure and a boilerplate base for building a
 web application's design.
 

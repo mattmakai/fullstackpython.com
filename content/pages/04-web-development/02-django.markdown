@@ -235,7 +235,7 @@ based on [WebSockets](/websockets.html).
   the front end.
 
 
-## Django ORM resources
+## Django ORM tutorials
 Django comes with its own custom object-relational mapper (ORM) typically
 referred to as "the Django ORM". Learn more about the Django ORM on the
 [Python object-relational mappers page](/object-relational-mappers-orms.html) 

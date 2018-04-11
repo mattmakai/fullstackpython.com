@@ -78,7 +78,7 @@ by a single connection at a time. Therefore is highly recommended to not
 [run a production web application with SQLite](https://docs.djangoproject.com/en/dev/ref/databases/#database-is-locked-errors).
 
 
-## PostgreSQL
+## PostgreSQL database
 PostgreSQL is the recommended relational database for working with Python
 web applications. PostgreSQL's feature set, active development and stability
 contribute to its usage as the backend for millions of applications live
@@ -88,7 +88,7 @@ Learn more about using PostgreSQL with Python on the
 [PostgreSQL page](/postgresql.html).
 
 
-## MySQL
+## MySQL database
 MySQL is another viable open source database implementation for Python 
 applications. MySQL has a slightly easier initial learning curve than 
 PostgreSQL but is not as feature rich.

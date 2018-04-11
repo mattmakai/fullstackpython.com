@@ -100,7 +100,7 @@ in addition to supporting (as of Django 1.9) drop-in replacement with other
 template engines such as Jinja.
 
 
-### Mako
+### Mako template engine
 [Mako](/mako.html) was the default templating engine for the 
 Pylons web framework and is one of many template engines supported by 
 [Pyramid](/pyramid.html). Mako has wide support as a replacement

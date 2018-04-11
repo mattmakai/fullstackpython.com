@@ -6,53 +6,41 @@
  <link href="theme/css/epub.css" rel="stylesheet">
 </head>
 <body>
-  <img src="img/book/cover-a4.jpg" width="100%">
-  <br/>
-  {% for page in pages|sort(attribute='sortorder') %}
-    {% if page.sortorder[0:2] == "00" %}
-      {{ page.content }}
-    {% endif %}
-  {% endfor %}
-  <p style="page-break-after:always;"></p>
-
-  <h1>Table of Contents</h1>
-  {% include "book-toc.html" %}
-
-  {% for page in pages|sort(attribute='sortorder') %}
-    {% if not page.sortorder[0:2] == "00" %}
-      {% if page.sortorder == "0100" %}
-       <div class="chapter">
-        <img src="img/book/01-introduction/01-cover.png" class="chapter-cover">
-       </div>
-      {% elif page.sortorder == "0200" %}
-       <div class="chapter">
-        <img src="img/book/02-dev-environments/02-cover.png" class="chapter-cover">
-       </div>
-      {% elif page.sortorder == "0300" %}
-       <div class="chapter">
-        <img src="img/book/03-data/03-cover.png" class="chapter-cover">
-       </div>
-      {% elif page.sortorder == "0400" %}
-       <div class="chapter">
-        <img src="img/book/04-web-development/04-cover.png" class="chapter-cover">
-       </div>
-      {% elif page.sortorder == "0500" %}
-       <div class="chapter">
-        <img src="img/book/05-deployments/05-cover.png" class="chapter-cover">
-       </div>
-      {% elif page.sortorder == "0600" %}
-       <div class="chapter">
-        <img src="img/book/06-devops/06-cover.png" class="chapter-cover">
-       </div>
-      {% elif page.sortorder == "0700" %}
-       <div class="chapter">
-        <img src="img/book/07-meta/07-cover.png" class="chapter-cover">
-       </div>
-      {% endif %}
-      {% if page.slug != "change-log" and page.slug != "page-statuses" and page.slug != "future-directions" %}
-      {{ page.content }}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+ <h1>Table of Contents</h1>
+ {% include "book-toc.html" %}
+ {% for page in pages|sort(attribute='sortorder') %}
+  {% if page.sortorder == "0100" %}
+   <div class="chapter">
+    <img src="img/book/01-introduction/01-cover.png" class="chapter-cover">
+   </div>
+  {% elif page.sortorder == "0200" %}
+   <div class="chapter">
+    <img src="img/book/02-dev-environments/02-cover.png" class="chapter-cover">
+   </div>
+  {% elif page.sortorder == "0300" %}
+   <div class="chapter">
+    <img src="img/book/03-data/03-cover.png" class="chapter-cover">
+   </div>
+  {% elif page.sortorder == "0400" %}
+   <div class="chapter">
+    <img src="img/book/04-web-development/04-cover.png" class="chapter-cover">
+   </div>
+  {% elif page.sortorder == "0500" %}
+   <div class="chapter">
+    <img src="img/book/05-deployments/05-cover.png" class="chapter-cover">
+   </div>
+  {% elif page.sortorder == "0600" %}
+   <div class="chapter">
+    <img src="img/book/06-devops/06-cover.png" class="chapter-cover">
+   </div>
+  {% elif page.sortorder == "0700" %}
+   <div class="chapter">
+    <img src="img/book/07-meta/07-cover.png" class="chapter-cover">
+   </div>
+  {% endif %}
+  {% if page.slug != "change-log" and page.slug != "page-statuses" and page.slug != "future-directions" %}
+   {{ page.content }}
+  {% endif %}
+ {% endfor %}
 </body>
 </html>

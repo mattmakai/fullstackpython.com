@@ -392,21 +392,13 @@ links = {# chapter 1
 
          "(/email.html)":
          "(" + BASE_FSP + "email.html)",
-         "<a href=\"/full-stack-python-map.pdf\" target=\"_blank\" style=\"border: none;\"><img src=\"/img/full-stack-python-map.png\" width=\"100%\" alt=\"Full Stack Python site map.\" class=\"technical-diagram\" /></a>":
-         "<img src=\"/img/full-stack-python-map.png\" alt=\"Full Stack Python deployment map.\" />",
+         "<a href=\"/full-stack-python-map.pdf\" style=\"border:none\"><img src=\"/img/visuals/full-stack-python-map.png\" width=\"100%\" alt=\"Full Stack Python deployments map.\" class=\"shot\"></a>":
+         "<img src=\"img/visuals/full-stack-python-map.png\" alt=\"Full Stack Python deployments map.\">",
 
          "(/blog.html)":
          "(" + BASE_FSP + "blog.html",
-         "(/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)":
-         "(" + BASE_FSP + "blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html",
-         "(/blog/install-redis-use-python-3-ubuntu-1604.html)":
-         "(" + BASE_FSP + "blog/install-redis-use-python-3-ubuntu-1604.html",
-         "(/blog/postgresql-python-3-psycopg2-ubuntu-1604.html)":
-         "(" + BASE_FSP + "blog/postgresql-python-3-psycopg2-ubuntu-1604.html",
-         "(/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html)":
-         "(" + BASE_FSP + "blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html",
-         "(/blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html)":
-         "(" + BASE_FSP + "blog/python-3-django-gunicorn-ubuntu-1604-xenial-xerus.html",
+         "(/blog/":
+         "(" + BASE_FSP + "blog/",
          }
 
 

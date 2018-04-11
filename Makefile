@@ -30,7 +30,7 @@ epub: bookbuild
 	sed -i '' 's/\(^.*~~.*$$\)/<\/pre><pre class="highlight-line">\1<\/pre><pre>/g' generated/book/epub-book.html
 	sed -i '' 's/"\/img\//"img\//g' generated/book/epub-book.html
 	sed -i '' 's/~~//g' generated/book/epub-book.html
-	cd generated/book; pandoc -f html epub-book.html -t epub3 --epub-metadata=epub-metadata.xml --epub-cover-image=img/book/cover-a4.jpg --toc-depth=2 --epub-stylesheet=theme/css/epub.css -o full_stack_python.epub
+	cd generated/book; pandoc -f html epub-book.html -t epub3 --epub-metadata=epub-metadata.xml --epub-cover-image=img/book/cover-a4.jpg --toc-depth=3 --epub-stylesheet=theme/css/epub.css -o full_stack_python.epub
 
 
 mobi: epub

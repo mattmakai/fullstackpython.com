@@ -44,7 +44,7 @@ Mac OS X is fine for development activities. Windows and Mac
 OS X are not appropriate for production deployments unless there is a 
 major reason why you must use them in lieu of Linux.
 
-### Ubuntu
+### Canonical's Ubuntu Linux
 Ubuntu is a Linux distribution packaged by the 
 [Canonical Ltd](http://www.canonical.com/) company. Ubuntu uses the
 Debian distribution as a base for packages, including the 

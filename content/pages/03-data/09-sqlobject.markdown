@@ -21,7 +21,7 @@ active open source development for over 14 years, since
 <div class="well see-also">SQLObject is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-### SQLObject resources
+### SQLObject tutorials
 SQLObject has been around for a long time as an open source project but
 unfortunately there are not that many tutorials for it. The following
 talks and posts will get you started. If you take an interest in the project

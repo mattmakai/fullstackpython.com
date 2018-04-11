@@ -121,7 +121,7 @@ reviews the basics of distributed version control systems.
   monorepos.
 
 
-### Git
+### Git distributed source control system
 [Git](/git.html) is the most widely-used source control system currently
 in use. Its distributed design eliminates the need to check files in
 and out of a centralized repository, which is a problem when using
@@ -129,7 +129,7 @@ and out of a centralized repository, which is a problem when using
 [a full page on Git](/git.html) with further details and resources.
 
 
-## Source control learning checklist
+### Source control learning checklist
 1. Pick a version control system. Git is recommended because on the web there
    are a significant number of tutorials to help both new and advanced users.
 

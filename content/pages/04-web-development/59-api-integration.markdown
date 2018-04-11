@@ -21,12 +21,12 @@ continuously grows in importance because APIs provide critical functionality
 across many implementation areas.
 
 
-## Hosted API testing services
+## API testing services
 * [Runscope](https://www.runscope.com/) is a service specifically designed
   for APIs that assists developers with automated testing and traffic
   inspection.
 
-* [Apiary](http://apiary.io/) provides a blueprint for creating APIs so
+* [Apiary](https://apiary.io/) provides a blueprint for creating APIs so
   they are easier to test and generate clean documentation.
 
 

@@ -268,9 +268,9 @@ A comprehensive list of [SQLAlchemy](/sqlalchemy.html) and
 pages.
 
 
-### Django ORM resources
+### Django ORM links
 A curated list of resources can be found on the dedicated 
-[Django ORM resources](/django-orm.html) page.
+[Django ORM resources page](/django-orm.html).
 
 
 ### Pony ORM resources

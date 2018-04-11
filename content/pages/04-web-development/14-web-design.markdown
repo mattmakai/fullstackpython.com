@@ -22,7 +22,7 @@ Creating web pages with their own style and interactivity so users can easily
 accomplish their tasks is a major part of building modern web applications.
 
 
-## Responsive design
+## Designing for various screen sizes
 Separating the content from the rules for how to display the content allows 
 devices to render the output differently based on factors such as screen size
 and device type. Displaying content differently based on varying screen 

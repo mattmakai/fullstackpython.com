@@ -44,7 +44,7 @@ operations, such as querying the database from the Django manage.py shell.
   shows the differences between these two Python-powered tools.
 
 
-## Ansible
+## Ansible configuration management
 [Ansible](http://www.ansible.com/) is an open source configuration
 management and application deployment tool built in Python.
 
