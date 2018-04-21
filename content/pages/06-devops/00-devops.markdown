@@ -8,9 +8,10 @@ meta: DevOps combines software development and application operations. Python is
 
 
 # DevOps
-DevOps is the combination of application development and operations, which
-minimizes or eliminates the disconnect between software developers who build 
-applications and systems administrators who keep infrastructure running.
+DevOps is the combination of [application development](/web-development.html)
+and operations, which minimizes or eliminates the disconnect between 
+software developers who build applications and systems administrators 
+who keep infrastructure running.
 
 
 ## Why is DevOps important?

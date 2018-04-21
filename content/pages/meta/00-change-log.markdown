@@ -61,6 +61,8 @@ on GitHub.
 * New [WebSockets](/websockets.html) resources.
 * New starter page on [CSS frameworks](/css-frameworks.html) and 
   [Foundation CSS](/foundation-css.html).
+* New 
+  [blog post on adding Rollbar monitoring to Django applications](/blog/monitor-django-projects-web-apps-rollbar.html).
 * Added new [enterprise Python](/enterprise-python.html) resources.
 
 ### January
