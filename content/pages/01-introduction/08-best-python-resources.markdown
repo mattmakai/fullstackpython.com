@@ -44,6 +44,13 @@ should skip down to the next section for "experienced developers".
   incredible job of breaking down the steps beginners should take when 
   they're uncertain about where to begin.
 
+* [A Python Crash Course](https://www.grahamwheeler.com/posts/python-crash-course.html)
+  gives an awesome overview of the history of Python, what drives the 
+  programming community and dives into example code. You will likely need
+  to read this in combination with other resources to really let the syntax
+  sink in, but it's a great article to read several times over as you 
+  continue to learn.
+
 * The [Python projects tag](https://www.twilio.com/blog/tag/python) on the 
   Twilio blog is constantly updated with fun tutorials you can build to
   learn Python, such as the
