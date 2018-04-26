@@ -19,6 +19,8 @@ frameworks that have their own dedicated pages:
 
 * [Pyramid](/pyramid.html)
 
+* [TurboGears](/turbogears.html)
+
 * [Bottle](/bottle.html)
 
 * [Falcon](/falcon.html)
@@ -26,14 +28,6 @@ frameworks that have their own dedicated pages:
 * [Morepath](/morepath.html)
 
 * [Sanic](/sanic.html)
-
-
-## TurboGears
-[TurboGears](http://www.turbogears.org), born as a full stack layer on top
-of Pylons, is now a standalone web framework that can act both as a full 
-stack library (like Django) or as a micro framework.
-
-<a href="http://www.turbogears.org/" style="border: none;"><img src="/img/logos/turbogears.jpg" width="100%" alt="TurboGears logo." class="technical-diagram" style="border-radius: 5px;"></a>
 
 
 ## web.py
