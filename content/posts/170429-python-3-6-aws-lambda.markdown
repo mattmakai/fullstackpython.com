@@ -3,7 +3,7 @@ slug: aws-lambda-python-3-6
 meta: Code, create and execute your first Amazon Web Services (AWS) Lambda function with Python 3.6.
 category: post
 date: 2017-04-29
-modified: 2017-04-30
+modified: 2018-04-25
 newsletter: False
 headerimage: /img/170429-aws-lambda-python-3-6/header.jpg
 headeralt: AWS, AWS Lambda and Python logos are copyright their respective owners.
@@ -122,7 +122,7 @@ command line.
 The Python code expects two environment variables that are read by the
 `os` module with the `environ.get` function. With the `what_to_print` and
 `how_many_times` variables set by the environment variables, our code then
-then prints a message zero or more times, based on the amount defined in 
+prints a message zero or more times, based on the amount defined in 
 the `how_many_times` variable. If a message is printed at least once then 
 the function returns the `what_to_print` string, if nothing is printed 
 then `None` is returned.

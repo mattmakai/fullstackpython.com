@@ -3,7 +3,7 @@ slug: monitor-python-3-6-example-code-aws-lambda-rollbar
 meta: Monitor your Python 3.6 application code on Amazon Web Services (AWS) Lambda functions using Rollbar.
 category: post
 date: 2018-04-20
-modified: 2018-04-20
+modified: 2018-04-25
 newsletter: False
 headerimage: /img/180420-monitor-aws-lambda/header.jpg
 headeralt: Python, AWS Lambda and Rollbar logos are copyright their respective owners.
@@ -47,145 +47,138 @@ starting page.
 
 <img src="/img/180420-monitor-aws-lambda/search-for-lambda.jpg" width="100%" class="shot rnd outl" alt="Search for lambda in the dashboard text box.">
 
-Click "Create a Lambda function" and the "Select Blueprint" page should
-appear.
+Click the "Create function" button.
 
-<img src="/img/180420-monitor-aws-lambda/select-blueprint.jpg" width="100%" class="shot rnd outl" alt="The Select Blueprint Lambda screen.">
+<img src="/img/180420-monitor-aws-lambda/create-function.png" width="100%" class="shot rnd outl" alt="The create Lambda function screen.">
 
-Select "Blank Function". The "Configure triggers" page should appear next.
-A trigger is how the Lambda function typically knows 
-when to execute based on an event from another AWS service like
-[Cloudwatch](https://aws.amazon.com/cloudwatch/) or
-[API Gateway](https://aws.amazon.com/api-gateway/). 
+Select "Author from Scratch". Fill in a name so you can easily recognize this
+function for future reference. I chose "monitorPython3". Select "Python 3.6"
+for Runtime.
 
-<img src="/img/180420-monitor-aws-lambda/configure-triggers.jpg" width="100%" class="shot rnd outl" alt="Screen for configuring the AWS Lambda trigger.">
+Select "Create new role from template(s)", input a Role name, for example
+"basicEdgeLambdaRole". For Policy templates choose "Basic Edge Lambda 
+Permissions".
 
-You do not need to configure a trigger to move to the next screen so
-we will not configure a trigger for this function. We can manually 
-kick off the Lambda to test it when we are done with configuring it. Leave 
-the trigger icon blank and click "Next" to continue.
+Then click "Create function."
 
-<img src="/img/180420-monitor-aws-lambda/blank-lambda.jpg" width="100%" class="shot rnd outl" alt="Blank AWS Lambda function.">
+<img src="/img/180420-monitor-aws-lambda/monitorpython3.png" width="100%" class="shot rnd outl" alt="Blank AWS Lambda function named monitorPython3.">
 
-Ok, finally we arrive at the "Configure function" screen where we can write
+Ok, finally we have arrived at the configuration screen where we can write
 our code.
 
 
-## Lambda Function Python Example Code
-Enter a name for the Lambda function, such as "python_3_6_lambda_test",
-as well as a description. A description is optional but it is useful
-when you have a dozens or hundreds of different Lambda functions and
-need to keep them straight. In the Runtime drop-down, select Python 3.6 for 
-the programming language.
+## Coding a Python Function
+Scroll down to the "Function code" user interface section.
 
-<img src="/img/170429-aws-lambda-python-3-6/python-3-6-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Enter a name, description and use Python 3.6 for the Lambda.">
-
-Beneath the Runtime drop-down there is a large text box for code, 
-prepopulated with a `lambda_handler` function definition. The 
-"Code entry type" drop-down can also be changed to allow uploading a ZIP
-file or inputing a file from an S3 bucket. For our simple first
-Lambda function we will stick to the "Edit code inline" option. Copy or type 
-in the following code, replacing what is already in the text box. This
-code is also available on [this open source GitHub repository](https://github.com/fullstackpython/blog-code-examples/blob/master/aws-lambda-python-3-6/).
+Paste or type in the following code, replacing what is already in the 
+text box.
 
 
 ```python
 import os
+import rollbar
 
 
+ROLLBAR_KEY = os.getenv('ROLLBAR_SECRET_KEY', 'missing Rollbar secret key')
+rollbar.init(ROLLBAR_KEY, 'production')
+
+
+@rollbar.lambda_function
 def lambda_handler(event, context):
-    what_to_print = os.environ.get("what_to_print")
-    how_many_times = int(os.environ.get("how_many_times"))
+    message = os.getenv("message")
+    print_count = int(os.getenv("print_count"))
 
-    # make sure what_to_print and how_many_times values exist
-    if what_to_print and how_many_times > 0:
-        for i in range(0, how_many_times):
+    # check if message exists and how many times to print it
+    if message and print_count > 0:
+        for i in range(0, print_count):
             # formatted string literals are new in Python 3.6
-            print(f"what_to_print: {what_to_print}.")
-        return what_to_print
+            print(f"message: {message}.")
+        return print_count
     return None
 ```
 
-The code above contains a required `lambda_handler` function, which is 
-AWS Lambda's defined hook so it knows where to begin execution. Think of 
-`lambda_handler` as a `main` function, like the  
-`if __name__ == "__main__":` conditional line commonly used in Python files 
-to ensure a block of code is executed when a script is run from the 
-command line.
+The code contains the required `lambda_handler` function. `lambda_handler` 
+is Lambda's hook for where to start execution the code.
 
 The Python code expects two environment variables that are read by the
-`os` module with the `environ.get` function. With the `what_to_print` and
-`how_many_times` variables set by the environment variables, our code then
-then prints a message zero or more times, based on the amount defined in 
-the `how_many_times` variable. If a message is printed at least once then 
-the function returns the `what_to_print` string, if nothing is printed 
-then `None` is returned.
+`os` module with the `getenv` function. The `message` and
+`print_count` variables are set by the environment variables.
 
 Below the code input text box on this function configuration screen there 
 is a section to set environment variable key-value pairs.
 
-Enter the keys named `what_to_print` and `how_many_times` then enter their 
-values. Use a string message for `what_to_print`'s value and an integer 
-whole number above 0 for `how_many_times`. Our Python code's error handling
-is not very robust so a value other than a number in the `how_many_times`
-variable will cause the script to throw an error when it is executed due
-to the forced casting of `how_many_times` via the `int()` function.
+<img src="/img/180420-monitor-aws-lambda/lambda-coded.png" width="100%" class="shot rnd outl" alt="Python 3.6 code within a Lambda function.">
 
-<img src="/img/170429-aws-lambda-python-3-6/environment-variables.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Section to set environment variables for the Lambda function.">
+Next we need to input two environment variables and then we can run
+our code.
 
-The Python 3.6 code and the environment variables are now in place. We 
-just need to handle a few more AWS-specific settings before we can test the 
-Lambda function.
+Enter the keys named `message` and `print_count`, then enter their values.
+Use a string message for `message`'s value and an integer whole number 
+above 0 for `print_count`. Our Python code's error handling is not very 
+robust so a value other than a number in the `print_count` variable will 
+cause the script to throw an error when it is executed due to the forced 
+casting of `print_count` via the `int()` function. That is how we will 
+test Rollbar's error monitoring for the Lambda function.
+
+(execute, show with errors)
 
 
-## Executing our Lambda Function
-Scroll past the environment variables to the 
-"Lambda function handler and role" section, which contains a few more 
-required function configuration items. 
+## Monitoring our Lambda Function
+Head over to the [Rollbar homepage](https://rollbar.com/) 
+to add their monitoring serving into our Lambda application.
 
-Keep the default handler set to `lambda_function.lambda_handler`. Select 
-"Create a new Role from template(s)" from the drop-down then for the
-"Role name" field enter "dynamodb_access". Under "Policy templates" 
-select the "Simple Microservice permissions". 
+<img src="/img/180420-monitor-aws-lambda/rollbar-home.jpg" width="100%" class="shot rnd outl" alt="Rollbar homepage.">
 
-The "Simple Microservice permissions" allows our Lambda to access
-[AWS DynamoDB](https://aws.amazon.com/dynamodb/). We will not use DynamoDB in 
-this tutorial but the service is commonly used either as permanent or 
-temporary storage for Lambda functions.
+Click "Sign Up" in the upper right-hand corner. Enter your 
+email address, username and desired password.
 
-<img src="/img/170429-aws-lambda-python-3-6/lambda-handler-and-role.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="For the final configuration, keep the default handler, create a new role from a template for Simple Microservice permissions and save it with a unique name.">
+<img src="/img/180420-monitor-aws-lambda/sign-up-rollbar.jpg" width="100%" class="shot rnd outl" alt="Signing up for a Rollbar account in your browser.">
 
-Our code and configuration is in place so click the "Next" button
-at the bottom right corner of the page.
+After the sign up page you will see the onboarding flow where you can
+enter a project name and select a programming language. For the project
+name type in "Full Stack Python" and then select that you are monitoring 
+a Python-based application.
 
-<img src="/img/170429-aws-lambda-python-3-6/review-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Review Lambda configuration.">
+<img src="/img/180420-monitor-aws-lambda/create-project.jpg" width="100%" class="shot rnd outl" alt="Name your project 'Full Stack Python' and select Python as your language.">
 
-The review screen shows us our configuration settings to make sure we 
-selected the appropriate values for our new Lambda function. Scroll down
-press "Create function".
+Press "Continue" at the bottom of the screen. The next
+page shows us a few instructions on how to add monitoring.
 
-<img src="/img/170429-aws-lambda-python-3-6/create-function.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Click the create function button to continue.">
+<img src="/img/180202-monitor-django/configure-project.jpg" width="100%" class="shot rnd outl" alt="Configure project using your server-side access token.">
 
-Success message should appear on the next page below the "Test" button.
+We can now update our AWS Lambda Pyton function to collect and aggregate
+the errors that occur in our application. Add the following highlighted
+lines to your Lambda code:
 
-<img src="/img/170429-aws-lambda-python-3-6/test.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Test button on the execution screen.">
 
-Click the "Test" button to execute the Lambda. Lambda will prompt us for
-some data to simulate an event that would kick off our function. Select
-the "Hello World" sample event template, which contains some keys but our
-Lambda will not use that in its execution. Click the "Save and test" button
-at the bottom of the modal.
+```python
+import os
+~~import rollbar
+~~
+~~
+~~ROLLBAR_KEY = os.getenv('ROLLBAR_SECRET_KEY', 'missing Rollbar secret key')
+~~rollbar.init(ROLLBAR_KEY, 'production')
 
-<img src="/img/170429-aws-lambda-python-3-6/sample-event-template.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Sample event template for Lambda execution.">
 
-Scroll down to the "Execution result" section where we can see our output.
+~~@rollbar.lambda_function
+def lambda_handler(event, context):
+    message = os.getenv("message")
+    print_count = int(os.getenv("print_count"))
 
-<img src="/img/170429-aws-lambda-python-3-6/execution-results.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Results from executing our new Lambda function.">
+    # check if message exists and how many times to print it
+    if message and print_count > 0:
+        for i in range(0, print_count):
+            # formatted string literals are new in Python 3.6
+            print(f"message: {message}.")
+        return print_count
+    return None
+```
 
-The log output shows us the return value of our function, which in this 
-execution was the string message from `what_to_print`. We can also see
-our print function produced output five times as expected based on the
-amount set in the `how_many_times` environment variable.
+(explain new lines of code)
+
+(add ROLLBAR env var)
+
+(re-run code)
 
 
 ## What's Next?

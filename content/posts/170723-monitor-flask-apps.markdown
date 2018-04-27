@@ -217,7 +217,7 @@ errors that occur for our users.
 Head to [Rollbar's homepage](https://rollbar.com/) so we can add their
 hosted monitoring tools to our oft-erroring Flask app.
 
-<img src="/img/170723-monitor-flask-apps/rollbar-homepage.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar homepage in the web browser.">
+<img src="/img/170723-monitor-flask-apps/rollbar-homepage.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar homepage in the web browser.">
 
 Click the "Sign Up" button in the upper right-hand corner. Enter your 
 email address, a username and the password you want on the sign up page.
