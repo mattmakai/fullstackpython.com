@@ -17,6 +17,11 @@ on GitHub.
 
 ## 2018
 ### April
+* New blog post on adding [Rollbar](/rollbar.html) for
+  [Monitoring Python 3.6 Functions on AWS Lambda](/blog/monitor-python-3-6-example-code-aws-lambda-rollbar.html).
+* New [TurboGears](/turbogears.html) web framework page via 
+  [pull request #162](https://github.com/mattmakai/fullstackpython.com/pull/162).
+  Thank you [Alessandro](https://github.com/amol-)!
 * A slew of new resources and descriptions for the 
   [Jupyter Notebook](/jupyter-notebook.html) page.
 * Reworking [web development](/web-development.html) page with new
