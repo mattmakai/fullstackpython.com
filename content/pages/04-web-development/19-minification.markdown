@@ -1,7 +1,7 @@
 title: Minification
 category: page
 slug: minification
-sortorder: 0418
+sortorder: 0419
 toc: False
 sidebartitle: Minification
 meta: Minification reduces the size of web assets to make pages and applications load quicker.
