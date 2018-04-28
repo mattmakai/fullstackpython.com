@@ -116,7 +116,7 @@ extension, but the preferred way of routing is through the
 In Object Dispatch a root controller object is traversed while
 resolving the URL. Each part of the url path is mapped to a property
 of the controller (Which might point to a sub controller) until
-a final collable action is encountered.
+a final callable action is encountered.
 
 This leads to a very natural mapping between URLs and the code
 serving them, allowing people with minimal knowledge of a project
@@ -137,7 +137,7 @@ class RootController(TGController):
 
 It's easy to see how ``/users/new`` actually resolves
 to ``RootController.users.new`` and all options provided
-to the URL are passed to the action serving the respose
+to the URL are passed to the action serving the response
 as arguments.
 
 ## TurboGears Resources
