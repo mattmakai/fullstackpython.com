@@ -187,6 +187,8 @@ when scaling out a large deployment of distributed task queues.
 * [Asynchronous Tasks with Flask and Redis Queue](https://testdriven.io/asynchronous-tasks-with-flask-and-redis-queue)
   looks at how to configure Redis Queue to handle long-running tasks in a Flask app.
 
+* [Developing an Asynchronous Task Queue in Python](https://testdriven.io/developing-an-asynchronous-task-queue-in-python) looks at how to implement several asynchronous task queues using Python's multiprocessing library and Redis.
+
 ## Task queue learning checklist
 1. Pick a slow function in your project that is called during an HTTP
    request.
