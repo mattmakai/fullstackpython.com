@@ -11,6 +11,7 @@
 <meta property="og:title" content="{{ article.title }}" />
 <meta property="og:description" content="{{ article.meta }} Great post on fullstackpython.com!" />
 <meta property="og:image" content="{{ SITEURL }}{{ article.headerimage }}" />
+<link rel="canonical" href="https://www.fullstackpython.com/blog/{{ article.slug }}.html" />
 {% endif %}{% endblock %}
 
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}

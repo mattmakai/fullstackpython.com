@@ -2,6 +2,7 @@
 
 {% block meta_header %}{% if page.meta %}
 <meta name="description" content="{{ page.meta }}">
+<link rel="canonical" href="https://www.fullstackpython.com/{{ page.slug }}.html" />
 {% endif %}{% endblock %}
 
 {% block title %}{{ page.title }} - {% endblock %}
