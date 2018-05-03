@@ -13,6 +13,8 @@ for math, science and engineering. [NumPy](/numpy.html),
 [Matplotlib](/matplotlib.html) and [pandas](/pandas.html) are libraries
 that fall under the SciPy project umbrella.
 
+<img src="/img/logos/scipy.png" width="100%" alt="SciPy project logo.">
+
 [Blaze](http://blaze.pydata.org/) is a similar, but separate, ecosystem 
 with additional tools for wrangling, cleaning, processing and analyzing data.
 

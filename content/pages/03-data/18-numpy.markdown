@@ -18,8 +18,14 @@ other scientific computing packages such as [pandas](/pandas.html).
 
 
 ### NumPy resources
+* [From Python to NumPy](http://www.labri.fr/perso/nrougier/from-python-to-numpy/)
+  is an awesome resource that shows how to use your basic
+  Python knowledge to learn how to do vectorization with NumPy.
+
 * [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/101-numpy-exercises-python/)
 
 * [NumPy: creating and manipulating numerical data](http://www.scipy-lectures.org/intro/numpy/index.html)
 
-
+* [Python NumPy Array Tutorial](https://www.datacamp.com/community/tutorials/python-numpy-tutorial)
+  is a starter tutorial specifically focused on using and working
+  with NumPy's powerful arrays. 
