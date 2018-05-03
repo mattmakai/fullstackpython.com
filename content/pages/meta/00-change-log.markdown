@@ -16,6 +16,11 @@ on GitHub.
 
 
 ## 2018
+### May
+* Merge 
+  [pull request #164](https://github.com/mattmakai/fullstackpython.com/pull/164)
+  with a new [task queues](/task-queues.html) resource.
+
 ### April
 * New blog post on adding [Rollbar](/rollbar.html) for
   [Monitoring Python 3.6 Functions on AWS Lambda](/blog/monitor-python-3-6-example-code-aws-lambda-rollbar.html).
