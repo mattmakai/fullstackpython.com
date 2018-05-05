@@ -55,16 +55,31 @@ podcast presentation.
   podcast from Ken Reitz and Alex Gaynor with very in-depth interviews with
   influential Python community members.
 
+* Professor Philip Guo has a video podcast called 
+  [PG Podcast](http://pgbovine.net/PG-Podcast.htm), typically on 
+  Python subjects. 
+  [All episodes are listed on a separate page](http://pgbovine.net/PG-Podcast-summary.htm).
 
 <div class="well see-also">If you prefer to learn by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
 
 
 ## General software development podcasts
-* [Embedded.fm](http://embedded.fm/)
+* [Software Engineering Daily](https://softwareengineeringdaily.com/)
+  incredibly has a podcast every day with a different developer on a
+  huge range of relevant development subjects.
 
-* [The Changelog](https://changelog.com/)
+* [Command_line Heroes](https://www.redhat.com/en/command-line-heroes)
+  covers [operating system](/operating-systems.html)-level topics as
+  well as [DevOps](/devops.html).
 
-* [Full Stack Radio](http://www.fullstackradio.com/)
+* [Embedded.fm](http://embedded.fm/) goes into embedded systems and
+  hardware hacking.
+
+* [The Changelog](https://changelog.com/) is a weekly podcast on
+  general software development matters.
+
+* [Full Stack Radio](http://www.fullstackradio.com/). No relation to 
+  Full Stack Python but another one to check out!
 
 * [Exponent](http://exponent.fm/) is not a software development podcast
   but it covers the intersection of corporate strategy and technology in an

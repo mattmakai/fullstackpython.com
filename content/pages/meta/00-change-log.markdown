@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### May
+* New [podcast](/best-python-podcasts.html) resources.
 * Merge 
   [pull request #164](https://github.com/mattmakai/fullstackpython.com/pull/164)
   with a new [task queues](/task-queues.html) resource.
