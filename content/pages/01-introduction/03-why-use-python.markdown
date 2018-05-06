@@ -108,6 +108,12 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 
 
 ### More perspectives on why to use Python
+Programming language rankings and the philosophy behind a language 
+provide solid initial data points for why you should learn Python.
+These resources also give perspectives on why people switched from other
+programming communities and why they advocate for Python as a primary
+language.
+
 * [How to argue for Python’s use](http://nothingbutsnark.svbtle.com/how-to-argue-for-pythons-use)
   explains that choosing a programming language can be complicated but that
   Python is a very good option for many use cases.
@@ -142,3 +148,11 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 * [Python or Ruby for web development](https://opensource.com/article/17/4/python-or-ruby-web-development)
   gives reasons for one language compared to the other just focused on the
   web development space.
+
+* If you are worried about the community split between 
+  [Python 2 and Python 3](/python-2-or-3.html), you should go with Python 3.
+  To read more about how companies handled upgrading, check out 
+  [Instagram's smooth move to Python 3](https://thenewstack.io/instagram-makes-smooth-move-python-3/),
+  [practical steps for moving to Python 3](https://talkpython.fm/episodes/show/155/practical-steps-for-moving-to-python-3)
+  and
+  [lessons learned from migrating to Python 3](https://able.bio/rhett/lessons-learned-from-migrating-to-python-3--27jsj82).
