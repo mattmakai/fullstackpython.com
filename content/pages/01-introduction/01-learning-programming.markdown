@@ -131,6 +131,12 @@ give example paths you can think about taking as a beginner:
   patterns and observations for how experienced programmers he has worked
   with in the past became great software developers.
 
+* [This Picture Will Change the Way You Learn to Code](https://dev.to/nextdotxyz/this-picture-will-change-the-way-you-learn-tocode-4kmh)
+  covers a well done graphics of many up-to-date concepts and tools that
+  developers use. The post reminds you that you will not and should not learn
+  everything but that you should pick tools you want to gain experience in
+  while generally knowing what else is out there.
+
 
 ### Teaching perspectives
 Are you an experienced programmer working with new and junior programmers?

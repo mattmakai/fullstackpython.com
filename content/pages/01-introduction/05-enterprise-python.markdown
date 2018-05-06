@@ -94,6 +94,10 @@ community in the enterprise software development landscape if they want to
 continue delivering business value to their business side customers.
 
 ## Open source enterprise Python projects
+Python is widely used across large enterprise organizations but the code
+is often not put out as open source. If you come across projects that are
+appropriate for this list, [contact me](/about-author.html) to let me know:
+
 * [Collab](https://github.com/cfpb/collab) by the 
   U.S. government's 
   [Consumer Financial Protection Bureau](http://www.consumerfinance.gov/) 
@@ -107,10 +111,23 @@ continue delivering business value to their business side customers.
 
 
 ## Enterprise Python software development resources
+The following articles cover topics in enterprise development that are 
+often not discussed when dealing with standard Python development.
+
 * Talk Python to Me's fourth episode interviewed PayPal's lead developer on
   [Enterprise Python and Large-Scale Projects](http://www.talkpythontome.com/episodes/show/4/enterprise-python-and-large-scale-projects).
   They rebuke many of the myths around Python for large scale projects
   including the variable typing system and scalability.
+
+* [Building and deploying an Enterprise Django Web App in 16 hours](https://medium.com/python-pandemonium/building-and-deploying-an-enterprise-django-web-app-in-16-hours-79e018f7b94c)
+  covers one developer's experience researching, 
+  [building](/web-development.html) and [deploying](/deployment.html) an 
+  enterprise application in Python and [Django](/django.html).
+
+* Mozilla's [Enterprise InfoSec](https://infosec.mozilla.org/) resources 
+  are programming language agnostic but very useful to developers trying 
+  to understand all the jargon that goes along with the enterprise 
+  security domain.
 
 * [The end of enterprise IT](http://www.leanessays.com/2017/01/the-end-of-enterprise-it.html)
   is a fascinating essay that actually does not talk about Python in 
