@@ -14,14 +14,16 @@ questions about which version they should learn. It is confusing to hear
 that Python 3, which was originally released in 2008, is still not the default
 installation on some operating systems.
 
-Here's the good news: you can't go wrong starting with either version. While 
-there are differences in unicode and syntax, for the most part if you 
-start with Python 2 and then learn Python 3 you won't be starting from 
-scratch. Likewise, you'll be able to read and write Python 2 code if you 
-started with Python 3.
+The simple answer is: learn Python 3, specifically the latest version
+which as of May 2018 is [Python 3.6.5](https://www.python.org/downloads/).
+If for some reason you absolutely have to learn Python 2, for example because
+your employer is working on a bunch of legacy code, you will be able to 
+transfer the majority of your knowledge from Python 2 right into Python 3.
+Likewise, you will still be able to read and write Python 2 code if you 
+start with Python 3.
 
-That said, my personal recommendation for new programmers as of right 
-now is to use Python 3, specifically 3.6 as of January 2017. There are 
+In addition, my personal strong recommendation for new programmers as of 
+right now is to use Python 3. There are 
 enough [great resources](/best-python-resources.html)
 out there that teach version 3 from the ground up. Python 3 is the future
 and you will not regret starting with the latest version of the
@@ -29,10 +31,8 @@ programming language.
 
 However, if you are interested in DevOps-type work with 
 [configuration management tools](/configuration-management.html) such as 
-Ansible or Fabric, then you'll have to stick to Python 2 because they have
-yet to upgrade to support Python 3. If you know there are libraries you must
-use in a project, check the 
-[Python Walls of Superpowers](https://python3wos.appspot.com/). 
+[Fabric](http://www.fabfile.org/), then you may have to use both Python 2
+and 3 because some of the libraries are lagging in full Python support.
 
 
 ### Visualizations and Projects
@@ -80,6 +80,10 @@ gone through the process and have advice for making it less painful.
   to Python 3. Their process involved upgrading dependencies, testing and
   deploying the new version before going back to clean up unnecessary code
   created by the transition.
+
+* [he only problem with Python 3's str is that you don't grok it](http://sircmpwn.github.io/2017/01/13/The-problem-with-Python-3.html)
+  specifically covers strings and some of the misconceptions around
+  how strings are handled in version 2 versus version 3.
 
 
 ### Python 2 to 3 resources
