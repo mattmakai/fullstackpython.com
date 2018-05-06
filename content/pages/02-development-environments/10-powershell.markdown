@@ -20,7 +20,11 @@ of a Python programmer's
 
 ### PowerShell resources
 * [A Python Developer's Guide to Powershell](https://akr.am/blog/posts/a-python-developers-guide-to-powershell)
+  explains the PowerShell scripting language then shows how to combine a
+  Python script and a PowerShell script to automate web scrapining downloads.
 
 * [ChatOps with PowerShell](https://www.youtube.com/watch?v=XIMOFnfdOx0)
+
+* [PowerShell in Azure Functions](http://www.brianbunke.com/blog/2018/02/27/powershell-in-azure-functions/)
 
 * [Getting Started with Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell)
