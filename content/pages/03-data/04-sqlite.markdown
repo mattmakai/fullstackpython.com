@@ -67,6 +67,10 @@ tutorials will help you get started.
   shows how to install SQLite, load data and work with the data stored in
   a new SQLite database.
 
+* [Python SQLite3 Basics](http://nitratine.net/python-sqlite3-basics/) covers
+  how to connect to a SQLite database in Python, executing statements,
+  committing and retrieving saved values.
+
 * [sqlite3 - embedded relational database](https://pymotw.com/3/sqlite3/) is an
   extensive tutorial showing many of the common create, read, update and delete 
   operations a developer would want to do with SQLite.
