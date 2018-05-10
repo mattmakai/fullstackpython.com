@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2018
 ### May
+* Major update to [Python 2 or 3](/python-2-or-3.html) page with better 
+  explanations that match community opinions in 2018 (originally page was
+  written in 2016 and descriptions were not heavily modified enough since 
+  then), along with a slew of new migration resources.
 * Added [newsletter on PyCon US 2018](/full-stack-python-pycon-us-2018.html).
 * New [podcast](/best-python-podcasts.html) resources.
 * Merge 
