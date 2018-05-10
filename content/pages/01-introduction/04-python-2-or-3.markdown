@@ -8,31 +8,35 @@ meta: Learn about whether you should use Python version 2 or 3 to build your app
 
 
 # Python 2 or 3?
-The Python programming language is currently in the midst of a long-term
-transition from version 2 to version 3. New programmers typically have many
-questions about which version they should learn. It is confusing to hear
-that Python 3, which was originally released in 2008, is still not the default
-installation on some operating systems.
+The Python programming language is almost finished with a long-term transition
+from version 2 to version 3. New programmers often have questions about which 
+version they should learn. It can be confusing to hear that Python 3, which was 
+originally released in 2008, is still not the default installation on some 
+operating systems such as macOS. However, that situation is rapidly changing 
+as the final version 2 release, Python 2.7, is approaching its end-of-life
+that is definitively scheduled for 
+[January 1, 2020](https://mail.python.org/pipermail/python-dev/2018-March/152348.html).
 
-The simple answer is: learn Python 3, specifically the latest version
-which as of May 2018 is [Python 3.6.5](https://www.python.org/downloads/).
-If for some reason you absolutely have to learn Python 2, for example because
-your employer is working on a bunch of legacy code, you will be able to 
-transfer the majority of your knowledge from Python 2 right into Python 3.
-Likewise, you will still be able to read and write Python 2 code if you 
-start with Python 3.
+The simple answer right now is: learn Python 3, specifically the latest 
+version which as of May 2018 is 
+[Python 3.6.5](https://www.python.org/downloads/). If for some reason you 
+absolutely have to learn Python 2, for example because your employer is 
+working on a bunch of legacy code, you will be able to transfer the majority
+of your knowledge from Python 2 right into Python 3. Likewise, you will 
+still be able to read and write Python 2 code if you start with Python 3.
 
-In addition, my personal strong recommendation for new programmers as of 
-right now is to use Python 3. There are 
-enough [great resources](/best-python-resources.html)
-out there that teach version 3 from the ground up. Python 3 is the future
-and you will not regret starting with the latest version of the
-programming language.
+There are enough [great resources](/best-python-resources.html)
+out there that will teach you to code in version 3 without any prior
+version 2 experience. Python 3 is the future and you will not regret 
+starting with the latest version of the 
+[programming language](/learning-programming.html).
 
-However, if you are interested in DevOps-type work with 
+One caveat to the recommendation to go full-on Python 3. If you are 
+interested in DevOps-type work with 
 [configuration management tools](/configuration-management.html) such as 
-[Fabric](http://www.fabfile.org/), then you may have to use both Python 2
-and 3 because some of the libraries are lagging in full Python support.
+[Fabric](http://www.fabfile.org/) or [Ansible](/ansible.html), then you 
+may have to sometimes use both Python 2 and 3 because parts of these 
+libraries are lagging in full Python 3 support.
 
 
 ### Visualizations and Projects
@@ -48,9 +52,9 @@ the community, many projects have sprung up to make the transition easier.
   used with Python 3.
 
 * The [Python clock](https://pythonclock.org/) counts down the time until
-  Python 2.x is no longer maintained. While in 2016 Python 2's retirement
-  may seem a long time away, it can take a lot of time and effort to migrate
-  existing application to the modified syntax in 3.x.
+  Python 2.x is no longer maintained. While Python 2's retirement
+  may still seem a long time away, it can take a lot of time and effort to 
+  migrate existing application to the modified syntax in 3.x.
 
 
 ### Porting to Python 3 resources
@@ -81,37 +85,60 @@ gone through the process and have advice for making it less painful.
   deploying the new version before going back to clean up unnecessary code
   created by the transition.
 
-* [he only problem with Python 3's str is that you don't grok it](http://sircmpwn.github.io/2017/01/13/The-problem-with-Python-3.html)
+* [The only problem with Python 3's str is that you don't grok it](http://sircmpwn.github.io/2017/01/13/The-problem-with-Python-3.html)
   specifically covers strings and some of the misconceptions around
   how strings are handled in version 2 versus version 3.
 
+* [Migrating to Python 3 with pleasure](https://github.com/arogozhnikov/python3_with_pleasure)
+  is a porting guide that focuses on code that data scientists would 
+  typically use in their programs.
+
+* [Instagram Makes a Smooth Move to Python 3](https://thenewstack.io/instagram-makes-smooth-move-python-3/)
+  explains their upgrade process for getting all of their code over to
+  Python 3 compatibility over a period of about a year.
+
+* [Practical steps for moving to Python 3](https://talkpython.fm/episodes/show/155/practical-steps-for-moving-to-python-3)
+  is a podcast episode that goes over migrating a large existing application's 
+  codebase to Python 3 from Python 2.
+
+* [Lessons learned from migrating to Python 3](https://able.bio/rhett/lessons-learned-from-migrating-to-python-3--27jsj82)
+  covers how a development team with a large e-commerce site built on 
+  [Django](/django.html) was able to upgrade their project.
+
 
 ### Python 2 to 3 resources
+The following resources will give you more context on how the community
+feels the transition from Python 2 to 3 is going, as well as why you
+should upgrade as soon as possible.
+
 * [Why should I use Python 3?](https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/)
   is a detailed FAQ on important topics such as unicode support, iteration
-  improvements and async upgrades provided by 3.x.
+  improvements and async upgrades provided by 3.x. There is also a great
+  follow up post by the author titled 
+  [A Rebuttal For Python 3](https://eev.ee/blog/2016/11/23/a-rebuttal-for-python-3/)
+  that counters some arguments made by other community members who are
+  unhappy about various features in Python 3.
 
 * Want to know all of the advantages and what's changed in Python 3 
   compared to Python 2? There's 
   [an official guide to Python 3 changes](https://docs.python.org/3/whatsnew/index.html)
   you'll want to read.
 
-* [Why Python 3?](http://whypy3.com/) randomly outputs valid reasons to
-  use Python 3 over 2.x.
-
-* [Python 3 in 2016](https://hynek.me/articles/python3-2016/) explains
-  that many newer Python developers have only used Python 3 and as that
-  cohort continues to grow it will have an outsized impact on further
-  adoption.
-
 * [Python 3 is winning](https://blogs.msdn.microsoft.com/pythonengineering/2016/03/08/python-3-is-winning/)
   presents data and graphs from PyPI to show that at the current rate,
   by mid-2016 overall Python 3 library support will overtake Python 2 
   support.
 
+* [Python 3 Retrospective from the Benevolent Dictator for Life ](https://www.youtube.com/watch?v=Oiw23yfqQy8)
+  is a talk by Guido van Rossum on what is working, not working and still
+  needs to be done before the changover can be considered complete.
+
 * [The stages of the Python 3 transition](http://www.snarky.ca/the-stages-of-the-python-3-transition)
   provides perspective from a core Python developer on how the transition from
   Python 2 to 3 is going as of the end of 2015.
+
+* [Why Python 3?](http://whypy3.com/) randomly outputs valid reasons to
+  use Python 3 over 2.x.
 
 * [Rules for Radicals: Changing the Culture of Python at Facebook](https://www.youtube.com/watch?v=nRtp9NgtXiA)
   is a fascinating look at how Facebook moved from primarily Python 2
@@ -144,3 +171,5 @@ gone through the process and have advice for making it less painful.
   is a great slideshow with code snippets that show useful new features
   of Python 3 that are not available in 2.x such as keyword-only
   arguments, chained exceptions and the `yield from` keyword.
+
+
