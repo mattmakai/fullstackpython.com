@@ -46,3 +46,10 @@ growth of a diverse and international community of Python programmers."
   [IRC channels](https://freenode.net/) such as #python, #python-dev
   and #distutils.
 
+* The Python community has a concept known as "Benevolent Dictator For Life" 
+  that may appear odd to newcomers. Essentially, Guido Van Rossum created
+  the language and still has the ability to decide community arguments one
+  way or the other. This post on the 
+  [origin of BDFL](http://www.artima.com/weblogs/viewpost.jsp?thread=235725)
+  has more context about Guido's role.
+

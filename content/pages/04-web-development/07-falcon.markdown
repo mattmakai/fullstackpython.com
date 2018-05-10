@@ -23,13 +23,6 @@ without requiring external code library dependencies.
 * [Building Scalable RESTful APIs with Falcon and PyPy](https://impythonist.wordpress.com/2015/09/12/build-massively-scalable-restful-api-with-falcon-and-pypy/)
   shows a to-do list example with Falcon running on PyPy.
 
-* [Getting started with the Falcon Framework (using Python)](http://www.giantflyingsaucer.com/blog/?p=4342)
-  provides a small example application you can build.
-
-* [Building a rate limiter in Python 3 with Falcon and run it via Docker](http://www.giantflyingsaucer.com/blog/?p=5910)
-  is an introductory tutorial for creating and running a simple but useful 
-  Falcon app and executing it within a [Docker](/docker.html) container.
-
 * The 
   [official Falcon tutorial](http://falcon.readthedocs.io/en/stable/user/tutorial.html)
   has a meaty guide for building and deploying your first Falcon web 

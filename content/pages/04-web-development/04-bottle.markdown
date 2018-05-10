@@ -86,9 +86,6 @@ steps to more easily get your web application up and running.
   is a similar beginner's tutorial for handling phone calls with a Bottle
   app using [Twilio](/twilio.html).
 
-* This tutorial provides a walkthrough for
-[getting started with Bottle](http://www.giantflyingsaucer.com/blog/?p=3598).
-
 * [Developing With Bottle](https://realpython.com/blog/python/developing-with-bottle-part-1/) details how to create a basic application with Bottle.
 
 * The [official Bottle tutorial](http://bottlepy.org/docs/dev/tutorial.html)
@@ -114,6 +111,12 @@ steps to more easily get your web application up and running.
 * [Jinja2 Templates and Bottle](http://reliablybroken.com/b/2013/12/jinja2-templates-and-bottle/)
   shows how to use Jinja instead of the built-in templating engine for
   Bottle page rendering.
+
+* [Python patterns](https://taoofmac.com/space/blog/2013/08/11/2300)
+  contains a setup that combines Bottle, [Celery](/celery.html) and
+  [Peewee](/peewee.html) as the developer's choice for backend 
+  [web development](/web-development.html). The developer also uses
+  [Vim](/vim.html) as the primary editor for working with Bottle.
 
 
 ## Open source Bottle example projects
