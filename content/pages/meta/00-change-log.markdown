@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### May
+* Added [newsletter on PyCon US 2018](/full-stack-python-pycon-us-2018.html).
 * New [podcast](/best-python-podcasts.html) resources.
 * Merge 
   [pull request #164](https://github.com/mattmakai/fullstackpython.com/pull/164)

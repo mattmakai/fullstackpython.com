@@ -141,3 +141,8 @@ developers learn PostgreSQL if they do not already know MySQL.
   metrics you should be collecting and monitoring in your production
   database along with the purpose for why those metrics are important.
 
+* [gh-ost](https://github.com/github/gh-ost) is a schema migration
+  tool built by GitHub and open sourced to the development community.
+  The advantages of gh-ost are sustainable workloads on the master node
+  to allow it to keep serving inbound query requests and the ability
+  to pause the migration.
