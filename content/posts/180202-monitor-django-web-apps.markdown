@@ -3,7 +3,7 @@ slug: monitor-django-projects-web-apps-rollbar
 meta: Add a monitoring service to Django-based web applications using a hosted service such as Rollbar.
 category: post
 date: 2018-02-02
-modified: 2018-04-16
+modified: 2018-05-11
 newsletter: False
 headerimage: /img/180202-monitor-django/header.jpg
 headeralt: Django and Rollbar logos, copyright their respective owners.
@@ -27,7 +27,7 @@ You can also check out a list of other hosted and open source tools on the
 
 ## Our Tools 
 [Python 3](/python-2-or-3.html) is strongly recommended for this tutorial
-because Python 2 will no longer be supported starting January 1, 2019.
+because Python 2 will no longer be supported starting January 1, 2020.
 [Python 3.6.4](https://www.python.org/downloads/release/python-364/) to 
 was used to build this tutorial. We will also use the following 
 [application dependencies](/application-dependencies.html) to build
