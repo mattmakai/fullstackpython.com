@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### May
+* Updated with a slew of new [serverless](/serverless.html), 
+  [static site generators](/static-site-generator.html) and 
+  [Bokeh](/bokeh.html) resources.
 * Major update to [Python 2 or 3](/python-2-or-3.html) page with better 
   explanations that match community opinions in 2018 (originally page was
   written in 2016 and descriptions were not heavily modified enough since 
