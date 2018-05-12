@@ -45,6 +45,16 @@ resources provide perspective on offline events like
   These summaries can be a great way to get a slice of the experience
   before purchasing a ticket and booking a trip.
 
+* One reason among many that Python conferences are spectacular experiences
+  is the transparency about the how and why decisions are made for 
+  event attendees. For example, PyCon is 
+  [transparent about the locations it selects for the conference](https://pycon.blogspot.ca/2018/04/how-why-cities-and-dates-are-selected.html)
+  as well as why the community has a long-standing tradition of having
+  [speakers pay their own way](http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays)
+  just as any conference attendee would. From the outside it may appear
+  these decisions are minor but they instill confidence in the stewardship
+  of the Python ecosystem by current community leadership.
+
 
 ### Python community resources
 * The [community page on Python.org](https://www.python.org/community/)
