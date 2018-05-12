@@ -91,6 +91,10 @@ repositories and sites with practice problems and solutions:
   is an awesome [Jupyter Notebook](/jupyter-notebook.html) to learn and
   test your data structures and algorithms knowledge in Python.
 
+* [Kindling project](https://nedbatchelder.com/text/kindling.html)
+  provides a wonderful list of resources that challenge beginners with
+  programming problems that beginners can solve to grow their skills.
+
 * [Python Programming Exercises](http://joaoventura.net/static/files/python_exercises_book.pdf)
   is a free short PDF book with exercises across many standard Python 
   language features such as dictionaries, classes and functions.

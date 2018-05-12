@@ -107,6 +107,12 @@ out how to structure and operate serverless applications.
   changed as new options such as [PaaS](/platform-as-a-service.html) 
   have become widespread.
 
+* [Lessons Learned — A Year Of Going “Fully Serverless” In Production](https://hackernoon.com/lessons-learned-a-year-of-going-fully-serverless-in-production-3d7e0d72213f)
+  is a retrospective from a small development team that combines a static 
+  site with serverless backend code to easily scale their site without an 
+  operations staff. They discuss the good and the bad of working in this
+  fashion while generally coming away with a positive experience.
+
 * [What's this serverless thing, anyway?](https://read.acloud.guru/whats-this-serverless-thing-anyway-b101cb72c7e6)
 
 * [Serverless architectures - let's ditch the servers?](https://codeahoy.com/2016/06/25/serverless-architectures-lets-ditch-the-servers/)
@@ -126,6 +132,12 @@ out how to structure and operate serverless applications.
   and disadvantages of serverless may be. However, it's early days for
   serverless so these strengths and weaknesses may change as the
   architectures and good practices evolve.
+
+* [Building A Serverless Contact Form For Your Static Site](https://www.smashingmagazine.com/2018/05/building-serverless-contact-form-static-website/)
+  uses [AWS Lambda](/aws-lambda.html), some 
+  [HTML](/hypertext-markup-language-html.html) and 
+  [JavaScript](/javascript.html) to add an input form to a static
+  [website created by a static site generator](/static-site-generator.html).
 
 * [Cloud first, serverless second](https://hackernoon.com/cloud-first-serverless-second-1c086f282326)
 

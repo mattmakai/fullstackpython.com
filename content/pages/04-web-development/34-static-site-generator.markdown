@@ -185,6 +185,11 @@ provide a unique angle on how to use a static site generator.
   data source backend. This approach is an alternative to using a 
   purpose-built static website generator such as Pelican, Lektor or MkDocs.
 
+* [Building A Serverless Contact Form For Your Static Site](https://www.smashingmagazine.com/2018/05/building-serverless-contact-form-static-website/)
+  shows how to use [HTML](/hypertext-markup-language-html.html) and 
+  [JavaScript](/javascript.html) deployed to [AWS Lambda](/aws-lambda.html)
+  to collect input with a form on a static site.
+
 
 ### Static site deployment resources
 Deploying a static site is far less complicated than a 
@@ -208,8 +213,8 @@ deployment.
 
 * Google Cloud provides a tutorial on how to use them to 
   [host your static site](https://cloud.google.com/storage/docs/hosting-static-website).
-  Note that you cannot currently use HTTPS on Google Storage servers, which is a huge
-  downside.
+  Note that you cannot currently use HTTPS on Google Storage servers, which is a 
+  major downside.
 
 * [Deploying a Static Blog with Continuous Integration](https://www.loxodrome.io/post/hugo-on-ci/)
   uses a Hugo (a Golang-based static site generator) generated site

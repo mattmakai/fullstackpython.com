@@ -57,10 +57,18 @@ basic syntax will change as the library's API is not yet stable.
   is a tutorial that combines the [Bottle](/bottle.html) 
   [web framework](/web-frameworks.html)
 
+* [Building Bullet Graphs and Waterfall Charts with Bokeh](http://pbpython.com/bokeh-bullet-waterfall.html)
+  covers buildings two types of useful visualizations into your applications
+  using Bokeh.
+
 * [Integrating Pandas, Django REST Framework and Bokeh](http://www.machinalis.com/blog/pandas-django-rest-framework-bokeh/)
   has a full example of integrating a 
   [web API](/application-programming-interfaces.html) with a Bokeh
   front end visual.
+
+* [Interactive Visualization of Australian Wine Ratings](http://pbpython.com/wine_visualization.html)
+  builds a non-trivial visualization with a nice sample set of data based
+  on wine ratings.
 
 * [Visualization with Bokeh](http://www.blog.pythonlibrary.org/2016/07/27/python-visualization-with-bokeh/)
 
