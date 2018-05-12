@@ -25,11 +25,16 @@ the Python programming language, and to support and facilitate the
 growth of a diverse and international community of Python programmers."
 
 
+### Conferences and events
+The Python online community has fantastic resources for learning but talking
+to your fellow developers in-person at conferences, meetups and hackathons
+is a crucial way to discover new tools and coding approaches. The following
+resources provide perspective on offline events like 
+[PyCon US](https://us.pycon.org/).
 
-## Python community resources
-* The [community page on Python.org](https://www.python.org/community/)
-  provides a starter page with links to community-run newsletters, resources
-  and conferences.
+* [How to have a great first PyCon](http://treyhunner.com/2018/04/how-to-make-the-most-of-your-first-pycon/)
+  gives a slew of advice on how to get the most out of your busy,
+  and often overwhelming, PyCon experience.
 
 * Clinton Dreisbach wrote two fantastic retrospectives for 
   [PyCon US 2015](http://www.dreisbach.us/blog/pycon-2015/) (his first PyCon)
@@ -39,6 +44,12 @@ growth of a diverse and international community of Python programmers."
   [community-led conferences such as EuroPython](http://www.artima.com/weblogs/viewpost.jsp?thread=261930).
   These summaries can be a great way to get a slice of the experience
   before purchasing a ticket and booking a trip.
+
+
+### Python community resources
+* The [community page on Python.org](https://www.python.org/community/)
+  provides a starter page with links to community-run newsletters, resources
+  and conferences.
 
 * There are many large active online communities on 
   [Reddit](https://www.reddit.com/r/python), 
