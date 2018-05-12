@@ -48,20 +48,22 @@ major reason why you must use them in lieu of Linux.
 Ubuntu is a Linux distribution packaged by the 
 [Canonical Ltd](http://www.canonical.com/) company. Ubuntu uses the
 Debian distribution as a base for packages, including the 
-[aptitude package manager](http://wiki.debian.org/Apt). For desktop versions 
-of Ubuntu, GNOME (until the 11.04 release) or Unity (11.10 through current)
-is bundled with the distribution to provide a user interface.
+[aptitude package manager](http://wiki.debian.org/Apt). For desktop versions
+of Ubuntu, GNOME (until the 11.04 release, then again in 18.04) or Unity 
+(11.10 until 17.10) is bundled with the distribution to provide a user 
+interface.
 
 Ubuntu [Long Term Support](https://wiki.ubuntu.com/LTS) (LTS) releases
 are the recommended versions to use for deployments. LTS versions receive
 five years of post-release updates from Canonical. Every two years, Canonical 
 creates a new LTS release, which allows for an easy upgrade path as well 
 as flexibility in skipping every other LTS release if necessary. As of
-April 2016, 
-[16.04 Xenial Xerus](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes)
+May 2018, 
+[18.04 Bionic Beaver](http://releases.ubuntu.com/18.04/)
 is the latest Ubuntu LTS release. Xenial Xerus includes 
-[Python 3.5](/python-2-or-3.html) as its default Python version, which is
-a major update compared with 2.7 in Ubuntu 14.04 LTS.
+[Python 3.6](/python-2-or-3.html) as its default Python version, which is
+a major update compared with 2.7 in Ubuntu 14.04 LTS and a solid
+improvement over Python 3.5 included in Ubuntu 16.04 LTS.
 
 
 #### Ubuntu Python Packages
