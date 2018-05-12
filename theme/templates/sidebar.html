@@ -1,5 +1,8 @@
 {% if page %}
  {% include "sponsor.html" %}
+ {% if not page.slug == "about-author" %}
+  {% include "desktop-toc.html" %}
+ {% endif %}
  <div class="pn">
   <div class="pnh"><h3>Full Stack Python</h3></div>
   <div class="pnb">
@@ -12,9 +15,6 @@
    <a href="https://www.facebook.com/fullstackpython">Facebook</a>.
   </div>
  </div>
- {% if not page.slug == "about-author" %}
-  {% include "desktop-toc.html" %}
- {% endif %}
 {% endif %}
 {% if not page %}
  <div class="pn">
