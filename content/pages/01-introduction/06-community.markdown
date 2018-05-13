@@ -55,8 +55,18 @@ resources provide perspective on offline events like
   these decisions are minor but they instill confidence in the stewardship
   of the Python ecosystem by current community leadership.
 
+* [Don't Submit A Talk About Your Great Hack: Jesse's Seven Tips To Get Into PyCon](https://emptysqua.re/blog/seven-tips-for-pycon/)
+  provides wonderful advice on how to approach the Call for Proposals (CFP)
+  when you want to speak at a Python conference. The notes on how to balance
+  specifics with vagarity in your title is particularly useful.
+
 
 ### Python community resources
+The Python community exists both online and offline. The following resources
+will help you get connected with other Python developers in both forms. They
+also provide context on how some of the major decisions are made within
+the community.
+
 * The [community page on Python.org](https://www.python.org/community/)
   provides a starter page with links to community-run newsletters, resources
   and conferences.
@@ -73,4 +83,5 @@ resources provide perspective on offline events like
   way or the other. This post on the 
   [origin of BDFL](http://www.artima.com/weblogs/viewpost.jsp?thread=235725)
   has more context about Guido's role.
+
 
