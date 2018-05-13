@@ -84,4 +84,12 @@ the community.
   [origin of BDFL](http://www.artima.com/weblogs/viewpost.jsp?thread=235725)
   has more context about Guido's role.
 
+* [The history behind the decision to move Python to GitHub](https://snarky.ca/the-history-behind-the-decision-to-move-python-to-github/)
+  is a transparent and personal story by one of the Python Core Team
+  members, [Brett Cannon](https://github.com/brettcannon), on why the
+  main Python projects including the language itself are now 
+  [hosted for development](https://github.com/python/)
+  on [GitHub](/github.html). The post is a wonderful read about the history
+  of where Python development was centralized and how it moved from 
+  SourceForge to svg.python.org and then over to GitHub.
 
