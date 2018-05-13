@@ -55,6 +55,11 @@ resources provide perspective on offline events like
   these decisions are minor but they instill confidence in the stewardship
   of the Python ecosystem by current community leadership.
 
+* [How I Learned to Stop Worrying and Love PyCon](http://www.jesshamrick.com/2014/04/18/how-i-learned-to-stop-worrying-and-love-pycon/)
+  goes over one first-time PyCon attendee's nervousness about attending
+  the conference and how she got over it while having a great time in
+  the process.
+
 * [Don't Submit A Talk About Your Great Hack: Jesse's Seven Tips To Get Into PyCon](https://emptysqua.re/blog/seven-tips-for-pycon/)
   provides wonderful advice on how to approach the Call for Proposals (CFP)
   when you want to speak at a Python conference. The notes on how to balance
