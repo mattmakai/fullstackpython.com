@@ -51,6 +51,14 @@ talks from the past several years.
 * [GoDjango](https://godjango.com/) screencasts and tutorials are free short
   videos for learning how to build Django applications.
 
+* PyCon US videos from 
+  [2018](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ/videos),
+  [2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos),
+  [2016](https://www.youtube.com/channel/UCwTD5zJbsQGJN75MwbykYNw/videos),
+  [2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ/videos)
+  and [2014](https://www.youtube.com/user/PyCon2014/videos)
+  are all available online for free.
+
 * The videos and slides from 
   [Django: Under the Hood 2015](https://www.youtube.com/channel/UC9T1dhIlL_8Va9DxvKRowBw)
   are from Django core committers and provide insight into the ORM, 
