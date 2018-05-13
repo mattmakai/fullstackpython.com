@@ -113,7 +113,9 @@ There are numerous Python template engine implementations that range from
 weekend hacks to actively developed mature libraries. These template
 engines are listed alphabetically:
 
-* [Chameleon](https://chameleon.readthedocs.io/en/latest/)
+* [Chameleon](https://chameleon.readthedocs.io/en/latest/) is an
+  HTML and XML template engine that supports both 
+  [Python 2 and 3](/python-2-or-3.html).
 
 * [Cheetah](https://pythonhosted.org/Cheetah/)
 
@@ -186,3 +188,6 @@ when that's necessary for your projects.
   uses Jinja as an implementation example to explain the tasks that
   template engines can be used to perform.
 
+* [Approach: Building a toy template engine in Python](http://alexmic.net/building-a-template-engine/)
+  walks through how to create your own simple template engine in Python 
+  to understand the basics of how most template engines work.
