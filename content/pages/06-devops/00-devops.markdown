@@ -66,3 +66,8 @@ automate the delivery of code from development to production.
   a decent start for figuring out why IT organizations consider DevOps the
   hot new topic after adopting an Agile development methodology.
 
+* [SRE vs. DevOps: competing standards or close friends?](https://cloudplatform.googleblog.com/2018/05/SRE-vs-DevOps-competing-standards-or-close-friends.html)
+  covers Google's take on how Site Reliability Engineering (SRE) fits
+  with the DevOps world. Roughly speaking, SRE is more closely aligned with
+  metrics and how to operate infrastructure and applications, rather than
+  the broader principles embodied by the DevOps philosophy.
