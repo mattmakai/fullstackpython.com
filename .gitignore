@@ -18,10 +18,6 @@ develop-eggs
 # Installer logs
 pip-log.txt
 
-# URL logs
-urlin.txt
-urlout.txt
-
 # Unit test / coverage reports
 .coverage
 .tox
