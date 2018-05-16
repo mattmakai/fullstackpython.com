@@ -98,3 +98,13 @@ the community.
   of where Python development was centralized and how it moved from 
   SourceForge to svg.python.org and then over to GitHub.
 
+* [Python community trends in 2017/2018](https://opensource.com/article/18/5/numbers-python-community-trends)
+  by [Ewa Jodlowska](https://github.com/ejodlowska), who is heavily involved 
+  in PyCon and the overall Python ecosystem, provides a ton of data and 
+  metrics on areas of community interest such as Python developers' 
+  locations, [Python 3 adoption](/python-2-or-3.html) and years of 
+  experience as professional developers.
+
+* There are some amazing communities within the overall Python ecosystem,
+  such as [PyLadies](http://www.pyladies.com/), which encourages women
+  to be strong, proactive community members.
