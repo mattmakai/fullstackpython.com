@@ -121,6 +121,10 @@ to get started with these tutorials.
   are two detailed Digital Ocean guides for getting up and running with Vim,
   regardless of whether you're using it locally or on a cloud server.
 
+* [PacVim: a commandline game to learn Vim commands](https://www.ostechnix.com/pacvim-a-cli-game-to-learn-vim-commands/)
+  takes the PacMan theme and teaches you how to use Vim by forcing you
+  to move around and use Vim commands while gaming.
+
 * [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
   game that helps you learn Vim commands by playing through the adventure.
 
