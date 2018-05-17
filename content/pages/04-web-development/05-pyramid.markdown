@@ -28,10 +28,23 @@ Model-View-Controller (MVC) architectural pattern.
   [Google App Engine](/platform-as-a-service.html).
 
 
-## Pyramid resources
+### Pyramid resources
+Pyramid has fantastic official project documentation on its site. Other
+resources are harder to come by compared to other established
+[web frameworks](/web-frameworks.html) such as [Django](/django.html) and
+[Flask](/flask.html), but there are enough tutorials out there for you to
+learn Pyramid if you choose to build your web applications with it.
+
 * [Try Pyramid](https://trypyramid.com/) is the official marketing website for 
   Pyramid, with resources for extending your Pyramid apps. It also provides 
   some sample "hello world!" code.
+
+* [An introduction to the Pyramid web framework for Python](https://opensource.com/article/18/5/pyramid-framework)
+  provides a detailed configuration and more than trivial code to
+  build a "to do" application. This post is one in a four part series
+  that compares Pyramid to [Flask](/flask.html), [Django](/django.html) 
+  and Tornado so there is some commentary on how this framework compares
+  to the others.
 
 * The [first Pyramid app](http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/firstapp.html)
   is a good place to start getting your hands dirty with an example project.
