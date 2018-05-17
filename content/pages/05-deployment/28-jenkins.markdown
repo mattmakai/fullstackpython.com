@@ -71,3 +71,9 @@ used to automate building, [testing](/testing.html) and
   Jenkins so you can automate the setup of this part of your deployment
   infrastructure. The post goes into the motivations behind creating another
   tool for code configuration when other similar libraries already exist.
+
+* [Automated servers and deployments with Ansible & Jenkins](https://chromatichq.com/blog/automated-servers-and-deployments-ansible-jenkins)
+  covers using [Ansible](/ansible.html) for automating 
+  [deployments](/deployments.html) and handling the coordination via
+  Jenkins builds.
+
