@@ -95,6 +95,12 @@ repositories and sites with practice problems and solutions:
   provides a wonderful list of resources that challenge beginners with
   programming problems that beginners can solve to grow their skills.
 
+* [Build your own "x"](https://github.com/danistefanovic/build-your-own-x)
+  does not contain practice problems but instead provides tutorials for
+  how to build your own programming languages, blockchain, 
+  [bots](/bots.html), [databases](/databases.html), 
+  [frameworks](/web-frameworks.html) and more awesome projects.
+
 * [Python Programming Exercises](http://joaoventura.net/static/files/python_exercises_book.pdf)
   is a free short PDF book with exercises across many standard Python 
   language features such as dictionaries, classes and functions.
