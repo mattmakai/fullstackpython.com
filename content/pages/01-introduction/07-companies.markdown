@@ -26,3 +26,22 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
   at scale. They've been very vocal about successfully making the migration 
   from the [Python 2 world into Python 3](/python-2-or-3.html).
 
+
+### Government agencies
+* The [Consumer Financial Protection Bureau (CFPB)](https://github.com/cfpb) 
+  not only uses Python for running most of their applications but also open 
+  sources many of those Python projects for other agencies (or any 
+  organization) to use. For example, [collab](https://github.com/cfpb/collab)
+  is a [Django](/django.html) project that provides an 
+  [enterprise application](/enterprise-python.html) for storing and looking 
+  up information on employees and contractors.
+
+* [NASA uses Python extensively](https://www.python.org/about/success/usa/)
+  and [open sources much of their software](https://code.nasa.gov/).
+
+* The United States 
+  [Central Intelligence Agency (CIA)](https://www.reddit.com/r/Python/comments/5y2boe/cia_uses_python_a_lot/)
+  appears to be a huge fan of using Python in its state sponsored hacking 
+  tools. They even published their own Python code conventions 
+  documentation due to how many developers at the agency are using the
+  language.
