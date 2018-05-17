@@ -15,7 +15,7 @@ implementation of the [shell concept](/shells.html) and is often used
 during Python software development as part of a programmer's 
 [development environment](/development-environments.html).
 
-<a href="https://www.gnu.org/software/bash/" style="border:none"><img src="/img/logos/bash-wide.jpg" width="100%" alt="Bourne-again shell (Bash) logo." class="technical-diagram"></a>
+<a href="https://www.gnu.org/software/bash/" style="border:none"><img src="/img/logos/bash-wide.jpg" width="100%" alt="Bourne-again shell (Bash) logo."></a>
 
 <div class="well see-also">Bash is an implementation of the <a href="/shells.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
@@ -42,3 +42,12 @@ during Python software development as part of a programmer's
   that covers new topics such as on-the-fly command re-execution using the 
   carrot character.
 
+* Google's [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+  covers how to write consistent, maintainable shell scripts, which is 
+  particularly important if you have ever tried to debug a hacky shell 
+  script that was never meant to be used by anyone other than the original
+  author.
+
+* [Safe ways to do things in bash](https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md)
+  shows you how to not shoot yourself in the foot by using safe coding
+  practices with your shell scripts.
