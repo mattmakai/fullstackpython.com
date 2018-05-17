@@ -155,6 +155,12 @@ topics.
   compilers with Python 3, which is a good undertaking if you're looking
   to learn both more about the Python language and how compiles work.
 
+* [free-for-dev](https://github.com/ripienaar/free-for-dev) is not specific
+  to Python but it's a fantastic list of free tier resources for experienced
+  developers. The list is especially handy if you want to try building a
+  Python project and need new third party services to kick around while
+  experimenting.
+
 
 ## Videos, screencasts and presentations
 Videos from conferences and meetups along with screencasts are listed on

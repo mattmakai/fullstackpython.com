@@ -26,6 +26,10 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
   at scale. They've been very vocal about successfully making the migration 
   from the [Python 2 world into Python 3](/python-2-or-3.html).
 
+* *Increment* covers usage of Python (and other programming languages) at
+  Lyft, Digital Ocean, Sauce Labs, Slack and Fastly 
+  [in this awesome overview post titled "What its like to be a developer at..."](https://increment.com/development/what-its-like-to-be-a-developer-at/).
+
 
 ### Government agencies
 * The [Consumer Financial Protection Bureau (CFPB)](https://github.com/cfpb) 
