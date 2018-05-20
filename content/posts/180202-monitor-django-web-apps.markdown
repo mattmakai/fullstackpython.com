@@ -3,7 +3,7 @@ slug: monitor-django-projects-web-apps-rollbar
 meta: Add a monitoring service to Django-based web applications using a hosted service such as Rollbar.
 category: post
 date: 2018-02-02
-modified: 2018-05-11
+modified: 2018-05-20
 newsletter: False
 headerimage: /img/180202-monitor-django/header.jpg
 headeralt: Django and Rollbar logos, copyright their respective owners.
@@ -180,7 +180,7 @@ Save and close `settings.py`.
 
 **Reminder**: make sure you change the default `DEBUG` and `SECRET_KEY` 
 values in `settings.py` before you deploy any code to production. Secure 
-your app properly with the information from 
+your app properly with the information from the
 [Django production deployment checklist](https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/) 
 so that you do not add your project to the list of hacked applications
 on the web.

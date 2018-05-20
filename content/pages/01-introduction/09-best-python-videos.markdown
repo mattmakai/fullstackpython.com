@@ -4,7 +4,7 @@ slug: best-python-videos
 sortorder: 0109
 toc: False
 sidebartitle: Best Python Videos
-meta: Watch the best videos to learn Python from the language masters of the community on Full Stack Python's Best Python Videos page.
+meta: Watch the best videos to learn Python programming from developer experts in the community.
 
 
 # Best Python Videos
@@ -17,10 +17,22 @@ This page links to the best free videos as well as other video lists so you
 can do your own searching through the huge backlog of conference and meetup 
 talks from the past several years. 
 
-<div class="well see-also">Be sure to read the <a href="/best-python-resources.html">best Python resources</a> for links to books and articles as well as <a href="/web-frameworks.html">web frameworks</a> to learn more about web development.</div>
+<div class="well see-also">Check out the <a href="/best-python-resources.html">best Python resources</a> for links to great books and articles as well as <a href="/best-python-podcasts.html">must-listen Python podcasts</a> for audio-only shows.</div>
 
 
-## Web development with Django, Flask and other frameworks
+### Web development videos
+The following [web development](/web-development.html) videos cover the broad
+topics of using [web frameworks](/web-frameworks.html) like 
+[Django](/django.html), [Flask](/flask.html), [Pyramid](/pyramid.html) and 
+[other frameworks](/other-web-frameworks.html), as well as 
+[web design](/web-design.html) and [deployments](/deployment.html).
+
+* My [EuroPython 2014 "Full Stack Python"](https://www.youtube.com/watch?v=s6NaOKD40rY)
+  talk goes over each topic from this guide and provides context for how the
+  pieces fit together. 
+  The [talk slides](http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html) are also available. Even though the talk is from 2014, almost all
+  of the general web development principles remain consistent in 2018.
+
 * [Kate Heddleston](https://twitter.com/heddle317) gave a talk at PyCon 2014 
   called 
   "[Full-stack Python Web Applications](http://pyvideo.org/video/2591/so-you-want-to-be-a-full-stack-developer-how-to)"
@@ -28,12 +40,12 @@ talks from the past several years.
   stack fit together. There are also [slides available from the talk](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)
   with all the diagrams.
 
-* My [EuroPython 2014 "Full Stack Python"](https://www.youtube.com/watch?v=s6NaOKD40rY)
-  talk goes over each topic from this guide and provides context for how the
-  pieces fit together. 
-  The [talk slides](http://www.mattmakai.com/presentations/2014-full-stack-python-berlin.html) are also available.
-
-* All of [EuroPython 2016's talks are available on a YouTube playlist](https://www.youtube.com/playlist?list=PL8uoeex94UhE3FDvjacSlHFffoNEoPzzm).
+* [Design 101 for Developers](https://academy.realm.io/posts/christopher-downer-design-101-for-developers/)
+  covers a difficult topic for many analytic-minded developers to learn:
+  design. The talk is not specific to [web development](/web-development.html) 
+  or [web design](/web-design.html) but instead explains general design
+  principles such as spacing, consistency and making interactions obvious
+  for a user.
 
 * Kate Heddleston and I gave a talk at DjangoCon 2014 called
   [Choose Your Own Django Deployment Adventure](https://www.youtube.com/watch?v=QrFEKghISEI)
@@ -48,23 +60,6 @@ talks from the past several years.
   covers Django 1.7's new migrations from the main programmer 
   of South and now Django's built-in migrations, Andrew Godwin.
 
-* [GoDjango](https://godjango.com/) screencasts and tutorials are free short
-  videos for learning how to build Django applications.
-
-* PyCon US videos from 
-  [2018](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ/videos),
-  [2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos),
-  [2016](https://www.youtube.com/channel/UCwTD5zJbsQGJN75MwbykYNw/videos),
-  [2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ/videos)
-  and [2014](https://www.youtube.com/user/PyCon2014/videos)
-  are all available online for free.
-
-* The videos and slides from 
-  [Django: Under the Hood 2015](https://www.youtube.com/channel/UC9T1dhIlL_8Va9DxvKRowBw)
-  are from Django core committers and provide insight into the ORM, 
-  internationalization, templates and other important 
-  [web framework](/web-frameworks.html) topics.
-
 * DjangoCon US videos from 
   [2017](https://www.youtube.com/playlist?list=PL2NFhrDSOxgXmA215-fo02djziShwLa6T),
   [2016](https://www.youtube.com/playlist?list=PL2NFhrDSOxgX-A4qpaf3rRaEnEe7166Ac),
@@ -78,8 +73,18 @@ talks from the past several years.
   [2016](http://pyvideo.org/events/djangocon-europe-2016.html),
   and [2015](https://vimeo.com/channels/952478/videos).
 
+* [GoDjango](https://godjango.com/) screencasts and tutorials are free short
+  videos for learning how to build Django applications.
 
-## Core Python language videos
+* The videos and slides from 
+  [Django: Under the Hood 2015](https://www.youtube.com/channel/UC9T1dhIlL_8Va9DxvKRowBw)
+  are from Django core committers and provide insight into the 
+  [ORM](/django-orm.html), internationalization, 
+  [templates](/django-templates.html) and other important 
+  [web framework](/web-frameworks.html) topics.
+
+
+### Core Python language videos
 * Jessica McKellar's 
   [Building and breaking a Python sandbox](https://www.youtube.com/watch?v=sL_syMmRkoU)
   is a fascinating walk through the lower layers of the Python interpreter.
@@ -103,7 +108,13 @@ talks from the past several years.
   lecture videos and exercises for learning Python.
 
 
-## Video compilations
+### Video compilations
+All major Python conferences, as well as most regional ones, release 
+technical talk videos for free. These sites either aggregate the thousands
+of videos that have been released or are lists from specific conferences
+like [PyCon US](https://us.pycon.org/) and 
+[EuroPython](https://europython.eu/).
+
 * [PyVideo](http://pyvideo.org/) organizes and indexes thousands of Python
   videos from both major conferences and meetups.
 
@@ -111,5 +122,22 @@ talks from the past several years.
   is a repository I put together that features software developer speakers
   talking about programming language agnostic topics. The list is intended
   to emphasize professional software developers who also have the ability to
-  engage an audience of peers with an exciting talk.
+  engage an audience of peers with an exciting talk. These talks are relevant
+  to all software developers even though not every talk is specific to the
+  Python language.
+
+* PyCon US videos from 
+  [2018](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ/videos),
+  [2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos),
+  [2016](https://www.youtube.com/channel/UCwTD5zJbsQGJN75MwbykYNw/videos),
+  [2015](https://www.youtube.com/channel/UCgxzjK6GuOHVKR_08TT4hJQ/videos)
+  and [2014](https://www.youtube.com/user/PyCon2014/videos)
+  are all available online for free.
+
+* All of the talk videos are available on YouTube for 
+  [EuroPython 2017](https://www.youtube.com/watch?v=OCHrzW-R3QI&list=PL8uoeex94UhG9QAoRICebFpeKK2M0Herh),
+  [EuroPython 2016](https://www.youtube.com/playlist?list=PL8uoeex94UhE3FDvjacSlHFffoNEoPzzm),
+  [EuroPython 2015](https://www.youtube.com/watch?v=bp3mCgrdMxU&list=PL8uoeex94UhGGUH0mFb-StlZ1WYGWiJfP),
+  [EuroPython 2014](https://www.youtube.com/watch?v=8xHd3JkhWd4&list=PL8uoeex94UhEomMao7wuOrOGuj3jxJYlz)
+  and [earlier years](https://www.youtube.com/user/PythonItalia/playlists).
 

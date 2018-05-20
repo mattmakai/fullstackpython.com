@@ -68,6 +68,19 @@ podcast presentation.
   incredibly has a podcast every day with a different developer on a
   huge range of relevant development subjects.
 
+* [DataFramed](https://www.datacamp.com/community/podcast) is a data
+  science podcast that often covers Python libraries and other areas of
+  interest to people using Python to analyze [data](/data.html).
+
+* [All things Git](https://www.allthingsgit.com/) talks to developers
+  using, building and working with Git with new episodes every two weeks.
+
+* [CodeNewbie](https://www.codenewbie.org/podcast) interviews developers
+  who are early in their software development journey to find out their
+  stories of why they are programming and what they are working on. There
+  are also interviews with experienced developers building well-known
+  projects.
+
 * [Command_line Heroes](https://www.redhat.com/en/command-line-heroes)
   covers [operating system](/operating-systems.html)-level topics as
   well as [DevOps](/devops.html).
