@@ -23,6 +23,19 @@ are members of the
 is a 501(c)(3) non-profit with the mission to "promote, protect, and advance 
 the Python programming language, and to support and facilitate the 
 growth of a diverse and international community of Python programmers."
+Anyone that uses Python and has an active interest in the Python community 
+can join the PSF as a [member](https://www.python.org/psf/membership/).
+There are five classes of PSF members:
+
+1. Basic Members
+1. Supporting Members
+1. Sponsor Members
+1. Managing Members
+1. Contributing Members and Fellows
+
+Starting out by joining as a basic PSF member is a great way to show your
+support and begin your own journey in working with the larger open source
+ecosystem.
 
 
 ### Conferences and events
