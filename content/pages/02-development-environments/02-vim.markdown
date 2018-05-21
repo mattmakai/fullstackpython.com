@@ -125,6 +125,14 @@ to get started with these tutorials.
   takes the PacMan theme and teaches you how to use Vim by forcing you
   to move around and use Vim commands while gaming.
 
+* [Ten years of Vim](https://matthias-endler.de/2018/ten-years-of-Vim/)
+  provides an insightful retrospective on one experienced developer's
+  journey with using Vim as a primary text editor and development
+  environment. I found the part about going overboard with plugins before
+  switching back to a simpler configuration fascinating because it is
+  the same path I've found myself taking as I approach my own ten year
+  mark with Vim.
+
 * [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
   game that helps you learn Vim commands by playing through the adventure.
 
@@ -209,17 +217,6 @@ ready to take that step.
   [insightful post on a Vim setup for Markdown](http://www.swamphogg.com/2015/vim-setup/).
 
 
-## Vim Plugin Managers
-* [Vundle](https://github.com/gmarik/Vundle.vim) comes highly recommended
-  as a plugin manager for Vim.
-
-* [Pathogen](https://github.com/tpope/vim-pathogen) is a widely used
-  plugin manager.
-
-* [Vim-plug](https://github.com/junegunn/vim-plug) bills itself as a
-  minimalistic Vim plugin manager.
-
-
 ## Vim Plugin resources
 * [5 Essential VIM Plugins That Greatly Increase my Productivity](http://joelhooks.com/blog/2013/04/23/5-essential-vim-plugins/)
   covers the author's experience with the Vundle, NERDTree, ctrlp, Syntastic
@@ -235,4 +232,19 @@ ready to take that step.
 
 * [VimAwesome](https://vimawesome.com/) is a directory of Vim plugins sourced 
   from Vim.org, GitHub and user submissions.
+
+
+## Vim Plugin Managers
+If you use many Vim plugins together it is really handy to have a plugin
+managers to sort out all of the dependencies. The following plugin managers
+are the most commonly-used ones in the Vim ecosystem.
+
+* [Vundle](https://github.com/gmarik/Vundle.vim) comes highly recommended
+  as a plugin manager for Vim.
+
+* [Pathogen](https://github.com/tpope/vim-pathogen) is a widely used
+  plugin manager.
+
+* [Vim-plug](https://github.com/junegunn/vim-plug) bills itself as a
+  minimalistic Vim plugin manager.
 
