@@ -47,6 +47,11 @@ topics of using [web frameworks](/web-frameworks.html) like
   principles such as spacing, consistency and making interactions obvious
   for a user.
 
+* [How Netflix does failovers in 7 minutes flat](https://www.youtube.com/watch?v=iQI56-up3Yk)
+  by Amjith Ramanujam at PyCon US was an excellent talk on handling
+  network outages and predicting the reliability of failover routes.
+  This talk is worth watching even for the data visualizations alone!
+
 * Kate Heddleston and I gave a talk at DjangoCon 2014 called
   [Choose Your Own Django Deployment Adventure](https://www.youtube.com/watch?v=QrFEKghISEI)
   which walked through many of the scenarios you'd face when deploying your
