@@ -40,6 +40,18 @@ topics of using [web frameworks](/web-frameworks.html) like
   stack fit together. There are also [slides available from the talk](https://speakerdeck.com/pycon2014/so-you-want-to-be-a-full-stack-developer-how-to-build-a-full-stack-python-web-application-by-kate-heddleston)
   with all the diagrams.
 
+* [Taking Django Async](https://www.youtube.com/watch?v=-7taKQnndfo) is
+  a great overview by [Andrew Godwin](https://github.com/andrewgodwin),
+  who created South (now Django Migrations as part of the core framework)
+  and [Django Channels](https://channels.readthedocs.io/en/latest/). He
+  discusses the synchronous blocking worker design of 
+  [WSGI](/wsgi-servers.html) and why it is incompatible with asynchronous
+  protocols like [WebSockets](/websockets.html). A potential solution
+  could be a new protocol like Asynchronous Server Gateway Interface (ASGI),
+  but how far would the integration into Django need to go and would it
+  be worth the pain? Andrew does a great job of mixing the philosophical
+  questions with technical implementation details throughout the talk.
+
 * [Design 101 for Developers](https://academy.realm.io/posts/christopher-downer-design-101-for-developers/)
   covers a difficult topic for many analytic-minded developers to learn:
   design. The talk is not specific to [web development](/web-development.html) 
@@ -90,6 +102,13 @@ topics of using [web frameworks](/web-frameworks.html) like
 
 
 ### Core Python language videos
+The core Python programming language has many new features now that almost
+all [community](/python-community.html) resources are working on 
+[Python 3](/python-2-or-3.html) instead of split across legacy 2.x branches.
+The following videos cover topics within the core Python language primarily
+relevant to Python 3 features although some can be used with Python 2 as 
+well.
+
 * Jessica McKellar's 
   [Building and breaking a Python sandbox](https://www.youtube.com/watch?v=sL_syMmRkoU)
   is a fascinating walk through the lower layers of the Python interpreter.
@@ -100,6 +119,14 @@ topics of using [web frameworks](/web-frameworks.html) like
   data structure appropriate to your application and how the list and 
   dictionary can be used in many situations.
 
+* Guido van Rossum's 
+  [Python Language](https://www.youtube.com/watch?v=YgtL4S7Hrwo) keynote
+  talk from PyCon 2016 reinforced that there would be no Python version 2.8
+  and that development on backported security releases into the Python 2
+  branch would end by January 1, 2020. Guido also covered many topics
+  important to the Python language community like expanding the number and
+  backgrounds of core committers.
+
 * The talk [Python Descriptors](https://www.youtube.com/watch?v=ZdvpNaWwx24) 
   by Simeon Franklin explains the what and why of this core Python language 
   feature.
@@ -108,6 +135,10 @@ topics of using [web frameworks](/web-frameworks.html) like
   [Python concurrency](https://www.youtube.com/watch?v=MCs5OvhV9S4)
   using threads, event loops and coroutines. David makes the live coding
   look easy but a whole lot of work must've gone into that talk.
+
+* [What is a Python Core Developer?](https://www.youtube.com/watch?v=hhj7eb6TrtI)
+  explains the responsibilities, projects, repositories and expectations of
+  core Python committers as well as how to become one.
 
 * [Google's Python Class](https://developers.google.com/edu/python/) contains
   lecture videos and exercises for learning Python.
