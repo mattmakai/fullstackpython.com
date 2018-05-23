@@ -12,7 +12,7 @@ You're knee deep in learning [Python](http://www.python.org/)
 programming. The syntax is starting to make sense. The first
 few "*ahh-ha*!" moments hit you as you learn conditional
 statements, `for` loops and classes while playing around with the open 
-source libraries that make Python such an amazing language.
+source libraries that make Python such an amazing programming ecosystem.
 
 Now you want to take your 
 [initial Python knowledge](/learning-programming.html) 
