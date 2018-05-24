@@ -38,6 +38,30 @@ support and begin your own journey in working with the larger open source
 ecosystem.
 
 
+## What is a PEP and why do they matter?
+[Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/) are
+design documents that serve to drive Python's continued evolution. There
+are [three kinds of PEPs](https://www.python.org/dev/peps/pep-0001/#pep-types) 
+that serve disinct purposes:
+
+1. *Standards track*: enhances the Python language with new features
+1. *Informational*: provides information to the Python community
+1. *Process*: modifies or makes improvements on topics relevant to
+   the community but outside the Python language itself
+
+[PEP 1](https://www.python.org/dev/peps/pep-0001/) defines what a PEP is
+and its purpose. In true computer science fashion, 
+[PEP 0](https://www.python.org/dev/peps/) also exists and it is an index
+of all the PEPs that have been created.
+
+The PEPs are important because they drive a transparent process to evolve
+the language and broader ecosystems. Some other programming communities are
+opaquely pushed by a single person or small cliques who refuse to 
+understand outside perspectives. The insular nature of some groups typically
+causes decline over time as the original community members move on to new
+projects and no new members take their place.
+
+
 ### Conferences and events
 The Python online community has fantastic resources for learning but talking
 to your fellow developers in-person at conferences, meetups and hackathons
@@ -101,6 +125,12 @@ the community.
   way or the other. This post on the 
   [origin of BDFL](http://www.artima.com/weblogs/viewpost.jsp?thread=235725)
   has more context about Guido's role.
+
+* [Python Community and Python at Dropbox](https://talkpython.fm/episodes/show/30/python-community-and-python-at-dropbox)
+  is an interview with [Jessica McKellar](https://github.com/jesstess),
+  one of the most visible Python core committers and organizers for
+  her fantastic coding and community work. She explains what it
+  means to be a member and leader in the larger Python community.
 
 * [The history behind the decision to move Python to GitHub](https://snarky.ca/the-history-behind-the-decision-to-move-python-to-github/)
   is a transparent and personal story by one of the Python Core Team
