@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### May
+* Merged [PR #166](https://github.com/mattmakai/fullstackpython.com/pull/166)
+  and [PR #167](https://github.com/mattmakai/fullstackpython.com/pull/167) to
+  update the URL scanning script as well as remove all 404 links. Thanks Sam!
 * New blog post on 
   [How to Add Maps to Django Web App Projects with Mapbox](/blog/maps-django-web-applications-projects-mapbox.html).
 * Updated with a slew of new [serverless](/serverless.html), 
