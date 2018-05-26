@@ -136,9 +136,6 @@ you are having with SQLite rather than going through a general tutorial.
   [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
   to implement virtual tables and aggregates on top of SQLite.
 
-* [Using SQLite with Flask](http://flask.pocoo.org/docs/0.10/patterns/sqlite3/)
-  explains how Flask code can directly query a SQLite database without an ORM.
-
 * [Use SQLite with Django On AWS Lambda with Zappa](https://blog.zappa.io/posts/use-sqlite-with-django-on-aws-lambda-with-zappa)
   provides an example `dev_settings.py` file for 
   locally testing a [Django](/django.html) application intended for 

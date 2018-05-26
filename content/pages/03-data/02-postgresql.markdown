@@ -138,10 +138,6 @@ walkthroughs I've read.
 * [How to speed up tests in Django and PostgreSQL](http://nemesisdesign.net/blog/coding/how-to-speed-up-tests-django-postgresql/)
   explains some hacks for making your schema migration-backed run quicker.
 
-* [Full Text Search in Django using Database Back-Ends](http://www.machinalis.com/blog/full-text-search-on-django-with-database-back-ends/)
-  provides code for both PostgreSQL and [MySQL](/mysql.html) for adding simple
-  full text search into your application.
-
 * [Records](https://pypi.python.org/pypi/records/) is a wrapper around the psycopg2
   driver that allows easy access to direct SQL access. It's worth a look if
   you prefer writing SQL over using an 
@@ -168,9 +164,6 @@ for properly handling your data.
   covers the improvements that have been made to PostgreSQL over the
   past five years. It's amazing to see how far this project has come and
   how it continues to evolve.
-
-* [PostgreSQL: The Nice Bits](https://russ.garrett.co.uk/talks/postgres-gds/) is a 
-  good overview slideshow of why PostgreSQL is a great relational database.
 
 * [PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
   PostgreSQL content from around the web.

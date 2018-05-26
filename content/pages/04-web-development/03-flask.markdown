@@ -136,7 +136,7 @@ for getting started.
 
 * [Flask Blueprint templates](http://fewstreet.com/2015/01/16/flask-blueprint-templates.html)
   shows a way of structuring your `__init__.py` file with 
-  [blueprints](http://flask.pocoo.org/docs/0.10/blueprints/) for expanding
+  [blueprints](http://flask.pocoo.org/docs/latest/blueprints/) for expanding
   projects into many files and modules.
 
 * If you're not sure why `DEBUG` should be set to `False` in a production

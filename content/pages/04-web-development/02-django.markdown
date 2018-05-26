@@ -186,17 +186,6 @@ based on [WebSockets](/websockets.html).
   contains a couple of good starter projects such as a live blog and a 
   chat application to use as base code.
 
-* Channnels currently use Django's existing authentication scheme, but
-  this blog post [JSON Web Tokens authentication on Django Channels](http://www.machinalis.com/blog/jwt-django-channels/)
-  shows how to use a custom [JSON Web Token (JWT)](https://jwt.io/)
-  implementation in Django Channels instead.
-
-* [Offloading work using Django Channels](http://www.machinalis.com/blog/offloading-work-using-django-channels/)
-  is a short post that builds on a previous example to add a shared 
-  canvas with group updates via Channels, which would otherwise be difficult 
-  to accomplish in a Django web app without a persistent data transfer
-  mechanism.
-
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)

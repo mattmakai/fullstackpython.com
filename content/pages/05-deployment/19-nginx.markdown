@@ -138,9 +138,6 @@ several years.
   but can also be handled by Nginx with the `proxy_cache` and related
   directives.
 
-* [Nginx web server tutorials](http://articles.slicehost.com/nginx) are oldies
-  but goodies on setting up previous versions of Nginx. 
-
 * [Dynamic log formats in nginx](https://benwilber.github.io/nginx/syslog/logging/2015/08/26/dynamic-log-formats-in-nginx.html) 
   explains how to use the HttpSetMiscModule module to transform variables
   in Nginx and map input to controlled output in the logs. The author uses

@@ -61,20 +61,11 @@ basic syntax will change as the library's API is not yet stable.
   covers buildings two types of useful visualizations into your applications
   using Bokeh.
 
-* [Integrating Pandas, Django REST Framework and Bokeh](http://www.machinalis.com/blog/pandas-django-rest-framework-bokeh/)
-  has a full example of integrating a 
-  [web API](/application-programming-interfaces.html) with a Bokeh
-  front end visual.
-
 * [Interactive Visualization of Australian Wine Ratings](http://pbpython.com/wine_visualization.html)
   builds a non-trivial visualization with a nice sample set of data based
   on wine ratings.
 
 * [Visualization with Bokeh](http://www.blog.pythonlibrary.org/2016/07/27/python-visualization-with-bokeh/)
-
-* [Using Bokeh at NIST](https://www.continuum.io/blog/developer-blog/using-bokeh-nist)
-  contains a real-world example of building an interactive visual to show 
-  firefighter gear data. 
 
 * [Drawing a Brain with Bokeh](http://merqur.io/2015/10/02/drawing-a-brain-with-bokeh/)
   is a fun example of a chord diagram that represents neural connections in

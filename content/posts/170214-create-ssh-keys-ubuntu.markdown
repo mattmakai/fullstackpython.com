@@ -58,10 +58,8 @@ Enter passphrase (empty for no passphrase):
 ```
 
 Whether or not you want a passphrase depends on how you will use the key.
-The system will ask you for the passphrase whenever you use the SSH key 
-(although you can 
-[use ssh-agent to store the passphrase](http://manpages.ubuntu.com/manpages/zesty/man1/ssh-agent.1.html) 
-after you activate it on a system the first time) so it is more secure.
+The system will ask you for the passphrase whenever you use the SSH key
+so it is more secure.
 However, if you are automating deployments with a 
 [continuous integration](/continuous-integration.html) server like
 [Jenkins](/jenkins.html) then you will not want a passphrase.

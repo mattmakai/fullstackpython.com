@@ -30,7 +30,7 @@ The example code can be copy and pasted from this blog post or you
 can access it on GitHub under the
 [Full Stack Python blog-post-examples](https://github.com/fullstackpython/blog-code-examples)
 repository within the 
-[monitor-aws-lambda-python-3-6 directory](https://github.com/fullstackpython/blog-code-examples/monitor-aws-lambda-python-3-6).
+[monitor-aws-lambda-python-3-6 directory](https://github.com/fullstackpython/blog-code-examples/tree/master/aws-lambda-python-3-6).
 
 
 ## Accessing the AWS Lambda Service
