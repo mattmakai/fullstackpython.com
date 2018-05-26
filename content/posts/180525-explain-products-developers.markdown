@@ -62,6 +62,30 @@ developers.
 
 ...
 
+<img src="/img/180526-explain-product/08-more-products.jpg" width="100%" class="shot rnd outl" alt="Eventually you expand your product lines or features within a product.">
+
+...
+
+<img src="/img/180526-explain-product/09-devangelism.jpg" width="100%" class="shot rnd outl" alt="You as a founder, or as an investor who work with founders must be the chief evangelist for your product.">
+
+...
+
+<img src="/img/180526-explain-product/10-be-specific.jpg" width="100%" class="shot rnd outl" alt="The earlier you are, the more specific you need to be about what problem you solve.">
+
+...
+
+<img src="/img/180526-explain-product/11-refine-growth.jpg" width="100%" class="shot rnd outl" alt="Refine the message as you grow, or your industry grows.">
+
+...
+
+<img src="/img/180526-explain-product/12-rehearsal.jpg" width="100%" class="shot rnd outl" alt="No demo fails because you rehearse constantly.">
+
+...
+
+<img src="/img/180526-explain-product/13-your-message-to-devs.jpg" width="100%" class="shot rnd outl" alt="Your message to developers.">
+
+...
+
 <img src="/img/180526-explain-product/14-thank-you.jpg" width="100%" class="shot rnd outl" alt="Thank you slide.">
 
 That's all for today. My name is [Matt Makai](/about-author.html)

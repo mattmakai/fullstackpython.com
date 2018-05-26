@@ -3,7 +3,7 @@ slug: maps-django-web-applications-projects-mapbox
 meta: Learn how to add maps and location-based data to your web applications using Mapbox.
 category: post
 date: 2018-05-19
-modified: 2018-05-21
+modified: 2018-05-25
 newsletter: False
 headerimage: /img/180519-django-maps/header.jpg
 headeralt: Python, Django and Mapbox logos are copyright their respective owners.
@@ -13,6 +13,11 @@ Building interactive maps into a [Django](/django.html) web application
 can seem daunting if you do not know where to begin, but it is easier
 than you think if you use a developer tool such as 
 [Mapbox](https://www.mapbox.com/).
+
+In this post we will build a simple Django project with a single app
+and add an interactive map like the one you see below to the webpage that
+Django renders with the [Mapbox Maps](https://www.mapbox.com/maps/) 
+[API](/application-programming-interfaces.html).
 
 <div id='map' width="100%" style='height:280px;margin-bottom:16px' class="shot rnd outl"></div>
 <script>
@@ -24,11 +29,6 @@ var map = new mapboxgl.Map({
  zoom: 9
 });
 </script>
-
-In this post we will build a simple Django project with a single app
-and add an interactive map like the one you see above to the webpage that
-Django renders with the [Mapbox Maps](https://www.mapbox.com/maps/) 
-[API](/application-programming-interfaces.html).
 
 
 ## Our Tools
