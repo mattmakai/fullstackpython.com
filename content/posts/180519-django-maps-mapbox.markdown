@@ -321,19 +321,20 @@ from django.shortcuts import render
 
 def default_map(request):
 ~~    # TODO: move this token to Django settings from an environment variable
-~~    # found in the Mapbox dashboard and getting started instructions
+~~    # found in the Mapbox account settings and getting started instructions
+~~    # see https://www.mapbox.com/account/ under the "Access tokens" section
 ~~    mapbox_access_token = 'pk.my_mapbox_access_token'
 ~~    return render(request, 'default.html', 
-~~                  {'mapbox_access_token':mapbox_access_token})
+~~                  { 'mapbox_access_token': mapbox_access_token })
 ```
 
 The Mapbox access token should really be stored in the Django settings
-file, so we left a TODO note to handle that as a future step.
+file, so we left a "TODO" note to handle that as a future step.
 
 Now we can try our webpage again. Refresh `localhost:8000` in your
 web browser.
 
-<img src="/img/180519-django-maps/map-time-with-map.png" width="100%" class="shot rnd outl" alt="Screenshot of the Mapbox map showing up in our Django front end.">
+<img src="/img/180519-django-maps/map-time-with-map.jpg" width="100%" class="shot rnd outl" alt="Screenshot of the Mapbox map showing up in our Django front end.">
 
 Sweet, we've got a live, interactive map! It's kind of weird thought how it
 is zoomed out to view the entire world. Time to customize the map using
@@ -344,6 +345,96 @@ a few JavaScript parameters.
 We can modify the map by changing parameters for the style, zoom level,
 location and many other attributes.
 
+We'll start by changing the location that the initial map centers in
+on as well as the zoom level.
+
+Re-open `djmaps/maps/templates/default.html` and modify the first 
+highlighted lines so it ends with a commas and add the two new 
+highlighted lines shown below.
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive maps for Django web apps</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+  </head>
+  <body>
+   <h1>Map time!</h1>
+   <div id='map' width="100%" style='height:400px'></div>
+   <script>
+    mapboxgl.accessToken = {{ mapbox_access_token }};
+    var map = new mapboxgl.Map({
+     container: 'map',
+~~     style: 'mapbox://styles/mapbox/streets-v10',
+~~     center: [-77.03, 38.91],
+~~     zoom: 9
+    });
+   </script>
+  </body>
+</html>
+```
+
+The first number, -77.03, for the `center` array is the longitude
+and the second number, 38.91, is the latitude. Zoom level 9 is much
+closer to the city than the default which was the entire world at
+level 0. All of the customization values are listed in the 
+[Mapbox GL JS API documentation](https://www.mapbox.com/mapbox-gl-js/api/).
+
+Now refresh the page at `localhost:8000` to reload our map.
+
+<img src="/img/180519-django-maps/map-updated-style-1.jpg" width="100%" class="shot rnd outl" alt="Updated map centered and zoomed in on Washington, D.C.">
+
+Awesome, now we are zoomed in on Washington, D.C. and can still move
+around to see more of the map. Let's make a couple other changes to
+our map before wrapping up.
+
+Again back in `djmaps/maps/templates/default.html` change the highlighted
+line for the `style` key to the `mapbox://styles/mapbox/satellite-streets-v10`
+value. That will change the look from an abstract map style to satellite
+image data. Update `zoom: 9` so that it has a comma at the end of the line
+and add `bearing: 180` as the last key-value pair in the configuration.
+
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive maps for Django web apps</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+  </head>
+  <body>
+   <h1>Map time!</h1>
+   <div id='map' width="100%" style='height:400px'></div>
+   <script>
+    mapboxgl.accessToken = {{ mapbox_access_token }};
+    var map = new mapboxgl.Map({
+     container: 'map',
+~~     style: 'mapbox://styles/mapbox/satellite-streets-v10',
+~~     center: [-77.03, 38.91],
+~~     zoom: 9,
+~~     bearing: 180
+    });
+   </script>
+  </body>
+</html>
+```
+
+Save the template and refresh `localhost:8000`.
+
+<img src="/img/180519-django-maps/map-updated-style-2.jpg" width="100%" class="shot rnd outl" alt="Updated map with satellite imagery and street map overlay.">
+
+The map now provides a satellite view with streets overlay but it is
+also... "upside down"! At least the map is upside down compared to how 
+most maps are drawn, due to the `bearing: 180` value, which modified
+this map's rotation.
+
+Not bad for a few lines of JavaScript in our Django application.
+Remember to check the 
+[Mapbox GL JS API documentation](https://www.mapbox.com/mapbox-gl-js/api/)
+for the exhaustive list of parameters that you can adjust.
 
 
 ## What's Next?
