@@ -16,7 +16,10 @@
 
 {% block title %}{% if article %}{{ article.title }} - {% endif %}{% endblock %}
 
-{% block css %}<style>{% include "css/base.css" %}{% include "css/panel.css" %}{% include "css/page-article.css" %}{% include "css/responsive.css" %}</style>{% endblock %}
+{% block css %}<style>{% include "css/base.css" %}{% include "css/panel.css" %}{% include "css/page-article.css" %}{% include "css/responsive.css" %}</style>{% if article and article.slug == "maps-django-web-applications-projects-mapbox" %} 
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+{% endif %}{% endblock %}
 
 {% block banner %}{% include "banner.html" %}{% endblock %}
 
