@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### May
+* New blog post on 
+  [How to Add Maps to Django Web App Projects with Mapbox](/blog/maps-django-web-applications-projects-mapbox.html).
 * Updated with a slew of new [serverless](/serverless.html), 
   [static site generators](/static-site-generator.html),
   [Bokeh](/bokeh.html) and [community](/python-community.html) resources.
