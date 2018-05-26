@@ -58,8 +58,6 @@ securing Linux distributions.
 * [How HTTPS Secures Connections](http://blog.hartleybrody.com/https-certificates/)
   is a guide for what HTTPS does and does not secure against.
 
-* [When and How to Deploy HTTPS](http://erik.io/blog/2013/06/08/a-basic-guide-to-when-and-how-to-deploy-https/)
-
 * [The first few milliseconds of an HTTPS connection](http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html)
   provides a detailed look at the SSL handshake process that is implemented
   by browsers based on the [RFC 2818](http://tools.ietf.org/html/rfc2818)

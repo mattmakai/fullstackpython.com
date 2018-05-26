@@ -25,8 +25,4 @@ Python rather than digging into tmux's C code base.
 <div class="well see-also">Pymux is an implementation of the <a href="/terminal-multiplexers.html">terminal multiplexers</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
 ### Pymux resources
-* [Pymux, tmux clone in Python](http://blog.yjl.im/2016/01/pymux-tmux-clone-in-python.html)
-
-* [Pymux and tmux performance comparison](http://blog.yjl.im/2016/01/pymux-and-tmux-performance-comparison.html)
-
 * [Pymux discussion on Hacker News](https://news.ycombinator.com/item?id=10831149)

@@ -33,10 +33,6 @@ track of tasks in the queue that need to be executed.
 * [Flask by Example - Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   explains how to install and use RQ in a [Flask](/flask.html) application.
 
-* [Task Queues and Python RQ](http://blog.ashnab.com/task-queues-and-python-rq/)
-  provides a good explanation for how to use RQ in a [Django](/django.html)
-  project.
-
 * [rq-dashboard](https://github.com/eoranged/rq-dashboard) is an awesome
   [Flask](/flask.html)-based dashboard for viewing queues, workers and
   other critical information when using RQ.

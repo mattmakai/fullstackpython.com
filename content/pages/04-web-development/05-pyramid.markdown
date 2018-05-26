@@ -21,7 +21,7 @@ Model-View-Controller (MVC) architectural pattern.
 ## Open source Pyramid example apps
 * [pyramid\_blogr](https://github.com/Pylons/pyramid_blogr) is an example 
   project that shows how to build a blog with Pyramid modeled on the 
-  [Flaskr](http://flask.pocoo.org/docs/0.10/tutorial/introduction/) tutorial.
+  [Flaskr](http://flask.pocoo.org/docs/latest/tutorial/introduction/) tutorial.
 
 * [pyramid\_appengine](https://github.com/twillis/pyramid_appengine)
   provides a project skeleton for running Pyramid on 

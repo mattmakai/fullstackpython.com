@@ -111,7 +111,7 @@ like advanced interactive visualizations.
 
 * [mapboxgl-jupyter](https://github.com/mapbox/mapboxgl-jupyter) library along
   with the 
-  [quickstart](https://github.com/mapbox/mapboxgl-jupyter/blob/master/docs-markdown/viz.md) 
+  [quickstart](https://github.com/mapbox/mapboxgl-jupyter/blob/master/docs/viz.md)
   show you how to visualize geospatial data within your notebooks.
 
 * [Reproducible Data Analysis in Jupyter](https://jakevdp.github.io/blog/2017/03/03/reproducible-data-analysis-in-jupyter/)

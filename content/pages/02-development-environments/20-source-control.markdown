@@ -116,10 +116,6 @@ reviews the basics of distributed version control systems.
   disadvantages of common approaches used in both small and large 
   organizations.
 
-* [In which I discuss Monorepos](https://storify.com/samnewman/in-which-i-discuss-monorepos)
-  provides detail behind a series of tweets that explains source control
-  monorepos.
-
 
 ### Git distributed source control system
 [Git](/git.html) is the most widely-used source control system currently
