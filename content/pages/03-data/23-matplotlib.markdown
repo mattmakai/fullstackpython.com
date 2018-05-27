@@ -37,3 +37,9 @@ toolkits.
 * [5 Quick and Easy Data Visualizations in Python](https://towardsdatascience.com/5-quick-and-easy-data-visualizations-in-python-with-code-a2284bae952f)
   shows several code examples with explanations for performing exploratory
   data analysis using Matplotlib.
+
+* [Introduction to Matplotlib — Data Visualization in Python](https://heartbeat.fritz.ai/introduction-to-matplotlib-data-visualization-in-python-d9143287ae39)
+  explains how to install and start using Matplotlib. The post has a ton
+  of detail on customizing your plots and graphs after creating the
+  initial visuals.
+

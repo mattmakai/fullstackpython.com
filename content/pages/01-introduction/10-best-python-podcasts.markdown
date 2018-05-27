@@ -97,6 +97,10 @@ listening and learning from them.
   are also interviews with experienced developers building well-known
   projects.
 
+* [Developer on Fire](http://developeronfire.com/) interviews programmers, 
+  architects and testers with their stories of success, failure and 
+  excellence.
+
 * [Command_line Heroes](https://www.redhat.com/en/command-line-heroes)
   covers [operating system](/operating-systems.html)-level topics as
   well as [DevOps](/devops.html).
@@ -135,4 +139,4 @@ data science broadly and often get specific into Python ecosystem tools.
 * [Data Skeptic](https://dataskeptic.com/) covers data science, statistics, 
   machine learning, artificial intelligence and "scientific skepticism".
 
-* [Data stores](http://datastori.es/) is a podcast on data visualization.
+* [Data stories](http://datastori.es/) is a podcast on data visualization.
