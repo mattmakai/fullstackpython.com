@@ -17,6 +17,13 @@ other scientific computing packages such as [pandas](/pandas.html).
 <img src="/img/logos/numpy.jpg" width="100%" alt="NumPy logo.">
 
 
+### Example NumPy code
+* [SmoothLife](https://github.com/duckythescientist/SmoothLife) is an 
+  implementation of [Conway's Game of Life](https://bitstorm.org/gameoflife/)
+  using NumPy. The project uses a continuous space rather than the 
+  traditional discrete board.
+
+
 ### NumPy resources
 * [From Python to NumPy](http://www.labri.fr/perso/nrougier/from-python-to-numpy/)
   is an awesome resource that shows how to use your basic

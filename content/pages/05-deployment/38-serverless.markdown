@@ -120,6 +120,8 @@ out how to structure and operate serverless applications.
 * [The (fixable) problem with serverless](https://www.iopipe.com/2016/06/the-fixable-problem-with-serverless/)
 
 * [Serverless architectures](http://martinfowler.com/articles/serverless.html)
+  provides a fantastic overview of the subject with a balanced approach
+  that includes the drawbacks seen in current serverless platforms.
 
 * [Why the fuss about serverless?](https://hackernoon.com/why-the-fuss-about-serverless-4370b1596da0)
   is a wide-ranging post about the history of application development and 

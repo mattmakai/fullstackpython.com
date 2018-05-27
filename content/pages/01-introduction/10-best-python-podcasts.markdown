@@ -17,7 +17,40 @@ This page contains a list of active Python-specific and software engineering
 high-quality podcasts.
 
 
-## Favorite podcast episodes
+### Python-specific podcasts
+These podcasts are run and recorded by Python developers who focus on
+topics that are important to our field. Each podcast series has a long
+list of previously-recorded episodes that are still relevant even if they
+are several years old so you will always have some great material to
+listen and learn.
+
+* [Talk Python to Me](https://talkpython.fm) focuses on the
+  people and organizations coding on Python. Each episode features a
+  different guest interviewee to talk about his or her work.
+
+* [Podcast.\_\_init\_\_](http://podcastinit.com/) is another regular podcast 
+  that presents stories about Python and interviews "with the people who 
+  make it great".
+
+* [Python Bytes](https://pythonbytes.fm/) is a new podcast from the creators
+  of the above mentioned "Talk Python to Me" and "Test and Code Podcast".
+
+* [Test and Code Podcast](http://pythontesting.net/test-podcast/) focuses
+  on [testing](/testing.html) and related topics such as mocking and 
+  [code metrics](/code-metrics.html).
+
+* Professor Philip Guo has a video podcast called 
+  [PG Podcast](http://pgbovine.net/PG-Podcast.htm), typically on 
+  Python subjects. 
+  [All episodes are listed on a separate page](http://pgbovine.net/PG-Podcast-summary.htm).
+
+* [Import This](https://www.kennethreitz.org/import-this/) is an occasional
+  podcast from [Kenneth Reitz](https://github.com/kennethreitz) and 
+  [Alex Gaynor](https://github.com/alex) with very in-depth interviews with
+  influential [Python community](/python-community.html) members.
+
+
+### Favorite podcast episodes
 Here are a list of my favorite episodes from various Python podcasts before 
 we dive into entire podcast recommendations in the next section. Dig into
 these episodes to get a feel for various personalities and styles in
@@ -42,44 +75,18 @@ podcast presentation.
   how [Python web application deployments](/deployment.html) work.
 
 
+<div class="well see-also">If you prefer to learn Python by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
 
 
-## Python-specific podcasts
-* [Talk Python to Me](https://talkpython.fm) focuses on the
-  people and organizations coding on Python. Each episode features a
-  different guest interviewee to talk about his or her work.
+### General software development podcasts
+These podcasts are not specific to Python but cover relevant software
+engineering topics and often have episodes on Python topics. At the
+very least you will become a better general software developer by
+listening and learning from them.
 
-* [Podcast.\_\_init\_\_](http://podcastinit.com/) is another regular podcast 
-  that presents stories about Python and interviews "with the people who 
-  make it great".
-
-* [Test and Code Podcast](http://pythontesting.net/test-podcast/) focuses
-  on [testing](/testing.html) and related topics such as mocking and 
-  [code metrics](/code-metrics.html).
-
-* [Python Bytes](https://pythonbytes.fm/) is a new podcast from the creators
-  of the above mentioned "Talk Python to Me" and "Test and Code Podcast".
-
-* [Import This](https://www.kennethreitz.org/import-this/) is an occasional
-  podcast from Ken Reitz and Alex Gaynor with very in-depth interviews with
-  influential Python community members.
-
-* Professor Philip Guo has a video podcast called 
-  [PG Podcast](http://pgbovine.net/PG-Podcast.htm), typically on 
-  Python subjects. 
-  [All episodes are listed on a separate page](http://pgbovine.net/PG-Podcast-summary.htm).
-
-<div class="well see-also">If you prefer to learn by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
-
-
-## General software development podcasts
 * [Software Engineering Daily](https://softwareengineeringdaily.com/)
   incredibly has a podcast every day with a different developer on a
   huge range of relevant development subjects.
-
-* [DataFramed](https://www.datacamp.com/community/podcast) is a data
-  science podcast that often covers Python libraries and other areas of
-  interest to people using Python to analyze [data](/data.html).
 
 * [All things Git](https://www.allthingsgit.com/) talks to developers
   using, building and working with Git with new episodes every two weeks.
@@ -110,3 +117,22 @@ podcast presentation.
   (at 1.5x speed) and it's well worth the 45 to 60 minutes spent 
   listening to Ben Thompson and James Allworth go deep on a weekly topic.
 
+* [Test Talks](https://joecolantonio.com/testtalks/) examines a software 
+  testing topic each week, usually with a special guest focused on the
+  area being examined.
+
+
+### Data science and analysis podcasts
+The [data](/data.html) science community does not only use Python as its 
+core programming language but it plays a big role in almost every
+organization performing data analysis. The following podcasts cover
+data science broadly and often get specific into Python ecosystem tools.
+
+* [DataFramed](https://www.datacamp.com/community/podcast) is a data
+  science podcast that often covers Python libraries and other areas of
+  interest to people using Python to analyze [data](/data.html).
+
+* [Data Skeptic](https://dataskeptic.com/) covers data science, statistics, 
+  machine learning, artificial intelligence and "scientific skepticism".
+
+* [Data stores](http://datastori.es/) is a podcast on data visualization.
