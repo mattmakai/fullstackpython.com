@@ -74,13 +74,19 @@ control services are:
   [pricing](https://about.gitlab.com/pricing/) for businesses that need
   additional hosting support.
 
-* [GitHub](https://github.com/) provides free open source repositories 
-  and paid private repositories for Git.
+* [GitHub](https://github.com) is a software-as-a-service platform that 
+  provides a user interface, tools and backup for developers to use with their 
+  [Git](/git.html) repositories. Accounts are free for public open source 
+  development and private Git repositories can also be hosted for 
+  [$7 per month](https://github.com/pricing).
 
-* [BitBucket](https://bitbucket.org/) also has free Git and Mercurial 
-  repositories for open projects, but adds private repositories for up to 
-  five users. Users pay for hosting private repositories with more than 
-  five users.
+* [BitBucket](https://bitbucket.org/) is 
+  [Atlassian](https://www.atlassian.com/)'s software-as-a-service tool that 
+  with a user interface, comparison tools and backup for Git projects. There 
+  are many features in BitBucket focused on making it easier for groups of 
+  developers to work on projects together. BitBucket also has private 
+  repositories for up to five users. Users pay for hosting private 
+  repositories with more than five users.
 
 
 ## General source control resources
@@ -123,6 +129,14 @@ in use. Its distributed design eliminates the need to check files in
 and out of a centralized repository, which is a problem when using
 [Subversion](/apache-subversion.html) without a network connection. There is
 [a full page on Git](/git.html) with further details and resources.
+
+
+### GitHub resources
+* [A Beginner’s Git and GitHub Tutorial](http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html)
+
+* [Hello World: GitHub edition](https://guides.github.com/activities/hello-world/)
+
+* [Git and GitHub learning resources](https://help.github.com/articles/git-and-github-learning-resources/)
 
 
 ### Source control learning checklist

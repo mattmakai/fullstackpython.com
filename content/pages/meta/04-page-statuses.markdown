@@ -68,10 +68,6 @@ kept up to date with accurate descriptions and resources.
 |[Git](/git.html)                                              | starter      |
 |[Mercurial](/mercurial.html)                                  | starter      |
 |[Apache Subversion](/apache-subversion.html)                  | starter      |
-|[Hosted source control](/hosted-source-control-services.html) | starter      |
-|[GitHub](/github.html)                                        | starter      |
-|[BitBucket](/bitbucket.html)                                  | starter      |
-|[GitLab](/gitlab.html)                                        | starter      |
 
 
 ## Chapter 3: Data
@@ -133,10 +129,6 @@ kept up to date with accurate descriptions and resources.
 |Database testing                                           | not yet      |
 |[Code metrics](/code-metrics.html)                         | starter      |
 |[Debugging](/debugging.html)                               | starter      |
-|pdb                                                        | not yet      |
-|ipdb                                                       | not yet      |
-|pudb                                                       | not yet      |
-|wdb                                                        | not yet      |
 
 
 ## Chapter 5: Web App Deployment
@@ -153,10 +145,8 @@ kept up to date with accurate descriptions and resources.
 |Graphite                                                    | not yet      |
 |Prometheus                                                  | not yet      |
 |Service Canary                                              | not yet      |
-|Hosted Monitoring Services                                  | not yet      |
 |[Rollbar](/rollbar.html)                                    | starter      |
 |Sentry                                                      | not yet      |
-|New Relic                                                   | not yet      |
 |Scout                                                       | not yet      |
 |Web App Performance                                         | not yet      |
 |[Caching](/caching.html)                                    | starter      |
@@ -169,5 +159,4 @@ kept up to date with accurate descriptions and resources.
 |[Web analytics](/web-analytics.html)                        | starter      |
 |Google Analytics                                            | not yet      |
 |Piwik                                                       | not yet      |
-|MixPanel                                                    | not yet      |
 
