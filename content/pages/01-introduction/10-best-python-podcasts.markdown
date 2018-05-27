@@ -125,6 +125,9 @@ listening and learning from them.
   testing topic each week, usually with a special guest focused on the
   area being examined.
 
+* [The Cloudcast](http://www.thecloudcast.net/) focuses on cloud computing
+  and DevOps-related topics.
+
 
 ### Data science and analysis podcasts
 The [data](/data.html) science community does not only use Python as its 
