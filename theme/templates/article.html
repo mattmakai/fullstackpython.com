@@ -41,16 +41,23 @@
  </div>
 </div>
 <div class="row">
- <div class="c9">
-  {{ article.content }}
-  <hr>
-  {% include "email-for-book.html" %}
-  {% endif %}
- </div>
- <div class="c3">
-  {% include "article-sidebar.html" %}
-  {% include "sponsor/all-sponsor.html" %}
- </div>
+ {% if article.category == "talk" %}
+  <div class="c12">
+ {% else %}
+  <div class="c9">
+ {% endif %}
+   {{ article.content }}
+   <hr>
+   {% include "email-for-book.html" %}
+   {% endif %}
+  </div>
+ {% if article.category == "talk" %}
+ {% else %}
+  <div class="c3">
+   {% include "article-sidebar.html" %}
+   {% include "sponsor/all-sponsor.html" %}
+  </div>
+ {% endif %}
 </div>
 {% endblock %}
 
