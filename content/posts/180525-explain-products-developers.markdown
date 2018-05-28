@@ -140,11 +140,11 @@ framework and do not substantially change the narrative.
 
 <img src="/img/180526-explain-product/08-more-products.jpg" width="100%" class="shot rnd outl" alt="Eventually you expand your product lines or features within a product.">
 
-However, as you continue to grow you will reach an inflection point where
-you simply have too many products or features to explain, regardless of how
-much time you have for your demo. You reach a point where you try to tell
-the audience that you do everything, but what they hear is that you actually
-do nothing well. 
+As you continue to grow you will eventually reach an inflection point where
+you have too many products or features to explain, regardless of how
+much time you have for your demo. You reach a situation where if you try to 
+tell the audience everything that your product does, they will zone out
+and ignore your laundry list of features.
 
 If you are not intentional in the words you say and specific
 in the products and features you choose to show, then your pitch becomes 
@@ -170,7 +170,7 @@ features.
 
 <img src="/img/180526-explain-product/09-devangelism.jpg" width="100%" class="shot rnd outl" alt="You as a founder, or as an investor who work with founders must be the chief evangelist for your product.">
 
-Time to reinforce why it is so important for you, as a founder, or as an 
+Let's reinforce why it is so important for you, as a founder, or as an 
 investor that works with founders, to be the chief evangelist for your
 product. You cannot ever outsource this role. You cannot hire someone to
 lead an evangelism team and expect them to figure it all out for you. 
