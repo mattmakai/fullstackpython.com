@@ -230,7 +230,7 @@ fails. You should not demo fail, ever. To steal a line from
 [Rob Spectre](https://github.com/RobSpectre), former head of the Twilio 
 Developer Network: 
 
-"There is only one demo God, and her name is rehearsal."
+> There is only one demo God, and her name is rehearsal."
 
 You do not just rehearse and practice the happy path, you also practice
 what can go wrong. What happens when you mistype a character in your code?
