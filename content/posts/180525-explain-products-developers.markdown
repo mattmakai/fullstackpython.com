@@ -9,15 +9,12 @@ headerimage: /img/visuals/talk-header.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
 
-This blog post contains the slides along with a loose transcript and 
-additional resources from my talk on appropriately marketing products to 
-software developers that was given at 
+This blog post contains the slides along with a loose transcript
+from my talk on appropriately marketing products to 
+software developers that I gave at
 [Silicon Valley Bank](https://www.svb.com/) during 
 [Ubiquity.VC](http://www.ubiquity.vc/)'s summit for founders, investors and 
 technical advisors on May 24, 2018.
-
-Links to learn more about the concepts presented in this talk can
-be found in the sidebar and at the bottom of this page.
 
 ----
 
@@ -30,8 +27,8 @@ real world programmable. We ask "what if we could modify the real world using
 GitHub and Jira?" When we succeed in creating programmatic access to the 
 physical world, what then? Is that the end goal?
 
-No, that's only the beginning. We need developers to use that new 
-capabilities and code with it. How do you get developers to adopt
+No, that's only the beginning. We need developers to use those new 
+capabilities and code with them. How do you get developers to adopt
 what you are creating? That is a large question so I am going to zoom
 in on just one small slice of developer relations that kicks off the
 whole adoption process but that unfortunately I see upwards of 90% of
