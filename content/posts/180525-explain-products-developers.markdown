@@ -28,17 +28,18 @@ GitHub and Jira?" When we succeed in creating programmatic access to the
 physical world, what then? Is that the end goal?
 
 No, that's only the beginning. We need developers to use those new 
-capabilities and code with them. How do you get developers to adopt
-what you are creating? That is a large question so I am going to zoom
-in on just one small slice of developer relations that kicks off the
-whole adoption process but that unfortunately I see upwards of 90% of
-companies completely screw up: how to explain your product to
-developers.
+capabilities and code with them. 
+
+How do you get developers to adopt what you are creating? That is a broad 
+question so I am going to zoom in on just one small slice of developer 
+relations that kicks off the whole adoption process. Unfortunately I 
+see upwards of 90% of companies completely screw up explaining their 
+products to developers.
 
 Today we are going to look at how to appropriately explain and demo your 
-product to developers to maximize developer adoption. In other words, the
-first step towards getting a developer to care enough to try out what
-you have built.
+product to developers to maximize developer adoption. This is the first
+step towards getting a developer to care enough to try out what you have 
+built.
 
 
 <img src="/img/180526-explain-product/02-matt-makai-bio.jpg" width="100%" class="shot rnd outl" alt="Bio information slide for Matt Makai.">
