@@ -50,9 +50,9 @@ built.
 In addition to serving the Developer Network at Twilio, I am also a 
 <a href="https://www.python.org/">Python</a> and 
 <a href="https://swift.org/">Swift</a> developer as well as the creator of 
-<a href="https://www.fullstackpython.com/">Swift</a>. My background provides
-me an opportunity to give insight on this topic because I am a software 
-developer, I market to fellow software developers and I write a 
+<a href="https://www.fullstackpython.com/">Full Stack Python</a>. My 
+background provides me an opportunity to give insight on this topic because 
+I am a software developer, I market to fellow software developers and I write a 
 community-driven site that is widely read and trusted by software developers.
 </p></div></div>
 
