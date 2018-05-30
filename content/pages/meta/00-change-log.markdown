@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### May
+* New blog post on 
+  [How to (Appropriately) Explain Your Product to Software Developers](/blog/explain-products-developers.html)
+  that is based on a talk I gave in Silicon Valley.
 * Added a bunch of great [podcast](/best-python-podcasts.html) episodes
   to that page.
 * Merged [PR #166](https://github.com/mattmakai/fullstackpython.com/pull/166)
