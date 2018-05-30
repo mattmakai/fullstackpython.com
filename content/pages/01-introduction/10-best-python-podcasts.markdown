@@ -9,9 +9,9 @@ meta: Find out the best Python podcasts as well as general software development 
 
 # Best Python Podcasts
 The [Python community](/python-community.html) has an embarrassment of riches
-when it comes to free and low cost resources for both new and experienced 
-software developers. These great resources include several Python podcasts 
-that are released on regular schedules.
+when it comes to [free and low cost resources](/best-python-resources.html) 
+for both new and experienced software developers. These great resources 
+include several Python podcasts that are released on regular schedules.
 
 This page contains a list of active Python-specific and software engineering
 high-quality podcasts.
@@ -74,6 +74,27 @@ podcast presentation.
   *Spoiler alert*: this is the episode I was on Talk Python to Me explaining
   how [Python web application deployments](/deployment.html) work.
 
+* Python Bytes talked extensively about
+  [object-relational mappers (ORMs)](/object-relational-mappers-orms.html)
+  on 
+  [episode #39](https://pythonbytes.fm/episodes/show/39/the-new-pypi) where
+  a lot of the discussion was based on the 
+  [Full Stack Python ORMs](/object-relational-mappers-orms.html) page.
+  Thanks guys, it was great to hear the feedback about what worked and what
+  didn't work for you about the explanations!
+
+* The 
+  [Python at Netflix](https://talkpython.fm/episodes/show/16/python-at-netflix)
+  episode of Talk Python to Me provided an awesome view inside the largest
+  internet site by bandwidth and how Python fits into their polyglot 
+  organization.
+
+* Another great Talk Python to Me episode, 
+  [Python in Finance](https://talkpython.fm/episodes/show/120/python-in-finance),
+  explains how Python is used in the broad finance industry for stock trading,
+  quantitative analysis and data analytics. Check this one out if you have 
+  wondered how opaque private companies like hedge funds use Python to make
+  (a lot of) money.
 
 <div class="well see-also">If you prefer to learn Python by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
 
@@ -143,3 +164,9 @@ data science broadly and often get specific into Python ecosystem tools.
   machine learning, artificial intelligence and "scientific skepticism".
 
 * [Data stories](http://datastori.es/) is a podcast on data visualization.
+
+* [Partially Derivative](http://partiallyderivative.com/) was a podcast for
+  machine learning, artificial intelligence and the data community. They
+  finished their last episode in late 2017 but the 
+  [episodes list](http://partiallyderivative.com/podcast/) contains
+  a slew of existing content.

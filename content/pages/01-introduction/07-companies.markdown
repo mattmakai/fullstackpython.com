@@ -22,6 +22,10 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
   [Part two](https://eng.uber.com/tech-stack-part-two/) explains the higher
   levels of the marketplace and user interfaces.
 
+* [Netflix uses Python](https://talkpython.fm/episodes/show/16/python-at-netflix) 
+  throughout their organization to run chaos engineering tests and generally
+  glue together the code from their high-functioning polyglot teams.
+
 * [Facebook and Instagram use Python 3](https://thenewstack.io/instagram-makes-smooth-move-python-3/)
   at scale. They've been very vocal about successfully making the migration 
   from the [Python 2 world into Python 3](/python-2-or-3.html).
