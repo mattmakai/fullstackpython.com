@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### May
+* Added a bunch of great [podcast](/best-python-podcasts.html) episodes
+  to that page.
 * Merged [PR #166](https://github.com/mattmakai/fullstackpython.com/pull/166)
   and [PR #167](https://github.com/mattmakai/fullstackpython.com/pull/167) to
   update the URL scanning script as well as remove all 404 links. Thanks Sam!
