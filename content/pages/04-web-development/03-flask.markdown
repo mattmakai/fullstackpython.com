@@ -143,6 +143,7 @@ for getting started.
   [deployment](/deployment.html), be sure to read this article on 
   [how Patreon got hacked](http://labs.detectify.com/post/130332638391/how-patreon-got-hacked-publicly-exposed-werkzeug).
 
+* [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
 ### Intermediate to advanced Flask resources
 Once you move past the beginner tutorials and have created a few Flask

@@ -32,6 +32,8 @@ Examples of these front end frameworks include:
 
 * [Angular.js](https://angularjs.org/)
 
+* [Vue.js](https://vuejs.org/)
+
 * [Backbone.js](http://backbonejs.org/)
 
 * [Ember.js](http://emberjs.com/)
@@ -78,6 +80,7 @@ which is defined by the
   provides a high-level overview of tools frequently used on the client and
   server side for developers using JavaScript in their web applications.
 
+* [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
 ## JavaScript learning checklist
 1. Create a simple HTML file with basic elements in it. Use the
