@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### May
+* Merged [PR #168](https://github.com/mattmakai/fullstackpython.com/pull/168),
+  which contained links to a great blog post on [Flask](/flask.html) by
+  [TestDriven.io](https://testdriven.io/).
 * New blog post on 
   [How to (Appropriately) Explain Your Product to Software Developers](/blog/explain-products-developers.html)
   that is based on a talk I gave in Silicon Valley.
