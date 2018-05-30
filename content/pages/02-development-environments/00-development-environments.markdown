@@ -30,12 +30,12 @@ you want can either be done manually or by unit and functional tests.
 Here's what I (the author of Full Stack Python, 
 [Matt Makai](/about-author.html)) use to develop most of my Python 
 applications. I have a Macbook Pro with Mac OS X as its base operating 
-system. [Ubuntu 14.04 LTS](/operating-systems.html) is virtualized on top 
+system. [Ubuntu 18.04 LTS](/operating-systems.html) is virtualized on top 
 with [Parallels](https://www.parallels.com/). My code is written in 
 [vim](http://www.vim.org/) and executed with the 
-[Python 2.7.x](https://www.python.org/download/releases/2.7.8/) interpreter
-via the command line. I use [virtualenv](https://virtualenv.pypa.io/en/latest/) to create separate Python interpreters
-with their own isolated
+[Python 3.6](https://www.python.org/downloads/release/python-365/) release
+via the command line. I use [virtualenv](https://virtualenv.pypa.io/en/latest/) 
+to create separate Python interpreters with their own isolated
 [application dependencies](/application-dependencies.html) and
 [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/)
 to quickly switch between the interpreters created by virtualenv.
@@ -117,6 +117,10 @@ configuration as a starting point and customize it from there.
   installation as well as how to split out many virtual environments for
   Python 2 & 3.
 
+* The Python subreddit had a nice thread with developers giving the
+  specifications to their Python development environments in this post on
+  [What is in your Python Development Environment?](https://www.reddit.com/r/Python/comments/8n6cep/what_is_in_your_python_development_environment/).
+
 * Real Python has an awesome, detailed post on 
   [setting up your Sublime Text 3 environment](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
   as a full-fledged IDE.
@@ -156,3 +160,4 @@ configuration as a starting point and customize it from there.
   [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
   by Lauren Orsini. She also explains more about what a cloud IDE is and is
   not.
+
