@@ -24,11 +24,6 @@ used to generate output HTML, XML and similar formats.
 * [Configuration Templates with Python and Mako](https://codingnetworker.com/2016/01/configuration-templates-python-mako/)
   shows some basic situations for how to use Mako in an example project.
 
-* The 
-  [Pylons' project documentation on templates](http://pylonsbook.com/en/1.1/using-view-templates.html)
-  provides many examples for using Mako, which is the default template 
-  language for the Pylons [web framework](/web-frameworks.html).
-
 * [Flask-Mako](https://pythonhosted.org/Flask-Mako/) is a [Flask](/flask.html) 
   extension that makes it easier to use Mako as the template engine in your
   Flask web app projects.

@@ -160,9 +160,6 @@ data science broadly and often get specific into Python ecosystem tools.
   science podcast that often covers Python libraries and other areas of
   interest to people using Python to analyze [data](/data.html).
 
-* [Data Skeptic](https://dataskeptic.com/) covers data science, statistics, 
-  machine learning, artificial intelligence and "scientific skepticism".
-
 * [Data stories](http://datastori.es/) is a podcast on data visualization.
 
 * [Partially Derivative](http://partiallyderivative.com/) was a podcast for
