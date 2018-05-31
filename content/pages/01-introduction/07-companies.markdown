@@ -15,6 +15,13 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
 
 
 ### Large tech companies
+Large technology companies tend to be polyglot (use many programming 
+languages rather than standardizing on one), with Python either as a
+primary language or the "glue" that helps all the other languages fit
+together. The following articles explain how these leading large companies 
+like Uber, Twilio, Netflix and Facebook uses Python in their development 
+stacks.
+
 * [Uber's tech stack](https://eng.uber.com/tech-stack-part-one/) contains
   a significant amount of Python, which they documented in a series of 
   engineering posts. Part one describes the lower backend levels, which are 
