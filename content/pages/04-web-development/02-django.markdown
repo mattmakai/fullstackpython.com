@@ -74,6 +74,9 @@ since then.
   set of free introductions to using the most popular Python web framework. 
   Several current developers said this book really helped them get over the 
   initial framework learning curve.
+  
+ * The [Djang OverIQ](https://overiq.com/django/1.11/intro-to-django/)
+  is a project based awesome Django tutorial. Very easy to understand, at the same time showing practical stuff.
 
 * The [Django Girls Tutorial](http://tutorial.djangogirls.org/en/index.html)
   is a great tutorial that doesn't assume any prior knowledge of Python or
