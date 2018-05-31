@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### May
+* Merged [PR #169](https://github.com/mattmakai/fullstackpython.com/pull/169)
+  that cuts down on redirects to the new PyPI site. Thank you Sam!
 * Merged [PR #168](https://github.com/mattmakai/fullstackpython.com/pull/168),
   which contained links to a great blog post on [Flask](/flask.html) by
   [TestDriven.io](https://testdriven.io/).
