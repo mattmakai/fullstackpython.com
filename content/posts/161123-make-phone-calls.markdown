@@ -33,7 +33,7 @@ build this application. Throughout the post we will also use:
 * Twilio's 
   [Python helper library](https://www.twilio.com/docs/libraries/python),
   version 5.7.0, which is 
-  [available on PyPI](https://pypi.python.org/pypi/twilio)
+  [available on PyPI](https://pypi.org/project/twilio)
 
 You can snag all the open source code for this tutorial in the 
 [python-twilio-example-apps](https://github.com/mattmakai/python-twilio-example-apps/tree/master/no-framework/phone-calls)

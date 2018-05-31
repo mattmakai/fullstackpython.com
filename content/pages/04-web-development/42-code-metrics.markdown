@@ -24,11 +24,11 @@ system are occurring.
   obtaining raw metrics on line counts, Cyclomatic Complexity, Halstead
   metrics and maintainability metrics.
 
-* [Pylint](http://www.pylint.org/) contains checkers for PEP8 code 
+* [Pylint](https://pypi.org/project/pylint/) contains checkers for PEP8 code 
   style compliance, design, exceptions and many other source code analysis
   tools.
 
-* [PyFlakes](https://pypi.python.org/pypi/pyflakes) parses source files for
+* [PyFlakes](https://pypi.org/project/pyflakes/) parses source files for
   errors and reports on them.
 
 * [Pyntch](http://www.unixuser.org/~euske/python/pyntch/index.html) is a

@@ -28,7 +28,7 @@ those two versions installed.
 * A free [Twilio account](https://www.twilio.com/try-twilio) to use their 
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
-  [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
+  [Twilio Python helper library](https://pypi.org/project/twilio),
   [version 6.0.0](https://github.com/twilio/twilio-python/tree/6.0.0) 
   or later
 

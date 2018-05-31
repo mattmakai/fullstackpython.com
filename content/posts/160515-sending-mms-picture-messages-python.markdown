@@ -30,7 +30,7 @@ The other dependencies for this tutorial include:
   [application dependency](/application-dependencies.html)
 * A free [Twilio account](https://www.twilio.com/try-twilio) to use their 
   [MMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
-* [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
+* [Twilio Python helper library](https://pypi.org/project/twilio),
   [version 6.0.0](https://github.com/twilio/twilio-python/tree/6.0.0) 
   or later
 
@@ -64,7 +64,7 @@ in the phone number details screen.
 
 
 ## Installing Our Dependency
-We'll use the [twilio helper library](https://pypi.python.org/pypi/twilio) 
+We'll use the [twilio helper library](https://pypi.org/project/twilio) 
 as a dependency for our Python code. The helper library can be installed
 via the `pip` command, which pulls the code from 
 [PyPI](https://pypi.python.org/pypi) into our local virtualenv. In this

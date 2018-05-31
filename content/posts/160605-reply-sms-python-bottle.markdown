@@ -33,7 +33,7 @@ walkthrough. We also need:
 * Free [Twilio account](https://www.twilio.com/try-twilio) to use their 
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
-  [Twilio Python helper library](https://pypi.python.org/pypi/twilio),
+  [Twilio Python helper library](https://pypi.org/project/twilio),
   version 5.7.0 or earlier
 
 Check out the guide on 

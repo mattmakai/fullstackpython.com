@@ -77,7 +77,7 @@ Python-specific dependencies.
 
 ## Virtualenv
 In the previous section, [virtualenv](https://virtualenv.pypa.io/en/latest/) 
-and [pip](https://pypi.python.org/pypi/pip) were installed to handle our 
+and [pip](https://pypi.org/project/pip) were installed to handle our 
 [application dependencies](/application-dependencies.html).
 We can now use them to download and install Flask and Gunicorn.
 

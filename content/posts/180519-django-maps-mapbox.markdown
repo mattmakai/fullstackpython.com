@@ -85,7 +85,7 @@ The command prompt will change after activating the virtualenv:
 Remember that you have to activate your virtualenv in every new terminal 
 window where you want to use dependencies in the virtualenv.
 
-We can now install the [Django](https://pypi.python.org/pypi/Django/2.0.5) 
+We can now install the [Django](https://pypi.org/project/Django/2.0.5) 
 package into the activated but otherwise empty virtualenv.
 
 ```

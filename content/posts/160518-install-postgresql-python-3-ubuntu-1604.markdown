@@ -32,7 +32,7 @@ the Python interpreter, here are the other components we'll use:
   steps should also work fine with other Ubuntu versions)
 * [pip](https://pip.pypa.io/en/stable/) and 
   [virtualenv](https://virtualenv.pypa.io/en/latest/) to handle the
-  [psycopg2](https://pypi.python.org/pypi/psycopg2/2.6.1) 
+  [psycopg2](https://pypi.org/project/psycopg2/2.6.1) 
   [application dependency](/application-dependencies.html)
 * [PostgreSQL](http://www.postgresql.org/)
 

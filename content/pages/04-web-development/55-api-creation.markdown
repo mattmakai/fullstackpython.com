@@ -171,7 +171,7 @@ equivalent of browser testing in the web application world.
 * [Create a REST API in Minutes with Pyramid and Ramses](https://realpython.com/blog/python/create-a-rest-api-in-minutes-with-pyramid-and-ramses/)
   is a thorough tutorial from start to finish that uses the 
   [Pyramid](/pyramid.html) web framework along with 
-  [Ramses](https://pypi.python.org/pypi/ramses/), a library that uses
+  [Ramses](https://pypi.org/project/ramses/), a library that uses
   YAML files to generate a RESTful API.
 
 * [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)

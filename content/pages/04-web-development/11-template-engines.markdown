@@ -121,7 +121,7 @@ engines are listed alphabetically:
 
 * [Diazo](http://docs.diazo.org/en/latest/)
 
-* [evoque](https://pypi.python.org/pypi/evoque/)
+* [evoque](https://pypi.org/project/evoque/)
 
 * [Genshi](https://genshi.edgewall.org/)
 
@@ -129,7 +129,7 @@ engines are listed alphabetically:
 
 * [Myghty](https://pythonhosted.org/Myghty/whatsitdo.html)
 
-* [pyratemp](https://pypi.python.org/pypi/pyratemp/0.3.2)
+* [pyratemp](https://pypi.org/project/pyratemp/0.3.2)
 
 * [pystache](https://github.com/defunkt/pystache)
 

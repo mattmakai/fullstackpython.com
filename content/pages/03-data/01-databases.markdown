@@ -105,7 +105,7 @@ library. The most common libraries for relational databases are:
   ([source code](https://github.com/psycopg/psycopg2))
   for PostgreSQL.
 
-* [MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.5) 
+* [MySQLdb](https://pypi.org/project/MySQL-python/1.2.5) 
   ([source code](https://github.com/farcepest/MySQLdb1)) 
   for MySQL. Note that this driver's development is mostly frozen so
   evaluating alternative drivers is wise if you are using 
