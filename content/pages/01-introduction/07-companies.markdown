@@ -14,7 +14,7 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
 [create reliable, scalable enterprise applications](/enterprise-python.html).
 
 
-## Large tech companies
+### Large tech companies
 * [Uber's tech stack](https://eng.uber.com/tech-stack-part-one/) contains
   a significant amount of Python, which they documented in a series of 
   engineering posts. Part one describes the lower backend levels, which are 
@@ -48,6 +48,11 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
 
 
 ### Government agencies
+Python usage in government agencies is widespread despite the reputation of
+agencies as stodgy late technology adopters. Organizations range from 
+financial industry regulators like the SEC and CFPB, to intelligence agencies
+like the CIA, FBI and NSA.
+
 * The [Consumer Financial Protection Bureau (CFPB)](https://github.com/cfpb) 
   not only uses Python for running most of their applications but also open 
   sources many of those Python projects for other agencies (or any 
@@ -65,3 +70,13 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
   tools. They even published their own Python code conventions 
   documentation due to how many developers at the agency are using the
   language.
+
+* The 
+  [SEC uses Python and proposes organizations use Python to comply with regulations](http://jsdelfino.blogspot.com/2010/05/security-exchange-commission-python.html).
+
+* A quick search for government jobs that require or recommend Python 
+  [via USAJobs](https://sec.usajobs.gov/Search/?k=python&p=1) 
+  turns up numerous listings at organizations such as the Smithsonian
+  Institution, Department of Education, Department of the Navy and 
+  National Institute of Standards and Technology (NIST).
+
