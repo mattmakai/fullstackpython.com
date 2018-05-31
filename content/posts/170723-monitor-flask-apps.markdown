@@ -36,7 +36,7 @@ the post:
 * [pyrollbar](https://rollbar.com/docs/notifier/pyrollbar/) monitoring 
   instrumentation library,
   [version 0.13.12](https://github.com/rollbar/pyrollbar/tree/v0.13.12)
-* [blinker](https://pypi.python.org/pypi/blinker) for signaling support
+* [blinker](https://pypi.org/project/blinker) for signaling support
   in Flask applications so pyrollbar can report on all errors
 * A [free Rollbar account](https://rollbar.com/) where we will send error
   data and view it when it is captured

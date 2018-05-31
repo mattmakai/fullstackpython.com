@@ -34,7 +34,7 @@ applications. We also need:
 * Twilio's 
   [Python helper library](https://www.twilio.com/docs/libraries/python),
   which is [open source on GitHub](https://github.com/twilio/twilio-python) 
-  and [available for download from PyPI](https://pypi.python.org/pypi/twilio)
+  and [available for download from PyPI](https://pypi.org/project/twilio)
 
 Take a look at 
 [this guide on setting up Python 3, Bottle and Gunicorn on Ubuntu 16.04 LTS](/blog/python-3-bottle-gunicorn-ubuntu-1604-xenial-xerus.html)

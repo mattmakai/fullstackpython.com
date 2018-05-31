@@ -81,8 +81,8 @@ The command prompt will change after activating the virtualenv:
 Remember that you need to activate your virtualenv in every new terminal 
 window where you want to use the virtualenv to run the project.
 
-We can now install the [Django](https://pypi.python.org/pypi/Django/2.0.4) 
-and [Rollbar](https://pypi.python.org/pypi/rollbar) packages into the 
+We can now install the [Django](https://pypi.org/project/Django/2.0.4) 
+and [Rollbar](https://pypi.org/project/rollbar) packages into the 
 activated, empty virtualenv.
 
 ```

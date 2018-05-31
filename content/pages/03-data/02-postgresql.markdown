@@ -138,7 +138,7 @@ walkthroughs I've read.
 * [How to speed up tests in Django and PostgreSQL](http://nemesisdesign.net/blog/coding/how-to-speed-up-tests-django-postgresql/)
   explains some hacks for making your schema migration-backed run quicker.
 
-* [Records](https://pypi.python.org/pypi/records/) is a wrapper around the psycopg2
+* [Records](https://pypi.org/project/records/) is a wrapper around the psycopg2
   driver that allows easy access to direct SQL access. It's worth a look if
   you prefer writing SQL over using an 
   [ORM](/object-relational-mappers-orms.html) like SQLAlchemy.

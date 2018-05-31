@@ -32,10 +32,10 @@ driver.
 
 There was a major issue with MySQL drivers since the introduction of 
 Python 3. One of the most popular libraries called 
-[MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.5) did not work
+[MySQLdb](https://pypi.org/project/MySQL-python/1.2.5) did not work
 in its existing form with Python 3 and there were no plans to update it.
 Therefore a fork of MySQLdb named 
-[mysqlclient](https://pypi.python.org/pypi/mysqlclient) added Python 3
+[mysqlclient](https://pypi.org/project/mysqlclient) added Python 3
 compatibility. 
 
 The mysqlclient fork was good in that existing MySQLdb users could drop
@@ -49,7 +49,7 @@ With that driver support context in mind, it's absolutely possible to build
 a Python 3 web application with MySQL as a backend. Here is a list of
 drivers along with whether it supports Python 2, 3 or both.
 
-* [mysqlclient](https://pypi.python.org/pypi/mysqlclient) is a fork
+* [mysqlclient](https://pypi.org/project/mysqlclient) is a fork
   of MySQLdb that supports Python 2 and 3.
 
 * [MySQL Connector](http://dev.mysql.com/doc/connector-python/en/)
@@ -58,7 +58,7 @@ drivers along with whether it supports Python 2, 3 or both.
   [version guide](http://dev.mysql.com/doc/connector-python/en/) for what
   releases work with which Python versions.
 
-* [MySQLdb](https://pypi.python.org/pypi/MySQL-python/1.2.5) supports
+* [MySQLdb](https://pypi.org/project/MySQL-python/1.2.5) supports
   Python 2 and was frequently used by Python web applications before the
   mass migration to Python 3 began.
 

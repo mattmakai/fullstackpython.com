@@ -116,7 +116,7 @@ your application's code with the SQLAlchemy library.
 * [Morepath](/morepath.html) has easy-to-use support for SQLAlchemy via its
   [more.transaction](http://blog.startifact.com/posts/racing-the-morepath-sqlalchemy-integration.html) 
   module. There is a 
-  [morepath-sqlalchemy demo](https://pypi.python.org/pypi/morepath-sqlalchemy/)
+  [morepath-sqlalchemy demo](https://pypi.org/project/morepath-sqlalchemy/)
   that serves as a working example.
 
 
@@ -162,7 +162,7 @@ edge cases.
 
 * [Getting PostgreSQL transactions under control with SQLAlchemy](http://layer0.authentise.com/getting-postgresql-transactions-under-control-with-sqlalchemy.html)
   provides a quick introduction to the tool 
-  [Chryso](https://pypi.python.org/pypi/chryso/) that they are working on
+  [Chryso](https://pypi.org/project/chryso/) that they are working on
   to provide better transaction management in SQLAlchemy connections.
 
 

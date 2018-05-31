@@ -66,7 +66,7 @@ Python ORM libraries are not required for accessing relational
 databases. In fact, the low-level access is typically provided by another
 library called a *database connector*, such as
 [psycopg](http://initd.org/psycopg/) (for PostgreSQL)
-or [MySQL-python](https://pypi.python.org/pypi/MySQL-python/1.2.5) (for
+or [MySQL-python](https://pypi.org/project/MySQL-python/1.2.5) (for
 MySQL). Take a look at the table below which shows how ORMs can work with
 different web frameworks and connectors and relational databases.
 

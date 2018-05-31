@@ -22,7 +22,7 @@ For example,
 [template engine](/django-templates.html),
 an [object-relational mapper](/object-relational-mappers-orms.html) (ORM),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
-(as of version 1.7) are all included with the [Django framework](https://pypi.python.org/pypi/Django/). 
+(as of version 1.7) are all included with the [Django framework](https://pypi.org/project/Django/). 
 Compare that included functionality to the Flask framework which requires a 
 separate library such as 
 [Flask-Login](https://flask-login.readthedocs.org/en/latest/)
