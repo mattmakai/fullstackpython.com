@@ -30,15 +30,15 @@ kept up to date with accurate descriptions and resources.
 |Page                                                     | Status       |
 |---------------------------------------------------------|--------------|
 |[Introduction](/introduction.html)                       | maintain     |
-|[Learning Programming](/learning-programming.html)       | intermediate |
-|[The Python Language](/python-programming-language.html) | intermediate |
-|[Why Use Python?](/why-use-python.html)                  | intermediate |
-|[Enterprise Python](/enterprise-python.html)             | intermediate |
-|[Python Community](/python-community.html)               | starter      |
-|[Companies Using Python](/companies-using-python.html)   | starter      |
+|[Learning Programming](/learning-programming.html)       | maintain     |
+|[The Python Language](/python-programming-language.html) | maintain     |
+|[Why Use Python?](/why-use-python.html)                  | maintain     |
+|[Enterprise Python](/enterprise-python.html)             | maintain     |
+|[Python Community](/python-community.html)               | maintain     |
+|[Companies Using Python](/companies-using-python.html)   | intermediate |
 |[Best Python Resources](/best-python-resources.html)     | maintain     |
-|[Must-watch Python Videos](/best-python-videos.html)     | intermediate |
-|[Podcasts](/best-python-podcasts.html)                   | starter      |
+|[Must-watch Python Videos](/best-python-videos.html)     | maintain     |
+|[Podcasts](/best-python-podcasts.html)                   | maintain     |
 
 
 ## Chapter 2: Development Environments

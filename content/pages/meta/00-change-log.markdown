@@ -16,6 +16,10 @@ on GitHub.
 
 
 ## 2018
+### June
+* Further work on [companies using Python](/companies-using-python.html)
+  page.
+
 ### May
 * Merged [PR #169](https://github.com/mattmakai/fullstackpython.com/pull/169)
   that cuts down on redirects to the new PyPI site. Thank you Sam!
