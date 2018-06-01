@@ -14,6 +14,25 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
 [create reliable, scalable enterprise applications](/enterprise-python.html).
 
 
+### Financial institutions
+Python is widely-used across financial institutions, whether they are
+hedge funds, large banks or regulators (see "Government Agencies" section
+below).
+
+* [Goldman Sachs uses Python](https://www.quora.com/Why-does-Goldman-Sachs-ask-for-Python-language-as-a-skill-during-the-interview-for-an-analyst-role)
+  and often asks candidates about their experience with the language
+  during the interview process. 
+
+* You can see publicly what companies are using internally by looking
+  at job descriptions on sites like 
+  [Glassdoor with "Python Goldman Sachs" keywords](https://www.glassdoor.com/Jobs/Goldman-Sachs-python-Jobs-EI_IE2800.0,13_KO14,20.htm)
+  and
+  [Indeed for JP Morgan Chase](https://www.indeed.com/salaries/Python-Developer-Salaries-at-JPMorgan-Chase).
+  Salaries and responsibilities vary widely based on the role and whether
+  Python is used for data analysis, 
+  [web application development](/web-development.html) or DevOps.
+
+
 ### Large tech companies
 Large technology companies tend to be polyglot (use many programming 
 languages rather than standardizing on one), with Python either as a
