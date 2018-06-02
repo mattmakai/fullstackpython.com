@@ -44,6 +44,10 @@ be able to structure your playbooks:
 
 
 ### Specific Ansible topics
+* [An Ansible2 Tutorial](https://serversforhackers.com/c/an-ansible2-tutorial)
+  is an incredibly detailed look at how one developer installs and run
+  Ansible.
+
 * [Using Ansible for deploying serverless applications](https://opensource.com/article/17/8/ansible-serverless-applications)
   provides a short overview with an example playbook how Ansible can also
   be useful for configuring [serverless](/serverless.html) applications.

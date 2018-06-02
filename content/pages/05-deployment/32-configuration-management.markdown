@@ -50,8 +50,8 @@ management and application deployment tool built in Python.
 
 
 ### Ansible Resources
-* [An Ansible Tutorial](https://serversforhackers.com/an-ansible-tutorial)
-  is a fantastically detailed introduction to using Ansible to set up
+* [An Ansible Tutorial](https://serversforhackers.com/c/an-ansible2-tutorial)
+  is a fantastically detailed introduction on using Ansible to set up
   servers.
 
 * [Ansible Text Message Notifications with Twilio SMS](https://www.twilio.com/blog/2014/05/ansible-text-messages-notifications-with-twilio-sms.html)
