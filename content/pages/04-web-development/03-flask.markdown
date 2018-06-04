@@ -70,7 +70,7 @@ libraries such as [Lektor](/lektor.html), [Jinja](/jinja2.html) and
 several others.
 
 
-### Flask beginner tutorials
+### Flask tutorials
 The "Hello, World!" code for Flask is just seven lines of code but learning how
 to build full-featured web applications with any framework takes a lot of work.
 These resources listed below are the best up-to-date tutorials and references
@@ -113,6 +113,13 @@ for getting started.
   was previously backed on Kickstarter and cost money for about a year before
   being open sourced. The book explains best practices and patterns for 
   building Flask apps.
+
+* [Learn to Build Web Applications with Flask and Docker](https://buildasaasappwithflask.com/)
+  is a video course by [Nick Janetakis](https://github.com/nickjj)
+  that shows how to build a Software-as-a-Service (SaaS) application that
+  he [open sourced](https://github.com/nickjj/build-a-saas-app-with-flask)
+  which uses Flask for the [web framework](/web-frameworks.html) and 
+  [Docker](/docker.html) for [deployment](/deployment.html).
 
 * [Flask by Example: Part 1](http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/)
   shows the basic first steps for setting up a Flask project. 

@@ -1,49 +1,54 @@
-title: Developing Flask Apps in Docker Containers on macOS
-slug: develop-flask-web-apps-docker-containers-macos
-meta: Learn how to set up and develop a new Flask web application within a Docker container.
+title: First Steps with Bottle Apps in Docker Containers on macOS
+slug: first-steps-bottle-web-apps-docker-containers
+meta: Learn how to set up and develop a new Bottle web application within a Docker container.
 category: post
-date: 2018-03-09
+date: 2018-06-04
 modified: 2018-06-04
 newsletter: False
-headerimage: /img/180309-flask-docker/header.jpg
-headeralt: Flask, Docker and Apple logos, copyright their respective owners.
+headerimage: /img/180604-bottle-docker/header.jpg
+headeralt: Bottle, Docker and Apple logos, copyright their respective owners.
 
 
-Adding [Docker](/docker.html) to your [Python](/why-use-python.html) and 
-[Flask](/flask.html) [development environment](/development-environments.html) 
-can be confusing when you are just getting started with containers. Let's 
-quickly get Docker installed and configured for developing Flask web 
-applications on your local system.
+It can be confusing to figure out how to use [Docker](/docker.html) 
+containers in your [Python](/why-use-python.html) and 
+[Bottle](/flask.html) 
+[development environment](/development-environments.html) workflow.
+This tutorial will quickly show you the exact steps to get Docker
+up and running on macOS with a working Bottle 
+[web application](/web-development.html)
 
 
 ## Our Tools
-This tutorial is written for [Python 3](/python-2-or-3.html). It will work with
-Python 2 but I have not tested it with the 
-[soon-to-be deprecated 2.7 version](https://pythonclock.org/). 
+This tutorial is written for [Python 3](/python-2-or-3.html). It may work with
+Python 2 but it has not been testing with that soon-to-be deprecated
+[2.7 version](https://pythonclock.org/). You should really be using Python 3,
+preferrably the latest release which is currently 
+[3.6.5](https://www.python.org/downloads/release/python-365/).
 
-[Docker for Mac](https://docs.docker.com/docker-for-mac/install/) is necessary.
-I recommend the stable release unless you have an explicit purpose for the edge 
-channel.
+[Docker for Mac](https://docs.docker.com/docker-for-mac/install/) is necessary
+to run Docker containers. I recommend that you use the stable release unless 
+you have an explicit purpose for the 
+[edge channel](https://docs.docker.com/docker-for-mac/edge-release-notes/).
 
 Within the Docker container we will use:
 
 * Python 3, specifically the
-  [slim-3.6.4 version](https://hub.docker.com/r/library/python/tags/3.6-slim/)
-  from Docker Hub
-* [Flask](/flask.html) version 1.0.2
+  [slim-3.6.5 version](https://hub.docker.com/r/library/python/tags/)
+  from [Docker Hub](https://hub.docker.com/)
+* [Bottle](/bottle.html) version 0.12.13
 
-All of the code for the Dockerfile and the Flask app are available open source
+All for the Dockerfile and the Bottle project are available open source
 under the MIT license on GitHub under the 
-[docker-flask-mac directory](https://github.com/fullstackpython/blog-code-examples/tree/master/docker-flask-mac)
+[docker-bottle-mac directory](https://github.com/fullstackpython/blog-code-examples/tree/master/docker-bottle-mac)
 of the
 [blog-code-examples](https://github.com/fullstackpython/blog-code-examples)
-repository. Use the code for your own purposes as much as you like.
+repository.
 
 
 ## Installing Docker on macOS
-We need to install Docker before we can spin up our Docker containers. If you
-already have Docker for Mac installed and working, feel free to jump to the
-next section.
+We must install Docker before we can spin up our containers. Jump to
+the next section if you already have Docker for Mac installed and working
+on your computer.
 
 On your Mac, 
 [download the Docker Community Edition (CE) for Mac](https://www.docker.com/community-edition#/download)
