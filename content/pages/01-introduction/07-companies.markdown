@@ -106,3 +106,30 @@ like the CIA, FBI and NSA.
   Institution, Department of Education, Department of the Navy and 
   National Institute of Standards and Technology (NIST).
 
+
+### Industry-specific Python guides
+Python is so widely used across various industries that developers have
+written guides specific to their occupations for how to use Python. The
+following resources are guides for using Python in astronomy, social
+sciences and other fields rather than specific companies.
+
+* [Practical Business Python](http://pbpython.com/) covers business-related
+  topics such as how to automate generating large Excel spreadsheets or 
+  perform analysis when your data is locked in Microsoft Office files.
+
+* [Practical Python for Astronomers](https://python4astronomers.github.io/)
+  gives open source workshop materials to teach astronomy students how to
+  use Python for [data analysis](/data-analysis.html).
+
+* [Python for the Humanities](http://fbkarsdorp.github.io/python-course/) is a
+  textbook on the basics of text processing in Python. The material ramps 
+  up quickly after the first chapter so you will likely want to combine 
+  this walkthrough with other 
+  [great Python learning resources](/best-python-resources.html).
+
+* [Python for Social Scientists](http://www-rohan.sdsu.edu/~gawron/python_for_ss/)
+  and 
+  [Real Python's Python for Social Scientists](https://realpython.com/python-for-social-scientists/)
+  walkthroughs are specific to fields that work with a lot of 
+  [data](/data.html) gathered from studies such as psychology, sociology
+  and economics.
