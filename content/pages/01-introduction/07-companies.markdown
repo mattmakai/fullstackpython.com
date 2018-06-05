@@ -64,6 +64,12 @@ stacks.
   throughout their organization to run chaos engineering tests and generally
   glue together the code from their high-functioning polyglot teams.
 
+* [Google uses Python extensively](https://stackoverflow.com/questions/2560310/heavy-usage-of-python-at-google)
+  and officially supports it internally as one of their three core languages,
+  the other two being Java and Golang. While Google likely has every 
+  programming language running somewhere in their infrastructure, Python 
+  receives priority support due to its core language status.
+
 * [Facebook and Instagram use Python 3](https://thenewstack.io/instagram-makes-smooth-move-python-3/)
   at scale. They've been very vocal about successfully making the migration 
   from the [Python 2 world into Python 3](/python-2-or-3.html).

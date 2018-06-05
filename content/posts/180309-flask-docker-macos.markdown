@@ -3,7 +3,7 @@ slug: develop-flask-web-apps-docker-containers-macos
 meta: Learn how to set up and develop a new Flask web application within a Docker container.
 category: post
 date: 2018-03-09
-modified: 2018-06-04
+modified: 2018-06-05
 newsletter: False
 headerimage: /img/180309-flask-docker/header.jpg
 headeralt: Flask, Docker and Apple logos, copyright their respective owners.
@@ -28,7 +28,7 @@ channel.
 Within the Docker container we will use:
 
 * Python 3, specifically the
-  [slim-3.6.4 version](https://hub.docker.com/r/library/python/tags/3.6-slim/)
+  [slim-3.6.5 version](https://hub.docker.com/r/library/python/tags/)
   from Docker Hub
 * [Flask](/flask.html) version 1.0.2
 
@@ -66,7 +66,7 @@ docker --version
 If Docker is installed correctly you should see the following output:
 
 ```
-Docker version 17.12.0-ce, build c97c6d6
+Docker version 18.03.1-ce, build 9ee9f40
 ```
 
 Note that Docker runs through a system agent you can find in the menu bar.
@@ -88,7 +88,7 @@ Docker needs to know what we want in a container, which is where the
 
 ```
 # this is an official Python runtime, used as the parent image
-FROM python:3.6.4-slim
+FROM python:3.6.5-slim
 
 # set the working directory in the container to /app
 WORKDIR /app

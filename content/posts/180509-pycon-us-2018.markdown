@@ -1,0 +1,46 @@
+title: Full Stack Python at PyCon US 2018
+slug: full-stack-python-pycon-us-2018
+meta: Come by and say hello to Matt Makai, author of Full Stack Python, at PyCon US 2018 in Cleveland, Ohio.
+category: post
+date: 2018-05-09
+modified: 2018-05-09
+newsletter: True
+headerimage: /img/visuals/email-post-header.jpg
+headeralt: Python programming language and Full Stack Python logos.
+
+
+[PyCon US 2018](https://us.pycon.org/2018/about/) kicked off today with the 
+[first day of tutorials](https://us.pycon.org/2018/schedule/tutorials/). I am
+flying in tomorrow and will be there through the end of the 
+weekend. If you're around, come by either the 
+[Twilio booth](https://www.twilio.com/) or the community booth where the 
+gang from [Talk Python to Me](https://talkpython.fm/), 
+[Real Python](https://realpython.com/), [PyBites](https://pybit.es/) and 
+[Test & Code](http://testandcode.com/) will be hanging out. I will be 
+at one of those two spots when I am not watching talks! I'd love your 
+feedback on what I can improve on 
+[Full Stack Python](https://www.fullstackpython.com/). It's also great 
+hearing your stories about how the site has helped you improve your 
+development skills.
+
+For those folks who can't make it to PyCon, I'll be tweeting the best stuff 
+that I see throughout the conference via 
+[@fullstackpython](https://twitter.com/fullstackpython). Likewise, if I miss 
+something let me know on Twitter or via email so we can highlight it.
+
+One quick update on the
+[Full Stack Python Guide to Deployments book](https://www.deploypython.com/). 
+I have a great update in the works that bumps to the latest versions of 
+Ubuntu (now 18.04 LTS), Ansible 2.5.1 and Flask 1.0.2. It has been a long 
+time coming and will be a free update to all existing purchasers. If you have
+not bought the book yet, I recommend waiting until the update is out 
+because the existing book's software versions are getting way too out of 
+date to be useful to most projects.
+
+Got questions or comments about 
+[Full Stack Python](https://www.fullstackpython.com/)? Send me an email or 
+[submit an issue ticket on GitHub](https://github.com/mattmakai/fullstackpython.com/issues) 
+to let me know how to improve the site as I continue to fill in the 
+[table of contents](https://www.fullstackpython.com/table-of-contents.html) 
+with [new pages](https://www.fullstackpython.com/change-log.html) and 
+[new tutorials](https://www.fullstackpython.com/blog.html).
