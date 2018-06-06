@@ -10,8 +10,8 @@ DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email',
                     'blog', 'all',) #'pdf-book', 'epub-book')
 
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
+ARTICLE_URL = 'blog/{slug}.html'
 SITEMAP_SAVE_AS = 'sitemap.xml'
-FEED_DOMAIN = 'https://www.fullstackpython.com'
 FEED_RSS = 'feed'
 LINKS = ()
 MARKUP = ('rst', 'markdown',)
