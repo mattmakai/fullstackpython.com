@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2018
 ### June
+* Fix 
+  [issue #172](https://github.com/mattmakai/fullstackpython.com/issues/172)
+  where Atom and RSS feeds did not have `/blog/` in the URLs so they were 
+  pointing to incorrect (broken) article locations.
 * Further work on [companies using Python](/companies-using-python.html)
   page.
 
