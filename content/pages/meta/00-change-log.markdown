@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### June
+* Add even more descriptions and resources to the 
+  [Python companies](/companies-using-python.html) page.
 * Fix 
   [issue #172](https://github.com/mattmakai/fullstackpython.com/issues/172)
   where Atom and RSS feeds did not have `/blog/` in the URLs so they were 

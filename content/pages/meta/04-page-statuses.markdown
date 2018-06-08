@@ -35,7 +35,7 @@ kept up to date with accurate descriptions and resources.
 |[Why Use Python?](/why-use-python.html)                  | maintain     |
 |[Enterprise Python](/enterprise-python.html)             | maintain     |
 |[Python Community](/python-community.html)               | maintain     |
-|[Companies Using Python](/companies-using-python.html)   | intermediate |
+|[Companies Using Python](/companies-using-python.html)   | maintain     |
 |[Best Python Resources](/best-python-resources.html)     | maintain     |
 |[Must-watch Python Videos](/best-python-videos.html)     | maintain     |
 |[Podcasts](/best-python-podcasts.html)                   | maintain     |
