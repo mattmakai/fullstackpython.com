@@ -13,6 +13,17 @@ to [build web apps](/web-development.html), [analyze data](/data.html),
 [automate operations via DevOps](/devops.html) and 
 [create reliable, scalable enterprise applications](/enterprise-python.html).
 
+There is also a fantastic list of 
+[organizations using Python on the Python.org wiki](https://wiki.python.org/moin/OrganizationsUsingPython#Games)
+as well as a detailed write-up of 
+[several top Python-powered companies on Real Python's blog](https://realpython.com/world-class-companies-using-python/).
+
+Many companies do not even realize they are using Python across their
+organizations. For example, if a company is a "Java-only shop" but they
+use IBM WebSphere as a web application server then they have to use
+Python to script the server's configuration! Python has a habit of getting
+in everywhere regardless of whether the usage is intentional.
+
 
 ### Financial institutions
 Python is widely-used across financial institutions, whether they are
@@ -31,6 +42,12 @@ below).
   Salaries and responsibilities vary widely based on the role and whether
   Python is used for data analysis, 
   [web application development](/web-development.html) or DevOps.
+
+* [PayPal](https://www.paypal-engineering.com/2016/09/07/python-packaging-at-paypal/)
+  uses Python across their entire infrastructure and often writes great
+  technical blog posts on packaging, 
+  [optimization using C](https://www.paypal-engineering.com/2016/09/22/python-by-the-c-side/) 
+  and [configuring DNS](https://www.paypal-engineering.com/2015/12/16/enterprise-overhaul-resolving-dns/).
 
 
 ### Large tech companies
@@ -70,9 +87,21 @@ stacks.
   programming language running somewhere in their infrastructure, Python 
   receives priority support due to its core language status.
 
+* [Dropbox is well-known for using Python](https://techcrunch.com/2013/07/11/how-did-dropbox-scale-to-175m-users-a-former-engineer-details-the-early-days/)
+  across their application development, infrastructure and operations. They
+  also did a good job of cornering the market on hiring well-known Python 
+  core contributors for a period of time, such as 
+  [Guido van Rossum](https://blogs.dropbox.com/tech/2012/12/welcome-guido/) 
+  and 
+  [Jessica McKellar](https://opensource.com/business/16/7/red-hat-women-open-source-award-winner-jessica-mckellar) 
+  (although Jessica is now at a new company that she co-founded). 
+
 * [Facebook and Instagram use Python 3](https://thenewstack.io/instagram-makes-smooth-move-python-3/)
   at scale. They've been very vocal about successfully making the migration 
   from the [Python 2 world into Python 3](/python-2-or-3.html).
+
+* A significant portion of [Reddit is built in Python](https://github.com/reddit?language=python)
+  and it is one of the largest sites at scale to use the programming language.
 
 * *Increment* covers usage of Python (and other programming languages) at
   Lyft, Digital Ocean, Sauce Labs, Slack and Fastly 
