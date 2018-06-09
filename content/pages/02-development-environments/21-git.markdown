@@ -17,6 +17,14 @@ frequently used as the version control system for Python projects.
 
 <div class="well see-also">Git is an implementation of the <a href="/source-control.html">source control</a> concept. Learn how these pieces fit together in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
+## Why Git
+Git has grown traction in the industry because of the way it has transformed the way that developers and organizations develop software projects on a day-to-day basis.
+
+In traditional VCS where workflows were centralized, developers would have to pull a working copy from the central repository. This would typically be done over the network, which meant that the network would become the bottleneck the larger the organization grew. In Git, this is not the case since a developer would get a local copy of the full repository. As a result, developers would need minimal network connection in order to retrieve updates and commit history since everything is in their local copy.
+
+Another thing about traditional VCS was that it was difficult to create a branch ([see here for an example](http://www.sci.utah.edu/~macleod/docs/cvs-tips.html)). To simplify the process, folks created their own scripts to simplify the experience. But in Git, none of that is needed. Creating new branches is a single command (`git checkout -b`). This ease of use is important because it encouraged a distributed development workflow. In other words, developers could create local branches with ease and experiment with multiple concepts without impacting a mainline branch or a stable branch.
+
+One point that cannot be forgotten is the rise of GitHub as a public place where anyone could create their own Git repositories in the name of open-source. Its user experience and ease of use is what led to its popularity. Two features that helped pave the way for meaningful interaction between maintainers and consumers were the issues page and pull request page where GitHub users could voice their concerns or contribute back to the community. As organizations started finding value in GitHub, they added third-party integrations (i.e. Jenkins/Travis/CircleCI) to the platform.
 
 ## Beginner Git tutorials
 Git can take awhile to wrap your head around, even for experienced software
