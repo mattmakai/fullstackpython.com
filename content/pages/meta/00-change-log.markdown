@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### June
+* Merged [PR #173](https://github.com/mattmakai/fullstackpython.com/pull/173)
+  for new [Git](/git.html) page section. Modified wording a bit from original
+  pull request. Thanks [Sam](https://github.com/huangsam)!
 * Add even more descriptions and resources to the 
   [Python companies](/companies-using-python.html) page.
 * Fix 

@@ -17,14 +17,42 @@ frequently used as the version control system for Python projects.
 
 <div class="well see-also">Git is an implementation of the <a href="/source-control.html">source control</a> concept. Learn how these pieces fit together in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
-## Why Git
-Git has grown traction in the industry because of the way it has transformed the way that developers and organizations develop software projects on a day-to-day basis.
 
-In traditional VCS where workflows were centralized, developers would have to pull a working copy from the central repository. This would typically be done over the network, which meant that the network would become the bottleneck the larger the organization grew. In Git, this is not the case since a developer would get a local copy of the full repository. As a result, developers would need minimal network connection in order to retrieve updates and commit history since everything is in their local copy.
+## Why is Git widely-used by developers?
+Git is a *distributed* version control system (DVCS) compared to the 
+centralized models previously provided by 
+[Subversion](/apache-subversion.html) and [CVS](https://www.nongnu.org/cvs/).
+Files would need to be "checked out" over the network by a single person at
+a time while she was woring. The network transfer speed as well as the 
+blocking check out model became a significant bottleneck, especially for 
+large development teams. 
 
-Another thing about traditional VCS was that it was difficult to create a branch ([see here for an example](http://www.sci.utah.edu/~macleod/docs/cvs-tips.html)). To simplify the process, folks created their own scripts to simplify the experience. But in Git, none of that is needed. Creating new branches is a single command (`git checkout -b`). This ease of use is important because it encouraged a distributed development workflow. In other words, developers could create local branches with ease and experiment with multiple concepts without impacting a mainline branch or a stable branch.
+Git clones a full repository and its entire history instead of just the 
+current state of a file. Developers only require a network connection when
+pulling updates and pushing changes to a backup repository. The commit log
+and file histories are stored and transmitted far more efficiently than
+prior version control systems to maximize the effectiveness of the 
+distributed version control design.
 
-One point that cannot be forgotten is the rise of GitHub as a public place where anyone could create their own Git repositories in the name of open-source. Its user experience and ease of use is what led to its popularity. Two features that helped pave the way for meaningful interaction between maintainers and consumers were the issues page and pull request page where GitHub users could voice their concerns or contribute back to the community. As organizations started finding value in GitHub, they added third-party integrations (i.e. Jenkins/Travis/CircleCI) to the platform.
+Another issue with traditional VCS was that it was difficult to create 
+branches. Take a look
+[at this tutorial on managing a CVS repository](http://www.sci.utah.edu/~macleod/docs/cvs-tips.html)
+as an example of the confusion the existing non-distributed models could
+cause. Git simplified the branching process with simplified commands 
+such as `git checkout -b` and faster branch merging and clean up. In contrast
+to earlier version control systems, Git encourages developers to create local 
+branches and experiment in them without impacting a stable `master` branch.
+
+[GitHub](https://www.github.com/) also helped to drive Git as the overwhelming
+version control favorite by providing the open source community with free open
+remote Git repositories. GitHub's web application user interface, issue 
+tracking and pull request features for maintainers and consumers also 
+encouraged more collaboration than Git alone. Recently, 
+[GitHub's third-party marketplace](https://github.com/marketplace) has
+begun to add more features by integrating 
+[continuous integration](/continuous-integration.html) servers like 
+as [Jenkins](/jenkins.html) and [code metrics](/code-metrics.html) services.
+
 
 ## Beginner Git tutorials
 Git can take awhile to wrap your head around, even for experienced software
@@ -187,8 +215,6 @@ minimize merge conflicts.
   is a helpful post with diagrams to show how teams can create a Git workflow
   that will help their development process.
 
-* "[Our Git Workflow](http://www.braintreepaymentsolutions.com/devblog/our-git-workflow)"
-  by Braintree goes over how this payments company uses Git for development
-  and merging source code.
-
-
+* [Comparing workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+  provides a slew of examples for how developers on a team can handle merge
+  conflicts and other situations that commonly arise when using Git.
