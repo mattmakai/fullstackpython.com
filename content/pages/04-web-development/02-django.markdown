@@ -79,6 +79,11 @@ since then.
   is a great tutorial that doesn't assume any prior knowledge of Python or
   Django while helping you build your first web application.
 
+* [Django OverIQ](https://overiq.com/django/1.10/intro-to-django) is a 
+  project-based tutorial for beginners that covers the required features
+  such as the [Django ORM](/django-orm.html) and 
+  [Django Templates](/django-templates.html).
+
 * [2 Scoops of Django](https://www.twoscoopspress.com/collections/django/products/two-scoops-of-django-1-11)
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
