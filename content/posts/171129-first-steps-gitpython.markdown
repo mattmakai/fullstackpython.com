@@ -65,7 +65,7 @@ source gitpy/bin/activate
 The virtualenv's name will be prepended to the command prompt after 
 activation.
 
-<img src="/img/171129-gitpython/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create and activate the Python virtual environment.">
+<img src="/img/171129-gitpython/activate-virtualenv.png" width="100%" class="shot rnd outl" alt="Create and activate the Python virtual environment.">
 
 Now that the virutalenv is activated we can use the `pip` command to install
 GitPython.

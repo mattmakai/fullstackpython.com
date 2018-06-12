@@ -18,7 +18,7 @@ Arguments:
 Examples:
 
 1. Post URL to all channels with the default title found within the page's
-   <h1> and tagged with any keywords that match between the page content 
+   <h1> and tagged with any keywords that match between the page content
    and the table of contents map.
 
 	python post.py https://www.fullstackpython.com/django.html
@@ -46,8 +46,14 @@ parser = argparse.ArgumentParser(description='Post a tutorial.')
 parser.add_argument('url', metavar='1', type=str, nargs='?',
                     help='URL for the tutorial to post')
 parser.add_argument("-c", "--channel", help="channel to post tutorial to")
+parser.add_argument("-s", "--subject", help="subject line to use with the post")
+parser.add_argument("-t", "--tags", help="comma-delimited list of fsp topics")
 
 
 args = parser.parse_args()
 print(args.url)
 print(args.channel)
+print(args.subject)
+print(args.tags)
+
+

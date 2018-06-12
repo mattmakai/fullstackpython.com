@@ -2,6 +2,23 @@
 
 {% block meta_header %}{% if page.meta %}
 <meta name="description" content="{{ page.meta }}">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ page.title }}" />
+{% if not page.headerimage or page.headerimage == '' %}
+<meta name="twitter:image" content="https://www.fullstackpython.com/img/pages/default.jpg" />
+{% else %}
+<meta property="twitter:image" content="{{ SITEURL }}{{ page.headerimage }}" />
+{% endif %}
+<meta name="twitter:site" content="@fullstackpython" />
+<meta name="twitter:creator" content="@mattmakai" />
+<meta property="og:url" content="{{ SITEURL }}/{{ page.slug }}.html" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.meta }} Great post on Full Stack Python about {{ page.title }}!" />
+{% if not page.headerimage or page.headerimage == '' %}
+<meta property="og:image" content="https://www.fullstackpython.com/img/pages/default.jpg" />
+{% else %}
+<meta property="og:image" content="{{ SITEURL }}{{ page.headerimage }}" />
+{% endif %}
 <link rel="canonical" href="https://www.fullstackpython.com/{{ page.slug }}.html" />
 {% endif %}{% endblock %}
 
