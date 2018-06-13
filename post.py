@@ -42,6 +42,12 @@ Examples:
 	python post.py https://www.fullstackpython.com/databases.html "postgresql, mysql" -d "An overview of relational databases for Python." -c twitter
 """
 
+def post_to_buffer():
+    """See: https://buffer.com/developers/api/updates#updatesshare
+    """
+    pass
+
+
 parser = argparse.ArgumentParser(description='Post a tutorial.')
 parser.add_argument('url', metavar='1', type=str, nargs='?',
                     help='URL for the tutorial to post')

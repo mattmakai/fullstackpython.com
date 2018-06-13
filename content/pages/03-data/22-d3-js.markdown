@@ -50,6 +50,10 @@ from scratch.
 * [Argyle](http://bl.ocks.org/veltman/f24fba4f6549639cacfd4d0a50e9d4b8) in
   d3? Oh yes, the library can do that, and here is the code to prove it.
 
+* [How and why to use D3 with React](https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274)
+  is an awesome overview of the D3.js plugin ecosystem and how to use
+  the tool with a React-based JavaScript front end.
+
 
 ### Charts with d3.js
 * [Responsive D3js Charts](http://ablesense.com/responsive-d3js-charts/)
@@ -66,4 +70,20 @@ from scratch.
   generate d3.js charts without having to hand-write the JavaScript code.
   If you are interested in a solution like this for your own visualizations
   then you should also check out [Bokeh](/bokeh.html).
+
+
+### D3 ecosystem
+* [The trouble with D3](https://medium.com/@enjalot/the-trouble-with-d3-4a84f7de011f)
+  is not a tutorial but it's an important read because it discusses why
+  D3 can be very difficult to learn: the learning curve depends on your
+  background. If you are a front-end developer you will likely have the
+  easiest time if you already understand [JavaScript](/javascript.html),
+  SVG and the browser Document Object Model (DOM). Non-technical designers
+  and analysts typically have the hardest time with using D3 because the
+  not only have to learn the tool itself but all the concepts and 
+  web browser technologies that it is built upon. 
+
+* [D3.js in Action, Second Edition](https://blog.usejournal.com/d3-js-in-action-second-edition-8cf7ffa2a116)
+  is partially an announcement for the authors book but also contains
+  good context for who uses D3 and why its usage continues to grow.
 
