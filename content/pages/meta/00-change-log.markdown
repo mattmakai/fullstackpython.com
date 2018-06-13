@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### June
+* New [d3.js](/d3-js.html) resources.
 * Merged [PR #173](https://github.com/mattmakai/fullstackpython.com/pull/173)
   for new [Git](/git.html) page section. Modified wording a bit from original
   pull request. Thanks [Sam](https://github.com/huangsam)!
