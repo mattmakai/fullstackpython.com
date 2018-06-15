@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### June
+* New blog post on how to
+  [Configure Python 3, Flask and Gunicorn on Ubuntu 18.04 LTS](/blog/python-3-flask-gunicorn-ubuntu-1804-bionic-beaver.html).
 * New [d3.js](/d3-js.html) resources.
 * Merged [PR #173](https://github.com/mattmakai/fullstackpython.com/pull/173)
   for new [Git](/git.html) page section. Modified wording a bit from original
