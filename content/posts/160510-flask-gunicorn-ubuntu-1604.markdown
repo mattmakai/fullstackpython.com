@@ -3,7 +3,7 @@ slug: python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus
 meta: Instructions for setting up Ubuntu 16.04 with Python 3, Flask and Green Unicorn (Gunicorn).
 category: post
 date: 2016-05-10
-modified: 2017-04-28
+modified: 2017-06-14
 newsletter: False
 headerimage: /img/160510-ubuntu-flask-gunicorn/header.jpg
 headeralt: Flask, Green Unicorn and Ubuntu logos. Copyright their respective owners.
@@ -158,7 +158,7 @@ the `localhost:8000` or `127.0.0.1:8000` address.
 
 <img src="/img/160510-ubuntu-flask-gunicorn/it-works.jpg" width="100%" class="technical-diagram img-rounded">
 
-Now ready for some real [Flask](/flask.html) development!
+Now we're ready for some real [Flask](/flask.html) development!
 
 
 ## Ready for Development
