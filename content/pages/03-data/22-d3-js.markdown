@@ -54,6 +54,10 @@ from scratch.
   is an awesome overview of the D3.js plugin ecosystem and how to use
   the tool with a React-based JavaScript front end.
 
+* [D3 is not a data visualization library](https://medium.com/@Elijah_Meeks/d3-is-not-a-data-visualization-library-67ba549e8520)
+  breaks down the parts to D3 and why it's not directly comparable to 
+  a typical charting library.
+
 
 ### Charts with d3.js
 * [Responsive D3js Charts](http://ablesense.com/responsive-d3js-charts/)
