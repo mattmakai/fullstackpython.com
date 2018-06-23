@@ -113,6 +113,11 @@ out how to structure and operate serverless applications.
   operations staff. They discuss the good and the bad of working in this
   fashion while generally coming away with a positive experience.
 
+* [Have you shipped anything serious with a “serverless” architecture?](https://news.ycombinator.com/item?id=17378749)
+  provides some great answers by Hacker News developers who are using
+  serverless for large production applications and how they deal with
+  the limitations of the platforms.
+
 * [What's this serverless thing, anyway?](https://read.acloud.guru/whats-this-serverless-thing-anyway-b101cb72c7e6)
 
 * [Serverless architectures - let's ditch the servers?](https://codeahoy.com/2016/06/25/serverless-architectures-lets-ditch-the-servers/)
