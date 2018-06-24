@@ -138,6 +138,10 @@ topics.
   [The Elements of Python Style](https://github.com/amontalenti/elements-of-python-style)
   to know the Python community standards.
 
+* [Essential Reads for Any Python Programmer](http://notesbyanerd.com/2017/12/29/essential-reads-for-any-python-programmer/)
+  is a great collection of advice for developers coming to Python from another
+  programming language ecosystem such as Java.
+
 * [How to Develop Quality Python Code](https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code)
   is a good read to begin learning about development environments, 
   application dependencies and project structure.

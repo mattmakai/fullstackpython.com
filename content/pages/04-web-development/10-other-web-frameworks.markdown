@@ -60,6 +60,7 @@ Flask with URL routes defined as decorators upon view functions. The
 [Peewee ORM](https://peewee.readthedocs.org/en/latest/) is used instead of 
 the more common SQLAlchemy ORM.
 
+
 ## Ray
 [Ray](https://rayframework.github.io/site/)
 is a framework for building RESTful APIs, similar to [Falcon](/falcon.html). 
@@ -68,7 +69,14 @@ provides some initial code to get started with creating endpoints, adding
 authentication and protecting against malicious clients.
 
 
-## Other web framework resources
+## Vibora
+* [Vibora](https://vibora.io/) is an asynchronous model framework similar to
+  [Sanic](/sanic.html) that was inspired by [Flask](/flask.html)'s syntax.
+  However, the framework's author rewrote many parts like the template engine
+  to maximize performance.
+
+
+### Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
   contains both familiar and less known Python libraries.
 
