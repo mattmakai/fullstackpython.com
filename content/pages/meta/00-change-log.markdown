@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### June
+* New resources on the [operating systems](/operating-systems.html) and
+  [development environments](/development-environments.html) pages.
 * New blog post on how to
   [Configure Python 3, Flask and Gunicorn on Ubuntu 18.04 LTS](/blog/python-3-flask-gunicorn-ubuntu-1804-bionic-beaver.html).
 * New [d3.js](/d3-js.html) resources.
