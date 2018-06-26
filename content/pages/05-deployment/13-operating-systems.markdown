@@ -132,7 +132,30 @@ provides a command-line interface for interacting with the RPM system.
   as he became a professional software developer.
 
 
-## Operating system learning checklist
+### Choosing an OS resources
+macOS and Linux are generally preferred by Python developers over Windows 
+because many Python packages like [gevent](http://www.gevent.org/) simply do 
+not work on Windows. Others such as [Ansible](/ansible.html) cannot be used 
+as intended on Windows without major hacks.
+
+The following operating system resources cover perspectives on why developers
+chose one operating system over others.
+
+* [Finding an alternative to Mac OS X: Part 1](http://bitcannon.net/post/finding-an-alternative-to-mac-os-x/),
+  [part 2](http://bitcannon.net/post/finding-an-alternative-to-mac-os-x-part-2/)
+  and [part 3: being productive on Linux](http://bitcannon.net/post/being-productive-on-linux/)
+  explain what alternative applications are available for common functionality
+  such as the Gnome windowing system, email and terminal. There are a ton
+  of tips and tricks in there for getting comfortable with Linux as well as
+  a lot of thought put into what and why the developer wants his environment
+  set up in a particular way.
+
+* [Why I switched from OS X to GNU/Linux](https://jeena.net/why-i-switchedfrom-osx-to-linux)
+  explains the rationale for switching from the Apple-based operating system
+  to Linux along with what applications the author now uses.
+
+
+### Operating system learning checklist
 1. Choose either a Debian-based Linux distribution such as Ubuntu or a 
    Fedora-based distribution like CentOS.
 
