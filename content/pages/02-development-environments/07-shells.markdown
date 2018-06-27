@@ -30,4 +30,8 @@ environment named `fullstackpython` within the macOS Terminal application.
   covers aliases, environment variables via 
   [Autoenv](https://github.com/kennethreitz/autoenv) and some basic
   shell commands often used during development.
-  
+
+* [Terminal latency](https://danluu.com/term-latency/) quantifies the impact
+  of lag in your keystrokes appearing on the screen. It's a fascinating look 
+  at how a small difference of tens of milliseconds causes some shells and 
+  editors to feel slow while others are snappy.

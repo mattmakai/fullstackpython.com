@@ -45,17 +45,26 @@ less expensive set up or a cloud-based development environment.
 
 
 ## Open source text editors
-* [vim](http://www.vim.org/) is my editor of choice and installed by default
+* [Vim](/vim.html) is my editor of choice and installed by default
   on most \*nix systems.
 
-* [emacs](http://www.gnu.org/software/emacs/) is another editor often used
+* [Emacs](/emacs.html) is another editor often used
   on \*nix.
 
 * [Atom](https://atom.io/) is an open source editor built by the 
   [GitHub](https://github.com) team.
 
+* [Visual Studio Code](https://code.visualstudio.com/) by Microsoft provides
+  [spectacular Python support](https://code.visualstudio.com/docs/python/editing)
+
 
 ## Python-specific IDEs
+Editors built from the foundation up are not necessarily better than 
+general-purpose text editors and IDEs like [Vim](/vim.html) and 
+[Emacs](/emacs.html) but they are typically much easier to configure for 
+gathering [code metrics](/code.metrics.html), running 
+[unit tests](/unit-testing.html) and [debugging](/debugging.html).
+
 * [PyCharm](https://www.jetbrains.com/pycharm/) is a Python-specific IDE
   built on [JetBrains](https://www.jetbrains.com/)' platform. There are
   free editions for students and open source projects.
