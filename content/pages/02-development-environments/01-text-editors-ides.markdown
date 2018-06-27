@@ -28,9 +28,12 @@ Python applications.
 
 Preferrably your editor will have a monospace font. It will also get out
 of your way, so no "smart" correction or automatic letter capitalization.
+The more comfortable you become in your editor of choice the faster you
+can figure out how to implement that next feature in your application or
+squash that pesky bug that you just found.
 
 
-## What's the difference between text editors and IDEs?
+### What's the difference between text editors and IDEs?
 IDEs contain text editors but many text editors, for example Notepad included
 with Windows, do not include IDE features. Many text editors such as
 Vim or Emacs have IDE features by default but then can be further customized
@@ -38,24 +41,67 @@ to add file trees, syntax highlighting, line numbers and syntax checking
 that is commonly found in full-featured IDEs.
 
 
-## Text editor implementations
+### Open source text editors
+Open source provides an embarrassment of riches when its come to stable, 
+extendable text editors. Some version of these editors, such as the original
+vi version of Vim, have been used for over 40 years! You can't go wrong with
+using one of the editors as your development environment foundation.
+
 The following text editor implementations can be upgraded with
 configurations and plugins to become full-fledged IDEs when a developer
 wants that kind of functionality.
 
-* [Vim](/vim.html)
+* [Vim](/vim.html) is my editor of choice and installed by default
+  on most \*nix systems.
 
-* [Emacs](/emacs.html)
+* [Emacs](/emacs.html) is another editor often used
+  on \*nix.
 
-* [Sublime Text](/sublime-text.html)
+* [Atom](https://atom.io/) is an open source editor built by the 
+  [GitHub](https://github.com) team.
+
+* [Visual Studio Code](https://code.visualstudio.com/) by Microsoft provides
+  [spectacular Python support](https://code.visualstudio.com/docs/python/editing).
 
 
-### IDE implementations
-* PyCharm by JetBrains
+### Python-specific IDEs
+Editors built from the foundation up are not necessarily better than 
+general-purpose text editors and IDEs like [Vim](/vim.html) and 
+[Emacs](/emacs.html) but they are typically much easier to configure for 
+gathering [code metrics](/code.metrics.html), running 
+[unit tests](/unit-testing.html) and [debugging](/debugging.html).
 
-* Beeware
+* [PyCharm](https://www.jetbrains.com/pycharm/) is a Python-specific IDE
+  built on [JetBrains](https://www.jetbrains.com/)' platform. There are
+  free editions for students and open source projects.
 
-* Wing Python IDE
+* [Thonny](http://thonny.org/) is an 
+  [open source](https://bitbucket.org/plas/thonny/src) Python IDE for new 
+  programmers. The tool bakes in syntax highlighting, code completion, a 
+  simple debugger, a beginner-friendly shell and in situ documentation to
+  assist new developers who are just starting to code.
+
+* [Wing IDE](https://wingware.com/) is a paid development environment with
+  integrated debugging and code completion.
+
+* [PyDev](http://pydev.org/) is a Python IDE plug in for 
+  [Eclipse](https://eclipse.org/).
+
+
+### Proprietary (closed source) editors
+There are some editors that are closed source that developers are very
+happy using.
+
+* [Sublime Text](http://www.sublimetext.com/) versions 2 and 3 (currently
+  in beta) are popular text editors that can be extended with code completion,
+  linting, syntax highlighting and other features using plugins. If you
+  are considering using Sublime Text for Python development, check out this
+  [2016 in review - likes and dislikes about Sublime Text](https://dbader.org/blog/sublime-text-for-python-development-2016-review)
+  post that summarizes many of the positives and negatives of using the
+  editor.
+
+* [Komodo](http://komodoide.com/) is a cross-platform text editor and IDE
+  for major languages including Python, Ruby, JavaScript, Go and more.
 
 
 ### Text editor & IDE resources
@@ -63,4 +109,29 @@ wants that kind of functionality.
   is an awesome technical talk about designing a text editor with the
   current (2018) set of tools available to a developer.
 
+* [Build your own text editor](https://viewsourcecode.org/snaptoken/kilo/)
+  provides an awesome tutorial for creating a basic editor in the C
+  programming language. This walkthrough is useful to break open the black
+  box of how a tool you use every day as a programmer works under the covers.
 
+* [A brief glance at how various text editors manage their textual data](https://ecc-comp.blogspot.com/2015/05/a-brief-glance-at-how-5-text-editors.html)
+  is a fun dive into the source code of vi, GNU Moe, [Emacs](/emacs.html),
+  Scintilla and GNOME GtkTextView/GtkTextBuffer.
+
+* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
+  has a comparison of several features between the two editors.
+
+* [Building a Text Editor for a Digital-First Newsroom](https://open.nytimes.com/building-a-text-editor-for-a-digital-first-newsroom-f1cb8367fc21)
+  gives some wonderful insight into the New York Times' homegrown legacy
+  text editor and why they started building a new text editor named Oak
+  that is customized to the newsroom's workflow.
+
+* [Why I Deleted My IDE; and How It Changed My Life For the Better](https://dev.to/overopshq/why-i-deleted-my-ide-and-how-it-changed-my-life-for-the-better-hli)
+  contains some hyperbole but still has some solid reasoning why integrated
+  environments are not necessarily for everyone depending on a developer's
+  chosen workflow.
+
+* [Text editing techniques every Front-End developer should know](https://benfrain.com/text-editing-techniques-every-front-end-developer-should-know/)
+  contains tricks that experienced developers use in their editor of choice.
+  The author uses [Sublime Text](/sublime-text.html) to demonstrate how
+  the methods work but they can be used in just about any editor.

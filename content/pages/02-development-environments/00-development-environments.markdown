@@ -8,16 +8,21 @@ meta: Development environments allow programmers to read, write and work with co
 
 
 # Development Environments
-A development environment is a combination of a text editor and the Python
-interpreter. The text editor allows you to write the code. The interpreter
-provides a way to execute the code you've written. A text editor can be
-as simple as Notepad on Windows or more complicated as a complete integrated
-development environment (IDE) such as 
+A development environment is a combination of a [text editor](text-editors-ides) 
+and a Python runtime environment. The text editor allows you to write the code. 
+The runtime environment implementation such as 
+[CPython](https://github.com/python/cpython) or [PyPy](https://pypy.org/) 
+provides the method for executing your code.
+
+<img src="/img/visuals/tmux-vim-editor.png" width="100%" alt="tmux plus Vim editor on a dark background." class="shot rnd outl">
+
+A text editor can be as simple as Notepad on Windows or more complicated 
+as a complete integrated development environment (IDE) such as 
 [PyCharm](https://www.jetbrains.com/pycharm/) which runs on any major 
 operating system.
 
 
-## Why is a development environment necessary?
+### Why is a development environment necessary?
 Python code needs to be written, executed and tested to build
 applications. The text editor provides a way to write the code. The 
 interpreter allows it to be executed. Testing to see if the code does what
@@ -26,7 +31,7 @@ you want can either be done manually or by unit and functional tests.
 <div class="well see-also">While you're learning about development environments be sure to check out information on <a href="/vim.html">Vim</a> and <a href="/emacs.html">Emacs</a>.</div>
 
 
-## A development environment example
+### A development environment example
 Here's what I (the author of Full Stack Python, 
 [Matt Makai](/about-author.html)) use to develop most of my Python 
 applications. I have a Macbook Pro with Mac OS X as its base operating 
@@ -44,58 +49,31 @@ That's a common set up but you can certainly write great code with a much
 less expensive set up or a cloud-based development environment.
 
 
-## Open source text editors
-* [Vim](/vim.html) is my editor of choice and installed by default
-  on most \*nix systems.
+### Other developer's environments
+Often the best way to figure out how to get comfortable in your own
+development environment is to see examples of how other experienced 
+developers have set up their configurations. The following posts contain
+the tools, editors and workflows that developers have taken the time to 
+publicly document.
 
-* [Emacs](/emacs.html) is another editor often used
-  on \*nix.
+* [My Python development environment](https://gist.github.com/awesomebytes/c932b2502fab32d0c8bb)
+  has a setup with [Sublime Text](/sublime-text.html), Anaconda, 
+  [PyCharm](/pycharm.html) and the author's workflow for how to use
+  the different editors for different purposes.
 
-* [Atom](https://atom.io/) is an open source editor built by the 
-  [GitHub](https://github.com) team.
+* [My Python Development Environment, 2018 Edition](https://jacobian.org/writing/python-environment-2018/)
+  explains Jacob Kaplan-Moss' (one of the original creators of the
+  [Django](/django.html) web framework) local setup.
 
-* [Visual Studio Code](https://code.visualstudio.com/) by Microsoft provides
-  [spectacular Python support](https://code.visualstudio.com/docs/python/editing)
-
-
-## Python-specific IDEs
-Editors built from the foundation up are not necessarily better than 
-general-purpose text editors and IDEs like [Vim](/vim.html) and 
-[Emacs](/emacs.html) but they are typically much easier to configure for 
-gathering [code metrics](/code.metrics.html), running 
-[unit tests](/unit-testing.html) and [debugging](/debugging.html).
-
-* [PyCharm](https://www.jetbrains.com/pycharm/) is a Python-specific IDE
-  built on [JetBrains](https://www.jetbrains.com/)' platform. There are
-  free editions for students and open source projects.
-
-* [Thonny](http://thonny.org/) is an 
-  [open source](https://bitbucket.org/plas/thonny/src) Python IDE for new 
-  programmers. The tool bakes in syntax highlighting, code completion, a 
-  simple debugger, a beginner-friendly shell and in situ documentation to
-  assist new developers who are just starting to code.
-
-* [Wing IDE](https://wingware.com/) is a paid development environment with
-  integrated debugging and code completion.
-
-* [PyDev](http://pydev.org/) is a Python IDE plug in for 
-  [Eclipse](https://eclipse.org/).
+* [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14)
+  is geared towards using Python for data science but the guide remains
+  useful for configuring your system for any type of Python work. There is
+  some solid advice in the post about not adulterating your global Python
+  installation as well as how to split out many virtual environments for
+  Python 2 & 3.
 
 
-## Proprietary (closed source) editors
-* [Sublime Text](http://www.sublimetext.com/) versions 2 and 3 (currently
-  in beta) are popular text editors that can be extended with code completion,
-  linting, syntax highlighting and other features using plugins. If you
-  are considering using Sublime Text for Python development, check out this
-  [2016 in review - likes and dislikes about Sublime Text](https://dbader.org/blog/sublime-text-for-python-development-2016-review)
-  post that summarizes many of the positives and negatives of using the
-  editor.
-
-* [Komodo](http://komodoide.com/) is a cross-platform text editor and IDE
-  for major languages including Python, Ruby, JavaScript, Go and more.
-
-
-## Hosted development environments
+### Cloud hosted dev environments
 Several cloud-based development environments have popped up over the past
 several years. These hosted environments can work well when you are learning
 or stuck on a machine with a web browser but otherwise no administrative 
@@ -108,8 +86,16 @@ getting started and then require payment as you scale up your application.
 * [Cloud9](https://c9.io/) began as an independent company and is now owned 
   by Amazon as part of Amazon Web Services.
 
+* [code.xyz](https://code.xyz/) is an online text editor built by
+  [Stdlib](https://stdlib.com/) that can integrate with external 
+  [web APIs](/application-programming-interfaces.html).
 
-## Development environment resources
+* [GitLab Web IDE](https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/)
+  is integrated into the GitLab web application for modifying your
+  [Git](/git.html) repository files directly in your browser.
+
+
+### General dev environment resources
 Development environments are unique to each programmer because Python is
 used for many different purposes. The following guides range from 
 [web development](/web-development.html) to 
@@ -118,13 +104,6 @@ used for many different purposes. The following guides range from
 Even though your environment requirements are unique, you should be able to 
 find someone who has set up something similar to what you need. Use that
 configuration as a starting point and customize it from there.
-
-* [The definitive guide to setup my Python workspace](https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14)
-  is geared towards using Python for data science but the guide remains
-  useful for configuring your system for any type of Python work. There is
-  some solid advice in the post about not adulterating your global Python
-  installation as well as how to split out many virtual environments for
-  Python 2 & 3.
 
 * The Python subreddit had a nice thread with developers giving the
   specifications to their Python development environments in this post on
@@ -144,9 +123,6 @@ configuration as a starting point and customize it from there.
   before setting up the rest of their development environment. Unlike
   macOS and Linux, the Windows [operating system](/operating-systems.html) 
   does not include Python with its default installation.
-
-* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
-  has a comparison of several features between the two editors.
 
 * [PyCharm: The Good Parts](http://nafiulis.me/pycharm-the-good-parts-i.html)
   shows you how to be more efficient and productive with that IDE if it's
@@ -169,9 +145,11 @@ configuration as a starting point and customize it from there.
 * The [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/dev/env/)
   has a page dedicated to development environments.
 
-* If you're considering the cloud-based development environment route, check
-  out this 
-  [great article comparing Cloud9, Koding and Nitrous.io](http://readwrite.com/2014/08/14/cloud9-koding-nitrousio-integrated-development-environment-ide-coding)
-  by Lauren Orsini. She also explains more about what a cloud IDE is and is
-  not.
+* [Setting up a Python Development Environment with and without Docker](https://nickjanetakis.com/blog/setting-up-a-python-development-environment-with-and-without-docker)
+  explains the reasoning behind why and when to use various tools in
+  your local environment.
+
+* [Epic Development Environment using Windows Subsystem for Linux](https://dev.to/johnwoodruff91/epic-development-environment-using-windows-subsystem-forlinux-5f0n)
+  is geared towards [JavaScript](/javascript.html) developers but contains a
+  slew of good advice for developers trying to configure Windows.
 

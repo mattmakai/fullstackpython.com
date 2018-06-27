@@ -12,7 +12,7 @@ Vim, short for Vi IMproved, is a configurable text editor often used as
 a Python development environment. Vim proponents commonly cite the numerous
 plugins, Vimscript and logical command language as major Vim strengths.
 
-<a href="http://www.vim.org/" style="border:none"><img src="/img/logos/vim-the-editor.jpg" width="100%" alt="Vim logo." class="technical-diagram" style="border:1px solid #999; border-radius:6px"></a>
+<a href="http://www.vim.org/" style="border:none"><img src="/img/logos/vim-the-editor.jpg" width="100%" alt="Vim logo." class="shot rnd outl"></a>
 
 
 ## Why is Vim a good Python development environment?
@@ -69,14 +69,14 @@ to get a feel for some of the configuration statements:
 Here is how these configuration options look with a dark background on
 Mac OS X while editing the markdown for this webpage (how meta!).
 
-<img src="/img/visuals/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;">
+<img src="/img/visuals/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="shot rnd outl">
 
 Take a look at another example using these configuration options, this time
 with a light background and editing Python code from my
 [Choose Your Own Adventures Presentations](https://github.com/mattmakai/choose-your-own-adventure-presentations)
 project.
 
-<img src="/img/visuals/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="technical-diagram" style="border-radius: 5px; border: 1px solid #999;">
+<img src="/img/visuals/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="shot rnd outl">
 
 
 
