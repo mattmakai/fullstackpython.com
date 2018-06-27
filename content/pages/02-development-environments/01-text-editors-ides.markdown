@@ -20,7 +20,7 @@ expanded into a full Python IDE using configuration files and plugins.
 <div class="well see-also">Text editors and IDEs are a concept implemented by <a href="/vim.html">Vim</a>, <a href="/emacs.html">Emacs</a>, <a href="/sublime-text.html">Sublime Text</a>, <a href="/jupyter-notebook.html">Jupyter Notebook</a> and several other applications. Learn how the parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-## Why is a text editor or IDE necessary?
+### Why is a text editor or IDE necessary?
 Where will you write your code if you do not have a text editor? Your
 [development environment](/development-environments.html) must include
 a text editor so you can enter, edit and delete characters to create
@@ -104,10 +104,11 @@ happy using.
   for major languages including Python, Ruby, JavaScript, Go and more.
 
 
-### Text editor & IDE resources
-* [Xi: an editor for the next 20 years](https://www.recurse.com/events/localhost-raph-levien)
-  is an awesome technical talk about designing a text editor with the
-  current (2018) set of tools available to a developer.
+### Building your own text editor
+One great way to learn more about how text editors work is by building your 
+own, even if it turns out to be a hacked-together proof-of-concept. These
+resources give walkthroughs on building an editor, or explain how existing 
+editors work by digging into their source code.
 
 * [Build your own text editor](https://viewsourcecode.org/snaptoken/kilo/)
   provides an awesome tutorial for creating a basic editor in the C
@@ -118,13 +119,26 @@ happy using.
   is a fun dive into the source code of vi, GNU Moe, [Emacs](/emacs.html),
   Scintilla and GNOME GtkTextView/GtkTextBuffer.
 
-* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
-  has a comparison of several features between the two editors.
+* [Xi: an editor for the next 20 years](https://www.recurse.com/events/localhost-raph-levien)
+  is an awesome technical talk about designing a text editor with the
+  current (2018) set of tools available to a developer.
 
 * [Building a Text Editor for a Digital-First Newsroom](https://open.nytimes.com/building-a-text-editor-for-a-digital-first-newsroom-f1cb8367fc21)
   gives some wonderful insight into the New York Times' homegrown legacy
   text editor and why they started building a new text editor named Oak
   that is customized to the newsroom's workflow.
+
+
+### General text editor & IDE resources
+These resources provide comparisons of various editors and give some
+deeper insight into the IDE vs plain text editor debate.
+
+* [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
+  has a comparison of several features between the two editors.
+
+* [What is the best IDE for Python](https://www.quora.com/What-is-the-best-IDE-for-Python)
+  tries to answer a loaded question and gives some rationale behind
+  choosing one application or another.
 
 * [Why I Deleted My IDE; and How It Changed My Life For the Better](https://dev.to/overopshq/why-i-deleted-my-ide-and-how-it-changed-my-life-for-the-better-hli)
   contains some hyperbole but still has some solid reasoning why integrated
