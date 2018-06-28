@@ -190,6 +190,10 @@ provide a unique angle on how to use a static site generator.
   [JavaScript](/javascript.html) deployed to [AWS Lambda](/aws-lambda.html)
   to collect input with a form on a static site.
 
+* [5 ways to handle forms on your static site](https://forestry.io/blog/5-ways-to-handle-forms-on-your-static-site/)
+  gives a good overview of options like Google Forms for when you absolutely
+  must get input from users on a static site.
+
 
 ### Static site deployment resources
 Deploying a static site is far less complicated than a 
