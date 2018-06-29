@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### June
+* Major updates on [development environments](/development-environments.html)
+  and [text editors and IDEs](/text-editors-ides.html) pages.
 * New resources on the [operating systems](/operating-systems.html) and
   [development environments](/development-environments.html) pages.
 * New blog post on how to
