@@ -14,7 +14,7 @@ that can be customized by writing Lisp code.
 <a href="https://www.gnu.org/software/emacs/"><img src="/img/logos/emacs-wide.png" width="100%" alt="Emacs community logo." class="shot"></a>
 
 
-## Why is Emacs a good choice for Python coding?
+### Why is Emacs a good choice for Python coding?
 Emacs is designed to be customized via the built-in Lisp interpreter and
 package manager. The package manager, named package.el, has menus for
 handling installation. The largest Lisp Package Archive is 
@@ -27,18 +27,26 @@ to perform future actions.
 
 Hooks, which are Lisp variables that hold lists of functions to call,
 provide an extension mechanism for Emacs. For example,
-``kill-emacs-hook`` runs before exiting Emacs so functions can be loaded
+`kill-emacs-hook` runs before exiting Emacs so functions can be loaded
 into that hook to perform necessary actions before the exiting completes.
 
 <div class="well see-also">Emacs is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-## General Emacs resources
+### General Emacs resources
+Emacs, like any powerful tool, takes significant intentional practice to
+use properly. These resources provide instructions for getting comfortable
+with the editor both generally and specifically to Python.
+
 * [GNU Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
   provides an official in-depth review for how to use Emacs.
 
-* [Emacs as a Python IDE](http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/)
-  is a detailed walkthrough of setting up Emacs for Python development.
+* The [Absolute Beginner's Guide to Emacs](http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/)
+  and
+  [Emacs as a Python IDE](http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/)
+  are a couple of awesome detailed walkthroughs by 
+  [Jessica Hamrick](https://github.com/jhamrick) for setting up Emacs for 
+  Python development.
 
 * [Emacs - the Best Python Editor?](https://realpython.com/blog/python/emacs-the-best-python-editor/)
   continues the excellent Real Python series showing how to get started
@@ -48,6 +56,9 @@ into that hook to perform necessary actions before the exiting completes.
   [Sublime Text 3](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
   specifically for Python development.
 
+* [Emacs is sexy!](http://emacs.sexy/) provides a whole site with installation
+  instructions, cheat sheets and other materials for learning Emacs.
+
 * [Emacs Redux](http://emacsredux.com/) is a blog with tips and tricks for
   how to use Emacs effectively.
 
@@ -56,8 +67,24 @@ into that hook to perform necessary actions before the exiting completes.
 * [What the .emacs.d?!](http://whattheemacsd.com/) provides a bunch of tiny
   optimizations for Emacs' workflow.
 
+* Python developers often use reStructuredText (RST) to document their 
+  projects. This guide on 
+  [Emacs Support for reStructuredText](http://docutils.sourceforge.net/docs/user/emacs.html)
+  is handy for properly configuring your environment to work with RST files.
 
-## Notable Elisp Packages
+* The [Using Emacs Series](https://cestlaz.github.io/stories/emacs/) is
+  a set of videos along with an open source
+  [Git repository of the configuration](https://github.com/zamansky/using-emacs)
+  for using and gaining experience with Emacs.
+
+* [Emacs as a Python IDE](https://robots.thoughtbot.com/emacs-as-a-python-ide)
+  is a video of a technical talk where the speaker sets up code completion, 
+  documentation lookup and the 
+  [jedi-starter](https://github.com/wernerandrew/jedi-starter) kit on his
+  Emacs environment.
+
+
+### Notable Elisp Packages
 * [Magit](https://magit.vc/) allows the user to inspect and modify
   Git repositories from within Emacs.
 
@@ -75,7 +102,7 @@ into that hook to perform necessary actions before the exiting completes.
   via the [tern-django](https://github.com/proofit404/tern-django) package.
 
 
-## Popular user configurations
+### Popular user configurations
 * [Prelude](https://github.com/bbatsov/prelude) is an enhanced Emacs
   version 24 distribution.
 

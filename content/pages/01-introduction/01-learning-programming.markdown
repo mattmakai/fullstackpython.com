@@ -25,7 +25,7 @@ There are many steps in learning how to program, including
    users
 
 
-## How should I learn programming?
+### How should I learn programming?
 There are several schools of thought on how a person should start learning
 to program. One school of thought is that a lower-level programming
 language such as Assembly or C are the most appropriate languages to start
@@ -55,7 +55,7 @@ is placed on making the projects open source and working with experienced
 mentors to learn what he or she can improve on in their programs. 
 
 
-## Should I learn Python first?
+### Should I learn Python first?
 Python is good choice in the project-based approach because of the extensive 
 availability of 
 [free and low cost introductory resources](/best-python-resources.html),
