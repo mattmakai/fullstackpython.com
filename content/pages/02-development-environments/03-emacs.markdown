@@ -124,6 +124,13 @@ incorporate into their environment.
   to Python development and allows code navigation, documentation lookup 
   and code completion.
 
+* [web-mode.el](http://web-mode.org/) is a package for editing web templates
+  like [Jinja](/jinja2.html). Many 
+  [Python template engines](/template-engines.html) are supported 
+  including [Django templates](/django-templates.html), [Mako](/mako.html)
+  and [Cheetah](https://pythonhosted.org/Cheetah/) as well as 
+  [JavaScript](/javascript.html) front-end frameworks.
+
 * [Tern](http://ternjs.net/) is a stand-alone code-analysis engine for
   JavaScript. It can be integrated within a Django project
   via the [tern-django](https://github.com/proofit404/tern-django) package.
