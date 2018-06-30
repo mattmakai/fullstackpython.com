@@ -22,13 +22,13 @@ libraries from scratch.
   implementation language while walking through various stages of
   how to analyze a data set.
 
-    * [Part 1](http://blog.districtdatalabs.com/data-exploration-with-python-1)
+    * [Part 1](https://www.districtdatalabs.com/data-exploration-with-python-1)
       gives insight into how you should think about data and clarify
       what you are looking to learn.
-    * [Part 2](http://blog.districtdatalabs.com/data-exploration-with-python-2)
+    * [Part 2](https://www.districtdatalabs.com/data-exploration-with-python-2)
       explains categorization and transforming a data set into one that
       is easier to analyze.
-    * [Part 3](http://blog.districtdatalabs.com/data-exploration-with-python-3)
+    * [Part 3](https://www.districtdatalabs.com/data-exploration-with-python-3)
       shows how to visualize the results of your data exploration.
 
 * [The Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
