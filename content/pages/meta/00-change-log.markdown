@@ -17,6 +17,10 @@ on GitHub.
 
 ## 2018
 ### June
+* Merged [PR #175](https://github.com/mattmakai/fullstackpython.com/pull/175)
+  to fix changed URLs on [data analysis page](/data-analysis.html) where the
+  authors did not use 301 redirects to the new pages. Thank you 
+  [mbanerjeepalmer](https://github.com/mbanerjeepalmer)!
 * Major updates on [development environments](/development-environments.html)
   and [text editors and IDEs](/text-editors-ides.html) pages.
 * New resources on the [operating systems](/operating-systems.html) and
