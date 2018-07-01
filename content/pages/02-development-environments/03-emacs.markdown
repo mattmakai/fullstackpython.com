@@ -9,7 +9,7 @@ meta: Emacs is an extensible, customizable text editor often used for coding. Re
 
 # Emacs
 [Emacs](https://www.gnu.org/software/emacs/) is an extensible text editor 
-that can be customized by writing Lisp code.
+that can be customized by writing Emacs Lisp (Elisp) code.
 
 <a href="https://www.gnu.org/software/emacs/"><img src="/img/logos/emacs-wide.png" width="100%" alt="Emacs community logo." class="shot"></a>
 
@@ -103,6 +103,32 @@ advice.
   a set of videos along with an open source
   [Git repository of the configuration](https://github.com/zamansky/using-emacs)
   for using and gaining experience with Emacs.
+
+
+### Programming Emacs with Elisp
+Emacs can be completely customized and rewritten by using the Emacs-specific
+Lisp programming language named Emacs Lisp (Elisp). The ability to completely
+modify the editor is part of what led to the old joke "a great operating 
+system, lacking only a decent editor". Nevertheless, Elisp is what gives 
+Emacs its text editing power despite the perception that the editor is 
+overkill for working with text.
+
+These tutorials will help you learn the Elisp language and use it to modify
+Emacs for your own purposes.
+
+* [An Introduction to Programming in Emacs Lisp](https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html)
+  is the "official" introduction intended for a beginner programming
+  audience.
+
+* [Emacs Lisp Guide](https://github.com/chrisdone/elisp-guide) is for 
+  developers that have been using Emacs for a while and want to start
+  making extensions to get more out of the editor.
+
+* The [Emacs Wiki](https://www.emacswiki.org/emacs/LearnEmacsLisp) contains
+  advice and resources for getting oriented.
+
+* [Practical Emacs Lisp](http://ergoemacs.org/emacs/elisp.html) contains
+  a bunch of useful code and focuses on examples throughout the tutorial.
 
 
 ### Notable Elisp Packages
