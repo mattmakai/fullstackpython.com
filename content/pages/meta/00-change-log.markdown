@@ -16,6 +16,10 @@ on GitHub.
 
 
 ## 2018
+###
+* Added even more [Emacs](/emacs.html) resources and a new section for Elisp
+  resources, the programming language used to customize the editor.
+
 ### June
 * Added new [Emacs](/emacs.html) resources and descriptions.
 * Merged [PR #175](https://github.com/mattmakai/fullstackpython.com/pull/175)
