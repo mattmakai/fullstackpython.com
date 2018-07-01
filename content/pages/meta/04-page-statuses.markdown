@@ -44,13 +44,13 @@ kept up to date with accurate descriptions and resources.
 ## Chapter 2: Development Environments
 |Page                                                          | Status       |
 |--------------------------------------------------------------|--------------|
-|[Development environments](/development-environments.html)    | intermediate |
-|[Text Editors and IDEs](/text-editors-ides.html)              | starter      |
+|[Development environments](/development-environments.html)    | maintain     |
+|[Text Editors and IDEs](/text-editors-ides.html)              | maintain     |
 |[Vim](/vim.html)                                              | maintain     |
-|[Emacs](/emacs.html)                                          | intermediate |
+|[Emacs](/emacs.html)                                          | maintain     |
 |[Sublime Text](/sublime-text.html)                            | starter      |
 |[PyCharm](/pycharm.html)                                      | starter      |
-|[Jupyter Notebook](/jupyter-notebook.html)                    | intermediate |
+|[Jupyter Notebook](/jupyter-notebook.html)                    | maintain     |
 |[Shells](/shells.html)                                        | starter      | 
 |[Bourne-again shell (Bash)](/bourne-again-shell-bash.html)    | starter      | 
 |[Zsh](/zsh-shell.html)                                        | starter      | 

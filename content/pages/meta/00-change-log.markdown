@@ -17,7 +17,7 @@ on GitHub.
 
 ## 2018
 ### June
-* Added new [Emacs](/emacs.html) resources.
+* Added new [Emacs](/emacs.html) resources and descriptions.
 * Merged [PR #175](https://github.com/mattmakai/fullstackpython.com/pull/175)
   to fix changed URLs on [data analysis page](/data-analysis.html) where the
   authors did not use 301 redirects to the new pages. Thank you 
