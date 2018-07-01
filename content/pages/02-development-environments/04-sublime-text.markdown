@@ -15,7 +15,7 @@ numerous extensions for syntax highlighting, source file finding and analyzing
 programmers than some other applications like [Vim](/vim.html) and 
 [Emacs](/emacs.html).
 
-<a href="https://www.sublimetext.com/" style="border:none"><img src="/img/logos/sublime-text.jpg" width="100%" alt="Sublime Text logo." class="technical-diagram" style="border:1px solid #999; border-radius:6px"></a>
+<a href="https://www.sublimetext.com/" style="border:none"><img src="/img/logos/sublime-text.jpg" width="100%" alt="Sublime Text logo." class="shot outl rnd"></a>
 
 <div class="well see-also">Sublime Text is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
@@ -27,13 +27,13 @@ links should get your editor customized with linters,
 [code metrics](/code-metrics.html), syntax checking and many other 
 [integrated development environment](/text-editors-ides.html) features.
 
-* [Sublime Text 3 Heaven](https://www.kennethreitz.org/essays/sublime-text-3-heaven)
-  is a quick overview of the extensions, packages and bonus toys that
-  one developer uses for his own Sublime Text development setup.
-
 * [Setting Up Sublime Text 3 for Full Stack Python Development](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
   is a spectacular tutorial that covers installing Sublime Text and 
   configuring a multitude of helpful Python programming plugins.
+
+* [Sublime Text 3 Heaven](https://www.kennethreitz.org/essays/sublime-text-3-heaven)
+  is a quick overview of the extensions, packages and bonus toys that
+  one developer uses for his own Sublime Text development setup.
 
 * [Sublime Tutor](https://sublimetutor.com/) is an interactive in-editor 
   keyboard shortcuts tutorial that plugs into Sublime so you can learn and

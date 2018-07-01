@@ -14,7 +14,7 @@ Zsh is an implementation of the [shell concept](/shells.html) that is
 frequently used during Python software development as part of a 
 programmer's [development environment](/development-environments.html).
 
-<a href="http://zsh.sourceforge.net/" style="border:none"><img src="/img/logos/zsh.jpg" width="100%" alt="Zsh logo." class="technical-diagram" style="border-radius:5px"></a>
+<a href="http://zsh.sourceforge.net/" style="border:none"><img src="/img/logos/zsh.jpg" width="100%" alt="Zsh logo." class="shot rnd outl"></a>
 
 <div class="well see-also">Zsh is an implementation of the <a href="/shells.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 

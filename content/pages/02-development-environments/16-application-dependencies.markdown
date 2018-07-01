@@ -61,7 +61,7 @@ application then relies only on that virtualenv instance which has a separate
 copy of the Python interpreter and site-packages directory. A high level of
 how a server configured with virtualenv can look is shown in the picture below.
 
-<img src="/img/visuals/server-setup.png" alt="How the virtualenv separates dependencies on the server." width="100%" class="technical-diagram" />
+<img src="/img/visuals/server-setup.png" alt="How the virtualenv separates dependencies on the server." width="100%" class="shot" />
 
 
 ## Installing Python dependencies

@@ -32,7 +32,7 @@ as Git or Mercurial.
 Pulling code during a deployment is a potential way source control systems fit
 into the deployment process. 
 
-<img src="/img/visuals/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
+<img src="/img/visuals/app-source-control.png" width="100%" class="shot" alt="App deployment uses a server to pull from the source control system.">
 
 Note that some developers recommend deployment pipelines package the source 
 code to deploy it and never have a production environment touch a source 
@@ -137,6 +137,25 @@ and out of a centralized repository, which is a problem when using
 * [Hello World: GitHub edition](https://guides.github.com/activities/hello-world/)
 
 * [Git and GitHub learning resources](https://help.github.com/articles/git-and-github-learning-resources/)
+
+
+### Subversion resources
+[Apache Subversion](https://subversion.apache.org/)
+([source code](https://subversion.apache.org/source-code.html)), 
+often just called "Subversion" or "SVN", is a source control system 
+implementation.
+
+* The [SVN book](http://svnbook.red-bean.com/en/1.7/index.html) is the
+  free online version of the O'Reilly 
+  [Version Control with Subversion](https://www.amazon.com/dp/B002SR2QIW/) book.
+
+* [How to use Subversion (SVN)](https://deveo.com/svn-tutorial/) lays out
+  the basic concepts and provides the first few steps for getting started
+  tracking files.
+
+* [10 Most Used SVN Commands with Examples](http://www.thegeekstuff.com/2011/04/svn-command-examples/)
+  is a good refresher list if you've used SVN in the past but it has been 
+  awhile since you worked with all the commands.
 
 
 ### Source control learning checklist

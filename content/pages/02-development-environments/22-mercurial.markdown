@@ -13,7 +13,7 @@ meta: Mercurial is an implementation of the source (version) control concept. Le
 control") system for tracking and handling file modifications. Mercurial 
 can be used as the version control system for Python projects.
 
-<a href="https://www.mercurial-scm.org/" style="border: none;"><img src="/img/logos/mercurial.png" width="100%" alt="Official Mercurial logo." class="technical-diagram"></a>
+<a href="https://www.mercurial-scm.org/"><img src="/img/logos/mercurial.png" width="100%" alt="Official Mercurial logo." class="shot"></a>
 
 <div class="well see-also">Mercurial is an implementation of the <a href="/source-control.html">source control</a> concept. Learn how these pieces fit together in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 

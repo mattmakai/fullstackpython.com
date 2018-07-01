@@ -12,7 +12,7 @@ Text editors and integrated development environments (IDEs) are applications
 for [writing code](/learning-programming.html). These applications are the
 primary user interface for developers to create their own programs.
 
-<img src="/img/visuals/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="technical-diagram" style="border-radius: 5px;">
+<img src="/img/visuals/vim-dark-bg.jpg" width="100%" alt="Vim with basic configuration options on a dark background." class="shot outl rnd">
 
 [Vim](/vim.html) is an example of a text editor implementation that can be 
 expanded into a full Python IDE using configuration files and plugins.
