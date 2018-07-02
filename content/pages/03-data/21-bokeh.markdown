@@ -53,6 +53,12 @@ basic syntax will change as the library's API is not yet stable.
   tutorial for those new to Bokeh who want to try out the library and get
   an example project running quickly with [Flask](/flask.html).
 
+* [Data is beautiful: Visualizing Roman imperial dynasties](http://machineloveus.com/data-is-beautiful-visualizing-roman-imperial-dynasties/)
+  provides a walkthrough for creating a gorgeous visualization based on
+  historical Roman data. The post is about more than just the visual, it also
+  goes into the ideation, data wrangling and analysis phases that came
+  before using Bokeh to show the results.
+
 * [Creating Bar Chart Visuals with Bokeh, Bottle and Python 3](/blog/python-bottle-bokeh-bar-charts.html)
   is a tutorial that combines the [Bottle](/bottle.html) 
   [web framework](/web-frameworks.html)
