@@ -38,33 +38,34 @@ of configuration commands.
 Here's a short, commented example .vimrc file I use for Python development
 to get a feel for some of the configuration statements:
 
-    " enable syntax highlighting
-    syntax enable
+```
+" enable syntax highlighting
+syntax enable
 
-    " show line numbers
-    set number
+" show line numbers
+set number
 
-    " set tabs to have 4 spaces
-    set ts=4
+" set tabs to have 4 spaces
+set ts=4
 
-    " indent when moving to the next line while writing code
-    set autoindent
+" indent when moving to the next line while writing code
+set autoindent
 
-    " expand tabs into spaces
-    set expandtab
+" expand tabs into spaces
+set expandtab
 
-    " when using the >> or << commands, shift lines by 4 spaces
-    set shiftwidth=4
+" when using the >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
 
-    " show a visual line under the cursor's current line
-    set cursorline
+" show a visual line under the cursor's current line
+set cursorline
 
-    " show the matching part of the pair for [] {} and ()
-    set showmatch
+" show the matching part of the pair for [] {} and ()
+set showmatch
 
-    " enable all Python syntax highlighting features
-    let python_highlight_all = 1
-
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
+```
 
 Here is how these configuration options look with a dark background on
 Mac OS X while editing the markdown for this webpage (how meta!).
@@ -78,8 +79,6 @@ project.
 
 <img src="/img/visuals/vim-white-bg.png" width="100%" alt="Vim with basic configuration options on a white background." class="shot rnd outl">
 
-
-
 The Vimrc file lives under the home directory of the user account running
 Vim. For example, when my user account is 'matt', on Mac OS X my Vimrc
 file is found at ``/Users/matt/.vimrc``. On Ubuntu Linux my .vimrc file
@@ -90,7 +89,7 @@ home directory and it will be picked up by Vim the next time you open the
 editor.
 
 
-## Vim tutorials
+### Vim tutorials
 Vim has a reputation for a difficult learning curve, but it's much easier
 to get started with these tutorials.
 
@@ -149,7 +148,7 @@ to get started with these tutorials.
   whole path.
 
 
-## Vimrc resources
+### Vimrc resources
 These are a few resources for learning how to structure a `.vimrc` file. I
 recommend adding configuration options one at a time to test them
 individually instead of going whole hog with a Vimrc you are unfamiliar with.
@@ -170,7 +169,7 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.
   [two simple steps that helped this author learn Vim](http://adamdelong.com/two-simple-steps-helped-me-learn-vim/).
 
 
-## Vim installation guides
+### Vim installation guides
 These installation guides will help you get Vim up and running on Mac OS X,
 Linux and Windows.
 
@@ -192,7 +191,7 @@ Linux and Windows.
   other Vim emulation features.
 
 
-## Using Vim as a Python IDE
+### Using Vim as a Python IDE
 Once you get comfortable with Vim as an editor, there are several
 configuration options and plugins you can use to enhance your Python
 productivity. These are the resources and tutorials to read when you're
@@ -217,7 +216,7 @@ ready to take that step.
   [insightful post on a Vim setup for Markdown](http://www.swamphogg.com/2015/vim-setup/).
 
 
-## Vim Plugin resources
+### Vim Plugin resources
 * [5 Essential VIM Plugins That Greatly Increase my Productivity](http://joelhooks.com/blog/2013/04/23/5-essential-vim-plugins/)
   covers the author's experience with the Vundle, NERDTree, ctrlp, Syntastic
   and EasyMotion Vim plugins.
@@ -234,7 +233,7 @@ ready to take that step.
   from Vim.org, GitHub and user submissions.
 
 
-## Vim Plugin Managers
+### Vim Plugin Managers
 If you use many Vim plugins together it is really handy to have a plugin
 managers to sort out all of the dependencies. The following plugin managers
 are the most commonly-used ones in the Vim ecosystem.
@@ -247,4 +246,3 @@ are the most commonly-used ones in the Vim ecosystem.
 
 * [Vim-plug](https://github.com/junegunn/vim-plug) bills itself as a
   minimalistic Vim plugin manager.
-

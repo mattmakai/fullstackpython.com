@@ -22,7 +22,7 @@ as a complete integrated development environment (IDE) such as
 operating system.
 
 
-### Why is a development environment necessary?
+## Why is a development environment necessary?
 Python code needs to be written, executed and tested to build
 applications. The text editor provides a way to write the code. The 
 interpreter allows it to be executed. Testing to see if the code does what
@@ -31,7 +31,7 @@ you want can either be done manually or by unit and functional tests.
 <div class="well see-also">While you're learning about development environments be sure to check out information on <a href="/vim.html">Vim</a> and <a href="/emacs.html">Emacs</a>.</div>
 
 
-### A development environment example
+## An example development environment
 Here's what I (the author of Full Stack Python, 
 [Matt Makai](/about-author.html)) use to develop most of my Python 
 applications. I have a Macbook Pro with Mac OS X as its base operating 
@@ -49,7 +49,7 @@ That's a common set up but you can certainly write great code with a much
 less expensive set up or a cloud-based development environment.
 
 
-### Other developer's environments
+## Other developers' environments
 Often the best way to figure out how to get comfortable in your own
 development environment is to see examples of how other experienced 
 developers have set up their configurations. The following posts contain
@@ -73,7 +73,7 @@ publicly document.
   Python 2 & 3.
 
 
-### Cloud hosted dev environments
+## Cloud hosted dev environments
 Several cloud-based development environments have popped up over the past
 several years. These hosted environments can work well when you are learning
 or stuck on a machine with a web browser but otherwise no administrative 

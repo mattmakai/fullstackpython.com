@@ -187,7 +187,7 @@ section for a curated list of both Python-specific and general software
 development podcasts.
 
 
-### Newsletters
+## Newsletters
 Python's active community constantly publishes new tutorials and 
 walkthroughs. It is easier to keep up if you follow along by subscribing
 to several email newsletters that round up and curate the best new 

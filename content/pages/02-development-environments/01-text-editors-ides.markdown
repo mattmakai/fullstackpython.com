@@ -20,7 +20,7 @@ expanded into a full Python IDE using configuration files and plugins.
 <div class="well see-also">Text editors and IDEs are a concept implemented by <a href="/vim.html">Vim</a>, <a href="/emacs.html">Emacs</a>, <a href="/sublime-text.html">Sublime Text</a>, <a href="/jupyter-notebook.html">Jupyter Notebook</a> and several other applications. Learn how the parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-### Why is a text editor or IDE necessary?
+## Why is a text editor or IDE necessary?
 Where will you write your code if you do not have a text editor? Your
 [development environment](/development-environments.html) must include
 a text editor so you can enter, edit and delete characters to create
@@ -33,7 +33,7 @@ can figure out how to implement that next feature in your application or
 squash that pesky bug that you just found.
 
 
-### What's the difference between text editors and IDEs?
+## What's the difference between editors and IDEs?
 IDEs contain text editors but many text editors, for example Notepad included
 with Windows, do not include IDE features. Many text editors such as
 Vim or Emacs have IDE features by default but then can be further customized
@@ -41,7 +41,7 @@ to add file trees, syntax highlighting, line numbers and syntax checking
 that is commonly found in full-featured IDEs.
 
 
-### Open source text editors
+## Open source text editors
 Open source provides an embarrassment of riches when its come to stable, 
 extendable text editors. Some version of these editors, such as the original
 vi version of Vim, have been used for over 40 years! You can't go wrong with
@@ -64,7 +64,7 @@ wants that kind of functionality.
   [spectacular Python support](https://code.visualstudio.com/docs/python/editing).
 
 
-### Python-specific IDEs
+## Python-specific IDEs
 Editors built from the foundation up are not necessarily better than 
 general-purpose text editors and IDEs like [Vim](/vim.html) and 
 [Emacs](/emacs.html) but they are typically much easier to configure for 
@@ -88,7 +88,7 @@ gathering [code metrics](/code.metrics.html), running
   [Eclipse](https://eclipse.org/).
 
 
-### Proprietary (closed source) editors
+## Proprietary (closed source) editors
 There are some editors that are closed source that developers are very
 happy using.
 
@@ -104,7 +104,7 @@ happy using.
   for major languages including Python, Ruby, JavaScript, Go and more.
 
 
-### Building your own text editor
+## Building your own text editor
 One great way to learn more about how text editors work is by building your 
 own, even if it turns out to be a hacked-together proof-of-concept. These
 resources give walkthroughs on building an editor, or explain how existing 

@@ -60,7 +60,7 @@ involves nested loops with conditionals that can be difficult for code
 readers to properly evaluate.
 
 
-## Example code
+## Example comprehensions code
 List comprehension:
 
     >>> double_digit_evens = [e*2 for e in range(5, 50)]
@@ -79,7 +79,7 @@ Dictionary comprehension:
     {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60, 7: 70, 8: 80, 9: 90, 10: 100}
 
 
-## General Python language resources
+### General Python language resources
 * The [online Python tutor](http://www.pythontutor.com/) visually walks
   through code and shows how it executes on the Python interpreter.
 
@@ -116,7 +116,7 @@ Dictionary comprehension:
   is a summary of what one developer learned about PyPy while researching it. 
 
 
-## Python ecosystem resources
+### Python ecosystem resources
 There's an entire page on [best Python resources](/best-python-resources.html)
 with links but the following resources are a better fit for when you're past 
 the very beginner topics.

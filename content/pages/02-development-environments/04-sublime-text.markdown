@@ -54,7 +54,7 @@ links should get your editor customized with linters,
   Sublime.
 
 
-### Sublime Text resources
+### General Sublime Text resources
 Sublime Text can be used for much more than Python development and there are
 many useful tutorials that are not targeted at a specific programming language
 which are still useful.

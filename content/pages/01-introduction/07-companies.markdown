@@ -25,7 +25,7 @@ Python to script the server's configuration! Python has a habit of getting
 in everywhere regardless of whether the usage is intentional.
 
 
-### Financial institutions
+## Financial institutions
 Python is widely-used across financial institutions, whether they are
 hedge funds, large banks or regulators (see "Government Agencies" section
 below).
@@ -50,7 +50,7 @@ below).
   and [configuring DNS](https://www.paypal-engineering.com/2015/12/16/enterprise-overhaul-resolving-dns/).
 
 
-### Large tech companies
+## Large tech companies
 Large technology companies tend to be polyglot (use many programming 
 languages rather than standardizing on one), with Python either as a
 primary language or the "glue" that helps all the other languages fit
@@ -108,7 +108,7 @@ stacks.
   [in this awesome overview post titled "What its like to be a developer at..."](https://increment.com/development/what-its-like-to-be-a-developer-at/).
 
 
-### Government agencies
+## Government agencies
 Python usage in government agencies is widespread despite the reputation of
 agencies as stodgy late technology adopters. Organizations range from 
 financial industry regulators like the SEC and CFPB, to intelligence agencies
@@ -142,7 +142,7 @@ like the CIA, FBI and NSA.
   National Institute of Standards and Technology (NIST).
 
 
-### Industry-specific Python guides
+## Industry-specific Python guides
 Python is so widely used across various industries that developers have
 written guides specific to their occupations for how to use Python. The
 following resources are guides for using Python in astronomy, social

@@ -159,3 +159,6 @@ like advanced interactive visualizations.
   graphics-processing unit (video card), which for some machine learning
   situations can result in significantly faster execution times.
 
+* [Python & Big Data: Airflow & Jupyter Notebook with Hadoop 3, Spark & Presto](http://tech.marksblogg.com/python-big-data-airflow-jupyter-notebook-hadoop-3-hive-presto.html)
+  walks through a data pipeline that combines several commonly-used
+  [data analysis](/data-analysis.html) tools with a Jupyter Notebook.

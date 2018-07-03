@@ -62,7 +62,7 @@ causes decline over time as the original community members move on to new
 projects and no new members take their place.
 
 
-### Conferences and events
+## Conferences and events
 The Python online community has fantastic resources for learning but talking
 to your fellow developers in-person at conferences, meetups and hackathons
 is a crucial way to discover new tools and coding approaches. The following

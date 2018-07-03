@@ -24,7 +24,7 @@ beginner-friendly devices such as the
 <div class="well see-also">If you're learning about why to use Python you should also take a look at <a href="/best-python-resources.html">the best Python resources</a> and read <a href="/web-development.html">more about web development</a>.</div>
 
 
-### Python's programming language popularity
+## Python's programming language popularity
 Several programming language popularity rankings exist. While it's
 possible to criticize that these guides are not exact, every ranking shows 
 Python as a top programming language within the top ten, if not the top five
@@ -66,7 +66,7 @@ developers are using a language. However, the aggregate view shows that Python
 remains a stable programming language with a growing ecosystem.
 
 
-### Why does the choice of programming language matter?
+## Why does the choice of programming language matter?
 Programming languages have unique ecosystems, cultures and philosophies
 built around them. You will find friction with a community and difficulty 
 in learning if your approach to programming varies from the philosophy of 
@@ -107,7 +107,7 @@ displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
     Namespaces are one honking great idea -- let's do more of those!
 
 
-### More perspectives on why to use Python
+## More perspectives on using Python
 Programming language rankings and the philosophy behind a language 
 provide solid initial data points for why you should learn Python.
 These resources also give perspectives on why people switched from other

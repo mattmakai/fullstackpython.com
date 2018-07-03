@@ -1,7 +1,7 @@
 title: Source Control
 category: page
 slug: source-control
-sortorder: 0220
+sortorder: 0219
 toc: False
 sidebartitle: Source Control
 meta: Source control versions and backs up code for when programming problems occur. Learn more about source control on Full Stack Python.

@@ -39,7 +39,7 @@ may have to sometimes use both Python 2 and 3 because parts of these
 libraries are lagging in full Python 3 support.
 
 
-### Visualizations and Projects
+## Visualizations and Projects
 Since upgrading from Python 2 to 3 has been such a huge undertaking within
 the community, many projects have sprung up to make the transition easier.
 
@@ -171,5 +171,3 @@ should upgrade as soon as possible.
   is a great slideshow with code snippets that show useful new features
   of Python 3 that are not available in 2.x such as keyword-only
   arguments, chained exceptions and the `yield from` keyword.
-
-

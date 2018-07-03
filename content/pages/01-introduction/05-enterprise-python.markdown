@@ -110,7 +110,7 @@ appropriate for this list, [contact me](/about-author.html) to let me know:
   languages as is often the case in large organizations.
 
 
-## Enterprise Python software development resources
+### Enterprise Python software development resources
 The following articles cover topics in enterprise development that are 
 often not discussed when dealing with standard Python development.
 

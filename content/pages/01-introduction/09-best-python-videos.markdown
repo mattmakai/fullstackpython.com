@@ -20,7 +20,7 @@ talks from the past several years.
 <div class="well see-also">Check out the <a href="/best-python-resources.html">best Python resources</a> for links to great books and articles as well as <a href="/best-python-podcasts.html">must-listen Python podcasts</a> for audio-only shows.</div>
 
 
-### Web development videos
+## Web development videos
 The following [web development](/web-development.html) videos cover the broad
 topics of using [web frameworks](/web-frameworks.html) like 
 [Django](/django.html), [Flask](/flask.html), [Pyramid](/pyramid.html) and 
@@ -101,7 +101,7 @@ topics of using [web frameworks](/web-frameworks.html) like
   [web framework](/web-frameworks.html) topics.
 
 
-### Core Python language videos
+## Core Python language videos
 The core Python programming language has many new features now that almost
 all [community](/python-community.html) resources are working on 
 [Python 3](/python-2-or-3.html) instead of split across legacy 2.x branches.
@@ -144,7 +144,7 @@ well.
   lecture videos and exercises for learning Python.
 
 
-### Video compilations
+## Video compilations
 All major Python conferences, as well as most regional ones, release 
 technical talk videos for free. These sites either aggregate the thousands
 of videos that have been released or are lists from specific conferences

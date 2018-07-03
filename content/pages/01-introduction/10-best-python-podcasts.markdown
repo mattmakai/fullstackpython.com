@@ -17,7 +17,7 @@ This page contains a list of active Python-specific and software engineering
 high-quality podcasts.
 
 
-### Python-specific podcasts
+## Python-specific podcasts
 These podcasts are run and recorded by Python developers who focus on
 topics that are important to our field. Each podcast series has a long
 list of previously-recorded episodes that are still relevant even if they
@@ -50,7 +50,7 @@ listen and learn.
   influential [Python community](/python-community.html) members.
 
 
-### Favorite podcast episodes
+## Favorite podcast episodes
 Here are a list of my favorite episodes from various Python podcasts before 
 we dive into entire podcast recommendations in the next section. Dig into
 these episodes to get a feel for various personalities and styles in
@@ -99,7 +99,7 @@ podcast presentation.
 <div class="well see-also">If you prefer to learn Python by reading check out the <a href="/best-python-resources.html">best Python resources page</a> or <a href="/table-of-contents.html">view all topics</a>.</div>
 
 
-### General software development podcasts
+## General software development podcasts
 These podcasts are not specific to Python but cover relevant software
 engineering topics and often have episodes on Python topics. At the
 very least you will become a better general software developer by
@@ -150,7 +150,7 @@ listening and learning from them.
   and DevOps-related topics.
 
 
-### Data science and analysis podcasts
+## Data science and analysis podcasts
 The [data](/data.html) science community does not only use Python as its 
 core programming language but it plays a big role in almost every
 organization performing data analysis. The following podcasts cover
