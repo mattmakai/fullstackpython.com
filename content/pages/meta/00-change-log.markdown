@@ -16,7 +16,7 @@ on GitHub.
 
 
 ## 2018
-###
+### July
 * Added even more [Emacs](/emacs.html) resources and a new section for Elisp
   resources, the programming language used to customize the editor.
 
