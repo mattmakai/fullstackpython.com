@@ -40,7 +40,7 @@ links should get your editor customized with linters,
   become more productive as you use the editor.
 
 * [Using Generators for Fun and Profit - Utility for developers](http://www.sublimetext.com/forum/viewtopic.php?f=6&t=17671)
-  isn't about setting up your Sublime Text environment but instead how to
+  is not about setting up your Sublime Text environment but instead how to
   create your own plugins using Python. The tutorial is written by the
   author of a Sublime Text plugin who uses generators
   to implement features with Sublime's API.
@@ -51,6 +51,18 @@ links should get your editor customized with linters,
 
 * [Setting up Sublime Text 3 for Python Type Checking](https://medium.com/@erika_dike/setting-up-sublime-text-3-for-python-type-checking-85af5ce1a1ee)
   shows one way of setting up support for Python 3.6 static type checking in 
+  Sublime.
+
+* [Three steps to lint Python 3.6 in Sublime Text](https://janikarhunen.fi/three-steps-to-lint-python-3-6-in-sublime-text.html)
+  walks through setting up [Flake8](http://flake8.pycqa.org/en/latest/) to
+  enforce code style guidelines and show you the errors and warnings in 
+  Sublime as you are working.
+
+* [Text editing techniques every front-end developer should know](https://benfrain.com/text-editing-techniques-every-front-end-developer-should-know/)
+  gives examples in Sublime Text of time-saving text manipulation you may 
+  not have known existed such as line bubbling, ragged line selection, 
+  AceJump and transpose. While the techniques can be used in most editors
+  the provided video clips show how to perform each of these shortcuts in
   Sublime.
 
 
@@ -68,4 +80,9 @@ which are still useful.
 * [Sync your sublime text 3 configurations safely and easy](https://medium.com/@arshamshirvani/sync-your-sublime-text-3-configurations-safely-and-easy-b493021c80da)
   explains how to mitigate configuration conflicts that can arise when trying
   to use copied files from one computer to another.
+
+* [7 shortcuts of a highly effective Sublime Text user](https://kirankoduru.github.io/python/sublime-text-ninja.html)
+  shows keyboard shortcuts for opening any file, going to any specific
+  block of text, handling multiple cursors and more.
+
 
