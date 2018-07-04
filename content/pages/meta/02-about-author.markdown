@@ -8,7 +8,7 @@ meta: Learn more about the author of Full Stack Python, Matt Makai.
 
 
 # About the Author
-Full Stack Python is coded and written by
+[Full Stack Python](https://www.fullstackpython.com/) is coded and written by
 [Matt Makai](http://www.mattmakai.com/). Matt currently
 works in Washington, D.C. for the 
 [Twilio Developer Network](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html).
