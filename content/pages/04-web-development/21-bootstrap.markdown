@@ -31,3 +31,6 @@ is especially useful as a base layer of
   shows a slew of comparisons for how user interface elements have changed
   design over the past several Bootstrap major version iterations.
 
+* [Tabler](https://github.com/tabler/tabler) is a free, open source admin
+  theme for Bootstrap 4. You can also check out a 
+  [demo of the theme](https://tabler.github.io/tabler/).

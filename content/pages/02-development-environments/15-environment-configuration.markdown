@@ -42,6 +42,10 @@ Other useful environment variables resources:
 
 * [Environment variables in Windows](https://www.digitalcitizen.life/simple-questions-what-are-environment-variables)
 
+* [Security of infrastructure secrets](https://paul.querna.org/articles/2013/11/09/security-of-infrastructure-secrets/)
+  elaborates on techniques to protect your secret tokens such as API keys
+  as well as the threats that are out there which put your secrets at risk.
+
 
 ### Environment configuration resources
 * [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](https://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/)

@@ -167,6 +167,11 @@ provider.
 * [Writing better SQL](http://www.craigkerstiens.com/2016/01/08/writing-better-sql/)
   is a short code styling guide to make your queries easier to read.
 
+* [A one size fits all database doesn't fit anyone](https://www.allthingsdistributed.com/2018/06/purpose-built-databases-in-aws.html)
+  explains Amazon Web Services' specific rationale for having so many types 
+  of relational and non-relational databases on its platform but the article
+  is also a good overview of various database models and their use cases.
+
 * [DB-Engines](http://db-engines.com/en/ranking) ranks the most popular
   database management systems.
 
