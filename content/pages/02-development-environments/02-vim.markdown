@@ -147,6 +147,10 @@ to get started with these tutorials.
   to quickly open files in other directories rather than expanding the 
   whole path.
 
+* [Seven habits of effective text editing](http://moolenaar.net/habits.html)
+  explains moving around efficiently, fixing errors quickly and forming good
+  habits.
+
 
 ### Vimrc resources
 These are a few resources for learning how to structure a `.vimrc` file. I
@@ -159,6 +163,10 @@ individually instead of going whole hog with a Vimrc you are unfamiliar with.
 
 * [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
   and explains many Python-specific .vimrc options.
+
+* [Vim as a Python IDE](http://liuchengxu.org/posts/use-vim-as-a-python-ide/)
+  shows a slew of plugins and configuration options for coding with Python
+  in Vim.
 
 * This
   [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
@@ -232,6 +240,9 @@ ready to take that step.
 * [VimAwesome](https://vimawesome.com/) is a directory of Vim plugins sourced 
   from Vim.org, GitHub and user submissions.
 
+* [Command-T](https://github.com/wincent/command-t) is a Vim plugin for
+  fast fuzzy searching files.
+
 
 ### Vim Plugin Managers
 If you use many Vim plugins together it is really handy to have a plugin
@@ -246,3 +257,28 @@ are the most commonly-used ones in the Vim ecosystem.
 
 * [Vim-plug](https://github.com/junegunn/vim-plug) bills itself as a
   minimalistic Vim plugin manager.
+
+
+### Niche tutorials
+After you have been using Vim for awhile there will be features you bump
+into without realizing they were ever there. The following tutorials show
+how to use some specific niche features. You may already know about these
+if you have been using Vim for awhile but everyone's learning path is 
+different so it's useful to do a quick scan to make sure you are not missing
+anything.
+
+* [Vim’s absolute, relative and hybrid line numbers](https://jeffkreeftmeijer.com/vim-number/)
+  shows how to change the line numbering scheme. There was a period of 
+  time I used relative line numbers although I eventually switched back
+  to absolute numbers. The usefulness of these schemes is often dependent
+  on what language you are working in.
+
+* [A simpler Vim statusline](https://www.blaenkdenum.com/posts/a-simpler-vim-statusline/)
+  explains how to customize your bottom screen statusline *without* using
+  plugins such as [vim-powerline](https://github.com/powerline/powerline) 
+  or [vim-airline](https://github.com/vim-airline/vim-airline).
+
+* The [vim-clutch](https://github.com/alevchuk/vim-clutch) is a really cool
+  project and walkthrough that shows how you can create a foot pedal to
+  switch between Normal and Insert modes instead of using the typical ESC
+  key (or a remapped key).

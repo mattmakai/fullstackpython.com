@@ -45,3 +45,9 @@ during development so they can be addressed immediately.
   coded in Java but still relevant when you're learning about integration
   testing.
 
+* [What is an integration test exactly?](https://softwareengineering.stackexchange.com/questions/48237/what-is-an-integration-test-exactly)
+  is an awesome Stack Exchange thread that defines the differences in 
+  testing approaches like [unit tests](/unit-testing.html) versus integration
+  and other tests. There is also some practical advice like "It’s not 
+  important what you call it, but what it does" which as a pragmatic 
+  programmer I am keen to agree on.

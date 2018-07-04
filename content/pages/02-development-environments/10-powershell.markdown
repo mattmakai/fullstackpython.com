@@ -33,3 +33,15 @@ of a Python programmer's
 
 * [Getting Started with Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell)
   is a guide for your first steps with PowerShell.
+
+* [Windows Command-Line: Backgrounder](https://blogs.msdn.microsoft.com/commandline/2018/06/20/windows-command-line-backgrounder/)
+  and
+  [Windows Command-Line: The Evolution of the Windows Command-Line](https://blogs.msdn.microsoft.com/commandline/2018/06/27/windows-command-line-the-evolution-of-the-windows-command-line/)
+  give historical perspective on how the Windows shell has evolved from
+  MS-DOS days into the current Windows 10 world.
+
+* [PowerShell in Azure Functions](http://www.brianbunke.com/blog/2018/02/27/powershell-in-azure-functions/)
+  shows you how to use PowerShell scripting language code in your Azure
+  Functions. The language is only in experimental mode on Azure Functions 
+  but could be useful if you have a bunch of existing scripts that you want
+  to use on the [serverless](/serverless.html) platform.

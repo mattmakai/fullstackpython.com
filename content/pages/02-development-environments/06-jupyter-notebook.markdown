@@ -162,3 +162,7 @@ like advanced interactive visualizations.
 * [Python & Big Data: Airflow & Jupyter Notebook with Hadoop 3, Spark & Presto](http://tech.marksblogg.com/python-big-data-airflow-jupyter-notebook-hadoop-3-hive-presto.html)
   walks through a data pipeline that combines several commonly-used
   [data analysis](/data-analysis.html) tools with a Jupyter Notebook.
+
+* [Ansible-jupyter-kernel](https://github.com/ansible/ansible-jupyter-kernel)
+  is a kernel that allows you to run [Ansible](/ansible.html) tasks and 
+  playbooks from within your Jupyter environment.
