@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### July
+* Added a new section and additional [Vim](/vim.html) links.
 * Added even more [Emacs](/emacs.html) resources and a new section for Elisp
   resources, the programming language used to customize the editor.
 
