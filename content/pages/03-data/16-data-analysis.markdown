@@ -45,3 +45,11 @@ libraries from scratch.
   is a great tutorial on how to use simple data visualizations to bootstrap
   your understanding of a data set. The walkthrough covers histograms, time
   series analysis, scatter plots and various forms of bar charts.
+
+* This series entitled "Agile Analytics" has three parts that cover how to
+  work in a data science team and how to operate one if you are a manager:
+  
+    * [Part 1: The Good Stuff](https://www.locallyoptimistic.com/post/agile-analytics-p1/)
+    * [Part 2: The Bad Stuff](https://www.locallyoptimistic.com/post/agile-analytics-p2/)
+    * [Part 3: The Adjustments](https://www.locallyoptimistic.com/post/agile-analytics-p3/)
+
