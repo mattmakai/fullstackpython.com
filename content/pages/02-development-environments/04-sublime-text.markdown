@@ -123,3 +123,33 @@ which are still useful.
   shows keyboard shortcuts for opening any file, going to any specific
   block of text, handling multiple cursors and more.
 
+
+### Sublime Plugin resources
+Sublime Text plugins are written in Python which makes it convenient for 
+our ecosystem to customize the editor. The following resources provide
+information on writing your own plugins as well as great community plugins
+you will want to take a look at adding to your installation.
+
+* Sublime's documentation covers 
+  [plugin basics](http://www.sublimetext.com/docs/plugin-basics), the
+  [API for plugins](http://www.sublimetext.com/docs/api-reference) and
+  gives a 
+  ["Hello, world!"-level example](http://www.sublimetext.com/docs/plugin-examples)
+  that you can extend.
+
+* The unofficial 
+  [Sublime documentation's section on plugins](http://docs.sublimetext.info/en/latest/extensibility/plugins.html)
+  contains the steps to use plugins and how to write your first plugin.
+
+* [Sublime Text plugin development basics](http://engineering.vinted.com/2016/06/27/how-to-write-sublime-plugin/)
+  has some good advice and further resources.
+
+* [The 25 Best Sublime Text Plugins for Front End Developers](https://www.shopify.com/partners/blog/sublime-text-plugins-2018)
+  is not specific to Python development but there is a bunch of overlap
+  between plugins useful for general front-end development and any Python
+  [web development](/web-development.html) project.
+
+* [5 Awesome Sublime Plugins you Won’t Find in Top Plugin Posts](https://css-tricks.com/5-awesome-sublime-plugins-wont-find-top-plugin-posts/)
+  covers some lesser-known plugins and how you can find your own via 
+  [Package Control's trending plugins section](https://packagecontrol.io/browse/trending).
+
