@@ -20,6 +20,44 @@ programmers than some other applications like [Vim](/vim.html) and
 <div class="well see-also">Sublime Text is an implementation of the <a href="/text-editors-ides.html">text editors and IDEs</a> concept. Learn how these parts fit together in the <a href="/development-environments.html">development environments</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
+## What makes Sublime Text awesome?
+Sublime Text is often the first editor that newer programmers pick up because
+it works on all operating systems and it is far more approachable than 
+[Emacs](/emacs.html), [Vim](/vim.html) or even [PyCharm](/pycharm.html).
+
+It is easy to get started in Sublime because the menus and options are 
+accessible by using a mouse. There are no different modes to learn like 
+Vim's normal and insert modes. The keyboard shortcuts can be learned over
+time rather than all at once in the case of Vim or Emacs. 
+
+Sublime Text works well for beginners as soon as they install it and then
+can be extended with many of the features provided by an IDE like 
+[PyCharm](/pycharm.html) as a developer's skill level ramps up.
+
+An additional bonus of using Sublime Text as a Python developer is that
+[plugins are written in Python](http://www.sublimetext.com/docs/plugin-basics).
+Python developers can extend Sublime Text with their own programming language
+rather than learn a new language like Emacs' Elisp or Vim's Vimscript.
+
+
+## Why use any other editor if Sublime is so great?
+Picking a [text editor or IDE](/text-editors-ides.html) to use tends to 
+be a weirdly personal decision for each developer. Yet it makes sense when
+you realize that you are going to spend hours upon hours every day in your
+chosen environment so why not make sure it is one that is enjoyable and
+highly productive? 
+
+For some folks they prefer [Vim](/vim.html)'s keyboard-driven style, 
+[PyCharm](/pycharm.html)'s Swiss Army Knife set of Python tools or one of 
+the many other editors with its own strengths and weaknesses.
+
+The only "best" editor choice is to pick one that works really well for you
+and stick to it. Master your tool so it gets out of your way and enables
+as much time in 
+[programming flow](https://en.wikipedia.org/wiki/Flow_(psychology)) as 
+possible.
+
+
 ### Python-specific Sublime Text resources
 There are many Python-specific Sublime Text tutorials and resources because
 the editor is so frequently used to create Python applications. The following
@@ -84,5 +122,4 @@ which are still useful.
 * [7 shortcuts of a highly effective Sublime Text user](https://kirankoduru.github.io/python/sublime-text-ninja.html)
   shows keyboard shortcuts for opening any file, going to any specific
   block of text, handling multiple cursors and more.
-
 
