@@ -44,6 +44,10 @@ has support for both Python 2.7 and 3.6.
   provides a screen capture of one developer deploying their
   application to Lambda.
 
+* [Automated SQL Injection Testing of Serverless Functions On a Shoestring Budget (and Some Good Music)](https://www.puresec.io/blog/automated-sql-injection-testing-of-serverless-functions-on-a-shoestring-budget-and-some-good-music)
+  is an awesome operational security post that uses Python to test
+  for SQL injection vulnerabilities in serverless functions on AWS Lambda.
+
 * [Building Scikit-Learn For AWS Lambda](https://serverlesscode.com/post/scikitlearn-with-amazon-linux-container/)
 
 * [Code Evaluation With AWS Lambda and API Gateway](https://realpython.com/blog/python/code-evaluation-with-aws-lambda-and-api-gateway/) shows how to develop a code evaluation API, to execute arbitrary code, with AWS Lambda and API Gateway.
