@@ -89,6 +89,16 @@ then dive into these specific Celery tutorials.
   He gives an overview of Celery followed by specific code to set up the task
   queue and integrate it with Flask.
 
+* [Unit testing Celery tasks](https://www.python-celery.com/2018/05/01/unit-testing-celery-tasks/)
+  explains three strategies for testing code within functions that Celery 
+  executes. The post concludes that calling Celery tasks synchronously to test
+  them is the best strategy without any downsides. However, keep in mind that 
+  any testing method that is not the same as how the function will execute 
+  in a production environment can potentially lead to overlooked bugs. There 
+  is also an 
+  [open source Git repository with all of the source code](https://github.com/ZoomerAnalytics/python-celery-unit-testing)
+  from the post.
+
 * [3 Gotchas for Working with Celery](https://wiredcraft.com/blog/3-gotchas-for-celery/)
   are things to keep in mind when you're new to the Celery task queue 
   implementation.
