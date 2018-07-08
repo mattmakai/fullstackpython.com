@@ -113,6 +113,11 @@ control services are:
 * [What Is Version Control? Why Is It Important For Due Diligence?](http://oss-watch.ac.uk/resources/versioncontrol) 
   explains the benefits and necessity of version control systems.
 
+* [Version control before Git with CVS](https://twobithistory.org/2018/07/07/cvs.html)
+  goes into the history of version control systems and defines three 
+  generations, of which CVS and SVN were part of the second generation
+  while Git and Mercurial are third-generation version control systems.
+
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
