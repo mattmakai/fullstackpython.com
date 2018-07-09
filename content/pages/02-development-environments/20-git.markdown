@@ -218,3 +218,20 @@ minimize merge conflicts.
 * [Comparing workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
   provides a slew of examples for how developers on a team can handle merge
   conflicts and other situations that commonly arise when using Git.
+
+
+### GitHub resources
+GitHub is a software-as-a-service application 
+[now owned by Microsoft](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/)
+that makes it easier to collaborate with other developers on centralized
+Git repositories. The site also provides a remote backup location for
+repositories as well as secure, private repository storage. The following
+tutorials show how to get started using Git on GitHub.
+
+* [A Beginner’s Git and GitHub Tutorial](http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html)
+
+* [Hello World: GitHub edition](https://guides.github.com/activities/hello-world/)
+
+* [Git and GitHub learning resources](https://help.github.com/articles/git-and-github-learning-resources/)
+
+

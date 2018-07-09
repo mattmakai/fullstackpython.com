@@ -28,6 +28,27 @@ project should immediately begin by using a version control system such
 as Git or Mercurial.
 
 
+## Monorepo vs Multirepo
+There is a spectrum of philosophies for how to store projects within
+source code repositories. 
+
+On one extreme end of the spectrum, every line of code for every project 
+within an organization is stored **in a single repository**. That approach 
+is called *monorepo* and it is used by companies like Google. On the other 
+end of the spectrum, there are potentially tens of thousands or more 
+repositories that store parts of projects. That approach is known as
+*multirepo* or *manyrepo*. 
+
+For example, in a [microservices](/microservices.html) architecture, there
+could be thousands of microservices and each one is stored within its own
+repository. No one repository contains the code for the entire application
+created by the interaction of the microservices.
+
+There are many hybrid strategies for how to store source code that fall
+between these opposite approaches. What to choose will depend on your
+organization's needs, resources and culture.
+
+
 ## Source control during deployment
 Pulling code during a deployment is a potential way source control systems fit
 into the deployment process. 
@@ -121,11 +142,35 @@ control services are:
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
+* [Why not Git?](https://sqlite.org/whynotgit.html) covers 
+  [SQLite](/sqlite.html)'s development workflow and why they do not
+  use [Git](/git.html) as their version control system.
+
+
+### Monorepo vs multirepo resources
+Monorepo versus multirepo version control strategies are a weirdly 
+contentious topic in software development, likely because once a policy
+is set for an organization it is exceptionally difficult to change
+your approach. The following resources give more insight into the debate
+on how to structure your repositories.
+
 * [Monorepo, Manyrepo, Metarepo](http://notes.burke.libbey.me/metarepo/)
   is an awesome guide to varying ways of structuring your source repositories
   that contain more than one project. The guide covers advantages and
   disadvantages of common approaches used in both small and large 
   organizations.
+
+* [Repo Style Wars: Mono vs Multi](http://www.gigamonkeys.com/mono-vs-multi/)
+  goes into the implications of using one side or the other and why it is
+  unlikely you can create a combination solution that will give you the
+  advantages of both without the disadvantages.
+
+* [Why Google Stores Billions of Lines of Code in a Single Repository](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
+
+* [Advantages of monorepos](http://danluu.com/monorepo/) goes into the
+  advantages of using a monorepo and does not discuss the downsides but
+  admits there are many so the decision is not clear-cut on using either
+  strategy.
 
 
 ### Git distributed source control system
@@ -134,14 +179,6 @@ in use. Its distributed design eliminates the need to check files in
 and out of a centralized repository, which is a problem when using
 [Subversion](/apache-subversion.html) without a network connection. There is
 [a full page on Git](/git.html) with further details and resources.
-
-
-### GitHub resources
-* [A Beginner’s Git and GitHub Tutorial](http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html)
-
-* [Hello World: GitHub edition](https://guides.github.com/activities/hello-world/)
-
-* [Git and GitHub learning resources](https://help.github.com/articles/git-and-github-learning-resources/)
 
 
 ### Subversion resources
