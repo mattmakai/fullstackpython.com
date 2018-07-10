@@ -117,10 +117,6 @@ since then.
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
 
-* [Starting a Django Project](https://realpython.com/learn/start-django/) 
-  answers the question, “How do I set up a Django (1.5, 1.6, 1.7, or 1.8) project 
-  from scratch?”
-
 * This Django tutorial shows how to 
   [build a project from scratch using Twitter Bootstrap, Bower, Requests and the Github API](http://drksephy.github.io/2015/07/16/django/).
 
@@ -146,6 +142,12 @@ since then.
   [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a
   great start for figuring out what you need to know.
 
+* [Django for Beginners: Learn web development with Django 2](https://www.amazon.com/Django-Beginners-Learn-web-development/dp/1980377898)
+  by [William S. Vincent](https://wsvincent.com/) is perfect if you're just getting started with Django and web development, taking you from total beginner to confident web developer with Django and Python.
+
+* [REST APIs with Django: Build powerful web APIs with Python and Django](https://www.amazon.com/dp/198302998X) by [William S. Vincent](https://wsvincent.com/) is the book for you if you're just moving beyond the basics of Django and looking to get up speed with Django REST Framework (DRF) and service-oriented architecture (SOA) in general. The book's examples are clear and well-structured, making it easy for someone to quickly get up speed with building RESTful APIs with Django and DRF. It also dives into more advanced topics like token-based authentication and permissions, just to name a few.
+
+* [Django Stripe Tutorial](https://testdriven.io/django-stripe-tutorial) details how to quickly add Stripe to accept payments on a Django/Python website.
 
 ## Django videos
 Are you looking for Django videos in addition to articles? There is a special section
