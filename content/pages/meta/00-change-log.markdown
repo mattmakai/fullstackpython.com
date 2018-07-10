@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### July
+* Merged [PR #176](https://github.com/mattmakai/fullstackpython.com/pull/176)
+  to update the [Django](/django.html) page by removing some old links and
+  adding newer ones.
 * New section on [source control](/source-control.html) page and resources
   for mono vs multi repo debate.
 * Added a new section and additional [Vim](/vim.html) links.
