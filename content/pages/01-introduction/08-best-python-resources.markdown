@@ -33,6 +33,13 @@ should skip down to the next section for "experienced developers".
   and problems rather than jumping into a specific language that's recommended
   to you by a friend.
 
+* [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+  is an incredible book for both non-developers and professional developers
+  alike. Each chapter walks through a situation that can be automated using
+  Python such as manipulating images, organizing your files and 
+  programmatically controlling your mouse and keyboard to handle any sort
+  of tasks.
+
 * [CS for All](http://www.cs.hmc.edu/csforall/) is an open book by professors
   at Harvey Mudd College which teaches the fundamentals of computer science
   using Python. It's an accessible read and perfect for programming beginners.
