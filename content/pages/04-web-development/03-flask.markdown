@@ -238,6 +238,8 @@ combined with the example real-world projects listed in the next section.
   [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/) to generate a
   static website from a backend data source.
 
+* [Running Flask on Docker Swarm](https://testdriven.io/running-flask-on-docker-swarm)
+  details how to run a Flask app on Docker Swarm.
 
 ### Open source Flask example projects
 Flask's lack of standard boilerplate via a commandline interface for
