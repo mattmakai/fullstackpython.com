@@ -17,6 +17,8 @@ on GitHub.
 
 ## 2018
 ### July
+* Merged [PR #177](https://github.com/mattmakai/fullstackpython.com/pull/177)
+  that adds a new [Docker](/docker.html) Swarm tutorial.
 * Merged [PR #176](https://github.com/mattmakai/fullstackpython.com/pull/176)
   to update the [Django](/django.html) page by removing some old links and
   adding newer ones.

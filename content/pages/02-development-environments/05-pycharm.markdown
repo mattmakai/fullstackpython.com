@@ -38,3 +38,11 @@ Python code.
   is specific to developing and debugging 
   [with the Pyramid web framework](/pyramid.html).
 
+* [Just switched from Atom to PyCharm](https://www.reddit.com/r/learnpython/comments/5j67wu/just_switched_from_atom_to_pycharm/)
+  is a Reddit [/r/learnpython](https://www.reddit.com/r/learnpython)
+  thread with a positive experience of switching to PyCharm along with
+  some comments and feedback from other developers.
+
+* [PyCharm Vs Visual Studio Code For Python Development](https://www.c-sharpcorner.com/article/pycharm-vs-visual-studio-code-for-python-development/)
+  compares the editors on performance, extensions and resource consumption
+  for Python development.
