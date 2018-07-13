@@ -47,10 +47,6 @@ to hosting services such as Amazon S3 and GitHub Pages.
   walks through installing, generating the boilerplate and customizing
   your first static site using Pelican.
 
-* [The Long Road to Building a Static Blog with Pelican](http://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html)
-  is a fantastic read that really gets into the details throughout the 
-  walkthrough. 
-
 * [How I built this website, using Pelican](http://duncanlock.net/blog/2013/05/17/how-i-built-this-website-using-pelican-part-1-setup/)
   walks through getting your first Pelican site generated and running.
 
