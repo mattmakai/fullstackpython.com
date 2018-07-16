@@ -46,3 +46,10 @@ Python code.
 * [PyCharm Vs Visual Studio Code For Python Development](https://www.c-sharpcorner.com/article/pycharm-vs-visual-studio-code-for-python-development/)
   compares the editors on performance, extensions and resource consumption
   for Python development.
+
+* PyCharm has excellent first-party official documentation for 
+  [getting started and configuring the IDE](https://www.jetbrains.com/help/pycharm/quick-start-guide.html).
+  The advantagee to using the official docs is that they tend to
+  be more up-to-date than community blog posts that were not
+  published recently because PyCharm has new major releases 
+  twice per year.

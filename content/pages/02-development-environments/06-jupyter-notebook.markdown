@@ -95,6 +95,11 @@ and play around with the tool.
   contains an extensive set of notebooks along with public data
   sets that can be used for analysis.
 
+* [learn-python3](https://github.com/jerry-git/learn-python3) is geared
+  towards Python beginners who want to learn basic syntax and standard
+  library features such as about string manipulation, functions and 
+  iteration.
+
 
 ### Intermediate to advanced Jupyter Notebook tutorials
 Once you get the hang of the basics there are a slew of ways to connect
