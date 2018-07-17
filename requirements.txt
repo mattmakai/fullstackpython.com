@@ -1,6 +1,6 @@
 boto3==1.4.4
 bs4==0.0.1
 Markdown==2.6.10
-Pelican==3.7.1
+Pelican==3.6.3
 requests==2.18.4
 urllib3==1.22
