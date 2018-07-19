@@ -53,3 +53,8 @@ Python code.
   be more up-to-date than community blog posts that were not
   published recently because PyCharm has new major releases 
   twice per year.
+
+* [Getting Started with PyCharm](https://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm)
+  is another JetBrains-produced tutorial that is exceptionally in-depth
+  and just right for beginners who need help with every step of setting
+  up and creating their first Python project.
