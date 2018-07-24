@@ -189,6 +189,8 @@ when scaling out a large deployment of distributed task queues.
 
 * [Developing an Asynchronous Task Queue in Python](https://testdriven.io/developing-an-asynchronous-task-queue-in-python) looks at how to implement several asynchronous task queues using Python's multiprocessing library and Redis.
 
+* [Build a multi-tenant job queue with PostgreSQL](https://www.holistics.io/blog/how-we-built-a-multi-tenant-job-queue-system-with-postgresql-ruby/) provide great example how to build a job queue using SKIP LOCKED feature in PostgreSQL.
+
 ## Task queue learning checklist
 1. Pick a slow function in your project that is called during an HTTP
    request.
