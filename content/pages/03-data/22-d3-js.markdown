@@ -75,6 +75,12 @@ from scratch.
   If you are interested in a solution like this for your own visualizations
   then you should also check out [Bokeh](/bokeh.html).
 
+* [How to make a modern dashboard with NVD3.js](https://css-tricks.com/how-to-make-a-modern-dashboard-with-nvd3-js/)
+  uses the [NVD3.js](http://nvd3.org/) library that works as an
+  abstraction on top of d3.js to create charts. The post puts together
+  several charts to show how to build a dashboard based on public JSON
+  data.
+
 
 ### D3 ecosystem
 * [The trouble with D3](https://medium.com/@enjalot/the-trouble-with-d3-4a84f7de011f)
