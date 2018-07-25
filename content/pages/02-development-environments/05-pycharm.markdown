@@ -58,3 +58,12 @@ Python code.
   is another JetBrains-produced tutorial that is exceptionally in-depth
   and just right for beginners who need help with every step of setting
   up and creating their first Python project.
+
+* [Setting Up a Python Development Environment with PyCharm](https://www.ev3dev.org/docs/tutorials/setting-up-python-pycharm/)
+  is focused on the EV3 Lego Mindstorm Linux distribution but has some 
+  good information and steps for anyone setting up PyCharm for the first time.
+
+* [flask-pycharm-templates](https://github.com/mstuttgart/flask-pycharm-templates)
+  are snippets that are commonly used when building Python, 
+  [Jinja2](/jinja2.html) and [Flask](/flask.html) applications that you can 
+  import into your environment to use during development.

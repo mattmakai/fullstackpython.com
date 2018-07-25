@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### July
+* Added a bunch of new [PyCharm](/pycharm.html) resources.
 * Merged [PR #177](https://github.com/mattmakai/fullstackpython.com/pull/177)
   that adds a new [Docker](/docker.html) Swarm tutorial.
 * Merged [PR #176](https://github.com/mattmakai/fullstackpython.com/pull/176)
