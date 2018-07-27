@@ -16,6 +16,10 @@ report errors.
 
 
 ### Rollbar resources
+* [Rollbar monitoring of Celery in a Django app](https://www.mattlayman.com/2017/django-celery-rollbar.html)
+  covers the [Celery](/celery.html) [task queue](/task-queues.html) and how to
+  discover issues that happen in asynchronous worker processes.
+
 * [How to Add Hosted Monitoring to Flask Web Applications](/blog/hosted-monitoring-flask-web-apps.html)
   adds Rollbar's error tracking to a [Flask](/flask.html) web application.
 
