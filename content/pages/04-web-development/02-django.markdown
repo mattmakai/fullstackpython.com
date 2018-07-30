@@ -128,6 +128,14 @@ since then.
   will show you how to integrate social media sign in buttons into your Django
   application.
 
+* The [Django Admin Cookbook](https://books.agiliq.com/projects/django-admin-cookbook/en/latest/)
+  and 
+  [Building Multi Tenant Applications with Django](https://books.agiliq.com/projects/django-multi-tenant/en/latest/)
+  are two solid "code recipe-style" free open source books that will teach
+  you more about the admin interface as well as building projects that
+  will be used by more than a single customer so their data needs to be
+  properly separated.
+
 * Luke Plant writes about 
   [his approach to class based views](http://lukeplant.me.uk/blog/posts/my-approach-to-class-based-views/) (CBVs),
   which often provoke heated debate in the Django community for whether they

@@ -68,6 +68,11 @@ that have been added throughout the project's history.
   ElasticSearch. This is great for small sites before you scale them up with
   a more robust search engine.
 
+* The 
+  [Django ORM Cookbook](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/)
+  provides code recipes for various ways to use the Django ORM to insert and
+  query data.
+
 * [How to use Django's Proxy Models](http://benlopatin.com/using-django-proxy-models/)
   is a solid post on a Django ORM concept that doesn't frequently get a lot
   of love or explanation.
