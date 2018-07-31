@@ -57,6 +57,9 @@ wants that kind of functionality.
 * [Emacs](/emacs.html) is another editor often used
   on \*nix.
 
+* [Mu](https://codewith.mu/en/) ([source code](https://codewith.mu/en/)) is an
+  open source editor intended for Python beginners.
+
 * [Atom](https://atom.io/) is an open source editor built by the 
   [GitHub](https://github.com) team.
 
