@@ -17,7 +17,7 @@ interface for creating and executing database-agnostic code without
 needing to write SQL statements.
 
 
-<a href="http://www.sqlalchemy.org/"><img src="/img/logos/sqlalchemy.jpg" width="100%" alt="SQLAlchemy logo." class="technical-diagram"></a>
+<a href="http://www.sqlalchemy.org/"><img src="/img/logos/sqlalchemy.jpg" width="100%" alt="SQLAlchemy logo." class="shot"></a>
 
 
 ## Why is SQLAlchemy a good ORM choice?
@@ -126,8 +126,6 @@ a database-driven application. The following resources can be helpful if
 you are having trouble getting started or are starting to run into some 
 edge cases.
 
-* The [SQLAlchemy tutorial - OverIQ](https://overiq.com/sqlalchemy/101/intro-to-sqlalchemy/) covers all the basics you need to know to get up and running with SQLAlchemy.  
-
 * There is an entire chapter in the 
   [Architecture of Open Source Applications book on SQLAlchemy](http://aosabook.org/en/sqlalchemy.html).
   The content is detailed and well worth reading to understand what is 
@@ -147,6 +145,10 @@ edge cases.
 * [SQLAlchemy and Django](https://engineering.betterworks.com/2015/09/03/sqlalchemy-and-django/)
   explains how one development team uses the Django ORM for most of their
   standard queries but relies on SQLAlchemy for really advanced queries.
+
+* This
+  [SQLAlchemy tutorial](https://overiq.com/sqlalchemy/101/intro-to-sqlalchemy/) provides
+  a slew of code examples that cover the basics for working with SQLAlchemy.
 
 * [SQLAlchemy and data access in Python](https://talkpython.fm/episodes/show/5/sqlalchemy-and-data-access-in-python)
   is a podcast interview with the creator of SQLAlchemy that covers the
