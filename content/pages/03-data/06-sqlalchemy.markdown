@@ -126,6 +126,8 @@ a database-driven application. The following resources can be helpful if
 you are having trouble getting started or are starting to run into some 
 edge cases.
 
+* The [SQLAlchemy tutorial - OverIQ](https://overiq.com/sqlalchemy/101/intro-to-sqlalchemy/) covers all the basics you need to know to get up and running with SQLAlchemy.  
+
 * There is an entire chapter in the 
   [Architecture of Open Source Applications book on SQLAlchemy](http://aosabook.org/en/sqlalchemy.html).
   The content is detailed and well worth reading to understand what is 
