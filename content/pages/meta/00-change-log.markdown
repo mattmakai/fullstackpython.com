@@ -16,6 +16,9 @@ on GitHub.
 
 
 ## 2018
+### August
+* New [Markdown](/markdown.html) resources.
+
 ### July
 * Added a bunch of new [PyCharm](/pycharm.html) resources.
 * Merged [PR #177](https://github.com/mattmakai/fullstackpython.com/pull/177)
