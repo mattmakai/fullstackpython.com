@@ -72,4 +72,8 @@ or block quotes.
   used such as 
   [GitHub-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
 
+* [PowerShell and Markdown](https://ephos.github.io/posts/2018-8-1-PowerShell-Markdown)
+  shows how to work with Markdown in [PowerShell](/powershell.html) 
+  including customizing colors and listing some quirks you may need to get 
+  around.
 
