@@ -17,6 +17,14 @@ on GitHub.
 
 ## 2018
 ### August
+* Merged 
+  [PR #182](https://github.com/mattmakai/fullstackpython.com/pull/182) 
+  that updated the 
+  [Ubuntu SSH Keys post](/blog/ssh-keys-ubuntu-linux.html)
+  with the `-o` flag that mitigates an encryption vulnerability.
+* Fixed 
+  [issue #181](https://github.com/mattmakai/fullstackpython.com/issues/181)
+  that identified a broken link on the [Twilio](/twilio.html) page.
 * New [Markdown](/markdown.html) resources.
 
 ### July
