@@ -65,9 +65,9 @@ for fellow developers.
   [a chapter on sending text messages](https://automatetheboringstuff.com/chapter16/) 
   that uses Twilio to get the job done.
 
-* [Build a Simpsons Quote-Bot with Twilio MMS, Frinkiac, and Python](http://tutorials.pluralsight.com/interesting-apis/build-a-simpsons-quote-bot-with-twilio-mms-frinkiac-and-python)
+* [Build a Simpsons Quote-Bot with Twilio MMS, Frinkiac, and Python](https://www.pluralsight.com/guides/build-a-simpsons-quote-bot-with-twilio-mms-frinkiac-and-python)
   combines picture messages sent via Twilio MMS with 
-  [Frinkiac](https://frinkiac.com/) to create and sent Simpons cartoon
+  [Frinkiac](https://frinkiac.com/) to create and sent Simpsons cartoon
   quotes to any phone number. 
 
 * [Finding free food with Python](http://jamesbvaughan.com/python-twilio-scraping/)
