@@ -29,8 +29,10 @@ Optionally, you can also specify your email address with `-C` (otherwise
 one will be generated off your current Linux account):
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C my.email.address@company.com
+ssh-keygen -o -t rsa -b 4096 -C my.email.address@company.com
 ```
+
+(Note: the `-o` option was introduced in 2014; if this command fails for you, simply remove the `-o` option)
 
 The first prompt you will see asks where to save the key. However, there are
 actually two files that will be generated: the public key and the private 
