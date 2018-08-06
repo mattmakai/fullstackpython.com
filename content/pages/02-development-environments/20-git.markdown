@@ -121,6 +121,10 @@ cases.
   is a fantastic overview of how to unscrew a whole slew of bad situations
   you may find yourself in if you use Git for long enough.
 
+* [High-level Problems with Git and How to Fix Them](https://gregoryszorc.com/blog/2017/12/11/high-level-problems-with-git-and-how-to-fix-them/)
+  is a long-form article on how to fork properly (and how not to use them)
+  and how to not go crazy using branches and remote repositories.
+
 
 ## Specific Git resources
 Large tutorials are great for getting started with Git. However, sometimes
@@ -137,9 +141,9 @@ workflow. These resources will come in handy for specific Git subjects.
   of tips to get you out of binds you may find yourself in when you get too 
   tricky with Git commands. 
 
- * [Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html) 
-   goes through a difficult merge scenario that required deep Git 
-   understanding to properly fix.
+* [Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html) 
+  goes through a difficult merge scenario that required deep Git 
+  understanding to properly fix.
  
 * Erlang's source code provides a concise explanation on 
   [writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
@@ -222,16 +226,21 @@ minimize merge conflicts.
 
 ### GitHub resources
 GitHub is a software-as-a-service application 
-[now owned by Microsoft](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/)
+[owned by Microsoft](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/)
 that makes it easier to collaborate with other developers on centralized
 Git repositories. The site also provides a remote backup location for
 repositories as well as secure, private repository storage. The following
 tutorials show how to get started using Git on GitHub.
 
-* [A Beginner’s Git and GitHub Tutorial](http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html)
+* [Introduction to Git and GitHub for Python Developers](https://realpython.com/python-git-github-intro/)
+  covers basic usage for Git and working with repositories locally and on
+  the GitHub service.
 
-* [Hello World: GitHub edition](https://guides.github.com/activities/hello-world/)
+* [Hello World: GitHub edition](https://guides.github.com/activities/hello-world/) 
+  and
+  [Git and GitHub learning resources](https://help.github.com/articles/git-and-github-learning-resources/)
+  are GitHub's official guide and learning resources.
 
-* [Git and GitHub learning resources](https://help.github.com/articles/git-and-github-learning-resources/)
-
+* [A Beginner’s Git and GitHub Tutorial](https://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html)
+  shows how to perform your first commit and back it up on GitHub.
 
