@@ -90,3 +90,16 @@ open source project author from having to reinvent a new templating style.
 * When you use Jinja2 for long enough, eventually you'll want to escape
   large blocks of Jinja2-like text in your templates. To do so, you'll
   need the ["raw" template tag](http://stackoverflow.com/questions/25359898/escape-jinja2-syntax-in-a-jinja2-template).
+
+* [Python Templating Performance Showdown: Django vs Jinja](https://blog.sendwithus.com/python-templating-performance-showdown-django-vs-jinja/)
+  puts together some benchmarks for how 
+  [Django templates](/django-templates.html) compare with Jinja templates.
+  The usual benchmarking caveats apply here but there are some interesting
+  tests that examine how the template engines handle large numbers of 
+  variables and other factors.
+
+* [Universal Jinja](https://whatisjasongoldstein.com/writing/universal-jinja/)
+  presents a high-level overview of what you could do using the Jinja-like
+  [Nunchuks library](https://mozilla.github.io/nunjucks/) to perform
+  server-side template rendering for Django applications.
+
