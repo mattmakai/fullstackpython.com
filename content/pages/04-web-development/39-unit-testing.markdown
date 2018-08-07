@@ -48,6 +48,9 @@ by writing the test cases to exercise multiple parts of code at once.
   Hypothesis is by going through the well-written
   [quickstart](http://hypothesis.readthedocs.io/en/latest/quickstart.html).
 
+* [mimesis](https://github.com/lk-geimfari/mimesis) generates synthetic test 
+  data which is useful to apply in your tests.
+
 * [testify](https://github.com/Yelp/Testify/) was a testing framework
   meant to replace the common unittest+nose combination. However, the team
   behind testify is transitioning to pytest so it's recommended you do
@@ -55,6 +58,15 @@ by writing the test cases to exercise multiple parts of code at once.
 
 
 ### Unit testing resources
+Unit tests are useful in every project regardless of programming language.
+The following resources provide a good overview of unit testing from
+several viewpoints and follow up with additional depth in testing 
+Python-specific applications.
+
+* [Introduction to Unit Testing](https://qunitjs.com/intro/)
+  provides a broad introduction to unit testing, its importance and
+  how to get started in your projects.
+
 * [Dive into Python 3's chapter on unit testing](http://www.diveintopython3.net/unit-testing.html)
   has a complete example with code and a detailed explanation for creating
   unit testing with the 
@@ -88,3 +100,27 @@ by writing the test cases to exercise multiple parts of code at once.
   While the article is from 2006, it remains relevant today for learning
   how to use nose with your projects.
 
+* [Revisiting Unit Testing and Mocking in Python](https://blog.fugue.co/2017-07-18-revisiting-unit-testing-and-mocking-in-python.html)
+  is a wonderful post with many code examples showing how and
+  why to use dependency injection and `@property` to mock unit
+  tests.
+
+* [Unit Testing Doesn’t Affect Codebases the Way You Would Think](https://blog.ndepend.com/unit-testing-affect-codebases/)
+  presents research on how unit testing impacts project code and
+  ways that it does not. It is only one research report but the findings
+  on more unit tests leading to higher Cyclomatic Complexity per method
+  are interesting. Perhaps more tests are needed to keep a project
+  running due to the increased complexity.
+
+* [Python unittest with Robert Collins](http://pythontesting.net/transcripts/19-python-unittest-robert-collins-2/)
+  is the transcript of an interview with Robert Collins who is a core
+  committer of `unittest`.
+
+* [Why most unit testing is a waste](https://rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf)
+  discusses how low risk unit tests rarely fail even as the code
+  changes and why they do not matter as much to a project's health as
+  many developers are led to believe based on the test-driven development
+  dogma.
+
+* [Writing Unit Tests for Django Migrations](https://www.caktusgroup.com/blog/2016/02/02/writing-unit-tests-django-migrations/)
+  digs into code examples for testing Django data migrations.

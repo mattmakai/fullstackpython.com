@@ -36,3 +36,10 @@ for the SciPy ecosystem:
   provides a good overview of SciPy compared to the specific NumPy
   project, as well as explanations for the wrappers SciPy provides 
   over lower-level FORTRAN libraries.
+
+* [A plea for stability in the SciPy ecosystem](http://blog.khinsen.net/posts/2017/11/16/a-plea-for-stability-in-the-scipy-ecosystem/)
+  presents concerns from one scientist's perspective about how fast the 
+  Python programming ecosystem changes and that code can become backwards 
+  incompatible in only a few years. The issue is that many science projects
+  last decades and therefore cannot follow the rate of change as easily
+  as typical software development projects.

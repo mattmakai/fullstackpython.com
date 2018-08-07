@@ -121,3 +121,7 @@ following resources should get you past the initial hurdles.
   explains the difficulty of supporting Django 1.7 and maintaining South
   migrations for Django 1.6 then goes into how it can be done.
 
+* [Writing unit tests for Django migrations](https://www.caktusgroup.com/blog/2016/02/02/writing-unit-tests-django-migrations/)
+  contains a ton of awesome code examples for testing your
+  migrations to ensure data migrations work well throughout
+  the lifecycle of your Django project.

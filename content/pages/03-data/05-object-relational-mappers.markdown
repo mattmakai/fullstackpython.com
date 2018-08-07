@@ -137,7 +137,7 @@ There are numerous ORM implementations written in Python, including
 1. [Peewee](/peewee.html)
 1. [The Django ORM](/django-orm.html)
 1. [PonyORM](/pony-orm.html)
-1. [SQLObject](/sqlobject.html)
+1. [SQLObject](http://sqlobject.org/)
 
 There are other ORMs, such as Canonical's
 [Storm](https://storm.canonical.com/), but most of them do not appear to
@@ -190,9 +190,8 @@ open source, under the Apache 2.0 license.
 
 ### SQLObject ORM
 [SQLObject](http://sqlobject.org/) is an ORM that has been under active
-open source development since
+open source development for over 14 years, since
 [before 2003](http://sqlobject.org/News1.html#sqlobject-0-5).
-
 
 
 ## Schema migrations
@@ -279,5 +278,20 @@ All Pony ORM resources are listed on the dedicated
 
 
 ### SQLObject resources
-SQLObject resources can be found on the [SQLObject ORM page](/sqlobject.html).
+SQLObject has been around for a long time as an open source project but
+unfortunately there are not that many tutorials for it. The following
+talks and posts will get you started. If you take an interest in the project
+and write additional resources, file an 
+[issue ticket](https://github.com/mattmakai/fullstackpython.com/issues)
+so we can get them added to this list.
 
+* This post on
+  [Object-Relational Mapping with SQLObject](http://www.andypatterns.com/index.php/blog/object_relational_mapping_pattern_-_using_sqlobj/)
+  explains the concept behind ORMs and shows the Python code for how they
+  can be used.
+
+* Ian Bicking presented on SQLObject back in 2004 with a talk on
+  [SQLObject and Database Programming in Python](http://www.ianbicking.org/docs/sqlobject-presentation/sqlobject-and-database-programming.html).
+
+* [Connecting databases to Python with SQLObject](https://www.ibm.com/developerworks/library/os-pythonsqlo/index.html)
+  is an older post but still relevant with getting started basics.

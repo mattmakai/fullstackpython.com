@@ -42,11 +42,17 @@ Many terminal multiplexer implementations exist, including:
 
 * [tmux](/tmux.html)
 
-* screen
+* [screen](/screen.html)
 
 * byobu
 
-* pymux
+* [Pymux](https://pypi.org/project/pymux)
+  ([source code](https://github.com/jonathanslenders/pymux)) is a
+  terminal multiplexer implementation 
+  written in Python that clones the functionality of [tmux](/tmux.html).
+  Like tmux and [Screen](/screen.html), Pymux makes it easier for
+  programmers to use many shells within a single terminal window during
+  development.
 
 
 ### Terminal multiplexer resources
@@ -62,4 +68,6 @@ Many terminal multiplexer implementations exist, including:
 * [Byobu vs. GNU Screen vs. tmux — usefulness and transferability of skills](https://superuser.com/questions/423310/byobu-vs-gnu-screen-vs-tmux-usefulness-and-transferability-of-skills)
   gives solid answers on this (now closed) question of the usefulness of
   the major terminal multiplexer implementations.
+
+* [Pymux discussion on Hacker News](https://news.ycombinator.com/item?id=10831149)
 

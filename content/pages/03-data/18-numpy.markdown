@@ -36,3 +36,9 @@ other scientific computing packages such as [pandas](/pandas.html).
 * [Python NumPy Array Tutorial](https://www.datacamp.com/community/tutorials/python-numpy-tutorial)
   is a starter tutorial specifically focused on using and working
   with NumPy's powerful arrays. 
+
+* [Beyond Numpy Arrays in Python](https://matthewrocklin.com/blog//work/2018/05/27/beyond-numpy)
+  is a predecessor to a 
+  [Numpy Enhancement Proposal](https://github.com/numpy/numpy/pull/11189) 
+  that recommends how to prepare the scientific computing ecosystme for 
+  GPU, distributed and sparse arrays.
