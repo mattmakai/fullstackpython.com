@@ -67,3 +67,7 @@ Python code.
   are snippets that are commonly used when building Python, 
   [Jinja2](/jinja2.html) and [Flask](/flask.html) applications that you can 
   import into your environment to use during development.
+
+* [Unit Tests and Doctests in PyCharm](http://www.jessicayung.com/unit-tests-and-doctests-in-pycharm/)
+  is a beginner's guide on why you would want to use tests and doctests in
+  your Python code and run them with PyCharm.
