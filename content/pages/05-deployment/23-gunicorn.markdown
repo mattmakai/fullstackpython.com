@@ -125,3 +125,9 @@ perform the request handling. Each worker is independent of the controller.
   is a GitHub Gist with some great explanations for why we're setting up
   virtualenv and what to watch out for while you're doing the deployment.
 
+* The 
+  [Gunicorn design document](http://docs.gunicorn.org/en/stable/design.html)
+  is worth reading because it describes the server model and gives some 
+  context on how to choose the number of workers for your execution 
+  environment.
+
