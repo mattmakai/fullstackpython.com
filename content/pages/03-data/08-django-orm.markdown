@@ -90,6 +90,11 @@ that have been added throughout the project's history.
   avoid with `ForeignKey` field relationships, handling IDs and many other 
   edge cases that come up when frequently working with Django's ORM.
 
+* [Working with huge data sets in Django](https://blog.labdigital.nl/working-with-huge-data-sets-in-django-169453bca049)
+  explains how to slice the data you retrieve by query into pages and then
+  use `prefetch_related` on a subset of the data rather than your whole
+  data set.
+
 * [Solving performance problems in the Django ORM](https://medium.com/@hansonkd/performance-problems-in-the-django-orm-1f62b3d04785)
   gives a slew of great code snippets to use with `django.db.connection` so 
   you can discover issues such as unexpected extra queries and problematic 
@@ -125,3 +130,4 @@ following resources should get you past the initial hurdles.
   contains a ton of awesome code examples for testing your
   migrations to ensure data migrations work well throughout
   the lifecycle of your Django project.
+
