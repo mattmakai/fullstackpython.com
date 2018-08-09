@@ -17,6 +17,7 @@ on GitHub.
 
 ## 2018
 ### August
+* Tons of new [code metrics](/code-metrics.html) resources.
 * Added new [Git](/git.html) and [Jinja](/jinja2.html) resources.
 * Merged 
   [PR #182](https://github.com/mattmakai/fullstackpython.com/pull/182) 
