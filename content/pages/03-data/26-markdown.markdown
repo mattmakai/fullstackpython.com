@@ -77,3 +77,12 @@ or block quotes.
   including customizing colors and listing some quirks you may need to get 
   around.
 
+* [reStructuredText vs. Markdown for technical documentation](https://eli.thegreenplace.net/2017/restructuredtext-vs-markdown-for-technical-documentation/)
+  compares Markdown and reStructuredText specifically for documenting
+  software and explains where each one has advantages.
+
+* [Reach for Markdown, not LaTeX](https://blog.jez.io/reach-for-markdown/)
+  examines the virtues of using straight Markdown along with tools such
+  as [pandoc](https://pandoc.org/) to convert from one file format to 
+  another, including how to use Markdown for presentations and not just 
+  regular documentation.

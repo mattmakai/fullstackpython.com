@@ -90,6 +90,11 @@ diminishing returns.
   provides Quora's code quality goals and how they handle code reviews
   with their internal tools.
 
+* [Lessons from Building Static Analysis Tools at Google](https://cacm.acm.org/magazines/2018/4/226371-lessons-from-building-static-analysis-tools-at-google/fulltext)
+  is a fantastic in-depth read that explains why workflow integration
+  and adapting to developer feedback are critical for static analysis
+  tools adoption in development environments.
+
 * [Static Code Analizers for Python](http://doughellmann.com/2008/03/01/static-code-analizers-for-python.html)
   is an older article but goes over the basics of what Python static code
   analyzers do.
