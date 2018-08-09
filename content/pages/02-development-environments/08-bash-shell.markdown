@@ -48,6 +48,10 @@ during Python software development as part of a programmer's
   script that was never meant to be used by anyone other than the original
   author.
 
+* [Bash scripting quirks & safety tips](https://jvns.ca/blog/2017/03/26/bash-quirks/)
+  explains Bash basic programming constructs like `for` loops and variable 
+  assignment then goes into ways to avoid weird issues in your code.
+
 * [Safe ways to do things in bash](https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md)
   shows you how to not shoot yourself in the foot by using safe coding
   practices with your shell scripts.

@@ -39,6 +39,13 @@ system are occurring.
   code files to give data on type and location of classes, methods and 
   other related source information.
 
+* [Flake8](http://flake8.pycqa.org/en/latest/) is a code format style
+  guideline enforcer. Its goal is not to gather metrics but ensure 
+  a consistent style in all of your Python programs for maximum readability.
+  The rules for Flask8 are all defined in 
+  [this list](https://lintlyci.github.io/Flake8Rules/), which rolls up
+  the Flake8 dependencies of pycodestyle, pyflakes and McCabe.
+
 * [Black](https://github.com/ambv/black) is a Python code formatter with
   strong, uncompromising assumptions about how your code must be formatted.
 
@@ -79,16 +86,23 @@ diminishing returns.
   explains the difference between sampling and tracing profilers then
   digs into how they work and their advantages and disadvantages.
 
+* [Moving Fast With High Code Quality](https://engineering.quora.com/Moving-Fast-With-High-Code-Quality)
+  provides Quora's code quality goals and how they handle code reviews
+  with their internal tools.
+
 * [Static Code Analizers for Python](http://doughellmann.com/2008/03/01/static-code-analizers-for-python.html)
   is an older article but goes over the basics of what Python static code
   analyzers do.
 
-* This [Stack Overflow question on Python static code analysis tools](http://stackoverflow.com/questions/1428872/pylint-pychecker-or-pyflakes)
-  contains comparison discussions of PyLint, PyChecker and PyFlakes.
-
 * [Getting Started with Pylint](http://jbisbee.blogspot.ca/2014/04/getting-started-with-pylint.html)
   goes over setting up Pylint, generating the .pylintrc file and what's
   in the configuration.
+
+* [Linting as Lightweight Defect Detection for Python](https://dev.to/sethmichaellarson/linting-as-lightweight-defect-detection-for-python)
+  presents a straightforward code example of how linters can detect certain
+  classes of errors in code that especially in dynamically-typed languages
+  are not caught at compile time. The post then shows how to use Flake8 in
+  your own code reviews.
 
 * This /r/Python 
   [poll on what linters the community uses](https://www.reddit.com/r/Python/comments/3oyjva/what_python_linter_do_you_use_poll/)
@@ -98,4 +112,19 @@ diminishing returns.
 * [Automatically PEP8 & Format Your Python Code](https://avilpage.com/2015/05/automatically-pep8-your-python-code.html)
   shows how to use the `autopep8` library, including an [Emacs](/emacs.html)
   plugin that lints your code for PEP8 compliance as you work.
+
+* [How to use Flask8](https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html)
+  explains what Flask8 is, its usage and expected output.
+
+* [What is Flake8 and why we should use it?](https://medium.com/python-pandemonium/what-is-flake8-and-why-we-should-use-it-b89bd78073f2)
+  covers why using a linting tool like Flake8 can improve the quality of 
+  your Python code and how to install and configure it for your
+  environment.
+
+* [Dynamic tracing a Pony + Python program with DTrace](https://blog.wallaroolabs.com/2017/12/dynamic-tracing-a-pony---python-program-with-dtrace/)
+  shows how to use dynamic tracing programs to analyze code
+  at runtime.
+
+* This [Stack Overflow question on Python static code analysis tools](http://stackoverflow.com/questions/1428872/pylint-pychecker-or-pyflakes)
+  contains comparison discussions of PyLint, PyChecker and PyFlakes.
 
