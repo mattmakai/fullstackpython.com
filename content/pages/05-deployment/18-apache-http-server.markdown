@@ -39,22 +39,29 @@ development attention.
 * [Reverse proxies](http://www.apachetutor.org/admin/reverseproxies) shows
   how to set up Apache as a reverse proxy using `mod_proxy`.
 
-* [Apache Web Server on Ubuntu 14.04 LTS](https://www.linode.com/docs/websites/apache/apache-web-server-on-ubuntu-14-04)
-  explains how to install Apache on Ubuntu 14.04, which is still a supported
-  release. Note however, do *not* install mod\_python because it is now insecure
-  and made obsolete by [mod\_wsgi and WSGI servers](/wsgi-servers.html).
-
 * [Deploy Django on Apache with Virtualenv and mod\_wsgi](http://thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/)
   provides instructions for what packages to install to get Apache up
   and running with mod\_wsgi on Ubuntu.
-
-* [Apache and mod\_wsgi on Ubuntu 10.04](http://library.linode.com/web-servers/apache/mod-wsgi/ubuntu-10.04-lucid)
-  is an older post that shows how to set up Apache on the now out-of-support
-  Ubuntu 10.04 LTS release. This setup isn't recommended in 2016 and beyond
-  but if you are already using 10.04 as your base operating system you might
-  need to reference this material.
 
 * [Detecting Bots in Apache & Nginx Logs](http://tech.marksblogg.com/detect-bots-apache-nginx-logs.html)
   is a great tutorial for filtering out the significant traffic generated
   by web crawlers and bots when using Apache HTTP Server logs for traffic
   analytics.
+
+* [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
+  is a good comparison post that covers the differences between Apache and
+  [Nginx](/nginx.html) such as how they handle connections and serve content.
+
+* [Monitoring Apache web server performance](https://www.datadoghq.com/blog/monitoring-apache-web-server-performance/)
+  gives a really nice overview of metrics to watch when you are using
+  Apache as your web server.
+
+* [Web Performance 101: HTTP Headers](https://dzone.com/articles/web-performance-101-http-headers)
+  covers the gamut of HTTP headers and shows how they can impact performance 
+  based on your configuration.
+
+* [Apache Web Server on Ubuntu 14.04 LTS](https://www.linode.com/docs/websites/apache/apache-web-server-on-ubuntu-14-04)
+  explains how to install Apache on Ubuntu 14.04, which is still a supported
+  release. Note however, do *not* install mod\_python because it is now insecure
+  and made obsolete by [mod\_wsgi and WSGI servers](/wsgi-servers.html).
+
