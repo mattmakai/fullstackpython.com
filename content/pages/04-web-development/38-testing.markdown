@@ -48,6 +48,19 @@ correctness.
   shows how to set unit tests and integration tests for a Flask example
   application.
 
+* [BDD Testing a Restful Web Application in Python](https://semaphoreci.com/community/tutorials/bdd-testing-a-restful-web-application-in-python)
+  is an introduction to behavior-driven development (BDD) and uses
+  a [Flask](/flask.html) web application as an example project for
+  learning.
+
+* [Testing, for people who hate testing](https://eev.ee/blog/2016/08/22/testing-for-people-who-hate-testing/)
+  provides examples for how to improve your testing environment such
+  as using a new test harness and getting your test suite to run fast.
+
+* [Getting started with Pytest](https://jacobian.org/writing/getting-started-with-pytest/)
+  goes over some code challenges as examples for how to use Pytest in
+  your own projects.
+
 * [Good test, bad test](http://late.am/post/2015/04/20/good-test-bad-test.html)
   explains the difference between a "good" test case and one that is not
   as useful. Along the way the post breaks down some myths about common
@@ -58,6 +71,9 @@ correctness.
 
 * Google has a [testing blog](http://googletesting.blogspot.com/) where
   they write about various aspects of testing software at scale.
+
+* [A beginner's guide to Python testing](https://miguelgfierro.com/blog/2018/a-beginners-guide-to-python-testing/)
+  covers test-driven development for unit, integration and smoke tests.
 
 * Still confused about the difference between unit, functional and 
   integration tests? Check out this 
@@ -70,3 +86,44 @@ correctness.
   over standard unittest testing.
   
 * [Distributed Testing with Selenium Grid and Docker](https://testdriven.io/distributed-testing-with-selenium-grid) shows how to distribute automated, browser tests with Selenium Grid and Docker Swarm. It also looks at how to run tests against a number of browsers and automate the provisioning and deprovisioning of machines to keep costs down.
+
+* [Principles of Automated Testing](http://www.lihaoyi.com/post/PrinciplesofAutomatedTesting.html)
+  explains how to prioritize what to test, goes through some levels of
+  testing from [unit](/unit-testing.html) to 
+  [integration](/integration-testing.html) and examines when to use example
+  and bulk tests.
+
+
+### Mocking resources
+Mocking allows you to isolate parts of your code under test and avoid
+areas that are not critical to the tests you are writing. For example,
+you may want to test how you handle text message responses but do not
+want to actually receive text messages in your application. You can
+mock a part of the code that would provide a happy-path scenario so
+you can run your tests properly. The following resources show you how to
+use mocks in your test cases.
+
+* [Getting Started with Mocking in Python](https://semaphoreci.com/community/tutorials/getting-started-with-mocking-in-python)
+  provides a whole code example based on a blog project that shows
+  how to use `mock` when testing.
+
+* [Python Mocking 101: Fake It Before You Make It](https://blog.fugue.co/2016-02-11-python-mocking-101.html)
+  explains what mocking is and is not, and shows how to use the `patch`
+  function to accomplish it in your project. 
+  [Revisiting Unit Testing and Mocking in Python](https://blog.fugue.co/2017-07-18-revisiting-unit-testing-and-mocking-in-python.htmlZ)
+  is a follow-up post that expands upon using the `patch` function
+  along with dependency injection.
+
+* [Mocks and Monkeypatching in Python](https://semaphoreci.com/community/tutorials/mocks-and-monkeypatching-in-python)
+  uses the `mock` and `monkeypatch` tools to show how to mock your
+  test cases.
+
+* [Mock yourself, not your tests](http://hernantz.github.io/mock-yourself-not-your-tests.html)
+  examines when mocks are necessary and when they are not as useful
+  so you can avoid them in your test cases.
+
+* [Mocking Redis & Expiration in Python](http://malexandre.fr/2017/10/08/mocking-redis--expiration-in-python/)
+  is a specific scenario where you would want to test your
+  [Redis](/redis.html)-dependent code but prefer to mock it rather than
+  ensure an installation and connection are present whenever you run
+  your tests.

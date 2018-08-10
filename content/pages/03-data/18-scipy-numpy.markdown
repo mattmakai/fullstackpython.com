@@ -1,19 +1,27 @@
-title: SciPy
+title: SciPy and NumPy
 category: page
-slug: scipy
-sortorder: 0319
+slug: scipy-numpy
+sortorder: 0318
 toc: False
-sidebartitle: SciPy
+sidebartitle: SciPy & NumPy
 meta: SciPy is an umbrella project for many open source data analysis libraries such as NumPy, pandas and Matplotlib.
 
 
-# SciPy
+# SciPy and NumPy
 [SciPy](https://www.scipy.org/) is a collection of open source code libraries 
 for math, science and engineering. [NumPy](/numpy.html), 
 [Matplotlib](/matplotlib.html) and [pandas](/pandas.html) are libraries
 that fall under the SciPy project umbrella.
 
 <img src="/img/logos/scipy.png" width="100%" alt="SciPy project logo.">
+
+[NumPy](http://www.numpy.org/) ([source code](https://github.com/numpy/numpy))
+is a Python code library that adds scientific computing capabilities such as
+N-dimensional array objects, FORTRAN and C++ code integration, linear algebra
+and Fourier transformations. NumPy serves as a required dependency for many
+other scientific computing packages such as [pandas](/pandas.html).
+
+<img src="/img/logos/numpy.jpg" width="100%" alt="NumPy logo.">
 
 [Blaze](http://blaze.pydata.org/) is a similar, but separate, ecosystem 
 with additional tools for wrangling, cleaning, processing and analyzing data.
@@ -43,3 +51,31 @@ for the SciPy ecosystem:
   incompatible in only a few years. The issue is that many science projects
   last decades and therefore cannot follow the rate of change as easily
   as typical software development projects.
+
+
+### NumPy resources
+* [From Python to NumPy](http://www.labri.fr/perso/nrougier/from-python-to-numpy/)
+  is an awesome resource that shows how to use your basic
+  Python knowledge to learn how to do vectorization with NumPy.
+
+* [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/101-numpy-exercises-python/)
+
+* [NumPy: creating and manipulating numerical data](http://www.scipy-lectures.org/intro/numpy/index.html)
+
+* [Python NumPy Array Tutorial](https://www.datacamp.com/community/tutorials/python-numpy-tutorial)
+  is a starter tutorial specifically focused on using and working
+  with NumPy's powerful arrays. 
+
+* [Beyond Numpy Arrays in Python](https://matthewrocklin.com/blog//work/2018/05/27/beyond-numpy)
+  is a predecessor to a 
+  [Numpy Enhancement Proposal](https://github.com/numpy/numpy/pull/11189) 
+  that recommends how to prepare the scientific computing ecosystme for 
+  GPU, distributed and sparse arrays.
+
+
+### Example NumPy code
+* [SmoothLife](https://github.com/duckythescientist/SmoothLife) is an 
+  implementation of [Conway's Game of Life](https://bitstorm.org/gameoflife/)
+  using NumPy. The project uses a continuous space rather than the 
+  traditional discrete board.
+

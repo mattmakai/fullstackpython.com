@@ -55,3 +55,13 @@ during Python software development as part of a programmer's
 * [Safe ways to do things in bash](https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md)
   shows you how to not shoot yourself in the foot by using safe coding
   practices with your shell scripts.
+
+* The 
+  [Bash Infinity Framework](https://invent.life/project/bash-infinity-framework)
+  [source code](https://github.com/niieani/bash-oo-framework) provides 
+  boilerplate and a standard library for Bash projects so they are easier 
+  to read and maintain. If you have ever tried to read someone else's
+  Bash scripts or even your own after setting them aside for a couple of 
+  months, you know that anything which makes readability better is a major 
+  step up from vanilla Bash.
+
