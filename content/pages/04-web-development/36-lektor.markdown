@@ -17,7 +17,7 @@ Lektor's
 under the 
 [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause).
 
-<a href="https://www.getlektor.com/" style="border: none;"><img src="/img/logos/lektor.jpg" width="100%" alt="Lektor static website generator logo." class="technical-diagram" style="border-radius:5px"></a>
+<a href="https://www.getlektor.com/"><img src="/img/logos/lektor.jpg" width="100%" alt="Lektor static website generator logo." class="shot rnd outl"></a>
 
 
 ## How is Lektor different from other static site generators?
@@ -29,7 +29,15 @@ site content similar to Django or Wordpress.
 <div class="well see-also">Lektor is an implementation of the <a href="/static-site-generator.html">static site generators</a> concept. Learn how the parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-## Lektor resources
+### Lektor example projects
+* [PyCon Columbia's 2018 site](https://github.com/PyConColombia/website-2018)
+  was built with Lektor and is freely available on GitHub.
+
+* [freedombox.org](https://github.com/freedombox/freedombox.org) is also
+  available for reference.
+
+
+### Lektor resources
 Lektor is a young project and therefore has a nascent community compared with
 [Pelican](/pelican.html) and Jekyll (the most popular Ruby-based static 
 site generator). However, the official documentation and initial quickstarts 
@@ -62,4 +70,9 @@ painless.
   the author gives his impression of Lektor after moving his 400+ articles
   over from a home-grown blogging engine. He talks a bit about how he went
   from deploying on GitHub Pages to surge.sh and finally over to Netlify.
- 
+
+* [Automating deployment of Lektor blog sites](http://blog.dscpl.com.au/2016/01/automating-deployment-of-lektor-blog.html)
+  covers using OpenShift to deploy a static site. Seems like a lot of work
+  when [AWS S3](https://aws.amazon.com/s3/) deployments are a lot easier but 
+  OpenShift has its own ecosystem to keep you away from AWS world if that's 
+  your thing.
