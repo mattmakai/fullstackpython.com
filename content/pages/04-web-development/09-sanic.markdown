@@ -33,7 +33,7 @@ need to build a significant amount of the plumbing yourself rather than
 `pip` installing existing, well-tested libraries.
 
 
-## Sanic tutorials
+### Sanic tutorials
 Sanic is under very active development and is still in its infancy as a
 web framework. The following tutorials will get you started but there is
 a chance you will have to work through errors as Sanic is regularly updated.
@@ -53,8 +53,11 @@ a chance you will have to work through errors as Sanic is regularly updated.
 * [Python Sanic Tutorial](https://www.youtube.com/watch?v=WiGsWfwh0yY) is a
   video tutorial on how to write your first Sanic web apps.
 
+* [A Guide to Instrumenting Sanic Applications, Part 1](https://medium.com/@pyk/a-guide-to-instrument-sanic-application-part-1-193b3eb403a)
+  shows how to add Prometheus-based monitoring to Sanic applications.
 
-## Sanic open source projects and examples
+
+### Sanic open source projects and examples
 There are not many example applications and extensions for Sanic 
 compared to [Flask](/flask.html), [Django](/django.html) or 
 [other web frameworks](/other-web-frameworks.html) because Sanic is 
@@ -91,3 +94,6 @@ this framework.
   has boilerplate code for setting up a Sanic project using 
   [Docker](/docker.html) and [Nginx](/nginx.html).
 
+* [Sanic JWT](http://sanic-jwt.readthedocs.io/en/latest/) 
+  ([source code](https://github.com/ahopkins/sanic-jwt)) adds support for
+  authentication via [JSON Web Tokens (JWT)](https://jwt.io/). 
