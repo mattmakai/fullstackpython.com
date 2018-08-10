@@ -18,14 +18,41 @@ Model-View-Controller (MVC) architectural pattern.
 <div class="well see-also">Pyramid is an implementation of the <a href="/web-frameworks.html">web frameworks</a> concept. Learn how these parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 
 
-## Open source Pyramid example apps
+### Open source Pyramid example apps
+These projects provide solid starting code to learn from as you are building
+your own applications.
+
 * [pyramid\_blogr](https://github.com/Pylons/pyramid_blogr) is an example 
   project that shows how to build a blog with Pyramid modeled on the 
   [Flaskr](http://flask.pocoo.org/docs/latest/tutorial/introduction/) tutorial.
 
+* [pyramid-blogr-cf](https://github.com/cewing/pyramid-blogr-cf) is another
+  Pyramid web app that has a similar title to the one above but this one
+  is intended for teaching [web development](/web-development.html) to new
+  developers.
+
 * [pyramid\_appengine](https://github.com/twillis/pyramid_appengine)
   provides a project skeleton for running Pyramid on 
   [Google App Engine](/platform-as-a-service.html).
+
+
+### Pyramid-specific packages
+The following packages are designed to make Pyramid play nicely with existing
+open source libraries by reducing the boilerplate you need to add to your
+project.
+
+* [pyramid_celery](https://github.com/sontek/pyramid_celery) and 
+  [pyramid_rq](https://github.com/wichert/pyramid_rq) make it easier 
+  to use the [Celery](/celery.html) [task queue](/task-queues.html) in your 
+  Pyramid applications for handling asynchronous work.
+
+* [pyramid_zipkin](http://pyramid-zipkin.readthedocs.io/en/latest/) provides
+  distributed tracing via the [Zipkin](https://zipkin.io/) library.
+
+* [Ramses](https://ramses.tech/) 
+  ([source code](https://github.com/ramses-tech/ramses)) is a RESTful web API
+  generation framework, similar in concept (but not in implementation 
+  details) to how Django REST Framework works with [Django](/django.html).
 
 
 ### Pyramid resources
@@ -64,3 +91,7 @@ learn Pyramid if you choose to build your web applications with it.
   explains how Pyramid sprang from Pylons and how Pyramid compares to other 
   modern frameworks.
 
+* [Anyone using the Pyramid framework?](https://www.reddit.com/r/Python/comments/6yn74i/anyone_using_the_pyramid_framework/)
+  is a good /r/Python thread with responses by current users as well as
+  frustrations by developers who tried and decided against sticking with
+  the framework.
