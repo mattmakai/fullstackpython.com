@@ -162,10 +162,6 @@ further clarification.
   [this article about the differences](https://lincolnloop.com/blog/fast-immutable-python-deployments/)
   and be sure to upgrade.
 
-* [How to submit a package to PyPI](http://peterdowns.com/posts/first-time-with-pypi.html)
-  is a short and sweet introduction that'll help you quickly get your first
-  package on PyPI.
-
 
 ## Open source app dependency projects
 * [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating

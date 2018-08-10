@@ -44,6 +44,12 @@ and configurations.
 * [Caddy](/caddy.html) is a newcomer to the web server scene
   and is focused on serving the HTTP/2 protocol with HTTPS. 
 
+* [rwasa](https://2ton.com.au/rwasa/) is a newer web server written
+  in Assembly with no external dependencies that tuned to be faster than Nginx.
+  The benchmarks are worth taking a look at to see if this server could fit
+  your needs if you need the fastest performance trading off for as of yet
+  untested web server.
+
 
 ## Client requests
 A client that sends a request to a web server is usually a browser such 
@@ -86,37 +92,50 @@ large amount of bandwidth which is why using a Content Delivery Network
 possible.
 
 
-
-## Web server resources
-* [HTTP/1.1 Specification](http://www.w3.org/Protocols/rfc2616/rfc2616.html)
-
-* A reference with the full list of 
-[HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-is provided by W3C.
+### Building web servers
+* [A Simple Web Server in less than 500 lines of code](http://aosabook.org/en/500L/a-simple-web-server.html)
+  from the Architecture of Open Source book provides a great example 
+  with Python as the implementation language..
 
 * If you're looking to learn about web servers by building one, here's
   [part one](http://ruslanspivak.com/lsbaws-part1/),
   [part two](http://ruslanspivak.com/lsbaws-part2/) and [part three](http://ruslanspivak.com/lsbaws-part3/) 
   of a great tutorial that shows how to code a web server in Python.
 
-* [rwasa](https://2ton.com.au/rwasa/) is a newly released web server written
-  in Assembly with no external dependencies that tuned to be faster than Nginx.
-  The benchmarks are worth taking a look at to see if this server could fit
-  your needs if you need the fastest performance trading off for as of yet
-  untested web server.
+* [Building a basic HTTP Server from scratch in Python](http://joaoventura.net/blog/2017/python-webserver/)
+  ([source code](https://gist.github.com/joaoventura/824cbb501b8585f7c61bd54fec42f08f)
+  builds a very simple but insecure web server to show you how HTTP works.
 
 
-## Web servers learning checklist
+### Web server references
+* [HTTP/1.1](http://www.w3.org/Protocols/rfc2616/rfc2616.html)
+  and [HTTP/2](https://tools.ietf.org/html/rfc7540) specifications are the
+  source for how web servers implement the modern web.
+
+* A reference with the full list of 
+  [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+  is provided by W3C.
+
+* [Usage of web servers broken down by ranking](https://w3techs.com/technologies/cross/web_server/ranking)
+  shows how popular [Apache](/apache-http-server.html), [Nginx](/nginx.html) 
+  and other websites are among the top million through the top 1,000 sites
+  in the world.
+
+* [Optimizing web servers for high throughput and low latency](https://blogs.dropbox.com/tech/2017/09/optimizing-web-servers-for-high-throughput-and-low-latency/)
+  is a wonderful read that shows how detailed knowledge at every layer of 
+  the stack is necessary to optimize web server connections at scale.
+
+
+### Web servers learning checklist
 1. Choose a web server. [Nginx](http://nginx.org/en/) is often recommended 
    although [Apache](http://httpd.apache.org/) is also a great choice.
 
-1. Create an SSL certificate. For testing use a self-signed certificate 
-   and for a production app buy one from [Digicert](http://www.digicert.com/). 
-   Configure the web server to serve traffic over SSL. You'll need SSL for 
-   serving only HTTPS traffic and preventing security issues that occur with 
-   unencrypted user input.
+1. Create an SSL certificate via [Let's Encrypt](https://letsencrypt.org/). 
+   You will need SSL for serving HTTPS traffic and preventing myriad 
+   security issues that occur with unencrypted user input.
 
-1. Configure the web server to serve up static files such as CSS, JavaScript
+1. Configure the web server to serve up static files such as 
+   [CSS](/cascading-style-sheets.html), [JavaScript](/javascript.html)
    and images.
 
 1. Once you set up the [WSGI server](/wsgi-servers.html) you'll need to 
