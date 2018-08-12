@@ -64,6 +64,14 @@ world.
   that the visualization unfortunately stops around the beginning of 2013 but
   it's a good way to explore what happened in the first 24 years.
 
+* [Web app checklist](http://dhilipsiva.com/webapp-checklist/) presents 
+  good practices that developers building and [deploying](/deployment.html) 
+  web applications should follow. Don't worry about having every single
+  one of these recommendations implemented before getting your site
+  live, but it is worthwhile to review the list to make sure there is not
+  something obvious you can handle in a few minutes that will improve
+  your site's security, performance or usability.
+
 * [Web application development is different and better](http://radar.oreilly.com/2014/01/web-application-development-is-different-and-better.html)
   provides some context for how web development has evolved from writing
   static HTML files into the complex JavaScript client-side applications
