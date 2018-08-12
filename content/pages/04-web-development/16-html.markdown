@@ -23,6 +23,10 @@ and is used to display website and web application content.
   break down HTML by elements, metadata and forms before diving
   into more advanced web development topics.
 
+* [A few HTML tips](https://hacks.mozilla.org/2016/08/a-few-html-tips/)
+  is written for beginners who are learning HTML. The article gives guidance
+  on common mistakes to avoid and what to do instead to write proper HTML.
+
 * CodeAcademy's 
   [HTML basics](https://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1)
   course provides an interactive environment for learning the

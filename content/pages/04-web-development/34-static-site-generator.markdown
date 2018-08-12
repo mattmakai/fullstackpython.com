@@ -88,6 +88,10 @@ ones listed here are primarily coded in Python.
   own templates unless a custom site is desired at which point it might make
   more sense to use a different static site generator instead.
 
+* [mynt](http://mynt.uhnomoli.com/) 
+  ([source code](https://github.com/Anomareh/mynt)) is built to create
+  blogs and uses [Jinja](/jinja2.html) to generate HTML pages.
+
 * [Nikola](https://getnikola.com/) 
   ([source code](https://github.com/getnikola/nikola)) takes in 
   reStructuredText, Markdown or Jupyter (IPython) Notebooks and combines 
@@ -224,3 +228,12 @@ deployment.
   uses a Hugo (a Golang-based static site generator) generated site
   as an example but the instructions can easily be used to deploy
   a Python-based static site generator output as well.
+
+* [How to Make an AWS S3 Static Website With SSL](https://www.josephecombs.com/2018/03/05/how-to-make-an-AWS-S3-static-website-with-ssl)
+  explains the configuration required to use SSL for HTTPS on an
+  AWS-hosted static site.
+
+* [Hosting your static site with AWS S3, Route 53, and CloudFront
+](https://vickylai.com/verbose/hosting-your-static-site-with-aws-s3-route-53-and-cloudfront/)
+  is another solid tutorial that uses the AWS stack to deploy a
+  globally-hosted site.

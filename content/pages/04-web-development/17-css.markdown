@@ -96,6 +96,10 @@ web application's design.
   is one of the largest collections of valuable resources for frontend
   learning both in CSS as well as JavaScript.
 
+* [CSS coding techniques](https://hacks.mozilla.org/2016/05/css-coding-techniques/)
+  provides advice on how to write simpler, easier-to-maintain CSS code
+  to reduce your need to rely on CSS preprocessors and build pipelines.
+
 * [CSS refresher notes](https://github.com/vasanthk/css-refresher-notes) is
   incredibly helpful if you've learned CSS in bits and pieces along the way
   and you now want to fill in the gaps in your knowledge.

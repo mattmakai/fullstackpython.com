@@ -84,3 +84,7 @@ to hosting services such as Amazon S3 and GitHub Pages.
 * [Moving blogs to Pelican](http://arunrocks.com/moving-blogs-to-pelican/)
   talks about one developer's transition from Jekyll to Pelican for his
   own sites.
+
+* [Using Travis & GitHub to deploy static sites](http://www.gregreda.com/2015/03/26/static-site-deployments/)
+  shows how to automate deployments of a Pelican-based static site using
+  Travis CI.

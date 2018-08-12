@@ -65,3 +65,7 @@ during Python software development as part of a programmer's
   months, you know that anything which makes readability better is a major 
   step up from vanilla Bash.
 
+* [Static status](https://github.com/Cyclenerd/static_status) is a Bash 
+  application that generates a hostable, customizable status page for your 
+  services.
+
