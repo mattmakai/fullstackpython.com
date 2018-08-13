@@ -12,7 +12,7 @@ meta: Celery is a task queue for executing work outside a Python web application
 implementation for [Python web applications](/web-development.html) used
 to asynchronously execute work outside the HTTP request-response cycle.
 
-<a href="http://www.celeryproject.org/" style="border: none;"><img src="/img/logos/celery.png" alt="Celery task queue project logo." style="border-radius: 5px;" width="100%" class="technical-diagram"></a>
+<a href="http://www.celeryproject.org/" style="border:none"><img src="/img/logos/celery.png" alt="Celery task queue project logo." class="shot" width="100%"></a>
 
 <div class="well see-also">Celery is an implementation of the <a href="/task-queues.html">task queue</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
@@ -48,18 +48,21 @@ every Sunday. When the interval or specific time is hit, Celerybeat will
 hand the job over to Celeryd to execute on the next available worker.
 
 
-### Celery tutorials
+### Celery tutorials and advice
 Celery is a powerful tool that can be difficult to wrap your mind around
 at first. Be sure to read up on [task queue](/task-queues.html) concepts
 then dive into these specific Celery tutorials.
 
-* [Getting Started Scheduling Tasks with Celery](http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/)
-  is a detailed walkthrough for setting up Celery with Django (although
-  Celery can also be used without a problem with other frameworks).
+* [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
+  a short introductory task queue screencast.
 
-* [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
-  provides an introduction to the Celery task queue with Django as the
-  intended framework for building a web application.
+* This blog post series on 
+  [Celery's architecture](https://www.vinta.com.br/blog/2017/celery-overview-archtecture-and-how-it-works/), 
+  [Celery in the wild: tips and tricks to run async tasks in the real world](https://www.vinta.com.br/blog/2018/celery-wild-tips-and-tricks-run-async-tasks-real-world/)
+  and
+  [dealing with resource-consuming tasks on Celery](https://www.vinta.com.br/blog/2018/dealing-resource-consuming-tasks-celery/)
+  provide great context for how Celery works and how to handle some of the 
+  trickier bits to working with the task queue.
 
 * [How to use Celery with RabbitMQ](https://www.digitalocean.com/community/articles/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps)
   is a detailed walkthrough for using these tools on an Ubuntu VPS.
@@ -77,17 +80,18 @@ then dive into these specific Celery tutorials.
   are great reads for understanding the difference between a task queue and
   why you shouldn't use your database as one.
 
-* [A 4 Minute Intro to Celery](https://www.youtube.com/watch?v=68QWZU_gCDA) is
-  a short introductory task queue screencast.
+* [My Experiences With A Long-Running Celery-Based Microprocess](https://theblog.workey.co/my-experiences-with-a-long-running-celery-based-microprocess-b2cc30da94f5)
+  gives some good tips and advice based on experience with Celery workers
+  that take a long time to complete their jobs.
+
+* [Checklist to build great Celery async tasks](http://celerytaskschecklist.com/)
+  is a site specifically designed to give you a list of good practices to 
+  follow as you design your task queue configuration and deploy to 
+  development, staging and production environments.
 
 * Heroku wrote about how to 
   [secure Celery](https://engineering.heroku.com/blogs/2014-09-15-securing-celery)
   when tasks are otherwise sent over unencrypted networks.
-
-* Miguel Grinberg wrote a nice post on using the 
-  [task queue Celery with Flask](http://blog.miguelgrinberg.com/post/using-celery-with-flask). 
-  He gives an overview of Celery followed by specific code to set up the task
-  queue and integrate it with Flask.
 
 * [Unit testing Celery tasks](https://www.python-celery.com/2018/05/01/unit-testing-celery-tasks/)
   explains three strategies for testing code within functions that Celery 
@@ -99,13 +103,37 @@ then dive into these specific Celery tutorials.
   [open source Git repository with all of the source code](https://github.com/ZoomerAnalytics/python-celery-unit-testing)
   from the post.
 
+* [Rollbar monitoring of Celery in a Django app](https://www.mattlayman.com/blog/2017/django-celery-rollbar/)
+  explains how to use [Rollbar](/rollbar.html) to monitor tasks. Super
+  useful when workers invariably die for no apparent reason.
+
 * [3 Gotchas for Working with Celery](https://wiredcraft.com/blog/3-gotchas-for-celery/)
   are things to keep in mind when you're new to the Celery task queue 
   implementation.
 
-* [Deferred Tasks and Scheduled Jobs with Celery 3.1, Django 1.7 and Redis](https://godjango.com/63-deferred-tasks-and-scheduled-jobs-with-celery-31-django-17-and-redis/)
-  is a video along with code that shows how to set up Celery with Redis as the
-  broker in a Django application.
+* [Dask and Celery](http://matthewrocklin.com/blog/work/2016/09/13/dask-and-celery) 
+  compares Dask.distributed with Celery for Python projects. The post gives
+  code examples to show how to execute tasks with either task queue.
+
+* [Python+Celery: Chaining jobs?](https://stackoverflow.com/questions/3901101/pythoncelery-chaining-jobs)
+  explains that Celery tasks should be dependent upon each other using 
+  Celery chains, not direct dependencies between tasks.
+
+
+### Celery with web frameworks
+Celery is typically used with a [web framework](/web-frameworks.html) such as
+[Django](/django.html), [Flask](/flask.html) or [Pyramid](/pyramid.html).
+These resources show you how to integrate the Celery task queue with the
+web framework of your choice.
+
+* [How to Use Celery and RabbitMQ with Django](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html)
+  is a great tutorial that shows how to both install and set up a basic
+  task with Django.
+
+* Miguel Grinberg wrote a nice post on using the 
+  [task queue Celery with Flask](http://blog.miguelgrinberg.com/post/using-celery-with-flask). 
+  He gives an overview of Celery followed by specific code to set up the task
+  queue and integrate it with Flask.
 
 * [Setting up an asynchronous task queue for Django using Celery and Redis](http://michal.karzynski.pl/blog/2014/05/18/setting-up-an-asynchronous-task-queue-for-django-using-celery-redis/)
   is a straightforward tutorial for setting up the Celery task queue for 
@@ -117,15 +145,36 @@ then dive into these specific Celery tutorials.
   in your application. Note however there are other ways of integrating
   Celery with Django that do not require the django-celery dependency.
 
+* [Flask asynchronous background tasks with Celery and Redis](http://allynh.com/blog/flask-asynchronous-background-tasks-with-celery-and-redis/)
+  combines Celery with [Redis](/redis.html) as the broker and 
+  [Flask](/flask.html) for the example application's framework.
+
+* [Celery and Django and Docker: Oh My!](https://www.revsys.com/tidbits/celery-and-django-and-docker-oh-my/)
+  shows how to create Celery tasks for Django within a [Docker](/docker.html)
+  container. It also provides some 
+
 * [Asynchronous Tasks With Django and Celery](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/)
   shows how to integrate Celery with [Django](/django.html) and create Periodic Tasks.
 
-* [Dask and Celery](http://matthewrocklin.com/blog/work/2016/09/13/dask-and-celery) 
-  compares Dask.distributed with Celery for Python projects. The post gives
-  code examples to show how to execute tasks with either task queue.
+* [Getting Started Scheduling Tasks with Celery](http://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/)
+  is a detailed walkthrough for setting up Celery with Django (although
+  Celery can also be used without a problem with other frameworks).
+
+* [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
+  provides an introduction to the Celery task queue with Django as the
+  intended framework for building a web application.
+
+* [Asynchronous Tasks with Falcon and Celery](https://testdriven.io/asynchronous-tasks-with-falcon-and-celery)
+  configures Celery with the [Falcon](/falcon.html) framework, which is 
+  less commonly-used in web tutorials.
 
 
 ### Celery deployment resources
+Celery and its broker run separately from your web and WSGI servers so it 
+adds some additional complexity to your [deployments](/deployment.html). The 
+following resources walk you through how to handle deployments and get the
+right configuration settings in place.
+
 * The "Django in Production" series by 
   [Rob Golding](https://twitter.com/robgolding63) contains a post 
   specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/).
@@ -140,5 +189,5 @@ then dive into these specific Celery tutorials.
   discussed in existing documentation.
 
 * [Three quick tips from two years with Celery](https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb)
-  provides some solid advice on retry delays, the -Ofair flag and global
+  provides some solid advice on retry delays, the `-Ofair` flag and global
   task timeouts for Celery.
