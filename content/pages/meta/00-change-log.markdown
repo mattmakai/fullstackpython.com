@@ -17,6 +17,9 @@ on GitHub.
 
 ## 2018
 ### August
+* Updated the [Celery](/celery.html) page with a ton of new great
+  resources and broke them into new subsections for general resources,
+  frameworks and deployments.
 * Tons of new [code metrics](/code-metrics.html), [Lektor](/lektor.html),
   [Pyramid](/pyramid.html) and [Sanic](/sanic.html) resources.
 * Added new [Git](/git.html) and [Jinja](/jinja2.html) resources.
