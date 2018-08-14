@@ -241,6 +241,8 @@ combined with the example real-world projects listed in the next section.
 * [Running Flask on Docker Swarm](https://testdriven.io/running-flask-on-docker-swarm)
   details how to run a Flask app on Docker Swarm.
 
+* [Dynamic Secret Generation with Vault and Flask](https://testdriven.io/dynamic-secret-generation-with-vault-and-flask) looks at how to use Hashicorp's Vault and Consul to create dynamic Postgres credentials for a Flask web app.
+
 ### Open source Flask example projects
 Flask's lack of standard boilerplate via a commandline interface for
 setting up your project structure is a double edged sword. When you
