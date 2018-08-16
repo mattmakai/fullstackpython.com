@@ -1,7 +1,7 @@
 title: Markdown
 category: page
 slug: markdown
-sortorder: 0326
+sortorder: 0323
 toc: False
 sidebartitle: Markdown
 meta: Markdown is a type of markup language often used to document Python projects. Learn more about Markdown on Full Stack Python.

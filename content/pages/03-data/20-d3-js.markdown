@@ -1,7 +1,7 @@
 title: d3.js
 category: page
 slug: d3-js
-sortorder: 0322
+sortorder: 0320
 toc: False
 sidebartitle: d3.js
 meta: d3.js is a JavaScript visualization library for creating interactive visuals for web browsers.
@@ -67,6 +67,9 @@ from scratch.
 * [Resize to Scale with d3.js](http://www.thesoftwaresimpleton.com/blog/2015/11/16/resize-d3/)
   gives code for a render function that adjusts the size of the viewing
   window based on the parent element for the visualization.
+
+* [Responsive Data Visualization](http://nrabinowitz.github.io/rdv/)
+  provides another approach for making responsive D3.js charts.
 
 * [Make great-looking d3.js charts in Python without coding a line of JavaScript](http://dataviztalk.blogspot.com/2016/01/make-great-looking-d3js-charts-in.html)
   combines a Python backend with the 

@@ -1,7 +1,7 @@
 title: Matplotlib
 category: page
 slug: matplotlib
-sortorder: 0323
+sortorder: 0321
 toc: False
 sidebartitle: Matplotlib
 meta: Matplotlib is a data visualization plotting library that builds visuals in Python for output in Jupyter Notebooks and web apps.

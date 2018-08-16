@@ -35,6 +35,15 @@ Either one can be used in your applications but there are slight differences
 that can make one better than the other in various situations.
  
 Other useful environment variables resources:
+* [The Twelve-Factor App](https://12factor.net/) describes a method for
+  securing environment data for your applications. The twelve factors are
+  commonly referenced across many programming ecosystems, not just Python,
+  so it's worthwhile to familiarize yourself with how to use this method
+  to configure your applications.
+
+* [Everything You Need to Know About the Twelve-Factor App](https://developer.okta.com/blog/2018/03/30/everything-you-need-to-know-about-the-twelve-factor-app)
+  breaks down the original twelve-factor app source material and provides
+  solid additional advice and context.
 
 * [Environment variables on Ubuntu Linux](https://help.ubuntu.com/community/EnvironmentVariables)
 

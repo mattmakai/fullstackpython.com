@@ -1,7 +1,7 @@
 title: pandas
 category: page
 slug: pandas
-sortorder: 0317
+sortorder: 0316
 toc: False
 sidebartitle: pandas
 meta: The Python Data Analysis Library (pandas) is a data structures and analysis library.

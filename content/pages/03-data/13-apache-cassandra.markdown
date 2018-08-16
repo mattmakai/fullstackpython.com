@@ -1,7 +1,7 @@
 title: Apache Cassandra
 category: page
 slug: apache-cassandra
-sortorder: 0314
+sortorder: 0313
 toc: False
 sidebartitle: Apache Cassandra
 meta: Apache Cassandra is a column-family NoSQL data store occasionally used for persisting data in Python applications.

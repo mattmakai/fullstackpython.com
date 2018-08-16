@@ -1,7 +1,7 @@
 title: SciPy and NumPy
 category: page
 slug: scipy-numpy
-sortorder: 0318
+sortorder: 0317
 toc: False
 sidebartitle: SciPy & NumPy
 meta: SciPy is an umbrella project for many open source data analysis libraries such as NumPy, pandas and Matplotlib.

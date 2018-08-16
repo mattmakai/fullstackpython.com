@@ -1,7 +1,7 @@
 title: Neo4j
 category: page
 slug: neo4j
-sortorder: 0315
+sortorder: 0314
 toc: False
 sidebartitle: Neo4j
 meta: Neo4j is a graph NoSQL database that can be used to persist data in Python applications.

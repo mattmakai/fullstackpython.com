@@ -20,6 +20,7 @@ developing their applications.
 
 <div class="well see-also">Screen is an implementation of the <a href="/terminal-multiplexers.html">terminal multiplexers</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
+
 ### Screen resources
 * [Learn to use screen, a terminal multiplexer](https://dev.to/thiht/learn-to-use-screen-a-terminal-multiplexer-gl)
 
