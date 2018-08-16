@@ -1,7 +1,7 @@
 title: Virtual environments (virtualenvs)
 category: page
 slug: virtual-environments-virtualenvs-venvs
-sortorder: 0217
+sortorder: 0216
 toc: False
 sidebartitle: Virtualenvs
 meta: Virtual environments (virtualenvs) provide dependency isolation for your projects from external libraries.

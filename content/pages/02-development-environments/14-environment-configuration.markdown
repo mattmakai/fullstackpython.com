@@ -1,7 +1,7 @@
 title: Environment configuration
 category: page
 slug: environment-configuration
-sortorder: 0215
+sortorder: 0214
 toc: False
 sidebartitle: Environment configuration
 meta: Configuring a dev, test or production environment is important to successfully run a Python application.

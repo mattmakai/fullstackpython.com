@@ -1,7 +1,7 @@
 title: Mercurial
 category: page
 slug: mercurial
-sortorder: 0221
+sortorder: 0220
 toc: False
 sidebartitle: Mercurial
 meta: Mercurial is an implementation of the source (version) control concept. Learn more Full Stack Python.
