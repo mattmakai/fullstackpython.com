@@ -56,3 +56,8 @@ specific situation.
   theme for Bootstrap 4. You can also check out a 
   [demo of the theme](https://tabler.github.io/tabler/).
 
+* [How to use Bootstrap 4 forms with Django](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)
+  shows how to combine the popular 
+  [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  library with [Django](/django.html) to create and obtain user data
+  through web forms that are styled with Bootstrap 4 CSS.
