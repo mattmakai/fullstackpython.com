@@ -17,7 +17,7 @@ track of tasks in the queue that need to be executed.
 <div class="well see-also">RQ is an implementation of the <a href="/task-queues.html">task queue</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
-## RQ resources
+### RQ resources
 * The [RQ intro post](http://nvie.com/posts/introducing-rq/) contains
   information on design decisions and how to use RQ in your projects.
 
@@ -40,3 +40,11 @@ track of tasks in the queue that need to be executed.
 * [Sending Confirmation Emails with Flask, Redis Queue, and Amazon SES](https://testdriven.io/sending-confirmation-emails-with-flask-rq-and-ses)
   shows how RQ fits into a real-world application that uses many
   libraries and third party APIs.
+
+* [Background Tasks in Python using Redis Queue](https://timber.io/blog/background-tasks-in-python-using-task-queues/)
+  gives a code example for web scraping data from the Goodreads website.
+  Note that the first sentence in the post is not accurate: it's not the
+  Python language that is linear, but instead the way workers in 
+  [WSGI servers](/wsgi-servers.html) handle a single request at a time by
+  blocking. Nevertheless, the example is a good one for understanding how
+  RQ can execute.
