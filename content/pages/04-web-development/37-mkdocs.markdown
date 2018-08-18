@@ -42,11 +42,6 @@ generator.
   is likely the best place to go when you are just getting set up with your
   first site that uses this project.
 
-* [Building Markdown-based Sites with MkDocs](http://toolsfortheweb.net/cms/building-markdown-based-sites-with-mkdocs/)
-  provides an initial perspective on using MkDocs to build a static website
-  along with some of the advantages and disadvantages that come with using
-  this static site generator.
-
 * [Mkdocs documentation](https://visibilityspots.org/mkdocs.html) is a quick
   tutorial to get MkDocs installed and modify the initial mkdocs.yml file.
 

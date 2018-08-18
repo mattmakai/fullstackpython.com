@@ -23,10 +23,7 @@ Speaking of feedback on projects,
 [this GitHub issue thread named "**thank you**"](https://github.com/jhund/filterrific/issues/147#issuecomment-341867147)
 is incredible to read. The issue ticket blew up on the front page of Hacker
 News as an example of how powerful genuine positive comments can be for 
-project maintainers. Every time I get a thank you tweet 
-([like this one](https://twitter.com/foozmeat/status/928834578864750592)), 
-email or GitHub issue it certainly helps to motivate me to continue working 
-hard on Full Stack Python.
+project maintainers.
 
 [**Contributing to open source**](https://talkpython.fm/episodes/show/132/contributing-to-open-source) 
 is a recent [Talk Python to Me](https://talkpython.fm/) podcast episode in 

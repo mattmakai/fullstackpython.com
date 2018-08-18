@@ -110,7 +110,7 @@ use mocks in your test cases.
 * [Python Mocking 101: Fake It Before You Make It](https://blog.fugue.co/2016-02-11-python-mocking-101.html)
   explains what mocking is and is not, and shows how to use the `patch`
   function to accomplish it in your project. 
-  [Revisiting Unit Testing and Mocking in Python](https://blog.fugue.co/2017-07-18-revisiting-unit-testing-and-mocking-in-python.htmlZ)
+  [Revisiting Unit Testing and Mocking in Python](https://blog.fugue.co/2017-07-18-revisiting-unit-testing-and-mocking-in-python.html)
   is a follow-up post that expands upon using the `patch` function
   along with dependency injection.
 
