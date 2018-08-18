@@ -30,3 +30,7 @@ is a data structures and analysis library.
 * [Modern pandas](https://tomaugspurger.github.io/modern-1.html) is the
   first part in a well-written seven-part introductory series.
 
+* [A simple way to anonymize data with Python and Pandas](https://dev.to/r0f1/a-simple-way-to-anonymize-data-with-python-and-pandas-79g)
+  is a good tutorial on removing sensitive data from your unfiltered 
+  data sets.
+
