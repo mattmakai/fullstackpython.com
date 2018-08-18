@@ -1,5 +1,4 @@
-title: Change Log
-category: page
+title: Change Log category: page
 slug: change-log
 sortorder: 0700
 toc: True
@@ -17,6 +16,8 @@ on GitHub.
 
 ## 2018
 ### August
+* New [RQ](/redis-queue-rq.html) and [code metrics](/code-metrics.html)
+  resources.
 * Updated the [Celery](/celery.html) page with a ton of new great
   resources and broke them into new subsections for general resources,
   frameworks and deployments.

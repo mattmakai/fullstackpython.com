@@ -126,6 +126,10 @@ diminishing returns.
   your Python code and how to install and configure it for your
   environment.
 
+* [Which Python static analysis tools should I use?](https://www.codacy.com/blog/which-python-static-analysis-tools-should-i-use/)
+  covers Pylint, PyFlakes and mypy with a short description of the 
+  advantages and disadvantage for each one.
+
 * [Dynamic tracing a Pony + Python program with DTrace](https://blog.wallaroolabs.com/2017/12/dynamic-tracing-a-pony---python-program-with-dtrace/)
   shows how to use dynamic tracing programs to analyze code
   at runtime.
