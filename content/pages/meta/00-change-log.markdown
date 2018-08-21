@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2018
 ### August
+* Merged [PR #184](https://github.com/mattmakai/fullstackpython.com/pull/184)
+  to remove link rot issues. Thanks again [Sam](https://github.com/huangsam)!
 * New [RQ](/redis-queue-rq.html) and [code metrics](/code-metrics.html)
   resources.
 * Updated the [Celery](/celery.html) page with a ton of new great
