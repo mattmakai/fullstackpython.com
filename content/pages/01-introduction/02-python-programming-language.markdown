@@ -121,10 +121,6 @@ There's an entire page on [best Python resources](/best-python-resources.html)
 with links but the following resources are a better fit for when you're past 
 the very beginner topics.
 
-* [The Python Ecosystem: An Introduction](http://mirnazim.org/writings/python-ecosystem-introduction/)
-  provides context for virtual machines, Python packaging, pip, virtualenv
-  and many other topics after learning the basic Python syntax. 
-
 * The [Python Subreddit](http://www.reddit.com/r/python) rolls up great
   Python links and has an active community ready to answer questions from
   beginners and advanced Python developers alike.

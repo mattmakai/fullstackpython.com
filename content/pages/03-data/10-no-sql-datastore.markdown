@@ -170,7 +170,7 @@ representing a person could have a property of "female" or "male".
 
 
 ## NoSQL third-party services
-* [MongoHQ](http://www.mongohq.com/home) provides MongoDB as a service. It's
+* [Compose](https://www.compose.com/) provides MongoDB as a service. It's
   easy to set up with either a standard LAMP stack or on Heroku.
 
 
@@ -202,8 +202,6 @@ representing a person could have a property of "female" or "male".
 * Relational databases such as MySQL and PostgreSQL have added features in
   more recent versions that mimic some of the capabilities of NoSQL data
   stores. For example, check out this blog post on
-  [using MySQL as a key-value pair store](http://engineering.wix.com/2015/12/10/scaling-to-100m-mysql-is-a-better-nosql/)
-  and this post on
   [storing JSON data in PostgreSQL](https://blog.codeship.com/unleash-the-power-of-storing-json-in-postgres/).
 
 
