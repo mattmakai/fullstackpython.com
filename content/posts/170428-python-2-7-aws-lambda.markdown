@@ -38,7 +38,7 @@ Head to the
 web browser. Sign into your account, or sign up for a new account which
 comes with a free tier so you don't have to pay.
 
-<img src="/img/170428-aws-lambda-python-2-7/aws-amazon-com.jpg" width="100%" class="technical-diagram img-rounded" alt="AWS Lambda landing page.">
+<img src="/img/170428-aws-lambda-python-2-7/aws-amazon-com.jpg" width="100%" class="shot rnd outl" alt="AWS Lambda landing page.">
 
 If you're not taken directly to the 
 [Lambda Console page](https://console.aws.amazon.com/lambda/home) after
@@ -47,26 +47,26 @@ services (that seems to expand every week) so the best way to get around
 is to select the search text box and search for "lambda" as shown in the 
 following screenshot.
 
-<img src="/img/170428-aws-lambda-python-2-7/search-for-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Search for lambda in the dashboard text box.">
+<img src="/img/170428-aws-lambda-python-2-7/search-for-lambda.jpg" width="100%" class="shot rnd outl" alt="Search for lambda in the dashboard text box.">
 
 Press the "Create a Lambda function" button and you'll see the 
 "Select Blueprint" page.
 
-<img src="/img/170428-aws-lambda-python-2-7/select-blueprint.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="The select blueprint Lambda screen, where you should select Blank Function.">
+<img src="/img/170428-aws-lambda-python-2-7/select-blueprint.jpg" width="100%" class="shot rnd outl" alt="The select blueprint Lambda screen, where you should select Blank Function.">
 
 Choose "Blank Function". The next screen gives the option to select a
 "trigger", which is how the Lambda function gets executed. A trigger is
 some event that is integrated with other AWS services and can be exposed
 externally via an API or device such as Alexa.
 
-<img src="/img/170428-aws-lambda-python-2-7/configure-triggers.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Configure trigger screen, which we will not use for now because we will manually kick off our Lambda.">
+<img src="/img/170428-aws-lambda-python-2-7/configure-triggers.jpg" width="100%" class="shot rnd outl" alt="Configure trigger screen, which we will not use for now because we will manually kick off our Lambda.">
 
 However, we aren't going to set up a trigger for this function because 
 we can manually test the Lambda later before connecting it to a trigger.
 Leave the trigger icon blank and click the "Next" button to move along 
 to the next screen.
 
-<img src="/img/170428-aws-lambda-python-2-7/blank-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Blank Lambda configuration screen.">
+<img src="/img/170428-aws-lambda-python-2-7/blank-lambda.jpg" width="100%" class="shot rnd outl" alt="Blank Lambda configuration screen.">
 
 Now we're on the screen where we can enter our specific configuration
 and code for our new Lambda.
@@ -77,7 +77,7 @@ Start by entering a name for your Lambda function, such as "my_first_python_lamb
 when you start using Lambda regularly to keep all your functions straight. 
 In the Runtime drop-down, select Python 2.7 as the execution language.
 
-<img src="/img/170428-aws-lambda-python-2-7/first-python-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Enter a name, description and select Python 2.7 on the Lambda configuration screen.">
+<img src="/img/170428-aws-lambda-python-2-7/first-python-lambda.jpg" width="100%" class="shot rnd outl" alt="Enter a name, description and select Python 2.7 on the Lambda configuration screen.">
 
 Below the Runtime drop-down you'll see a large text box for writing code.
 We can also choose to upload a ZIP file with our Python application which
@@ -124,7 +124,7 @@ whole number above 0 for `how_many_times`. Our Python code's error handling
 is not very robust so a value other than a number in the `how_many_times`
 variable will cause the script to throw an error when it is executed.
 
-<img src="/img/170428-aws-lambda-python-2-7/environment-variables.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Enter the exact keys of what_to_print and how_many_times along with corresponding values as environment variables.">
+<img src="/img/170428-aws-lambda-python-2-7/environment-variables.jpg" width="100%" class="shot rnd outl" alt="Enter the exact keys of what_to_print and how_many_times along with corresponding values as environment variables.">
 
 Our code and environment variables are in place and we just need to set
 a few more AWS-specific settings before we can test the Lambda function.
@@ -139,7 +139,7 @@ be `lambda_function.lambda_handler`. Select
 "Role name" field enter "dynamodb_permissions". Under "Policy templates" 
 select the "Simple Microservice permissions". 
 
-<img src="/img/170428-aws-lambda-python-2-7/lambda-handler-and-role.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="For the final configuration, keep the default handler, create a new role from a template for Simple Microservice permissions and save it with a unique name.">
+<img src="/img/170428-aws-lambda-python-2-7/lambda-handler-and-role.jpg" width="100%" class="shot rnd outl" alt="For the final configuration, keep the default handler, create a new role from a template for Simple Microservice permissions and save it with a unique name.">
 
 The "Simple Microservice permissions" gives our Lambda access to 
 [AWS DynamoDB](https://aws.amazon.com/dynamodb/). We won't use DynamoDB in 
@@ -149,17 +149,17 @@ storage when working with Lambda.
 Now that our code and configuration is in place, click the "Next" button
 at the bottom right corner of the page.
 
-<img src="/img/170428-aws-lambda-python-2-7/review-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="We can review the values set during our configuration.">
+<img src="/img/170428-aws-lambda-python-2-7/review-lambda.jpg" width="100%" class="shot rnd outl" alt="We can review the values set during our configuration.">
 
 The review screen will show us our configuration settings. Scroll down
 to the bottom and click the "Create function" button to continue.
 
-<img src="/img/170428-aws-lambda-python-2-7/create-function.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Click the create function button to continue.">
+<img src="/img/170428-aws-lambda-python-2-7/create-function.jpg" width="100%" class="shot rnd outl" alt="Click the create function button to continue.">
 
 We should see a success message on the next page just below the 
 "Save and test" button.
 
-<img src="/img/170428-aws-lambda-python-2-7/save-and-test.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Save and test button.">
+<img src="/img/170428-aws-lambda-python-2-7/save-and-test.jpg" width="100%" class="shot rnd outl" alt="Save and test button.">
 
 Press the "Test" button to execute the Lambda. Lambda prompts us for
 some data to simulate an event that would trigger our function. Select
@@ -167,11 +167,11 @@ the "Hello World" sample event template, which contains some example keys.
 Our Lambda will not those keys in its execution so it does not matter what
 they are. Click the "Save and test" button at the bottom of the modal.
 
-<img src="/img/170428-aws-lambda-python-2-7/sample-event-template.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Sample event template for our Lambda execution.">
+<img src="/img/170428-aws-lambda-python-2-7/sample-event-template.jpg" width="100%" class="shot rnd outl" alt="Sample event template for our Lambda execution.">
 
 Scroll down to the "Execution result" section where we can see our output.
 
-<img src="/img/170428-aws-lambda-python-2-7/execution-results.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Execution results from running our Lambda function.">
+<img src="/img/170428-aws-lambda-python-2-7/execution-results.jpg" width="100%" class="" alt="Execution results from running our Lambda function.">
 
 We get the log output that shows us the return value of our function. In
 this case it is the string message from `what_to_print`. We can also see

@@ -43,7 +43,7 @@ If using Python 2 is still your jam rather than Python 3, take a look at
 Sign up for a new [Amazon Web Services account](https://aws.amazon.com/),
 which provides a generous free tier, or use your existing AWS account.
 
-<img src="/img/170429-aws-lambda-python-3-6/aws-amazon-com.jpg" width="100%" class="technical-diagram img-rounded" alt="AWS Lambda landing and sign in screen.">
+<img src="/img/170429-aws-lambda-python-3-6/aws-amazon-com.jpg" width="100%" class="shot outl rnd" alt="AWS Lambda landing and sign in screen.">
 
 After signing up a few tutorials may pop up, but skip past them and
 go to the main Console. AWS has tons of services, with more being added
@@ -51,12 +51,12 @@ every month, so using the search box is the best way to get around.
 Select the search text box, enter "lambda" and select "Lambda" to get to
 the Lambda starting page.
 
-<img src="/img/170429-aws-lambda-python-3-6/search-for-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Search for lambda in the dashboard text box.">
+<img src="/img/170429-aws-lambda-python-3-6/search-for-lambda.jpg" width="100%" class="shot rnd outl" alt="Search for lambda in the dashboard text box.">
 
 Click the "Create a Lambda function" button. The "Select Blueprint" page
 will appear.
 
-<img src="/img/170429-aws-lambda-python-3-6/select-blueprint.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="The Select Blueprint Lambda screen.">
+<img src="/img/170429-aws-lambda-python-3-6/select-blueprint.jpg" width="100%" class="shot rnd outl" alt="The Select Blueprint Lambda screen.">
 
 Select "Blank Function" and the "Configure triggers" page will come up. 
 It was non-obvious to me at first, but you don't actually need to configure a 
@@ -65,13 +65,13 @@ when to execute based on an event from another AWS service such as
 [API Gateway](https://aws.amazon.com/api-gateway/) or 
 [Cloudwatch](https://aws.amazon.com/cloudwatch/).
 
-<img src="/img/170429-aws-lambda-python-3-6/configure-triggers.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Configure Lambda trigger screen.">
+<img src="/img/170429-aws-lambda-python-3-6/configure-triggers.jpg" width="100%" class="shot rnd outl" alt="Configure Lambda trigger screen.">
 
 We won't configure a trigger for this function because we can manually 
 kick off the Lambda to test it when we are finished configuring it. Leave 
 the trigger icon blank and click the "Next" button to move along. 
 
-<img src="/img/170429-aws-lambda-python-3-6/blank-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="The Lambda configuration screen.">
+<img src="/img/170429-aws-lambda-python-3-6/blank-lambda.jpg" width="100%" class="shot outl rnd" alt="The Lambda configuration screen.">
 
 Next we get to the "Configure function" screen where we can finally write
 some code!
@@ -84,7 +84,7 @@ when you have a dozens or hundreds of different Lambda functions and
 need to keep them straight. In the Runtime drop-down, select Python 3.6 for 
 the programming language.
 
-<img src="/img/170429-aws-lambda-python-3-6/python-3-6-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Enter a name, description and use Python 3.6 for the Lambda.">
+<img src="/img/170429-aws-lambda-python-3-6/python-3-6-lambda.jpg" width="100%" class="shot outl rnd" alt="Enter a name, description and use Python 3.6 for the Lambda.">
 
 Beneath the Runtime drop-down there is a large text box for code, 
 prepopulated with a `lambda_handler` function definition. The 
@@ -137,7 +137,7 @@ is not very robust so a value other than a number in the `how_many_times`
 variable will cause the script to throw an error when it is executed due
 to the forced casting of `how_many_times` via the `int()` function.
 
-<img src="/img/170429-aws-lambda-python-3-6/environment-variables.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Section to set environment variables for the Lambda function.">
+<img src="/img/170429-aws-lambda-python-3-6/environment-variables.jpg" width="100%" class="shot rnd outl" alt="Section to set environment variables for the Lambda function.">
 
 The Python 3.6 code and the environment variables are now in place. We 
 just need to handle a few more AWS-specific settings before we can test the 
@@ -159,22 +159,22 @@ The "Simple Microservice permissions" allows our Lambda to access
 this tutorial but the service is commonly used either as permanent or 
 temporary storage for Lambda functions.
 
-<img src="/img/170429-aws-lambda-python-3-6/lambda-handler-and-role.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="For the final configuration, keep the default handler, create a new role from a template for Simple Microservice permissions and save it with a unique name.">
+<img src="/img/170429-aws-lambda-python-3-6/lambda-handler-and-role.jpg" width="100%" class="shot rnd outl" alt="For the final configuration, keep the default handler, create a new role from a template for Simple Microservice permissions and save it with a unique name.">
 
 Our code and configuration is in place so click the "Next" button
 at the bottom right corner of the page.
 
-<img src="/img/170429-aws-lambda-python-3-6/review-lambda.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Review Lambda configuration.">
+<img src="/img/170429-aws-lambda-python-3-6/review-lambda.jpg" width="100%" class="shot rnd outl" alt="Review Lambda configuration.">
 
 The review screen shows us our configuration settings to make sure we 
 selected the appropriate values for our new Lambda function. Scroll down
 press "Create function".
 
-<img src="/img/170429-aws-lambda-python-3-6/create-function.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Click the create function button to continue.">
+<img src="/img/170429-aws-lambda-python-3-6/create-function.jpg" width="100%" class="shot rnd outl" alt="Click the create function button to continue.">
 
 Success message should appear on the next page below the "Test" button.
 
-<img src="/img/170429-aws-lambda-python-3-6/test.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Test button on the execution screen.">
+<img src="/img/170429-aws-lambda-python-3-6/test.jpg" width="100%" class="shot outl rnd" alt="Test button on the execution screen.">
 
 Click the "Test" button to execute the Lambda. Lambda will prompt us for
 some data to simulate an event that would kick off our function. Select
@@ -182,11 +182,11 @@ the "Hello World" sample event template, which contains some keys but our
 Lambda will not use that in its execution. Click the "Save and test" button
 at the bottom of the modal.
 
-<img src="/img/170429-aws-lambda-python-3-6/sample-event-template.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Sample event template for Lambda execution.">
+<img src="/img/170429-aws-lambda-python-3-6/sample-event-template.jpg" width="100%" class="shot outl rnd" alt="Sample event template for Lambda execution.">
 
 Scroll down to the "Execution result" section where we can see our output.
 
-<img src="/img/170429-aws-lambda-python-3-6/execution-results.jpg" width="100%" class="technical-diagram img-rounded bordered" alt="Results from executing our new Lambda function.">
+<img src="/img/170429-aws-lambda-python-3-6/execution-results.jpg" width="100%" class="shot outl rnd" alt="Results from executing our new Lambda function.">
 
 The log output shows us the return value of our function, which in this 
 execution was the string message from `what_to_print`. We can also see
