@@ -69,3 +69,7 @@ during Python software development as part of a programmer's
   application that generates a hostable, customizable status page for your 
   services.
 
+* [Replacing Bash scripts with Python](https://github.com/ninjaaron/replacing-bash-scripting-with-python)
+  is a guide on using using Python for administrative scripting, including
+  what to do about replacing invaluable command line tools such as `awk`, 
+  `sed` and `grep`.
