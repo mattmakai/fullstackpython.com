@@ -104,6 +104,11 @@ certain threshold.
   output to help debuggin when things go wrong, or to determine if something
   is going wrong.
 
+* [Django Logging, the Right Way](https://lincolnloop.com/blog/django-logging-right-way/)
+  covers a few Python logging techniques and then goes into how you use them
+  with your [Django](/django.html) projects.
+  
+
 * Django's 1.3 release brought unified logging into project configurations. 
   This [post shows how to set up logging](http://www.djm.org.uk/how-to-log-file-django-13-and-above/)
   in a project's settings.py file. Caktus Group also has a nice tutorial on
