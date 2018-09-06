@@ -15,6 +15,12 @@ on GitHub.
 
 
 ## 2018
+### September
+* Added a bunch of new resources across the site and removed a few out of
+  date ones as well.
+* Added initial pages for [WebRTC](/webrtc.html) and JavaScript frameworks.
+  More resources coming to those pages soon.
+
 ### August
 * Merged [PR #184](https://github.com/mattmakai/fullstackpython.com/pull/184)
   to remove link rot issues. Thanks again [Sam](https://github.com/huangsam)!
