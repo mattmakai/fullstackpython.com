@@ -1,7 +1,7 @@
 title: Debugging
 category: page
 slug: debugging
-sortorder: 0443
+sortorder: 0438
 toc: False
 sidebartitle: Debugging
 meta: Debugging involves instrumenting, isolating and hunting defects in running code. Learn more about debugging on Full Stack Python.
@@ -38,4 +38,6 @@ work as correctly as time and budget allow.
 * [Debugging in Python](https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/)
   elaborates on what pdb does and how it can be used.
 
-
+* [How to debug JavaScript errors](https://rollbar.com/guides/how-to-debug-javascript/)
+  introduces some key debugging tools such as source maps that make
+  identifying errors on the client side much easier during development.

@@ -1,7 +1,7 @@
 title: JavaScript
 category: page
 slug: javascript
-sortorder: 0424
+sortorder: 0423
 toc: False
 sidebartitle: JavaScript
 meta: Learn about JavaScript and MVC frameworks for web applications on Full Stack Python.
@@ -49,11 +49,7 @@ which is defined by the
 [Ecma International Standards Body](http://www.ecma-international.org/default.htm).
 
 
-## JavaScript resources
-* [Frontend tooling in 2015](http://ashleynolan.co.uk/blog/frontend-tooling-survey-2015-results)
-  shows the results of a survey for what frontend developers are using for
-  CSS pre- and post-processing and other build steps.
-
+### JavaScript resources
 * [How Browsers Work](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   is a great overview of both JavaScript and CSS as well as how pages are 
   rendered in a browser.
@@ -72,17 +68,14 @@ which is defined by the
 * [Unheap](http://www.unheap.com/) is an amazing collection of reusable JQuery 
   plugins for everything from navigation to displaying media.
 
-* [The State of JavaScript in 2015](http://www.breck-mckye.com/blog/2014/12/the-state-of-javascript-in-2015/)
-  is an opinion piece about favoring small, single-purpose JavaScript libraries 
-  over larger frameworks due to churn in the ecosystem.
-
-* [The Modern JavaScript Developer’s Toolbox ](http://www.infoq.com/articles/modern-javascript-toolbox)
+* [The Modern JavaScript Developer's Toolbox](http://www.infoq.com/articles/modern-javascript-toolbox)
   provides a high-level overview of tools frequently used on the client and
   server side for developers using JavaScript in their web applications.
 
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
-## JavaScript learning checklist
+
+### JavaScript learning checklist
 1. Create a simple HTML file with basic elements in it. Use the
    ``python -m SimpleHTTPServer`` command to serve it up. Create a 
    ``<script type="text/javascript"></script>`` 

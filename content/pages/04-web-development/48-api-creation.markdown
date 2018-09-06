@@ -1,7 +1,7 @@
 title: API Creation
 category: page
 slug: api-creation
-sortorder: 0455
+sortorder: 0448
 toc: False
 sidebartitle: API Creation
 meta: Web APIs enable machine-to-machine communication. Learn more about creating web APIs on Full Stack Python.
@@ -68,7 +68,7 @@ equivalent of browser testing in the web application world.
 
 
 
-## Hosted API testing services
+### Hosted API testing services
 * [Runscope](https://www.runscope.com/) is an API testing SaaS application
   that can test both your own APIs and external APIs that your application
   relies upon.
@@ -77,7 +77,7 @@ equivalent of browser testing in the web application world.
   including multi-step API calls and monitoring of external APIs.
 
 
-## API creation resources
+### API creation resources
 * [An API is only as good as its documentation](https://rocketeer.be/blog/2015/03/api-quality/)
   is a strongly held mantra in the web API world because so many APIs have
   poor documentation that prevents ease-of-use. If an API is not well 
@@ -162,7 +162,9 @@ equivalent of browser testing in the web application world.
   is based on Heroku's best practices for the platform's API.
 
 
-## Python-specific API creation resources
+### Python-specific API creation resources
+* [Deploying a Machine Learning Model as a REST API](https://towardsdatascience.com/deploying-a-machine-learning-model-as-a-rest-api-4a03b865c166)
+
 * [Choosing an API framework for Django](https://www.pydanny.com/choosing-api-framework-for-django.html)
   by [PyDanny](https://twitter.com/pydanny) contains questions and insight
   into what makes a good API framework and which one you should currently

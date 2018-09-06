@@ -13,6 +13,12 @@ easier for humans to see patterns, trends and other useful information.
 
 
 ### Data visualization resources
+* [Data visualization, from 1987 to today](https://medium.economist.com/data-visualisation-from-1987-to-today-65d0609c6017)
+  is a wonderful reference about the pre-computer age era of visualization
+  which was a combination of cartography, art and statistics rather than
+  any cohesive field as it is often seen today. The images showing how
+  people worked with paper to build their visuals add fantastic context to
+  the story.
 
 * [One Chart, Twelve Charting Libraries](https://lisacharlotterost.github.io/2016/05/17/one-chart-code/)
   compares how charting libraries such as [D3.js](/d3-js.html),

@@ -1,7 +1,7 @@
 title: Redis Queue (RQ)
 category: page
 slug: redis-queue-rq
-sortorder: 0431
+sortorder: 0429
 toc: False
 sidebartitle: Redis Queue (RQ)
 meta: Redis Queue (RQ) is a Python task queue built on top of Redis that executes work outside an HTTP request-response cycle.

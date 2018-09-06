@@ -1,7 +1,7 @@
 title: Dramatiq
 category: page
 slug: dramatiq
-sortorder: 0432
+sortorder: 0430
 toc: False
 sidebartitle: Dramatiq
 meta: Dramatiq is an alternative to the Celery task queue that support RabbitMQ and Redis as brokers.

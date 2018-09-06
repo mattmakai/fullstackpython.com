@@ -1,7 +1,7 @@
 title: Twilio
 category: page
 slug: twilio
-sortorder: 0460
+sortorder: 0452
 toc: False
 sidebartitle: Twilio
 meta: Twilio is an API for developers to add communications such as phone calling, messaging and video to Python applications.
@@ -31,18 +31,20 @@ For example, here's how you can send an
 [outbound SMS](https://www.twilio.com/docs/quickstart/python/sms/sending-via-rest) 
 using a few lines of Python code:
 
-    # import the Twilio helper library (installed with pip install twilio)
-    from twilio.rest import TwilioRestClient
+```python
+# import the Twilio helper library (installed with pip install twilio)
+from twilio.rest import TwilioRestClient
 
-    # replace the placeholder strings in the following code line with 
-    # your Twilio Account SID and Auth Token from the Twilio Console
-    client = TwilioRestClient("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
+# replace the placeholder strings in the following code line with 
+# your Twilio Account SID and Auth Token from the Twilio Console
+client = TwilioRestClient("ACxxxxxxxxxxxxxx", "zzzzzzzzzzzzz")
 
-    # change the "from_" number to your Twilio number and the "to" number
-    # to any phone number you want to send the message to 
-    client.messages.create(to="+19732644152", from_="+12023358536", 
-                           body="Hello from Python!")
+# change the "from_" number to your Twilio number and the "to" number
+# to any phone number you want to send the message to 
+client.messages.create(to="+19732644152", from_="+12023358536", 
+                       body="Hello from Python!")
 
+```
 
 Learn more about the above code in the 
 [How to Send SMS Text Messages with Python tutorial](/blog/send-sms-text-messages-python.html).

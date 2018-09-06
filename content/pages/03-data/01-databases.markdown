@@ -159,6 +159,12 @@ provider.
   operations we often take for granted when using an established relational 
   database such as PostgreSQL.
 
+* [Select Star SQL](https://selectstarsql.com/) is an interactive book for
+  learning SQL. Highly recommended even if you feel you will only be working
+  with an [object-relational mapper](/object-relational-mappers-orms.html)
+  on your projects because you never know when you will need to drop into
+  SQL to improve a generated query's slow performance.
+
 * [Why I Love Databases](https://medium.com/@jeeyoungk/why-i-love-databases-1d4cc433685f)
   is a great read on the CAP Theorem, distributed systems and other topics
   that are at the core of database theory and implementation. Well worth

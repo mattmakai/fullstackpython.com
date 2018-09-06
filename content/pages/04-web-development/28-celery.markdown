@@ -1,7 +1,7 @@
 title: Celery
 category: page
 slug: celery
-sortorder: 0430
+sortorder: 0428
 toc: False
 sidebartitle: Celery
 meta: Celery is a task queue for executing work outside a Python web application HTTP request-response cycle.

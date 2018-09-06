@@ -138,6 +138,7 @@ There are numerous ORM implementations written in Python, including
 1. [The Django ORM](/django-orm.html)
 1. [PonyORM](/pony-orm.html)
 1. [SQLObject](http://sqlobject.org/)
+1. [Tortoise ORM](https://tortoise-orm.readthedocs.io/en/latest/)
 
 There are other ORMs, such as Canonical's
 [Storm](https://storm.canonical.com/), but most of them do not appear to

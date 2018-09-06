@@ -73,7 +73,7 @@ source monitorflask/bin/activate
 
 The command prompt will change after activating the virtualenv:
 
-<img src="/img/170723-monitor-flask-apps/activate-virtualenv.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Activating our Python virtual environment on the command line.">
+<img src="/img/170723-monitor-flask-apps/activate-virtualenv.png" width="100%" class="shot rnd outl" alt="Activating our Python virtual environment on the command line.">
 
 Remember that you need to activate the virtualenv in every new terminal 
 window where you want to use the virtualenv to run the project.
@@ -179,12 +179,12 @@ python app.py
 The Flask development server should start up and display a few lines
 of output.
 
-<img src="/img/170723-monitor-flask-apps/python-app-py.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Run the Flask development server locally.">
+<img src="/img/170723-monitor-flask-apps/python-app-py.png" width="100%" class="shot rnd outl" alt="Run the Flask development server locally.">
 
 What happens when we access the application running on 
 [localhost port 5000](http://localhost:5000)?
 
-<img src="/img/170723-monitor-flask-apps/localhost-base-url.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Testing our Flask application at the base URL receives an HTTP 404 error.">
+<img src="/img/170723-monitor-flask-apps/localhost-base-url.png" width="100%" class="shot rnd outl" alt="Testing our Flask application at the base URL receives an HTTP 404 error.">
 
 HTTP status 404 page not found, which is what we expected because we only
 defined a single route and it did not live at the base path.
@@ -193,13 +193,13 @@ We created a template named `battlegrounds.html` that should be accessible
 when we go to 
 [localhost:5000/battlegrounds/](http://localhost:5000/battlegrounds/).
 
-<img src="/img/170723-monitor-flask-apps/localhost-pubg-gif.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Testing our Flask application at /battlegrounds/ gets the proper template with a GIF.">
+<img src="/img/170723-monitor-flask-apps/localhost-pubg-gif.jpg" width="100%" class="shot rnd outl" alt="Testing our Flask application at /battlegrounds/ gets the proper template with a GIF.">
 
 The application successfully found the `battlegrounds.html` template but
 that is the only one available. What if we try 
 [localhost:5000/fullstackpython/](http://localhost:5000/fullstackpython/)?
 
-<img src="/img/170723-monitor-flask-apps/localhost-no-template.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="If no template is found we receive a 500 error.">
+<img src="/img/170723-monitor-flask-apps/localhost-no-template.jpg" width="100%" class="shot rnd outl" alt="If no template is found we receive a 500 error.">
 
 HTTP 500 error. That's no good.
 
@@ -217,24 +217,24 @@ errors that occur for our users.
 Head to [Rollbar's homepage](https://rollbar.com/) so we can add their
 hosted monitoring tools to our oft-erroring Flask app.
 
-<img src="/img/170723-monitor-flask-apps/rollbar-homepage.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar homepage in the web browser.">
+<img src="/img/170723-monitor-flask-apps/rollbar-homepage.jpg" width="100%" class="shot rnd outl" alt="Rollbar homepage in the web browser.">
 
 Click the "Sign Up" button in the upper right-hand corner. Enter your 
 email address, a username and the password you want on the sign up page.
 
-<img src="/img/170723-monitor-flask-apps/sign-up.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Enter your basic account information on the sign up page.">
+<img src="/img/170723-monitor-flask-apps/sign-up.jpg" width="100%" class="shot rnd outl" alt="Enter your basic account information on the sign up page.">
 
 After the sign up page you will see the onboarding flow where you can
 enter a project name and select a programming language. For project
 name enter "Battlegrounds" and select that you are monitoring a Python app.
 
-<img src="/img/170723-monitor-flask-apps/create-new-project.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Create a new project named 'Battlegrounds' and select Python as the programming language.">
+<img src="/img/170723-monitor-flask-apps/create-new-project.jpg" width="100%" class="shot rnd outl" alt="Create a new project named 'Battlegrounds' and select Python as the programming language.">
 
 Press the "Continue" button at the bottom to move along. The next
 screen shows us a few quick instructions to add monitoring to our Flask
 application.
 
-<img src="/img/170723-monitor-flask-apps/project-setup.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Set up your project using your server-side access token.">
+<img src="/img/170723-monitor-flask-apps/project-setup.jpg" width="100%" class="shot rnd outl" alt="Set up your project using your server-side access token.">
 
 Let's modify our Flask application to test whether we can properly connect
 to Rollbar's service. Change `app.py` to include the following highlighted
@@ -308,12 +308,12 @@ moment.
 If the event hasn't been reported yet we'll see a waiting screen like this
 one:
 
-<img src="/img/170723-monitor-flask-apps/waiting.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Waiting for data on the dashboard.">
+<img src="/img/170723-monitor-flask-apps/waiting.jpg" width="100%" class="shot rnd outl" alt="Waiting for data on the dashboard.">
 
 Once Flask starts up though, the first event will be populated on the 
 dashboard.
 
-<img src="/img/170723-monitor-flask-apps/first-event.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="First event populated on our dashboard for this project.">
+<img src="/img/170723-monitor-flask-apps/first-event.jpg" width="100%" class="shot rnd outl" alt="First event populated on our dashboard for this project.">
 
 Okay, our first test event has been populated, but we really want to see
 all the errors from our application, not a test event.
@@ -376,7 +376,7 @@ an HTTP 500 error will occur.
 
 You should see an aggregation of errors as you test out these errors:
 
-<img src="/img/170723-monitor-flask-apps/error-aggregation.jpg" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Rollbar dashboard showing aggregations of errors.">
+<img src="/img/170723-monitor-flask-apps/error-aggregation.jpg" width="100%" class="shot rnd outl" alt="Rollbar dashboard showing aggregations of errors.">
 
 Woohoo, we finally have our Flask app reporting all errors that occur
 for any user back to the hosted Rollbar monitoring service!

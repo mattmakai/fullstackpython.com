@@ -1,7 +1,7 @@
 title: Static Site Generators
 category: page
 slug: static-site-generator
-sortorder: 0434
+sortorder: 0431
 toc: False
 sidebartitle: Static Site Generators
 meta: A static site generator combines a markup language with a templating engine to produce HTML files. Learn more on Full Stack Python.
@@ -237,3 +237,9 @@ deployment.
 ](https://vickylai.com/verbose/hosting-your-static-site-with-aws-s3-route-53-and-cloudfront/)
   is another solid tutorial that uses the AWS stack to deploy a
   globally-hosted site.
+
+* [Why your static website needs HTTPS](https://www.troyhunt.com/heres-why-your-static-website-needs-https/)
+  shows all of the malicious activity that bad actors can cause if you
+  do not use HTTPS as part of your static site deployment. There are few 
+  excuses for having an insecure site without required HTTPS in today's 
+  world of free Let's Encrypt certificates.

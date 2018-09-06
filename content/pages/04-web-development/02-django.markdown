@@ -14,7 +14,7 @@ behind batteries-included is that the common functionality for building
 web applications should come with the framework instead of as separate
 libraries.
 
-<a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram"></a>
+<a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="shot"></a>
 
 For example, 
 [authentication](https://docs.djangoproject.com/en/dev/topics/auth/),
@@ -135,6 +135,12 @@ since then.
   you more about the admin interface as well as building projects that
   will be used by more than a single customer so their data needs to be
   properly separated.
+
+* [How to Create Custom Django Management Commands](https://simpleisbetterthancomplex.com/tutorial/2018/08/27/how-to-create-custom-django-management-commands.html)
+  explains how to expand the default `manage.py` commands list with your
+  own custom commands in your projects. The tutorial has a bunch of great
+  examples with expected output to make it easy to follow along and learn
+  while you work through the post.
 
 * Luke Plant writes about 
   [his approach to class based views](http://lukeplant.me.uk/blog/posts/my-approach-to-class-based-views/) (CBVs),

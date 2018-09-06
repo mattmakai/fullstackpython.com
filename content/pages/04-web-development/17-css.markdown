@@ -126,6 +126,11 @@ web application's design.
 * [Can I Use...](http://caniuse.com/) is a compatibility table that shows
   which versions of browsers implement specific CSS features.
 
+* The [Web Design Museum](https://www.webdesignmuseum.org/) is an amazing
+  look back at how web design has evolved over the past 25+ years. Some of 
+  the designs can still be seen in their current site's presentation such
+  as the top navigation of Apple's 2001 site.
+
 
 ## CSS learning checklist
 1. Create a simple HTML file with basic elements in it. Use the

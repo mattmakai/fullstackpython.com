@@ -1,7 +1,7 @@
 title: WebSockets
 category: page
 slug: websockets
-sortorder: 0448
+sortorder: 0442
 toc: False
 sidebartitle: WebSockets
 meta: WebSockets are a protocol for full-duplex web communications. Learn about WebSockets on Full Stack Python.

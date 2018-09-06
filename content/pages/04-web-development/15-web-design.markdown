@@ -64,3 +64,9 @@ width.
   [blog post series on building a browser engine](http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html)
   that will show you how to build a simple rendering engine.
 
+* [Defining Colors in CSS](https://pineco.de/defining-colors-in-css/)
+  presents how to define color in your 
+  [Cascading Style Sheets (CSS)](/cascading-style-sheets.html) and breaks
+  down the differences between specifying predefined color values, 
+  hexadecimal values, red-green-blue (RGB) and 
+  Hue-Saturation-Lightness (HSL).

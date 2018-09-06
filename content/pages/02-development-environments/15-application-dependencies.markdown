@@ -82,17 +82,19 @@ should include `requirements.txt` in the base directory of your project.
 Python projects' dependencies for a web application should be specified 
 with pegged dependencies like the following:
 
-    django==1.6
-    bpython==0.12
-    django-braces==0.2.1
-    django-model-utils==1.1.0
-    logutils==0.3.3
-    South==0.7.6
-    requests==1.2.0
-    stripe==1.9.1
-    dj-database-url==0.2.1
-    django-oauth2-provider==0.2.4
-    djangorestframework==2.3.1
+```
+django==1.11.0
+bpython==0.12
+django-braces==0.2.1
+django-model-utils==1.1.0
+logutils==0.3.3
+South==0.7.6
+requests==1.2.0
+stripe==1.9.1
+dj-database-url==0.2.1
+django-oauth2-provider==0.2.4
+djangorestframework==2.3.1
+```
 
 Pegged dependencies with precise version numbers or Git tags are important 
 because otherwise the latest version of a dependency will be used. While
@@ -118,12 +120,16 @@ requirements.txt and setup.py, so read this
 further clarification.
 
 
-## Application dependency resources
+### Application dependency resources
 * [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
   is a wonderfully written blog post. It provides historical context on why
   Python's code library packaging was painful for a long time, and what's 
   been fixed to make building and installing application dependencies so
   much better.
+
+* [Python Packaging User Guide](https://packaging.python.org/)
+  provides a collection of resources to understand how to package and 
+  distribute Python code libraries.
 
 * [Alice in Python projectland](https://veekaybee.github.io/2017/09/26/python-packaging/)
   is an amazing post that takes the reader from simple Python script
@@ -135,6 +141,10 @@ further clarification.
 * [A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
   breaks down what problems these tools solve and how to use them.
 
+* [Testing & Packaging](https://hynek.me/articles/testing-packaging/) examines
+  a configuration for ensuring tests run against your code and how to
+  properly package your project.
+
 * [Tools of the modern Python hacker](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/) 
   contains detailed explanations of virtualenv, Fabric, and pip.
 
@@ -143,10 +153,10 @@ further clarification.
   [one perspective on that debate](http://notes.pault.ag/debian-python/).
 
 * [Open source trust scaling](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/)
-  is a good piece for the Python community (and other communities) that is
-  based on the 
+  is a good piece for the [Python community](/python-community.html) 
+  (and other programming communities) that is based on the 
   [left-pad NPM situation](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)
-  that broke many dependent packages in the Node.JS community.
+  that broke many dependent packages in the Node.js community.
 
 * This Stack Overflow question details how to set up a 
   [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
@@ -162,8 +172,20 @@ further clarification.
   [this article about the differences](https://lincolnloop.com/blog/fast-immutable-python-deployments/)
   and be sure to upgrade.
 
+* [Typosquatting programming language package managers](https://incolumitas.com/2016/06/08/typosquatting-package-managers/)
+  shows how many packages on centralized dependency servers for Python, 
+  Node.js and Ruby can be vulnerable to "typosquatting" where a developer
+  either confuses a fake package for the correct one or simply makes a
+  typo when specifying her dependency list.
 
-## Open source app dependency projects
+* [Perils of packaging](https://malramsay.com/post/perils_of_packaging/)
+  covers several edge cases that come up when trying to put together
+  pieces like Travis CI, PyPI and conda. The post walks through the errors 
+  and how to get around them until they are smoothed out by updates to the 
+  tools.
+
+
+### Open source app dependency projects
 * [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating
   environment variables stored in a `.env` file in your projects' home
   directories. Environment variables aren't managed by virtualenv and although
@@ -176,10 +198,18 @@ further clarification.
   while this could come in handy with a legacy project, the version numbers
   for those libraries will not be generated with the output.
 
+* [pip-check](https://github.com/bartTC/pip-check) presents a nicely-formatted
+  list of all your installed dependencies and the status of whether or not
+  updates are available for each of them.
 
-## Application dependencies learning checklist
+* [pip-name](https://github.com/prakashdanish/pip-name) is a straightforward
+  library that looks up package names on PyPI and tells you whether or not
+  the library name is already taken.
+
+
+### Application dependencies learning checklist
 1. Ensure the libraries your web application depends on are all captured in 
-   a requirement.txt file with pegged versions. 
+   a `requirement.txt` file with pegged versions. 
 
 1. An easy way to capture currently installed dependencies is with the 
    `pip freeze` command.

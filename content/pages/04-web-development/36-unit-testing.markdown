@@ -1,7 +1,7 @@
 title: Unit Testing
 category: page
 slug: unit-testing
-sortorder: 0439
+sortorder: 0436
 toc: False
 sidebartitle: Unit Testing
 meta: Unit testing exercises one function isolated from a program. Learn more about unit testing on Full Stack Python.
@@ -124,3 +124,7 @@ Python-specific applications.
 
 * [Writing Unit Tests for Django Migrations](https://www.caktusgroup.com/blog/2016/02/02/writing-unit-tests-django-migrations/)
   digs into code examples for testing Django data migrations.
+
+* [The business case for unit testing](https://www.typemock.com/business-case-unit-testing/)
+  makes arguments for management should buy into unit testing,
+  including risk management and faster development timelines. 
