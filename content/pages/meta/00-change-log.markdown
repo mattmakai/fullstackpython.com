@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2018
 ### September
+* New [web app security](/web-application-security.html), 
+  [task queue](/task-queues.html) and [WebRTC](/webrtc.html) resources.
 * Added a bunch of new resources across the site and removed a few out of
   date ones as well.
 * Added initial pages for [WebRTC](/webrtc.html) and JavaScript frameworks.

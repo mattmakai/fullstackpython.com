@@ -72,6 +72,14 @@ time it takes to understand how to use the project.
 * [Dramatiq](https://dramatiq.io) is a fast and reliable alternative
   to Celery.  It supports RabbitMQ and Redis as message brokers.
 
+* [django-carrot](https://github.com/chris104957/django-carrot) is a 
+  simple task queue specifically for [Django](/django.html) that can 
+  serve when [Celery](/celery.html) is overkill.
+
+* [tasq](https://github.com/codepr/tasq) is a brokerless task queue
+  for simple use cases. It is not recommended for production unless 
+  further testing and development is done.
+
 
 ## Hosted message and task queue services
 Task queue third party services aim to solve the complexity issues that arise
@@ -133,7 +141,6 @@ when scaling out a large deployment of distributed task queues.
   are great reads for understanding the difference between a task queue and
   why you shouldn't use your database as one.
 
-
 * Flask by Example [Implementing a Redis Task Queue](https://realpython.com/blog/python/flask-by-example-implementing-a-redis-task-queue/)
   provides a detailed walkthrough of setting up workers to use RQ with
   Redis.
@@ -168,6 +175,11 @@ when scaling out a large deployment of distributed task queues.
   He gives an overview of Celery followed by specific code to set up the task
   queue and integrate it with Flask.
 
+* [Ditching the Task Queue for Gevent](http://charlesleifer.com/blog/ditching-the-task-queue-for-gevent/)
+  explains how in some cases you can replace the complexity of a task queue
+  with concurrency. For example, you can remove [Celery](/celery.html) in
+  favor of [gevent](http://www.gevent.org/).
+
 * [3 Gotchas for Working with Celery](https://wiredcraft.com/blog/3-gotchas-for-celery/)
   are things to keep in mind when you're new to the Celery task queue
   implementation.
@@ -189,7 +201,8 @@ when scaling out a large deployment of distributed task queues.
 
 * [Developing an Asynchronous Task Queue in Python](https://testdriven.io/developing-an-asynchronous-task-queue-in-python) looks at how to implement several asynchronous task queues using Python's multiprocessing library and Redis.
 
-## Task queue learning checklist
+
+### Task queue learning checklist
 1. Pick a slow function in your project that is called during an HTTP
    request.
 
