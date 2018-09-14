@@ -73,3 +73,8 @@ during Python software development as part of a programmer's
   is a guide on using using Python for administrative scripting, including
   what to do about replacing invaluable command line tools such as `awk`, 
   `sed` and `grep`.
+
+* [Using Aliases to Speed Up Your Git Workflow](https://dev.to/robertcoopercode/using-aliases-to-speed-up-your-git-workflow-2f5a)
+  has a bunch of shell aliases that make it easier for you to execute
+  complicated or uncommon [Git](/git.html) commands.
+

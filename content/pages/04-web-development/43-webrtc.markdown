@@ -45,6 +45,14 @@ browser) and server (usually a [web server](/web-servers.html)).
   great overview of WebRTC and the new security concerns it can bring as it
   is integrated into more web applications.
 
+* [How Discord Handles Two and Half Million Concurrent Voice Users using WebRTC](https://blog.discordapp.com/how-discord-handles-two-and-half-million-concurrent-voice-users-using-webrtc-ce01c3187429)
+  provides detailed insight into the what and why of the highly scalable
+  [Discord](https://discordapp.com/) technical architecture that relies
+  upon WebRTC for communication. There are a bunch of great examples here
+  for why some of the service must be centralized (to prevent client IP 
+  addresses from leaking to other clients) while others are decentralized
+  to assist with scaling the number of possible connections.
+
 * [Architectures for a kickass WebRTC application](https://www.youtube.com/watch?v=m9QxBc0OeoI)
   is a video of a technical talk that covers some of the tools and protocols 
   that can be used to create your WebRTC projects and why you would choose 

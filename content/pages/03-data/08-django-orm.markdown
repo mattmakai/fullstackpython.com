@@ -90,6 +90,10 @@ that have been added throughout the project's history.
   avoid with `ForeignKey` field relationships, handling IDs and many other 
   edge cases that come up when frequently working with Django's ORM.
 
+* [Merging Django ORM with SQLAlchemy for Easier Data Analysis](https://djangostars.com/blog/merging-django-orm-with-sqlalchemy-for-easier-data-analysis/)
+  provides rationale for using the [SQLAlchemy](/sqlalchemy.html) ORM
+  instead of Django's default ORM in some situations.
+
 * [Working with huge data sets in Django](https://blog.labdigital.nl/working-with-huge-data-sets-in-django-169453bca049)
   explains how to slice the data you retrieve by query into pages and then
   use `prefetch_related` on a subset of the data rather than your whole

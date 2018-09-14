@@ -14,18 +14,42 @@ treatment, such as cross-site scripting (XSS), SQL injection, cross-site
 request forgery and usage of public-private keypairs.
 
 
-## Security open source projects
+### Security tools
 * [Bro](http://www.bro.org/) is a network security and traffic monitor.
 
-* [quick NIX secure script](https://github.com/marshyski/quick-secure) for
-securing Linux distributions.
-
-* [lynis](https://github.com/CISOfy/lynis) is a really cool security audit
-  tool that can be run as a shell script on a Linux system to find out
+* [lynis](https://cisofy.com/lynis/) 
+  ([source code](https://github.com/CISOfy/lynis)) is a security 
+  audit tool that can run as a shell script on a Linux system to find out
   its vulnerabilities so that you can fix them instead of allowing them
   to be exploited by malicious actors.
 
-## HTTPS resources
+* [Charles](https://www.charlesproxy.com/) is an HTTP proxy for inspecting
+  headers, requests and responses for all traffic that flows through it.
+
+* [quick NIX secure script](https://github.com/marshyski/quick-secure) for
+  securing Linux distributions.
+
+* [TLS Observatory](https://github.com/mozilla/tls-observatory) provides
+  a suite of security tools for analyzing and inspecting Transport Layer
+  Security (TLS) services.
+
+* [WIG](https://github.com/6e726d/WIG) contains tools for gathering wireless
+  data via Wifi protocols.
+
+
+### Specific vulnerabilities
+* [httpoxy](https://httpoxy.org/) is a set of vulnerabilities that can affect
+  Python web application servers via HTTP requests.
+
+* [Heartbleed](http://heartbleed.com/) is a vulnerability in OpenSSL 
+  implementations that must be patched for any systems you run otherwise
+  you are at serious risk for data leakage.
+
+* [Meltdown and Spectre](https://meltdownattack.com/) are x86 architecture
+  problems caused by exploiting CPU branch-prediction implementations.
+
+
+### HTTPS resources
 * [How does HTTPS actually work?](http://robertheaton.com/2014/03/27/how-does-https-actually-work/)
   is a well-written overview of the protocol including certificates, 
   signatures, signing and related topics.
@@ -74,6 +98,11 @@ securing Linux distributions.
 * The Open Web Application Security Project (OWASP) has 
   [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
   topics.
+
+* [The SaaS CTO Security Checklist](https://cto-security-checklist.sqreen.io/)
+  is an awesome list of steps for securing your infrastructure and employees
+  as well as what stage and size company it is recommended that you put those
+  procedures in place.
 
 * This page contains a
   [fantastic curated list of security reading material](http://dfir.org/?q=node/8/)
@@ -135,6 +164,9 @@ securing Linux distributions.
   how those attacks work is important in keeping your users' connections
   secure.
 
+* [Let's Encrypt at Scale](https://engineering.autotrader.co.uk/2018/09/04/letsencrypt-at-scale.html)
+  shows an implementation for securing thousands of sites with SSL 
+  certificates to support HTTPS everywhere.
 
 ## Web security learning checklist
 1. Read and understand the major web application security flaws that are

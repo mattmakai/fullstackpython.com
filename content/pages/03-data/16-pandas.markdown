@@ -34,3 +34,8 @@ is a data structures and analysis library.
   is a good tutorial on removing sensitive data from your unfiltered 
   data sets.
 
+* [Analyzing a photographer's flickr stream using pandas](https://www.turbowhale.com/posts/analyze_flickr_stream_pandas/)
+  explains how the author grabbed a bunch of Flickr data using the 
+  [flickr-api](https://github.com/alexis-mignon/python-flickr-api) library
+  then analyzed the EXIF data in the photos using pandas.
+  

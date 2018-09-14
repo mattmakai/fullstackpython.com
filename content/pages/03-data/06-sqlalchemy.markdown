@@ -119,6 +119,10 @@ your application's code with the SQLAlchemy library.
   [morepath-sqlalchemy demo](https://pypi.org/project/morepath-sqlalchemy/)
   that serves as a working example.
 
+* [Merging Django ORM with SQLAlchemy for Easier Data Analysis](https://djangostars.com/blog/merging-django-orm-with-sqlalchemy-for-easier-data-analysis/)
+  has details on why, how and when you may want to use SQLAlchemy to
+  augment the [Django ORM](/django-orm.html).
+
 
 ### SQLAlchemy resources
 The best way to get comfortable with SQLAlchemy is to dig in and write

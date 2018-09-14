@@ -187,6 +187,10 @@ the [best Python videos](/best-python-videos.html) page.
   awesome-python although instead of just a Git repository this site is
   in the Read the Docs format.
 
+* [Hacker News Tools of the Trade](https://github.com/cjbarber/ToolsOfTheTrade)
+  is not specific to Python but almost all of the tools and services are
+  useful to building software projects.
+
 
 ## Podcasts
 Take a look at the [best Python podcasts](/best-python-podcasts.html)

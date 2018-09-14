@@ -62,6 +62,11 @@ security controls so make sure to lock down your instances.
   installing and using MongoDB on your own instance. The post covers 
   authentication, SSL and firewalls.
 
+* [Securing MongoDB using Let's Encrypt certificate](https://zohaib.me/securing-mongodb-using-lets-encrypt/)
+  gives a configuration that encrypts that traffic coming from and
+  going to your MongoDB instances using free 
+  [Let's Encrypt certificates](https://letsencrypt.org/).
+
 
 ### Python with MongoDB resources
 MongoDB is straightforward to use in a Python application when a driver
@@ -88,3 +93,9 @@ configure and start using MongoDB with Python.
 * [Python and MongoDB](https://talkpython.fm/episodes/show/2/python-and-mongodb)
   on the Talk Python to Me podcast has a great interview with the 
   MongoDB Python driver maintainer.
+
+* [PyMongo Monday: Setting Up Your PyMongo Environment](https://www.mongodb.com/blog/post/pymongo-monday-setting-up-your-pymongo-environment)
+  is an introduction to using MongoDB with Python code. This first
+  part of the series shows how to set up the 
+  [development environment](/development-environment.html) required
+  for working with Mongo.

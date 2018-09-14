@@ -171,3 +171,12 @@ like advanced interactive visualizations.
 * [Ansible-jupyter-kernel](https://github.com/ansible/ansible-jupyter-kernel)
   is a kernel that allows you to run [Ansible](/ansible.html) tasks and 
   playbooks from within your Jupyter environment.
+
+* [The Notebook Wars](https://yihui.name/en/2018/09/notebook-war/) is not a
+  tutorial but instead points to the weaknesses that become apparent when
+  using Jupyter and the current generation of notebook projects. The
+  article raises many good points about barriers to entry although you
+  could also argue some of these issues have been mitigated by Jupyter, just
+  not as much as some people would like to see. Overall there is a lot to
+  enjoy reading here and reflect on so that the community can continue making
+  Jupyter a fantastic environment for development.

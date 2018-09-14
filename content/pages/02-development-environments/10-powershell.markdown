@@ -45,3 +45,7 @@ of a Python programmer's
   Functions. The language is only in experimental mode on Azure Functions 
   but could be useful if you have a bunch of existing scripts that you want
   to use on the [serverless](/serverless.html) platform.
+
+* [PowerShell Core support in AWS Lambda](https://aws.amazon.com/blogs/developer/announcing-lambda-support-for-powershell-core/)
+  is an announcement post that PowerShell can be used in AWS Lambda Functions
+  along with how to get started.

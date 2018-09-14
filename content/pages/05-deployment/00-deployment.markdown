@@ -67,6 +67,11 @@ guide as they are considered advanced deployment techniques.
 * [Deploying Software](https://zachholman.com/posts/deploying-software)
   is a long must-read for understanding how to deploy software properly.
 
+* [Hands-off deployment with Canary](https://developers.soundcloud.com/blog/hands-off-deployment-with-canary)
+  explains how SoundCloud automates their deployment process and uses
+  canary builds to identify and roll back issues to mitigate reliability
+  issues that can occur with shipping software at scale.
+
 * [Practical continuous deployment](http://blogs.atlassian.com/2014/04/practical-continuous-deployment/)
   defines delivery versus deployment and walks through a continuous deployment
   workflow.
