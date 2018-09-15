@@ -156,7 +156,7 @@ since then.
   [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a
   great start for figuring out what you need to know.
 
-* [Django for Beginners: Learn web development with Django 2](https://www.amazon.com/Django-Beginners-Learn-web-development/dp/1980377898)
+* [Django for Beginners: Build websites with Python and Django](https://www.amazon.com/Django-Beginners-Learn-web-development/dp/1983172669)
   by [William S. Vincent](https://wsvincent.com/) is perfect if you're just getting started with Django and web development, taking you from total beginner to confident web developer with Django and Python.
 
 * [REST APIs with Django: Build powerful web APIs with Python and Django](https://www.amazon.com/dp/198302998X) by [William S. Vincent](https://wsvincent.com/) is the book for you if you're just moving beyond the basics of Django and looking to get up speed with Django REST Framework (DRF) and service-oriented architecture (SOA) in general. The book's examples are clear and well-structured, making it easy for someone to quickly get up speed with building RESTful APIs with Django and DRF. It also dives into more advanced topics like token-based authentication and permissions, just to name a few.
