@@ -238,8 +238,9 @@ combined with the example real-world projects listed in the next section.
   [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/) to generate a
   static website from a backend data source.
 
-* [Running Flask on Docker Swarm](https://testdriven.io/running-flask-on-docker-swarm)
-  details how to run a Flask app on Docker Swarm.
+* [Running Flask on Docker Swarm](https://testdriven.io/running-flask-on-docker-swarm) details how to run a Flask app on Docker Swarm.
+  
+* [Running Flask on Kubernetes](https://testdriven.io/running-flask-on-kubernetes) step-by-step walkthrough of how to deploy a Flask-based microservice (along with Postgres and Vue.js) to a Kubernetes cluster.
 
 * [Dynamic Secret Generation with Vault and Flask](https://testdriven.io/dynamic-secret-generation-with-vault-and-flask) looks at how to use Hashicorp's Vault and Consul to create dynamic Postgres credentials for a Flask web app.
 
