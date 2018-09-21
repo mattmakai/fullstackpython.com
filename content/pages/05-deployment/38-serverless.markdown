@@ -118,6 +118,12 @@ out how to structure and operate serverless applications.
   serverless for large production applications and how they deal with
   the limitations of the platforms.
 
+* [Serverless cold start war](https://mikhail.io/2018/08/serverless-cold-start-war/)
+  compares startup times of serverless function instances across Google 
+  Cloud, AWS and Azure. This is only one way to measure the results the
+  author did a great job presenting the data and elaborating on potential
+  reasons why the results appeared as shown.
+
 * [What's this serverless thing, anyway?](https://read.acloud.guru/whats-this-serverless-thing-anyway-b101cb72c7e6)
 
 * [Serverless architectures - let's ditch the servers?](https://codeahoy.com/2016/06/25/serverless-architectures-lets-ditch-the-servers/)

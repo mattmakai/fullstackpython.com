@@ -22,4 +22,11 @@ parser and then transformed into HTML output.
   argues for the simplicity of Markdown versus the steep learning curve and
   less easily adopted LaTeX for creating documents.
 
-
+* [Yet Another Markup LOL?](https://urcomputeringpal.com/2018/09/09/yaml)
+  explains the virtues and the significant downsides of tooling for the
+  [YAML markup language](http://yaml.org/). Mistakes in configuration files 
+  that use YAML or any markup language often fly past 
+  [testing](/testing.html) and 
+  [continuous integration](/continuous-integration.html) services that
+  catch errors in regular code. The post also introduces a couple of tools
+  that can help with specific YAML issues, especially when using Kubernetes.

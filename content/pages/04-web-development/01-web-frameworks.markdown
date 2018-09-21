@@ -96,6 +96,10 @@ with Flask? Check out
 [this Django web application tutorial](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-python-django)
 and then view [the same application built with Flask](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-python-flask).
 
+[Talk Python to Me had a podcast episode](https://talkpython.fm/episodes/show/149/4-python-web-frameworks-compared) 
+with a detailed comparison of the [Django](/django.html), 
+[Flask](/flask.html), Tornado and [Pyramid](/pyramid.html) frameworks.
+
 There is also a repository called
 [compare-python-web-frameworks](https://github.com/mattmakai/compare-python-web-frameworks)
 where the same web application is being coded with varying Python web 
@@ -118,6 +122,13 @@ frameworks, templating engines and
   "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
   question on Stack Overflow.
 
+* Another great series that digs behind the web framework magic is
+  "Web Application from Scratch". The four parts are:
+  * [part 1: handling HTTP requests and responses](https://defn.io/2018/02/25/web-app-from-scratch-01/)
+  * [part 2: abstracting Requests, Responses and Servers](https://defn.io/2018/03/04/web-app-from-scratch-02/)
+  * [part 3: request handlers and middleware](https://defn.io/2018/03/20/web-app-from-scratch-03/)
+  * [part 4: abstracting applications](https://defn.io/2018/05/12/web-app-from-scratch-04/)
+   
 * [Frameworks](http://youtu.be/W6KCPXl6Zuc) is a really well done short video
   that explains how to choose between web frameworks. The author has some
   particular opinions about what should be in a framework. For the most part
@@ -150,6 +161,13 @@ frameworks, templating engines and
 * This user-voted question & answer site asked "[What are the best general purpose Python web frameworks usable in production?](http://www.slant.co/topics/426/~what-are-the-best-general-purpose-python-web-frameworks-usable-in-production-sites)".
   The votes aren't as important as the list of the many frameworks
   that are available to Python developers.
+
+* [Not Your Father’s Python: Amazing Powerful Frameworks](https://blog.signifai.io/not-your-fathers-python-amazing-powerful-frameworks/)
+  covers the rise of web frameworks, such as [Sanic](/sanic.html), that
+  are built on Python's 
+  [asyncio](https://docs.python.org/3/library/asyncio.html) 
+  functionality that was built into the standard library starting with 
+  Python 3.4.
 
 
 ### Web frameworks learning checklist

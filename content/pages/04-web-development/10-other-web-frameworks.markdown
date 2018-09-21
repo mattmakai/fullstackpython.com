@@ -70,10 +70,17 @@ authentication and protecting against malicious clients.
 
 
 ## Vibora
-* [Vibora](https://vibora.io/) is an asynchronous model framework similar to
-  [Sanic](/sanic.html) that was inspired by [Flask](/flask.html)'s syntax.
-  However, the framework's author rewrote many parts like the template engine
-  to maximize performance.
+[Vibora](https://vibora.io/) is an asynchronous model framework similar to
+[Sanic](/sanic.html) that was inspired by [Flask](/flask.html)'s syntax.
+However, the framework's author rewrote many parts like the template engine
+to maximize performance.
+
+
+## Pecan
+[Pecan](https://pecan.readthedocs.io/en/latest/index.html) is inspired by
+CherryPy and [TurboGears](/turbogears.html). It purely focuses on HTTP
+requests and responses via Python objects and does not integrate session
+handling or [database](/databases.html) access.
 
 
 ### Other web framework resources

@@ -166,3 +166,7 @@ as arguments.
   An article showcasing how to create web applications relying on React
   without the need to have NodeJS installed at all. The article
   uses TurboGears as the web framework to develop the example application.
+
+* [Turbogears and the future of Python web frameworks](https://talkpython.fm/episodes/show/35/turbogears-and-the-future-of-python-web-frameworks)
+  is a Talk Python to Me podcast episode featuring an interview with one
+  of the TurboGears core developers.

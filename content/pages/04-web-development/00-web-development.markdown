@@ -58,11 +58,23 @@ world.
   succinctly explains the origins of the web starting from Tim Berners-Lee's
   origin vision and release at CERN.
 
+* [Web Architecture 101](https://engineering.videoblocks.com/web-architecture-101-a3224e126947)
+  is a great high-level overview of the technologies that run the modern
+  web, such as DNS, load balancers, web application servers (for Python
+  that equates to [WSGI servers](/wsgi-servers.html)), 
+  [data bases](/databases.html), [task queues](/task-queues.html),
+  [caching](/caching.html) and several other critical concepts.
+
 * The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
   how web browsers and related technologies have changed over time as well as
   the overall growth of the Internet in the amount of data transferred. Note 
   that the visualization unfortunately stops around the beginning of 2013 but
   it's a good way to explore what happened in the first 24 years.
+
+* [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
+  provides an overview with solid detail on how browsers take the HTML,
+  CSS, JavaScript, images and other files as input and render webpages as
+  output. It is well worth your time to know this stuff as a web developer.
 
 * [Web app checklist](http://dhilipsiva.com/webapp-checklist/) presents 
   good practices that developers building and [deploying](/deployment.html) 
