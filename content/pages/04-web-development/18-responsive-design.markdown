@@ -13,7 +13,7 @@ Responsive design is a method of using media queries in
 site is usable on various devices with different screen sizes, from very
 small to very large.
 
-<img src="/img/visuals/responsive-design.jpg" width="100%" alt="Three different screen sizes and devices with the same website that uses a responsive designt." class="technical-diagram" style="border: 1px solid #999;border-radius: 5px" />
+<img src="/img/visuals/responsive-design.jpg" width="100%" alt="Three different screen sizes and devices with the same website that uses a responsive designt." class="shot outl rnd">
 
 Full Stack Python uses responsive design to improve readability across
 a broad range of devices that people use to read this site.
@@ -28,6 +28,10 @@ a broad range of devices that people use to read this site.
 
 * This [site is entirely on responsive design](https://responsivedesign.is/)
   and has many articles on how to achieve readability across devices.
+
+* [Using Media Queries For Responsive Design In 2018](https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/)
+  contains a bunch of great examples for how to use media queries to
+  achieve a responsive design.
 
 * Smashing Magazine's article from 2011 on
   [responsive design - what it is and how to use it](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)

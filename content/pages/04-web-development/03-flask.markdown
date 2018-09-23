@@ -153,6 +153,7 @@ for getting started.
 
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
+
 ### Intermediate to advanced Flask resources
 Once you move past the beginner tutorials and have created a few Flask
 projects you will want to learn how to use Flask extensions, 
@@ -229,6 +230,10 @@ combined with the example real-world projects listed in the next section.
   [Amazon Web Services' S3](https://aws.amazon.com/s3/) with a Flask 
   application.
 
+* [Visualize your trip with Flask and Mapbox](http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/)
+  uses geographic GeoJSON data and presents it in a Flask application
+  that uses [Mapbox](https://www.mapbox.com/).
+
 * [Handling Email Confirmation in Flask](https://realpython.com/blog/python/handling-email-confirmation-in-flask/)
   is a great walkthrough for a common use case of ensuring an email address
   matches with the user's login information.
@@ -244,6 +249,7 @@ combined with the example real-world projects listed in the next section.
 
 * [Dynamic Secret Generation with Vault and Flask](https://testdriven.io/dynamic-secret-generation-with-vault-and-flask) looks at how to use Hashicorp's Vault and Consul to create dynamic Postgres credentials for a Flask web app.
 
+
 ### Open source Flask example projects
 Flask's lack of standard boilerplate via a commandline interface for
 setting up your project structure is a double edged sword. When you
@@ -255,6 +261,11 @@ about how to working on your codebase.
 * [Skylines](https://github.com/skylines-project/skylines) is an open source 
   flight tracking web application built with Flask. You can check out a 
   [running version of the application](https://skylines.aero/).
+
+* [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a Flask
+  blueprint that creates JavaScript Object Notiation (JSON) 
+  [APIs](/application-programming-interfaces.html) for [data](/data.html)
+  dashboards.
 
 * [Microblog](https://github.com/miguelgrinberg/microblog) is the companion
   open source project that goes along with Miguel Grinberg's O'Reilly Flask
@@ -268,6 +279,10 @@ about how to working on your codebase.
   [note-taking app](http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/)
   along with the 
   [source code in Gists](https://gist.github.com/coleifer/632d3c9aa6b2ea519384).
+
+* [Reddit Job Search](https://github.com/anis-coding/Reddit-Job-Search)
+  uses the [Reddit API](https://www.reddit.com/dev/api/) for a jobs data set
+  and presents them via a Flask web app.
 
 * [Bean Counter](https://github.com/BouncyNudibranch/bean-counter) is an
   open source Flask app for tracking coffee.

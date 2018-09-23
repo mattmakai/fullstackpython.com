@@ -25,6 +25,11 @@ automate the delivery of code from development to production.
 
 
 ## DevOps tooling resources
+DevOps cannot be performed with tools alone, but having the right tools
+to augment the culture and processes is important to successful software
+delivery. The following resources discuss both Python-specific and general
+tools and services for DevOps environments.
+
 * [DevOps: Python tools to get started](https://speakerdeck.com/victorneo/devops-python-tools-to-get-started)
   is a presentation slideshow that explains that while DevOps is a culture, 
   it can be supported by tools such as Fabric, Jenkins, BuildBot and Git
@@ -42,6 +47,9 @@ automate the delivery of code from development to production.
 
 
 ## General DevOps resources
+The following resources give advice and approaches for building the right
+teams, culture, processes and tools into software development organizations.
+
 * [DevOps vs. Platform Engineering](https://alexgaynor.net/2015/mar/06/devops-vs-platform-engineering/)
   considers DevOps an ad hoc approach to developing software while building
   a platform is a strict contract. I see this as "DevOps is a process", 
