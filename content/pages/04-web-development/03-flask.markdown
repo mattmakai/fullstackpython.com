@@ -224,6 +224,13 @@ combined with the example real-world projects listed in the next section.
   with 
   [standalone WSGI containers](http://flask.pocoo.org/docs/deploying/wsgi-standalone/).
 
+* [Serverless Python Web Applications With AWS Lambda and Flask](https://spiegelmock.com/2018/09/06/serverless-python-web-applications-with-aws-lambda-and-flask/)
+  is a spectacular post that walks through how to run Flask applications
+  on AWS Lambda's [serverless](/serverless.html) offering. The tutorial
+  has instructions on how to include 
+  [application dependencies](/application-dependencies.html) and handle 
+  your [deployment](/deployment.html) workflow.
+
 * [How to use Flask to upload files to Amazon S3](http://zabana.me/notes/upload-files-amazon-s3-flask.html)
   provides all the code with detailed explanations on how to store files 
   using [boto](https://boto3.readthedocs.io/en/latest/) and 

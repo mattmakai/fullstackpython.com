@@ -17,7 +17,7 @@ that software developers can use to add communications such as
 [two-factor authentication](https://www.twilio.com/docs/tutorials/walkthrough/two-factor-authentication/python/flask)
 into their [Python](/learning-programming.html) applications.
 
-<img src="/img/logos/twilio.png" width="100%" alt="Twilio logo." class="technical-diagram" style="padding: 10px 0 10px 0;"/>
+<img src="/img/logos/twilio.png" width="100%" alt="Twilio logo." class="shot" style="padding: 10px 0 10px 0;"/>
 
 
 ## Why is Twilio a good API choice?
@@ -105,8 +105,13 @@ for fellow developers.
   backend to power thousands of Rick Rolling calls in several countries 
   with Twilio.
 
+* [Stripe SMS Notifications via Twilio, Heroku, and Python](https://www.twilio.com/blog/2017/02/stripe-sms-notifications-via-twilio-heroku-and-python.html)
+  is a quick tutorial that demonstrates how to combine multiple services
+  to receive helpful notifications via SMS.
+
 
 #### Disclaimer
-I [currently work at Twilio](/about-author.html) as a 
-[Developer Evangelist](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html).
+I [currently work at Twilio](/about-author.html) on the
+[Developer Network](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html)
+and run a program called [Twilio Voices](http://www.twiliovoices.com/).
 

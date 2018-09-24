@@ -56,6 +56,12 @@ teams, culture, processes and tools into software development organizations.
   while a "platform is code". Running code is better than any organizational 
   process.
 
+* The open source 
+  [PagerDuty Incident Response guide](https://response.pagerduty.com/) is the
+  amazing result from their company taking the practices they use to keep
+  their services running and putting them out for other developers to consume.
+  Highly recommended.
+
 * [So, you've been paged](http://blog.scalyr.com/2016/09/so-youve-been-paged/)
   provides their development team's "Communicate -> Learn -> Act" structure
   for handling production issues based on lessons learned from their years 
@@ -67,6 +73,18 @@ teams, culture, processes and tools into software development organizations.
   is greater ownership for developers who built the applications running
   in production. The disadvantage of course is the greater ownership
   also leads to much greater responsibility when something breaks!
+
+* Google's 
+  [Site Reliability Engineering (SRE) book](https://landing.google.com/sre/book/index.html)
+  is free online and required reading for understanding the practices and
+  principles behind keeping the largest websites alive. Note though that
+  some of the advice in the book will be considered controversial at more
+  stodgy traditional organizations that have done operations differently
+  for a long time.
+
+* [Bing: Continuous Delivery](http://stories.visualstudio.com/bing-continuous-delivery/)
+  is an impressive visual story that explains the practices for how their
+  team delivers updates to the search engine.
 
 * [Why are we racing to DevOps?](http://www.cio.com/article/3015237/application-development/why-are-we-racing-to-devops.html)
   is a very high level summary of the benefits of DevOps to IT organizations.
