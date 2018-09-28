@@ -22,7 +22,7 @@ installation so applications are easier for developers to create.
 
 ## Finding libraries
 Python libraries are stored in a central location known as the 
-[Python Package Index](https://pypi.python.org/pypi) (PyPi). PyPi contains
+[Python Package Index](https://pypi.org/). PyPi contains
 search functionality with results weighted by usage and relevance based on
 keyword terms.
 
@@ -121,6 +121,10 @@ further clarification.
 
 
 ### Application dependency resources
+The following links provide advice on how to use Python packages as well
+as package your own dependencies for projects or consumption by other
+developers.
+
 * [Python Packaging Is Good Now](https://glyph.twistedmatrix.com/2016/08/python-packaging.html)
   is a wonderfully written blog post. It provides historical context on why
   Python's code library packaging was painful for a long time, and what's 
@@ -135,18 +139,16 @@ further clarification.
   is an amazing post that takes the reader from simple Python script
   into a complete Python package.
 
-* [Jon Chu](https://twitter.com/jonathanchu) wrote a great introduction on 
-  [virtualenv and pip basics](http://jonathanchu.is/posts/virtualenv-and-pip-basics/).
-
 * [A non-magical introduction to virtualenv and pip](http://dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) 
   breaks down what problems these tools solve and how to use them.
+
+* [There’s no magic: virtualenv edition](https://www.recurse.com/blog/14-there-is-no-magic-virtualenv-edition)
+  breaks open the virtual environment "black box" to show you what the
+  tool is doing when you use its commands.
 
 * [Testing & Packaging](https://hynek.me/articles/testing-packaging/) examines
   a configuration for ensuring tests run against your code and how to
   properly package your project.
-
-* [Tools of the modern Python hacker](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/) 
-  contains detailed explanations of virtualenv, Fabric, and pip.
 
 * Occasionally arguments about using Python's dependency manager versus
   one of Linux's dependency managers comes up. This provides
@@ -157,16 +159,6 @@ further clarification.
   (and other programming communities) that is based on the 
   [left-pad NPM situation](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)
   that broke many dependent packages in the Node.js community.
-
-* This Stack Overflow question details how to set up a 
-  [virtual environment for Python development](http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu).
-
-* Another Stack Overflow page answers 
-  [how to set environment variables when using virtualenv](http://stackoverflow.com/questions/9554087/setting-an-environment-variable-in-virtualenv).
-
-* [Tips for using pip + virtualenv + virtualenvwrapper](http://mrcoles.com/tips-using-pip-virtualenv-virtualenvwrapper/)
-  shows how to use shell aliases and postactivate virtualenvwrapper hooks to
-  make life easier when using these tools.
 
 * Major speed improvements were made in pip 7 over previous versions. Read 
   [this article about the differences](https://lincolnloop.com/blog/fast-immutable-python-deployments/)
@@ -184,13 +176,32 @@ further clarification.
   and how to get around them until they are smoothed out by updates to the 
   tools.
 
+* [The Many Layers of Packaging](https://sedimental.org/the_packaging_gradient.html)
+  goes up and down the packaging stack and even covers bits about virtual
+  environments and security. It's well worth investing some time to read
+  this post to get an overview of the many layers involved in dependency
+  packaging.
+
+* [How to Publish Your Package on PyPI](https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/)
+  is for developers who have created a code library they would like to
+  share and make installable for other developers.
+
 
 ### Open source app dependency projects
+[pip and venv](https://docs.python.org/3/library/venv.html) are part of 
+Python 3's standard library as of version 3.3. However, there are numerous
+other open source libraries that can be helpful when managing application
+dependencies in your projects, as listed below.
+
 * [Autoenv](https://github.com/kennethreitz/autoenv) is a tool for activating
   environment variables stored in a `.env` file in your projects' home
   directories. Environment variables aren't managed by virtualenv and although
   virtualenvwrapper has some hooks for handling them, it's often easiest to
   use a shell script or `.env` file to set them in a development environment.
+
+* [Pipenv](https://pipenv.readthedocs.io/en/latest/) is a newer Python 
+  packaging and dependency management library that has seen some adoption
+  in place of the standard `pip` library.
 
 * [Pipreqs](https://github.com/bndr/pipreqs) searches through a project for
   dependencies based on imports. It then generates a `requirements.txt` file

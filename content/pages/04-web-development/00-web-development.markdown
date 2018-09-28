@@ -48,6 +48,12 @@ many other topics. The following resources provide a range of perspectives
 and when combined together should get you oriented in the web development
 world.
 
+* [How the Internet works](https://thesquareplanet.com/blog/how-the-internet-works/)
+  is a must-read to get a quick overview of all the pieces that go into
+  a network connection from one machine to another. The example explains how
+  an email is sent and the story is just as useful for learning about other
+  connections such as downloading a webpage.
+
 * If you want to be a web developer it's important to know the foundational
   tools used to build websites and web applications. It is also important to
   understand that the core concepts such as 
@@ -123,6 +129,10 @@ world.
   [Python script that scrapes network speeds](https://github.com/WesleyAC/toybox/blob/42262bf81ac226ca83addea2c340017f8ea0e60f/misc/scrape_network_speeds.py)
   from disparate locations to see what the network speed is in fiber optic
   cables as a percentage of the speed of light.
+
+* [The critical path: optimizing load times with the Chrome DevTools](https://www.lucidchart.com/techblog/2018/03/13/the-critical-path-optimizing-load-times-with-the-chromedev-tools/)
+  provides a well-written explanation about using Chrome's developer 
+  features to improve the performance of your websites and web applications.
 
 * [Three takeaways for web developers after two weeks of painfully slow Internet](https://medium.com/@zengabor/three-takeaways-for-web-developers-after-two-weeks-of-painfully-slow-internet-9e7f6d47726e)
   is a must-read for every web developer. Not everyone has fast Internet
