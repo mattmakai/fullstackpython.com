@@ -11,7 +11,7 @@ meta: MySQL is an open source database often used by Python developers for stori
 MySQL is an open source [relational database](/databases.html) 
 implementation for storing and retrieving data.
 
-<img src="/img/logos/mysql.png" width="100%" alt="MySQL logo." class="technical-diagram" />
+<img src="/img/logos/mysql.png" width="100%" alt="MySQL logo." class="shot">
 
 
 ## MySQL or PostgreSQL?
@@ -72,6 +72,7 @@ drivers along with whether it supports Python 2, 3 or both.
 ## What organizations use MySQL?
 The database is deployed in production at some of the highest 
 trafficked sites such as 
+[Uber](https://eng.uber.com/mysql-migration/),
 [Twitter](https://blog.twitter.com/2012/mysql-twitter), 
 [Facebook](https://www.facebook.com/notes/facebook-engineering/mysql-and-database-engineering-mark-callaghan/10150599729938920)
 and [many others major organizations](http://www.mysql.com/customers/).
@@ -83,10 +84,20 @@ database by
 [Wikipedia](http://www.zdnet.com/wikipedia-moving-from-mysql-to-mariadb-7000008912/) 
 and [Google](http://readwrite.com/2013/09/14/google-waves-goodbye-to-mysql-in-favor-of-mariadb). 
 MySQL remains a viable database option but I always recommend new Python 
-developers learn PostgreSQL if they do not already know MySQL.
+developers learn [PostgreSQL](/postgresql.html) if they do not already know 
+MySQL.
 
 
 ### Python-specific MySQL resources
+The following resources show you how to work with MySQL in your
+Python code either directly through SQL queries or less directly with an
+[object-relational mapper (ORM)](/object-relational-mappers-orms.html)
+like [SQLAlchemy](/sqlalchemy.html) or the [Django ORM](/django-orm.html).
+
+* [Python MySQL tutorial](https://pynative.com/python-mysql-tutorial/)
+  uses the MySQL Connector Python library to demonstrate how to run
+  queries and stored procedures in your Python applications.
+
 * [Python 3.4.0 with MySQL database](http://stackoverflow.com/questions/23376103/python-3-4-0-with-mysql-database)
   and 
   [Python 3 and MySQL](http://stackoverflow.com/questions/4960048/python-3-and-mysql)
@@ -97,16 +108,19 @@ developers learn PostgreSQL if they do not already know MySQL.
   is a blog post about specific deficiencies in MySQL's implementation that
   hinder its usage with Django's ORM.
 
-* [Graph Data From MySQL Database in Python](http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/)
-  is an interesting study with code of how to pull data out of MySQL and graph
-  the data with Plotly.
-
 * [MySQL Python tutorial](http://zetcode.com/db/mysqlpython/) uses the
   MySQLdb driver to connect to a MySQL server instance and shows some
   examples for inserting and querying data.
 
+* [Graph Data From MySQL Database in Python](http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/)
+  is an interesting study with code of how to pull data out of MySQL and graph
+  the data with Plotly.
+
 
 ### General MySQL resources
+There are many programming language agnostic tutorials for MySQL.
+A handful of the best of these tutorials are listed below.
+
 * [How to Install and Use MySQL on Ubuntu 16.04](/blog/install-mysql-ubuntu-1604.html)
   is a quick tutorial for getting up and running on Ubuntu Linux.
 
@@ -117,8 +131,8 @@ developers learn PostgreSQL if they do not already know MySQL.
   doesn't have the most original title but it's a good walkthrough of your
   first few steps in MySQL for creating users and working with tables.
 
-* [Pinterest open sourced many of their MySQL tools](https://engineering.pinterest.com/blog/open-sourcing-pinterest-mysql-management-tools)
-  to manage instances of the database.
+* [mycli](https://www.mycli.net/) is a command line interface for MySQL
+  that includes command completion and other super handy features.
 
 * [Bye Bye MySQL & MongoDB, Guten Tag PostgreSQL](https://www.userlike.com/en/blog/2015/10/09/bye-by-mysql-and-mongodb-guten-tag-postgresql)
   goes into details for why the company Userlike migrated from their MySQL
@@ -128,11 +142,6 @@ developers learn PostgreSQL if they do not already know MySQL.
   a story about how one company went through dramatic growth and had to keep
   up with it by quickly scaling their MySQL database.
 
-* [Tracker: Ingesting MySQL data at scale - (Part 1)](https://engineering.pinterest.com/blog/tracker-ingesting-mysql-data-scale-part-1)
-  is the first blog post in a series explaining Pinterest's tool to
-  load large volumes of data into MySQL from other internal sources
-  such as Kafka and Redis.
-
 * [Monitoring MySQL metrics](https://www.datadoghq.com/blog/monitoring-mysql-performance-metrics/)
   is the first of a three part series, with the other parts on 
   [collecting metrics](https://www.datadoghq.com/blog/collecting-mysql-statistics-and-metrics/)
@@ -141,8 +150,21 @@ developers learn PostgreSQL if they do not already know MySQL.
   metrics you should be collecting and monitoring in your production
   database along with the purpose for why those metrics are important.
 
-* [gh-ost](https://github.com/github/gh-ost) is a schema migration
+* [gh-ost](https://githubengineering.com/gh-ost-github-s-online-migration-tool-for-mysql/)
+  ([source code](https://github.com/github/gh-ost)) is a schema migration
   tool built by GitHub and open sourced to the development community.
   The advantages of gh-ost are sustainable workloads on the master node
   to allow it to keep serving inbound query requests and the ability
-  to pause the migration.
+  to pause the migration. The post on how to use gh-ost pairs nicely with
+  GitHub's detailed write-up on how they perform backups, failover and 
+  schema migrations in 
+  [MySQL infrastructure testing automation at GitHub](https://githubengineering.com/mysql-testing-automation-at-github/).
+
+* The 
+  [unofficial MySQL optimizers guide](http://www.unofficialmysqlguide.com/)
+  is intended for experienced developers who need to get better performance
+  out of MySQL for their specific use cases.
+ 
+* [The Ultimate Postgres vs MySQL Blog Post](https://dev.to/dmfay/the-ultimate-postgres-vs-mysql-blog-post-1l5f)
+  provides comparisons of data types, default values, arrays, joins and
+  many other differences between MySQL and PostgreSQL.
