@@ -243,3 +243,8 @@ deployment.
   do not use HTTPS as part of your static site deployment. There are few 
   excuses for having an insecure site without required HTTPS in today's 
   world of free Let's Encrypt certificates.
+
+* [How to Build a Low-tech Website?](https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website/)
+  takes static site deployments to the extreme. The site served with
+  solar power and customized hardware setup. This is a great read even
+  though it will not be remotely practical for most organizations.

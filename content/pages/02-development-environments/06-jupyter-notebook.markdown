@@ -180,3 +180,7 @@ like advanced interactive visualizations.
   not as much as some people would like to see. Overall there is a lot to
   enjoy reading here and reflect on so that the community can continue making
   Jupyter a fantastic environment for development.
+
+* [Creating Presentations with Jupyter Notebook](http://www.blog.pythonlibrary.org/2018/09/25/creating-presentations-with-jupyter-notebook/)
+  shows how to make slides out of your cells so you can present your
+  work like a traditional presentation.

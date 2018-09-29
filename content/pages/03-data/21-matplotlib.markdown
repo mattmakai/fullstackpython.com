@@ -45,3 +45,7 @@ toolkits.
 * [Pandas & Seaborn - A guide to handle & visualize data in Python](https://tryolabs.com/blog/2017/03/16/pandas-seaborn-a-guide-to-handle-visualize-data-elegantly/)
   builds a visualization by starting with [pandas](/pandas.html) for data
   wrangling then outputs charts with Matplotlib and Seaborn.
+
+* [Matplotlib Tips and Demos](https://nbviewer.jupyter.org/urls/gist.githubusercontent.com/Jwink3101/e6b57eba3beca4b05ec146d9e38fc839/raw/f486ca3dcad44c33fc4e7ddedc1f83b82c02b492/Matplotlib_Cheatsheet)
+  is a long [Jupyter Notebook](/jupyter-notebook.html) with a ton of example
+  code that shows how to use Matplotlib in many ways.

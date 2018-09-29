@@ -55,6 +55,10 @@ system are occurring.
   [bite-sized command line tools: pylintdb](https://nedbatchelder.com//blog/201712/bitesized_command_line_tools_pylintdb.html)
   post.
 
+* [Flask8-eradicate](https://pypi.org/project/flake8-eradicate/)
+  ([source code](https://github.com/sobolevn/flake8-eradicate)) is a Flask8
+  plugin for identifying dead code.
+
 
 ## Hosted code metrics services
 The following tools are ready to use by going to the service, punching in
