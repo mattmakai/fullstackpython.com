@@ -21,10 +21,42 @@ developer has to learn how to debug code in order to write programs that
 work as correctly as time and budget allow.
 
 
-### Debugging resources
+### Debugging tools
+There are many debugging tools, some of which are built into 
+[IDEs](/text-editors-ides.html) like [PyCharm](/pycharm.html) and others
+that are standalone applications. The following list contains mostly 
+standalone tools that you can use in any 
+[development environment](/development-environments.html).
+
+* [pdb](https://docs.python.org/3/library/pdb.html) is a debugger built
+  into the Python standard library and is the one most developers come across
+  first when trying to debug their programs.
+
+* [Web-PDB](https://github.com/romanvm/python-web-pdb) provides a
+  web-based user interface for pdb to make it easier to understand what is
+  happening while inspecting your running code.
+
+* [wdb](https://github.com/Kozea/wdb) uses [WebSockets](/websockets.html)
+  to allow you to debug running Python code from a web browser.
+
+* [Pyflame](http://eng.uber.com/pyflame/) 
+  ([source code](https://github.com/uber/pyflame)) is a profiling tool
+  that generates [flame graphs](http://www.brendangregg.com/flamegraphs.html)
+  for executing Python program code.
+
+* [objgraph](https://mg.pov.lt/objgraph/)
+  ([source code](https://github.com/mgedmin/objgraph)) uses 
+  [graphviz](https://www.graphviz.org/) to draw the connections between 
+  Python objects running in an application
+
+
+### Python-specific Debugging tutorials
+The Python ecosystem has a range of tools to help with debugging your code.
+These tutorials are specific to Python libraries like pdb and objgraph.
+
 * [Debugging your Python code](http://howchoo.com/g/zgi2y2iwyze/debugging-your-python-code)
   walks through a scenario where 
-  [pdb](https://docs.python.org/2/library/pdb.html) 
+  [pdb](https://docs.python.org/3/library/pdb.html) 
   can be used to find a defect in a block of Python code.
 
 * [pdb - Interactive Debugger](https://pymotw.com/2/pdb/) is featured on
@@ -38,6 +70,18 @@ work as correctly as time and budget allow.
 * [Debugging in Python](https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/)
   elaborates on what pdb does and how it can be used.
 
+
+### General debugging resources
+The following resources are not specific to Python development but
+give solid programming language-agnostic debugging advice.
+
+* [The art of debugging](https://remysharp.com/2015/10/14/the-art-of-debugging)
+  provides a whirlwind overview for how to fix issues in your code.
+
 * [How to debug JavaScript errors](https://rollbar.com/guides/how-to-debug-javascript/)
   introduces some key debugging tools such as source maps that make
   identifying errors on the client side much easier during development.
+
+* [Linux debugging tools you'll love](https://jvns.ca/debugging-zine.pdf)
+  is an awesome comic that covers the Linux ecosystem for debugging.
+  

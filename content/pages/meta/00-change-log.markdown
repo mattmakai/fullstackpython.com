@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2018
 ### September
+* A ton of new tools and links on the [debugging](/debugging.html) page.
+* Added a starter [Django REST Framework](/django-rest-framework-drf.html) 
+  page.
 * New [web app security](/web-application-security.html), 
   [task queue](/task-queues.html) and [WebRTC](/webrtc.html) resources.
 * Added a bunch of new resources across the site and removed a few out of
