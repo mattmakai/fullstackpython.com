@@ -109,9 +109,6 @@ Dictionary comprehension:
 * Armin Roacher presented [things you didn't know about Python](https://speakerdeck.com/mitsuhiko/didntknow)
   at PyCon South Africa in 2012.
 
-* [Writing idiomatic Python](http://www.jeffknupp.com/blog/2012/10/04/writing-idiomatic-python/)
-  is a guide for writing Pythonic code.
-
 * [The thing that runs your Python](http://ashfall.github.io/blog/2012/10/23/the-thing-that-runs-your-python/)
   is a summary of what one developer learned about PyPy while researching it. 
 
