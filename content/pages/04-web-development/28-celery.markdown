@@ -168,6 +168,11 @@ web framework of your choice.
   configures Celery with the [Falcon](/falcon.html) framework, which is 
   less commonly-used in web tutorials.
 
+* [Custom Celery task states](https://www.distributedpython.com/2018/09/28/celery-task-states/)
+  is an advanced post on creating custom states, which is especially useful 
+  for transient states in your application that are not covered by the 
+  default Celery configuration.
+
 
 ### Celery deployment resources
 Celery and its broker run separately from your web and WSGI servers so it 

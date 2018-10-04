@@ -28,3 +28,5 @@ without requiring external code library dependencies.
   has a meaty guide for building and deploying your first Falcon web 
   application.
 
+* [Asynchronous Tasks with Falcon and Celery](https://testdriven.io/asynchronous-tasks-with-falcon-and-celery)
+  shows how to configure [Celery](/celery.html) with the framework.
