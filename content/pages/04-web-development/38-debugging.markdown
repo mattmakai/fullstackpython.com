@@ -50,14 +50,10 @@ standalone tools that you can use in any
   Python objects running in an application
 
 
-### Python-specific debugging tutorials
-The Python ecosystem has a range of tools to help with debugging your code.
-These tutorials are specific to Python libraries like pdb and objgraph.
-
-* [Debugging your Python code](http://howchoo.com/g/zgi2y2iwyze/debugging-your-python-code)
-  walks through a scenario where 
-  [pdb](https://docs.python.org/3/library/pdb.html) 
-  can be used to find a defect in a block of Python code.
+### pdb tutorials
+pdb is the most commonly-used debugger for Python because it is built
+into the standard library. The following walkthroughs will show you how
+to use pdb while fixing your own code.
 
 * [How to Use Pdb to Debug Your Code](https://pybit.es/pdb-debugger.html)
   is a wonderful code-first tutorial on getting started with pdb.
@@ -66,20 +62,34 @@ These tutorials are specific to Python libraries like pdb and objgraph.
   the Python Module of the Week blog and has some great detail on using
   the program effectively.
 
-* [Python debugging tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
-  provides a list of tools such as pdb and its derivatives ipdb, pudb and
-  pdb++ along with how they can be used in the hunt for defects.
+* [pdb: Using the Python debugger in Django](https://mike.tig.as/blog/2010/09/14/pdb/)
+  is a tutorial specific to working with pdb in [Django](/django.html)
+  projects.
+
+* [Debugging your Python code](http://howchoo.com/g/zgi2y2iwyze/debugging-your-python-code)
+  walks through a scenario where 
+  [pdb](https://docs.python.org/3/library/pdb.html) 
+  can be used to find a defect in a block of Python code.
+
+* [pdb Tutorial](https://github.com/spiside/pdb-tutorial) is a code-heavy
+  beginners tutorial for pdb.
 
 * [Debugging in Python](https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/)
   elaborates on what pdb does and how it can be used.
 
+
+### Python-specific debugging tutorials
+The Python ecosystem has a range of tools to help with debugging your code.
+These tutorials show you how to either use a tool other than pdb or provide
+an overview of the debugging ecosystem for Python.
+
+* [Python debugging tools](http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/)
+  provides a list of tools such as pdb and its derivatives ipdb, pudb and
+  pdb++ along with how they can be used in the hunt for defects.
+
 * [Profiling Python web applications with visual tools](https://mitjafelicijan.com/profiling-python-web-applications-with-visual-tools)
   details a configuration for visualizing code execution using 
   [KCachegrind](http://kcachegrind.sourceforge.net/html/Home.html).
-
-* [pdb: Using the Python debugger in Django](https://mike.tig.as/blog/2010/09/14/pdb/)
-  is a tutorial specific to working with pdb in [Django](/django.html)
-  projects.
 
 * [My Startling Encounter With Python Debuggers](https://benbernardblog.com/my-startling-encounter-with-python-debuggers/)
   along with 
@@ -87,6 +97,13 @@ These tutorials are specific to Python libraries like pdb and objgraph.
   are a fantastic couple of posts that walk through a specific scenario
   of how a well-tested distributed web crawler failed and how tools like
   gdb, top and Winpdb were used to debug a multithreaded application.
+
+* [Debugging Python like a boss](https://zapier.com/engineering/debugging-python-boss/)
+  covers several Python debuggers such as pudb, pydbgr and ipdb.
+
+* [The case of the mysterious Python crash](https://benbernardblog.com/the-case-of-the-mysterious-python-crash/)
+  explains the symptoms that happened during a crash and what steps
+  the author took to figure out what was going on.
 
 
 ### General debugging resources
