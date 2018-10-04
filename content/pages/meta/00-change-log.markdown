@@ -15,6 +15,10 @@ on GitHub.
 
 
 ## 2018
+### October
+* Added even more new [debugging](/debugging.html) tutorials and split
+  pdb tutorials into their own section.
+
 ### September
 * A ton of new tools and links on the [debugging](/debugging.html) page.
 * Added a starter [Django REST Framework](/django-rest-framework-drf.html) 
