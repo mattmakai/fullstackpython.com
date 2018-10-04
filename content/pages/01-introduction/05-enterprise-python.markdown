@@ -93,7 +93,8 @@ can no longer ignore the progress of Python and the great open source
 community in the enterprise software development landscape if they want to
 continue delivering business value to their business side customers.
 
-## Open source enterprise Python projects
+
+### Open source enterprise Python projects
 Python is widely used across large enterprise organizations but the code
 is often not put out as open source. If you come across projects that are
 appropriate for this list, [contact me](/about-author.html) to let me know:
@@ -158,3 +159,6 @@ often not discussed when dealing with standard Python development.
   that's worth a look for broader opinions on Python compared to Java and
   .NET in enterprise environments.
 
+* [Why are enterprises so slow?](https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/)
+  is not specific to Python but is a fantastic article on the regulatory,
+  cultural and financial reasons why large companies often move so slowly.

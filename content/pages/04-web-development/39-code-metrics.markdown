@@ -141,3 +141,7 @@ diminishing returns.
 * This [Stack Overflow question on Python static code analysis tools](http://stackoverflow.com/questions/1428872/pylint-pychecker-or-pyflakes)
   contains comparison discussions of PyLint, PyChecker and PyFlakes.
 
+* [Consistent Python code with Black](https://www.mattlayman.com/blog/2018/python-code-black/)
+  covers how to use Black and add it as a pre-commit hook in Git to
+  ensure consistency in repository updates.
+
