@@ -154,6 +154,13 @@ chose one operating system over others.
   explains the rationale for switching from the Apple-based operating system
   to Linux along with what applications the author now uses.
 
+* [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
+  is a free book by University of Wisconsin Computer Science professors
+  that teaches how operating systems are built. Although you do not know
+  exactly how to build your own OS to use one, understanding the 
+  foundation for how software works is incredibly helpful in unexpected
+  ways while developing and operating your applications.
+
 
 ### Operating system learning checklist
 1. Choose either a Debian-based Linux distribution such as Ubuntu or a 

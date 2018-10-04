@@ -48,8 +48,8 @@ kept up to date with accurate descriptions and resources.
 |[Text Editors and IDEs](/text-editors-ides.html)              | maintain     |
 |[Vim](/vim.html)                                              | maintain     |
 |[Emacs](/emacs.html)                                          | maintain     |
-|[Sublime Text](/sublime-text.html)                            | starter      |
-|[PyCharm](/pycharm.html)                                      | starter      |
+|[Sublime Text](/sublime-text.html)                            | maintain     |
+|[PyCharm](/pycharm.html)                                      | intermediate |
 |[Jupyter Notebook](/jupyter-notebook.html)                    | maintain     |
 |[Shells](/shells.html)                                        | starter      | 
 |[Bourne-again shell (Bash)](/bourne-again-shell-bash.html)    | starter      | 
@@ -104,7 +104,7 @@ kept up to date with accurate descriptions and resources.
 ## Chapter 4: Web Development
 |Page                                                       | Status       |
 |-----------------------------------------------------------|--------------|
-|[Web development](/web-development.html)                   | starter      |
+|[Web development](/web-development.html)                   | intermediate |
 |[Web frameworks](/web-frameworks.html)                     | maintain     |
 |[Django](/django.html)                                     | intermediate |
 |[Flask](/flask.html)                                       | maintain     |

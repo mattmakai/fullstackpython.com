@@ -50,7 +50,7 @@ standalone tools that you can use in any
   Python objects running in an application
 
 
-### Python-specific Debugging tutorials
+### Python-specific debugging tutorials
 The Python ecosystem has a range of tools to help with debugging your code.
 These tutorials are specific to Python libraries like pdb and objgraph.
 
@@ -59,7 +59,10 @@ These tutorials are specific to Python libraries like pdb and objgraph.
   [pdb](https://docs.python.org/3/library/pdb.html) 
   can be used to find a defect in a block of Python code.
 
-* [pdb - Interactive Debugger](https://pymotw.com/2/pdb/) is featured on
+* [How to Use Pdb to Debug Your Code](https://pybit.es/pdb-debugger.html)
+  is a wonderful code-first tutorial on getting started with pdb.
+
+* [pdb - Interactive Debugger](https://pymotw.com/3/pdb/) is featured on
   the Python Module of the Week blog and has some great detail on using
   the program effectively.
 
@@ -69,6 +72,21 @@ These tutorials are specific to Python libraries like pdb and objgraph.
 
 * [Debugging in Python](https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/)
   elaborates on what pdb does and how it can be used.
+
+* [Profiling Python web applications with visual tools](https://mitjafelicijan.com/profiling-python-web-applications-with-visual-tools)
+  details a configuration for visualizing code execution using 
+  [KCachegrind](http://kcachegrind.sourceforge.net/html/Home.html).
+
+* [pdb: Using the Python debugger in Django](https://mike.tig.as/blog/2010/09/14/pdb/)
+  is a tutorial specific to working with pdb in [Django](/django.html)
+  projects.
+
+* [My Startling Encounter With Python Debuggers](https://benbernardblog.com/my-startling-encounter-with-python-debuggers/)
+  along with 
+  [the follow-up second post](https://benbernardblog.com/my-startling-encounter-with-python-debuggers-part-2/)
+  are a fantastic couple of posts that walk through a specific scenario
+  of how a well-tested distributed web crawler failed and how tools like
+  gdb, top and Winpdb were used to debug a multithreaded application.
 
 
 ### General debugging resources
