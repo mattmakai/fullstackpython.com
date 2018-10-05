@@ -11,7 +11,7 @@ meta: Learn how to use Cascading Style Sheets (CSS) to create your web applicati
 Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.
 
-<img src="/img/logos/css.jpg" width="100%" alt="CSS3 logo." class="technical-diagram" />
+<img src="/img/logos/css.jpg" width="100%" alt="CSS3 logo." class="shot">
 
 
 ## Why is CSS necessary?
@@ -28,13 +28,13 @@ needed to render the content. The web browser requests the CSS file after the
 HTML file as shown below in a screenshot captured of the Chrome Web Developer 
 Tools network traffic.
 
-<img src="/img/visuals/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="technical-diagram" />
+<img src="/img/visuals/css-chrome-dev-tools.jpg" width="100%" alt="Google Chrome Web Developer Tools shows how CSS is separate from the HTML content." class="shot rnd outl">
 
 That request for the fsp.css file is made because the HTML file for Full 
 Stack Python contains a reference to ``theme/css/fsp.css`` which is shown
 in the view source screenshot below.
 
-<img src="/img/visuals/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="technical-diagram" />
+<img src="/img/visuals/fsp-css-source.jpg" width="100%" alt="View source screenshot for the fsp.css file in index.html." class="shot rnd outl" />
 
 
 ## CSS preprocessors
@@ -95,6 +95,10 @@ web application's design.
 * [Frontend Development Bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
   is one of the largest collections of valuable resources for frontend
   learning both in CSS as well as JavaScript.
+
+* [CSS Reference](https://cssreference.io/) provides much-needed visual 
+  examples for every CSS property to show you what they are actually going 
+  to look like on your pagee when you use them.
 
 * [CSS coding techniques](https://hacks.mozilla.org/2016/05/css-coding-techniques/)
   provides advice on how to write simpler, easier-to-maintain CSS code
