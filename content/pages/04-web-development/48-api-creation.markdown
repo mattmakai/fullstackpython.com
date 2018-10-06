@@ -32,7 +32,7 @@ applications through machine-to-machine communication.
 * [Flask API](http://www.flaskapi.org/) is another common library for 
   exposing APIs from Flask web applications.
 
-* [Sandman](http://www.github.com/jeffknupp/sandman) is a widely used tool to
+* [Sandman](http://www.github.com/jeffknupp/sandman2) is a widely used tool to
   automatically generate a RESTful API service from a legacy database without
   writing a line of code (though it's easily extensible through code).
 
