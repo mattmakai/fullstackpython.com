@@ -336,6 +336,18 @@ Now start giving Starter Bot commands in your channel.
 
 <img src="/img/160604-simple-python-slack-bot/working-starterbot.png" width="100%" class="technical-diagram img-rounded" alt="Give StarterBot commands in your Slack channel.">
 
+_**Additional Note:**_ Currently there's an [issue](https://github.com/slackapi/python-slackclient/issues/334) with the `websocket` package and the CA certificate it uses, so if you encounter an error like:
+```
+...
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1045)
+...
+slackclient.server.SlackConnectionError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1045)
+Connection failed. Exception traceback printed above.
+```
+
+There are a couple of things that can be done:
+1. Downgrading the websocket-client library to `0.47.0`
+2. Or, download the certificate (`wget https://www.tbs-certificats.com/issuerdata/DigiCertGlobalRootCA.crt`), then set the environment variable `export WEBSOCKET_CLIENT_CA_BUNDLE=DigiCertGlobalRootCA.crt`
 
 ## Wrapping Up
 Alright, now you've got a simple Starter Bot with a bunch of places in the
