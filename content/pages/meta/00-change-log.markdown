@@ -16,6 +16,10 @@ on GitHub.
 
 ## 2018
 ### October
+* Merge [PR #189](https://github.com/mattmakai/fullstackpython.com/pull/189)
+  to help readers figure out how to get around some security warning issues
+  that could come up in the 
+  [Slack bot tutorial](/blog/build-first-slack-bot-python.html).
 * Added even more new [debugging](/debugging.html) tutorials and split
   pdb tutorials into their own section.
 

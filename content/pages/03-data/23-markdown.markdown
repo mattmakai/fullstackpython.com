@@ -86,3 +86,6 @@ or block quotes.
   as [pandoc](https://pandoc.org/) to convert from one file format to 
   another, including how to use Markdown for presentations and not just 
   regular documentation.
+
+* [Markdown page](https://github.com/oscarmorrison/md-page) is a JavaScript
+  file that makes it easy to render plain old Markdown as a webpage.
