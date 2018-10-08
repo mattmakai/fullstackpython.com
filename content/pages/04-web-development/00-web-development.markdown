@@ -139,3 +139,21 @@ world.
   service, whether because they are in a remote part of the world or they're
   just in a subway tunnel. Optimizing sites so they work in those situations
   is important for keeping your users happy.
+
+* [The History of the URL: Path, Fragment, Query, and Auth](https://eager.io/blog/the-history-of-the-url-path-fragment-query-auth/)
+  gives a comprenhensive historical perspective on the fundamental
+  way to link to resources on the web. This post should be required reading
+  for web developers.
+
+* [Quantum Up Close: What is a browser engine?](https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/)
+  explains how a browser takes in 
+  [HTML](/hypertext-markup-language-html.html), 
+  [JavaScript](/javascript.html), 
+  [CSS](/cascading-style-sheets.html), 
+  [images](/static-content.html) and any
+  other data and files to produce a webpage as output.
+
+* [How to understand performance tests](https://fly.io/articles/how-to-understand-performance-tests/)
+  is an important topic because many websites are slow and bloated.
+  Learning about improving the performance of your site is one of
+  the best ways to become a better web developer.
