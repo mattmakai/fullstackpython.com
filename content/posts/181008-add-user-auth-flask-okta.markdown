@@ -9,14 +9,17 @@ headerimage: /img/181008-flask-okta/header.jpg
 headeralt: Flask and Okta logos. Copyright their respective owners.
 
 
-User authentication is a basic feature in web applications
-so that people can create and access their own accounts. Unfortunately,
-there are many ways to improperly implement authentication. 
+User authentication is a basic feature in 
+[web applications](/web-development.html) so people can create and access 
+their own accounts. Unfortunately, authentication is not always easy to
+set up and there are many ways to incorrectly implement login and logout
+features. 
 
 This tutorial walks through how to use the 
 [secure identity authentication service](https://developer.okta.com/use_cases/authentication/)
 called [Okta](https://developer.okta.com/), which is free for up to 1,000
-active user accounts, to handle user data in Flask applications.
+active user accounts, to easily handle user data in [Flask](/flask.html) 
+applications.
 
 
 ## Our Tools
@@ -478,7 +481,8 @@ production application you will create other accounts for users to log into.
 
 Let's tweak one more bit in our application to fix the glaring lack of
 excitement in successfully completing the authentication code for this 
-tutorial.
+tutorial. Update the two highlighted lines to match what is in the code
+block below:
 
 ```python
 # imports for both Flask and Okta connection
@@ -514,8 +518,8 @@ def before_request():
 @app.route("/lair")
 @oidc.require_login
 def lair():
-    thundercats_lair = '<html><head><title>Thundercats, hoooo!</title></head><body><h1>Thundercats now hidden lair.</h1><iframe src="https://giphy.com/embed/ahXtBEbHiraxO" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/retro-cartoons-thundercats-ahXtBEbHiraxO">via GIPHY</a></p></body></html>'
-    return Response(thundercats_lair)
+~~    thundercats_lair = '<html><head><title>Thundercats, hoooo!</title></head><body><h1>Thundercats now hidden lair.</h1><iframe src="https://giphy.com/embed/ahXtBEbHiraxO" width="480" height="273" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/retro-cartoons-thundercats-ahXtBEbHiraxO">via GIPHY</a></p></body></html>'
+~~    return Response(thundercats_lair)
 
 
 @app.route("/")
