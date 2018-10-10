@@ -156,4 +156,8 @@ world.
 * [How to understand performance tests](https://fly.io/articles/how-to-understand-performance-tests/)
   is an important topic because many websites are slow and bloated.
   Learning about improving the performance of your site is one of
-  the best ways to become a better web developer.
+  the best ways to become a better web developer. Another great article on
+  website performance is 
+  [The average web page is 3MB. How much should we care?](https://speedcurve.com/blog/web-performance-page-bloat/).
+  The visuals alone tell a compelling story about how large webpage
+  sizes have grown in recent years.

@@ -43,7 +43,22 @@ language, testing takes on even greater importance for ensuring program
 correctness.
 
 
-## Testing resources
+## Python testing tools
+The Python ecosystem has a wealth of tools to make it easier to run
+your tests and interpret the results. The following tools encompass
+test runners, coverage reports and related libraries.
+
+* [green](https://github.com/cleancut/green) is a test runner that has
+  pretty printing on output to make the results easier to read and
+  understand.
+
+* [requestium](https://github.com/tryolabs/requestium) merges the
+  Requests library with Selenium to make it easier to run automated
+  browser tests.
+
+
+
+### Testing resources
 * [The Minimum Viable Test Suite](https://realpython.com/blog/python/the-minimum-viable-test-suite/)
   shows how to set unit tests and integration tests for a Flask example
   application.

@@ -78,3 +78,6 @@ during Python software development as part of a programmer's
   has a bunch of shell aliases that make it easier for you to execute
   complicated or uncommon [Git](/git.html) commands.
 
+* [Creating a bash completion script](https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html)
+  is a great tutorial that walks you through a reasonably complex Bash
+  script for completing syntax in other Bash shell scripts.

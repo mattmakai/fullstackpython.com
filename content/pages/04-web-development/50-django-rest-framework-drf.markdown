@@ -1,7 +1,7 @@
 title: Django REST Framework
 category: page
 slug: django-rest-framework-drf
-sortorder: 0449
+sortorder: 0450
 toc: False
 sidebartitle: Django REST Framework
 meta: Django REST Framework (DRF) is a Python library for building web application programming interfaces (APIs).

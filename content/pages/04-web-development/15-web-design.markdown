@@ -40,8 +40,20 @@ width.
 
 
 ## Design resources
-* [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) is
-  an amazing write up of good practices for HTML, CSS and JS.
+* [Clean up your mess: A Guide to Visual Design for Everyone](http://www.visualmess.com/index.html)
+  walks through the basic principles for clean and effective design. You
+  can make a website go from terrible to well-designed often by following
+  a few principles on spacing, alignment, contrast and repetition of
+  page elements.
+
+* [Resilient web design](https://resilientwebdesign.com/) is an incredible
+  online book that teaches how to create websitess that are accessible to
+  every reader and look great while doing it.
+
+* [Design 101 for Developers](https://academy.realm.io/posts/christopher-downer-design-101-for-developers/)
+  gives away the "secrets" to good design that designers follow but that
+  can be similarly accessible to developers who understand what they want
+  their design to accomplish.
 
 * [How I Work with Color](https://medium.com/@JustinMezzell/how-i-work-with-color-8439c98ae5ed)
   is a fantastic article from a professional designer on how he thinks
@@ -52,15 +64,12 @@ width.
   Highly recommended especially if you feel you have no design skills but 
   need to learn them.
 
-* [Learn Design Principles](http://learndesignprinciples.com) is a well
-  thought out clear explanation for how to think about design according to
-  specific rules such as axis, symmetry, hierarchy and rhythm.
-
 * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
   color picker by Adobe that helps choose colors for your designs.
 
-* If you want to learn more about how browsers work behind the scenes, 
-  here's a 
+* If you want to learn more about how browsers work behind the scenes
+  to render a webpage's design, 
+  here is a 
   [blog post series on building a browser engine](http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html)
   that will show you how to build a simple rendering engine.
 
@@ -70,3 +79,13 @@ width.
   down the differences between specifying predefined color values, 
   hexadecimal values, red-green-blue (RGB) and 
   Hue-Saturation-Lightness (HSL).
+
+
+### Checklists and design guidelines
+* [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) is
+  an amazing write up of good practices for HTML, CSS and JS.
+
+* [Learn Design Principles](http://learndesignprinciples.com) is a well
+  thought out clear explanation for how to think about design according to
+  specific rules such as axis, symmetry, hierarchy and rhythm.
+

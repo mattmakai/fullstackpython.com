@@ -31,3 +31,7 @@ and is used to display website and web application content.
   [HTML basics](https://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1)
   course provides an interactive environment for learning the
   gist of the markup language.
+
+* [A list of everything that *could* go in the head of your document](https://github.com/joshbuchea/HEAD)
+  provides a comprehensive reference for elements that are required
+  or optional in the `<head>` element of your webpage.

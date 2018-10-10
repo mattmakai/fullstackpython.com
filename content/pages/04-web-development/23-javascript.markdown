@@ -57,6 +57,11 @@ which is defined by the
 * [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   by Mozilla walks through the basic syntax and operators.
 
+* [The State of JavaScript report](https://stateofjs.com/) contains a wealth
+  of data on what libraries developers are using in the JavaScript 
+  ecosystem. There are also reports from previous years which show how the 
+  community's preferences have changed over time.
+
 * [Coding tools and JavaScript libraries](http://www.smashingmagazine.com/2011/10/28/useful-coding-workflow-tools-for-web-designers-developers/)
   is a huge list by Smashing Magazine with explanations for each tool and 
   library for working with JavaScript.

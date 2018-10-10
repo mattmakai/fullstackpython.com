@@ -3,7 +3,7 @@ slug: add-user-authentication-flask-apps-okta
 meta: How to quickly add user authentication to Flask web applications using the Okta service.
 category: post
 date: 2018-10-08
-modified: 2018-10-08
+modified: 2018-10-10
 newsletter: False
 headerimage: /img/181008-flask-okta/header.jpg
 headeralt: Flask and Okta logos. Copyright their respective owners.
@@ -420,7 +420,11 @@ def landing_page():
 ~~    return redirect(url_for(".landing_page"))
 ```
 
-The above new highlighted lines do *x*.
+The above new highlighted lines check whether or not a user is logged in
+before each request. If a route requires a logged in user due to the 
+`@oidc.require_login` decorator then the user will be redirect to the
+sign in page. We also added routes under `/login` and `/logout` to make
+it possible to log in and out of the application.
 
 Set three environment variables so our application can use them when we
 run it. Make sure the placeholders `ORG_URL` and `AUTH_TOKEN` are set with 
