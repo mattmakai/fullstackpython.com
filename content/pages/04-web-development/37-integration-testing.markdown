@@ -51,3 +51,12 @@ during development so they can be addressed immediately.
   and other tests. There is also some practical advice like "It’s not 
   important what you call it, but what it does" which as a pragmatic 
   programmer I am keen to agree on.
+
+* [Consistent Selenium Testing in Python](https://chrxs.net/articles/2017/09/01/consistent-selenium-testing/)
+  gives a spectacular code-driven walkthrough for setting up Selenium
+  along with SauceLabs for continuous browser-based testing.
+
+* [Where do our flaky tests come from?](https://testing.googleblog.com/2017/04/where-do-our-flaky-tests-come-from.html)
+  presents Google's data on where their integration tests fail and how
+  the tools you use can sometimes lead to higher incidents of failed
+  tests than other testing tools.

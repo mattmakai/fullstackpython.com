@@ -56,6 +56,8 @@ test runners, coverage reports and related libraries.
   Requests library with Selenium to make it easier to run automated
   browser tests.
 
+* [coverage.py](https://coverage.readthedocs.io/) is a tool for
+  measuring code coverage when running tests.
 
 
 ### Testing resources
@@ -95,18 +97,31 @@ test runners, coverage reports and related libraries.
   [top answer on Stack Overflow](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test) 
   to that very question.
 
+* [The cleaning hand of Pytest](https://blog.daftcode.pl/the-cleaning-hand-of-pytest-28f434f4b684)
+  provides a couple of case studies for how companies set up their testing
+  systems. It then gives the boilerplate code the author uses for Pytest
+  and goes through a bunch of code samples for common situations. 
+
 * [Using pytest with Django](http://engineroom.trackmaven.com/blog/using-pytest-with-django/)
   shows how to get a basic [pytest](http://pytest.org/latest/) test
   running for a Django project and explains why the author prefers pytest 
   over standard unittest testing.
   
-* [Distributed Testing with Selenium Grid and Docker](https://testdriven.io/distributed-testing-with-selenium-grid) shows how to distribute automated, browser tests with Selenium Grid and Docker Swarm. It also looks at how to run tests against a number of browsers and automate the provisioning and deprovisioning of machines to keep costs down.
+* [Distributed Testing with Selenium Grid and Docker](https://testdriven.io/distributed-testing-with-selenium-grid) 
+  shows how to distribute automated, browser tests with Selenium Grid and 
+  Docker Swarm. It also looks at how to run tests against a number of 
+  browsers and automate the provisioning and deprovisioning of machines to 
+  keep costs down.
 
 * [Principles of Automated Testing](http://www.lihaoyi.com/post/PrinciplesofAutomatedTesting.html)
   explains how to prioritize what to test, goes through some levels of
   testing from [unit](/unit-testing.html) to 
   [integration](/integration-testing.html) and examines when to use example
   and bulk tests.
+
+* [Pytest leaking](https://nvbn.github.io/2017/02/02/pytest-leaking/)
+  examines situations where tests leak memory and can cause abnormal
+  results if they are not fixed.
 
 
 ### Mocking resources
@@ -142,3 +157,4 @@ use mocks in your test cases.
   [Redis](/redis.html)-dependent code but prefer to mock it rather than
   ensure an installation and connection are present whenever you run
   your tests.
+

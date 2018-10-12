@@ -57,6 +57,10 @@ with your Python code.
   version of Redis' in-memory data store with Python. It's a good article
   to understand more about how NoSQL data stores can work under the covers.
 
+* [Introduction to Redis streams with Python](http://charlesleifer.com/blog/redis-streams-with-python/)
+  shows how to use the new (as of Redis version 5.0) append-only streams 
+  functionality via Python code.
+
 
 ### Redis examples
 Redis' wide applicability can be a downside if you don't know what to start

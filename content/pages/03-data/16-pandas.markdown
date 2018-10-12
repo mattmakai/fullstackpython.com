@@ -38,4 +38,7 @@ is a data structures and analysis library.
   explains how the author grabbed a bunch of Flickr data using the 
   [flickr-api](https://github.com/alexis-mignon/python-flickr-api) library
   then analyzed the EXIF data in the photos using pandas.
-  
+
+* [Pandas Crosstab Explained](http://pbpython.com/pandas-crosstab.html)
+  shows how to use the `crosstab` function in pandas so you can summarize
+  and group data.

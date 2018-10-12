@@ -16,7 +16,7 @@ using CSS and JavaScript.
 You wouldn’t use a web application that looked like the following screenshot, 
 would you?
 
-<img src="/img/visuals/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="technical-diagram" /> 
+<img src="/img/visuals/no-style-webpage.png" width="100%" alt="HTML with no CSS or JavaScript." class="shot rnd outl"> 
 
 Creating web pages with their own style and interactivity so users can easily
 accomplish their tasks is a major part of building modern web applications.
@@ -39,7 +39,11 @@ shows that navigation bar relocation scenario when you resize the browser
 width.
 
 
-## Design resources
+## Fantastic design resources
+There are way too many design resources on the web, so I picked out
+this short list as my absolute favorites that help developers become
+(hopefully much) better with design.
+
 * [Clean up your mess: A Guide to Visual Design for Everyone](http://www.visualmess.com/index.html)
   walks through the basic principles for clean and effective design. You
   can make a website go from terrible to well-designed often by following
@@ -89,3 +93,6 @@ width.
   thought out clear explanation for how to think about design according to
   specific rules such as axis, symmetry, hierarchy and rhythm.
 
+* [Front-end performance checklist](https://github.com/thedaviddias/Front-End-Performance-Checklist)
+  is a comprehensive checklist useful when you are implementing a
+  web application's client side code.

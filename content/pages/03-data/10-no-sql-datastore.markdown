@@ -168,6 +168,9 @@ representing a person could have a property of "female" or "male".
   covers trends in NoSQL data stores and compares graph databases to other
   data store types.
 
+* [Graph search algorithm basics](https://neo4j.com/blog/graph-search-algorithm-basics/)
+  explains the methods for searching nodes for data in a graph database.
+
 
 ## NoSQL third-party services
 * [Compose](https://www.compose.com/) provides MongoDB as a service. It's
