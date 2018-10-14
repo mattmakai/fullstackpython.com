@@ -16,7 +16,7 @@ on GitHub.
 
 ## 2018
 ### October
-* Published new blog post showing
+* Published a new blog post showing
   [How to Add User Authentication to Flask Apps with Okta](/blog/add-user-authentication-flask-apps-okta.html).
 * Merge [PR #189](https://github.com/mattmakai/fullstackpython.com/pull/189)
   to help readers figure out how to get around some security warning issues

@@ -125,6 +125,11 @@ possible.
   is a wonderful read that shows how detailed knowledge at every layer of 
   the stack is necessary to optimize web server connections at scale.
 
+* [Implementing a tiny web server in a single printf call](https://tinyhack.com/2014/03/12/implementing-a-web-server-in-a-single-printf-call/)
+  is an absurd C language hack that you would never want to use in any 
+  real project but still an amazing little application and wonderful 
+  explanation that you can learn a bit more about web servers by reading.
+
 
 ### Web servers learning checklist
 1. Choose a web server. [Nginx](http://nginx.org/en/) is often recommended 
