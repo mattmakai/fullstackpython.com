@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2018
 ### October
+* Published new post on 
+  [How to Provision Ubuntu 18.04 LTS Linux Servers on DigitalOcean](/blog/provision-ubuntu-1804-linux-servers-digitalocean.html).
 * Published a new blog post showing
   [How to Add User Authentication to Flask Apps with Okta](/blog/add-user-authentication-flask-apps-okta.html).
 * Merge [PR #189](https://github.com/mattmakai/fullstackpython.com/pull/189)
