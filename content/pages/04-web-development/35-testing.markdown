@@ -157,4 +157,3 @@ use mocks in your test cases.
   [Redis](/redis.html)-dependent code but prefer to mock it rather than
   ensure an installation and connection are present whenever you run
   your tests.
-
