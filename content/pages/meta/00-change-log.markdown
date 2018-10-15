@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2018
 ### October
+* Added a bunch of new [testing](/testing.html) page resources.
 * Published new post on 
   [How to Provision Ubuntu 18.04 LTS Linux Servers on DigitalOcean](/blog/provision-ubuntu-1804-linux-servers-digitalocean.html).
 * Published a new blog post showing

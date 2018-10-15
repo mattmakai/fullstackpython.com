@@ -97,6 +97,10 @@ test runners, coverage reports and related libraries.
   [top answer on Stack Overflow](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test) 
   to that very question.
 
+* [Testing Python applications with Pytest](https://semaphoreci.com/community/tutorials/testing-python-applications-with-pytest)
+  walks through the basics of using Pytest and some more advanced
+  ways to use it such as continuous testing through Semiphore CI.
+
 * [The cleaning hand of Pytest](https://blog.daftcode.pl/the-cleaning-hand-of-pytest-28f434f4b684)
   provides a couple of case studies for how companies set up their testing
   systems. It then gives the boilerplate code the author uses for Pytest
@@ -106,7 +110,7 @@ test runners, coverage reports and related libraries.
   shows how to get a basic [pytest](http://pytest.org/latest/) test
   running for a Django project and explains why the author prefers pytest 
   over standard unittest testing.
-  
+
 * [Distributed Testing with Selenium Grid and Docker](https://testdriven.io/distributed-testing-with-selenium-grid) 
   shows how to distribute automated, browser tests with Selenium Grid and 
   Docker Swarm. It also looks at how to run tests against a number of 
@@ -118,6 +122,21 @@ test runners, coverage reports and related libraries.
   testing from [unit](/unit-testing.html) to 
   [integration](/integration-testing.html) and examines when to use example
   and bulk tests.
+
+* [How to run tests continuously while coding](https://www.blog.pythonlibrary.org/2017/03/14/how-to-run-python-tests-continuously-while-coding/)
+  contains a Python script that uses the 
+  [watchdog](https://pythonhosted.org/watchdog/) to check for changes
+  to source code files in your project directory. If changes are detected 
+  then your tests will be run to check that everything is still working
+  as intended.
+
+* This test-driven development series shows you how to write an interpreter
+  in Python and contains a ton of great code samples to learn from:
+
+    * [A game of tokens: write an interpreter in Python with TDD - Part 1](http://blog.thedigitalcatonline.com/blog/2017/05/09/a-game-of-tokens-write-an-interpreter-in-python-with-tdd-part-1/)
+    * [A game of tokens - part 2](http://blog.thedigitalcatonline.com/blog/2017/10/01/a-game-of-tokens-write-an-interpreter-in-python-with-tdd-part-2/)
+    * [A game of tokens - part 3](http://blog.thedigitalcatonline.com/blog/2017/10/31/a-game-of-tokens-write-an-interpreter-in-python-with-tdd-part-3/)
+    * [A game of tokens - part 4](http://blog.thedigitalcatonline.com/blog/2018/06/02/a-game-of-tokens-write-an-interpreter-in-python-with-tdd-part-4/)
 
 * [Pytest leaking](https://nvbn.github.io/2017/02/02/pytest-leaking/)
   examines situations where tests leak memory and can cause abnormal

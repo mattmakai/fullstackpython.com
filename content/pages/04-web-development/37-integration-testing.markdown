@@ -60,3 +60,8 @@ during development so they can be addressed immediately.
   presents Google's data on where their integration tests fail and how
   the tools you use can sometimes lead to higher incidents of failed
   tests than other testing tools.
+
+* [Unleash the test army](http://wordaligned.org/articles/unleash-the-test-army)
+  covers the author's first impressions of using Hypothesis for testing
+  the properties of a system under test.
+
