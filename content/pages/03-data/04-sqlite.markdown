@@ -14,7 +14,7 @@ is also included with the standard library so that no further external
 dependencies are required to access a SQLite database from within Python 
 applications.
 
-<img src="/img/logos/sqlite.jpg" width="100%" alt="SQLite logo.">
+<img src="/img/logos/sqlite.jpg" class="shot" width="100%" alt="SQLite logo.">
 
 <div class="well see-also">SQLite is an implementation of the <a href="/databases.html">relational database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
@@ -140,4 +140,8 @@ you are having with SQLite rather than going through a general tutorial.
   provides an example `dev_settings.py` file for 
   locally testing a [Django](/django.html) application intended for 
   [AWS Lambda](/aws-lambda.html).
+
+* [SQLite Database Authorization and Access Control with Python](http://charlesleifer.com/blog/sqlite-database-authorization-and-access-control-with-python/)
+  covers how to control access to the SQLite database connection and
+  file even though SQLite normally allows unauthorized access by design.
 
