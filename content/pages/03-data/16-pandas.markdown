@@ -42,3 +42,12 @@ is a data structures and analysis library.
 * [Pandas Crosstab Explained](http://pbpython.com/pandas-crosstab.html)
   shows how to use the `crosstab` function in pandas so you can summarize
   and group data.
+
+* This two-part series on loading data into a pandas DataFrame presents
+  what to do
+  [when CSV files do not match your expectations](http://blog.enthought.com/python/with-and-without-the-canopy-data-import-tool-loading-data-theres-no-such-thing-as-a-simple-csv-file/)
+  and 
+  [how to handle missing values](http://blog.enthought.com/enthought-canopy/data-import-tool/handling-missing-values-pandas-dataframes-hard-way-easy-way/)
+  so you can start performing your analysis rather than getting frustrated
+  with common issues at the beginning of your workflow.
+
