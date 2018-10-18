@@ -51,3 +51,18 @@ is a data structures and analysis library.
   so you can start performing your analysis rather than getting frustrated
   with common issues at the beginning of your workflow.
 
+* [Building a financial model with pandas](http://pbpython.com/amortization-model.html)
+  explains how to create an amortization schedule with corresponding table
+  and charts that show the pay off period broken down by interest and
+  principal.
+
+* [tabula-py: Extract table from PDF into Python DataFrame](https://blog.chezo.uno/tabula-py-extract-table-from-pdf-into-python-dataframe-6c7acfa5f302)
+  presents how to use the Python wrapper for the 
+  [Tabula](https://tabula.technology/) library that makes it easier to
+  extract table data from PDF files.
+
+* [Time Series Forecast Case Study with Python: Monthly Armed Robberies in Boston](https://machinelearningmastery.com/time-series-forecast-case-study-python-monthly-armed-robberies-boston/)
+  walks through the data wrangling, analysis and visualization steps
+  with a public data set of murders in Boston from 1966 to 1975. This
+  particular data problem may not be your thing but by going through
+  the process you can learn a lot that can be applied to any data set.
