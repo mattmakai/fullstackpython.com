@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2018
 ### October
+* Sent out a 
+  [quick email newsletter update](/blog/fresh-tutorials-october-2018.html)
+  about new recent tutorials on the blog.
 * Added a bunch of new [testing](/testing.html) page resources.
 * Published new post on 
   [How to Provision Ubuntu 18.04 LTS Linux Servers on DigitalOcean](/blog/provision-ubuntu-1804-linux-servers-digitalocean.html).
