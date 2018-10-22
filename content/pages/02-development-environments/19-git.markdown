@@ -149,6 +149,10 @@ workflow. These resources will come in handy for specific Git subjects.
   [writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
   that any programming ecosystem can learn from. 
 
+* [How Microsoft uses Git](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/use-git-microsoft)
+  gives a high-level overview of their repository structure and hosting 
+  at the extremely large scale organization.
+
 * [GitTips](https://git.wiki.kernel.org/index.php/GitTips) is a list of 
   pro tips to clean up common issues and how to dive through Git history
   to find specific text.
