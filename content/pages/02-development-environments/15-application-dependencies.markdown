@@ -131,6 +131,16 @@ developers.
   been fixed to make building and installing application dependencies so
   much better.
 
+* [Python's New Package Landscape](http://andrewsforge.com/article/python-new-package-landscape/)
+  covers the history of Python packaging tools and examines the
+  problems with dependency isolation and the dependency graphs that 
+  newer tools such as 
+  [Pipenv](https://pipenv.readthedocs.io/en/latest/), 
+  [Poetry](https://poetry.eustace.io/), 
+  [Hatch](https://github.com/ofek/hatch) and 
+  [pipsi](https://github.com/mitsuhiko/pipsi) 
+  aim to solve.
+
 * [Python Packaging User Guide](https://packaging.python.org/)
   provides a collection of resources to understand how to package and 
   distribute Python code libraries.
