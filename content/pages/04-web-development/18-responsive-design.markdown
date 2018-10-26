@@ -37,3 +37,7 @@ a broad range of devices that people use to read this site.
   [responsive design - what it is and how to use it](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
   remains a definitive source for understanding why sites should be
   responsive.
+
+* [Fundamentals of responsive images](https://www.lullabot.com/articles/fundamentals-of-responsive-images)
+  shows the code behind several ways to make your web images resize according
+  to browser window size.

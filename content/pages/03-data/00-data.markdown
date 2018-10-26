@@ -14,7 +14,7 @@ subsections, including (in no particular order):
 * data processing / wrangling
 * machine learning
 * data analysis
-* visualization
+* [visualization](/data-visualization.html)
 * geospatial mapping
 * persistence via [relational databases](/databases.html) and 
   [NoSQL data stores](/no-sql-datastore.html)
@@ -71,7 +71,7 @@ created the incredible mix of data code libraries available today.
   Python data tools. They put on fantastic conferences around the world and fund 
   the continued development of open source data-related libraries.
 
-* [Continuum Analytics](http://continuum.io/) is one of the leading Python
+* [Anaconda](https://www.anaconda.com/) is one of the leading Python
   companies that pours a tremendous amount of time and funding into
   the data community.
 
@@ -86,3 +86,7 @@ created the incredible mix of data code libraries available today.
   give historical perspective on how the Python data tools
   have evolved over the past 20ish years based on his first-hand experience
   as a leader and member in that community.
+
+* The [Open Source Data Science Masters](http://datasciencemasters.org/)
+  is a well-crafted free curriculum and set of resources for students who
+  want to learn both the theory and technologies for working with data.
