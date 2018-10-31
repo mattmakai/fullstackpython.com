@@ -12,6 +12,8 @@ An operating system runs on the server or virtual server and controls access
 to computing resources. The operating system also includes a way to install
 programs necessary for running your Python web application.
 
+<img src="/img/logos/operating-systems.jpg" width="100%" alt="Windows, Linux and Apple logos, copyright their respective owners." class="shot rnd outl">
+
 
 ## Why are operating systems necessary?
 An operating system makes many of the computing tasks we take for granted 
@@ -93,12 +95,10 @@ to handle the packaging and installation of libraries and applications. YUM
 provides a command-line interface for interacting with the RPM system.
 
 
-## Operating system resources
+## Learning how operating systems work
 * [Linux Performance](http://www.brendangregg.com/linuxperf.html) is an
   incredible site that links to a number of performance-focused materials
   that are useful when developing on or deploying to any Linux distribution.
-
-* Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
 
 * [Linux Journey](https://linuxjourney.com/) is a really well designed
   curriculum for learning Linux basics such as the command line, package
@@ -131,6 +131,20 @@ provides a command-line interface for interacting with the RPM system.
   which was originally written by a high school student and later updated
   as he became a professional software developer.
 
+* [ops-class.org](https://www.ops-class.org/) provides an online lecture
+  videos, slides and sample exams for learning how operating systems are 
+  built.
+
+* [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
+  is a free book by University of Wisconsin Computer Science professors
+  that teaches how operating systems are built. Although you do not know
+  exactly how to build your own OS to use one, understanding the 
+  foundation for how software works is incredibly helpful in unexpected
+  ways while developing and operating your applications.
+
+* [Operating systems: From 0 to 1](https://tuhdo.github.io/os01/) is a 
+  self-learner resource for writing your own operating system from scratch.
+
 
 ### Choosing an OS resources
 macOS and Linux are generally preferred by Python developers over Windows 
@@ -154,12 +168,11 @@ chose one operating system over others.
   explains the rationale for switching from the Apple-based operating system
   to Linux along with what applications the author now uses.
 
-* [Operating Systems: Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/)
-  is a free book by University of Wisconsin Computer Science professors
-  that teaches how operating systems are built. Although you do not know
-  exactly how to build your own OS to use one, understanding the 
-  foundation for how software works is incredibly helpful in unexpected
-  ways while developing and operating your applications.
+* [Ultimate Linux on the Desktop](https://blog.jessfraz.com/post/ultimate-linux-on-the-desktop/)
+  explains one experienced developer's Linux desktop development environment
+  for getting coding work done.
+
+* Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
 
 
 ### Operating system learning checklist
