@@ -136,3 +136,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 * [Python virtual environments and Docker](http://blog.dscpl.com.au/2016/01/python-virtual-environments-and-docker.html)
   goes into detail on whether virtual environments should be used with Docker
   and how system packages can generally be a safer route to go.
+  
+* [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/dockerizing-django-with-postgres-gunicorn-and-nginx)
+details how to configure Django to run on Docker along with Postgres, Nginx, and Gunicorn.
