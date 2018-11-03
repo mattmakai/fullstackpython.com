@@ -35,3 +35,19 @@ easier for humans to see patterns, trends and other useful information.
 * [Big League Graphs](https://bigleaguegraphs.com/) presents a bunch of
   creative ways to view data for sports such as basketball, baseball and
   hockey.
+
+* [Engineering Intelligence Through Data Visualization at Uber](https://eng.uber.com/data-viz-intel/)
+  explains how Uber's data visualization team grew from 1 person to 15
+  and the output they created along the way, including the open source
+  tools [react-vis](https://uber.github.io/react-vis/) and 
+  [react-map-gl](https://uber.github.io/react-map-gl/).
+
+* [Introduction to Data Visualization with Altair](http://pbpython.com/altair-intro.html)
+  is a starter post for the wonderful 
+  [Altair](https://altair-viz.github.io/) visualization tool written in
+  Python.
+
+* [Roads to Rome](http://roadstorome.moovellab.com/) is a beautiful
+  visualization showing the data behind the expression "all roads lead 
+  to Rome" and whether or not there is a "Rome" central city in every 
+  country.

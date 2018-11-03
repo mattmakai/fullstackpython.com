@@ -15,7 +15,13 @@ on GitHub.
 
 
 ## 2018
+### November
+* Updated the [data visualization](/data-visualization.html) page with
+  new resources.
+
 ### October
+* Added new blog post on
+  [Adding Okta Authentication to an Existing Flask Web App](/blog/okta-user-auth-existing-flask-web-app.html).
 * Sent out a 
   [quick email newsletter update](/blog/fresh-tutorials-october-2018.html)
   about new recent tutorials on the blog.
