@@ -92,6 +92,13 @@ web application's design.
 
 
 ## CSS resources
+* [The languages which were almost CSS](https://eager.io/blog/the-languages-which-almost-were-css/) 
+  contains the history of what might have been if other styling
+  proposals were adopted instead of CSS, such as RRP, PWP, FOSI, DSSSL, 
+  PSL96 and CHSS. Many of those proposals came before CSS was first published
+  as a specification in 1996 so the article is a wonderful view into the
+  Web in its infancy.
+
 * [Frontend Development Bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
   is one of the largest collections of valuable resources for frontend
   learning both in CSS as well as JavaScript.
@@ -116,9 +123,16 @@ web application's design.
   is a detailed guide for learning how to do element positioning correctly
   with CSS.
 
+* [Using feature queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
+  covers the `@supports` rule and how to use it in your stylesheets.
+
 * [Learn CSS layout](http://learnlayout.com/toc.html) is a simple guide that
   breaks CSS layout topics into chapters so you can learn each part one
   at a time.
+
+* [How well do you know CSS display?](https://www.chenhuijing.com/blog/how-well-do-you-know-display/)
+  zooms into a single CSS property, `display`, to teach the reader about it
+  in-depth.
 
 * [Google's Web Fundamentals class](https://developers.google.com/web/fundamentals/)
   shows how to create responsive designs and performant websites.
