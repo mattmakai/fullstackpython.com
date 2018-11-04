@@ -135,6 +135,10 @@ web application's design.
   the designs can still be seen in their current site's presentation such
   as the top navigation of Apple's 2001 site.
 
+* [Improving Your CSS with Parker](https://csswizardry.com/2016/06/improving-your-css-with-parker/)
+  shows how to use the static CSS analysis tool 
+  [Parker](https://github.com/katiefenn/parker/) to improve your stylesheets.
+
 
 ## CSS learning checklist
 1. Create a simple HTML file with basic elements in it. Use the
