@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2018
 ### November
+* Updated the [web design](/web-design.html) page with new resources.
 * Updated the [data visualization](/data-visualization.html) page with
   new resources.
 

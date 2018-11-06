@@ -59,6 +59,10 @@ this short list as my absolute favorites that help developers become
   can be similarly accessible to developers who understand what they want
   their design to accomplish.
 
+* [Laws of UX](https://lawsofux.com/) provides a beautiful overview of 
+  design principles for building user experiences. Highly recommended even
+  if just to see how the information is presented.
+
 * [How I Work with Color](https://medium.com/@JustinMezzell/how-i-work-with-color-8439c98ae5ed)
   is a fantastic article from a professional designer on how he thinks
   about color and uses it for certain effects in his designs.
@@ -67,6 +71,17 @@ this short list as my absolute favorites that help developers become
   the clearest and concise resources for learning design that I've ever read. 
   Highly recommended especially if you feel you have no design skills but 
   need to learn them.
+
+* [Web bloat](https://danluu.com/web-bloat/) is the story of traveling
+  and using the web with low bandwidth, high latency internet connections 
+  that often drop packets. The author explains how many websites are 
+  barely usable and that if you truly want your site to work well you need
+  to ensure it works for connections much worse than the fiber connection
+  you may have at the home or office.
+
+* [The Average Web Page (Data from Analyzing 8 Million Websites)](https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/)
+  shows the most frequently used HTML elements, metadata, text
+  content and other statistics from a large scale analysis of the web.
 
 * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
   color picker by Adobe that helps choose colors for your designs.
@@ -96,3 +111,8 @@ this short list as my absolute favorites that help developers become
 * [Front-end performance checklist](https://github.com/thedaviddias/Front-End-Performance-Checklist)
   is a comprehensive checklist useful when you are implementing a
   web application's client side code.
+
+* [Front-end Developer Handbook 2018](https://frontendmasters.com/books/front-end-handbook/2018/)
+  provides a high-level overview of many of the tools developers use
+  in the browser and some other useful information on average salaries
+  and where to search for front-end development jobs.
