@@ -66,3 +66,12 @@ is a data structures and analysis library.
   with a public data set of murders in Boston from 1966 to 1975. This
   particular data problem may not be your thing but by going through
   the process you can learn a lot that can be applied to any data set.
+
+* [A Gentle Visual Intro to Data Analysis in Python Using Pandas](https://jalammar.github.io/gentle-visual-intro-to-data-analysis-python-pandas/)
+  presents spreadsheet-like pictures to show conceptually what
+  pandas is doing with your data as you apply various functions like
+  `groupby` and `loc`.
+
+* [Data Manipulation with Pandas: A Brief Tutorial](https://www.marsja.se/data-manipulation-pandas-tutorial/)
+  uses some example data sets to show how the most commonly-used functions
+  in pandas work.

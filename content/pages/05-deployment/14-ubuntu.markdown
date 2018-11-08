@@ -13,7 +13,7 @@ meta: Ubuntu is a Debian Linux-based operating system distribution often used fo
 [Python development](/learning-programming.html) and 
 [web application deployment](/deployment.html).
 
-<a href="https://www.ubuntu.com/" style="border: none;"><img src="/img/logos/ubuntu-linux.png" width="100%" alt="Official Ubuntu logo. Copyright Canonical Ltd." class="technical-diagram"></a>
+<a href="https://www.ubuntu.com/" style="border: none;"><img src="/img/logos/ubuntu-linux.png" width="100%" alt="Official Ubuntu logo. Copyright Canonical Ltd." class="shot rnd outl"></a>
 
 
 ## Why is Ubuntu important for Python?
@@ -53,16 +53,19 @@ repository system packages.
   is a great tutorial on which packages you should install and why to 
   use [Python 3](/python-2-or-3.html), OpenCV and Keras on Ubuntu Linux.
 
+* [How to Use the Command Line for Apple macOS and Linux](https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/)
+  is a fantastic guide relevant to Ubuntu users who should be able to use
+  the terminal to accomplish their tasks.
+
+* [Linux System Mining with Python](https://echorand.me/linux-system-mining-with-python.html)
+  shows how to use Python libraries to gather Linux system information
+  and work with it programmatically in your applications.
+
 * Canonical, the organization that produces Ubuntu, typically pushes the 
   boundaries on non-LTS releases, but occasionally rocks the boat with
   major changes for an LTS release. 16.04 LTS was one such version, which
   is described in this article about how 
   [Ubuntu 16.04 proves even an LTS release can live at Linux's bleeding edge](http://arstechnica.com/information-technology/2016/05/ubuntu-16-04-proves-even-an-lts-release-can-live-at-linuxs-bleeding-edge/).
-
-* Ubuntu has been a target operating system for Docker since the beginning of
-  the project. Here's a guide for 
-  [how to install Docker on Ubuntu 14.04 LTS](http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/),
-  one of the older operating system releases that supports containers.
 
 * [My First 10 Minutes On a Server - Primer for Securing Ubuntu](http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/)
   is based off an earlier post of the first five minutes on a Linux server.
@@ -75,3 +78,5 @@ repository system packages.
   how he went about securing package management, security standards and 
   file integrity on Ubuntu 14.04 LTS.
 
+* [In Beaver We Trust: A Lengthy, Pedantic Review of Ubuntu 18.04 LTS](http://blog.bityard.net/articles/2018/April/in-beaver-we-trust-a-lengthy-pedantic-review-of-ubuntu-1804-lts.html)
+  examines the latest Ubuntu Long Term Support desktop release in detail.

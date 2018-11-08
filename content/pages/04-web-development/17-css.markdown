@@ -90,6 +90,8 @@ web application's design.
 
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
 
+* [Spectre](https://picturepan2.github.io/spectre/)
+
 
 ## CSS resources
 * [The languages which were almost CSS](https://eager.io/blog/the-languages-which-almost-were-css/) 
@@ -102,6 +104,13 @@ web application's design.
 * [Frontend Development Bookmarks](https://github.com/dypsilon/frontend-dev-bookmarks)
   is one of the largest collections of valuable resources for frontend
   learning both in CSS as well as JavaScript.
+
+* This series on how CSS works including
+  [How CSS works: Parsing & painting CSS in the critical rendering path](https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3)
+  and 
+  [How CSS works: Understanding the cascade](https://blog.logrocket.com/how-css-works-understanding-the-cascade-d181cd89a4d8)
+  examines the rendering methods browsers use to display web pages along
+  with details of the algorithms they use to cascade style rules.
 
 * [CSS Reference](https://cssreference.io/) provides much-needed visual 
   examples for every CSS property to show you what they are actually going 
@@ -122,6 +131,10 @@ web application's design.
 * [CSS Positioning 101](http://alistapart.com/article/css-positioning-101)
   is a detailed guide for learning how to do element positioning correctly
   with CSS.
+
+* [Did CSS get more complicated since the late nineties?](https://hiddedevries.nl/en/blog/2017-07-03-did-css-get-more-complicated-since-the-late-nineties)
+  is a solid look back at how CSS evolved and where it has ended up today
+  compared to its origins.
 
 * [Using feature queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
   covers the `@supports` rule and how to use it in your stylesheets.
@@ -156,10 +169,25 @@ web application's design.
   fix this situation with `display` as well as other less visible properties
   such as floats and `auto` width.
 
+* [30 seconds of CSS](https://30-seconds.github.io/30-seconds-of-css/)
+  provides short useful code snippets for you to learn from and use for
+  building your own web applications.
+
+* [CSS: The bad bits](https://www.joeforshaw.com/blog/css-the-bad-bits-and-how-to-avoid-them)
+  examines global scope, implicit percentage styling rules and the z-index
+  which can be difficult to use and require some restraint to ensure they
+  do not cause issues for the rest of your stylesheet rules as you create
+  and maintain your frontend.
 
 * [Improving Your CSS with Parker](https://csswizardry.com/2016/06/improving-your-css-with-parker/)
   shows how to use the static CSS analysis tool 
   [Parker](https://github.com/katiefenn/parker/) to improve your stylesheets.
+
+* [Third party CSS is not safe](https://jakearchibald.com/2018/third-party-css-is-not-safe/)
+  is a good reminder that any code you did not write yourself, especially
+  code served through 3rd party sources not under your control can contain
+  potentially malicious applications, such as the experimental CSS keylogger
+  hack that made the rounds in early 2018.
 
 
 ## CSS learning checklist
