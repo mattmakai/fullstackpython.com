@@ -99,6 +99,11 @@ this short list as my absolute favorites that help developers become
   hexadecimal values, red-green-blue (RGB) and 
   Hue-Saturation-Lightness (HSL).
 
+* [13 Terrible Web Trends From the 90s, and How to Recreate Them](https://envato.com/blog/13-terrible-web-trends-90s-recreate/)
+  revisits a simpler and perhaps more... ugly time on the web where designs
+  were a bit out of control. Learn more about the history of web design and
+  styling techniques with this hilarious but useful blog post.
+
 
 ### Checklists and design guidelines
 * [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) is

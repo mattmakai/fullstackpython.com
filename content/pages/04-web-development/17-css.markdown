@@ -149,6 +149,14 @@ web application's design.
   the designs can still be seen in their current site's presentation such
   as the top navigation of Apple's 2001 site.
 
+* [The invisible parts of CSS](https://www.madebymike.com.au/writing/the-invisible-parts-of-css/)
+  asks the question "can you describe what the `display:block` property
+  and value do? Most developers would have some sense of what it is for
+  but could not explain it to someone else beyond that. The article helps
+  fix this situation with `display` as well as other less visible properties
+  such as floats and `auto` width.
+
+
 * [Improving Your CSS with Parker](https://csswizardry.com/2016/06/improving-your-css-with-parker/)
   shows how to use the static CSS analysis tool 
   [Parker](https://github.com/katiefenn/parker/) to improve your stylesheets.
