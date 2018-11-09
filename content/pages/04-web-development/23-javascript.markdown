@@ -79,6 +79,11 @@ which is defined by the
 
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
+* [The Deep Roots of Javascript Fatigue](https://segment.com/blog/the-deep-roots-of-js-fatigue/)
+  starts by covering the non-stop library churn in the JavaScript ecosystem
+  and then relates JavaScript evolution since the mid-90s to explain the
+  history of the problem.
+
 
 ### JavaScript learning checklist
 1. Create a simple HTML file with basic elements in it. Use the
