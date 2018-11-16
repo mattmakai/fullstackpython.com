@@ -270,6 +270,9 @@ to handle these files properly.
 * [Loading Django FileField and ImageFields from the file system](http://www.revsys.com/blog/2014/dec/03/loading-django-files-from-code/)
   shows how to load a model field with a file from the file system.
 
+* [Storing Django Static and Media Files on Amazon S3](https://testdriven.io/storing-django-static-and-media-files-on-amazon-s3)
+  shows how to configure Django to load and serve up static and media files, public and private, via an Amazon S3 bucket.
+
 
 ## Open source Django example projects
 * [Browser calls with Django and Twilio](https://www.twilio.com/docs/howto/walkthrough/browser-calls/python/django)
