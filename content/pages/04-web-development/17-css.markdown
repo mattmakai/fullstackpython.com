@@ -183,6 +183,14 @@ web application's design.
   shows how to use the static CSS analysis tool 
   [Parker](https://github.com/katiefenn/parker/) to improve your stylesheets.
 
+* [CSS and network performance](https://csswizardry.com/2018/11/css-and-network-performance/)
+  analyzes how splitting your CSS can affect browser render times and how
+  you can improve your site loading performance by changing how you
+  structure your CSS files. My recommendation: there's a lot you can do
+  with these techniques but it is probably a better idea to make your CSS
+  simpler and cut down the massive bloat that can accumulate as you build
+  your site as a first step to improving your performance.
+
 * [Third party CSS is not safe](https://jakearchibald.com/2018/third-party-css-is-not-safe/)
   is a good reminder that any code you did not write yourself, especially
   code served through 3rd party sources not under your control can contain
