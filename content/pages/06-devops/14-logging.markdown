@@ -92,11 +92,23 @@ certain threshold.
   [intro to logging](http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/)
   presents the Python logging module and how to use it.
 
+* [Understanding Python's logging module](https://www.electricmonk.nl/log/2017/08/06/understanding-pythons-logging-module/)
+  clears up some misconceptions about how pattern matching with logging
+  hierarchies works and provides a few clear diagrams to visually explain
+  logging handlers.
+
+* [Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html)
+  contains useful code snippets to easily add logging to your own applications.
+
+* [Logging in Python](https://realpython.com/python-logging/) explains 
+  the logging module in the Python standard library, configuration 
+  settings, handlers and how to log data.
+
 * [A Brief Digression About Logging](https://lukasa.co.uk/2014/05/A_Brief_Digression_About_Logging/)
   is a short post that gets Python logging up and running quickly.
 
 * [Taking the pain out of Python logging](https://hynek.me/articles/taking-some-pain-out-of-python-logging/)
-  shows a logging set up with uWSGI.
+  provides a logging set up with uWSGI.
 
 * [Good logging practice in Python](http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python)
   shows how to use the standard library to log data from your application.
@@ -104,10 +116,13 @@ certain threshold.
   output to help debuggin when things go wrong, or to determine if something
   is going wrong.
 
+* [A guide to logging in Python](https://opensource.com/article/17/9/python-logging)
+  has some clear, simple diagrams to explain how logging works in Python
+  applications.
+
 * [Django Logging, the Right Way](https://lincolnloop.com/blog/django-logging-right-way/)
   covers a few Python logging techniques and then goes into how you use them
   with your [Django](/django.html) projects.
-  
 
 * Django's 1.3 release brought unified logging into project configurations. 
   This [post shows how to set up logging](http://www.djm.org.uk/how-to-log-file-django-13-and-above/)
@@ -117,6 +132,9 @@ certain threshold.
 * [Django Logging Configuration: How the Default Settings Interfere with Yours](http://www.caktusgroup.com/blog/2015/01/27/Django-Logging-Configuration-logging_config-default-settings-logger/)
   explains a problem with the default Django logging configuration and what
   to do about in your project.
+
+* [The Pythonic Guide To Logging](https://timber.io/blog/the-pythonic-guide-to-logging/)
+  provides a quick introduction to log levels in Python code.
 
 * [Exceptional Logging of Exceptions in Python](https://www.loggly.com/blog/exceptional-logging-of-exceptions-in-python/)
   shows how to log errors more accurately to pinpoint the problem instead of

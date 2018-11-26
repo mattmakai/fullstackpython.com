@@ -114,6 +114,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is a killer tutorial that shows how to combine Docker with CircleCI to
   continuously deploy a Flask application.
 
+* [Building smaller Python Docker images](https://simonwillison.net/2018/Nov/19/smaller-python-docker-images/)
+  examines how to inspect layers in Dockerfiles and minimize the
+  overhead of what images contain for better performance.
+
 * [Deploying Django Applications in Docker](http://handlebarcreative.tumblr.com/post/104881545637/deploying-django-applications-in-docker)
   explains some of the concepts behind using Docker for Python deployments and
   shows how to specifically use it for deploying Django. 

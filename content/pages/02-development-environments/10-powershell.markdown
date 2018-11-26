@@ -49,3 +49,6 @@ of a Python programmer's
 * [PowerShell Core support in AWS Lambda](https://aws.amazon.com/blogs/developer/announcing-lambda-support-for-powershell-core/)
   is an announcement post that PowerShell can be used in AWS Lambda Functions
   along with how to get started.
+
+* [PowerShellBuild](https://github.com/psake/PowerShellBuild) provides common
+  reusable tasks for building PowerShell modules.
