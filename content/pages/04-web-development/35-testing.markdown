@@ -176,3 +176,8 @@ use mocks in your test cases.
   [Redis](/redis.html)-dependent code but prefer to mock it rather than
   ensure an installation and connection are present whenever you run
   your tests.
+
+* [Better tests for Redis integrations with redislite](https://www.obeythetestinggoat.com/better-tests-for-redis-integrations-with-redislite.html)
+  is a great example of how using the right mocking library can clean
+  up existing hacky testing code and make it more straightforward for
+  any developer that happens upon the tests in the future.

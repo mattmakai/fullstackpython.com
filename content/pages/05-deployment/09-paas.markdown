@@ -57,12 +57,40 @@ application framework and your app itself is up to date and secured. See the
 
 * [OpenShift](https://openshift.redhat.com/community/get-started/python)
 
-* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/),
-  [AWS CodeStar](https://aws.amazon.com/codestar/)
+* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) and
+  [AWS CodeStar](https://aws.amazon.com/codestar/) are Amazon Web Services'
+  PaaS offerings. CodeStar is the newer service and recommended for new
+  projects.
+
+
+## Platform-as-a-service open source projects
+The following open source projects allow you to host your own version
+of a platform-as-a-service. Running one of these gives you the advantage
+of controlling and modifying the project for your own applications,
+but prevents you from offloading the responsibility of keeping servers
+running to someone else.
+
+* [Kel](http://www.kelproject.com/) uses Kubernetes as a foundation
+  for a custom self-hosted PaaS. Note that it was created by Eldarion,
+  which had one of the first Python-specific PaaS offerings on the
+  market around the time that Heroku was launched.
+
+* [Dokku](http://dokku.viewdocs.io/dokku/) builds on Docker and has
+  hooks for plugins to extend the small core of the project and customize 
+  deployments for your applications.
+
+* [Convox Rack](https://github.com/convox/rack) is open source PaaS
+  designed to run on top of AWS services.
+
 
 
 ## Platform-as-a-service resources
-* [PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/) by [Nate Aune](https://twitter.com/natea).
+* [The differences between IaaS, PaaS and SaaS](https://www.engineyard.com/blog/the-differences-between-iaas-paas-and-saas-and-when-to-use-each)
+  explains the abstract layer differences among "X-as-a-service" offering
+  types and when to consider using each one.
+
+* [PaaS bakeoff: Comparing Stackato, OpenShift, Dotcloud and Heroku for Django hosting and deployment](http://appsembler.com/blog/paas-bakeoff-comparing-stackato-openshift-dotcloud-and-heroku-for-django-hosting-and-deployment/) 
+  by [Nate Aune](https://twitter.com/natea).
 
 * [Deploying Django](http://www.rdegges.com/deploying-django/) by 
   Randall Degges is another great free resource about Heroku.
@@ -71,6 +99,10 @@ application framework and your app itself is up to date and secured. See the
   shows what current Amazon Web Services individual services are
   currently called and what they could've been called to be more 
   clear to users.
+
+* [PAAS comparison - Dokku vs Flynn vs Deis vs Kubernetes vs Docker Swarm in 2017](http://www.jancarloviray.com/blog/paas-comparison-2017-dokku-flynn-deis-kubernetes-docker-swarm/)
+  covers high-level advantages and disadvantages of several self-hosted PaaS 
+  projects.
 
 * [5 AWS mistakes you should avoid](https://cloudonaut.io/5-aws-mistakes-you-should-avoid/)
   explains how common beginner practices such as manually managing 
@@ -124,6 +156,11 @@ application framework and your app itself is up to date and secured. See the
   provides some insight into how Spotify runs all of their infrastructure
   on Google Cloud and posits what they may be paying to run their
   service.
+
+* [PaaS (false) economics](https://blog.drie.co/paas-false-economics-13f72d87b485)
+  gives some quick back-of-the-envelope calculations on why running your
+  applications on a PaaS is obviously going to appear more expensive if you 
+  do not take the cost of your own software engineers into the equation.
 
 * Two blog posts on using AWS Autoscaling in [Automatic replacement of Autoscaling nodes with equivalent spot instances](https://mcristi.wordpress.com/2016/04/21/my-approach-at-making-aws-ec2-affordable-automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances/)
   and

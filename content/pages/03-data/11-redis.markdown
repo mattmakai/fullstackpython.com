@@ -13,7 +13,7 @@ database typically classified as a [NoSQL database](/no-sql-datastore.html).
 Redis is commonly used for [caching](/caching.html), transient data storage
 and as a holding area for data during analysis in Python applications.
 
-<a href="https://redis.io/" style="border: none;"><img src="/img/logos/redis.jpg" width="100%" alt="Redis logo." class="technical-diagram" /></a>
+<a href="https://redis.io/" style="border: none;"><img src="/img/logos/redis.jpg" width="100%" alt="Redis logo." class="shot" /></a>
 
 <div class="well see-also">Redis is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
@@ -136,3 +136,8 @@ get started in those areas.
 * [A Speed Guide To Redis Lua Scripting](https://www.compose.com/articles/a-quick-guide-to-redis-lua-scripting/)
   shows how to use the Lua programming language to create extensions
   for Redis.
+
+* [Better tests for Redis integrations with redislite](https://www.obeythetestinggoat.com/better-tests-for-redis-integrations-with-redislite.html)
+  shows how to mock out a Redis instance using the 
+  [redislite](https://github.com/yahoo/redislite) library and clean up
+  existing hacks you may be using to test your Redis usage.
