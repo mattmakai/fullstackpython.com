@@ -62,7 +62,7 @@ with your Python code.
   functionality via Python code.
 
 
-### Redis examples
+### Redis tools and examples
 Redis' wide applicability can be a downside if you don't know what to start
 using it for in your application. The following code and posts provide common
 use cases for Redis.
@@ -74,6 +74,10 @@ use cases for Redis.
 * [redis-migrate-tool](https://github.com/vipshop/redis-migrate-tool)
   is a library to make it easier to move data between redis clusters
   and groups.
+
+* [redis-rdb-tools](https://github.com/sripathikrishnan/redis-rdb-tools)
+  parses the Redis' database storage files and can dump the contents to
+  JSON files.
 
 
 ### Redis Security
@@ -104,6 +108,10 @@ down against malicious actors, you will want to learn more about operating,
 scaling and collecting metrics. The following resources should help you
 get started in those areas.
 
+* [A Key Expired In Redis, You Won't Believe What Happened Next](https://engineering.grab.com/a-key-expired-in-redis-you-wont-believe-what-happened-next)
+  is a well-written post on issues one team found with their configuration
+  when they were using Redis for a lot of data caching.
+
 * [Redis-playbook](https://github.com/mikeblum/redis-playbook) is an Ansible
   playbook for installing, configuring and securing a Redis instance.
 
@@ -115,6 +123,12 @@ get started in those areas.
   [moving persistent data out of Redis](http://githubengineering.com/moving-persistent-data-out-of-redis/)
   and into [MySQL](/mysql.html) that is worth a read as you scale up your
   Redis usage.
+
+* [Learn Redis the hard way (in production)](https://tech.trivago.com/2017/01/25/learn-redis-the-hard-way-in-production/)
+  investigates problems found with a development team's Redis 
+  infrastructure, how they went about debugging them and ultimately fixing
+  some of the issues, while being aware of limitations that could cause
+  them issues in the future.
 
 * This video on
   [Scaling Redis at Twitter](https://www.youtube.com/watch?v=rP9EKvWt0zo) is
@@ -141,3 +155,7 @@ get started in those areas.
   shows how to mock out a Redis instance using the 
   [redislite](https://github.com/yahoo/redislite) library and clean up
   existing hacks you may be using to test your Redis usage.
+
+* [Our journey from Redis 2 to Redis 3 while not taking the site down](https://engineering.skybettingandgaming.com/2017/09/25/redis-2-to-redis-3/)
+  explains their infrastructure and uptime demands in the gambling industry,
+  and how they were able to roll their upgraded Redis versions.
