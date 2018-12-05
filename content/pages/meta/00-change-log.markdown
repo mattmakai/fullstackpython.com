@@ -15,6 +15,10 @@ on GitHub.
 
 
 ## 2018
+### December
+* Updated the [serverless](/serverless.html) and
+  [HTTPS](/https.html) pages with a bunch of new resources.
+
 ### November
 * Updated the [logging](/logging.html), [Redis](/redis.html) and
   [PaaS](/platform-as-a-service.html) pages with a bunch of new resources.
