@@ -113,6 +113,12 @@ out how to structure and operate serverless applications.
   operations staff. They discuss the good and the bad of working in this
   fashion while generally coming away with a positive experience.
 
+* [From bare metal to Serverless](https://loige.co/from-bare-metal-to-serverless/)
+  gives some historical detail and background context for how various
+  execution architectures have evolved, from the invention of the web to
+  software-as-a-service, infrastructure-as-a-service to today's newer 
+  serverless platforms.
+
 * [Have you shipped anything serious with a “serverless” architecture?](https://news.ycombinator.com/item?id=17378749)
   provides some great answers by Hacker News developers who are using
   serverless for large production applications and how they deal with
@@ -124,11 +130,14 @@ out how to structure and operate serverless applications.
   author did a great job presenting the data and elaborating on potential
   reasons why the results appeared as shown.
 
+* [Serverless Deployments of Python APIs](https://blog.miguelgrinberg.com/post/serverless-deployments-of-python-apis)
+  is a wonderful Python-specific article on how to use AWS Lambda, API
+  Gateway and DynamoDB to create and deploy a Python 
+  [API](/application-programming-interfaces.html).
+
 * [What's this serverless thing, anyway?](https://read.acloud.guru/whats-this-serverless-thing-anyway-b101cb72c7e6)
 
 * [Serverless architectures - let's ditch the servers?](https://codeahoy.com/2016/06/25/serverless-architectures-lets-ditch-the-servers/)
-
-* [The (fixable) problem with serverless](https://www.iopipe.com/2016/06/the-fixable-problem-with-serverless/)
 
 * [Serverless architectures](http://martinfowler.com/articles/serverless.html)
   provides a fantastic overview of the subject with a balanced approach
@@ -151,8 +160,6 @@ out how to structure and operate serverless applications.
   [HTML](/hypertext-markup-language-html.html) and 
   [JavaScript](/javascript.html) to add an input form to a static
   [website created by a static site generator](/static-site-generator.html).
-
-* [Cloud first, serverless second](https://hackernoon.com/cloud-first-serverless-second-1c086f282326)
 
 * [Serverless architectures, five design patterns](https://thenewstack.io/serverless-architecture-five-design-patterns/)
   goes over the four main principles of serverless infrastructure and the
@@ -208,9 +215,3 @@ perspectives on lock-in and using multiple cloud providers.
   recommends using a single vendor for now and stop worrying about 
   hedging your bets because it typically makes your infrastructure 
   significantly more complex.
-
-* [The (Fixable) Problem with Serverless](https://www.iopipe.com/2016/06/the-fixable-problem-with-serverless/)
-  is a bit of a marketing piece but it introduces 
-  [the IOPipe open source projects](https://github.com/iopipe)
-  that are designed as an abstraction layer for running on multiple
-  serverless cloud platforms.
