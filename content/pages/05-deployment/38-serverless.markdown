@@ -48,7 +48,7 @@ and not all of them have Python support.
 * [AWS Lambda](/aws-lambda.html) is the current leader among serverless
   compute implementations. It has support for both 
   [Python 2.7](/blog/aws-lambda-python-2-7.html) and 
-  [Python 3.6](/blog/aws-lambda-python-3-6.html).
+  [Python 3.6/3.7](/blog/aws-lambda-python-3-6.html).
   
 * Azure Functions has second-class citizen support for Python. It's
   supposed to be possible but 
@@ -169,6 +169,28 @@ out how to structure and operate serverless applications.
   Azure Functions and IBM OpenWhisk are all included in the results.
 
 
+### Serverless environment comparsions
+The "big 3" serverless platforms, 
+[AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model.html), 
+[Azure Functions](https://azure.microsoft.com/en-us/updates/azure-functions-python-support-public-preview-2/)
+and 
+[Google Cloud Functions](https://cloud.google.com/functions/docs/concepts/python-runtime)
+have varying degrees of support for Python. AWS Lambda has
+production-ready support for Python 2 and 3.7, while Azure and Google Cloud
+have "beta" support with unclear production-worthiness. The following
+resources are some comparison articles to help you in your decision-making
+process for which platform to learn.
+
+* [Serverless hosting comparison](https://headmelted.com/serverless-showdown-4a771ca561d2)
+  is a broad overview of documentation, community, pricing and other
+  notes for the major platforms as well as IBM OpenWhisk and 
+  the [Fission.io](https://fission.io/) project.
+
+* [Microsoft Azure Functions vs. Google Cloud Functions vs. AWS Lambda](https://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/)
+  presents an overview of Azure Functions and how they compare to
+  Google Cloud Functions and AWS Lambda.
+
+
 ### Serverless vendor lock-in?
 There is some concern by organizations and developers about vendor lock-in
 on serverless platforms. It is unclear if portability is worse for
@@ -183,13 +205,12 @@ perspectives on lock-in and using multiple cloud providers.
   on that platform.
 
 * [Why vendor lock-in with serverless isn’t what you think it is](https://medium.com/@PaulDJohnston/why-vendor-lock-in-with-serverless-isnt-what-you-think-it-is-d6be40fa9ca9)
-  is a short piece that also recommends using a single vendor for
-  now and stop worrying about hedging your bets because it typically
-  makes your infrastructure significantly more complex.
+  recommends using a single vendor for now and stop worrying about 
+  hedging your bets because it typically makes your infrastructure 
+  significantly more complex.
 
 * [The (Fixable) Problem with Serverless](https://www.iopipe.com/2016/06/the-fixable-problem-with-serverless/)
   is a bit of a marketing piece but it introduces 
   [the IOPipe open source projects](https://github.com/iopipe)
   that are designed as an abstraction layer for running on multiple
   serverless cloud platforms.
-
