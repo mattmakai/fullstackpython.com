@@ -16,7 +16,8 @@ on GitHub.
 
 ## 2018
 ### December
-* Updated the [serverless](/serverless.html) and
+* Updated the [serverless](/serverless.html), 
+  [operating systems](/operating-systems.html) and
   [HTTPS](/https.html) pages with a bunch of new resources.
 
 ### November
