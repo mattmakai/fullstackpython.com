@@ -68,20 +68,6 @@ a major update compared with 2.7 in Ubuntu 14.04 LTS and a solid
 improvement over Python 3.5 included in Ubuntu 16.04 LTS.
 
 
-#### Ubuntu Python Packages
-There are several 
-[Aptitude](https://help.ubuntu.com/16.04/serverguide/aptitude.html)
-packages found on Linux servers running a Python stack. These packages are: 
-
-* [python-dev](http://packages.ubuntu.com/precise/python-dev) for header
-  files and static library for Python
-
-* [python-virtualenv](http://packages.ubuntu.com/precise/python-virtualenv)
-  for creating and managing Python 
-  [virtualenvs](https://virtualenv.pypa.io/en/latest/) to isolate library
-  dependencies
-
-
 ### Red Hat and CentOS
 [Red Hat Enterprise Linux](http://www.redhat.com/products/enterprise-linux/)
 (RHEL) and [Community ENTerprise Operating System](http://www.centos.org/)
@@ -117,6 +103,16 @@ provides a command-line interface for interacting with the RPM system.
 * [First 5 Minutes on a Server](http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers)
   shows the first several [security steps](/web-application-security.html)
   that should be done manually or automatically on any server you stand up.
+
+* [How to Use the Command Line for Apple macOS and Linux](https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/)
+  is useful for learning the shell and is even helpful for Windows now
+  that the 
+  [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+  allows you to work with Widnows as if it is a \*nix operating system.
+
+* [Linux System Mining with Python](https://echorand.me/linux-system-mining-with-python.html)
+  shows how to gather system information using the `platform` module and 
+  some of your own Python code.
 
 * Digital Ocean has a detailed 
   [walkthrough for setting up Python web applications on Ubuntu](https://www.digitalocean.com/community/articles/how-to-set-up-ubuntu-cloud-servers-for-python-web-applications).
@@ -174,6 +170,10 @@ chose one operating system over others.
 
 * Lifehacker's [guide to choosing a Linux distro](http://lifehacker.com/5889950/how-to-find-the-perfect-linux-distribution-for-you).
 
+* [Distro chooser](https://distrochooser.de/?l=2) walks you through a set of
+  sixteen questions to determine which Linux distribution could fit your
+  personal needs.
+  
 
 ### Operating system learning checklist
 1. Choose either a Debian-based Linux distribution such as Ubuntu or a 

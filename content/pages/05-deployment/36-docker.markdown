@@ -16,7 +16,7 @@ a moving target, but the core idea behind Docker is that operating
 system-level containers are used as an abstraction layer on top of regular
 servers for deployment and application operations.
 
-<a href="https://docs.docker.com/" style="border: none;"><img src="/img/logos/docker-wide.png" width="100%" alt="Official Docker logo. Copyright Docker." class="technical-diagram"></a>
+<a href="https://docs.docker.com/" style="border: none;"><img src="/img/logos/docker-wide.png" width="100%" alt="Official Docker logo. Copyright Docker." class="shot"></a>
 
 
 ## Why is Docker important?
