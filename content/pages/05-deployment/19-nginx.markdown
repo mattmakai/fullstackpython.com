@@ -13,7 +13,7 @@ meta: Nginx is a commonly deployed web server that also functions well as a reve
 reverse proxy to handle requests and pass back responses for Python 
 [WSGI servers](/wsgi-servers.html) or even other web servers such as Apache.
 
-<a href="https://nginx.org/en/" style="border: none;"><img src="/img/logos/nginx.png" width="100%" alt="Official Nginx logo." class="technical-diagram"></a>
+<a href="https://nginx.org/en/" style="border: none;"><img src="/img/logos/nginx.png" width="100%" alt="Official Nginx logo." class="shot"></a>
 
 
 ## How is Nginx used in a Python web app deployment?
@@ -29,7 +29,7 @@ format, the reverse proxy then responds to the client with that result.
 The request and response cycle with a reverse proxy server and the WSGI
 server can be seen in the following diagram.
 
-<img src="/img/visuals/web-servers-map.png" width="100%" alt="Python web application deployments rely on Nginx either as a web server or reverse proxy for WSGI servers." class="technical-diagram" />
+<img src="/img/visuals/web-servers-map.png" width="100%" alt="Python web application deployments rely on Nginx either as a web server or reverse proxy for WSGI servers." class="shot" />
 
 Typically the client will not know or need to know that a Python web 
 application generated the result. The result could have instead been 
@@ -63,20 +63,16 @@ times you try it. It's a really good idea to read some of these tutorials
 to make sure you are avoiding the most common security errors that plague
 HTTP(S) configurations.
 
-* [Hacker News broke our site – how Nginx and PageSpeed fixed the problem](https://www.airport-parking-shop.co.uk/blog/hacker-news-broke-site-nginx-pagespeed-fixed-problem/)
-  is primarily about optimizing Nginx's configuration for more efficient 
-  SSL connections. The post also covers 
-  [configuration management](/configuration-management.html) with Ansible
-  as well as the Pagespeed module that Google released for both Nginx
-  and the [Apache HTTP Server](/apache-http-server.html).
+* [HTTPS with Let's Encrypt and nginx](https://botleg.com/stories/https-with-lets-encrypt-and-nginx/)
+  walks throough installing a free SSL certificate from Let's Encrypt
+  to secure HTTP connects to your nginx server via HTTPS.
 
-* [Secure Web Deployment with Let's Encrypt and Nginx](https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/ )
-  is a detailed walkthrough for setting up HTTPS under Ubuntu 14.04 with
-  Nginx.
+* The tools [Nginx Config](https://nginxconfig.io/) and 
+  [Cipherlist](https://cipherli.st/) generate strong encryption configurations
+  and ciphers for Nginx.
 
-* [How To Secure Nginx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-on-ubuntu-14-04)
-  explains SSL configurations and IP address blacklisting then provides
-  several other tutorials for more advanced security modules.
+* [Gixy](https://github.com/yandex/gixy) is a static analyzer for your
+  Nginx configuration and can tell you issues with how you are setup.
 
 * [Strong SSL Security on Nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)
   shows how to mitigate high profile SSL attacks like 
@@ -112,6 +108,13 @@ several years.
   this from a government agency, although UK's Government Digital Service as
   well as USA's 18F and US Digital Service foster a far more credible
   culture than most typical agencies.
+
+* [Hacker News broke our site – how Nginx and PageSpeed fixed the problem](https://www.airport-parking-shop.co.uk/blog/hacker-news-broke-site-nginx-pagespeed-fixed-problem/)
+  is primarily about optimizing Nginx's configuration for more efficient 
+  SSL connections. The post also covers 
+  [configuration management](/configuration-management.html) with Ansible
+  as well as the Pagespeed module that Google released for both Nginx
+  and the [Apache HTTP Server](/apache-http-server.html).
 
 * [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
   provides the first steps to getting an initial Nginx configuration up and

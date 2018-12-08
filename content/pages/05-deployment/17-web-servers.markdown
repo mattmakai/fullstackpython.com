@@ -121,6 +121,11 @@ possible.
   and other websites are among the top million through the top 1,000 sites
   in the world.
 
+* [Apache vs Nginx: practical considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
+  gives an an overview of each project, explains how each one handles
+  connections, how it is configured and the differences between the
+  two web servers in how it can use custom modules.
+
 * [Optimizing web servers for high throughput and low latency](https://blogs.dropbox.com/tech/2017/09/optimizing-web-servers-for-high-throughput-and-low-latency/)
   is a wonderful read that shows how detailed knowledge at every layer of 
   the stack is necessary to optimize web server connections at scale.
@@ -129,6 +134,11 @@ possible.
   is an absurd C language hack that you would never want to use in any 
   real project but still an amazing little application and wonderful 
   explanation that you can learn a bit more about web servers by reading.
+
+* [Top 5 open source web servers](https://opensource.com/business/16/8/top-5-open-source-web-servers)
+  is a short overview of [Apache](/apache-http-server.html), 
+  [Nginx](/nginx.html), Lighttpd and two programming language specific
+  servers, Node.js for JavaScript and Tomcat for Java.
 
 
 ### Web servers learning checklist
