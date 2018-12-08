@@ -160,6 +160,11 @@ developers.
   a configuration for ensuring tests run against your code and how to
   properly package your project.
 
+* [Python Application Dependency Management in 2018](https://hynek.me/articles/python-app-deps-2018/)
+  presents some critical analysis and critique oof the existing Python
+  dependency management tools including newer ones such as pipenv and
+  Poetry.
+
 * Occasionally arguments about using Python's dependency manager versus
   one of Linux's dependency managers comes up. This provides
   [one perspective on that debate](http://notes.pault.ag/debian-python/).

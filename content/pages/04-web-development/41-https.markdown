@@ -37,6 +37,11 @@ client web browser.
   provides real-world data for which ciphersuites to use based on 
   mozilla.org connections.
 
+* [HTTPS in the real world](https://robertheaton.com/2018/11/28/https-in-the-real-world/)
+  is both an accesible read and gives the nitty gritty details beyond how
+  the HTTPS handshake and transmission work, along the assumptions it breaks
+  down about where the most likely attack vectors really come from.
+
 * [How Let's Encrypt Works](https://letsencrypt.org/how-it-works/) is a 
   primer on how the free and now widely-used certificate service grants
   and revokes domain certificates.
