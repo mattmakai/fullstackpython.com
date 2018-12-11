@@ -28,6 +28,10 @@ used to automate building, [testing](/testing.html) and
   application to enable continuous delivery. Take a look if you're not 
   grokking all of the steps provided in these other blog posts.
 
+* [Revisiting Docker and Jenkins](https://engineering.riotgames.com/news/revisiting-docker-and-jenkins)
+  is a fantastic series of posts that explains how Riot Games combines 
+  Jenkins and Docker to test their back end services.
+
 * [Setting up Jenkins as a continuous integration server for Django](http://michal.karzynski.pl/blog/2014/04/19/continuous-integration-server-for-django-using-jenkins/)
   is another solid tutorial that also shows how to send email notifications 
   as part of the build process.
@@ -37,11 +41,6 @@ used to automate building, [testing](/testing.html) and
   [this blog post on connecting Jenkins with Git](http://dcycleproject.org/blog/51/connecting-jenkins-and-git)
   to get the steps to solve that problem.
 
-* [Automated Servers and Deployments with Ansible & Jenkins](http://chromaticsites.com/blog/automated-servers-and-deployments-ansible-jenkins)
-  covers the benefits of using the 
-  [configuration management tool](/configuration-management.html) Ansible in
-  combination with Jenkins.
-  
 * [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
   is a short tutorial showing how to use the official 
   [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
@@ -77,3 +76,14 @@ used to automate building, [testing](/testing.html) and
   [deployments](/deployments.html) and handling the coordination via
   Jenkins builds.
 
+* [Building GitHub Pull Requests using Jenkins Pipelines](https://www.theguild.nl/building-github-pull-requests-using-jenkins-pipelines/)
+  explains how to use Jenkins 2.0 with Pipelines to create builds that
+  run in Docker containers off of new GitHub pull requests.
+
+* [Automated API testing with Jenkins](https://assertible.com/blog/automated-api-testing-with-jenkins)
+  walks through how to use Jenkins to tests your 
+  [API](/application-programming-interfaces.html) upon each deployment.
+
+* [Continuous Delivery with Jenkins and Rollbar](https://rollbar.com/blog/continuous-delivery-with-jenkins/)
+  is a tutorial on using Jenkins for continuous integration paired with
+  [Rollbar](/rollbar.html) for tracking deployments and errors.

@@ -143,7 +143,7 @@ walkthroughs I've read.
   you prefer writing SQL over using an 
   [ORM](/object-relational-mappers-orms.html) like SQLAlchemy.
 
-* [Postgres Joins and Django Querysets](http://lucasroesler.com/2017/02/postgres-joins-and-django-querysets/) 
+o [Postgres Joins and Django Querysets](http://lucasroesler.com/2017/02/postgres-joins-and-django-querysets/) 
   is a well done post with a specific example of how a standard 
   Django ORM query can lead to degraded performance due when obtaining
   data from many related tables. The `prefetch_related` command and 
@@ -154,6 +154,11 @@ walkthroughs I've read.
   is a quality tutorial that combines [API calls](/api-integration.html)
   with psycopg and PostgreSQL to take data from Google Analytics and save
   it in a PostgreSQL database.
+
+* [1M rows/s from Postgres to Python](https://magic.io/blog/asyncpg-1m-rows-from-postgres-to-python/)
+  shows some benchmarks for the performance of the
+  [asyncpg](https://github.com/magicstack/asyncpg) Python database client
+  and why you may want to consider using it for data transfers.
 
 
 ### General PostgreSQL resources
@@ -281,3 +286,6 @@ have to handle these issues in your applications.
   build a special index to support LIKE whenever you use a locale other
   than "C".
 
+* The [PostgreSQL page on PopSQL](https://popsql.io/learn-sql/postgresql/)
+  has a ton of useful syntax snippets categorized by type of action you
+  want to perform using SQL.
