@@ -13,7 +13,7 @@ meta: Ubuntu is a Debian Linux-based operating system distribution often used fo
 [Python development](/learning-programming.html) and 
 [web application deployment](/deployment.html).
 
-<a href="https://www.ubuntu.com/" style="border: none;"><img src="/img/logos/ubuntu-linux.png" width="100%" alt="Official Ubuntu logo. Copyright Canonical Ltd." class="shot rnd outl"></a>
+<a href="https://www.ubuntu.com/" style="border: none;"><img src="/img/logos/ubuntu-linux.png" width="100%" alt="Official Ubuntu logo. Copyright Canonical Ltd." class="shot rnd"></a>
 
 
 ## Why is Ubuntu important for Python?

@@ -8,11 +8,11 @@ meta: Bokeh is a data visualization library that builds visuals in Python and ou
 
 
 # Bokeh
-[Bokeh](http://bokeh.pydata.org/en/latest/) is a data visualization
+[Bokeh](https://bokeh.pydata.org/en/latest/) is a data visualization
 library that allows a developer to code in Python and output 
 [JavaScript](/javascript.html) charts and visuals in web browsers.
 
-<img src="/img/logos/bokeh.jpg" width="100%" alt="Bokeh logo on a dark background." class="technical-diagram" style="border-radius:5px" />
+<img src="/img/logos/bokeh.jpg" width="100%" alt="Bokeh logo on a dark background." class="shot rnd outl">
 
 
 ## Why is Bokeh a useful library?
@@ -31,7 +31,7 @@ here is a screenshot of a bar chart created with the
 [figure](http://bokeh.pydata.org/en/latest/docs/reference/plotting.html)
 plot:
 
-<img src="/img/170526-bar-charts-bokeh-flask/chart-example-64.png" width="100%" class="technical-diagram img-rounded" style="border:1px solid #ccc" alt="Responsive Bokeh bar chart with 64 bars.">
+<img src="/img/170526-bar-charts-bokeh-flask/chart-example-64.png" width="100%" class="shot img rnd" alt="Responsive Bokeh bar chart with 64 bars.">
 
 For more references, including interactive live demonstrations, check out
 these sites:
@@ -53,11 +53,20 @@ basic syntax will change as the library's API is not yet stable.
   tutorial for those new to Bokeh who want to try out the library and get
   an example project running quickly with [Flask](/flask.html).
 
+* [Fun with NFL Stats, Bokeh, and Pandas](https://j253.github.io/blog/fun-with-nfl-stats.html)
+  takes an NFL play-by-play data set, shows how to wrangle the data into 
+  an appropriate format then explains the code that uses Bokeh to visualize
+  it.
+
 * [Data is beautiful: Visualizing Roman imperial dynasties](http://machineloveus.com/data-is-beautiful-visualizing-roman-imperial-dynasties/)
   provides a walkthrough for creating a gorgeous visualization based on
   historical Roman data. The post is about more than just the visual, it also
   goes into the ideation, data wrangling and analysis phases that came
   before using Bokeh to show the results.
+
+* [Interactive Data Visualization in Python With Bokeh](https://realpython.com/python-data-visualization-bokeh/)
+  is a great beginners tutorial that shows you how to structure your data,
+  draw your first figures and add interactivity to the visualizations.
 
 * [Creating Bar Chart Visuals with Bokeh, Bottle and Python 3](/blog/python-bottle-bokeh-bar-charts.html)
   is a tutorial that combines the [Bottle](/bottle.html) 

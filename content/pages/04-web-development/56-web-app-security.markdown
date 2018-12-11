@@ -26,15 +26,17 @@ request forgery and usage of public-private keypairs.
 * [Charles](https://www.charlesproxy.com/) is an HTTP proxy for inspecting
   headers, requests and responses for all traffic that flows through it.
 
-* [quick NIX secure script](https://github.com/marshyski/quick-secure) for
-  securing Linux distributions.
-
 * [TLS Observatory](https://github.com/mozilla/tls-observatory) provides
   a suite of security tools for analyzing and inspecting Transport Layer
-  Security (TLS) services.
+  Security (TLS) services. There is also a hosted version you can use
+  at [observatory.mozilla.org](https://observatory.mozilla.org/).
 
 * [WIG](https://github.com/6e726d/WIG) contains tools for gathering wireless
   data via Wifi protocols.
+
+* [HTTP Evader](https://noxxi.de/research/http-evader.html) is an automated
+  testing tool for checking firewalls to ensure they are protecting the
+  appropriate ports and payloads.
 
 
 ### Specific vulnerabilities
@@ -50,6 +52,10 @@ request forgery and usage of public-private keypairs.
 
 
 ### HTTPS resources
+SSL over HTTP (HTTPS) is mandatory for securing web data traffic in transit.
+There is a [page dedicated to HTTPS](/https.html) and the following
+resources can also give you a good overview of how HTTPS works.
+
 * [How does HTTPS actually work?](http://robertheaton.com/2014/03/27/how-does-https-actually-work/)
   is a well-written overview of the protocol including certificates, 
   signatures, signing and related topics.
@@ -108,6 +114,10 @@ request forgery and usage of public-private keypairs.
   [fantastic curated list of security reading material](http://dfir.org/?q=node/8/)
   from beginning to advanced topics.
 
+* [How to protect your infrastructure against the basic attacker](https://www.mailgun.com/blog/security-guide-basic-infrastructure-security)
+  presents a good overview of what you need to think about when
+  hardening your system against reasonablely competent malicious attackers.
+
 * The [/r/netsec](http://www.reddit.com/r/netsec/) subreddit is one place to
   go to learn more about network and application security.
 
@@ -115,17 +125,15 @@ request forgery and usage of public-private keypairs.
   is a great list of password cracking, scanning, sniffing and other security
   penetration testing tools.
 
-* [Securing an Ubuntu Server](http://www.andrewault.net/2010/05/17/securing-an-ubuntu-server/)
-
-* [Securing Ubuntu](http://joshrendek.com/2013/01/securing-ubuntu/)
-
 * [Security Tips from Apache](http://httpd.apache.org/docs/current/misc/security_tips.html)
-
-* [Securing a Linux Server](http://spenserj.com/blog/2013/07/15/securing-a-linux-server/)
 
 * The EFF has a well written overview on 
   [what makes a good security audit](https://www.eff.org/deeplinks/2014/11/what-makes-good-security-audit). It's broad but contains some of their behind the
   scenes thinking on important considerations with security audits.
+
+* [Ubuntu system hardening guide](https://linux-audit.com/ubuntu-server-hardening-guide-quick-and-secure/)
+  provides step-by-step instructions for hardening the most recent 
+  three [Ubuntu LTS](/ubuntu.html) releases.
 
 * Ars Technica wrote posts on 
   [securing your website](http://arstechnica.com/security/2013/02/securing-your-website-a-tough-job-but-someones-got-to-do-it/)
@@ -167,6 +175,7 @@ request forgery and usage of public-private keypairs.
 * [Let's Encrypt at Scale](https://engineering.autotrader.co.uk/2018/09/04/letsencrypt-at-scale.html)
   shows an implementation for securing thousands of sites with SSL 
   certificates to support HTTPS everywhere.
+
 
 ## Web security learning checklist
 1. Read and understand the major web application security flaws that are
