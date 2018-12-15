@@ -22,6 +22,11 @@ for processing payments.
 * [Switching from Braintree to Stripe](https://www.deekit.com/braintree-to-stripe/)
   covers one development team's experience with moving payment providers.
 
+* [Dirt Cheap Recurring Payments with Stripe and AWS Lambda](http://normal-extensions.com/2017/05/05/simple-recurring/)
+  explains how to use the Stripe API with [AWS Lambda](/aws-lambda.html)
+  to handle recurring payments instead of using a more expensive service 
+  like Chargify or Recurly if you only have minimal requirements.
+
 
 ### Resources about Stripe
 * [How Stripe Designs Beautiful Websites](https://www.leejamesrobinson.com/blog/how-stripe-designs-beautiful-websites/)
@@ -32,3 +37,4 @@ for processing payments.
 * [Creating a Culture of Observability](http://onemogin.com/observability/stripe/culture/monitoring/monitorama/creating-a-culture-of-observability.html)
   is a technical talk about monitoring systems at scale. The presenter works
   at Stripe so much of his 
+

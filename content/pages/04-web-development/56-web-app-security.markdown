@@ -38,6 +38,9 @@ request forgery and usage of public-private keypairs.
   testing tool for checking firewalls to ensure they are protecting the
   appropriate ports and payloads.
 
+* [Security monkey](https://github.com/Netflix/security_monkey) monitors for
+  changes to AWS, Google Cloud, GitHub and other infrastructure systems.
+
 
 ### Specific vulnerabilities
 * [httpoxy](https://httpoxy.org/) is a set of vulnerabilities that can affect
@@ -110,6 +113,10 @@ resources can also give you a good overview of how HTTPS works.
   as well as what stage and size company it is recommended that you put those
   procedures in place.
 
+* [Reckon you've seen some stupid security things? Here, hold my beer...](https://www.troyhunt.com/reckon-youve-seen-some-stupid-security-things-here-hold-my-beer/)
+  provides hilarious, and terribly sad, security vulnerabilities and weaknesses
+  around encryption and password storage.
+
 * This page contains a
   [fantastic curated list of security reading material](http://dfir.org/?q=node/8/)
   from beginning to advanced topics.
@@ -125,7 +132,6 @@ resources can also give you a good overview of how HTTPS works.
   is a great list of password cracking, scanning, sniffing and other security
   penetration testing tools.
 
-* [Security Tips from Apache](http://httpd.apache.org/docs/current/misc/security_tips.html)
 
 * The EFF has a well written overview on 
   [what makes a good security audit](https://www.eff.org/deeplinks/2014/11/what-makes-good-security-audit). It's broad but contains some of their behind the
@@ -143,6 +149,12 @@ resources can also give you a good overview of how HTTPS works.
 
 * [Crypto 101](https://www.crypto101.io/) is an introductory course on
   cryptography for programmers.
+
+* The first answer to the question
+  ["Why are salted hashes more secure for password storage?"](https://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure-for-password-storage)
+  on Stack Overflow gives a wonderful explanation for why this is an
+  important technique to use to keep your database passwords and other
+  secrets more secure if the hashed strings are leaked.
 
 * [An in-depth analysis of SSH attacks on Amazon EC2](http://getprismatic.com/story/1409447605839)
   shows how important it is to secure your web servers, especially when they are
