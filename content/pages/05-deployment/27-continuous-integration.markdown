@@ -45,7 +45,7 @@ intended.
 The following picture represents a high level perspective on how continuous
 integration and deployment can work. 
 
-<img src="/img/visuals/continuous-integration.png" width="100%" class="technical-diagram" alt="One potential way for continuous integration to work with source control and a deployment environment." />
+<img src="/img/visuals/continuous-integration.png" width="100%" class="shot" alt="One potential way for continuous integration to work with source control and a deployment environment." />
 
 In the above diagram, when new code is committed to a source repository 
 there is a hook that notifies the continuous integration server that new 
@@ -157,3 +157,17 @@ programming language agnostic. Learn more via the following resources or on
   strongly advises securing your continuous integration server just as you
   would every other part of your production application, unless you want
   your environment to be vulnerable to malicious actors.
+
+* [Measuring and Improving your CI/CD Pipelines](https://blog.petegoo.com/2018/11/09/optimizing-ci-cd-pipelines/)
+  provides metrics for what you should measure with your CI/CD setup to 
+  improve the process for helping your development teams ship code.
+
+* [Six rules for setting up continuous integration systems](https://rhonabwy.com/2016/01/31/six-rules-for-setting-up-continuous-integration-systems/)
+  has some solid general advice for culling problematic tests, ensuring
+  the integration speed supports the development culture you are building
+  and keeping all code in source control instead of having complicated
+  logic configured within the CI server.
+
+* [How to Identify Major Blockers in a CI/CD Pipeline](https://blog.codeship.com/how-to-identify-major-blockers-in-a-cicd-pipeline/)
+  gives a high level overview of concepts such as shipping velocity, test
+  execution and environment provisioning with regards to CI configurations.
