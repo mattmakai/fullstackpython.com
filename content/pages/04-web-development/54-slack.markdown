@@ -39,3 +39,42 @@ for programmatically interacting with its messaging service.
   a Python tutorial but it provides a crazy hack for communicating
   with Slack using a Super Nintendo.
 
+* [Hacking Slack accounts: As easy as searching GitHub](https://arstechnica.com/information-technology/2016/04/hacking-slack-accounts-as-easy-as-searching-github/)
+  explains how secret Slack API keys are often committed to public GitHub 
+  repositories which allows malicious actors to easily break into an 
+  organization's messaging systems. Secret credentials in public repositories
+  is a problem for any API and it is a particular problem for ones that are
+  critical to a business' private communications.
+
+* [Serverless Slash Commands with Python](https://renzo.lucioni.xyz/serverless-slash-commands-with-python/)
+  shows how to build a [serverless](/serverless.html) [Flask](/flask.html)
+  plus Zappa framework web app that is hosted on [AWS Lambda](/aws-lambda.html)
+  and can use the Slack API.
+
+* [Hacking Slack using postMessage and WebSocket-reconnect to steal your precious token](https://labs.detectify.com/2017/02/28/hacking-slack-using-postmessage-and-websocket-reconnect-to-steal-your-precious-token/)
+  examines a bug that the author found in Slack's WebSockets reconnection 
+  operation that he reported to Slack. Slack fixed the issue and paid him a
+  bug bounty for his work.
+
+* [Posting messages to Slack using incoming webhooks and Python3 Requests API](https://notes.ayushsharma.in/2017/09/posting-messages-to-slack-using-incoming-webhooks-and-python-requests-api)
+  is a short script that uses the [Requests](https://pypi.org/project/requests/) 
+  library instead of the Slack-provided Python helper libraries to interact
+  with the API.
+
+* [Build a Google Analytics Slack Bot with Python](https://www.twilio.com/blog/2018/03/google-analytics-slack-bot-python.html)
+  walks through creating a bot that posts Google Analytics data into
+  Slack channels by combining the Slack and Google APIs.
+
+
+### Example Slack bots
+* [python-rtmbot](https://github.com/slackapi/python-rtmbot) is the 
+  Slack-provided library for working with the Slack API and 
+  [WebSockets](/websockets.html) connection.
+
+* [slack-starterbot](https://github.com/mattmakai/slack-starterbot)
+
+* [slack-api-python-examples](https://github.com/mattmakai/slack-api-python-examples)
+  contains the example code from several Slack bot blog posts.
+ 
+* [slackbot](https://github.com/lins05/slackbot) another popular
+  Slack bot implementation.

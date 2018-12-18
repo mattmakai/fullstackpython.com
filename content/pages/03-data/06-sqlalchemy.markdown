@@ -33,7 +33,7 @@ application software stacks and backend databases. Any of these
 configurations can be a valid option depending on what type of application
 you are coding.
 
-<img src="/img/visuals/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="technical-diagram"></a>
+<img src="/img/visuals/sqlalchemy-orm-example.png" width="100%" alt="Example SQLAlchemy configurations with different web frameworks." class="shot"></a>
 
 A benefit many developers enjoy with SQLAlchemy is that it allows them 
 to write Python code in their project to map from the database schema 
@@ -123,6 +123,9 @@ your application's code with the SQLAlchemy library.
   has details on why, how and when you may want to use SQLAlchemy to
   augment the [Django ORM](/django-orm.html).
 
+* [Building a Simple Birthday App with Flask-SQLAlchemy](https://pybit.es/flask-sqlalchemy-bday-app.html)
+  combines SQLAlchemy with Flask to create a birthday reminder application.
+
 
 ### SQLAlchemy resources
 The best way to get comfortable with SQLAlchemy is to dig in and write
@@ -153,6 +156,10 @@ edge cases.
 * This
   [SQLAlchemy tutorial](https://overiq.com/sqlalchemy/101/intro-to-sqlalchemy/) provides
   a slew of code examples that cover the basics for working with SQLAlchemy.
+
+* [Implementing User Comments with SQLAlchemy](https://blog.miguelgrinberg.com/post/implementing-user-comments-with-sqlalchemy)
+  gives a wonderful walkthrough of how to build your own online commenting
+  system in Python using SQLAlchemy.
 
 * [SQLAlchemy and data access in Python](https://talkpython.fm/episodes/show/5/sqlalchemy-and-data-access-in-python)
   is a podcast interview with the creator of SQLAlchemy that covers the

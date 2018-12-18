@@ -41,6 +41,12 @@ command line and query language.
   operate that were non-intuitive to developers who are new to using this
   database.
 
+* [On MongoDB](https://www.nemil.com/mongo/index.html) is not a tutorial
+  but instead discusses the culture and adoption patterns around how MongoDB
+  became such a common NoSQL database. This is a must read to understand
+  both the strengths and many weaknesses Mongo has despite what you may
+  read in other introductory tutorials.
+
 
 ### MongoDB security
 NoSQL databases can be a weak spot in a production deployment environment,

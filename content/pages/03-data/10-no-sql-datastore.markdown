@@ -183,6 +183,10 @@ representing a person could have a property of "female" or "male".
   relational systems and what the Consistency, Availability and
   Partition-Tolerance (CAP) Theorem means.
 
+* [NoSQL Explained](https://www.mongodb.com/nosql-explained) is a good
+  high-level overview of considerations and features when choosing a type 
+  of NoSQL database compared to a relational database.
+
 * [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
   presents the basic constraints all databases must trade off in operation.
 

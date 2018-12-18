@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2018
 ### December
+* Updated [SQLAlchemy](/sqlalchemy.html), [NoSQL](/no-sql-datastore.html),
+  [MongoDB](/mongodb.html) and [Slack API](/slack.html) pages with
+  new descriptions and resources.
 * Updated the [serverless](/serverless.html), 
   [operating systems](/operating-systems.html) and
   [HTTPS](/https.html) pages with a bunch of new resources.
