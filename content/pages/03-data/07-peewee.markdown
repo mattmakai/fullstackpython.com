@@ -117,3 +117,10 @@ Python applications.
   even chimed in to add his own fair assessment of the differences in the
   ORMs.
 
+* [peewee-async](https://peewee-async.readthedocs.io/en/latest/) 
+  ([source code](https://github.com/05bit/peewee-async)) is an alpha
+  library for using Python 3's 
+  [asyncio](https://docs.python.org/3/library/asyncio.html) standard library
+  with Peewee. This library is worth watching if you use an async 
+  [web framework](/web-frameworks.html) and want to have Peewee serve as your
+  application's ORM.

@@ -70,3 +70,11 @@ resulting tools as open source projects.
   due to partitions and consistency lag time that occur with just about every
   Cassandra setup.
 
+* [Getting the Most Out of Cassandra](https://www.youtube.com/watch?v=Q9EA8E-eLf0)
+  is a video for on data modeling and application development for developers
+  new to Cassandra.
+
+* [How Discord Stores Billions of Messages](https://blog.discordapp.com/how-discord-stores-billions-of-messages-7fa6ec7ee4c7)
+  talks about the evolution of Discord's very large scale message store
+  system from a [MongoDB](/mongodb.html) instance to Cassandra for storing 
+  messages in a distributed, replicated cluster.
