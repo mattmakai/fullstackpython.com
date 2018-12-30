@@ -114,8 +114,10 @@ resulting tools as open source projects.
   compares Cassandra to traditional [relational databases](/databases.html).
 
 * [On Cassandra Collections, Updates, and Tombstones](https://www.sestevez.com/on-cassandra-collections-updates-and-tombstones/)
-  presents a mistake of using collections in the wrong way that developers 
-  often make when using Cassandra for the first time.
+  and
+  [Undetectable tombstones in Apache Cassandra](http://thelastpickle.com/blog/2018/07/05/undetectable-tombstones-in-apache-cassandra.html)
+  present how developers often use Cassandra collections incorrectly
+  when they are not experienced with how the data store operates. 
 
 * [When to use Cassandra and when to steer clear](https://towardsdatascience.com/when-to-use-cassandra-and-when-to-steer-clear-72b7f2cede76)
   explains the advantages Cassandra provides such as high throughput on
@@ -132,4 +134,12 @@ resulting tools as open source projects.
   are good technical posts on the data structures within Cassandra's
   architecture along with some of the problems that can pop up when
   working with your data.
-  
+
+* [Analyzing Cassandra Performance with Flame Graphs](http://thelastpickle.com/blog/2018/01/16/cassandra-flame-graphs.html)
+  and
+  [Garbage Collection Tuning for Apache Cassandra](http://thelastpickle.com/blog/2018/04/11/gc-tuning.html)
+  are two posts in a series on how to debug issues in operational 
+  Cassandra deployments using appropriate data visualization, especially
+  when the issue is due to the Java Virtual Machine (JVM)'s garbage 
+  collection methods.
+
