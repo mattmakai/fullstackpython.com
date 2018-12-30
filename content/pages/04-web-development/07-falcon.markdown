@@ -20,13 +20,17 @@ without requiring external code library dependencies.
 
 
 ### Falcon resources
-* [Building Scalable RESTful APIs with Falcon and PyPy](https://impythonist.wordpress.com/2015/09/12/build-massively-scalable-restful-api-with-falcon-and-pypy/)
-  shows a to-do list example with Falcon running on PyPy.
+* [Building Very Fast App Backends with Falcon Web Framework on PyPy](https://www.alibabacloud.com/blog/building-very-fast-app-backends-with-falcon-web-framework-on-pypy_594282)
+  provides a walkthrough of a web API in Falcon that runs with PyPy and
+  [Nginx](/nginx.html).
+
+* [Asynchronous Tasks with Falcon and Celery](https://testdriven.io/asynchronous-tasks-with-falcon-and-celery)
+  shows how to configure [Celery](/celery.html) with the framework.
 
 * The 
   [official Falcon tutorial](http://falcon.readthedocs.io/en/stable/user/tutorial.html)
   has a meaty guide for building and deploying your first Falcon web 
   application.
 
-* [Asynchronous Tasks with Falcon and Celery](https://testdriven.io/asynchronous-tasks-with-falcon-and-celery)
-  shows how to configure [Celery](/celery.html) with the framework.
+* [Building Scalable RESTful APIs with Falcon and PyPy](https://impythonist.wordpress.com/2015/09/12/build-massively-scalable-restful-api-with-falcon-and-pypy/)
+  shows a to-do list example with Falcon running on PyPy.
