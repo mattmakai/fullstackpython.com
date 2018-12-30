@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2018
 ### December
+* Added a ton of new resources and descriptions on the 
+  [Cassandra](/apache-cassandra.html) page.
+* 6 years of Full Stack Python as of December 23, 2018!
 * Updated [SQLAlchemy](/sqlalchemy.html), [NoSQL](/no-sql-datastore.html),
   [MongoDB](/mongodb.html) and [Slack API](/slack.html) pages with
   new descriptions and resources.
