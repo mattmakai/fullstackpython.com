@@ -9,7 +9,7 @@ meta: Apache Cassandra is a column-family NoSQL data store occasionally used for
 
 # Apache Cassandra
 [Apache Cassandra](http://cassandra.apache.org/) is a column-family NoSQL 
-data store occasionally used for persisting data in 
+data store designed for write-heavy persistent storage in 
 [Python web applications](/web-development.html) and 
 [data projects](/data.html).
 
@@ -19,6 +19,11 @@ data store occasionally used for persisting data in
 
 
 ## Python with Cassandra resources
+Cassandra is commonly used with Python for write-heavy application demands.
+The following tutorials walk through several of the helper libraries that
+can be used to interact with Cassandra, with and without web frameworks such
+as [Django](/django.html).
+
 * [DataStax's Python Cassandra driver](https://datastax.github.io/python-driver/)
   can be installed as an 
   [application dependency](/application-dependencies.html) to make it
@@ -43,8 +48,13 @@ data store occasionally used for persisting data in
 * The Stack Overflow thread asking about the 
   [best Cassandra library/driver for Python?](https://stackoverflow.com/questions/10430417/best-cassandra-library-wrapper-for-python)
   has a good answer on why to use the 
-  [datastacks/python-driver](https://github.com/datastax/python-driver)
+  [datastax/python-driver](https://github.com/datastax/python-driver)
   project due to its CQL support and active development.
+
+* [Cassandra performance in Python: Avoid namedtuple](https://rhye.org/post/python-cassandra-namedtuple-performance/)
+  covers the performance penalty of using the `namedtuple` type with the
+  DataStax Cassandra Python driver and how you can work around it.
+
 
 ## How Companies Use Cassandra
 These resources are written by engineering teams at organizations that
@@ -87,6 +97,10 @@ resulting tools as open source projects.
   with Cassandra, due to its NoSQL architecture that is optimized for other
   types of operations.
 
+* [Cassandra Query Language (CQL) Tutorial](http://abiasforaction.net/cassandra-query-language-cql-tutorial/)
+  explains the concepts and syntax behind the data management language that 
+  is Cassandra's equivalent to relational database SQL.
+
 * [Backup and Recovery for Apache Cassandra and Scale-Out Databases](https://www.youtube.com/watch?v=krGmn4D2fgY)
   covers issues encountered when trying to take snapshot backups of Cassandra 
   due to partitions and consistency lag time that occur with just about every
@@ -112,3 +126,10 @@ resulting tools as open source projects.
   to understand based on your workload and decide upon *before* you build 
   out your whole data architecture!
 
+* [Cassandra - the tale of a lonely Node](https://www.hugopicado.com/2017/05/14/cassandra-the-tale-of-a-lonely-node.html) 
+  and
+  [Cassandra - the fellowship of The Ring](https://www.hugopicado.com/2017/05/16/cassandra-the-fellowship-of-the-ring.html)
+  are good technical posts on the data structures within Cassandra's
+  architecture along with some of the problems that can pop up when
+  working with your data.
+  
