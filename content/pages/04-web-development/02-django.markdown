@@ -207,6 +207,8 @@ based on [WebSockets](/websockets.html).
   contains a couple of good starter projects such as a live blog and a 
   chat application to use as base code.
 
+* [Developing a Real-Time Taxi App with Django Channels and Angular](https://testdriven.io/courses/real-time-app-with-django-channels-and-angular/)
+  this course teaches you how to build and test a real-time ride-sharing app with Django Channels and Angular.
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
