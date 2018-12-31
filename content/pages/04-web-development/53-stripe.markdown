@@ -27,6 +27,11 @@ for processing payments.
   to handle recurring payments instead of using a more expensive service 
   like Chargify or Recurly if you only have minimal requirements.
 
+* [Django Stripe Tutorial](https://testdriven.io/blog/django-stripe-tutorial/)
+  looks at how to quickly add Stripe to accept payments on a Django/Python website.
+
+* [Setting up Stripe Connect with Django](https://testdriven.io/blog/setting-up-stripe-connect-with-django/)
+  this tutorial looks at how to integrate Stripe Connect into a Django application.
 
 ### Resources about Stripe
 * [How Stripe Designs Beautiful Websites](https://www.leejamesrobinson.com/blog/how-stripe-designs-beautiful-websites/)
