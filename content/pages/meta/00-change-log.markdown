@@ -14,6 +14,13 @@ changes via the
 on GitHub.
 
 
+## 2019
+### January
+* Updated the [Docker](/docker.html) page with new resources, removed old ones and
+  added new descriptions to sections.
+* Happy New Year!
+
+
 ## 2018
 ### December
 * Added a ton of new resources and descriptions on the 

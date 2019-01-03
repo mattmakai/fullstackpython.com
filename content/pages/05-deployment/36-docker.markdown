@@ -88,6 +88,11 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   provides a lot of "don'ts" that you'll want to consider before bumping
   up against the limitations of how containers should be used.
 
+* [Docker Internals](http://docker-saigon.github.io/post/Docker-Internals/) presents
+  Linux containers and how Docker uses them as its base for how the project works.
+  This article is a great way to bridge what you know about Docker with a more
+  traditional Linux operating system architecture understanding.
+
 
 ## Python-specific Docker resources
 * [How to deploy Django using Docker](https://www.stavros.io/posts/how-deploy-django-docker/)
@@ -103,6 +108,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 * [How to Containerize Python Web Applications](https://www.digitalocean.com/community/tutorials/docker-explained-how-to-containerize-python-web-applications)
   is an extensive tutorial that uses a Flask application and deploys it
   using a Docker container.
+
+* [How to use Django, PostgreSQL, and Docker](https://wsvincent.com/django-docker-postgresql/)
+  shows how to get a [Django](/django.html) project that uses [PostgreSQL](/postgresql.html)
+  as its back end running in Docker.
 
 * The [Docker is awesome](http://pritishc.com/blog/2015/09/03/docker-is-awesome/) 
   miniseries explains how to get a Django + AngularJS application running 
@@ -142,4 +151,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   and how system packages can generally be a safer route to go.
   
 * [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/dockerizing-django-with-postgres-gunicorn-and-nginx)
-details how to configure Django to run on Docker along with Postgres, Nginx, and Gunicorn.
+  details how to configure Django to run on Docker along with Postgres, Nginx
+  and Gunicorn.
+
+
