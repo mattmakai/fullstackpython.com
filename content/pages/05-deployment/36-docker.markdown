@@ -93,8 +93,17 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   This article is a great way to bridge what you know about Docker with a more
   traditional Linux operating system architecture understanding.
 
+* This post gives an overview and 
+  [comparison of Docker GUIs](https://blog.codeship.com/docker-guis/) which can be
+  handy for monitoring your Docker containers.
+
 
 ## Python-specific Docker resources
+* [Dockering Django, uWSGI and PostgreSQL the serious way](https://www.eidel.io/2017/07/10/dockerizing-django-uwsgi-postgres/)
+  walks through both the code and the error messages that will likely crop
+  up as you attempt to container-ize a [Django](/django.html) project that
+  uses a [PostgreSQL](/postgresql.html) database on the backend.
+
 * [How to deploy Django using Docker](https://www.stavros.io/posts/how-deploy-django-docker/)
   assumes you already have the basic grasp of working with Docker and
   jumps right into a Django deployment. The post shows you how to set up
@@ -127,6 +136,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   examines how to inspect layers in Dockerfiles and minimize the
   overhead of what images contain for better performance.
 
+* [The Flask Mega-Tutorial Part XIX: Deployment on Docker Containers](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xix-deployment-on-docker-containers)
+  is one post in [Miguel Grinberg](https://github.com/miguelgrinberg)'s absolutely
+  spectacular [Flask](/flask.html) application series.
+
 * [Deploying Django Applications in Docker](http://handlebarcreative.tumblr.com/post/104881545637/deploying-django-applications-in-docker)
   explains some of the concepts behind using Docker for Python deployments and
   shows how to specifically use it for deploying Django. 
@@ -154,4 +167,5 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   details how to configure Django to run on Docker along with Postgres, Nginx
   and Gunicorn.
 
-
+* [Dockerizing a Python Django Web Application](https://semaphoreci.com/community/tutorials/dockerizing-a-python-django-web-application)
+  is another in-depth tutorial on combining Docker with [Django](/django.html).
