@@ -4,7 +4,7 @@ slug: aws-lambda
 sortorder: 0539
 toc: False
 sidebartitle: AWS Lambda
-meta: AWS Lambda is a serverless compute service that can execute arbitrary Python 2.7 and 3.6 code.
+meta: AWS Lambda is a serverless compute service that can execute arbitrary Python 2.7, 3.6 or 3.7 code.
 
 
 # AWS Lambda
@@ -32,13 +32,23 @@ has support for both Python 2.7, 3.6 and 3.7.
 
 
 ### Python-specific AWS Lambda resources
-* [Going Serverless with AWS Lambda and API Gateway](http://blog.ryankelly.us/2016/08/07/going-serverless-with-aws-lambda-and-api-gateway.html)
+* [Serverless Slash Commands with Python](https://renzo.lucioni.xyz/serverless-slash-commands-with-python/)
+  shows how to use the [Slack](/slack.html) API to build *slash* commands
+  that run with an AWS Lambda backend.
 
 * [Zappa](https://github.com/Miserlou/Zappa) is a serverless framework
   for deploying Python web applications. It's a really slick project
   and used even by internal AWS developers for their own application 
   deployments. Be sure to [read the Zappa blog](https://blog.zappa.io/)
   as well for walkthroughs and new feature announcements.
+
+* [How to Setup a Serverless URL Shortener With API Gateway Lambda and DynamoDB on AWS](https://blog.ruanbekker.com/blog/2018/11/30/how-to-setup-a-serverless-url-shortener-with-api-gateway-lambda-and-dynamodb-on-aws/)
+  builds a non-trivial URL shortener application as an example Python 
+  application that runs on Lambda.
+
+* [How we built Hamiltix.net for less than $1 a month on AWS](https://blog.badsectorlabs.com/how-we-built-hamiltixnet-for-less-than-1-a-month-on-aws.html)
+  walks through setting up a full website that runs on AWS and scales
+  with the Lambda free tier to minimize spend despite large traffic spikes.
 
 * [Deploying a serverless Flask app to AWS Lambda using Zappa](https://asciinema.org/a/98560)
   provides a screen capture of one developer deploying their
@@ -61,12 +71,24 @@ has support for both Python 2.7, 3.6 and 3.7.
 * [Code Evaluation With AWS Lambda and API Gateway](https://realpython.com/blog/python/code-evaluation-with-aws-lambda-and-api-gateway/) 
   shows how to develop a code evaluation API, to execute arbitrary code, with AWS Lambda and API Gateway.
 
+* [Crawling thousands of products using AWS Lambda](https://engineering.21buttons.com/crawling-thousands-of-products-using-aws-lambda-80332e259de1)
+  gives a real-world example of where using Python, Selenium and 
+  [headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)
+  on AWS Lambda could crawl thousands of pages to collect data
+  with each crawler running within its own Lambda Function.
+
+* [Going Serverless with AWS Lambda and API Gateway](http://blog.ryankelly.us/2016/08/07/going-serverless-with-aws-lambda-and-api-gateway.html)
+
 
 ### General AWS Lambda resources
 * [AWS Lambda Serverless Reference Architectures](http://www.allthingsdistributed.com/2016/06/aws-lambda-serverless-reference-architectures.html)
   provides blueprints with diagrams of common architecture patterns that
   developers use for their mobile backend, file processing, stream
   processing and web application projects.
+
+* [Reverse engineering AWS Lambda](https://www.denialof.services/lambda/)
+  is an incredible, in-depth analysis of the author's work investigating
+  the black box of how Lambda works and what he learned from it.
 
 * The 
   [AWS Lambda tag](https://aws.amazon.com/blogs/aws/category/aws-lambda/)
