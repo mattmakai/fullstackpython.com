@@ -12,12 +12,12 @@ meta: MongoDB is a document-oriented NoSQL database often used as a persistence 
 [NoSQL database](/no-sql-datastore.html) that is often used for
 storing, querying and analyzing persistence data in Python applications.
 
-<a href="https://github.com/mongodb/mongo" style="border: none;"><img src="/img/logos/mongodb.jpg" width="100%" alt="MongoDB logo." class="technical-diagram" /></a>
+<a href="https://github.com/mongodb/mongo" style="border: none;"><img src="/img/logos/mongodb.jpg" width="100%" alt="MongoDB logo." class="shot" /></a>
 
 <div class="well see-also">MongoDB is an implementation of the <a href="/no-sql-datastore.html">NoSQL database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
 
-### General MongoDB introductions
+### General MongoDB tutorials
 It is worth taking some time to learn the ins and outs of MongoDB before
 connecting it to your Python application. The following tutorials are 
 not specific to Python and will have you work directly with the MongoDB
@@ -47,6 +47,22 @@ command line and query language.
   both the strengths and many weaknesses Mongo has despite what you may
   read in other introductory tutorials.
 
+* This 3-part series on monitoring MongoDB with
+  [WiredTiger](https://www.datadoghq.com/blog/monitoring-mongodb-performance-metrics-wiredtiger/)
+  [MMAP](https://www.datadoghq.com/blog/monitoring-mongodb-performance-metrics-mmap/)
+  and
+  [Datadog](https://www.datadoghq.com/blog/monitor-mongodb-performance-with-datadog/)
+  explains how to install and configure agents and gather metrics out
+  of your MongoDB instances.
+
+* [How to Investigate MongoDB Query Performance](https://studio3t.com/knowledge-base/articles/mongodb-query-performance/)
+  shows how to work with the MongoDB profiler, use the `explain` method 
+  and check execution plans.
+
+* [How to Optimize Performance of MongoDB](https://severalnines.com/blog/how-optimize-performance-mongodb)
+  covers schema design, replication lag, resource provisioning and query
+  efficiency.
+
 
 ### MongoDB security
 NoSQL databases can be a weak spot in a production deployment environment,
@@ -72,6 +88,18 @@ security controls so make sure to lock down your instances.
   gives a configuration that encrypts that traffic coming from and
   going to your MongoDB instances using free 
   [Let's Encrypt certificates](https://letsencrypt.org/).
+
+* This 4 post securing MongoDB series covers
+  [Data Security Requirements for Regulatory Compliance](https://www.mongodb.com/blog/post/securing-mongodb-part-1-data-security-requirements-for-regulatory-compliance),
+  [Database Access Control](https://www.mongodb.com/blog/post/securing-mongodb-part-2-database-access-control),
+  [Database Auditing and Encryption](https://www.mongodb.com/blog/post/securing-mongodb-part-3-database-auditing-and-encryption)
+  and 
+  [Environmental Control & Database Management](https://www.mongodb.com/blog/post/securing-mongodb-part-4-environmental-control-and-database-management).
+
+* Lightweight Directory Access Protocol (LDAP) is common in many 
+  established company environments for security. This post on 
+  [How to Configure LDAP Authentication for MongoDB](https://www.mongodb.com/blog/post/how-to-configure-LDAP-authentication-for-mongodb)
+  goes over how to authenticate users via LDAP who are using MongoDB.
 
 
 ### Python with MongoDB resources

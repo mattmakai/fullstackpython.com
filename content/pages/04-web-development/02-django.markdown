@@ -192,6 +192,11 @@ for Django and web development on the [best Python videos](/best-python-videos.h
   shows one potential way of performing on-line schema migrations with
   Django.
 
+* [How to Extend Django User Model](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html)
+  presents four main ways to expand upon the built-in `User` model that
+  is packaged with Django. This scenario is very common for all but the
+  simplest Django projects.
+
 
 ## Channels in 1.9+
 Channels are a new mechanism in Django 1.9 provided as a standalone app. 
@@ -209,6 +214,7 @@ based on [WebSockets](/websockets.html).
 
 * [Developing a Real-Time Taxi App with Django Channels and Angular](https://testdriven.io/courses/real-time-app-with-django-channels-and-angular/)
   this course teaches you how to build and test a real-time ride-sharing app with Django Channels and Angular.
+
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
