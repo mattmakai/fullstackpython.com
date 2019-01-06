@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2019
 ### January
+* Added new [MongoDB](/mongodb.html) resources.
 * Updated the [Docker](/docker.html) page with new resources, removed old ones and
   added new descriptions to sections.
 * Happy New Year!
