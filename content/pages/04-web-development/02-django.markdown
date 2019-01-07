@@ -61,7 +61,9 @@ syntax and language semantics first before diving into web development.
 There are a slew of free or low cost resources out there for Django. Make
 sure to check the version numbers used in each post you read because 
 Django was released over 10 years ago and has had a huge number of updates
-since then.
+since then. These resources are geared towards beginners. If you are already
+experienced with Django you should take a look at the next section of
+resources for more advanced tutorials.
 
 * [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
   focuses on web development using Django and JavaScript. This book uses 
@@ -84,35 +86,12 @@ since then.
   such as the [Django ORM](/django-orm.html) and 
   [Django Templates](/django-templates.html).
 
-* [2 Scoops of Django](https://www.twoscoopspress.com/collections/django/products/two-scoops-of-django-1-11)
-  by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
-  you're serious about learning how to correctly develop Django websites.
-
-* This tutorial shows how to create
-  [a Django web app that can make phone calls and send text messages for automated surveys](https://www.twilio.com/docs/tutorials/walkthrough/automated-survey/python/django). 
-  The code is a really good example of a full Django project and is also
-  available 
-  [open source on GitHub](https://github.com/TwilioDevEd/automated-survey-django).
-
 * [Effective Django](http://effectivedjango.com/) is another free introduction
   to the web framework.
 
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
   the latest resources for learning Django and is also a good spot to ask 
   questions about it.
-
-* Steve Losh wrote an incredibly detailed [Django Advice guide](http://stevelosh.com/blog/2011/06/django-advice/).
-
-* [Lightweight Django](http://programming.oreilly.com/2014/04/simplifying-django.html)
-  has several nice examples for breaking Django into smaller simpler 
-  components.
-
-* The [Definitive Guide to Django Deployment](https://github.com/rogueleaderr/definitive_guide_to_django_deployment)
-  explains the architecture of the resulting set up and includes Chef scripts
-  to automate the deployment.
-
-* This [step-by-step guide for Django](http://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/)
-  shows how to transmit data via AJAX with JQuery.
 
 * [django-awesome](https://github.com/rosarior/awesome-django) is a curated
   list of Django libraries and resources.
@@ -123,6 +102,53 @@ since then.
 * The [recommended Django project layout](http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/)
   is helpful for developers new to Django to understand how to structure
   the directories and files within apps for projects.
+
+* [Django for Beginners: Build websites with Python and Django](https://www.amazon.com/Django-Beginners-Learn-web-development/dp/1983172669)
+  by [William S. Vincent](https://wsvincent.com/) is perfect if you are 
+  just getting started with Django and web development, taking you from 
+  total beginner to confident web developer with Django and Python.
+
+
+### Django videos
+Are you looking for Django videos in addition to articles? There is a special 
+section for Django and web development on the 
+[best Python videos](/best-python-videos.html) page.
+
+
+### Intermediate and advanced Django topics
+These books and tutorials assume that you know the basics of building
+Django and want to go further to become much more knowledgeable about
+the framework.
+
+* [2 Scoops of Django](https://www.twoscoopspress.com/collections/django/products/two-scoops-of-django-1-11)
+  by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
+  you're serious about learning how to correctly develop Django websites.
+
+* This 3-part Django project optimization guide covers a wide range of
+  advanced topics such as 
+  [Profiling and Django settings](https://dizballanze.com/django-project-optimization-part-1/),
+  [working with databases](https://dizballanze.com/django-project-optimization-part-2/)
+  and [caching](https://dizballanze.com/django-project-optimization-part-3/).
+
+* This tutorial shows how to create
+  [a Django web app that can make phone calls and send text messages for automated surveys](https://www.twilio.com/docs/tutorials/walkthrough/automated-survey/python/django). 
+  The code is a really good example of a full Django project and is also
+  available 
+  [open source on GitHub](https://github.com/TwilioDevEd/automated-survey-django).
+
+* Working with time zones is necessary for every web application. This 
+  [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a
+  great start for figuring out what you need to know.
+
+* [REST APIs with Django: Build powerful web APIs with Python and Django](https://www.amazon.com/dp/198302998X) 
+  by [William S. Vincent](https://wsvincent.com/) is the book for you 
+  if you are just moving beyond the basics of Django and looking to get 
+  up speed with [Django REST Framework (DRF)](/django-rest-framework-drf.html) 
+  and service-oriented architecture (SOA). It also dives into more advanced 
+  topics like token-based authentication and permissions.
+
+* [Django Stripe Tutorial](https://testdriven.io/django-stripe-tutorial) 
+  details how to quickly add Stripe to accept payments in a Django web app.
 
 * This [Python Social Auth for Django tutorial](https://github.com/davisfreeman1015/SocialAuthDjangoTutorial)
   will show you how to integrate social media sign in buttons into your Django
@@ -146,26 +172,6 @@ since then.
   [his approach to class based views](http://lukeplant.me.uk/blog/posts/my-approach-to-class-based-views/) (CBVs),
   which often provoke heated debate in the Django community for whether they
   are a time saver or "too much magic" for the framework.
-
-* [How to serve Django apps with uWSGI and Nginx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-14-04)
-  and 
-  [how to set up Django with PostgreSQL, Nginx and Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-centos-7) 
-  are detailed tutorials that walk through each step in the deployment process.
-
-* Working with time zones is necessary for every web application. This 
-  [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a
-  great start for figuring out what you need to know.
-
-* [Django for Beginners: Build websites with Python and Django](https://www.amazon.com/Django-Beginners-Learn-web-development/dp/1983172669)
-  by [William S. Vincent](https://wsvincent.com/) is perfect if you're just getting started with Django and web development, taking you from total beginner to confident web developer with Django and Python.
-
-* [REST APIs with Django: Build powerful web APIs with Python and Django](https://www.amazon.com/dp/198302998X) by [William S. Vincent](https://wsvincent.com/) is the book for you if you're just moving beyond the basics of Django and looking to get up speed with Django REST Framework (DRF) and service-oriented architecture (SOA) in general. The book's examples are clear and well-structured, making it easy for someone to quickly get up speed with building RESTful APIs with Django and DRF. It also dives into more advanced topics like token-based authentication and permissions, just to name a few.
-
-* [Django Stripe Tutorial](https://testdriven.io/django-stripe-tutorial) details how to quickly add Stripe to accept payments on a Django/Python website.
-
-## Django videos
-Are you looking for Django videos in addition to articles? There is a special section
-for Django and web development on the [best Python videos](/best-python-videos.html) page.
 
 
 ## Django migrations
@@ -212,9 +218,6 @@ based on [WebSockets](/websockets.html).
   contains a couple of good starter projects such as a live blog and a 
   chat application to use as base code.
 
-* [Developing a Real-Time Taxi App with Django Channels and Angular](https://testdriven.io/courses/real-time-app-with-django-channels-and-angular/)
-  this course teaches you how to build and test a real-time ride-sharing app with Django Channels and Angular.
-
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
@@ -234,31 +237,18 @@ based on [WebSockets](/websockets.html).
   [Selenium](http://www.seleniumhq.org) browser-based tests.
 
 
-## Django with Angular (Djangular) resources
-* [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
-  is a very detailed introduction to Djangular with example code. 
-
-* This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://mourafiq.com/2013/07/01/end-to-end-web-app-with-django-angular-1.html)
-  tutorial along with 
-  [part 2](http://mourafiq.com/2013/07/15/end-to-end-web-app-with-django-angular-2.html),
-  [part 3](http://mourafiq.com/2013/08/01/end-to-end-web-app-with-django-angular-3.html)
-  and
-  [part 4](http://mourafiq.com/2013/08/15/end-to-end-web-app-with-django-angular-4.html)
-  creates an example blog application with Djangular. There is also a
-  corresponding [GitHub repo](https://github.com/mouradmourafiq/django-angular-blog)
-  for the project code.
-
-* [Django-angular](https://github.com/jrief/django-angular) is a code 
-  library that aims to make it easier to pair Django with AngularJS on
-  the front end.
+### Django with JavaScript MVC frameworks
+There are resources for JavaScript MVC frameworks such as
+[Angular](/angular.html), [React](/react.html) and [Vue.js](/vuejs.html) 
+on their respective pages.
 
 
-## Django ORM tutorials
+### Django ORM tutorials
 Django comes with its own custom object-relational mapper (ORM) typically
-referred to as "the Django ORM". Learn more about the Django ORM on the
-[Python object-relational mappers page](/object-relational-mappers-orms.html) 
-that includes a section specifically for the Django ORM as well as additional
-resources and tutorials.
+referred to as "the Django ORM". Learn more about the 
+[Django ORM](/django-orm.html) on the its own page and more broadly about
+ORMs on the 
+[Python object-relational mappers page](/object-relational-mappers-orms.html).
 
 
 ## Static and media files
