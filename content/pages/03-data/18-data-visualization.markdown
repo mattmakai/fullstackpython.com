@@ -31,6 +31,11 @@ easier for humans to see patterns, trends and other useful information.
   question-and-answer format for what you can do with the data is a really
   good model that keeps your attention throughout the post.
 
+* [How to Generate FiveThirtyEight Graphs in Python](https://www.dataquest.io/blog/making-538-plots/)
+  gives a great tutorial on generating a specific style graph with
+  [pandas](/pandas.html) and [Matplotlib](/matplotlib.html) that is
+  similar to [FiveThirtyEight](https://fivethirtyeight.com/)'s plots.
+
 
 ### Beautiful example visualizations
 Sometimes you need inspiration from other sources to figure out what
@@ -58,6 +63,12 @@ visualization and gave me ideas for what to build.
   ton of data analysis and graphing and show numerous ways to slice and 
   present information.
 
+* [How We Animated Trillions of Tons of Flowing Ice](http://dwtkns.com/posts/flowing-ice.html)
+  breaks down the process that the NY Times data team used to create the
+  beautiful 
+  [Antarctic Dispatches](https://www.nytimes.com/interactive/2017/05/18/climate/antarctica-ice-melt-climate-change.html)
+  articles that show how glaciers and ice are moving.
+
 
 ### Data visualization resources
 * [Data visualization, from 1987 to today](https://medium.economist.com/data-visualisation-from-1987-to-today-65d0609c6017)
@@ -74,6 +85,11 @@ visualization and gave me ideas for what to build.
 
 * [dataviz.tools](http://dataviz.tools/) has a nice list of categorized
   tools for working with data and visualizing it.
+
+* [Xenographics](https://xeno.graphics/) presents uncommon and unusual
+  visualization formats such as the 
+  [Manhattan Plot](https://xeno.graphics/manhattan-plot/) and
+  [Time Curve](https://xeno.graphics/time-curve/).
 
 * [Engineering Intelligence Through Data Visualization at Uber](https://eng.uber.com/data-viz-intel/)
   explains how Uber's data visualization team grew from 1 person to 15
