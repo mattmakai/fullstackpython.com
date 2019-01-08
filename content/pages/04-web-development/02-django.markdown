@@ -93,9 +93,6 @@ resources for more advanced tutorials.
   the latest resources for learning Django and is also a good spot to ask 
   questions about it.
 
-* [django-awesome](https://github.com/rosarior/awesome-django) is a curated
-  list of Django libraries and resources.
-
 * This Django tutorial shows how to 
   [build a project from scratch using Twitter Bootstrap, Bower, Requests and the Github API](http://drksephy.github.io/2015/07/16/django/).
 

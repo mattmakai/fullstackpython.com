@@ -173,8 +173,6 @@ combined with the example real-world projects listed in the next section.
   teaches how to spin up a reproducible Flask development environment with 
   [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
   Amazon EC2 instance then scale the services on Amazon EC2 Container Service (ECS).
-  The [Flask Blueprints](https://testdriven.io/part-one-flask-blueprints) page
-  is particularly handy for learning how to structure a large Flask project.
 
 * [Why and how to handle exceptions in Python Flask](https://opensource.com/article/17/3/python-flask-exceptions)
   has some great example code and reasons why you should code defensively

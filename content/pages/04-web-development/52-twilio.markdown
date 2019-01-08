@@ -89,7 +89,7 @@ for fellow developers.
   and [Bottle](https://www.twilio.com/blog/2016/08/getting-started-python-bottle-twilio-sms-mms.html) 
   apps to learn from while building your own projects.
 
-* [Google Cloud recommends developers use Twilio](https://cloud.google.com/appengine/docs/python/sms/twilio)
+* [Google Cloud recommends developers use Twilio](https://cloud.google.com/appengine/docs/standard/python/sms/twilio)
   for communications in their apps and provides a short walkthrough for
   Python developers.
 

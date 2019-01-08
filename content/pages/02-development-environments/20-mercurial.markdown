@@ -19,9 +19,6 @@ can be used as the version control system for Python projects.
 
 
 ### Mercurial tutorials
-* [Hg Init](http://hginit.com/) is a six-part in-depth tutorial that explores
-  the basic concepts and syntax for using Mercurial.
-
 * The official 
   [Mercurial tutorial](https://www.mercurial-scm.org/wiki/Tutorial)
   goes through the basics. It has great examples for syntax and expected
