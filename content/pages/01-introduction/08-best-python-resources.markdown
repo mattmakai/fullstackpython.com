@@ -68,9 +68,6 @@ should skip down to the next section for "experienced developers".
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
-* Code Academy has a [Python track](http://www.codecademy.com/tracks/python)
-  for people completely new to programming.
-
 * [Introduction to Programming with Python](http://opentechschool.github.io/python-beginners/en/index.html)
   goes over the basic syntax and control structures in Python. The free book 
   has numerous code examples to go along with each topic.

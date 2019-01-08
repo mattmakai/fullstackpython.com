@@ -36,6 +36,11 @@ easier for humans to see patterns, trends and other useful information.
   [pandas](/pandas.html) and [Matplotlib](/matplotlib.html) that is
   similar to [FiveThirtyEight](https://fivethirtyeight.com/)'s plots.
 
+* [Intro to pdvega - Plotting for Pandas using Vega-Lite](http://pbpython.com/pdvega.html)
+  shows how to generate plots from your 
+  [pandas](/pandas.html)-structured data using 
+  [pdvega](https://github.com/altair-viz/pdvega).
+
 
 ### Beautiful example visualizations
 Sometimes you need inspiration from other sources to figure out what

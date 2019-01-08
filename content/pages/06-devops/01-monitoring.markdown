@@ -162,11 +162,6 @@ Incident Management
   has some nice data and graphs on what developers and operations folks use
   in their environments.
 
-* Ryan Frantz wrote a nice post on 
-  [Solving Monitoring](http://ryanfrantz.com/posts/solving-monitoring/)
-  with a new definition of what monitoring means based on today's complex
-  systems and how the practice should evolve going forward.
-
 
 ## Monitoring learning checklist
 1. Review the software-as-a-service and open source monitoring tools below. 

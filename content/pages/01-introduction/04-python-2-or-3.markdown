@@ -85,10 +85,6 @@ gone through the process and have advice for making it less painful.
   deploying the new version before going back to clean up unnecessary code
   created by the transition.
 
-* [The only problem with Python 3's str is that you don't grok it](http://sircmpwn.github.io/2017/01/13/The-problem-with-Python-3.html)
-  specifically covers strings and some of the misconceptions around
-  how strings are handled in version 2 versus version 3.
-
 * [Migrating to Python 3 with pleasure](https://github.com/arogozhnikov/python3_with_pleasure)
   is a porting guide that focuses on code that data scientists would 
   typically use in their programs.
@@ -164,12 +160,6 @@ should upgrade as soon as possible.
   no later than 2020, when Python 2's maintenance life is over. The pledge 
   strongly encourages Python 3 adoption by publicly stating their
   intentions. 
-
-* [There isn’t really a Python 2 vs Python 3 Problem](http://pythonforengineers.com/there-isnt-really-a-python-2-vs-python-3-problem/)
-  tries to cut past the concern about the Python 2 vs 3 divide and explain
-  that it's really not a major concern as a Python programmer. The 
-  recommendation to new programmers is to use Python 3 and for experienced 
-  developers to keep your explanation simple: Python 3 is where to begin.
 
 * [10 awesome features of Python that you can't use because you refuse to upgrade to Python 3](http://www.asmeurer.com/python3-presentation/slides.html)
   is a great slideshow with code snippets that show useful new features
