@@ -56,8 +56,6 @@ be able to structure your playbooks:
 
 * [Ansible: Post-Install Setup](https://valdhaus.co/writings/ansible-post-install/)
 
-* [Managing Docker containers with Ansible](https://linuxacademy.com/howtoguides/posts/show/topic/13750-managing-docker-containers-with-ansible)
-
 * [How To Use Vault to Protect Sensitive Ansible Data on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-use-vault-to-protect-sensitive-ansible-data-on-ubuntu-16-04)
 
 * [How to use Ansible Variables and Vaults](https://www.expressvpn.com/blog/ansible-variables-vaults/)

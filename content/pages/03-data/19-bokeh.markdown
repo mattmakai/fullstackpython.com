@@ -93,17 +93,10 @@ basic syntax will change as the library's API is not yet stable.
   by Jake VanderPlas at PyCon 2017 covers many Python data visualization
   tools, including Bokeh.
 
-* [Enjoying the bokeh.models API](https://bokeh.github.io/blog/2017/7/5/idiomatic_bokeh/)
-  explains the `bokeh.models.plots.Plot` object and data ranges.
-
 * This 
   [flask-bokeh-example](https://github.com/realpython/flask-bokeh-example/blob/master/tutorial.md)
   project has the code to create a simple chart with Bokeh and 
   [Flask](/flask.html).
-
-* [Styling Bokeh Visualizations](https://bokeh.github.io/blog/2017/7/24/styling-bokeh/)
-  shows how to use themes and style dictionaries to customize your Bokeh
-  visuals.
 
 * [Bokeh vs Dash — Which is the Best Dashboard Framework for Python?](https://blog.sicara.com/bokeh-dash-best-dashboard-framework-python-shiny-alternative-c5b576375f7f)
   contains a single project that was written in both Dash and Bokeh. The

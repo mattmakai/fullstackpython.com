@@ -67,11 +67,6 @@ Python-specific applications.
   provides a broad introduction to unit testing, its importance and
   how to get started in your projects.
 
-* [Dive into Python 3's chapter on unit testing](http://www.diveintopython3.net/unit-testing.html)
-  has a complete example with code and a detailed explanation for creating
-  unit testing with the 
-  [unittest](https://docs.python.org/3/library/unittest.html) module.
-
 * [Unit Testing Your Twilio App Using Python’s Flask and Nose](https://www.twilio.com/blog/2014/03/unit-testing-your-twilio-app-using-pythons-flask-and-nose.html)
   is a detailed tutorial for using the nose test runner for ensuring a
   Flask application is working properly.
@@ -86,10 +81,6 @@ Python-specific applications.
 
 * The Python wiki has a page with a list of 
   [Python testing tools and extensions](https://wiki.python.org/moin/PythonTestingToolsTaxonomy).
-
-* [Working Effectively with Unit Tests](http://blog.fogcreek.com/working-effectively-with-unit-tests-interview-with-jay-fields/)
-  is an interview with the author of a book by the title where he shares
-  some of the insight he's learned on the topic.
 
 * [Generate your tests](http://blog.kevinastone.com/generate-your-tests.html)
   shows how to write a test generator that works with the `unittest` 

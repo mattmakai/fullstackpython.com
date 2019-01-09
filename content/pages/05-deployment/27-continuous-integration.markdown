@@ -82,9 +82,6 @@ the application was written in.
   practices for the build and test & release cycles in mind. 
   [Go CD source code is on GitHub](https://github.com/gocd/gocd).
 
-* [Strider](http://stridercd.com/) is a CI server written in node.js. 
-  [Strider source code is on GitHub](https://github.com/Strider-CD/strider).
-
 * [BuildBot](http://buildbot.net/) is a continuous integration **framework** 
   with a set of components for creating your own CI server. It's written in
   Python and intended for development teams that want more control over

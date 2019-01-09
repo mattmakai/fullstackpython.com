@@ -27,9 +27,6 @@ is a data structures and analysis library.
   a GitHub repository with Jupyter Notebooks that let you practice
   sorting, filtering, visualizing, grouping, merging and more with pandas.
 
-* [Modern pandas](https://tomaugspurger.github.io/modern-1.html) is the
-  first part in a well-written seven-part introductory series.
-
 * [A simple way to anonymize data with Python and Pandas](https://dev.to/r0f1/a-simple-way-to-anonymize-data-with-python-and-pandas-79g)
   is a good tutorial on removing sensitive data from your unfiltered 
   data sets.

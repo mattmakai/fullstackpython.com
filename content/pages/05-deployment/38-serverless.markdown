@@ -166,8 +166,6 @@ out how to structure and operate serverless applications.
   five major usage patterns the AWS Lambda team is seeing from initial
   serverless deployments.
 
-* [Serverless computing: If there is no server, where does my application run?](https://devup.co/serverless-computing-if-there-is-no-server-where-does-my-application-run-a369c3699730)
-
 * [Serverless Cost Calculator](http://serverlesscalc.com/) estimates
   the amount each serverless platform would charge based on executions,
   average execution time and memory needed per execution. 

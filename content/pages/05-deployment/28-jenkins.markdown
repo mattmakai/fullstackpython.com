@@ -13,7 +13,7 @@ meta: Jenkins is a continuous integration (CI) server often used to automaticall
 used to automate building, [testing](/testing.html) and 
 [deploying](/deployment.html) Python applications.
 
-<a href="https://jenkins.io/" style="border: none;"><img src="/img/logos/jenkins.png" width="100%" alt="Official Jenkins CI logo. Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License." class="technical-diagram"></a>
+<a href="https://jenkins.io/" style="border: none;"><img src="/img/logos/jenkins.png" width="100%" alt="Official Jenkins CI logo. Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License." class="shot"></a>
 
 <div class="well see-also">Jenkins is an implementation of the <a href="/continuous-integration.html">continuous integration</a> concept. Learn more in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
@@ -49,11 +49,6 @@ used to automate building, [testing](/testing.html) and
 * [Securing Jenkins](https://wiki.jenkins.io/display/JENKINS/Securing+Jenkins)
   is the landing page for Jenkins security. If you're deploying your own
   instance, you'll need to lock it down against unauthorized users.
-
-* [Can we use Jenkins for that?](http://engineering.simondata.com/can-we-use-jenkins-for-that)
-  looks at how one team uses Jenkins for more than typical continuous 
-  integration situations - they also use it as an administrative interface, 
-  cron jobs, data analytics pipelines and long-running scripts.
 
 * [Updating the GOV.UK Continuous Integration environment](https://gdstechnology.blog.gov.uk/2017/02/10/updating-the-gov-uk-continuous-integration-environment/)
   describes the configuration improvements one infrastructure team made

@@ -91,7 +91,7 @@ provides a command-line interface for interacting with the RPM system.
   management, text handling. There are also courses for more advanced topics
   such as how the kernel works, setting up logging and device management.
 
-* The [Ops School curriculum](http://www.opsschool.org/en/latest/) is a
+* The [Ops School curriculum](http://www.opsschool.org/) is a
   comprehensive resource for learning about Linux fundamentals and how to
   perform the work that system administrators typically handle.
 
