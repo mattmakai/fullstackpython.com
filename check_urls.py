@@ -1,25 +1,25 @@
 #!/usr/bin/env python
-import argparse
-import multiprocessing as mp
 import os
-import json
-import uuid
-import sys
+from argparse import ArgumentParser
 from concurrent import futures
 from collections import defaultdict
 from functools import partial
+from json import dumps
+from multiprocessing import cpu_count
+from sys import argv
+from uuid import uuid4
 
-from bs4 import BeautifulSoup
-from markdown import markdown
 import requests
 import urllib3
+from bs4 import BeautifulSoup
+from markdown import markdown
 
 
 # Ignore security hazard since certs SHOULD be trusted (https)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Avoid rate limiting (tcp)
-URL_BOT_ID = f'Bot {str(uuid.uuid4())}'
+URL_BOT_ID = f'Bot {str(uuid4())}'
 
 
 def extract_urls_from_html(content):
@@ -104,7 +104,7 @@ def bad_url(url_status):
 
 
 def parse_args(argv):
-    parser = argparse.ArgumentParser(
+    parser = ArgumentParser(
         description='Check correctness of url links.',
         add_help=True)
     parser.add_argument(
@@ -119,14 +119,14 @@ def parse_args(argv):
         help='Number of url retries')
     parser.add_argument(
         '--num-threads',
-        default=mp.cpu_count()*4,
+        default=cpu_count()*4,
         dest='threads',
         help='Number of threads to run with')
     return parser.parse_args(argv)
 
 
 def main():
-    args = parse_args(sys.argv[1:])
+    args = parse_args(argv[1:])
     print('Extract urls...')
     all_urls = extract_urls(os.getcwd() + os.path.sep + 'content')
     print('\nCheck urls...')
@@ -147,8 +147,8 @@ def main():
         bad_url: all_urls[bad_url]
         for bad_url in bad_url_status
     }
-    status_content = json.dumps(bad_url_status, indent=4)
-    location_content = json.dumps(bad_url_location, indent=4)
+    status_content = dumps(bad_url_status, indent=4)
+    location_content = dumps(bad_url_location, indent=4)
     print(f'\nBad url status: {status_content}')
     print(f'\nBad url locations: {location_content}')
 
