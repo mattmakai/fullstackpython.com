@@ -85,14 +85,14 @@ def get_url_status(url, timeout, retries):
             return (clean_url, response.status_code)
     except requests.exceptions.Timeout:
         return (clean_url, 504)
-    except requests.exceptions.ConnectionError:
-        return (clean_url, -1)
     except requests.exceptions.TooManyRedirects:
+        return (clean_url, -301)
+    except requests.exceptions.ConnectionError:
         return (clean_url, -1)
 
 
 def bad_url(url_status):
-    if url_status == -1:
+    if url_status == -301 or url_status == -1:
         return True
     elif url_status == 401 or url_status == 403:
         return False
@@ -136,7 +136,10 @@ def main():
     for url_path, url_status in run_workers(
             get_url_status, all_urls.keys(),
             threads=args.threads, timeout=args.timeout, retries=args.retries):
-        output = f'Currently checking: id={url_id} host={urllib3.util.parse_url(url_path).host}'
+        output = (
+            f'Currently checking: id={url_id} '
+            f'host={urllib3.util.parse_url(url_path).host}'
+        )
         if max_strlen < len(output):
             max_strlen = len(output)
         print(output.ljust(max_strlen), end='\r')
