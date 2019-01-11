@@ -38,7 +38,7 @@ def extract_urls(discover_path):
     max_strlen = -1
     for root, dirs, files in os.walk(discover_path, topdown=True):
         dirs[:] = [d for d in dirs if d not in exclude]
-        short_root = root.lstrip(discover_path)
+        short_root = root.replace(discover_path, '')
         for file in files:
             output = f'Currently checking: file={file}'
             file_path = os.path.join(root, file)
