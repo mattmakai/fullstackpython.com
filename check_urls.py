@@ -105,7 +105,7 @@ def bad_url(url_status):
 
 def parse_args(argv):
     parser = ArgumentParser(
-        description='Check correctness of url links.',
+        description='Check for bad urls in the HTML content.',
         add_help=True)
     parser.add_argument(
         '-timeout', '--url-timeout',
