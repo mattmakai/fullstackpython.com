@@ -108,18 +108,21 @@ def parse_args(argv):
         description='Check correctness of url links.',
         add_help=True)
     parser.add_argument(
-        '--url-timeout',
+        '-timeout', '--url-timeout',
         default=10.0,
+        type=float,
         dest='timeout',
         help='Timeout in seconds to wait for url')
     parser.add_argument(
-        '--url-retries',
-        default=10,
+        '-retries', '--url-retries',
+        default=5,
+        type=int,
         dest='retries',
         help='Number of url retries')
     parser.add_argument(
-        '--num-threads',
+        '-threads', '--num-threads',
         default=cpu_count()*4,
+        type=int,
         dest='threads',
         help='Number of threads to run with')
     return parser.parse_args(argv)
