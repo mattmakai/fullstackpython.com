@@ -74,6 +74,12 @@ visualization and gave me ideas for what to build.
   [Antarctic Dispatches](https://www.nytimes.com/interactive/2017/05/18/climate/antarctica-ice-melt-climate-change.html)
   articles that show how glaciers and ice are moving.
 
+* Who knew good old histograms could be so fascinating? Check out this
+  post titled 
+  [What's so hard about histograms?](http://tinlizzie.org/histograms/)
+  and scroll through to learn a ton about the details you can think about
+  when creating these types of data visuals.
+
 
 ### Data visualization resources
 * [Data visualization, from 1987 to today](https://medium.economist.com/data-visualisation-from-1987-to-today-65d0609c6017)
