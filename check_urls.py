@@ -4,8 +4,10 @@ import multiprocessing as mp
 import os
 import json
 import uuid
+import sys
 from concurrent import futures
 from collections import defaultdict
+from functools import partial
 
 from bs4 import BeautifulSoup
 from markdown import markdown
@@ -56,26 +58,29 @@ def extract_urls(discover_path):
     return all_urls
 
 
-def run_workers(work, data, worker_threads=mp.cpu_count()*4):
-    with futures.ThreadPoolExecutor(max_workers=worker_threads) as executor:
+def run_workers(work, data, threads, **kwargs):
+    work_partial = partial(work, **kwargs)
+    with futures.ThreadPoolExecutor(max_workers=threads) as executor:
         future_to_result = {
-            executor.submit(work, arg): arg for arg in data}
+            executor.submit(work_partial, arg): arg
+            for arg in data
+        }
         for future in futures.as_completed(future_to_result):
             yield future.result()
 
 
-def get_url_status(url):
+def get_url_status(url, timeout, retries):
     for local in ('localhost', '127.0.0.1', 'app_server'):
         if url.startswith('http://' + local):
             return (url, 0)
     clean_url = url.strip('?.')
     try:
         with requests.Session() as session:
-            adapter = requests.adapters.HTTPAdapter(max_retries=10)
+            adapter = requests.adapters.HTTPAdapter(max_retries=retries)
             session.mount('http://', adapter)
             session.mount('https://', adapter)
             response = session.get(
-                clean_url, verify=False, timeout=10.0,
+                clean_url, verify=False, timeout=timeout,
                 headers={'User-Agent': URL_BOT_ID})
             return (clean_url, response.status_code)
     except requests.exceptions.Timeout:
@@ -98,22 +103,24 @@ def bad_url(url_status):
     return False
 
 
-
 def parse_args(argv):
     parser = argparse.ArgumentParser(
         description='Check correctness of url links.',
         add_help=True)
     parser.add_argument(
-        'url-timeout',
+        '--url-timeout',
         default=10.0,
-        help='Timeout in seconds to wait for link')
+        dest='timeout',
+        help='Timeout in seconds to wait for url')
     parser.add_argument(
-        'url-retries',
+        '--url-retries',
         default=10,
-        help='Number of link retries')
+        dest='retries',
+        help='Number of url retries')
     parser.add_argument(
-        'num-threads',
+        '--num-threads',
         default=mp.cpu_count()*4,
+        dest='threads',
         help='Number of threads to run with')
     return parser.parse_args(argv)
 
@@ -126,7 +133,9 @@ def main():
     bad_url_status = {}
     url_id = 1
     max_strlen = -1
-    for url_path, url_status in run_workers(get_url_status, all_urls.keys()):
+    for url_path, url_status in run_workers(
+            get_url_status, all_urls.keys(),
+            threads=args.threads, timeout=args.timeout, retries=args.retries):
         output = f'Currently checking: id={url_id} host={urllib3.util.parse_url(url_path).host}'
         if max_strlen < len(output):
             max_strlen = len(output)
