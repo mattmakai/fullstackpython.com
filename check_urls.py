@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import argparse
 import multiprocessing as mp
 import os
 import json
@@ -97,7 +98,28 @@ def bad_url(url_status):
     return False
 
 
+
+def parse_args(argv):
+    parser = argparse.ArgumentParser(
+        description='Check correctness of url links.',
+        add_help=True)
+    parser.add_argument(
+        'url-timeout',
+        default=10.0,
+        help='Timeout in seconds to wait for link')
+    parser.add_argument(
+        'url-retries',
+        default=10,
+        help='Number of link retries')
+    parser.add_argument(
+        'num-threads',
+        default=mp.cpu_count()*4,
+        help='Number of threads to run with')
+    return parser.parse_args(argv)
+
+
 def main():
+    args = parse_args(sys.argv[1:])
     print('Extract urls...')
     all_urls = extract_urls(os.getcwd() + os.path.sep + 'content')
     print('\nCheck urls...')
