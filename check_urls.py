@@ -131,7 +131,7 @@ def parse_args(argv):
 def main():
     args = parse_args(argv[1:])
     print('Extract urls...')
-    all_urls = extract_urls(os.getcwd() + os.path.sep + 'content')
+    all_urls = extract_urls(os.getcwd())
     print('\nCheck urls...')
     bad_url_status = {}
     url_id = 1
