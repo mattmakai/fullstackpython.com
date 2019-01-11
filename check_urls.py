@@ -69,10 +69,14 @@ def get_url_status(url):
             return (url, 0)
     clean_url = url.strip('?.')
     try:
-        response = requests.get(
-            clean_url, verify=False, timeout=10.0,
-            headers={'User-Agent': URL_BOT_ID})
-        return (clean_url, response.status_code)
+        with requests.Session() as session:
+            adapter = requests.adapters.HTTPAdapter(max_retries=10)
+            session.mount('http://', adapter)
+            session.mount('https://', adapter)
+            response = session.get(
+                clean_url, verify=False, timeout=10.0,
+                headers={'User-Agent': URL_BOT_ID})
+            return (clean_url, response.status_code)
     except requests.exceptions.Timeout:
         return (clean_url, 504)
     except requests.exceptions.ConnectionError:
