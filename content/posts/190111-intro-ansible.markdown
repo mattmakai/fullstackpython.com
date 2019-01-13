@@ -1,6 +1,6 @@
 title: Introduction to Ansible video course released!
 slug: introduction-ansible-videos-released
-meta: Take a look at the just-launched Introduction to Ansible video courses on Talk Python's training site.
+meta: Take a look at the just-launched Introduction to Ansible video courses on Talk Python Training.
 category: post
 date: 2019-01-13
 modified: 2019-01-13
