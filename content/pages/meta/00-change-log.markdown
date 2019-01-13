@@ -16,7 +16,9 @@ on GitHub.
 
 ## 2019
 ### January
-* Cleaned up a bunch of broken linkss thanks to 
+* Added new post on the 
+  [Introduction to Ansible video course launch](/blog/introduction-ansible-videos-released.html).
+* Cleaned up a bunch of broken links thanks to 
   [pull request #198](https://github.com/mattmakai/fullstackpython.com/pull/198).
   Thanks again [Sam](https://github.com/huangsam)!
 * Added new [MongoDB](/mongodb.html) resources.
