@@ -1,3 +1,8 @@
+{% include "sponsor/begin-sponsor-panel.html" %}
+ {% include "sponsor/rollbar.html" %}
+{% include "sponsor/end-sponsor-panel.html" %}
+
+{% if false %}
 {% if page.sortorder[0:2] == "01" or page.sortorder[0:2] == "02" %}
  {% include "sponsor/dual-premium-standard.html" %}
 {% elif page.sortorder[0:2] == "03" %}
@@ -18,4 +23,5 @@
  <hr>
  {% include "sponsor/scout.html" %}
  {% include "sponsor/end-sponsor-panel.html" %}
+{% endif %}
 {% endif %}

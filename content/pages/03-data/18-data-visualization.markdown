@@ -12,7 +12,23 @@ Data visualizations transform raw numbers into graphic formats that make it
 easier for humans to see patterns, trends and other useful information.
 
 
+### Python data visualization tools
+* [Bokeh](https://bokeh.pydata.org/en/latest/)
+
+* [HoloViews](http://holoviews.org/)
+
+* [Matplotlib](https://matplotlib.org/)
+
+* [Chartify](https://labs.spotify.com/2018/11/15/introducing-chartify-easier-chart-creation-in-python-for-data-scientists/) 
+  ([source code](https://github.com/spotify/chartify/))
+
+
 ### Python-specific data viz resources
+* [Python Data Visualization 2018: Why So Many Libraries?](https://www.anaconda.com/blog/developer-blog/python-data-visualization-2018-why-so-many-libraries/)
+  is an in-depth article on the Python data visualization tools landscape.
+  A must-read whether you are new to the space or have been using one or
+  more of these libraries for awhile.
+
 * The [Python Graph Gallery](https://python-graph-gallery.com/) has a slew 
   of visualizations created with Python and includes the code used to 
   produced each one.
@@ -25,6 +41,9 @@ easier for humans to see patterns, trends and other useful information.
   is a starter post for the wonderful 
   [Altair](https://altair-viz.github.io/) visualization tool written in
   Python.
+
+* [An introduction to Altair](http://vallandingham.me/altair_intro.html) 
+  provides another wonderful tutorial on this data visualization tool.
 
 * [A Dramatic Tour through Python’s Data Visualization Landscape](https://dsaber.com/2016/10/02/a-dramatic-tour-through-pythons-data-visualization-landscape-including-ggplot-and-altair/)
   provides examples with the ggplot and Altair libraries. The 
@@ -40,6 +59,10 @@ easier for humans to see patterns, trends and other useful information.
   shows how to generate plots from your 
   [pandas](/pandas.html)-structured data using 
   [pdvega](https://github.com/altair-viz/pdvega).
+
+* [Sorting Algorithms Visualized in Python](https://www.makeartwithpython.com/blog/visualizing-sort-algorithms-in-python/)
+  uses Python, numpy and scikit-image to animate how sorting algorithms 
+  work.
 
 
 ### Beautiful example visualizations
@@ -60,6 +83,10 @@ visualization and gave me ideas for what to build.
 * [Big League Graphs](https://bigleaguegraphs.com/) presents a bunch of
   creative ways to view data for sports such as basketball, baseball and
   hockey.
+
+* [What do numbers look like?](https://johnhw.github.io/umap_primes/index.md.html)
+  is a Python 3 dimensional visualization of millions of integers, colored
+  by special factors such as prime and Fibonacci numbers.
 
 * [Bay Area Housing Marketing Analysis: Part 1](https://blog.checkyo.tech/2018/08/06/bay-area-housing-market-analysis/)
   and

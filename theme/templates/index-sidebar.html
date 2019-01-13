@@ -3,9 +3,11 @@
   <div class="pnh"><h3>{% for p in pages|sort(attribute='sortorder') %}{% if page and p.slug == page.slug %}{{ p.title }}{% endif %}{% endfor %}{% if not page %}Full Stack Python{% endif %}</h3></div>
   <div class="pnb">
    <a href="/">Full Stack Python</a> is an <a href="https://github.com/mattmakai/fullstackpython.com">open book</a> that explains
-   concepts in plain language and provides great resources 
-   <a href="/table-of-contents.html">on all topics</a>.
+   concepts in plain language.
+   <hr>
+   <a href="https://training.talkpython.fm/courses/explore_ansible/introduction-to-ansible-with-python"><img src="/img/logos/intro-to-ansible.jpg" alt="Introduction to Ansible video course logo." class="shot rnd outl" width="100%"></a>
+   <p style="font-size: .8em; margin-top: 10px;">Learn <a href="https://training.talkpython.fm/courses/explore_ansible/introduction-to-ansible-with-python">Ansible</a> in my new course.</p>
   </div>
  </div>
- {% include "sponsor/dual-premium.html" %}
+ {% include "sponsor.html" %}
 </div>

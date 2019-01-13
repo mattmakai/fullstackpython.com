@@ -64,6 +64,10 @@ basic syntax will change as the library's API is not yet stable.
   goes into the ideation, data wrangling and analysis phases that came
   before using Bokeh to show the results.
 
+* [Visualizing with Bokeh](https://programminghistorian.org/en/lessons/visualizing-with-bokeh)
+  gives a detailed explanation with the code for number Bokeh visuals
+  you can output while working with a [pandas](/pandas.html) data set.
+
 * [Interactive Data Visualization in Python With Bokeh](https://realpython.com/python-data-visualization-bokeh/)
   is a great beginners tutorial that shows you how to structure your data,
   draw your first figures and add interactivity to the visualizations.
