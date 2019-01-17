@@ -48,6 +48,9 @@ during Python software development as part of a programmer's
   script that was never meant to be used by anyone other than the original
   author.
 
+* [101 Bash Commands and Tips for Beginners to Experts](https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je)
+  is a well-done laundry list of tricks to explore.
+
 * [Bash scripting quirks & safety tips](https://jvns.ca/blog/2017/03/26/bash-quirks/)
   explains Bash basic programming constructs like `for` loops and variable 
   assignment then goes into ways to avoid weird issues in your code.

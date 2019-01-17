@@ -42,6 +42,10 @@ easier for humans to see patterns, trends and other useful information.
   [Altair](https://altair-viz.github.io/) visualization tool written in
   Python.
 
+* [The Next Level of Data Visualization in Python](https://towardsdatascience.com/the-next-level-of-data-visualization-in-python-dd6e99039d5e)
+  uses the [Plotly](https://plot.ly/python/) graphing library to draw
+  more complex visualizations.
+
 * [An introduction to Altair](http://vallandingham.me/altair_intro.html) 
   provides another wonderful tutorial on this data visualization tool.
 
@@ -134,4 +138,3 @@ visualization and gave me ideas for what to build.
   and the output they created along the way, including the open source
   tools [react-vis](https://uber.github.io/react-vis/) and 
   [react-map-gl](https://uber.github.io/react-map-gl/).
-
