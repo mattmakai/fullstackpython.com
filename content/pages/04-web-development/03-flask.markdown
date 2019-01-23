@@ -38,6 +38,7 @@ if __name__ == '__main__':
     app.run()
 ```
 
+
 The above code shows "Hello, World!" on localhost port 5000 in a web browser 
 when run with the `python app.py` command and the Flask library installed.
 
@@ -162,6 +163,12 @@ projects you will want to learn how to use Flask extensions,
 extensive functionality. The following tutorials will guide you through
 more advanced topics and provide solid learning materials, especially when 
 combined with the example real-world projects listed in the next section.
+
+* [Microservices with Docker, Flask, and React](https://testdriven.io/courses/microservices-with-docker-flask-and-react/?utm_source=fsp)
+  is an awesome course for beyond-the-basics work with Flask. There are 
+  a couple of free chapters and the rest of the course is well worth paying
+  for to learn a bunch of valuable tools such as [Docker](/docker.html),
+  [React](/react.html) and [microservices architectures](/microservices.html).
 
 * [Visualize your trip with Flask and Mapbox](http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/)
   along with the 

@@ -135,6 +135,11 @@ Incident Management
   Python web apps built with any of the major Python 
   [web frameworks](/web-frameworks.html).
 
+* [Stack Overflow: How We Do Monitoring - 2018 Edition](https://nickcraver.com/blog/2018/11/29/stack-overflow-how-we-do-monitoring/)
+  is a detailed, long read about how Stack Overflow handles their 
+  monitoring, health checks, alerting and dashboarding of their
+  infrastructure.
+
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
 
 * [Effortless Monitoring with collectd, Graphite, and Docker](http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/)

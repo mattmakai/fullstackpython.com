@@ -23,16 +23,6 @@ If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
 should skip down to the next section for "experienced developers".
 
-* [Real Python's tricks newsletter](https://realpython.com/python-tricks/)
-  provides a ton of free content to show you how to get started and continue
-  to improve your programming skills over time.
-
-* This [short 5 minute video](https://www.youtube.com/watch?v=mvK0UzFNw1Q)
-  explains why it's better to think of projects you'd like to build and
-  problems you want to solve with programming. Start working on those projects
-  and problems rather than jumping into a specific language that's recommended
-  to you by a friend.
-
 * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
   is an incredible book for both non-developers and professional developers
   alike. Each chapter walks through a situation that can be automated using
@@ -50,6 +40,12 @@ should skip down to the next section for "experienced developers".
   by [Laurence Bradford](https://twitter.com/lebdev). She's done an 
   incredible job of breaking down the steps beginners should take when 
   they're uncertain about where to begin.
+
+* This [short 5 minute video](https://www.youtube.com/watch?v=mvK0UzFNw1Q)
+  explains why it's better to think of projects you'd like to build and
+  problems you want to solve with programming. Start working on those projects
+  and problems rather than jumping into a specific language that's recommended
+  to you by a friend.
 
 * [A Python Crash Course](https://www.grahamwheeler.com/posts/python-crash-course.html)
   gives an awesome overview of the history of Python, what drives the 
@@ -134,6 +130,11 @@ topics.
   provides a whirlwind tour of the Python language. The guide is especially
   useful if you're coming in with previous software development experience
   and want to quickly grasp how the language is structured.
+
+* [Microservices with Docker, Flask, and React](https://testdriven.io/courses/microservices-with-docker-flask-and-react/?utm_source=fsp)
+  is a great tutorial for digging in deeper with common Python tools such
+  as [Flask](/flask.html), [Docker](/docker.html), [React](/react.html) 
+  and [microservices](/microservices.html).
 
 * Developers familiar with other languages often have difficulty adapting to
   accepted Python code style. Make sure to read the 
