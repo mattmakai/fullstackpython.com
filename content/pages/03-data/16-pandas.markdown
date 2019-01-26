@@ -11,7 +11,7 @@ meta: The Python Data Analysis Library (pandas) is a data structures and analysi
 The [Python Data Analysis Library (pandas)](http://pandas.pydata.org/)
 is a data structures and analysis library.
 
-<a href="http://pandas.pydata.org/" style="border: none;"><img src="/img/logos/pandas.png" width="100%" alt="Python Data Analysis Library pandas project logo." class="technical-diagram" /></a>
+<a href="http://pandas.pydata.org/" style="border: none;"><img src="/img/logos/pandas.png" width="100%" alt="Python Data Analysis Library (pandas) logo." class="shot"></a>
 
 
 ### pandas resources
@@ -30,6 +30,13 @@ is a data structures and analysis library.
 * [A simple way to anonymize data with Python and Pandas](https://dev.to/r0f1/a-simple-way-to-anonymize-data-with-python-and-pandas-79g)
   is a good tutorial on removing sensitive data from your unfiltered 
   data sets.
+
+* [Time Series Analysis with Pandas](https://www.dataquest.io/blog/tutorial-time-series-analysis-pandas/)
+  show you how to combine [Python 3.6](/why-use-python.html), pandas, 
+  [matplotlib](/matplotlib.html) and [seaborn](/data-visualization.html)
+  to analyze and visualize open data from Germany's power grid. This is 
+  a great tutorial to learn these tools with a realistic data set.
+  
 
 * [Analyzing a photographer's flickr stream using pandas](https://www.turbowhale.com/posts/analyze_flickr_stream_pandas/)
   explains how the author grabbed a bunch of Flickr data using the 
