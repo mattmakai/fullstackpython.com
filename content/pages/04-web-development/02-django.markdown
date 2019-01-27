@@ -65,13 +65,6 @@ since then. These resources are geared towards beginners. If you are already
 experienced with Django you should take a look at the next section of
 resources for more advanced tutorials.
 
-* [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
-  focuses on web development using Django and JavaScript. This book uses 
-  the development of a website using the Django web framework as a real
-  world example of how to perform test-driven development (TDD). There is
-  also coverage of NoSQL, WebSockets and asynchronous responses. The book can
-  be read online for free or purchased in hard copy via O'Reilly.
-
 * [Tango with Django](http://www.tangowithdjango.com/) is an extensive 
   set of free introductions to using the most popular Python web framework. 
   Several current developers said this book really helped them get over the 
@@ -80,6 +73,26 @@ resources for more advanced tutorials.
 * The [Django Girls Tutorial](http://tutorial.djangogirls.org/en/index.html)
   is a great tutorial that doesn't assume any prior knowledge of Python or
   Django while helping you build your first web application.
+
+* [A Complete Beginner's Guide to Django](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/)
+  is a wonderful seven-part series that incrementally builds out a Django
+  project and handles [deploying the app](/deployment.html) in the final 
+  post. The seven parts are:
+
+    * [Getting Started](https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html)
+    * [Fundamentals](https://simpleisbetterthancomplex.com/series/2017/09/11/a-complete-beginners-guide-to-django-part-2.html)
+    * [Advanced Concepts](https://simpleisbetterthancomplex.com/series/2017/09/18/a-complete-beginners-guide-to-django-part-3.html)
+    * [Authentication](https://simpleisbetterthancomplex.com/series/2017/09/25/a-complete-beginners-guide-to-django-part-4.html)
+    * [Django ORM](https://simpleisbetterthancomplex.com/series/2017/10/02/a-complete-beginners-guide-to-django-part-5.html)
+    * [Class-Based Views](https://simpleisbetterthancomplex.com/series/2017/10/09/a-complete-beginners-guide-to-django-part-6.html)
+    * [Deployment](https://simpleisbetterthancomplex.com/series/2017/10/16/a-complete-beginners-guide-to-django-part-7.html)
+
+* [Test-Driven Development with Python](http://www.obeythetestinggoat.com/) 
+  focuses on web development using Django and JavaScript. This book uses 
+  the development of a website using the Django web framework as a real
+  world example of how to perform test-driven development (TDD). There is
+  also coverage of NoSQL, WebSockets and asynchronous responses. The book can
+  be read online for free or purchased in hard copy via O'Reilly.
 
 * [Django OverIQ](https://overiq.com/django/1.10/intro-to-django) is a 
   project-based tutorial for beginners that covers the required features
@@ -151,6 +164,10 @@ the framework.
   will show you how to integrate social media sign in buttons into your Django
   application.
 
+* [Upgrading Django](http://thosecleverkids.com/thoughts/posts/upgrading-django)
+  provides a version-by-version guide for updating your Django projects'
+  code.
+
 * The [Django Admin Cookbook](https://books.agiliq.com/projects/django-admin-cookbook/en/latest/)
   and 
   [Building Multi Tenant Applications with Django](https://books.agiliq.com/projects/django-multi-tenant/en/latest/)
@@ -169,6 +186,9 @@ the framework.
   [his approach to class based views](http://lukeplant.me.uk/blog/posts/my-approach-to-class-based-views/) (CBVs),
   which often provoke heated debate in the Django community for whether they
   are a time saver or "too much magic" for the framework.
+
+* [Django Apps Checklist](https://devchecklists.com/django-apps-checklist/en/)
+  gives some good practices rules for building reusable Django apps.
 
 
 ## Django migrations
@@ -201,7 +221,7 @@ the framework.
   simplest Django projects.
 
 
-## Channels in 1.9+
+## Django Channels
 Channels are a new mechanism in Django 1.9 provided as a standalone app. 
 They may be incorporated into the core framework in 2.0+. Channels provide 
 "real-time" full-duplex communication between the browser and the server 

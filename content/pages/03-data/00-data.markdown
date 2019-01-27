@@ -90,3 +90,9 @@ created the incredible mix of data code libraries available today.
 * The [Open Source Data Science Masters](http://datasciencemasters.org/)
   is a well-crafted free curriculum and set of resources for students who
   want to learn both the theory and technologies for working with data.
+
+* [Reproducible research: Stripe’s approach to data science](https://stripe.com/blog/reproducible-research)
+  goes through the workflow and tools such as 
+  [Jupyter Notebook](/jupyter-notebook.html) that [Stripe](/stripe.html)
+  for their data analysis across the company.
+
