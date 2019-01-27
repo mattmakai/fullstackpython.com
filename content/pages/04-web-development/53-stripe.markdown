@@ -33,6 +33,10 @@ for processing payments.
 * [Setting up Stripe Connect with Django](https://testdriven.io/blog/setting-up-stripe-connect-with-django/)
   this tutorial looks at how to integrate Stripe Connect into a Django application.
 
+* [Adding a Custom Stripe Checkout to a Flask App](https://testdriven.io/blog/adding-a-custom-stripe-checkout-to-a-flask-app/) looks at how to add a custom Stripe checkout to a Flask application for processing payments.
+
+
+
 ### Resources about Stripe
 * [How Stripe Designs Beautiful Websites](https://www.leejamesrobinson.com/blog/how-stripe-designs-beautiful-websites/)
   explains the process for how Stripe creates their gorgeous design that
