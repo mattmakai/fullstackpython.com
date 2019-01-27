@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### January
+* Updated the [source control](/source-control.html) page with more 
+  resources.
 * Added new post on the 
   [Introduction to Ansible video course launch](/blog/introduction-ansible-videos-released.html).
 * Cleaned up a bunch of broken links thanks to 

@@ -166,11 +166,20 @@ on how to structure your repositories.
   advantages of both without the disadvantages.
 
 * [Why Google Stores Billions of Lines of Code in a Single Repository](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
+  covers the history and background of Google's source control monorepo, 
+  which is one of if not the largest monorepo for an organization in the
+  world.
 
 * [Advantages of monorepos](http://danluu.com/monorepo/) goes into the
   advantages of using a monorepo and does not discuss the downsides but
   admits there are many so the decision is not clear-cut on using either
   strategy.
+
+* [Monorepos and the Fallacy of Scale](https://presumably.de/monorepos-and-the-fallacy-of-scale.html)
+  argues that having all of an organization's code in a single repository
+  encourages code sharing. The author considers the concerns often raised 
+  about tight coupling between components in a monorepo code base but says
+  that the advantages outweigh the disadvantages overall.
 
 
 ### Git distributed source control system
