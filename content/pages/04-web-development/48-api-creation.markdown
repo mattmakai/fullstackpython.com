@@ -195,6 +195,11 @@ equivalent of browser testing in the web application world.
   [Serpy](https://github.com/clarkduvall/serpy) and 
   [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
 
+* Microsoft's 
+  [REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
+  are a detailed set of considerations for when you are building your own
+  APIs that you want to be easily-consumable by other developers.
+
 * [Building better API docs](https://engineering.gosquared.com/building-better-api-docs)
   shows how Square used Swagger with React to create more helpful docs.
 

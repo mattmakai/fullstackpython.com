@@ -37,7 +37,6 @@ is a data structures and analysis library.
   to analyze and visualize open data from Germany's power grid. This is 
   a great tutorial to learn these tools with a realistic data set.
   
-
 * [Analyzing a photographer's flickr stream using pandas](https://www.turbowhale.com/posts/analyze_flickr_stream_pandas/)
   explains how the author grabbed a bunch of Flickr data using the 
   [flickr-api](https://github.com/alexis-mignon/python-flickr-api) library
@@ -65,6 +64,10 @@ is a data structures and analysis library.
   [Tabula](https://tabula.technology/) library that makes it easier to
   extract table data from PDF files.
 
+* [Analyzing Browser History Using Python and Pandas](https://applecrazy.github.io/blog/2017-11-12/analyzing-browser-hist-using-python)
+  shows how to take data from Google Chrome and start to visualize it
+  with pandas and [matplotlib](/matplotlib.html).
+
 * [Time Series Forecast Case Study with Python: Monthly Armed Robberies in Boston](https://machinelearningmastery.com/time-series-forecast-case-study-python-monthly-armed-robberies-boston/)
   walks through the data wrangling, analysis and visualization steps
   with a public data set of murders in Boston from 1966 to 1975. This
@@ -79,3 +82,15 @@ is a data structures and analysis library.
 * [Data Manipulation with Pandas: A Brief Tutorial](https://www.marsja.se/data-manipulation-pandas-tutorial/)
   uses some example data sets to show how the most commonly-used functions
   in pandas work.
+
+* [Analyzing Pronto CycleShare Data with Python and Pandas](https://jakevdp.github.io/blog/2015/10/17/analyzing-pronto-cycleshare-data-with-python-and-pandas/)
+  uses Seattle bikeshare data as a source for wrangling, analysis and 
+  visualization.
+
+* [Python and JSON: Working with large datasets using Pandas](https://www.dataquest.io/blog/python-json-tutorial/)
+  is a well-done detailed tutorial that shows how to mung and analyze
+  JSON data.
+
+* [Fun with NFL Stats, Bokeh, and Pandas](https://j253.github.io/blog/fun-with-nfl-stats.html) 
+  uses National (American) Football League data as a source for 
+  wrangling and visualization.

@@ -33,6 +33,14 @@ typically abbreviated "DRF", is a Python library for building web
     * [Authentication and Permissions](http://polyglot.ninja/django-rest-framework-authentication-permissions/)
     * [JSON Web Tokens (JWT)](http://polyglot.ninja/django-rest-framework-json-web-tokens-jwt/)
 
+* [How to optimize your Django REST Viewsets](http://concisecoder.io/2018/12/23/how-to-optimize-your-django-rest-viewsets/)
+  provides a good step-by-step example about using `select_related` and 
+  `prefetch_related` in the [Django ORM](/django-orm.html) layer to avoid
+  large numbers of unnecessary queries in your views. Also, props to the
+  author for wearing a UVA t-shirt in his picture when his blog says he
+  works as a developer in Blacksburg, Virginia (where Virginia Tech is 
+  located).
+
 * [Optimizing slow Django REST Framework performance](https://ses4j.github.io/2015/11/23/optimizing-slow-django-rest-framework-performance/)
 
 * [TLT: Serializing Authenticated User Data With Django REST Framework](http://gregblogs.com/tlt-serializing-authenticated-user-data-with-django-rest-framework/)
@@ -42,3 +50,4 @@ typically abbreviated "DRF", is a Python library for building web
 * [Simple Nested API Using Django REST Framework](https://blog.apptension.com/2017/09/13/rest-api-using-django-rest-framework/)
 
 * [Building APIs with Django and Django Rest Framework](https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/)
+
