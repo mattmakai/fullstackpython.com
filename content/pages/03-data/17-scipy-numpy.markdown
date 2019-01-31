@@ -79,3 +79,6 @@ for the SciPy ecosystem:
   using NumPy. The project uses a continuous space rather than the 
   traditional discrete board.
 
+* [Advanced Numpy Techniques](https://nbviewer.jupyter.org/github/vlad17/np-learn/blob/master/presentation.ipynb?flush_cache=true)
+  is a [Jupyter Notebook](/jupyter-notebook.html) with code on 
+  beyond-the-basics NumPy features.

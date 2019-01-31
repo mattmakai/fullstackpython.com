@@ -31,6 +31,10 @@ libraries from scratch.
     * [Part 3](https://www.districtdatalabs.com/data-exploration-with-python-3)
       shows how to visualize the results of your data exploration.
 
+* [PyData 101](https://speakerdeck.com/jakevdp/pydata-101) presents the
+  slides for one of the leading developers in the Python ecosystem on how
+  to orient yourself if you are new to data science.
+
 * [The Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
   is available to read for free online, although I also recommend
   buying the book as it is a great resource for learning the topic.
@@ -53,3 +57,32 @@ libraries from scratch.
     * [Part 2: The Bad Stuff](https://www.locallyoptimistic.com/post/agile-analytics-p2/)
     * [Part 3: The Adjustments](https://www.locallyoptimistic.com/post/agile-analytics-p3/)
 
+* [How to automate creating high end virtual machines on AWS for data science projects](https://tsaprailis.com/2017/09/11/How-to-automate-creating-a-virtual-machine-for-data-science/)
+  walks through setting up a 
+  [development environment](/development-environments.html) on Amazon Web 
+  Services so that you can perform data analysis without owning a 
+  high-end computer.
+
+* [Gender Distribution in North Korean Posters with Convolutional Neural Networks](http://digitalnk.com/blog/2017/09/30/gender-distribution-in-north-korean-posters/)
+  is a fascinating post that uses convolutional neural networks as a 
+  mechanism to identify gender by faces in North Korean posters. The 
+  article's analysis on this messy data set and the results it produces
+  using some Python glue code with various open source libraries is
+  a great example of how data analysis can answer questions that would
+  be very time consuming for a person to figure out without a computer.
+
+* [Time Series Analysis in Python: An Introduction](https://towardsdatascience.com/time-series-analysis-in-python-an-introduction-70d5a5b1d52a)
+  shows how to use the open source 
+  [Prophet](https://research.fb.com/prophet-forecasting-at-scale/) library
+  to perform time series analysis on a data set.
+
+* [Python Data Wrangling Tutorial: Cryptocurrency Edition](https://elitedatascience.com/python-data-wrangling-tutorial)
+  uses the [pandas](/pandas.html) library to clean up a messy 
+  cryptocurrency data set and shift the data into a structure that
+  is useful for analysis the author wantds to perform.
+
+* [Handy Python Libraries for Formatting and Cleaning Data](https://mode.com/blog/python-data-cleaning-libraries)
+  provides a short overview of the libraries such as 
+  [Arrow](https://arrow.readthedocs.io/en/latest/) and 
+  [Dora](https://github.com/NathanEpstein/Dora) that make it easier to 
+  wrangle your data before doing analysis.
