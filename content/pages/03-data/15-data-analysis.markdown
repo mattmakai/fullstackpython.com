@@ -61,7 +61,16 @@ libraries from scratch.
   walks through setting up a 
   [development environment](/development-environments.html) on Amazon Web 
   Services so that you can perform data analysis without owning a 
-  high-end computer.
+  high-end computer. Also check out the 
+  [Introduction to AWS for Data Scientists](https://www.dataquest.io/blog/introduction-to-aws-for-data-scientists/)
+  for another tutorial that shows you how to set up additional commonly-used
+  data science tools on AWS.
+
+* [Analyzing bugs.python.org](https://tirkarthi.github.io/python/2018/06/26/analyzing-python-bug-tracker.html)
+  uses 
+  [extracted data from CPython development](https://github.com/tirkarthi/cpython-bugs)
+  to show the most-commented issues and issues by version number
+  throughout the project's history.
 
 * [Gender Distribution in North Korean Posters with Convolutional Neural Networks](http://digitalnk.com/blog/2017/09/30/gender-distribution-in-north-korean-posters/)
   is a fascinating post that uses convolutional neural networks as a 
@@ -86,3 +95,12 @@ libraries from scratch.
   [Arrow](https://arrow.readthedocs.io/en/latest/) and 
   [Dora](https://github.com/NathanEpstein/Dora) that make it easier to 
   wrangle your data before doing analysis.
+
+* [Analyzing one million robots.txt files](https://intoli.com/blog/analyzing-one-million-robots-txt-files/)
+  explains what a `robots.txt` file is, why it matters, how to download
+  a bunch of them and then perform some analysis with NumPy.
+
+* [Safely Analyzing Popular Licenses on GitHub Projects](https://www.kaggle.com/mrisdal/safely-analyzing-github-projects-popular-licenses/notebook)
+  uses a 
+  [Google BigQuery Python helper library](https://github.com/SohierDane/BigQuery_Helper/blob/master/bq_helper.py)
+  to work with a massive 3 terabyte data set provided by GitHub.

@@ -54,6 +54,11 @@ which is defined by the
   is a great overview of both JavaScript and CSS as well as how pages are 
   rendered in a browser.
 
+* This 
+  [step-by-step tutorial to build a modern JavaScript stack](https://github.com/verekia/js-stack-from-scratch)
+  is useful to understanding how front-end JS frameworks such as Angular
+  and Ember.js work.
+
 * [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   by Mozilla walks through the basic syntax and operators.
 
@@ -77,7 +82,16 @@ which is defined by the
   provides a high-level overview of tools frequently used on the client and
   server side for developers using JavaScript in their web applications.
 
+* [Front-end Walkthrough: Designing a Single Page Application Architecture](https://blog.poki.com/front-end-walkthrough-building-a-single-page-application-from-scratch-d47c35fdc830)
+  covers what a single page app (SPA) architecture looks like, what the 
+  tools are that you can use and some comparisons when deciding between 
+  Angular and React.
+
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
+
+* [SPAs are harder, and always will be](http://wgross.net/essays/spas-are-harder)
+  talks about the inherent complexity in building client-side user
+  interfaces with JavaScript.
 
 * [The Deep Roots of Javascript Fatigue](https://segment.com/blog/the-deep-roots-of-js-fatigue/)
   starts by covering the non-stop library churn in the JavaScript ecosystem
