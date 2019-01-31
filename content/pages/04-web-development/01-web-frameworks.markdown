@@ -51,7 +51,7 @@ with the framework while others have a minimal core package that is amenable
 to extensions provided by other packages.
 
 For example, the [Django web application framework](/django.html) includes
-[the Django ORM](/django-orm.html) layer that allows a deveoper to write
+[the Django ORM](/django-orm.html) layer that allows a developer to write
 [relational database](/databases.html)
 read, write, query, and delete operations in Python code rather than SQL. 
 However, Django's ORM cannot work without significant modification on 
