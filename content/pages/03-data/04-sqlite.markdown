@@ -100,6 +100,9 @@ tutorials will help you get started.
   is a nice roundup of useful tools to use with SQLite and tutorials for
   learning more about the database.
 
+* [Python SQLite3 tutorial](https://www.codementor.io/likegeeks/python-sqlite3-tutorial-database-programming-riqdhwx9z)
+  provides another beginner's tutorial using the built-in `sqlite3`
+  Python standard library module.
 
 
 ### Specific SQLite scenarios

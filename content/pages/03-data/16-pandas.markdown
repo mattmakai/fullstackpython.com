@@ -94,3 +94,7 @@ is a data structures and analysis library.
 * [Fun with NFL Stats, Bokeh, and Pandas](https://j253.github.io/blog/fun-with-nfl-stats.html) 
   uses National (American) Football League data as a source for 
   wrangling and visualization.
+
+* [Analyzing my Spotify Music Library With Jupyter And a Bit of Pandas](https://vsupalov.com/analyze-spotify-music-library-with-jupyter-pandas/)
+  shows how to grab all of your user data from the Spotify API then
+  analyze it using pandas in [Jupyter Notebook](/jupyter-notebook.html).
