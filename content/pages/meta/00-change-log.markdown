@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### February
+* New [data](/data.html) and [data analysis](/data-analysis.html) resources
+  added.
 * Refreshed the [relational databases](/databases.html) page with new 
   resources and removed some out-of-date ones.
 
