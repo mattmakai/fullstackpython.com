@@ -104,6 +104,9 @@ tutorials will help you get started.
   provides another beginner's tutorial using the built-in `sqlite3`
   Python standard library module.
 
+* [A SQLite tutorial with Python](https://stackabuse.com/a-sqlite-tutorial-with-python/)
+  covers both SQL and Python code to interact with SQLite.
+
 
 ### Specific SQLite scenarios
 These are solid resources if you are looking to solve a particular problem 
@@ -117,6 +120,11 @@ you are having with SQLite rather than going through a general tutorial.
   gives the rationale behind one development teams' decision to stick to 
   SQLite instead of porting to another relational database such as 
   [MySQL](/mysql.html) or [PostgreSQL](/postgresql.html).
+
+* This overview of SQLite as part of the 
+  [Databaseology Lectures](https://www.youtube.com/watch?v=gpxnbly9bz4)
+  is amazing because they are given by the creator and he shines a ton
+  of light on how SQLite is built and why.
 
 * [How SQLite is tested](https://www.sqlite.org/testing.html) digs into the
   nitty-gritty behind the quality assurance practices for testing potential
@@ -148,3 +156,15 @@ you are having with SQLite rather than going through a general tutorial.
   covers how to control access to the SQLite database connection and
   file even though SQLite normally allows unauthorized access by design.
 
+* [Can I read and write to a SQLite database concurrently from multiple connections?](https://stackoverflow.com/questions/10325683/can-i-read-and-write-to-a-sqlite-database-concurrently-from-multiple-connections)
+  answers one of the concerns that was an issue in earlier versions of
+  SQLite that could have issues if more than one connection was writing
+  to the database at one time.
+
+* [Appropriate uses for SQLite](https://sqlite.org/whentouse.html) is an 
+  official documentation page that explains what types of applications
+  are designed to work well with SQLite as the backend.
+
+* [How to corrupt a SQLite file](https://sqlite.org/howtocorrupt.html) 
+  explains how the database file could potentially get corrupted if you
+  really work at screwing it up.

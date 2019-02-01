@@ -124,3 +124,10 @@ Python applications.
   with Peewee. This library is worth watching if you use an async 
   [web framework](/web-frameworks.html) and want to have Peewee serve as your
   application's ORM.
+
+* [Accessing remote MySQL database with peewee](https://stackoverflow.com/questions/16448198/accessing-remote-mysql-database-with-peewee)
+  debugs a question where the original author had issues accessing a remote
+  [MySQL](/mysql.html) database because they did not properly include the
+  `Model` class from 
+  [peewee.py](https://github.com/coleifer/peewee/blob/master/peewee.py)
+  when instantiating a mapper class.

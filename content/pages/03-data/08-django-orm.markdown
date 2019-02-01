@@ -15,7 +15,7 @@ that can be used to interact with application [data](/data.html) from various
 [relational databases](/databases.html) such as [SQLite](/sqlite.html),
 [PostgreSQL](/postgresql.html) and [MySQL](/mysql.html).
 
-<a href="https://docs.djangoproject.com/en/dev/topics/db/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram"></a>
+<a href="https://docs.djangoproject.com/en/dev/topics/db/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="shot"></a>
 
 
 <div class="well see-also">The Django ORM is an implementation of the <a href="/object-relational-mappers-orms.html">object-relational mapping (ORM)</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>

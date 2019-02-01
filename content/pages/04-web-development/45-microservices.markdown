@@ -99,3 +99,6 @@ ease further development and deployment. This approach is called the
   [Using Netflix Zuul to Proxy your Microservices](https://blog.heroku.com/using_netflix_zuul_to_proxy_your_microservices)
   to learn more and get started using it.
 
+* [The Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith/)
+  explains the advantages of a monolithic architecture and how it's worked
+  amazingly well for the Basecamp small development team.

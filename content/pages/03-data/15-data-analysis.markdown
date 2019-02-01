@@ -109,3 +109,10 @@ libraries from scratch.
   uses a 
   [Google BigQuery Python helper library](https://github.com/SohierDane/BigQuery_Helper/blob/master/bq_helper.py)
   to work with a massive 3 terabyte data set provided by GitHub.
+
+* [Cleaning and Preparing Data in Python](https://towardsdatascience.com/cleaning-and-preparing-data-in-python-494a9d51a878)
+  shows how to uses [pandas](/pandas.html) to do the "boring" part of
+  a data analysis job and convert dirty data into a more consistent,
+  structured format.
+
+

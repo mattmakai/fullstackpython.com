@@ -27,3 +27,12 @@ alternative until Google Cloud Functions supports Python.
 * [Microsoft Azure Functions vs. Google Cloud Functions vs. AWS Lambda](http://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/)
   gives an overview of these three serverless cloud platforms and
   compares their current capabilities.
+
+* [Getting Started With Google Cloud Functions and MongoDB](https://thecodebarbarian.com/getting-started-with-google-cloud-functions-and-mongodb.html)
+  explains how to connect a
+  [Google Cloud Function](/google-cloud-functions.html) to a persistent
+  [MongoDB](/mongodb.html) data store.
+
+* [Running End to End tests as Google Cloud Functions](https://hackernoon.com/running-end-to-end-tests-as-google-cloud-functions-f5e34ffc3984)
+  provides the code and a walkthrough for running a headless Chrome 
+  instance in a serverless Cloud Function to perform browser-based tests.

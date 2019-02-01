@@ -86,6 +86,13 @@ and [data visualization](/data-visualization.html) pages.
   combines earthquake data with questions around earthquake recurrence
   probabilities to tell its story.
 
+* [Data Science Project: Profitable App Profiles for App Store and Google Play](https://www.dataquest.io/blog/basic-data-science-portfolio-project-tutorial/)
+  is a tutorial that shows you how to use iOS and Android app store data
+  for business analysis. This post is part of a larger series on 
+  [how to get your first job as a data scientist](https://www.dataquest.io/blog/how-to-get-your-first-data-science-job/)
+  which is all worth your time reading to understand the intersection of
+  working with data to figure out its value to companies sand organizations.
+
 
 ### Example data sets
 Looking for freely-available data to use in your projects but aren't 

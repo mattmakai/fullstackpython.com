@@ -108,3 +108,7 @@ basic syntax will change as the library's API is not yet stable.
   although the web application only contained a single type of data 
   visualization so it is hard to drawn any real conclusions from his
   opinion.
+
+* [Realtime Flight Tracking with Pandas and Bokeh](https://www.geodose.com/2019/01/realtime-flight-tracking-pandas-bokeh-python.html)
+  provides a great example of combining [pandas](/pandas.html) for structuring
+  data with Bokeh for visualization.

@@ -63,6 +63,11 @@ command line and query language.
   covers schema design, replication lag, resource provisioning and query
   efficiency.
 
+* [Getting Started With Google Cloud Functions and MongoDB](https://thecodebarbarian.com/getting-started-with-google-cloud-functions-and-mongodb.html)
+  shows how to connect Mongo with a 
+  [Google Cloud Function](/google-cloud-functions.html) 
+  to store persistent data while running on a serverless platform.
+
 
 ### MongoDB security
 NoSQL databases can be a weak spot in a production deployment environment,
