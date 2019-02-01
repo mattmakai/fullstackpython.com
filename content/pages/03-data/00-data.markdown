@@ -66,6 +66,51 @@ work of a massive number of engineers and scientists around the world who
 created the incredible mix of data code libraries available today.
 
 
+### Data inspiration
+Sometimes you just need to see it to understand how data analysis,
+visualization and storytelling can intersect in a meaningful way. The
+following resources do a great job of telling stories with data. There
+are more links to stories listed on the [data analysis](/data-analysis.html) 
+and [data visualization](/data-visualization.html) pages.
+
+* [Metadata Investigation : Inside Hacking Team](https://labs.rs/en/metadata/)
+  presents what metadata is and how it can be used to track people even though
+  it is often thought of as less of a problem than typical stored data.
+
+* [A visual introduction to machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
+  provide a spectacular example of 
+  [data visualization](/data-visualization.html) to explain what a machine
+  learning model does on a San Francisco and New York housing data set.
+
+* [Earthquake recurrence and survival analysis: How long should we wait for an overdue earthquake?](http://rocksandwater.net/blog/2016/07/wrightwood-recurrence/)
+  combines earthquake data with questions around earthquake recurrence
+  probabilities to tell its story.
+
+
+### Example data sets
+Looking for freely-available data to use in your projects but aren't 
+sure where to get it? The following links have large free, open data
+sets. 
+
+* Check out the 
+  [awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
+  project repository for data in many different categories ranging from
+  finance to museums.
+
+* [Kickstarter datasets](https://webrobots.io/kickstarter-datasets/)
+  are scraped JSON and CSV structured monthly data from Kickstarter 
+  projects.
+
+* [Data is Plural](https://tinyletter.com/data-is-plural) is a weekly
+  newsletter that highlights open data that you can use for your projects.
+  I have been a subscriber to the newsletter for a couple of years now and
+  love seeing the wide variety of data sources that are freely available.
+
+* [Data analysis and machine learning projects](https://github.com/rhiever/Data-Analysis-and-Machine-Learning-Projects)
+  provides more than just the data, it also includes instructions and
+  code for working with the data in your own development environment.
+
+
 ### General Python data resources
 * [PyData](http://pydata.org/) is a community for developer and users of 
   Python data tools. They put on fantastic conferences around the world and fund 

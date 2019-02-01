@@ -72,6 +72,11 @@ libraries from scratch.
   to show the most-commented issues and issues by version number
   throughout the project's history.
 
+* [Divergent and Convergent Phases of Data Analysis](https://simplystatistics.org/2018/09/14/divergent-and-convergent-phases-of-data-analysis/)
+  examines the flow most people doing data science and analysis projects 
+  go through during the exploration, synthesis, modeling and narration
+  phases.
+
 * [Gender Distribution in North Korean Posters with Convolutional Neural Networks](http://digitalnk.com/blog/2017/09/30/gender-distribution-in-north-korean-posters/)
   is a fascinating post that uses convolutional neural networks as a 
   mechanism to identify gender by faces in North Korean posters. The 
