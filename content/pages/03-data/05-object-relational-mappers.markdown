@@ -25,7 +25,7 @@ statements or stored procedures.
 
 For example, without an ORM a developer would write the following SQL
 statement to retrieve every row in the USERS table where the
-``zip_code`` column is 94107:
+`zip_code` column is 94107:
 
     SELECT * FROM USERS WHERE zip_code=94107;
 

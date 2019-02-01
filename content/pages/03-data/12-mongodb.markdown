@@ -79,6 +79,11 @@ security controls so make sure to lock down your instances.
   each of the items on the 
   [official MongoDB security checklist](https://docs.mongodb.com/manual/administration/security-checklist/).
 
+* [The definitive guide to MongoDB security](https://opensource.com/article/19/1/mongodb-security)
+  is a high-level overview for the multitude of tasks you must perform
+  to lock down your MongoDB instances, such as appropriately using SSL 
+  certificates and access-control lists.
+
 * [MongoDB Security Basics For Your Deployments in AWS](https://www.mongodb.com/blog/post/mongodb-security-basics-for-your-deployments-in)
   is primarily a guide on AWS security from the perspective of using 
   installing and using MongoDB on your own instance. The post covers 

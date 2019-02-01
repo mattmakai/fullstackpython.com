@@ -15,7 +15,13 @@ on GitHub.
 
 
 ## 2019
+### February
+* Refreshed the [relational databases](/databases.html) page with new 
+  resources and removed some out-of-date ones.
+
 ### January
+* Merged [PR #202](https://github.com/mattmakai/fullstackpython.com/pull/202)
+  to fix a typo on the [web frameworks](/web-frameworks.html) page.
 * Updated the [source control](/source-control.html) page with more 
   resources.
 * Added new post on the 

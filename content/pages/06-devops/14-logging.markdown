@@ -140,6 +140,10 @@ certain threshold.
   shows how to log errors more accurately to pinpoint the problem instead of
   receiving generic exceptions in your logs.
 
+* [Python and Django logging in plain English](https://djangodeconstructed.com/2018/12/18/django-and-python-logging-in-plain-english/)
+  is a wonderful overview of how to configure logging in 
+  [Django](/django.html) projects.
+
 
 ## Logging learning checklist
 1. Read how to integrate logging into your web application framework. 

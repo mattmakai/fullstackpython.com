@@ -52,6 +52,11 @@ ease further development and deployment. This approach is called the
   provides some advice on using microservices in a fairly early stage of
   a software project's lifecycle.
 
+* [Why Microservices?](https://dev.otto.de/2016/03/20/why-microservices/)
+  presents advantages microservices can bring to an existing monolithic
+  application where it is clear what needs to be broken down into smaller
+  components to make it easier to iterate and maintain.
+
 * [Developing a RESTful microservice in Python](http://www.skybert.net/python/developing-a-restful-micro-service-in-python/)
   is a good story of how an aging Java project was replaced with a
   microservice built with Python and Flask.
@@ -88,4 +93,9 @@ ease further development and deployment. This approach is called the
   inherent in distributed systems.
 
 * In the [Microservices with Docker, Flask, and React](http://testdriven.io/) course, you will learn how to quickly spin up a reproducible development environment with Docker to manage a number of microservices. Once the app is up and running locally, you'll learn how to deploy it to an Amazon EC2 instance. Finally, we'll look at scaling the services on Amazon EC2 Container Service (ECS).
+
+* Zuul is open source proxy for combining multiple microservices into a 
+  unified API call. Check out this post on 
+  [Using Netflix Zuul to Proxy your Microservices](https://blog.heroku.com/using_netflix_zuul_to_proxy_your_microservices)
+  to learn more and get started using it.
 

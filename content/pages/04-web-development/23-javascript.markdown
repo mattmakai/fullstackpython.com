@@ -98,6 +98,19 @@ which is defined by the
   and then relates JavaScript evolution since the mid-90s to explain the
   history of the problem.
 
+* [How JavaScript works: the rendering engine and tips to optimize its performance](https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda)
+  is one particularly relevant post in a multi-part series that explains
+  how you can optimize slower JavaScript code to better suit the JS engines
+  in common web browsers.
+
+* [How to reduce the impact of JavaScript on your page load time](https://engineering.gosquared.com/improve-javascript-page-load-time)
+  provides insight into minimizing the size and improving the download
+  and execution speed for JavaScript libraries, especially ones that are
+  used at scale by many websites.
+
+* [Learn JS data](http://learnjsdata.com/) teaches how to manipulate data
+  using JavaScript in a browser or on the server using Node.js. 
+
 
 ### JavaScript learning checklist
 1. Create a simple HTML file with basic elements in it. Use the

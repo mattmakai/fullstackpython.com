@@ -51,6 +51,15 @@ A cache can be created for multiple layers of the stack.
   [downsides to caching](https://msol.io/blog/tech/2015/09/05/youre-probably-wrong-about-caching/)
   that many developers fail to take into consideration.
 
+* [Caching at Reddit](https://redditblog.com/2017/1/17/caching-at-reddit/)
+  covers monitoring, tuning and scaling for the very high scale 
+  [Reddit.com](https://www.reddit.com/) website.
+
+* [Mastering HTTP caching](https://blog.fortrabbit.com/mastering-http-caching)
+  provides more advanced advice on caching dynamic as well as static 
+  content via CDNs and other configurations.
+
+
 
 ## Caching learning checklist
 1. Analyze your web application for the slowest parts. It's likely there are
