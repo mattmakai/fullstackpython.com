@@ -30,3 +30,10 @@ one or more [servers](/servers.html), or a
 * [VPS $5 Showdown - October 2018 - DigitalOcean vs. Lightsail vs. Linode vs. Vultr](https://joshtronic.com/2018/10/15/vps-showdown-october-2018/)
   compares and contrasts the cheapest options for four popular virtual 
   private server providers.
+
+* [VPS comparisons](https://github.com/joedicastro/vps-comparison) uses
+  [Ansible](/ansible.html) to get some data around provisioning speed
+  and system performance. The whole 
+  [README](https://github.com/joedicastro/vps-comparison/blob/master/README.org)
+  file in that repository has a ton of useful information and summaries
+  of the tested providers.

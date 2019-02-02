@@ -115,4 +115,9 @@ libraries from scratch.
   a data analysis job and convert dirty data into a more consistent,
   structured format.
 
-
+* [9 obscure Python libraries for data science](https://opensource.com/article/18/11/python-libraries-data-science)
+  presents several lesser-known but still very useful libraries for 
+  performing data analysis such as 
+  [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy)
+  and
+  [gym](https://github.com/openai/gym).
