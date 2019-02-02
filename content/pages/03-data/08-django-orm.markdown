@@ -126,6 +126,11 @@ following resources should get you past the initial hurdles.
   shows a simple example with code for how to use the migrations integrated
   into Django 1.7.
 
+* [Django Anti-Patterns: Signals](https://lincolnloop.com/blog/django-anti-patterns-signals/)
+  explains why you should avoid using Django ORM's 
+  [signals](https://docs.djangoproject.com/en/dev/topics/signals/) feature
+  in your applications if you want to make them easier to maintain.
+
 * [Supporting both Django 1.7 and South](http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/)
   explains the difficulty of supporting Django 1.7 and maintaining South
   migrations for Django 1.6 then goes into how it can be done.

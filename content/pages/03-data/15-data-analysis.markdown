@@ -77,6 +77,14 @@ libraries from scratch.
   go through during the exploration, synthesis, modeling and narration
   phases.
 
+* [Forget privacy: you're terrible at targeting anyway](https://apenwarr.ca/log/20190201)
+  is a different type of article. It is a strong piece of commentary rather
+  than a tutorial on a specific data analysis topic. The author argues that
+  *collecting* data is typically easy but doing the dirty analysis work often
+  yields little in the way of definitive, actionable insight. Overall it's
+  a well-written thought piece that will make you at least stop and ask 
+  yourself, "do we *really* need to collect this user data?"
+
 * [Gender Distribution in North Korean Posters with Convolutional Neural Networks](http://digitalnk.com/blog/2017/09/30/gender-distribution-in-north-korean-posters/)
   is a fascinating post that uses convolutional neural networks as a 
   mechanism to identify gender by faces in North Korean posters. The 

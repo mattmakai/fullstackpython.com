@@ -36,6 +36,15 @@ tack on React to build your client-side user interfaces.
   quickly fall out of date while this one tends to stick to the basics
   that are relevant to beginners.
 
+* This Modern Django 4-part tutorial series is well-done, has 
+  [freely available source code](https://github.com/v1k45/ponynote) 
+  and includes:
+
+    1. [Setting up Django and React](http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/)
+    2. [Redux and React Router setup](http://v1k45.com/blog/modern-django-part-2-redux-and-react-router-setup/)
+    3. [Creating an API and integrating with React](http://v1k45.com/blog/modern-django-part-3-creating-an-api-and-integrating-with-react/)
+    4. [Adding authentication to React SPA using DRF](http://v1k45.com/blog/modern-django-part-4-adding-authentication-to-react-spa-using-drf/)
+
 * [Django REST with React (Django 2.0 and a sprinkle of testing)](https://www.valentinog.com/blog/tutorial-api-django-rest-react/)
   combines a [Django](/django.html) plus 
   [Django REST Framework (DRF)](/django-rest-framework-drf.html) backend 

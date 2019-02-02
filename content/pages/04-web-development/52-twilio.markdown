@@ -113,5 +113,5 @@ for fellow developers.
 #### Disclaimer
 I [currently work at Twilio](/about-author.html) on the
 [Developer Network](https://www.twilio.com/blog/2014/02/introducing-developer-evangelist-matt-makai.html)
-and run a program called [Twilio Voices](http://www.twiliovoices.com/).
+and run the [Developer Voices](http://www.twiliovoices.com/) team.
 

@@ -14,7 +14,7 @@ information, to appropriately handle the request and respond. Bots are
 often also called "chatbots", "assistants" or "agents."
 
 
-## Open source Slack bot examples
+### Open source bot examples
 * [Limbo](https://github.com/llimllib/limbo) is an awesome Slack chatbot 
   that provides a base for Python code that otherwise would require 
   boilerplate to handle the Slack API events firehose.
@@ -23,20 +23,28 @@ often also called "chatbots", "assistants" or "agents."
   framework for building Slack bots with the Real Time Messaging (RTM) API
   over [WebSockets](/websockets.html).
 
+* The 
+  [GitHub bots search results](https://github.com/search?utf8=%E2%9C%93&q=bots)
+  and the [bots GitHub topic](https://github.com/topics/bots) contain tens of
+  thousands of example bots you take analyze to see how they are built.
 
-## Python-specific Bots resources
+* [Errbot](http://errbot.io/en/latest/) can work with 
+  [multiple backends](http://errbot.io/en/latest/features.html) such
+  as Hipchat, Discord, Slack and Telegram. It's designed to be deployed
+  "as is" except for your credentials but the 
+  [Python source code](https://github.com/errbotio/errbot) 
+  can also be customized.
+
+
+### Python-specific bot resources
 * [How to Buid an SMS Slack Bot](https://www.twilio.com/blog/2016/05/build-sms-slack-bot-python.html)
   is a tutorial on using 
-  [SMS text messages](http://www.fullstackpython.com/blog/send-sms-text-messages-python.html) 
+  [SMS text messages](/blog/send-sms-text-messages-python.html) 
   to communicate with a Slack bot that can post and receive messages. The
   bot is a good base for a more complicated Slack bot that could use
   natural language processing or other more advanced parsing techniques.
   Either Python 2 or 3 can be used 
   [with the code which is also available on GitHub](https://github.com/mattmakai/slack-api-python-examples).
-
-* [How to write a Slack bot in Python](https://medium.com/@julianmartinez/how-to-write-a-slack-bot-with-python-code-examples-4ed354407b98)
-  is a solid code tutorial for building your first bot on the Slack
-  platform.
 
 * [Dropbox open sourced their security Slack bot](https://blogs.dropbox.com/tech/2017/02/meet-securitybot-open-sourcing-automated-security-at-scale/),
   which is [built in Python](https://github.com/dropbox/securitybot).
@@ -48,7 +56,7 @@ often also called "chatbots", "assistants" or "agents."
   [markovify](https://github.com/jsvine/markovify) Markov Chains library to 
   generate responses that are similar to ones other Slack users have said.
 
-* [A Slack bot with Python’s 3.5 asyncio](https://medium.com/@greut/a-slack-bot-with-pythons-3-5-asyncio-ad766d8b5d8f)
+* [A Slack bot with Python's asyncio](https://medium.com/@greut/a-slack-bot-with-pythons-3-5-asyncio-ad766d8b5d8f)
   shows how to connect a bot to Slack via the web API using the Python 3
   [asyncio standard library](https://docs.python.org/3/library/asyncio.html).
 
@@ -56,7 +64,11 @@ often also called "chatbots", "assistants" or "agents."
   is an open source Facebook Messenger bot written in Python.
 
 
-## Additional Bots resources
+### Additional Bots resources
+* [Bots: An introduction for developers](https://core.telegram.org/bots)
+  explains the technical details of how to create 
+  [Telegram](https://telegram.org/) bots.
+
 * [Slack bot token leakage exposing business critical information](https://labs.detectify.com/2016/04/28/slack-bot-token-leakage-exposing-business-critical-information/)
   is a detailed look at a search on GitHub for Slack tokens that are used
   mostly for bots but must be kept secret. Otherwise those tokens expose 
@@ -73,4 +85,10 @@ often also called "chatbots", "assistants" or "agents."
   apps with automated responses, user data and basic web browser 
   functionality are what has allowed bot concepts to bloom in Asian markets.
   There's a lot of good information in this post to unpack.
+
+* [Principles of bot design](https://www.intercom.com/blog/principles-bot-design/)
+  contains some general, common-sense ideas to keep in mind when building
+  bots such as do not pretend to be a human (because it will be quickly 
+  discovered that your bot is not a human) and keep it as simple as possible
+  so people can actually use the damn thing.
 
