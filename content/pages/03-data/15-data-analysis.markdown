@@ -57,6 +57,19 @@ libraries from scratch.
     * [Part 2: The Bad Stuff](https://www.locallyoptimistic.com/post/agile-analytics-p2/)
     * [Part 3: The Adjustments](https://www.locallyoptimistic.com/post/agile-analytics-p3/)
 
+* [Learning Seattle's Work Habits from Bicycle Counts](https://jakevdp.github.io/blog/2015/07/23/learning-seattles-work-habits-from-bicycle-counts/)
+  provides a great example of using open data, in this case 
+  [from the city of Seattle](https://data.seattle.gov/), messing with it
+  using Python and [pandas](/pandas.html), then charting it using
+  skikit-learn. You can do this type of analysis on almost any data set
+  to find out its patterns.
+
+* [Exploring the shapes of stories using Python and sentiment APIs](https://indico.io/blog/plotlines/)
+  is a wonderful read with context for the problem being solved, plenty of
+  insight into how to reproduce the results with your own code and a good
+  number of charts that show how sentiment analysis can extract information
+  from blocks of text.
+
 * [How to automate creating high end virtual machines on AWS for data science projects](https://tsaprailis.com/2017/09/11/How-to-automate-creating-a-virtual-machine-for-data-science/)
   walks through setting up a 
   [development environment](/development-environments.html) on Amazon Web 
@@ -129,3 +142,11 @@ libraries from scratch.
   [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy)
   and
   [gym](https://github.com/openai/gym).
+
+* Nvidia's series on defining data analysis, machine learning and deep 
+  learning are worth reading for the background and how they break down
+  the problem domains:
+    
+    * [What’s the Difference Between Artificial Intelligence, Machine Learning, and Deep Learning?](https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/)
+    * [Deep Learning in a Nutshell: History and Training](https://devblogs.nvidia.com/deep-learning-nutshell-history-training/)
+    * [Deep Learning in a Nutshell: Core Concepts](https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/)

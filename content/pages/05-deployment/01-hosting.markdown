@@ -14,26 +14,27 @@ one or more [servers](/servers.html), or a
 
 
 ### Hosting resources
-* [Ready. Steady. Go! The speed of VM creation and SSH access on AWS, DigitalOcean, Linode, Vexxhost, Google Cloud, Rackspace and Microsoft Azure](https://blog.cloud66.com/ready-steady-go-the-speed-of-vm-creation-and-ssh-key-access-on-aws-digitalocean-linode-vexxhost-google-cloud-rackspace-and-microsoft-azure/)
-  and
-  [Comparing the speed of VM creation and SSH access of cloud providers](https://blog.cloud66.com/part-2-comparing-the-speed-of-vm-creation-and-ssh-access-on-aws-digitalocean-linode-vexxhost-google-cloud-rackspace-packet-cloud-a-and-microsoft-azure/)
-  are one way to measure some of the infrastructure speed provided by several
-  cloud vendors. The virtual machine and SSH access data points are taken in 
-  multiple regions. It's unclear how these metrics would change over time based
-  on backend tweaks made by each provider.
+* [An engineer’s guide to cloud capacity planning](https://increment.com/cloud/an-engineers-guide-to-cloud-capacity-planning/)
+  is a wonderful article that discusses on-demand provisioning, horizontal 
+  and vertical scaling and how to estimate performance of your infrastructure.
 
-* The [State of Cloud Instance Provisioning](https://ahmet.im/blog/cloud-instance-provisioning/)
-  explains the tools and operations behind how AWS, 
-  [DigitalOcean](/digitalocean.html), Google Cloud and Microsoft Azure stand up
-  virtual machine instances for you to use.
+* [Selecting a cloud provider](https://codeascraft.com/2018/01/04/selecting-a-cloud-provider/)
+  reviews Etsy's decisionmaking around self-hosted infrastructure versus
+  cloud hosting. They put together an architectural model and ultimately
+  decided to start migrating over to Google Cloud Platform.
 
-* [VPS $5 Showdown - October 2018 - DigitalOcean vs. Lightsail vs. Linode vs. Vultr](https://joshtronic.com/2018/10/15/vps-showdown-october-2018/)
-  compares and contrasts the cheapest options for four popular virtual 
-  private server providers.
+* [Going Multi-Cloud with AWS and GCP: Lessons Learned at Scale](https://metamarkets.com/2017/big-cloud-data-aws-and-gcp/)
+  covers the compute, networking, persistent storage, billing and
+  failover aspects of using more than one infrastructure provider.
 
-* [VPS comparisons](https://github.com/joedicastro/vps-comparison) uses
-  [Ansible](/ansible.html) to get some data around provisioning speed
-  and system performance. The whole 
-  [README](https://github.com/joedicastro/vps-comparison/blob/master/README.org)
-  file in that repository has a ton of useful information and summaries
-  of the tested providers.
+* [Auth0 Architecture: Running In Multiple Cloud Providers And Regions](http://highscalability.com/blog/2018/8/27/auth0-architecture-running-in-multiple-cloud-providers-and-r.html)
+  explains their multi-cloud architecture and how it has evolved over the
+  past several years.
+
+* [Choose A Cloud](https://www.chooseacloud.com/) has a few posts with 
+  charts for easy cross-cloud comparisons pricing on features such as 
+  [persistent storage](https://www.chooseacloud.com/objectstorage).
+
+* [How Netlify migrated to a fully multi-cloud infrastructure](https://www.netlify.com/blog/2018/05/14/how-netlify-migrated-to-a-fully-multi-cloud-infrastructure/)
+  is another story post about developing a multi-cloud architecture and
+  the considerations for disaster recovery, databases and testing.

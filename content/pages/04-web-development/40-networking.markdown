@@ -10,3 +10,26 @@ meta: Understanding computer networking is critical to building reliable, perfor
 # Networking
 Computing networking is critical to building reliable, performant Python
 web applications.
+
+
+
+### Resources about networking
+* [Monitoring and Tuning the Linux Networking Stack: Receiving Data](https://blog.packagecloud.io/eng/2016/06/22/monitoring-tuning-linux-networking-stack-receiving-data/)
+  along with 
+  [Monitoring and Tuning the Linux Networking Stack: Sending Data](https://blog.packagecloud.io/eng/2017/02/06/monitoring-tuning-linux-networking-stack-sending-data/)
+  are incredibly detailed technical posts on the networking layer within
+  Linux operating systems.
+
+* [Computer networking](http://cnp3book.info.ucl.ac.be/) is a free book
+  that explains how networking between computer systems works. There are
+  also exercises for testing what you learned along the way.
+
+* [What's the history behind 192.168.1.1? Why not 192.169.1.1 or any other IP address? When did it start being used? Who started it? Why? Why not 1.1.1.1? What is the relation to 127.0.0.1? What about 10.0.0.1 (Apple)?](https://www.quora.com/Whats-the-history-behind-192-168-1-1-Why-not-192-169-1-1-or-any-other-IP-address-When-did-it-start-being-used-Who-started-it-Why-Why-not-1-1-1-1-What-is-the-relation-to-127-0-0-1-What-about-10-0-0-1-Apple)
+  is a nice answer on the history of IPv4 addressing and why various
+  IP addresses such as 192.168.1.1 became standards for localhost or
+  other local networking. 
+
+* [Dropbox traffic infrastructure: Edge network](https://blogs.dropbox.com/tech/2018/10/dropbox-traffic-infrastructure-edge-network/)
+  explains how Dropbox uses edge-of-the-network resources closer to the
+  end user to optimize performance of their service.
+

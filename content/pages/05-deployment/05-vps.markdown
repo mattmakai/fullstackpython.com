@@ -39,3 +39,27 @@ A few providers I currently use to host my Python web applications:
 * [Amazon Web Services' Lightsail](https://amazonlightsail.com/)
 
 
+### VPS comparisons
+* [Ready. Steady. Go! The speed of VM creation and SSH access on AWS, DigitalOcean, Linode, Vexxhost, Google Cloud, Rackspace and Microsoft Azure](https://blog.cloud66.com/ready-steady-go-the-speed-of-vm-creation-and-ssh-key-access-on-aws-digitalocean-linode-vexxhost-google-cloud-rackspace-and-microsoft-azure/)
+  and
+  [Comparing the speed of VM creation and SSH access of cloud providers](https://blog.cloud66.com/part-2-comparing-the-speed-of-vm-creation-and-ssh-access-on-aws-digitalocean-linode-vexxhost-google-cloud-rackspace-packet-cloud-a-and-microsoft-azure/)
+  are one way to measure some of the infrastructure speed provided by several
+  cloud vendors. The virtual machine and SSH access data points are taken in 
+  multiple regions. It's unclear how these metrics would change over time based
+  on backend tweaks made by each provider.
+
+* The [State of Cloud Instance Provisioning](https://ahmet.im/blog/cloud-instance-provisioning/)
+  explains the tools and operations behind how AWS, 
+  [DigitalOcean](/digitalocean.html), Google Cloud and Microsoft Azure stand up
+  virtual machine instances for you to use.
+
+* [VPS $5 Showdown - October 2018 - DigitalOcean vs. Lightsail vs. Linode vs. Vultr](https://joshtronic.com/2018/10/15/vps-showdown-october-2018/)
+  compares and contrasts the cheapest options for four popular virtual 
+  private server providers.
+
+* [VPS comparisons](https://github.com/joedicastro/vps-comparison) uses
+  [Ansible](/ansible.html) to get some data around provisioning speed
+  and system performance. The whole 
+  [README](https://github.com/joedicastro/vps-comparison/blob/master/README.org)
+  file in that repository has a ton of useful information and summaries
+  of the tested providers.
