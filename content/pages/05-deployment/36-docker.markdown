@@ -41,6 +41,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   clearly delineates what Docker is and what it isn't. This is a good article
   for when you're first wrapping your head around Docker conceptually.
 
+* [rubber-docker](https://github.com/Fewbytes/rubber-docker) is an open source
+  repository and tutorial that shows you how to recreate a simplified version
+  of Docker to better understand what it's doing under the hood.
+
 * [Andrew Baker](https://github.com/atbaker) presented a fantastic tutorial 
   at [PyOhio](http://andrewtorkbaker.com/pyohio-docker-101-tutorial) on 
   [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial).

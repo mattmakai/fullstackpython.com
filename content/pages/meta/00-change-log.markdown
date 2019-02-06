@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2019
 ### February
+* Added a bunch more [bots](/bots.html) resources.
 * New [data](/data.html) and [data analysis](/data-analysis.html) resources
   added.
 * Refreshed the [relational databases](/databases.html) page with new 
