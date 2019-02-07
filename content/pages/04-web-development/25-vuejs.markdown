@@ -17,6 +17,10 @@ application framework for building rich apps that run in web browsers.
 
 
 ### Vue.js resources
+* [A friendly introduction to Vue.js](https://appendto.com/2016/11/a-friendly-introduction-to-vue-js/)
+  contains the code and brief explanations of what it's doing so you can
+  learn to create your first Vue app.
+
 * [Building Modern Applications with Django and Vue.js](https://auth0.com/blog/building-modern-applications-with-django-and-vuejs/)
   combines [Django](/django.html), 
   [Django REST Framework](/django-rest-framework-drf.html), Vue.js

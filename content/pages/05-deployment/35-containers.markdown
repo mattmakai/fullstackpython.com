@@ -81,6 +81,23 @@ configurations and dig deeper into how containers work.
   is a bonkers in-depth post about building your own simplified, but not 
   simple version of Docker to learn how it works.
 
+* [A Comparison of Linux Container Images](http://crunchtools.com/comparison-linux-container-images/)
+  presents data on many of the frequently-used base container images.
+
+* [7 best practices for building containers](https://cloudplatform.googleblog.com/2018/07/7-best-practices-for-building-containers.html)
+  provides Google's recommendations for creating containers such as 
+  include only a single application per container, make sure to use
+  descriptive tags and build the smallest image size possible.
+
+* [Building healthier containers](https://blog.kintoandar.com/2018/01/Building-healthier-containers.html)
+  examines how [Docker containers](/docker.html) are different from 
+  virtual machines and digs into dependencies that can be included in
+  your container image if you do not know how to properly build them.
+
+* [Containers patterns](https://l0rd.github.io/containerspatterns/)
+  covers common usage patterns that have developed now that containers
+  have been in development workflows for a few years.
+
 
 ### Container security resources
 Container security is a hot topic because there are so many ways of screwing
@@ -92,5 +109,10 @@ resources explain security considerations specific to containers.
   author created [img](https://github.com/genuinetools/img) as a tool
   to help solve the problems she was seeing.
  
+* [Making security invisible](https://docs.google.com/presentation/d/1x0DfyC8OxTHsiqf6YRGmqS63CjqCs8-613T_Dzdyi0Q/mobilepresent?slide=id.p)
+  is a great presentation that covers sandboxes, Seccomp and other
+  concepts for isolating potentially unsafe code to limit attack scope.
 
-
+* [10 layers of Linux container security](https://opensource.com/article/17/10/10-layers-container-security)
+  explains many of the attack vectors you need to be aware of when you
+  are working with containers.
