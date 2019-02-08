@@ -191,6 +191,10 @@ web application's design.
   simpler and cut down the massive bloat that can accumulate as you build
   your site as a first step to improving your performance.
 
+* [A Guide To CSS Support In Browsers](https://www.smashingmagazine.com/2019/02/css-browser-support/)
+  analyzes features versus bugs in different browser versions and how
+  to test for support so that issues are less likely to hit your web app.
+
 * [Third party CSS is not safe](https://jakearchibald.com/2018/third-party-css-is-not-safe/)
   is a good reminder that any code you did not write yourself, especially
   code served through 3rd party sources not under your control can contain

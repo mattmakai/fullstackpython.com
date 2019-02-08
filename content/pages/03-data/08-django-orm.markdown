@@ -51,6 +51,12 @@ that have been added throughout the project's history.
 * [Going Beyond Django ORM with Postgres](https://speakerdeck.com/craigkerstiens/going-beyond-django-orm-with-postgres)
   is specific to using PostgreSQL with Django.
 
+* [How to view Django ORM SQL queries](https://mrcoles.com/how-view-django-orm-sql-queries/)
+  along with 
+  [django-sql-explorer](https://github.com/groveco/django-sql-explorer)
+  allow you to better understand the SQL code that is generated from the 
+  Django ORM.
+
 * [Migrating a Django app from MySQL to PostgreSQL](http://www.calazan.com/migrating-django-app-from-mysql-to-postgresql/)
   is a quick look at how to move from MySQL to PostgreSQL. However, my guess
   is that any Django app that's been running for awhile on one
@@ -104,6 +110,10 @@ that have been added throughout the project's history.
   you can discover issues such as unexpected extra queries and problematic 
   key relationships.
 
+* [Full-text search in Django with PostgreSQL](https://www.paulox.net/2017/12/22/full-text-search-in-django-with-postgresql/)
+  is a very detailed example that shows how to work specifically with
+  a [PostgreSQL](/postgresql.html) backend.
+
 
 ### Django migrations resources
 [Django migrations](https://docs.djangoproject.com/en/dev/topics/migrations/) 
@@ -121,6 +131,10 @@ following resources should get you past the initial hurdles.
 * [Django 1.7: Database Migrations Done Right](https://markusholtermann.eu/2014/09/django-17-database-migrations-done-right/)
   explains why South was not directly integrated into Django, how migrations
   are built and shows how backwards migrations work.
+
+* [Executing custom SQL in Django migrations](https://www.endpoint.com/blog/2016/09/17/executing-custom-sql-in-django-migration)
+  examines how you can hook in straight SQL that will run during a Django 
+  migration.
 
 * [Squashing and optimizing migrations in Django](http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/)
   shows a simple example with code for how to use the migrations integrated
@@ -140,3 +154,16 @@ following resources should get you past the initial hurdles.
   migrations to ensure data migrations work well throughout
   the lifecycle of your Django project.
 
+* [Strategies for reducing memory usage in Django migrations](https://www.azavea.com/blog/2017/02/23/strategies-reducing-memory-usage-django-migrations/)
+  shows the large memory usage problem that often occurs with Django 
+  migrations at scale and what you can do to mitigate the issue.
+
+* [How to Create Django Data Migrations](https://simpleisbetterthancomplex.com/tutorial/2017/09/26/how-to-create-django-data-migrations.html)
+  has a straightforward blog ORM modeling example to show how to perform
+  data migration.
+
+* [Keeping data integrity with Django migrations](https://cheesecakelabs.com/blog/keeping-data-integrity-django-migrations/)
+  shows two table modification scenarios, one where a column needs to be
+  added to an existing table, and another where a `Many-to-Many` field needs
+  to be converted to a standard `ForeignKey` column while retaining all
+  of the data.

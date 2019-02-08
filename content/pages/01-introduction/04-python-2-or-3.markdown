@@ -135,7 +135,11 @@ should upgrade as soon as possible.
 
 * [How Dropbox rolled out one of the largest Python 3 migrations ever](https://blogs.dropbox.com/tech/2018/09/how-we-rolled-out-one-of-the-largest-python-3-migrations-ever/)
   explains how their transition began in 2015 and was successfully completed
-  in 2018.
+  in 2018. There is also a follow up post on
+  [incrementally migrating over one million lines of code from Python 2 to Python 3](https://blogs.dropbox.com/tech/2019/02/incrementally-migrating-over-one-million-lines-of-code-from-python-2-to-python-3/)
+  that has more details on how hack weeks were able to help make enough
+  progress so the engineers could better estimate the scope of work when 
+  the transition from 2 to 3 became critical to their development toolchain.
 
 * [Why Python 3?](http://whypy3.com/) randomly outputs valid reasons to
   use Python 3 over 2.x.

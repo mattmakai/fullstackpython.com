@@ -44,6 +44,12 @@ operations, such as querying the database from the Django manage.py shell.
   shows the differences between these two Python-powered tools.
 
 
+### Configuration management resources
+* [A quick guide to choosing infrastructure tools](https://www.oreilly.com/learning/a-quick-guide-to-choosing-infrastructure-tools)
+  presents a high-level overview of the categories of tools you will need
+  to perform infrastructure-as-code in an organization.
+
+
 ## Ansible configuration management
 [Ansible](http://www.ansible.com/) is an open source configuration
 management and application deployment tool built in Python.

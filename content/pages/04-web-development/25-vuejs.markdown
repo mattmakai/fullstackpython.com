@@ -8,18 +8,56 @@ meta: Learn about Vue.js and other JavaScript frameworks for web applications on
 
 
 # Vue.js
-[Vue.js](https://vuejs.org/) is a [JavaScript](/javascript.html) web 
-application framework for building rich apps that run in web browsers.
+[Vue.js](https://vuejs.org/) ([source code](https://github.com/vuejs/vue)) 
+is a [JavaScript](/javascript.html) web application framework for building 
+rich apps that run in web browsers.
 
 <a href="https://vuejs.org/" style="border:none"><img src="/img/logos/vuejs-wide.png" width="100%" alt="Vue.js logo." class="shot"></a>
 
 <div class="well see-also">Vue.js is an implementation of the <a href="/javascript.html">JavaScript frameworks</a> concept. Learn how these pieces fit together in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
 
+### Vue.js-related projects
+* [flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa) is an example
+  project with a [Flask](/flask.html) API on the backend and Vue on the front.
+
+* [django-vue-template](https://github.com/ariera/django-vue-template) contains
+  example code for a [Django](/django.html) backend.
+
+* [vuepress](https://vuepress.vuejs.org/) 
+  ([source code](https://github.com/vuejs/vuepress)) is a 
+  [static site generator](/static-site-generator.html) that uses Vue and
+  [Markdown](/markdown.html) to create pre-rendered static HTML pages.
+
+
 ### Vue.js resources
 * [A friendly introduction to Vue.js](https://appendto.com/2016/11/a-friendly-introduction-to-vue-js/)
   contains the code and brief explanations of what it's doing so you can
   learn to create your first Vue app.
+
+* [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/)
+  walks through all of the environment configuration, project setup and
+  coding you need to do to build a legitimate Vue.js application that
+  uses a [Flask](/flask.html) API on the backend.
+
+* The official 
+  [Vue.js getting started documentation](https://vuejs.org/v2/guide/)
+  is fantastic and highly recommended as a top starting resource.
+
+* [Replacing jQuery With Vue.js: No Build Step Necessary](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/)
+  explains why you may want to replace existing jQuery code with Vue and how
+  to do so with minimal steps, depending on the complexity of your applicationi
+  code, of course!
+
+* [Why we chose Vue.js](https://about.gitlab.com/2016/10/20/why-we-chose-vue/)
+  covers GitLab's reasons for using this JavaScript framework over other
+  options.
+
+* The Vue.js publishes their own documentation page on how Vue 
+  [compares with other frameworks](https://vuejs.org/v2/guide/comparison.html).
+  It is refreshing to see a straightforward technical analysis without the
+  posturing that often comes from authors of one project discussing other work
+  in the same space.
 
 * [Building Modern Applications with Django and Vue.js](https://auth0.com/blog/building-modern-applications-with-django-and-vuejs/)
   combines [Django](/django.html), 
