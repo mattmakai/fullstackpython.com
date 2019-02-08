@@ -220,6 +220,10 @@ the framework.
   is packaged with Django. This scenario is very common for all but the
   simplest Django projects.
 
+* [Creating a Custom User Model in Django](https://testdriven.io/blog/django-custom-user-model/)
+  looks at how to create a custom User model in Django so that an email
+  address can be used as the primary user identifier instead of a
+  username for authentication.
 
 ## Django Channels
 Channels are a new mechanism in Django 1.9 provided as a standalone app. 
