@@ -22,7 +22,11 @@ rich apps that run in web browsers.
   project with a [Flask](/flask.html) API on the backend and Vue on the front.
 
 * [django-vue-template](https://github.com/ariera/django-vue-template) contains
-  example code for a [Django](/django.html) backend.
+  example code for a [Django](/django.html) backend. There is also another
+  project named 
+  [django-vue-template](https://github.com/gtalarico/django-vue-template) by
+  a different developer so take a peek at that one as well if the first one
+  does not suit your needs.
 
 * [vuepress](https://vuepress.vuejs.org/) 
   ([source code](https://github.com/vuejs/vuepress)) is a 
@@ -66,5 +70,7 @@ rich apps that run in web browsers.
   (an authentication web [API](/application-programming-interfaces.html))
   in an introductory web application.
 
-
+* [Exploring Data with Serverless and Vue: Automatically Update GitHub Files With Serverless Functions](https://css-tricks.com/exploring-data-with-serverless-and-vue-part-i/)
+  combines a [serverless](/serverless.html) backend with Vue.js on the
+  front.
 

@@ -92,7 +92,12 @@ ease further development and deployment. This approach is called the
   text go into how reality gets messy and how to embrace the constraints
   inherent in distributed systems.
 
-* In the [Microservices with Docker, Flask, and React](http://testdriven.io/) course, you will learn how to quickly spin up a reproducible development environment with Docker to manage a number of microservices. Once the app is up and running locally, you'll learn how to deploy it to an Amazon EC2 instance. Finally, we'll look at scaling the services on Amazon EC2 Container Service (ECS).
+* In the [Microservices with Docker, Flask, and React](http://testdriven.io/) 
+  course, you will learn how to quickly spin up a reproducible development 
+  environment with Docker to manage a number of microservices. Once the app 
+  is up and running locally, you'll learn how to deploy it to an Amazon EC2 
+  instance. Finally, we'll look at scaling the services on Amazon EC2 
+  Container Service (ECS).
 
 * Zuul is open source proxy for combining multiple microservices into a 
   unified API call. Check out this post on 
@@ -102,3 +107,24 @@ ease further development and deployment. This approach is called the
 * [The Majestic Monolith](https://m.signalvnoise.com/the-majestic-monolith/)
   explains the advantages of a monolithic architecture and how it's worked
   amazingly well for the Basecamp small development team.
+
+* [Developing a RESTful micro service in Python](http://skybert.net/python/developing-a-restful-micro-service-in-python/)
+  goes into detail on how one development team rebuilt an existing Java
+  application as a microservice in Python with [Flask](/flask.html).
+
+* [Documenting microservices](https://blog.codeship.com/documenting-microservices/)
+  has some good thoughts on how to explain your microservice API to
+  other developers such as clearly showing all of the endpoints as well as
+  the intersection of multiple endpoints.
+
+* [Best practices for building a microservice](https://www.vinaysahni.com/best-practices-for-building-a-microservice-architecture)
+  is an exhaustive (and somewhat exhausting to read!) list with what you
+  should think about as you build your microservice.
+
+* [The Hardest Part About Microservices: Your Data](http://blog.christianposta.com/microservices/the-hardest-part-about-microservices-data/)
+  presents a data-centric view on how to structure and transport data
+  in a microservices architecture.
+
+* [Making microservices more resilient with circuit breakers](https://blog.buoyant.io/2017/01/13/making-microservices-more-resilient-with-circuit-breaking/)
+  provides a solid idea for how to handle issues with microservices so the
+  problems are less likely to cascade through your entire infrastructure.

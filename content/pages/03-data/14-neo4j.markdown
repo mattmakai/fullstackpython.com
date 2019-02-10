@@ -50,3 +50,18 @@ of the database.
 * [impfuzzy for Neo4j](https://github.com/JPCERTCC/impfuzzy)
   is a Python script that uses Neo4j as a backend to analyze malware.
 
+* Neo4j runs an online monthly developer "meetup" and records the talks. 
+  Here are a few that stand out:
+
+    * [Natural Language Understanding with Python and Neo4j](https://www.youtube.com/watch?v=mTCqQ2e08Q8)
+    * [Analysing football transfers with Neo4j](https://www.youtube.com/watch?v=MxOJW7X8GHs)
+    * [Efficient Graph Algorithms in Neo4j](https://www.youtube.com/watch?v=55uB_t0RKTE)
+    * [An introduction to Neo4j Bolt Drivers](https://www.youtube.com/watch?v=UixTSyGfAxU)
+
+* [A Pythonic Tour of Neo4j and the Cypher Query Language](https://www.youtube.com/watch?v=Ma6lVy6x3Mg)
+  is a PyData conference talk that gives a Python view of Neo4j's query
+  language.
+
+* [Analyzing the Paradise Papers with Neo4j: A Closer Look at Queries, Data Models & More](https://neo4j.com/blog/analyzing-paradise-papers-neo4j/)
+  uses the Neo4j Cypher Query Language to perform analysis on the leaked 
+  Paradise Papers data.

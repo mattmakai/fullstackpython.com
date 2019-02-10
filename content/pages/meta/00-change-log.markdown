@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### February
+* Updated the [Neo4j](/neo4j.html) and [microservices](/microservices.html)
+  pages with more resources.
 * Added a bunch more [bots](/bots.html) resources.
 * New [data](/data.html) and [data analysis](/data-analysis.html) resources
   added.
