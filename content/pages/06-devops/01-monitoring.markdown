@@ -167,9 +167,11 @@ Incident Management
 * The Collector Highlight Series has an article on [StatsD](http://blog.librato.com/posts/statsd)
   that explains how to install it and how it works.
 
-* This [survey on monitoring tools](http://kartar.net/2014/11/monitoring-survey---tools/)
-  has some nice data and graphs on what developers and operations folks use
-  in their environments.
+* OpenCensuss, OpenTracing and OpenMetrics are three projects that are trying
+  to create standards for application monitoring metrics.
+  [This article on the 3 projects](https://www.datadoghq.com/blog/instrument-opencensus-opentracing-and-openmetrics/)
+  is a helpful overview to understand what each one is trying to do and how
+  they compare to each other.
 
 
 ## Monitoring learning checklist

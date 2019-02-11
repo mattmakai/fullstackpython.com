@@ -36,6 +36,11 @@ of the database.
   Transform and Load (ETL) tool to move your data from one database such as
   [MySQL](/mysql.html) into Neo4j.
 
+* [Migrating from MySQL to Neo4j](https://engineering.logicgate.com/migrating-from-mysql-to-neo4j-2f6cb63a73c8)
+  gives specific advice about how your data can change during a migration from
+  a relational database to a graph database which the author did not know 
+  before undertaking their own migration.
+
 
 ### Neo4j resources
 * [Building a Recommendation Engine with Neo4j and Python](https://www.youtube.com/watch?v=ILjTikVhT9k)
@@ -69,3 +74,7 @@ of the database.
 * [How to Import the Bitcoin Blockchain into Neo4j](https://neo4j.com/blog/import-bitcoin-blockchain-neo4j/)
   shows how to use an existing cryptocurrency data set within Neo4j to 
   perform analysis on the graph structure.
+
+* [Getting Started with Data Analysis using Neo4j](https://neo4j.com/blog/getting-started-data-analysis-neo4j/) 
+  is a programming language agnostic tutorial that explains how to 
+  do analysis directly in the Neo4j Cypher Query Language.

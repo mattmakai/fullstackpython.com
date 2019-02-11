@@ -40,3 +40,9 @@ environment named `fullstackpython` within the macOS Terminal application.
   is a post by the creator of [Oil shell](http://www.oilshell.org/) that
   goes into the rationale for building a new shell even though so many others
   such as Bash, zsh, PowerShell and KornShell already exist.
+
+* [explainshell](https://explainshell.com/) 
+  ([source code](https://github.com/idank/explainshell)) is a wonderful
+  little tool that shows how input and arguments in the shell break
+  down and are interpreted by commands. The data is pulled from the 
+  [Ubuntu](/ubuntu.html) `man` pages.
