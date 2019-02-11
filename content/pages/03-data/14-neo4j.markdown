@@ -17,7 +17,7 @@ graph database that can be used to persist data in
 [a commercial version and a community version](https://neo4j.com/editions/)
 of the database.
 
-<a href="https://neo4j.com/product/" style="border: none;"><img src="/img/logos/neo4j.png" width="100%" alt="Neo4j logo." class="technical-diagram" /></a>
+<a href="https://neo4j.com/product/" style="border: none;"><img src="/img/logos/neo4j.png" width="100%" alt="Neo4j logo." class="shot"></a>
 
 <div class="well see-also">Neo4j is an implementation of the <a href="/no-sql-datastore.html">NoSQL graph database</a> concept. Learn more in the <a href="/data.html">data</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 

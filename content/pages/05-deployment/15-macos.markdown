@@ -12,6 +12,8 @@ macOS is an [operating system](/operating-system.html)
 within the Unix family tree that is developed by Apple and is often 
 used for [developing Python applications](/learning-programming.html).
 
+<div class="well see-also">macOS is an implementation of the <a href="/operating-systems.html">operating systems</a> concept. Learn more in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
+
 
 ### macOS Python resources
 * [Using Python on a Macintosh](https://docs.python.org/3/using/mac.html)

@@ -151,6 +151,10 @@ Incident Management
   "[10 Things They Forgot to Monitor](http://word.bitly.com/post/74839060954/ten-things-to-monitor)"
   beyond the standard metrics such as disk & memory usage.
 
+* The videos from [Monitorama](https://vimeo.com/monitorama), a conference 
+  that's all about monitoring and observability, are recordings of fantastic
+  technical talks from their events.
+
 * [Four Linux server monitoring tools](http://aarvik.dk/four-linux-server-monitoring-and-management-tools/)
 
 * [How to design useful monitoring and graphing visualizations](https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/)
