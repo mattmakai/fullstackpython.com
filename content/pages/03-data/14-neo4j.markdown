@@ -65,3 +65,7 @@ of the database.
 * [Analyzing the Paradise Papers with Neo4j: A Closer Look at Queries, Data Models & More](https://neo4j.com/blog/analyzing-paradise-papers-neo4j/)
   uses the Neo4j Cypher Query Language to perform analysis on the leaked 
   Paradise Papers data.
+
+* [How to Import the Bitcoin Blockchain into Neo4j](https://neo4j.com/blog/import-bitcoin-blockchain-neo4j/)
+  shows how to use an existing cryptocurrency data set within Neo4j to 
+  perform analysis on the graph structure.
