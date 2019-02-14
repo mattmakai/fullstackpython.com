@@ -141,6 +141,10 @@ should upgrade as soon as possible.
   progress so the engineers could better estimate the scope of work when 
   the transition from 2 to 3 became critical to their development toolchain.
 
+* [Zato: A successful Python 3 migration story](https://zato.io/blog/posts/python-3-migration-success-story.html)
+  examines the background, preparation, execution and testing of moving
+  an existing Python 2 code base over to Python 3.
+
 * [Why Python 3?](http://whypy3.com/) randomly outputs valid reasons to
   use Python 3 over 2.x.
 

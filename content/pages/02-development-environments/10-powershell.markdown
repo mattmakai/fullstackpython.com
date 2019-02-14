@@ -52,3 +52,7 @@ of a Python programmer's
 
 * [PowerShellBuild](https://github.com/psake/PowerShellBuild) provides common
   reusable tasks for building PowerShell modules.
+
+* [Invoke-Build](https://github.com/nightroman/Invoke-Build) is a build 
+  automation tool. There is also extensive documentation on their 
+  [wiki](https://github.com/nightroman/Invoke-Build/wiki).

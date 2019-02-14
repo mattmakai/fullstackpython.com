@@ -111,6 +111,11 @@ visualization and gave me ideas for what to build.
   and scroll through to learn a ton about the details you can think about
   when creating these types of data visuals.
 
+* [Optimized Brewery Road Trip, With Genetic Algorithm](https://flowingdata.com/2019/02/08/optimized-brewery-road-trip-with-genetic-algorithm/)
+  shows how a heuristic solving approach such as a genetic algorithm can be
+  used to handle a version of the Traveling Salesman Problem (TSP), but
+  with the more fun Top 100 American brewery locations.
+
 
 ### Data visualization resources
 * [Data visualization, from 1987 to today](https://medium.economist.com/data-visualisation-from-1987-to-today-65d0609c6017)
@@ -138,3 +143,4 @@ visualization and gave me ideas for what to build.
   and the output they created along the way, including the open source
   tools [react-vis](https://uber.github.io/react-vis/) and 
   [react-map-gl](https://uber.github.io/react-map-gl/).
+
