@@ -163,6 +163,9 @@ and "password" values with your own.
         cursor.execute("""CREATE TABLE tutorials (name char(40));""")
         # run a SELECT statement - no data in there, but we can try it
         cursor.execute("""SELECT * from tutorials""")
+        conn.commit() # <--- makes sure the change is shown in the database
+        conn.close()
+        cursor.close()
         rows = cursor.fetchall()
         print(rows)
     except Exception as e:
