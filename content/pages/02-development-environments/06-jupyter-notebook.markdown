@@ -184,3 +184,7 @@ like advanced interactive visualizations.
 * [Creating Presentations with Jupyter Notebook](http://www.blog.pythonlibrary.org/2018/09/25/creating-presentations-with-jupyter-notebook/)
   shows how to make slides out of your cells so you can present your
   work like a traditional presentation.
+
+* [Power-Ups for Jupyter Notebooks](https://towardsdatascience.com/power-ups-for-jupyter-notebooks-ebfa6e5e57a0)
+  gives an overview of helpful add ons, shortcuts and tricks that you
+  can use in your Jupyter Notebooks.
