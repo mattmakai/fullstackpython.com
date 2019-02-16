@@ -56,8 +56,14 @@ guide as they are considered advanced deployment techniques.
   created at Twitter and now split out as its own sustainable open source
   project.
 
+* [Screwdriver](http://screwdriver.cd/) is an open source build system
+  originally developed at Yahoo! that is now open source. Learn more about
+  it in the 
+  [introduction post](https://yahooeng.tumblr.com/post/155765242061/open-sourcing-screwdriver-yahoos-continuous)
+  that contains the rationale for its creation.
 
-## Deployment resources
+
+### Deployment resources
 * If you need a step-by-step guide to deploying a Python web application,
   I wrote [a whole book](http://www.deploypython.com/) on exactly this topic 
   called 
@@ -75,6 +81,15 @@ guide as they are considered advanced deployment techniques.
 
 * [Deploying Software](https://zachholman.com/posts/deploying-software)
   is a long must-read for understanding how to deploy software properly.
+
+* [The evolution of code deploys at Reddit](https://redditblog.com/2017/06/02/the-evolution-of-code-deploys-at-reddit/)
+  teaches the history, including the mistakes, that Reddit's development
+  teams learned as they scaled up the development team and the traffic
+  on one of the most-visited websites in the world.
+
+* [Deployment strategies defined](http://blog.itaysk.com/2017/11/20/deployment-strategies-defined)
+  explains various ways that development teams deploy applications, 
+  ranging from reckless to versioned.
 
 * [How we release so frequently](https://engineering.skybettingandgaming.com/2016/02/02/how-we-release-so-frequently/)
   provides a high-level overview of tactics for how teams at large scale 
