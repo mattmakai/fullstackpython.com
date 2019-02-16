@@ -48,6 +48,15 @@ system-specific package management systems. We won't cover those in this
 guide as they are considered advanced deployment techniques.
 
 
+## Deployment tools
+* [teletraan](https://github.com/pinterest/teletraan) is the deploy system
+  used by the development teams at Pinterest, a huge Python shop!
+
+* [pants](https://www.pantsbuild.org/index.html) is a build system originally
+  created at Twitter and now split out as its own sustainable open source
+  project.
+
+
 ## Deployment resources
 * If you need a step-by-step guide to deploying a Python web application,
   I wrote [a whole book](http://www.deploypython.com/) on exactly this topic 
@@ -66,6 +75,12 @@ guide as they are considered advanced deployment techniques.
 
 * [Deploying Software](https://zachholman.com/posts/deploying-software)
   is a long must-read for understanding how to deploy software properly.
+
+* [How we release so frequently](https://engineering.skybettingandgaming.com/2016/02/02/how-we-release-so-frequently/)
+  provides a high-level overview of tactics for how teams at large scale 
+  can deploy changes several times per day or more with confidence the 
+  systems will not completely fail. There will be bugs, but that does not
+  mean the entire operation will stop.
 
 * [Hands-off deployment with Canary](https://developers.soundcloud.com/blog/hands-off-deployment-with-canary)
   explains how SoundCloud automates their deployment process and uses
@@ -112,10 +127,6 @@ guide as they are considered advanced deployment techniques.
   overview of deployment concepts and as an introduction to the other videos
   on those subjects in that series.
 
-* If you're using Flask this 
-  [detailed post on deploying it to Ubuntu](https://realpython.com/blog/python/kickstarting-flask-on-ubuntu-setup-and-deployment/)
-  is a great way to familiarize yourself with the deployment process.
-  
 * [TestDriven.io](https://testdriven.io/) shows how to deploy a
   [microservices](/microservices.html) architecture that uses 
   [Docker](/docker.html), [Flask](/flask.html), and React with 
