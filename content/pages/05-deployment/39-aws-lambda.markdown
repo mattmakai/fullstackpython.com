@@ -111,3 +111,11 @@ has support for both Python 2.7, 3.6 and 3.7.
 
 * [How does language, memory and package size affect cold starts of AWS Lambda?](https://read.acloud.guru/does-coding-language-memory-or-package-size-affect-cold-starts-of-aws-lambda-a15e26d12c76)
   investigates the performance implications of various Lambda settings.
+
+* [Best Practices for AWS Lambda Timeouts](https://epsagon.com/blog/best-practices-for-aws-lambda-timeouts/)
+  explains some of the current hard upper limits on AWS timeouts, such
+  as 5 minutes for Lambdas, when explicitly set that high, as well as
+  29 seconds for API Gatway requests. There is also good advice on 
+  how the circuit breaker pattern should be applied to your Lambdas
+  and ultimately why low time outs are likely the best way to go to
+  prevent your application from becoming entirely unresponsive.
