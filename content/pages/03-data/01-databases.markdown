@@ -241,6 +241,12 @@ speed on SQL if you have never previously used it.
 * [Databases integration testing strategies](https://julien.danjou.info/blog/2014/db-integration-testing-strategies-python)
   covers a difficult topic that comes up on every real world project.
 
+* GitLab provided their 
+  [postmortem of a database outage on January 31](https://about.gitlab.com/2017/02/10/postmortem-of-database-outage-of-january-31/)
+  as a way to be transparent to customers and help other development
+  teams learn how they screwed up their database systems then found a way
+  to recover.
+
 * [Asynchronous Python and Databases](http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/)
   is an in-depth article covering why many Python database drivers cannot
   be used without modification due to the differences in blocking versus
