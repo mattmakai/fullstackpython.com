@@ -32,3 +32,13 @@ implementation that is typically used to run Python web applications.
   shows how to set up a [Django](/django.html) web app on Debian Linux that
   uses [Nginx](/nginx.html) as a [web server](/web-servers.html) and reverse 
   proxy for the uWSGI server.
+
+* The official 
+  [uWSGI quickstart](https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html)
+  is awesome because it shows you how to code a quick WSGI application without
+  using a framework then builds up an example with deploying a traditional 
+  Django web app.
+
+* [Deployment Notes for Pylons, Nginx, and uWSGI](http://tonylandis.com/python/deployment-howt-pylons-nginx-and-uwsgi/)
+  gives the code and instructions for setting up a Pylons application 
+  with uWSGI.

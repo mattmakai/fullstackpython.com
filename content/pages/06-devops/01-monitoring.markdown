@@ -58,29 +58,34 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
 
 ## Open source monitoring projects
 
-Error Tracking
-
 * [Sentry](https://github.com/getsentry/sentry) started life as a 
   Python-only monitoring project but can now be used for any programming
   language.
 
-Metrics
+* [Service Canary](https://servicecanary.com/)
+
+* [ping.gg](https://ping.gg/) ([source code](https://github.com/pinggg/pingd))
+
+* [glances](https://nicolargo.github.io/glances/) 
+  ([source code](https://github.com/nicolargo/glances))
 
 * [statsd](https://github.com/etsy/statsd/) is a node.js network daemon that
   listens for metrics and aggregates them for transfer into another service
   such as Graphite.
+
 * [Graphite](https://graphite.readthedocs.org/en/latest/overview.html) stores
   time-series data and displays them in graphs through a Django web application.
+
 * [Sensu](http://sensuapp.org/) is an open source monitoring framework
   written in Ruby but applicable to any programming language web application. 
+
 * [Graph Explorer](http://vimeo.github.io/graph-explorer/) by Vimeo is a
   Graphite-based dashboard with added features and a slick design.
+
 * [Munin](http://munin-monitoring.org/) is a client plugin-based monitoring 
   system that sends monitoring traffic to the Munin node where the data can
   be analyzed and visualized. Note this project is written in Perl so Perl 5
   must be installed on the node collecting the data.
-
-User Monitoring
 
 * [Bucky](http://github.hubspot.com/bucky/) measures the performance of a
   web application from end user's browsers and sends that data back to the
@@ -163,6 +168,13 @@ Incident Management
   is a great presentation highlighting that visualization so humans can
   understand measurements is a hard problem. Line graphs are often not
   the best solution and they are overused.
+
+* [Keeping an eye on our network](https://githubengineering.com/keeping-an-eye-on-our-network/)
+  explains how GitHub uses tagged metrics to keep better tabs on its
+  infrastructure and network connections.
+
+* [10 monitoring talks every developer should watch](https://techbeacon.com/devops/10-monitoring-talks-every-developer-should-watch)
+  contains a great collection of relevant monitoring presentations.
 
 * The Collector Highlight Series has an article on [StatsD](http://blog.librato.com/posts/statsd)
   that explains how to install it and how it works.
