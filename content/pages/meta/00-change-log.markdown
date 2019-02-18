@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2019
 ### February
+* Add [uWSGI](/uwsgi.html) page with a few initial resources.
 * Updated the [Neo4j](/neo4j.html) and [microservices](/microservices.html)
   pages with more resources.
 * Added a bunch more [bots](/bots.html) resources.
