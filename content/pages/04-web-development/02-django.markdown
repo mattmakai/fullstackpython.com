@@ -278,10 +278,6 @@ Django developers. These resources along with the
 [static content](/static-content.html) page are useful for figuring out how 
 to handle these files properly.
 
-* [How to Optimize Images for Page Load Speed in Django](https://worthwhile.com/blog/2016/07/11/django-page-load-speed/)
-  reviews good practices for improving page speed performance when media 
-  images make up a significant percentage of webpage download size.
-
 * [Using Amazon S3 to Store your Django Site's Static and Media Files](http://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/)
   is a well written guide to a question commonly asked about static and
   media file serving.

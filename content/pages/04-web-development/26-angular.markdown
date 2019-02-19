@@ -17,8 +17,6 @@ application framework for building rich apps that run in web browsers.
 
 
 ### Angular resources
-* [Getting Started with Django Rest Framework and AngularJS](http://blog.kevinastone.com/getting-started-with-django-rest-framework-and-angularjs.html)
-  is a very detailed introduction to Djangular with example code. 
 
 * This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://mourafiq.com/2013/07/01/end-to-end-web-app-with-django-angular-1.html)
   tutorial along with 
