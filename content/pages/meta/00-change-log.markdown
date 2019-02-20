@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2019
 ### February
+* Removed many broken links thanks to 
+  [pull request #205](https://github.com/mattmakai/fullstackpython.com/pull/205). 
+  Thanks again [Sam](https://github.com/huangsam)!
 * Add [uWSGI](/uwsgi.html) page with a few initial resources.
 * Updated the [Neo4j](/neo4j.html) and [microservices](/microservices.html)
   pages with more resources.
