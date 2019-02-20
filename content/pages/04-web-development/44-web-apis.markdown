@@ -62,6 +62,10 @@ on the number's page on Twilio as shown below.
   [APIs 101](https://zapier.com/blog/apis-101/) free guide for what APIs 
   are, why they are valuable and how to use them properly. 
 
+* [What is REST?](http://mickadoo.github.io/rest/2016/09/26/what-is-rest.html)
+  is a well-written overview of the REpresentational State Transfer (REST)
+  architecture proposed by Roy Fielding in his dissertation.
+
 * [GET PUT POST](https://medium.com/get-put-post) is a newsletter just
   about APIs. Past issues have included interviews with the developers 
   behind Stripe, Dropbox and Coinbase.

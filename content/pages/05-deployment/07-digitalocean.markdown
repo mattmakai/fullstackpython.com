@@ -11,6 +11,8 @@ meta: DigitalOcean is a virtual private server provider and deployment platform 
 DigitalOcean is a virtual private server provider and deployment 
 platform that can be used for running Python applications.
 
+<a href="https://do.co/fullstackpython" style="border: none;"><img src="/img/logos/digitalocean.png" width="100%" alt="Official DigitalOcean logo. Copyright DigitalOcean." class="shot" style="padding: 12px 0 12px 0"></a>
+
 
 ### DigitalOcean examples
 * [Creating a Kubernetes Cluster on DigitalOcean with Python and Fabric](https://testdriven.io/blog/creating-a-kubernetes-cluster-on-digitalocean/)

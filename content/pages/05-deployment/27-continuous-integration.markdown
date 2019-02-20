@@ -143,6 +143,10 @@ programming language agnostic. Learn more via the following resources or on
   includes advice on checking in code, commit tests and reverting to
   previous revisions.
 
+* [Scoring Continuous Integration](https://paulhammant.com/2017/05/01/scoring-continuous-integration/)
+  gives an interesting perspective on ways to rank the effectiveness
+  of how teams use their CI tooling.
+
 * [Why Continuous Integration Is Important](https://blog.codeship.com/continuous-integration-important/)
   is a high-level overview of how CI can build trust both among developers
   and between developers and non-technical people in an organization. The

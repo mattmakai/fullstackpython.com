@@ -72,7 +72,16 @@ teams, culture, processes and tools into software development organizations.
   principles behind keeping the largest websites alive. Note though that
   some of the advice in the book will be considered controversial at more
   stodgy traditional organizations that have done operations differently
-  for a long time.
+  for a long time. There is also 
+  [a wonderful interview with Ben Treynor](https://landing.google.com/sre/interview/ben-treynor/), 
+  one of the authors of the book, that contains additional information.
+
+* [The Increment](https://increment.com/), Stripe's fantastic digital and
+  print magazine, has 
+  [an issue dedicated to being on-call](https://increment.com/on-call/)
+  which discusses many DevOps-related topics such as what happens when
+  your pager goes off, ownership and how startups can be different from
+  large companies with their incident responses.
 
 * [Bing: Continuous Delivery](http://stories.visualstudio.com/bing-continuous-delivery/)
   is an impressive visual story that explains the practices for how their
