@@ -157,10 +157,6 @@ incorporate into their environment.
   and [Cheetah](https://pythonhosted.org/Cheetah/) as well as 
   [JavaScript](/javascript.html) front-end frameworks.
 
-* [Tern](http://ternjs.net/) is a stand-alone code-analysis engine for
-  JavaScript. It can be integrated within a Django project
-  via the [tern-django](https://github.com/proofit404/tern-django) package.
-
 
 ### Popular user configurations
 Numerous custom Emacs user configurations exist that bundle together custom

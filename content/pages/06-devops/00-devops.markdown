@@ -59,11 +59,6 @@ teams, culture, processes and tools into software development organizations.
   their services running and putting them out for other developers to consume.
   Highly recommended.
 
-* [So, you've been paged](http://blog.scalyr.com/2016/09/so-youve-been-paged/)
-  provides their development team's "Communicate -> Learn -> Act" structure
-  for handling production issues based on lessons learned from their years 
-  of experience dealing with incidents.
-
 * [Operations for software developers for beginners](https://jvns.ca/blog/2016/10/15/operations-for-software-developers-for-beginners/)
   gives advice to developers who have never done operations work and
   been on call for outages before in their career. The advantage of DevOps

@@ -82,10 +82,6 @@ Python-specific applications.
 * The Python wiki has a page with a list of 
   [Python testing tools and extensions](https://wiki.python.org/moin/PythonTestingToolsTaxonomy).
 
-* [Generate your tests](http://blog.kevinastone.com/generate-your-tests.html)
-  shows how to write a test generator that works with the `unittest` 
-  framework.
-
 * [An Extended Introduction to the nose Unit Testing Framework](http://ivory.idyll.org/articles/nose-intro.html)
   shows how this test runner can be used to write basic test suites.
   While the article is from 2006, it remains relevant today for learning

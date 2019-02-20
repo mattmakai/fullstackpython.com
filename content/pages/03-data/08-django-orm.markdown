@@ -63,11 +63,6 @@ that have been added throughout the project's history.
   [relational database](/databases.html) will require a lot more work to
   port over to another backend even with the power of the ORM.
 
-* [Django Model Descriptors](http://blog.kevinastone.com/django-model-descriptors.html)
-  discusses and shows how to incorporate business logic into Django models
-  to reduce complexity from the views and make the code easier to reuse across
-  separate views.
-
 * [Adding basic search to your Django site](https://www.calazan.com/adding-basic-search-to-your-django-site/)
   shows how to write generic queries that'll allow you to provide site
   search via the Django ORM without relying on another tool like
