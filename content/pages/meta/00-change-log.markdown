@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2019
 ### February
+* Added a ton of resources on the [Kubernetes](/kubernetes.html) page.
 * Removed many broken links thanks to 
   [pull request #205](https://github.com/mattmakai/fullstackpython.com/pull/205). 
   Thanks again [Sam](https://github.com/huangsam)!

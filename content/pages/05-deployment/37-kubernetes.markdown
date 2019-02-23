@@ -73,6 +73,10 @@ applications.
   gives a great overview of the most popular tools that make it easier to
   use Kubernetes.
 
+* [Architecting applications for Kubernetes](https://www.digitalocean.com/community/tutorials/architecting-applications-for-kubernetes)
+  is stuffed full of great design advice that is now available as people
+  having been using Kubernetes for a couple of years.
+
 
 ### Kubernetes tutorials
 * [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -97,4 +101,8 @@ applications.
 * [Kubernetes Production Patterns](https://github.com/gravitational/workshop/blob/master/k8sprod.md)
   is a tutorial with good and bad practices so you can learn what to do
   and what to avoid in your Kubernetes infrastructure.
+
+* [Django Production Deployment on GCP with Kubernetes](https://www.agiliq.com/blog/2018/07/django-on-kubernetes/)
+  uses Helm to make it easier to deploy the example [Django](/django.html)
+  web app with a [PostgreSQL](/postgresql.html) backend.
 
