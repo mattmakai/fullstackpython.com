@@ -17,6 +17,27 @@ applications.
 <a href="https://kubernetes.io/" style="border: none;"><img src="/img/logos/kubernetes.png" width="100%" alt="Official Kubernetes logo." class="shot" style="padding: 6px 0 6px 0"></a>
 
 
+### Kubernetes tools
+* [Helm](https://helm.sh/) ([source code](https://github.com/helm/helm))
+  is a package manager for Kubernetes charts, which are the way to define
+  common types of Kubernetes cluster arrangements, like [MySQL](/mysql.html),
+  [Cassandra](/apache-cassandra.html) or [Jenkins](/jenkins.html).
+
+* [Gitkube](https://gitkube.sh/) 
+  ([source code](https://github.com/hasura/gitkube)) makes it possible to
+  deploy an application to Kubernetes using `git push`, similar to how
+  Heroku popularized making 
+  [platform-as-a-service](/platform-as-a-service.html) deployments easy.
+
+* [Kompose](http://kompose.io/index) 
+  ([source code](https://github.com/kubernetes/kompose))
+  translate Docker Compose files into Kubernetes configuration resources.
+
+* [skaffold](https://skaffold.dev/). [Using Kubernetes for local development](https://nemethgergely.com/using-kubernetes-for-local-development/index.html)
+  is a good starting place for more information on getting started with
+  Skaffold.
+
+
 ### Kubernetes background and retrospectives
 * [Borg, Omega and Kubernetes](https://queue.acm.org/detail.cfm?id=2898444)
   goes into the history of Borg and Omega, projects that preceded 
@@ -37,6 +58,21 @@ applications.
   running on your Kubernetes cluster and potentially much faster deployment 
   after appropriate configuration.
 
+* [How we designed our Kubernetes infrastructure on AWS](https://developer.atlassian.com/blog/2017/07/kubernetes-infra-on-aws/)
+  explains how the Kubernetes Infrastructure Technology Team (yes, that
+  abbreviates to KITT in honor of the 
+  [1980s Knight Rider TV show](https://www.imdb.com/title/tt0083437/))
+  at Atlassian starting using the tool and how they have built infrastructure
+  around it for the company to operate their container-ized applications.
+
+* [10 Most Common Reasons Kubernetes Deployments Fail](https://kukulinski.com/10-most-common-reasons-kubernetes-deployments-fail-part-1/)
+  goes over many of the top technical reasons why issues come up with
+  Kubernetes and what you need to do to avoid or work through them.
+
+* [Draft vs Gitkube vs Helm vs Ksonnet vs Metaparticle vs Skaffold](https://blog.hasura.io/draft-vs-gitkube-vs-helm-vs-ksonnet-vs-metaparticle-vs-skaffold-f5aa9561f948/)
+  gives a great overview of the most popular tools that make it easier to
+  use Kubernetes.
+
 
 ### Kubernetes tutorials
 * [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -48,8 +84,17 @@ applications.
 * [Kubernetes by Example](http://kubernetesbyexample.com/) provides the 
   commands and code for you to get started with the core Kubernetes concepts.
 
+* [Your instant Kubernetes cluster](https://blog.alexellis.io/your-instant-kubernetes-cluster/)
+  provide a concise set of instructions for setting up a cluster.
+
+* [A tutorial introduction to Kubernetes](http://okigiveup.net/a-tutorial-introduction-to-kubernetes/)
+  covers a bunch of introductory steps using an example Python application.
+
+* [An Example Of Real Kubernetes: Bitnami](https://engineering.bitnami.com/articles/an-example-of-real-kubernetes-bitnami.html)
+  gives instructions for what to do after you have finished creating
+  a Kubernetes cluster and learned the "Hello, World!"-style example.
+
 * [Kubernetes Production Patterns](https://github.com/gravitational/workshop/blob/master/k8sprod.md)
   is a tutorial with good and bad practices so you can learn what to do
   and what to avoid in your Kubernetes infrastructure.
-
 

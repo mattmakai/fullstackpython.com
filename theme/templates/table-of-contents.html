@@ -158,24 +158,23 @@ dedicated to Python web application deployment.
 <h4>5.3 <a href="/platform-as-a-service.html">Platform-as-a-Service</a></h4>
 <div class="tc"><a href="/heroku.html">Heroku</a></div>
 <div class="tc"><a href="/pythonanywhere.html">PythonAnywhere</a></div>
-<div class="tc sn">AWS Codestar</div>
+<div class="tc"><a href="/aws-codestar.html">AWS CodeStar</a></div>
 <h4>5.4 <a href="/operating-systems.html">Operating systems</a></h4>
 <div class="tc"><a href="/ubuntu.html">Ubuntu Linux</a></div>
 <div class="tc"><a href="/macos.html">macOS</a></div>
+<div class="tc sn">FreeBSD</div>
 <div class="tc"><a href="/microsoft-windows.html">Windows</a></div>
 <h4>5.5 <a href="/web-servers.html">Web servers</a></h4>
 <div class="tc"><a href="/apache-http-server.html">Apache HTTP Server</a></div>
 <div class="tc"><a href="/nginx.html">Nginx</a></div>
 <div class="tc"><a href="/caddy.html">Caddy</a></div>
-<div class="tc sn">Lighttpd</div>
 <h4>5.6 <a href="/wsgi-servers.html">WSGI servers</a></h4>
 <div class="tc"><a href="/green-unicorn-gunicorn.html">Green Unicorn</a></div>
-<div class="tc sn">mod_wsgi</div>
 <div class="tc"><a href="/uwsgi.html">uWSGI</a></div>
+<div class="tc sn">mod_wsgi</div>
 <h4>5.7 <a href="/continuous-integration.html">Continuous integration</a></h4>
 <div class="tc"><a href="/jenkins.html">Jenkins</a></div>
 <div class="tc sn">GoCD</div>
-<div class="tc sn">Travis CI</div>
 <h4>5.8 <a href="/configuration-management.html">Configuration management</a></h4>
 <div class="tc"><a href="/ansible.html">Ansible</a></div>
 <div class="tc sn">Salt</div>
@@ -193,16 +192,17 @@ dedicated to Python web application deployment.
 <div class="tc"><a href="/rollbar.html">Rollbar</a></div>
 <div class="tc sn">Sentry</div>
 <div class="tc sn">Scout</div>
-<h4>6.3 <span class="sn">Web App Performance</span></h4>
+<h4>6.2 <span class="sn">Web App Performance</span></h4>
+<div class="tc"><a href="/logging.html">Logging</a></div>
 <div class="tc"><a href="/caching.html">Caching</a></div>
-<div class="tc sn">Load testing</div>
-<div class="tc sn">Scaling</div>
-<h4>6.4 <a href="/logging.html">Logging</a></h4>
-<div class="tc sn">stdlib logging</div>
-<div class="tc sn">logbook</div>
-<h4>6.5 <a href="/web-analytics.html">Web Analytics</a></h4>
-<div class="tc sn">Google Analytics</div>
-<div class="tc sn">Piwik</div>
+<div class="tc"><a href="/web-analytics.html">Web Analytics</a></div>
+
+<h3>7. Meta</h3>
+<div class="tc" style="margin-left:26px"><a href="/change-log.html">Change log</a></div>
+<div class="tc" style="margin-left:26px"><a href="/about-author.html">About the author</a></div>
+<div class="tc" style="margin-left:26px"><a href="/what-full-stack-means.html">What "full stack" means</a></div>
+<div class="tc" style="margin-left:26px"><a href="/page-statuses.html">Page Statuses</a></div>
+<div class="tc" style="margin-left:26px"><a href="/future-directions.html">Future directions</a></div>
 </div>
 </div>
 <br>
@@ -213,12 +213,10 @@ dedicated to Python web application deployment.
 {% for a in articles %}<h4 class="bp"><a href="/blog/{{ a.slug }}.html">{{ a.title }}</a></h4>{% endfor %}
 </div>
 <div class="c3">
-<h2>Meta</h2>
-<h4 class="bp"><a href="/change-log.html">Change log</a></h4>
-<h4 class="bp"><a href="/about-author.html">About the author</a></h4>
-<h4 class="bp"><a href="/what-full-stack-means.html">What "full stack" means</a></h4>
-<h4 class="bp"><a href="/page-statuses.html">Page Statuses</a></h4>
-<h4 class="bp"><a href="/future-directions.html">Future directions</a></h4>
+<h2>Books &amp; Videos</h2>
+<h4 class="bp"><a href="https://training.talkpython.fm/courses/explore_ansible/introduction-to-ansible-with-python">Introduction to Ansible</a></h4>
+<h4 class="bp"><a href="https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business">Python for Entrepreneurs</a></h4>
+<h4 class="bp"><a href="https://www.deploypython.com/">Deploying Flask Web Apps</a></h4>
 </div>
 </div>
 {% endblock %}
