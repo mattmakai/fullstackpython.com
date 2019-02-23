@@ -57,6 +57,7 @@ applications through machine-to-machine communication.
 * [Pycnic](http://pycnic.nullism.com) is a JSON-API-only framework designed 
   with REST in mind. 
 
+
 ## API testing projects
 Building, running and maintaining APIs requires as much effort as building,
 running and maintaining a web application. API testing frameworks are the 
@@ -65,6 +66,8 @@ equivalent of browser testing in the web application world.
 * [zato-apitest](https://github.com/zatosource/zato-apitest) invokes HTTP 
   APIs and provides hooks for running through other testing frameworks.
 
+* [Tavern](https://taverntesting.github.io/) is a pytest plugin for 
+  automated API testing.
 
 
 ### Hosted API testing services
@@ -90,6 +93,10 @@ equivalent of browser testing in the web application world.
   others to host the open source code. Fraud and malware prevention are 
   difficult problems so keep an eye on server utilization and endpoint calls 
   growth to separate legitimate from illegitimate traffic. 
+
+* [API versioning](https://stripe.com/blog/api-versioning) is a wonderful
+  article on the tradeoffs between including an API version in the URL
+  compared to other common ways to version APIs.
 
 * [API Doc JS](http://apidocjs.com/) allows a developer to embed markup
   in their documentation that will generate a site based on the endpoints
@@ -169,11 +176,9 @@ equivalent of browser testing in the web application world.
   into what makes a good API framework and which one you should currently
   choose for Django.
 
-* [Create a REST API in Minutes with Pyramid and Ramses](https://realpython.com/blog/python/create-a-rest-api-in-minutes-with-pyramid-and-ramses/)
-  is a thorough tutorial from start to finish that uses the 
-  [Pyramid](/pyramid.html) web framework along with 
-  [Ramses](https://pypi.org/project/ramses/), a library that uses
-  YAML files to generate a RESTful API.
+* [Creating Web APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
+  is a free book on building APIs with [Flask](/flask.html) as the
+  core [web framework](/web-framework.html).
 
 * [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
   is an interesting overview of the Python API frameworks space.
@@ -189,16 +194,29 @@ equivalent of browser testing in the web application world.
   subscribing to updates via a REST interface. Both REST hooks and webhooks
   are far more efficient than polling for updates and notifications.
 
+* [Rate limiters](https://stripe.com/blog/rate-limiters) provides a great
+  overview of how limiting access in both the number of requests per
+  second as well as the number of concurrent open connections can help
+  keep your API alive during times of heavy traffic.
+
 * Serialization is common for transforming objects into web API JSON
   results. One company found the serialization performance of Django REST 
   framework was lacking so they created 
   [Serpy](https://github.com/clarkduvall/serpy) and 
   [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
 
+* [Designing a Web API](http://restlet.com/company/blog/2015/03/16/api-design-designing-a-web-api/)
+  gives a detailed walkthrough of concepts and design decisions you need
+  to make when building an API.
+
 * Microsoft's 
   [REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)
   are a detailed set of considerations for when you are building your own
   APIs that you want to be easily-consumable by other developers.
+
+* [Designing Good Static REST API Documentation](https://www.moesif.com/blog/technical/documentation/Designing-Good-Static-REST-API-Documentation/)
+  is about documentation not APIs themselves, but it covers a critical topic
+  if you want your API to succeed: how to use the damn thing.
 
 * [Building better API docs](https://engineering.gosquared.com/building-better-api-docs)
   shows how Square used Swagger with React to create more helpful docs.

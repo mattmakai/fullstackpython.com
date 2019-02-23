@@ -48,9 +48,19 @@ be able to structure your playbooks:
   is an incredibly detailed look at how one developer installs and run
   Ansible.
 
+* This retrospective from a developer on 
+  [lessons from using Ansible exclusively for 2 years](https://blog.serverdensity.com/what-ive-learnt-from-using-ansible-exclusively-for-2-years/)
+  explains his rationale for choosing Ansible over Puppet and Chef,
+  then goes through several use cases and best practices learned over
+  time with the tool.
+
 * [Using Ansible for deploying serverless applications](https://opensource.com/article/17/8/ansible-serverless-applications)
   provides a short overview with an example playbook how Ansible can also
   be useful for configuring [serverless](/serverless.html) applications.
+
+* [Painless Immutable Infrastructure with Ansible and AWS](http://radify.io/blog/painless-immutable-infrastructure-with-ansible-and-aws/)
+  covers the steps needed for the unique authentication complexities
+  that arise from using Amazon Web Services for your infrastructure.
 
 * [DevOps from Scratch, Part 1: Vagrant & Ansible](https://www.kevinlondon.com/2016/09/19/devops-from-scratch-pt-1.html)
 

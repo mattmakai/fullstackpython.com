@@ -94,13 +94,17 @@ several years.
   has a great chapter devoted to why Nginx is built to scale a certain way
   and lessons learned along the development journey.
 
+* [nginx-quick-reference](https://github.com/trimstray/nginx-quick-reference)
+  provides fantastic tactical advice for improving Nginx performance,
+  handling security and many other critical aspects.
+
 * [Inside Nginx: How we designed for performance and scale](http://nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
   is a blog post from the developers behind Nginx on why they believe their
   architecture model is more performant and scalable than other approaches
   used to build web servers.
 
 * [Test-driving web server configuration](https://gdstechnology.blog.gov.uk/2015/03/25/test-driving-web-server-configuration/)
-  is a good story for how to iteratively apply configuration changes, such
+  tells a good story for how to iteratively apply configuration changes, such
   as routing traffic to [Piwik](http://piwik.org/) for 
   [web analytics](/web-analytics.html), reverse proxying to backend
   application servers and terminately TLS connections appropriately.

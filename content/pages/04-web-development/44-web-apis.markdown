@@ -66,9 +66,19 @@ on the number's page on Twilio as shown below.
   is a well-written overview of the REpresentational State Transfer (REST)
   architecture proposed by Roy Fielding in his dissertation.
 
+* The list of [public APIs](https://github.com/toddmotto/public-apis) in
+  this Git repository is incredible and worth examining if you are looking
+  to find data sources for your projects.
+
 * [GET PUT POST](https://medium.com/get-put-post) is a newsletter just
   about APIs. Past issues have included interviews with the developers 
   behind Stripe, Dropbox and Coinbase.
+
+* [Designing robust and predictable APIs with idempotency](https://stripe.com/blog/idempotency) 
+  discusses designing APIs for *idempotency*, which means guaranteeing that 
+  side effects only occur once. This topic is especially important with web
+  APIs because network connections are and will always be unreliable so you
+  need to build knowing network problems will happen.
 
 * [What RESTful actually means](https://codewords.recurse.com/issues/five/what-restful-actually-means)
   does a fantastic job of laying out the REST principles in plain language
@@ -85,6 +95,7 @@ on the number's page on Twilio as shown below.
 * [API tools for every occasion](https://medium.com/@orliesaurus/api-tools-for-every-occasion-10-api-tools-released-in-2015-i-can-t-live-without-d5947d9ca9c3)
   provides a list of 10 tools that are really helpful when working with APIs
   that are new in 2015.
+
 
 
 ## APIs learning checklist
