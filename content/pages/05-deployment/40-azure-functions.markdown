@@ -28,3 +28,19 @@ in other Azure services.
   response time, user load, requests per second and error rate
   over various periods of time.
 
+* [How to build a serverless report server with Azure Functions and SendGrid](https://medium.freecodecamp.org/how-to-build-a-serverless-report-server-with-azure-functions-and-sendgrid-3c063a51f963)
+  combines the [Sendgrid email API](https://sendgrid.com/) with some 
+  configuration code to have Azure Functions kick off email jobs.
+
+* [azure-cli](https://github.com/Azure/azure-cli) are the command line
+  tools for using all of Azure, not just Functions.
+
+* [My (Rough) Start with Azure Functions](https://www.raymondcamden.com/2018/07/06/my-rough-start-with-azure-functions)
+  painstakingly details signing up for Azure, accessing Functions and
+  finally coding a Function. The author has some really great points on
+  what is confusing to newcomers that hopefully will be addressed
+  as Microsoft continues to work on their Azure platform.
+
+* [Azure in Plain English](https://www.expeditedssl.com/azure-in-plain-english)
+  covers all of the Azure services and explains them because their
+  default names are often too vague to understand their purpose.
