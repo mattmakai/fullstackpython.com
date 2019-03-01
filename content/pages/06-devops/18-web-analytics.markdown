@@ -72,7 +72,7 @@ application before taking some action, such as purchasing your service.
   movements. 
 
 
-## Python-specific web analytics resources
+### Python-specific web analytics resources
 * [Building an Analytics App with Flask](http://charlesleifer.com/blog/saturday-morning-hacks-building-an-analytics-app-with-flask/)
   is a detailed walkthrough for collecting and analyzing webpage
   analytics with your own Flask app.
@@ -85,8 +85,13 @@ application before taking some action, such as purchasing your service.
   show how to extract your Google Analytics data via their web API and Python
   helper library so it can be used in other tools such as Excel.
 
+* [Automating web analytics through Python](https://rrighart.github.io/GA/)
+  is a tutorial for interacting with your Google Analytics data using 
+  [pandas](/pandas.html) and related [data analysis](/data-analysis.html) 
+  tools.
 
-## General web analytics resources
+
+### General web analytics resources
 * [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)  
 
 * This beginner's guide to 
@@ -99,6 +104,17 @@ application before taking some action, such as purchasing your service.
 
 * This post provides context for determining if a given metric is
   ["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
+
+* This series on measuring your technical content has a bunch of advice
+  for figuring out why you want to gather metrics, how to do the
+  instrumentation and determining your success factors.
+
+    * [Part 1 covers "why"](https://docsbydesign.com/2017/08/24/measuring-your-technical-content-part-1/)
+    * [Part 2 examines success factors](https://docsbydesign.com/2017/08/27/measuring-your-technical-content-part-2/)
+    * [Part 3 digs further into measurement](https://docsbydesign.com/2017/08/29/measuring-your-technical-content-part-3/)
+
+* [awesome-analytics](https://github.com/onurakpolat/awesome-analytics) 
+  aggregates analytics tools for both web and mobile applications.
 
 
 ## Web analytics learning checklist
