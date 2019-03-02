@@ -81,14 +81,19 @@ application before taking some action, such as purchasing your service.
   shows how to use pandas for data analysis with Google Analytics' API to
   perform calculations not available in the tool itself.
 
-* [Build your own Google Analytics Dashboard in Excel](http://blog.zoomeranalytics.com/google-analytics/)
-  show how to extract your Google Analytics data via their web API and Python
-  helper library so it can be used in other tools such as Excel.
+* [Build a Google Analytics Slack Bot with Python](https://www.twilio.com/blog/2018/03/google-analytics-slack-bot-python.html)
+  explains how to connect the Google Analytics API to a [Slack](/slack.html) 
+  bot, with all the code in Python, so you can query for Google Analytics 
+  data from your Slack channels.
 
 * [Automating web analytics through Python](https://rrighart.github.io/GA/)
   is a tutorial for interacting with your Google Analytics data using 
   [pandas](/pandas.html) and related [data analysis](/data-analysis.html) 
   tools.
+
+* [Build your own Google Analytics Dashboard in Excel](http://blog.zoomeranalytics.com/google-analytics/)
+  show how to extract your Google Analytics data via their web API and Python
+  helper library so it can be used in other tools such as Excel.
 
 
 ### General web analytics resources
@@ -115,6 +120,11 @@ application before taking some action, such as purchasing your service.
 
 * [awesome-analytics](https://github.com/onurakpolat/awesome-analytics) 
   aggregates analytics tools for both web and mobile applications.
+
+* [10 red flags signaling your analytics program will fail](https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/ten-red-flags-signaling-your-analytics-program-will-fail)
+  is a more business-focused piece but it has sosme good information and
+  visualization on broader themes that developers who work in larger
+  organizations should think about when it comes to analytics.
 
 
 ## Web analytics learning checklist
