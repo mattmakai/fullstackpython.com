@@ -15,6 +15,9 @@ on GitHub.
 
 
 ## 2019
+### March
+* New resources on the [web analytics](/web-analytics.html) page.
+
 ### February
 * Added a ton of resources on the [Kubernetes](/kubernetes.html) page.
 * Removed many broken links thanks to 

@@ -52,7 +52,7 @@ application before taking some action, such as purchasing your service.
 * [Google Analytics](http://www.google.com/analytics/) is a widely used
   free analytics tool for website traffic.
 
-* [Clicky](http://clicky.com/) provides real-time analytics comparable to
+* [Clicky](https://clicky.com/) provides real-time analytics comparable to
   Google Analytics' real-time dashboard.
 
 * [MixPanel](https://mixpanel.com/)'s analytics platform focuses on mobile
@@ -67,7 +67,7 @@ application before taking some action, such as purchasing your service.
 * [Heap](https://heapanalytics.com/) is a recently founded analytics service
   with a free introductory tier to get started.
 
-* [CrazyEgg](http://www.crazyegg.com/) is tool for understanding a
+* [CrazyEgg](https://www.crazyegg.com/) is tool for understanding a
   user's focus while using a website based on heatmaps generated from mouse 
   movements. 
 
@@ -95,9 +95,26 @@ application before taking some action, such as purchasing your service.
   show how to extract your Google Analytics data via their web API and Python
   helper library so it can be used in other tools such as Excel.
 
+* The official 
+  [Google Analytics Python quickstart](https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py)
+  isn't really the easiest tutorial to follow due to all of the configuration
+  required to make your first API call, but it is still the right place to go
+  to get started.
+
+* [How Accurately Can Prophet Project Website Traffic?](https://pbpython.com/prophet-accuracy.html)
+  uses the data forecasting tool 
+  [Prophet](https://facebook.github.io/prophet/) to see if it is possible
+  to predict future trends in website traffic based on historical data.
+
 
 ### General web analytics resources
-* [Google Analytics for Developers](http://blog.arkency.com/2012/12/google-analytics-for-developers/)  
+* [The Google Analytics Setup I Use on Every Site I Build](https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build/)
+  is a tutorial written for developers to better understand the scope
+  of what Google Analytics can tell you about your site and how
+  to configure it for better output.
+
+* [Deconstructing the Google Analytics tracking script](https://billfranklin.svbtle.com/deconstructing-the-ga-script)
+  breaks down the JavaScript found in the Google Analytics script.
 
 * This beginner's guide to 
   [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
