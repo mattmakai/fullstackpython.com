@@ -23,7 +23,7 @@ Git is a *distributed* version control system (DVCS) compared to the
 centralized models previously provided by 
 [Subversion](/apache-subversion.html) and [CVS](https://www.nongnu.org/cvs/).
 Files would need to be "checked out" over the network by a single person at
-a time while she was woring. The network transfer speed as well as the 
+a time while she was working. The network transfer speed as well as the 
 blocking check out model became a significant bottleneck, especially for 
 large development teams. 
 
