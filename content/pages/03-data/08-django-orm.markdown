@@ -109,6 +109,19 @@ that have been added throughout the project's history.
   is a very detailed example that shows how to work specifically with
   a [PostgreSQL](/postgresql.html) backend.
 
+* [Django Anti-Patterns: Signals](https://lincolnloop.com/blog/django-anti-patterns-signals/)
+  explains why you should avoid using Django ORM's 
+  [signals](https://docs.djangoproject.com/en/dev/topics/signals/) feature
+  in your applications if you want to make them easier to maintain.
+
+* [Django ORM optimization story on selecting the least possible](https://www.peterbe.com/plog/django-orm-optimization-story-on-selecting-the-least-possible)
+  goes through one developer's Django ORM code refactoring to optimize the
+  performance and results of a single query.
+
+* [Fixing your Django async job - database integration](https://spapas.github.io/2019/02/25/django-fix-async-db/)
+  is a great article on how to properly integrate the 
+  [RQ task queue](/redis-queue-rq.html) with a Django backend.
+
 
 ### Django migrations resources
 [Django migrations](https://docs.djangoproject.com/en/dev/topics/migrations/) 
@@ -134,11 +147,6 @@ following resources should get you past the initial hurdles.
 * [Squashing and optimizing migrations in Django](http://www.rkblog.rk.edu.pl/w/p/squashing-and-optimizing-migrations-django/)
   shows a simple example with code for how to use the migrations integrated
   into Django 1.7.
-
-* [Django Anti-Patterns: Signals](https://lincolnloop.com/blog/django-anti-patterns-signals/)
-  explains why you should avoid using Django ORM's 
-  [signals](https://docs.djangoproject.com/en/dev/topics/signals/) feature
-  in your applications if you want to make them easier to maintain.
 
 * [Supporting both Django 1.7 and South](http://treyhunner.com/2014/03/migrating-to-django-1-dot-7/)
   explains the difficulty of supporting Django 1.7 and maintaining South
