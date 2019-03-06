@@ -119,3 +119,14 @@ has support for both Python 2.7, 3.6 and 3.7.
   how the circuit breaker pattern should be applied to your Lambdas
   and ultimately why low time outs are likely the best way to go to
   prevent your application from becoming entirely unresponsive.
+
+* [X-rays for Flask and Django Serverless Applications](https://aws.amazon.com/blogs/developer/introducing-aws-x-ray-support-for-python-web-frameworks-used-in-serverless-applications/)
+  is an instrumentation, monitoring and debugging service built into AWS
+  Lambda specifically for Python [web frameworks](/web-frameworks.html) 
+  running on the service.
+
+* [Cutting Through the Layers: AWS Lambda Layers Explained](https://read.iopipe.com/cutting-through-the-layers-aws-lamba-layers-explained-28e8a8d7bda8)
+  explains how AWS Lambda now offer a "Bring Your Own Runtime" by exposing
+  the layers that were previously controlled exclusively by Amazon. There
+  is an overview of the layers and why they matter for customizing your
+  functions.

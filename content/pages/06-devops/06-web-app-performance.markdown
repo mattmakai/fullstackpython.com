@@ -28,7 +28,6 @@ database queries, page size and many other factors.
   ensure their applications work properly under heavy usage.
 
 
-
 ### Web app performance resources
 * [A Primer in Web Performance](https://kiboit.com/performance) is a quick,
   straightforward one pager on why the topic matters and what causes bad
@@ -51,6 +50,16 @@ database queries, page size and many other factors.
   [task queues](/task-queues.html), [database](/databases.html) optimization
   and [caching](/caching.html).
 
+* The [Performance Testing Guidance for Web Applications](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/bb924375(v%3dpandp.10)
+  book from Microsoft is a gem. There are chapters on foundations of 
+  performance testing, modeling application usage and many other topics
+  that are critical to working on web app performance.
+
 * [awesome-scalability](https://github.com/binhnguyennus/awesome-scalability)
   provides a list with a crazy number of scaling and performance optimization 
   resources and tools by category.
+
+* [The Infrastructure Behind Twitter: Scale](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html)
+  examines the evolution from having to buy your own hardware from vendors
+  to run a service to the current days of being able to rely on cloud 
+  providers for some or all workloads regardless of scale.
