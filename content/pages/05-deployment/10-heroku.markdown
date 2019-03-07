@@ -25,3 +25,6 @@ easily [deploy](/deployment.html) Python applications.
 * Heroku's 
   [official Python documentation](https://devcenter.heroku.com/articles/getting-started-with-python) 
   is fantastic and walks through deploying WSGI applications in short order.
+
+* [Production Django Deployments on Heroku](https://testdriven.io/blog/production-django-deployments-on-heroku/)
+  aims to simplify the process of deploying, maintaining, and scaling production-grade Django apps on Heroku.
