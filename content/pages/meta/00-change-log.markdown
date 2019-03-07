@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2019
 ### March
+* Added new resources across the site and merged 
+  [PR #206](https://github.com/mattmakai/fullstackpython.com/pull/206)
+  with a new [Heroku](/heroku.html) page link.
 * New resources on the [web analytics](/web-analytics.html) page.
 
 ### February
