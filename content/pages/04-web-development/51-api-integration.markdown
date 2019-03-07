@@ -36,6 +36,11 @@ across many implementation areas.
   helper library. In that case check out this 
   [tutorial on using requests to access web APIs](http://engineering.hackerearth.com/2014/08/21/python-requests-module/).
 
+* [How to Debug Common API Errors](https://blog.runscope.com/posts/how-to-debug-common-api-errors)
+  talks about the 1xx through 5xx status codes you will receive when working
+  with HTTP requests and what to do when you get some of the more common 
+  ones such as 403 Forbidden and 502 Bad Gateway.
+
 * Product Hunt lists many commonly used 
   [commercial and free web APIs](https://www.producthunt.com/e/an-api-for-everything)
   to show "there's an API for everything".

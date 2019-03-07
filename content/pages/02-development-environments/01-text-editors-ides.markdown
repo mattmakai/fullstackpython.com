@@ -136,6 +136,11 @@ editors work by digging into their source code.
 These resources provide comparisons of various editors and give some
 deeper insight into the IDE vs plain text editor debate.
 
+* [EditorConfig](https://editorconfig.org/) 
+  ([source code](https://github.com/editorconfig/)) is an open source
+  tool for keeping many text editors and IDEs on the same code styles
+  and configurations.
+
 * [PyCharm vs Sublime Text](https://opensourcehacker.com/2015/05/02/pycharm-vs-sublime-text/)
   has a comparison of several features between the two editors.
 

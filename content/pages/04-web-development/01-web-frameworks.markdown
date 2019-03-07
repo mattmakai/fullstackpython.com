@@ -118,6 +118,15 @@ frameworks, templating engines and
   [Flask](/flask.html) and [Pyramid](/pyramid.html) allow developers to 
   accomplish.
 
+* There is also another, more recent multi-part tutorial about 
+  building your own web framework in Python. This series is based on the
+  [alcazar](https://github.com/rahmonov/alcazar) project the author is
+  coding for learning purposes:
+
+    * [Part 1: Handling requests](http://rahmonov.me/posts/write-python-framework-part-one/)
+    * [Part 2: Routes, Class-Based Handlers and Unit Testing](http://rahmonov.me/posts/write-python-framework-part-two/)
+    * [Part 3: Test Client and Templating Support](http://rahmonov.me/posts/write-python-framework-part-three/)
+
 * Check out the answer to the 
   "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
   question on Stack Overflow.

@@ -124,3 +124,6 @@ Python-specific applications.
   shows how to use the Faker tool with various seeds and outputs into
   your tests.
 
+* [Unit Testing Applications that use Flask-Login and Flask-SocketIO](https://blog.miguelgrinberg.com/post/unit-testing-applications-that-use-flask-login-and-flask-socketio)
+  explains how to set up a [WebSockets](/websockets.html) unit test
+  with a couple of common [Flask](/flask.html) libraries.
