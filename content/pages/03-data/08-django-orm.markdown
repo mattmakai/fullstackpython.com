@@ -82,6 +82,13 @@ that have been added throughout the project's history.
   shows you how to log authentication failures, create an IP addresses white
   list and combine fail2ban with the authentication failures list.
 
+* [How to Turn Django Admin Into a Lightweight Dashboard](https://hakibenita.com/how-to-turn-django-admin-into-a-lightweight-dashboard)
+  and
+  [How to Use Grouping Sets in Django](https://hakibenita.com/how-to-use-grouping-sets-in-django)
+  are two great posts on how to add custom features to the Django Admin
+  as well as optimize with more advanced SQL when the first attempt
+  at the queries get slow due to larger amounts of data.
+
 * [Sorting querysets with NULLs in Django](https://www.isotoma.com/blog/2015/11/23/sorting-querysets-with-nulls-in-django/)
   shows what to do if you're struggling with the common issue of sorting
   columns that contain NULL values.

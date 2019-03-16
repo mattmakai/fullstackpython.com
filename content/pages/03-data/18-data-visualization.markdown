@@ -68,6 +68,10 @@ easier for humans to see patterns, trends and other useful information.
   uses Python, numpy and scikit-image to animate how sorting algorithms 
   work.
 
+* [How to Build a Reporting Dashboard using Dash and Plotly](https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f)
+  explains how to use the Dash library to take a bunch of data and
+  turn it into a nice-looking dashboard.
+
 
 ### Beautiful example visualizations
 Sometimes you need inspiration from other sources to figure out what

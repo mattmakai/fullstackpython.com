@@ -116,6 +116,12 @@ application before taking some action, such as purchasing your service.
 * [Deconstructing the Google Analytics tracking script](https://billfranklin.svbtle.com/deconstructing-the-ga-script)
   breaks down the JavaScript found in the Google Analytics script.
 
+* [Roll your own analytics](https://www.pcmaffey.com/roll-your-own-analytics/)
+  shows you how to use [AWS Lambda](/aws-lambda.html) and some custom 
+  JavaScript to create your own replacement for Google Analytics. This route
+  is not for everyone but it is really useful if you want to avoid the Google
+  data trap.
+
 * This beginner's guide to 
   [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
   provides some context for understanding and reasoning about web traffic. 
