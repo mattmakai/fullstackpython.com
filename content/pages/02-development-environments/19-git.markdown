@@ -114,6 +114,11 @@ cases.
   tools, potential hot spots in the code and coupling between source code
   files. This is a great read once you get past the basics of using Git.
 
+* [Write yourself a Git!](https://wyag.thb.lt/) is a tutorial for building 
+  your own version of Git from scratch with 503 lines of Python code. The 
+  result is obviously not as full-featured as the real Git implementation
+  but this program is awesome for understanding how Git's internals work.
+
 * [Phil Nash](https://philna.sh/) shows how to use the `git reflog` command 
   in [Git back to the future](https://philna.sh/blog/2017/01/04/git-back-to-the-future/).
   
