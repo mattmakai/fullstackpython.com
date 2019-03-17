@@ -116,6 +116,11 @@ certain threshold.
   output to help debuggin when things go wrong, or to determine if something
   is going wrong.
 
+* [Structured Logging: The Best Friend You’ll Want When Things Go Wrong](https://engineering.grab.com/structured-logging)
+  explains how Grab (a large ridesharing platform in Asia) uses
+  structured logging to reduce Mean Time To Resolve (MTTR) and how they
+  arranged their log levels to support their scale.
+
 * [A guide to logging in Python](https://opensource.com/article/17/9/python-logging)
   has some clear, simple diagrams to explain how logging works in Python
   applications.

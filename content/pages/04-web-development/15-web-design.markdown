@@ -99,6 +99,10 @@ this short list as my absolute favorites that help developers become
   hexadecimal values, red-green-blue (RGB) and 
   Hue-Saturation-Lightness (HSL).
 
+* [Easy to Remember Color Guide for Non-Designers](https://sendwithses.gitbook.io/helpdocs/random-stuff/easy-to-remember-color-guide-for-non-designers)
+  gives guidance to less aesthetically-inclined folks like myself who
+  need rules for picking groups of colors to use together in your designs.
+
 * [13 Terrible Web Trends From the 90s, and How to Recreate Them](https://envato.com/blog/13-terrible-web-trends-90s-recreate/)
   revisits a simpler and perhaps more... ugly time on the web where designs
   were a bit out of control. Learn more about the history of web design and
