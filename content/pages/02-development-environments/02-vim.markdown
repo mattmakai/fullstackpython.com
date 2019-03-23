@@ -282,3 +282,8 @@ anything.
   project and walkthrough that shows how you can create a foot pedal to
   switch between Normal and Insert modes instead of using the typical ESC
   key (or a remapped key).
+
+* [How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)
+  explains how the author is able to keep up with mathematics
+  lectures by using Vim and LaTeX which produces gorgeous notes
+  that can be used to study.
