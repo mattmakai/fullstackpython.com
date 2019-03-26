@@ -14,13 +14,17 @@ source code that can be executed on computers to achieve one or more goals.
 There are many steps in learning how to program, including
 
 1. setting up a [development environment](/development-environments.html)
-1. selecting a programming language, such as Python
+1. selecting a [programming language](/python-programming-language.html), 
+   of which 
+   [Python is just one of many amazing ecosystems](/why-use-python.html)
+   that you can decide to use
 1. understanding the syntax and commands for the language
 1. writing code in the language, often using 
    [pre-existing code libraries](/application-dependencies.html) and 
    [frameworks](/web-frameworks.html)
 1. executing the program
-1. debugging errors and unexpected results
+1. [debugging errors](/debugging.html) and 
+   [testing for unexpected results](/testing.html)
 1. [deploying](/deployment.html) an application so it can run for intended 
    users
 
