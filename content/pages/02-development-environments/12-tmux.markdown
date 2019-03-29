@@ -24,6 +24,10 @@ easier to use many shells at once and attaching to both local and remote
 
 ### tmux resources
 * [Tmux and Vim - even better together](https://blog.bugsnag.com/tmux-and-vim/)
+  explains how using tmux with the [Vim](/vim.html) editor provide better
+  multi-window navigation using only keystrokes and other benefits. As an avid
+  tmux+Vim user myself, I can attest to how great these two tools complement
+  each other.
 
 * [Making tmux Pretty and Usable - A Guide to Customizing your tmux.conf](http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/)
 
