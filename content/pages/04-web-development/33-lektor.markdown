@@ -30,7 +30,7 @@ site content similar to Django or Wordpress.
 
 
 ### Lektor example projects
-* [PyCon Columbia's 2018 site](https://github.com/PyConColombia/website-2018)
+* [PyCon Colombia's 2018 site](https://github.com/PyConColombia/website-2018)
   was built with Lektor and is freely available on GitHub.
 
 * [freedombox.org](https://github.com/freedombox/freedombox.org) is also
