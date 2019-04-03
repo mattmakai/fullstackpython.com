@@ -8,11 +8,12 @@ meta: Vim is a text editor with powerful string manipulation capabilities. Find 
 
 
 # Vim
-Vim, short for Vi IMproved, is a configurable text editor often used as
+[Vim](https://www.vim.org/) ([source code](https://github.com/vim/vim)), 
+short for Vi IMproved, is a configurable text editor often used as
 a Python development environment. Vim proponents commonly cite the numerous
 plugins, Vimscript and logical command language as major Vim strengths.
 
-<a href="http://www.vim.org/" style="border:none"><img src="/img/logos/vim-the-editor.jpg" width="100%" alt="Vim logo." class="shot rnd outl"></a>
+<a href="https://www.vim.org/" style="border:none"><img src="/img/logos/vim-the-editor.jpg" width="100%" alt="Vim logo." class="shot rnd outl"></a>
 
 
 ## Why is Vim a good Python development environment?
