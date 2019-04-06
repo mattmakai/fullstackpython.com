@@ -48,3 +48,8 @@ for processing payments.
   is a technical talk about monitoring systems at scale. The presenter works
   at Stripe so much of his 
 
+* [Implementing API Billing with Stripe](https://www.daily.co/blog/implementing-api-billing-with-stripe)
+  covers billing and invoicing requirements for a video calling API product.
+  They explain how they matched their requirements to what Stripe offers
+  then what they had to build themselves to get everything working the way
+  they intended.

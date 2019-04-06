@@ -15,6 +15,9 @@ on GitHub.
 
 
 ## 2019
+### April
+* New [Stripe API](/stripe.html) resources.
+
 ### March
 * Added new resources across the site and merged 
   [PR #206](https://github.com/mattmakai/fullstackpython.com/pull/206)
