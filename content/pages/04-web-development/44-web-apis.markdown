@@ -35,7 +35,7 @@ best to understand these ideas first before diving into the API literature.
 * Endpoints
 
 
-## Webhooks
+## What are Webhooks?
 A webhook is a user-defined HTTP callback to a URL that executes when a 
 system condition is met. The call alerts the second system via a POST or GET
 request and often passes data as well.

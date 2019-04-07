@@ -23,7 +23,7 @@ client web browser.
   can be behind Cloudflare's free tier to HTTPS.
 
 
-### HTTPS resources
+### Additional HTTPS resources
 * [The 6-Step "Happy Path" to HTTPS](https://www.troyhunt.com/the-6-step-happy-path-to-https/)
   covers how to obtain a free SSL certificate, permanently redirect HTTP
   to HTTPS and fix insecure references to non-HTTPS resources.
