@@ -86,6 +86,12 @@ has support for both Python 2.7, 3.6 and 3.7.
   developers use for their mobile backend, file processing, stream
   processing and web application projects.
 
+* [Security Overview of AWS Lambda](https://d1.awsstatic.com/whitepapers/Overview-AWS-Lambda-Security.pdf)
+  (PDF file) covers their "Shared Responsibility Model" for security and
+  compliance. Although the paper bills itself as an in-depth look at 
+  AWS Lambda security it is really more of a high-level overview, but still
+  worth the read.
+
 * [Reverse engineering AWS Lambda](https://www.denialof.services/lambda/)
   is an incredible, in-depth analysis of the author's work investigating
   the black box of how Lambda works and what he learned from it.
