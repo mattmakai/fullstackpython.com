@@ -41,6 +41,11 @@ typically abbreviated "DRF", is a Python library for building web
   works as a developer in Blacksburg, Virginia (where Virginia Tech is 
   located).
 
+* [How to Save Extra Data to a Django REST Framework Serializer](https://simpleisbetterthancomplex.com/tutorial/2019/04/07/how-to-save-extra-data-to-a-django-rest-framework-serializer.html)
+  is a concise, handy tutorial for combining additional data
+  with the already-defined DRF serializer fields before saving 
+  everything to a database or similar action.
+
 * [Optimizing slow Django REST Framework performance](https://ses4j.github.io/2015/11/23/optimizing-slow-django-rest-framework-performance/)
 
 * [TLT: Serializing Authenticated User Data With Django REST Framework](http://gregblogs.com/tlt-serializing-authenticated-user-data-with-django-rest-framework/)
