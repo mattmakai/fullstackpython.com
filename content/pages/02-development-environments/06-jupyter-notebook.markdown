@@ -74,6 +74,11 @@ your own productive workflow.
   data science notebook projects such as MATLAB and Mathematica to set the stage 
   for IPython and Jupyter's creation.
 
+* [How to Version Control Jupyter Notebooks](https://nextjournal.com/schmudde/how-to-version-control-jupyter)
+  explains how Jupyter Notebooks are stored in JSON, the issues with that
+  format for [source control](/source-control.html) and how to get
+  around the problem.
+
 
 ### Example Notebooks
 Example Notebooks are easy to fire up and see how other people are working.

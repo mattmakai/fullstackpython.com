@@ -84,6 +84,10 @@ from scratch.
   several charts to show how to build a dashboard based on public JSON
   data.
 
+* [d3-regression](https://observablehq.com/@harrystevens/introducing-d3-regression)
+  is a module for calculating statistical regressions from two-dimensionala
+  data.
+
 
 ### D3 ecosystem
 * [The trouble with D3](https://medium.com/@enjalot/the-trouble-with-d3-4a84f7de011f)
