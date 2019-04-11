@@ -86,6 +86,10 @@ equivalent of browser testing in the web application world.
   documented then developers who have options to use something else will
   just skip it.
 
+* [8 Open-Source Frameworks for Building APIs in Python](https://nordicapis.com/8-open-source-frameworks-for-building-apis-in-python/)
+  presents a high-level overview of the options for building APIs in
+  Python.
+
 * [Adventures in running a free, public API](http://www.cambus.net/adventures-in-running-a-free-public-api/)
   is a quick story of a developer's geolocation API being abused and his 
   lack of resources for preventing further abuse. Eventually he had to shut
