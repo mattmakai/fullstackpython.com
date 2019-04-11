@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### April
+* Added new [web frameworks](/web-frameworks.html), [d3.js](/d3-js.html)
+  and [Django REST framework](/django-rest-framework-drf.html) resources.
 * New [Stripe API](/stripe.html) resources.
 
 ### March
