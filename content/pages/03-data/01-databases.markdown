@@ -213,6 +213,10 @@ speed on SQL if you have never previously used it.
 * [DB Weekly](http://dbweekly.com/) is a weekly roundup of general database 
   articles and resources.
 
+* [Designing Highly Scalable Database Architectures](https://www.red-gate.com/simple-talk/cloud/cloud-data/designing-highly-scalable-database-architectures/)
+  covers horizontal and vertical scaling, replication and caching in
+  relational database architectures.
+
 * [Online migrations at scale](https://stripe.com/blog/online-migrations)
   is a great read on breaking down the complexity of a database schema
   migration for an operational database. The approach the author's team
