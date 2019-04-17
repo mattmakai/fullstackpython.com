@@ -27,6 +27,10 @@ database queries, page size and many other factors.
   are opinionated pieces on how developer should use load testing to
   ensure their applications work properly under heavy usage.
 
+* [Building a PostgreSQL load tester](https://blog.lawrencejones.dev/building-a-postgresql-load-tester/)
+  explains how the [pgreplay-go](https://github.com/gocardless/pgreplay-go/)
+  tool works and how to obtain performance metrics for a PostgreSQL database.
+
 
 ### Web app performance resources
 * [A Primer in Web Performance](https://kiboit.com/performance) is a quick,
