@@ -59,16 +59,12 @@ links = {# chapter 1
          "(#tmux)",
          "(/screen.html)":
          "(#screen)",
-         "(/pymux.html)":
-         "(#pymux)",
          "(/environment-configuration.html)":
          "(#environment-configuration)",
          "(/application-dependencies.html)":
          "(#application-dependencies)",
          "(/virtual-environments-virtualenvs-venvs.html)":
          "(#virtual-environments-virtualenvs)",
-         "(/environment-variables.html)":
-         "(#environment-variables)",
          "(/localhost-tunnels.html)":
          "(#localhost-tunnels)",
          "(/source-control.html)":
@@ -77,16 +73,6 @@ links = {# chapter 1
          "(#git)",
          "(/mercurial.html)":
          "(#mercurial)",
-         "(/apache-subversion.html)":
-         "(#apache-subversion)",
-         "(/hosted-source-control-services.html)":
-         "(#hosted-source-control-services)",
-         "(/github.html)":
-         "(#github)",
-         "(/bitbucket.html)":
-         "(#bitbucket)",
-         "(/gitlab.html)":
-         "(#gitlab)",
 
          # chapter 3
          "(/data.html)":
@@ -107,8 +93,6 @@ links = {# chapter 1
          "(#peewee)",
          "(/django-orm.html)":
          "(#django-object-relational-mapper)",
-         "(/sqlobject.html)":
-         "(#sqlobject)",
          "(/pony-orm.html)":
          "(#pony-orm)",
          "(/no-sql-datastore.html)":
@@ -125,22 +109,20 @@ links = {# chapter 1
          "(#data-analysis)",
          "(/pandas.html)":
          "(#pandas)",
-         "(/numpy.html)":
-         "(#numpy)",
-         "(/scipy.html)":
-         "(#scipy)",
-         #("/.html)":
-         #("#)",
+         "(/scipy-numpy.html)":
+         "(#scipy-and-numpy)",
+         "(/data-visualization.html)":
+         "(#data-visualization)",
          "(/bokeh.html)":
          "(#bokeh)",
          "(/d3-js.html)":
          "(#data-driven-documents-d3js)",
          "(/matplotlib.html)":
          "(#matplotlib)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/markup-languages.html)":
+         "(#markup-languages)",
+         "(/restructuredtext.html)":
+         "(#restructuredtext)",
          "(/markdown.html)":
          "(#markdown)",
 
@@ -189,20 +171,14 @@ links = {# chapter 1
          "(#bootstrap)",
          "(/foundation-css.html)":
          "(#foundation)",
-         #"(/.html)":
-         #"(#)",
-         #"(/.html)":
-         #"(#)",
          "(/javascript.html)":
          "(#javascript)",
-         #"(/.html)":
-         #"(#)",
-         #"(/.html)":
-         #"(#)",
-         #"(/.html)":
-         #"(#)",
-         #"(/.html)":
-         #"(#)",
+         "(/react.html)":
+         "(#react)",
+         "(/vuejs.html)":
+         "(#vuejs)",
+         "(/angular.html)":
+         "(#angular)",
          "(/task-queues.html)":
          "(#task-queues)",
          "(/celery.html)":
@@ -211,8 +187,6 @@ links = {# chapter 1
          "(#redis-queue-rq)",
          "(/dramatiq.html)":
          "(#dramatiq)",
-         #("/.html)":
-         #("#)",
          "(/static-site-generator.html)":
          "(#static-site-generator)",
          "(/pelican.html)":
@@ -227,82 +201,72 @@ links = {# chapter 1
          "(#unit-testing)",
          "(/integration-testing.html)":
          "(#integration-testing)",
-         #("/.html)":
-         #("#)",
-         "(/code-metrics.html)":
-         "(#code-metrics)",
          "(/debugging.html)":
          "(#debugging)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/code-metrics.html)":
+         "(#code-metrics)",
+         "(/networking.html)":
+         "(#networking)",
+         "(/https.html)":
+         "(#https)",
          "(/websockets.html)":
          "(#websockets)",
-         #("/.html)":
-         #("#)",
-         "(/uvloop.html)":
-         "(#uvloop)",
+         "(/webrtc.html)":
+         "(#webrtc)",
          "(/application-programming-interfaces.html)":
          "(#application-programming-interfaces)",
          "(/microservices.html)":
          "(#microservices)",
-         #("/.html)":
-         #("#)",
+         "(/webhooks.html)":
+         "(#webhooks)",
          "(/bots.html)":
          "(#bots)",
          "(/api-creation.html)":
          "(#api-creation)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/api-frameworks.html)":
+         "(#api-frameworks)",
+         "(/django-rest-framework-drf.html)":
+         "(#django-rest-framework)",
          "(/api-integration.html)":
          "(#api-integration)",
          "(/twilio.html)":
          "(#twilio)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/stripe.html)":
+         "(#stripe)",
+         "(/slack.html)":
+         "(#slack)",
+         "(/okta.html)":
+         "(#okta)",
          "(/web-application-security.html)":
          "(#web-application-security)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/sql-injection.html)":
+         "(#sql-injection)",
+         "(/cross-site-request-forgery-csrf.html)":
+         "(#cross-site-request-forgery-csrf)",
 
          # chapter 5
          "(/deployment.html)":
          "(#deployment)",
-         #("/.html)":
-         #("#)",
+         "(/hosting.html)":
+         "(#hosting)",
          "(/servers.html)":
          "(#servers)",
          "(/static-content.html)":
          "(#static-content)",
-         #("/.html)":
-         #("#)",
+         "(/content-delivery-networks-cdns.html)":
+         "(#content-delivery-networks-cdns)",
          "(/virtual-private-servers-vps.html)":
          "(#virtual-private-servers-vps)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/linode.html)":
+         "(#linode)",
+         "(/digitalocean.html)":
+         "(#digitalocean)",
+         "(/lightsail.html)":
+         "(#lightsail)",
          "(/platform-as-a-service.html)":
          "(#platform-as-a-service)",
-         #("/.html)":
-         #("#)",
+         "(/heroku.html)":
+         "(#heroku)",
          #("/.html)":
          #("#)",
          #("/.html)":

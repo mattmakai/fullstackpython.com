@@ -28,10 +28,9 @@ with additional tools for wrangling, cleaning, processing and analyzing data.
 
 
 ### SciPy resources
-Take a look at the individual pages for [NumPy](/numpy.html), 
-[Matplotlib](/matplotlib.html) and [pandas](/pandas.html) for tutorials
-specific to those projects. The following resources are broader walkthroughs
-for the SciPy ecosystem:
+Take a look at the pages on [Matplotlib](/matplotlib.html) and 
+[pandas](/pandas.html) for tutorials specific to those projects. The 
+following resources are broader walkthroughs for the SciPy ecosystem:
 
 * [SciPy Lecture notes](http://www.scipy-lectures.org/) goes into the 
   overall Python scientific computing ecosystem and how to use it.
