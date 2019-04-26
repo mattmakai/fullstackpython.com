@@ -267,18 +267,20 @@ links = {# chapter 1
          "(#platform-as-a-service)",
          "(/heroku.html)":
          "(#heroku)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/pythonanywhere.html)":
+         "(#pythonanywhere)",
+         "(/aws-codestar.html)":
+         "(#aws-codestar)",
          "(/operating-systems.html)":
          "(#operating-systems)",
          "(/ubuntu.html)":
          "(#ubuntu)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/macos.html)":
+         "(#macos)",
+         "(/freebsd.html)":
+         "(#freebsd)",
+         "(/windows.html)":
+         "(#windows)",
          "(/web-servers.html)":
          "(#web-servers)",
          "(/apache-http-server.html)":
@@ -287,18 +289,14 @@ links = {# chapter 1
          "(#nginx)",
          "(/caddy.html)":
          "(#caddy)",
-         #("/.html)":
-         #("#)",
          "(/wsgi-servers.html)":
          "(#wsgi-servers)",
          "(/green-unicorn-gunicorn.html)":
          "(#green-unicorn-gunicorn)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/uwsgi.html)":
+         "(#uwsgi)",
+         "(/mod-wsgi.html)":
+         "(#mod-wsgi)",
          "(/continuous-integration.html)":
          "(#continuous-integration)",
          "(/jenkins.html)":
