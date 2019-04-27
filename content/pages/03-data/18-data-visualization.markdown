@@ -148,3 +148,11 @@ visualization and gave me ideas for what to build.
   tools [react-vis](https://uber.github.io/react-vis/) and 
   [react-map-gl](https://uber.github.io/react-map-gl/).
 
+* The Practitioner's Guide to System Dashboard Design series covers a
+  lot of ground for what you should consider when building one form
+  of visualization, the data dashboard:
+  
+    * [Part 1: Structure and Layout](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design.html)
+    * [Part 2: Presentation and Accessibility](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design-p2.html)
+    * [Part 3: What Charts to Use](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design-p3.html)
+    * [Part 4: Context Improvement](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design-p4.html)
