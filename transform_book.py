@@ -301,30 +301,26 @@ links = {# chapter 1
          "(#continuous-integration)",
          "(/jenkins.html)":
          "(#jenkins)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/gocd.html)":
+         "(#gocd)",
          "(/configuration-management.html)":
          "(#configuration-management)",
          "(/ansible.html)":
          "(#ansible)",
-         #("/.html)":
-         #("#)",
-         #("/.html)":
-         #("#)",
+         "(/salt.html)":
+         "(#salt)",
+         "(/containers.html)":
+         "(#containers)",
          "(/docker.html)":
          "(#docker)",
-         #("/.html)":
-         #("#)",
+         "(/kubernetes.html)":
+         "(#kubernetes)",
          "(/serverless.html)":
          "(#serverless)",
          "(/aws-lambda.html)":
          "(#aws-lambda)",
-         #("/.html)":
-         #("#)",
+         "(/azure-functions.html)":
+         "(#azure-functions)",
          "(/google-cloud-functions.html)":
          "(#google-cloud-functions)",
 
@@ -333,12 +329,20 @@ links = {# chapter 1
          "(#devops)",
          "(/monitoring.html)":
          "(#monitoring)",
+         "(/prometheus.html)":
+         "(#prometheus)",
          "(/rollbar.html)":
          "(#rollbar)",
-         "(/caching.html)":
-         "(#caching)",
+         "(/sentry.html)":
+         "(#sentry)",
+         "(/scout.html)":
+         "(#scout)",
+         "(/web-app-performance.html)":
+         "(#web-app-performance)",
          "(/logging.html)":
          "(#logging)",
+         "(/caching.html)":
+         "(#caching)",
          "(/web-analytics.html)":
          "(#web-analytics)",
 
