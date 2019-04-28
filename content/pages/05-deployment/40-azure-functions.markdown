@@ -23,6 +23,10 @@ in other Azure services.
   is the official quickstart guide by Microsoft and has some good high-level
   information on their platform's services as well.
 
+* [Deploy Python to Azure Functions](https://code.visualstudio.com/docs/python/tutorial-azure-functions)
+  provides the step-by-step instructions needed to get Python code running 
+  on Azure Functions.
+
 * [Azure Functions vs AWS Lambda – Scaling Face Off](https://www.azurefromthetrenches.com/azure-functions-vs-aws-lambda-scaling-face-off/)
   contains metrics from comparing AWS Lambda with Azure Functions in
   response time, user load, requests per second and error rate

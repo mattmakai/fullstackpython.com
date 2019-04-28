@@ -49,3 +49,7 @@ toolkits.
 * [Matplotlib Tips and Demos](https://nbviewer.jupyter.org/urls/gist.githubusercontent.com/Jwink3101/e6b57eba3beca4b05ec146d9e38fc839/raw/f486ca3dcad44c33fc4e7ddedc1f83b82c02b492/Matplotlib_Cheatsheet)
   is a long [Jupyter Notebook](/jupyter-notebook.html) with a ton of example
   code that shows how to use Matplotlib in many ways.
+
+* [Animation with Matplotlib](https://towardsdatascience.com/animations-with-matplotlib-d96375c5442c)
+  explains the `animation` base class and the main interfaces for
+  creating animations in your visualizations.

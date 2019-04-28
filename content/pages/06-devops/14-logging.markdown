@@ -121,6 +121,11 @@ certain threshold.
   structured logging to reduce Mean Time To Resolve (MTTR) and how they
   arranged their log levels to support their scale.
 
+* [How to collect, customize, and centralize Python logs](https://www.datadoghq.com/blog/python-logging-best-practices/)
+  covers the standard library `logging` module and how to configure
+  it for various ways you are likely to use it with one or more 
+  Python applications.
+
 * [A guide to logging in Python](https://opensource.com/article/17/9/python-logging)
   has some clear, simple diagrams to explain how logging works in Python
   applications.

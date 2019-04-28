@@ -84,3 +84,7 @@ during Python software development as part of a programmer's
 * [Creating a bash completion script](https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html)
   is a great tutorial that walks you through a reasonably complex Bash
   script for completing syntax in other Bash shell scripts.
+
+* [6 Tips Before You Write Your Next Bash Cronjob](https://yasoob.me/posts/6-tips-before-you-write-your-next-bash-cronjob/)
+  covers starting your scripts with shebang, redirecting output, timeouts
+  and sudo privileges.

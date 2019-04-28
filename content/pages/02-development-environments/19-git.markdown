@@ -146,6 +146,11 @@ workflow. These resources will come in handy for specific Git subjects.
   of tips to get you out of binds you may find yourself in when you get too 
   tricky with Git commands. 
 
+* [Tips for a disciplined git workflow](https://drewdevault.com/2019/02/25/Using-git-with-discipline.html)
+  is less about workflow and more about how to write self-explaining commit
+  messages, self-containing each commit and modifying branch history
+  when you muff up before it is merged into master.
+
 * [Another Git catastrophe cleaned up](http://blog.plover.com/prog/git-tastrophe.html) 
   goes through a difficult merge scenario that required deep Git 
   understanding to properly fix.
