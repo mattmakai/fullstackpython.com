@@ -61,3 +61,8 @@ specific situation.
   [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
   library with [Django](/django.html) to create and obtain user data
   through web forms that are styled with Bootstrap 4 CSS.
+
+* [React Bootstrap](https://react-bootstrap.github.io/) 
+  ([source code](https://github.com/react-bootstrap/react-bootstrap) replaces
+  the existing Bootstrap JavaScript with React components that do not
+  rely on jQuery.

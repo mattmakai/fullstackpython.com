@@ -46,6 +46,10 @@ typically abbreviated "DRF", is a Python library for building web
   with the already-defined DRF serializer fields before saving 
   everything to a database or similar action.
 
+* [Django polls api using Django REST Framework](https://www.agiliq.com/blog/2019/04/drf-polls/)
+  gives a great walkthrough for creating a question polling application 
+  backend with code and the explanation as you build it.
+
 * [Optimizing slow Django REST Framework performance](https://ses4j.github.io/2015/11/23/optimizing-slow-django-rest-framework-performance/)
 
 * [TLT: Serializing Authenticated User Data With Django REST Framework](http://gregblogs.com/tlt-serializing-authenticated-user-data-with-django-rest-framework/)
@@ -55,4 +59,5 @@ typically abbreviated "DRF", is a Python library for building web
 * [Simple Nested API Using Django REST Framework](https://blog.apptension.com/2017/09/13/rest-api-using-django-rest-framework/)
 
 * [Building APIs with Django and Django Rest Framework](https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/)
+
 

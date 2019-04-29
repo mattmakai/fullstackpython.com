@@ -61,9 +61,13 @@ tack on React to build your client-side user interfaces.
   is not a tutorial but instead the author gives some strong opinions for
   what beginners should know as they start learning React.
 
+* [React Bootstrap](https://react-bootstrap.github.io/) 
+  ([source code](https://github.com/react-bootstrap/react-bootstrap) replaces
+  the existing Bootstrap JavaScript with React components that do not
+  rely on jQuery.
+
 
 ### Other React resources
-
 * [React interview questions](https://tylermcginnis.com/react-interview-questions/)
   is a good quiz to see what you know or still need to learn about the
   fundamentals of using React.
