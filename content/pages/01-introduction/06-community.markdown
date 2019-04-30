@@ -137,7 +137,7 @@ the community.
   members, [Brett Cannon](https://github.com/brettcannon), on why the
   main Python projects including the language itself are now 
   [hosted for development](https://github.com/python/)
-  on [GitHub](/github.html). The post is a wonderful read about the history
+  on [GitHub](https://github.com). The post is a wonderful read about the history
   of where Python development was centralized and how it moved from 
   SourceForge to svg.python.org and then over to GitHub.
 
