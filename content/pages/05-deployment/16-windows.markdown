@@ -9,7 +9,7 @@ meta: Windows is an operating system built by Microsoft that is often used for d
 
 # Windows
 [Windows](https://www.microsoft.com/windows) is a closed-source, proprietary 
-[operating system](/operating-system.html) created by Microsoft that 
+[operating system](/operating-systems.html) created by Microsoft that 
 is often used to [develop Python applications](/learning-programming.html).
 
 <a href="https://www.microsoft.com/windows" style="border: none"><img src="/img/logos/windows.png" width="100%" alt="Microsoft Windows 10 logo." class="shot" style="margin: 8px 0 8px 0"></a>

@@ -21,7 +21,7 @@ frequently used as the version control system for Python projects.
 ## Why is Git widely-used by developers?
 Git is a *distributed* version control system (DVCS) compared to the 
 centralized models previously provided by 
-[Subversion](/apache-subversion.html) and [CVS](https://www.nongnu.org/cvs/).
+[Subversion](https://subversion.apache.org/) and [CVS](https://www.nongnu.org/cvs/).
 Files would need to be "checked out" over the network by a single person at
 a time while she was working. The network transfer speed as well as the 
 blocking check out model became a significant bottleneck, especially for 

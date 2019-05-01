@@ -11,7 +11,7 @@ links = {# chapter 1
          "(#introduction)",
          "(/learning-programming.html)":
          "(#learning-programming)",
-         "(/python-programming-language)":
+         "(/python-programming-language.html)":
          "(#python-programming-language)",
          "(/why-use-python.html)":
          "(#why-use-python)",

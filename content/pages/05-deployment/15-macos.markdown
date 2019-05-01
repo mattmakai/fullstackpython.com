@@ -8,7 +8,7 @@ meta: macOS is an operating system within the Unix family tree that is developed
 
 
 # macOS
-macOS is an [operating system](/operating-system.html) 
+macOS is an [operating system](/operating-systems.html) 
 within the Unix family tree that is developed by Apple and is often 
 used for [developing Python applications](/learning-programming.html).
 

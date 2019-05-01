@@ -71,7 +71,7 @@ wants that kind of functionality.
 Editors built from the foundation up are not necessarily better than 
 general-purpose text editors and IDEs like [Vim](/vim.html) and 
 [Emacs](/emacs.html) but they are typically much easier to configure for 
-gathering [code metrics](/code.metrics.html), running 
+gathering [code metrics](/code-metrics.html), running 
 [unit tests](/unit-testing.html) and [debugging](/debugging.html).
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) is a Python-specific IDE

@@ -350,9 +350,8 @@ on GitHub.
   to track what's being worked on.
 * Updated [future directions](/future-directions.html) with more context on
   page maturity.
-* New starter pages for [Companies Using Python](/companies-using-python.html),
-  [Sublime Text](/sublime-text.html), 
-  [Apache Subversion](/apache-subversion.html)
+* New starter pages for [Companies Using Python](/companies-using-python.html)
+  and [Sublime Text](/sublime-text.html).
 * New [Python 2 or 3?](/python-2-or-3.html) resources.
 * Fixed diagram mistake on [Peewee](/peewee.html) ORM page that was 
   referencing SQLAlchemy instead of Peewee.

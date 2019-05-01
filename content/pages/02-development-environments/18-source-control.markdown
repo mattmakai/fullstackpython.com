@@ -77,7 +77,7 @@ today's Python development world. The two primary choices are:
 * [Mercurial](/mercurial.html) is similar to Git, also a free
   and open source distributed version control system.
 
-* [Subversion](/apache-subversion.html) is a centralized system where
+* [Subversion](https://subversion.apache.org/) is a centralized system where
   developers must check files in and out of the hosted repository to minimize
   merge conflicts.
 
@@ -186,7 +186,7 @@ on how to structure your repositories.
 [Git](/git.html) is the most widely-used source control system currently
 in use. Its distributed design eliminates the need to check files in
 and out of a centralized repository, which is a problem when using
-[Subversion](/apache-subversion.html) without a network connection. There is
+[Subversion](https://subversion.apache.org/) without a network connection. There is
 [a full page on Git](/git.html) with further details and resources.
 
 

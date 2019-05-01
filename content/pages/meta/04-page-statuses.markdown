@@ -67,7 +67,6 @@ kept up to date with accurate descriptions and resources.
 |[Source Control](/source-control.html)                        | intermediate |
 |[Git](/git.html)                                              | starter      |
 |[Mercurial](/mercurial.html)                                  | starter      |
-|[Apache Subversion](/apache-subversion.html)                  | starter      |
 
 
 ## Chapter 3: Data
