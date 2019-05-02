@@ -492,6 +492,5 @@ on their respective pages:
 * [Testing](/testing.html)
 * [Source control](/source-control.html)
 * [Git](/git.html)
-* [Hosted source control services](/hosted-source-control-services.html)
 * [Code metrics](/code-metrics.html)
 * [NoSQL](/no-sql-datastore.html)

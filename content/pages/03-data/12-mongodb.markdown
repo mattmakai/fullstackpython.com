@@ -141,5 +141,5 @@ configure and start using MongoDB with Python.
 * [PyMongo Monday: Setting Up Your PyMongo Environment](https://www.mongodb.com/blog/post/pymongo-monday-setting-up-your-pymongo-environment)
   is an introduction to using MongoDB with Python code. This first
   part of the series shows how to set up the 
-  [development environment](/development-environment.html) required
+  [development environment](/development-environments.html) required
   for working with Mongo.

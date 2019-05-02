@@ -20,7 +20,7 @@ browsers.
 
 ### Beginner React tutorials
 Generally before you start working with React you will want to learn how 
-to build your Python backend with a [web framework](/web-framework.html)
+to build your Python backend with a [web framework](/web-frameworks.html)
 such as [Django](/django.html), [Flask](/flask.html) or 
 [Pyramid](/pyramid.html). Once you get comfortable with the 
 [web development](/web-development.html) basics with one of those frameworks

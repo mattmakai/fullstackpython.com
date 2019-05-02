@@ -84,8 +84,7 @@ today's Python development world. The two primary choices are:
 
 ## Hosted version control services
 Git and Mercurial can be downloaded and run on your own server. However,
-it's easy and cheap to get started with a 
-[hosted version control service](/hosted-source-control-services.html).
+it's easy and cheap to get started with a hosted version control service.
 You can transition away from the service at a later time by moving your 
 repositories if your needs change. A couple of recommended hosted version
 control services are:

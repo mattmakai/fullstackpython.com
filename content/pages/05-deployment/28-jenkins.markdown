@@ -68,7 +68,7 @@ used to automate building, [testing](/testing.html) and
 
 * [Automated servers and deployments with Ansible & Jenkins](https://chromatichq.com/blog/automated-servers-and-deployments-ansible-jenkins)
   covers using [Ansible](/ansible.html) for automating 
-  [deployments](/deployments.html) and handling the coordination via
+  [deployments](/deployment.html) and handling the coordination via
   Jenkins builds.
 
 * [Building GitHub Pull Requests using Jenkins Pipelines](https://www.theguild.nl/building-github-pull-requests-using-jenkins-pipelines/)

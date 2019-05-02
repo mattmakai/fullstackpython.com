@@ -20,7 +20,7 @@ used for [developing Python applications](/learning-programming.html).
   explains how Python 2.7 is installed by default on Macs. You should
   start setting up your environment by installing Python 3 and then follow
   the instructions in the post to get a 
-  [development environment](/development-environment.html) configured.
+  [development environment](/development-environments.html) configured.
 
 * [Python Development Environment on macOS High Sierra](https://hackercodex.com/guide/python-development-environment-on-mac-osx/)
   takes the defualt macOS environment and gives you the step to configure

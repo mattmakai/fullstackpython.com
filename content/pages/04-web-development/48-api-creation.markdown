@@ -182,7 +182,7 @@ equivalent of browser testing in the web application world.
 
 * [Creating Web APIs with Python and Flask](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
   is a free book on building APIs with [Flask](/flask.html) as the
-  core [web framework](/web-framework.html).
+  core [web framework](/web-frameworks.html).
 
 * [RESTful web services with Python](http://www.slideshare.net/Solution4Future/python-restful-webservices-with-python-flask-and-django-solutions)
   is an interesting overview of the Python API frameworks space.

@@ -89,8 +89,7 @@ kept up to date with accurate descriptions and resources.
 |[Neo4j](/neo4j.html)                                       | starter      |
 |[Data analysis](/data-analysis.html)                       | starter      |
 |[pandas](/pandas.html)                                     | starter      |
-|[NumPy](/numpy.html)                                       | starter      |
-|[SciPy](/scipy.html)                                       | starter      |
+|[SciPy & NumPy](/scipy-numpy.html)                         | starter      |
 |Data visualization                                         | not yet      |
 |[Bokeh](/bokeh.html)                                       | starter      |
 |[d3.js](d3-js.html)                                        | starter      |

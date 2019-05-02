@@ -139,6 +139,8 @@ links = {# chapter 1
          "(#bottle)",
          "(/pyramid.html)":
          "(#pyramid)",
+         "(/turbogears.html)":
+         "(#turbogears)",
          "(/falcon.html)":
          "(#falcon)",
          "(/morepath.html)":
