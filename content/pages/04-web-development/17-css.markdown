@@ -195,6 +195,11 @@ web application's design.
   analyzes features versus bugs in different browser versions and how
   to test for support so that issues are less likely to hit your web app.
 
+* [That Time I Tried Browsing the Web Without CSS](https://css-tricks.com/that-time-i-tried-browsing-the-web-without-css/)
+  is an enlightening look at how crucial CSS is to the modern web. You can
+  view examples of what it is like to use Amazon, DuckDuckGo, GitHub
+  and several other sites.
+
 * [Third party CSS is not safe](https://jakearchibald.com/2018/third-party-css-is-not-safe/)
   is a good reminder that any code you did not write yourself, especially
   code served through 3rd party sources not under your control can contain

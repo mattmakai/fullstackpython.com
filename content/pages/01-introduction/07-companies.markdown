@@ -79,7 +79,17 @@ stacks.
 
 * [Netflix uses Python](https://talkpython.fm/episodes/show/16/python-at-netflix) 
   throughout their organization to run chaos engineering tests and generally
-  glue together the code from their high-functioning polyglot teams.
+  glue together the code from their high-functioning polyglot teams. Netflix
+  also wrote a 
+  [2019 update for PyCon US](https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e)
+  to give more detail on what teams and projects work in Python.
+
+* [Python 3 at Mozilla](https://ahal.ca/blog/2019/python-3-at-mozilla/)
+  explains how their "build system, CI configuration, test harnesses, 
+  command line tooling and countless other scripts, tools or Github projects 
+  are all handled by Python". So just about everything a developer touches
+  every day to build anything else needs Python to hook into the larger
+  organization!
 
 * [Google uses Python extensively](https://stackoverflow.com/questions/2560310/heavy-usage-of-python-at-google)
   and officially supports it internally as one of their three core languages,
