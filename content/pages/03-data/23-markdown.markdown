@@ -69,8 +69,7 @@ or block quotes.
 * The Python Package Index (PyPI) 
   [supports Markdown as of 2018](https://dustingram.com/articles/2018/03/16/markdown-descriptions-on-pypi)
   although there are still some tweaks being made to the flavors that can be
-  used such as 
-  [GitHub-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
+  used such as GitHub-flavored Markdown.
 
 * [PowerShell and Markdown](https://ephos.github.io/posts/2018-8-1-PowerShell-Markdown)
   shows how to work with Markdown in [PowerShell](/powershell.html) 

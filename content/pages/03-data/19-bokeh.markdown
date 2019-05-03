@@ -40,7 +40,7 @@ these sites:
   [official Bokeh gallery](http://bokeh.pydata.org/en/latest/docs/gallery.html)
   has many example Bokeh visual formats.
 
-* [Bokeh Applications](https://demo.bokehplots.com/) hosts numerous
+* [Bokeh Applications](https://demo.bokeh.org/) hosts numerous
   data visualizations built with Bokeh.
 
 

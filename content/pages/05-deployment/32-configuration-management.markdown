@@ -86,10 +86,6 @@ from PyCon UK 2013
 
 * [6 practices for super smooth Ansible experience](http://hakunin.com/six-ansible-practices)
 
-* [Shippable + Ansible + Docker + Loggly for awesome deployments](http://www.hiddentao.com/archives/2014/06/03/shippable-ansible-docker-loggly-for-awesome-deployments/)
-  is a well written detailed post about using Docker and Ansible together with
-  a few other pieces.
-
 * [Create a Couchbase Cluster with Ansible](http://blog.couchbase.com/create-couchbase-cluster-with-ansible)
 
 * [Idempotence, convergence, and other silly fancy words we often use](https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ)

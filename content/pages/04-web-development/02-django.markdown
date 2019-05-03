@@ -99,9 +99,6 @@ resources for more advanced tutorials.
   such as the [Django ORM](/django-orm.html) and 
   [Django Templates](/django-templates.html).
 
-* [Effective Django](http://effectivedjango.com/) is another free introduction
-  to the web framework.
-
 * The [Django subreddit](http://www.reddit.com/r/django) often has links to
   the latest resources for learning Django and is also a good spot to ask 
   questions about it.

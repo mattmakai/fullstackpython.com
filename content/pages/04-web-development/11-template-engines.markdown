@@ -139,10 +139,6 @@ There are many Python template engine implementations in addition to the
 ones listed above. These resources can help you select a Python template 
 engine implementation that works well for your project.
 
-* [Python Web Templating Battle](https://ivanteoh.com/posts/188-python-web-templating-battle/)
-  compares and contrasts Django templates, Chameleon, Jinja, Diazo
-  and Mako, with examples for each engine.
-
 * This 
   [template engines site](http://www.simple-is-better.org/template/index.html)
   contains a range of information from what templates engines are to listing

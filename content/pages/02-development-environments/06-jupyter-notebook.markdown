@@ -160,9 +160,9 @@ like advanced interactive visualizations.
   help a lot to make sure you avoid getting lost in the sea of menus along
   the way.
 
-* [A Jupyter Notebook That Will Analyze Cryptocurrency Portfolios For You](http://grantbartel.com/blog/jupyter-notebook-that-will-analyze-cryptocurrency-portfolios/)
-  uses a freely-available large cryptocurrency data set as source material
-  for a data analysis and visualization project.
+* [Analyzing Cryptocurrency Markets using Python](https://blog.patricktriest.com/analyzing-cryptocurrencies-python/)
+  uses a freely-available Bitcoin API as a source data set 
+  for a data analysis and visualization project in Jupyter.
 
 * [Running Jupyter Notebooks on GPU on AWS: a starter guide](https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html)
   explains how to run notebooks on Amazon Web Services using a 

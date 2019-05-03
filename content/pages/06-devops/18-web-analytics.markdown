@@ -91,10 +91,6 @@ application before taking some action, such as purchasing your service.
   [pandas](/pandas.html) and related [data analysis](/data-analysis.html) 
   tools.
 
-* [Build your own Google Analytics Dashboard in Excel](http://blog.zoomeranalytics.com/google-analytics/)
-  show how to extract your Google Analytics data via their web API and Python
-  helper library so it can be used in other tools such as Excel.
-
 * The official 
   [Google Analytics Python quickstart](https://developers.google.com/analytics/devguides/reporting/core/v4/quickstart/service-py)
   isn't really the easiest tutorial to follow due to all of the configuration
