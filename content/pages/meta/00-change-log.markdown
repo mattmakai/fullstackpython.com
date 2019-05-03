@@ -15,6 +15,9 @@ on GitHub.
 
 
 ## 2019
+### May
+* Fix typos and broken internal links on site.
+
 ### April
 * Added new [web frameworks](/web-frameworks.html), [d3.js](/d3-js.html)
   and [Django REST framework](/django-rest-framework-drf.html) resources.

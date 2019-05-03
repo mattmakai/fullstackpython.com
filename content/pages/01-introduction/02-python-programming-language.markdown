@@ -164,10 +164,6 @@ the very beginner topics.
   are shorthand for common iteration code, such as copying one list into
   another while performing some operation on the contained elements.
 
-* [Learning Python by example: list comprehensions](http://blog.cdleary.com/2010/04/learning-python-by-example-list-comprehensions/)
-  gives an example of an incorrect list comprehension then shows how to
-  correct its issues.
-
 * [List comprehensions in Python](http://www.pythonforbeginners.com/basics/list-comprehensions-in-python)
   covers what the code for list comprehensions looks like and gives some
   example code to show how they work.

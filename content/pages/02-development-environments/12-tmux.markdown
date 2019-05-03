@@ -37,9 +37,6 @@ easier to use many shells at once and attaching to both local and remote
 
 * [Differences between tmux vs screen](https://wtanaka.com/node/8136)
 
-* [Cockpit](http://cockpit.27ae60.com/) helps you create the exact pane
-  layout you want for your tmux setup.
-
 * [The Power Of tmux Hooks](https://devel.tech/tips/n/tMuXz2lj/the-power-of-tmux-hooks/)
 
 * There are a slew of "cheat sheets" for tmux out there, here are a few 

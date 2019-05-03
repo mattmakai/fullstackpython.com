@@ -125,7 +125,7 @@ to get started with these tutorials.
   takes the PacMan theme and teaches you how to use Vim by forcing you
   to move around and use Vim commands while gaming.
 
-* [Ten years of Vim](https://matthias-endler.de/2018/ten-years-of-Vim/)
+* [Ten years of Vim](https://matthias-endler.de/2018/ten-years-of-vim/)
   provides an insightful retrospective on one experienced developer's
   journey with using Vim as a primary text editor and development
   environment. I found the part about going overboard with plugins before

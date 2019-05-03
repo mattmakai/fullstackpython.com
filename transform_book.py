@@ -6,7 +6,11 @@ from os.path import isdir, isfile
 BASE_DIR = './tempcontent/pages/'
 BASE_FSP = "https://www.fullstackpython.com/"
 
-links = {# chapter 1
+links = {
+         "(/table-of-contents.html)":
+         "(#table-of-contents)",
+
+         # chapter 1
          "(/introduction.html)":
          "(#introduction)",
          "(/learning-programming.html)":
