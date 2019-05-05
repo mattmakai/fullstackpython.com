@@ -49,6 +49,10 @@ Bokeh is under heavy development ahead of the upcoming 1.0 release. Note that
 while all of the following tutorials are useful, it is possible some of the
 basic syntax will change as the library's API is not yet stable.
 
+* [Integrating Bokeh Visualisations Into Django Projects](https://hackernoon.com/integrating-bokeh-visualisations-into-django-projects-a1c01a16b67a)
+  does a nice job of walking through how to use Bokeh to render
+  visualizations in [Django](/django.html) projects.
+
 * [Responsive Bar Charts with Bokeh, Flask and Python 3](/blog/responsive-bar-charts-bokeh-flask-python-3.html) is my recommended
   tutorial for those new to Bokeh who want to try out the library and get
   an example project running quickly with [Flask](/flask.html).
