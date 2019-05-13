@@ -164,10 +164,10 @@ and "password" values with your own.
         # run a SELECT statement - no data in there, but we can try it
         cursor.execute("""SELECT * from tutorials""")
         conn.commit() # <--- makes sure the change is shown in the database
-        conn.close()
-        cursor.close()
         rows = cursor.fetchall()
         print(rows)
+        cursor.close()
+        conn.close()
     except Exception as e:
         print("Uh oh, can't connect. Invalid dbname, user or password?")
         print(e)
