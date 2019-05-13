@@ -143,3 +143,8 @@ configure and start using MongoDB with Python.
   part of the series shows how to set up the 
   [development environment](/development-environments.html) required
   for working with Mongo.
+
+* [Testing MongoDB Failover in Your Python App](https://scalegrid.io/blog/pymongo-tutorial-testing-mongodb-failover-in-your-python-app/)
+  shows show to switch to a MongoDB replica in production failure scenarios
+  using the PyMongo library.
+

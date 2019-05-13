@@ -40,7 +40,11 @@ during Python software development as part of a programmer's
   command. There is also a great follow up post called
   [Ten MORE Things I Wish I'd Known About Bash](https://zwischenzugs.com/2018/01/21/ten-more-things-i-wish-id-known-about-bash/) 
   that covers new topics such as on-the-fly command re-execution using the 
-  carrot character.
+  carrot character. The 
+  [Seven Surprising Bash Variables](https://zwischenzugs.com/2019/05/11/seven-surprising-bash-variables/)
+  post continues the series by examining built-in variables such as
+  `PROMPT_COMMAND`, `CDPATH` and `REPLY` which can simplify your
+  scripts by using values that Bash already has stored for you.
 
 * Google's [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
   covers how to write consistent, maintainable shell scripts, which is 

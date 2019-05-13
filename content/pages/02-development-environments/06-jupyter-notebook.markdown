@@ -189,3 +189,7 @@ like advanced interactive visualizations.
 * [Creating Presentations with Jupyter Notebook](http://www.blog.pythonlibrary.org/2018/09/25/creating-presentations-with-jupyter-notebook/)
   shows how to make slides out of your cells so you can present your
   work like a traditional presentation.
+
+* The number of open source Jupyter Notebooks on GitHub is exploding and
+  [this post attempts to estimate the growth](https://kyso.io/KyleOS/nbestimate)
+  using Python, [pandas](/pandas.html) and a scraped data set.
