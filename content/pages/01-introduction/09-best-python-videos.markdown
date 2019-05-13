@@ -163,6 +163,7 @@ like [PyCon US](https://us.pycon.org/) and
   Python language.
 
 * PyCon US videos from 
+  [2019](https://www.youtube.com/channel/UCxs2IIVXaEHHA4BtTiWZ2mQ/videos),
   [2018](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ/videos),
   [2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos),
   [2016](https://www.youtube.com/channel/UCwTD5zJbsQGJN75MwbykYNw/videos),

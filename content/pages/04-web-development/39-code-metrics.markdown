@@ -145,3 +145,7 @@ diminishing returns.
   covers how to use Black and add it as a pre-commit hook in Git to
   ensure consistency in repository updates.
 
+* [Format Python however you like with Black](https://opensource.com/article/19/5/python-black)
+  is a super short introduction on what Black does to keep your code
+  formatting consistent.
+
