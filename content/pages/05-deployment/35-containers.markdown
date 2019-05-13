@@ -28,6 +28,13 @@ The following resources do a great job of explaining where the containers
 concept came from, how they differ from virtual machines and why they are
 useful.
 
+* [The Missing Introduction To Containerization](https://medium.com/faun/the-missing-introduction-to-containerization-de1fbb73efc5)
+  truly grants what its title sets out to do: give a wide-ranging overview
+  and history of container concepts and tools. The post is dense but well
+  worth the read to start learning about `chroot`, Solaris zones, LXC,
+  [Docker](/docker.html) and how they've influenced each other throughout
+  the past 40 years.
+
 * [A brief history of containers](https://mesosphere.com/blog/brief-history-containers/)
   has some solid context for why containers have taken off in the last
   several years, including the integration of operating system container
