@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### May
+* Rearrange parts of the [app dependencies](/application-dependencies.html)
+  page to make it easier to read.
 * Fix typos and broken internal links on site.
 
 ### April
