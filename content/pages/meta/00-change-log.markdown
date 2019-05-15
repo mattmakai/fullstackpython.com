@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2019
 ### May
+* Updated the subnav with a link to 
+  [deploypython.com](https://www.deploypython.com/)
+  and added a bunch of new resources across pages on the site.
 * Rearrange parts of the [app dependencies](/application-dependencies.html)
   page to make it easier to read.
 * Fix typos and broken internal links on site.
