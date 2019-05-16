@@ -109,6 +109,13 @@ this short list as my absolute favorites that help developers become
   gives guidance to less aesthetically-inclined folks like myself who
   need rules for picking groups of colors to use together in your designs.
 
+* [Styling HTML checkboxes is hard - here's why](https://areknawo.com/styling-html-checkboxes-is-hard-heres-why/)
+  explains why form elements like checkboxes are more difficult to style
+  than other [HTML](/hypertext-markup-language-html.html) elements,
+  The post shows how to perform the styling in various ways such as
+  [CSS](/cascading-style-sheets.html)-only and then with 
+  [JavaScript](/javascript.html) plus CSS.
+
 * [13 Terrible Web Trends From the 90s, and How to Recreate Them](https://envato.com/blog/13-terrible-web-trends-90s-recreate/)
   revisits a simpler and perhaps more... ugly time on the web where designs
   were a bit out of control. Learn more about the history of web design and
