@@ -134,10 +134,11 @@ frameworks, templating engines and
 
 * Another great series that digs behind the web framework magic is
   "Web Application from Scratch". The four parts are:
-  * [part 1: handling HTTP requests and responses](https://defn.io/2018/02/25/web-app-from-scratch-01/)
-  * [part 2: abstracting Requests, Responses and Servers](https://defn.io/2018/03/04/web-app-from-scratch-02/)
-  * [part 3: request handlers and middleware](https://defn.io/2018/03/20/web-app-from-scratch-03/)
-  * [part 4: abstracting applications](https://defn.io/2018/05/12/web-app-from-scratch-04/)
+
+    * [Part 1: handling HTTP requests and responses](https://defn.io/2018/02/25/web-app-from-scratch-01/)
+    * [Part 2: abstracting Requests, Responses and Servers](https://defn.io/2018/03/04/web-app-from-scratch-02/)
+    * [Part 3: request handlers and middleware](https://defn.io/2018/03/20/web-app-from-scratch-03/)
+    * [Part 4: abstracting applications](https://defn.io/2018/05/12/web-app-from-scratch-04/)
    
 * [Frameworks](http://youtu.be/W6KCPXl6Zuc) is a really well done short video
   that explains how to choose between web frameworks. The author has some
