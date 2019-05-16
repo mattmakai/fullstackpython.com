@@ -72,6 +72,12 @@ easier for humans to see patterns, trends and other useful information.
   explains how to use the Dash library to take a bunch of data and
   turn it into a nice-looking dashboard.
 
+* [The reason I am using Altair for most of my visualization in Python](http://fernandoi.cl/blog/posts/altair/)
+  explains why this wrapper for [Vega-lite](https://vega.github.io/vega-lite/)
+  is awesome and that the author uses Altair because 
+  [Matplotlib](/matplotlib.html) can be very complicated for whipping up 
+  quick visualizations.
+
 
 ### Beautiful example visualizations
 Sometimes you need inspiration from other sources to figure out what

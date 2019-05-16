@@ -79,6 +79,12 @@ this short list as my absolute favorites that help developers become
   to ensure it works for connections much worse than the fiber connection
   you may have at the home or office.
 
+* [Fundamental design principles for non-designers](https://medium.freecodecamp.org/fundamental-design-principles-for-non-designers-ad34c30caa7)
+  summarizes numerous design tips into four principles that those without
+  prior design knowledge can follow. The author gives a bunch of great 
+  examples and further details for the four principles, which are contrast, 
+  consistency, Occam's Razor and space.
+
 * [The Average Web Page (Data from Analyzing 8 Million Websites)](https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/)
   shows the most frequently used HTML elements, metadata, text
   content and other statistics from a large scale analysis of the web.
