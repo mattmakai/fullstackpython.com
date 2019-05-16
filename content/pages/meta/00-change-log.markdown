@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### May
+* Added new [data visualization](/data-visualization.html), 
+  [web design](/web-design.html) and [pandas](/pandas.html) resources.
 * Updated the subnav with a link to 
   [deploypython.com](https://www.deploypython.com/)
   and added a bunch of new resources across pages on the site.

@@ -87,6 +87,10 @@ is a data structures and analysis library.
   uses Seattle bikeshare data as a source for wrangling, analysis and 
   visualization.
 
+* [Stylin' with pandas](https://pbpython.com/styling-pandas.html) shows how
+  to add colors and sparklines to your output when using pandas for data 
+  visualization.
+
 * [Python and JSON: Working with large datasets using Pandas](https://www.dataquest.io/blog/python-json-tutorial/)
   is a well-done detailed tutorial that shows how to mung and analyze
   JSON data.
