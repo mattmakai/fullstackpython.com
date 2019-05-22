@@ -102,3 +102,8 @@ is a data structures and analysis library.
 * [Analyzing my Spotify Music Library With Jupyter And a Bit of Pandas](https://vsupalov.com/analyze-spotify-music-library-with-jupyter-pandas/)
   shows how to grab all of your user data from the Spotify API then
   analyze it using pandas in [Jupyter Notebook](/jupyter-notebook.html).
+
+* [Scalable Python Code with Pandas UDFs](https://towardsdatascience.com/scalable-python-code-with-pandas-udfs-a-data-science-application-dd515a628896)
+  explains that pandas operations can often be parallelized for better 
+  performance using the Pandas UDFs feature in PySpark version 2.3
+  or greater.

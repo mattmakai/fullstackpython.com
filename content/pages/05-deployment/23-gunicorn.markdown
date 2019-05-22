@@ -131,3 +131,7 @@ perform the request handling. Each worker is independent of the controller.
   context on how to choose the number of workers for your execution 
   environment.
 
+* [Configuring Gunicorn for containers](https://pythonspeed.com/articles/gunicorn-in-docker/)
+  explains how to avoid excessive slowness in your [Docker](/docker.html)
+  containers that run Gunicorn workers, as well as some tips on
+  proper logging.
