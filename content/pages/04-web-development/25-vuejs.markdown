@@ -70,6 +70,12 @@ rich apps that run in web browsers.
   (an authentication web [API](/application-programming-interfaces.html))
   in an introductory web application.
 
+* [Vue.js And SEO: How To Optimize Reactive Websites For Search Engines And Bots](https://www.smashingmagazine.com/2019/05/vue-js-seo-reactive-websites-search-engines-bots/)
+  shows how pre-rendering and various other attributes of JavaScript MVC 
+  frameworks like Vue.js can negatively impact your SEO. It then walks 
+  through the most important items to address to mitigate these problems
+  on your own Vue-based sites.
+
 * [Exploring Data with Serverless and Vue: Automatically Update GitHub Files With Serverless Functions](https://css-tricks.com/exploring-data-with-serverless-and-vue-part-i/)
   combines a [serverless](/serverless.html) backend with Vue.js on the
   front.
