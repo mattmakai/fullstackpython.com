@@ -85,6 +85,10 @@ applications.
   of performing everything through automation like you normally would after
   you understand how to use the tool.
 
+* [Kubernetes Any% Speedrun](https://elliot.pro/blog/kubernetes-any-percent-speedrun.html)
+  hilariously presents the pain of using Kubernetes and gives the basic
+  steps for getting a deployment up and running.
+
 * [Kubernetes by Example](http://kubernetesbyexample.com/) provides the 
   commands and code for you to get started with the core Kubernetes concepts.
 

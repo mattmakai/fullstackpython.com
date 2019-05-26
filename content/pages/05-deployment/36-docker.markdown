@@ -97,6 +97,9 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   This article is a great way to bridge what you know about Docker with a more
   traditional Linux operating system architecture understanding.
 
+* [Improve your Dockerfile, best practices](https://dev.to/azure/improve-your-dockerfile-best-practices-5ll)
+  covers image size, layers, starting scripts and LABEL.
+
 * This post gives an overview and 
   [comparison of Docker GUIs](https://blog.codeship.com/docker-guis/) which can be
   handy for monitoring your Docker containers.

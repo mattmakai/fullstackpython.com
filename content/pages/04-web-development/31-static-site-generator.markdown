@@ -224,6 +224,10 @@ deployment.
   Note that you cannot currently use HTTPS on Google Storage servers, which is a 
   major downside.
 
+* [scar](https://github.com/cloudkj/scar) is an open source tool for
+  making static site deployments and redeployments to Amazon Web Services 
+  easier.
+
 * [Deploying a Static Blog with Continuous Integration](https://www.loxodrome.io/post/hugo-on-ci/)
   uses a Hugo (a Golang-based static site generator) generated site
   as an example but the instructions can easily be used to deploy
