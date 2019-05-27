@@ -8,13 +8,15 @@ meta: Emacs is an extensible, customizable text editor often used for coding. Re
 
 
 # Emacs
-[Emacs](https://www.gnu.org/software/emacs/) is an extensible text editor 
+[Emacs](https://www.gnu.org/software/emacs/) 
+([source code](https://savannah.gnu.org/git/?group=emacs))
+is an extensible text editor 
 that can be customized by writing Emacs Lisp (Elisp) code.
 
 <a href="https://www.gnu.org/software/emacs/"><img src="/img/logos/emacs-wide.png" width="100%" alt="Emacs community logo." class="shot"></a>
 
 
-### Why is Emacs a good choice for Python coding?
+### Why is Emacs a good choice for coding Python?
 Emacs is designed to be customized via the built-in Lisp interpreter and
 package manager. The package manager, named package.el, has menus for
 handling installation. The largest Lisp Package Archive is 
