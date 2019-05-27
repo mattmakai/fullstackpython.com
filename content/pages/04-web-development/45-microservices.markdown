@@ -124,7 +124,3 @@ ease further development and deployment. This approach is called the
 * [The Hardest Part About Microservices: Your Data](http://blog.christianposta.com/microservices/the-hardest-part-about-microservices-data/)
   presents a data-centric view on how to structure and transport data
   in a microservices architecture.
-
-* [Making microservices more resilient with circuit breakers](https://blog.buoyant.io/2017/01/13/making-microservices-more-resilient-with-circuit-breaking/)
-  provides a solid idea for how to handle issues with microservices so the
-  problems are less likely to cascade through your entire infrastructure.
