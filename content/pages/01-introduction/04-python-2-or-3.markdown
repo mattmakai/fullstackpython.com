@@ -75,10 +75,6 @@ gone through the process and have advice for making it less painful.
   implementations. There is also a 
   [quick reference for writting code with Python 2 and 3 compatibility](https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef).
 
-* [Django and Python 3 How to Setup pyenv for Multiple Pythons](https://godjango.com/96-django-and-python-3-how-to-setup-pyenv-for-multiple-pythons/)
-  is a screencast showing how to run both Python 2 and 3 for different
-  projects using pyenv.
-
 * [Upgrading to Python 3 with Zero Downtime](https://tech.yplanapp.com/2016/08/24/upgrading-to-python-3-with-zero-downtime/)
   supplies advice on transitioning a large existing Python 2 web application 
   to Python 3. Their process involved upgrading dependencies, testing and

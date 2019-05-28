@@ -77,10 +77,6 @@ application before taking some action, such as purchasing your service.
   is a detailed walkthrough for collecting and analyzing webpage
   analytics with your own Flask app.
 
-* [Pandas and Google Analytics](http://blog.yhathq.com/posts/pandas-google-analytics.html)
-  shows how to use pandas for data analysis with Google Analytics' API to
-  perform calculations not available in the tool itself.
-
 * [Build a Google Analytics Slack Bot with Python](https://www.twilio.com/blog/2018/03/google-analytics-slack-bot-python.html)
   explains how to connect the Google Analytics API to a [Slack](/slack.html) 
   bot, with all the code in Python, so you can query for Google Analytics 
