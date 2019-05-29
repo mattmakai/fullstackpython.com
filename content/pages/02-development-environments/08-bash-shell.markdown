@@ -8,7 +8,8 @@ meta: The Bourne-Again Shell (Bash) is an implementation of the shell concept an
 
 
 # Bourne-again shell (Bash)
-The [Bourne-again shell](https://www.gnu.org/software/bash/), almost 
+The [Bourne-Again SHell](https://www.gnu.org/software/bash/) 
+([source code](https://savannah.gnu.org/git/?group=bash)), almost 
 always referred to simply as "*Bash*", interprets and executes input 
 entered from a source such as the user or a program. Bash is an 
 implementation of the [shell concept](/shells.html) and is often used 
