@@ -93,3 +93,8 @@ during Python software development as part of a programmer's
 * [6 Tips Before You Write Your Next Bash Cronjob](https://yasoob.me/posts/6-tips-before-you-write-your-next-bash-cronjob/)
   covers starting your scripts with shebang, redirecting output, timeouts
   and sudo privileges.
+
+* [Better Bash history](https://sanctum.geek.nz/arabesque/better-bash-history/)
+  shows how to make your Bash history more useful by having it store more
+  previous commands (which takes up more persistent storage but is not
+  a huge deal in 2019) and add timestamps to the `history` command.
