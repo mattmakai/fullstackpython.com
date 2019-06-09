@@ -7,7 +7,7 @@ TIMEZONE = 'America/New_York'
 GITHUB_URL = 'https://github.com/mattmakai/fullstackpython.com'
 PDF_GENERATOR = False
 DIRECT_TEMPLATES = ('index', 'sitemap', 'table-of-contents', 'email',
-                    'blog', 'all',) #'pdf-book', 'epub-book')
+                    'blog', 'example', 'all',) #'pdf-book', 'epub-book')
 
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 ARTICLE_URL = 'blog/{slug}.html'

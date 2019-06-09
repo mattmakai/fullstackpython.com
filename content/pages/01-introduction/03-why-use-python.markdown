@@ -142,6 +142,10 @@ language.
   introduced to the language and ecosystem while getting data analysis
   work done.
 
+* [Evangelizing Python for Business](https://pbpython.com/python-for-business.html)
+  contains helpful hints if you are trying to convince your company to use 
+  Python, particularly for [web development](/web-development.html).
+
 * [Python: Beyond Just Web Apps](https://blog.appdynamics.com/python/python-beyond-just-web-apps/)
   supplies non-web development project examples that use Python. The article
   also does a solid job comparing and contrasting Python to other common

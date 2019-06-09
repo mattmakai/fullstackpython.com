@@ -133,6 +133,10 @@ to get started with these tutorials.
   the same path I've found myself taking as I approach my own ten year
   mark with Vim.
 
+* [At least one Vim trick you might not know about](https://www.hillelwayne.com/post/intermediate-vim/)
+  is a collection of non-obvious keyboard shortcuts, many of which are 
+  infrequently used but still useful.
+
 * [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
   game that helps you learn Vim commands by playing through the adventure.
 
