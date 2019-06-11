@@ -1,6 +1,6 @@
 title: django.urls.path Examples
 category: page
-slug: django-urls-path
+slug: django-urls-path-examples
 sortorder: 5000
 toc: False
 sidebartitle: django.urls.path Examples
@@ -49,3 +49,4 @@ urlpatterns = [
 ```
 
 
+## Example 2 from gadget-board
