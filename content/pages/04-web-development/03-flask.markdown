@@ -320,7 +320,7 @@ ways to structure your code.
   [companion website](https://jackstouffer.github.io/Flask-Foundation/) for
   the project that explains what extensions the base project includes.
 
-* [Cookiecutter Flask](https://github.com/sloria/cookiecutter-flask) is a 
+* [Cookiecutter Flask](https://github.com/cookiecutter-flask/cookiecutter-flask) is a 
   project template for use with 
   [Cookiecutter](https://github.com/audreyr/cookiecutter).
 
