@@ -1,7 +1,7 @@
 title: django.conf.urls.url Examples
 category: page
 slug: django-conf-urls-url-examples
-sortorder: 5001
+sortorder: 50001
 toc: False
 sidebartitle: django.conf.urls.url Examples
 meta: Python code examples for the url function within the django.conf.urls module of the Django project. 
@@ -54,7 +54,7 @@ urlpatterns = [
 ```
 
 
-## Example 2 from ORGAN-IZE/register
+## Example 2 from register
 [register](https://github.com/ORGAN-IZE/register) is a [Django](/django.html),
 [Bootstrap](/bootstrap.html), [PostgreSQL](/postgresql.html) project that is
 open source under the 
@@ -147,3 +147,44 @@ urlpatterns = [
 ]
 ```
 
+
+## Example 4 from django-cms
+[django-cms](https://github.com/divio/django-cms)
+([project website](https://www.django-cms.org/en/)) is a Python-based
+content management system (CMS) [library](https://pypi.org/project/django-cms/) 
+for use with Django web apps that is open sourced under the 
+[BSD 3-Clause "New" License](https://github.com/divio/django-cms/blob/develop/LICENSE).
+
+[**django-cms/cms/urls.py**](https://github.com/divio/django-cms/blob/develop/cms/urls.py)
+
+```python
+# -*- coding: utf-8 -*-
+from django.conf import settings
+~~from django.conf.urls import include, url
+
+from cms import views
+from cms.apphook_pool import apphook_pool
+from cms.appresolver import get_app_patterns
+from cms.constants import SLUG_REGEXP
+
+
+if settings.APPEND_SLASH:
+    regexp = r'^(?P<slug>%s)/$' % SLUG_REGEXP
+else:
+    regexp = r'^(?P<slug>%s)$' % SLUG_REGEXP
+
+if apphook_pool.get_apphooks():
+    # If there are some application urls, use special resolver,
+    # so we will have standard reverse support.
+    urlpatterns = get_app_patterns()
+else:
+    urlpatterns = []
+
+
+urlpatterns.extend([
+~~    url(r'^cms_login/$', views.login, name='cms_login'),
+~~    url(r'^cms_wizard/', include('cms.wizards.urls')),
+~~    url(regexp, views.details, name='pages-details-by-slug'),
+~~    url(r'^$', views.details, {'slug': ''}, name='pages-root'),
+])
+```
