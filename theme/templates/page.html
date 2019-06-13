@@ -43,7 +43,9 @@
   {% else %}
    {{ page.content }}
   {% endif %}
-  {% if not page.sortorder == "5000" %}
+  {% if page.sortorder[0:2] == "50" %}
+   <hr>
+  {% else %}
    {% include "choices/" + page.slug + ".html" %}
   {% endif %}
   {% include "email-for-book.html" %}

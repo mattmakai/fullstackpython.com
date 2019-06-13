@@ -15,6 +15,11 @@ on GitHub.
 
 
 ## 2019
+### June
+* Started new open source code examples series, beginning with 
+  [url](/django-conf-urls-url-examples.html)
+  and [path](/django-urls-path-examples.html) functions.
+
 ### May
 * Added new [data visualization](/data-visualization.html), 
   [web design](/web-design.html) and [pandas](/pandas.html) resources.
