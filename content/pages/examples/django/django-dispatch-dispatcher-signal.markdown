@@ -52,3 +52,35 @@ It is open source under the
 )
 ```
 
+
+## Example 2 from aldryn-accounts
+[aldryn-accounts](https://github.com/divio/aldryn-accounts) is a code library
+for user registration and authentication in [Django](/django.html) projects.
+The code for this project is open source under the 
+[MIT license](https://github.com/divio/aldryn-accounts/blob/develop/LICENSE).
+
+[**aldryn-accounts/aldryn_accounts/signal.py**](https://github.com/divio/aldryn-accounts/blob/develop/aldryn_accounts/signals.py)
+
+```python
+# -*- coding: utf-8 -*-
+~~import django.dispatch
+from django.contrib.auth import user_logged_in
+from django.db.models import signals, ObjectDoesNotExist
+from django.utils.encoding import force_text
+from django.utils import timezone
+from django.contrib.auth.models import User
+
+from .utils import generate_username
+
+
+~~user_signed_up = django.dispatch.Signal(providing_args=["user", "form"])
+~~user_sign_up_attempt = django.dispatch.Signal(providing_args=["username",  "email", "result"])
+~~signup_code_sent = django.dispatch.Signal(providing_args=["signup_code"])
+~~signup_code_used = django.dispatch.Signal(providing_args=["signup_code_result"])
+~~email_confirmed = django.dispatch.Signal(providing_args=["email_address"])
+~~email_confirmation_sent = django.dispatch.Signal(providing_args=["confirmation"])
+~~password_changed = django.dispatch.Signal(providing_args=["user"])
+
+
+# code continues from here without any further django.dispatch.Signal references
+```
