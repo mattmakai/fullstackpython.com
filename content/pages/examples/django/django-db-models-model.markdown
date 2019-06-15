@@ -3,7 +3,7 @@ category: page
 slug: django-db-models-model-examples
 sortorder: 50002
 toc: False
-sidebartitle: django.db.models.Model Examples
+sidebartitle: django.db.models.Model
 meta: Python code examples for the Model class within the django.db.models module of the Django project. 
 
 
@@ -13,6 +13,34 @@ The
 class is the superclass for all data stored in [Django](/django.html) 
 applications.
 
+
+## Example 1 from django-audit-log
+[django-audit-log](https://github.com/vvangelovski/django-audit-log) is a
+[code library](https://pypi.org/project/django-audit-log/) that tracks 
+changes to [Django](/django.html) models. The source code is available 
+under the 
+[BSD 3 "New" license](https://github.com/vvangelovski/django-audit-log/blob/master/LICENSE.txt).
+
+[**django-audit-log/audit-log/models/__init__.py**](https://github.com/vvangelovski/django-audit-log/blob/master/audit_log/models/__init__.py)
+
+```python
+~~from django.db.models import Model
+from django.utils.translation import ugettext_lazy as _
+from audit_log.models.fields import CreatingUserField, CreatingSessionKeyField, LastUserField, LastSessionKeyField
+
+~~class AuthStampedModel(Model):
+    """
+    An abstract base class model that provides auth and session information
+    fields.
+    """
+    created_by = CreatingUserField(verbose_name = _("created by"), related_name = "created_%(app_label)s_%(class)s_set")
+    created_with_session_key = CreatingSessionKeyField(_("created with session key"))
+    modified_by =  LastUserField(verbose_name = _("modified by"), related_name = "modified_%(app_label)s_%(class)s_set")
+    modified_with_session_key = LastSessionKeyField(_("modified with session key"))
+
+    class Meta:
+        abstract = True
+```
 
 
 ## Example 2 from django-cms
@@ -114,3 +142,86 @@ class Page(models.Model):
         on_delete=models.CASCADE,
     )
 ```
+
+
+## Example 3 from
+
+## Example 4 from mezzanine
+
+
+[**mezzanine/mezzanine/core/models.py**](https://github.com/stephenmcd/mezzanine/blob/master/mezzanine/core/models.py)
+
+```python
+from __future__ import unicode_literals
+from future.builtins import str
+from future.utils import with_metaclass
+
+from json import loads
+try:
+    from urllib.request import urlopen
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlopen, urlencode
+
+from django.apps import apps
+from django.contrib.contenttypes.fields import GenericForeignKey
+~~from django.db import models
+from django.db.models.base import ModelBase
+from django.template.defaultfilters import truncatewords_html
+from django.utils.encoding import python_2_unicode_compatible
+from django.utils.html import format_html, strip_tags
+from django.utils.timesince import timesince
+from django.utils.timezone import now
+from django.utils.translation import ugettext, ugettext_lazy as _
+
+from mezzanine.conf import settings
+from mezzanine.core.fields import RichTextField, OrderField
+from mezzanine.core.managers import DisplayableManager, CurrentSiteManager
+from mezzanine.generic.fields import KeywordsField
+from mezzanine.utils.html import TagCloser
+from mezzanine.utils.models import base_concrete_model, get_user_model_name
+from mezzanine.utils.sites import current_site_id, current_request
+from mezzanine.utils.urls import admin_url, slugify, unique_slug
+
+
+user_model_name = get_user_model_name()
+
+
+def wrapped_manager(klass):
+    if settings.USE_MODELTRANSLATION:
+        from modeltranslation.manager import MultilingualManager
+
+        class Mgr(MultilingualManager, klass):
+            pass
+        return Mgr()
+    else:
+        return klass()
+
+
+~~class SiteRelated(models.Model):
+    """
+    Abstract model for all things site-related. Adds a foreignkey to
+    Django's ``Site`` model, and filters by site with all querysets.
+    See ``mezzanine.utils.sites.current_site_id`` for implementation
+    details.
+    """
+
+    objects = wrapped_manager(CurrentSiteManager)
+
+    class Meta:
+        abstract = True
+
+~~    site = models.ForeignKey("sites.Site", on_delete=models.CASCADE,
+~~        editable=False)
+
+    def save(self, update_site=False, *args, **kwargs):
+        """
+        Set the site to the current site when the record is first
+        created, or the ``update_site`` argument is explicitly set
+        to ``True``.
+        """
+        if update_site or (self.id is None and self.site_id is None):
+            self.site_id = current_site_id()
+        super(SiteRelated, self).save(*args, **kwargs)
+```
+

@@ -3,7 +3,7 @@ category: page
 slug: django-urls-path-examples
 sortorder: 50000
 toc: False
-sidebartitle: django.urls.path Examples
+sidebartitle: django.urls.path
 meta: Python code examples for the path function within the django.urls module of the Django project. 
 
 
