@@ -454,3 +454,161 @@ FILTER_FUNCS = {
 ~~                current_row.insert(0, current_entry)
 ~~            yield current_row
 ```
+
+
+## Example 2 from django-allauth
+[django-allauth](https://github.com/pennersr/django-allauth) 
+([project website](https://www.intenct.nl/projects/django-allauth/)) is a
+[Django](/django.html) code library for easily adding local and social 
+authentication flows to Django projects. Its code is available as open 
+source under the 
+[MIT License](https://github.com/pennersr/django-allauth/blob/master/LICENSE).
+
+[**django-allauth/allauth/account/forms.py**](https://github.com/pennersr/django-allauth/blob/master/allauth/account/forms.py)
+
+```python
+from __future__ import absolute_import
+
+import warnings
+from importlib import import_module
+
+~~from django import forms
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from django.contrib.sites.shortcuts import get_current_site
+from django.core import exceptions, validators
+from django.urls import reverse
+from django.utils.translation import pgettext
+
+from allauth.compat import ugettext, ugettext_lazy as _
+
+from ..utils import (
+    build_absolute_uri,
+    get_username_max_length,
+    set_form_field_order,
+)
+from . import app_settings
+from .adapter import get_adapter
+from .app_settings import AuthenticationMethod
+from .models import EmailAddress
+from .utils import (
+    filter_users_by_email,
+    get_user_model,
+    perform_login,
+    setup_user_email,
+    sync_user_email_addresses,
+    url_str_to_user_pk,
+    user_email,
+    user_pk_to_url_str,
+    user_username,
+)
+
+
+class EmailAwarePasswordResetTokenGenerator(PasswordResetTokenGenerator):
+
+    def _make_hash_value(self, user, timestamp):
+        ret = super(
+            EmailAwarePasswordResetTokenGenerator, self)._make_hash_value(
+                user, timestamp)
+        sync_user_email_addresses(user)
+        emails = set([user.email] if user.email else [])
+        emails.update(
+            EmailAddress.objects
+            .filter(user=user)
+            .values_list('email', flat=True))
+        ret += '|'.join(sorted(emails))
+        return ret
+
+
+default_token_generator = EmailAwarePasswordResetTokenGenerator()
+
+
+class PasswordVerificationMixin(object):
+    def clean(self):
+        cleaned_data = super(PasswordVerificationMixin, self).clean()
+        password1 = cleaned_data.get('password1')
+        password2 = cleaned_data.get('password2')
+        if (password1 and password2) and password1 != password2:
+            self.add_error(
+                'password2', _("You must type the same password each time.")
+            )
+        return cleaned_data
+
+
+~~class PasswordField(forms.CharField):
+
+~~    def __init__(self, *args, **kwargs):
+~~        render_value = kwargs.pop('render_value',
+~~                                  app_settings.PASSWORD_INPUT_RENDER_VALUE)
+~~        kwargs['widget'] = forms.PasswordInput(render_value=render_value,
+~~                                               attrs={'placeholder':
+~~                                                      kwargs.get("label")})
+~~        super(PasswordField, self).__init__(*args, **kwargs)
+
+
+class SetPasswordField(PasswordField):
+
+    def __init__(self, *args, **kwargs):
+        super(SetPasswordField, self).__init__(*args, **kwargs)
+        self.user = None
+
+    def clean(self, value):
+        value = super(SetPasswordField, self).clean(value)
+        value = get_adapter().clean_password(value, user=self.user)
+        return value
+
+
+~~class LoginForm(forms.Form):
+
+~~    password = PasswordField(label=_("Password"))
+~~    remember = forms.BooleanField(label=_("Remember Me"),
+~~                                  required=False)
+
+~~    user = None
+~~    error_messages = {
+~~        'account_inactive':
+~~        _("This account is currently inactive."),
+
+~~        'email_password_mismatch':
+~~        _("The e-mail address and/or password you specified are not correct."),
+
+~~        'username_password_mismatch':
+~~        _("The username and/or password you specified are not correct."),
+~~    }
+
+~~    def __init__(self, *args, **kwargs):
+~~        self.request = kwargs.pop('request', None)
+~~        super(LoginForm, self).__init__(*args, **kwargs)
+~~        if app_settings.AUTHENTICATION_METHOD == AuthenticationMethod.EMAIL:
+~~            login_widget = forms.TextInput(attrs={'type': 'email',
+~~                                                  'placeholder':
+~~                                                  _('E-mail address'),
+~~                                                  'autofocus': 'autofocus'})
+~~            login_field = forms.EmailField(label=_("E-mail"),
+~~                                           widget=login_widget)
+~~        elif app_settings.AUTHENTICATION_METHOD \
+~~                == AuthenticationMethod.USERNAME:
+~~            login_widget = forms.TextInput(attrs={'placeholder':
+~~                                                  _('Username'),
+~~                                                  'autofocus': 'autofocus'})
+~~            login_field = forms.CharField(
+~~                label=_("Username"),
+~~                widget=login_widget,
+~~                max_length=get_username_max_length())
+~~        else:
+~~            assert app_settings.AUTHENTICATION_METHOD \
+~~                == AuthenticationMethod.USERNAME_EMAIL
+~~            login_widget = forms.TextInput(attrs={'placeholder':
+~~                                                  _('Username or e-mail'),
+~~                                                  'autofocus': 'autofocus'})
+~~            login_field = forms.CharField(label=pgettext("field label",
+~~                                                         "Login"),
+~~                                          widget=login_widget)
+~~        self.fields["login"] = login_field
+~~        set_form_field_order(self, ["login", "password", "remember"])
+~~        if app_settings.SESSION_REMEMBER is not None:
+~~            del self.fields['remember']
+
+# source file continues from here with a few more good forms examples
+```
+
+
