@@ -611,4 +611,32 @@ class SetPasswordField(PasswordField):
 # source file continues from here with a few more good forms examples
 ```
 
+## Example 3 from heritagesites
+[heritagesites](https://github.com/Michael-Cantley/heritagesites) is a
+[Django](/django.html) web application with a [MySQL](/mysql.html)
+backend that displays 
+[UNESCO heritage sites](https://whc.unesco.org/en/list/). The project
+code is open source under the 
+[MIT license](https://github.com/Michael-Cantley/heritagesites/blob/master/LICENSE).
 
+[**heritagesites/heritagesites/forms.py**](https://github.com/Michael-Cantley/heritagesites/blob/master/heritagesites/forms.py)
+
+```python
+# forms.py
+~~from django import forms
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
+from heritagesites.models import HeritageSite
+
+
+~~class HeritageSiteForm(forms.ModelForm):
+~~    class Meta:
+~~        model = HeritageSite
+~~        fields = '__all__'
+
+~~    def __init__(self, *args, **kwargs):
+~~        super().__init__(*args, **kwargs)
+~~        self.helper = FormHelper()
+~~        self.helper.form_method = 'post'
+~~        self.helper.add_input(Submit('submit', 'submit'))
+```
