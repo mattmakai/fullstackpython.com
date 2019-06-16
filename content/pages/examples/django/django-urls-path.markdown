@@ -18,6 +18,39 @@ a Django application using the
 [URL dispatcher](https://docs.djangoproject.com/en/dev/topics/http/urls/).
 
 
-## Example 1 from
+## Example 1 from dccnsys
+[dccnsys](https://github.com/dccnconf/dccnsys) is a conference registration 
+system built with [Django](/django.html). The code is open source under the
+[MIT license](https://github.com/dccnconf/dccnsys/blob/master/LICENSE).
 
+[**dccnsys/wwwdccn/wwwdccn/urls.py**](https://github.com/dccnconf/dccnsys/blob/master/wwwdccn/wwwdccn/urls.py)
 
+```python
+from django.conf import settings
+from django.conf.urls.static import static
+~~from django.urls import path, include
+
+urlpatterns = [
+~~    path('', include('public_site.urls')),
+~~    path('user/', include('user_site.urls')),
+~~    path('auth/', include('auth_app.urls')),
+~~    path('users/', include('users.urls')),
+~~    path('registration/', include('registration.urls')),
+~~    path('conferences/', include('conferences.urls')),
+~~    path('submissions/', include('submissions.urls')),
+~~    path('chair/', include('chair.urls')),
+]
+
+if settings.USE_LOCAL_MEDIA:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.USE_DEBUG_TOOLBAR:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+
+        # For django versions before 2.0:
+        # url(r'^__debug__/', include(debug_toolbar.urls)),
+
+    ] + urlpatterns
+```
