@@ -14,7 +14,49 @@ The admin interface can be heavily customized and the code examples below can
 help you understand how to implement some of the trickier parts of customization.
 
 
-## Example 1 from heritagesites
+## Example 1 from django-oscar
+[django-oscar](https://github.com/django-oscar/django-oscar/) 
+([project website](http://oscarcommerce.com/))
+is a framework for building e-commerce sites on top of 
+[Django](/django.html). The code for the project is available open 
+source under a 
+[custom license written by Tangent Communications PLC](https://github.com/django-oscar/django-oscar/blob/master/LICENSE).
+
+[**django-oscar/src/oscar/apps/address/admin.py**](https://github.com/django-oscar/django-oscar/blob/master/src/oscar/apps/address/admin.py)
+
+```python
+# admin.py
+~~from django.contrib import admin
+
+from oscar.core.loading import get_model
+
+
+~~class UserAddressAdmin(admin.ModelAdmin):
+~~    readonly_fields = ('num_orders_as_billing_address', 'num_orders_as_shipping_address')
+
+
+~~class CountryAdmin(admin.ModelAdmin):
+    list_display = [
+        '__str__',
+        'display_order'
+    ]
+    list_filter = [
+        'is_shipping_country'
+    ]
+    search_fields = [
+        'name',
+        'printable_name',
+        'iso_3166_1_a2',
+        'iso_3166_1_a3'
+    ]
+
+
+~~admin.site.register(get_model('address', 'useraddress'), UserAddressAdmin)
+~~admin.site.register(get_model('address', 'country'), CountryAdmin)
+```
+
+
+## Example 2 from heritagesites
 [heritagesites](https://github.com/Michael-Cantley/heritagesites) is a
 [Django](/django.html)-based web app with a [MySQL](/mysql.html)
 backend that displays 
