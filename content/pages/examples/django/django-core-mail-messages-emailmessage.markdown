@@ -15,8 +15,14 @@ class is contained with the
 module within the [Django project](/django.html) code base. 
 
 
-## EmailMessage Example 1 from django-emailmessagetemplate
+## Example 1 from django-emailmessagetemplate
+[django-emailmessagetemplates](https://github.com/mcoconnor/django-emailmessagetemplates)
+is a code library that makes it easier to add functionality for end users to 
+customize email templates in a [Django](/django.html) application. The code
+is available under the 
+[BSD 3-Clause "New" or "Revised" License](https://github.com/mcoconnor/django-emailmessagetemplates/blob/master/LICENSE).
 
+[**django-emailmessagetemplates/emailmessagetemplates/utils.py**](https://github.com/mcoconnor/django-emailmessagetemplates/blob/master/emailmessagetemplates/utils.py)
 
 ```python
 import copy
