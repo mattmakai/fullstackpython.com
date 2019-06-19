@@ -137,9 +137,12 @@ ACCESS_CHOICES = (
 ~~    can_change_advanced_settings = models.BooleanField(_("can change advanced settings"), 
 														 default=False)
 ~~    can_publish = models.BooleanField(_("can publish"), default=True)
-~~    can_change_permissions = models.BooleanField(_("can change permissions"), default=False, help_text=_("on page level"))
+~~    can_change_permissions = models.BooleanField(_("can change permissions"), 
+                                                   default=False, 
+                                                   help_text=_("on page level"))
 ~~    can_move_page = models.BooleanField(_("can move"), default=True)
-~~    can_view = models.BooleanField(_("view restricted"), default=False, help_text=_("frontend view restriction"))
+~~    can_view = models.BooleanField(_("view restricted"), default=False, 
+                                     help_text=_("frontend view restriction"))
 ~~
 ~~    class Meta:
 ~~        abstract = True
@@ -227,7 +230,8 @@ ACCESS_CHOICES = (
         permissions_by_action = {
             'add_page': ['can_add', 'can_change'],
             'change_page': ['can_change'],
-            'change_page_advanced_settings': ['can_change', 'can_change_advanced_settings'],
+            'change_page_advanced_settings': ['can_change', 
+                                              'can_change_advanced_settings'],
             'change_page_permissions': ['can_change', 'can_change_permissions'],
             'delete_page': ['can_change', 'can_delete'],
             'delete_page_translation': ['can_change', 'can_delete'],
