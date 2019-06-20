@@ -45,7 +45,8 @@ gadgets_router.register(r'data', GadgetDataViewSet, base_name='gadgets-data')
 
 urlpatterns = [
 ~~    url(r'^backend/admin/', admin.site.urls),
-~~    url(r'^backend/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+~~    url(r'^backend/api-auth/', include('rest_framework.urls', 
+~~        namespace='rest_framework')),
 ~~    url(r'^backend/api-token-auth/', obtain_jwt_token),
 ~~    url(r'^backend/api-token-refresh/', refresh_jwt_token),
 ~~    url(r'^backend/api/v1/', include(router.urls)),
@@ -54,7 +55,79 @@ urlpatterns = [
 ```
 
 
-## Example 2 from register
+## Example 2 from wagtail
+[wagtail](https://github.com/wagtail/wagtail)
+([project website](https://wagtail.io/)) is a fantastic
+[Django](/django.html)-based CMS with code that is open source
+under the 
+[BSD 3-Clause "New" or "Revised" License](https://github.com/wagtail/wagtail/blob/master/LICENSE).
+
+[**wagtail/wagtail/admin/urls/pages.py**](https://github.com/wagtail/wagtail/blob/master/wagtail/admin/urls/pages.py)
+
+```python
+# pages.py
+~~from django.conf.urls import url
+
+from wagtail.admin.views import page_privacy, pages
+
+
+app_name = 'wagtailadmin_pages'
+urlpatterns = [
+~~    url(r'^add/(\w+)/(\w+)/(\d+)/$', pages.create, name='add'),
+~~    url(r'^add/(\w+)/(\w+)/(\d+)/preview/$',
+~~        pages.PreviewOnCreate.as_view(), name='preview_on_add'),
+~~    url(r'^usage/(\w+)/(\w+)/$', pages.content_type_use, 
+~~        name='type_use'),
+
+~~    url(r'^(\d+)/edit/$', pages.edit, name='edit'),
+~~    url(r'^(\d+)/edit/preview/$', pages.PreviewOnEdit.as_view(), 
+~~        name='preview_on_edit'),
+
+~~    url(r'^(\d+)/view_draft/$', pages.view_draft, name='view_draft'),
+~~    url(r'^(\d+)/add_subpage/$', pages.add_subpage, name='add_subpage'),
+~~    url(r'^(\d+)/delete/$', pages.delete, name='delete'),
+~~    url(r'^(\d+)/unpublish/$', pages.unpublish, name='unpublish'),
+
+~~    url(r'^search/$', pages.search, name='search'),
+
+~~    url(r'^(\d+)/move/$', pages.move_choose_destination, name='move'),
+~~    url(r'^(\d+)/move/(\d+)/$', pages.move_choose_destination, 
+~~        name='move_choose_destination'),
+~~    url(r'^(\d+)/move/(\d+)/confirm/$', pages.move_confirm, 
+~~        name='move_confirm'),
+~~    url(r'^(\d+)/set_position/$', pages.set_page_position, 
+~~        name='set_page_position'),
+
+~~    url(r'^(\d+)/copy/$', pages.copy, name='copy'),
+
+~~    url(r'^moderation/(\d+)/approve/$', pages.approve_moderation, 
+~~        name='approve_moderation'),
+~~    url(r'^moderation/(\d+)/reject/$', pages.reject_moderation, 
+~~        name='reject_moderation'),
+~~    url(r'^moderation/(\d+)/preview/$', pages.preview_for_moderation, 
+~~        name='preview_for_moderation'),
+
+~~    url(r'^(\d+)/privacy/$', page_privacy.set_privacy, 
+~~        name='set_privacy'),
+
+~~    url(r'^(\d+)/lock/$', pages.lock, name='lock'),
+~~    url(r'^(\d+)/unlock/$', pages.unlock, name='unlock'),
+
+~~    url(r'^(\d+)/revisions/$', pages.revisions_index, 
+~~        name='revisions_index'),
+~~    url(r'^(\d+)/revisions/(\d+)/view/$', pages.revisions_view, 
+~~        name='revisions_view'),
+~~    url(r'^(\d+)/revisions/(\d+)/revert/$', pages.revisions_revert, 
+~~        name='revisions_revert'),
+~~    url(r'^(\d+)/revisions/(\d+)/unschedule/$', pages.revisions_unschedule, 
+~~        name='revisions_unschedule'),
+~~    url(r'^(\d+)/revisions/compare/(live|earliest|\d+)\.\.\.(live|latest|\d+)/$', 
+~~        pages.revisions_compare, name='revisions_compare'),
+]
+```
+
+
+## Example 3 from register
 [register](https://github.com/ORGAN-IZE/register) is a [Django](/django.html),
 [Bootstrap](/bootstrap.html), [PostgreSQL](/postgresql.html) project that is
 open source under the 
@@ -80,9 +153,11 @@ from django.contrib.auth import views
 
 
 urlpatterns = [
-~~    django.conf.urls.url(r'^i18n/', django.conf.urls.include('django.conf.urls.i18n')),
+~~    django.conf.urls.url(r'^i18n/', 
+~~      django.conf.urls.include('django.conf.urls.i18n')),
 ~~    django.conf.urls.url(r'^robots.txt$', 
-~~                         django.views.generic.TemplateView.as_view(template_name='robots.txt')),
+~~                         django.views.generic.TemplateView.as_view(\
+~~                           template_name='robots.txt')),
 ~~    django.conf.urls.url(r'^', django.conf.urls.include('registration.urls')),
 ~~    django.conf.urls.url(r'^brand/', django.conf.urls.include('cobrand.urls')),
 ~~    django.conf.urls.url(r'^admin/', django.conf.urls.include(django.contrib.admin.site.urls)),
@@ -101,7 +176,7 @@ urlpatterns = [
 ```
 
 
-## Example 3 from django-allauth
+## Example 4 from django-allauth
 [django-allauth](https://github.com/pennersr/django-allauth) 
 ([project website](https://www.intenct.nl/projects/django-allauth/)) is a
 [Django](/django.html) library for easily adding local and social authentication
@@ -123,7 +198,8 @@ urlpatterns = [
 
 ~~    url(r"^password/change/$", views.password_change,
 ~~        name="account_change_password"),
-~~    url(r"^password/set/$", views.password_set, name="account_set_password"),
+~~    url(r"^password/set/$", views.password_set, 
+~~        name="account_set_password"),
 
 ~~    url(r"^inactive/$", views.account_inactive, name="account_inactive"),
 
@@ -142,13 +218,14 @@ urlpatterns = [
 ~~    url(r"^password/reset/key/(?P<uidb36>[0-9A-Za-z]+)-(?P<key>.+)/$",
 ~~        views.password_reset_from_key,
 ~~        name="account_reset_password_from_key"),
-~~    url(r"^password/reset/key/done/$", views.password_reset_from_key_done,
+~~    url(r"^password/reset/key/done/$", 
+~~        views.password_reset_from_key_done,
 ~~        name="account_reset_password_from_key_done"),
 ]
 ```
 
 
-## Example 4 from django-cms
+## Example 5 from django-cms
 [django-cms](https://github.com/divio/django-cms)
 ([project website](https://www.django-cms.org/en/)) is a Python-based
 content management system (CMS) [library](https://pypi.org/project/django-cms/) 
@@ -188,3 +265,5 @@ urlpatterns.extend([
 ~~    url(r'^$', views.details, {'slug': ''}, name='pages-root'),
 ])
 ```
+
+
