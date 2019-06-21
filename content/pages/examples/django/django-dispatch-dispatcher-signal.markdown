@@ -1,13 +1,13 @@
-title: django.dispatch.dispatcher.Signal Examples
+title: django.dispatch Signal Examples
 category: page
 slug: django-dispatch-dispatcher-signal-examples
 sortorder: 50004
 toc: False
-sidebartitle: django.dispatch.dispatcher Signal
+sidebartitle: django.dispatch Signal
 meta: Python code examples for the Signal class within the django.dispatch module of the Django project. 
 
 
-# django.dispatch.dispatcher Signal Examples
+# django.dispatch Signal Examples
 The 
 [Signal](https://github.com/django/django/blob/master/django/dispatch/dispatcher.py)
 class allows certain senders to notify a set of receivers that some action 
@@ -84,3 +84,24 @@ from .utils import generate_username
 
 # code continues from here without any further django.dispatch.Signal references
 ```
+
+
+## Example 3 from django-easy-timezones
+[django-easy-timezones](https://github.com/Miserlou/django-easy-timezones)
+([project website](https://www.gun.io/blog/django-easy-timezones))
+is a [Django](/django.html) 
+[middleware](https://docs.djangoproject.com/en/2.2/topics/http/middleware/)
+[code library](https://pypi.org/project/django-easy-timezones/)
+to simplify handling time data in your applications using
+users' geolocation data.
+
+[**django-easy-timezones/easy_timezones/signals.py**](https://github.com/Miserlou/django-easy-timezones/blob/master/easy_timezones/middleware.py)
+
+```python
+# Django
+~~import django.dispatch
+
+~~detected_timezone = django.dispatch.Signal(providing_args=["instance", "timezone"])
+```
+
+
