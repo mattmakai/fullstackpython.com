@@ -437,6 +437,7 @@ from django_countries.fields import CountryField
 # source file continues from here without further Model examples
 ```
 
+
 ## Example 4 from mezzanine
 [mezzanine](https://github.com/stephenmcd/mezzanine) is a 
 [Django](/django.html)-based CMS with open source code under the
