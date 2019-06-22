@@ -522,6 +522,7 @@ def wrapped_manager(klass):
 
 ## Example 5 from sorl-thumbnail
 [sorl-thumbnail](https://github.com/jazzband/sorl-thumbnail)
+([project documentation](https://sorl-thumbnail.readthedocs.io/en/latest/))
 is a code library to make it easier to work with thumbnails
 in [Django](/django.html) applications. The code for the 
 project is open source under the
