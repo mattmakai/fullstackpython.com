@@ -114,6 +114,7 @@ The code for the project is available under the
 [**viewflow / viewflow / signals.py**](https://github.com/viewflow/viewflow/blob/master/viewflow/signals.py)
 
 ```python
+# signals.py
 ~~from django.dispatch import Signal
 
 ~~flow_started = Signal(providing_args=["process", "task"])

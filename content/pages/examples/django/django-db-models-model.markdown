@@ -519,3 +519,32 @@ def wrapped_manager(klass):
         super(SiteRelated, self).save(*args, **kwargs)
 ```
 
+
+## Example 5 from sorl-thumbnail
+[sorl-thumbnail](https://github.com/jazzband/sorl-thumbnail)
+is a code library to make it easier to work with thumbnails
+in [Django](/django.html) applications. The code for the 
+project is open source under the
+[BSD 3-Clause "New" or "Revised" license](https://github.com/jazzband/sorl-thumbnail/blob/master/LICENSE).
+
+[**sorl-thumbnail / sorl / thumbnail / models.py**](https://github.com/jazzband/sorl-thumbnail/blob/master/sorl/thumbnail/models.py)
+
+```python
+# models.py
+~~from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
+
+from sorl.thumbnail.conf import settings
+
+
+@python_2_unicode_compatible
+~~class KVStore(models.Model):
+~~    key = models.CharField(
+~~        max_length=200, primary_key=True,
+~~        db_column=settings.THUMBNAIL_KEY_DBCOLUMN
+~~    )
+~~    value = models.TextField()
+
+    def __str__(self):
+        return self.key
+```
