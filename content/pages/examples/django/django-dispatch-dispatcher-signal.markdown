@@ -22,8 +22,7 @@ stores Django model state to track history, view and revert changes via the
 It is open source under the 
 [BSD 3-Clause "New" or "Revise" License](https://github.com/treyhunner/django-simple-history/blob/master/LICENSE.txt).
 
-
-[**django-simple-history/simple_history/signals.py**](https://github.com/treyhunner/django-simple-history/blob/master/simple_history/signals.py)
+[**django-simple-history / simple_history / signals.py**](https://github.com/treyhunner/django-simple-history/blob/master/simple_history/signals.py)
 
 ```python
 # signals.py
@@ -59,7 +58,7 @@ for user registration and authentication in [Django](/django.html) projects.
 The code for this project is open source under the 
 [MIT license](https://github.com/divio/aldryn-accounts/blob/develop/LICENSE).
 
-[**aldryn-accounts/aldryn_accounts/signal.py**](https://github.com/divio/aldryn-accounts/blob/develop/aldryn_accounts/signals.py)
+[**aldryn-accounts / aldryn_accounts / signal.py**](https://github.com/divio/aldryn-accounts/blob/develop/aldryn_accounts/signals.py)
 
 ```python
 # -*- coding: utf-8 -*-
@@ -95,7 +94,7 @@ is a [Django](/django.html)
 to simplify handling time data in your applications using
 users' geolocation data.
 
-[**django-easy-timezones/easy_timezones/signals.py**](https://github.com/Miserlou/django-easy-timezones/blob/master/easy_timezones/middleware.py)
+[**django-easy-timezones / easy_timezones / signals.py**](https://github.com/Miserlou/django-easy-timezones/blob/master/easy_timezones/middleware.py)
 
 ```python
 # Django
@@ -105,3 +104,22 @@ users' geolocation data.
 ```
 
 
+## Example 4 from viewflow
+[viewflow](https://github.com/viewflow/viewflow) is a reusable workflow
+code library for organizing business logic in a complex web application.
+The code for the project is available under the 
+[GNU Alfredo license](https://github.com/viewflow/viewflow/blob/master/LICENSE).
+
+[**viewflow / viewflow / signals.py**](https://github.com/viewflow/viewflow/blob/master/viewflow/signals.py)
+
+```python
+from django.dispatch import Signal
+
+flow_started = Signal(providing_args=["process", "task"])
+flow_finished = Signal(providing_args=["process", "task"])
+
+task_started = Signal(providing_args=["process", "task"])
+task_failed = Signal(providing_args=["process", "task", "exception", 
+                                     "traceback"])
+task_finished = Signal(providing_args=["process", "task"])
+```
