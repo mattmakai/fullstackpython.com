@@ -105,7 +105,8 @@ users' geolocation data.
 
 
 ## Example 4 from viewflow
-[viewflow](https://github.com/viewflow/viewflow) is a reusable workflow
+[viewflow](https://github.com/viewflow/viewflow) 
+([project website](http://viewflow.io/)) is a reusable workflow
 code library for organizing business logic in a complex web application.
 The code for the project is available under the 
 [GNU Alfredo license](https://github.com/viewflow/viewflow/blob/master/LICENSE).
@@ -113,13 +114,13 @@ The code for the project is available under the
 [**viewflow / viewflow / signals.py**](https://github.com/viewflow/viewflow/blob/master/viewflow/signals.py)
 
 ```python
-from django.dispatch import Signal
+~~from django.dispatch import Signal
 
-flow_started = Signal(providing_args=["process", "task"])
-flow_finished = Signal(providing_args=["process", "task"])
+~~flow_started = Signal(providing_args=["process", "task"])
+~~flow_finished = Signal(providing_args=["process", "task"])
 
-task_started = Signal(providing_args=["process", "task"])
-task_failed = Signal(providing_args=["process", "task", "exception", 
-                                     "traceback"])
-task_finished = Signal(providing_args=["process", "task"])
+~~task_started = Signal(providing_args=["process", "task"])
+~~task_failed = Signal(providing_args=["process", "task", "exception", 
+~~                                     "traceback"])
+~~task_finished = Signal(providing_args=["process", "task"])
 ```
