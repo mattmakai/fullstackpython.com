@@ -53,3 +53,8 @@ toolkits.
 * [Animation with Matplotlib](https://towardsdatascience.com/animations-with-matplotlib-d96375c5442c)
   explains the `animation` base class and the main interfaces for
   creating animations in your visualizations.
+
+* [Matplotlib: Creating Plots](https://www.youtube.com/playlist?list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_)
+  is a video tutorial series where each 15-ish minute episode covers
+  one important topic such as shading areas on line plots, drawing
+  pie charts or plotting a stream of updating data.
