@@ -89,6 +89,12 @@ visualization and gave me ideas for what to build.
   to Rome" and whether or not there is a "Rome" central city in every 
   country.
 
+* [Monarchs](https://thebackend.dev/monarchs/) is a wonderful 1,000 year
+  history visual of European rulers. The developer also wrote an in-depth
+  article on 
+  [how Monarchs was created](https://thebackend.dev/building-monarchs)
+  using [d3.js](/d3-js.html).
+
 * [Star Wars: The Force Accounted](https://www.bloomberg.com/graphics/2015-star-wars-the-force-accounted/)
   is Bloomberg's way of breaking down on-screen action between light
   and dark sides, the main characters, various bits about the Force
