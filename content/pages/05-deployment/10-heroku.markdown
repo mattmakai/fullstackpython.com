@@ -28,3 +28,6 @@ easily [deploy](/deployment.html) Python applications.
 
 * [Production Django Deployments on Heroku](https://testdriven.io/blog/production-django-deployments-on-heroku/)
   aims to simplify the process of deploying, maintaining, and scaling production-grade Django apps on Heroku.
+  
+* [Deploying Django to Heroku With Docker](https://testdriven.io/blog/deploying-django-to-heroku-with-docker/)
+  looks at how to deploy a Django app to Heroku with Docker via the Heroku Container Runtime.
