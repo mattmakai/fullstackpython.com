@@ -169,7 +169,12 @@ Team at <a href="https://www.ubiquity.vc/">Ubiquity Ventures</a>.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/22-cloud-laws.jpg" width="100%" class="shot rnd outl" alt="Bessemer's 10 Laws of Cloud Computing and developer platform laws are fantastic foundational reading.">
 </div><div class="c6"><p>
-...
+Bessemer's 
+<a href="https://www.bvp.com/atlas/10-laws-of-cloud">10 Laws of Cloud Computing</a> 
+and 
+<a href="https://www.bvp.com/atlas/eight-laws-for-developer-platforms">8 Laws for Developer Platforms</a>
+are helpful foundational resources for understanding how to build, 
+market and sell software products for developers.
 </p>
 </div></div>
 
@@ -181,42 +186,42 @@ Team at <a href="https://www.ubiquity.vc/">Ubiquity Ventures</a>.
 </div></div>
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/24-tactics.jpg" width="100%" class="shot rnd outl" alt="">
+<img src="/img/190626-dev-led-sales/24-tactics.jpg" width="100%" class="shot rnd outl" alt="Subsection for dev-led sales and marketing tactics.">
 </div><div class="c6"><p>
 ...
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/25-docs.jpg" width="100%" class="shot rnd outl" alt="">
+<img src="/img/190626-dev-led-sales/25-docs.jpg" width="100%" class="shot rnd outl" alt="Great developers documentation is your best friend.">
 </div><div class="c6"><p>
 ...
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/26-content.jpg" width="100%" class="shot rnd outl" alt="">
+<img src="/img/190626-dev-led-sales/26-content.jpg" width="100%" class="shot rnd outl" alt="Timely tutorials hit topics that developers care about right now.">
 </div><div class="c6"><p>
 ...
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/27-online-social.jpg" width="100%" class="shot rnd outl" alt="">
+<img src="/img/190626-dev-led-sales/27-online-social.jpg" width="100%" class="shot rnd outl" alt="Online social strategies.">
 </div><div class="c6"><p>
 ...
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/28-async-video.jpg" width="100%" class="shot rnd outl" alt="">
+<img src="/img/190626-dev-led-sales/28-async-video.jpg" width="100%" class="shot rnd outl" alt="Asynchronously-consumed video tutorials.">
 </div><div class="c6"><p>
 ...
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/29-streaming.jpg" width="100%" class="shot rnd outl" alt="">
+<img src="/img/190626-dev-led-sales/29-streaming.jpg" width="100%" class="shot rnd outl" alt="Synchronous broadcasting and consuming video via streaming.">
 </div><div class="c6"><p>
 ...
 </p>
