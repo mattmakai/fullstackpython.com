@@ -27,7 +27,7 @@ images in Django's admin interface. The project also installs a few
 Django `manage.py` commands to make it easier to work with the files
 and images that you upload.
 
-[**django-filer/filer/management/commands/generate_thumbnails.py**](https://github.com/divio/django-filer/blob/develop/filer/management/commands/generate_thumbnails.py)
+[**django-filer / filer / management / commands / generate_thumbnails.py**](https://github.com/divio/django-filer/blob/develop/filer/management/commands/generate_thumbnails.py)
 
 ```python
 # -*- coding: utf-8 -*-
