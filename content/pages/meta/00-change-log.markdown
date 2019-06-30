@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### June
+* Added a new page for 
+  [Django BaseCommand code examples](/django-core-management-base-basecommand-examples.html).
 * Started new open source code examples series, beginning with 
   [url](/django-conf-urls-url-examples.html)
   and [path](/django-urls-path-examples.html) functions.
