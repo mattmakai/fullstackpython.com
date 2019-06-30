@@ -25,7 +25,8 @@ by Vitor Freitas.
 is a file management library for uploading and organizing files and 
 images in Django's admin interface. The project also installs a few
 Django `manage.py` commands to make it easier to work with the files
-and images that you upload.
+and images that you upload. The project's code is available under the 
+[BSD 3-Clause "New" or "Revised" open source license](https://github.com/divio/django-filer/blob/develop/LICENSE.txt).
 
 [**django-filer / filer / management / commands / generate_thumbnails.py**](https://github.com/divio/django-filer/blob/develop/filer/management/commands/generate_thumbnails.py)
 
