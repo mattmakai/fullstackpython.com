@@ -125,3 +125,42 @@ The code for the project is available under the
 ~~                                     "traceback"])
 ~~task_finished = Signal(providing_args=["process", "task"])
 ```
+
+
+## Example 5 from django-registration (redux)
+[django-registration (redux)](https://github.com/macropin/django-registration)
+([project documentation](https://django-registration-redux.readthedocs.io/en/latest/))
+is a [Django](/django.html) code library for one-phase, two-phase and 
+three-phase registration flows. The code is available 
+[open source](https://github.com/macropin/django-registration/blob/master/LICENSE). 
+
+[**django-registration / registrations / signals.py**](https://github.com/macropin/django-registration/blob/master/registration/signals.py)
+
+```python
+from django.conf import settings
+from django.contrib.auth import get_backends
+from django.contrib.auth import login
+~~from django.dispatch import Signal
+
+# An admin has approved a user's account
+~~user_approved = Signal(providing_args=["user", "request"])
+
+# A new user has registered.
+~~user_registered = Signal(providing_args=["user", "request"])
+
+# A user has activated his or her account.
+~~user_activated = Signal(providing_args=["user", "request"])
+
+
+def login_user(sender, user, request, **kwargs):
+    """ Automatically authenticate the user when activated  """
+    backend = get_backends()[0]  # Hack to bypass `authenticate()`.
+    user.backend = "%s.%s" % (backend.__module__, backend.__class__.__name__)
+    login(request, user)
+    request.session['REGISTRATION_AUTO_LOGIN'] = True
+    request.session.modified = True
+
+
+if getattr(settings, 'REGISTRATION_AUTO_LOGIN', False):
+    user_activated.connect(login_user)
+```
