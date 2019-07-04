@@ -87,15 +87,21 @@ monitoring and analytics tools.
 <img src="/img/190626-dev-led-sales/08-public-companies.jpg" width="100%" class="shot rnd outl" alt="Public and large private successful dev-led sales companies.">
 </div><div class="c6"><p>
 Then you have the massive success stories of developer-focused companies,
-such as publicly-traded [Okta](https://www.okta.com/), 
-[Pluralsight](https://www.pluralsight.com/), [Slack](https://slack.com/)
-and [Twilio](https://www.twilio.com/). Still private 
-[Stripe](https://stripe.com/) recently raised more venture capital money
-at a $22 billion valuation which is more than those four public companies.
+such as publicly-traded <a href="https://www.okta.com/">Okta</a>
+<a href="https://www.pluralsight.com/">Pluralsight</a>, 
+<a href="https://slack.com/">Slack</a>
+and 
+<a href="https://www.twilio.com/">Twilio</a>. Still private 
+<a href="https://stripe.com/">Stripe</a> recently raised more 
+venture capital money at a $22 billion valuation which is more than 
+those four public companies.
 </p><p>
-Amazon Web Services (AWS), while not independent of its parent company,
-arguably is by far the leader in cloud computing infrastructure due to
-its initial and continuing focus on bottoms-up developer product adoption.
+<a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a>, 
+while not independent of its 
+<a href="https://investinganswers.com/dictionary/m/mega-cap">mega cap</a>
+parent company, arguably is by far the leader in cloud computing 
+infrastructure due to its initial and continuing focus on grassroots
+developer product adoption.
 </p>
 </div></div>
 
@@ -110,7 +116,23 @@ required to execute on the vision?
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/10-devrel-skills.jpg" width="100%" class="shot rnd outl" alt="Developer relations skillset.">
 </div><div class="c6"><p>
-...
+You, as the founder, should serve as the chief evangelist for your 
+product during the early stages of your company, and arguably that role
+never stops. 
+<p>
+But your time is split in a hundred different ways so eventually you 
+need to hire someone with a nuanced understanding of how to 
+<strong>appropriately</strong> market your company to developers.
+Hiring the wrong person for the job is going to be the equivalent of
+adding a 
+<a href="http://wiki.c2.com/?NetNegativeProducingProgrammer">net negative producing programmer</a> 
+to your development team at a critical stage of growth. The result
+could sink your entire company.
+</p>
+<p>
+The right person for the job likely has a combination of significant
+heads-down software development experience, humility, patience,
+strong writing and solid speaking abilities.
 </p>
 </div></div>
 
