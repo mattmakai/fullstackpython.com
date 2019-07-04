@@ -52,7 +52,7 @@ That's when they usually tell me about their "the dev-led sales dream".
 </div><div class="c6"><p>
 Their dream is that developers go to tech events, like hackathons, 
 conferences and meetups. They see a new 
-[API](/application-programming-interfaces.html) or technical
+<a href="/application-programming-interfaces.html">API</a> or technical
 product that looks interesting.
 </p>
 </div></div>
@@ -60,35 +60,50 @@ product that looks interesting.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/05-code.jpg" width="100%" class="shot rnd outl" alt="Code in a text editor.">
 </div><div class="c6"><p>
-...
+Immediately developers at the event implement the API in their own
+projects.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/06-joint-success.jpg" width="100%" class="shot rnd outl" alt="Your revenue grows with their usage.">
 </div><div class="c6"><p>
-...
+Boom, success!
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/07-early-stage.jpg" width="100%" class="shot rnd outl" alt="Early stage example dev-led sales companies.">
 </div><div class="c6"><p>
-...
+It seems like there are examples of this success story across many
+early-stage and mid-stage companies.
+
+Rollbar and DataDog are doing well by focusing on developers for new
+monitoring and analytics tools.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/08-public-companies.jpg" width="100%" class="shot rnd outl" alt="Public and large private successful dev-led sales companies.">
 </div><div class="c6"><p>
-...
+Then you have the massive success stories of developer-focused companies,
+such as publicly-traded [Okta](https://www.okta.com/), 
+[Pluralsight](https://www.pluralsight.com/), [Slack](https://slack.com/)
+and [Twilio](https://www.twilio.com/). Still private 
+[Stripe](https://stripe.com/) recently raised more venture capital money
+at a $22 billion valuation which is more than those four public companies.
+</p><p>
+Amazon Web Services (AWS), while not independent of its parent company,
+arguably is by far the leader in cloud computing infrastructure due to
+its initial and continuing focus on bottoms-up developer product adoption.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/09-reality.jpg" width="100%" class="shot rnd outl" alt="Subsection reality.">
 </div><div class="c6"><p>
-...
+But how does that startup dream match the reality of the work and skills
+required to execute on the vision?
 </p>
 </div></div>
 
