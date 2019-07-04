@@ -139,14 +139,20 @@ strong writing and solid speaking abilities.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/11-devrel-expense.jpg" width="100%" class="shot rnd outl" alt="Developer relations is expensive.">
 </div><div class="c6"><p>
-...
+That combination of skills is exceedingly rare, which according to 
+supply and demand dictates a large compensation premium over a 
+programmy-only skill set. If you've done any recruiting for top notch 
+developer relations folks, you may have already discovered this issue
+which is prohibitive for startup companies trying to compete with 
+better-capitalized firms.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/12-what-is-dev-led.jpg" width="100%" class="shot rnd outl" alt="Subsection for what is dev-led sales.">
 </div><div class="c6"><p>
-...
+We've done a bunch of talking already about the developer-led sales
+dream for startups, but what exactly <em>is</em> developer-led sales?
 </p>
 </div></div>
 
