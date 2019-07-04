@@ -36,14 +36,24 @@ Team at <a href="https://www.ubiquity.vc/">Ubiquity Ventures</a>.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/03-dream.jpg" width="100%" class="shot rnd outl" alt="Section title slide for the dream of developer-led sales.">
 </div><div class="c6"><p>
-...
+I often meet startup founders who ask me "how can my company do what
+Twilio does with developers?"</p>
+<p>
+I respond by asking, "what do see Twilio doing and want to replicate 
+for developers who interact with your business?"
+</p>
+<p>
+That's when they usually tell me about their "the dev-led sales dream".
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/04-dev-events.jpg" width="100%" class="shot rnd outl" alt="Developers at a hackathon working on code.">
 </div><div class="c6"><p>
-...
+Their dream is that developers go to tech events, like hackathons, 
+conferences and meetups. They see a new 
+[API](/application-programming-interfaces.html) or technical
+product that looks interesting.
 </p>
 </div></div>
 
