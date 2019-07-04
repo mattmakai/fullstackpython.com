@@ -159,7 +159,20 @@ dream for startups, but what exactly <em>is</em> developer-led sales?
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/13-dev-buyers.jpg" width="100%" class="shot rnd outl" alt="Developers are your first buyers.">
 </div><div class="c6"><p>
-...
+Developer-led sales mean that developers are your primary customers. The
+goal is to have developers see the value in your product, sign up, start
+using it and spend some amount of money that is relevant to your business.
+This approach typically works best with a usage-based model where
+development is cheap or free then costs scale with the consumption of your
+product.
+</p><p>
+For example, 
+<a href="https://www.twilio.com/docs/sms/api">Twilio's SMS API</a> 
+is free to get started with during development. Then for testing and 
+production text messages can be sent and received for .00075 US dollars 
+each. A developer can sign up with their credit card to test that your 
+product actually does what you say it can do, then scale up as their
+application goes to production.
 </p>
 </div></div>
 
