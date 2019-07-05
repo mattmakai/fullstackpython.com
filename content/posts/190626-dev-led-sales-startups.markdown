@@ -225,7 +225,9 @@ paying for what you are offering, as represented by this dark world map.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/16-global-dev-adoption.jpg" width="100%" class="shot rnd outl" alt="Initial developer adoption upon launch.">
 </div><div class="c6"><p>
-...
+A few risk-taking developers who have a problem you are solving 
+"raise their hands" with code by using your product or service
+once you launch.
 </p>
 </div></div>
 
@@ -239,7 +241,8 @@ paying for what you are offering, as represented by this dark world map.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/18-worthwhile.jpg" width="100%" class="shot rnd outl" alt="When is dev-led sales worthwhile?">
 </div><div class="c6"><p>
-...
+When should you consider a developer-led sales strategy instead of a
+tried-and-true traditional sales motion?
 </p>
 </div></div>
 

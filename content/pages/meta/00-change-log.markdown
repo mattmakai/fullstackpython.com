@@ -15,6 +15,10 @@ on GitHub.
 
 
 ## 2019
+### July
+* New blog post with slides and a loose transcript of my latest talk on
+  [Developer-led sales for tech startups](/blog/developer-led-sales-startups.html).
+
 ### June
 * Added a new page for 
   [Django BaseCommand code examples](/django-core-management-base-basecommand-examples.html).
