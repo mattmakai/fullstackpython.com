@@ -69,6 +69,12 @@ projects.
 <img src="/img/190626-dev-led-sales/06-joint-success.jpg" width="100%" class="shot rnd outl" alt="Your revenue grows with their usage.">
 </div><div class="c6"><p>
 Boom, success!
+</p><p>
+You make more money as the company that the developer works
+for uses increasing amounts of your product. Take that money,
+reinvest in the business to grow and improve your product.
+</p><p>
+Rinse and repeat until the IPO and beyond.
 </p>
 </div></div>
 
@@ -174,19 +180,45 @@ each. A developer can sign up with their credit card to test that your
 product actually does what you say it can do, then scale up as their
 application goes to production.
 </p>
+<p>
+Developer-led sales stands in contrast to the typical business
+model where a business development representative (often shortened to
+"BDR") prospects for potential customers, outbound emails and calls 
+those prospects, then hands off to a more senior sales representative
+to work on closing a deal that is large enough to justify the time
+invested in the sales cycle.
+</p>
+<p>In this traditional model, your startup sells directly to 
+stakeholders who control a relatively large budget and are authorized 
+to spend that money. Developers usually do not have significant 
+budget to spend but can often spend a small amount on a credit card 
+and expense it without an issue. That's why dev-led sales is possible
+as an alternative sales model.
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/14-dev-led-not.jpg" width="100%" class="shot rnd outl" alt="Dev-led sales is not sales engineering or dev-only sales.">
 </div><div class="c6"><p>
-...
+We should also confirm what developer-led sales is not. It's not sales 
+engineering, where your technical folks support a traditional top-down
+large sales deal.
+<p>
+Developer-led sales is also not developer-only sales. Other stakeholders
+remain important. When your product is successfully implemented then you
+still have to ensure non-developer stakeholders are part of your sales 
+process.
+</p>
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/15-global.jpg" width="100%" class="shot rnd outl" alt="Empty map no developers using your product before launch.">
 </div><div class="c6"><p>
-...
+Here's another way to think about a developer-led approach to product
+adoption and sales.
+</p><p>
+Before your product exists, no developers anywhere are using and
+paying for what you are offering, as represented by this dark world map.
 </p>
 </div></div>
 
