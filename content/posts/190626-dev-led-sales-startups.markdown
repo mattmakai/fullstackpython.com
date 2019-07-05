@@ -234,7 +234,10 @@ once you launch.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/17-global-more-devs.jpg" width="100%" class="shot rnd outl" alt="Over time many more developers use your product.">
 </div><div class="c6"><p>
-...
+When you are successful, more and more developers use your products and 
+serve as indicators that your product is solving a real problem. Those
+developers can be your first hook into larger deals with organizations 
+where those developers work.
 </p>
 </div></div>
 
@@ -249,21 +252,37 @@ tried-and-true traditional sales motion?
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/19-solving-problem.jpg" width="100%" class="shot rnd outl" alt="Solving a worthwhile developer problem.">
 </div><div class="c6"><p>
-...
+First, you need to be solving an actual problem that developers recognize
+is an issue for them that they themselves would not want to solve. This is
+a high bar that non-technical founders often take for granted when 
+pitching their product. 
+</p><p>
+Is the problem your product solves... actually a problem worth solving?
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/20-explain-devs.jpg" width="100%" class="shot rnd outl" alt="How to explain your product to developers.">
 </div><div class="c6"><p>
-...
+Second, you need to be able to properly
+<a href="/blog/explain-products-developers.html">articulate the problem that you solve</a>
+to developers. That is an unexpectedly large challenge if no one on
+the founding team of your tech startup is a developer themselves.
+</p><p>
+That link contains the slides and a loose transcript to another talk
+that provides some guidance around telling your product's story
+to developers.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/21-cac-ltv.jpg" width="100%" class="shot rnd outl" alt="At an early stage you may not know your CAC and LTV but you should have a hypothesis for what they could be.">
 </div><div class="c6"><p>
-...
+Third, even at an early stage you should have some understanding of 
+your own business model. The business model should include a working 
+hypothesis for both the cost of customer acquisition (CAC) and lifetime 
+value of a customer (LTV). Also, does the revenue derived from your
+customers match a standard distribution or a power law distribution?
 </p>
 </div></div>
 
