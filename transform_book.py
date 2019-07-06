@@ -382,19 +382,20 @@ def transform(output_format='pdf'):
             # modify all markdown files in directory
             files = os.listdir(BASE_DIR + d)
             for f in files:
-                with open(BASE_DIR + d + '/' + f, 'r',
-                          encoding="utf-8") as read_f:
-                    all_lines = read_f.readlines()
+                if not isdir(BASE_DIR + d + '/' + f):
+                    with open(BASE_DIR + d + '/' + f, 'r',
+                              encoding="utf-8") as read_f:
+                        all_lines = read_f.readlines()
 
-                with open(BASE_DIR + d + '/' + f, 'w') as write_f:
-                    for l in all_lines:
-                        for k, v in links.items():
-                            l = l.replace(k, v)
-                        if "<div class=\"well see-also\">" in l:
-                            write_f.write("")
-                        else:
-                            write_f.write(l)
-                    print('prepared file ' + str(d) + '/' + str(f))
+                    with open(BASE_DIR + d + '/' + f, 'w') as write_f:
+                        for l in all_lines:
+                            for k, v in links.items():
+                                l = l.replace(k, v)
+                            if "<div class=\"well see-also\">" in l:
+                                write_f.write("")
+                            else:
+                                write_f.write(l)
+                        print('prepared file ' + str(d) + '/' + str(f))
 
 
 if __name__ == '__main__':

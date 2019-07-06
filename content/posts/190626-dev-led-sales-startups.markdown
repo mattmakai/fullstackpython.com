@@ -393,7 +393,11 @@ currently interested in learning about.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/27-online-social.jpg" width="100%" class="shot rnd outl" alt="Online social strategies.">
 </div><div class="c6"><p>
-...
+Alright, I am going to start talking about online social with the 
+caveat that I personally think it's difficult if not impossible to
+pull off as a decent developer adoption tactic. It's usually done
+so poorly that it is better to not do social channels like Twitter,
+Facebook and your own Slack instance at all.
 </p>
 </div></div>
 
@@ -407,7 +411,13 @@ currently interested in learning about.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/29-streaming.jpg" width="100%" class="shot rnd outl" alt="Synchronous broadcasting and consuming video via streaming.">
 </div><div class="c6"><p>
-...
+Live coding on Twitch and YouTube are a nascent but promising teaching 
+method.
+</p><p>
+Evergreen documentation, timely technical content, online social, 
+asynchronous videos and streaming are the most common <em>online</em> 
+developer adoption tactics. Next we'll look at some offline, in-person
+tactics.
 </p>
 </div></div>
 
@@ -435,7 +445,18 @@ currently interested in learning about.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/33-magic.jpg" width="100%" class="shot rnd outl" alt="Magical new approaches to developer relations.">
 </div><div class="c6"><p>
-...
+That covers the most common online and offline developer marketing and
+sales tactics. Is that it?
+</p><p>
+No, there actually are many other tactics. However, the ones we just listed
+are the most likely to be successful based on the relatively small 
+investment you can make as a startup company.
+<p></p>
+There are a set of tactics that are essentially "magic" to you because they
+rely on an existing successful foundation to properly execute. Building a
+new foundation of developer awareness is dramatically 
+different from doing a better job of serving developers who already know
+you and expanding developer adoption further away from early adopters.
 </p>
 </div></div>
 
