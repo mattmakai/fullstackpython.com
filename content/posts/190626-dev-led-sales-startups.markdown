@@ -283,25 +283,52 @@ your own business model. The business model should include a working
 hypothesis for both the cost of customer acquisition (CAC) and lifetime 
 value of a customer (LTV). Also, does the revenue derived from your
 customers match a standard distribution or a power law distribution?
+</p><p>
+What do CAC, LTV and standard vs. power law distribution have to do with
+a developer-led sales motion?
+</p><p>
+Ideally, your CAC will be significantly lower with a developer-led
+sales strategy versus a traditional sales motion. This is one reason
+established companies such as Okta 
+<a href="https://www.okta.com/press-room/press-releases/okta-welcomes-stormpath-to-accelerate-identity-for-developers/">acquire smaller firms such as Stormpath</a> 
+to create a different sales cycle based on usage from developers instead
+of trying to convince companies to sign large deals before the software
+has proven useful.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/22-cloud-laws.jpg" width="100%" class="shot rnd outl" alt="Bessemer's 10 Laws of Cloud Computing and developer platform laws are fantastic foundational reading.">
 </div><div class="c6"><p>
-Bessemer's 
+Note that I am making a lot of assumptions about your understanding of
+developer platforms. If what I am saying about CAC, LTV, usage-based
+models and related terms are unclear, you definitely need to read 
+Bessemer's articles on
 <a href="https://www.bvp.com/atlas/10-laws-of-cloud">10 Laws of Cloud Computing</a> 
 and 
-<a href="https://www.bvp.com/atlas/eight-laws-for-developer-platforms">8 Laws for Developer Platforms</a>
-are helpful foundational resources for understanding how to build, 
-market and sell software products for developers.
+<a href="https://www.bvp.com/atlas/eight-laws-for-developer-platforms">8 Laws for Developer Platforms</a>.
+</p><p>
+They are both incredibly helpful foundational resources for understanding 
+how to build, market and sell software products for developers.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/23-platform.jpg" width="100%" class="shot rnd outl" alt="Broad developer platform.">
 </div><div class="c6"><p>
-...
+Finally, if you have a product that solves a real problem for developers,
+can explain it to them and have a working model of your CAC and LTV,
+then a massive bonus comes into play when you have a broad platform
+useful across many industries. Broad platforms that developers can use
+in creative ways can potentially create new use cases for company to
+sell.
+</p><p>
+For example, when Twilio started the SMS API, 2-factor authentication was
+rare. The ease of integrating the API to send unique codes to pre-qualified
+phone numbers to enhance security beyond a password became a new use
+case for the company to sell to customers. It was developers who came up
+with the use case and deserve the credit for figuring out what was
+valuable about an SMS API.
 </p>
 </div></div>
 
