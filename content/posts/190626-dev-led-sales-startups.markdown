@@ -50,18 +50,17 @@ That's when they usually tell me about their "the dev-led sales dream".
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/04-dev-events.jpg" width="100%" class="shot rnd outl" alt="Developers at a hackathon working on code.">
 </div><div class="c6"><p>
-Their dream is that developers go to tech events, like hackathons, 
-conferences and meetups. They see a new 
-<a href="/application-programming-interfaces.html">API</a> or technical
-product that looks interesting.
+Their dream is that software developers go to tech events, like 
+hackathons, conferences and meetups. While at an event, developers 
+see a new <a href="/application-programming-interfaces.html">API</a> 
+or technical product that looks interesting.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/05-code.jpg" width="100%" class="shot rnd outl" alt="Code in a text editor.">
 </div><div class="c6"><p>
-Immediately developers at the event implement the API in their own
-projects.
+Immediately those developers implement the API in their own projects.
 </p>
 </div></div>
 
@@ -335,21 +334,59 @@ valuable about an SMS API.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/24-tactics.jpg" width="100%" class="shot rnd outl" alt="Subsection for dev-led sales and marketing tactics.">
 </div><div class="c6"><p>
-...
+Most startup founders I talk to go straight into questions about the
+tactics that Twilio and other companies use for selling to developers.
+It's a bit of a "the cart before the horse" situation because you really
+need to have figured out what we talked about in the previous section
+as it applies to your business before you dig into the specific tactics
+you will use to engage developers.
+</p><p>
+Let's assume you have determined a developer-led sales motion fits well 
+with your company strategy. Now we can dig into the myriad tactics you 
+can apply to grow your sales funnel. 
+</p><p>
+Most of these tactics are better described as "developer marketing" 
+rather than sales. You are not going to be cold calling developers to
+pitch them your service. Please make sure you never do that.
+</p><p>
+Let's dig into several of the specific tactics that can work well to
+jump start developers adopting your product when it solves a problem
+that they have.
+</p><p>
+We'll start with a few online tactics then review in-person "offline"
+event-related activities like startup founders' dream hackathons.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/25-docs.jpg" width="100%" class="shot rnd outl" alt="Great developers documentation is your best friend.">
 </div><div class="c6"><p>
-...
+By far your most important marketing asset is having stellar developer
+documentation. However, documentation rarely comes up in conversations
+as part of marketing and sales efforts. Why is that?
+</p><p>
+Historically, documentation has been a by-product of an actual product
+or service being offered. Docs are considered a necessary evil and cost
+center that needs to be minimized as a time suck for engineers to work
+on "real" problems. Sometimes writers with minimal or no development
+experience are hired to just get it done.
+<p></p>
+The "necessary evil" attitude makes sense in a world where documentation
+lives in a large paper binder that is mailed out after a purchase is
+complete. The quality has to be just enough that the customer doesn't
+complain about the complexity being so high their developers cannot
+eventually (after some long unpaid additional work nights and weekends) 
+complete an implementation.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/26-content.jpg" width="100%" class="shot rnd outl" alt="Timely tutorials hit topics that developers care about right now.">
 </div><div class="c6"><p>
-...
+Documentation is your evergreen always-to-date content, but there are
+additional formats such as blog post walkthroughs, example use cases and 
+brand awareness tutorials related to hot topics that developers are
+currently interested in learning about.
 </p>
 </div></div>
 
@@ -405,7 +442,8 @@ valuable about an SMS API.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/34-recap.jpg" width="100%" class="shot rnd outl" alt="Subsection title for recap.">
 </div><div class="c6"><p>
-...
+Let's wrap with a quick review of the important concepts presented in
+this talk.
 </p>
 </div></div>
 
@@ -419,9 +457,11 @@ valuable about an SMS API.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/36-q-a.jpg" width="100%" class="shot rnd outl" alt="Q&A slide.">
 </div><div class="c6"><p>
-That's all the slides for today so let's open it up for further questions. 
-Again, my name is <a href="/about-author.html">Matt Makai</a>,
-I am a software developer at <a href="/twilio.html">Twilio</a> and the
-author of <a href="https://www.fullstackpython.com/">Full Stack Python</a>.
+That's all the prepared materials for today. Thank you very much. Again, 
+my name is <a href="/about-author.html">Matt Makai</a>, I am a software 
+developer at <a href="/twilio.html">Twilio</a> on the Developer Network and 
+the creator of 
+<a href="https://www.fullstackpython.com/">Full Stack Python</a>
+(<a href="https://github.com/mattmakai/fullstackpython.com">source code</a>).
 </p>
 </div></div>
