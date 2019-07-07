@@ -4,6 +4,7 @@ slug: flask
 sortorder: 0403
 toc: False
 sidebartitle: Flask
+headerimage: /img/pages/flask-python-fsp.jpg
 meta: Flask is a popular, extensible web microframework for building web applications with Python.
 
 

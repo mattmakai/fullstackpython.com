@@ -386,7 +386,7 @@ complete an implementation.
 Documentation is your evergreen always-to-date content, but there are
 additional formats such as blog post walkthroughs, example use cases and 
 brand awareness tutorials related to hot topics that developers are
-currently interested in learning about.
+currently interested in learning.
 </p>
 </div></div>
 
@@ -448,15 +448,16 @@ tactics.
 That covers the most common online and offline developer marketing and
 sales tactics. Is that it?
 </p><p>
-No, there actually are many other tactics. However, the ones we just listed
+No, there are many other tactics. However, the ones we just listed
 are the most likely to be successful based on the relatively small 
-investment you can make as a startup company.
+investment you can make as a startup.
 <p></p>
-There are a set of tactics that are essentially "magic" to you because they
-rely on an existing successful foundation to properly execute. Building a
-new foundation of developer awareness is dramatically 
-different from doing a better job of serving developers who already know
-you and expanding developer adoption further away from early adopters.
+There are an additional set of tactics that are essentially "magic" to 
+you because they rely on an existing successful foundation to properly 
+execute. Building a new foundation of developer awareness is dramatically 
+different from expanding developer adoption among those are not early
+adoptors as well as doing a better job of serving developers who already 
+use your service.
 </p>
 </div></div>
 
@@ -471,7 +472,11 @@ this talk.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/35-recap.jpg" width="100%" class="shot rnd outl" alt="Recap core ideas of talk.">
 </div><div class="c6"><p>
-...
+There is a startup dream of developer-led sales which is an easy path 
+from launching your service to developers, having them find out and
+start to use it, then becoming large paying customers.
+</p><p>
+The reality is clearly more difficult than the dream.
 </p>
 </div></div>
 
