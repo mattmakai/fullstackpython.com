@@ -16,6 +16,12 @@ on GitHub.
 
 ## 2019
 ### July
+* Pushed the [3000th commit](https://github.com/mattmakai/fullstackpython.com/commit/180051047a582b9154874b15dccb315600f23300)
+  to Full Stack Python, a bit over 3 years after the
+  [2000th commit](https://github.com/mattmakai/fullstackpython.com/commit/3baed0aa82e1b3b7fa0a337e91998018d62a0f23) 
+  and 5ish years after the
+  [1000th commit](https://github.com/mattmakai/fullstackpython.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d). Here's to the next 1,000 commits!
+<img src="/img/visuals/3000th-commit.png" width="100%" alt="Screenshot of 3000th commit to Full Stack Python." class="shot rnd outl" />
 * New blog post with slides and a loose transcript of my latest talk on
   [Developer-led sales for tech startups](/blog/developer-led-sales-startups.html).
 
@@ -428,7 +434,7 @@ on GitHub.
 * Pushed the [2000th commit](https://github.com/mattmakai/fullstackpython.com/commit/3baed0aa82e1b3b7fa0a337e91998018d62a0f23) 
   to Full Stack Python, just under 2 years after the 
   [1000th commit](https://github.com/mattmakai/fullstackpython.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d). Here's to the next 1,000 commits!
-<img src="/img/visuals/2000th-commit.jpg" width="100%" alt="Screenshot of 2000th commit to Full Stack Python." class="technical-diagram" />
+<img src="/img/visuals/2000th-commit.jpg" width="100%" alt="Screenshot of 2000th commit to Full Stack Python." class="shot rnd outl" />
 * Added new [PostgreSQL](/postgresql.html) and [SQLAlchemy](/sqlalchemy.html)
   resources.
 * New [Git](/git.html) resources.
@@ -768,7 +774,7 @@ on GitHub.
   icons with SVG elements that mimic the font awesome icons.
 * Pushed the [1000th commit](https://github.com/mattmakai/fullstackpython.com/commit/2fc711b44ffed89c9855f4f999d4c1df076bc44d) 
   to Full Stack Python!
-<img src="/img/visuals/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="technical-diagram" />
+<img src="/img/visuals/1000th-commit.jpg" width="100%" alt="Screenshot of 1000th commit to Full Stack Python." class="shot rnd outl" />
 * Major update to [Vim](/vim.html) page to add screenshots, a better example
   .vimrc configuration and many more resources.
 * Updated the [web analytics](/web-analytics.html) page with a new 
@@ -944,7 +950,7 @@ on GitHub.
   Kinda has that "choose your own adventure" thing going for it, doesn't it?
 * New logo! This one's way more Python software stack, way less boring 
   folder-thingy. Here's how the old one looked in comparison:
-  <img src="/img/visuals/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="technical-diagram" />
+  <img src="/img/visuals/old-logo.png" width="100%" alt="Old Full Stack Python logo" class="shot" />
 
 * Added a [future direction](../future-directions.html) section to explain
   current priorities for further developments on the site.
