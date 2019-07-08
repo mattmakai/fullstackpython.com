@@ -5,7 +5,7 @@ category: talk
 date: 2018-05-25
 modified: 2018-05-25
 newsletter: False
-headerimage: /img/visuals/talk-header.jpg
+headerimage: /img/180526-explain-product/01-explain-products.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
 
