@@ -3,18 +3,18 @@ slug: developer-led-sales-startups
 meta: Talk slides, notes and more resources for a technical talk on developer-led sales and marketing for tech startups, by Matt Makai.
 category: talk
 date: 2019-06-26
-modified: 2019-06-26
+modified: 2019-07-07
 newsletter: False
-headerimage: /img/visuals/talk-header.jpg
+headerimage: /img/190626-dev-led-sales/01-dev-led-sales.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
 
 This blog post contains the slides along with a loose transcript
 from my talk on the promises and perils of developer-led sales as an
-early-stage company strategy for acquiring customers. 
+early-stage company method to acquire customers. 
 
 I gave this talk remotely to [Ubiquity.VC](http://www.ubiquity.vc/) 
-portfolio company founders and the Extended Team on June 26, 2019.
+portfolio company startup founders and the Extended Team on June 26, 2019.
 
 ----
 
@@ -83,8 +83,16 @@ Rinse and repeat until the IPO and beyond.
 It seems like there are examples of this success story across many
 early-stage and mid-stage companies.
 
-Rollbar and DataDog are doing well by focusing on developers for new
-monitoring and analytics tools.
+<a href="https://rollbar.com/">Rollbar</a> and 
+<a href="https://www.datadoghq.com/">Datadog</a> are doing well by 
+focusing on developer adoption for their monitoring and analytics tools.
+</p><p>
+<a href="https://www.getpostman.com/">Postman</a> recently raised 
+<a href="https://pitchbook.com/newsletter/postman-picks-up-50m-series-b">$50 million</a>
+in a Series B round of venture capital to expand their API testing
+developer tools. Postman was founded in large part because the original
+tool was virally adopted by developers building APIs and 
+<a href="/microservices.html">microservices</a>.
 </p>
 </div></div>
 
@@ -424,7 +432,30 @@ tactics.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/30-conferences.jpg" width="100%" class="shot rnd outl" alt="Developers at tech conferences.">
 </div><div class="c6"><p>
-...
+Conferences split into a couple of categories: community-run and
+vendor-run. For example, 
+<a href="https://developer.apple.com/wwdc19/">WWDC</a> is Apple's vendor-run
+developer conference. They run the show and control the messaging.
+<a href="https://us.pycon.org/2019/">PyCon US</a> is the community-run 
+Python developer conference. There are a ton of vendors there as sponsors
+but no one company controls what happens at the conference.
+</p><p>
+Conferences, especially community-run ones, work well for brand awareness.
+Vendor-run conferences can work well for brand awareness if your product
+augments an existing company's products and solves a problem for the
+developers who attend that event.
+</p><p>
+Non-developer conferences are great for sales lead generation. Think
+of badge scanning and prize raffles in exchange for hearing a product
+pitch. However, badge scanning and lead generation activities do not
+work very well because most developers are skeptical and just want to
+avoid overly pushy situations. Be considerate of your audience and
+respectful.
+</p><p>
+Generally, I find you can spend a ton of money on conference sponsorships
+without getting a ton of value out of them. If you want to be successful
+with this tactic you should figure out your secret developer marketing
+sauce on smaller, regional conferences then expand from there.
 </p>
 </div></div>
 
@@ -476,7 +507,17 @@ There is a startup dream of developer-led sales which is an easy path
 from launching your service to developers, having them find out and
 start to use it, then becoming large paying customers.
 </p><p>
-The reality is clearly more difficult than the dream.
+The reality is clearly more difficult than the dream. You as the
+startup founder need to be the "chief developer evangelism officer" 
+and it will be expensive when you aim to hire a seasoned developer
+relations employee.
+</p><p>
+We define developer-led sales as a different sales motion than a
+traditional sales outreach approach. Instead, you appropriately 
+market to developers who need a solution to a problem they are
+facing, typically with great documentation, timely tutorials or
+another respectful tactic rather than cold calling or empty
+clickbait content.
 </p>
 </div></div>
 
