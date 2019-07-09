@@ -3,7 +3,7 @@ slug: developer-led-sales-startups
 meta: Talk slides, notes and more resources for a technical talk on developer-led sales and marketing for tech startups, by Matt Makai.
 category: talk
 date: 2019-06-26
-modified: 2019-07-07
+modified: 2019-07-09
 newsletter: False
 headerimage: /img/190626-dev-led-sales/01-dev-led-sales.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
@@ -412,7 +412,15 @@ Facebook and your own Slack instance at all.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/28-async-video.jpg" width="100%" class="shot rnd outl" alt="Asynchronously-consumed video tutorials.">
 </div><div class="c6"><p>
-...
+Video tutorials that teach how to use your product which you can post 
+on YouTube and other sites are more difficult to create than straight
+text and code, but they can be well worth the effort. YouTube is
+currently the second largest search engine in the world (amazing how
+both number 1 and number 2 are the same company) and the video
+search results are also cross-posted in Google standard search. 
+</p><p>
+The wide reach presents a strong acquisition model if you can create
+useful technical content.
 </p>
 </div></div>
 
