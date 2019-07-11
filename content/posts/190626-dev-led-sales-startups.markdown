@@ -80,12 +80,13 @@ Rinse and repeat until the IPO and beyond.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/07-early-stage.jpg" width="100%" class="shot rnd outl" alt="Early stage example dev-led sales companies.">
 </div><div class="c6"><p>
-It seems like there are examples of this success story across many
-early-stage and mid-stage companies.
+There are examples of this developer-led marketing and sales success 
+story across many early-stage and mid-stage companies.
 
-<a href="https://rollbar.com/">Rollbar</a> and 
+For example, <a href="https://rollbar.com/">Rollbar</a> and 
 <a href="https://www.datadoghq.com/">Datadog</a> are doing well by 
-focusing on developer adoption for their monitoring and analytics tools.
+focusing on developer adoption with great technical content for their 
+monitoring and analytics tools.
 </p><p>
 <a href="https://www.getpostman.com/">Postman</a> recently raised 
 <a href="https://pitchbook.com/newsletter/postman-picks-up-50m-series-b">$50 million</a>
@@ -93,6 +94,16 @@ in a Series B round of venture capital to expand their API testing
 developer tools. Postman was founded in large part because the original
 tool was virally adopted by developers building APIs and 
 <a href="/microservices.html">microservices</a>.
+</p><p>
+<a href="https://www.digitalocean.com/">DigitalOcean</a>'s extensive
+<a href="https://www.digitalocean.com/community/tutorials">community-written tutorials</a>
+have endeared them to developers and has allowed them to compete 
+in a world where providing cloud infrastructure pits you against AWS,
+Google and Microsoft.
+</p><p>
+Citus Data's developer-focused <a href="/databases.html">database</a> 
+content and <a href="/postgresql.html">PostgreSQL</a> offerings led them to 
+<a href="https://blogs.microsoft.com/blog/2019/01/24/microsoft-acquires-citus-data-re-affirming-its-commitment-to-open-source-and-accelerating-azure-postgresql-performance-and-scale/">a successful exit via Microsofta acquisition</a>.
 </p>
 </div></div>
 
@@ -104,7 +115,7 @@ such as publicly-traded <a href="https://www.okta.com/">Okta</a>
 <a href="https://www.pluralsight.com/">Pluralsight</a>, 
 <a href="https://slack.com/">Slack</a>
 and 
-<a href="https://www.twilio.com/">Twilio</a>. Still private 
+<a href="https://www.twilio.com/">Twilio</a>. Still-private 
 <a href="https://stripe.com/">Stripe</a> recently raised more 
 venture capital money at a $22 billion valuation which is more than 
 those four public companies.
@@ -130,8 +141,8 @@ required to execute on the vision?
 <img src="/img/190626-dev-led-sales/10-devrel-skills.jpg" width="100%" class="shot rnd outl" alt="Developer relations skillset.">
 </div><div class="c6"><p>
 You, as the founder, should serve as the chief evangelist for your 
-product during the early stages of your company, and arguably that role
-never stops. 
+product during the early stages of your company. That role
+never stops regardless of how large and successful you become. 
 <p>
 But your time is split in a hundred different ways so eventually you 
 need to hire someone with a nuanced understanding of how to 
@@ -139,7 +150,7 @@ need to hire someone with a nuanced understanding of how to
 Hiring the wrong person for the job is going to be the equivalent of
 adding a 
 <a href="http://wiki.c2.com/?NetNegativeProducingProgrammer">net negative producing programmer</a> 
-to your development team at a critical stage of growth. The result
+to your development team at a critical stage of growth. A poor result
 could sink your entire company.
 </p>
 <p>
@@ -260,11 +271,14 @@ tried-and-true traditional sales motion?
 <img src="/img/190626-dev-led-sales/19-solving-problem.jpg" width="100%" class="shot rnd outl" alt="Solving a worthwhile developer problem.">
 </div><div class="c6"><p>
 First, you need to be solving an actual problem that developers recognize
-is an issue for them that they themselves would not want to solve. This is
+is an issue for them that they themselves would not want to solve. Solving
+a meaty technical problem with an easy-to-use solution is
 a high bar that non-technical founders often take for granted when 
 pitching their product. 
 </p><p>
-Is the problem your product solves... actually a problem worth solving?
+Is the problem your product solves... actually a problem worth solving
+for developers? It must be if you want to be successful with a developer-led
+sales model.
 </p>
 </div></div>
 
@@ -470,14 +484,33 @@ sauce on smaller, regional conferences then expand from there.
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/31-meetups.jpg" width="100%" class="shot rnd outl" alt="Developers at meetups.">
 </div><div class="c6"><p>
-...
+Tech meetups are good for brand awareness among primarily less experienced
+developers. While there are some niche, senior developer and tech 
+lead-focused meetups, most of the content at these events is aimed at
+less experienced folks.
 </p>
 </div></div>
 
 <div class="row talk"><div class="c6">
 <img src="/img/190626-dev-led-sales/32-hackathons.jpg" width="100%" class="shot rnd outl" alt="Developers at hackathons.">
 </div><div class="c6"><p>
-...
+Professional hackathons have undergone a transition over the past several
+years. Broadly speaking there is less excitement among developers to spend
+a long sleep-deprived weekend working on a project with an unclear payoff.
+I could be projecting my own feelings on this one but it appears that the
+majority of developers in 2019 would prefer to work on their projects outside
+the pressure of an arbitrary forced deadline. Hackathons can be still useful 
+for getting a focused product shipped in a weekend but there seems to be less
+excitement around them than a few years ago.
+</p><p>
+College hacakthons, like Hack MIT, MHacks and Hoo Hacks, on the other hand,
+are going stronger than ever. There are always new classes of students who
+are excited to code their ideas. However, you are playing the long game with
+college hackathons and assuming that a few years down the road a student
+who learned your APIs will pick it back up to solve a problem at work. For
+most early startups, college hackathons won't make a ton of sense unless
+you want to get quick immediate feedback from junior programmers about your
+product's developer experience.
 </p>
 </div></div>
 
