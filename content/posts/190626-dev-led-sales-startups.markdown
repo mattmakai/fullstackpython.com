@@ -3,7 +3,7 @@ slug: developer-led-sales-startups
 meta: Talk slides, notes and more resources for a technical talk on developer-led sales and marketing for tech startups, by Matt Makai.
 category: talk
 date: 2019-06-26
-modified: 2019-07-09
+modified: 2019-07-11
 newsletter: False
 headerimage: /img/190626-dev-led-sales/01-dev-led-sales.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
@@ -347,7 +347,7 @@ sell.
 For example, when Twilio started the SMS API, 2-factor authentication was
 rare. The ease of integrating the API to send unique codes to pre-qualified
 phone numbers to enhance security beyond a password became a new use
-case for the company to sell to customers. It was developers who came up
+case for the company to sell to customers. Developers came up
 with the use case and deserve the credit for figuring out what was
 valuable about an SMS API.
 </p>
