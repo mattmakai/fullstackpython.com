@@ -114,8 +114,7 @@ the community.
   and conferences.
 
 * There are many large active online communities on 
-  [Reddit](https://www.reddit.com/r/python), 
-  [Google Plus](https://plus.google.com/communities/103393744324769547228)
+  [Reddit](https://www.reddit.com/r/python) and
   [IRC channels](https://freenode.net/) such as #python, #python-dev
   and #distutils.
 
