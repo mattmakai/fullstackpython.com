@@ -8,11 +8,11 @@ meta: Development environments allow programmers to read, write and work with co
 
 
 # Development Environments
-A development environment is a combination of a [text editor](text-editors-ides) 
-and a Python runtime environment. The text editor allows you to write the code. 
-The runtime environment implementation such as 
-[CPython](https://github.com/python/cpython) or [PyPy](https://pypy.org/) 
-provides the method for executing your code.
+A development environment is a combination of a 
+[text editor](/text-editors-ides.html) and a Python runtime environment. 
+The text editor allows you to write the code. The runtime environment 
+implementation such as [CPython](https://github.com/python/cpython) 
+or [PyPy](https://pypy.org/) provides the method for executing your code.
 
 <img src="/img/visuals/tmux-vim-editor.png" width="100%" alt="tmux plus Vim editor on a dark background." class="shot rnd outl">
 

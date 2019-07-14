@@ -31,3 +31,9 @@ easily [deploy](/deployment.html) Python applications.
   
 * [Deploying Django to Heroku With Docker](https://testdriven.io/blog/deploying-django-to-heroku-with-docker/)
   looks at how to deploy a Django app to Heroku with Docker via the Heroku Container Runtime.
+
+* [Heroku Chatbot with Celery, WebSockets, and Redis](https://itnext.io/heroku-chatbot-with-celery-websockets-and-redis-340fcd160f06)
+  is a walkthrough with 
+  [available source code](https://github.com/inoks/django-chatbot) to build
+  a [Django](/django.html) and [Redis](/redis.html)-based chat 
+  [bot](/bots.html) that can be easily deployed to Heroku.
