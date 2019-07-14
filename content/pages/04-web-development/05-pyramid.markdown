@@ -24,7 +24,8 @@ your own applications.
 
 * [pyramid\_blogr](https://github.com/Pylons/pyramid_blogr) is an example 
   project that shows how to build a blog with Pyramid modeled on the 
-  [Flaskr](http://flask.pocoo.org/docs/latest/tutorial/introduction/) tutorial.
+  [Flaskr](https://flask.palletsprojects.com/en/1.1.x/tutorial/#tutorial) 
+  tutorial.
 
 * [pyramid-blogr-cf](https://github.com/cewing/pyramid-blogr-cf) is another
   Pyramid web app that has a similar title to the one above but this one
