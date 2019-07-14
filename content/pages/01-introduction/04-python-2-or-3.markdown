@@ -43,7 +43,7 @@ libraries are lagging in full Python 3 support.
 Since upgrading from Python 2 to 3 has been such a huge undertaking within
 the community, many projects have sprung up to make the transition easier.
 
-* [six](https://pythonhosted.org/six/) is a 2/3 compatibility library that
+* [six](https://pypi.org/project/six/) is a 2/3 compatibility library that
   is a dependency for many popular Python projects to make it easier to
   support both Python 2 and 3 at the same time.
 
