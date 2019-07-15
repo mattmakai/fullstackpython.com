@@ -113,7 +113,7 @@ named `starterbot.py` and include the following code in it.
     import os
     import time
     import re
-    from slackclient import SlackClient
+    from slack import WebClient
 
 
 With our dependencies imported we can use them to obtain the environment
@@ -121,7 +121,7 @@ variable values and then instantiate the Slack client.
 
 
     # instantiate Slack client
-    slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
+    slack_client = WebClient(os.environ.get('SLACK_BOT_TOKEN'))
     # starterbot's user ID in Slack: value is assigned after the bot starts up
     starterbot_id = None
 
