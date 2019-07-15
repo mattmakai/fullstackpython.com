@@ -141,11 +141,6 @@ visualization and gave me ideas for what to build.
   people worked with paper to build their visuals add fantastic context to
   the story.
 
-* [One Chart, Twelve Charting Libraries](https://lisacharlotterost.github.io/2016/05/17/one-chart-code/)
-  compares how charting libraries such as [D3.js](/d3-js.html),
-  [Matplotlib](/matplotlib.html), [Bokeh](/bokeh.html) and Seaborn 
-  compare to each other with default plotting values.
-
 * [dataviz.tools](http://dataviz.tools/) has a nice list of categorized
   tools for working with data and visualizing it.
 

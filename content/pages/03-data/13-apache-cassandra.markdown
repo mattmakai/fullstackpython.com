@@ -128,13 +128,6 @@ resulting tools as open source projects.
   to understand based on your workload and decide upon *before* you build 
   out your whole data architecture!
 
-* [Cassandra - the tale of a lonely Node](https://www.hugopicado.com/2017/05/14/cassandra-the-tale-of-a-lonely-node.html) 
-  and
-  [Cassandra - the fellowship of The Ring](https://www.hugopicado.com/2017/05/16/cassandra-the-fellowship-of-the-ring.html)
-  are good technical posts on the data structures within Cassandra's
-  architecture along with some of the problems that can pop up when
-  working with your data.
-
 * [Analyzing Cassandra Performance with Flame Graphs](http://thelastpickle.com/blog/2018/01/16/cassandra-flame-graphs.html)
   and
   [Garbage Collection Tuning for Apache Cassandra](http://thelastpickle.com/blog/2018/04/11/gc-tuning.html)
