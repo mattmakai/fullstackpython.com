@@ -14,6 +14,7 @@ run:
 bookbuild:                                                                   
 	mkdir tempcontent
 	cp -R content/pages tempcontent/pages
+	rm -rf tempcontent/pages/examples
 	python transform_book.py pdf
 	pelican -t theme -s book_settings.py -o generated/book tempcontent
 	cp -R static-html/* generated/book/
