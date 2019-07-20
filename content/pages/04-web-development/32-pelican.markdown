@@ -68,6 +68,10 @@ to hosting services such as Amazon S3 and GitHub Pages.
   an initial site then adds the Tipue Search plugin to provide content
   search despite the static site limitations.
 
+* [Pelican Folder Structure](http://archerimagine.com/articles/pelican/pelican-folder-structure.html)
+  explains how the `pages` and `posts` structure under `content`
+  works when using Pelican.
+
 * [Pelican's official Plugin creation documentation](http://docs.getpelican.com/en/3.7.1/plugins.html)
   gives a great starting point for building your own plugins that can
   take in new input markup formats, modify the generator process and
@@ -88,3 +92,4 @@ to hosting services such as Amazon S3 and GitHub Pages.
 * [Using Travis & GitHub to deploy static sites](http://www.gregreda.com/2015/03/26/static-site-deployments/)
   shows how to automate deployments of a Pelican-based static site using
   Travis CI.
+

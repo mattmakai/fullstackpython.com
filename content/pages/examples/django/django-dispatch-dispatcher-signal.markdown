@@ -164,3 +164,24 @@ def login_user(sender, user, request, **kwargs):
 if getattr(settings, 'REGISTRATION_AUTO_LOGIN', False):
     user_activated.connect(login_user)
 ```
+
+
+## Example 6 from django-cors-headers
+[django-cors-headers](https://github.com/ottoyiu/django-cors-headers) is
+an 
+[open source](https://github.com/ottoyiu/django-cors-headers/blob/master/LICENSE)
+library for enabling 
+[Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 
+handling in your [Django](/django.html) web applications and appropriately
+dealing with HTTP headers for CORS requests.
+
+[**django-cors-headers / corsheaders / signals.py**](https://github.com/ottoyiu/django-cors-headers/blob/master/corsheaders/signals.py)
+
+```python
+~~from django.dispatch import Signal
+
+# If any attached handler returns Truthy, CORS will be allowed for the request.
+# This can be used to build custom logic into the request handling when the
+# configuration doesn't work.
+~~check_request_enabled = Signal(providing_args=["request"])
+```

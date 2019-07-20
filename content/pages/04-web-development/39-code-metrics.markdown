@@ -149,3 +149,6 @@ diminishing returns.
   is a super short introduction on what Black does to keep your code
   formatting consistent.
 
+* [Intro to Black – The Uncompromising Python Code Formatter](http://www.blog.pythonlibrary.org/2019/07/16/intro-to-black-the-uncompromising-python-code-formatter/)
+  contains some introductory examples for using Black and shows how to
+  use it on your source files.
