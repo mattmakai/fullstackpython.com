@@ -1,4 +1,4 @@
-title: django.conf.urls.url Examples
+title: django.conf.urls.url Code Examples
 category: page
 slug: django-conf-urls-url-examples
 sortorder: 50001
@@ -7,7 +7,6 @@ sidebartitle: django.conf.urls.url
 meta: Python code examples for the url function within the django.conf.urls module of the Django project. 
 
 
-# django.conf.urls.url Examples
 The [url](https://github.com/django/django/blob/master/django/conf/urls/__init__.py)
 function is contained with the 
 [django.conf.urls](https://github.com/django/django/tree/master/django/conf/urls) 

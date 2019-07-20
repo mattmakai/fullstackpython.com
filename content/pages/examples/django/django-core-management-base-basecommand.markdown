@@ -1,4 +1,4 @@
-title: django.core.management.base BaseCommand Examples
+title: django.core.management.base BaseCommand Code Examples
 category: page
 slug: django-core-management-base-basecommand-examples
 sortorder: 50018
@@ -7,7 +7,6 @@ sidebartitle: django.core.management.base BaseCommand
 meta: Python code examples for Django management commands.
 
 
-# django.core.management.base BaseCommand Examples
 [BaseCommand](https://github.com/django/django/blob/master/django/core/management/base.py)
 is a [Django](/django.html) object for creating new Django admin commands
 that can be invoked with the `manage.py` script. The Django project team
@@ -42,7 +41,8 @@ from filer.models.imagemodels import Image
 ~~    def handle(self, *args, **options):
         """
         Generates image thumbnails
-        NOTE: To keep memory consumption stable avoid iteration over the Image queryset
+        NOTE: To keep memory consumption stable avoid iteration 
+        over the Image queryset
         """
         pks = Image.objects.all().values_list('id', flat=True)
         total = len(pks)
@@ -50,16 +50,17 @@ from filer.models.imagemodels import Image
             image = None
             try:
                 image = Image.objects.get(pk=pk)
-                self.stdout.write(u'Processing image {0} / {1} {2}'.format(idx + 1, total, image))
+                self.stdout.write(u'Processing image {0} / {1} {2}'.\
+                    format(idx + 1, total, image))
                 self.stdout.flush()
                 image.thumbnails
                 image.icons
             except IOError as e:
-                self.stderr.write('Failed to generate thumbnails: {0}'.format(str(e)))
+                self.stderr.write('Failed to generate thumbnails: {0}'\
+                    .format(str(e)))
                 self.stderr.flush()
             finally:
                 del image
 ```
-
 
 

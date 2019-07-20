@@ -1,4 +1,4 @@
-title: flask_sqlalchemy.SQLAlchemy Model Examples
+title: flask_sqlalchemy.SQLAlchemy Model Code Examples
 category: page
 slug: flask-sqlalchemy-model-examples
 sortorder: 50100
@@ -7,7 +7,6 @@ sidebartitle: flask_sqlalchemy.SQLAlchemy Model
 meta: Python code examples for the Model class within the flask_sqlalchemy.SQLAlchemy module of the Flask-SQLAlchemy project. 
 
 
-# flask_sqlalchemy.SQLAlchemy Model Examples
 [flask_sqlalchemy.SQLAlchemy.Model](https://github.com/pallets/flask-sqlalchemy/blob/master/flask_sqlalchemy/model.py)
 is a class within the
 [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)

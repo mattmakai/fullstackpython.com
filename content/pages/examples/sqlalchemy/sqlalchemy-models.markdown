@@ -1,4 +1,4 @@
-title: SQLAlchemy Model Examples
+title: SQLAlchemy Model Code Examples
 category: page
 slug: sqlalchemy-model-examples
 sortorder: 50201
@@ -7,7 +7,6 @@ sidebartitle: SQLAlchemy Model Examples
 meta: Python code examples for the Model class within the SQLAlchemy project.
 
 
-# SQLAlchemy Model Examples
 [SQLAlchemy](/sqlalchemy.html) 
 ([source code](https://github.com/sqlalchemy/sqlalchemy)) is a 
 Python library for accessing persistent data stored in 

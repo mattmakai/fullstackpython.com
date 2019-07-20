@@ -1,4 +1,4 @@
-title: django.urls.path Examples
+title: django.urls.path Code Examples
 category: page
 slug: django-urls-path-examples
 sortorder: 50000
@@ -7,7 +7,6 @@ sidebartitle: django.urls.path
 meta: Python code examples for the path function within the django.urls module of the Django project. 
 
 
-# django.urls.path Examples
 The [path](https://github.com/django/django/blob/master/django/urls/conf.py) 
 function is contained with the 
 [django.urls](https://github.com/django/django/tree/master/django/urls) 

@@ -1,4 +1,4 @@
-title: django.forms Examples
+title: django.forms Code Examples
 category: page
 slug: django-forms-examples
 sortorder: 50015
@@ -7,7 +7,6 @@ sidebartitle: django.forms
 meta: Python code examples for the forms module in the Django open source project. 
 
 
-# django.forms Examples
 [forms](https://github.com/django/django/tree/master/django/forms) is a 
 module within the [Django](/django.html) project for safely handling user
 input in a [web application](/web-development.html).

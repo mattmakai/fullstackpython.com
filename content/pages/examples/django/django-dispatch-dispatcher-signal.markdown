@@ -1,4 +1,4 @@
-title: django.dispatch Signal Examples
+title: django.dispatch Signal Code Examples
 category: page
 slug: django-dispatch-dispatcher-signal-examples
 sortorder: 50004
@@ -7,7 +7,6 @@ sidebartitle: django.dispatch Signal
 meta: Python code examples for the Signal class within the django.dispatch module of the Django project. 
 
 
-# django.dispatch Signal Examples
 The 
 [Signal](https://github.com/django/django/blob/master/django/dispatch/dispatcher.py)
 class allows certain senders to notify a set of receivers that some action 

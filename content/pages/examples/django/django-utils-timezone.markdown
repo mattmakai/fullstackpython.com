@@ -1,4 +1,4 @@
-title: django.utils.timezone Examples
+title: django.utils.timezone Code Examples
 category: page
 slug: django-utils-timezone-examples
 sortorder: 50020
@@ -7,7 +7,6 @@ sidebartitle: django.utils.timezone
 meta: Python code examples for timezone-related classes and functions provided by the Django codebase. 
 
 
-# django.utils.timezone Examples
 [timezone.py](https://github.com/django/django/blob/master/django/utils/timezone.py)
 is a source file within the [Django](/django.html) project that contains
 date and time-related helper classes and functions that are useful when 

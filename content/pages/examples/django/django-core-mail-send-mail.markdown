@@ -1,4 +1,4 @@
-title: django.core.mail.send_mail Examples
+title: django.core.mail.send_mail Code Examples
 category: page
 slug: django-core-mail-send-mail-examples
 sortorder: 50006
@@ -7,7 +7,6 @@ sidebartitle: django.core.mail.send_mail
 meta: Python code examples for the send_mail function within the django.core.mail  module of the Django project. 
 
 
-# django.core.mail.send_mail Examples
 [send_mail](https://github.com/django/django/blob/master/django/core/mail/__init__.py)
 is a function in [Django](/django.html) that can send an email
 using the [EmailMessage](/django-core-mail-messages-emailmessage-examples.html)
@@ -15,7 +14,10 @@ class.
 
 
 ## Example 1 from apiserver
-
+[apiserver](https://github.com/renjith-tring/apiserver) is a 
+[RESTful web API](/application-programming-interfaces.html) project
+built with [Django](/django.html) for user management tasks such as 
+registration (with email verification), login, logout and password changes.
 
 [**apiserver/apps/accounts/signals.py**](https://github.com/renjith-tring/apiserver/blob/master/apps/accounts/signals.py)
 

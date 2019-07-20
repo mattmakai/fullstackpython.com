@@ -41,6 +41,9 @@
     </div>
    </div>
   {% else %}
+   {% if page.sortorder[0:2] == "50" %}
+    <h1 style="font-size: 32px">{{ page.title }}</h1>
+   {% endif %}
    {{ page.content }}
   {% endif %}
   {% if page.sortorder[0:2] == "50" %}

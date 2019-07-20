@@ -1,4 +1,4 @@
-title: django.conf settings Examples
+title: django.conf settings Code Examples
 category: page
 slug: django-conf-settings-examples
 sortorder: 50010
@@ -7,7 +7,6 @@ sidebartitle: django.conf settings
 meta: Python code examples for Django settings files.
 
 
-# django.conf settings Examples
 The [Django](/django.html) 
 [settings](https://docs.djangoproject.com/en/dev/topics/settings/)
 file contains all of the configuration for a web application.

@@ -1,4 +1,4 @@
-title: django.db.models.signal Examples
+title: django.db.models signal Code Examples
 category: page
 slug: django-db-models-signal-examples
 sortorder: 50005
@@ -7,7 +7,6 @@ sidebartitle: django.db.models.signal
 meta: Python code examples for database signals within a Django project. 
 
 
-# django.db.models.signal Examples
 The 
 [Signal](https://github.com/django/django/blob/master/django/db/models/signals.py)
 module allows certain senders to notify a set of receivers that some action 

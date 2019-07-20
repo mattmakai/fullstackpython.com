@@ -1,4 +1,4 @@
-title: django.db.models.Model Examples
+title: django.db.models Model Code Examples
 category: page
 slug: django-db-models-model-examples
 sortorder: 50002
@@ -7,7 +7,6 @@ sidebartitle: django.db.models Model
 meta: Python code examples for the Model class within the django.db.models module of the Django project. 
 
 
-# django.db.models.Model Examples
 The 
 [Model](https://github.com/django/django/blob/master/django/db/models/base.py)
 class is the superclass for all data stored in [Django](/django.html) 

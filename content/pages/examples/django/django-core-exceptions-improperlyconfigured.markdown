@@ -1,4 +1,4 @@
-title: django.core.exceptions ImproperlyConfigured Examples
+title: django.core.exceptions ImproperlyConfigured Code Examples
 category: page
 slug: django-core-exceptions-improperlyconfigured
 sortorder: 50030
@@ -7,7 +7,6 @@ sidebartitle: django.core.exceptions ImproperlyConfigured
 meta: Python code examples for the ImproperlyConfigured exception class provided by the Django codebase. 
 
 
-# django.core.exceptions ImproperlyConfigured Examples
 [ImproperlyConfigured](https://github.com/django/django/blob/master/django/core/exceptions.py)
 is a class within the [Django](/django.html) project that is thrown
 when there is a mistake in an application's settings. The exception

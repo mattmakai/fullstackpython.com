@@ -1,4 +1,4 @@
-title: django.contrib.admin Examples
+title: django.contrib.admin Code Examples
 category: page
 slug: django-contrib-admin-examples
 sortorder: 50001
@@ -7,7 +7,6 @@ sidebartitle: django.contrib.admin
 meta: Python code examples for the admin module within django.contrib of the Django project. 
 
 
-# django.contrib.admin Examples
 The [Django admin](https://docs.djangoproject.com/en/2.2/ref/contrib/admin/)
 is an automatically-generated user interface for [Django models](/django-orm.html).
 The admin interface can be heavily customized and the code examples below can
