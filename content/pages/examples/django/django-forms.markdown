@@ -1,4 +1,4 @@
-title: django.forms Code Examples
+title: django.forms Example Code
 category: page
 slug: django-forms-examples
 sortorder: 50015

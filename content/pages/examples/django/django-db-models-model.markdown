@@ -1,4 +1,4 @@
-title: django.db.models Model Code Examples
+title: django.db.models Model Example Code
 category: page
 slug: django-db-models-model-examples
 sortorder: 50002

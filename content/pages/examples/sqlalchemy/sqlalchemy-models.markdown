@@ -1,4 +1,4 @@
-title: SQLAlchemy Model Code Examples
+title: SQLAlchemy Model Example Code
 category: page
 slug: sqlalchemy-model-examples
 sortorder: 50201

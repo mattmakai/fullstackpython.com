@@ -1,4 +1,4 @@
-title: django.core.mail.send_mail Code Examples
+title: django.core.mail.send_mail Example Code
 category: page
 slug: django-core-mail-send-mail-examples
 sortorder: 50006

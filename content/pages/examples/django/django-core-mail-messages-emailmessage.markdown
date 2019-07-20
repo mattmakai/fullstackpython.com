@@ -1,4 +1,4 @@
-title: django.core.mail.messages EmailMessage Code Examples
+title: django.core.mail.messages EmailMessage Example Code
 category: page
 slug: django-core-mail-messages-emailmessage-examples
 sortorder: 50007

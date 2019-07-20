@@ -1,4 +1,4 @@
-title: django.contrib.admin Code Examples
+title: django.contrib.admin Example Code
 category: page
 slug: django-contrib-admin-examples
 sortorder: 50001

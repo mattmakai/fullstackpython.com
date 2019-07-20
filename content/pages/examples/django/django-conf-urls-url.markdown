@@ -1,4 +1,4 @@
-title: django.conf.urls.url Code Examples
+title: django.conf.urls.url Example Code
 category: page
 slug: django-conf-urls-url-examples
 sortorder: 50001

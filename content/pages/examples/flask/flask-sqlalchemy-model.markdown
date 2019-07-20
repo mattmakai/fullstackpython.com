@@ -1,4 +1,4 @@
-title: flask_sqlalchemy.SQLAlchemy Model Code Examples
+title: flask_sqlalchemy.SQLAlchemy Model Example Code
 category: page
 slug: flask-sqlalchemy-model-examples
 sortorder: 50100

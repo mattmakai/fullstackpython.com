@@ -1,4 +1,4 @@
-title: django.core.exceptions ImproperlyConfigured Code Examples
+title: django.core.exceptions ImproperlyConfigured Example Code
 category: page
 slug: django-core-exceptions-improperlyconfigured
 sortorder: 50030

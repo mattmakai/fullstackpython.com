@@ -1,4 +1,4 @@
-title: django.conf settings Code Examples
+title: django.conf settings Example Code
 category: page
 slug: django-conf-settings-examples
 sortorder: 50010

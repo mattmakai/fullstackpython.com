@@ -1,4 +1,4 @@
-title: django.dispatch Signal Code Examples
+title: django.dispatch Signal Example Code
 category: page
 slug: django-dispatch-dispatcher-signal-examples
 sortorder: 50004

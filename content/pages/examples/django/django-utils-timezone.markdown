@@ -1,4 +1,4 @@
-title: django.utils.timezone Code Examples
+title: django.utils.timezone Example Code
 category: page
 slug: django-utils-timezone-examples
 sortorder: 50020

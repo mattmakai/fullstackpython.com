@@ -1,4 +1,4 @@
-title: django.db.models signal Code Examples
+title: django.db.models signal Example Code
 category: page
 slug: django-db-models-signal-examples
 sortorder: 50005

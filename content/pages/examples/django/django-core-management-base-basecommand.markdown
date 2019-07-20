@@ -1,4 +1,4 @@
-title: django.core.management.base BaseCommand Code Examples
+title: django.core.management.base BaseCommand Example Code
 category: page
 slug: django-core-management-base-basecommand-examples
 sortorder: 50018

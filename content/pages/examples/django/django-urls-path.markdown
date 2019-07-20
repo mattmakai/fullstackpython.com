@@ -1,4 +1,4 @@
-title: django.urls.path Code Examples
+title: django.urls.path Example Code
 category: page
 slug: django-urls-path-examples
 sortorder: 50000
