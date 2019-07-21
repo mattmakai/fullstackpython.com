@@ -15,7 +15,7 @@ class.
 
 ## Example 1 from apiserver
 [apiserver](https://github.com/renjith-tring/apiserver) is a 
-[RESTful web API](/application-programming-interfaces.html) project
+[RESTful web API](/application-programming-interfaces.html) server project
 built with [Django](/django.html) for user management tasks such as 
 registration (with email verification), login, logout and password changes.
 

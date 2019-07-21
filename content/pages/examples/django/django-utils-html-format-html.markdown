@@ -22,8 +22,8 @@ that use Django's `format_html` function:
   [HTML](/hypertext-markup-language-html.html)
 * [Angular](/angular.html) and [JavaScript](/javascript.html)
 
-You should also view the [extensive all topics page](/table-of-contents.html)
-for additional resources.
+You can also view the [complete all topics page](/table-of-contents.html)
+for even more resources.
 
 
 ## Example 1 from django-angular
@@ -160,12 +160,13 @@ def djng_locale_script(context, default_language='en'):
 ```
 
 
-## Example 2 from django-auditlog
+## Example 2 from AuditLog
 [Auditlog](https://github.com/jjkester/django-auditlog) 
 ([project documentation](https://django-auditlog.readthedocs.io/en/latest/))
 is a [Django](/django.html) app that logs changes to Python objects,
 similar to the Django admin's logs but with more details and
-output formats.
+output formats. Auditlog's source code is provided as open source under the
+[MIT license](https://github.com/jjkester/django-auditlog/blob/master/LICENSE).
 
 [**django-auditlog / src / auditlog / mixins.py**](https://github.com/jjkester/django-auditlog/blob/master/src/auditlog/mixins.py)
 
