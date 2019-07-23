@@ -180,6 +180,9 @@ frameworks, templating engines and
   functionality that was built into the standard library starting with 
   Python 3.4.
 
+* [Django vs. Flask in 2019: Which Framework to Choose](https://testdriven.io/blog/django-vs-flask/)
+  looks at the best use cases for Django and Flask along with what 
+  makes them unique, from an educational and development standpoint.
 
 ### Web frameworks learning checklist
 1. Choose a major Python web framework ([Django](/django.html) or 
