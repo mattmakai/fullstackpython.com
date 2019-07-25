@@ -25,6 +25,61 @@ These projects, ordered alphabetically, are also helpful as example
 code for how to build your own applications.
 
 
+### AuditLog
+[Auditlog](https://github.com/jjkester/django-auditlog) 
+([project documentation](https://django-auditlog.readthedocs.io/en/latest/))
+is a [Django](/django.html) app that logs changes to Python objects,
+similar to the Django admin's logs but with more details and
+output formats. Auditlog's source code is provided as open source under the
+[MIT license](https://github.com/jjkester/django-auditlog/blob/master/LICENSE).
+
+Example code found in the AuditLog project:
+
+* [django.contrib.admin.filters SimpleListFilter](/django-contrib-admin-filters-simplelistfilter-examples.html)
+* [django.utils.html format_html](/django-utils-html-format-html-examples.html)
+
+
+### django-allauth
+[django-allauth](https://github.com/pennersr/django-allauth) 
+([project website](https://www.intenct.nl/projects/django-allauth/)) is a
+[Django](/django.html) library for easily adding local and social authentication
+flows to Django projects. It is open source under the 
+[MIT License](https://github.com/pennersr/django-allauth/blob/master/LICENSE).
+
+Code used for examples from the django-allauth project:
+
+* [django.conf.urls.url](/django-conf-urls-url-examples.html)
+* [django.forms](/django-forms-examples.html)
+
+
+### django-angular
+[django-angular](https://github.com/jrief/django-angular) 
+([project examples website](https://django-angular.awesto.com/classic_form/))
+is a library with helper code to make it easier to use 
+[Angular](/angular.html) as the front-end to [Django](/django.html) projects.
+The code for django-angular is 
+[open source under the MIT license](https://github.com/jrief/django-angular/blob/master/LICENSE.txt).
+
+Code from django-angular is shown on:
+
+* [django.utils.html format_html](/django-utils-html-format-html-examples.html)
+
+
+### django-cors-headers
+[django-cors-headers](https://github.com/ottoyiu/django-cors-headers) is
+an 
+[open source](https://github.com/ottoyiu/django-cors-headers/blob/master/LICENSE)
+library for enabling 
+[Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 
+handling in your [Django](/django.html) web applications and appropriately
+dealing with HTTP headers for CORS requests.
+
+Code examples from the django-cors-headers project:
+
+* [django.conf settings](/django-conf-settings-examples.html)
+* [django.dispatch Signal](/django-dispatch-dispatcher-signal-examples.html)
+
+
 ### django-cms
 [django-cms](https://github.com/divio/django-cms)
 ([project website](https://www.django-cms.org/en/)) is a Python-based
@@ -67,6 +122,31 @@ Code from django-filer can be found on these pages:
 * [django.conf settings](/django-conf-settings-examples.html)
 * [django.contrib.admin](/django-contrib-admin.html)
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
+
+
+### django-oscar
+[django-oscar](https://github.com/django-oscar/django-oscar/) 
+([project website](http://oscarcommerce.com/))
+is a framework for building e-commerce sites on top of 
+[Django](/django.html). The code for the project is available open 
+source under a 
+[custom license written by Tangent Communications PLC](https://github.com/django-oscar/django-oscar/blob/master/LICENSE).
+
+Further code examples from django-oscar:
+
+* [django.contrib.admin](/django-contrib-admin-examples.html)
+
+
+### django-smithy
+[django-smithy](https://github.com/jamiecounsell/django-smithy) is
+a [Django](/django.html) code library that allows users to send 
+HTTP requests from the Django admin user interface. The code for
+the project is open source under the 
+[MIT license](https://github.com/jamiecounsell/django-smithy/blob/master/LICENSE).
+
+Code examples from django-smithy are shown on the following pages:
+
+* [django.utils timezone](/django-utils-timezone-examples.html)
 
 
 ### gadget-board
