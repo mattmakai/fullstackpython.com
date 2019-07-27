@@ -158,6 +158,7 @@ Code examples from django-smithy are shown on the following pages:
 
 * [django.utils timezone](/django-utils-timezone-examples.html)
 * [django.db.models CharField](/django-db-models-charfield-examples.html)
+* [django.db.models TextField](/django-db-models-textfield-examples.html)
 
 
 ### gadget-board
