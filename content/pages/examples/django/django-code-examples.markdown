@@ -39,6 +39,16 @@ Example code found in the AuditLog project:
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 
 
+### dccnsys
+[dccnsys](https://github.com/dccnconf/dccnsys) is a conference registration 
+system built with [Django](/django.html). The code is open source under the
+[MIT license](https://github.com/dccnconf/dccnsys/blob/master/LICENSE).
+
+dccnsys is shown on the following code example pages:
+
+* [django.urls.path](/django-urls-path-examples.html)
+
+
 ### django-allauth
 [django-allauth](https://github.com/pennersr/django-allauth) 
 ([project website](https://www.intenct.nl/projects/django-allauth/)) is a
@@ -147,6 +157,7 @@ the project is open source under the
 Code examples from django-smithy are shown on the following pages:
 
 * [django.utils timezone](/django-utils-timezone-examples.html)
+* [django.db.models CharField](/django-db-models-charfield-examples.html)
 
 
 ### gadget-board

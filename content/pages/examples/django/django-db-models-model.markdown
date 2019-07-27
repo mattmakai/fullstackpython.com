@@ -20,7 +20,7 @@ changes to [Django](/django.html) models. The source code is available
 under the 
 [BSD 3 "New" license](https://github.com/vvangelovski/django-audit-log/blob/master/LICENSE.txt).
 
-[**django-audit-log/audit-log/models/__init__.py**](https://github.com/vvangelovski/django-audit-log/blob/master/audit_log/models/__init__.py)
+[**django-audit-log / audit-log / models / __init__.py**](https://github.com/vvangelovski/django-audit-log/blob/master/audit_log/models/__init__.py)
 
 ```python
 # __init__.py
@@ -54,7 +54,7 @@ content management system (CMS)
 for use with Django web apps that is open sourced under the 
 [BSD 3-Clause "New" License](https://github.com/divio/django-cms/blob/develop/LICENSE).
 
-[**django-cms/cms/models/permisssionmodels.py**](https://github.com/divio/django-cms/blob/develop/cms/models/pagemodel.py)
+[**django-cms / cms / models / permisssionmodels.py**](https://github.com/divio/django-cms/blob/develop/cms/models/pagemodel.py)
 
 ```python
 # -*- coding: utf-8 -*-
@@ -133,7 +133,8 @@ ACCESS_CHOICES = (
 ~~    can_change = models.BooleanField(_("can edit"), default=True)
 ~~    can_add = models.BooleanField(_("can add"), default=True)
 ~~    can_delete = models.BooleanField(_("can delete"), default=True)
-~~    can_change_advanced_settings = models.BooleanField(_("can change advanced settings"), 
+~~    can_change_advanced_settings = models.BooleanField(_(\
+~~          "can change advanced settings"), 
                                                          default=False)
 ~~    can_publish = models.BooleanField(_("can publish"), default=True)
 ~~    can_change_permissions = models.BooleanField(_("can change permissions"), 
@@ -247,7 +248,7 @@ ACCESS_CHOICES = (
 system built with [Django](/django.html). The code is open source under the
 [MIT license](https://github.com/dccnconf/dccnsys/blob/master/LICENSE).
 
-[**dccnconf/wwwdccn/conferences/models.py**](https://github.com/dccnconf/dccnsys/blob/master/wwwdccn/conferences/models.py)
+[**dccnconf / wwwdccn / conferences / models.py**](https://github.com/dccnconf/dccnsys/blob/master/wwwdccn/conferences/models.py)
 
 ```python
 from django.conf import settings
@@ -442,7 +443,7 @@ from django_countries.fields import CountryField
 [Django](/django.html)-based CMS with open source code under the
 [BSD 2-Clause "Simplified" License](https://github.com/stephenmcd/mezzanine/blob/master/LICENSE).
 
-[**mezzanine/mezzanine/core/models.py**](https://github.com/stephenmcd/mezzanine/blob/master/mezzanine/core/models.py)
+[**mezzanine / mezzanine / core / models.py**](https://github.com/stephenmcd/mezzanine/blob/master/mezzanine/core/models.py)
 
 ```python
 from __future__ import unicode_literals
