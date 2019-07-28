@@ -130,8 +130,24 @@ in Django's admin interface. The project's code is available under the
 Code from django-filer can be found on these pages:
 
 * [django.conf settings](/django-conf-settings-examples.html)
-* [django.contrib.admin](/django-contrib-admin.html)
+* [django.contrib.admin](/django-contrib-admin-examples.html)
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
+
+
+### django-push-notifications
+[django-push-notifications](https://github.com/jazzband/django-push-notifications)
+is a [Django](/django.html) app for storing and interacting with
+push notification services such as 
+[Google's Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
+and 
+[Apple Notifications](https://developer.apple.com/notifications/).
+The django-push-notification project's source code is available
+open source under the 
+[MIT license](https://github.com/jazzband/django-push-notifications/blob/master/LICENSE).
+
+* [django.db.models Model](/django-db-models-model-examples.html)
+* [django.db.models BooleanField](/django-db-models-booleanfield-examples.html)
+* [django.db.models CharField](/django-db-models-charfield-examples.html)
 
 
 ### django-oscar
