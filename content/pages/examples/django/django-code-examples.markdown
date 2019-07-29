@@ -148,7 +148,7 @@ open source under the
 * [django.db.models Model](/django-db-models-model-examples.html)
 * [django.db.models BooleanField](/django-db-models-booleanfield-examples.html)
 * [django.db.models CharField](/django-db-models-charfield-examples.html)
-
+* [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 
 ### django-oscar
 [django-oscar](https://github.com/django-oscar/django-oscar/) 
@@ -175,6 +175,22 @@ Code examples from django-smithy are shown on the following pages:
 * [django.utils timezone](/django-utils-timezone-examples.html)
 * [django.db.models CharField](/django-db-models-charfield-examples.html)
 * [django.db.models TextField](/django-db-models-textfield-examples.html)
+
+
+### drf-action-serializer
+[drf-action-serializer](https://github.com/gregschmit/drf-action-serializer)
+is an extension for [Django REST Framework](/django-rest-framework-drf.html)
+that makes it easier to configure specific serializers to use based on the
+client's request action. For example, a list view should have one serializer
+whereas the detail view would have a different serializer.
+
+The project is open source under the 
+[MIT license](https://github.com/gregschmit/drf-action-serializer/blob/master/LICENSE).
+
+There are code examples from the drf-action-serializer project on the
+following pages:
+
+* [django.urls.path](/django-urls-path-examples.html)
 
 
 ### gadget-board

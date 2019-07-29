@@ -63,7 +63,7 @@ backend that displays
 code is open source under the 
 [MIT license](https://github.com/Michael-Cantley/heritagesites/blob/master/LICENSE).
 
-[**heritagesites/heritagesites/urls.py**](https://github.com/Michael-Cantley/heritagesites/blob/master/heritagesites/urls.py)
+[**heritagesites / heritagesites / urls.py**](https://github.com/Michael-Cantley/heritagesites/blob/master/heritagesites/urls.py)
 
 ```python
 # urls.py
@@ -85,5 +85,36 @@ urlpatterns = [
 ~~    path('sites/<int:pk>/update/', views.SiteUpdateView.as_view(), name='site_update'),
 
 ~~    path('sites/search', views.SiteFilterView.as_view(), name="search")
+]
+```
+
+## Example 3 from drf-action-serializer
+[drf-action-serializer](https://github.com/gregschmit/drf-action-serializer)
+is an extension for [Django REST Framework](/django-rest-framework-drf.html)
+that makes it easier to configure specific serializers to use based on the
+client's request action. For example, a list view should have one serializer
+whereas the detail view would have a different serializer.
+
+The project is open source under the 
+[MIT license](https://github.com/gregschmit/drf-action-serializer/blob/master/LICENSE).
+
+[**drf-action-serializer / action_serializer / urls.py**](https://github.com/gregschmit/drf-action-serializer/blob/master/action_serializer/urls.py)
+
+```python
+from django.contrib import admin
+~~from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+
+from .sample_group_viewset import GroupViewSet
+
+
+router = DefaultRouter()
+router.register('auth/group', GroupViewSet)
+router.register('auth/groups', GroupViewSet)
+
+urlpatterns = [
+~~    path('api/', include(router.urls)),
+~~    path('admin/doc/', include('django.contrib.admindocs.urls')),
+~~    path('admin/', admin.site.urls),
 ]
 ```
