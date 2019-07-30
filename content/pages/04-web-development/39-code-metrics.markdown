@@ -128,6 +128,16 @@ diminishing returns.
 * [How to use Flask8](https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html)
   explains what Flask8 is, its usage and expected output.
 
+* [Pylint false positives](https://lukeplant.me.uk/blog/posts/pylint-false-positives/)
+  is a walkthrough of issues that Pylint detects in an example project,
+  which ones cannot be fixed and the ones where the tool was incorrect.
+  The author concludes that with all of the false positives that were
+  found the signal to noise ratio was not useful enough to use the
+  tool on a typical project. However, on a brand new project without
+  many dependencies it might be helpful to keep your code in a pristine
+  state before the code base grows beyond the nosiness false positives
+  threshold.
+
 * [What is Flake8 and why we should use it?](https://medium.com/python-pandemonium/what-is-flake8-and-why-we-should-use-it-b89bd78073f2)
   covers why using a linting tool like Flake8 can improve the quality of 
   your Python code and how to install and configure it for your
