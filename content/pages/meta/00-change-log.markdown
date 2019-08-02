@@ -15,6 +15,11 @@ on GitHub.
 
 
 ## 2019
+### August
+* Added new [Django](/django-code-examples.html) code examples pages:
+    * [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
+    * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
+
 ### July
 * Pushed the [3000th commit](https://github.com/mattmakai/fullstackpython.com/commit/180051047a582b9154874b15dccb315600f23300)
   to Full Stack Python, a bit over 3 years after the

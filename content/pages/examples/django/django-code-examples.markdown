@@ -46,8 +46,9 @@ system built with [Django](/django.html). The code is open source under the
 
 dccnsys is shown on the following code example pages:
 
+* [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
+* [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 * [django.urls.path](/django-urls-path-examples.html)
-
 
 ### django-allauth
 [django-allauth](https://github.com/pennersr/django-allauth) 
