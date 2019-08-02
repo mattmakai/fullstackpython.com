@@ -151,6 +151,7 @@ open source under the
 * [django.db.models CharField](/django-db-models-charfield-examples.html)
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 
+
 ### django-oscar
 [django-oscar](https://github.com/django-oscar/django-oscar/) 
 ([project website](http://oscarcommerce.com/))
@@ -162,6 +163,7 @@ source under a
 Further code examples from django-oscar:
 
 * [django.contrib.admin](/django-contrib-admin-examples.html)
+* [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 
 
 ### django-smithy
