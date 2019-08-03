@@ -272,7 +272,7 @@ class EasyTimezoneMiddleware(middleware_base_class):
 ```
 
 
-## Example 2 from AuditLog
+## Example 4 from AuditLog
 [Auditlog](https://github.com/jjkester/django-auditlog) 
 ([project documentation](https://django-auditlog.readthedocs.io/en/latest/))
 is a [Django](/django.html) app that logs changes to Python objects,
