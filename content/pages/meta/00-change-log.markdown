@@ -19,6 +19,10 @@ on GitHub.
 * Added new [Django](/django-code-examples.html) code examples pages:
     * [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
     * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
+    * [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
+    * [django.http Http404](/django-http-http404-examples.html)
+* Updated code examples on the following pages:
+    * [django.contrib admin](/django-contrib-admin-examples.html)
 
 ### July
 * Pushed the [3000th commit](https://github.com/mattmakai/fullstackpython.com/commit/180051047a582b9154874b15dccb315600f23300)

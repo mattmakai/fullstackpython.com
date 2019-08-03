@@ -206,6 +206,8 @@ following pages:
 Additional example code found within gadget-board:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
+* [django.contrib admin](/django-contrib-admin-examples.html)
+* [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
 
 
 ### register
@@ -232,5 +234,5 @@ under the
 Example code from wagtail shown on these pages:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
-
+* [django.http Http404](/django-http-http404-examples.html)
 

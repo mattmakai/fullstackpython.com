@@ -438,3 +438,23 @@ from ..models import File
 
 ~~FileAdmin.fieldsets = FileAdmin.build_fieldsets()
 ```
+
+
+## Example 5 from gadget-board
+[gadget-board](https://github.com/mik4el/gadget-board) is a 
+[Django](/django.html),
+[Django REST Framework (DRF)](/django-rest-framework-drf.html) and
+[Angular](/angular.html) web application that is open source under the 
+[Apache2 license](https://github.com/mik4el/gadget-board/blob/master/LICENSE).
+
+[**gadget-board / web / authentication / admin.py**](https://github.com/mik4el/gadget-board/blob/master/web/authentication/admin.py)
+
+```python
+~~from django.contrib import admin
+from .models import Account
+
+
+~~@admin.register(Account)
+~~class AccountAdmin(admin.ModelAdmin):
+	readonly_fields = ('created_at','updated_at',)
+```
