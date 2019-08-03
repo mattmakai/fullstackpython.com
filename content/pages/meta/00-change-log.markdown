@@ -23,6 +23,8 @@ on GitHub.
     * [django.http Http404](/django-http-http404-examples.html)
 * Updated code examples on the following pages:
     * [django.contrib admin](/django-contrib-admin-examples.html)
+    * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
+    * [django.utils timezone](/django-utils-timezone-examples.html)
 
 ### July
 * Pushed the [3000th commit](https://github.com/mattmakai/fullstackpython.com/commit/180051047a582b9154874b15dccb315600f23300)

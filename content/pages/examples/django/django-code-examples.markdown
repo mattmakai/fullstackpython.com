@@ -36,6 +36,7 @@ output formats. Auditlog's source code is provided as open source under the
 Example code found in the AuditLog project:
 
 * [django.contrib.admin.filters SimpleListFilter](/django-contrib-admin-filters-simplelistfilter-examples.html)
+* [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 
 
