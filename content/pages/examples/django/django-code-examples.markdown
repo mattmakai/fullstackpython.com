@@ -12,7 +12,7 @@ meta: Python code examples that show how to use the Django web application frame
 <a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="shot" style="margin-top:20px"></a>
 
 
-## Django Projects
+## Django Example Projects
 Part of Django's widespread adoption comes from its broad ecosystem of 
 open source code libraries and example projects.
 
