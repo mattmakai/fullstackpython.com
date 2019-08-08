@@ -42,7 +42,7 @@ your control over each aspect of the hardware and software.
 
 ### Serverless implementations
 Each major cloud vendor has a serverless compute implementation.
-These implementations are under significant active developer
+These implementations are under significant active development
 and not all of them have Python support.
 
 * [AWS Lambda](/aws-lambda.html) is the current leader among serverless
