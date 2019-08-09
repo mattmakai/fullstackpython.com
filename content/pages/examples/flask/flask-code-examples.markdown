@@ -41,6 +41,17 @@ flask-base's code is open sourced
 [under the MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
 
 
+### FlaskBB
+[FlaskBB](https://github.com/flaskbb/flaskbb)
+([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
+forum web application. The web app allows users to chat in an open
+message board or send private messages in plain text or 
+[Markdown](/markdown.html).
+
+FlaskBB is provided as open source 
+[under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
+
+
 ### Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is the wonderful 
 example application by 
