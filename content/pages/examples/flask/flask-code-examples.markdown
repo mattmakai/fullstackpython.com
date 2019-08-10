@@ -51,6 +51,10 @@ message board or send private messages in plain text or
 FlaskBB is provided as open source 
 [under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
 
+FlaskBB's code examples can be found on:
+
+* [flask request](/flask-request-examples.html)
+
 
 ### Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is the wonderful 

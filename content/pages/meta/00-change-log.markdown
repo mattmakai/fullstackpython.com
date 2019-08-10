@@ -19,6 +19,9 @@ on GitHub.
 * Merged [PR #215](https://github.com/mattmakai/fullstackpython.com/pull/215)
   to fix a typo on the [serverless](/serverless.html) page. Thanks 
   [Kyle](https://github.com/kylekizirian)!
+* Added new [Flask](/flask-code-examples.html) code examples:
+    * [flask request](/flask-request-examples.html)
+    * [flask redirect](/flask-redirect-examples.html)
 * Added new [Django](/django-code-examples.html) code examples pages:
     * [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
     * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
