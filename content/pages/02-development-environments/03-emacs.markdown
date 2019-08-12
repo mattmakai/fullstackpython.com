@@ -7,7 +7,6 @@ sidebartitle: Emacs
 meta: Emacs is an extensible, customizable text editor often used for coding. Read more about Emacs on Full Stack Python.
 
 
-# Emacs
 [Emacs](https://www.gnu.org/software/emacs/) 
 ([source code](https://savannah.gnu.org/git/?group=emacs))
 is an extensible text editor 

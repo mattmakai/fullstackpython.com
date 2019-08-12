@@ -7,7 +7,6 @@ sidebartitle: Python 2 or 3?
 meta: Learn about whether you should use Python version 2 or 3 to build your applications.
 
 
-# Python 2 or 3?
 The Python programming language is almost finished with a long-term transition
 from version 2 to version 3. New programmers often have questions about which 
 version they should learn. It can be confusing to hear that Python 3, which was 

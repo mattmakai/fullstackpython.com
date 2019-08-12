@@ -7,7 +7,6 @@ sidebartitle: Microservices
 meta: Microservices are an architecture where independent, functionality-contained programs communicate via network calls.
 
 
-# Microservices
 Microservices are an application architecture style where independent,
 self-contained programs with a single purpose each can communicate with
 each other over a network. Typically, these microservices are able to be

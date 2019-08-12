@@ -7,7 +7,6 @@ sidebartitle: 2. Development Environments
 meta: Development environments allow programmers to read, write and work with code.
 
 
-# Development Environments
 A development environment is a combination of a 
 [text editor](/text-editors-ides.html) and a Python runtime environment. 
 The text editor allows you to write the code. The runtime environment 

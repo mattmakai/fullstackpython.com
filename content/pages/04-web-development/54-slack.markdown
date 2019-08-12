@@ -7,7 +7,6 @@ sidebartitle: Slack
 meta: Slack has an application programming interface (API) for building bots and programmatically interacting with its messaging service.
 
 
-# Slack
 Slack provides a web
 [application programming interface (API)](/application-programming-interfaces.html) 
 for programmatically interacting with its messaging service.

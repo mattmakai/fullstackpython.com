@@ -7,7 +7,6 @@ sidebartitle: JavaScript
 meta: Learn about JavaScript and MVC frameworks for web applications on Full Stack Python.
 
 
-# JavaScript
 JavaScript is a scripting programming language interpretted by web 
 browsers that enables dynamic content and interactions in web applications. 
 

@@ -7,7 +7,6 @@ sidebartitle: Serverless
 meta: Serverless is an deployment architecture where servers are not explicitly provisioned and code is run based on pre-defined events.
 
 
-# Serverless
 Serverless is a [deployment](/deployment.html) architecture where 
 [servers](/servers.html) are not explicitly provisioned by the deployer. 
 Code is instead executed based on developer-defined events that are 

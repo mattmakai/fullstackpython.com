@@ -7,7 +7,6 @@ sidebartitle: Web Frameworks
 meta: Find out about Python web frameworks, which are code libraries that solve common web application creation challenges.
 
 
-# Web frameworks
 A web framework is a code library that makes 
 [web development](/web-development.html) faster and easier by providing 
 common patterns for building reliable, scalable and maintainable web

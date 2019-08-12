@@ -7,7 +7,6 @@ sidebartitle: Angular
 meta: Learn about Angular and other JavaScript frameworks for web applications on Full Stack Python.
 
 
-# Angular
 [Angular](https://angular.io/) is a [JavaScript](/javascript.html) web 
 application framework for building rich apps that run in web browsers.
 
@@ -17,7 +16,6 @@ application framework for building rich apps that run in web browsers.
 
 
 ### Angular resources
-
 * This [end to end web app with Django-Rest-Framework & AngularJS part 1](http://mourafiq.com/2013/07/01/end-to-end-web-app-with-django-angular-1.html)
   tutorial along with 
   [part 2](http://mourafiq.com/2013/07/15/end-to-end-web-app-with-django-angular-2.html),

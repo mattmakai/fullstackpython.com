@@ -7,7 +7,6 @@ sidebartitle: Security
 meta: Web applications can be attacked many ways by malicious actors. Learn more on Full Stack Python.
 
 
-# Web Application Security
 Website security must be thought about while building every level of the web 
 stack. However, this section includes topics that deserve particular
 treatment, such as cross-site scripting (XSS), SQL injection, cross-site 

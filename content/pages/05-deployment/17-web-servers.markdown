@@ -7,7 +7,6 @@ sidebartitle: Web Servers
 meta: Web servers respond to HTTP requests for static content and serve as reverse proxies for Python web applications.
 
 
-# Web servers
 Web servers respond to 
 [Hypertext Transfer Protocol](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) (HTTP)
 requests from clients and send back a response containing a status code and

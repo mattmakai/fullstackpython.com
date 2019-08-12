@@ -7,7 +7,6 @@ sidebartitle: WebSockets
 meta: WebSockets are a protocol for full-duplex web communications. Learn about WebSockets on Full Stack Python.
 
 
-# WebSockets
 A WebSocket is a [standard protocol](http://tools.ietf.org/html/rfc6455) for 
 two-way data transfer between a client and server. The WebSockets protocol 
 does not run over HTTP, instead it is a separate implementation on top of 

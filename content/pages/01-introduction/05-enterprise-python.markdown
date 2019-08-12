@@ -7,7 +7,6 @@ sidebartitle: Enterprise Python
 meta: Python is widely used to build enterprise application in large organizations around the world.
 
 
-# Enterprise Python
 One of the misconceptions around Python and other dynamically-typed languages 
 is that they cannot be reliably used to build enterprise-grade software. 
 However, almost all commercial and government enterprises already use 

@@ -7,7 +7,6 @@ sidebartitle: Jenkins
 meta: Jenkins is a continuous integration (CI) server often used to automatically build and test Python applications.
 
 
-# Jenkins
 [Jenkins](https://jenkins.io/) is a 
 [continuous integration](/continuous-integration.html) (CI) server often 
 used to automate building, [testing](/testing.html) and 

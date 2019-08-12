@@ -7,7 +7,6 @@ sidebartitle: Best Python Resources
 meta: Get recommendations for dozens of great programming tutorials via Full Stack Python's Best Python Resources page.
 
 
-# Best Python Resources
 The Python community is amazing at sharing detailed resources and helping
 beginners learn to program with the language. There are so many resources
 out there though that it can be difficult to know how to find them. 

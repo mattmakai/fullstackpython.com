@@ -7,7 +7,6 @@ sidebartitle: Containers
 meta: Containers are a concept where processes are run isolated on a operating system.
 
 
-# Containers
 Containers are an [operating system](/operating-systems.html)-level 
 isolation mechanism for running processes and other system resources from
 other containers and the base system.

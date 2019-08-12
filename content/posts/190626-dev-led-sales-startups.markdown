@@ -5,7 +5,7 @@ category: talk
 date: 2019-06-26
 modified: 2019-07-11
 newsletter: False
-headerimage: /img/190626-dev-led-sales/01-dev-led-sales.jpg
+headerimage: /img/190626-dev-led-sales/01-title.jpg
 headeralt: Comment bubble with code representing a technical talk-based blog post.
 
 
@@ -19,7 +19,7 @@ portfolio company startup founders and the Extended Team on June 26, 2019.
 ----
 
 <div class="row talk"><div class="c6">
-<img src="/img/190626-dev-led-sales/01-dev-led-sales.jpg" width="100%" class="shot rnd outl" alt="Title slide for this talk on Developer-Led Sales for Startups.">
+<img src="/img/190626-dev-led-sales/01-title.jpg" width="100%" class="shot rnd outl" alt="Title slide for this talk on Developer-Led Sales for Startups.">
 </div><div class="c6"><p>
 </p></div></div>
 

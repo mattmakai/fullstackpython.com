@@ -7,7 +7,6 @@ sidebartitle: mod_wsgi
 meta: mod_wsgi is a Web Server Gateway Interface (WSGI) implementation that runs Python web application code.
 
 
-# mod_wsgi
 [mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)
 ([source code](https://github.com/GrahamDumpleton/mod_wsgi))
 is an implementation of the [Web Server Gateway Interface](/wsgi-servers.html) 

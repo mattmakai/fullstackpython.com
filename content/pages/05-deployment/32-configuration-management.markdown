@@ -7,7 +7,6 @@ sidebartitle: Configuration Management
 meta: Configuration management tools automate application deployments and environment settings.
 
 
-# Configuration Management
 Configuration management involves modifying servers from an existing state to 
 a desired state and automating how an application is deployed.
 

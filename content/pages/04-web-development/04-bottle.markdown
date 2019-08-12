@@ -7,7 +7,6 @@ sidebartitle: Bottle
 meta: Bottle is a Python web framework contained within a single source file. Learn more about Bottle on Full Stack Python.
 
 
-# Bottle
 [Bottle](http://bottlepy.org/docs/dev/index.html) 
 ([source code](https://github.com/bottlepy/bottle)) is a 
 [WSGI-compliant](/wsgi-servers.html)

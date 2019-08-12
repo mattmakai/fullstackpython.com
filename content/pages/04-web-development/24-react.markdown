@@ -7,7 +7,6 @@ sidebartitle: React
 meta: Learn about React and JavaScript frameworks for web applications on Full Stack Python.
 
 
-# React
 [React](https://reactjs.org/) is a [JavaScript](/javascript.html) web 
 application framework for building rich user interfaces that run in web 
 browsers.

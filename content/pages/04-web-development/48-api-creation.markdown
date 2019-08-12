@@ -7,7 +7,6 @@ sidebartitle: API Creation
 meta: Web APIs enable machine-to-machine communication. Learn more about creating web APIs on Full Stack Python.
 
 
-# API Creation
 Creating and exposing APIs allows your web application to interact with other
 applications through machine-to-machine communication.
 

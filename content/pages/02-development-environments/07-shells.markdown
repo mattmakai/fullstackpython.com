@@ -7,7 +7,6 @@ sidebartitle: Shells
 meta: A shell is a computer user interface and often refers to a text-only or primarily text command line terminal.
 
 
-# Shells
 Shells are computer user interfaces that typically refer to a text-only or 
 primarily text-based command prompt.
 

@@ -7,7 +7,6 @@ sidebartitle: MySQL
 meta: MySQL is an open source database often used by Python developers for storing and retrieving data.
 
 
-# MySQL
 MySQL is an open source [relational database](/databases.html) 
 implementation for storing and retrieving data.
 

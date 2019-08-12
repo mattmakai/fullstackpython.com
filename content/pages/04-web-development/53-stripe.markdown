@@ -7,7 +7,6 @@ sidebartitle: Stripe
 meta: Stripe is an application programming interface (API) for payment processing.
 
 
-# Stripe
 Stripe is a web
 [application programming interface (API)](/application-programming-interfaces.html) 
 for processing payments.

@@ -7,7 +7,6 @@ sidebartitle: PowerShell
 meta: PowerShell is an implementation of the shell concept and is often used during Python software development on Windows.
 
 
-# PowerShell
 [PowerShell](https://docs.microsoft.com/en-us/powershell/) is a commandline 
 user interface for Windows that is often used as part
 of a Python programmer's 

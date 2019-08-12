@@ -7,7 +7,6 @@ sidebartitle: d3.js
 meta: d3.js is a JavaScript visualization library for creating interactive visuals for web browsers.
 
 
-# Data-Driven Documents (d3.js)
 [Data-Driven Documents (d3.js)](https://d3js.org/) is a 
 [JavaScript](/javascript.html) visualization library used to create 
 interactive visuals for web browsers.

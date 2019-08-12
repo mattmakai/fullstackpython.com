@@ -7,7 +7,6 @@ sidebartitle: PyCharm
 meta: PyCharm is a text editor and integrated development environment specifically designed for writing Python code.
 
 
-# PyCharm
 [PyCharm](https://www.jetbrains.com/pycharm/) is a text editor and 
 integrated development environment specifically designed for writing 
 Python code.

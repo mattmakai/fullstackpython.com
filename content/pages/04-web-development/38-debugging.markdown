@@ -7,7 +7,6 @@ sidebartitle: Debugging
 meta: Debugging involves instrumenting, isolating and hunting defects in running code. Learn more about debugging on Full Stack Python.
 
 
-# Debugging
 Developers often find themselves in situations where the code they've written
 is not working quite right. When that happens, a developer debugs their code
 by instrumenting, executing and inspecting the code to determine what state

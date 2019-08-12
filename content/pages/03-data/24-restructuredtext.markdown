@@ -7,7 +7,6 @@ sidebartitle: reStructuredText
 meta: reStructuredText is a markup language implementation that is often used to document Python and other software projects.
 
 
-# reStructuredText
 [reStructuredText](http://docutils.sourceforge.net/rst.html), sometimes
 abbreviated as "RST" or "reST", is a [markup language](/markup-languages.html) 
 implementation that is often used to document Python projects.

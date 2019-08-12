@@ -7,7 +7,6 @@ sidebartitle: Git
 meta: Git is an implementation of the source (version) control concept. Learn more about Git and source control on Full Stack Python.
 
 
-# Git
 [Git](https://git-scm.com/) is a distributed open source 
 [source control](/source-control.html) (also referred to as "version 
 control") system commonly used to track and manage file changes. Git is 

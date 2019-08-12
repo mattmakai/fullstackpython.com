@@ -7,7 +7,6 @@ sidebartitle: Lektor
 meta: Lektor is a static website generator with content management system (CMS) and web framework features for creating websites.
 
 
-# Lektor
 [Lektor](https://www.getlektor.com/) is a static website generator with 
 content management system (CMS) and [web framework](/web-frameworks.html) 
 features for creating websites. 

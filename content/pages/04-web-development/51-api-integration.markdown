@@ -7,7 +7,6 @@ sidebartitle: API Integration
 meta: Integrating web APIs into an application is necessary for both mobile and web applications. Learn more about API integration on Full Stack Python.
 
 
-# API Integration
 The majority of production Python web applications rely on several
 externally hosted application programming interfaces (APIs). APIs are also
 commonly referred to as third party services or external platforms. 

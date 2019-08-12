@@ -7,7 +7,6 @@ sidebartitle: SQL Injection
 meta: SQL Injection is a web application vulnerability category that can affect both relational and NoSQL databases.
 
 
-# SQL Injection
 SQL injections are a category of web application security vulnerabilities that 
 can affect both [relational databases](/databases.html) and 
 [NoSQL data stores](/no-sql-datastore.html).

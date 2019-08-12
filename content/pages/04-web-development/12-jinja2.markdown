@@ -7,7 +7,6 @@ sidebartitle: Jinja2
 meta: Jinja2 is a template engine written in Python for outputting formats such as HTML and XML.
 
 
-# Jinja2
 Jinja, also commonly referred to as 
 "[Jinja2](http://jinja.pocoo.org/docs/dev/)" to specify the newest 
 release version, is a Python [template engine](/template-engines.html) 

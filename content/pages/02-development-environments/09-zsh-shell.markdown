@@ -7,7 +7,6 @@ sidebartitle: Zsh
 meta: Zsh is an implementation of the shell concept and is often used during Python software development.
 
 
-# Zsh
 [Zsh](http://zsh.sourceforge.net/) interprets and executes input 
 entered from text sources such as user input or from another application. 
 Zsh is an implementation of the [shell concept](/shells.html) that is

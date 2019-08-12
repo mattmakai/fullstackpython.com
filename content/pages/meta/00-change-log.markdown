@@ -1,4 +1,5 @@
-title: Change Log category: page
+title: Change Log 
+category: page
 slug: change-log
 sortorder: 0700
 toc: True
@@ -6,7 +7,6 @@ sidebartitle: Change Log
 meta: The change log page explains what is new on Full Stack Python.
 
 
-# Change Log
 Here are the major changes to Full Stack Python in reverse chronological
 order since its inception in December 2012. You can view commit-level
 changes via the 

@@ -7,7 +7,6 @@ sidebartitle: Redis
 meta: Redis is an in-memory key-value pair data store classified as a NoSQL database and used with Python applications.
 
 
-# Redis
 <a href="https://redis.io/">Redis</a> is an in-memory key-value pair 
 database typically classified as a [NoSQL database](/no-sql-datastore.html). 
 Redis is commonly used for [caching](/caching.html), transient data storage

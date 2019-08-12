@@ -7,7 +7,6 @@ sidebartitle: Neo4j
 meta: Neo4j is a graph NoSQL database that can be used to persist data in Python applications.
 
 
-# Neo4j
 [Neo4j](https://neo4j.com/product/) 
 ([source code](https://github.com/neo4j/neo4j))
 is a [NoSQL](/no-sql-datastore.html) 

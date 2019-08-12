@@ -7,7 +7,6 @@ sidebartitle: 4. Web Development
 meta: Web development is the catch-all term for activities involved with websites and web apps. Learn more on Full Stack Python.
 
 
-# Web Development
 Web development is the umbrella term for conceptualizing, creating, 
 [deploying](/deployment.html) and operating web applications and 
 [application programming interfaces](/application-programming-interfaces.html)

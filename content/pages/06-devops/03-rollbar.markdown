@@ -7,7 +7,6 @@ sidebartitle: Rollbar
 meta: Rollbar is a monitoring service that can be used with Python web applications to catch and report errors.
 
 
-# Rollbar
 [Rollbar](https://rollbar.com) is a hosted monitoring service that can be 
 used with Python [web applications](/web-development.html) to catch and 
 report errors.

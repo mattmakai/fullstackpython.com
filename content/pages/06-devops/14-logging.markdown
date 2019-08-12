@@ -7,7 +7,6 @@ sidebartitle: Logging
 meta: Logging saves error, warning and event output to storage for debugging purposes. Learn about logging on Full Stack Python.
 
 
-# Logging
 Logging saves output such as errors, warnings and event information to 
 persistent storage for debugging purposes. 
 

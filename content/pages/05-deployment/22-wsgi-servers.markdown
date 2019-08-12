@@ -7,7 +7,6 @@ sidebartitle: WSGI Servers
 meta: A Web Server Gateway Interface (WSGI) server runs Python code to create a web application. Learn more about WSGI servers on Full Stack Python.
 
 
-# WSGI Servers
 A [Web Server Gateway Interface](http://wsgi.readthedocs.org/en/latest/)
 (WSGI) server implements the web server side of the WSGI interface for
 running Python web applications. 

@@ -7,7 +7,6 @@ sidebartitle: Virtual Private Servers
 meta: A virtual private server is a software-isolated portion of hardware run with a hypervisor on a physical server.
 
 
-# Virtual private servers (VPS)
 Virtual private servers (VPSs) are sandboxed slices of hardware run with a
 hypervisor running on top of a physical server. Virtualization software 
 such as [Xen](http://www.xenproject.org/) and 

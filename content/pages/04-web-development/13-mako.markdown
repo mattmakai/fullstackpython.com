@@ -7,7 +7,6 @@ sidebartitle: Mako
 meta: Mako is a Python template engine used to generate HTML, XML or other output formats.
 
 
-# Mako
 Mako is a [template engine built in Python](/template-engines.html) that is
 used to generate output HTML, XML and similar formats.
 

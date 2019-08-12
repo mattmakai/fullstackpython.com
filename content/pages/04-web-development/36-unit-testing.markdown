@@ -7,7 +7,6 @@ sidebartitle: Unit Testing
 meta: Unit testing exercises one function isolated from a program. Learn more about unit testing on Full Stack Python.
 
 
-# Unit testing
 Unit testing is a method of determining the correctness of a single function 
 isolated from a larger codebase. The idea is that if all the atomic units
 of an application work as intended in isolation, then integrating them 

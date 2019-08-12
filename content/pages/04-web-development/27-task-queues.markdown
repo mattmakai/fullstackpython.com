@@ -7,7 +7,6 @@ sidebartitle: Task Queues
 meta: Task queues handle asynchronous jobs outside a Python web application HTTP request-response cycle.
 
 
-# Task queues
 Task queues manage background work that must be executed outside the usual
 HTTP request-response cycle.
 

@@ -7,7 +7,6 @@ sidebartitle: Code Metrics
 meta: Code metrics provide insight into the quality of a code base via analysis tools. Learn more about code metrics on Full Stack Python.
 
 
-# Code Metrics
 Code metrics can be produced by static code analysis tools to determine 
 complexity and non-standard practices.
 

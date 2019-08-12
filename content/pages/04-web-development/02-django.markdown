@@ -7,7 +7,6 @@ sidebartitle: Django
 meta: Learn more about Django, the popular batteries-included Python web framework, on Full Stack Python.
 
 
-# Django
 [Django](http://www.djangoproject.com/) is a widely-used Python web 
 application framework with a "batteries-included" philosophy. The principle
 behind batteries-included is that the common functionality for building

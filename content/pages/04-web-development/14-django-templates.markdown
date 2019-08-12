@@ -7,7 +7,6 @@ sidebartitle: Django Templates
 meta: Django has its own template engine referred to as Django templates and is similar to Jinja with some minor differences.
 
 
-# Django Templates
 The [Django web framework](/django.html) contains its own 
 [template engine](/template-engines.html) for generating HTML, XML and other
 output formats.

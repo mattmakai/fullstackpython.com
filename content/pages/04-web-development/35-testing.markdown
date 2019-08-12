@@ -7,7 +7,6 @@ sidebartitle: Testing
 meta: Testing code is a vital part of developing Python applications. Learn more about testing on Full Stack Python.
 
 
-# Testing
 Testing determines whether software runs correctly based on specific inputs 
 and identifies defects that need to be fixed.
 

@@ -7,7 +7,6 @@ sidebartitle: Caddy
 meta: Caddy is an HTTP server written in Go that emphasizes modern security standards and encryption.
 
 
-# Caddy
 [Caddy](https://caddyserver.com/) is a relatively new HTTP server created 
 in 2015 and written in [Go](https://golang.org/). The server's philosophy
 and design emphasize HTTPS-everywhere along with the HTTP/2 protocol.

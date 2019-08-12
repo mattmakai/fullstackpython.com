@@ -7,7 +7,6 @@ sidebartitle: WebRTC
 meta: Web Real-Time Communications (WebRTC) is a protocol for web apps to transmit video, audio and data streams between client and server.
 
 
-# WebRTC
 [Web Real-Time Communications (WebRTC)](https://tools.ietf.org/html/rfc7478) 
 is a specification for a protocol implementation that enables web apps to 
 transmit video, audio and data streams between client (typically a web

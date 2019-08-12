@@ -7,7 +7,6 @@ sidebartitle: 5. Deployment
 meta: Web application deployment involves packaging and running your app on a server. Learn more about deployments on Full Stack Python.
 
 
-# Deployment
 Deployment involves packaging up your web application and putting it in a 
 production environment that can run the app.
 

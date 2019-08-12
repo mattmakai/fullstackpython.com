@@ -7,7 +7,6 @@ sidebartitle: Minification
 meta: Minification reduces the size of web assets to make pages and applications load quicker.
 
 
-# Minification
 Minification is the process of reducing the size of 
 [static content assets](/static-content.html) that need to be transferred 
 from a [web server](/web-servers.html) to the web browser client. The goal

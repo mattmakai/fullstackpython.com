@@ -7,7 +7,6 @@ sidebartitle: Learning Programming
 meta: Want to learn how to code but don't know where to start? Read up on approaches to learning programming on Full Stack Python.
 
 
-# Learning Programming
 Learning to program is about understanding how to translate thoughts into 
 source code that can be executed on computers to achieve one or more goals.
 

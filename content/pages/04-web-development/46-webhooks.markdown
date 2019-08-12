@@ -7,7 +7,6 @@ sidebartitle: Webhooks
 meta: Webhooks are user-defined HTTP callbacks that allow interactions between otherwise independent web applications.
 
 
-# Webhooks
 Webhooks are user-defined HTTP callbacks that allow interactions between 
 otherwise independent web applications.
 

@@ -7,7 +7,6 @@ sidebartitle: Operating Systems
 meta: Learn what operating system you should be using for you web application and resources to configure the OS on Full Stack Python.
 
 
-# Operating Systems
 An operating system runs on the server or virtual server and controls access 
 to computing resources. The operating system also includes a way to install
 programs necessary for running your Python web application.

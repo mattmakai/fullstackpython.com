@@ -7,7 +7,6 @@ sidebartitle: Servers
 meta: Servers are required to run web applications. Learn more about setting up servers on Full Stack Python.
 
 
-# Servers
 Servers are the physical infrastructure to run all the layers of software
 so your web application can respond to requests from clients such as web 
 browsers.

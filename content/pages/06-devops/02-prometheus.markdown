@@ -7,7 +7,6 @@ sidebartitle: Prometheus
 meta: Prometheus is an open source monitoring tool that can be used to instrument and report on Python web apps.
 
 
-# Prometheus
 [Prometheus](https://prometheus.io/) 
 ([source code](https://github.com/prometheus/prometheus))  is an open
 source [monitoring](/monitoring.html) tool that can be used to instrument 

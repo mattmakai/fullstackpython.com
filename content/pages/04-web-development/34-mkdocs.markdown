@@ -7,7 +7,6 @@ sidebartitle: MkDocs
 meta: MkDocs is a static site generator built in Python that is intended for creating slick project documentation.
 
 
-# MkDocs
 [MkDocs](http://www.mkdocs.org/) is a Python-based static site generator 
 that combines Markdown content with [Jinja2 templates](/jinja2.html) to 
 produce websites. MkDocs can be pronounced "McDocs" or "M-K Docs",

@@ -7,7 +7,6 @@ sidebartitle: 6. DevOps
 meta: DevOps combines software development and application operations. Python is often used in the DevOps toolchain.
 
 
-# DevOps
 DevOps is the combination of [application development](/web-development.html)
 and operations, which minimizes or eliminates the disconnect between 
 software developers who build applications and systems administrators 

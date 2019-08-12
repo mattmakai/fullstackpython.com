@@ -7,7 +7,6 @@ sidebartitle: Page Statuses
 meta: Many pages on Full Stack Python are a work-in-progress. This page aggregates the status of each other page.
 
 
-# Page Statuses
 There are 205 pages on Full Stack Python, not including blog posts. Many 
 pages are a work-in-progress. This page aggregates the status of each page 
 on the site.

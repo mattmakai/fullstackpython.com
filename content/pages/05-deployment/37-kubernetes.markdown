@@ -7,7 +7,6 @@ sidebartitle: Kubernetes
 meta: Kubernetes is a container orchestration system for deploying, scaling and managing applications.
 
 
-# Kubernetes
 [Kubernetes](https://kubernetes.io/) 
 ([source code](https://github.com/kubernetes/kubernetes)) is a 
 [container](/containers.html) orchestration system for 

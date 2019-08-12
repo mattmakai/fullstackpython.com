@@ -7,7 +7,6 @@ sidebartitle: Text Editors & IDEs
 meta: Text editors and integrated development environments (IDEs) are applications for writing Python code.
 
 
-# Text Editors and IDEs
 Text editors and integrated development environments (IDEs) are applications
 for [writing code](/learning-programming.html). These applications are the
 primary user interface for developers to create their own programs.

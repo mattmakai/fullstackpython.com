@@ -7,7 +7,6 @@ sidebartitle: Vue.js
 meta: Learn about Vue.js and other JavaScript frameworks for web applications on Full Stack Python.
 
 
-# Vue.js
 [Vue.js](https://vuejs.org/) ([source code](https://github.com/vuejs/vue)) 
 is a [JavaScript](/javascript.html) web application framework for building 
 rich apps that run in web browsers.

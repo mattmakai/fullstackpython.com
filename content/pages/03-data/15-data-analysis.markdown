@@ -7,7 +7,6 @@ sidebartitle: Data analysis
 meta: Data analysis is a broad set of activities that involves cleaning, processing, transforming and understanding a data collection.
 
 
-# Data analysis
 Data analysis involves a broad set of activities to clean, process and
 transform a data collection to learn from it. Python is commonly used
 as a programming language to perform data analysis because many tools,

@@ -7,7 +7,6 @@ sidebartitle: Terminal Multiplexers
 meta: Terminal multiplexers can run several shells in a single terminal as well as attach, detach and move sessions from one computer to another.
 
 
-# Terminal Multiplexers
 A terminal multiplexer provides separation between where a [shell](/shells.html)
 is running and where the shell is accessed. Each shell can be running on a 
 different computer, but to the developer it does not matter where each 

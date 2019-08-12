@@ -7,7 +7,6 @@ sidebartitle: Linode
 meta: Linode is a virtual private server service provider that is frequently used for deploying production Python web applications.
 
 
-# Linode
 Linode is a virtual private server service provider that is frequently 
 used for deploying production Python web applications.
 

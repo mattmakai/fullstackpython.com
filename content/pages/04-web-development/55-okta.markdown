@@ -7,7 +7,6 @@ sidebartitle: Okta
 meta: Okta is an application programming interface (API) for authentication and identity management in web applications.
 
 
-# Okta
 [Okta](https://developer.okta.com/) is an 
 [application programming interface (API)](/application-programming-interfaces.html) 
 for authentication and identity management in web applications.

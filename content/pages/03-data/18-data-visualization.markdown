@@ -7,7 +7,6 @@ sidebartitle: Data visualization
 meta: Data visualization transforms raw numbers into a graphic medium that allows humans to better understand patterns and trends.
 
 
-# Data Visualization
 Data visualizations transform raw numbers into graphic formats that make it
 easier for humans to see patterns, trends and other useful information.
 

@@ -7,7 +7,6 @@ sidebartitle: Sublime Text
 meta: Sublime Text is a commonly-used text editor with development extensions for the Python programming language.
 
 
-# Sublime Text
 [Sublime Text](https://www.sublimetext.com/) is a commonly-used text editor 
 used to write Python code. Sublime Text's slick user interface along with its 
 numerous extensions for syntax highlighting, source file finding and analyzing 

@@ -7,7 +7,6 @@ sidebartitle: pandas
 meta: The Python Data Analysis Library (pandas) is a data structures and analysis library.
 
 
-# pandas
 The [Python Data Analysis Library (pandas)](http://pandas.pydata.org/)
 is a data structures and analysis library.
 

@@ -7,7 +7,6 @@ sidebartitle: Static Site Generators
 meta: A static site generator combines a markup language with a templating engine to produce HTML files. Learn more on Full Stack Python.
 
 
-# Static Site Generator
 A static website generator combines a markup language, such as Markdown 
 or reStructuredText, with a templating engine such as 
 [Jinja](http://jinja.pocoo.org/), to produce HTML 

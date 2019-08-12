@@ -8,7 +8,6 @@ headerimage: /img/pages/flask-python-fsp.jpg
 meta: Flask is a popular, extensible web microframework for building web applications with Python.
 
 
-# Flask
 [Flask](http://flask.pocoo.org/) ([source code](https://github.com/pallets/flask))
 is a Python [web framework](/web-frameworks.html) built with a 
 [small core and easy-to-extend philosophy](http://flask.pocoo.org/docs/design/). 

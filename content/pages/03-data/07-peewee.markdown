@@ -7,7 +7,6 @@ sidebartitle: Peewee
 meta: Peewee is a object-relational mapper (ORM) implementation for bridging relational data and Python objects.
 
 
-# Peewee
 [Peewee](http://docs.peewee-orm.com/en/latest/) 
 ([source code](https://github.com/coleifer/peewee)) is a 
 [object-relational mapper (ORM)](/object-relational-mappers-orms.html) 

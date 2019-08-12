@@ -7,7 +7,6 @@ sidebartitle: Dramatiq
 meta: Dramatiq is an alternative to the Celery task queue that support RabbitMQ and Redis as brokers.
 
 
-# Dramatiq
 [Dramatiq](https://dramatiq.io) ([source code](https://github.com/Bogdanp/dramatiq))
 is a Python-based [task queue](/task-queues.html)
 created as an alernative to the ubiquitous [Celery](/celery.html) project

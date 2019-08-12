@@ -7,7 +7,6 @@ sidebartitle: Pelican
 meta: Pelican is a static site generator implemented in Python that uses Markdown or reStructuredText to produce websites.
 
 
-# Pelican
 [Pelican](http://docs.getpelican.com/en/3.6.3/) is a 
 [static site generator](/static-site-generator.html) implemented in Python 
 that combines [Jinja](/jinja2.html) [templates](/template-engines.html) 

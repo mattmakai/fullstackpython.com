@@ -7,7 +7,6 @@ sidebartitle: Why Use Python?
 meta: Learn why you should use Python, the powerful and accessible programming language, on Full Stack Python.
 
 
-# Why Use Python?
 Python's expansive library of open source data analysis tools, 
 [web frameworks](/web-frameworks.html), 
 and testing instruments make its ecosystem one of the largest out of any 

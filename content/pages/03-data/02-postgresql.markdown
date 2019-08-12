@@ -7,7 +7,6 @@ sidebartitle: PostgreSQL
 meta: PostgreSQL is an open source relational database commonly used with Python applications.
 
 
-# PostgreSQL
 [PostgreSQL](http://www.postgresql.org/), often written as "Postgres" and 
 pronounced "Poss-gres", is an open source
 [relational database](/databases.html) implementation frequently used by 

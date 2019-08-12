@@ -7,7 +7,6 @@ sidebartitle: Bokeh
 meta: Bokeh is a data visualization library that builds visuals in Python and outputs them in JavaScript.
 
 
-# Bokeh
 [Bokeh](https://bokeh.pydata.org/en/latest/) is a data visualization
 library that allows a developer to code in Python and output 
 [JavaScript](/javascript.html) charts and visuals in web browsers.

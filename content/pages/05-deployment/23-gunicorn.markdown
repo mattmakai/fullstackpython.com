@@ -7,7 +7,6 @@ sidebartitle: Green Unicorn (Gunicorn)
 meta: Green Unicorn (Gunicorn) is a Python WSGI server that runs Python web application code.
 
 
-# Green Unicorn (Gunicorn)
 [Green Unicorn](http://gunicorn.org/), commonly shortened to "Gunicorn", 
 is a [Web Server Gateway Interface (WSGI) server](/wsgi-servers.html)
 implementation that is commonly used to run Python web applications.

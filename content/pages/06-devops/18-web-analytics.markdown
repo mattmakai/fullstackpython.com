@@ -7,7 +7,6 @@ sidebartitle: Web Analytics
 meta: Web analytics tools collect and visualize data from website visitors. Learn more on Full Stack Python.
 
 
-# Web analytics
 Web analytics involves collecting, processing, visualizing web data to enable
 critical thinking about how users interact with a web application.
 

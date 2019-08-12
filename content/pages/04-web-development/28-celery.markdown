@@ -7,7 +7,6 @@ sidebartitle: Celery
 meta: Celery is a task queue for executing work outside a Python web application HTTP request-response cycle.
 
 
-# Celery
 [Celery](http://www.celeryproject.org/) is a [task queue](/task-queues.html) 
 implementation for [Python web applications](/web-development.html) used
 to asynchronously execute work outside the HTTP request-response cycle.

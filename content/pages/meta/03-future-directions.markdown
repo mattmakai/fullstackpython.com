@@ -7,7 +7,6 @@ sidebartitle: Future Directions
 meta: The future directions page on Full Stack Python gives some insight into in-progress site enhancements.
 
 
-# Future Directions
 Full Stack Python has completely blown away my expectations for what I could
 accomplish with a side project. I really appreciate all of the in-person 
 feedback, emails and pull requests I've received from the community. Keep 

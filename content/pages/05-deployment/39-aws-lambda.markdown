@@ -7,7 +7,6 @@ sidebartitle: AWS Lambda
 meta: AWS Lambda is a serverless compute service that can execute arbitrary Python 2.7, 3.6 or 3.7 code.
 
 
-# AWS Lambda
 [Amazon Web Services (AWS) Lambda](https://aws.amazon.com/lambda/) 
 is a compute service that executes arbitrary Python code in response 
 to developer-defined AWS events, such as inbound API calls or file 

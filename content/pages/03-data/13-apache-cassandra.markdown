@@ -7,7 +7,6 @@ sidebartitle: Apache Cassandra
 meta: Apache Cassandra is a column-family NoSQL data store occasionally used for persisting data in Python applications.
 
 
-# Apache Cassandra
 [Apache Cassandra](http://cassandra.apache.org/) is a column-family NoSQL 
 data store designed for write-heavy persistent storage in 
 [Python web applications](/web-development.html) and 

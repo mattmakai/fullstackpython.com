@@ -1,4 +1,4 @@
-title: Cascading Style Sheets
+title: Cascading Style Sheets (CSS)
 category: page
 slug: cascading-style-sheets
 sortorder: 0417
@@ -7,7 +7,6 @@ sidebartitle: Cascading Style Sheets (CSS)
 meta: Learn how to use Cascading Style Sheets (CSS) to create your web application's user interface design on Full Stack Python.
 
 
-# Cascading Style Sheets (CSS)
 Cascading Style Sheet (CSS) files contain rules for how to display and 
 lay out the HTML content when it is rendered by a web browser.
 

@@ -7,7 +7,6 @@ sidebartitle: CSS Frameworks
 meta: A CSS framework is a code library that makes web designs easier for developers to implement in their web apps.
 
 
-# CSS Frameworks
 A [Cascading Style Sheet (CSS)](/cascading-style-sheets.html) framework is 
 a code library that abstracts common web designs and makes the designs 
 easier for a developer to implement in their web apps.

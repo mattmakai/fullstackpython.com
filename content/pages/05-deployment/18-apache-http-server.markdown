@@ -7,7 +7,6 @@ sidebartitle: Apache HTTP Server
 meta: Apache HTTP Server is a widely deployed web server and is often used with WSGI to serve Python web apps.
 
 
-# Apache HTTP Server
 The [Apache HTTP Server](https://httpd.apache.org/) is a widely deployed web server
 that can be used in combination with a WSGI module, such as mod\_wsgi or a
 stand-alone [WSGI server](/wsgi-servers.html) to run Python web applications.

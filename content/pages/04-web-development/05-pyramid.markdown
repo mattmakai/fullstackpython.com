@@ -7,7 +7,6 @@ sidebartitle: Pyramid
 meta: Pyramid is a Python web framework that grew out of the Pylons project. Learn more about Pyramid on Full Stack Python. 
 
 
-# Pyramid
 [Pyramid](http://www.pylonsproject.org/projects/pyramid/about) is an open 
 source [WSGI](/wsgi-servers.html) web framework based on the 
 Model-View-Controller (MVC) architectural pattern.

@@ -7,7 +7,6 @@ sidebartitle: NoSQL Data Stores
 meta: NoSQL data stores persistent data in different ways than traditional relational databases. Learn more about NoSQL on Full Stack Python.
 
 
-# NoSQL Data Stores
 Relational databases store the vast majority of web application
 persistent data. However, there are several alternative classifications of
 storage representations.

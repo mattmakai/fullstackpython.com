@@ -7,7 +7,6 @@ sidebartitle: SQLAlchemy
 meta: SQLAlchemy is a popular Python-based object-relational mapper (ORM) that bridges database relations into objects.
 
 
-# SQLAlchemy
 [SQLAlchemy](http://www.sqlalchemy.org/) 
 ([source code](https://github.com/zzzeek/sqlalchemy)) is a well-regarded 
 database toolkit and 

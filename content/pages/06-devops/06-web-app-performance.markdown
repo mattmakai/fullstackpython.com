@@ -7,7 +7,6 @@ sidebartitle: Web App Performance
 meta: Web application performance is affected by network latency, bandwidth, database queries, page size and many other factors.
 
 
-# Web App Performance
 Web application performance is affected by network latency, bandwidth, 
 database queries, page size and many other factors.
 

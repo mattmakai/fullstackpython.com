@@ -7,7 +7,6 @@ sidebartitle: Marcos Pythona
 meta: Marcos Placona demoing in his favorite programming language ever, Python.
 
 
-# Marcos Pythona
 Photo evidence of 
 [Marcos Placona](https://www.twilio.com/blog/2014/12/introducing-twilio-developer-evangelist-marcos-placona.html) 
 demoing on stage at [SIGNAL](https://www.twilio.com/signal) 

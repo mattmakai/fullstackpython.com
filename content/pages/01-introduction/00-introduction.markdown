@@ -7,7 +7,6 @@ sidebartitle: 1. Introduction
 meta: Full Stack Python provides plain language explanations for Python programming concepts and implementations.
 
 
-# Introduction
 You're knee deep in learning [Python](http://www.python.org/)
 programming. The syntax is starting to make sense. The first
 few "*ahh-ha*!" moments hit you as you learn conditional

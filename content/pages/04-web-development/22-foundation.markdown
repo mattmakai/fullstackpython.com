@@ -7,7 +7,6 @@ sidebartitle: Foundation
 meta: Foundation is a CSS framework used to design web application user interfaces.
 
 
-# Foundation
 [Foundation](https://foundation.zurb.com/) is a 
 [Cascading Style Sheet (CSS) framework](/css-frameworks.html) that makes it 
 easier to create website and web application user interfaces. Bootstrap 

@@ -7,7 +7,6 @@ sidebartitle: CDNs
 meta: Content delivery networks (CDNs) serve static assets via globally distributed servers to improve web app loading speed.
 
 
-# Content Delivery Networks (CDNs)
 Content delivery networks (CDNs) serve static assets via globally distributed 
 servers to improve web app loading speed.
 

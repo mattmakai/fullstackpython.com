@@ -7,7 +7,6 @@ sidebartitle: Vim
 meta: Vim is a text editor with powerful string manipulation capabilities. Find out more about Vim on Full Stack Python.
 
 
-# Vim
 [Vim](https://www.vim.org/) ([source code](https://github.com/vim/vim)), 
 short for Vi IMproved, is a configurable text editor often used as
 a Python development environment. Vim proponents commonly cite the numerous

@@ -7,7 +7,6 @@ sidebartitle: Matplotlib
 meta: Matplotlib is a data visualization plotting library that builds visuals in Python for output in Jupyter Notebooks and web apps.
 
 
-# Matplotlib
 Matplotlib is a data visualization plotting library where a developer can 
 code visuals in Python and output them as part of 
 [Jupyter Notebooks](/jupyter-notebook.html), 

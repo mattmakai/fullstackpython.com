@@ -7,7 +7,6 @@ sidebartitle: Source Control
 meta: Source control versions and backs up code for when programming problems occur. Learn more about source control on Full Stack Python.
 
 
-# Source control
 Source control, also known as *version control*, stores software code files
 with a detailed history of every modification made to those files.
 

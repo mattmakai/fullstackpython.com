@@ -7,7 +7,6 @@ sidebartitle: SciPy & NumPy
 meta: SciPy is an umbrella project for many open source data analysis libraries such as NumPy, pandas and Matplotlib.
 
 
-# SciPy and NumPy
 [SciPy](https://www.scipy.org/) is a collection of open source code libraries 
 for math, science and engineering. [NumPy](https://www.numpy.org/),
 [Matplotlib](/matplotlib.html) and [pandas](/pandas.html) are libraries

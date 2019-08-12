@@ -7,7 +7,6 @@ sidebartitle: Responsive Design
 meta: Responsive design is a method of using media queries in Cascading Style Sheets (CSS) to ensure a site is usable on all screen sizes.
 
 
-# Responsive design
 Responsive design is a method of using media queries in 
 [Cascading Style Sheets (CSS)](/cascading-style-sheets.html) to ensure a 
 site is usable on various devices with different screen sizes, from very

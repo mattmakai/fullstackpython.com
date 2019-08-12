@@ -7,7 +7,6 @@ sidebartitle: Windows
 meta: Windows is an operating system built by Microsoft that is often used for developing Python applications.
 
 
-# Windows
 [Windows](https://www.microsoft.com/windows) is a closed-source, proprietary 
 [operating system](/operating-systems.html) created by Microsoft that 
 is often used to [develop Python applications](/learning-programming.html).

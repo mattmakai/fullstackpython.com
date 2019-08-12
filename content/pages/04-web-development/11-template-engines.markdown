@@ -7,7 +7,6 @@ sidebartitle: Template Engines
 meta: Template engines provide programmatic output of formatted string content such as HTML, XML or PDF.
 
 
-# Template Engines
 Template engines take in tokenized strings and produce rendered strings with
 values in place of the tokens as output. Templates are typically used as
 an intermediate format written by developers to programmatically 

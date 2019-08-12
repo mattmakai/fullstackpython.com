@@ -7,7 +7,6 @@ sidebartitle: Python Community
 meta: Python has a global community with millions of developers that interact online and offline in thousands of virtual and physical locations.
 
 
-# Python Community
 The Python programming language has a global community with millions of 
 software developers who interact online and offline in thousands of virtual 
 and physical locations.

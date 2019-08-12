@@ -7,7 +7,6 @@ sidebartitle: Docker
 meta: Docker is a container management system often used for deploying web applications. Learn more about Docker on Full Stack Python.
 
 
-# Docker
 [Docker](https://docs.docker.com/) 
 ([source code for core Docker project](https://github.com/docker/docker))
 is an infrastructure management platform for running and deploying software. 

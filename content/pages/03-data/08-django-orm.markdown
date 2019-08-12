@@ -7,7 +7,6 @@ sidebartitle: Django ORM
 meta: Django comes with a default object-relational mapping layer for multiple backends in Python web apps.
 
 
-# Django Object-Relational Mapper
 The [Django](/django.html) [web framework](/web-frameworks.html) includes
 a default 
 [object-relational mapping layer (ORM)](/object-relational-mappers-orms.html)

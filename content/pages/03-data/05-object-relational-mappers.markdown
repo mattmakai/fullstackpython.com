@@ -7,7 +7,6 @@ sidebartitle: Object-relational Mappers
 meta: Object-relational mappers (ORMs) bridge relational databases and data represented in Python code.
 
 
-# Object-relational mappers (ORMs)
 An object-relational mapper (ORM) is a code library that automates the
 transfer of data stored in relational databases tables into objects that
 are more commonly used in application code.

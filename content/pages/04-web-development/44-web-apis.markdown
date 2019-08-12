@@ -7,7 +7,6 @@ sidebartitle: Web APIs
 meta: Web application programming interfaces (APIs) provide a machine-to-machine data transport mechanism. Learn more about web APIs at Full Stack Python.
 
 
-# Application Programming Interfaces
 Application programming interfaces (APIs) provide machine-readable
 data transfer and signaling between applications.
 

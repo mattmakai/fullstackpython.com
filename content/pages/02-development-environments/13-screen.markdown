@@ -7,7 +7,6 @@ sidebartitle: Screen
 meta: Screen is a terminal multiplexer implementation frequently used for development on Linux and macOS.
 
 
-# Screen
 [Screen](https://www.gnu.org/software/screen/)
 ([source code](https://savannah.gnu.org/git/?group=screen)) is a 
 [terminal multiplexer](/terminal-multiplexers.html) implementation 

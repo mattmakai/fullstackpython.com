@@ -7,7 +7,6 @@ sidebartitle: Heroku
 meta: Heroku is an implementation of the platform-as-a-service (PaaS) concept that can be used to more easily deploy Python applications.
 
 
-# Heroku
 <a href="https://www.heroku.com/">Heroku</a> is an implementation of 
 the platform-as-a-service (PaaS) concept that can be used to more 
 easily [deploy](/deployment.html) Python applications.

@@ -29,6 +29,13 @@
 {% block banner %}{% include "banner.html" %}{% endblock %}
 
 {% block content %}
+{% if page.slug != 'about-author' %}
+<div class="row">
+ <div class="c12">
+  <h1 style="font-size: 32px">{{ page.title }}</h1>
+ </div>
+</div>
+{% endif %}
 <div class="row">
  <div class="c8">
   {% if page.slug == 'about-author' %}
@@ -41,9 +48,6 @@
     </div>
    </div>
   {% else %}
-   {% if page.sortorder[0:2] == "50" %}
-    <h1 style="font-size: 32px">{{ page.title }}</h1>
-   {% endif %}
    {{ page.content }}
   {% endif %}
   {% if page.sortorder[0:2] == "50" %}
@@ -53,7 +57,7 @@
   {% endif %}
   {% include "email-for-book.html" %}
  </div>
- <div class="co1 c3" id="sb">
+ <div class="co1 c3">
   {% include "sidebar.html" %}
  </div>
 </div>

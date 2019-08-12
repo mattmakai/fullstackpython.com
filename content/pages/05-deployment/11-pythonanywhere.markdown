@@ -7,7 +7,6 @@ sidebartitle: PythonAnywhere
 meta: PythonAnywhere is a platform-as-a-service implementation which can be used to more easily deploy Python applications.
 
 
-# PythonAnywhere
 <a href="https://www.pythonanywhere.com/">PythonAnywhere</a> is an 
 implementation of the 
 [platform-as-a-service (PaaS)](/platform-as-a-service.html) concept 

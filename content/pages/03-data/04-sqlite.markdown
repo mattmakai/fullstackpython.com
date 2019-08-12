@@ -7,7 +7,6 @@ sidebartitle: SQLite
 meta: SQLite is an relational database built into the Python standard library that uses a single file to store data. 
 
 
-# SQLite
 SQLite is an open source [relational database](/databases.html) included with 
 the Python standard library as of Python 2.5. The pysqlite database driver 
 is also included with the standard library so that no further external 

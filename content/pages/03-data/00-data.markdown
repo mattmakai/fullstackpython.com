@@ -7,7 +7,6 @@ sidebartitle: 3. Data
 meta: Python make it possible to work with data through analysis, visualization and persistence. Learn more about data on Full Stack Python.
 
 
-# Data
 Data is an incredibly broad topic but it can be broken down into many
 subsections, including (in no particular order):
 

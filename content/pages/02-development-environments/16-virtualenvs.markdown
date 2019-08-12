@@ -7,7 +7,6 @@ sidebartitle: Virtualenvs
 meta: Virtual environments (virtualenvs) provide dependency isolation for your projects from external libraries.
 
 
-# Virtual environments (virtualenvs)
 Virtual environments, implemented by the library virtualenv and venv 
 (added to Python standard library in Python 3.3 via 
 [PEP 405](https://www.python.org/dev/peps/pep-0405/)), separate project

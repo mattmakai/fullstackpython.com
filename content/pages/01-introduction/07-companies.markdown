@@ -7,7 +7,6 @@ sidebartitle: Companies using Python
 meta: A majority of companies around the world use the Python programming language throughout their organizations.
 
 
-# Companies Using Python
 The Python programming language is widely used by companies around the world 
 to [build web apps](/web-development.html), [analyze data](/data.html),
 [automate operations via DevOps](/devops.html) and 

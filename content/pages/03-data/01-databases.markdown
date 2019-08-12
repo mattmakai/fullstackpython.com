@@ -7,7 +7,6 @@ sidebartitle: Relational Databases
 meta: Relational databases serve the critical role of persisting data in many Python applications.
 
 
-# Databases
 A database is an abstraction over an 
 [operating system](/operating-systems.html)'s file system that makes
 it easier for developers to build applications that create, read, update

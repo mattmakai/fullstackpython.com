@@ -7,7 +7,6 @@ sidebartitle: Markup Languages
 meta: Markup languages allow annotations on text documents where the syntax is different and parsable from the plain text.
 
 
-# Markup Languages
 Markup languages provide pre-defined, parsable syntax within text documents 
 that is used for annotations. For example, within a [Markdown](/markdown.html)
 document, the syntax 

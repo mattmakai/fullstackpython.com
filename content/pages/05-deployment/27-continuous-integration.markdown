@@ -7,7 +7,6 @@ sidebartitle: Continuous Integration
 meta: Continuous integration (CI) automatically rebuilds, tests and deploys applications as developers commit code.
 
 
-# Continuous Integration
 Continuous integration automates the building, testing and deploying of 
 applications. Software projects, whether created by a single individual or 
 entire teams, typically use continuous integration as a hub to ensure 

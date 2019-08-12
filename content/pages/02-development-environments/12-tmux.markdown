@@ -7,7 +7,6 @@ sidebartitle: tmux
 meta: tmux is a terminal multiplexer implementation often used during Python development on Linux and macOS.
 
 
-# tmux
 [tmux](https://github.com/tmux/tmux/wiki) 
 ([source code](https://github.com/tmux/tmux)) is a 
 [terminal multiplexer](/terminal-multiplexers.html) implementation 

@@ -7,7 +7,6 @@ sidebartitle: Bootstrap
 meta: Bootstrap is a CSS framework for building website and web application user interfaces.
 
 
-# Bootstrap
 [Bootstrap](http://getbootstrap.com/) is a CSS framework that makes it 
 easier to create website and web application user interfaces. Bootstrap 
 is especially useful as a base layer of 

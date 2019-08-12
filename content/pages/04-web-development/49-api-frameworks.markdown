@@ -7,7 +7,6 @@ sidebartitle: API Frameworks
 meta: API frameworks are code libraries that provide well-tested, commonly-used functionality when building a web API.
 
 
-# API Frameworks
 API frameworks are code libraries that provide commonly-used functionality 
 when building your own 
 [web application programming interfaces](/application-programming-interfaces.html)

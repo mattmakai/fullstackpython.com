@@ -7,7 +7,6 @@ sidebartitle: HTTPS
 meta: The HTTP Secure (HTTPS) protocol encyrpts data between a web server and the client web browser.
 
 
-# HTTPS
 The HTTP Secure (HTTPS) protocol encyrpts data between a web server and the 
 client web browser.
 

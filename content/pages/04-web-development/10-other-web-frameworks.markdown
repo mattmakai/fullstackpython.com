@@ -7,7 +7,6 @@ sidebartitle: Other Web Frameworks
 meta: Python has many web frameworks with differing philosophies. Learn more about frameworks on Full Stack Python.
 
 
-# Other Web Frameworks
 Python has a significant number of newer and less frequently-used 
 [web frameworks](/web-frameworks.html) that are still worth your time to 
 investigate. The list on this page does not include the following web 

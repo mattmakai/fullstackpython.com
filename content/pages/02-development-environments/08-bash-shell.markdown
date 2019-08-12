@@ -7,7 +7,6 @@ sidebartitle: Bash shell
 meta: The Bourne-Again Shell (Bash) is an implementation of the shell concept and is often used during Python software development.
 
 
-# Bourne-again shell (Bash)
 The [Bourne-Again SHell](https://www.gnu.org/software/bash/) 
 ([source code](https://savannah.gnu.org/git/?group=bash)), almost 
 always referred to simply as "*Bash*", interprets and executes input 

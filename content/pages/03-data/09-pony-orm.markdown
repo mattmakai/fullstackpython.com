@@ -7,7 +7,6 @@ sidebartitle: Pony ORM
 meta: Pony is an object-relational mapper (ORM) library for Python applications.
 
 
-# Pony ORM
 [Pony](https://ponyorm.com/) 
 ([source code](https://github.com/ponyorm/pony)) is 
 a Python 

@@ -7,7 +7,6 @@ sidebartitle: Core Language
 meta: The core Python programming language includes a combination of features not found in many other languages.
 
 
-# Python Programming Language
 The Python programming language is an 
 [open source](https://www.python.org/downloads/source/), 
 [widely-used](/why-use-python.html) tool for 

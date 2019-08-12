@@ -7,7 +7,6 @@ sidebartitle: Integration Testing
 meta: Integration testing determines the correctness for several parts of a system under test at once. Learn more on Full Stack Python.
 
 
-# Integration Testing
 Integration testing exercises two or more parts of an application at once, 
 including the interactions between the parts, to determine if they function
 as intended. This type of [testing](/testing.html) identifies defects in 

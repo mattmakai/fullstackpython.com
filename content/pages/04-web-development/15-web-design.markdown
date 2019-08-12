@@ -7,7 +7,6 @@ sidebartitle: Web Design
 meta: Web design creates a compelling user experience for your Python web app. Learn more about web design on Full Stack Python.
 
 
-# Web Design
 Web design is the creation of a web application's style and user interaction
 using CSS and JavaScript.
 

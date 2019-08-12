@@ -7,7 +7,6 @@ sidebartitle: Best Python Podcasts
 meta: Find out the best Python podcasts as well as general software development podcasts on Full Stack Python.
 
 
-# Best Python Podcasts
 The [Python community](/python-community.html) has an embarrassment of riches
 when it comes to [free and low cost resources](/best-python-resources.html) 
 for both new and experienced software developers. These great resources 

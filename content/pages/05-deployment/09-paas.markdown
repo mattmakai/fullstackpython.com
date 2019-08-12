@@ -7,7 +7,6 @@ sidebartitle: Platform-as-a-Service
 meta: A platform-as-a-service simplifies the deployment of application code while risking other tradeoffs. Learn more on Full Stack Python.
 
 
-# Platform-as-a-service
 A platform-as-a-service (PaaS) provides infrastructure and a software layer
 on which a web application is deployed. Running your web application from
 a PaaS removes the need to know as much about the underlying servers, 

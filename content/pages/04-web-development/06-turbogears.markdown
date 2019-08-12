@@ -6,7 +6,6 @@ toc: False
 sidebartitle: TurboGears
 meta: TurboGears is a batteries included web framework that can act both as a full stack or microframework solution, with MongoDB as a first citizen storage.
 
-# TurboGears
 [TurboGears](http://www.turbogears.org), born as a full stack layer on top
 of Pylons, is now a standalone [WSGI](/wsgi-servers.html) web framework
 that can act both as a full  stack framework (like [Django](/django.html)) 

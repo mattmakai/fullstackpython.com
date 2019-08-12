@@ -7,7 +7,6 @@ sidebartitle: Monitoring
 meta: Monitoring tools capture and visualize data from an application's execution. Learn more about monitoring on Full Stack Python.
 
 
-# Monitoring
 Monitoring tools capture, analyze and display information for a web 
 application's execution. Every application has issues arise throughout
 all levels of the web stack. Monitoring tools provide transparency so

@@ -7,7 +7,6 @@ sidebartitle: Falcon
 meta: Falcon is a Python web framework designed for building fast RESTful APIs with minimal external dependencies.
 
 
-# Falcon
 [Falcon](https://falconframework.org/) is a 
 [WSGI-compliant](/wsgi-servers.html) [web framework](/web-frameworks.html)
 designed to build [RESTful APIs](/application-programming-interfaces.html)

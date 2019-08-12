@@ -7,7 +7,6 @@ sidebartitle: Sanic
 meta: Sanic is a Python web framework built with uvloop and designed for fast HTTP responses via asynchronous request handling. 
 
 
-# Sanic
 [Sanic](https://github.com/channelcat/sanic) is a 
 [Python web framework](/web-frameworks.html) built on 
 [uvloop](https://magic.io/blog/uvloop-blazing-fast-python-networking/) and 

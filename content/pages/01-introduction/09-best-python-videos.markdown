@@ -7,7 +7,6 @@ sidebartitle: Best Python Videos
 meta: Watch the best videos to learn Python programming from developer experts in the community.
 
 
-# Best Python Videos
 If you prefer to learn Python programming by watching videos then this is the
 resource for you. I've watched hundreds of live technical talks and combed
 through videos to pick out the ones with great speakers who'll teach you the

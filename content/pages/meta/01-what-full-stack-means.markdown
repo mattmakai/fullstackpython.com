@@ -7,7 +7,6 @@ sidebartitle: What Full Stack Means
 meta: Full stack is an ambiguous term so on this Full Stack Python page I describe its meaning and usage for this site.
 
 
-# What "full stack" means
 The terms "full stack" and "Full Stack Python" are ambiguous but I am using
 a specific definition here on this site. These term can be defined for a 
 web stack either to mean

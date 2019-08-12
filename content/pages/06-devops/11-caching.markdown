@@ -7,7 +7,6 @@ sidebartitle: Caching
 meta: Caching reduces load on servers by pre-calculating the results of common operations. Learn more about caching on Full Stack Python.
 
 
-# Caching
 Caching can reduce the load on servers by storing the results of common 
 operations and serving the precomputed answers to clients. 
 

@@ -7,7 +7,6 @@ sidebartitle: Twilio
 meta: Twilio is an API for developers to add communications such as phone calling, messaging and video to Python applications.
 
 
-# Twilio
 [Twilio](https://www.twilio.com/docs/quickstart/python/twiml) is a 
 [web application programming interface (API)](/application-programming-interfaces.html)
 that software developers can use to add communications such as 

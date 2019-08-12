@@ -7,7 +7,6 @@ sidebartitle: Azure Functions
 meta: Azure Functions is a serverless compute service that can execute Python 3.6 code.
 
 
-# Azure Functions
 [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/)
 is a compute service created by Microsoft that can execute Python code in 
 response to pre-defined events, such as API calls or database transactions

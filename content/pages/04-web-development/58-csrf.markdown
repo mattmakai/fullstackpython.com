@@ -7,7 +7,6 @@ sidebartitle: CSRF
 meta: Cross-Site Request Forgery is a type of web app vulnerability that forces users to execute unwanted actions when authenticated to an application.
 
 
-# Cross-Site Request Forgery (CSRF)
 Cross-Site Request Forgery is a type of web app vulnerability that forces users to execute unwanted actions when authenticated to an application.
 
 

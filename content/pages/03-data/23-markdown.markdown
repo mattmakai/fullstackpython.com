@@ -7,7 +7,6 @@ sidebartitle: Markdown
 meta: Markdown is a type of markup language often used to document Python projects. Learn more about Markdown on Full Stack Python.
 
 
-# Markdown
 Markdown is a common markup language frequently used by developers to write 
 Python project documention.
 

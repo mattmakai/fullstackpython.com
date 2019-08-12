@@ -7,7 +7,6 @@ sidebartitle: Application Dependencies
 meta: Python web applications depend on many code libraries. Learn more about application dependencies on Full Stack Python.
 
 
-# Application Dependencies
 Application dependencies are the libraries other than your project code
 that are required to create and run your application. 
 

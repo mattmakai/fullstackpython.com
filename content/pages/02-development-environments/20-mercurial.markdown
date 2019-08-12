@@ -7,7 +7,6 @@ sidebartitle: Mercurial
 meta: Mercurial is an implementation of the source (version) control concept. Learn more Full Stack Python.
 
 
-# Mercurial
 [Mercurial](https://www.mercurial-scm.org/) is a distributed open source 
 [source control](/source-control.html) (also known as "version 
 control") system written in Python for tracking and handling file 

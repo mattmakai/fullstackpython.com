@@ -7,7 +7,6 @@ sidebartitle: Localhost tunnels
 meta: Localhost tunnels allow anyone with a tunneling URL to connect to a server running on your local development system.
 
 
-# Localhost tunnels
 A localhost tunnel establishes a connection between your local machine
 and a remote connection. The connection is intended to proxy traffic 
 from a publicly-addressable IP address and URL to your local machine.

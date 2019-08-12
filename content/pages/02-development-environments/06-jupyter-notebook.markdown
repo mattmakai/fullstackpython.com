@@ -7,7 +7,6 @@ sidebartitle: Jupyter Notebook
 meta: Jupyter Notebook, formerly named iPython Notebook, is a powerful Python code execution environment often used for data analysis.
 
 
-# Jupyter Notebook
 [Jupyter Notebook](http://jupyter.org/) 
 ([open source code](https://github.com/jupyter/notebook)), which began 
 as the iPython Notebook project, is a 
