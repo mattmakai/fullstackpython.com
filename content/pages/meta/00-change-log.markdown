@@ -28,6 +28,7 @@ on GitHub.
     * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
     * [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
     * [django.http Http404](/django-http-http404-examples.html)
+    * [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
 * Updated code examples on the following pages:
     * [django.contrib admin](/django-contrib-admin-examples.html)
     * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)

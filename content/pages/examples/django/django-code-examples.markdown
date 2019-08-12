@@ -75,6 +75,7 @@ The code for django-angular is
 Code from django-angular is shown on:
 
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
+* [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
 
 
 ### django-cors-headers
