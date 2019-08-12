@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2019
 ### August
+* Added stub page for [mod_wsgi](/mod-wsgi.html).
 * Merged [PR #215](https://github.com/mattmakai/fullstackpython.com/pull/215)
   to fix a typo on the [serverless](/serverless.html) page. Thanks 
   [Kyle](https://github.com/kylekizirian)!

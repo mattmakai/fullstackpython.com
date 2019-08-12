@@ -53,6 +53,7 @@ FlaskBB is provided as open source
 
 FlaskBB's code examples can be found on:
 
+* [flask redirect](/flask-redirect-examples.html)
 * [flask request](/flask-request-examples.html)
 
 
