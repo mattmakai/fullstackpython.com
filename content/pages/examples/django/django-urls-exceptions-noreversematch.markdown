@@ -31,9 +31,7 @@ is a library with helper code to make it easier to use
 The code for django-angular is 
 [open source under the MIT license](https://github.com/jrief/django-angular/blob/master/LICENSE.txt).
 
-
 [**django-angular / djng / core / urlresolvers.py**](https://github.com/jrief/django-angular/blob/master/djng/core/urlresolvers.py)
-
 
 ```python
 # -*- coding: utf-8 -*-

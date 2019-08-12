@@ -466,3 +466,64 @@ class Settings(object):
 
 conf = Settings()
 ```
+
+
+## Example 4 from django-angular
+[django-angular](https://github.com/jrief/django-angular) 
+([project examples website](https://django-angular.awesto.com/classic_form/))
+is a library with helper code to make it easier to use 
+[Angular](/angular.html) as the front-end to [Django](/django.html) projects.
+The code for django-angular is 
+[open source under the MIT license](https://github.com/jrief/django-angular/blob/master/LICENSE.txt).
+
+The following example shows how to check if an Django app is specified 
+under `INSTALLED_APPS` and if not, throw an exception to let the developer
+know their project is not properly configured.
+
+[**django-angular / djng / forms / fields.py**](https://github.com/jrief/django-angular/blob/master/djng/forms/fields.py)
+
+```python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+import re
+import mimetypes
+
+~~from django.conf import settings
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.core import signing
+from django.core.exceptions import ImproperlyConfigured, ValidationError
+from django.core.files.storage import default_storage
+from django.core.files.uploadedfile import InMemoryUploadedFile, TemporaryUploadedFile
+from django.urls import reverse_lazy
+from django.forms import fields, models as model_fields, widgets
+from django.utils.html import format_html
+from django.utils.module_loading import import_string
+from django.utils.safestring import mark_safe
+from django.utils.translation import ugettext_lazy as _, ungettext_lazy
+
+## ... source code lines cut here for brevity ...
+
+
+class ImageField(FileFieldMixin, fields.ImageField):
+    storage = app_settings.upload_storage
+    signer = signing.Signer()
+
+    def __init__(self, *args, **kwargs):
+~~        if 'easy_thumbnails' not in settings.INSTALLED_APPS:
+~~            raise ImproperlyConfigured("'djng.forms.fields.ImageField' \
+~~                requires 'easy-thubnails' to be installed")
+        accept = kwargs.pop('accept', 'image/*')
+        fileupload_url = kwargs.pop('fileupload_url', 
+                                    reverse_lazy('fileupload'))
+        area_label = kwargs.pop('area_label', 
+                                _("Drop image here or click to upload"))
+        attrs = {
+            'accept': accept,
+            'ngf-pattern': accept,
+        }
+        kwargs.update(widget=DropImageWidget(area_label, 
+                                             fileupload_url, 
+                                             attrs=attrs))
+        super(ImageField, self).__init__(*args, **kwargs)
+```
