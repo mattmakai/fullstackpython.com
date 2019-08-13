@@ -24,7 +24,7 @@ a Django app.
 [Angular](/angular.html) web application that is open source under the 
 [Apache2 license](https://github.com/mik4el/gadget-board/blob/master/LICENSE).
 
-[**gadget-board/web/gadget_board_backend/urls.py**](https://github.com/mik4el/gadget-board/blob/master/web/gadget_board_backend/urls.py)
+[**gadget-board / web / gadget_board_backend / urls.py**](https://github.com/mik4el/gadget-board/blob/master/web/gadget_board_backend/urls.py)
 
 ```python
 from django.contrib import admin

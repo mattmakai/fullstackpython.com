@@ -74,8 +74,9 @@ The code for django-angular is
 
 Code from django-angular is shown on:
 
-* [django-conf-urls url](/django-conf-urls-url-examples.html)
+* [django.conf.urls url](/django-conf-urls-url-examples.html)
 * [django.conf settings](/django-conf-settings-examples.html)
+* [django.http.responses HttpResponsePermanentRedirect](/django-http-responses-httpresponsepermanentredirect-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 * [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
 
