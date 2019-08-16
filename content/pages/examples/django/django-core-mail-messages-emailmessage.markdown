@@ -21,7 +21,7 @@ customize email templates in a [Django](/django.html) application. The code
 is available under the 
 [BSD 3-Clause "New" or "Revised" License](https://github.com/mcoconnor/django-emailmessagetemplates/blob/master/LICENSE).
 
-[**django-emailmessagetemplates/emailmessagetemplates/utils.py**](https://github.com/mcoconnor/django-emailmessagetemplates/blob/master/emailmessagetemplates/utils.py)
+[**django-emailmessagetemplates / emailmessagetemplates / utils.py**](https://github.com/mcoconnor/django-emailmessagetemplates/blob/master/emailmessagetemplates/utils.py)
 
 ```python
 import copy
