@@ -51,6 +51,7 @@ dccnsys is shown on the following code example pages:
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 * [django.urls.path](/django-urls-path-examples.html)
 
+
 ### django-allauth
 [django-allauth](https://github.com/pennersr/django-allauth) 
 ([project website](https://www.intenct.nl/projects/django-allauth/)) is a
@@ -155,6 +156,17 @@ open source under the
 * [django.db.models BooleanField](/django-db-models-booleanfield-examples.html)
 * [django.db.models CharField](/django-db-models-charfield-examples.html)
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
+
+
+### django-jsonfield
+[django-jsonfield](https://github.com/dmkoch/django-jsonfield) 
+([jsonfield on PyPi](https://pypi.org/project/jsonfield/)) is a
+[Django](/django.html) code library that makes it easier to store validated
+JSON in a [Django object-relational mapper (ORM)](/django-orm.html) database 
+model.
+
+The django-jsonfield project is open source under the 
+[MIT license](https://github.com/dmkoch/django-jsonfield/blob/master/LICENSE).
 
 
 ### django-oscar

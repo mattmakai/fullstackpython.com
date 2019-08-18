@@ -1,10 +1,9 @@
 {% if page %}
  {% include "books-videos/learnmore.html" %}
- {% include "sponsor/ezoic.html" %}
  {% if not page.slug == "about-author" %}
   {% include "desktop-toc.html" %}
  {% endif %}
- <div class="pn">
+ <div class="pn" style="margin-top:10px">
   <div class="pnh"><h3>Full Stack Python</h3></div>
   <div class="pnb">
    <a href="/table-of-contents.html">Full Stack Python</a> 
@@ -18,7 +17,7 @@
  </div>
 {% endif %}
 {% if not page %}
- <div class="pn">
+ <div class="pn" style="margin-top:10px">
   {% if page and page.slug == "about-author" %}
    <div class="pnh"><h3>Updates</h3></div>
   {% else %}
