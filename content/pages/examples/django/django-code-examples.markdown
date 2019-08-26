@@ -127,6 +127,20 @@ Useful example code found within django-easy-timezones:
 * [django.utils.timezone](/django-utils-timezone-examples.html)
 
 
+### django-extensions
+[django-extensions](https://github.com/django-extensions/django-extensions)
+([project documentation](https://django-extensions.readthedocs.io/en/latest/)
+and [PyPI page](https://pypi.org/project/django-extensions/))
+is a [Django](/django.html) project that adds a bunch of additional
+useful commands to the `manage.py` interface. This 
+[GoDjango video](https://www.youtube.com/watch?v=1F6G3ONhr4k) provides a 
+quick overview of what you get when you install it into your Python
+environment.
+
+The django-extensions project is open sourced under the
+[MIT license](https://github.com/django-extensions/django-extensions/blob/master/LICENSE).
+
+
 ### django-filer
 [django-filer](https://github.com/divio/django-filer)
 ([project documentation](https://django-filer.readthedocs.io/en/latest/))
@@ -141,21 +155,19 @@ Code from django-filer can be found on these pages:
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
 
 
-### django-push-notifications
-[django-push-notifications](https://github.com/jazzband/django-push-notifications)
-is a [Django](/django.html) app for storing and interacting with
-push notification services such as 
-[Google's Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
-and 
-[Apple Notifications](https://developer.apple.com/notifications/).
-The django-push-notification project's source code is available
-open source under the 
-[MIT license](https://github.com/jazzband/django-push-notifications/blob/master/LICENSE).
+### django-haystack
+[django-haystack](https://github.com/django-haystack/django-haystack)
+([project website](http://haystacksearch.org/) and 
+[PyPI page](https://pypi.org/project/django-haystack/))
+is a search abstraction layer that separates the Python search code
+in a [Django](/django.html) web application from the search engine 
+implementation that it runs on, such as 
+[Apache Solr](http://lucene.apache.org/solr/), 
+[Elasticsearch](https://www.elastic.co/)
+or [Whoosh](https://whoosh.readthedocs.io/en/latest/intro.html).
 
-* [django.db.models Model](/django-db-models-model-examples.html)
-* [django.db.models BooleanField](/django-db-models-booleanfield-examples.html)
-* [django.db.models CharField](/django-db-models-charfield-examples.html)
-* [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
+The django-haystack project is open source under the
+[BSD license](https://github.com/django-haystack/django-haystack/blob/master/LICENSE).
 
 
 ### django-jsonfield
@@ -183,6 +195,23 @@ Further code examples from django-oscar:
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 
 
+### django-push-notifications
+[django-push-notifications](https://github.com/jazzband/django-push-notifications)
+is a [Django](/django.html) app for storing and interacting with
+push notification services such as 
+[Google's Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
+and 
+[Apple Notifications](https://developer.apple.com/notifications/).
+The django-push-notification project's source code is available
+open source under the 
+[MIT license](https://github.com/jazzband/django-push-notifications/blob/master/LICENSE).
+
+* [django.db.models Model](/django-db-models-model-examples.html)
+* [django.db.models BooleanField](/django-db-models-booleanfield-examples.html)
+* [django.db.models CharField](/django-db-models-charfield-examples.html)
+* [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
+
+
 ### django-smithy
 [django-smithy](https://github.com/jamiecounsell/django-smithy) is
 a [Django](/django.html) code library that allows users to send 
@@ -199,6 +228,7 @@ Code examples from django-smithy are shown on the following pages:
 
 ### drf-action-serializer
 [drf-action-serializer](https://github.com/gregschmit/drf-action-serializer)
+([PyPI page](https://pypi.org/project/drf-action-serializer/))
 is an extension for [Django REST Framework](/django-rest-framework-drf.html)
 that makes it easier to configure specific serializers to use based on the
 client's request action. For example, a list view should have one serializer
