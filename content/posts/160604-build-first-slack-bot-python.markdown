@@ -58,7 +58,7 @@ The official `slackclient` API helper library built by Slack can send and
 receive messages from a Slack channel. Install the slackclient library with
 the `pip` command:
 
-    pip install slackclient
+    pip install slackclient==1.3.2
 
 When `pip` is finished you should see output like this and you'll be
 back at the prompt.

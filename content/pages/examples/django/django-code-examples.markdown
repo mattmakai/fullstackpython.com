@@ -111,6 +111,11 @@ Example code from django-cms:
 * [django.utils timezone](/django-utils-timezone-examples.html)
 
 
+### django-debug-toolbar
+[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
+
+
+
 ### django-easy-timezones
 [django-easy-timezones](https://github.com/Miserlou/django-easy-timezones)
 ([project website](https://www.gun.io/blog/django-easy-timezones))
