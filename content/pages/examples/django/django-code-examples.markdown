@@ -113,11 +113,11 @@ Example code from django-cms:
 
 ### django-debug-toolbar
 [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
-([project documentation](https://github.com/jazzband/django-debug-toolbar) 
+([project documentation](https://github.com/jazzband/django-debug-toolbar)
 and [PyPI page](https://pypi.org/project/django-debug-toolbar/))
 grants a developer detailed request-response cycle information while
 developing a [Django](/django.html) web application.
-The code for django-debug-toolbar is 
+The code for django-debug-toolbar is
 [open source](https://github.com/jazzband/django-debug-toolbar/blob/master/LICENSE)
 and maintained by the developer community group known as
 [Jazzband](https://jazzband.co/).
@@ -278,6 +278,17 @@ Additional example code found within gadget-board:
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
 * [django.contrib admin](/django-contrib-admin-examples.html)
 * [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
+
+
+### jazzboard
+[jazzboard](https://github.com/jazzband/website) is a 
+[Django](/django.html)-based web application that runs a website with
+information on many Django projects such as 
+[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
+and [django-taggit](https://github.com/jazzband/django-taggit).
+
+The project's code is provided as open source under the
+[MIT license](https://github.com/jazzband/website/blob/master/LICENSE).
 
 
 ### register
