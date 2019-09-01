@@ -113,7 +113,14 @@ Example code from django-cms:
 
 ### django-debug-toolbar
 [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
-
+([project documentation](https://github.com/jazzband/django-debug-toolbar) 
+and [PyPI page](https://pypi.org/project/django-debug-toolbar/))
+grants a developer detailed request-response cycle information while
+developing a [Django](/django.html) web application.
+The code for django-debug-toolbar is 
+[open source](https://github.com/jazzband/django-debug-toolbar/blob/master/LICENSE)
+and maintained by the developer community group known as
+[Jazzband](https://jazzband.co/).
 
 
 ### django-easy-timezones
@@ -229,6 +236,17 @@ Code examples from django-smithy are shown on the following pages:
 * [django.utils timezone](/django-utils-timezone-examples.html)
 * [django.db.models CharField](/django-db-models-charfield-examples.html)
 * [django.db.models TextField](/django-db-models-textfield-examples.html)
+
+
+### django-taggit
+[django-taggit](https://github.com/jazzband/django-taggit)
+([project documentation](https://django-taggit.readthedocs.io/))
+[PyPI page](https://pypi.org/project/django-taggit/)) provides a way
+to create, store, manage and use tags in a [Django](/django.html) project. 
+The code for django-taggit is 
+[open source](https://github.com/jazzband/django-taggit/blob/master/LICENSE)
+and maintained by the collaborative developer community group 
+[Jazzband](https://jazzband.co/).
 
 
 ### drf-action-serializer
