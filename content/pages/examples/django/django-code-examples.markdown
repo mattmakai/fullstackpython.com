@@ -167,6 +167,20 @@ Code from django-filer can be found on these pages:
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
 
 
+### django-floppyforms
+[django-floppyforms](https://github.com/jazzband/django-floppyforms)
+([project documentation](https://django-floppyforms.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/django-floppyforms/))
+is a [Django](/django.html) code library for better control
+over rendering HTML forms in your [templates](/template-engines.html).
+
+The django-floppyforms code is provided as
+[open source](https://github.com/jazzband/django-floppyforms/blob/master/LICENSE)
+and maintained by the collaborative developer community group 
+[Jazzband](https://jazzband.co/).
+
+
 ### django-haystack
 [django-haystack](https://github.com/django-haystack/django-haystack)
 ([project website](http://haystacksearch.org/) and 
@@ -280,8 +294,8 @@ Additional example code found within gadget-board:
 * [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
 
 
-### jazzboard
-[jazzboard](https://github.com/jazzband/website) is a 
+### jazzband
+[jazzband](https://github.com/jazzband/website) is a 
 [Django](/django.html)-based web application that runs a website with
 information on many Django projects such as 
 [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
