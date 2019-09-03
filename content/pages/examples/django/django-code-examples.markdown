@@ -221,6 +221,27 @@ and it is maintained by the developer community group
 [Jazzband](https://jazzband.co/).
 
 
+### django-mongonaut
+[django-mongonaut](https://github.com/jazzband/django-mongonaut)
+([project documentation](https://django-mongonaut.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/django-mongonaut/))
+provides an introspective interface for working with 
+[MongoDB](/mongodb.html) via mongoengine. The project has its own new code 
+to map MongoDB to the [Django](/django.html) Admin interface.
+
+django-mongonaut's highlighted features include:
+
+    * Automatic introspection of mongoengine documents
+    * The ability to constrain who sees what and what they can do
+    * Full control for adding, editing and deleting documents
+
+The django-mongonaut project is open sourced under the
+[MIT License](https://github.com/jazzband/django-mongonaut/blob/master/LICENSE.txt)
+and it is maintained by the developer community group 
+[Jazzband](https://jazzband.co/).
+
+
 ### django-oscar
 [django-oscar](https://github.com/django-oscar/django-oscar/) 
 ([project website](http://oscarcommerce.com/))
