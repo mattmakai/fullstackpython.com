@@ -207,6 +207,20 @@ The django-jsonfield project is open source under the
 [MIT license](https://github.com/dmkoch/django-jsonfield/blob/master/LICENSE).
 
 
+### django-model-utils
+[django-model-utils](https://github.com/jazzband/django-model-utils)
+([project documentation](https://django-model-utils.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/django-model-utils/))
+provides useful mixins and utilities for working with 
+[Django ORM](/django-orm.html) models in your projects.
+
+The django-model-utils project is open sourced under the
+[BSD 3-Clause "New" or "Revised" License](https://github.com/jazzband/django-model-utils/blob/master/LICENSE.txt)
+and it is maintained by the developer community group 
+[Jazzband](https://jazzband.co/).
+
+
 ### django-oscar
 [django-oscar](https://github.com/django-oscar/django-oscar/) 
 ([project website](http://oscarcommerce.com/))
