@@ -15,6 +15,12 @@ on GitHub.
 
 
 ## 2019
+### September
+* Added new Django code example pages:
+    * [django.db OperationalError](/django-db-operationalerror-examples.html)
+    * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
+
+
 ### August
 * Added stub page for [mod_wsgi](/mod-wsgi.html).
 * Merged [PR #215](https://github.com/mattmakai/fullstackpython.com/pull/215)
