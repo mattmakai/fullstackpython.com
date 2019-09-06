@@ -126,6 +126,7 @@ for use with Django web apps that is open sourced under the
 Example code from django-cms:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
+* [django.db OperationalError](/django-db-operationalerror-examples.html)
 * [django.db.models Model](/django-db-models-model-examples.html)
 * [django.utils timezone](/django-utils-timezone-examples.html)
 
@@ -285,7 +286,7 @@ is a code library for handling and compressing
 [Django](/django.html) web applications.
 
 The django-pipeline project is open sourced under the
-[MIT License](https://github.com/jazzband/django-pipeline/blob/master/LICENSE.txt)
+[MIT License](https://github.com/jazzband/django-pipeline/blob/master/LICENSE)
 and it is maintained by the developer community group 
 [Jazzband](https://jazzband.co/).
 
@@ -377,7 +378,7 @@ The project's code is provided as open source under the
 
 ### register
 [register](https://github.com/ORGAN-IZE/register) is a [Django](/django.html),
-[Bootstrap](/bootstrap.html), [PostgreSQL](/postgresql.html) project that is
+[Bootstrap](/bootstrap-css.html), [PostgreSQL](/postgresql.html) project that is
 open source under the 
 [GNU General Public License v3.0](https://github.com/ORGAN-IZE/register/blob/master/LICENSE).
 This web application makes it easier for people to register as organ donors. 
