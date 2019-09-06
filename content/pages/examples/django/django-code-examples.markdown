@@ -35,6 +35,7 @@ output formats. Auditlog's source code is provided as open source under the
 
 Example code found in the AuditLog project:
 
+* [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.contrib.admin.filters SimpleListFilter](/django-contrib-admin-filters-simplelistfilter-examples.html)
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
@@ -47,6 +48,7 @@ system built with [Django](/django.html). The code is open source under the
 
 dccnsys is shown on the following code example pages:
 
+* [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 * [django.urls.path](/django-urls-path-examples.html)
@@ -61,6 +63,7 @@ flows to Django projects. It is open source under the
 
 Code used for examples from the django-allauth project:
 
+* [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.conf.urls.url](/django-conf-urls-url-examples.html)
 * [django.forms](/django-forms-examples.html)
 
@@ -80,6 +83,22 @@ Code from django-angular is shown on:
 * [django.http.responses HttpResponsePermanentRedirect](/django-http-responses-httpresponsepermanentredirect-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 * [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
+
+
+### django-axes
+[django-axes](https://github.com/jazzband/django-axes/)
+([project documentation](https://django-axes.readthedocs.io/en/latest/)
+and 
+[PyPI package information](https://pypi.org/project/django-axes/)
+is a code library for [Django](/django.html) projects to track failed
+login attempts against a web application. The goal of the project is
+to make it easier for you to stop people and scripts from hacking your
+Django-powered website.
+
+The code for django-axes is
+[open source under the MIT liense](https://github.com/jazzband/django-axes/blob/master/LICENSE)
+and maintained by the group of developers known as
+[Jazzband](https://jazzband.co/).
 
 
 ### django-cors-headers
@@ -256,6 +275,21 @@ Further code examples from django-oscar:
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 
 
+### django-pipeline
+[django-pipeline](https://github.com/jazzband/django-pipeline)
+([project documentation](https://django-pipeline.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/django-pipeline/))
+is a code library for handling and compressing 
+[static content assets](/static-content.html) when handling requests in
+[Django](/django.html) web applications.
+
+The django-pipeline project is open sourced under the
+[MIT License](https://github.com/jazzband/django-pipeline/blob/master/LICENSE.txt)
+and it is maintained by the developer community group 
+[Jazzband](https://jazzband.co/).
+
+
 ### django-push-notifications
 [django-push-notifications](https://github.com/jazzband/django-push-notifications)
 is a [Django](/django.html) app for storing and interacting with
@@ -324,6 +358,7 @@ following pages:
 
 Additional example code found within gadget-board:
 
+* [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
 * [django.contrib admin](/django-contrib-admin-examples.html)
 * [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)

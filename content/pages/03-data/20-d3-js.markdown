@@ -99,6 +99,13 @@ from scratch.
   not only have to learn the tool itself but all the concepts and 
   web browser technologies that it is built upon. 
 
+* This 
+  [visualization of d3.js modules and resources](https://wattenberger.com/blog/d3)
+  is a wonderful map for understanding how various parts of the library
+  and the ecosystem fit together. The visual provides a useful map for where
+  to concentrate your learning depending on what type of visualization you
+  are working to build.
+
 * [D3.js in Action, Second Edition](https://blog.usejournal.com/d3-js-in-action-second-edition-8cf7ffa2a116)
   is partially an announcement for the authors book but also contains
   good context for who uses D3 and why its usage continues to grow.
