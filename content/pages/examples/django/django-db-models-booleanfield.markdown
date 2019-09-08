@@ -194,7 +194,7 @@ class EmailAddress(models.Model):
 ```
 
 
-## Example 4 from django-axes
+## Example 3 from django-axes
 [django-axes](https://github.com/jazzband/django-axes/)
 ([project documentation](https://django-axes.readthedocs.io/en/latest/)
 and
@@ -270,7 +270,7 @@ class Migration(migrations.Migration):
 ```
 
 
-## Example 5 from django-filer
+## Example 4 from django-filer
 [django-filer](https://github.com/divio/django-filer)
 ([project documentation](https://django-filer.readthedocs.io/en/latest/))
 is a file management library for uploading and organizing files and images
@@ -324,7 +324,7 @@ class Migration(migrations.Migration):
 ```
 
 
-## Example 6 from django-push-notifications
+## Example 5 from django-push-notifications
 [django-push-notifications](https://github.com/jazzband/django-push-notifications)
 is a [Django](/django.html) app for storing and interacting with
 push notification services such as 
@@ -388,7 +388,7 @@ class Device(models.Model):
 ```
 
 
-## Example 7 from AuditLog
+## Example 6 from AuditLog
 [Auditlog](https://github.com/jjkester/django-auditlog)
 ([project documentation](https://django-auditlog.readthedocs.io/en/latest/))
 is a [Django](/django.html) app that logs changes to Python objects,
@@ -456,7 +456,7 @@ class UUIDPrimaryKeyModel(models.Model):
 ```
 
 
-## Example 8 from gadget-board
+## Example 7 from gadget-board
 [gadget-board](https://github.com/mik4el/gadget-board) is a
 [Django](/django.html),
 [Django REST Framework (DRF)](/django-rest-framework-drf.html) and
@@ -536,7 +536,7 @@ class Account(AbstractBaseUser, PermissionsMixin):
 ```
 
 
-## Example 9 from wagtail
+## Example 8 from wagtail
 [wagtail](https://github.com/wagtail/wagtail)
 ([project website](https://wagtail.io/)) is a fantastic
 [Django](/django.html)-based CMS with code that is open source
