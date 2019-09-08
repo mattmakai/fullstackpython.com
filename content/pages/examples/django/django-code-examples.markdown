@@ -37,6 +37,7 @@ Example code found in the AuditLog project:
 
 * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.contrib.admin.filters SimpleListFilter](/django-contrib-admin-filters-simplelistfilter-examples.html)
+* [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 
@@ -51,6 +52,7 @@ dccnsys is shown on the following code example pages:
 * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
+* [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.urls.path](/django-urls-path-examples.html)
 
 
@@ -199,6 +201,11 @@ The django-floppyforms code is provided as
 [open source](https://github.com/jazzband/django-floppyforms/blob/master/LICENSE)
 and maintained by the collaborative developer community group 
 [Jazzband](https://jazzband.co/).
+
+Code from django-floppyforms is used as examples for the following parts of
+Django:
+
+* [django.db.models DateField](/django-db-models-datefield-examples.html)
 
 
 ### django-haystack
@@ -400,5 +407,6 @@ under the
 Example code from wagtail shown on these pages:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
+* [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.http Http404](/django-http-http404-examples.html)
 
