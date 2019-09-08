@@ -207,3 +207,125 @@ class RequestRecord(Request):
 
 ## source file continues from here without further TextField examples
 ```
+
+
+## Example 2 from django-push-notifications
+[django-push-notifications](https://github.com/jazzband/django-push-notifications)
+is a [Django](/django.html) app for storing and interacting with
+push notification services such as
+[Google's Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
+and
+[Apple Notifications](https://developer.apple.com/notifications/).
+The django-push-notification project's source code is available
+open source under the
+[MIT license](https://github.com/jazzband/django-push-notifications/blob/master/LICENSE).
+
+[**django-push-notifications / push_notifications / migrations / 0001_initial.py**](https://github.com/jazzband/django-push-notifications/blob/master/push_notifications/migrations/0001_initial.py)
+
+```python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.conf import settings
+~~from django.db import migrations, models
+
+import push_notifications.fields
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='APNSDevice',
+            fields=[
+                ('id', 
+                 models.AutoField(verbose_name='ID', 
+                                  serialize=False, 
+                                  auto_created=True, 
+                                  primary_key=True)),
+                ('name', 
+                 models.CharField(max_length=255, 
+                                  null=True, 
+                                  verbose_name='Name', 
+                                  blank=True)),
+                ('active', 
+                 models.BooleanField(default=True, 
+                                     help_text='Inactive devices '
+                                               'will not be sent '
+                                               'notifications', 
+                                     verbose_name='Is active')),
+                ('date_created', 
+                 models.DateTimeField(auto_now_add=True, 
+                                      verbose_name='Creation date', 
+                                      null=True)),
+                ('device_id', 
+                 models.UUIDField(help_text='UDID / '
+                                            'UIDevice.'
+                                            'identifierForVendor()', 
+                                  max_length=32, 
+                                  null=True, 
+                                  verbose_name='Device ID', 
+                                  blank=True, 
+                                  db_index=True)),
+                ('registration_id', 
+                 models.CharField(unique=True, max_length=64, 
+                                  verbose_name='Registration ID')),
+                ('user', 
+                 models.ForeignKey(blank=True, 
+                                   to=settings.AUTH_USER_MODEL, 
+                                   null=True, 
+                                   on_delete=models.CASCADE)),
+            ],
+            options={
+                'verbose_name': 'APNS device',
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='GCMDevice',
+            fields=[
+                ('id', 
+                 models.AutoField(verbose_name='ID', 
+                                  serialize=False, 
+                                  auto_created=True, 
+                                  primary_key=True)),
+                ('name', 
+                 models.CharField(max_length=255, 
+                                  null=True, 
+                                  verbose_name='Name', 
+                                  blank=True)),
+                ('active', 
+                 models.BooleanField(default=True, 
+                                     help_text='Inactive devices '
+                                               'will not be sent '
+                                               'notifications', 
+                                     verbose_name='Is active')),
+                ('date_created', 
+                 models.DateTimeField(auto_now_add=True, 
+                                      verbose_name='Creation date', 
+                                      null=True)),
+                ('device_id', 
+                 push_notifications.fields.HexIntegerField(\
+                   help_text='ANDROID_ID / TelephonyManager.'
+                             'getDeviceId() (always as hex)', 
+                   null=True, verbose_name='Device ID', 
+                   blank=True, db_index=True)),
+~~                ('registration_id', 
+~~                 models.TextField(verbose_name='Registration ID')),
+                ('user', 
+                 models.ForeignKey(blank=True, 
+                                   to=settings.AUTH_USER_MODEL, 
+                                   null=True, 
+                                   on_delete=models.CASCADE)),
+            ],
+            options={
+                'verbose_name': 'GCM device',
+            },
+            bases=(models.Model,),
+        ),
+    ]
+```
