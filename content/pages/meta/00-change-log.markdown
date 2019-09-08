@@ -18,6 +18,7 @@ on GitHub.
 ### September
 * Added new Django code example pages:
     * [django.db OperationalError](/django-db-operationalerror-examples.html)
+    * [django.db.models AutoField](/django-db-models-autofield-examples.html)
     * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 
 
