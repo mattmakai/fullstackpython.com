@@ -49,11 +49,9 @@
    {{ page.content }}
   {% endif %}
   {% if page.sortorder[0:2] == "50" %}
-   <hr>
   {% else %}
    {% include "choices/" + page.slug + ".html" %}
   {% endif %}
-  {% include "email-for-book.html" %}
  </div>
  <div class="co1 c3">
   {% include "sidebar.html" %}
