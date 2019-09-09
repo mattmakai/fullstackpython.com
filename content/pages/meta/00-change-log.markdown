@@ -17,6 +17,7 @@ on GitHub.
 ## 2019
 ### September
 * Added new Django code example pages:
+    * [django.contrib.admin.sites register](/django-contrib-admin-sites-register-examples.html)
     * [django.db OperationalError](/django-db-operationalerror-examples.html)
     * [django.db.models AutoField](/django-db-models-autofield-examples.html)
     * [django.db.models DateField](/django-db-models-datefield-examples.html)
