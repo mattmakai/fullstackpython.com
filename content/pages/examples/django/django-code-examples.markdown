@@ -37,8 +37,10 @@ Example code found in the AuditLog project:
 
 * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.contrib.admin.filters SimpleListFilter](/django-contrib-admin-filters-simplelistfilter-examples.html)
+* [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
+* [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 
 
@@ -53,6 +55,7 @@ dccnsys is shown on the following code example pages:
 * [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
+* [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
 * [django.urls.path](/django-urls-path-examples.html)
 
 
@@ -67,6 +70,7 @@ Code used for examples from the django-allauth project:
 
 * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
 * [django.conf.urls.url](/django-conf-urls-url-examples.html)
+* [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.forms](/django-forms-examples.html)
 
 
@@ -128,6 +132,7 @@ for use with Django web apps that is open sourced under the
 Example code from django-cms:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
+* [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db OperationalError](/django-db-operationalerror-examples.html)
 * [django.db.models Model](/django-db-models-model-examples.html)
 * [django.utils timezone](/django-utils-timezone-examples.html)
@@ -186,6 +191,7 @@ Code from django-filer can be found on these pages:
 
 * [django.conf settings](/django-conf-settings-examples.html)
 * [django.contrib.admin](/django-contrib-admin-examples.html)
+* [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
 
 
@@ -407,6 +413,8 @@ under the
 Example code from wagtail shown on these pages:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
+* [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
+* [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
 * [django.http Http404](/django-http-http404-examples.html)
 
