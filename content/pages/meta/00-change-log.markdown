@@ -17,13 +17,13 @@ on GitHub.
 ## 2019
 ### September
 * Added new Django code example pages:
+    * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
     * [django.contrib.admin.sites register](/django-contrib-admin-sites-register-examples.html)
     * [django.db OperationalError](/django-db-operationalerror-examples.html)
     * [django.db.models AutoField](/django-db-models-autofield-examples.html)
     * [django.db.models DateField](/django-db-models-datefield-examples.html)
     * [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
-    * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
-
+    * [django.urls reverse_lazy](/django-urls-reverse-lazy-examples.html)
 
 ### August
 * Added stub page for [mod_wsgi](/mod-wsgi.html).
