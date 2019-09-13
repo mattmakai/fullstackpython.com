@@ -30,6 +30,10 @@ is a data structures and analysis library.
   is a good tutorial on removing sensitive data from your unfiltered 
   data sets.
 
+* [Learn a new pandas trick every day!](https://www.dataschool.io/python-pandas-tips-and-tricks/)
+  is a running list of great pandas tips that the author originally
+  posted on Twitter and then aggregated onto a single webpage.
+
 * [Time Series Analysis with Pandas](https://www.dataquest.io/blog/tutorial-time-series-analysis-pandas/)
   show you how to combine [Python 3.6](/why-use-python.html), pandas, 
   [matplotlib](/matplotlib.html) and [seaborn](/data-visualization.html)

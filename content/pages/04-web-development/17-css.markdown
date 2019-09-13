@@ -205,6 +205,11 @@ web application's design.
   potentially malicious applications, such as the experimental CSS keylogger
   hack that made the rounds in early 2018.
 
+* [Understanding specificity in CSS](https://alligator.io/css/understanding-specificity-in-css/)
+  provides some wonderful detail on the various ways to select elements
+  via CSS selectors, including type selectors, pseudo-elements, class 
+  selectors, attribute selectors and ID selectors.
+
 
 ## CSS learning checklist
 1. Create a simple HTML file with basic elements in it. Use the
