@@ -88,6 +88,11 @@ applications.
   hilariously presents the pain of using Kubernetes and gives the basic
   steps for getting a deployment up and running.
 
+* [The cult of Kubernetes](https://christine.website/blog/the-cult-of-kubernetes-2019-09-07)
+  is a hilarious rant that also manages to teach the reader a lot about how to
+  avoid some big issues the author ran into while working with Kubernetes for
+  simple starter projects.
+
 * [Kubernetes by Example](http://kubernetesbyexample.com/) provides the 
   commands and code for you to get started with the core Kubernetes concepts.
 
