@@ -276,6 +276,21 @@ and it is maintained by the developer community group
 [Jazzband](https://jazzband.co/).
 
 
+### django-oauth-toolkit
+[django-oauth-toolkit](https://github.com/jazzband/django-oauth-toolkit)
+([project website](http://dot.evonove.it/)
+and
+[PyPI package information](https://pypi.org/project/django-oauth-toolkit/1.2.0/))
+is a code library for adding and handling [OAuth2](https://oauth.net/)
+flows within your [Django](/django.html) web application and 
+[API](/application-programming-interfaces.html).
+
+The django-oauth-toolkit project is open sourced under the
+[FreeBSD license](https://github.com/jazzband/django-oauth-toolkit/blob/master/LICENSE)
+and it is maintained by the developer community group 
+[Jazzband](https://jazzband.co/).
+
+
 ### django-oscar
 [django-oscar](https://github.com/django-oscar/django-oscar/) 
 ([project website](http://oscarcommerce.com/))
