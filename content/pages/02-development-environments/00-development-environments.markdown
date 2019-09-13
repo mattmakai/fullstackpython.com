@@ -13,7 +13,7 @@ The text editor allows you to write the code. The runtime environment
 implementation such as [CPython](https://github.com/python/cpython) 
 or [PyPy](https://pypy.org/) provides the method for executing your code.
 
-<img src="/img/visuals/tmux-vim-editor.png" width="100%" alt="tmux plus Vim editor on a dark background." class="shot rnd outl">
+<img src="/img/visuals/tmux-vim-editor.jpg" width="100%" alt="tmux plus Vim editor on a dark background." class="shot rnd outl">
 
 A text editor can be as simple as Notepad on Windows or more complicated 
 as a complete integrated development environment (IDE) such as 
