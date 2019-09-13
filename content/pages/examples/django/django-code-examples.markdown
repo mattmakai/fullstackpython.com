@@ -135,6 +135,7 @@ Example code from django-cms:
 * [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db OperationalError](/django-db-operationalerror-examples.html)
 * [django.db.models Model](/django-db-models-model-examples.html)
+* [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
 * [django.utils timezone](/django-utils-timezone-examples.html)
 
 
@@ -417,4 +418,5 @@ Example code from wagtail shown on these pages:
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
 * [django.http Http404](/django-http-http404-examples.html)
+* [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
 
