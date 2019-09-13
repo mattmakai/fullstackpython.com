@@ -115,3 +115,8 @@ basic syntax will change as the library's API is not yet stable.
 * [Realtime Flight Tracking with Pandas and Bokeh](https://www.geodose.com/2019/01/realtime-flight-tracking-pandas-bokeh-python.html)
   provides a great example of combining [pandas](/pandas.html) for structuring
   data with Bokeh for visualization.
+
+* [How to Create an Interactive Geographic Map Using Python and Bokeh](https://towardsdatascience.com/how-to-create-an-interactive-geographic-map-using-python-and-bokeh-12981ca0b567)
+  shows how to use a `GeoJSONDataSource` as input for Bokeh and draw a
+  map with the data.
+
