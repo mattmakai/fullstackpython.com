@@ -230,6 +230,17 @@ The django-haystack project is open source under the
 [BSD license](https://github.com/django-haystack/django-haystack/blob/master/LICENSE).
 
 
+### django-jet
+[django-jet](https://github.com/geex-arts/django-jet) 
+([project documentation](https://jet.readthedocs.io/en/latest/),
+[PyPI project page](https://pypi.org/project/django-jet/) and
+[more information](http://jet.geex-arts.com/))
+is a fancy [Django](/django.html) Admin panel replacement.
+
+The django-jet project is open source under the
+[GNU Affero General Public License v3.0](https://github.com/geex-arts/django-jet/blob/dev/LICENSE).
+
+
 ### django-jsonfield
 [django-jsonfield](https://github.com/dmkoch/django-jsonfield) 
 ([jsonfield on PyPi](https://pypi.org/project/jsonfield/)) is a
