@@ -156,7 +156,7 @@ class Migration(migrations.Migration):
 [django-easy-timezones](https://github.com/Miserlou/django-easy-timezones)
 ([project website](https://www.gun.io/blog/django-easy-timezones))
 is a [Django](/django.html) 
-[middleware](https://docs.djangoproject.com/en/2.2/topics/http/middleware/)
+[middleware](https://docs.djangoproject.com/en/stable/topics/http/middleware/)
 [code library](https://pypi.org/project/django-easy-timezones/)
 to simplify handling time data in your applications using
 users' geolocation data.

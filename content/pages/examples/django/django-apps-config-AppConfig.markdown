@@ -8,7 +8,7 @@ meta: Python code examples for the AppConfig class that is part of Django's djan
 
 
 [AppConfig](https://github.com/django/django/blob/master/django/apps/config.py)
-([documentation](https://docs.djangoproject.com/en/2.2/ref/applications/#django.apps.AppConfig))
+([documentation](https://docs.djangoproject.com/en/stable/ref/applications/#django.apps.AppConfig))
 represents an app for a [Django](/django.html) project, including
 metadata such as name, label and path.
 

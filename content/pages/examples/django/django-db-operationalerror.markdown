@@ -8,7 +8,7 @@ meta: Python code examples for the OperationalError exception class that is part
 
 
 [OperationalError](https://github.com/django/django/blob/master/django/db/utils.py)
-([documentation](https://docs.djangoproject.com/en/2.2/ref/exceptions/#django.db.OperationalError))
+([documentation](https://docs.djangoproject.com/en/stable/ref/exceptions/#django.db.OperationalError))
 is one of many possible 
 [Python exceptions](https://docs.python.org/3/tutorial/errors.html)
 thrown by the [Django](/django.html) [web framework](/web-frameworks.html)
