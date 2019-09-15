@@ -23,6 +23,7 @@ on GitHub.
     * [django.db.models AutoField](/django-db-models-autofield-examples.html)
     * [django.db.models DateField](/django-db-models-datefield-examples.html)
     * [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
+    * [django.http HttpResponse](/django-http-httpresponse-examples.html)
     * [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
     * [django.urls reverse_lazy](/django-urls-reverse-lazy-examples.html)
 
