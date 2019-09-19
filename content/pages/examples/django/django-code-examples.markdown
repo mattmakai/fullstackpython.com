@@ -56,6 +56,7 @@ dccnsys is shown on the following code example pages:
 * [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
+* [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
 * [django.urls.path](/django-urls-path-examples.html)
 
 
@@ -86,6 +87,7 @@ Code from django-angular is shown on:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
 * [django.conf settings](/django-conf-settings-examples.html)
+* [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
 * [django.http.responses HttpResponsePermanentRedirect](/django-http-responses-httpresponsepermanentredirect-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 * [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
@@ -135,6 +137,7 @@ Example code from django-cms:
 * [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db OperationalError](/django-db-operationalerror-examples.html)
 * [django.db.models Model](/django-db-models-model-examples.html)
+* [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
 * [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
 * [django.utils timezone](/django-utils-timezone-examples.html)
 
@@ -300,6 +303,10 @@ The django-oauth-toolkit project is open sourced under the
 [FreeBSD license](https://github.com/jazzband/django-oauth-toolkit/blob/master/LICENSE)
 and it is maintained by the developer community group 
 [Jazzband](https://jazzband.co/).
+
+Code examples provided by django-oauth-toolkit:
+
+* [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
 
 
 ### django-oscar
