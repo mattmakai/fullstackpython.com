@@ -88,6 +88,10 @@ applications.
   hilariously presents the pain of using Kubernetes and gives the basic
   steps for getting a deployment up and running.
 
+* [A Gentle introduction to Kubernetes with more than just the basics](https://github.com/eon01/kubernetes-workshop)
+  is a Git README tutorial with clear steps for how to get started running
+  a Kubernetes cluster.
+
 * [The cult of Kubernetes](https://christine.website/blog/the-cult-of-kubernetes-2019-09-07)
   is a hilarious rant that also manages to teach the reader a lot about how to
   avoid some big issues the author ran into while working with Kubernetes for
