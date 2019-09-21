@@ -6,6 +6,7 @@ toc: False
 sidebartitle: django.http HttpResponse
 meta: Example Python code for using the HttpResponse object provided by Django in the django.http module.
 
+
 [HttpResponse](https://docs.djangoproject.com/en/stable/ref/request-response/#httpresponse-objects)
 ([source code](https://github.com/django/django/blob/master/django/http/response.py))
 provides an inbound HTTP request to a [Django](/django.html) web application
