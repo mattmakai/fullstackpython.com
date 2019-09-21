@@ -87,6 +87,7 @@ Code from django-angular is shown on:
 
 * [django.conf.urls url](/django-conf-urls-url-examples.html)
 * [django.conf settings](/django-conf-settings-examples.html)
+* [django.http HttpResponseBadRequest](/django-http-httpresponsebadrequest-examples.html)
 * [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
 * [django.http.responses HttpResponsePermanentRedirect](/django-http-responses-httpresponsepermanentredirect-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
@@ -137,6 +138,7 @@ Example code from django-cms:
 * [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db OperationalError](/django-db-operationalerror-examples.html)
 * [django.db.models Model](/django-db-models-model-examples.html)
+* [django.http HttpResponseBadRequest](/django-http-httpresponsebadrequest-examples.html)
 * [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
 * [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
 * [django.utils timezone](/django-utils-timezone-examples.html)
@@ -197,6 +199,7 @@ Code from django-filer can be found on these pages:
 * [django.contrib.admin](/django-contrib-admin-examples.html)
 * [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
+* [django.http HttpResponseBadRequest](/django-http-httpresponsebadrequest-examples.html)
 
 
 ### django-floppyforms
