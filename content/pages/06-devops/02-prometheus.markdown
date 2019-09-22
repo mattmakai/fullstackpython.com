@@ -33,3 +33,9 @@ and report on Python [web applications](/web-development.html).
 * [Monitor your applications with Prometheus](https://blog.alexellis.io/prometheus-monitoring/)
   is a getting started guide with a walkthrough of how to instrument
   a simple Golang application.
+
+* [Custom Application Metrics with Django, Prometheus, and Kubernetes](https://labs.meanpug.com/custom-application-metrics-with-django-prometheus-and-kubernetes/)
+  shows how to handle the initial configuration with `django-prometheus`,
+  deploys the [Django](/django.html) web app using 
+  [Helm](https://helm.sh/) and configures Prometheus to scrape metrics
+  from the application running on Kubernetes.

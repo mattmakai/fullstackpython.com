@@ -30,14 +30,18 @@ Python as a top programming language within the top ten, if not the top five
 of all languages.  
 
 The IEEE ranked Python as the
-[#1 programming language in 2018](https://spectrum.ieee.org/at-work/innovation/the-2018-top-programming-languages)
-after ranking as the 
-[#1 language in 2017](https://spectrum.ieee.org/at-work/innovation/the-2017-top-programming-languages)
+[#1 programming language in 2019](https://spectrum.ieee.org/computing/software/the-top-programming-languages-2019),
+which continued its hot streak
+after ranking it 
+[#1 in 2018](https://spectrum.ieee.org/at-work/innovation/the-2018-top-programming-languages),
+[#1 in 2017](https://spectrum.ieee.org/at-work/innovation/the-2017-top-programming-languages)
 and
 [#3 top programming language in 2016](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages).
-[RedMonk's June 2017 ranking](http://redmonk.com/sogrady/2017/06/08/language-rankings-6-17/),
-had Python at #3, which was up one slot from 
-[their same ranking two years earlier](http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/).
+[RedMonk's June 2019 ranking](https://redmonk.com/sogrady/2019/07/18/language-rankings-6-19/)
+had Python at #3, which held consistent from previous years' rankings in 
+[2018](https://redmonk.com/sogrady/2018/08/10/language-rankings-6-18/) 
+and 
+[2017](https://redmonk.com/sogrady/2017/06/08/language-rankings-6-17/).
 
 Stack Overflow's community-created question and answer data confirms the
 [incredible growth of the Python ecosystem](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
@@ -50,13 +54,13 @@ and that there is a close alignment between the languages and tools that
 developers choose to learn and the usage in developers' professional work.
 
 The 
-[TIOBE Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html),
-a long-running language ranking, has Python moving up the charts to #4,
-climbing from #8 just a couple years ago.
+[TIOBE Index](https://www.tiobe.com/tiobe-index//)
+a long-running language ranking, has Python moving up the charts to #3,
+climbing from #8 just a few years ago.
 
 The [PopularitY of Programming Language](http://pypl.github.io/PYPL.html) 
 (PYPL), based on leading indicators from Google Trends search keyword 
-analysis, shows Python at #2.
+analysis, shows Python at #1.
 
 [GitHut](http://githut.info/), a visualization of GitHub language popularity, 
 pegs Python at #3 overall.
@@ -84,28 +88,30 @@ The philosophy for Python is so strongly held that it's even embedded in
 the language as shown when the interpreter executes "import this" and
 displays [The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 
-    >>> import this
-    The Zen of Python, by Tim Peters
+```
+>>> import this
+The Zen of Python, by Tim Peters
 
-    Beautiful is better than ugly.
-    Explicit is better than implicit.
-    Simple is better than complex.
-    Complex is better than complicated.
-    Flat is better than nested.
-    Sparse is better than dense.
-    Readability counts.
-    Special cases aren't special enough to break the rules.
-    Although practicality beats purity.
-    Errors should never pass silently.
-    Unless explicitly silenced.
-    In the face of ambiguity, refuse the temptation to guess.
-    There should be one-- and preferably only one --obvious way to do it.
-    Although that way may not be obvious at first unless you're Dutch.
-    Now is better than never.
-    Although never is often better than *right* now.
-    If the implementation is hard to explain, it's a bad idea.
-    If the implementation is easy to explain, it may be a good idea.
-    Namespaces are one honking great idea -- let's do more of those!
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
 
 
 ## More perspectives on using Python
