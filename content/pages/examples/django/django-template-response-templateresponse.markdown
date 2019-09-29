@@ -10,9 +10,10 @@ meta: Python code examples for the TemplateResponse class that is part of Django
 [TemplateResponse](https://docs.djangoproject.com/en/stable/ref/template-response/)
 ([source code](https://github.com/django/django/blob/master/django/template/response.py))
 is a class provided by [Django](/django.html) that retains context for the
-HTTP Request that caused the view to generate the response. TemplateResponse 
+HTTP request that caused the view to generate the response. TemplateResponse 
 is useful for modifying a response before it is rendered, which cannot be
-done with a traditional static HttpResponse object.
+done with a traditional static 
+[HttpResponse](/django-http-httpresponse-examples.html) object.
 
 
 ## Example 1 from django-cms

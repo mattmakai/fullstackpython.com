@@ -28,6 +28,7 @@ on GitHub.
     * [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
     * [django.http HttpResponseRedirect](/django-http-httpresponseredirect-examples.html)
     * [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
+    * [django.template.response SimpleTemplateResponse](/django-template-response-simpletemplateresponse-examples.html)
     * [django.urls reverse_lazy](/django-urls-reverse-lazy-examples.html)
 
 ### August
