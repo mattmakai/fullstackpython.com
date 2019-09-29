@@ -7,7 +7,7 @@ sidebartitle: django.http HttpResponseBadRequest
 meta: Example Python code for using the HttpResponseBadRequest object provided by Django in the django.http module.
 
 
-[HttpResponseBadRequest](https://docs.djangoproject.com/en/2.2/ref/request-response/#django.http.HttpResponseBadRequest)
+[HttpResponseBadRequest](https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpResponseBadRequest)
 ([source code](https://github.com/django/django/blob/master/django/http/response.py))
 returns the 
 [HTTP 400 status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 

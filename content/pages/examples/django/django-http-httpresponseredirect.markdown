@@ -7,7 +7,7 @@ sidebartitle: django.http HttpResponseRedirect
 meta: Example Python code for using the HttpResponseRedirect object provided by Django in the django.http module.
 
 
-[HttpResponseRedirect](https://docs.djangoproject.com/en/2.2/ref/request-response/#django.http.HttpResponseRedirect)
+[HttpResponseRedirect](https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpResponseRedirect)
 is a subclass of
 [HttpResponse](/django-http-httpresponse-examples.html)
 ([source code](https://github.com/django/django/blob/master/django/http/response.py))

@@ -6,6 +6,7 @@ toc: False
 sidebartitle: django.http HttpResponseForbidden
 meta: Example Python code for using the HttpResponseForbidden object provided by Django in the django.http module.
 
+
 [HttpResponseForbidden](https://docs.djangoproject.com/en/stable/ref/request-response/#django.http.HttpResponseForbidden)
 ([source code](https://github.com/django/django/blob/master/django/http/response.py))
 returns the 403 status code to an inbound HTTP request in a 

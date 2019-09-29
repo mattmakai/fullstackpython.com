@@ -26,6 +26,7 @@ on GitHub.
     * [django.http HttpResponse](/django-http-httpresponse-examples.html)
     * [django.http HttpResponseBadRequest](/django-http-httpresponsebadrequest-examples.html)
     * [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
+    * [django.http HttpResponseNotModified](/django-http-httpresponsenotmodified-examples.html)
     * [django.http HttpResponseRedirect](/django-http-httpresponseredirect-examples.html)
     * [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
     * [django.template.response SimpleTemplateResponse](/django-template-response-simpletemplateresponse-examples.html)
