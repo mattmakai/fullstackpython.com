@@ -130,10 +130,11 @@ topics.
   useful if you're coming in with previous software development experience
   and want to quickly grasp how the language is structured.
 
-* [Microservices with Docker, Flask, and React](https://testdriven.io/courses/microservices-with-docker-flask-and-react/?utm_source=fsp)
-  is a great tutorial for digging in deeper with common Python tools such
-  as [Flask](/flask.html), [Docker](/docker.html), [React](/react.html) 
-  and [microservices](/microservices.html).
+* [Developing a Real-Time Taxi App with Django Channels and Angular](https://testdriven.io/courses/real-time-app-with-django-channels-and-angular/?utm_source=fsp)
+  is a great tutorial for jumping into a real project instead of a simple
+  starter application while learning common Python concepts and tools such
+  as [Django](/django.html), [Angular](/angular.html), 
+  [WebSockets](/websockets.html) and [Redis](/redis.html).
 
 * Developers familiar with other languages often have difficulty adapting to
   accepted Python code style. Make sure to read the 
@@ -141,6 +142,12 @@ topics.
   as well as 
   [The Elements of Python Style](https://github.com/amontalenti/elements-of-python-style)
   to know the Python community standards.
+
+* [Authentication with Flask, React, and Docker](https://testdriven.io/courses/auth-flask-react/?utm_source=fsp)
+  is another detailed course that shows how to combine 
+  [Flask](/flask.html), [React](/react.html), [Docker](/docker.html) 
+  and [Heroku](/heroku.html) to build a solid intermediate-to-advanced
+  web application and deploy it.
 
 * [Essential Reads for Any Python Programmer](http://notesbyanerd.com/2017/12/29/essential-reads-for-any-python-programmer/)
   is a great collection of advice for developers coming to Python from another
