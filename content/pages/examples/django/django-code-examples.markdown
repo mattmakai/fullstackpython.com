@@ -89,7 +89,7 @@ Code from django-angular is shown on:
 * [django.conf settings](/django-conf-settings-examples.html)
 * [django.http HttpResponseBadRequest](/django-http-httpresponsebadrequest-examples.html)
 * [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
-* [django.http.responses HttpResponsePermanentRedirect](/django-http-responses-httpresponsepermanentredirect-examples.html)
+* [django.http HttpResponsePermanentRedirect](/django-http-responses-httpresponsepermanentredirect-examples.html)
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 * [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
 
@@ -453,6 +453,7 @@ Example code from wagtail shown on these pages:
 * [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
 * [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
+* [django.http HttpResponseNotModified](/django-http-httpresponsenotmodified-examples.html)
 * [django.http Http404](/django-http-http404-examples.html)
 * [django.template.response TemplateResponse](/django-template-response-templateresponse-examples.html)
 
