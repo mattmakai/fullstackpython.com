@@ -3,7 +3,7 @@ slug: maps-django-web-applications-projects-mapbox
 meta: Learn how to add maps and location-based data to your web applications using Mapbox.
 category: post
 date: 2018-05-19
-modified: 2018-05-25
+modified: 2019-10-06
 newsletter: False
 headerimage: /img/180519-django-maps/header.jpg
 headeralt: Python, Django and Mapbox logos are copyright their respective owners.
@@ -43,7 +43,7 @@ our application:
   [version 2.0.5](https://docs.djangoproject.com/en/2.0/)
 * [pip](https://pip.pypa.io/en/stable/) and 
   [virtualenv](https://virtualenv.pypa.io/en/latest/), which come installed 
-  with Python 3, to install and isolate these Django and Rollbar libraries 
+  with Python 3, to install and isolate the Django library 
   from your other applications
 * A [free Mapbox account](https://www.mapbox.com/) to interact with their
   [web API](/application-programming-interfaces.html) using 

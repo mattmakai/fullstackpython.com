@@ -247,6 +247,10 @@ ready to take that step.
 * [Command-T](https://github.com/wincent/command-t) is a Vim plugin for
   fast fuzzy searching files.
 
+* [YouCompleteMe](http://ycm-core.github.io/YouCompleteMe/)
+  ([source code](https://github.com/ycm-core/YouCompleteMe)) is a
+  code-completion engine and plugin that works for Python.
+
 
 ### Vim Plugin Managers
 If you use many Vim plugins together it is really handy to have a plugin
