@@ -52,6 +52,8 @@ applications:
   provide example code for storing user accounts, roles and authentication 
   tokens in web applications.
 
+* [ExtendsClass](https://extendsclass.com/sqlite-browser.html) is an online SQLite browser.
+
 
 ### SQLite tutorials
 It's a good idea to brush up on the basics for using SQLite before you use 
