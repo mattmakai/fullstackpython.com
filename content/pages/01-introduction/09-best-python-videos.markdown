@@ -171,6 +171,8 @@ like [PyCon US](https://us.pycon.org/) and
   are all available online for free.
 
 * All of the talk videos are available on YouTube for 
+  [EuroPython 2019](https://www.youtube.com/playlist?list=PL8uoeex94UhHFRew8gzfFJHIpRFWyY4YW),
+  [EuroPython 2018](https://www.youtube.com/watch?v=LoRq9yGeBWY&list=PL8uoeex94UhFrNUV2m5MigREebUms39U5),
   [EuroPython 2017](https://www.youtube.com/watch?v=OCHrzW-R3QI&list=PL8uoeex94UhG9QAoRICebFpeKK2M0Herh),
   [EuroPython 2016](https://www.youtube.com/playlist?list=PL8uoeex94UhE3FDvjacSlHFffoNEoPzzm),
   [EuroPython 2015](https://www.youtube.com/watch?v=bp3mCgrdMxU&list=PL8uoeex94UhGGUH0mFb-StlZ1WYGWiJfP),

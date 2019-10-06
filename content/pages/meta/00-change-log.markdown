@@ -15,6 +15,9 @@ on GitHub.
 
 
 ## 2019
+### October
+* Updated [best videos](/best-python-videos.html) page with new EuroPython links.
+
 ### September
 * Added new Django code example pages:
     * [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
