@@ -16,9 +16,9 @@ as the final version 2 release, Python 2.7, is approaching its end-of-life
 that is definitively scheduled for 
 [January 1, 2020](https://mail.python.org/pipermail/python-dev/2018-March/152348.html).
 
-The simple answer right now is: learn Python 3, specifically the latest 
-version which as of May 2018 is 
-[Python 3.6.5](https://www.python.org/downloads/). If for some reason you 
+The simple answer right now is: *learn Python 3*, specifically the latest 
+version which as of October 2019 is 
+[Python 3.7](https://www.python.org/downloads/). If for some reason you 
 absolutely have to learn Python 2, for example because your employer is 
 working on a bunch of legacy code, you will be able to transfer the majority
 of your knowledge from Python 2 right into Python 3. Likewise, you will 
@@ -30,12 +30,16 @@ version 2 experience. Python 3 is the future and you will not regret
 starting with the latest version of the 
 [programming language](/learning-programming.html).
 
-One caveat to the recommendation to go full-on Python 3. If you are 
-interested in DevOps-type work with 
+There is one small caveat to the recommendation to go full-on Python 3. 
+You may infrequently come across lesser-used open source code libraries
+that were originally written in Python 2 that do not completely support
+Python 3. That was the case before 2019 with [DevOps](/devops.html) 
 [configuration management tools](/configuration-management.html) such as 
-[Fabric](http://www.fabfile.org/) or [Ansible](/ansible.html), then you 
-may have to sometimes use both Python 2 and 3 because parts of these 
-libraries are lagging in full Python 3 support.
+[Fabric](http://www.fabfile.org/) or [Ansible](/ansible.html). However,
+those libraries now support Python 3 and the usage problems that were
+frequent in years past are now typically not a concern. Knowing how
+to upgrade Python 2 libraries to 3.x is still a useful skill to apply
+at the edges of the Python open source community.
 
 
 ## Visualizations and Projects
