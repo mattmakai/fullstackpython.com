@@ -16,6 +16,10 @@ on GitHub.
 
 ## 2019
 ### October
+* Added new Django code example pages:
+    * [django.db.models FileField](/django-db-models-filefield-examples.html)
+* Rewrote some parts of the [Python 2 or 3](/python-2-or-3.html) page to
+  make it more clear that 3 is now the mandatory way to get started.
 * Updated [best videos](/best-python-videos.html) page with new EuroPython links.
 
 ### September
