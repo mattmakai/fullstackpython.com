@@ -38,6 +38,11 @@ listen and learn.
   on [testing](/testing.html) and related topics such as mocking and 
   [code metrics](/code-metrics.html).
 
+* [Teaching Python](https://www.teachingpython.fm/) is a podcast by two
+  teachers about their adventures teaching middle school computer science, 
+  problem solving, handling failure, frustration, and success with
+  teaching Python programming.
+
 * Professor Philip Guo has a video podcast called 
   [PG Podcast](http://pgbovine.net/PG-Podcast.htm), typically on 
   Python subjects. 
