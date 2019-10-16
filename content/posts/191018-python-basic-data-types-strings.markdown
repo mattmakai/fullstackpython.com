@@ -1,7 +1,7 @@
 title: Basic Data Types in Python 3: Strings
 slug: python-basic-data-types-strings
 meta: Learn to create and manipulate strings in this series of blog posts on basic data types in Python programming
-category: talk
+category: post
 date: 2019-10-18
 modified: 2019-10-18
 newsletter: False
