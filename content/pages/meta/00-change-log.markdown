@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### October
+* Published a new blog post tutorial on the 
+  [String Data Type in Python 3](/blog/python-basic-data-types-strings.html).
 * Added new Django code example pages:
     * [django.db.models FileField](/django-db-models-filefield-examples.html)
 * Rewrote some parts of the [Python 2 or 3](/python-2-or-3.html) page to
