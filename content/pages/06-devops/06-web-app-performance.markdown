@@ -44,6 +44,10 @@ database queries, page size and many other factors.
   explains an issue the author found when measuring First Input Delay (FID) 
   on his site and what techniques he used to fix the problem.
 
+* [How to measure web app performance](https://blog.miguelgrinberg.com/post/video-how-to-measure-web-app-performance)
+  is a 20 minute code-first demo that shows how to get a realistic estimate
+  for how many requests per second your web application will be able to handle.
+
 * [How to Interpret Site Performance Tests](https://fly.io/articles/how-to-understand-performance-tests/)
   covers the difference between client, page and connection speed tests
   as well as a bit on caching performance.
