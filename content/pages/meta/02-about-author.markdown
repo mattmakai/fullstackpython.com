@@ -7,7 +7,6 @@ sidebartitle: About the Author
 meta: Learn more about the author of Full Stack Python, Matt Makai.
 
 
-# About the Author
 [Full Stack Python](https://www.fullstackpython.com/) is coded and written by
 [Matt Makai](http://www.mattmakai.com/). Matt currently
 works in Washington, D.C. for the 
