@@ -63,11 +63,13 @@ guide as they are considered advanced deployment techniques.
 
 
 ### Deployment resources
-* If you need a step-by-step guide to deploying a Python web application,
-  I wrote [a whole book](http://www.deploypython.com/) on exactly this topic 
-  called 
-  [The Full Stack Python Guide to Deployments](https://gumroad.com/l/WOvyt)
-  that you'll find super helpful.
+* [Hello, production](https://blog.thepete.net/blog/2019/10/04/hello-production/)
+  lays out the powerful philosophy of putting a project into production as
+  soon as possible in a project's lifecycle to establish the pipeline,
+  identify issues and bottlenecks, and build the foundation for continuous 
+  delivery. The post also covers common objections and provides some 
+  arguments to help you convince others that this strategy is the right
+  way to go on all projects.
 
 * [Deploying Python web applications](http://talkpython.fm/episodes/show/26/deploying-python-web-applications-updated)
   is an episode of the great Talk Python to Me podcast series where I

@@ -39,3 +39,7 @@ and report on Python [web applications](/web-development.html).
   deploys the [Django](/django.html) web app using 
   [Helm](https://helm.sh/) and configures Prometheus to scrape metrics
   from the application running on Kubernetes.
+
+* [A gentle introduction to the wonderful world of metrics](https://tech.showmax.com/2019/10/prometheus-introduction/)
+  has a quick summary that compares Prometheus with Nagios, then digs
+  into the logging format and what you can visualize with this tool.
