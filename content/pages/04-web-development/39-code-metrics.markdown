@@ -115,6 +115,11 @@ diminishing returns.
   are not caught at compile time. The post then shows how to use Flake8 in
   your own code reviews.
 
+* [Static Analysis at Scale](https://instagram-engineering.com/static-analysis-at-scale-an-instagram-story-8f498ab71a0c)
+  explains how Instagram's extremely high-trafficked Python-powered site 
+  is enabled by linting, codemods, and type-checking with 
+  [Pyre](https://pyre-check.org/).
+
 * This /r/Python 
   [poll on what linters the community uses](https://www.reddit.com/r/Python/comments/3oyjva/what_python_linter_do_you_use_poll/)
   provides some input on using PyCharm just for its linting features as

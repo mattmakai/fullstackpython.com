@@ -124,6 +124,10 @@ configure and start using MongoDB with Python.
   reviews a connection configuration file, the basics for data insertion,
   aggregation and updating records.
 
+* [How To Set Up Flask with MongoDB and Docker](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker)
+  combines the [Flask](/flask.html) web framework with MongoDB then
+  containerizes the example application with [Docker](/docker.html).
+
 * The [PyMongo project](https://api.mongodb.com/python/current/) creators 
   wrote a retrospective focusing on four decisions they would have done 
   differently with the benefit of hindsight:

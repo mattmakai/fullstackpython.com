@@ -88,6 +88,10 @@ which is defined by the
 
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
+* [is-website-vulnerable](https://github.com/lirantal/is-website-vulnerable)
+  is an open source tool that identifies security vulnerabilities based on 
+  the front end JavaScript code a web application runs.
+
 * [SPAs are harder, and always will be](http://wgross.net/essays/spas-are-harder)
   talks about the inherent complexity in building client-side user
   interfaces with JavaScript.
