@@ -40,13 +40,6 @@ should skip down to the next section for "experienced developers".
   at Harvey Mudd College which teaches the fundamentals of computer science
   using Python. It's an accessible read and perfect for programming beginners.
 
-* If you've never programmed before check out the 
-  [Getting Started](https://learntocodewith.me/getting-started/) page on 
-  [Learn To Code with Me](https://learntocodewith.me/)
-  by [Laurence Bradford](https://twitter.com/lebdev). She's done an 
-  incredible job of breaking down the steps beginners should take when 
-  they're uncertain about where to begin.
-
 * This [short 5 minute video](https://www.youtube.com/watch?v=mvK0UzFNw1Q)
   explains why it's better to think of projects you'd like to build and
   problems you want to solve with programming. Start working on those projects
@@ -70,10 +63,6 @@ should skip down to the next section for "experienced developers".
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
-* [Introduction to Programming with Python](http://opentechschool.github.io/python-beginners/en/index.html)
-  goes over the basic syntax and control structures in Python. The free book 
-  has numerous code examples to go along with each topic.
-
 * Google put together a great compilation of materials and subjects you 
   should read and learn from if you want to be a 
   [professional programmer](https://www.google.com/about/careers/students/guide-to-technical-development.html).
@@ -84,19 +73,8 @@ should skip down to the next section for "experienced developers".
   [Think Python: How to Think Like a Computer Scientist](http://greenteapress.com/thinkpython/html/index.html)
   is available in HTML form for free on the web.
 
-* [Python Practice Book](http://anandology.com/python-practice-book/index.html)
-  is a book of Python exercises to help you learn the basic language syntax.
-
 * Looking for ideas about what projects to use to learn to code? Check out 
   [this list of 5 programming projects for Python beginners](https://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/).
-
-* There's a Udacity course by one of the creators of Reddit that shows how to 
-  [use Python to build a blog](https://www.udacity.com/course/web-development--cs253).
-  It's a great introduction to web development concepts through coding.
-
-* I wrote a quick blog post on
-  [learning Python](http://www.mattmakai.com/learning-python-for-non-developers.html)
-  that non-technical folks trying to learn to program may find useful.
 
 * [Python for you and me](http://pymbook.readthedocs.org/en/latest/) is an
   approachable book with sections for Python syntax and the major language 
@@ -169,10 +147,6 @@ topics.
   Doug Hellmann is also now updating the list for changes brought about 
   from the upgrade to Python 3 from 2.x.
 
-* Kenneth Reitz's 
-  [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/en/latest/)
-  contains a wealth of information both on the Python programming language and the community.
-
 * [Composing Programs](http://composingprograms.com/) shows how to build 
   compilers with Python 3, which is a good undertaking if you're looking
   to learn both more about the Python language and how compiles work.
@@ -217,30 +191,21 @@ resources. I subscribe to all of the following newsletters and find that
 each one has its own unique take on what resources are most important
 to send out to the community.
 
-* [Python Weekly](http://www.pythonweekly.com/) is a free weekly roundup
+* [Python Weekly](https://www.pythonweekly.com/) is a free weekly roundup
   of the latest Python articles, videos, projects and upcoming events.
-
-* The [Full Stack Python monthly newsletter](https://www.fullstackpython.com/email.html) 
-  is a monthly newsletter that focuses on a single topic each month. For 
-  example, one month will aggregate great Flask resources, while another 
-  month will provide WSGI server configurations.
-
-* The [Python Tricks newsletter](https://realpython.com/python-tricks/)
-  contains code snippets and stories every few days to teach you new ways to 
-  code Python.
-
-* [Awesome Python Newsletter](https://python.libhunt.com/newsletter) provides
-  another solid selection of new and existing tutorials along with an extensive
-  [issues archive](https://python.libhunt.com/newsletter/archive) with previous 
-  links to resources.
-
-* [Import Python](http://importpython.com/newsletter/) is a newer newsletter
-  than Python Weekly and PyCoder's Weekly. So far I've found this newsletter
-  often pulls from different sources than the other two. It's well worth 
-  subscribing to all three so you don't miss anything.
 
 * [PyCoder's Weekly](http://pycoders.com/) is another great free weekly
   email newsletter similar to Python Weekly. The best resources are generally
   covered in both newsletters but they often cover different articles
   and projects from around the web.
+
+* [Talk Python's Friends of the Show](https://talkpython.fm/friends-of-the-show)
+  always highlights new episodes of this wonderful 
+  [podcast](/best-python-podcasts.html) as well as new useful tools to
+  add to your developer toolbelt.
+
+* [Awesome Python Newsletter](https://python.libhunt.com/newsletter) provides
+  another solid selection of new and existing tutorials along with an extensive
+  [issues archive](https://python.libhunt.com/newsletter/archive) with previous 
+  links to resources.
 

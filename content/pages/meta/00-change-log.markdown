@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2019
 ### October
+* Removed a bunch of outdated content from the 
+  [best Python resources](/best-python-resources.html) page and
+  added some nice new links to the mix.
 * Published a new blog post tutorial on the 
   [String Data Type in Python 3](/blog/python-basic-data-types-strings.html).
 * Added new Django code example pages:
