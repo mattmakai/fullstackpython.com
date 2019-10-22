@@ -59,7 +59,7 @@ mentors to learn what he or she can improve on in their programs.
 
 Another way to learn that combines the project-based learning with defined
 objectives is to play a computer game that will guide you through the
-learning process. For example, [TwilioQuest](https://www.twilio.com/quest)
+learning process. For example, [TwilioQuest](https://www.twilio.com/quest/learn/python)
 teaches the basics of Python in one of its missions and then has a
 ton of free content for studying intermediate and advanced topics.
 

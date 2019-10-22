@@ -22,11 +22,12 @@ If you're learning your first programming language these books were written
 with you in mind. Developers learning Python as a second or later language
 should skip down to the next section for "experienced developers".
 
-* [TwilioQuest](https://www.twilio.com/quest) is an free and incredible 16-bit
-  adventure game that teaches programming in the Python basics mission. It's
-  an absolutely way to stay engaged with the core concepts that can often
-  be otherwise dry to learn. There are also more advanced missions to learn
-  about [web APIs](/application-programming-interfaces.html), and new 
+* [TwilioQuest](https://www.twilio.com/quest/learn/python) is an free and 
+  incredible 16-bit adventure game that teaches programming in the Python 
+  basics mission. It's an absolutely way to stay engaged with the core 
+  concepts that can often be otherwise dry to learn. There are also more 
+  advanced missions to learn about 
+  [web APIs](/application-programming-interfaces.html), and new 
   learning missions are added regularly on new programming topics.
 
 * [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
