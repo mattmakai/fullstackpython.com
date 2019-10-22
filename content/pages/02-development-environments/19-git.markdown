@@ -158,6 +158,11 @@ workflow. These resources will come in handy for specific Git subjects.
   [writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
   that any programming ecosystem can learn from. 
 
+* [Git internals](https://blog.isquaredsoftware.com/presentations/2019-03-git-internals-rewrite/)
+  is a presentation that covers how Git stores data, how to work with
+  the Git history, and good practices for using Git based on the
+  knowledge of how it works internally.
+
 * [How Microsoft uses Git](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/use-git-microsoft)
   gives a high-level overview of their repository structure and hosting 
   at the extremely large scale organization.
