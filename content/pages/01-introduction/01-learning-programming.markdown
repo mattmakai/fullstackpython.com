@@ -57,6 +57,12 @@ that expand a programmer's abilities are the units of progress. Extra value
 is placed on making the projects open source and working with experienced 
 mentors to learn what he or she can improve on in their programs. 
 
+Another way to learn that combines the project-based learning with defined
+objectives is to play a computer game that will guide you through the
+learning process. For example, [TwilioQuest](https://www.twilio.com/quest)
+teaches the basics of Python in one of its missions and then has a
+ton of free content for studying intermediate and advanced topics.
+
 
 ### Should I learn Python first?
 Python is good choice in the project-based approach because of the extensive 
