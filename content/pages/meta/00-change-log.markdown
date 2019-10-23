@@ -23,6 +23,8 @@ on GitHub.
   [String Data Type in Python 3](/blog/python-basic-data-types-strings.html).
 * Added new Django code example pages:
     * [django.db.models FileField](/django-db-models-filefield-examples.html)
+* Updated code examples on the following pages:
+    * [django.db.models TextField](/django-db-models-textfield-examples.html)
 * Rewrote some parts of the [Python 2 or 3](/python-2-or-3.html) page to
   make it more clear that 3 is now the mandatory way to get started.
 * Updated [best videos](/best-python-videos.html) page with new EuroPython links.
