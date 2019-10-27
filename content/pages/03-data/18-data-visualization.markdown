@@ -32,6 +32,13 @@ easier for humans to see patterns, trends and other useful information.
   of visualizations created with Python and includes the code used to 
   produced each one.
 
+* [Python & OpenGL for Scientific Visualization](https://www.labri.fr/perso/nrougier/python-opengl/)
+  is a free book that shows how to combine open source tools such as 
+  [Pyglet](https://pyglet.readthedocs.io/en/stable/) and 
+  [PyOpenGL](http://pyopengl.sourceforge.net/) with Python 
+  [data analysis](/data-analysis.html) libraries to generate interactive
+  scientific data visualizations.
+
 * [10 Useful Python Data Visualization Libraries for Any Discipline](https://blog.modeanalytics.com/python-data-visualization-libraries/)
   is a straightforward overview of Python packages that create Python
   visualizations.

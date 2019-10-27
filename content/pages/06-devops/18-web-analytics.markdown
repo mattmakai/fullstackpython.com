@@ -121,6 +121,10 @@ application before taking some action, such as purchasing your service.
   by Mozilla explains what to track, choosing an analytics platform and how
   to serve up the analytics JavaScript asynchronously.
 
+* [Options for Hosting Your Own Non-JavaScript-Based Analytics](https://css-tricks.com/options-for-hosting-your-own-non-javascript-based-analytics/)
+  has a few non-Google Analytics web analytics tools that mostly rely
+  on server-side rather than client-side tracking.
+
 * This post provides context for determining if a given metric is
   ["vanity" or actionable](http://fizzle.co/sparkline/vanity-vs-actionable-metrics).
 

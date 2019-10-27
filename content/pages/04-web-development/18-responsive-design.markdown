@@ -32,6 +32,9 @@ a broad range of devices that people use to read this site.
   contains a bunch of great examples for how to use media queries to
   achieve a responsive design.
 
+* [Making Tables Responsive With Minimal CSS](https://uglyduck.ca/responsive-tables/)
+  steps through a couple of ways to responsively handle tables.
+
 * Smashing Magazine's article from 2011 on
   [responsive design - what it is and how to use it](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
   remains a definitive source for understanding why sites should be

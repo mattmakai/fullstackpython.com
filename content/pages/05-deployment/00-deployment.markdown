@@ -71,6 +71,11 @@ guide as they are considered advanced deployment techniques.
   arguments to help you convince others that this strategy is the right
   way to go on all projects.
 
+* [Automated Continuous Deployment at Heroku](https://blog.heroku.com/automated-continuous-deployment-at-heroku)
+  explains [Heroku](/heroku.html)'s deployment system, the checks they 
+  use to ensure code quality and what they have learned from building
+  the pipeline and process.
+
 * [Deploying Python web applications](http://talkpython.fm/episodes/show/26/deploying-python-web-applications-updated)
   is an episode of the great Talk Python to Me podcast series where I
   discuss deploying web applications based on a fairly traditional virtual 

@@ -77,6 +77,8 @@ topics of using [web frameworks](/web-frameworks.html) like
   of South and now Django's built-in migrations, Andrew Godwin.
 
 * DjangoCon US videos from 
+  [2019](https://www.youtube.com/playlist?list=PL2NFhrDSOxgXXUMIGOs8lNe2B-f4pXOX-),
+  [2018](https://www.youtube.com/watch?v=pY-oje5b5Qk&list=PL2NFhrDSOxgW5tKoKmUyuubsbTfRgvT6z),
   [2017](https://www.youtube.com/playlist?list=PL2NFhrDSOxgXmA215-fo02djziShwLa6T),
   [2016](https://www.youtube.com/playlist?list=PL2NFhrDSOxgX-A4qpaf3rRaEnEe7166Ac),
   [2015](https://www.youtube.com/playlist?list=PL2NFhrDSOxgWvzf40lYJ8gohFciQqRx3K),

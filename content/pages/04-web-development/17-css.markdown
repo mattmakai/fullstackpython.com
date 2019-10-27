@@ -210,6 +210,12 @@ web application's design.
   via CSS selectors, including type selectors, pseudo-elements, class 
   selectors, attribute selectors and ID selectors.
 
+* [Realistic Water Effect without JavaScript - HTML/CSS Only](https://www.youtube.com/watch?v=q-i0rZBZvBk)
+  is one of the coolest tutorials I have seen that uses CSS to create
+  a water effect over an image. This video provides an example of how
+  there are so many incredible ways to use CSS and web development  
+  technologies.
+
 
 ## CSS learning checklist
 1. Create a simple HTML file with basic elements in it. Use the

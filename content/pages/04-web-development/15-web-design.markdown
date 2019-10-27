@@ -88,6 +88,9 @@ this short list as my absolute favorites that help developers become
   shows the most frequently used HTML elements, metadata, text
   content and other statistics from a large scale analysis of the web.
 
+* [How to design delightful dark themes](https://blog.superhuman.com/how-to-design-delightful-dark-themes-7b3da644ff1f)
+  explains some subtle tactics to make dark themes work well for users.
+
 * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
   color picker by Adobe that helps choose colors for your designs.
 

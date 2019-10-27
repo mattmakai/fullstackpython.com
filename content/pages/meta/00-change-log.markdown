@@ -23,6 +23,7 @@ on GitHub.
   [String Data Type in Python 3](/blog/python-basic-data-types-strings.html).
 * Added new Django code example pages:
     * [django.db.models FileField](/django-db-models-filefield-examples.html)
+    * [django.db.models SlugField](/django-db-models-slugfield-examples.html)
 * Updated code examples on the following pages:
     * [django.db.models TextField](/django-db-models-textfield-examples.html)
 * Rewrote some parts of the [Python 2 or 3](/python-2-or-3.html) page to
