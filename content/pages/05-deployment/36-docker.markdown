@@ -169,3 +169,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 
 * [Dockerizing a Python Django Web Application](https://semaphoreci.com/community/tutorials/dockerizing-a-python-django-web-application)
   is another in-depth tutorial on combining Docker with [Django](/django.html).
+
+* [Dockerizing Flask with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/)
+  looks at how to configure Flask to run on Docker along with Postgres,
+  Nginx, and Gunicorn.
