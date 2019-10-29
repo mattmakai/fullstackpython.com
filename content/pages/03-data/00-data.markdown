@@ -72,12 +72,22 @@ following resources do a great job of telling stories with data. There
 are more links to stories listed on the [data analysis](/data-analysis.html) 
 and [data visualization](/data-visualization.html) pages.
 
+* [Data — from objects to assets](https://www.nature.com/articles/d41586-019-03062-w)
+  covers the history of data collection and usage, from 150 years ago to
+  today. The article covers how initial steps by individual scientists
+  sponsored by wealthy patrons in the 1800s gave way to systematic collection
+  by governments and businesses in the 20th century. A significant amount
+  of personal data is now held by a few dozen large corporations worldwide
+  such as Google, Amazon and Facebook. The article covers some of the
+  implications of data as a valuable asset and in general is a great read
+  as a high-level overview of on this topic.
+
 * [Metadata Investigation : Inside Hacking Team](https://labs.rs/en/metadata/)
   presents what metadata is and how it can be used to track people even though
   it is often thought of as less of a problem than typical stored data.
 
 * [A visual introduction to machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
-  provide a spectacular example of 
+  is a spectacular example of 
   [data visualization](/data-visualization.html) to explain what a machine
   learning model does on a San Francisco and New York housing data set.
 

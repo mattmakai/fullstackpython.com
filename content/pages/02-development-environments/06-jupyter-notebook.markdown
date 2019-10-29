@@ -192,3 +192,8 @@ like advanced interactive visualizations.
 * The number of open source Jupyter Notebooks on GitHub is exploding and
   [this post attempts to estimate the growth](https://kyso.io/KyleOS/nbestimate)
   using Python, [pandas](/pandas.html) and a scraped data set.
+
+* [Reproducible Jupyter Notebooks with Docker](https://blog.reviewnb.com/reproducible-notebooks/)
+  explains when to use [Docker](/docker.html) in combination with Jupyter
+  Notebooks as well as the instructions for creating a dockerfile to build
+  your images.
