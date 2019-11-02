@@ -107,6 +107,11 @@ frameworks, templating engines and
 
 
 ### Web framework resources
+* [Building Your Own Python Web Framework](https://testdriven.io/courses/python-web-framework/?utm_source=fsp)
+  is an awesome way to learn how the [WSGI](/wsgi-servers.html) works
+  and the many other pieces that combine to make web frameworks useful
+  to web developers.
+
 * When you are learning how to use one or more web frameworks it's helpful
   to have an idea of what the code under the covers is doing. This post on
   building a 

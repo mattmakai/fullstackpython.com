@@ -221,6 +221,17 @@ Django:
 * [django.db.models DateField](/django-db-models-datefield-examples.html)
 
 
+### django-guardian
+[django-guardian](https://github.com/django-guardian/django-guardian)
+([project documentation](https://django-guardian.readthedocs.io/en/stable/)
+and
+[PyPI page](https://pypi.org/project/django-guardian/))
+provides per-object permissions in [Django](/django.html) projects 
+by enhancing the existing authentication backend. The project's code
+is open source under the 
+[MIT license](https://github.com/django-guardian/django-guardian/blob/devel/LICENSE).
+
+
 ### django-haystack
 [django-haystack](https://github.com/django-haystack/django-haystack)
 ([project website](http://haystacksearch.org/) and 
