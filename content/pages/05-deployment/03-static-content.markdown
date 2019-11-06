@@ -57,6 +57,9 @@ Amazon S3 and other content delivery networks.
   provide their perspectives in this piece: 
   [CDN experts on CDNs](https://www.maxcdn.com/blog/cdn-experts-on-cdns/).
 
+* [Serving Static Files from Flask with WhiteNoise and Amazon CloudFront](https://testdriven.io/blog/flask-static-files-whitenoise-cloudfront/)
+  looks at how to manage static files with Flask, WhiteNoise, and
+  Amazon CloudFront.
 
 ## Static content learning checklist
 1. Identify a content delivery network to offload serving static content 
