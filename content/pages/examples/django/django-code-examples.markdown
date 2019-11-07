@@ -437,6 +437,17 @@ The project's code is provided as open source under the
 [MIT license](https://github.com/jazzband/website/blob/master/LICENSE).
 
 
+### pytest-django
+[pytest-django](https://github.com/pytest-dev/pytest-django)
+([project documentation](https://pytest-django.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/pytest-django/))
+is a code library that makes it easier to use 
+[pytest](https://docs.pytest.org/en/latest/) with [Django](/django.html)
+applications. The project and its code are open sourced under the 
+[BSD 3-clause license](https://github.com/pytest-dev/pytest-django/blob/master/LICENSE).
+
+
 ### register
 [register](https://github.com/ORGAN-IZE/register) is a [Django](/django.html),
 [Bootstrap](/bootstrap-css.html), [PostgreSQL](/postgresql.html) project that is

@@ -15,6 +15,10 @@ on GitHub.
 
 
 ## 2019
+### November
+* Added new resources to [RQ](/redis-queue-rq.html), [Sanic](/sanic.html)
+  and [networking](/networking.html) pages.
+
 ### October
 * Removed a bunch of outdated content from the 
   [best Python resources](/best-python-resources.html) page and

@@ -28,6 +28,12 @@ web applications.
   IP addresses such as 192.168.1.1 became standards for localhost or
   other local networking. 
 
+* [We built network isolation for 1,500 services to make Monzo more secure](https://monzo.com/blog/we-built-network-isolation-for-1-500-services)
+  provides the thinking, processes and data analysis behind how one
+  team took a complex environment, separated the dependencies and
+  was able to improve their network. It's a great case study-style
+  article that has more detail than a lot of similar operations posts.
+
 * [Dropbox traffic infrastructure: Edge network](https://blogs.dropbox.com/tech/2018/10/dropbox-traffic-infrastructure-edge-network/)
   explains how Dropbox uses edge-of-the-network resources closer to the
   end user to optimize performance of their service.

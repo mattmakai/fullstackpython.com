@@ -70,6 +70,11 @@ this framework.
   [a demo that was deployed to Azure](https://c-w.github.io/gutenberg-http/)
   to show how it works.
 
+* [Practical Log Viewers with Sanic and Elasticsearch - Designing CI/CD Systems](https://tryexceptpass.org/article/continuous-builds-viewing-logs/)
+  shows how to build a log viewer using Sanic that collects 
+  data from various Docker containers being created through
+  a build system.
+
 * Sanic comes with 
   [a slew of examples](https://github.com/channelcat/sanic/tree/master/examples) 
   in the official repository.
