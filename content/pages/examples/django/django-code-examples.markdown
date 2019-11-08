@@ -260,13 +260,23 @@ The django-jet project is open source under the
 
 ### django-jsonfield
 [django-jsonfield](https://github.com/dmkoch/django-jsonfield) 
-([jsonfield on PyPi](https://pypi.org/project/jsonfield/)) is a
+([jsonfield on PyPI](https://pypi.org/project/jsonfield/)) is a
 [Django](/django.html) code library that makes it easier to store validated
 JSON in a [Django object-relational mapper (ORM)](/django-orm.html) database 
 model.
 
 The django-jsonfield project is open source under the 
 [MIT license](https://github.com/dmkoch/django-jsonfield/blob/master/LICENSE).
+
+
+### django-loginas
+[django-loginas](https://github.com/skorokithakis/django-loginas)
+([PyPI package information](https://pypi.org/project/django-loginas/))
+is [Django](/django.html) code library for admins to log into an application
+as another user, typically for debugging purposes.
+
+django-loginas is open source under the
+[BSD 3-Clause "New" or "Revised" License](https://github.com/skorokithakis/django-loginas/blob/master/LICENSE).
 
 
 ### django-model-utils
@@ -392,6 +402,23 @@ The code for django-taggit is
 [open source](https://github.com/jazzband/django-taggit/blob/master/LICENSE)
 and maintained by the collaborative developer community group 
 [Jazzband](https://jazzband.co/).
+
+
+### django-wiki
+[django-wiki](https://github.com/django-wiki/django-wiki)
+([project documentation](https://django-wiki.readthedocs.io/en/master/),
+[demo](https://demo.django-wiki.org/),
+and [PyPI page](https://pypi.org/project/django-wiki/))
+is a wiki system code library for [Django](/django.html)
+projects that makes it easier to create user-editable content.
+The project aims to provide necessary core features and then
+have an easy plugin format for additional features, rather than
+having every exhaustive feature built into the core system.
+django-wiki is a rewrite of an earlier now-defunct project
+named [django-simplewiki](https://code.google.com/p/django-simple-wiki/).
+
+The code for django-wiki is provided as open source under the
+[GNU General Public License 3.0](https://github.com/django-wiki/django-wiki/blob/master/COPYING).
 
 
 ### drf-action-serializer
