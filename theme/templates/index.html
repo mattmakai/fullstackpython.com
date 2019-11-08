@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://www.fullstackpython.com/" />
 {% endblock %}
 
-{% block css %}<style>{% include "css/base.css" %}{% include "css/panel.css" %}{% include "css/page-article.css" %}{% include "css/responsive.css" %}</style>{% endblock %}
+{% block css %}<style>{% include "css/base.css" %}{% include "css/toc.css" %}{% include "css/panel.css" %}{% include "css/page-article.css" %}{% include "css/responsive.css" %}</style>{% endblock %}
 
 {% block banner %}
 {% endblock %}
@@ -36,8 +36,12 @@
   <a href="/table-of-contents.html">table of contents</a>.
   </p>
   <h3>What do you need to learn to create your application?</h3>
-  {% include "choices/index.html" %}
  </div>
  {% include "index-sidebar.html" %}
+</div>
+<div class="row">
+ <div class="c12">
+{% include "book-chapters.html" %}
+ </div>
 </div>
 {% endblock %}
