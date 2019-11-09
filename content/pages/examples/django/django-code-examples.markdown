@@ -393,9 +393,22 @@ Code examples from django-smithy are shown on the following pages:
 * [django.db.models TextField](/django-db-models-textfield-examples.html)
 
 
+### django-tables2
+[django-tables2](https://github.com/jieter/django-tables2) 
+([projection documentation](https://django-tables2.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/django-tables2/))
+is a code library for [Django](/django.html) that simplifies creating and 
+displaying tables in [Django templates](/django-templates.html),
+especially with more advanced features such as pagination and sorting.
+The project and its code are 
+[available as open source](https://github.com/jieter/django-tables2/blob/master/LICENSE).
+
+
 ### django-taggit
 [django-taggit](https://github.com/jazzband/django-taggit)
-([project documentation](https://django-taggit.readthedocs.io/))
+([project documentation](https://django-taggit.readthedocs.io/)
+and
 [PyPI page](https://pypi.org/project/django-taggit/)) provides a way
 to create, store, manage and use tags in a [Django](/django.html) project. 
 The code for django-taggit is 
