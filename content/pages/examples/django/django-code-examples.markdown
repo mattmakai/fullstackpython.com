@@ -172,6 +172,20 @@ Useful example code found within django-easy-timezones:
 * [django.utils.timezone](/django-utils-timezone-examples.html)
 
 
+### django-environ
+[django-environ](https://github.com/joke2k/django-environ)
+([project documentation](https://django-environ.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/django-environ/))
+is a library that aims to make it easier to configure your Django
+project's configuration through environment variables. The philosophy
+is inspired by the [Twelve-Factor App](https://www.12factor.net/)
+set of principles.
+
+django-environ is open source under the 
+[MIT license](https://github.com/joke2k/django-environ/blob/develop/LICENSE.txt).
+
+
 ### django-extensions
 [django-extensions](https://github.com/django-extensions/django-extensions)
 ([project documentation](https://django-extensions.readthedocs.io/en/latest/)
@@ -200,6 +214,17 @@ Code from django-filer can be found on these pages:
 * [django.contrib.admin.sites.register](/django-contrib-admin-sites-register-examples.html)
 * [django.core.management.base BaseCommand](/django-core-management-base-basecommand-examples.html)
 * [django.http HttpResponseBadRequest](/django-http-httpresponsebadrequest-examples.html)
+
+
+### django-filter
+[django-filter](https://github.com/carltongibson/django-filter)
+([project documentation](https://django-filter.readthedocs.io/en/master/)
+and
+[PyPI page](https://pypi.org/project/django-filter/2.2.0/))
+makes it easier to filter down querysets from the 
+[Django ORM](/django-orm.html) by providing common bits of boilerplate
+code. django-filter is provided as 
+[open source](https://github.com/carltongibson/django-filter/blob/master/LICENSE).
 
 
 ### django-floppyforms
