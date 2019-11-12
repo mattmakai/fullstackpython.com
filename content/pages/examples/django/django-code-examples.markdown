@@ -272,6 +272,16 @@ The django-haystack project is open source under the
 [BSD license](https://github.com/django-haystack/django-haystack/blob/master/LICENSE).
 
 
+### django-import-export
+[django-import-export](https://github.com/django-import-export/django-import-export)
+([documentation](https://django-import-export.readthedocs.io/en/latest/)
+and [PyPI page](https://pypi.org/project/django-import-export/))
+is a [Django](/django.html) code library for importing and exporting data
+from the Django Admin. The tool supports many export and import formats 
+such as CSV, JSON and YAML. django-import-export is open source under the
+[BSD 2-Clause "Simplified" License](https://github.com/django-import-export/django-import-export/blob/master/LICENSE).
+
+
 ### django-jet
 [django-jet](https://github.com/geex-arts/django-jet) 
 ([project documentation](https://jet.readthedocs.io/en/latest/),
