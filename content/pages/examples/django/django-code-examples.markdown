@@ -428,6 +428,18 @@ Code examples from django-smithy are shown on the following pages:
 * [django.db.models TextField](/django-db-models-textfield-examples.html)
 
 
+### django-sql-explorer
+[django-sql-explorer](https://github.com/groveco/django-sql-explorer)
+([PyPI page](https://pypi.org/project/django-sql-explorer/0.2/)),
+also referred to as "SQL Explorer",
+is a code library for the [Django](/django.html) Admin that allows
+approved, authenticated users to view and execute direct database SQL 
+queries. The tool keeps track of executed queries so users can share them
+with each other, as well as export results to downloadable formats.
+django-sql-explorer is provided as open source under the
+[MIT license](https://github.com/groveco/django-sql-explorer/blob/master/LICENSE).
+
+
 ### django-tables2
 [django-tables2](https://github.com/jieter/django-tables2) 
 ([projection documentation](https://django-tables2.readthedocs.io/en/latest/)

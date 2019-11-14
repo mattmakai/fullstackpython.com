@@ -188,6 +188,12 @@ frameworks, templating engines and
   looks at the best use cases for Django and Flask along with what 
   makes them unique, from an educational and development standpoint.
 
+* [11 new Python web frameworks](https://deepsource.io/blog/new-python-web-frameworks/)
+  has a quick blurb on several newer frameworks that are still emerging,
+  such as [Sanic](/sanic.html), [Masonite](https://docs.masoniteproject.com/)
+  and [Molten](https://moltenframework.com/).
+
+
 ### Web frameworks learning checklist
 1. Choose a major Python web framework ([Django](/django.html) or 
    [Flask](/flask.html) are recommended) and stick with it. When you're just
