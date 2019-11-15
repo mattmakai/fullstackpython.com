@@ -16,6 +16,11 @@ typically abbreviated "DRF", is a Python library for building web
 
 
 ### Django REST Framework resources
+* [How to Developer APIs with Django REST Framework](https://djangostars.com/blog/rest-apis-django-development/)
+  covers the steps for creating a development environment for your Django+DRF
+  project then creating API endpoints with the test-driven development (TDD)
+  approach.
+
 * The 
   [official DRF tutorial](http://www.django-rest-framework.org/tutorial/quickstart/)
   is one of the best first-party pieces of documentation on any open source
