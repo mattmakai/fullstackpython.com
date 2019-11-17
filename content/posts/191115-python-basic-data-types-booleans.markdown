@@ -1,6 +1,6 @@
 title: Basic Data Types in Python 3: Booleans
 slug: python-basic-data-types-booleans
-meta: Learn to use boolean (true and false) values in your Python 3 code
+meta: Learn to use boolean (True and False) values in your Python 3 code
 category: post
 date: 2019-11-15
 modified: 2019-11-15
@@ -10,8 +10,9 @@ headeralt: Learn basic Python data types in TwilioQuest 3 - Booleans
 author: Kevin Whinnery
 authorlink: https://www.twilio.com/quest
 
-Welcome back to our ongoing series of blog posts on basic data types in Python 3!
-Last time, we explored the functionality of
+
+Welcome back to our ongoing series of blog posts on basic data types in 
+[Python 3](/python-2-or-3.html)! Last time, we explored the functionality of
 [strings](/blog/python-basic-data-types-strings.html). Today, we dive in to
 another key data type - booleans. Booleans (and "boolean logic") are an 
 important concept in programming, representing the concept of "true" and "false".
@@ -23,8 +24,8 @@ Python programming.
 
 Ready to learn how to use booleans in Python 3? Let's get started!
 
-## Booleans in Python 3
 
+## Booleans in Python 3
 [Booleans](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not)
 are a concept that exists in every programming language. A boolean represents
 the idea of "true" or "false". When you are writing a program, there
@@ -53,8 +54,8 @@ your_name = "Kars"
 have_same_name = my_name == your_name
 ```
 
-### Boolean logic
 
+### Boolean logic
 Booleans are used in your code to make it behave differently based on current
 conditions within your program. You can use boolean values and comparisons in 
 conjunction with the `if`, `elif`, and `else` keyoards as one means to achieve 
@@ -83,8 +84,8 @@ else:
   print("Skol, Vikings!")
 ```
 
-### More complex boolean logic
 
+### More complex boolean logic
 Sometimes you will need to evaluate multiple conditions in your boolean logic.
 For this purpose, you'll combine the `and` and `or` keywords. The `and` keyword
 compares two boolean values and returns `True` if both are true. The `or` keyword
@@ -104,8 +105,8 @@ else:
   print("Huh - not what I would have chosen.")
 ```
 
-## Wrapping up
 
+## Wrapping up
 Booleans are an important tool in any programming language. Using boolean logic,
 your code can react to data inside your program, and carry out different
 instructions under different circumstances. Hopefully, you've learned a bit 

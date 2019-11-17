@@ -31,7 +31,7 @@ command line and query language.
 * [An Introduction to MongoDB](https://scotch.io/tutorials/an-introduction-to-mongodb) 
   examines common commands frequently used to perform data operations.
 
-* [MongoDB In 30 Minutes](https://www.youtube.com/watch?list=PL1Z_7yg6Pa3AhqCOTQKm9X_Sl9xLdMKYo&v=pWbMrx5rVBE)
+* [MongoDB In 30 Minutes](https://www.youtube.com/watch?v=-56x56UppqQ)
    goes over the basics for creating, querying, updating and deleting data
    in MongoDB.
 

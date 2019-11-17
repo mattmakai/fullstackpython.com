@@ -337,11 +337,9 @@ provides an introspective interface for working with
 [MongoDB](/mongodb.html) via mongoengine. The project has its own new code 
 to map MongoDB to the [Django](/django.html) Admin interface.
 
-django-mongonaut's highlighted features include:
-
-    * Automatic introspection of mongoengine documents
-    * The ability to constrain who sees what and what they can do
-    * Full control for adding, editing and deleting documents
+django-mongonaut's highlighted features include automatic introspection 
+of mongoengine documents, the ability to constrain who sees what and what 
+they can do, and full control for adding, editing and deleting documents.
 
 The django-mongonaut project is open sourced under the
 [MIT License](https://github.com/jazzband/django-mongonaut/blob/master/LICENSE.txt)
