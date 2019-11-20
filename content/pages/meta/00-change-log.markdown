@@ -18,6 +18,9 @@ on GitHub.
 ### November
 * Added new resources to [RQ](/redis-queue-rq.html), [Sanic](/sanic.html)
   and [networking](/networking.html) pages.
+* Added new Django code example pages:
+    * [django.forms BooleanField](/django-forms-booleanfield-examples.html)
+    * [django.forms CharField](/django-forms-charfield-examples.html)
 
 ### October
 * Removed a bunch of outdated content from the 
