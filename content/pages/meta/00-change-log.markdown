@@ -21,6 +21,7 @@ on GitHub.
 * Added new Django code example pages:
     * [django.forms BooleanField](/django-forms-booleanfield-examples.html)
     * [django.forms CharField](/django-forms-charfield-examples.html)
+    * [django.forms ChoiceField](/django-forms-choicefield-examples.html)
 
 ### October
 * Removed a bunch of outdated content from the 
