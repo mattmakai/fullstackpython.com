@@ -156,6 +156,11 @@ web application's design.
 * [Can I Use...](http://caniuse.com/) is a compatibility table that shows
   which versions of browsers implement specific CSS features.
 
+* [How do you remove unused CSS from a site?](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/)
+  covers tools for identifying unnecessary CSS and the process for eliminating
+  rules that are overwritten by other rules and therefore do not need to
+  be sent to the client.
+
 * The [Web Design Museum](https://www.webdesignmuseum.org/) is an amazing
   look back at how web design has evolved over the past 25+ years. Some of 
   the designs can still be seen in their current site's presentation such
