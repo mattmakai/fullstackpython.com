@@ -54,6 +54,10 @@ typically abbreviated "DRF", is a Python library for building web
   gives a great walkthrough for creating a question polling application 
   backend with code and the explanation as you build it.
 
+* [Django REST Framework Permissions in Depth](https://nezhar.com/blog/django-rest-framework-permissions-in-depth/)
+  has code examples and explains permission classes versus authentication
+  classes in DRF.
+
 * [Optimizing slow Django REST Framework performance](https://ses4j.github.io/2015/11/23/optimizing-slow-django-rest-framework-performance/)
 
 * [TLT: Serializing Authenticated User Data With Django REST Framework](http://gregblogs.com/tlt-serializing-authenticated-user-data-with-django-rest-framework/)

@@ -56,6 +56,11 @@ following resources are broader walkthroughs for the SciPy ecosystem:
   is an awesome resource that shows how to use your basic
   Python knowledge to learn how to do vectorization with NumPy.
 
+* [The ultimate beginner's guide to NumPy](https://towardsdatascience.com/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54)
+  explains how to install and import NumPy, then digs into using arrays for
+  computation and how to perform operations that get the results you need
+  for your data analysis.
+
 * [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/101-numpy-exercises-python/)
 
 * [NumPy: creating and manipulating numerical data](http://www.scipy-lectures.org/intro/numpy/index.html)
