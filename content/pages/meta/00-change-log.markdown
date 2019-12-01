@@ -15,6 +15,10 @@ on GitHub.
 
 
 ## 2019
+### December
+* Added new Django code example pages:
+    * [django.forms EmailField](/django-forms-emailfield-examples.html)
+
 ### November
 * Added new resources to [RQ](/redis-queue-rq.html), [Sanic](/sanic.html)
   and [networking](/networking.html) pages.
