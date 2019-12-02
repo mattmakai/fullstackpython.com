@@ -8,7 +8,7 @@ meta: View Python code examples that show how to use the EmailField class within
 
 
 [EmailField](https://github.com/django/django/blob/master/django/forms/fields.py)
-([documentation](https://docs.djangoproject.com/en/2.2/ref/forms/fields/#emailfield)),
+([documentation](https://docs.djangoproject.com/en/stable/ref/forms/fields/#emailfield)),
 from the [Django](/django.html) `forms` module, enables safe handling of 
 text intended to be stored and used as valid email addresses. The email address
 data is collected via an HTTP POST request from an
