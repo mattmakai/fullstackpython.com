@@ -82,6 +82,19 @@ requests and responses via Python objects and does not integrate session
 handling or [database](/databases.html) access.
 
 
+## FastAPI
+[FastAPI](https://fastapi.tiangolo.com/) is a Python 3.6+ framework for
+building APIs. It has very high performance as it is based on
+[Starlette](https://www.starlette.io/) and
+[Pydantic](https://pydantic-docs.helpmanual.io/).
+
+It takes advantage of standard Python type declarations in function parameters
+to declare request parameters, bodies, perform data conversion (serialization,
+parsing), data valdiation and automatic API documentation with **OpenAPI 3**
+(including **JSON Schema**). And it provides 2 alternative web user interfaces
+for automatic, interactive, API documentation.
+
+
 ### Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
   contains both familiar and less known Python libraries.
