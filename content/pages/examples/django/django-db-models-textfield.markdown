@@ -1,4 +1,4 @@
-title: django.db.models TextField Example Code
+title: django.db.models TextField Python Example Code
 category: page
 slug: django-db-models-textfield-examples
 sortorder: 50102
@@ -574,4 +574,46 @@ auditlog.register(CharfieldTextfieldModel)
 auditlog.register(PostgresArrayFieldModel)
 auditlog.register(NoDeleteHistoryModel)
 ```
+
+
+## Example 4 from django-sql-explorer
+[django-sql-explorer](https://github.com/groveco/django-sql-explorer)
+([PyPI page](https://pypi.org/project/django-sql-explorer/0.2/)),
+also referred to as "SQL Explorer",
+is a code library for the [Django](/django.html) Admin that allows
+approved, authenticated users to view and execute direct database SQL
+queries. The tool keeps track of executed queries so users can share them
+with each other, as well as export results to downloadable formats.
+django-sql-explorer is provided as open source under the
+[MIT license](https://github.com/groveco/django-sql-explorer/blob/master/LICENSE).
+
+[**django-sql-explorer / explorer / migrations / 0002_auto_20150501_1515.py**](https://github.com/groveco/django-sql-explorer/blob/master/explorer/migrations/0002_auto_20150501_1515.py)
+
+```python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+~~from django.db import models, migrations
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('explorer', '0001_initial'),
+    ]
+
+~~    operations = [
+~~        migrations.RemoveField(
+~~            model_name='querylog',
+~~            name='is_playground',
+~~        ),
+~~        migrations.AlterField(
+~~            model_name='querylog',
+~~            name='sql',
+~~            field=models.TextField(null=True, blank=True),
+~~        ),
+~~    ]
+
+```
+
 
