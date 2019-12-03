@@ -129,6 +129,11 @@ the framework.
 * [2 Scoops of Django](https://www.twoscoopspress.com/collections/django/products/two-scoops-of-django-1-11)
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
+  
+* The [Test-Driven Development with Django, Django REST Framework, and Docker](https://testdriven.io/courses/tdd-django/?utm_source=fsp)
+  course details how to set up a development environment with Docker in
+  order to build and deploy a RESTful API powered by Python, Django,
+  and Django REST Framework.
 
 * This 3-part Django project optimization guide covers a wide range of
   advanced topics such as 
@@ -234,7 +239,13 @@ based on [WebSockets](/websockets.html).
   [channels examples repository](https://github.com/andrewgodwin/channels-examples)
   contains a couple of good starter projects such as a live blog and a 
   chat application to use as base code.
-
+  
+* The [Developing a Real-Time Taxi App with Django Channels and Angular](https://testdriven.io/courses/real-time-app-with-django-channels-and-angular/?utm_source=fsp)
+  course details how to create a ride-sharing app with Django Channels,
+  Angular, and Docker. Along the way, you'll learn how to manage
+  client/server communication with Django Channels, control flow and
+  routing with Angular, and build a RESTful API with Django REST
+  Framework.
 
 ## Django testing
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
