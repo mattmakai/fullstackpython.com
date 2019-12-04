@@ -18,6 +18,7 @@ on GitHub.
 ### December
 * Added new Django code example pages:
     * [django.forms EmailField](/django-forms-emailfield-examples.html)
+    * [django.forms IntegerField](/django-forms-integerfield-examples.html)
 
 ### November
 * Added new resources to [RQ](/redis-queue-rq.html), [Sanic](/sanic.html)
