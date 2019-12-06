@@ -16,6 +16,8 @@ on GitHub.
 
 ## 2019
 ### December
+* Updated the [RQ](/redis-queue-rq.html) page with a couple of new fresh
+  resources.
 * Added new Django code example pages:
     * [django.forms EmailField](/django-forms-emailfield-examples.html)
     * [django.forms IntegerField](/django-forms-integerfield-examples.html)

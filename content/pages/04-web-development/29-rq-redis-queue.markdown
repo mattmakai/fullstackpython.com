@@ -22,6 +22,10 @@ track of tasks in the queue that need to be executed.
   from the 
   [Mars Rover web API](https://data.nasa.gov/Space-Science/Mars-Rover-Photos-API/929k-jizu)
   and process URLs for each of the photos taken by NASA's Mars rover.
+  There is also a follow-up post on
+  [Scheduling Tasks in Python with Redis Queue and RQ Scheduler](https://www.twilio.com/blog/scheduling-tasks-in-python-with-redis-queue-and-rq-scheduler)
+  that shows how to schedule tasks in advance, which is a common way of 
+  working with [task queues](/task-queues.html).
 
 * The [RQ intro post](http://nvie.com/posts/introducing-rq/) contains
   information on design decisions and how to use RQ in your projects.
