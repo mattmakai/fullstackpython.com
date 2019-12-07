@@ -36,6 +36,10 @@ applications.
   is a good starting place for more information on getting started with
   Skaffold.
 
+* [kubethanos](https://github.com/berkay-dincer/kubethanos) is a tool to kill 
+  half of your Kubernetes pods at random, to test the resilience of your
+  infrastructure under highly chaotic scenarios.
+
 
 ### Kubernetes background and retrospectives
 * [Borg, Omega and Kubernetes](https://queue.acm.org/detail.cfm?id=2898444)
