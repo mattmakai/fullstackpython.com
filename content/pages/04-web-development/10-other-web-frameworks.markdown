@@ -82,6 +82,20 @@ requests and responses via Python objects and does not integrate session
 handling or [database](/databases.html) access.
 
 
+## Masonite
+
+[Masonite](https://docs.masoniteproject.com/) is a modern, developer
+centric, batteries-included Python web framework. It uses the MVC
+(Model-View-Controller) architecture pattern and comes with a lot of
+functionality out of the box with an extremely extendable architecture.
+
+Check out the following resources to lean more:
+
+1. [5 reasons why people are choosing Masonite over Django](https://dev.to/masonite/5-reasons-why-people-are-choosing-masonite-over-django-ic3)
+1. [MasoniteCasts](https://masonitecasts.com/)
+1. [Dockerizing Masonite with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-masonite-with-postgres-gunicorn-and-nginx/)
+
+
 ### Other web framework resources
 * This [roundup of 14 minimal Python frameworks](http://codecondo.com/14-minimal-web-frameworks-for-python/)
   contains both familiar and less known Python libraries.
