@@ -43,3 +43,9 @@ and report on Python [web applications](/web-development.html).
 * [A gentle introduction to the wonderful world of metrics](https://tech.showmax.com/2019/10/prometheus-introduction/)
   has a quick summary that compares Prometheus with Nagios, then digs
   into the logging format and what you can visualize with this tool.
+
+* [From Graphite to Prometheus](https://engineering.nanit.com/from-graphite-to-prometheus-things-ive-learned-e1d1e4b97fc)
+  explains some of the differences between using a StatsD / Graphite 
+  monitoring stack and Prometheus, such as how Prometheus scrapes data
+  instead of the applications pushing data to a metrics aggregator,
+  and the query languages for each tool.

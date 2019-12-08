@@ -163,6 +163,12 @@ like advanced interactive visualizations.
   uses a freely-available Bitcoin API as a source data set 
   for a data analysis and visualization project in Jupyter.
 
+* [nbdev: use Jupyter Notebooks for everything](https://www.fast.ai/2019/12/02/nbdev/)
+  shows how to use the [nbdev](https://nbdev.fast.ai/) tool to create a literate
+  programming environment within a Jupyter Notebook so that you can do
+  all of your debugging and refactoring there rather than switching between 
+  a more traditional IDE and Jupyter.
+
 * [Running Jupyter Notebooks on GPU on AWS: a starter guide](https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html)
   explains how to run notebooks on Amazon Web Services using a 
   graphics-processing unit (video card), which for some machine learning
