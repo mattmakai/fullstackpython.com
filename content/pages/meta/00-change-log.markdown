@@ -16,6 +16,9 @@ on GitHub.
 
 ## 2019
 ### December
+* Merged PR [#224](https://github.com/mattmakai/fullstackpython.com/pull/224)
+  with information and resources on the Masonite web framework for the
+  [other.web frameworks](/other-web-frameworks.html) page.
 * Updated the [RQ](/redis-queue-rq.html) page with a couple of new fresh
   resources.
 * Added new Django code example pages:
