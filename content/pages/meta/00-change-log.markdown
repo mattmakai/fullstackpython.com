@@ -22,6 +22,7 @@ on GitHub.
 * Updated the [RQ](/redis-queue-rq.html) page with a couple of new fresh
   resources.
 * Added new Django code example pages:
+    * [django.db.models.related ForeignKey](/django-db-models-related-foreignkey-examples.html)
     * [django.forms EmailField](/django-forms-emailfield-examples.html)
     * [django.forms IntegerField](/django-forms-integerfield-examples.html)
 
