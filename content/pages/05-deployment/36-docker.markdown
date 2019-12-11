@@ -79,10 +79,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is an explanation of the concepts and philosophy by the authors of the 
   new Manning Docker book in early access format.
 
-* [Eight Docker Development Patterns](http://www.hokstad.com/docker/patterns)
-  shares lessons learned and explains how to work with the containers so you 
-  get more use out of them during development.
-
 * [Building Docker containers from scratch](http://datakurre.pandala.org/2015/07/building-docker-containers-from-scratch.html)
   is a short tutorial for creating a Docker container with a specific
   configuration.

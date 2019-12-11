@@ -48,11 +48,6 @@ listen and learn.
   Python subjects. 
   [All episodes are listed on a separate page](http://pgbovine.net/PG-Podcast-summary.htm).
 
-* [Import This](https://www.kennethreitz.org/import-this/) is an occasional
-  podcast from [Kenneth Reitz](https://github.com/kennethreitz) and 
-  [Alex Gaynor](https://github.com/alex) with very in-depth interviews with
-  influential [Python community](/python-community.html) members.
-
 
 ## Favorite podcast episodes
 Here are a list of my favorite episodes from various Python podcasts before 

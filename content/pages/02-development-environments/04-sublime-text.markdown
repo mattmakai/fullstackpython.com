@@ -136,10 +136,6 @@ you will want to take a look at adding to your installation.
   ["Hello, world!"-level example](http://www.sublimetext.com/docs/plugin-examples)
   that you can extend.
 
-* The unofficial 
-  [Sublime documentation's section on plugins](http://docs.sublimetext.info/en/latest/extensibility/plugins.html)
-  contains the steps to use plugins and how to write your first plugin.
-
 * [Sublime Text plugin development basics](http://engineering.vinted.com/2016/06/27/how-to-write-sublime-plugin/)
   has some good advice and further resources.
 

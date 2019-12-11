@@ -206,12 +206,6 @@ point a domain name to your site as well as provide HTTPS support.
 These guides walk through various ways of handling the static site 
 deployment.
 
-* Randall Degges' 
-  [Ultimate Guide to Deploying Static Sites to Amazon Web Services](https://stormpath.com/blog/ultimate-guide-deploying-static-site-aws)
-  walks through all the steps you need to get your site up and running on
-  S3. The guide also shows how to set up SSL certificates to ensure
-  your site can be loaded via HTTPS.
-
 * [Static site hosting with S3 and Cloudflare](https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/)
   shows how to set up an S3 bucket with Cloudflare in front as a CDN that
   serves the content with HTTPS. You should be able to accomplish roughly 

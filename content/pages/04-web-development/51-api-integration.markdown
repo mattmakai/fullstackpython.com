@@ -48,9 +48,6 @@ across many implementation areas.
   [18F's API-All-the-X list](http://18f.github.io/API-All-the-X/). The list
   is updated whenever a new API comes online.
 
-* If you use Requests check out this handy guide on gracefully
-  [handling HTTP errors with Python](http://www.mobify.com/blog/http-requests-are-hard/).
-
 * John Sheehan's 
   "[Zen and the Art of API Maintenance](https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance)"
   slides are relevant for API integration.

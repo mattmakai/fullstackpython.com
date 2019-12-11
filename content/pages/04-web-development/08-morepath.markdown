@@ -46,11 +46,6 @@ these resources below are a good place to get started.
   is a blog post by Startifact on how they use Morepath and some of the
   features of the framework.
 
-* [A Summer with Morepath](http://blog.stacktrace.ch/post/132538261985)
-  describes the author's experience using Morepath, such as how he built
-  a framework around Morepath's core functionality. He eventually became
-  a core contributor to Morepath based on the application he created.
-
 * [Build a better batching UI with Morepath and Jinja2](http://blog.startifact.com/posts/morepath-batching-example.html)
   is an introductory post on building a simple web application with the 
   framework. The code for the application is also 

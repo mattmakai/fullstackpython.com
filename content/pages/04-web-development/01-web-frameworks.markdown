@@ -177,13 +177,6 @@ frameworks, templating engines and
   The votes aren't as important as the list of the many frameworks
   that are available to Python developers.
 
-* [Not Your Father’s Python: Amazing Powerful Frameworks](https://blog.signifai.io/not-your-fathers-python-amazing-powerful-frameworks/)
-  covers the rise of web frameworks, such as [Sanic](/sanic.html), that
-  are built on Python's 
-  [asyncio](https://docs.python.org/3/library/asyncio.html) 
-  functionality that was built into the standard library starting with 
-  Python 3.4.
-
 * [Django vs. Flask in 2019: Which Framework to Choose](https://testdriven.io/blog/django-vs-flask/)
   looks at the best use cases for Django and Flask along with what 
   makes them unique, from an educational and development standpoint.

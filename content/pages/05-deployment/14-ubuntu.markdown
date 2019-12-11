@@ -66,11 +66,6 @@ repository system packages.
   is described in this article about how 
   [Ubuntu 16.04 proves even an LTS release can live at Linux's bleeding edge](http://arstechnica.com/information-technology/2016/05/ubuntu-16-04-proves-even-an-lts-release-can-live-at-linuxs-bleeding-edge/).
 
-* [My First 10 Minutes On a Server - Primer for Securing Ubuntu](http://www.codelitt.com/blog/my-first-10-minutes-on-a-server-primer-for-securing-ubuntu/)
-  is based off an earlier post of the first five minutes on a Linux server.
-  This one is specific to Ubuntu Linux and goes into user accounts, sudo
-  privileges, SSH keys, security updates and 2-factor authentication.
-
 * [What I learned while securing Ubuntu](https://major.io/2015/10/14/what-i-learned-while-securing-ubuntu/)
   explains how difficult it can be just to find correct information
   on how to secure an operating system. In this case, the author goes over

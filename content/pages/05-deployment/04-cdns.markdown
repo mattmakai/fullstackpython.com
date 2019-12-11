@@ -18,7 +18,9 @@ servers to improve web app loading speed.
 
 * [MaxCDN vs CloudFlare vs Amazon CloudFront vs Akamai Edge vs Fastly](https://www.codeinwp.com/blog/maxcdn-vs-cloudflare-vs-cloudfront-vs-akamai-edge-vs-fastly/)
   compares and contrasts the most popular CDN services based on features,
-  performance and pricing.
+  performance and pricing. Note
+  that [Full Stack Python](https://www.fullstackpython.com/) uses Cloudflare
+  to serve all content.
 
 * [Crushing, caching and CDN deployment in Django](https://tech.marksblogg.com/crushing-caching-cdn-django.html)
   explains how to use the 
@@ -35,10 +37,3 @@ servers to improve web app loading speed.
   describes the security implications for CDNs with unexpectedly modified
   content and how Subresource Integrity in modern web browsers can mitigate
   this vulnerability if used properly.
-
-* [Put yourself on internet with Jekyll, GitHub and Cloudflare](https://adgllorente.com/2016/09/put-yourself-on-internet-with-jekyll-github-and-cloudflare/)
-  is not a Python-specific post but it gives language agnostic instructions 
-  you can use for Python web applications that want to use 
-  [Cloudflare](https://www.cloudflare.com/) as a CDN for static assets. Note
-  that [Full Stack Python](https://www.fullstackpython.com/) uses Cloudflare
-  to serve all content.

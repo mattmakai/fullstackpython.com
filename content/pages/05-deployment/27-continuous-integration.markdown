@@ -127,10 +127,6 @@ programming language agnostic. Learn more via the following resources or on
   uses well done drawings to show how continuous integration and delivery 
   works for testing and managing data.
 
-* [Diving into continuous integration as a newbie](http://www.rackspace.com/blog/diving-into-continuous-integration-as-a-newbie/)
-  is a retrospective on learning CI from a Rackspace intern on how she learned
-  the subject.
-
 * [The real difference between CI and CD](https://fire.ci/blog/the-difference-between-ci-and-cd/)
   explains what advantages CI provides, what constraints it operates under
   (such as total build time) to work well, and how that is different from

@@ -21,9 +21,9 @@ applications through machine-to-machine communication.
   [successful Kickstarter campaign](https://www.kickstarter.com/projects/tomchristie/django-rest-framework-3).
 
 * [Flask-RESTful](http://flask-restful.readthedocs.org/en/latest/) is
-  widely used for creating web APIs with Flask. It was originally 
-  [open sourced and explained in a blog post by Twilio](https://www.twilio.com/engineering/2012/10/18/open-sourcing-flask-restful)
-  then moved into its 
+  widely used for creating web APIs with Flask. It was originally
+  open sourced by Twilio
+  then moved into its
   [own GitHub organization](https://github.com/flask-restful/flask-restful)
   so engineers from outside the company could be core contributors.
 

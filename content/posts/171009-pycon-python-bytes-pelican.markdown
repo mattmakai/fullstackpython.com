@@ -55,7 +55,6 @@ yourself:
 
 1. [How to Create Your First Static Site with Pelican and Jinja2](/blog/generating-static-websites-pelican-jinja2-markdown.html)
 1. [An overview of the Pelican static site generator](/pelican.html)
-1. [The Ultimate Guide to Deploying Static Sites on AWS](https://stormpath.com/blog/ultimate-guide-deploying-static-site-aws)
 
 
 One last bit: [Python for Entrepreneurs](https://training.talkpython.fm/courses/explore_entrepreneurs/python-for-entrepreneurs-build-and-launch-your-online-business) 

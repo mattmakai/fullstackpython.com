@@ -86,7 +86,7 @@ application is read-heavy, write-heavy, or subject to rapid swings in traffic.
   be analyzed and visualized. Note this project is written in Perl so Perl 5
   must be installed on the node collecting the data.
 
-* [Bucky](http://github.hubspot.com/bucky/) measures the performance of a
+* [Bucky](https://github.com/HubSpot/BuckyClient) measures the performance of a
   web application from end user's browsers and sends that data back to the
   server for collection.
 
