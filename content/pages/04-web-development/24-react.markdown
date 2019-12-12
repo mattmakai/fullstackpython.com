@@ -71,9 +71,5 @@ tack on React to build your client-side user interfaces.
   is a good quiz to see what you know or still need to learn about the
   fundamentals of using React.
 
-* [Building a Serverless Stripe Analytics Dashboard](https://statsbot.co/blog/building-serverless-stripe-analytics-dashboard/)
-  shows how to work with the [Stripe](/stripe.html) API to build a
-  dashboard in React then serve the static assets from AWS S3.
-
 * [Under-the-hood-ReactJS](https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/)
   examines the React codebase itself rather than teaching you how to use it.

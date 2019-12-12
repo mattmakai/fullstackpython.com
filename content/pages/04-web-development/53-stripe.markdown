@@ -38,7 +38,7 @@ for processing payments.
 
 
 ### Resources about Stripe
-* [How Stripe Designs Beautiful Websites](https://www.leejamesrobinson.com/blog/how-stripe-designs-beautiful-websites/)
+* [How Stripe Designs Beautiful Websites](https://leerob.io/blog/how-stripe-designs-beautiful-websites)
   explains the process for how Stripe creates their gorgeous design that
   makes people want to use the service and explore what else they can
   build with it.

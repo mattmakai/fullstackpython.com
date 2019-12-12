@@ -147,9 +147,6 @@ visualization and gave me ideas for what to build.
   people worked with paper to build their visuals add fantastic context to
   the story.
 
-* [dataviz.tools](http://dataviz.tools/) has a nice list of categorized
-  tools for working with data and visualizing it.
-
 * [Xenographics](https://xeno.graphics/) presents uncommon and unusual
   visualization formats such as the 
   [Manhattan Plot](https://xeno.graphics/manhattan-plot/) and

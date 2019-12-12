@@ -106,9 +106,9 @@ test runners, coverage reports and related libraries.
   and goes through a bunch of code samples for common situations. 
 
 * [Using pytest with Django](http://engineroom.trackmaven.com/blog/using-pytest-with-django/)
-  shows how to get a basic [pytest](http://pytest.org/latest/) test
-  running for a Django project and explains why the author prefers pytest 
-  over standard unittest testing.
+  shows how to get a basic [pytest](https://docs.pytest.org/en/latest/) test
+  case running for a Django project and explains why the author prefers 
+  pytest over standard unittest testing.
 
 * [Distributed Testing with Selenium Grid and Docker](https://testdriven.io/distributed-testing-with-selenium-grid) 
   shows how to distribute automated, browser tests with Selenium Grid and 
