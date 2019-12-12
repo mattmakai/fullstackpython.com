@@ -140,10 +140,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   explains some of the concepts behind using Docker for Python deployments and
   shows how to specifically use it for deploying Django. 
 
-* [A Docker primer – from zero to a running Django app](https://ochronus.com/docker-primer-django/)
-  provides specific commands and expected output for running Django apps
-  with Docker and Vagrant.
-
 * [Using Docker and Docker Compose to replace virtualenv](https://www.calazan.com/using-docker-and-docker-compose-for-local-django-development-replacing-virtualenv/)
   is a tutorial for using Docker instead of virtualenv for dependency
   isolation.
