@@ -174,7 +174,7 @@ library for enabling
 handling in your [Django](/django.html) web applications and appropriately
 dealing with HTTP headers for CORS requests.
 
-[**django-cors-headers / corsheaders / signals.py**](https://github.com/ottoyiu/django-cors-headers/blob/master/corsheaders/signals.py)
+[**django-cors-headers / src / corsheaders / signals.py**](https://github.com/adamchainz/django-cors-headers/blob/master/src/corsheaders/signals.py)
 
 ```python
 ~~from django.dispatch import Signal

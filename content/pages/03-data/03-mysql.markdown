@@ -111,10 +111,6 @@ like [SQLAlchemy](/sqlalchemy.html) or the [Django ORM](/django-orm.html).
   MySQLdb driver to connect to a MySQL server instance and shows some
   examples for inserting and querying data.
 
-* [Graph Data From MySQL Database in Python](http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/)
-  is an interesting study with code of how to pull data out of MySQL and graph
-  the data with Plotly.
-
 
 ### General MySQL resources
 There are many programming language agnostic tutorials for MySQL.

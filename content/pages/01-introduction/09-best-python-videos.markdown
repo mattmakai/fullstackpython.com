@@ -82,8 +82,7 @@ topics of using [web frameworks](/web-frameworks.html) like
   [2017](https://www.youtube.com/playlist?list=PL2NFhrDSOxgXmA215-fo02djziShwLa6T),
   [2016](https://www.youtube.com/playlist?list=PL2NFhrDSOxgX-A4qpaf3rRaEnEe7166Ac),
   [2015](https://www.youtube.com/playlist?list=PL2NFhrDSOxgWvzf40lYJ8gohFciQqRx3K),
-  [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), 
-  [2013](http://www.youtube.com/user/TheOpenBastion/videos), are all available
+  [2014](https://www.youtube.com/playlist?list=PLE7tQUdRKcybbNiuhLcc3h6WzmZGVBMr3), are all available
   free of charge.
 
 * DjangoCon EU videos are also available from 

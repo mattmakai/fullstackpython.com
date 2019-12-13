@@ -236,12 +236,6 @@ combined with the example real-world projects listed in the next section.
   [application dependencies](/application-dependencies.html) and handle 
   your [deployment](/deployment.html) workflow.
 
-* [How to use Flask to upload files to Amazon S3](http://zabana.me/notes/upload-files-amazon-s3-flask.html)
-  provides all the code with detailed explanations on how to store files 
-  using [boto](https://boto3.readthedocs.io/en/latest/) and 
-  [Amazon Web Services' S3](https://aws.amazon.com/s3/) with a Flask 
-  application.
-
 * [Visualize your trip with Flask and Mapbox](http://kazuar.github.io/visualize-trip-with-flask-and-mapbox/)
   uses geographic GeoJSON data and presents it in a Flask application
   that uses [Mapbox](https://www.mapbox.com/).

@@ -409,7 +409,7 @@ library for enabling
 handling in your [Django](/django.html) web applications and appropriately
 dealing with HTTP headers for CORS requests.
 
-[**django-cors-headers / corsheaders / conf.py**](https://github.com/ottoyiu/django-cors-headers/blob/master/corsheaders/conf.py)
+[**django-cors-headers / src / corsheaders / conf.py**](https://github.com/ottoyiu/django-cors-headers/blob/master/src/corsheaders/conf.py)
 
 ```python
 ~~from django.conf import settings

@@ -104,9 +104,6 @@ application before taking some action, such as purchasing your service.
   of what Google Analytics can tell you about your site and how
   to configure it for better output.
 
-* [Deconstructing the Google Analytics tracking script](https://billfranklin.svbtle.com/deconstructing-the-ga-script)
-  breaks down the JavaScript found in the Google Analytics script.
-
 * [Roll your own analytics](https://www.pcmaffey.com/roll-your-own-analytics/)
   shows you how to use [AWS Lambda](/aws-lambda.html) and some custom 
   JavaScript to create your own replacement for Google Analytics. This route

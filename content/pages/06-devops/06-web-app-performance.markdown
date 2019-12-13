@@ -32,9 +32,6 @@ database queries, page size and many other factors.
 
 
 ### Web app performance resources
-* [A Primer in Web Performance](https://kiboit.com/performance) is a quick,
-  straightforward one pager on why the topic matters and what causes bad
-  website performance.
 
 * [Web Performance 101](https://3perf.com/talks/web-perf-101/) introduces
   web application loading performance. There is a ton of great information

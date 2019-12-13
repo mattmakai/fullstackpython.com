@@ -37,9 +37,4 @@ the [proxy directive](https://caddyserver.com/docs/proxy).
   shows how to use a self-signed certificate with Caddy to do local 
   development with an HTTP/2 web server.
 
-* [Is Caddy free?](https://caddyserver.com/blog/is-caddy-free) explains
-  the donation and sponsorships model that Caddy uses to continue development
-  on the server. The gist is that the server is free to clone, download and
-  use. Sponsors and optional donations are currently used to fund ongoing
-  development.
 

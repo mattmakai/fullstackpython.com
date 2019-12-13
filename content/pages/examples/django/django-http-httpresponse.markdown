@@ -136,7 +136,7 @@ class MiddlewareTest(TestCase):
 system built with [Django](/django.html). The code is open source under the
 [MIT license](https://github.com/dccnconf/dccnsys/blob/master/LICENSE).
 
-[**dccnsys / wwwdccn / chair / views.py**](https://github.com/dccnconf/dccnsys/blob/master/wwwdccn/chair/views.py)
+[**dccnsys / wwwdccn / chair / views**](https://github.com/dccnconf/dccnsys/tree/master/wwwdccn/chair/views)
 
 ```python
 import csv
