@@ -16,12 +16,15 @@ on GitHub.
 
 ## 2019
 ### December
-* Merged PR [#224](https://github.com/mattmakai/fullstackpython.com/pull/224)
+* Cleaned a bunch of dead links out thanks to 
+  [PR #225](https://github.com/mattmakai/fullstackpython.com/pull/225).
+* Merged [PR #224](https://github.com/mattmakai/fullstackpython.com/pull/224)
   with information and resources on the Masonite web framework for the
   [other web frameworks](/other-web-frameworks.html) page.
 * Updated the [RQ](/redis-queue-rq.html) page with a couple of new fresh
   resources.
 * Added new Django code example pages:
+    * [django.db.models ImageField](/django-db-models-imagefield-examples.html)
     * [django.db.models.related ForeignKey](/django-db-models-related-foreignkey-examples.html)
     * [django.forms EmailField](/django-forms-emailfield-examples.html)
     * [django.forms IntegerField](/django-forms-integerfield-examples.html)
