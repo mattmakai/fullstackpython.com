@@ -129,6 +129,11 @@ test runners, coverage reports and related libraries.
   then your tests will be run to check that everything is still working
   as intended.
 
+* [8 great pytest plugins](https://opensource.com/article/18/6/pytest-plugins)
+  is a list of plugins that go with PyTest and help with tasks like reducing 
+  the friction around testing [Django](/django.html), as well as running
+  tests in parallel.
+
 * This test-driven development series shows you how to write an interpreter
   in Python and contains a ton of great code samples to learn from:
 

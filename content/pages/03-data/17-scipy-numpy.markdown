@@ -75,6 +75,11 @@ following resources are broader walkthroughs for the SciPy ecosystem:
   that recommends how to prepare the scientific computing ecosystme for 
   GPU, distributed and sparse arrays.
 
+* [Probability distribution explorer](http://bois.caltech.edu/distribution_explorer/)
+  contains graphs for understanding how different probabilities look
+  when plotted. There is also code for implementing the visuals in NumPy
+  and SciPy.
+
 
 ### Example NumPy code
 * [SmoothLife](https://github.com/duckythescientist/SmoothLife) is an 
