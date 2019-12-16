@@ -43,3 +43,8 @@ a broad range of devices that people use to read this site.
 * [Fundamentals of responsive images](https://www.lullabot.com/articles/fundamentals-of-responsive-images)
   shows the code behind several ways to make your web images resize according
   to browser window size.
+
+* [ResponsiveViewer](https://chrome.google.com/webstore/detail/responsiveviewer/inmopeiepgfljkpkidclfgbgbmfcennb)
+  is a Chrome plugin in that allows you to view multiple sizes and devices in the
+  same browser window. This is a handy tool to avoid constantly flipping between
+  tabs or resizing the same tab to see the changes you are making to a design.
