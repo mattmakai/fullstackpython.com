@@ -26,6 +26,7 @@ on GitHub.
 * Added new Django code example pages:
     * [django.db.models GenericIPAddressField](/django-db-models-genericipaddressfield-examples.html)
     * [django.db.models ImageField](/django-db-models-imagefield-examples.html)
+    * [django.db.models PositiveIntegerField](/django-db-models-positiveintegerfield-examples.html)
     * [django.db.models.related ForeignKey](/django-db-models-related-foreignkey-examples.html)
     * [django.forms EmailField](/django-forms-emailfield-examples.html)
     * [django.forms IntegerField](/django-forms-integerfield-examples.html)
