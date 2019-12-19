@@ -20,12 +20,11 @@ module but is typically referenced from
 rather than including the `fields` module reference.
 
 
-
 ## Example 1 from wagtail
 [wagtail](https://github.com/wagtail/wagtail)
 ([project website](https://wagtail.io/)) is a fantastic
-[Django](/django.html)-based CMS with code that is open source
-under the
+[Django](/django.html)-based content management system with code 
+that is open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/wagtail/wagtail/blob/master/LICENSE).
 
 [**wagtail / wagtail / images / models.py**](https://github.com/wagtail/wagtail/blob/master/wagtail/images/models.py)
@@ -345,7 +344,7 @@ class Migration(IrreversibleMigration):
 ```
 
 
-## Example 3 from django-filer
+## Example 4 from django-filer
 [django-filer](https://github.com/divio/django-filer)
 ([project documentation](https://django-filer.readthedocs.io/en/latest/))
 is a file management library for uploading and organizing files and images
@@ -471,7 +470,7 @@ class Migration(migrations.Migration):
 ```
 
 
-## Example 7 from django-wiki
+## Example 6 from django-wiki
 [django-wiki](https://github.com/django-wiki/django-wiki)
 ([project documentation](https://django-wiki.readthedocs.io/en/master/),
 [demo](https://demo.django-wiki.org/),
