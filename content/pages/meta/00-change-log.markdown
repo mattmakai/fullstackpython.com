@@ -16,6 +16,7 @@ on GitHub.
 
 ## 2019
 ### December
+* 7 years of Full Stack Python as of December 23, 2019!
 * Cleaned a bunch of dead links out thanks to 
   [PR #225](https://github.com/mattmakai/fullstackpython.com/pull/225).
 * Merged [PR #224](https://github.com/mattmakai/fullstackpython.com/pull/224)

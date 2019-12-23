@@ -1,0 +1,55 @@
+title: SQLAlchemy Extensions, Plug-ins and Related Libraries
+category: page
+slug: sqlalchemy-extensions-plug-ins-related-libraries
+sortorder: 50003000
+toc: False
+sidebartitle: SQLAlchemy Extensions
+meta: Python code extensions and plug-in example projects that show how to use the SQLAlchemy object-relational mapper.
+
+
+[SQLAlchemy](/sqlalchemy.html) is a Python library for interacting
+with [databases](/databases.html) either through SQL or with an
+[object-relational mapper (ORM)](/object-relational-mappers-orms.html).
+
+<a href="http://www.sqlalchemy.org/"><img src="/img/logos/sqlalchemy.jpg" width="100%" alt="SQLAlchemy logo." class="shot"></a> 
+
+
+### Alembic
+[Alembic](https://github.com/sqlalchemy/alembic) 
+([project documentation](https://alembic.sqlalchemy.org/) and
+[PyPI information](https://pypi.org/project/alembic/))
+is a data migrations tool used with [SQLAlchemy](/sqlalchemy.html) to make 
+database schema changes. The Alembic project is open sourced under the 
+[MIT license](https://github.com/sqlalchemy/alembic/blob/master/LICENSE).
+
+
+### flask-sqlalchemy
+[flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy) 
+([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+and
+[PyPI information](https://pypi.org/project/Flask-SQLAlchemy/)) is a 
+[Flask](/flask.html) extension that makes it easier to use 
+[SQLAlchemy](/sqlalchemy.html) when building Flask apps. flask-sqlalchemy
+provides helper functions that reduce the amount of common boilerplate 
+code that you have to frequently write yourself if you did not use this 
+library when combining Flask with SQLAlchemy.
+
+flask-sqlalchemy is provided as open source under the 
+[BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
+
+
+### marshmallow-sqlalchemy
+[marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)
+([project documentation](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/)
+and
+[PyPI information](https://pypi.org/project/marshmallow-sqlalchemy/))
+is a code library that makes it easier to use
+[SQLAlchemy](/sqlalchemy.html) with the 
+[Marshmallow](https://marshmallow.readthedocs.io/en/stable/)
+data serialization tool.
+
+The marshmallow-sqlalchemy project is provided as open source under the
+[MIT license](https://github.com/marshmallow-code/marshmallow-sqlalchemy/blob/dev/LICENSE).
+
+
+

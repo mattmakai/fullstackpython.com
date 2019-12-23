@@ -15,10 +15,10 @@ Python library for accessing persistent data stored in
 
 
 ## Example 1 from flask-website
-[flask-website](https://github.com/pallets/flask-website) is the
+[flask-website](https://github.com/pallets/website) is the
 code that runs the [Flask](/flask.html) official 
 [project website](http://flask.pocoo.org/). Yes, Flask is used to
-create and run the Flask project website. Did you expect the creators 
+create and run the Flask project website... did you expect the creators 
 of Flask to use [Django](/django.html) instead?
 
 [**flask-website / flask_website / database.py**](https://github.com/pallets/flask-website/blob/master/flask_website/database.py)
