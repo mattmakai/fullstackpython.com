@@ -38,6 +38,23 @@ flask-sqlalchemy is provided as open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
 
 
+### flask-base
+[flask-base](https://github.com/hack4impact/flask-base)
+([project documentation](http://hack4impact.github.io/flask-base/))
+provides boilerplate code for new [Flask](/flask.html) web apps.
+The purpose of the boilerplate is to stitch together disparate
+libraries that are commonly used in Flask projects, such as
+[Redis](/redis.html) for fast caching and transient data storage, 
+[SendGrid](https://www.twilio.com/sendgrid) for transactional email,
+[SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
+[relational database](/databases.html) backend,
+[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+handling, and many others.
+
+flask-base is provided as open source under the 
+[MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
+
+
 ### marshmallow-sqlalchemy
 [marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)
 ([project documentation](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/)
