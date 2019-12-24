@@ -84,6 +84,12 @@ idiosyncratic differences between database implementations in
 [PostgreSQL](/postgresql.html).
 
 
+### SQLAlchemy Extensions, Plug-ins and Related Libraries
+Take a look at the 
+[SQLAlchemy extensions, plug-ins and related libraries](/sqlalchemy-extensions-plug-ins-related-libraries.html)
+page for a curated list of useful code libraries to use with SQLAlchemy.
+
+
 ### Using SQLAlchemy with Web Frameworks
 There is no reason why you cannot use the SQLAlchemy library in any 
 application that requires a database backend. However, if you are

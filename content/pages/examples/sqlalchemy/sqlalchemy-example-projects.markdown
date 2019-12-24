@@ -52,4 +52,17 @@ The marshmallow-sqlalchemy project is provided as open source under the
 [MIT license](https://github.com/marshmallow-code/marshmallow-sqlalchemy/blob/dev/LICENSE).
 
 
+### sqlalchemy-utils
+[sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
+([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
+is a code library with various helper functions and new data types 
+that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+projects that involve more specific storage requirements such as
+[currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
+The wide array of 
+[data types](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html)
+includes [ranged values](https://sqlalchemy-utils.readthedocs.io/en/latest/range_data_types.html)
+and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/aggregates.html).
 
