@@ -21,6 +21,8 @@ easier for humans to see patterns, trends and other useful information.
 * [Chartify](https://labs.spotify.com/2018/11/15/introducing-chartify-easier-chart-creation-in-python-for-data-scientists/) 
   ([source code](https://github.com/spotify/chartify/))
 
+* [Graphviz](https://pypi.org/project/graphviz/)
+
 
 ### Python-specific data viz resources
 * [Python Data Visualization 2018: Why So Many Libraries?](https://www.anaconda.com/blog/developer-blog/python-data-visualization-2018-why-so-many-libraries/)
