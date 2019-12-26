@@ -13,6 +13,12 @@ with [databases](/databases.html) either through SQL or with an
 
 <a href="http://www.sqlalchemy.org/"><img src="/img/logos/sqlalchemy.jpg" width="100%" alt="SQLAlchemy logo." class="shot"></a> 
 
+The following projects augment SQLAlchemy's capabilities by providing 
+functionality not included with the library itself. For example, the
+[Alembic](https://github.com/sqlalchemy/alembic) project makes it easier
+to perform database schema migrations, which is frequently needed
+as applications evolve and need to store additional data.
+
 
 ### Alembic
 [Alembic](https://github.com/sqlalchemy/alembic) 
@@ -21,6 +27,23 @@ with [databases](/databases.html) either through SQL or with an
 is a data migrations tool used with [SQLAlchemy](/sqlalchemy.html) to make 
 database schema changes. The Alembic project is open sourced under the 
 [MIT license](https://github.com/sqlalchemy/alembic/blob/master/LICENSE).
+
+
+### flask-base
+[flask-base](https://github.com/hack4impact/flask-base)
+([project documentation](http://hack4impact.github.io/flask-base/))
+provides boilerplate code for new [Flask](/flask.html) web apps.
+The purpose of the boilerplate is to stitch together disparate
+libraries that are commonly used in Flask projects, such as
+[Redis](/redis.html) for fast caching and transient data storage, 
+[SendGrid](https://www.twilio.com/sendgrid) for transactional email,
+[SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
+[relational database](/databases.html) back end,
+[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+handling, and many others.
+
+flask-base is provided as open source under the 
+[MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
 
 
 ### flask-sqlalchemy
@@ -36,23 +59,6 @@ library when combining Flask with SQLAlchemy.
 
 flask-sqlalchemy is provided as open source under the 
 [BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
-
-
-### flask-base
-[flask-base](https://github.com/hack4impact/flask-base)
-([project documentation](http://hack4impact.github.io/flask-base/))
-provides boilerplate code for new [Flask](/flask.html) web apps.
-The purpose of the boilerplate is to stitch together disparate
-libraries that are commonly used in Flask projects, such as
-[Redis](/redis.html) for fast caching and transient data storage, 
-[SendGrid](https://www.twilio.com/sendgrid) for transactional email,
-[SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
-[relational database](/databases.html) backend,
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
-handling, and many others.
-
-flask-base is provided as open source under the 
-[MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
 
 
 ### marshmallow-sqlalchemy
