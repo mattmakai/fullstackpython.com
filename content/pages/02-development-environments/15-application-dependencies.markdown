@@ -210,6 +210,12 @@ developers.
   breaks open the virtual environment "black box" to show you what the
   tool is doing when you use its commands.
 
+* [Using pyenv to manage your Python interpreters](https://www.marc-richter.info/using-pyenv-to-manage-your-python-interpreters/)
+  explains how the pyenv tool can make it easier to switch between different
+  versions of Python for each project and gives a brief review of the
+  important things to know when using the tool such as local versus global
+  scope.
+
 * [Testing & Packaging](https://hynek.me/articles/testing-packaging/) examines
   a configuration for ensuring tests run against your code and how to
   properly package your project.

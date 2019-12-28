@@ -13,7 +13,7 @@ platform that can be used for running Python applications.
 <a href="https://do.co/fullstackpython" style="border: none;"><img src="/img/logos/digitalocean.png" width="100%" alt="Official DigitalOcean logo. Copyright DigitalOcean." class="shot" style="padding: 12px 0 12px 0"></a>
 
 
-### DigitalOcean examples
+### DigitalOcean resources
 * [Creating a Kubernetes Cluster on DigitalOcean with Python and Fabric](https://testdriven.io/blog/creating-a-kubernetes-cluster-on-digitalocean/)
   shows how to configure a three node Kubernetes cluster using
   [Ubuntu](/ubuntu.html) 16.04 LTS.
@@ -27,3 +27,14 @@ platform that can be used for running Python applications.
   [digitalocean-developer-firewall](https://github.com/ErlendEllingsen/digitalocean-developer-firewall)
   to make it easier to configure firewalls and other services on your
   droplets.
+
+
+### Useful tools for working with DigitalOcean
+* [python-digitalocean](https://github.com/koalalorenzo/python-digitalocean)
+  is a helper library for interacting with 
+  [DigitalOcean's APIs](https://developers.digitalocean.com/) so you can,
+  for example, spin up and shut down your servers.
+
+* [vagrant-digitalocean](https://github.com/devopsgroup-io/vagrant-digitalocean)
+  is a [Vagrant](https://www.vagrantup.com/) provider plugin for managing
+  DigitalOcean infrastructure.

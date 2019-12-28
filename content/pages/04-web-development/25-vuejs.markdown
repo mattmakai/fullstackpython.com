@@ -62,6 +62,12 @@ rich apps that run in web browsers.
   posturing that often comes from authors of one project discussing other work
   in the same space.
 
+* [Build a Crud application using Vue and Django](https://codesource.io/build-a-crud-application-vue-and-django/)
+  combines [Django](/django.html) and 
+  [Django REST Framework](/django-rest-framework-drf.html) with Vue.js in
+  this tutorial that shows how to build a simple web app for managing 
+  subscriptions.
+
 * [Building Modern Applications with Django and Vue.js](https://auth0.com/blog/building-modern-applications-with-django-and-vuejs/)
   combines [Django](/django.html), 
   [Django REST Framework](/django-rest-framework-drf.html), Vue.js

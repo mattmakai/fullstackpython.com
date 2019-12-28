@@ -118,6 +118,10 @@ like advanced interactive visualizations.
   have a ton more details on ways to set up Jupyter Notebooks as dashboards
   and export results to other formats.
 
+* [Creating Interactive Dashboards from Jupyter Notebooks](https://pbpython.com/interactive-dashboards.html)
+  shows how to use public Reddit data for a data analysis project as
+  an example to display in dashboards running in a Jupyter Notebook.
+
 * [mapboxgl-jupyter](https://github.com/mapbox/mapboxgl-jupyter) library along
   with the 
   [quickstart](https://github.com/mapbox/mapboxgl-jupyter/blob/master/docs/viz.md)
@@ -203,3 +207,7 @@ like advanced interactive visualizations.
   explains when to use [Docker](/docker.html) in combination with Jupyter
   Notebooks as well as the instructions for creating a dockerfile to build
   your images.
+
+* [JupyterLab GPU Dashboards](https://github.com/rapidsai/jupyterlab-nvdashboard)
+  contains a [Bokeh](/bokeh.html) server and TypeScript code for displaying
+  GPU utilization charts.

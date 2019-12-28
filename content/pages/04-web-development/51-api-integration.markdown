@@ -20,16 +20,11 @@ continuously grows in importance because APIs provide critical functionality
 across many implementation areas.
 
 
-## API testing services
-* [Runscope](https://www.runscope.com/) is a service specifically designed
-  for APIs that assists developers with automated testing and traffic
-  inspection.
-
-* [Apiary](https://apiary.io/) provides a blueprint for creating APIs so
-  they are easier to test and generate clean documentation.
-
-
 ## API Integration Resources
+* [APIs for Beginners](https://www.freecodecamp.org/news/apis-for-beginners-full-course/)
+  is an awesome free video course that shows how to use APIs and
+  add them to applications with a bunch of useful code examples.
+
 * Some developers prefer to use 
   [Requests](http://docs.python-requests.org/en/latest/) instead of an API's 
   helper library. In that case check out this 
