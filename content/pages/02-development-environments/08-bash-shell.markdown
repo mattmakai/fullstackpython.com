@@ -97,3 +97,8 @@ during Python software development as part of a programmer's
   shows how to make your Bash history more useful by having it store more
   previous commands (which takes up more persistent storage but is not
   a huge deal in 2019) and add timestamps to the `history` command.
+
+* [9 Evil Bash Commands Explained](https://dev.to/devmount/9-evil-bash-commands-explained-4k5e)
+  presents a list of commands *you should never run*, but can learn about
+  their destructive abilities by reading through the descriptions provided
+  by the author.
