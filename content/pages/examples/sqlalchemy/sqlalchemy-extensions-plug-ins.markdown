@@ -61,8 +61,8 @@ flask-sqlalchemy is provided as open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
 
 
-### gino
-[gino](https://github.com/fantix/gino)
+### GINO
+[GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
 and
 [PyPI package information](https://pypi.org/project/gino/))
@@ -70,6 +70,8 @@ is an [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
 built on SQLAlchemy that is non-blocking and therefore designed to work properly
 with asynchronously-run code, for example, an application written with 
 [asyncio](https://docs.python.org/3/library/asyncio.html).
+
+GINO is open sourced under the [BSD License](https://github.com/python-gino/gino/blob/master/LICENSE).
 
 
 ### marshmallow-sqlalchemy
