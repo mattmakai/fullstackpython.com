@@ -220,6 +220,11 @@ developers.
   a configuration for ensuring tests run against your code and how to
   properly package your project.
 
+* [12 Alternatives for Distributing Python Applications in 2020](https://tryexceptpass.org/article/distributing-python-applications/)
+  covers packaging with [Docker](/docker.html), Vagrant, PyInstaller, 
+  Briefcase, virtual environments, Pipx and several more options for
+  bundling and running Python code.
+
 * [Python Application Dependency Management in 2018](https://hynek.me/articles/python-app-deps-2018/)
   presents some critical analysis and critique oof the existing Python
   dependency management tools including newer ones such as pipenv and

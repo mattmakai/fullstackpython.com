@@ -102,6 +102,11 @@ Python-specific applications.
   is the transcript of an interview with Robert Collins who is a core
   committer of `unittest`.
 
+* [Precise Unit Tests with PyHamcrest](https://orbifold.xyz/pyhamcrest.html)
+  is a short tutorial on using the 
+  [PyHamcrest](https://github.com/hamcrest/PyHamcrest) assertion tool for
+  unit testing.
+
 * [Why most unit testing is a waste](https://rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf)
   discusses how low risk unit tests rarely fail even as the code
   changes and why they do not matter as much to a project's health as

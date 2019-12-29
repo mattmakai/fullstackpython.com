@@ -85,6 +85,16 @@ test runners, coverage reports and related libraries.
 * [Python Testing](http://pythontesting.net/) is a site devoted to testing
   in - you guessed it - the Python programming language.
 
+* [In praise of property-based testing](https://increment.com/testing/in-praise-of-property-based-testing/)
+  is an article by the author of the [Hypothesis](https://hypothesis.works/)
+  testing tool written in Python. The article explains the shortcomings of 
+  example-based tests and how property-based testing can augment or replace
+  those example-based tests to find more defects in software. There is also
+  a great 
+  [introductory post on Hypothesis](https://hypothesis.works/articles/incremental-property-based-testing/)
+  that goes into further detail about getting your first Hypothesis tests
+  up and running.
+
 * Google has a [testing blog](http://googletesting.blogspot.com/) where
   they write about various aspects of testing software at scale.
 

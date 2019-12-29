@@ -272,6 +272,12 @@ Python.
   [handy WebSockets reference chart](http://caniuse.com/#feat=websockets) 
   for which web browsers and specific versions support WebSockets.
 
+* [WebSockets for fun and profit](https://stackoverflow.blog/2019/12/18/websockets-for-fun-and-profit/)
+  has a nice concise overview of WebSockets alternatives like long polling
+  and Server-Sent Events (SSE) before it goes into a WebSockets example
+  that includes [JavaScript](/javascript.html) code for the client-side
+  implementation.
+
 * Mozilla's 
   [Developer Resources for WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets)
   is a good place to find documentation and tools for developing with 
