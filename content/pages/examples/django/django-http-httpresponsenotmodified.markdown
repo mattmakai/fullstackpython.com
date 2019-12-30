@@ -1,7 +1,7 @@
 title: django.http HttpResponseNotModified Python Code Examples
 category: page
 slug: django-http-httpresponsenotmodified-examples
-sortorder: 50063
+sortorder: 500013450
 toc: False
 sidebartitle: django.http HttpResponseNotModified
 meta: Example Python code for using the HttpResponseNotModified object provided by Django in the django.http module.

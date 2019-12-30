@@ -1,7 +1,7 @@
 title: django.http HttpResponseRedirect Python Code Examples
 category: page
 slug: django-http-httpresponseredirect-examples
-sortorder: 50065
+sortorder: 500013470
 toc: False
 sidebartitle: django.http HttpResponseRedirect
 meta: Example Python code for using the HttpResponseRedirect object provided by Django in the django.http module.

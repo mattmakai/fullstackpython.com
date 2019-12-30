@@ -1,7 +1,7 @@
 title: django.db.models SlugField Example Code
 category: page
 slug: django-db-models-slugfield-examples
-sortorder: 50157
+sortorder: 500012900
 toc: False
 sidebartitle: django.db.models SlugField
 meta: Python code examples for the Django ORM's SlugField class, found within the django.db.models module of the Django project. 

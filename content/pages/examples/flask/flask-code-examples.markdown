@@ -1,7 +1,7 @@
 title: Flask Core and Extensions Code Examples
 category: page
 slug: flask-core-extensions-code-examples
-sortorder: 50500
+sortorder: 500020000
 toc: False
 sidebartitle: Flask Core and Extensions Code Examples
 meta: Learn how to create Flask applications with easy to copy and paste Python code examples for the Flask web framework.

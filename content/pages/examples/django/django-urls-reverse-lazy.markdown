@@ -1,7 +1,7 @@
 title: django.urls.reverse_lazy Example Code
 category: page
 slug: django-urls-reverse-lazy-examples
-sortorder: 50202
+sortorder: 500013630
 toc: False
 sidebartitle: django.urls reverse_lazy
 meta: Python code examples for the reverse_lazy function within the django.urls module of the Django project. 

@@ -1,7 +1,7 @@
 title: django.db.models PositiveSmallIntegerField Python Code Examples
 category: page
 slug: django-db-models-positivesmallintegerfield-examples
-sortorder: 50136
+sortorder: 500012890
 toc: False
 sidebartitle: django.db.models PositiveSmallIntegerField
 meta: Python code examples for the PositiveSmallIntegerField class used in the Django ORM, found within the django.db.models module of the Django project. 

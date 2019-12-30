@@ -1,7 +1,7 @@
 title: django.db OperationalError Example Code
 category: page
 slug: django-db-operationalerror-examples
-sortorder: 50069
+sortorder: 500012920
 toc: False
 sidebartitle: django.db OperationalError
 meta: Python code examples for the OperationalError exception class that is part of Django web framework's django.db package.

@@ -1,7 +1,7 @@
 title: django.template.response SimpleTemplateResponse Example Code
 category: page
 slug: django-template-response-simpletemplateresponse-examples
-sortorder: 50192
+sortorder: 500013500
 toc: False
 sidebartitle: django.template.response SimpleTemplateResponse
 meta: Python open source example code for the SimpleTemplateResponse class in Django within django.template.response.

@@ -1,7 +1,7 @@
 title: django.core.mail.send_mail Example Code
 category: page
 slug: django-core-mail-send-mail-examples
-sortorder: 50006
+sortorder: 500012525
 toc: False
 sidebartitle: django.core.mail.send_mail
 meta: Python code examples for the send_mail function within the django.core.mail  module of the Django project. 

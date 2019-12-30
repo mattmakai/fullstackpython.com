@@ -1,7 +1,7 @@
 title: django.forms ChoiceField Python Code Examples
 category: page
 slug: django-forms-choicefield-examples
-sortorder: 50092
+sortorder: 500013115
 toc: False
 sidebartitle: django.forms ChoiceField
 meta: Python code examples to show how to use the ChoiceField class within the forms module of the Django open source project. 

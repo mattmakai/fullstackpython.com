@@ -1,7 +1,7 @@
 title: django.forms CharField Python Code Examples
 category: page
 slug: django-forms-charfield-examples
-sortorder: 50090
+sortorder: 500013110
 toc: False
 sidebartitle: django.forms CharField
 meta: Python code examples to show how to use the CharField class within the forms module of the Django open source project. 

@@ -1,7 +1,7 @@
 title: django.http HttpResponsePermanentRedirect Python Code Examples
 category: page
 slug: django-http-httpresponsepermanentredirect-examples
-sortorder: 50057
+sortorder: 500013460
 toc: False
 sidebartitle: django.http HttpResponsePermanentRedirect
 meta: Example code that shows you how to use the HttpResponsePermanentRedirect class from the django.http module.

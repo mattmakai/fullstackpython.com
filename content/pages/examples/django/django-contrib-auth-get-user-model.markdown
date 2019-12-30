@@ -1,7 +1,7 @@
 title: django.contrib.auth get_user_model Example Code
 category: page
 slug: django-contrib-auth-get-user-model-examples
-sortorder: 50024
+sortorder: 500012205
 toc: False
 sidebartitle: django.contrib.auth get_user_model
 meta: Python code examples for the Django function get_user_model from the django.contrib.auth module.

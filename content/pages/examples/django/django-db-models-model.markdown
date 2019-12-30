@@ -1,7 +1,7 @@
 title: django.db.models Model Example Code
 category: page
 slug: django-db-models-model-examples
-sortorder: 50002
+sortorder: 500012875
 toc: False
 sidebartitle: django.db.models Model
 meta: Python code examples for the Model class within the django.db.models module of the Django project. 

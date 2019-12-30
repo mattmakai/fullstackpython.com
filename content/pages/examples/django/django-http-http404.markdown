@@ -1,7 +1,7 @@
 title: django.http Http404 Python Code Examples
 category: page
 slug: django-http-http404-examples
-sortorder: 50045
+sortorder: 500013410
 toc: False
 sidebartitle: django.http Http404
 meta: Example code for the Http404 Exception class from the django.http module.

@@ -1,7 +1,7 @@
 title: django.utils.timezone Example Code
 category: page
 slug: django-utils-timezone-examples
-sortorder: 50020
+sortorder: 500013715
 toc: False
 sidebartitle: django.utils.timezone
 meta: Python code examples for timezone-related classes and functions provided by the Django codebase. 

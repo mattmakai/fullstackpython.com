@@ -1,7 +1,7 @@
 title: django.http HttpResponseBadRequest Python Code Examples
 category: page
 slug: django-http-httpresponsebadrequest-examples
-sortorder: 50054
+sortorder: 500013430
 toc: False
 sidebartitle: django.http HttpResponseBadRequest
 meta: Example Python code for using the HttpResponseBadRequest object provided by Django in the django.http module.

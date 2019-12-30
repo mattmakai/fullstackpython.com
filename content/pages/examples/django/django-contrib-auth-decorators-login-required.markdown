@@ -1,7 +1,7 @@
 title: django.contrib.auth.decorators login_required Example Python Code
 category: page
 slug: django-contrib-auth-decorators-login-required-examples
-sortorder: 50025
+sortorder: 500012150
 toc: False
 sidebartitle: django.contrib.auth.decorators login_required
 meta: Python code examples for the Django function login_required from the django.contrib.auth.decorators module.

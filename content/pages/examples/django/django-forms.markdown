@@ -1,7 +1,7 @@
 title: django.forms Example Code
 category: page
 slug: django-forms-examples
-sortorder: 50015
+sortorder: 500013100
 toc: False
 sidebartitle: django.forms
 meta: Python code examples for the forms module in the Django open source project. 

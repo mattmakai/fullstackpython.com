@@ -1,7 +1,7 @@
 title: flask redirect Example Python Code
 category: page
 slug: flask-redirect-examples
-sortorder: 50104
+sortorder: 500021005
 toc: False
 sidebartitle: flask redirect
 meta: Python code examples for the redirect function from the Flask project used for building web applications.

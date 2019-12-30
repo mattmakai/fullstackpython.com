@@ -1,7 +1,7 @@
 title: django.db.models DateField Example Code
 category: page
 slug: django-db-models-datefield-examples
-sortorder: 50109
+sortorder: 500012820
 toc: False
 sidebartitle: django.db.models DateField
 meta: Python code examples for the DateField class used in the Django ORM, found within the django.db.models module of the Django project. 

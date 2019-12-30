@@ -1,7 +1,7 @@
 title: django.conf settings Example Code
 category: page
 slug: django-conf-settings-examples
-sortorder: 50010
+sortorder: 500010050
 toc: False
 sidebartitle: django.conf settings
 meta: Python code examples for Django settings files.

@@ -1,7 +1,7 @@
 title: django.template.response TemplateResponse Example Code
 category: page
 slug: django-template-response-templateresponse-examples
-sortorder: 50190
+sortorder: 500013510
 toc: False
 sidebartitle: django.template.response TemplateResponse
 meta: Python code examples for the TemplateResponse class that is part of Django's django.template.response module.

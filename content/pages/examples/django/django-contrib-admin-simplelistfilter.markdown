@@ -1,7 +1,7 @@
 title: django.contrib.admin.filters SimpleListFilter Example Code
 category: page
 slug: django-contrib-admin-filters-simplelistfilter-examples
-sortorder: 50055
+sortorder: 500010185
 toc: False
 sidebartitle: django.contrib.admin.filters SimpleListFilter
 meta: Python code examples for using the SimpleListFilter class contained within django.contrib.admin.filters.

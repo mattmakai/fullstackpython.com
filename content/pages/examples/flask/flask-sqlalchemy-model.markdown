@@ -1,7 +1,7 @@
 title: flask_sqlalchemy.SQLAlchemy Model Example Code
 category: page
 slug: flask-sqlalchemy-model-examples
-sortorder: 50100
+sortorder: 500022010
 toc: False
 sidebartitle: flask_sqlalchemy.SQLAlchemy Model
 meta: Python code examples for the Model class within the flask_sqlalchemy.SQLAlchemy module of the Flask-SQLAlchemy project. 

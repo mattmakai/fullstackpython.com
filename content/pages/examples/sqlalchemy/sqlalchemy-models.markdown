@@ -1,9 +1,9 @@
 title: SQLAlchemy Model Example Code
 category: page
 slug: sqlalchemy-model-examples
-sortorder: 50201
+sortorder: 500030500
 toc: False
-sidebartitle: SQLAlchemy Model Examples
+sidebartitle: SQLAlchemy Models
 meta: Python code examples for the Model class within the SQLAlchemy project.
 
 

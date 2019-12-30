@@ -1,7 +1,7 @@
 title: django.core.mail.messages EmailMessage Example Code
 category: page
 slug: django-core-mail-messages-emailmessage-examples
-sortorder: 50007
+sortorder: 500012515
 toc: False
 sidebartitle: django.core.mail.messages EmailMessage
 meta: Python code examples for the EmailMessage function within the django.core.mail module of the Django project. 

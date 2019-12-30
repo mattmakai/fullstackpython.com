@@ -1,7 +1,7 @@
 title: django.db.models TextField Python Example Code
 category: page
 slug: django-db-models-textfield-examples
-sortorder: 50102
+sortorder: 500012910
 toc: False
 sidebartitle: django.db.models TextField
 meta: Python code examples for the Django ORM's TextField class, found within the django.db.models module of the Django project. 

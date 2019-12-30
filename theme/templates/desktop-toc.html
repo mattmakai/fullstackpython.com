@@ -6,7 +6,8 @@
   {% for p in pages|sort(attribute='sortorder') %}
    {% if p %}
     {% if p.toc == "True" %}<a href="/{{ p.slug }}.html" class="lgi {% if page and p.slug == page.slug %}active{% endif %}">{{ p.sidebartitle }}</a>
-    {% elif p.sortorder[0:2] == page.sortorder[0:2] %}<a href="/{{ p.slug }}.html" class="lgi{% if p.slug == page.slug %} active{% endif %} {% if not p.sortorder[0:2] == '50' %}{% if p.sortorder[0:2]|int > 9 and p.sortorder[2:4]|int > 1 %}sbc2{% else %}sbc{% endif %}{% endif %}">{{ p.sidebartitle }}</a>
+    {% elif p.sortorder[0:2] == page.sortorder[0:2] and not p.sortorder[0:2] == '50' %}<a href="/{{ p.slug }}.html" class="lgi{% if p.slug == page.slug %} active{% endif %} {% if p.sortorder[0:2]|int > 9 and p.sortorder[2:4]|int > 1 %}sbc2{% else %}sbc{% endif %}">{{ p.sidebartitle }}</a>
+    {% elif p.sortorder[0:2] == '50' %}{% if p.sortorder[2:5] == page.sortorder[2:5] %}<a href="/{{ p.slug }}.html" class="lgi{% if p.slug == page.slug %} active{% endif %}{% if not p.sortorder[5:8] == '000' %} sbc{% endif %}">{{ p.sidebartitle }}</a>{% endif %}
     {% endif %}
    {% endif %}
   {% endfor %}

@@ -1,7 +1,7 @@
 title: django.conf.urls.url Example Code
 category: page
 slug: django-conf-urls-url-examples
-sortorder: 50001
+sortorder: 500010055
 toc: False
 sidebartitle: django.conf.urls.url
 meta: Python code examples for the url function within the django.conf.urls module of the Django project. 

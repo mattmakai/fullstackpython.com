@@ -1,7 +1,7 @@
 title: django.db.models signal Example Code
 category: page
 slug: django-db-models-signal-examples
-sortorder: 50005
+sortorder: 500012895
 toc: False
 sidebartitle: django.db.models.signal
 meta: Python code examples for database signals within a Django project. 

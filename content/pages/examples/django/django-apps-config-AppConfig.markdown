@@ -1,7 +1,7 @@
 title: django.apps.config AppConfig Example Code
 category: page
 slug: django-apps-config-appconfig-examples
-sortorder: 50067
+sortorder: 500010020
 toc: False
 sidebartitle: django.apps.config AppConfig
 meta: Python code examples for the AppConfig class that is part of Django's django.apps.config package.

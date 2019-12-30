@@ -1,7 +1,7 @@
 title: django.http HttpResponseForbidden Python Code Examples
 category: page
 slug: django-http-httpresponseforbidden-examples
-sortorder: 50051
+sortorder: 500013440
 toc: False
 sidebartitle: django.http HttpResponseForbidden
 meta: Example Python code for using the HttpResponseForbidden object provided by Django in the django.http module.

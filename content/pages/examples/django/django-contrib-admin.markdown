@@ -1,7 +1,7 @@
 title: django.contrib.admin Example Code
 category: page
 slug: django-contrib-admin-examples
-sortorder: 50001
+sortorder: 500010155
 toc: False
 sidebartitle: django.contrib.admin
 meta: Python code examples for the admin module within django.contrib of the Django project. 

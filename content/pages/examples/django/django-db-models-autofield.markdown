@@ -1,7 +1,7 @@
 title: django.db.models AutoField Example Code
 category: page
 slug: django-db-models-autofield-examples
-sortorder: 50107
+sortorder: 500012805
 toc: False
 sidebartitle: django.db.models AutoField
 meta: Python code examples for the AutoField class used in the Django ORM, found within the django.db.models module of the Django project. 

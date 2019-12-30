@@ -1,7 +1,7 @@
 title: django.forms BooleanField Python Code Examples
 category: page
 slug: django-forms-booleanfield-examples
-sortorder: 50089
+sortorder: 500013105
 toc: False
 sidebartitle: django.forms BooleanField
 meta: Python code examples to show how to use the BooleanField class within the forms module of the Django open source project. 

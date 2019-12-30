@@ -1,7 +1,7 @@
 title: django.contrib.admin.sites register Example Code
 category: page
 slug: django-contrib-admin-sites-register-examples
-sortorder: 50016
+sortorder: 500010190
 toc: False
 sidebartitle: django.contrib.admin.sites register
 meta: Python code examples for the admin module within django.contrib of the Django project. 

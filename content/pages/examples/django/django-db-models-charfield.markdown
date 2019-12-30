@@ -1,7 +1,7 @@
 title: django.db.models CharField Example Code
 category: page
 slug: django-db-models-charfield-examples
-sortorder: 50101
+sortorder: 500012815
 toc: False
 sidebartitle: django.db.models CharField
 meta: Python code examples for the CharField class used in the Django ORM, found within the django.db.models module of the Django project. 

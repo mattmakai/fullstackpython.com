@@ -1,7 +1,7 @@
 title: django.forms EmailField Python Code Examples
 category: page
 slug: django-forms-emailfield-examples
-sortorder: 50097
+sortorder: 500013120
 toc: False
 sidebartitle: django.forms EmailField
 meta: View Python code examples that show how to use the EmailField class within the forms module of the Django open source project. 

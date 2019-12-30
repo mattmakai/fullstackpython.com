@@ -1,7 +1,7 @@
 title: django.http HttpResponse Python Code Examples
 category: page
 slug: django-http-httpresponse-examples
-sortorder: 50049
+sortorder: 500013420
 toc: False
 sidebartitle: django.http HttpResponse
 meta: Example Python code for using the HttpResponse object provided by Django in the django.http module.

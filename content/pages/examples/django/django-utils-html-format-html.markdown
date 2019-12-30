@@ -1,7 +1,7 @@
 title: django.utils.html format_html Example Code
 category: page
 slug: django-utils-html-format-html-examples
-sortorder: 50030
+sortorder: 500013705
 toc: False
 sidebartitle: django.utils.html format_html
 meta: Python code examples for using the format_html function contained within Django's django.utils.html module.

@@ -1,7 +1,7 @@
 title: django.db.models BooleanField Example Code
 category: page
 slug: django-db-models-booleanfield-examples
-sortorder: 50103
+sortorder: 500012810
 toc: False
 sidebartitle: django.db.models BooleanField
 meta: Python code examples for the BooleanField class used with the Django ORM to create a Boolean column in a database.

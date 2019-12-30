@@ -1,7 +1,7 @@
 title: django.core.management.base BaseCommand Example Code
 category: page
 slug: django-core-management-base-basecommand-examples
-sortorder: 50018
+sortorder: 500012545
 toc: False
 sidebartitle: django.core.management.base BaseCommand
 meta: Python code examples for Django management commands.
