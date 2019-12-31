@@ -69,3 +69,11 @@ Code examples from Flasky are shown on the following pages:
 
 * [flask_sqlalchemy SQLAlchemy Model](/flask-sqlalchemy-model-examples.html)
 
+
+### newspie
+[NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news 
+aggregator created with [Flask](/flask.html) and the 
+[News API](https://newsapi.org/). 
+
+NewsPie is provided as open source under the 
+[MIT license](https://github.com/skamieniarz/newspie/blob/master/LICENSE).
