@@ -296,6 +296,22 @@ django-loginas is open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/skorokithakis/django-loginas/blob/master/LICENSE).
 
 
+### django-migration-linter
+[django-migration-linter](https://github.com/3YOURMIND/django-migration-linter)
+([PyPI package information](https://pypi.org/project/django-migration-linter/))
+checks for backwards-incompatible changes in [Django ORM](/django-orm.html)
+schema migrations and warns you about them. The purpose of the project is
+to save time in older and larger projects by detecting field migrations
+that will be a problem so you do not run into issues later, and make it
+easier to enable continuous [deployment](/deployment.html) configurations 
+with database changes. There is a 
+[blog post on keeping Django database migrations backward compatible](https://medium.com/3yourmind/keeping-django-database-migrations-backward-compatible-727820260dbb) 
+that goes into further detail on the tool.
+
+The django-migration-linter project is open sourced under the
+[Apache 2.0 license](https://github.com/3YOURMIND/django-migration-linter/blob/master/LICENSE).
+
+
 ### django-model-utils
 [django-model-utils](https://github.com/jazzband/django-model-utils)
 ([project documentation](https://django-model-utils.readthedocs.io/en/latest/)
