@@ -1,7 +1,7 @@
 title: Rollbar
 category: page
 slug: rollbar
-sortorder: 0606
+sortorder: 0604
 toc: False
 sidebartitle: Rollbar
 meta: Rollbar is a monitoring service that can be used with Python web applications to catch and report errors.
@@ -11,7 +11,7 @@ meta: Rollbar is a monitoring service that can be used with Python web applicati
 used with Python [web applications](/web-development.html) to catch and 
 report errors.
 
-<a href="https://rollbar.com/" style="border: none;"><img src="/img/logos/rollbar-hi-res-wide.png" width="100%" alt="Rollbar logo, copyright Rollbar, Inc." class="technical-diagram" /></a>
+<a href="https://rollbar.com/" style="border: none;"><img src="/img/logos/rollbar-hi-res-wide.png" width="100%" alt="Rollbar logo, copyright Rollbar, Inc." class="shot" /></a>
 
 
 ### Rollbar resources

@@ -13,6 +13,17 @@ view commit-level changes via the
 [source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/) 
 on GitHub.
 
+## 2020
+### January
+* Added starter pages for the remaining topics in the table of contents
+  that were previously missing. Still working on adding more resources and
+  descriptions to each page:
+    * [Datadog](/datadog.html)
+    * [GoCD](/gocd-continuous-integration.html)
+    * [Salt](/salt.html)
+    * [Sentry](/sentry.html)
+* Happy New Year (and decade) to my fellow Python developers!
+
 
 ## 2019
 ### December

@@ -1,7 +1,7 @@
 title: Prometheus
 category: page
 slug: prometheus
-sortorder: 0602
+sortorder: 0603
 toc: False
 sidebartitle: Prometheus
 meta: Prometheus is an open source monitoring tool that can be used to instrument and report on Python web apps.
