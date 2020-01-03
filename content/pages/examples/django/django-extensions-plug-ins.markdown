@@ -209,6 +209,19 @@ code. django-filter is provided as
 [open source](https://github.com/carltongibson/django-filter/blob/master/LICENSE).
 
 
+### django-flexible-subscriptions
+[django-flexible-subscriptions](https://github.com/studybuffalo/django-flexible-subscriptions)
+([project documentation](https://django-flexible-subscriptions.readthedocs.io/en/latest/)
+and 
+[PyPI package information](https://pypi.org/project/django-flexible-subscriptions/))
+provides boilerplate code for adding subscription and recurrent billing
+to [Django](/django.html) web applications. Various payment providers 
+can be added on the back end to run the transactions.
+
+The django-flexible-subscriptions project is open sourced under the
+[GNU General Public License v3.0](https://github.com/studybuffalo/django-flexible-subscriptions/blob/master/LICENSE).
+
+
 ### django-floppyforms
 [django-floppyforms](https://github.com/jazzband/django-floppyforms)
 ([project documentation](https://django-floppyforms.readthedocs.io/en/latest/)
