@@ -410,6 +410,18 @@ open source under the
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 
 
+### django-simple-task
+[django-simple-task](https://github.com/ericls/django-simple-task) 
+([project documentation](https://django-simple-task.readthedocs.io/)
+and
+[PyPI package information](https://pypi.org/project/django-simple-task/))
+is a task runner similar but more brittle than other 
+[task queues](/task-queues.html) such as [Celery](/celery.html) and 
+[RQ](/redis-queue-rq.html). django-simple-task requires Django 3.0's new
+ASGI event loop functionality to work properly. It is open sourced under the
+[MIT license](https://github.com/ericls/django-simple-task/blob/master/LICENSE).
+
+
 ### django-smithy
 [django-smithy](https://github.com/jamiecounsell/django-smithy) is
 a [Django](/django.html) code library that allows users to send 
@@ -458,6 +470,17 @@ The code for django-taggit is
 [open source](https://github.com/jazzband/django-taggit/blob/master/LICENSE)
 and maintained by the collaborative developer community group 
 [Jazzband](https://jazzband.co/).
+
+
+### django-webshell
+[django-webshell](https://github.com/onrik/django-webshell) is an extension
+for executing arbitrary code in the 
+[Django admin](https://docs.djangoproject.com/en/stable/ref/contrib/admin/),
+similar to how you can run code by using the `django manage.py shell` 
+command from the terminal.
+
+The django-webshell project is provided as open source under the
+[MIT license](https://github.com/onrik/django-webshell/blob/master/LICENSE).
 
 
 ### django-wiki
