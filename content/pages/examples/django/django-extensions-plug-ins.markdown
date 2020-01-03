@@ -422,6 +422,19 @@ ASGI event loop functionality to work properly. It is open sourced under the
 [MIT license](https://github.com/ericls/django-simple-task/blob/master/LICENSE).
 
 
+### django-sitetree
+[django-sitetree](https://github.com/idlesign/django-sitetree)
+([project documentation](https://django-sitetree.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/django-sitetree/))
+is a [Django](/django.html) extension that makes it easier for
+developers to add site trees, menus and breadcrumb navigation elements
+to their web applications.
+
+The django-sitetree project is provided as open source under the
+[BSD 3-Clause "New" or "Revised" License](https://github.com/idlesign/django-sitetree/blob/master/LICENSE).
+
+
 ### django-smithy
 [django-smithy](https://github.com/jamiecounsell/django-smithy) is
 a [Django](/django.html) code library that allows users to send 
