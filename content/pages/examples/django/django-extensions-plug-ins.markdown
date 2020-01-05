@@ -277,6 +277,15 @@ such as CSV, JSON and YAML. django-import-export is open source under the
 [BSD 2-Clause "Simplified" License](https://github.com/django-import-export/django-import-export/blob/master/LICENSE).
 
 
+### django-inline-actions
+[django-inline-actions](https://github.com/escaped/django-inline-actions)
+([PyPI package information](https://pypi.org/project/django-inline-actions/))
+is an extension that adds actions to the [Django](/django.html)
+Admin InlineModelAdmin and ModelAdmin changelists. The project is open
+sourced under the 
+[BSD 3-Clause "New" or "Revised" License](https://github.com/escaped/django-inline-actions/blob/master/LICENSE).
+
+
 ### django-jet
 [django-jet](https://github.com/geex-arts/django-jet) 
 ([project documentation](https://jet.readthedocs.io/en/latest/),
