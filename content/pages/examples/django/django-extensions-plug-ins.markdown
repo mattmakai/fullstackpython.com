@@ -518,6 +518,17 @@ The django-webshell project is provided as open source under the
 [MIT license](https://github.com/onrik/django-webshell/blob/master/LICENSE).
 
 
+### django-webtest
+[django-webtest](https://github.com/django-webtest/django-webtest)
+([PyPI package information](https://pypi.org/project/django-webtest/))
+is a [Django](/django.html) extension that makes it easier to use
+[WebTest](http://docs.pylonsproject.org/projects/webtest/) with
+your projects.
+
+The project is open sourced under the
+[MIT license](https://github.com/django-webtest/django-webtest/blob/master/LICENSE.txt).
+
+
 ### django-wiki
 [django-wiki](https://github.com/django-wiki/django-wiki)
 ([project documentation](https://django-wiki.readthedocs.io/en/master/),
