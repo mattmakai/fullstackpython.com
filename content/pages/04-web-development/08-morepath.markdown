@@ -11,6 +11,8 @@ meta: Morepath is a Python web framework with a model-driven design approach. Le
 framework with a model-driven approach to creating web applications and web
 APIs.
 
+<a href="http://morepath.readthedocs.org/en/latest/" style="border: none;"><img src="/img/logos/morepath.jpg" width="100%" alt="Official Morepath web framework logo." class="shot"></a>
+
 Morepath's framework philosophy is that the data models should drive the
 creation via the web framework. By default the framework routes URLs directly 
 to model code, unlike for example Django which requires explicit URL routing
