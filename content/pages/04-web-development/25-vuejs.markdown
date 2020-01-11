@@ -41,7 +41,12 @@ rich apps that run in web browsers.
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/)
   walks through all of the environment configuration, project setup and
   coding you need to do to build a legitimate Vue.js application that
-  uses a [Flask](/flask.html) API on the backend.
+  uses a [Flask](/flask.html) API on the backend. 
+
+* [Learn Vue by Building and Deploying a CRUD App](https://testdriven.io/courses/learn-vue/?utm_source=fsp)
+  is an awesome course that walks through the Vue basics and building
+  a whole application and deploying it to 
+  [Netlify](https://www.netlify.com/).
 
 * The official 
   [Vue.js getting started documentation](https://vuejs.org/v2/guide/)
