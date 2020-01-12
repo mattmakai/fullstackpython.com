@@ -8,10 +8,10 @@ meta: Python code examples for the PositiveSmallIntegerField class used in the D
 
 
 [PositiveSmallIntegerField](https://github.com/django/django/blob/master/django/db/models/fields/__init__.py)
-([documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#django.db.models.PositiveIntegerField))
+([documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#django.db.models.PositiveSmallIntegerField))
 is a [Django ORM](/django-orm.html) mapping from your Python code to an
 integer-type column in your [relational database](/databases.html)
-that is restricted to only positive values from 0 to 2147483647.
+that is restricted to only positive values from 0 to 32767.
 
 Note that `PositiveSmallIntegerField` is defined within the 
 [django.db.models.fields](https://github.com/django/django/blob/master/django/db/models/fields/__init__.py)
@@ -348,3 +348,244 @@ def inlineformset_factory(parent_model, model, form=ModelForm,
 ```
 
 
+## Example 4 from django-flexible-subscriptions
+[django-flexible-subscriptions](https://github.com/studybuffalo/django-flexible-subscriptions)
+([project documentation](https://django-flexible-subscriptions.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/django-flexible-subscriptions/))
+provides boilerplate code for adding subscription and recurrent billing
+to [Django](/django.html) web applications. Various payment providers
+can be added on the back end to run the transactions.
+
+The django-flexible-subscriptions project is open sourced under the
+[GNU General Public License v3.0](https://github.com/studybuffalo/django-flexible-subscriptions/blob/master/LICENSE).
+
+[**django-flexible-subscriptions / subscriptions / . / models.py**](https://github.com/studybuffalo/django-flexible-subscriptions/blob/master/subscriptions/./models.py)
+
+```python
+"""Models for the Flexible Subscriptions app."""
+from datetime import timedelta
+from uuid import uuid4
+
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
+from django.core.validators import MinValueValidator
+~~from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
+
+# Convenience references for units for plan recurrence billing
+# ----------------------------------------------------------------------------
+ONCE = '0'
+SECOND = '1'
+MINUTE = '2'
+HOUR = '3'
+DAY = '4'
+WEEK = '5'
+MONTH = '6'
+YEAR = '7'
+RECURRENCE_UNIT_CHOICES = (
+    (ONCE, 'once'),
+    (SECOND, 'second'),
+    (MINUTE, 'minute'),
+    (HOUR, 'hour'),
+    (DAY, 'day'),
+    (WEEK, 'week'),
+    (MONTH, 'month'),
+    (YEAR, 'year'),
+)
+# ----------------------------------------------------------------------------
+
+class PlanTag(models.Model):
+    """A tag for a subscription plan."""
+    tag = models.CharField(
+        help_text=_('the tag name'),
+        max_length=64,
+        unique=True,
+    )
+
+    class Meta:
+        ordering = ('tag',)
+
+    def __str__(self):
+        return self.tag
+
+class SubscriptionPlan(models.Model):
+    """Details for a subscription plan."""
+    id = models.UUIDField(
+        default=uuid4,
+        editable=False,
+        primary_key=True,
+        verbose_name='ID',
+    )
+    plan_name = models.CharField(
+        help_text=_('the name of the subscription plan'),
+        max_length=128,
+    )
+    plan_description = models.CharField(
+        blank=True,
+        help_text=_('a description of the subscription plan'),
+        max_length=512,
+        null=True,
+    )
+    group = models.ForeignKey(
+        Group,
+        blank=True,
+        help_text=_('the Django auth group for this plan'),
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='plans',
+    )
+    tags = models.ManyToManyField(
+        PlanTag,
+        blank=True,
+        help_text=_('any tags associated with this plan'),
+        related_name='plans',
+    )
+    grace_period = models.PositiveIntegerField(
+        default=0,
+        help_text=_(
+            'how many days after the subscription ends before the '
+            'subscription expires'
+        ),
+    )
+
+    class Meta:
+        ordering = ('plan_name',)
+        permissions = (
+            ('subscriptions', 'Can interact with subscription details'),
+        )
+
+    def __str__(self):
+        return self.plan_name
+
+    def display_tags(self):
+        """Displays tags as a string (truncates if more than 3)."""
+        if self.tags.count() > 3:
+            return '{}, ...'.format(
+                ', '.join(tag.tag for tag in self.tags.all()[:3])
+            )
+
+        return ', '.join(tag.tag for tag in self.tags.all()[:3])
+
+class PlanCost(models.Model):
+    """Cost and frequency of billing for a plan."""
+    id = models.UUIDField(
+        default=uuid4,
+        editable=False,
+        primary_key=True,
+        verbose_name='ID',
+    )
+    plan = models.ForeignKey(
+        SubscriptionPlan,
+        help_text=_('the subscription plan for these cost details'),
+        on_delete=models.CASCADE,
+        related_name='costs',
+    )
+~~    recurrence_period = models.PositiveSmallIntegerField(
+~~        default=1,
+~~        help_text=_('how often the plan is billed (per recurrence unit)'),
+~~        validators=[MinValueValidator(1)],
+~~    )
+    recurrence_unit = models.CharField(
+        choices=RECURRENCE_UNIT_CHOICES,
+        default=MONTH,
+        max_length=1,
+    )
+    cost = models.DecimalField(
+        blank=True,
+        decimal_places=4,
+        help_text=_('the cost per recurrence of the plan'),
+        max_digits=19,
+        null=True,
+    )
+
+~~    class Meta:
+~~        ordering = ('recurrence_unit', 'recurrence_period', 'cost',)
+
+    @property
+    def display_recurrent_unit_text(self):
+        """Converts recurrence_unit integer to text."""
+        conversion = {
+            ONCE: 'one-time',
+            SECOND: 'per second',
+            MINUTE: 'per minute',
+            HOUR: 'per hour',
+            DAY: 'per day',
+            WEEK: 'per week',
+            MONTH: 'per month',
+            YEAR: 'per year',
+        }
+
+        return conversion[self.recurrence_unit]
+
+    @property
+    def display_billing_frequency_text(self):
+        """Generates human-readable billing frequency."""
+        conversion = {
+            ONCE: 'one-time',
+            SECOND: {'singular': 'per second', 'plural': 'seconds'},
+            MINUTE: {'singular': 'per minute', 'plural': 'minutes'},
+            HOUR: {'singular': 'per hour', 'plural': 'hours'},
+            DAY: {'singular': 'per day', 'plural': 'days'},
+            WEEK: {'singular': 'per week', 'plural': 'weeks'},
+            MONTH: {'singular': 'per month', 'plural': 'months'},
+            YEAR: {'singular': 'per year', 'plural': 'years'},
+        }
+
+        if self.recurrence_unit == ONCE:
+            return conversion[ONCE]
+
+~~        if self.recurrence_period == 1:
+~~            return conversion[self.recurrence_unit]['singular']
+
+~~        return 'every {} {}'.format(
+~~            self.recurrence_period, conversion[self.recurrence_unit]['plural']
+~~        )
+
+    def next_billing_datetime(self, current):
+        """Calculates next billing date for provided datetime.
+
+            Parameters:
+                current (datetime): The current datetime to compare
+                    against.
+
+            Returns:
+                datetime: The next time billing will be due.
+        """
+~~        if self.recurrence_unit == SECOND:
+~~            return current + timedelta(seconds=self.recurrence_period)
+
+~~        if self.recurrence_unit == MINUTE:
+~~            return current + timedelta(minutes=self.recurrence_period)
+
+~~        if self.recurrence_unit == HOUR:
+~~            return current + timedelta(hours=self.recurrence_period)
+
+~~        if self.recurrence_unit == DAY:
+~~            return current + timedelta(days=self.recurrence_period)
+
+~~        if self.recurrence_unit == WEEK:
+~~            return current + timedelta(weeks=self.recurrence_period)
+
+~~        if self.recurrence_unit == MONTH:
+~~            # Adds the average number of days per month as per:
+~~            # http://en.wikipedia.org/wiki/Month#Julian_and_Gregorian_calendars
+~~            # This handle any issues with months < 31 days and leap years
+~~            return current + timedelta(
+~~                days=30.4368 * self.recurrence_period
+~~            )
+
+~~        if self.recurrence_unit == YEAR:
+~~            # Adds the average number of days per year as per:
+~~            # http://en.wikipedia.org/wiki/Year#Calendar_year
+~~            # This handle any issues with leap years
+~~            return current + timedelta(
+~~                days=365.2425 * self.recurrence_period
+~~            )
+
+~~        return None
+
+
+## ... source file continues with no further relevant examples ...
+```
