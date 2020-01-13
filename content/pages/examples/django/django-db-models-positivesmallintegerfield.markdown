@@ -8,7 +8,7 @@ meta: Python code examples for the PositiveSmallIntegerField class used in the D
 
 
 [PositiveSmallIntegerField](https://github.com/django/django/blob/master/django/db/models/fields/__init__.py)
-([documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#django.db.models.PositiveSmallIntegerField))
+([documentation](https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.PositiveSmallIntegerField))
 is a [Django ORM](/django-orm.html) mapping from your Python code to an
 integer-type column in your [relational database](/databases.html)
 that is restricted to only positive values from 0 to 32767.

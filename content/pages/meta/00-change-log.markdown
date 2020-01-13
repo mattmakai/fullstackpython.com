@@ -15,6 +15,9 @@ on GitHub.
 
 ## 2020
 ### January
+* Added new Django code example pages:
+    * [django.db.models SmallIntegerField](/django-db-models-smallintegerfield-examples.html)
+    * [django.urls.exceptions Resolver404](/django-urls-exceptions-resolver404-examples.html)
 * Added starter pages for the remaining topics in the table of contents
   that were previously missing. Still working on adding more resources and
   descriptions to each page:
