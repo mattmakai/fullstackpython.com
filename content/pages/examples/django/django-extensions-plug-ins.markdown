@@ -432,6 +432,22 @@ open source under the
 * [django.db.models DateTimeField](/django-db-models-datetimefield-examples.html)
 
 
+### Django REST Framework
+[Django REST Framework](https://github.com/encode/django-rest-framework)
+([project homepage and documentation](https://www.django-rest-framework.org/),
+[PyPI package information](https://pypi.org/project/djangorestframework/)
+and [more resources on Full Stack Python](/django-rest-framework-drf.html)), 
+often abbreviated as "DRF", is a popular [Django](/django.html) extension
+for building [web APIs](/application-programming-interfaces.html).
+The project has fantastic documentation and a wonderful
+[quickstart](https://www.django-rest-framework.org/tutorial/quickstart/)
+that serve as examples of how to make it easier for newcomers
+to get started.
+
+The project is open sourced under the 
+[Encode OSS Ltd. license](https://github.com/encode/django-rest-framework/blob/master/LICENSE.md).
+
+
 ### django-simple-task
 [django-simple-task](https://github.com/ericls/django-simple-task) 
 ([project documentation](https://django-simple-task.readthedocs.io/)
