@@ -47,7 +47,7 @@ to variants in the DMD gene and display that [data](/data.html) to a user
 with a [Django](/django.html) web application.
 
 
-### drf-action-serializer
+### Django REST Framework Action Serializer
 [drf-action-serializer](https://github.com/gregschmit/drf-action-serializer)
 ([PyPI page](https://pypi.org/project/drf-action-serializer/))
 is an extension for [Django REST Framework](/django-rest-framework-drf.html)
@@ -64,7 +64,7 @@ following pages:
 * [django.urls.path](/django-urls-path-examples.html)
 
 
-### gadget-board
+### Gadget Board
 [gadget-board](https://github.com/mik4el/gadget-board) is a 
 [Django](/django.html),
 [Django REST Framework (DRF)](/django-rest-framework-drf.html) and
@@ -79,7 +79,24 @@ Additional example code found within gadget-board:
 * [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
 
 
-### jazzband
+### Graphite-Web
+[Graphite](https://github.com/graphite-project/graphite-web) 
+([project website](http://graphiteapp.org/), 
+[documentation](https://graphite.readthedocs.io/en/latest/) and
+[PyPI package information](https://pypi.org/project/graphite-web/))
+is a metrics collection and visualization tool, built with both
+Python and JavaScript. Metrics are collected by a Node.js application
+and displayed using a [Django](/django.html) web application,
+called "Graphite-Web", which is one of three core projects under
+the Graphite umbrella (the other two are 
+[Carbon](https://github.com/graphite-project/carbon) and 
+[Whisper](https://github.com/graphite-project/whisper)). 
+
+Graphite is provided as open sourced under the 
+[Apache License 2.0](https://github.com/graphite-project/whisper/blob/master/LICENSE).
+
+
+### Jazzband's website
 [jazzband](https://github.com/jazzband/website) is a 
 [Django](/django.html)-based web application that runs a website with
 information on many Django projects such as 
@@ -90,7 +107,7 @@ The project's code is provided as open source under the
 [MIT license](https://github.com/jazzband/website/blob/master/LICENSE).
 
 
-### register
+### Register
 [register](https://github.com/ORGAN-IZE/register) is a [Django](/django.html),
 [Bootstrap](/bootstrap-css.html), [PostgreSQL](/postgresql.html) project that is
 open source under the 

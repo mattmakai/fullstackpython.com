@@ -138,6 +138,19 @@ and maintained by the developer community group known as
 [Jazzband](https://jazzband.co/).
 
 
+### Django DownloadView
+[django-downloadview](https://github.com/benoitbryon/django-downloadview)
+([project documentation](https://django-downloadview.readthedocs.io/en/1.9/)
+and
+[PyPI package information](https://pypi.org/project/django-downloadview/))
+is a [Django](/django.html) extension for serving downloads through your
+web application. While typically you would use a web server to handle
+[static content](/static-content.html), sometimes you need to control
+file access, such as requiring a user to register before downloading a
+PDF. In that situations, django-downloadview is a handy library to avoid
+boilerplate code for common scenarios.
+
+
 ### django-easy-timezones
 [django-easy-timezones](https://github.com/Miserlou/django-easy-timezones)
 ([project website](https://www.gun.io/blog/django-easy-timezones))
