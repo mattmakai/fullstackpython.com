@@ -47,6 +47,10 @@
     </div>
    </div>
   {% else %}
+   {% if page.slug == "django-code-examples" %}
+    {% include "examples-extensions-descriptions/django.html" %}
+    {% include "code-examples/django.html" %}
+   {% endif %}
    {{ page.content }}
   {% endif %}
   {% if page.sortorder[0:2] == "50" %}

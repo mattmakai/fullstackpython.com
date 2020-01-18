@@ -7,36 +7,15 @@ sidebartitle: Django Example Code
 meta: Python example projects and code that show how to use the Django web application framework.
 
 
-[Django](/django.html) is a Python [web framework](/web-frameworks.html).
-
-<a href="http://www.djangoproject.com/" style="border: none;"><img src="/img/logos/django.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="shot" style="margin-top:20px"></a>
-
-Part of Django's widespread adoption comes from its broad ecosystem of 
-open source code libraries and example projects.
-
-It's good to familiarize yourself with the following projects to 
-learn what is available to you beyond the extensive 
-"[batteries-included](https://www.quora.com/Why-does-Django-tout-itself-as-a-batteries-included-web-framework-when-you-have-to-manually-write-regexes-to-do-URL-routing)" 
-code base. 
-
-These projects, ordered alphabetically, are also helpful as example 
-code for how to build your own applications.
+## Example Projects with Great Example Code
+The following active projects use the [Django](/django.html) framework in
+various ways that can show you how to build your own applications.
 
 
 ### dccnsys
 [dccnsys](https://github.com/dccnconf/dccnsys) is a conference registration 
 system built with [Django](/django.html). The code is open source under the
 [MIT license](https://github.com/dccnconf/dccnsys/blob/master/LICENSE).
-
-dccnsys is shown on the following code example pages:
-
-* [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
-* [django.contrib.auth get_user_model](/django-contrib-auth-get-user-model-examples.html)
-* [django.contrib.auth.decorators login_required](/django-contrib-auth-decorators-login-required-examples.html)
-* [django.db.models DateField](/django-db-models-datefield-examples.html)
-* [django.db.models IntegerField](/django-db-models-integerfield-examples.html)
-* [django.http HttpResponseForbidden](/django-http-httpresponseforbidden-examples.html)
-* [django.urls.path](/django-urls-path-examples.html)
 
 
 ### dmd-interpreter
@@ -58,11 +37,6 @@ whereas the detail view would have a different serializer.
 The project is open source under the 
 [MIT license](https://github.com/gregschmit/drf-action-serializer/blob/master/LICENSE).
 
-There are code examples from the drf-action-serializer project on the
-following pages:
-
-* [django.urls.path](/django-urls-path-examples.html)
-
 
 ### Gadget Board
 [gadget-board](https://github.com/mik4el/gadget-board) is a 
@@ -70,13 +44,6 @@ following pages:
 [Django REST Framework (DRF)](/django-rest-framework-drf.html) and
 [Angular](/angular.html) web application that is open source under the 
 [Apache2 license](https://github.com/mik4el/gadget-board/blob/master/LICENSE).
-
-Additional example code found within gadget-board:
-
-* [django.apps.config AppConfig](/django-apps-config-appconfig-examples.html)
-* [django.conf.urls url](/django-conf-urls-url-examples.html)
-* [django.contrib admin](/django-contrib-admin-examples.html)
-* [django.contrib.auth.hashers make_password](/django-contrib-auth-hashers-make-password-examples.html)
 
 
 ### Graphite-Web
@@ -115,8 +82,4 @@ open source under the
 This web application makes it easier for people to register as organ donors. 
 You can see the application live at 
 [https://register.organize.org/](https://register.organize.org/).
-
-Useful example code from register can be found on:
-
-* [django.conf.urls url](/django-conf-urls-url-examples.html)
 
