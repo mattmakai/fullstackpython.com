@@ -71,6 +71,14 @@ this short list as my absolute favorites that help developers become
   Highly recommended especially if you feel you have no design skills but 
   need to learn them.
 
+* [A short history of body copy sizes on the Web](https://fvsch.com/body-copy-sizes/)
+  provides a useful examination of how originally the web's typography 
+  mirrored what was in traditional print. Eventually, the designs shifted
+  upwards in font size because screen resolutions changed. However, even
+  in 2020 there is no consensus for what font size to use in various
+  situations so designers simply have to do what they've always done and
+  try their sites on various devices and screen sizes.
+
 * [Web bloat](https://danluu.com/web-bloat/) is the story of traveling
   and using the web with low bandwidth, high latency internet connections 
   that often drop packets. The author explains how many websites are 
