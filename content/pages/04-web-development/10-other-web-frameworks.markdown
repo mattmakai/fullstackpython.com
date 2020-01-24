@@ -89,11 +89,28 @@ centric, batteries-included Python web framework. It uses the MVC
 (Model-View-Controller) architecture pattern and comes with a lot of
 functionality out of the box with an extremely extendable architecture.
 
-Check out the following resources to lean more:
+Check out the following resources to learn more:
 
 1. [5 reasons why people are choosing Masonite over Django](https://dev.to/masonite/5-reasons-why-people-are-choosing-masonite-over-django-ic3)
 1. [MasoniteCasts](https://masonitecasts.com/)
 1. [Dockerizing Masonite with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-masonite-with-postgres-gunicorn-and-nginx/)
+
+
+## FastAPI
+
+[FastAPI](https://docs.masoniteproject.com/) is a modern,
+high-performance, batteries-included Python web framework that's
+perfect for building RESTful APIs. It can handle both synchronous and
+asynchronous requests and has built-in support for data validation,
+JSON serialization, authentication and authorization, and OpenAPI
+documentation.
+
+
+Resources:
+
+1. [Introducing FastAPI](https://medium.com/@tiangolo/introducing-fastapi-fdc1206d453f)
+1. [Developing and Testing an Asynchronous API with FastAPI and Pytest](https://testdriven.io/blog/fastapi-crud/)
+1. [Porting Flask to FastAPI for ML Model Serving](https://www.pluralsight.com/tech-blog/porting-flask-to-fastapi-for-ml-model-serving/)
 
 
 ### Other web framework resources
