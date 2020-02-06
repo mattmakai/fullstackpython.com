@@ -186,6 +186,11 @@ like advanced interactive visualizations.
   is a kernel that allows you to run [Ansible](/ansible.html) tasks and 
   playbooks from within your Jupyter environment.
 
+* [Jupyter Notebooks in the IDE](https://towardsdatascience.com/jupyter-notebooks-in-the-ide-visual-studio-code-versus-pycharm-5e72218eb3e8)
+  explains how to use Jupyter files in Visual Studio Code or 
+  [PyCharm](/pycharm.html) with Jupytext, which defines the
+  pairing information and notebook kernel.
+
 * [The Notebook Wars](https://yihui.name/en/2018/09/notebook-war/) is not a
   tutorial but instead points to the weaknesses that become apparent when
   using Jupyter and the current generation of notebook projects. The
