@@ -7,7 +7,6 @@ sidebartitle: uWSGI
 meta: uWSGI is a Python WSGI server implementation typically used for running Python web applications.
 
 
-# uWSGI
 [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) 
 ([source code](https://github.com/unbit/uwsgi)), pronounced "mu wiz gee", 
 is a [Web Server Gateway Interface (WSGI) server](/wsgi-servers.html)
@@ -17,6 +16,11 @@ implementation that is typically used to run Python web applications.
 
 
 ### uWSGI resources
+* [Configuring uWSGI for Production Deployment](https://www.techatbloomberg.com/blog/configuring-uwsgi-production-deployment/)
+  explains how Bloomberg uses uWSGI as a production WSGI server
+  for some of their Python projects and how to set it up for your
+  own applications.
+
 * The official [Django](/django.html) framework docs on 
   [how to use Django with uWSGI](https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/uwsgi/)
   along with the corresponding official

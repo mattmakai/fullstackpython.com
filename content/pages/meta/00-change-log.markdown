@@ -15,8 +15,8 @@ on GitHub.
 
 ## 2020
 ### February
-* New [CSS](/cascading-style-sheets.html) and [task queue](/task-queues.html)
-  resources.
+* New [CSS](/cascading-style-sheets.html), [task queue](/task-queues.html)
+  and [uWSGI](/uwsgi.html) resources.
 
 ### January
 * Added new Django code example pages:
