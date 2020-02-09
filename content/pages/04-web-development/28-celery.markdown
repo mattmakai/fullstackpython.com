@@ -74,6 +74,10 @@ then dive into these specific Celery tutorials.
   is a different author's follow up to the above best practices post that
   builds upon some of his own learnings from 3+ years using Celery.
 
+* [Common Issues Using Celery (And Other Task Queues)](https://adamj.eu/tech/2020/02/03/common-celery-issues-on-django-projects/)
+  contains good advice about mistakes to avoid in your task configurations, 
+  such as database transaction usage and retrying failed tasks.
+
 * [Asynchronous Processing in Web Applications Part One](http://blog.thecodepath.com/2012/11/15/asynchronous-processing-in-web-applications-part-1-a-database-is-not-a-queue/) 
   and [Part Two](http://blog.thecodepath.com/2013/01/06/asynchronous-processing-in-web-applications-part-2-developers-need-to-understand-message-queues/)
   are great reads for understanding the difference between a task queue and

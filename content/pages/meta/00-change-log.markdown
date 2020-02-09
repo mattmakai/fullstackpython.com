@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### February
+* New [CSS](/cascading-style-sheets.html) and [task queue](/task-queues.html)
+  resources.
+
 ### January
 * Added new Django code example pages:
     * [django.db.models SmallIntegerField](/django-db-models-smallintegerfield-examples.html)
