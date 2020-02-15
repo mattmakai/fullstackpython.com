@@ -126,6 +126,12 @@ sets.
   provides more than just the data, it also includes instructions and
   code for working with the data in your own development environment.
 
+* [Discovering millions of datasets on the web](https://blog.google/products/search/discovering-millions-datasets-web/)
+  introduces Google's 
+  [dataset search](https://datasetsearch.research.google.com/)
+  and explains what they learned from iterating on earlier versions
+  of it before they released this one.
+
 
 ### General Python data resources
 * [PyData](http://pydata.org/) is a community for developer and users of 

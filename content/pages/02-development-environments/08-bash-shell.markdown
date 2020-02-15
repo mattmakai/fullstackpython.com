@@ -102,3 +102,11 @@ during Python software development as part of a programmer's
   presents a list of commands *you should never run*, but can learn about
   their destructive abilities by reading through the descriptions provided
   by the author.
+
+* [Bash Quick References](https://shellmagic.xyz/) is a cheat sheet for
+  common operators and signals that come up when working with scripts.
+
+* [Anybody can write good bash (with a little effort)](https://blog.yossarian.net/2020/01/23/Anybody-can-write-good-bash-with-a-little-effort)
+  covers the basics of shell scripting and provides some recommendations
+  for creating more maintainable scripts such as using linters and
+  formatters.

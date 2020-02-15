@@ -71,3 +71,8 @@ database queries, page size and many other factors.
   examines the evolution from having to buy your own hardware from vendors
   to run a service to the current days of being able to rely on cloud 
   providers for some or all workloads regardless of scale.
+
+* [Scaling to 100k users](https://alexpareto.com/scalability/systems/2020/02/03/scaling-100k.html)
+  covers the architecture scaling techniques commonly used to move up 
+  in serving users by orders of magnitude, for example from 100 to 1000.
+

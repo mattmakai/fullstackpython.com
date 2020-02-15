@@ -173,6 +173,19 @@ web application's design.
   fix this situation with `display` as well as other less visible properties
   such as floats and `auto` width.
 
+* [A brief history of CSS until 2016](https://www.w3.org/Style/CSS20/history.html)
+  explains how CSS originated at CERN in 1994 as a solution to the
+  problem of HTML not having reasonable styling features
+  (in-line `style` attributes on elements don't count).
+
+* [Old CSS, New CSS](https://eev.ee/blog/2020/02/01/old-css-new-css/) tells
+  the wonderful and painful story of web design in the early days of the
+  Web, when inline styling was required, HTML CAPS were mandatory, and
+  most websites wished they had design styles like the amazing
+  [Space Jam](https://www.spacejam.com/) pages. Oh also, lots and lots of
+  talk about tables, because that was the only way to position anything
+  back in the day.
+
 * [30 seconds of CSS](https://30-seconds.github.io/30-seconds-of-css/)
   provides short useful code snippets for you to learn from and use for
   building your own web applications.
