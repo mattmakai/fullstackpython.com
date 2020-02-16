@@ -17,6 +17,10 @@ meta: Salt is configuration management tool used for application deployment and 
 
 
 ### Salt resources
+* [What's new in Salt 3000 Neon](https://salt.tips/whats-new-in-salt-neon/)
+  covers the latest release and the significant number of new features
+  and fixes contained within it.
+
 * [Introduction to Salt](https://docs.saltstack.com/en/latest/topics/)
   gives a 30 second summary of what the tool can do for you then provides
   a collection of links to other resources that plug you into the Salt
