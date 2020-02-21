@@ -41,3 +41,8 @@ and is used to display website and web application content.
   remains because there is not enough optimization juice to squeeze from
   changing the implementation compared to the backwards-breaking changes
   in rendering existing sites.
+
+* [A Complete Guide to Links and Buttons](https://css-tricks.com/a-complete-guide-to-links-and-buttons/)
+  extensively covers what might be thought of as a simple topic: the
+  `a` and `button` elements in HTML, along with their many attributes
+  and quirks.
