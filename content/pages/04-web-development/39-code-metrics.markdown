@@ -169,3 +169,7 @@ diminishing returns.
 * [Intro to Black – The Uncompromising Python Code Formatter](http://www.blog.pythonlibrary.org/2019/07/16/intro-to-black-the-uncompromising-python-code-formatter/)
   contains some introductory examples for using Black and shows how to
   use it on your source files.
+
+* [Python static analysis tools](https://luminousmen.com/post/python-static-analysis-tools)
+  is a quick overview of the features for Black, Pylint, Pyflakes, Mypy,
+  Bandit and Prospector.
