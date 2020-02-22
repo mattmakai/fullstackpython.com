@@ -38,6 +38,12 @@ following resources are broader walkthroughs for the SciPy ecosystem:
   instructions for various SciPy packages that were previously hosted
   on the SciPy wiki.
 
+* [Robots and Generative Art and Python, oh my!](https://www.generativehut.com/post/robots-and-generative-art-and-python-oh-my)
+  uses Scipy, Numpy, and [Matplotlib](/matplotlib.html) to generate
+  some nice looking art that can even be written to paper using a
+  plotter. This is a very cool example project that ties together
+  the scientific world and the art world.
+
 * [Lectures in Quantitative Economics: SciPy](https://lectures.quantecon.org/py/scipy.html)
   provides a good overview of SciPy compared to the specific NumPy
   project, as well as explanations for the wrappers SciPy provides 
