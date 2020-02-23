@@ -18,6 +18,7 @@ on GitHub.
 * New [CSS](/cascading-style-sheets.html), [task queue](/task-queues.html)
   and [uWSGI](/uwsgi.html) resources.
 * Added new Django code example pages:
+    * [django.forms DateField](/django-db-models-datefield-examples.html)
     * [django.forms TypedChoiceField](/django-db-models-typedchoicefield-examples.html)
 
 ### January
