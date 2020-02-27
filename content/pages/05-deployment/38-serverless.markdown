@@ -49,11 +49,8 @@ and not all of them have Python support.
   [Python 2.7](/blog/aws-lambda-python-2-7.html) and 
   [Python 3.6/3.7](/blog/aws-lambda-python-3-6.html).
   
-* Azure Functions has second-class citizen support for Python. It's
-  supposed to be possible but 
-  [kind of hacky at the moment](https://github.com/Azure/azure-webjobs-sdk-script/issues/335).
-  Polyglot support should be quickly coming to Azure to better
-  compete with AWS Lambda.
+* Azure Functions has stepped up its support for Python. It has support
+  for [Python 3.6 and 3.7](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python#python-version).
 
 * IBM Bluemix OpenWhisk is based on the 
   [Apache OpenWhisk](https://github.com/openwhisk/openwhisk)
