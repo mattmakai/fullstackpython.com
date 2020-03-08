@@ -1,7 +1,7 @@
 title: django.forms TypedChoiceField Python Code Examples
 category: page
 slug: django-forms-typedchoicefield-examples
-sortorder: 500013125
+sortorder: 500013129
 toc: False
 sidebartitle: django.forms TypedChoiceField
 meta: View code examples that show how to use the TypedChoiceField class within the forms module of Django.

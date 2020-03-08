@@ -19,6 +19,7 @@ on GitHub.
   and [uWSGI](/uwsgi.html) resources.
 * Added new Django code example pages:
     * [django.forms DateField](/django-db-models-datefield-examples.html)
+    * [django.forms DateTimeField](/django-db-models-datetimefield-examples.html)
     * [django.forms TypedChoiceField](/django-db-models-typedchoicefield-examples.html)
 
 ### January
