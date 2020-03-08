@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### March
+* Added new blog post on 
+  [The Best Resources for Developers to Learn Finance](/blog/best-resources-developers-learn-finance.html).
+
 ### February
 * New [CSS](/cascading-style-sheets.html), [task queue](/task-queues.html)
   and [uWSGI](/uwsgi.html) resources.
