@@ -39,9 +39,14 @@ are talking or writing about.
   about finance down your throat even if you do not want their opinions.
   
 * [Endless Metrics](https://endlessmetrics.substack.com) explains financial
-  topics in a way that's easy to understand. What I love most about this
-  newsletter is that the author will often venture into finance-related
-  topics he's interested in and then explain those subjects
+  topics in a way that's easy for anyone without a finance background to 
+  understand. For example, 
+  [what the heck is GDP and how do you read a GDP chart?](https://endlessmetrics.substack.com/p/reading-a-gdp-chart). 
+  What I love most about this newsletter is that the author will often 
+  venture into finance-related topics he's interested in and then explain 
+  those subjects while grounding them with useful charts and data.
+  This analytic approach closely matches how my developer brain processes
+  information!
 
 * [Points of Return by John Auther](https://www.bloomberg.com/authors/AT2bBytfUHQ/john-authers)
   ([newsletter sign up form](http://link.mail.bloombergbusiness.com/join/4wm/opinion-authers-signup)).
