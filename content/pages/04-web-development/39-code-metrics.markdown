@@ -48,7 +48,7 @@ system are occurring.
 * [Black](https://github.com/ambv/black) is a Python code formatter with
   strong, uncompromising assumptions about how your code must be formatted.
 
-* [dlint](https://github.com/duo-labs/dlint) is a linter for secure coding
+* [dlint](https://github.com/dlint-py) is a linter for secure coding
   practices.
 
 * [pylintdb](https://github.com/nedbat/pylintdb) puts pylint results into
