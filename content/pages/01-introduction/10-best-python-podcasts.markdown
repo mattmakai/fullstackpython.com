@@ -38,6 +38,10 @@ listen and learn.
   on [testing](/testing.html) and related topics such as mocking and 
   [code metrics](/code-metrics.html).
 
+* [Django Riffs](https://djangoriffs.com/) is a podcast for learning 
+  [web application development](/web-development.html) in Python using the 
+  [Django web framework](/django.html).
+
 * [Teaching Python](https://www.teachingpython.fm/) is a podcast by two
   teachers about their adventures teaching middle school computer science, 
   problem solving, handling failure, frustration, and success with
