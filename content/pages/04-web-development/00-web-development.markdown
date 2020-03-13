@@ -81,6 +81,11 @@ world.
   CSS, JavaScript, images and other files as input and render webpages as
   output. It is well worth your time to know this stuff as a web developer.
 
+* [The history of the URL](https://blog.cloudflare.com/the-history-of-the-url/)
+  explains how the growth of ARPANET to hundreds of nodes eventually led to
+  the creation of the URL. This is a great read that provides historical
+  context for why things are the way they are with the web.
+
 * [Web app checklist](http://dhilipsiva.com/webapp-checklist/) presents 
   good practices that developers building and [deploying](/deployment.html) 
   web applications should follow. Don't worry about having every single

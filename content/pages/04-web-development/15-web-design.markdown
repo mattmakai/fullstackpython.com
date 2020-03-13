@@ -99,6 +99,11 @@ this short list as my absolute favorites that help developers become
 * [How to design delightful dark themes](https://blog.superhuman.com/how-to-design-delightful-dark-themes-7b3da644ff1f)
   explains some subtle tactics to make dark themes work well for users.
 
+* [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
+  describes how browser layout and resizing settings could affect your
+  images so manually setting the size is more useful than it has
+  been in the past few years.
+
 * [Kuler](https://kuler.adobe.com/create/color-wheel/) is a complementary
   color picker by Adobe that helps choose colors for your designs.
 

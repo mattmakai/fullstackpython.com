@@ -15,6 +15,8 @@ on GitHub.
 
 ## 2020
 ### March
+* New [web design](/web-design.html) and 
+  [web development](/web-development.html) resources.
 * Added new blog post on 
   [The Best Resources for Developers to Learn Finance](/blog/best-resources-developers-learn-finance.html).
 
