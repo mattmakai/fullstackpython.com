@@ -137,6 +137,12 @@ walkthroughs I've read.
 * [How to speed up tests in Django and PostgreSQL](http://nemesisdesign.net/blog/coding/how-to-speed-up-tests-django-postgresql/)
   explains some hacks for making your schema migration-backed run quicker.
 
+* [Thinking psycopg3](https://www.varrazzo.com/blog/2020/03/06/thinking-psycopg3/)
+  is written by a developer who has worked on this critical Python library
+  for interacting with PostgreSQL since 2005. The author writes up thoughts
+  on what should change if backwards-incompatible changes are ever introduced
+  in a new hypothetical future version.
+
 * [Records](https://pypi.org/project/records/) is a wrapper around the psycopg2
   driver that allows easy access to direct SQL access. It's worth a look if
   you prefer writing SQL over using an 

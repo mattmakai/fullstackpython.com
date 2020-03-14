@@ -73,6 +73,11 @@ your own productive workflow.
   data science notebook projects such as MATLAB and Mathematica to set the stage 
   for IPython and Jupyter's creation.
 
+* [How to use Jupyter Notebooks in 2020 (Part 1: The data science landscape)](https://ljvmiranda921.github.io/notebook/2020/03/06/jupyter-notebooks-in-2020/)
+  is a high-level overview post that starts a series on Jupyter Notebooks.
+  This first post covers why a tool like Jupyter Notebook is needed in
+  the broader landscape of data science.
+
 * [How to Version Control Jupyter Notebooks](https://nextjournal.com/schmudde/how-to-version-control-jupyter)
   explains how Jupyter Notebooks are stored in JSON, the issues with that
   format for [source control](/source-control.html) and how to get
