@@ -49,6 +49,10 @@ is a data structures and analysis library.
   shows how to use the `crosstab` function in pandas so you can summarize
   and group data.
 
+* [How to Convert a Python Dictionary to a Pandas DataFrame](https://www.marsja.se/how-to-convert-a-python-dictionary-to-a-pandas-dataframe/)
+  is a straightforward tutorial with example code for loading and adding 
+  data stored in a typical Python dictionary into a DataFrame.
+
 * This two-part series on loading data into a pandas DataFrame presents
   what to do
   [when CSV files do not match your expectations](http://blog.enthought.com/python/with-and-without-the-canopy-data-import-tool-loading-data-theres-no-such-thing-as-a-simple-csv-file/)

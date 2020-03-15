@@ -88,6 +88,11 @@ for fellow developers.
   and [Bottle](https://www.twilio.com/blog/2016/08/getting-started-python-bottle-twilio-sms-mms.html) 
   apps to learn from while building your own projects.
 
+* [Serverless Phone Number Validation with AWS Lambda, Python and Twilio](https://www.twilio.com/blog/serverless-phone-number-validation-aws-lambda-python-twilio)
+  walks through using the Python runtime on [AWS Lambda](/aws-lambda.html) 
+  and Twilio's APIs for validating phone number information.
+
+
 * [Google Cloud recommends developers use Twilio](https://cloud.google.com/appengine/docs/standard/python/sms/twilio)
   for communications in their apps and provides a short walkthrough for
   Python developers.
@@ -95,7 +100,8 @@ for fellow developers.
 * [SMS Tracking Notifications](https://www.easypost.com/sms-tracking-tutorial)
   is a fun tutorial that combines two APIs together - Twilio and 
   [Easypost](https://www.easypost.com) to track packages sent through the
-  Easypost service.
+  Easypost service. There is also another tutorial on 
+  [shipment notifications specifically for Flask](https://www.twilio.com/blog/build-shipment-notification-service-python-flask-twilio-easypost).
 
 * This video titled 
   "[We're No Strangers to VoIP: Building the National Rick Astley Hotline)](https://www.youtube.com/watch?v=LgKshQoGh64)"
