@@ -176,3 +176,9 @@ following resources should get you past the initial hurdles.
   added to an existing table, and another where a `Many-to-Many` field needs
   to be converted to a standard `ForeignKey` column while retaining all
   of the data.
+
+* [Double-checked locking with Django ORM](https://lukeplant.me.uk/blog/posts/double-checked-locking-with-django-orm/)
+  shows how you can implement a double-checking locking pattern in the
+  Django ORM with [PostgreSQL](/postgresql.html), which is useful
+  when you want to prevent multiple processes from accessing the same
+  data at the same time.
