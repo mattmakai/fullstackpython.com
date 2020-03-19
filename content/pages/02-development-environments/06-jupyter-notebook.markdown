@@ -77,6 +77,9 @@ your own productive workflow.
   is a high-level overview post that starts a series on Jupyter Notebooks.
   This first post covers why a tool like Jupyter Notebook is needed in
   the broader landscape of data science.
+  [Part 2](https://ljvmiranda921.github.io/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/)
+  examines the growth of the Jupyter ecosystem and the jump from exploratory
+  analysis notebooks to production notebooks.
 
 * [How to Version Control Jupyter Notebooks](https://nextjournal.com/schmudde/how-to-version-control-jupyter)
   explains how Jupyter Notebooks are stored in JSON, the issues with that

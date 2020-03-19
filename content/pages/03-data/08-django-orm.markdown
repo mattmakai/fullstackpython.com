@@ -182,3 +182,9 @@ following resources should get you past the initial hurdles.
   Django ORM with [PostgreSQL](/postgresql.html), which is useful
   when you want to prevent multiple processes from accessing the same
   data at the same time.
+
+* [Using Django Check Constraints for the Sum of Percentage Fields](https://adamj.eu/tech/2020/03/10/django-check-constraints-sum-percentage-fields/)
+  shows how you can combine several `PositiveIntegerField` model
+  fields with a checking constraint and a web form that ensures
+  all of the fields sum up to a precise amount, such as 100%.
+
