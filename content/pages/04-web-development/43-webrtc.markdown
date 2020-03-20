@@ -18,6 +18,14 @@ browser) and server (usually a [web server](/web-servers.html)).
   explains what you do and do not need to know as prerequisites for
   building with WebRTC along with some sources for learning.
 
+* This post titled 
+  [WebRTC: a working example](http://pfertyk.me/2020/03/webrtc-a-working-example/)
+  and the
+  [companion open source repository](https://github.com/pfertyk/webrtc-working-example)
+  provides a simple working example of WebRTC technology, without any 3rd party 
+  dependencies. It allows 2 web browsers to exchange audio and video streams by
+  using the `aiohttp` and `python-socketio` modules.
+
 * [A real world guide to WebRTC](https://deepstreamhub.com/tutorials/protocols/webrtc-intro/)
   goes through WebRTC fundamentals such as data channels, audio and video,
   screen sharing and file transfers with the JavaScript code provided
