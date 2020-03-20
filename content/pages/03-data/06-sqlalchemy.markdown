@@ -193,6 +193,11 @@ implementations. Several open source projects and articles are listed here
 to make it a bit easier to understand the differences between these
 implementations.
 
+* [Introduction to SQLAlchemy ORM for Django Developers](https://apirobot.me/posts/introduction-to-sqlalchemy-orm-for-django-developers)
+  is written by a developer who typically used the [Django ORM](/django-orm.html)
+  at work and then had a chance to try SQLAlchemy for one project. He covers
+  differences in how each one handles transactions, models and queries.
+
 * [SQLAlchemy vs Other ORMs](http://www.pythoncentral.io/sqlalchemy-vs-orms/)
   provides a detailed comparison of SQLAlchemy against alternatives.
 
