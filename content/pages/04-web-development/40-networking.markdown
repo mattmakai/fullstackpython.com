@@ -38,3 +38,7 @@ web applications.
   explains how Dropbox uses edge-of-the-network resources closer to the
   end user to optimize performance of their service.
 
+* [On the shoulders of giants: recent changes in Internet traffic](https://blog.cloudflare.com/on-the-shoulders-of-giants-recent-changes-in-internet-traffic/)
+   examines how the COVID-19 pandemic of 2020 changed the times during the
+   day and locations of how the majority of internet traffic was routed
+   and consumed.

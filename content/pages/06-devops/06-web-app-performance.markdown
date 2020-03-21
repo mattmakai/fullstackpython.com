@@ -67,6 +67,10 @@ database queries, page size and many other factors.
   provides a list with a crazy number of scaling and performance optimization 
   resources and tools by category.
 
+* [Every Web Performance Test Tool](https://www.swyx.io/writing/webperf-tests/)
+  provides a nice list of tools and provides short summaries of what each
+  one can help with in identifying performance problems.
+
 * [The Infrastructure Behind Twitter: Scale](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html)
   examines the evolution from having to buy your own hardware from vendors
   to run a service to the current days of being able to rely on cloud 
