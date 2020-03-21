@@ -107,6 +107,11 @@ resources can also give you a good overview of how HTTPS works.
   [cheat sheets for security](https://www.owasp.org/index.php/Cheat_Sheets) 
   topics.
 
+* [Stanford's CS253 class](https://web.stanford.edu/class/cs253/) is available
+  for free online, including lecture slides, videos and course materials to
+  learn about web browser internals, session attacks, fingerprinting, HTTPS
+  and many other fundamental topics.
+
 * [The SaaS CTO Security Checklist](https://cto-security-checklist.sqreen.io/)
   is an awesome list of steps for securing your infrastructure and employees
   as well as what stage and size company it is recommended that you put those

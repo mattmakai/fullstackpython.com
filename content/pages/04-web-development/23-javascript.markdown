@@ -46,6 +46,10 @@ JavaScript is an implementation of
 [the ECMAScript specification](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/JavaScript_Overview) 
 which is defined by the 
 [Ecma International Standards Body](http://www.ecma-international.org/default.htm).
+Read this paper on 
+[the first 20 years of JavaScript](https://zenodo.org/record/3710954)
+by Brendan Eich, the original creator of the programming language, and 
+Allen Wirfs-Brock for more context on the language's evolution.
 
 
 ### JavaScript resources
