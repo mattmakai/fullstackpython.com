@@ -151,6 +151,11 @@ the framework.
   [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a
   great start for figuring out what you need to know.
 
+* [A Guide to ASGI in Django 3.0 and its Performance](https://arunrocks.com/a-guide-to-asgi-in-django-30-and-its-performance/)
+  covers the new Asynchronous Server Gateway Interface (ASGI) that was
+  introduced in Django 3.0 and explains some of the nuances and gotchas
+  that you should consider if you decide to use it for your web apps.
+
 * [REST APIs with Django: Build powerful web APIs with Python and Django](https://www.amazon.com/dp/198302998X) 
   by [William S. Vincent](https://wsvincent.com/) is the book for you 
   if you are just moving beyond the basics of Django and looking to get 
@@ -225,6 +230,7 @@ the framework.
   looks at how to create a custom User model in Django so that an email
   address can be used as the primary user identifier instead of a
   username for authentication.
+
 
 ## Django Channels
 Channels are a new mechanism in Django 1.9 provided as a standalone app. 
