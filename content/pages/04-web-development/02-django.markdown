@@ -141,11 +141,10 @@ the framework.
   [working with databases](https://dizballanze.com/django-project-optimization-part-2/)
   and [caching](https://dizballanze.com/django-project-optimization-part-3/).
 
-* This tutorial shows how to create
-  [a Django web app that can make phone calls and send text messages for automated surveys](https://www.twilio.com/docs/tutorials/walkthrough/automated-survey/python/django). 
-  The code is a really good example of a full Django project and is also
-  available 
-  [open source on GitHub](https://github.com/TwilioDevEd/automated-survey-django).
+* [Mental Models for Class Based Views](https://djangodeconstructed.com/2020/01/03/mental-models-for-class-based-views/)
+  provides some comparison points between class based views (CBVs) and 
+  function based views and the author's opinions for how you can better
+  understand CBVs.
 
 * Working with time zones is necessary for every web application. This 
   [blog post on pytz and Django](http://tommikaikkonen.github.io/timezones/) is a

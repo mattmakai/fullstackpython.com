@@ -90,7 +90,13 @@ Allen Wirfs-Brock for more context on the language's evolution.
   tools are that you can use and some comparisons when deciding between 
   Angular and React.
 
-* [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
+* [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) 
+  is a step-by-step walkthrough of how to set up a basic CRUD app with 
+  [Vue.js](/vuejs.html) and [Flask](/flask.html).
+
+* [A Guide to Console Commands](https://css-tricks.com/a-guide-to-console-commands/)
+  shows off what JavaScript commands you can use in your browser's console,
+  which is a typical debugging pattern for JavaScript development.
 
 * [is-website-vulnerable](https://github.com/lirantal/is-website-vulnerable)
   is an open source tool that identifies security vulnerabilities based on 

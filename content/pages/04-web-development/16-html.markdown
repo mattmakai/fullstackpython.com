@@ -46,3 +46,8 @@ and is used to display website and web application content.
   extensively covers what might be thought of as a simple topic: the
   `a` and `button` elements in HTML, along with their many attributes
   and quirks.
+
+* [HTML: the inaccessible parts](https://daverupert.com/2020/02/html-the-inaccessible-parts/)
+  explains how even basic HTML elements can cause accessibility issues
+  for screen readers and other devices that help people with impairments
+  to use the web.

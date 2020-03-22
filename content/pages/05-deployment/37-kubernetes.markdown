@@ -80,6 +80,18 @@ applications.
   is stuffed full of great design advice that is now available as people
   having been using Kubernetes for a couple of years.
 
+* ["Let’s use Kubernetes!" Now you have 8 problems](https://pythonspeed.com/articles/dont-need-kubernetes/)
+  is a counter-argument for why you should be cautious about introducing
+  the significant complexity overhead of Kubernetes (or any related tools)
+  into your environment unless you really need the advantages that they can
+  provide. Each developer, team and organization should perform an explicit
+  cost-benefit analysis to make sure the tool's scability, reliability
+  and related functionality will outweigh the downsides.
+
+* [How Zolando manages 140+ Kubernetes clusters](https://srcco.de/posts/how-zalando-manages-140-kubernetes-clusters.html)
+  covers the architecture, monitoring and workflow of a team that has 
+  to run a decent number of clusters for their development teams.
+
 
 ### Kubernetes tutorials
 * [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -126,6 +138,6 @@ applications.
   uses Helm to make it easier to deploy the example [Django](/django.html)
   web app with a [PostgreSQL](/postgresql.html) backend.
 
-* [How Zolando manages 140+ Kubernetes clusters](https://srcco.de/posts/how-zalando-manages-140-kubernetes-clusters.html)
-  covers the architecture, monitoring and workflow of a team that has 
-  to run a decent number of clusters for their development teams.
+* [K8s YAML Alternative: Python](https://www.phillipsj.net/posts/k8s-yaml-alternative-python/)
+  shows how you can use Python scripts instead of YAML to configure
+  your Kubernetes clusters.

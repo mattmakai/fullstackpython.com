@@ -149,6 +149,11 @@ equivalent of browser testing in the web application world.
   is free and contains a wealth of practical advice for what design
   decisions to make for your web API.
 
+* [Documenting APIs: A guide for technical writers and engineers](https://idratherbewriting.com/learnapidoc/)
+  is a guide that covers good practices for thinking like a developer who
+  will use your API, as well as what the documentation for endpoints
+  and other important pieces should look like.
+
 * [1-to-1 Relationships and Subresources in REST APIs](http://developers.lyst.com/2015/02/20/1-to-1-relationships-and-subresources-in-rest-apis/)
   tells the story of design decisions that were made during an API's creation
   and why those choices were made.

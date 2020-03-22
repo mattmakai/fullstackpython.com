@@ -166,6 +166,10 @@ edge cases.
   gives a wonderful walkthrough of how to build your own online commenting
   system in Python using SQLAlchemy.
 
+* [Master SQLAlchemy Relationships in a Performance Friendly Way](https://blog.theodo.com/2020/03/sqlalchemy-relationship-performance/)
+  dives into code that shows how to improve performance when setting and 
+  accessing relationship-based data in your models.
+
 * [SQLAlchemy and data access in Python](https://talkpython.fm/episodes/show/5/sqlalchemy-and-data-access-in-python)
   is a podcast interview with the creator of SQLAlchemy that covers the
   project's history and how it has evolved over the past decade.
