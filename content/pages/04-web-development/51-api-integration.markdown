@@ -43,6 +43,12 @@ across many implementation areas.
   [18F's API-All-the-X list](http://18f.github.io/API-All-the-X/). The list
   is updated whenever a new API comes online.
 
+* [The Only Type of API Services I'll Use](https://www.rdegges.com/2020/the-only-type-of-api-services-ill-use/)
+  explains how alignment between usage and pricing is crucial to a solid,
+  long-lasting API experience. Other models such as tiered usage and 
+  enterprise upsells typically lead to terrible developer experiences and
+  should generally be avoided when building applications with APIs.
+
 * John Sheehan's 
   "[Zen and the Art of API Maintenance](https://speakerdeck.com/johnsheehan/zen-and-the-art-of-api-maintenance)"
   slides are relevant for API integration.
