@@ -114,3 +114,7 @@ is a data structures and analysis library.
   explains that pandas operations can often be parallelized for better 
   performance using the Pandas UDFs feature in PySpark version 2.3
   or greater.
+
+* [How to use Pandas read_html to Scrape Data from HTML Tables](https://www.marsja.se/how-to-use-pandas-read_html-to-scrape-data-from-html-tables/)
+  has a bunch of great code examples that show how to load
+  data from HTML directly into your DataFrames.
