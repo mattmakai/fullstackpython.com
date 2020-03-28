@@ -15,6 +15,8 @@ on GitHub.
 
 ## 2020
 ### March
+* Added new blog post tutorial on 
+  [Learning pandas by Exploring COVID-19 Data](/blog/learn-pandas-basic-commands-explore-covid-19-data.html).
 * New [web design](/web-design.html) and 
   [web development](/web-development.html) resources.
 * Added new blog post on 
