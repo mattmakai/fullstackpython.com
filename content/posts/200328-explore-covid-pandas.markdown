@@ -36,7 +36,7 @@ source covidpandas/bin/activate
 pip install pandas
 ```
 
-We're now ready to get the COVID-19 data and start analyzing it with
+We are now ready to get the COVID-19 data and start analyzing it with
 pandas.
 
 
