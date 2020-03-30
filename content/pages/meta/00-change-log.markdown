@@ -15,6 +15,8 @@ on GitHub.
 
 ## 2020
 ### March
+* Added another new blog post on
+  [Exporting pandas DataFrames into SQLite with SQLAlchemy](/blog/export-pandas-dataframes-sqlite-sqlalchemy.html).
 * Added new blog post tutorial on 
   [Learning pandas by Exploring COVID-19 Data](/blog/learn-pandas-basic-commands-explore-covid-19-data.html).
 * New [web design](/web-design.html) and 
