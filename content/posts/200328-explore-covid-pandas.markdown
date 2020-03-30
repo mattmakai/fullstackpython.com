@@ -5,7 +5,7 @@ category: post
 date: 2020-03-28
 modified: 2020-03-28
 newsletter: False
-headerimage: /img/200328-covid-19-pandas/header.png
+headerimage: /img/200328-covid-19-pandas/header.jpg
 headeralt: pandas logo. Copyright the PyData Foundation.
 
 
@@ -313,4 +313,3 @@ the username [mattmakai](https://github.com/mattmakai).
 Something wrong with this post? Fork 
 [this page's source on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/200328-explore-covid-pandas.markdown)
 and submit a pull request.
-
