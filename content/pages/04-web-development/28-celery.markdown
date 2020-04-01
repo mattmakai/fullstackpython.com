@@ -176,6 +176,9 @@ web framework of your choice.
   for transient states in your application that are not covered by the 
   default Celery configuration.
 
+* [Asynchronous Tasks with Django and Celery](https://testdriven.io/blog/django-and-celery/)
+  looks at how to configure Celery to handle long-running tasks in a
+  Django app.
 
 ### Celery deployment resources
 Celery and its broker run separately from your web and WSGI servers so it 
