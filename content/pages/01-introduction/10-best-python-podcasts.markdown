@@ -52,6 +52,7 @@ listen and learn.
   Python subjects. 
   [All episodes are listed on a separate page](http://pgbovine.net/PG-Podcast-summary.htm).
 
+* [The Real Python Podcast](https://realpython.com/podcasts/rpp/) is a weekly podcast with interviews, coding tips, and conversation with guests from the Python community.
 
 ## Favorite podcast episodes
 Here are a list of my favorite episodes from various Python podcasts before 
