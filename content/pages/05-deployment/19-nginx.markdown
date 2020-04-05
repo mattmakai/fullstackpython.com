@@ -155,7 +155,3 @@ several years.
   from your traffic logs when using them for web traffic analytics.
 
 
-### Nginx release summaries
-* [nginx-1.13.0](http://mailman.nginx.org/pipermail/nginx-announce/2017/000195.html)
-
-
