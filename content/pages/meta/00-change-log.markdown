@@ -14,6 +14,9 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### April
+* Updated the [web design](/web-design.html) page with new resources.
+
 ### March
 * Added another new blog post on
   [Exporting pandas DataFrames into SQLite with SQLAlchemy](/blog/export-pandas-dataframes-sqlite-sqlalchemy.html).
