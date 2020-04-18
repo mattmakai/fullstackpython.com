@@ -71,6 +71,11 @@ this short list as my absolute favorites that help developers become
   Highly recommended especially if you feel you have no design skills but 
   need to learn them.
 
+* [Building dark mode on Stack Overflow](https://stackoverflow.blog/2020/03/31/building-dark-mode-on-stack-overflow/)
+  explains the thought process and work that the team at Stack Overflow
+  had to do with colors, styling and the code implementation so they
+  could offer a dark mode design to their users.
+
 * [A short history of body copy sizes on the Web](https://fvsch.com/body-copy-sizes/)
   provides a useful examination of how originally the web's typography 
   mirrored what was in traditional print. Eventually, the designs shifted
