@@ -15,6 +15,9 @@ on GitHub.
 
 ## 2020
 ### April
+* Merge [PR #233](https://github.com/mattmakai/fullstackpython.com/pull/233) and 
+  [PR #235](https://github.com/mattmakai/fullstackpython.com/pull/235) for new 
+  [Celery](/celery.html) and [podcast](/best-python-podcasts.html) resources.
 * Updated the [web design](/web-design.html) page with new resources.
 
 ### March
