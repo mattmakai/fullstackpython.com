@@ -65,6 +65,12 @@ Allen Wirfs-Brock for more context on the language's evolution.
 * [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   by Mozilla walks through the basic syntax and operators.
 
+* [The Cost of Javascript Frameworks](https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/)
+  presents a balanced view of how JavaScript libraries and frameworks impact
+  web performance on both desktop and mobile. The author acknowledges that
+  these libraries are useful for developers but in extreme cases there are 
+  significant downsides to including so much JavaScript in pages.
+
 * [The State of JavaScript report](https://stateofjs.com/) contains a wealth
   of data on what libraries developers are using in the JavaScript 
   ecosystem. There are also reports from previous years which show how the 
