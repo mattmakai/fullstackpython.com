@@ -45,3 +45,7 @@ environment named `fullstackpython` within the macOS Terminal application.
   little tool that shows how input and arguments in the shell break
   down and are interpreted by commands. The data is pulled from the 
   [Ubuntu](/ubuntu.html) `man` pages.
+
+* [Shell productivity tips and tricks](https://blog.balthazar-rouberol.com/shell-productivity-tips-and-tricks.html)
+  covers how to increase your effectiveness on the shell across topics such as
+  navigating history, autocompletion, and pattern matching.

@@ -39,6 +39,10 @@ that have been added throughout the project's history.
   [Django Silk](http://mtford.co.uk/blog/2/) is another inspection tool and
   has capabilities to do more than just SQL inspection.
 
+* [Django QuerySet Examples (with SQL code included)](https://davit.tech/django-queryset-examples/)
+  teaches how QuerySets work and shows the corresponding SQL code behind the
+  Python code you write to use the ORM.
+
 * [Making a specific Django app faster](http://reinout.vanrees.org/weblog/2014/05/06/making-faster.html)
   is a Django performance blog post with some tips on measuring performance
   and optimizing based on the measured results.

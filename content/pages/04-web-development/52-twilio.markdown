@@ -92,6 +92,9 @@ for fellow developers.
   walks through using the Python runtime on [AWS Lambda](/aws-lambda.html) 
   and Twilio's APIs for validating phone number information.
 
+* [Receive Flask Error Alerts by Email with Twilio SendGrid](https://www.twilio.com/blog/receive-flask-error-alerts-email-twilio-sendgrid)
+  shows how to use Twilio to add email error reports to [Flask](/flask.html)
+  web applications.
 
 * [Google Cloud recommends developers use Twilio](https://cloud.google.com/appengine/docs/standard/python/sms/twilio)
   for communications in their apps and provides a short walkthrough for
