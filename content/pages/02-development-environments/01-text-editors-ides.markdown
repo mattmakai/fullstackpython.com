@@ -78,7 +78,7 @@ gathering [code metrics](/code-metrics.html), running
   free editions for students and open source projects.
 
 * [Thonny](http://thonny.org/) is an 
-  [open source](https://bitbucket.org/plas/thonny/src) Python IDE for new 
+  [open source](https://github.com/thonny/thonny) Python IDE for new 
   programmers. The tool bakes in syntax highlighting, code completion, a 
   simple debugger, a beginner-friendly shell and in situ documentation to
   assist new developers who are just starting to code.

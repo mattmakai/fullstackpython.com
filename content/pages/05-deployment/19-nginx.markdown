@@ -66,9 +66,8 @@ HTTP(S) configurations.
   walks throough installing a free SSL certificate from Let's Encrypt
   to secure HTTP connects to your nginx server via HTTPS.
 
-* The tools [Nginx Config](https://nginxconfig.io/) and 
-  [Cipherlist](https://cipherli.st/) generate strong encryption configurations
-  and ciphers for Nginx.
+* The [Nginx Config](https://nginxconfig.io/) tool can generate strong 
+  encryption configurations and ciphers for Nginx.
 
 * [Gixy](https://github.com/yandex/gixy) is a static analyzer for your
   Nginx configuration and can tell you issues with how you are setup.

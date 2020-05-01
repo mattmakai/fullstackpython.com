@@ -151,10 +151,6 @@ like advanced interactive visualizations.
   you will eventually want to handle within your notebooks as you get 
   comfortable in the environment.
 
-* [Hacking my way to a Jupyter notebook powered blog](https://nipunbatra.github.io/blog/2017/Jupyter-powered-blog.html)
-  explores how the author created a blog using Jupyter but ran into some
-  issues along the way, along with how to solve those problems.
-
 * [Making Publication Ready Python Notebooks](http://blog.juliusschulz.de/blog/ultimate-ipython-notebook)
   explores the plugins that the author uses when creating and exporting
   reports from Jupyter.
