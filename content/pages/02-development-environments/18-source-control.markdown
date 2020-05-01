@@ -118,10 +118,6 @@ control services are:
   part of an ongoing deployment guide written by the folks at 
   [Rainforest](https://www.rainforestqa.com/).
 
-* This lighthearted guide to the 
-  [ten astonishments in version control history](http://www.flourish.org/2011/12/astonishments-ten-in-the-history-of-version-control/) 
-  is a fun way to learn how systems developed over the past several decades.
-
 * [A visual guide to version control](http://betterexplained.com/articles/a-visual-guide-to-version-control/) 
   is a detailed article with real-life examples for why version control is
   necessary in software development.

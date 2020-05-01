@@ -153,7 +153,7 @@ the very beginner topics.
   [comprehensions](http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Comprehensions.html)
   including code examples and diagrams to explain how they work.
 
-* [Comprehensions in Python the Jedi way](https://gist.github.com/bearfrieze/a746c6f12d8bada03589)
+* [Comprehensions in Python the Jedi way](https://gist.github.com/mjhea0/1c0031bd6fcd9263f844)
   shows off comprehensions with a Star Wars theme to walk through the nuts
   and bolts. All examples use Python 3.5.
 

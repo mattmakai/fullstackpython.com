@@ -120,10 +120,6 @@ configure and start using MongoDB with Python.
   shows how to use Python to interface with MongoDB via PyMongo and 
   MongoEngine.
 
-* A [Gentle Introduction to MongoDB using Pymongo](http://altons.github.io/python/2013/01/21/gentle-introduction-to-mongodb-using-pymongo/)
-  reviews a connection configuration file, the basics for data insertion,
-  aggregation and updating records.
-
 * [How To Set Up Flask with MongoDB and Docker](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker)
   combines the [Flask](/flask.html) web framework with MongoDB then
   containerizes the example application with [Docker](/docker.html).

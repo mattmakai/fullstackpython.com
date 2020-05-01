@@ -311,7 +311,7 @@ except ImportError:
 
 ## Example 4 from register
 [register](https://github.com/ORGAN-IZE/register) is a [Django](/django.html),
-[Bootstrap](/bootstrap.html), [PostgreSQL](/postgresql.html) project that is
+[Bootstrap](/bootstrap-css.html), [PostgreSQL](/postgresql.html) project that is
 open source under the
 [GNU General Public License v3.0](https://github.com/ORGAN-IZE/register/blob/master/LICENSE).
 This web application makes it easier for people to register as organ donors.
