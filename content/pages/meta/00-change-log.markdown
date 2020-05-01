@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### May
+* Added a new page with the start of 
+  [pandas example code and projects](/pandas-code-examples.html).
+
 ### April
 * Merge [PR #233](https://github.com/mattmakai/fullstackpython.com/pull/233) and 
   [PR #235](https://github.com/mattmakai/fullstackpython.com/pull/235) for new 

@@ -51,6 +51,9 @@
     {% include "examples-extensions-descriptions/django.html" %}
     {% include "code-examples/django.html" %}
    {% endif %}
+   {% if page.slug == "pandas-code-examples" %}
+    {% include "examples-extensions-descriptions/pandas.html" %}
+   {% endif %}
    {{ page.content }}
   {% endif %}
   {% if page.sortorder[0:2] == "50" %}
