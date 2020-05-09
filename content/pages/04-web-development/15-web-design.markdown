@@ -22,8 +22,24 @@ accomplish their tasks is a major part of building modern web applications.
 
 
 ## Getting started if you have no "eye" for design
+Design can feel like something "creative" people understand intuitively,
+but like all skills design is something that can be learned. Some people
+are faster learners in design just like some folks are quicker in
+picking up programming. But anyone can learn how to be a better designer
+by learning the basic principles and practicing them.
 
+One of the best mental models for basic design is C.R.A.P., which helped me 
+grasp why some designs look good while others do not. CRAP is an acronym
+for:
 
+    * Contrast: noticeable differences from one element to another
+    * Repetition: elements' consistency
+    * Alignment: order among all elements
+    * Proximity: placement between elements and how they are organized
+
+These basic principles all you to start breaking down the problem into
+digestible pieces that you can work on rather than feeling like you
+"just don't have an eye for design".
 
 
 ## Designing for various screen sizes
@@ -117,6 +133,10 @@ this short list as my absolute favorites that help developers become
   here is a 
   [blog post series on building a browser engine](http://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html)
   that will show you how to build a simple rendering engine.
+
+* [How to Use C.R.A.P. Design Principles for Better UX](https://vwo.com/blog/crap-design-principles/)
+  has a good summary of what contrast, repetition, alignment and
+  proximity means for designing user interfaces.
 
 * [Defining Colors in CSS](https://pineco.de/defining-colors-in-css/)
   presents how to define color in your 
