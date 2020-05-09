@@ -15,6 +15,7 @@ on GitHub.
 
 ## 2020
 ### May
+* Tweaked some CSS for the site.
 * Added a new page with the start of 
   [pandas example code and projects](/pandas-code-examples.html).
 

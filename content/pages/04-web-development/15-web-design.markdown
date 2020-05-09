@@ -21,6 +21,11 @@ Creating web pages with their own style and interactivity so users can easily
 accomplish their tasks is a major part of building modern web applications.
 
 
+## Getting started if you have no "eye" for design
+
+
+
+
 ## Designing for various screen sizes
 Separating the content from the rules for how to display the content allows 
 devices to render the output differently based on factors such as screen size
@@ -50,7 +55,7 @@ this short list as my absolute favorites that help developers become
   page elements.
 
 * [Resilient web design](https://resilientwebdesign.com/) is an incredible
-  online book that teaches how to create websitess that are accessible to
+  online book that teaches how to create websites that are accessible to
   every reader and look great while doing it.
 
 * [Design 101 for Developers](https://academy.realm.io/posts/christopher-downer-design-101-for-developers/)
@@ -65,11 +70,6 @@ this short list as my absolute favorites that help developers become
 * [How I Work with Color](https://medium.com/@JustinMezzell/how-i-work-with-color-8439c98ae5ed)
   is a fantastic article from a professional designer on how he thinks
   about color and uses it for certain effects in his designs.
-
-* The [Bootstrapping Design](http://bootstrappingdesign.com/) book is one of 
-  the clearest and concise resources for learning design that I've ever read. 
-  Highly recommended especially if you feel you have no design skills but 
-  need to learn them.
 
 * [Building dark mode on Stack Overflow](https://stackoverflow.blog/2020/03/31/building-dark-mode-on-stack-overflow/)
   explains the thought process and work that the team at Stack Overflow
