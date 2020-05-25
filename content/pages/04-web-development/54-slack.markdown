@@ -70,6 +70,10 @@ for programmatically interacting with its messaging service.
   Slack-provided library for working with the Slack API and 
   [WebSockets](/websockets.html) connection.
 
+* [slackify](https://github.com/Ambro17/slackify) is a lightweight
+  framework for building bots and the quickstart walks you through
+  how to create a simple example bot.
+
 * [slack-starterbot](https://github.com/mattmakai/slack-starterbot)
 
 * [slack-api-python-examples](https://github.com/mattmakai/slack-api-python-examples)

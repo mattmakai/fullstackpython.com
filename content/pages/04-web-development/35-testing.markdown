@@ -101,6 +101,12 @@ test runners, coverage reports and related libraries.
 * [A beginner's guide to Python testing](https://miguelgfierro.com/blog/2018/a-beginners-guide-to-python-testing/)
   covers test-driven development for unit, integration and smoke tests.
 
+* [Testing a Twilio Interactive Voice Response (IVR) System With Python and pytest](https://www.twilio.com/blog/testing-twilio-ivr-system-python-pytest)
+  is an incredibly in-depth tutorial on testing a Python-powered IVR
+  using pytest. There is also a tutorial on 
+  [how to build the IVR before this testing tutorial](https://www.twilio.com/blog/building-interactive-voice-response-ivr-system-python-django-twilio),
+  although you can just clone it to jump into the testing walkthrough.
+
 * Still confused about the difference between unit, functional and 
   integration tests? Check out this 
   [top answer on Stack Overflow](http://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test) 

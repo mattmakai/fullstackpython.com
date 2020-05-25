@@ -21,6 +21,7 @@ in [1989](http://home.cern/topics/birth-web). Web development is the concept
 that encompasses all the activities involved with websites and web 
 applications.
 
+
 ## How does Python fit into web development?
 Python can be used to build server-side web applications. While a
 [web framework](/web-frameworks.html) is not required to build web apps,
@@ -75,6 +76,11 @@ world.
   the overall growth of the Internet in the amount of data transferred. Note 
   that the visualization unfortunately stops around the beginning of 2013 but
   it's a good way to explore what happened in the first 24 years.
+
+* [What happens when?](https://github.com/alex/what-happens-when) is an 
+  incredibly detailed answer to the questions "What happens when you 
+  type google.com into your browser's address box and press enter?" that
+  seems straightforward on the surface until you really dig in.
 
 * [How browsers work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
   provides an overview with solid detail on how browsers take the HTML,

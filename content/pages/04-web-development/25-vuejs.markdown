@@ -43,6 +43,11 @@ rich apps that run in web browsers.
   coding you need to do to build a legitimate Vue.js application that
   uses a [Flask](/flask.html) API on the backend. 
 
+* [Building a SaaS using Django and Vue.js](https://www.youtube.com/playlist?list=PLpyspNLjzwBnGesxJOt_0r4xTWR80j7Y3)
+  shows how to create a software-as-a-service application with a 
+  [Django](/django.html) back end and Vue on the front end via a 
+  series of videos that are each between 10-15 minutes in length.
+
 * [Learn Vue by Building and Deploying a CRUD App](https://testdriven.io/courses/learn-vue/?utm_source=fsp)
   is an awesome course that walks through the Vue basics and building
   a whole application and deploying it to 

@@ -80,3 +80,8 @@ database queries, page size and many other factors.
   covers the architecture scaling techniques commonly used to move up 
   in serving users by orders of magnitude, for example from 100 to 1000.
 
+* [Web Performance Recipes with Puppeteer](https://addyosmani.com/blog/puppeteer-recipes/)
+  digs into tracing through page rendering to measure performance and
+  how to extract performance metrics from the
+  [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool
+  for further analysis.

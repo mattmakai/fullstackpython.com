@@ -128,3 +128,7 @@ ease further development and deployment. This approach is called the
 * [The Hardest Part About Microservices: Your Data](http://blog.christianposta.com/microservices/the-hardest-part-about-microservices-data/)
   presents a data-centric view on how to structure and transport data
   in a microservices architecture.
+
+* [Deleting data distributed throughout your microservices architecture](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/deleting-data-distributed-throughout-your-microservices-architecture.html)
+  examines how Twitter handles issues with discoverability, access and erasure
+  in their microservices-heavy production environment.

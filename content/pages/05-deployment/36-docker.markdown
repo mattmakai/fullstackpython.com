@@ -36,6 +36,10 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
 
 
 ## Docker resources
+* [Beginners guide to Docker](https://www.learncloudnative.com/blog/2020-04-29-beginners-guide-to-docker/)
+  explains what it is, the difference between containers and virtual machines,
+  and then provides a hands-on walkthrough command-driven tutorial.
+
 * [What is Docker and When to Use It](https://www.ctl.io/developers/blog/post/what-is-docker-and-when-to-use-it/)
   clearly delineates what Docker is and what it isn't. This is a good article
   for when you're first wrapping your head around Docker conceptually.

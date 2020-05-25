@@ -181,6 +181,11 @@ combined with the example real-world projects listed in the next section.
   [Docker](/docker.html). It shows how to [deploy](/deployment.html) it to an 
   Amazon EC2 instance then scale the services on Amazon EC2 Container Service (ECS).
 
+* [Build a Video Chat Application with Python, JavaScript and Twilio Programmable Video](https://www.twilio.com/blog/build-video-chat-application-python-javascript-twilio-programmable-video)
+  shows how to use [Twilio](/twilio.html) 
+  [Programmable Video](https://www.twilio.com/video) to build cross-platform
+  (web, iOS and Android) video into Flask applications.
+
 * [Why and how to handle exceptions in Python Flask](https://opensource.com/article/17/3/python-flask-exceptions)
   has some great example code and reasons why you should code defensively
   by anticipating and handling the unhappy path exceptions in your Flask

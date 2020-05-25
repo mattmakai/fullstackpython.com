@@ -80,6 +80,11 @@ has support for both Python 2.7, 3.6 and 3.7.
 
 
 ### General AWS Lambda resources
+* [Getting started with serverless on AWS](https://emshea.com/post/serverless-getting-started)
+  is a wonderful tutorials, example projects and additional resources
+  guide created by a developer who used all of these bits to learn
+  AWS services herself.
+
 * [AWS Lambda Serverless Reference Architectures](http://www.allthingsdistributed.com/2016/06/aws-lambda-serverless-reference-architectures.html)
   provides blueprints with diagrams of common architecture patterns that
   developers use for their mobile backend, file processing, stream

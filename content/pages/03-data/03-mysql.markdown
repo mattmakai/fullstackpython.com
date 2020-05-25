@@ -133,6 +133,10 @@ A handful of the best of these tutorials are listed below.
   goes into details for why the company Userlike migrated from their MySQL
   database setup to PostgreSQL.
 
+* [MySQL sharding at Quora](https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora)
+  provides details behind Quora's at-scale infrastructure and
+  how their MySQL sharding evolved over time.
+
 * [Growing up with MySQL](https://nylas.com/blog/growing-up-with-mysql/) is
   a story about how one company went through dramatic growth and had to keep
   up with it by quickly scaling their MySQL database.

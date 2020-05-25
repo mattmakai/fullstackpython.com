@@ -206,6 +206,13 @@ equivalent of browser testing in the web application world.
   second as well as the number of concurrent open connections can help
   keep your API alive during times of heavy traffic.
 
+* [Writing HTTP files to test HTTP APIs](https://renato.athaydes.com/posts/writing-http-files-for-testing.html)
+  shows how to perform automated testing of APIs using HTTP file formats
+  provided by 
+  [VS Code REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) 
+  and the 
+  [JetBrains HTTP Client Editor](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html).
+
 * Serialization is common for transforming objects into web API JSON
   results. One company found the serialization performance of Django REST 
   framework was lacking so they created 
@@ -227,6 +234,11 @@ equivalent of browser testing in the web application world.
 
 * [Building better API docs](https://engineering.gosquared.com/building-better-api-docs)
   shows how Square used Swagger with React to create more helpful docs.
+
+* [Best Practices For Creating Useful API Documentation](https://nordicapis.com/best-practices-for-creating-useful-api-documentation/)
+  covers standard but important topics such as knowing your audience, 
+  ensuring your documentation covers the error codes, and providing
+  a changelog as well as terms of service.
 
 
 ## Django REST Framework resources

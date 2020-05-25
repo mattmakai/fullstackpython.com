@@ -49,6 +49,10 @@ is a data structures and analysis library.
   shows how to use the `crosstab` function in pandas so you can summarize
   and group data.
 
+* [Calculating streaks in pandas](https://joshdevlin.com/blog/calculate-streaks-in-pandas/)
+  shows how to measure and report on streaks in data, which is where 
+  several events happen in a row consecutively.
+
 * [How to Convert a Python Dictionary to a Pandas DataFrame](https://www.marsja.se/how-to-convert-a-python-dictionary-to-a-pandas-dataframe/)
   is a straightforward tutorial with example code for loading and adding 
   data stored in a typical Python dictionary into a DataFrame.
@@ -118,3 +122,7 @@ is a data structures and analysis library.
 * [How to use Pandas read_html to Scrape Data from HTML Tables](https://www.marsja.se/how-to-use-pandas-read_html-to-scrape-data-from-html-tables/)
   has a bunch of great code examples that show how to load
   data from HTML directly into your DataFrames.
+
+* [How to download fundamentals data with Python](http://theautomatic.net/2020/05/05/how-to-download-fundamentals-data-with-python/)
+  shows how to obtain and use financial data, such as balance sheets,
+  stock prices, and various ratios to perform your own analysis on.

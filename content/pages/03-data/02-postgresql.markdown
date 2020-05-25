@@ -175,8 +175,20 @@ for properly handling your data.
   past five years. It's amazing to see how far this project has come and
   how it continues to evolve.
 
+* [The Internals of PostgreSQL](http://www.interdb.jp/pg/) is a book
+  that goes into how PostgreSQL works, including core topics such as
+  [query processing](http://www.interdb.jp/pg/pgsql03.html), 
+  [concurrency control](http://www.interdb.jp/pg/pgsql05.html) and the
+  [layout of heap table files](http://www.interdb.jp/pg/pgsql01.html).
+
 * [PostgreSQL Weekly](http://postgresweekly.com/) is a weekly newsletter of
   PostgreSQL content from around the web.
+
+* [My Favorite PostgreSQL Extensions - Part One](https://severalnines.com/database-blog/my-favorite-postgresql-extensions-part-one) 
+  and 
+  [part two](https://severalnines.com/database-blog/my-favorite-postgresql-extensions-part-two)
+  are roundups of useful PostgreSQL extensions that augment the
+  standard PostgreSQL functionality.
 
 * [An introduction to PostgreSQL physical storage](http://rachbelaid.com/introduction-to-postgres-physical-storage/)
   provides a solid walkthrough of where PostgreSQL files are located on

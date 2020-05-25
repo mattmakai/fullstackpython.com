@@ -106,6 +106,11 @@ for fellow developers.
   Easypost service. There is also another tutorial on 
   [shipment notifications specifically for Flask](https://www.twilio.com/blog/build-shipment-notification-service-python-flask-twilio-easypost).
 
+* [Build a Video Chat Application with Python, JavaScript and Twilio Programmable Video](https://www.twilio.com/blog/build-video-chat-application-python-javascript-twilio-programmable-video)
+  shows how to use [Flask](/flask.html) and the 
+  [Twilio Programmable Video API](https://www.twilio.com/docs/video) to
+  build cross-platform video into new and existing applications.
+
 * This video titled 
   "[We're No Strangers to VoIP: Building the National Rick Astley Hotline)](https://www.youtube.com/watch?v=LgKshQoGh64)"
   presents a hilarious hack that uses Python and 

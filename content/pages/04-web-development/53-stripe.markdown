@@ -18,6 +18,11 @@ for processing payments.
 
 
 ### Stripe tutorials
+* [How to Create a Subscription SaaS Application with Django and Stripe](https://www.saaspegasus.com/guides/django-stripe-integrate/)
+  shows how to build a [Django](/django.html) application with models for
+  the subscription data in the [Django ORM](/django-orm.html) and create
+  a pricing page.
+
 * [Switching from Braintree to Stripe](https://www.deekit.com/braintree-to-stripe/)
   covers one development team's experience with moving payment providers.
 

@@ -135,11 +135,20 @@ the framework.
   order to build and deploy a RESTful API powered by Python, Django,
   and Django REST Framework.
 
+* [User Interaction With Forms](https://www.mattlayman.com/understand-django/user-interaction-forms/)
+  explains general web form input, how Django handles forms via POST requests,
+  different types of input such as CharFields, DateFields and EmailFields,
+  and validating that input.
+
 * This 3-part Django project optimization guide covers a wide range of
   advanced topics such as 
   [Profiling and Django settings](https://dizballanze.com/django-project-optimization-part-1/),
   [working with databases](https://dizballanze.com/django-project-optimization-part-2/)
   and [caching](https://dizballanze.com/django-project-optimization-part-3/).
+
+* [Caching in Django](https://testdriven.io/blog/django-caching/) is a detailed
+  look at the configuration required for caching and how to measure the 
+  performance improvements once you have it in place.
 
 * [Mental Models for Class Based Views](https://djangodeconstructed.com/2020/01/03/mental-models-for-class-based-views/)
   provides some comparison points between class based views (CBVs) and 
@@ -256,6 +265,11 @@ based on [WebSockets](/websockets.html).
 * [Integrating Front End Tools with Django](https://lincolnloop.com/blog/integrating-front-end-tools-your-django-project/)
   is a good post to read for figuring out how to use [Gulp](http://gulpjs.com/)
   for handling front end tools in development and production Django sites.
+
+* [Django Testing Cheat Sheet](https://www.valentinog.com/blog/testing-django/)
+  covers many common scenarios for Django applications such as testing
+  POST requests, request headers, authentication, and large numbers of
+  model fields in the [Django ORM](/django-orm.html).
 
 * [Getting Started with Django Testing](http://howchoo.com/g/mjkwmtu5zdl/getting-started-with-django-testing)
   will help you stop procrastinating on testing your Django projects if you're

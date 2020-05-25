@@ -42,6 +42,9 @@ application before taking some action, such as purchasing your service.
   Piwik is a solid choice if you cannot use Google Analytics or want to 
   customize your own web analytics platform.
 
+* [Shynet](https://github.com/milesmcc/shynet) is a lightweight, privacy-friendly 
+  cookie-free web analytics application written in Python.
+
 * [Open Web Analytics](http://www.openwebanalytics.com/) is another 
   self-hosted platform that integrates through a JavaScript snippet that
   tracks users' interactions with the webpage.
@@ -58,10 +61,6 @@ application before taking some action, such as purchasing your service.
   and sales funnel metrics. A developer builds what data points need to be
   collected into the server side or client side code. MixPanel captures that
   data and provides metrics and visualizations based on the data.
-
-* [KISSmetrics](https://www.kissmetrics.com/)' analytics provides context
-  for who is visiting a website and what actions they are taking while on
-  the site.
 
 * [Heap](https://heapanalytics.com/) is a recently founded analytics service
   with a free introductory tier to get started.

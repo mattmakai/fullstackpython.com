@@ -163,3 +163,7 @@ sets.
   [Jupyter Notebook](/jupyter-notebook.html) that [Stripe](/stripe.html)
   for their data analysis across the company.
 
+* [The Definitive Data Scientist Environment Setup](https://davidadrian.cc/definitive-data-scientist-setup/)
+  explains how to set up both a hardware and software configuration that
+  is conducive to data science research and analysis.
+

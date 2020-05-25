@@ -55,3 +55,9 @@ of a Python programmer's
 * [Invoke-Build](https://github.com/nightroman/Invoke-Build) is a build 
   automation tool. There is also extensive documentation on their 
   [wiki](https://github.com/nightroman/Invoke-Build/wiki).
+
+* [Two months with Powershell on a UNIX](https://code.joejag.com/2020/a-month-with-powershell.html)
+  examines one developer's experience using PowerShell not on Windows
+  but on a \*nix [operating system](/operating-systems.html). The author
+  covers the advantages and disadvantages he found during his experience
+  and some of the bugs he hopes are fixed in PowerShell 7.

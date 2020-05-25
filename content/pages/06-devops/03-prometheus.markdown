@@ -16,6 +16,11 @@ and report on Python [web applications](/web-development.html).
 
 
 ### Prometheus resources
+* [Prometheus-Basics](https://github.com/yolossn/Prometheus-Basics)
+  is a newbie's introduction to this tool. It covers what Prometheus
+  is, the tool's architecture, types of metrics and contains a
+  walkthrough of how to get it configured.
+
 * This primer on [Prometheus](https://www.kartar.net/2017/10/prometheus/) 
   walks through installation, configuration and metrics collection.
 

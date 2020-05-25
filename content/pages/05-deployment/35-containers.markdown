@@ -55,6 +55,11 @@ useful.
   on building jails and other process isolation abstractions into
   operating systems.
 
+* [Linux containers in a few lines of code](https://zserge.com/posts/containers/)
+  shows how containers work by providing some code to run a busybox
+  Docker image but without using docker. It then explains what's
+  happening under the hood as you run basic commands such as `/bin/sh`.
+
 * [A Practical Introduction to Container Terminology](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction/)
   has both some solid introductory information on containers as well as
   a good description of terms such as container host, registry server,

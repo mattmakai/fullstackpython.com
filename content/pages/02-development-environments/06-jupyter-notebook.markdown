@@ -81,6 +81,10 @@ your own productive workflow.
   examines the growth of the Jupyter ecosystem and the jump from exploratory
   analysis notebooks to production notebooks.
 
+* [Jupyter Notebook Best Practices](https://levelup.gitconnected.com/jupyter-notebook-best-practices-fc326eb5cd22)
+  contains tips for beginners such as learning shortcuts and properly 
+  documenting the analysis you work on.
+
 * [How to Version Control Jupyter Notebooks](https://nextjournal.com/schmudde/how-to-version-control-jupyter)
   explains how Jupyter Notebooks are stored in JSON, the issues with that
   format for [source control](/source-control.html) and how to get
