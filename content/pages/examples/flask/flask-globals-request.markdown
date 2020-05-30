@@ -10,7 +10,353 @@ meta: Python example code for the request function from the flask.globals module
 request is a function within the flask.globals module of the Flask project.
 
 
-## Example 1 from flask-sqlalchemy
+## Example 1 from Flask AppBuilder
+[Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
+([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
+and
+[example apps](https://github.com/dpgaspar/Flask-AppBuilder/tree/master/examples))
+is a web application generator that uses Flask to automatically create
+the code for database-driven applications based on parameters set
+by the user. The generated applications include default security settings,
+forms, and internationalization support.
+
+Flask App Builder is provided under the
+[BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
+
+[**Flask AppBuilder / flask_appbuilder / urltools.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/./urltools.py)
+
+```python
+# urltools.py
+import re
+
+~~from flask import request
+
+
+class Stack(object):
+    """
+        Stack data structure will not insert
+        equal sequential data
+    """
+
+    def __init__(self, list=None, size=5):
+        self.size = size
+        self.data = list or []
+
+    def push(self, item):
+        if self.data:
+            if item != self.data[len(self.data) - 1]:
+                self.data.append(item)
+        else:
+            self.data.append(item)
+        if len(self.data) > self.size:
+            self.data.pop(0)
+
+    def pop(self):
+        if len(self.data) == 0:
+            return None
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+def get_group_by_args():
+    """
+        Get page arguments for group by
+    """
+    group_by = request.args.get("group_by")
+    if not group_by:
+        group_by = ""
+    return group_by
+
+
+def get_page_args():
+    """
+        Get page arguments, returns a dictionary
+        { <VIEW_NAME>: PAGE_NUMBER }
+
+        Arguments are passed: page_<VIEW_NAME>=<PAGE_NUMBER>
+
+    """
+    pages = {}
+~~    for arg in request.args:
+        re_match = re.findall("page_(.*)", arg)
+        if re_match:
+~~            pages[re_match[0]] = int(request.args.get(arg))
+    return pages
+
+
+def get_page_size_args():
+    """
+        Get page size arguments, returns an int
+        { <VIEW_NAME>: PAGE_NUMBER }
+
+        Arguments are passed: psize_<VIEW_NAME>=<PAGE_SIZE>
+
+    """
+    page_sizes = {}
+~~    for arg in request.args:
+        re_match = re.findall("psize_(.*)", arg)
+        if re_match:
+~~            page_sizes[re_match[0]] = int(request.args.get(arg))
+    return page_sizes
+
+
+def get_order_args():
+    """
+        Get order arguments, return a dictionary
+        { <VIEW_NAME>: (ORDER_COL, ORDER_DIRECTION) }
+
+        Arguments are passed like: _oc_<VIEW_NAME>=<COL_NAME>&_od_<VIEW_NAME>='asc'|'desc'
+
+    """
+    orders = {}
+~~    for arg in request.args:
+        re_match = re.findall("_oc_(.*)", arg)
+        if re_match:
+~~            order_direction = request.args.get("_od_" + re_match[0])
+            if order_direction in ("asc", "desc"):
+~~                orders[re_match[0]] = (request.args.get(arg), order_direction)
+    return orders
+
+
+def get_filter_args(filters):
+    filters.clear_filters()
+~~    for arg in request.args:
+        re_match = re.findall("_flt_(\d)_(.*)", arg)
+        if re_match:
+            filters.add_filter_index(
+~~                re_match[0][1], int(re_match[0][0]), request.args.get(arg)
+            )
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 2 from FlaskBB
+[FlaskBB](https://github.com/flaskbb/flaskbb)
+([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
+forum web application. The web app allows users to chat in an open
+message board or send private messages in plain text or
+[Markdown](/markdown.html).
+
+FlaskBB is provided as open source
+[under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
+
+[**FlaskBB / flaskbb / app.py**](https://github.com/flaskbb/flaskbb/blob/master/flaskbb/./app.py)
+
+```python
+# app.py
+# -*- coding: utf-8 -*-
+"""
+    flaskbb.app
+    -----------
+
+    manages the app creation and configuration process
+
+    :copyright: (c) 2014 by the FlaskBB Team.
+    :license: BSD, see LICENSE for more details.
+"""
+import logging
+import logging.config
+import os
+import sys
+import time
+import warnings
+from datetime import datetime
+
+~~from flask import Flask, request
+from flask_login import current_user
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
+from sqlalchemy.exc import OperationalError, ProgrammingError
+
+from flaskbb._compat import iteritems, string_types
+# extensions
+from flaskbb.extensions import (alembic, allows, babel, cache, celery, csrf,
+                                db, debugtoolbar, limiter, login_manager, mail,
+                                redis_store, themes, whooshee)
+from flaskbb.plugins import spec
+from flaskbb.plugins.manager import FlaskBBPluginManager
+from flaskbb.plugins.models import PluginRegistry
+from flaskbb.plugins.utils import remove_zombie_plugins_from_db, template_hook
+# models
+from flaskbb.user.models import Guest, User
+# various helpers
+from flaskbb.utils.helpers import (app_config_from_env, crop_title,
+                                   format_date, format_datetime,
+                                   forum_is_unread, get_alembic_locations,
+                                   get_flaskbb_config, is_online, mark_online,
+                                   render_template, time_since, time_utcnow,
+                                   topic_is_unread)
+# permission checks (here they are used for the jinja filters)
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+def configure_before_handlers(app):
+    """Configures the before request handlers."""
+
+    @app.before_request
+    def update_lastseen():
+        """Updates `lastseen` before every reguest if the user is
+        authenticated."""
+        if current_user.is_authenticated:
+            current_user.lastseen = time_utcnow()
+            db.session.add(current_user)
+            db.session.commit()
+
+    if app.config["REDIS_ENABLED"]:
+
+        @app.before_request
+        def mark_current_user_online():
+            if current_user.is_authenticated:
+                mark_online(current_user.username)
+            else:
+~~                mark_online(request.remote_addr, guest=True)
+
+    app.pluggy.hook.flaskbb_request_processors(app=app)
+
+
+def configure_errorhandlers(app):
+    """Configures the error handlers."""
+
+    @app.errorhandler(403)
+    def forbidden_page(error):
+        return render_template("errors/forbidden_page.html"), 403
+
+    @app.errorhandler(404)
+    def page_not_found(error):
+        return render_template("errors/page_not_found.html"), 404
+
+    @app.errorhandler(500)
+    def server_error_page(error):
+        return render_template("errors/server_error.html"), 500
+
+    app.pluggy.hook.flaskbb_errorhandlers(app=app)
+
+
+def configure_migrations(app):
+    """Configure migrations."""
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 3 from flask-restx
+[Flask RESTX](https://github.com/python-restx/flask-restx) is an
+extension that makes it easier to build
+[RESTful APIs](/application-programming-interfaces.html) into
+your applications. Flask RESTX aims for minimal configuration to
+get basic APIs running for existing applications and it exposes
+endpoint documentation using [Swagger](https://swagger.io/).
+
+Flask RESTX is provided as open source under the
+[BSD  3-Clause license](https://github.com/python-restx/flask-restx/blob/master/LICENSE).
+
+[**flask-restx / flask_restx / marshalling.py**](https://github.com/python-restx/flask-restx/blob/master/flask_restx/./marshalling.py)
+
+```python
+# marshalling.py
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from collections import OrderedDict
+from functools import wraps
+from six import iteritems
+
+~~from flask import request, current_app, has_app_context
+
+from .mask import Mask, apply as apply_mask
+from .utils import unpack
+
+
+def make(cls):
+    if isinstance(cls, type):
+        return cls()
+    return cls
+
+
+def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=False):
+    """Takes raw data (in the form of a dict, list, object) and a dict of
+    fields to output and filters the data based on those fields.
+
+    :param data: the actual object(s) from which the fields are taken from
+    :param fields: a dict of whose keys will make up the final serialized
+                   response output
+    :param envelope: optional key that will be used to envelop the serialized
+                     response
+    :param bool skip_none: optional key will be used to eliminate fields
+                           which value is None or the field's key not
+                           exist in data
+    :param bool ordered: Wether or not to preserve order
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+    ):
+        """
+        :param fields: a dict of whose keys will make up the final
+                       serialized response output
+        :param envelope: optional key that will be used to envelop the serialized
+                         response
+        """
+        self.fields = fields
+        self.envelope = envelope
+        self.skip_none = skip_none
+        self.ordered = ordered
+        self.mask = Mask(mask, skip=True)
+
+    def __call__(self, f):
+        @wraps(f)
+        def wrapper(*args, **kwargs):
+            resp = f(*args, **kwargs)
+            mask = self.mask
+            if has_app_context():
+                mask_header = current_app.config["RESTX_MASK_HEADER"]
+~~                mask = request.headers.get(mask_header) or mask
+            if isinstance(resp, tuple):
+                data, code, headers = unpack(resp)
+                return (
+                    marshal(
+                        data,
+                        self.fields,
+                        self.envelope,
+                        self.skip_none,
+                        mask,
+                        self.ordered,
+                    ),
+                    code,
+                    headers,
+                )
+            else:
+                return marshal(
+                    resp, self.fields, self.envelope, self.skip_none, mask, self.ordered
+                )
+
+        return wrapper
+
+
+class marshal_with_field(object):
+    """
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 4 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -24,52 +370,56 @@ library when combining Flask with SQLAlchemy.
 flask-sqlalchemy is provided as open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
 
-[**flask-sqlalchemy / flask_sqlalchemy / __init__.py**](https://github.com/pallets/flask-sqlalchemy/blob/master/flask_sqlalchemy/./__init__.py)
+[**flask-sqlalchemy / src/flask_sqlalchemy / __init__.py**](https://github.com/pallets/flask-sqlalchemy/blob/master/src/flask_sqlalchemy/./__init__.py)
 
 ```python
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
-
+# __init__.py
 import functools
 import os
 import sys
-import time
 import warnings
 from math import ceil
 from operator import itemgetter
 from threading import Lock
+from time import perf_counter
 
 import sqlalchemy
-~~from flask import _app_ctx_stack, abort, current_app, request
+from flask import _app_ctx_stack
+from flask import abort
+from flask import current_app
+~~from flask import request
 from flask.signals import Namespace
-from sqlalchemy import event, inspect, orm
+from sqlalchemy import event
+from sqlalchemy import inspect
+from sqlalchemy import orm
 from sqlalchemy.engine.url import make_url
-from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.declarative import DeclarativeMeta
 from sqlalchemy.orm.exc import UnmappedClassError
 from sqlalchemy.orm.session import Session as SessionBase
 
-from flask_sqlalchemy.model import Model
-from ._compat import itervalues, string_types, xrange
 from .model import DefaultMeta
-from . import utils
+from .model import Model
 
 __version__ = "3.0.0.dev"
 
-# the best timer function for the platform
-if sys.platform == 'win32':
-    if sys.version_info >= (3, 3):
-        _timer = time.perf_counter
-    else:
-        _timer = time.clock
-else:
-    _timer = time.time
-
 _signals = Namespace()
+models_committed = _signals.signal("models-committed")
+before_models_committed = _signals.signal("before-models-committed")
+
+
+def _make_table(db):
+    def _make_table(*args, **kwargs):
+        if len(args) > 1 and isinstance(args[1], db.Column):
+            args = (args[0], db.metadata) + args[1:]
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
+
+        If ``page`` or ``per_page`` are ``None``, they will be retrieved from
+        the request query. If ``max_per_page`` is specified, ``per_page`` will
         be limited to that value. If there is no request or they aren't in the
         query, they default to 1 and 20 respectively. If ``count`` is ``False``,
         no query to help determine total page count will be run.
@@ -87,10 +437,10 @@ _signals = Namespace()
         Returns a :class:`Pagination` object.
         """
 
-        if request:
+~~        if request:
             if page is None:
                 try:
-~~                    page = int(request.args.get('page', 1))
+~~                    page = int(request.args.get("page", 1))
                 except (TypeError, ValueError):
                     if error_out:
                         abort(404)
@@ -99,7 +449,7 @@ _signals = Namespace()
 
             if per_page is None:
                 try:
-~~                    per_page = int(request.args.get('per_page', 20))
+~~                    per_page = int(request.args.get("per_page", 20))
                 except (TypeError, ValueError):
                     if error_out:
                         abort(404)
@@ -114,11 +464,6 @@ _signals = Namespace()
 
         if max_per_page is not None:
             per_page = min(per_page, max_per_page)
-
-
-
-## ... source file abbreviated to get to request examples ...
-
 
         if page < 1:
             if error_out:
@@ -137,7 +482,169 @@ _signals = Namespace()
 ```
 
 
-## Example 2 from newspie
+## Example 5 from Flask-WTF
+[Flask-WTF](https://github.com/lepture/flask-wtf)
+([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
+and
+[PyPI page](https://pypi.org/project/Flask-WTF/))
+provides a bridge between [Flask](/flask.html) and the the
+[WTForms](https://wtforms.readthedocs.io/en/2.3.x/) form-handling library.
+It makes it easier to use WTForms by reducing boilerplate code and
+shorter examples for common form operations as well as common security
+practices such as [CSRF](/cross-site-request-forgery-csrf.html).
+
+[**Flask-WTF / flask_wtf / csrf.py**](https://github.com/lepture/flask-wtf/blob/master/flask_wtf/./csrf.py)
+
+```python
+# csrf.py
+import hashlib
+import logging
+import os
+import warnings
+from functools import wraps
+
+~~from flask import Blueprint, current_app, g, request, session
+from itsdangerous import BadData, SignatureExpired, URLSafeTimedSerializer
+from werkzeug.exceptions import BadRequest
+from werkzeug.security import safe_str_cmp
+from wtforms import ValidationError
+from wtforms.csrf.core import CSRF
+
+from ._compat import FlaskWTFDeprecationWarning, string_types, urlparse
+
+__all__ = ('generate_csrf', 'validate_csrf', 'CSRFProtect')
+logger = logging.getLogger(__name__)
+
+
+def generate_csrf(secret_key=None, token_key=None):
+    """Generate a CSRF token. The token is cached for a request, so multiple
+    calls to this function will generate the same token.
+
+    During testing, it might be useful to access the signed token in
+    ``g.csrf_token`` and the raw token in ``session['csrf_token']``.
+
+    :param secret_key: Used to securely sign the token. Default is
+        ``WTF_CSRF_SECRET_KEY`` or ``SECRET_KEY``.
+    :param token_key: Key where token is stored in session for comparison.
+        Default is ``WTF_CSRF_FIELD_NAME`` or ``'csrf_token'``.
+    """
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+            'WTF_CSRF_METHODS', ['POST', 'PUT', 'PATCH', 'DELETE']
+        ))
+        app.config.setdefault('WTF_CSRF_FIELD_NAME', 'csrf_token')
+        app.config.setdefault(
+            'WTF_CSRF_HEADERS', ['X-CSRFToken', 'X-CSRF-Token']
+        )
+        app.config.setdefault('WTF_CSRF_TIME_LIMIT', 3600)
+        app.config.setdefault('WTF_CSRF_SSL_STRICT', True)
+
+        app.jinja_env.globals['csrf_token'] = generate_csrf
+        app.context_processor(lambda: {'csrf_token': generate_csrf})
+
+        @app.before_request
+        def csrf_protect():
+            if not app.config['WTF_CSRF_ENABLED']:
+                return
+
+            if not app.config['WTF_CSRF_CHECK_DEFAULT']:
+                return
+
+~~            if request.method not in app.config['WTF_CSRF_METHODS']:
+                return
+
+~~            if not request.endpoint:
+                return
+
+~~            if request.blueprint in self._exempt_blueprints:
+                return
+
+~~            view = app.view_functions.get(request.endpoint)
+            dest = '{0}.{1}'.format(view.__module__, view.__name__)
+
+            if dest in self._exempt_views:
+                return
+
+            self.protect()
+
+    def _get_csrf_token(self):
+        # find the token in the form data
+        field_name = current_app.config['WTF_CSRF_FIELD_NAME']
+~~        base_token = request.form.get(field_name)
+
+        if base_token:
+            return base_token
+
+        # if the form has a prefix, the name will be {prefix}-csrf_token
+~~        for key in request.form:
+            if key.endswith(field_name):
+~~                csrf_token = request.form[key]
+
+                if csrf_token:
+                    return csrf_token
+
+        # find the token in the headers
+        for header_name in current_app.config['WTF_CSRF_HEADERS']:
+~~            csrf_token = request.headers.get(header_name)
+
+            if csrf_token:
+                return csrf_token
+
+        return None
+
+    def protect(self):
+~~        if request.method not in current_app.config['WTF_CSRF_METHODS']:
+            return
+
+        try:
+            validate_csrf(self._get_csrf_token())
+        except ValidationError as e:
+            logger.info(e.args[0])
+            self._error_response(e.args[0])
+
+~~        if request.is_secure and current_app.config['WTF_CSRF_SSL_STRICT']:
+~~            if not request.referrer:
+                self._error_response('The referrer header is missing.')
+
+~~            good_referrer = 'https://{0}/'.format(request.host)
+
+~~            if not same_origin(request.referrer, good_referrer):
+                self._error_response('The referrer does not match the host.')
+
+        g.csrf_valid = True  # mark this request as CSRF valid
+
+    def exempt(self, view):
+        """Mark a view or blueprint to be excluded from CSRF protection.
+
+        ::
+
+            @app.route('/some-view', methods=['POST'])
+            @csrf.exempt
+            def some_view():
+                ...
+
+        ::
+
+            bp = Blueprint(...)
+            csrf.exempt(bp)
+
+        """
+
+        if isinstance(view, Blueprint):
+            self._exempt_blueprints.add(view.name)
+            return view
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 6 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -148,6 +655,7 @@ NewsPie is provided as open source under the
 [**newspie / news.py**](https://github.com/skamieniarz/newspie/blob/master/././news.py)
 
 ```python
+# news.py
 # -*- coding: utf-8 -*-
 '''
 NewsPie - a minimalistic news aggregator built with Flask and powered by
@@ -238,11 +746,6 @@ def category(category):
     return redirect(url_for('category', category='general', page=page))
 
 
-
-
-## ... source file abbreviated to get to request examples ...
-
-
 @APP.route('/search/<string:query>', methods=['GET', 'POST'])
 def search(query):
     ''' Handles category route.
@@ -311,6 +814,11 @@ def parse_articles(response):
         articles.
     '''
     parsed_articles = []
+
+
+## ... source file abbreviated to get to request examples ...
+
+
     ''' Renders the template with appropriate variables. Up to 12 pages
         allowed. '''
     pages = pages if pages <= 12 else 12
@@ -345,7 +853,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 3 from sandman2
+## Example 7 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -364,6 +872,7 @@ The sandman2 project is provided under the
 [**sandman2 / sandman2 / service.py**](https://github.com/jeffknupp/sandman2/blob/master/sandman2/./service.py)
 
 ```python
+# service.py
 """Automatically generated REST API services from SQLAlchemy
 ORM models or a database introspection."""
 
@@ -393,11 +902,6 @@ def add_link_headers(response, links):
         link_string += ', <{}>; rel=related'.format(link)
     response.headers['Link'] = link_string
     return response
-
-
-## ... source file abbreviated to get to request examples ...
-
-
 
 
 def jsonify(resource):
@@ -441,12 +945,11 @@ class Service(MethodView):
         """Return an HTTP response object resulting from a HTTP DELETE call.
 
         :param resource_id: The value of the resource's primary key
-        """
-        resource = self._resource(resource_id)
-        error_message = is_valid_method(self.__model__, resource)
-        if error_message:
-            raise BadRequestException(error_message)
-        db.session().delete(resource)
+
+
+## ... source file abbreviated to get to request examples ...
+
+
         db.session().commit()
         return self._no_content_response()
 
@@ -459,7 +962,7 @@ class Service(MethodView):
 
         :param resource_id: The value of the resource's primary key
         """
-~~        if request.path.endswith('meta'):
+        if request.path.endswith('meta'):
             return self._meta()
 
         if resource_id is None:
@@ -508,7 +1011,7 @@ class Service(MethodView):
         :returns: ``HTTP 204`` if the resource already exists
         :returns: ``HTTP 400`` if the request is malformed or missing data
         """
-~~        resource = self.__model__.query.filter_by(**request.json).first()
+        resource = self.__model__.query.filter_by(**request.json).first()
         if resource:
             error_message = is_valid_method(self.__model__, resource)
             if error_message:

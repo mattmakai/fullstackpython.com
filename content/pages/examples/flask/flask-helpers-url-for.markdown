@@ -1,7 +1,7 @@
 title: flask.helpers url_for Python code examples
 category: page
 slug: flask-helpers-url-for-examples
-sortorder: 500021001
+sortorder: 500021002
 toc: False
 sidebartitle: flask.helpers url_for
 meta: Python example code for the url_for function from the flask.helpers module of the Flask project.
@@ -10,7 +10,163 @@ meta: Python example code for the url_for function from the flask.helpers module
 url_for is a function within the flask.helpers module of the Flask project.
 
 
-## Example 1 from flask-base
+## Example 1 from Flask AppBuilder
+[Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
+([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
+and
+[example apps](https://github.com/dpgaspar/Flask-AppBuilder/tree/master/examples))
+is a web application generator that uses Flask to automatically create
+the code for database-driven applications based on parameters set
+by the user. The generated applications include default security settings,
+forms, and internationalization support.
+
+Flask App Builder is provided under the
+[BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
+
+[**Flask AppBuilder / flask_appbuilder / menu.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/./menu.py)
+
+```python
+# menu.py
+from typing import List
+
+~~from flask import current_app, url_for
+from flask_babel import gettext as __
+
+from .api import BaseApi, expose
+from .basemanager import BaseManager
+from .security.decorators import permission_name, protect
+
+
+class MenuItem(object):
+    def __init__(self, name, href="", icon="", label="", childs=None, baseview=None):
+        self.name = name
+        self.href = href
+        self.icon = icon
+        self.label = label
+        self.childs = childs or []
+        self.baseview = baseview
+
+    def get_url(self):
+        if not self.href:
+            if not self.baseview:
+                return ""
+            else:
+~~                return url_for(f"{self.baseview.endpoint}.{self.baseview.default_view}")
+        else:
+            try:
+~~                return url_for(self.href)
+            except Exception:
+                return self.href
+
+    def __repr__(self):
+        return self.name
+
+
+class Menu(object):
+    def __init__(self, reverse=True, extra_classes=""):
+        self.menu = []
+        if reverse:
+            extra_classes = extra_classes + "navbar-inverse"
+        self.extra_classes = extra_classes
+
+    @property
+    def reverse(self):
+        return "navbar-inverse" in self.extra_classes
+
+    def get_list(self):
+        return self.menu
+
+    def get_flat_name_list(self, menu: "Menu" = None, result: List = None) -> List:
+        menu = menu or self.menu
+        result = result or []
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 2 from FlaskBB
+[FlaskBB](https://github.com/flaskbb/flaskbb)
+([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
+forum web application. The web app allows users to chat in an open
+message board or send private messages in plain text or
+[Markdown](/markdown.html).
+
+FlaskBB is provided as open source
+[under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
+
+[**FlaskBB / flaskbb / markup.py**](https://github.com/flaskbb/flaskbb/blob/master/flaskbb/./markup.py)
+
+```python
+# markup.py
+# -*- coding: utf-8 -*-
+"""
+    flaskbb.utils.markup
+    --------------------
+
+    A module for all markup related stuff.
+
+    :copyright: (c) 2016 by the FlaskBB Team.
+    :license: BSD, see LICENSE for more details.
+"""
+import logging
+import re
+
+import mistune
+~~from flask import url_for
+from jinja2 import Markup
+from pluggy import HookimplMarker
+from pygments import highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import get_lexer_by_name
+from pygments.util import ClassNotFound
+
+impl = HookimplMarker('flaskbb')
+
+logger = logging.getLogger(__name__)
+
+_re_user = re.compile(r'@(\w+)', re.I)
+
+
+def userify(match):
+    value = match.group(1)
+    user = "<a href='{url}'>@{user}</a>".format(
+~~        url=url_for("user.profile", username=value, _external=False),
+        user=value
+    )
+    return user
+
+
+class FlaskBBRenderer(mistune.Renderer):
+    """Markdown with some syntactic sugar, such as @user gettting linked
+    to the user's profile.
+    """
+
+    def __init__(self, **kwargs):
+        super(FlaskBBRenderer, self).__init__(**kwargs)
+
+    def paragraph(self, text):
+        """Render paragraph tags, autolinking user handles."""
+
+        text = _re_user.sub(userify, text)
+        return super(FlaskBBRenderer, self).paragraph(text)
+
+    def block_code(self, code, lang):
+        if lang:
+            try:
+                lexer = get_lexer_by_name(lang, stripall=True)
+            except ClassNotFound:
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 3 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -29,6 +185,7 @@ flask-base is provided as open source under the
 [**flask-base / app / utils.py**](https://github.com/hack4impact/flask-base/blob/master/app/./utils.py)
 
 ```python
+# utils.py
 ~~from flask import url_for
 from wtforms.fields import Field
 from wtforms.widgets import HiddenInput
@@ -54,11 +211,6 @@ def index_for_role(role):
 ~~    return url_for(role.index)
 
 
-
-
-## ... source file abbreviated to get to url_for examples ...
-
-
 class CustomSelectField(Field):
     widget = HiddenInput()
 
@@ -78,6 +230,315 @@ class CustomSelectField(Field):
             self.raw_data = [valuelist[1]]
         else:
             self.data = ''
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 4 from flask-phone-input
+[flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
+is an example application that ties together the
+[intTellInput.js](https://github.com/jackocnr/intl-tel-input)
+JavaScript plugin with the
+[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) form-handling
+library. flask-phone-input is provided as open source under the
+[MIT license](https://github.com/miguelgrinberg/flask-phone-input/blob/1a1c227c044474ce0fe133493d7f8b0fb8312409/LICENSE).
+
+[**flask-phone-input / app.py**](https://github.com/miguelgrinberg/flask-phone-input/blob/master/././app.py)
+
+```python
+# app.py
+~~from flask import Flask, render_template, session, redirect, url_for
+from flask_bootstrap import Bootstrap
+from flask_wtf import FlaskForm
+import phonenumbers
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired, ValidationError
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'top-secret!'
+Bootstrap(app)
+
+
+class PhoneForm(FlaskForm):
+    phone = StringField('Phone', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+    def validate_phone(self, phone):
+        try:
+            p = phonenumbers.parse(phone.data)
+            if not phonenumbers.is_valid_number(p):
+                raise ValueError()
+        except (phonenumbers.phonenumberutil.NumberParseException, ValueError):
+            raise ValidationError('Invalid phone number')
+
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = PhoneForm()
+    if form.validate_on_submit():
+        session['phone'] = form.phone.data
+~~        return redirect(url_for('show_phone'))
+    return render_template('index.html', form=form)
+
+
+@app.route('/showphone')
+def show_phone():
+    return render_template('show_phone.html', phone=session['phone'])
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 5 from flask-restx
+[Flask RESTX](https://github.com/python-restx/flask-restx) is an
+extension that makes it easier to build
+[RESTful APIs](/application-programming-interfaces.html) into
+your applications. Flask RESTX aims for minimal configuration to
+get basic APIs running for existing applications and it exposes
+endpoint documentation using [Swagger](https://swagger.io/).
+
+Flask RESTX is provided as open source under the
+[BSD  3-Clause license](https://github.com/python-restx/flask-restx/blob/master/LICENSE).
+
+[**flask-restx / flask_restx / apidoc.py**](https://github.com/python-restx/flask-restx/blob/master/flask_restx/./apidoc.py)
+
+```python
+# apidoc.py
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+~~from flask import url_for, Blueprint, render_template
+
+
+class Apidoc(Blueprint):
+    """
+    Allow to know if the blueprint has already been registered
+    until https://github.com/mitsuhiko/flask/pull/1301 is merged
+    """
+
+    def __init__(self, *args, **kwargs):
+        self.registered = False
+        super(Apidoc, self).__init__(*args, **kwargs)
+
+    def register(self, *args, **kwargs):
+        super(Apidoc, self).register(*args, **kwargs)
+        self.registered = True
+
+
+apidoc = Apidoc(
+    "restx_doc",
+    __name__,
+    template_folder="templates",
+    static_folder="static",
+    static_url_path="/swaggerui",
+)
+
+
+@apidoc.add_app_template_global
+def swagger_static(filename):
+~~    return url_for("restx_doc.static", filename=filename)
+
+
+def ui_for(api):
+    """Render a SwaggerUI for a given API"""
+    return render_template("swagger-ui.html", title=api.title, specs_url=api.specs_url)
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 6 from Flasky
+[Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
+example application by
+[Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
+while teaching developers how to use [Flask](/flask.html) in
+[his books and videos](https://courses.miguelgrinberg.com/). Flasky
+is [open sourced under the MIT license](https://github.com/miguelgrinberg/flasky/blob/master/LICENSE).
+
+[**Flasky / app / models.py**](https://github.com/miguelgrinberg/flasky/blob/master/./app/models.py)
+
+```python
+# models.py
+from datetime import datetime
+import hashlib
+from werkzeug.security import generate_password_hash, check_password_hash
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from markdown import markdown
+import bleach
+~~from flask import current_app, request, url_for
+from flask_login import UserMixin, AnonymousUserMixin
+from app.exceptions import ValidationError
+from . import db, login_manager
+
+
+class Permission:
+    FOLLOW = 1
+    COMMENT = 2
+    WRITE = 4
+    MODERATE = 8
+    ADMIN = 16
+
+
+class Role(db.Model):
+    __tablename__ = 'roles'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    default = db.Column(db.Boolean, default=False, index=True)
+    permissions = db.Column(db.Integer)
+    users = db.relationship('User', backref='role', lazy='dynamic')
+
+    def __init__(self, **kwargs):
+        super(Role, self).__init__(**kwargs)
+        if self.permissions is None:
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+
+    def is_following(self, user):
+        if user.id is None:
+            return False
+        return self.followed.filter_by(
+            followed_id=user.id).first() is not None
+
+    def is_followed_by(self, user):
+        if user.id is None:
+            return False
+        return self.followers.filter_by(
+            follower_id=user.id).first() is not None
+
+    @property
+    def followed_posts(self):
+        return Post.query.join(Follow, Follow.followed_id == Post.author_id)\
+            .filter(Follow.follower_id == self.id)
+
+    def to_json(self):
+        json_user = {
+~~            'url': url_for('api.get_user', id=self.id),
+            'username': self.username,
+            'member_since': self.member_since,
+            'last_seen': self.last_seen,
+~~            'posts_url': url_for('api.get_user_posts', id=self.id),
+~~            'followed_posts_url': url_for('api.get_user_followed_posts',
+                                          id=self.id),
+            'post_count': self.posts.count()
+        }
+        return json_user
+
+    def generate_auth_token(self, expiration):
+        s = Serializer(current_app.config['SECRET_KEY'],
+                       expires_in=expiration)
+        return s.dumps({'id': self.id}).decode('utf-8')
+
+    @staticmethod
+    def verify_auth_token(token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except:
+            return None
+        return User.query.get(data['id'])
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+
+
+class AnonymousUser(AnonymousUserMixin):
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+class Post(db.Model):
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    body_html = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    comments = db.relationship('Comment', backref='post', lazy='dynamic')
+
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initiator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'blockquote', 'code',
+                        'em', 'i', 'li', 'ol', 'pre', 'strong', 'ul',
+                        'h1', 'h2', 'h3', 'p']
+        target.body_html = bleach.linkify(bleach.clean(
+            markdown(value, output_format='html'),
+            tags=allowed_tags, strip=True))
+
+    def to_json(self):
+        json_post = {
+~~            'url': url_for('api.get_post', id=self.id),
+            'body': self.body,
+            'body_html': self.body_html,
+            'timestamp': self.timestamp,
+~~            'author_url': url_for('api.get_user', id=self.author_id),
+~~            'comments_url': url_for('api.get_post_comments', id=self.id),
+            'comment_count': self.comments.count()
+        }
+        return json_post
+
+    @staticmethod
+    def from_json(json_post):
+        body = json_post.get('body')
+        if body is None or body == '':
+            raise ValidationError('post does not have a body')
+        return Post(body=body)
+
+
+db.event.listen(Post.body, 'set', Post.on_changed_body)
+
+
+class Comment(db.Model):
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    body_html = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    disabled = db.Column(db.Boolean)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
+
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initiator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code', 'em', 'i',
+                        'strong']
+        target.body_html = bleach.linkify(bleach.clean(
+            markdown(value, output_format='html'),
+            tags=allowed_tags, strip=True))
+
+    def to_json(self):
+        json_comment = {
+~~            'url': url_for('api.get_comment', id=self.id),
+~~            'post_url': url_for('api.get_post', id=self.post_id),
+            'body': self.body,
+            'body_html': self.body_html,
+            'timestamp': self.timestamp,
+~~            'author_url': url_for('api.get_user', id=self.author_id),
+        }
+        return json_comment
+
+    @staticmethod
+    def from_json(json_comment):
+        body = json_comment.get('body')
+        if body is None or body == '':
+            raise ValidationError('comment does not have a body')
+        return Comment(body=body)
+
+
+db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 
 
 ## ... source file continues with no further url_for examples...

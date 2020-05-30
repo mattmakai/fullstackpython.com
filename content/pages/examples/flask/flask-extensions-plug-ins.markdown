@@ -30,6 +30,20 @@ as extensions added to your code base as well as example code for
 building your own applications.
 
 
+### Flask App Builder
+[Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder) 
+([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
+and
+[example apps](https://github.com/dpgaspar/Flask-AppBuilder/tree/master/examples))
+is a web application generator that uses Flask to automatically create
+the code for database-driven applications based on parameters set
+by the user. The generated applications include default security settings,
+forms, and internationalization support.
+
+Flask App Builder is provided under the
+[BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
+
+
 ### flask-base
 [flask-base](https://github.com/hack4impact/flask-base) 
 ([project documentation](http://hack4impact.github.io/flask-base/))
@@ -51,3 +65,16 @@ endpoint documentation using [Swagger](https://swagger.io/).
 
 Flask RESTX is provided as open source under the
 [BSD  3-Clause license](https://github.com/python-restx/flask-restx/blob/master/LICENSE).
+
+
+### Flask-WTF
+[Flask-WTF](https://github.com/lepture/flask-wtf)
+([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
+and
+[PyPI page](https://pypi.org/project/Flask-WTF/))
+provides a bridge between [Flask](/flask.html) and the the 
+[WTForms](https://wtforms.readthedocs.io/en/2.3.x/) form-handling library.
+It makes it easier to use WTForms by reducing boilerplate code and 
+shorter examples for common form operations as well as common security
+practices such as [CSRF](/cross-site-request-forgery-csrf.html).
+

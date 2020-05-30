@@ -18,7 +18,7 @@ Pelican's
 under the 
 [AGPL 3 license](https://www.gnu.org/licenses/why-affero-gpl.html).
 
-<a href="http://docs.getpelican.com/en/3.6.3/" style="border: none;"><img src="/img/logos/pelican.png" width="100%" alt="Pelican static website generator logo." class="technical-diagram" /></a>
+<a href="http://docs.getpelican.com/en/3.6.3/" style="border: none;"><img src="/img/logos/pelican.png" width="100%" alt="Pelican static website generator logo." class="shot" /></a>
 
 <div class="well see-also">Pelican is an implementation of the <a href="/static-site-generator.html">static site generators</a> concept. Learn how the parts fit together in the <a href="/web-development.html">web development</a> chapter or view <a href="/table-of-contents.html">all topics</a>.</div>
 

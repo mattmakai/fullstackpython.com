@@ -32,8 +32,18 @@ is configured in JSON. The code is provided as open source under the
 [MIT license](https://github.com/christabor/flask_jsondash/blob/master/LICENSE).
 
 
+### flask-phone-input
+[flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
+is an example application that ties together the 
+[intTellInput.js](https://github.com/jackocnr/intl-tel-input)
+JavaScript plugin with the 
+[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) form-handling 
+library. flask-phone-input is provided as open source under the
+[MIT license](https://github.com/miguelgrinberg/flask-phone-input/blob/1a1c227c044474ce0fe133493d7f8b0fb8312409/LICENSE).
+
+
 ### Flasky
-[Flasky](https://github.com/miguelgrinberg/flasky) is the wonderful 
+[Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by 
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
 while teaching developers how to use [Flask](/flask.html) in 
