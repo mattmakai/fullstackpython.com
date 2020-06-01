@@ -15,6 +15,24 @@ on GitHub.
 
 ## 2020
 ### May
+* Added new example code pages for Flask modules:
+    * flask.cli [FlaskGroup](/flask-cli-flaskgroup-examples.html),
+      [ScriptInfo](/flask-cli-scriptinfo-examples.html), and
+      [with_appcontext](/flask-cli-with-appcontext-examples.html)
+    * flask.globals [request](/flask-globals-request-examples.html) and
+      [session](/flask-globals-session-examples.html)
+    * flask.helpers [flask](/flask-helpers-flash-examples.html),
+      [make_response](/flask-helpers-make-response-examples.html), and
+      [url_for](/flask-helpers-url-for-examples.html)
+    * flask.signals [Namespace](/flask-signals-namespace-examples.html)
+    * flask.templating 
+      [render_template](/flask-templating-render-template-examples.html)
+    * flask.views
+      [MethodView](/flask-views-methodview-examples.html),
+      [View](/flask-views-view-examples.html), and
+      [http_method_funcs](/flask-views-http-method-funcs-examples.html)
+* New blog post on 
+  [Reporting Exceptions in Python Scripts with Sentry](/blog/report-exceptions-python-scripts-sentry.html).
 * Tweaked some CSS for the site.
 * Added a new page with the start of 
   [pandas example code and projects](/pandas-code-examples.html).

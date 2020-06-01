@@ -644,7 +644,60 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 6 from newspie
+## Example 6 from flaskSaaS
+[flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
+starter project to build a software-as-a-service (SaaS) web application
+in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
+boilerplate relies on many common Flask extensions such as
+[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
+[Flask-Login](https://flask-login.readthedocs.io/en/latest/),
+[Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
+many others. The project is provided as open source under the
+[MIT license](https://github.com/alectrocute/flaskSaaS/blob/master/LICENSE).
+
+[**flaskSaaS / app / admin.py**](https://github.com/alectrocute/flaskSaaS/blob/master/app/./admin.py)
+
+```python
+# admin.py
+import os.path as op
+
+~~from flask import request, Response
+from werkzeug.exceptions import HTTPException
+from flask_admin import Admin
+from flask.ext.admin.contrib.sqla import ModelView
+from flask.ext.admin.contrib.fileadmin import FileAdmin
+
+from app import app, db
+from app.models import User
+
+
+admin = Admin(app, name='Admin', template_mode='bootstrap3')
+
+class ModelView(ModelView):
+
+    def is_accessible(self):
+~~        auth = request.authorization or request.environ.get('REMOTE_USER')  # workaround for Apache
+        if not auth or (auth.username, auth.password) != app.config['ADMIN_CREDENTIALS']:
+            raise HTTPException('', Response('You have to an administrator.', 401,
+                {'WWW-Authenticate': 'Basic realm="Login Required"'}
+            ))
+        return True
+
+# Users
+admin.add_view(ModelView(User, db.session))
+
+# Static files
+path = op.join(op.dirname(__file__), 'static')
+admin.add_view(FileAdmin(path, '/static/', name='Static'))
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 7 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -853,7 +906,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 7 from sandman2
+## Example 8 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and

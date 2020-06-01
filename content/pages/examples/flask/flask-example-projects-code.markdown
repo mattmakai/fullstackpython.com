@@ -41,6 +41,17 @@ JavaScript plugin with the
 library. flask-phone-input is provided as open source under the
 [MIT license](https://github.com/miguelgrinberg/flask-phone-input/blob/1a1c227c044474ce0fe133493d7f8b0fb8312409/LICENSE).
 
+### flaskSaaS
+[flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate 
+starter project to build a software-as-a-service (SaaS) web application
+in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
+boilerplate relies on many common Flask extensions such as 
+[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/), 
+[Flask-Login](https://flask-login.readthedocs.io/en/latest/),
+[Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
+many others. The project is provided as open source under the
+[MIT license](https://github.com/alectrocute/flaskSaaS/blob/master/LICENSE).
+
 
 ### Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
