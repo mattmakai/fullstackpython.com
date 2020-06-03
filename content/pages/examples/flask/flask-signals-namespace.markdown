@@ -10,7 +10,67 @@ meta: Python example code for the Namespace class from the flask.signals module 
 Namespace is a class within the flask.signals module of the Flask project.
 
 
-## Example 1 from flask-sqlalchemy
+## Example 1 from flask-login
+[Flask-Login](https://github.com/maxcountryman/flask-login)
+([project documentation](https://flask-login.readthedocs.io/en/latest/)
+and [PyPI package](https://pypi.org/project/Flask-Login/))
+is a [Flask](/flask.html) extension that provides user session
+management, which handles common tasks such as logging in
+and out of a [web application](/web-development.html) and
+managing associated user session data. Flask-Login is
+open sourced under the
+[MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
+
+[**flask-login / flask_login / signals.py**](https://github.com/maxcountryman/flask-login/blob/master/flask_login/./signals.py)
+
+```python
+# signals.py
+# -*- coding: utf-8 -*-
+'''
+    flask_login.signals
+    -------------------
+    This module provides signals to get notified when Flask-Login performs
+    certain actions.
+'''
+
+
+~~from flask.signals import Namespace
+
+
+~~_signals = Namespace()
+
+
+#: Sent when a user is logged in. In addition to the app (which is the
+#: sender), it is passed `user`, which is the user being logged in.
+user_logged_in = _signals.signal('logged-in')
+
+#: Sent when a user is logged out. In addition to the app (which is the
+#: sender), it is passed `user`, which is the user being logged out.
+user_logged_out = _signals.signal('logged-out')
+
+#: Sent when the user is loaded from the cookie. In addition to the app (which
+#: is the sender), it is passed `user`, which is the user being reloaded.
+user_loaded_from_cookie = _signals.signal('loaded-from-cookie')
+
+#: Sent when the user is loaded from the header. In addition to the app (which
+#: is the #: sender), it is passed `user`, which is the user being reloaded.
+user_loaded_from_header = _signals.signal('loaded-from-header')
+
+#: Sent when the user is loaded from the request. In addition to the app (which
+#: is the #: sender), it is passed `user`, which is the user being reloaded.
+user_loaded_from_request = _signals.signal('loaded-from-request')
+
+#: Sent when a user's login is confirmed, marking it as fresh. (It is not
+#: called for a normal login.)
+
+
+## ... source file continues with no further Namespace examples...
+
+
+```
+
+
+## Example 2 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and

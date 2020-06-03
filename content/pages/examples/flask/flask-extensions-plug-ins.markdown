@@ -55,6 +55,18 @@ flask-base's code is open sourced
 [under the MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
 
 
+### Flask-Login
+[Flask-Login](https://github.com/maxcountryman/flask-login)
+([project documentation](https://flask-login.readthedocs.io/en/latest/)
+and [PyPI package](https://pypi.org/project/Flask-Login/))
+is a [Flask](/flask.html) extension that provides user session
+management, which handles common tasks such as logging in
+and out of a [web application](/web-development.html) and
+managing associated user session data. Flask-Login is
+open sourced under the
+[MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
+
+
 ### Flask RESTX
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build

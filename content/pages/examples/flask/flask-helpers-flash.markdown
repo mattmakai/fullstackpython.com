@@ -557,3 +557,168 @@ def clone(c_id):
 
 ```
 
+
+## Example 4 from flask-login
+[Flask-Login](https://github.com/maxcountryman/flask-login)
+([project documentation](https://flask-login.readthedocs.io/en/latest/)
+and [PyPI package](https://pypi.org/project/Flask-Login/))
+is a [Flask](/flask.html) extension that provides user session
+management, which handles common tasks such as logging in
+and out of a [web application](/web-development.html) and
+managing associated user session data. Flask-Login is
+open sourced under the
+[MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
+
+[**flask-login / flask_login / login_manager.py**](https://github.com/maxcountryman/flask-login/blob/master/flask_login/./login_manager.py)
+
+```python
+# login_manager.py
+# -*- coding: utf-8 -*-
+'''
+    flask_login.login_manager
+    -------------------------
+    The LoginManager class.
+'''
+
+
+import warnings
+from datetime import datetime, timedelta
+
+~~from flask import (_request_ctx_stack, abort, current_app, flash, redirect,
+                   has_app_context, request, session)
+
+from ._compat import text_type
+from .config import (COOKIE_NAME, COOKIE_DURATION, COOKIE_SECURE,
+                     COOKIE_HTTPONLY, COOKIE_SAMESITE, LOGIN_MESSAGE,
+                     LOGIN_MESSAGE_CATEGORY, REFRESH_MESSAGE,
+                     REFRESH_MESSAGE_CATEGORY, ID_ATTRIBUTE,
+                     AUTH_HEADER_NAME, SESSION_KEYS, USE_SESSION_FOR_NEXT)
+from .mixins import AnonymousUserMixin
+from .signals import (user_loaded_from_cookie, user_loaded_from_header,
+                      user_loaded_from_request, user_unauthorized,
+                      user_needs_refresh, user_accessed, session_protected)
+from .utils import (login_url as make_login_url, _create_identifier,
+                    _user_context_processor, encode_cookie, decode_cookie,
+                    make_next_param, expand_login_view)
+
+
+class LoginManager(object):
+    '''This object is used to hold the settings used for logging in. Instances
+    of :class:`LoginManager` are *not* bound to specific apps, so you can
+    create one in the main body of your code and then bind it to your
+    app in a factory function.
+    '''
+    def __init__(self, app=None, add_context_processor=True):
+
+
+## ... source file abbreviated to get to flash examples ...
+
+
+        raise a HTTP 401 (Unauthorized) error instead.
+
+        This should be returned from a view or before/after_request function,
+        otherwise the redirect will have no effect.
+        '''
+        user_unauthorized.send(current_app._get_current_object())
+
+        if self.unauthorized_callback:
+            return self.unauthorized_callback()
+
+        if request.blueprint in self.blueprint_login_views:
+            login_view = self.blueprint_login_views[request.blueprint]
+        else:
+            login_view = self.login_view
+
+        if not login_view:
+            abort(401)
+
+        if self.login_message:
+            if self.localize_callback is not None:
+~~                flash(self.localize_callback(self.login_message),
+                      category=self.login_message_category)
+            else:
+~~                flash(self.login_message, category=self.login_message_category)
+
+        config = current_app.config
+        if config.get('USE_SESSION_FOR_NEXT', USE_SESSION_FOR_NEXT):
+            login_url = expand_login_view(login_view)
+            session['_id'] = self._session_identifier_generator()
+            session['next'] = make_next_param(login_url, request.url)
+            redirect_url = make_login_url(login_view)
+        else:
+            redirect_url = make_login_url(login_view, next_url=request.url)
+
+        return redirect(redirect_url)
+
+    def user_loader(self, callback):
+        '''
+        This sets the callback for reloading a user from the session. The
+        function you set should take a user ID (a ``unicode``) and return a
+        user object, or ``None`` if the user does not exist.
+
+        :param callback: The callback for retrieving a user object.
+        :type callback: callable
+        '''
+        self._user_callback = callback
+        return self.user_callback
+
+
+
+## ... source file abbreviated to get to flash examples ...
+
+
+              they were attempting to access will be passed in the ``next``
+              query string variable, so you can redirect there if present
+              instead of the homepage.)
+
+        If :attr:`LoginManager.refresh_view` is not defined, then it will
+        simply raise a HTTP 401 (Unauthorized) error instead.
+
+        This should be returned from a view or before/after_request function,
+        otherwise the redirect will have no effect.
+        '''
+        user_needs_refresh.send(current_app._get_current_object())
+
+        if self.needs_refresh_callback:
+            return self.needs_refresh_callback()
+
+        if not self.refresh_view:
+            abort(401)
+
+        if self.needs_refresh_message:
+            if self.localize_callback is not None:
+~~                flash(self.localize_callback(self.needs_refresh_message),
+                      category=self.needs_refresh_message_category)
+            else:
+~~                flash(self.needs_refresh_message,
+                      category=self.needs_refresh_message_category)
+
+        config = current_app.config
+        if config.get('USE_SESSION_FOR_NEXT', USE_SESSION_FOR_NEXT):
+            login_url = expand_login_view(self.refresh_view)
+            session['_id'] = self._session_identifier_generator()
+            session['next'] = make_next_param(login_url, request.url)
+            redirect_url = make_login_url(self.refresh_view)
+        else:
+            login_url = self.refresh_view
+            redirect_url = make_login_url(login_url, next_url=request.url)
+
+        return redirect(redirect_url)
+
+    def header_loader(self, callback):
+        '''
+        This function has been deprecated. Please use
+        :meth:`LoginManager.request_loader` instead.
+
+        This sets the callback for loading a user from a header value.
+        The function you set should take an authentication token and
+        return a user object, or `None` if the user does not exist.
+
+        :param callback: The callback for retrieving a user object.
+
+
+## ... source file continues with no further flash examples...
+
+
+```
+

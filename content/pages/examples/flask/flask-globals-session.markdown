@@ -231,7 +231,183 @@ def do_topic_action(topics, user, action, reverse):  # noqa: C901
 ```
 
 
-## Example 3 from Flask-WTF
+## Example 3 from flask-login
+[Flask-Login](https://github.com/maxcountryman/flask-login)
+([project documentation](https://flask-login.readthedocs.io/en/latest/)
+and [PyPI package](https://pypi.org/project/Flask-Login/))
+is a [Flask](/flask.html) extension that provides user session
+management, which handles common tasks such as logging in
+and out of a [web application](/web-development.html) and
+managing associated user session data. Flask-Login is
+open sourced under the
+[MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
+
+[**flask-login / flask_login / utils.py**](https://github.com/maxcountryman/flask-login/blob/master/flask_login/./utils.py)
+
+```python
+# utils.py
+# -*- coding: utf-8 -*-
+'''
+    flask_login.utils
+    -----------------
+    General utilities.
+'''
+
+
+import hmac
+from hashlib import sha512
+from functools import wraps
+from werkzeug.local import LocalProxy
+from werkzeug.security import safe_str_cmp
+from werkzeug.urls import url_decode, url_encode
+
+~~from flask import (_request_ctx_stack, current_app, request, session, url_for,
+                   has_request_context)
+
+from ._compat import text_type, urlparse, urlunparse
+from .config import COOKIE_NAME, EXEMPT_METHODS
+from .signals import user_logged_in, user_logged_out, user_login_confirmed
+
+
+#: A proxy for the current user. If no user is logged in, this will be an
+#: anonymous user
+current_user = LocalProxy(lambda: _get_user())
+
+
+def encode_cookie(payload, key=None):
+    '''
+    This will encode a ``unicode`` value into a cookie, and sign that cookie
+    with the app's secret key.
+
+    :param payload: The value to encode, as `unicode`.
+    :type payload: unicode
+
+    :param key: The key to use when creating the cookie digest. If not
+                specified, the SECRET_KEY value from app config will be used.
+    :type key: str
+    '''
+
+
+## ... source file abbreviated to get to session examples ...
+
+
+    '''
+    base = expand_login_view(login_view)
+
+    if next_url is None:
+        return base
+
+    parsed_result = urlparse(base)
+    md = url_decode(parsed_result.query)
+    md[next_field] = make_next_param(base, next_url)
+    netloc = current_app.config.get('FORCE_HOST_FOR_REDIRECTS') or \
+        parsed_result.netloc
+    parsed_result = parsed_result._replace(netloc=netloc,
+                                           query=url_encode(md, sort=True))
+    return urlunparse(parsed_result)
+
+
+def login_fresh():
+    '''
+    This returns ``True`` if the current login is fresh.
+    '''
+~~    return session.get('_fresh', False)
+
+
+def login_user(user, remember=False, duration=None, force=False, fresh=True):
+    '''
+    Logs a user in. You should pass the actual user object to this. If the
+    user's `is_active` property is ``False``, they will not be logged in
+    unless `force` is ``True``.
+
+    This will return ``True`` if the log in attempt succeeds, and ``False`` if
+    it fails (i.e. because the user is inactive).
+
+    :param user: The user object to log in.
+    :type user: object
+    :param remember: Whether to remember the user after their session expires.
+        Defaults to ``False``.
+    :type remember: bool
+    :param duration: The amount of time before the remember cookie expires. If
+        ``None`` the value set in the settings is used. Defaults to ``None``.
+    :type duration: :class:`datetime.timedelta`
+    :param force: If the user is inactive, setting this to ``True`` will log
+        them in regardless. Defaults to ``False``.
+    :type force: bool
+    :param fresh: setting this to ``False`` will log in the user with a session
+        marked as not "fresh". Defaults to ``True``.
+
+
+## ... source file abbreviated to get to session examples ...
+
+
+                                                (duration.seconds +
+                                                 duration.days * 24 * 3600) *
+                                                10**6) / 10.0**6
+            except AttributeError:
+                raise Exception('duration must be a datetime.timedelta, '
+                                'instead got: {0}'.format(duration))
+
+    current_app.login_manager._update_request_context_with_user(user)
+    user_logged_in.send(current_app._get_current_object(), user=_get_user())
+    return True
+
+
+def logout_user():
+    '''
+    Logs a user out. (You do not need to pass the actual user.) This will
+    also clean up the remember me cookie if it exists.
+    '''
+
+    user = _get_user()
+
+~~    if '_user_id' in session:
+~~        session.pop('_user_id')
+
+~~    if '_fresh' in session:
+~~        session.pop('_fresh')
+
+~~    if '_id' in session:
+~~        session.pop('_id')
+
+    cookie_name = current_app.config.get('REMEMBER_COOKIE_NAME', COOKIE_NAME)
+    if cookie_name in request.cookies:
+        session['_remember'] = 'clear'
+~~        if '_remember_seconds' in session:
+~~            session.pop('_remember_seconds')
+
+    user_logged_out.send(current_app._get_current_object(), user=user)
+
+    current_app.login_manager._update_request_context_with_user()
+    return True
+
+
+def confirm_login():
+    '''
+    This sets the current session as fresh. Sessions become stale when they
+    are reloaded from a cookie.
+    '''
+    session['_fresh'] = True
+    session['_id'] = current_app.login_manager._session_identifier_generator()
+    user_login_confirmed.send(current_app._get_current_object())
+
+
+def login_required(func):
+    '''
+    If you decorate a view with this, it will ensure that the current user is
+    logged in and authenticated before calling the actual view. (If they are
+    not, it calls the :attr:`LoginManager.unauthorized` callback.) For
+    example::
+
+
+
+## ... source file continues with no further session examples...
+
+
+```
+
+
+## Example 4 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -373,7 +549,7 @@ def _get_config(
 ```
 
 
-## Example 4 from flaskSaaS
+## Example 5 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The

@@ -251,7 +251,316 @@ def configure_migrations(app):
 ```
 
 
-## Example 3 from flask-restx
+## Example 3 from flask-login
+[Flask-Login](https://github.com/maxcountryman/flask-login)
+([project documentation](https://flask-login.readthedocs.io/en/latest/)
+and [PyPI package](https://pypi.org/project/Flask-Login/))
+is a [Flask](/flask.html) extension that provides user session
+management, which handles common tasks such as logging in
+and out of a [web application](/web-development.html) and
+managing associated user session data. Flask-Login is
+open sourced under the
+[MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
+
+[**flask-login / flask_login / utils.py**](https://github.com/maxcountryman/flask-login/blob/master/flask_login/./utils.py)
+
+```python
+# utils.py
+# -*- coding: utf-8 -*-
+'''
+    flask_login.utils
+    -----------------
+    General utilities.
+'''
+
+
+import hmac
+from hashlib import sha512
+from functools import wraps
+from werkzeug.local import LocalProxy
+from werkzeug.security import safe_str_cmp
+from werkzeug.urls import url_decode, url_encode
+
+~~from flask import (_request_ctx_stack, current_app, request, session, url_for,
+                   has_request_context)
+
+from ._compat import text_type, urlparse, urlunparse
+from .config import COOKIE_NAME, EXEMPT_METHODS
+from .signals import user_logged_in, user_logged_out, user_login_confirmed
+
+
+#: A proxy for the current user. If no user is logged in, this will be an
+#: anonymous user
+current_user = LocalProxy(lambda: _get_user())
+
+
+def encode_cookie(payload, key=None):
+    '''
+    This will encode a ``unicode`` value into a cookie, and sign that cookie
+    with the app's secret key.
+
+    :param payload: The value to encode, as `unicode`.
+    :type payload: unicode
+
+    :param key: The key to use when creating the cookie digest. If not
+                specified, the SECRET_KEY value from app config will be used.
+    :type key: str
+    '''
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+    l_url = urlparse(login_url)
+    c_url = urlparse(current_url)
+
+    if (not l_url.scheme or l_url.scheme == c_url.scheme) and \
+            (not l_url.netloc or l_url.netloc == c_url.netloc):
+        return urlunparse(('', '', c_url.path, c_url.params, c_url.query, ''))
+    return current_url
+
+
+def expand_login_view(login_view):
+    '''
+    Returns the url for the login view, expanding the view name to a url if
+    needed.
+
+    :param login_view: The name of the login view or a URL for the login view.
+    :type login_view: str
+    '''
+    if login_view.startswith(('https://', 'http://', '/')):
+        return login_view
+    else:
+~~        if request.view_args is None:
+            return url_for(login_view)
+        else:
+~~            return url_for(login_view, **request.view_args)
+
+
+def login_url(login_view, next_url=None, next_field='next'):
+    '''
+    Creates a URL for redirecting to a login page. If only `login_view` is
+    provided, this will just return the URL for it. If `next_url` is provided,
+    however, this will append a ``next=URL`` parameter to the query string
+    so that the login view can redirect back to that URL. Flask-Login's default
+    unauthorized handler uses this function when redirecting to your login url.
+    To force the host name used, set `FORCE_HOST_FOR_REDIRECTS` to a host. This
+    prevents from redirecting to external sites if request headers Host or
+    X-Forwarded-For are present.
+
+    :param login_view: The name of the login view. (Alternately, the actual
+                       URL to the login view.)
+    :type login_view: str
+    :param next_url: The URL to give the login view for redirection.
+    :type next_url: str
+    :param next_field: What field to store the next URL in. (It defaults to
+                       ``next``.)
+    :type next_field: str
+    '''
+    base = expand_login_view(login_view)
+
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+
+def logout_user():
+    '''
+    Logs a user out. (You do not need to pass the actual user.) This will
+    also clean up the remember me cookie if it exists.
+    '''
+
+    user = _get_user()
+
+    if '_user_id' in session:
+        session.pop('_user_id')
+
+    if '_fresh' in session:
+        session.pop('_fresh')
+
+    if '_id' in session:
+        session.pop('_id')
+
+    cookie_name = current_app.config.get('REMEMBER_COOKIE_NAME', COOKIE_NAME)
+~~    if cookie_name in request.cookies:
+        session['_remember'] = 'clear'
+        if '_remember_seconds' in session:
+            session.pop('_remember_seconds')
+
+    user_logged_out.send(current_app._get_current_object(), user=user)
+
+    current_app.login_manager._update_request_context_with_user()
+    return True
+
+
+def confirm_login():
+    '''
+    This sets the current session as fresh. Sessions become stale when they
+    are reloaded from a cookie.
+    '''
+    session['_fresh'] = True
+    session['_id'] = current_app.login_manager._session_identifier_generator()
+    user_login_confirmed.send(current_app._get_current_object())
+
+
+def login_required(func):
+    '''
+    If you decorate a view with this, it will ensure that the current user is
+    logged in and authenticated before calling the actual view. (If they are
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        if not current_user.is_authenticated:
+            return current_app.login_manager.unauthorized()
+
+    ...which is essentially the code that this function adds to your views.
+
+    It can be convenient to globally turn off authentication when unit testing.
+    To enable this, if the application configuration variable `LOGIN_DISABLED`
+    is set to `True`, this decorator will be ignored.
+
+    .. Note ::
+
+        Per `W3 guidelines for CORS preflight requests
+        <http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0>`_,
+        HTTP ``OPTIONS`` requests are exempt from login checks.
+
+    :param func: The view function to decorate.
+    :type func: function
+    '''
+    @wraps(func)
+    def decorated_view(*args, **kwargs):
+~~        if request.method in EXEMPT_METHODS:
+            return func(*args, **kwargs)
+        elif current_app.config.get('LOGIN_DISABLED'):
+            return func(*args, **kwargs)
+        elif not current_user.is_authenticated:
+            return current_app.login_manager.unauthorized()
+        return func(*args, **kwargs)
+    return decorated_view
+
+
+def fresh_login_required(func):
+    '''
+    If you decorate a view with this, it will ensure that the current user's
+    login is fresh - i.e. their session was not restored from a 'remember me'
+    cookie. Sensitive operations, like changing a password or e-mail, should
+    be protected with this, to impede the efforts of cookie thieves.
+
+    If the user is not authenticated, :meth:`LoginManager.unauthorized` is
+    called as normal. If they are authenticated, but their session is not
+    fresh, it will call :meth:`LoginManager.needs_refresh` instead. (In that
+    case, you will need to provide a :attr:`LoginManager.refresh_view`.)
+
+    Behaves identically to the :func:`login_required` decorator with respect
+    to configuration variables.
+
+    .. Note ::
+
+        Per `W3 guidelines for CORS preflight requests
+        <http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0>`_,
+        HTTP ``OPTIONS`` requests are exempt from login checks.
+
+    :param func: The view function to decorate.
+    :type func: function
+    '''
+    @wraps(func)
+    def decorated_view(*args, **kwargs):
+~~        if request.method in EXEMPT_METHODS:
+            return func(*args, **kwargs)
+        elif current_app.config.get('LOGIN_DISABLED'):
+            return func(*args, **kwargs)
+        elif not current_user.is_authenticated:
+            return current_app.login_manager.unauthorized()
+        elif not login_fresh():
+            return current_app.login_manager.needs_refresh()
+        return func(*args, **kwargs)
+    return decorated_view
+
+
+def set_login_view(login_view, blueprint=None):
+    '''
+    Sets the login view for the app or blueprint. If a blueprint is passed,
+    the login view is set for this blueprint on ``blueprint_login_views``.
+
+    :param login_view: The user object to log in.
+    :type login_view: str
+    :param blueprint: The blueprint which this login view should be set on.
+        Defaults to ``None``.
+    :type blueprint: object
+    '''
+
+    num_login_views = len(current_app.login_manager.blueprint_login_views)
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+        current_app.login_manager.login_view = None
+    else:
+        current_app.login_manager.login_view = login_view
+
+
+def _get_user():
+    if has_request_context() and not hasattr(_request_ctx_stack.top, 'user'):
+        current_app.login_manager._load_user()
+
+    return getattr(_request_ctx_stack.top, 'user', None)
+
+
+def _cookie_digest(payload, key=None):
+    key = _secret_key(key)
+
+    return hmac.new(key, payload.encode('utf-8'), sha512).hexdigest()
+
+
+def _get_remote_addr():
+~~    address = request.headers.get('X-Forwarded-For', request.remote_addr)
+    if address is not None:
+        # An 'X-Forwarded-For' header includes a comma separated list of the
+        # addresses, the first address being the actual remote address.
+        address = address.encode('utf-8').split(b',')[0].strip()
+    return address
+
+
+def _create_identifier():
+~~    user_agent = request.headers.get('User-Agent')
+    if user_agent is not None:
+        user_agent = user_agent.encode('utf-8')
+    base = '{0}|{1}'.format(_get_remote_addr(), user_agent)
+    if str is bytes:
+        base = text_type(base, 'utf-8', errors='replace')  # pragma: no cover
+    h = sha512()
+    h.update(base.encode('utf8'))
+    return h.hexdigest()
+
+
+def _user_context_processor():
+    return dict(current_user=_get_user())
+
+
+def _secret_key(key=None):
+    if key is None:
+        key = current_app.config['SECRET_KEY']
+
+    if isinstance(key, text_type):  # pragma: no cover
+        key = key.encode('latin1')  # ensure bytes
+
+    return key
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 4 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -356,7 +665,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 4 from flask-sqlalchemy
+## Example 5 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -482,7 +791,7 @@ def _make_table(db):
 ```
 
 
-## Example 5 from Flask-WTF
+## Example 6 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -644,7 +953,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 6 from flaskSaaS
+## Example 7 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -697,7 +1006,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 7 from newspie
+## Example 8 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -906,7 +1215,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 8 from sandman2
+## Example 9 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
