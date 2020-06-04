@@ -24,6 +24,7 @@ on GitHub.
     * flask.helpers [flask](/flask-helpers-flash-examples.html),
       [make_response](/flask-helpers-make-response-examples.html), and
       [url_for](/flask-helpers-url-for-examples.html)
+    * flask.sessions [SessionInterface](/flask-sessions-sessioninterface-examples.html)
     * flask.signals [Namespace](/flask-signals-namespace-examples.html)
     * flask.templating 
       [render_template](/flask-templating-render-template-examples.html)

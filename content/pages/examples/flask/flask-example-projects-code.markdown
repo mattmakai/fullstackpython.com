@@ -76,3 +76,17 @@ is [open sourced under the MIT license](https://github.com/miguelgrinberg/flasky
 aggregator created with [Flask](/flask.html) and the 
 [News API](https://newsapi.org/). NewsPie is provided as open source under 
 the [MIT license](https://github.com/skamieniarz/newspie/blob/master/LICENSE).
+
+
+### tedivm's flask starter app
+[tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a 
+base of [Flask](/flask.html) code and related projects such as 
+[Celery](/celery.html) which provides a template to start your own
+Flask web app. The project comes baked with an admin panel, 
+[API authentication and authorization](/application-programming-interfaces.html),
+[SQLAlchemy](/sqlalchemy.html) and many other common libraries that are
+often used with Flask.
+
+The project's code is provided as open source under the
+[BSD 2-Clause "Simplified" license](https://github.com/tedivm/tedivms-flask/blob/master/LICENSE.txt).
+

@@ -984,3 +984,101 @@ if __name__ == '__main__':
 
 ```
 
+
+## Example 10 from tedivms-flask
+[tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
+base of [Flask](/flask.html) code and related projects such as
+[Celery](/celery.html) which provides a template to start your own
+Flask web app. The project comes baked with an admin panel,
+[API authentication and authorization](/application-programming-interfaces.html),
+[SQLAlchemy](/sqlalchemy.html) and many other common libraries that are
+often used with Flask.
+
+The project's code is provided as open source under the
+[BSD 2-Clause "Simplified" license](https://github.com/tedivm/tedivms-flask/blob/master/LICENSE.txt).
+
+[**tedivms-flask / app / __init__.py**](https://github.com/tedivm/tedivms-flask/blob/master/app/./__init__.py)
+
+```python
+# __init__.py
+import boto3
+from celery import Celery
+from datetime import datetime
+import os
+import requests
+import yaml
+
+~~from flask import Flask, session, render_template
+from flask_mail import Mail
+from flask_migrate import Migrate, MigrateCommand
+from flask.sessions import SessionInterface
+from flask_sqlalchemy import SQLAlchemy
+from flask_user import user_logged_out
+from flask_wtf.csrf import CSRFProtect
+
+from beaker.cache import CacheManager
+from beaker.util import parse_cache_config_options
+from beaker.middleware import SessionMiddleware
+
+# Instantiate Flask extensions
+db = SQLAlchemy()
+csrf_protect = CSRFProtect()
+mail = Mail()
+migrate = Migrate()
+
+
+def get_config():
+    # Instantiate Flask
+    app = Flask(__name__)
+
+    # Load App Config settings
+    # Load common settings from 'app/settings.py' file
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+            return session
+
+        def save_session(self, app, session, response):
+            session.save()
+
+    app.wsgi_app = SessionMiddleware(app.wsgi_app, session_opts)
+    app.session_interface = BeakerSessionInterface()
+
+    @user_logged_out.connect_via(app)
+    def clear_session(sender, user, **extra):
+        session.clear()
+
+
+def init_celery_service(app):
+    celery.conf.update(app.config)
+
+
+def init_error_handlers(app):
+
+    def show_error(status, message='An unknown error has occured.'):
+~~        return render_template('pages/errors.html', error_code=status, message=message), status
+
+    @app.errorhandler(401)
+    def error_unauthorized(e):
+        return show_error(401, 'Unauthorized')
+
+    @app.errorhandler(403)
+    def error_forbidden(e):
+        return show_error(403, 'Forbidden')
+
+    @app.errorhandler(404)
+    def error_pagenotfound(e):
+        return show_error(404, 'Page not found.')
+
+    @app.errorhandler(500)
+    def error_servererror(e):
+        return show_error(500, 'An unknown error has occurred on the server.')
+
+
+## ... source file continues with no further render_template examples...
+
+
+```
+
