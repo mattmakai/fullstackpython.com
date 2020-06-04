@@ -24,6 +24,15 @@ FlaskBB is provided as open source
 [under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
 
 
+### Flaskex
+[Flaskex](https://github.com/anfederico/Flaskex) is a working example 
+[Flask](/flask.html) web application intended as a base to build your
+own applications upon. The application comes with pre-built sign up, log in
+and related screens, as well as a database backend. Flaskex is provided
+as open source under the 
+[MIT license](https://github.com/anfederico/Flaskex/blob/master/LICENSE.txt).
+
+
 ### Flask JSONDash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a 
 configurable web application built in Flask that creates charts and

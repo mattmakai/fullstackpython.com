@@ -238,7 +238,111 @@ class CustomSelectField(Field):
 ```
 
 
-## Example 4 from flask-login
+## Example 4 from flaskex
+[Flaskex](https://github.com/anfederico/Flaskex) is a working example
+[Flask](/flask.html) web application intended as a base to build your
+own applications upon. The application comes with pre-built sign up, log in
+and related screens, as well as a database backend. Flaskex is provided
+as open source under the
+[MIT license](https://github.com/anfederico/Flaskex/blob/master/LICENSE.txt).
+
+[**flaskex / app.py**](https://github.com/anfederico/Flaskex/blob/master/././app.py)
+
+```python
+# app.py
+# -*- coding: utf-8 -*-
+
+from scripts import tabledef
+from scripts import forms
+from scripts import helpers
+~~from flask import Flask, redirect, url_for, render_template, request, session
+import json
+import sys
+import os
+
+app = Flask(__name__)
+app.secret_key = os.urandom(12)  # Generic key for dev purposes only
+
+# Heroku
+#from flask_heroku import Heroku
+#heroku = Heroku(app)
+
+# ======== Routing =========================================================== #
+# -------- Login ------------------------------------------------------------- #
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    if not session.get('logged_in'):
+        form = forms.LoginForm(request.form)
+        if request.method == 'POST':
+            username = request.form['username'].lower()
+            password = request.form['password']
+            if form.validate():
+                if helpers.credentials_valid(username, password):
+                    session['logged_in'] = True
+                    session['username'] = username
+                    return json.dumps({'status': 'Login successful'})
+                return json.dumps({'status': 'Invalid user/pass'})
+            return json.dumps({'status': 'Both fields required'})
+        return render_template('login.html', form=form)
+    user = helpers.get_user()
+    return render_template('home.html', user=user)
+
+
+@app.route("/logout")
+def logout():
+    session['logged_in'] = False
+~~    return redirect(url_for('login'))
+
+
+# -------- Signup ---------------------------------------------------------- #
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if not session.get('logged_in'):
+        form = forms.LoginForm(request.form)
+        if request.method == 'POST':
+            username = request.form['username'].lower()
+            password = helpers.hash_password(request.form['password'])
+            email = request.form['email']
+            if form.validate():
+                if not helpers.username_taken(username):
+                    helpers.add_user(username, password, email)
+                    session['logged_in'] = True
+                    session['username'] = username
+                    return json.dumps({'status': 'Signup successful'})
+                return json.dumps({'status': 'Username taken'})
+            return json.dumps({'status': 'User/Pass required'})
+        return render_template('login.html', form=form)
+~~    return redirect(url_for('login'))
+
+
+# -------- Settings ---------------------------------------------------------- #
+@app.route('/settings', methods=['GET', 'POST'])
+def settings():
+    if session.get('logged_in'):
+        if request.method == 'POST':
+            password = request.form['password']
+            if password != "":
+                password = helpers.hash_password(password)
+            email = request.form['email']
+            helpers.change_user(password=password, email=email)
+            return json.dumps({'status': 'Saved'})
+        user = helpers.get_user()
+        return render_template('settings.html', user=user)
+~~    return redirect(url_for('login'))
+
+
+# ======== Main ============================================================== #
+if __name__ == "__main__":
+    app.run(debug=True, use_reloader=True, host="0.0.0.0")
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 5 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -353,7 +457,7 @@ def login_url(login_view, next_url=None, next_field='next'):
 ```
 
 
-## Example 5 from flask-phone-input
+## Example 6 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -411,7 +515,7 @@ def show_phone():
 ```
 
 
-## Example 6 from flask-restx
+## Example 7 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -472,7 +576,7 @@ def ui_for(api):
 ```
 
 
-## Example 7 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -687,7 +791,7 @@ def charge():
 ```
 
 
-## Example 8 from Flasky
+## Example 9 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
