@@ -1,4 +1,4 @@
-title: flask.cli with_appcontext Python code examples
+title: flask.cli with_appcontext code examples
 category: page
 slug: flask-cli-with-appcontext-examples
 sortorder: 500021002

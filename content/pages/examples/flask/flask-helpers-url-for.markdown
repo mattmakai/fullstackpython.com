@@ -1,4 +1,4 @@
-title: flask.helpers url_for Python code examples
+title: flask.helpers url_for code examples
 category: page
 slug: flask-helpers-url-for-examples
 sortorder: 500021002

@@ -1,4 +1,4 @@
-title: flask.views MethodView Python code examples
+title: flask.views MethodView code examples
 category: page
 slug: flask-views-methodview-examples
 sortorder: 500021000

@@ -1,4 +1,4 @@
-title: flask.helpers flash Python code examples
+title: flask.helpers flash code examples
 category: page
 slug: flask-helpers-flash-examples
 sortorder: 500021000

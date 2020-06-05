@@ -1,4 +1,4 @@
-title: flask.views View Python code examples
+title: flask.views View code examples
 category: page
 slug: flask-views-view-examples
 sortorder: 500021001

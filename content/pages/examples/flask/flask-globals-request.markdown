@@ -1,7 +1,7 @@
-title: flask.globals request Python code examples
+title: flask.globals request code examples
 category: page
 slug: flask-globals-request-examples
-sortorder: 500021000
+sortorder: 500021001
 toc: False
 sidebartitle: flask.globals request
 meta: Python example code for the request function from the flask.globals module of the Flask project.

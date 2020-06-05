@@ -14,6 +14,13 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### June
+* Added new example code pages for Flask modules:
+    * flask.blueprints [Blueprint](/flask-blueprints-blueprint-examples.html)
+    * flask.ctx [has_app_context](/flask-ctx-has-app-context-examples.html) and
+      [has_request_context](/flask-ctx-has-request-context-examples.html)
+    * flask.globals [current_app](/flask-globals-current-app-examples.html)
+
 ### May
 * Added new example code pages for Flask modules:
     * flask.cli [FlaskGroup](/flask-cli-flaskgroup-examples.html),

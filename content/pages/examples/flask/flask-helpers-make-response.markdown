@@ -1,4 +1,4 @@
-title: flask.helpers make_response Python code examples
+title: flask.helpers make_response code examples
 category: page
 slug: flask-helpers-make-response-examples
 sortorder: 500021001
