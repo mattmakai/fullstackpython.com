@@ -142,6 +142,12 @@ visualization and gave me ideas for what to build.
 
 
 ### Data visualization resources
+* [Guides for visualizing data](https://flowingdata.com/2020/06/01/guides-for-visualizing-reality/)
+  provides the thought processes that you can use when you are
+  showing uncertainty, incompletet data, differences, outliers,
+  and other common scenarios that occur when your data is messy -
+  and it usually is!
+
 * [Data visualization, from 1987 to today](https://medium.economist.com/data-visualisation-from-1987-to-today-65d0609c6017)
   is a wonderful reference about the pre-computer age era of visualization
   which was a combination of cartography, art and statistics rather than
