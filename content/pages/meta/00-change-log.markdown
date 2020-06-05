@@ -20,6 +20,7 @@ on GitHub.
     * flask.ctx [has_app_context](/flask-ctx-has-app-context-examples.html) and
       [has_request_context](/flask-ctx-has-request-context-examples.html)
     * flask.globals [current_app](/flask-globals-current-app-examples.html)
+    * flask.sessions [BadSignature](/flask-sessions-badsignature-examples.html)
 
 ### May
 * Added new example code pages for Flask modules:
