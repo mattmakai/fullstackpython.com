@@ -1,0 +1,121 @@
+title: sqlalchemy.orm.interfaces PropComparator code examples
+category: page
+slug: sqlalchemy-orm-interfaces-propcomparator-examples
+sortorder: 500031001
+toc: False
+sidebartitle: sqlalchemy.orm.interfaces PropComparator
+meta: Python example code for the PropComparator class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
+
+
+PropComparator is a class within the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
+
+
+## Example 1 from sqlalchemy-utils
+[sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
+([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
+is a code library with various helper functions and new data types
+that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+projects that involve more specific storage requirements such as
+[currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
+The wide array of
+[data types](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html)
+includes [ranged values](https://sqlalchemy-utils.readthedocs.io/en/latest/range_data_types.html)
+and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/aggregates.html).
+
+[**sqlalchemy-utils / sqlalchemy_utils / generic.py**](https://github.com/kvesteri/sqlalchemy-utils/blob/master/sqlalchemy_utils/./generic.py)
+
+```python
+# generic.py
+try:
+    from collections.abc import Iterable
+except ImportError:  # For python 2.7 support
+    from collections import Iterable
+
+import six
+import sqlalchemy as sa
+from sqlalchemy.ext.hybrid import hybrid_property
+from sqlalchemy.orm import attributes, class_mapper, ColumnProperty
+~~from sqlalchemy.orm.interfaces import MapperProperty, PropComparator
+from sqlalchemy.orm.session import _state_session
+from sqlalchemy.util import set_creation_order
+
+from .exceptions import ImproperlyConfigured
+from .functions import identity
+
+
+class GenericAttributeImpl(attributes.ScalarAttributeImpl):
+    def get(self, state, dict_, passive=attributes.PASSIVE_OFF):
+        if self.key in dict_:
+            return dict_[self.key]
+
+        # Retrieve the session bound to the state in order to perform
+        # a lazy query for the attribute.
+        session = _state_session(state)
+        if session is None:
+            # State is not bound to a session; we cannot proceed.
+            return None
+
+        # Find class for discriminator.
+        # TODO: Perhaps optimize with some sort of lookup?
+        discriminator = self.get_state_discriminator(state)
+        target_class = state.class_._decl_class_registry.get(discriminator)
+
+
+
+## ... source file abbreviated to get to PropComparator examples ...
+
+
+                return self.parent.columns[column]
+            return column
+
+        self._discriminator_col = convert_strings(self._discriminator_col)
+        self._id_cols = convert_strings(self._id_cols)
+
+        if isinstance(self._id_cols, Iterable):
+            self._id_cols = list(map(convert_strings, self._id_cols))
+        else:
+            self._id_cols = [self._id_cols]
+
+        self.discriminator = self._column_to_property(self._discriminator_col)
+
+        if self.discriminator is None:
+            raise ImproperlyConfigured(
+                'Could not find discriminator descriptor.'
+            )
+
+        self.id = list(map(self._column_to_property, self._id_cols))
+
+~~    class Comparator(PropComparator):
+        def __init__(self, prop, parentmapper):
+            self.property = prop
+            self._parententity = parentmapper
+
+        def __eq__(self, other):
+            discriminator = six.text_type(type(other).__name__)
+            q = self.property._discriminator_col == discriminator
+            other_id = identity(other)
+            for index, id in enumerate(self.property._id_cols):
+                q &= id == other_id[index]
+            return q
+
+        def __ne__(self, other):
+            return -(self == other)
+
+        def is_type(self, other):
+            mapper = sa.inspect(other)
+            # Iterate through the weak sequence in order to get the actual
+            # mappers
+            class_names = [six.text_type(other.__name__)]
+            class_names.extend([
+                six.text_type(submapper.class_.__name__)
+                for submapper in mapper._inheriting_mappers
+            ])
+
+
+## ... source file continues with no further PropComparator examples...
+
+
+```
+

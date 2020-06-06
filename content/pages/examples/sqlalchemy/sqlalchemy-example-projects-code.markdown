@@ -1,6 +1,6 @@
 title: SQLAlchemy Example Projects and Code
 category: page
-slug: sqlalchemy-projects-code-examples
+slug: sqlalchemy-code-examples
 sortorder: 500030001
 toc: False
 sidebartitle: SQLAlchemy Example Code
