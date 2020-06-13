@@ -1,7 +1,7 @@
 title: flask.globals session code examples
 category: page
 slug: flask-globals-session-examples
-sortorder: 500021002
+sortorder: 500021008
 toc: False
 sidebartitle: flask.globals session
 meta: Python example code for the session function from the flask.globals module of the Flask project.
@@ -231,7 +231,80 @@ def do_topic_action(topics, user, action, reverse):  # noqa: C901
 ```
 
 
-## Example 3 from flaskex
+## Example 3 from flask-debugtoolbar
+[Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
+([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/Flask-DebugToolbar/))
+is a [Flask](/flask.html) conversion of the popular
+[Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar)
+project. This extension creates a sidebar with useful debugging
+information when you are running a Flask application in development
+mode. The project is provided as open source under
+[this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
+
+[**flask-debugtoolbar / flask_debugtoolbar / panels / request_vars.py**](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/flask_debugtoolbar/panels/request_vars.py)
+
+```python
+# request_vars.py
+~~from flask import session
+
+from flask_debugtoolbar.panels import DebugPanel
+
+_ = lambda x: x
+
+
+class RequestVarsDebugPanel(DebugPanel):
+    """
+    A panel to display request variables (POST/GET, session, cookies).
+    """
+    name = 'RequestVars'
+    has_content = True
+
+    def nav_title(self):
+        return _('Request Vars')
+
+    def title(self):
+        return _('Request Vars')
+
+    def url(self):
+        return ''
+
+    def process_request(self, request):
+        self.request = request
+        self.session = session
+        self.view_func = None
+        self.view_args = []
+        self.view_kwargs = {}
+
+    def process_view(self, request, view_func, view_kwargs):
+        self.view_func = view_func
+        self.view_kwargs = view_kwargs
+
+    def content(self):
+        context = self.context.copy()
+        context.update({
+            'get': self.request.args.lists(),
+            'post': self.request.form.lists(),
+            'cookies': self.request.cookies.items(),
+            'view_func': ('%s.%s' % (self.view_func.__module__,
+                                     self.view_func.__name__)
+                          if self.view_func else '[unknown]'),
+            'view_args': self.view_args,
+            'view_kwargs': self.view_kwargs or {},
+~~            'session': self.session.items(),
+        })
+
+        return self.render('panels/request_vars.html', context)
+
+
+## ... source file continues with no further session examples...
+
+
+```
+
+
+## Example 4 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -335,7 +408,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 4 from flask-login
+## Example 5 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -511,7 +584,7 @@ def login_required(func):
 ```
 
 
-## Example 5 from Flask-WTF
+## Example 6 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -653,7 +726,7 @@ def _get_config(
 ```
 
 
-## Example 6 from flaskSaaS
+## Example 7 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -743,7 +816,7 @@ logger = wrap_logger(
 ```
 
 
-## Example 7 from tedivms-flask
+## Example 8 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

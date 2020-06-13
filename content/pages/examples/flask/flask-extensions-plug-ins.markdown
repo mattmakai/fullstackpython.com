@@ -65,6 +65,19 @@ flask-base's code is open sourced
 [under the MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
 
 
+### Flask Debug-toolbar
+[Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
+([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/Flask-DebugToolbar/))
+is a [Flask](/flask.html) conversion of the popular 
+[Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar)
+project. This extension creates a sidebar with useful debugging
+information when you are running a Flask application in development 
+mode. The project is provided as open source under 
+[this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
+
+
 ### Flask-Login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)

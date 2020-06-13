@@ -1,7 +1,7 @@
 title: flask.globals current_app code examples
 category: page
 slug: flask-globals-current-app-examples
-sortorder: 500021000
+sortorder: 500021006
 toc: False
 sidebartitle: flask.globals current_app
 meta: Python example code for the current_app function from the flask.globals module of the Flask project.
@@ -445,7 +445,159 @@ class User(UserMixin, db.Model):
 ```
 
 
-## Example 4 from flask_jsondash
+## Example 4 from flask-debugtoolbar
+[Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
+([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/Flask-DebugToolbar/))
+is a [Flask](/flask.html) conversion of the popular
+[Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar)
+project. This extension creates a sidebar with useful debugging
+information when you are running a Flask application in development
+mode. The project is provided as open source under
+[this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
+
+[**flask-debugtoolbar / flask_debugtoolbar / __init__.py**](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/flask_debugtoolbar/./__init__.py)
+
+```python
+# __init__.py
+import os
+import warnings
+
+~~from flask import Blueprint, current_app, request, g, send_from_directory, url_for
+from flask.globals import _request_ctx_stack
+from jinja2 import Environment, PackageLoader
+from werkzeug.urls import url_quote_plus
+
+from flask_debugtoolbar.compat import iteritems
+from flask_debugtoolbar.toolbar import DebugToolbar
+from flask_debugtoolbar.utils import decode_text
+
+try:
+    # Python 3.8+
+    from importlib.metadata import version
+
+    __version__ = version("Flask-DebugToolbar")
+except ImportError:
+    import pkg_resources
+
+    __version__ = pkg_resources.get_distribution("Flask-DebugToolbar").version
+
+
+module = Blueprint('debugtoolbar', __name__)
+
+
+def replace_insensitive(string, target, replacement):
+    """Similar to string.replace() but is case insensitive
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+
+        rule = req.url_rule
+
+        # if we provide automatic options for this URL and the
+        # request came with the OPTIONS method, reply automatically
+        if getattr(rule, 'provide_automatic_options', False) \
+           and req.method == 'OPTIONS':
+            return app.make_default_options_response()
+
+        # otherwise dispatch to the handler for that endpoint
+        view_func = app.view_functions[rule.endpoint]
+        view_func = self.process_view(app, view_func, req.view_args)
+
+        return view_func(**req.view_args)
+
+    def _show_toolbar(self):
+        """Return a boolean to indicate if we need to show the toolbar."""
+        if request.blueprint == 'debugtoolbar':
+            return False
+
+~~        hosts = current_app.config['DEBUG_TB_HOSTS']
+        if hosts and request.remote_addr not in hosts:
+            return False
+
+        return True
+
+    def send_static_file(self, filename):
+        """Send a static file from the flask-debugtoolbar static directory."""
+        return send_from_directory(self._static_dir, filename)
+
+    def process_request(self):
+        g.debug_toolbar = self
+
+        if not self._show_toolbar():
+            return
+
+        real_request = request._get_current_object()
+
+        self.debug_toolbars[real_request] = (
+            DebugToolbar(real_request, self.jinja_env))
+
+        for panel in self.debug_toolbars[real_request].panels:
+            panel.process_request(real_request)
+
+    def process_view(self, app, view_func, view_kwargs):
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+        real_request = request._get_current_object()
+        try:
+            toolbar = self.debug_toolbars[real_request]
+        except KeyError:
+            return view_func
+
+        for panel in toolbar.panels:
+            new_view = panel.process_view(real_request, view_func, view_kwargs)
+            if new_view:
+                view_func = new_view
+
+        return view_func
+
+    def process_response(self, response):
+        real_request = request._get_current_object()
+        if real_request not in self.debug_toolbars:
+            return response
+
+        # Intercept http redirect codes and display an html page with a
+        # link to the target.
+~~        if current_app.config['DEBUG_TB_INTERCEPT_REDIRECTS']:
+            if response.status_code in self._redirect_codes:
+                redirect_to = response.location
+                redirect_code = response.status_code
+                if redirect_to:
+                    content = self.render('redirect.html', {
+                        'redirect_to': redirect_to,
+                        'redirect_code': redirect_code
+                    })
+                    response.content_length = len(content)
+                    response.location = None
+                    response.response = [content]
+                    response.status_code = 200
+
+        # If the http response code is 200 then we process to add the
+        # toolbar to the returned html response.
+        if not (response.status_code == 200 and
+                response.is_sequence and
+                response.headers['content-type'].startswith('text/html')):
+            return response
+
+        response_html = response.data.decode(response.charset)
+
+        no_case = response_html.lower()
+        body_end = no_case.rfind('</body>')
+
+
+## ... source file continues with no further current_app examples...
+
+
+```
+
+
+## Example 5 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -575,7 +727,7 @@ def local_static(chart_config, static_config):
 ```
 
 
-## Example 5 from flask-login
+## Example 6 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -925,7 +1077,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 6 from flask-restx
+## Example 7 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1171,7 +1323,7 @@ def _clean_header(header):
 ```
 
 
-## Example 7 from flask-sqlalchemy
+## Example 8 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -1341,7 +1493,7 @@ def get_debug_queries():
 ```
 
 
-## Example 8 from Flask-WTF
+## Example 9 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1650,7 +1802,7 @@ class CSRFError(BadRequest):
 ```
 
 
-## Example 9 from Flasky
+## Example 10 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1714,7 +1866,7 @@ def run_migrations_offline():
 ```
 
 
-## Example 10 from sandman2
+## Example 11 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1837,7 +1989,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 11 from tedivms-flask
+## Example 12 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

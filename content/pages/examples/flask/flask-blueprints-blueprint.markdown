@@ -270,7 +270,79 @@ def about():
 ```
 
 
-## Example 4 from flask_jsondash
+## Example 4 from flask-debugtoolbar
+[Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
+([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/Flask-DebugToolbar/))
+is a [Flask](/flask.html) conversion of the popular
+[Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar)
+project. This extension creates a sidebar with useful debugging
+information when you are running a Flask application in development
+mode. The project is provided as open source under
+[this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
+
+[**flask-debugtoolbar / flask_debugtoolbar / __init__.py**](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/flask_debugtoolbar/./__init__.py)
+
+```python
+# __init__.py
+import os
+import warnings
+
+~~from flask import Blueprint, current_app, request, g, send_from_directory, url_for
+from flask.globals import _request_ctx_stack
+from jinja2 import Environment, PackageLoader
+from werkzeug.urls import url_quote_plus
+
+from flask_debugtoolbar.compat import iteritems
+from flask_debugtoolbar.toolbar import DebugToolbar
+from flask_debugtoolbar.utils import decode_text
+
+try:
+    # Python 3.8+
+    from importlib.metadata import version
+
+    __version__ = version("Flask-DebugToolbar")
+except ImportError:
+    import pkg_resources
+
+    __version__ = pkg_resources.get_distribution("Flask-DebugToolbar").version
+
+
+~~module = Blueprint('debugtoolbar', __name__)
+
+
+def replace_insensitive(string, target, replacement):
+    """Similar to string.replace() but is case insensitive
+    Code borrowed from:
+    http://forums.devshed.com/python-programming-11/case-insensitive-string-replace-490921.html
+    """
+    no_case = string.lower()
+    index = no_case.rfind(target.lower())
+    if index >= 0:
+        return string[:index] + replacement + string[index + len(target):]
+    else:  # no results so return the original string
+        return string
+
+
+def _printable(value):
+    try:
+        return decode_text(repr(value))
+    except Exception as e:
+        return '<repr(%s) raised %s: %s>' % (
+               object.__repr__(value), type(e).__name__, e)
+
+
+class DebugToolbarExtension(object):
+
+
+## ... source file continues with no further Blueprint examples...
+
+
+```
+
+
+## Example 5 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -356,7 +428,7 @@ def auth(**kwargs):
 ```
 
 
-## Example 5 from flask-restx
+## Example 6 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -410,7 +482,7 @@ apidoc = Apidoc(
 ```
 
 
-## Example 6 from Flask-WTF
+## Example 7 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -519,7 +591,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 7 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -590,7 +662,7 @@ def signup():
 ```
 
 
-## Example 8 from tedivms-flask
+## Example 9 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

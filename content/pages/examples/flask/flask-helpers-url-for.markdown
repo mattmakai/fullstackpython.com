@@ -1,7 +1,7 @@
 title: flask.helpers url_for code examples
 category: page
 slug: flask-helpers-url-for-examples
-sortorder: 500021002
+sortorder: 500021011
 toc: False
 sidebartitle: flask.helpers url_for
 meta: Python example code for the url_for function from the flask.helpers module of the Flask project.
@@ -238,7 +238,75 @@ class CustomSelectField(Field):
 ```
 
 
-## Example 4 from flaskex
+## Example 4 from flask-debugtoolbar
+[Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
+([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/Flask-DebugToolbar/))
+is a [Flask](/flask.html) conversion of the popular
+[Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar)
+project. This extension creates a sidebar with useful debugging
+information when you are running a Flask application in development
+mode. The project is provided as open source under
+[this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
+
+[**flask-debugtoolbar / flask_debugtoolbar / toolbar.py**](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/flask_debugtoolbar/./toolbar.py)
+
+```python
+# toolbar.py
+try:
+    from urllib.parse import unquote
+except ImportError:
+    from urllib import unquote
+
+~~from flask import url_for, current_app
+from werkzeug.utils import import_string
+
+
+class DebugToolbar(object):
+
+    _cached_panel_classes = {}
+
+    def __init__(self, request, jinja_env):
+        self.jinja_env = jinja_env
+        self.request = request
+        self.panels = []
+
+        self.template_context = {
+~~            'static_path': url_for('_debug_toolbar.static', filename='')
+        }
+
+        self.create_panels()
+
+    def create_panels(self):
+        """
+        Populate debug panels
+        """
+        activated = self.request.cookies.get('fldt_active', '')
+        activated = unquote(activated).split(';')
+
+        for panel_class in self._iter_panels(current_app):
+            panel_instance = panel_class(jinja_env=self.jinja_env,
+                                         context=self.template_context)
+
+            if panel_instance.dom_id() in activated:
+                panel_instance.is_active = True
+
+            self.panels.append(panel_instance)
+
+    def render_toolbar(self):
+        context = self.template_context.copy()
+        context.update({'panels': self.panels})
+
+
+
+## ... source file continues with no further url_for examples...
+
+
+```
+
+
+## Example 5 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -342,7 +410,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 5 from flask-login
+## Example 6 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -457,7 +525,7 @@ def login_url(login_view, next_url=None, next_field='next'):
 ```
 
 
-## Example 6 from flask-phone-input
+## Example 7 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -515,7 +583,7 @@ def show_phone():
 ```
 
 
-## Example 7 from flask-restx
+## Example 8 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -576,7 +644,7 @@ def ui_for(api):
 ```
 
 
-## Example 8 from flaskSaaS
+## Example 9 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -791,7 +859,7 @@ def charge():
 ```
 
 
-## Example 9 from Flasky
+## Example 10 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -981,7 +1049,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 10 from tedivms-flask
+## Example 11 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

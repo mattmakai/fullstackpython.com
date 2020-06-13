@@ -1,7 +1,7 @@
 title: flask.views http_method_funcs code examples
 category: page
 slug: flask-views-http-method-funcs-examples
-sortorder: 500021002
+sortorder: 500021019
 toc: False
 sidebartitle: flask.views http_method_funcs
 meta: Python example code for the http_method_funcs function from the flask.views module of the Flask project.

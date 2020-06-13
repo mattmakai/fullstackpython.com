@@ -1,7 +1,7 @@
 title: flask.globals request code examples
 category: page
 slug: flask-globals-request-examples
-sortorder: 500021001
+sortorder: 500021007
 toc: False
 sidebartitle: flask.globals request
 meta: Python example code for the request function from the flask.globals module of the Flask project.
@@ -251,7 +251,143 @@ def configure_migrations(app):
 ```
 
 
-## Example 3 from flaskex
+## Example 3 from flask-debugtoolbar
+[Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
+([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
+and
+[PyPI page](https://pypi.org/project/Flask-DebugToolbar/))
+is a [Flask](/flask.html) conversion of the popular
+[Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar)
+project. This extension creates a sidebar with useful debugging
+information when you are running a Flask application in development
+mode. The project is provided as open source under
+[this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
+
+[**flask-debugtoolbar / flask_debugtoolbar / __init__.py**](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/flask_debugtoolbar/./__init__.py)
+
+```python
+# __init__.py
+import os
+import warnings
+
+~~from flask import Blueprint, current_app, request, g, send_from_directory, url_for
+from flask.globals import _request_ctx_stack
+from jinja2 import Environment, PackageLoader
+from werkzeug.urls import url_quote_plus
+
+from flask_debugtoolbar.compat import iteritems
+from flask_debugtoolbar.toolbar import DebugToolbar
+from flask_debugtoolbar.utils import decode_text
+
+try:
+    # Python 3.8+
+    from importlib.metadata import version
+
+    __version__ = version("Flask-DebugToolbar")
+except ImportError:
+    import pkg_resources
+
+    __version__ = pkg_resources.get_distribution("Flask-DebugToolbar").version
+
+
+module = Blueprint('debugtoolbar', __name__)
+
+
+def replace_insensitive(string, target, replacement):
+    """Similar to string.replace() but is case insensitive
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+        if req.routing_exception is not None:
+            app.raise_routing_exception(req)
+
+        rule = req.url_rule
+
+        # if we provide automatic options for this URL and the
+        # request came with the OPTIONS method, reply automatically
+        if getattr(rule, 'provide_automatic_options', False) \
+           and req.method == 'OPTIONS':
+            return app.make_default_options_response()
+
+        # otherwise dispatch to the handler for that endpoint
+        view_func = app.view_functions[rule.endpoint]
+        view_func = self.process_view(app, view_func, req.view_args)
+
+        return view_func(**req.view_args)
+
+    def _show_toolbar(self):
+        """Return a boolean to indicate if we need to show the toolbar."""
+~~        if request.blueprint == 'debugtoolbar':
+            return False
+
+        hosts = current_app.config['DEBUG_TB_HOSTS']
+~~        if hosts and request.remote_addr not in hosts:
+            return False
+
+        return True
+
+    def send_static_file(self, filename):
+        """Send a static file from the flask-debugtoolbar static directory."""
+        return send_from_directory(self._static_dir, filename)
+
+    def process_request(self):
+        g.debug_toolbar = self
+
+        if not self._show_toolbar():
+            return
+
+        real_request = request._get_current_object()
+
+        self.debug_toolbars[real_request] = (
+            DebugToolbar(real_request, self.jinja_env))
+
+        for panel in self.debug_toolbars[real_request].panels:
+            panel.process_request(real_request)
+
+    def process_view(self, app, view_func, view_kwargs):
+        """ This method is called just before the flask view is called.
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        else:
+            warnings.warn('Could not insert debug toolbar.'
+                          ' </body> tag not found in response.')
+            return response
+
+        toolbar = self.debug_toolbars[real_request]
+
+        for panel in toolbar.panels:
+            panel.process_response(real_request, response)
+
+        toolbar_html = toolbar.render_toolbar()
+
+        content = ''.join((before, toolbar_html, after))
+        content = content.encode(response.charset)
+        response.response = [content]
+        response.content_length = len(content)
+
+        return response
+
+    def teardown_request(self, exc):
+~~        self.debug_toolbars.pop(request._get_current_object(), None)
+
+    def render(self, template_name, context):
+        template = self.jinja_env.get_template(template_name)
+        return template.render(**context)
+
+
+## ... source file continues with no further request examples...
+
+
+```
+
+
+## Example 4 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -355,7 +491,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 4 from flask-login
+## Example 5 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -664,7 +800,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 5 from flask-restx
+## Example 6 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -769,7 +905,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 6 from flask-sqlalchemy
+## Example 7 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -895,7 +1031,7 @@ def _make_table(db):
 ```
 
 
-## Example 7 from Flask-WTF
+## Example 8 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1057,7 +1193,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 8 from flaskSaaS
+## Example 9 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1110,7 +1246,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 9 from newspie
+## Example 10 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1319,7 +1455,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 10 from sandman2
+## Example 11 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1598,7 +1734,7 @@ class Service(MethodView):
 ```
 
 
-## Example 11 from tedivms-flask
+## Example 12 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

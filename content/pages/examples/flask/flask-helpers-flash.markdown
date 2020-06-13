@@ -1,7 +1,7 @@
 title: flask.helpers flash code examples
 category: page
 slug: flask-helpers-flash-examples
-sortorder: 500021000
+sortorder: 500021009
 toc: False
 sidebartitle: flask.helpers flash
 meta: Python example code for the flash function from the flask.helpers module of the Flask project.
