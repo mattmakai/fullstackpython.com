@@ -55,6 +55,10 @@
     {% include "examples-extensions-descriptions/flask.html" %}
     {% include "code-examples/flask.html" %}
    {% endif %}
+   {% if page.slug == "sqlalchemy-code-examples" %}
+    {% include "examples-extensions-descriptions/sqlalchemy.html" %}
+    {% include "code-examples/sqlalchemy.html" %}
+   {% endif %}
    {% if page.slug == "pandas-code-examples" %}
     {% include "examples-extensions-descriptions/pandas.html" %}
    {% endif %}

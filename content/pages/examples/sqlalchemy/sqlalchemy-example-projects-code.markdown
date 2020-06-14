@@ -7,15 +7,9 @@ sidebartitle: SQLAlchemy Example Code
 meta: Python example projects and code that show how to use the SQLAlchemy object-relational mapper (ORM).
 
 
-[SQLAlchemy](/sqlalchemy.html) is a Python library for interacting
-with [databases](/databases.html) either through SQL or with an
-[object-relational mapper (ORM)](/object-relational-mappers-orms.html).
-
-<a href="http://www.sqlalchemy.org/"><img src="/img/logos/sqlalchemy.jpg" width="100%" alt="SQLAlchemy logo." class="shot"></a> 
-
-This page describes projects that use SQLAlchemy to accomplish some
-goal, such as data analysis, running a web application's back end,
-or providing a [web API](/application-programming-interfaces.html).
+## Example Open Source Projects
+The following open source projects can serve as example code for you as
+you build your own applications with SQLAlchemy.
 
 
 ### sandman2
