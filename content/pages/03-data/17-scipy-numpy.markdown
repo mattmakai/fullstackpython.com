@@ -67,6 +67,9 @@ following resources are broader walkthroughs for the SciPy ecosystem:
   computation and how to perform operations that get the results you need
   for your data analysis.
 
+* [Math to Code](https://mathtocode.com/) provides an interactive
+  tutorial to learn how to implement math in NumPy.
+
 * [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/101-numpy-exercises-python/)
 
 * [NumPy: creating and manipulating numerical data](http://www.scipy-lectures.org/intro/numpy/index.html)
