@@ -48,9 +48,8 @@ listen and learn.
   teaching Python programming.
 
 * Professor Philip Guo has a video podcast called 
-  [PG Podcast](http://pgbovine.net/PG-Podcast.htm), typically on 
-  Python subjects. 
-  [All episodes are listed on a separate page](http://pgbovine.net/PG-Podcast-summary.htm).
+  [PG Podcast](https://podcasts.apple.com/us/podcast/philip-guo-podcasts-pgbovine-net/id1276072242),
+  which typically covers Python subjects. 
 
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/) is a weekly podcast with interviews, coding tips, and conversation with guests from the Python community.
 
