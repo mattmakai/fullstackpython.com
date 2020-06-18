@@ -174,3 +174,9 @@ visualization and gave me ideas for what to build.
     * [Part 2: Presentation and Accessibility](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design-p2.html)
     * [Part 3: What Charts to Use](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design-p3.html)
     * [Part 4: Context Improvement](http://onemogin.com/observability/dashboards/practitioners-guide-to-system-dashboard-design-p4.html)
+
+* [Truncating the Y-Axis: Threat or Menace?](https://engineering.tableau.com/truncating-the-y-axis-threat-or-menace-d0bce66d4d08)
+  is a great in-indepth explanation of why something that seems as 
+  straightforward as laying out the Y-Axis requires thought and
+  care otherwise the visualization could end up being misleading.
+
