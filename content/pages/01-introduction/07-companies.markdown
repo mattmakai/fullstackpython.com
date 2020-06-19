@@ -145,7 +145,7 @@ like the CIA, FBI and NSA.
   [SEC uses Python and proposes organizations use Python to comply with regulations](http://jsdelfino.blogspot.com/2010/05/security-exchange-commission-python.html).
 
 * A quick search for government jobs that require or recommend Python 
-  [via USAJobs](https://sec.usajobs.gov/Search/?k=python&p=1) 
+  [via USAJobs](https://www.usajobs.gov/Search/Results?k=python)
   turns up numerous listings at organizations such as the Smithsonian
   Institution, Department of Education, Department of the Navy and 
   National Institute of Standards and Technology (NIST).

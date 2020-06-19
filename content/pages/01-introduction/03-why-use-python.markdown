@@ -47,9 +47,9 @@ Stack Overflow's community-created question and answer data confirms the
 [incredible growth of the Python ecosystem](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 and tries to determine
 [why it growing so quickly](https://stackoverflow.blog/2017/09/14/python-growing-quickly/)
-with their own analysis. In the 2018 Stack Overflow developer survey the
+with their own analysis. In the 2020 Stack Overflow developer survey the
 data indicated that 
-[Python was the fastest growing major programming language](https://insights.stackoverflow.com/survey/2018/#technology-programming-scripting-and-markup-languages)
+[Python was the fastest growing major programming language](https://insights.stackoverflow.com/survey/2020/#technology-programming-scripting-and-markup-languages)
 and that there is a close alignment between the languages and tools that 
 developers choose to learn and the usage in developers' professional work.
 

@@ -8,7 +8,7 @@ meta: GoCD is a continuous integration (CI) server often used to automatically b
 
 
 [GoCD](https://www.gocd.org/) is a 
-[continuous integration (CI)](/continuous-integation.html) 
+[continuous integration (CI)](/continuous-integration.html) 
 server often used to automatically build, [test](/testing.html) and
 [deploy](/deployment.html) Python applications.
 
