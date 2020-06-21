@@ -15,6 +15,24 @@ on GitHub.
 
 ## 2020
 ### June
+* Added new example code for [Django](/django.html) modules:
+    * django.utils.translation 
+      [LANGUAGE_SESSION_KEY](/django-utils-translation-language-session-key-examples.html),
+      [activate](/django-utils-translation-activate-examples.html),
+      [deactivate_all](/django-utils-translation-deactivate-all-examples.html),
+      [get_language](/django-utils-translation-get-language-examples.html),
+      [get_language_from_request](/django-utils-translation-get-language-from-request-examples.html),
+      [gettext](/django-utils-translation-gettext-examples.html),
+      [gettext_lazy](/django-utils-translation-gettext-lazy-examples.html),
+      [ngettext](/django-utils-translation-ngettext-examples.html),
+      [override](/django-utils-translation-override-examples.html),
+      [pgettext](/django-utils-translation-pgettext-examples.html),
+      [pgettext_lazy](/django-utils-translation-pgettext-lazy-examples.html),
+      [ugettext](/django-utils-translation-ugettext-examples.html),
+      [ugettext_lazy](/django-utils-translation-ugettext-lazy-examples.html),
+      [ungettex](/django-utils-translation-ungettext-examples.html),
+      and
+      [ungettext_lazy](/django-utils-translation-ungettext-lazy-examples.html)
 * Added new example code pages for Flask modules:
     * flask.blueprints [Blueprint](/flask-blueprints-blueprint-examples.html)
     * flask.ctx [has_app_context](/flask-ctx-has-app-context-examples.html) and
