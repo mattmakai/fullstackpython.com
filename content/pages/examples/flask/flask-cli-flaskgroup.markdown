@@ -24,14 +24,6 @@ FlaskBB is provided as open source
 
 ```python
 # main.py
-    flaskbb.cli.commands
-    --------------------
-
-    This module contains the main commands.
-
-    :copyright: (c) 2016 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import binascii
 import logging
 import os
@@ -95,7 +87,6 @@ click_log.basic_config(logger)
 
 
 ## ... source file continues with no further FlaskGroup examples...
-
 
 ```
 

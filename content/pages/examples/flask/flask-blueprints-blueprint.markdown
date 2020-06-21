@@ -53,15 +53,20 @@ log = logging.getLogger(__name__)
 
 
 def dynamic_class_import(class_path):
-    """
-        Will dynamically import a class from a string path
-        :param class_path: string with class path
+    try:
+        tmp = class_path.split(".")
+        module_path = ".".join(tmp[0:-1])
 
 
 ## ... source file abbreviated to get to Blueprint examples ...
 
 
-        """
+    @property
+    def app_theme(self):
+        return self.get_app.config["APP_THEME"]
+
+    @property
+    def app_icon(self):
         return self.get_app.config["APP_ICON"]
 
     @property
@@ -70,11 +75,6 @@ def dynamic_class_import(class_path):
 
     @property
     def version(self):
-        """
-            Get the current F.A.B. version
-
-            :return: String with the current F.A.B. version
-        """
         return __version__
 
     def _add_global_filters(self):
@@ -92,9 +92,6 @@ def dynamic_class_import(class_path):
         self.get_app.register_blueprint(bp)
 
     def _add_admin_views(self):
-        """
-            Registers indexview, utilview (back function), babel views and Security views.
-        """
         self.indexview = self._check_and_init(self.indexview)
         self.add_view_no_menu(self.indexview)
         self.add_view_no_menu(UtilView())
@@ -104,12 +101,14 @@ def dynamic_class_import(class_path):
         self.menuapi_manager.register_views()
 
     def _add_addon_views(self):
-        """
-            Registers declared addon's
+        for addon in self._addon_managers:
+            addon_class = dynamic_class_import(addon)
+            if addon_class:
+                addon_class = addon_class(self)
+                try:
 
 
 ## ... source file continues with no further Blueprint examples...
-
 
 ```
 
@@ -128,17 +127,6 @@ FlaskBB is provided as open source
 
 ```python
 # views.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.auth.views
-    ------------------
-
-    This view provides user authentication, registration and a view for
-    resetting the password of a user if he has lost his password
-
-    :copyright: (c) 2014 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import logging
 from datetime import datetime
 
@@ -195,16 +183,12 @@ def flaskbb_load_blueprints(app):
 ~~    auth = Blueprint("auth", __name__)
 
     def login_rate_limit():
-        """Dynamically load the rate limiting config from the database."""
-        # [count] [per|/] [n (optional)] [second|minute|hour|day|month|year]
         return "{count}/{timeout}minutes".format(
             count=flaskbb_config["AUTH_REQUESTS"],
             timeout=flaskbb_config["AUTH_TIMEOUT"]
         )
 
     def login_rate_limit_message():
-        """Display the amount of time left until the user can access the requested
-        resource again."""
         current_limit = getattr(g, 'view_rate_limit', None)
         if current_limit is not None:
             window_stats = limiter.limiter.get_window_stats(*current_limit)
@@ -214,13 +198,16 @@ def flaskbb_load_blueprints(app):
 
     @auth.before_request
     def check_rate_limiting():
-        """Check the the rate limits for each request for this blueprint."""
         if not flaskbb_config["AUTH_RATELIMIT_ENABLED"]:
             return None
+        return limiter.check()
+
+    @auth.errorhandler(429)
+    def login_rate_limit_error(error):
+        return render_template(
 
 
 ## ... source file continues with no further Blueprint examples...
-
 
 ```
 
@@ -264,8 +251,8 @@ def about():
         'main/about.html', editable_html_obj=editable_html_obj)
 
 
-## ... source file continues with no further Blueprint examples...
 
+## ... source file continues with no further Blueprint examples...
 
 ```
 
@@ -299,7 +286,6 @@ from flask_debugtoolbar.toolbar import DebugToolbar
 from flask_debugtoolbar.utils import decode_text
 
 try:
-    # Python 3.8+
     from importlib.metadata import version
 
     __version__ = version("Flask-DebugToolbar")
@@ -313,10 +299,6 @@ except ImportError:
 
 
 def replace_insensitive(string, target, replacement):
-    """Similar to string.replace() but is case insensitive
-    Code borrowed from:
-    http://forums.devshed.com/python-programming-11/case-insensitive-string-replace-490921.html
-    """
     no_case = string.lower()
     index = no_case.rfind(target.lower())
     if index >= 0:
@@ -334,101 +316,18 @@ def _printable(value):
 
 
 class DebugToolbarExtension(object):
+    _static_dir = os.path.realpath(
+        os.path.join(os.path.dirname(__file__), 'static'))
+
+    _redirect_codes = [301, 302, 303, 304]
 
 
 ## ... source file continues with no further Blueprint examples...
 
-
 ```
 
 
-## Example 5 from flask_jsondash
-[Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
-configurable web application built in Flask that creates charts and
-dashboards from arbitrary API endpoints. Everything for the web app
-is configured in JSON. The code is provided as open source under the
-[MIT license](https://github.com/christabor/flask_jsondash/blob/master/LICENSE).
-
-[**flask_jsondash / flask_jsondash / charts_builder.py**](https://github.com/christabor/flask_jsondash/blob/master/flask_jsondash/./charts_builder.py)
-
-```python
-# charts_builder.py
-# -*- coding: utf-8 -*-
-
-"""
-flask_jsondash.charts_builder
------------------------------
-
-The chart blueprint that houses all functionality.
-
-:copyright: (c) 2016 by Chris Tabor.
-:license: MIT, see LICENSE for more details.
-"""
-
-import json
-import os
-import uuid
-from datetime import datetime as dt
-
-import jinja2
-~~from flask import (Blueprint, current_app, flash, redirect, render_template,
-                   request, send_from_directory, url_for)
-
-from flask_jsondash import static, templates
-
-from flask_jsondash import db
-from flask_jsondash import settings
-from flask_jsondash.utils import setting
-from flask_jsondash.utils import adapter
-from flask_jsondash import utils
-from flask_jsondash.schema import (
-    validate_raw_json, InvalidSchemaError,
-)
-
-TEMPLATE_DIR = os.path.dirname(templates.__file__)
-STATIC_DIR = os.path.dirname(static.__file__)
-
-# Internally required libs that are also shared in `settings.py`
-# for charts. These follow the same format as what is loaded in
-# `get_active_assets` so that shared libraries are loaded in the same manner
-# for simplicty and prevention of duplicate loading.
-# Note these are just LABELS, not files.
-REQUIRED_STATIC_FAMILES = ['D3']
-
-~~charts = Blueprint(
-    'jsondash',
-    __name__,
-    template_folder=TEMPLATE_DIR,
-    static_url_path=STATIC_DIR,
-    static_folder=STATIC_DIR,
-)
-
-
-def auth(**kwargs):
-    """Check if general auth functions have been specified.
-
-    Checks for either a global auth (if authtype is None), or
-    an action specific auth (specified by authtype).
-    """
-    if 'JSONDASH' not in current_app.config:
-        return True
-    if 'auth' not in current_app.config['JSONDASH']:
-        return True
-    authtype = kwargs.pop('authtype')
-    auth_conf = current_app.config.get('JSONDASH').get('auth')
-    # If the user didn't supply an auth function, assume true.
-    if authtype not in auth_conf:
-        return True
-    # Only perform the user-supplied check
-
-
-## ... source file continues with no further Blueprint examples...
-
-
-```
-
-
-## Example 6 from flask-restx
+## Example 5 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -443,17 +342,12 @@ Flask RESTX is provided as open source under the
 
 ```python
 # apidoc.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 ~~from flask import url_for, Blueprint, render_template
 
 
 ~~class Apidoc(Blueprint):
-    """
-    Allow to know if the blueprint has already been registered
-    until https://github.com/mitsuhiko/flask/pull/1301 is merged
-    """
 
     def __init__(self, *args, **kwargs):
         self.registered = False
@@ -474,15 +368,18 @@ apidoc = Apidoc(
 
 
 @apidoc.add_app_template_global
+def swagger_static(filename):
+    return url_for("restx_doc.static", filename=filename)
+
+
 
 
 ## ... source file continues with no further Blueprint examples...
 
-
 ```
 
 
-## Example 7 from Flask-WTF
+## Example 6 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -517,152 +414,25 @@ logger = logging.getLogger(__name__)
 
 
 def generate_csrf(secret_key=None, token_key=None):
-    """Generate a CSRF token. The token is cached for a request, so multiple
-    calls to this function will generate the same token.
 
-    During testing, it might be useful to access the signed token in
-    ``g.csrf_token`` and the raw token in ``session['csrf_token']``.
+    secret_key = _get_config(
+        secret_key, 'WTF_CSRF_SECRET_KEY', current_app.secret_key,
+        message='A secret key is required to use CSRF.'
+    )
+    field_name = _get_config(
+        token_key, 'WTF_CSRF_FIELD_NAME', 'csrf_token',
+        message='A field name is required to use CSRF.'
+    )
 
-    :param secret_key: Used to securely sign the token. Default is
-        ``WTF_CSRF_SECRET_KEY`` or ``SECRET_KEY``.
-    :param token_key: Key where token is stored in session for comparison.
-        Default is ``WTF_CSRF_FIELD_NAME`` or ``'csrf_token'``.
-    """
-
-
-## ... source file abbreviated to get to Blueprint examples ...
-
-
-
-            good_referrer = 'https://{0}/'.format(request.host)
-
-            if not same_origin(request.referrer, good_referrer):
-                self._error_response('The referrer does not match the host.')
-
-        g.csrf_valid = True  # mark this request as CSRF valid
-
-    def exempt(self, view):
-        """Mark a view or blueprint to be excluded from CSRF protection.
-
-        ::
-
-            @app.route('/some-view', methods=['POST'])
-            @csrf.exempt
-            def some_view():
-                ...
-
-        ::
-
-~~            bp = Blueprint(...)
-            csrf.exempt(bp)
-
-        """
-
-~~        if isinstance(view, Blueprint):
-            self._exempt_blueprints.add(view.name)
-            return view
-
-        if isinstance(view, string_types):
-            view_location = view
-        else:
-            view_location = '.'.join((view.__module__, view.__name__))
-
-        self._exempt_views.add(view_location)
-        return view
-
-    def _error_response(self, reason):
-        raise CSRFError(reason)
-
-    def error_handler(self, view):
-        """Register a function that will generate the response for CSRF errors.
-
-        .. deprecated:: 0.14
-            Use the standard Flask error system with
-            ``@app.errorhandler(CSRFError)`` instead. This will be removed in
-            version 1.0.
-
-        The function will be passed one argument, ``reason``. By default it
-        will raise a :class:`-flask_wtf.csrf.CSRFError`. ::
+    if field_name not in g:
 
 
 ## ... source file continues with no further Blueprint examples...
 
-
 ```
 
 
-## Example 8 from flaskSaaS
-[flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
-starter project to build a software-as-a-service (SaaS) web application
-in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
-boilerplate relies on many common Flask extensions such as
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
-[Flask-Login](https://flask-login.readthedocs.io/en/latest/),
-[Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
-many others. The project is provided as open source under the
-[MIT license](https://github.com/alectrocute/flaskSaaS/blob/master/LICENSE).
-
-[**flaskSaaS / app / views / user.py**](https://github.com/alectrocute/flaskSaaS/blob/master/app/views/user.py)
-
-```python
-# user.py
-~~from flask import (Blueprint, render_template, redirect, request, url_for,
-                   abort, flash)
-from flask.ext.login import login_user, logout_user, login_required, current_user
-from itsdangerous import URLSafeTimedSerializer
-from app import app, models, db
-from app.forms import user as user_forms
-from app.toolbox import email
-# Setup Stripe integration
-import stripe
-import json
-from json import dumps
-
-stripe_keys = {
-	'secret_key': "sk_test_GvpPOs0XFxeP0fQiWMmk6HYe",
-	'publishable_key': "pk_test_UU62FhsIB6457uPiUX6mJS5x"
-}
-
-stripe.api_key = stripe_keys['secret_key']
-
-# Serializer for generating random tokens
-ts = URLSafeTimedSerializer(app.config['SECRET_KEY'])
-
-# Create a user blueprint
-~~userbp = Blueprint('userbp', __name__, url_prefix='/user')
-
-
-@userbp.route('/signup', methods=['GET', 'POST'])
-def signup():
-    form = user_forms.SignUp()
-    if form.validate_on_submit():
-        # Create a user who hasn't validated his email address
-        user = models.User(
-            first_name=form.first_name.data,
-            last_name=form.last_name.data,
-            phone=form.phone.data,
-            email=form.email.data,
-            confirmation=False,
-            password=form.password.data,
-        )
-        # Insert the user in the database
-        db.session.add(user)
-        db.session.commit()
-        # Subject of the confirmation email
-        subject = 'Please confirm your email address.'
-        # Generate a random token
-        token = ts.dumps(user.email, salt='email-confirm-key')
-        # Build a confirm link with token
-        confirmUrl = url_for('userbp.confirm', token=token, _external=True)
-
-
-## ... source file continues with no further Blueprint examples...
-
-
-```
-
-
-## Example 9 from tedivms-flask
+## Example 7 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -703,15 +473,14 @@ def is_hidden_field_filter(field):
 @jinja_extensions_blueprint.app_template_filter()
 @evalcontextfilter
 def nl2br(eval_ctx, value):
-    """Converts newlines into <p> and <br />s."""
     normalized_value = re.sub(r'\r\n|\r|\n', '\n', value) # normalize newlines
     html_value = normalized_value.replace('\n', '\n<br />\n')
     if eval_ctx.autoescape:
         return Markup(html_value)
+    return html_value
 
 
 ## ... source file continues with no further Blueprint examples...
-
 
 ```
 

@@ -45,16 +45,16 @@ log = logging.getLogger(__name__)
 
 
 def protect(allow_browser_login=False):
-    """
-        Use this decorator to enable granular security permissions
-        to your API methods (BaseApi and child classes).
-        Permissions will be associated to a role, and roles are associated to users.
 
-        allow_browser_login will accept signed cookies obtained from the normal MVC app::
+    def _protect(f):
+        if hasattr(f, "_permission_name"):
+            permission_str = f._permission_name
+        else:
+            permission_str = f.__name__
 
-            class MyApi(BaseApi):
-                @expose('/dosonmething', methods=['GET'])
-                @protect(allow_browser_login=True)
+        def wraps(self, *args, **kwargs):
+            permission_str = "{}{}".format(PERMISSION_PREFIX, f._permission_name)
+            if self.method_permission_name:
 
 
 ## ... source file abbreviated to get to jsonify examples ...
@@ -93,22 +93,16 @@ def protect(allow_browser_login=False):
 
 
 def permission_name(name):
-    """
-        Use this decorator to override the name of the permission.
-        has_access will use the methods name has the permission name
-        if you want to override this add this decorator to your methods.
-        This is useful if you want to aggregate methods to permissions
 
-        It will add '_permission_name' attribute to your method
-        that will be inspected by BaseView to collect your view's
-        permissions.
+    def wraps(f):
+        f._permission_name = name
+        return f
 
-        Note that you should use @has_access to execute after @permission_name
-        like on the following example.
+    return wraps
+
 
 
 ## ... source file continues with no further jsonify examples...
-
 
 ```
 
@@ -127,16 +121,6 @@ FlaskBB is provided as open source
 
 ```python
 # views.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.management.views
-    ------------------------
-
-    This module handles the management views.
-
-    :copyright: (c) 2014 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import logging
 import sys
 
@@ -172,12 +156,12 @@ from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+    def post(self, user_id=None):
         if request.is_xhr:
             ids = request.get_json()["ids"]
 
             data = []
             for user in User.query.filter(User.id.in_(ids)).all():
-                # do not delete current user
                 if current_user.id == user.id:
                     continue
 
@@ -250,7 +234,6 @@ class AddUser(MethodView):
             )
 
         user = User.query.filter_by(id=user_id).first_or_404()
-        # Do not allow moderators to ban admins
         if Permission(IsAdmin, identity=user) and Permission(
                 Not(IsAdmin), identity=current_user):
             flash(_("A moderator cannot ban an admin user."), "danger")
@@ -267,14 +250,15 @@ class UnbanUser(MethodView):
     decorators = [
         allows.requires(
             IsAtleastModerator,
+            on_fail=FlashAndRedirect(
 
 
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+            )
             return redirect(url_for("management.overview"))
 
-        # ajax request
         if request.is_xhr:
             ids = request.get_json()["ids"]
 
@@ -322,12 +306,12 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+        )
     ]
 
     def post(self, group_id=None):
         if request.is_xhr:
             ids = request.get_json()["ids"]
-            # TODO: Get rid of magic numbers
             if not (set(ids) & set(["1", "2", "3", "4", "5", "6"])):
                 data = []
                 for group in Group.query.filter(Group.id.in_(ids)).all():
@@ -378,8 +362,8 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+    def post(self, report_id=None):
 
-        # AJAX request
         if request.is_xhr:
             ids = request.get_json()["ids"]
             data = []
@@ -405,7 +389,6 @@ class Groups(MethodView):
                 status=200
             )
 
-        # mark single report as read
         if report_id:
             report = Report.query.filter_by(id=report_id).first_or_404()
             if report.zapped:
@@ -421,8 +404,9 @@ class Groups(MethodView):
             flash(_("Report %(id)s marked as read.", id=report.id), "success")
             return redirect(url_for("management.reports"))
 
-        # mark all as read
         reports = Report.query.filter(Report.zapped == None).all()
+        report_list = []
+        for report in reports:
 
 
 ## ... source file abbreviated to get to jsonify examples ...
@@ -478,9 +462,6 @@ class CeleryStatus(MethodView):
         try:
             celery_running = True if celery_inspect.ping() else False
         except Exception:
-            # catching Exception is bad, and just catching ConnectionError
-            # from redis is also bad because you can run celery with other
-            # brokers as well.
             celery_running = False
 
 ~~        return jsonify(celery_running=celery_running, status=200)
@@ -499,7 +480,6 @@ class ManagementOverview(MethodView):
     ]
 
     def get(self):
-        # user and group stats
         banned_users = User.query.filter(
             Group.banned == True, Group.id == User.primary_group_id
         ).count()
@@ -510,8 +490,8 @@ class ManagementOverview(MethodView):
             online_users = len(get_online_users())
 
 
-## ... source file continues with no further jsonify examples...
 
+## ... source file continues with no further jsonify examples...
 
 ```
 
@@ -559,8 +539,9 @@ def map_refresh():
 def contact():
     return render_template('contact.html', title='Contact')
 
-## ... source file continues with no further jsonify examples...
 
+
+## ... source file continues with no further jsonify examples...
 
 ```
 
@@ -581,92 +562,149 @@ direct database access.
 The sandman2 project is provided under the
 [Apache License 2.0](https://github.com/jeffknupp/sandman2/blob/master/LICENSE).
 
-[**sandman2 / sandman2 / app.py**](https://github.com/jeffknupp/sandman2/blob/master/sandman2/./app.py)
+[**sandman2 / sandman2 / service.py**](https://github.com/jeffknupp/sandman2/blob/master/sandman2/./service.py)
 
 ```python
-# app.py
-"""Sandman2 main application setup code."""
+# service.py
 
-# Third-party imports
-~~from flask import Flask, current_app, jsonify
-from sqlalchemy.sql import sqltypes
+from flask import request, make_response
+~~import flask
+from flask.views import MethodView
+from sqlalchemy import asc, desc
 
-# Application imports
-from sandman2.exception import (
-    BadRequestException,
-    ForbiddenException,
-    NotFoundException,
-    NotAcceptableException,
-    NotImplementedException,
-    ConflictException,
-    ServerErrorException,
-    ServiceUnavailableException,
-    )
-from sandman2.service import Service
-from sandman2.model import db, Model, AutomapModel
-from sandman2.admin import CustomAdminView
-from flask_admin import Admin
-from flask_httpauth import HTTPBasicAuth
+from sandman2.exception import NotFoundException, BadRequestException
+from sandman2.model import db
+from sandman2.decorators import etag, validate_fields
 
-# Augment sandman2's Model class with the Automap and Flask-SQLAlchemy model
-# classes
-auth = HTTPBasicAuth()
 
-def get_app(
+def add_link_headers(response, links):
+    link_string = '<{}>; rel=self'.format(links['self'])
+    for link in links.values():
+        link_string += ', <{}>; rel=related'.format(link)
+    response.headers['Link'] = link_string
+    return response
+
+
+def jsonify(resource):
+
+~~    response = flask.jsonify(resource.to_dict())
+    response = add_link_headers(response, resource.links())
+    return response
+
+
+def is_valid_method(model, resource=None):
+    validation_function_name = 'is_valid_{}'.format(
+        request.method.lower())
+    if hasattr(model, validation_function_name):
+        return getattr(model, validation_function_name)(request, resource)
+
+class Service(MethodView):
+
+
+    __model__ = None
+
+    __json_collection_name__ = 'resources'
+
+    def delete(self, resource_id):
+        resource = self._resource(resource_id)
+        error_message = is_valid_method(self.__model__, resource)
+        if error_message:
+            raise BadRequestException(error_message)
+        db.session().delete(resource)
+        db.session().commit()
+        return self._no_content_response()
+
+    @etag
+    def get(self, resource_id=None):
+        if request.path.endswith('meta'):
+            return self._meta()
+
+        if resource_id is None:
+            error_message = is_valid_method(self.__model__)
+            if error_message:
+                raise BadRequestException(error_message)
+
+            if 'export' in request.args: 
+                return self._export(self._all_resources())
+
+~~            return flask.jsonify({
+                self.__json_collection_name__: self._all_resources()
+                })
+        else:
+            resource = self._resource(resource_id)
+            error_message = is_valid_method(self.__model__, resource)
+            if error_message:
+                raise BadRequestException(error_message)
+            return jsonify(resource)
+
+    def patch(self, resource_id):
+        resource = self._resource(resource_id)
+        error_message = is_valid_method(self.__model__, resource)
+        if error_message:
+            raise BadRequestException(error_message)
+        if not request.json:
+            raise BadRequestException('No JSON data received')
+        resource.update(request.json)
+        db.session().merge(resource)
+        db.session().commit()
+        return jsonify(resource)
+
+    @validate_fields
+    def post(self):
+        resource = self.__model__.query.filter_by(**request.json).first()
 
 
 ## ... source file abbreviated to get to jsonify examples ...
 
 
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.classes = []
-    db.init_app(app)
-    admin = Admin(app, base_template='layout.html', template_mode='bootstrap3')
-    _register_error_handlers(app)
-    if user_models:
-        with app.app_context():
-            _register_user_models(user_models, admin, schema=schema)
-    elif reflect_all:
-        with app.app_context():
-            _reflect_all(exclude_tables, admin, read_only, schema=schema)
+    def put(self, resource_id):
+        resource = self.__model__.query.get(resource_id)
+        if resource:
+            error_message = is_valid_method(self.__model__, resource)
+            if error_message:
+                raise BadRequestException(error_message)
+            resource.update(request.json)
+            db.session().merge(resource)
+            db.session().commit()
+            return jsonify(resource)
 
-    @app.route('/')
-    def index():
-        """Return a list of routes to the registered classes."""
-        routes = {}
-        for cls in app.classes:
-            routes[cls.__model__.__name__] = '{}{{/{}}}'.format(
-                cls.__model__.__url__,
-                cls.__model__.primary_key())
-~~        return jsonify(routes)
-    return app
+        resource = self.__model__(**request.json)  # pylint: disable=not-callable
+        error_message = is_valid_method(self.__model__, resource)
+        if error_message:
+            raise BadRequestException(error_message)
+        db.session().add(resource)
+        db.session().commit()
+        return self._created_response(resource)
 
+    def _meta(self):
+~~        return flask.jsonify(self.__model__.description())
 
-def _register_error_handlers(app):
-    """Register error-handlers for the application.
+    def _resource(self, resource_id):
+        resource = self.__model__.query.get(resource_id)
+        if not resource:
+            raise NotFoundException()
+        return resource
 
-    :param app: The application instance
-    """
-    @app.errorhandler(BadRequestException)
-    @app.errorhandler(ForbiddenException)
-    @app.errorhandler(NotAcceptableException)
-    @app.errorhandler(NotFoundException)
-    @app.errorhandler(ConflictException)
-    @app.errorhandler(ServerErrorException)
-    @app.errorhandler(NotImplementedException)
-    @app.errorhandler(ServiceUnavailableException)
-    def handle_application_error(error):  # pylint:disable=unused-variable
-        """Handler used to send JSON error messages rather than default HTML
-        ones."""
-        response = jsonify(error.to_dict())
-        response.status_code = error.code
-        return response
-
-
+    def _all_resources(self):
+        queryset = self.__model__.query
+        args = {k: v for (k, v) in request.args.items() if k not in ('page', 'export')}
+        limit = None
+        if args:
+            filters = []
+            order = []
+            for key, value in args.items():
+                if value.startswith('%'):
+                    filters.append(getattr(self.__model__, key).like(str(value), escape='/'))
+                elif key == 'sort':
+                    direction = desc if value.startswith('-') else asc
+                    order.append(direction(getattr(self.__model__, value.lstrip('-'))))
+                elif key == 'limit':
+                    limit = int(value)
+                elif hasattr(self.__model__, key):
+                    filters.append(getattr(self.__model__, key) == value)
 
 
 ## ... source file continues with no further jsonify examples...
-
 
 ```
 
@@ -683,43 +721,53 @@ often used with Flask.
 The project's code is provided as open source under the
 [BSD 2-Clause "Simplified" license](https://github.com/tedivm/tedivms-flask/blob/master/LICENSE.txt).
 
-[**tedivms-flask / app / views / apikeys.py**](https://github.com/tedivm/tedivms-flask/blob/master/app/views/apikeys.py)
+[**tedivms-flask / app / views / apis.py**](https://github.com/tedivm/tedivms-flask/blob/master/app/views/apis.py)
 
 ```python
-# apikeys.py
-from flask import Blueprint, redirect, render_template, current_app
-~~from flask import request, url_for, flash, send_from_directory, jsonify, render_template_string
-from flask_user import current_user, login_required, roles_accepted
+# apis.py
 
-~~from flask import Flask, session, redirect, url_for, request, render_template, jsonify, abort
+from flask import Blueprint, redirect
+~~from flask import request, url_for, jsonify, current_app
+
 from app import db
-from app.models import user_models as users
-from app.utils import forms
+from app.models import user_models
+from app.utils.api import roles_accepted_api
+from app.extensions.ldap import authenticate
 
-import time
 import uuid
 
+api_blueprint = Blueprint('api', __name__, template_folder='templates')
 
-# When using a Flask app factory we must use a blueprint to avoid needing 'app' for '@apikeys_blueprint.route'
-apikeys_blueprint = Blueprint('apikeys', __name__, template_folder='templates')
+@api_blueprint.route('/api/credentials', methods=['POST'])
+def api_create_credentials():
+    username = request.form['username']
+    password = request.form['password']
+    label = request.form.get('label', None)
+    user = user_models.User.query.filter(user_models.User.email == username).first()
+    if not user:
+        user = user_models.User.query.filter(user_models.User.username == username).first()
+        if not user:
+            abort(400)
 
+    if current_app.config.get('USER_LDAP', False):
+        if not authenticate(username, password):
+            abort(401)
+    else:
+        if not current_app.user_manager.verify_password(password, user.password):
+            abort(401)
 
-@apikeys_blueprint.route('/user/apikeys')
-@roles_accepted('dev', 'admin')
-def apikeys_index():
-    all_keys = users.ApiKey.query.filter_by(user_id=current_user.id).all()
-    return render_template("apikeys/list.html", keys=all_keys)
+    id = uuid.uuid4().hex[0:12]
+    key = uuid.uuid4().hex
+    hash = current_app.user_manager.hash_password(key)
+    new_key = user_models.ApiKey(id=id, hash=hash, user_id=user.id, label=label)
+    db.session.add(new_key)
+    db.session.commit()
 
+~~    return jsonify({'id': id,'key': key})
 
-@apikeys_blueprint.route('/user/create_apikey', methods=['GET', 'POST'])
-@roles_accepted('dev', 'admin')
-def apikeys_create():
-    form = users.ApiKeyForm(request.form)
-    if request.method == 'POST' and form.validate():
 
 
 ## ... source file continues with no further jsonify examples...
-
 
 ```
 

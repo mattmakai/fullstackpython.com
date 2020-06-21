@@ -25,13 +25,6 @@ open sourced under the
 
 ```python
 # signals.py
-# -*- coding: utf-8 -*-
-'''
-    flask_login.signals
-    -------------------
-    This module provides signals to get notified when Flask-Login performs
-    certain actions.
-'''
 
 
 ~~from flask.signals import Namespace
@@ -40,32 +33,29 @@ open sourced under the
 ~~_signals = Namespace()
 
 
-#: Sent when a user is logged in. In addition to the app (which is the
-#: sender), it is passed `user`, which is the user being logged in.
 user_logged_in = _signals.signal('logged-in')
 
-#: Sent when a user is logged out. In addition to the app (which is the
-#: sender), it is passed `user`, which is the user being logged out.
 user_logged_out = _signals.signal('logged-out')
 
-#: Sent when the user is loaded from the cookie. In addition to the app (which
-#: is the sender), it is passed `user`, which is the user being reloaded.
 user_loaded_from_cookie = _signals.signal('loaded-from-cookie')
 
-#: Sent when the user is loaded from the header. In addition to the app (which
-#: is the #: sender), it is passed `user`, which is the user being reloaded.
 user_loaded_from_header = _signals.signal('loaded-from-header')
 
-#: Sent when the user is loaded from the request. In addition to the app (which
-#: is the #: sender), it is passed `user`, which is the user being reloaded.
 user_loaded_from_request = _signals.signal('loaded-from-request')
 
-#: Sent when a user's login is confirmed, marking it as fresh. (It is not
-#: called for a normal login.)
+user_login_confirmed = _signals.signal('login-confirmed')
+
+user_unauthorized = _signals.signal('unauthorized')
+
+user_needs_refresh = _signals.signal('needs-refresh')
+
+user_accessed = _signals.signal('accessed')
+
+session_protected = _signals.signal('session-protected')
+
 
 
 ## ... source file continues with no further Namespace examples...
-
 
 ```
 
@@ -145,7 +135,6 @@ def _wrap_with_default_query_class(fn, cls):
 
 
 ## ... source file continues with no further Namespace examples...
-
 
 ```
 

@@ -1,7 +1,7 @@
 title: flask.templating render_template code examples
 category: page
 slug: flask-templating-render-template-examples
-sortorder: 500021016
+sortorder: 500021017
 toc: False
 sidebartitle: flask.templating render_template
 meta: Python example code for the render_template function from the flask.templating module of the Flask project.
@@ -24,16 +24,6 @@ FlaskBB is provided as open source
 
 ```python
 # email.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.email
-    -------------
-
-    This module adds the functionality to send emails
-
-    :copyright: (c) 2014 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import logging
 ~~from flask import render_template
 from flask_mail import Message
@@ -47,12 +37,6 @@ logger = logging.getLogger(__name__)
 
 @celery.task
 def send_reset_token(token, username, email):
-    """Sends the reset token to the user's email address.
-
-    :param token: The token to send to the user
-    :param username: The username to whom the email should be sent.
-    :param email:  The email address of the user
-    """
     send_email(
         subject=_("Password Recovery Confirmation"),
         recipients=[email],
@@ -71,12 +55,6 @@ def send_reset_token(token, username, email):
 
 @celery.task
 def send_activation_token(token, username, email):
-    """Sends the activation token to the user's email address.
-
-    :param token: The token to send to the user
-    :param username: The username to whom the email should be sent.
-    :param email:  The email address of the user
-    """
     send_email(
         subject=_("Account Activation"),
         recipients=[email],
@@ -99,21 +77,14 @@ def send_async_email(*args, **kwargs):
 
 
 def send_email(subject, recipients, text_body, html_body, sender=None):
-    """Sends an email to the given recipients.
-
-    :param subject: The subject of the email.
-    :param recipients: A list of recipients.
-    :param text_body: The text body of the email.
-    :param html_body: The html body of the email.
-    :param sender: A two-element tuple consisting of name and address.
-                   If no sender is given, it will fall back to the one you
-                   have configured with ``MAIL_DEFAULT_SENDER``.
-    """
     msg = Message(subject, recipients=recipients, sender=sender)
+    msg.body = text_body
+    msg.html = html_body
+    mail.send(msg)
+
 
 
 ## ... source file continues with no further render_template examples...
-
 
 ```
 
@@ -159,8 +130,8 @@ def send_email(recipient, subject, template, **kwargs):
         mail.send(msg)
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -177,7 +148,6 @@ as open source under the
 
 ```python
 # app.py
-# -*- coding: utf-8 -*-
 
 from scripts import tabledef
 from scripts import forms
@@ -190,12 +160,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(12)  # Generic key for dev purposes only
 
-# Heroku
-#from flask_heroku import Heroku
-#heroku = Heroku(app)
 
-# ======== Routing =========================================================== #
-# -------- Login ------------------------------------------------------------- #
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if not session.get('logged_in'):
@@ -221,7 +186,6 @@ def logout():
     return redirect(url_for('login'))
 
 
-# -------- Signup ---------------------------------------------------------- #
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if not session.get('logged_in'):
@@ -242,7 +206,6 @@ def signup():
     return redirect(url_for('login'))
 
 
-# -------- Settings ---------------------------------------------------------- #
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
     if session.get('logged_in'):
@@ -258,13 +221,12 @@ def settings():
     return redirect(url_for('login'))
 
 
-# ======== Main ============================================================== #
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=True, host="0.0.0.0")
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -280,17 +242,7 @@ is configured in JSON. The code is provided as open source under the
 
 ```python
 # charts_builder.py
-# -*- coding: utf-8 -*-
 
-"""
-flask_jsondash.charts_builder
------------------------------
-
-The chart blueprint that houses all functionality.
-
-:copyright: (c) 2016 by Chris Tabor.
-:license: MIT, see LICENSE for more details.
-"""
 
 import json
 import os
@@ -315,14 +267,14 @@ from flask_jsondash.schema import (
 TEMPLATE_DIR = os.path.dirname(templates.__file__)
 STATIC_DIR = os.path.dirname(static.__file__)
 
-# Internally required libs that are also shared in `settings.py`
-# for charts. These follow the same format as what is loaded in
-# `get_active_assets` so that shared libraries are loaded in the same manner
-# for simplicty and prevention of duplicate loading.
-# Note these are just LABELS, not files.
 REQUIRED_STATIC_FAMILES = ['D3']
 
 charts = Blueprint(
+    'jsondash',
+    __name__,
+    template_folder=TEMPLATE_DIR,
+    static_url_path=STATIC_DIR,
+    static_folder=STATIC_DIR,
 
 
 ## ... source file abbreviated to get to render_template examples ...
@@ -353,7 +305,6 @@ charts = Blueprint(
 
 @charts.route('/charts/<c_id>', methods=['GET'])
 def view(c_id):
-    """Load a json view config from the DB."""
     if not auth(authtype='view', view_id=c_id):
         flash('You do not have access to view this dashboard.', 'error')
         return redirect(url_for('jsondash.dashboard'))
@@ -361,23 +312,17 @@ def view(c_id):
     if not viewjson:
         flash('Could not find view: {}'.format(c_id), 'error')
         return redirect(url_for('jsondash.dashboard'))
-    # Remove _id, it's not JSON serializeable.
     if '_id' in viewjson:
         viewjson.pop('_id')
     if 'modules' not in viewjson:
         flash('Invalid configuration - missing modules.', 'error')
         return redirect(url_for('jsondash.dashboard'))
-    # Chart family is encoded in chart type value for lookup.
     active_charts = [v.get('family') for v in viewjson['modules']
                      if v.get('family') is not None]
-    # If the logged in user is also the creator of this dashboard,
-    # let me edit it. Otherwise, defer to any user-supplied auth function
-    # for this specific view.
     if metadata(key='username') == viewjson.get('created_by'):
         can_edit = True
     else:
         can_edit = auth(authtype='edit_others', view_id=c_id)
-    # Backwards compatible layout type
     layout_type = viewjson.get('layout', 'freeform')
     kwargs = dict(
         id=c_id,
@@ -397,7 +342,6 @@ def view(c_id):
 
 @charts.route('/charts/<c_id>/delete', methods=['POST'])
 def delete(c_id):
-    """Delete a json dashboard config."""
     dash_url = url_for('jsondash.dashboard')
     if not auth(authtype='delete'):
         flash('You do not have access to delete dashboards.', 'error')
@@ -409,7 +353,6 @@ def delete(c_id):
 
 @charts.route('/charts/<c_id>/update', methods=['POST'])
 def update(c_id):
-    """Normalize the form POST and setup the json view config object."""
     if not auth(authtype='update'):
         flash('You do not have access to update dashboards.', 'error')
         return redirect(url_for('jsondash.dashboard'))
@@ -417,10 +360,11 @@ def update(c_id):
     if not viewjson:
         flash('Could not find view: {}'.format(c_id), 'error')
         return redirect(url_for('jsondash.dashboard'))
+    form_data = request.form
+    view_url = url_for('jsondash.view', c_id=c_id)
 
 
 ## ... source file continues with no further render_template examples...
-
 
 ```
 
@@ -477,8 +421,8 @@ def show_phone():
 ~~    return render_template('show_phone.html', phone=session['phone'])
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -498,17 +442,12 @@ Flask RESTX is provided as open source under the
 
 ```python
 # apidoc.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 ~~from flask import url_for, Blueprint, render_template
 
 
 class Apidoc(Blueprint):
-    """
-    Allow to know if the blueprint has already been registered
-    until https://github.com/mitsuhiko/flask/pull/1301 is merged
-    """
 
     def __init__(self, *args, **kwargs):
         self.registered = False
@@ -534,12 +473,11 @@ def swagger_static(filename):
 
 
 def ui_for(api):
-    """Render a SwaggerUI for a given API"""
 ~~    return render_template("swagger-ui.html", title=api.title, specs_url=api.specs_url)
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -566,7 +504,6 @@ from itsdangerous import URLSafeTimedSerializer
 from app import app, models, db
 from app.forms import user as user_forms
 from app.toolbox import email
-# Setup Stripe integration
 import stripe
 import json
 from json import dumps
@@ -578,19 +515,15 @@ stripe_keys = {
 
 stripe.api_key = stripe_keys['secret_key']
 
-# Serializer for generating random tokens
 ts = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
-# Create a user blueprint
 userbp = Blueprint('userbp', __name__, url_prefix='/user')
 
 
-
-## ... source file abbreviated to get to render_template examples ...
-
-
+@userbp.route('/signup', methods=['GET', 'POST'])
+def signup():
+    form = user_forms.SignUp()
     if form.validate_on_submit():
-        # Create a user who hasn't validated his email address
         user = models.User(
             first_name=form.first_name.data,
             last_name=form.last_name.data,
@@ -599,21 +532,14 @@ userbp = Blueprint('userbp', __name__, url_prefix='/user')
             confirmation=False,
             password=form.password.data,
         )
-        # Insert the user in the database
         db.session.add(user)
         db.session.commit()
-        # Subject of the confirmation email
         subject = 'Please confirm your email address.'
-        # Generate a random token
         token = ts.dumps(user.email, salt='email-confirm-key')
-        # Build a confirm link with token
         confirmUrl = url_for('userbp.confirm', token=token, _external=True)
-        # Render an HTML template to send by email
 ~~        html = render_template('email/confirm.html',
                                confirm_url=confirmUrl)
-        # Send the email to user
         email.send(user.email, subject, html)
-        # Send back to the home page
         flash('Check your emails to confirm your email address.', 'positive')
         return redirect(url_for('index'))
 ~~    return render_template('user/signup.html', form=form, title='Sign up')
@@ -623,16 +549,11 @@ userbp = Blueprint('userbp', __name__, url_prefix='/user')
 def confirm(token):
     try:
         email = ts.loads(token, salt='email-confirm-key', max_age=86400)
-    # The token can either expire or be invalid
     except:
         abort(404)
-    # Get the user from the database
     user = models.User.query.filter_by(email=email).first()
-    # The user has confirmed his or her email address
     user.confirmation = True
-    # Update the database with the user
     db.session.commit()
-    # Send to the signin page
     flash(
         'Your email address has been confirmed, you can sign in.', 'positive')
     return redirect(url_for('userbp.signin'))
@@ -641,20 +562,12 @@ def confirm(token):
 @userbp.route('/signin', methods=['GET', 'POST'])
 def signin():
     form = user_forms.Login()
-
-
-## ... source file abbreviated to get to render_template examples ...
-
-
+    if form.validate_on_submit():
         user = models.User.query.filter_by(email=form.email.data).first()
-        # Check the user exists
         if user is not None:
-            # Check the password is correct
             if user.check_password(form.password.data):
-		#Check if email is confirmed
 		if user.confirmation == True:
 			login_user(user)			
-                	# Send back to the home page
 			flash('Succesfully signed in.', 'positive')
 			return redirect(url_for('userbp.account'))
 		else:
@@ -687,19 +600,12 @@ def forgot():
     form = user_forms.Forgot()
     if form.validate_on_submit():
         user = models.User.query.filter_by(email=form.email.data).first()
-        # Check the user exists
         if user is not None:
-            # Subject of the confirmation email
             subject = 'Reset your password.'
-            # Generate a random token
             token = ts.dumps(user.email, salt='password-reset-key')
-            # Build a reset link with token
             resetUrl = url_for('userbp.reset', token=token, _external=True)
-            # Render an HTML template to send by email
 ~~            html = render_template('email/reset.html', reset_url=resetUrl)
-            # Send the email to user
             email.send(user.email, subject, html)
-            # Send back to the home page
             flash('Check your emails to reset your password.', 'positive')
             return redirect(url_for('index'))
         else:
@@ -712,18 +618,14 @@ def forgot():
 def reset(token):
     try:
         email = ts.loads(token, salt='password-reset-key', max_age=86400)
-    # The token can either expire or be invalid
     except:
         abort(404)
     form = user_forms.Reset()
     if form.validate_on_submit():
         user = models.User.query.filter_by(email=email).first()
-        # Check the user exists
         if user is not None:
             user.password = form.password.data
-            # Update the database with the user
             db.session.commit()
-            # Send to the signin page
             flash('Your password has been reset, you can sign in.', 'positive')
             return redirect(url_for('userbp.signin'))
         else:
@@ -742,7 +644,6 @@ def pay():
 @app.route('/user/charge', methods=['POST'])
 @login_required
 def charge():
-    # Amount in cents
     amount = 500
     customer = stripe.Customer.create(email=current_user.email, source=request.form['stripeToken'])
     charge = stripe.Charge.create(
@@ -754,7 +655,6 @@ def charge():
     user = models.User.query.filter_by(email=current_user.email).first()
     user.paid = 1
     db.session.commit()
-    # do anything else, like execute shell command to enable user's service on your app
 ~~    return render_template('user/charge.html', amount=amount)
 
 @app.route('/api/payFail', methods=['POST', 'GET'])
@@ -765,7 +665,6 @@ def payFail():
 	if user is not None: 
 		user.paid = 0
 		db.session.commit()
-		# do anything else, like execute shell command to disable user's service on your app
 	return "Response: User with associated email " + str(stripe_email) + " updated on our end (payment failure)."
 
 @app.route('/api/paySuccess', methods=['POST', 'GET'])
@@ -776,13 +675,12 @@ def paySuccess():
 	if user is not None: 
 		user.paid = 1
 		db.session.commit()
-		# do anything else on payment success, maybe send a thank you email or update more db fields?
 	return "Response: User with associated email " + str(stripe_email) + " updated on our end (paid)."
 
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -821,8 +719,8 @@ def send_email(to, subject, template, **kwargs):
     return thr
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -839,13 +737,6 @@ NewsPie is provided as open source under the
 
 ```python
 # news.py
-# -*- coding: utf-8 -*-
-'''
-NewsPie - a minimalistic news aggregator built with Flask and powered by
-News API (https://newsapi.org/).
-
-Created by @skamieniarz (https://github.com/skamieniarz) in 2019.
-'''
 import configparser
 import json
 import logging
@@ -910,16 +801,6 @@ def root():
 
 @APP.route('/search/<string:query>', methods=['GET', 'POST'])
 def search(query):
-    ''' Handles category route.
-
-    Parameters:
-        - name: query
-          in: path
-          description: Query string to be searched
-        - name: page
-          in: query
-          description: Number of the page
-    '''
     page = request.args.get('page', default=1, type=int)
     if page < 1:
         return redirect(url_for('search', query=query, page=1))
@@ -929,21 +810,33 @@ def search(query):
         'page': page,
         'pageSize': PAGE_SIZE
     }
+    if request.method == 'POST':
+        return do_post(page, category='search', current_query=query)
+    response = requests.get(EVERYTHING,
+                            params=params,
+                            headers={'Authorization': API_KEY})
+    pages = count_pages(response.json())
+    if page > pages:
+        page = pages
+        return redirect(url_for('search', query=query, page=page))
+    articles = parse_articles(response.json())
 
 
 ## ... source file abbreviated to get to render_template examples ...
 
 
+                                   ).strftime('%Y-%m-%d %H:%M'),
+                'title':
+                    article['title'],
+                'url':
+                    article['url'],
+                'source':
+                    article['source']['name']
             })
     return parsed_articles
 
 
 def count_pages(response):
-    ''' Helper method that counts number of total pages basing on total
-        results from News API response and page size.
-
-    Returns:
-        An int with a number of total pages. '''
     pages = 0
     if response.get('status') == 'ok':
         pages = (-(-response.get('totalResults', 0) // PAGE_SIZE))
@@ -951,8 +844,6 @@ def count_pages(response):
 
 
 def render(articles, page, pages, country, category):
-    ''' Renders the template with appropriate variables. Up to 12 pages
-        allowed. '''
     pages = pages if pages <= 12 else 12
 ~~    return render_template(CONFIG['VARIOUS']['TEMPLATE'],
                            articles=articles,
@@ -965,12 +856,6 @@ def render(articles, page, pages, country, category):
 
 
 def get_cookie(key):
-    ''' Helper method that gets cookie's value.
-
-    Returns:
-        A string with a value of a cookie with provided key. If a key is
-        missing, None is returned.
-    '''
     cookie_value = request.cookies.get(key)
     return cookie_value
 
@@ -979,8 +864,8 @@ if __name__ == '__main__':
     APP.run()
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 
@@ -1020,7 +905,6 @@ from beaker.cache import CacheManager
 from beaker.util import parse_cache_config_options
 from beaker.middleware import SessionMiddleware
 
-# Instantiate Flask extensions
 db = SQLAlchemy()
 csrf_protect = CSRFProtect()
 mail = Mail()
@@ -1028,11 +912,12 @@ migrate = Migrate()
 
 
 def get_config():
-    # Instantiate Flask
     app = Flask(__name__)
 
-    # Load App Config settings
-    # Load common settings from 'app/settings.py' file
+    app.config.from_object('app.settings')
+    if 'APPLICATION_SETTINGS' in os.environ:
+        app.config.from_envvar(os.environ['APPLICATION_SETTINGS'])
+    if 'AWS_SECRETS_MANAGER_CONFIG' in os.environ:
 
 
 ## ... source file abbreviated to get to render_template examples ...
@@ -1077,8 +962,8 @@ def init_error_handlers(app):
         return show_error(500, 'An unknown error has occurred on the server.')
 
 
-## ... source file continues with no further render_template examples...
 
+## ... source file continues with no further render_template examples...
 
 ```
 

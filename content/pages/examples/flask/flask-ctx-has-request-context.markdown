@@ -80,7 +80,6 @@ class BabelManager(BaseManager):
 
     def get_locale(self):
 ~~        if has_request_context():
-            # locale selector for API searches for request args
             for arg, value in request.args.items():
                 if arg == "_l_":
                     if value in self.languages:
@@ -94,8 +93,8 @@ class BabelManager(BaseManager):
             return session["locale"]
 
 
-## ... source file continues with no further has_request_context examples...
 
+## ... source file continues with no further has_request_context examples...
 
 ```
 
@@ -114,15 +113,6 @@ FlaskBB is provided as open source
 
 ```python
 # locals.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.forum.locals
-    --------------------
-    Thread local helpers for FlaskBB
-
-    :copyright: 2017, the FlaskBB Team
-    :license: BSD, see license for more details
-"""
 
 ~~from flask import _request_ctx_stack, has_request_context, request
 from werkzeug.local import LocalProxy
@@ -171,8 +161,8 @@ def _get_item(model, view_arg, name):
     return getattr(_request_ctx_stack.top, name, None)
 
 
-## ... source file continues with no further has_request_context examples...
 
+## ... source file continues with no further has_request_context examples...
 
 ```
 

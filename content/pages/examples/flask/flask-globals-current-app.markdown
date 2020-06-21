@@ -106,8 +106,40 @@ class MenuItem(object):
                         "url": item.get_url(),
 
 
-## ... source file continues with no further current_app examples...
+## ... source file abbreviated to get to current_app examples ...
 
+
+                )
+                self.find(category).childs.append(new_menu_item)
+
+    def add_separator(self, category=""):
+        menu_item = self.find(category)
+        if menu_item:
+            menu_item.childs.append(MenuItem("-"))
+        else:
+            raise Exception(
+                "Menu separator does not have correct category {}".format(category)
+            )
+
+
+class MenuApi(BaseApi):
+    resource_name = "menu"
+
+    @expose("/", methods=["GET"])
+    @protect(allow_browser_login=True)
+    @permission_name("get")
+    def get_menu_data(self):
+~~        return self.response(200, result=current_app.appbuilder.menu.get_data())
+
+
+class MenuApiManager(BaseManager):
+    def register_views(self):
+        if self.appbuilder.app.config.get("FAB_ADD_MENU_API", True):
+            self.appbuilder.add_api(MenuApi)
+
+
+
+## ... source file continues with no further current_app examples...
 
 ```
 
@@ -126,17 +158,6 @@ FlaskBB is provided as open source
 
 ```python
 # views.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.auth.views
-    ------------------
-
-    This view provides user authentication, registration and a view for
-    resetting the password of a user if he has lost his password
-
-    :copyright: (c) 2014 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import logging
 from datetime import datetime
 
@@ -258,7 +279,6 @@ class ForgotPassword(MethodView):
 
 ## ... source file continues with no further current_app examples...
 
-
 ```
 
 
@@ -357,90 +377,9 @@ class User(UserMixin, db.Model):
         self.password_hash = generate_password_hash(password)
 
     def verify_password(self, password):
-        return check_password_hash(self.password_hash, password)
-
-    def generate_confirmation_token(self, expiration=604800):
-        """Generate a confirmation token to email a new user."""
-
-~~        s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'confirm': self.id})
-
-    def generate_email_change_token(self, new_email, expiration=3600):
-        """Generate an email change token to email an existing user."""
-~~        s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'change_email': self.id, 'new_email': new_email})
-
-    def generate_password_reset_token(self, expiration=3600):
-        """
-        Generate a password reset change token to email to an existing user.
-        """
-        s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'reset': self.id})
-
-    def confirm_account(self, token):
-        """Verify that the provided token is for this user's id."""
-~~        s = Serializer(current_app.config['SECRET_KEY'])
-        try:
-            data = s.loads(token)
-        except (BadSignature, SignatureExpired):
-            return False
-        if data.get('confirm') != self.id:
-            return False
-        self.confirmed = True
-        db.session.add(self)
-        db.session.commit()
-        return True
-
-    def change_email(self, token):
-        """Verify the new email for this user."""
-~~        s = Serializer(current_app.config['SECRET_KEY'])
-        try:
-            data = s.loads(token)
-        except (BadSignature, SignatureExpired):
-            return False
-        if data.get('change_email') != self.id:
-            return False
-        new_email = data.get('new_email')
-        if new_email is None:
-            return False
-        if self.query.filter_by(email=new_email).first() is not None:
-            return False
-        self.email = new_email
-        db.session.add(self)
-        db.session.commit()
-        return True
-
-    def reset_password(self, token, new_password):
-        """Verify the new password for this user."""
-~~        s = Serializer(current_app.config['SECRET_KEY'])
-        try:
-            data = s.loads(token)
-        except (BadSignature, SignatureExpired):
-            return False
-        if data.get('reset') != self.id:
-            return False
-        self.password = new_password
-        db.session.add(self)
-        db.session.commit()
-        return True
-
-    @staticmethod
-    def generate_fake(count=100, **kwargs):
-        """Generate a number of fake users for testing."""
-        from sqlalchemy.exc import IntegrityError
-        from random import seed, choice
-        from faker import Faker
-
-        fake = Faker()
-        roles = Role.query.all()
-
-        seed()
-        for i in range(count):
-            u = User(
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -474,7 +413,6 @@ from flask_debugtoolbar.toolbar import DebugToolbar
 from flask_debugtoolbar.utils import decode_text
 
 try:
-    # Python 3.8+
     from importlib.metadata import version
 
     __version__ = version("Flask-DebugToolbar")
@@ -488,29 +426,30 @@ module = Blueprint('debugtoolbar', __name__)
 
 
 def replace_insensitive(string, target, replacement):
-    """Similar to string.replace() but is case insensitive
+    no_case = string.lower()
+    index = no_case.rfind(target.lower())
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
+        app = current_app
+
+        if req.routing_exception is not None:
+            app.raise_routing_exception(req)
 
         rule = req.url_rule
 
-        # if we provide automatic options for this URL and the
-        # request came with the OPTIONS method, reply automatically
         if getattr(rule, 'provide_automatic_options', False) \
            and req.method == 'OPTIONS':
             return app.make_default_options_response()
 
-        # otherwise dispatch to the handler for that endpoint
         view_func = app.view_functions[rule.endpoint]
         view_func = self.process_view(app, view_func, req.view_args)
 
         return view_func(**req.view_args)
 
     def _show_toolbar(self):
-        """Return a boolean to indicate if we need to show the toolbar."""
         if request.blueprint == 'debugtoolbar':
             return False
 
@@ -521,7 +460,6 @@ def replace_insensitive(string, target, replacement):
         return True
 
     def send_static_file(self, filename):
-        """Send a static file from the flask-debugtoolbar static directory."""
         return send_from_directory(self._static_dir, filename)
 
     def process_request(self):
@@ -539,11 +477,6 @@ def replace_insensitive(string, target, replacement):
             panel.process_request(real_request)
 
     def process_view(self, app, view_func, view_kwargs):
-
-
-## ... source file abbreviated to get to current_app examples ...
-
-
         real_request = request._get_current_object()
         try:
             toolbar = self.debug_toolbars[real_request]
@@ -562,8 +495,6 @@ def replace_insensitive(string, target, replacement):
         if real_request not in self.debug_toolbars:
             return response
 
-        # Intercept http redirect codes and display an html page with a
-        # link to the target.
 ~~        if current_app.config['DEBUG_TB_INTERCEPT_REDIRECTS']:
             if response.status_code in self._redirect_codes:
                 redirect_to = response.location
@@ -578,8 +509,6 @@ def replace_insensitive(string, target, replacement):
                     response.response = [content]
                     response.status_code = 200
 
-        # If the http response code is 200 then we process to add the
-        # toolbar to the returned html response.
         if not (response.status_code == 200 and
                 response.is_sequence and
                 response.headers['content-type'].startswith('text/html')):
@@ -590,9 +519,10 @@ def replace_insensitive(string, target, replacement):
         no_case = response_html.lower()
         body_end = no_case.rfind('</body>')
 
+        if body_end >= 0:
+
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -608,17 +538,7 @@ is configured in JSON. The code is provided as open source under the
 
 ```python
 # charts_builder.py
-# -*- coding: utf-8 -*-
 
-"""
-flask_jsondash.charts_builder
------------------------------
-
-The chart blueprint that houses all functionality.
-
-:copyright: (c) 2016 by Chris Tabor.
-:license: MIT, see LICENSE for more details.
-"""
 
 import json
 import os
@@ -643,11 +563,6 @@ from flask_jsondash.schema import (
 TEMPLATE_DIR = os.path.dirname(templates.__file__)
 STATIC_DIR = os.path.dirname(static.__file__)
 
-# Internally required libs that are also shared in `settings.py`
-# for charts. These follow the same format as what is loaded in
-# `get_active_assets` so that shared libraries are loaded in the same manner
-# for simplicty and prevention of duplicate loading.
-# Note these are just LABELS, not files.
 REQUIRED_STATIC_FAMILES = ['D3']
 
 charts = Blueprint(
@@ -660,49 +575,26 @@ charts = Blueprint(
 
 
 def auth(**kwargs):
-    """Check if general auth functions have been specified.
-
-    Checks for either a global auth (if authtype is None), or
-    an action specific auth (specified by authtype).
-    """
-    if 'JSONDASH' not in current_app.config:
+~~    if 'JSONDASH' not in current_app.config:
         return True
 ~~    if 'auth' not in current_app.config['JSONDASH']:
         return True
     authtype = kwargs.pop('authtype')
 ~~    auth_conf = current_app.config.get('JSONDASH').get('auth')
-    # If the user didn't supply an auth function, assume true.
     if authtype not in auth_conf:
         return True
-    # Only perform the user-supplied check
-    # if the authtype is actually enabled.
     return auth_conf[authtype](**kwargs)
 
 
 def metadata(key=None, exclude=[]):
-    """An abstraction around misc. metadata.
-
-    This allows loose coupling for enabling and setting
-    metadata for each chart.
-
-    Args:
-        key (None, optional): A key to look up in global config.
-        exclude (list, optional): A list of fields to exclude when
-            retrieving metadata.
-
-    Returns:
-        _metadata (dict): The metadata configuration.
-    """
     _metadata = dict()
 ~~    conf = current_app.config
     conf_metadata = conf.get('JSONDASH', {}).get('metadata')
-    # Also useful for getting arbitrary configuration keys.
     if key is not None:
         if key in conf_metadata:
             return conf_metadata[key]()
         else:
             return None
-    # Update all metadata values if the function exists.
     for k, func in conf_metadata.items():
         if k in exclude:
             continue
@@ -711,18 +603,19 @@ def metadata(key=None, exclude=[]):
 
 
 def local_static(chart_config, static_config):
-    """Convert remote cdn urls to local urls, based on user provided paths.
-
-    The filename must be identical to the one specified in the
-    `settings.py` configuration.
-
-    So, for example:
-    '//cdnjs.cloudflare.com/foo/bar/foo.js'
-    becomes
+    js_path = static_config.get('js_path')
+    css_path = static_config.get('css_path')
+    for family, config in chart_config.items():
+        if config['js_url']:
+            for i, url in enumerate(config['js_url']):
+                url = '{}{}'.format(js_path, url.split('/')[-1])
+                config['js_url'][i] = url_for('static', filename=url)
+        if config['css_url']:
+            for i, url in enumerate(config['css_url']):
+                url = '{}{}'.format(css_path, url.split('/')[-1])
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -742,12 +635,6 @@ open sourced under the
 
 ```python
 # utils.py
-# -*- coding: utf-8 -*-
-'''
-    flask_login.utils
-    -----------------
-    General utilities.
-'''
 
 
 import hmac
@@ -765,40 +652,40 @@ from .config import COOKIE_NAME, EXEMPT_METHODS
 from .signals import user_logged_in, user_logged_out, user_login_confirmed
 
 
-#: A proxy for the current user. If no user is logged in, this will be an
-#: anonymous user
 current_user = LocalProxy(lambda: _get_user())
 
 
 def encode_cookie(payload, key=None):
-    '''
-    This will encode a ``unicode`` value into a cookie, and sign that cookie
-    with the app's secret key.
+    return u'{0}|{1}'.format(payload, _cookie_digest(payload, key=key))
 
-    :param payload: The value to encode, as `unicode`.
-    :type payload: unicode
 
-    :param key: The key to use when creating the cookie digest. If not
-                specified, the SECRET_KEY value from app config will be used.
-    :type key: str
-    '''
+def decode_cookie(cookie, key=None):
+    try:
+        payload, digest = cookie.rsplit(u'|', 1)
+        if hasattr(digest, 'decode'):
+            digest = digest.decode('ascii')  # pragma: no cover
+    except ValueError:
+        return
+
+    if safe_str_cmp(_cookie_digest(payload, key=key), digest):
+        return payload
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
-    prevents from redirecting to external sites if request headers Host or
-    X-Forwarded-For are present.
 
-    :param login_view: The name of the login view. (Alternately, the actual
-                       URL to the login view.)
-    :type login_view: str
-    :param next_url: The URL to give the login view for redirection.
-    :type next_url: str
-    :param next_field: What field to store the next URL in. (It defaults to
-                       ``next``.)
-    :type next_field: str
-    '''
+def expand_login_view(login_view):
+    if login_view.startswith(('https://', 'http://', '/')):
+        return login_view
+    else:
+        if request.view_args is None:
+            return url_for(login_view)
+        else:
+            return url_for(login_view, **request.view_args)
+
+
+def login_url(login_view, next_url=None, next_field='next'):
     base = expand_login_view(login_view)
 
     if next_url is None:
@@ -815,36 +702,10 @@ def encode_cookie(payload, key=None):
 
 
 def login_fresh():
-    '''
-    This returns ``True`` if the current login is fresh.
-    '''
     return session.get('_fresh', False)
 
 
 def login_user(user, remember=False, duration=None, force=False, fresh=True):
-    '''
-    Logs a user in. You should pass the actual user object to this. If the
-    user's `is_active` property is ``False``, they will not be logged in
-    unless `force` is ``True``.
-
-    This will return ``True`` if the log in attempt succeeds, and ``False`` if
-    it fails (i.e. because the user is inactive).
-
-    :param user: The user object to log in.
-    :type user: object
-    :param remember: Whether to remember the user after their session expires.
-        Defaults to ``False``.
-    :type remember: bool
-    :param duration: The amount of time before the remember cookie expires. If
-        ``None`` the value set in the settings is used. Defaults to ``None``.
-    :type duration: :class:`datetime.timedelta`
-    :param force: If the user is inactive, setting this to ``True`` will log
-        them in regardless. Defaults to ``False``.
-    :type force: bool
-    :param fresh: setting this to ``False`` will log in the user with a session
-        marked as not "fresh". Defaults to ``True``.
-    :type fresh: bool
-    '''
     if not force and not user.is_active:
         return False
 
@@ -857,7 +718,6 @@ def login_user(user, remember=False, duration=None, force=False, fresh=True):
         session['_remember'] = 'set'
         if duration is not None:
             try:
-                # equal to timedelta.total_seconds() but works with Python 2.6
                 session['_remember_seconds'] = (duration.microseconds +
                                                 (duration.seconds +
                                                  duration.days * 24 * 3600) *
@@ -867,15 +727,11 @@ def login_user(user, remember=False, duration=None, force=False, fresh=True):
                                 'instead got: {0}'.format(duration))
 
 ~~    current_app.login_manager._update_request_context_with_user(user)
-~~    user_logged_in.send(current_app._get_current_object(), user=_get_user())
+    user_logged_in.send(current_app._get_current_object(), user=_get_user())
     return True
 
 
 def logout_user():
-    '''
-    Logs a user out. (You do not need to pass the actual user.) This will
-    also clean up the remember me cookie if it exists.
-    '''
 
     user = _get_user()
 
@@ -894,55 +750,19 @@ def logout_user():
         if '_remember_seconds' in session:
             session.pop('_remember_seconds')
 
-~~    user_logged_out.send(current_app._get_current_object(), user=user)
+    user_logged_out.send(current_app._get_current_object(), user=user)
 
 ~~    current_app.login_manager._update_request_context_with_user()
     return True
 
 
 def confirm_login():
-    '''
-    This sets the current session as fresh. Sessions become stale when they
-    are reloaded from a cookie.
-    '''
     session['_fresh'] = True
 ~~    session['_id'] = current_app.login_manager._session_identifier_generator()
-~~    user_login_confirmed.send(current_app._get_current_object())
+    user_login_confirmed.send(current_app._get_current_object())
 
 
 def login_required(func):
-    '''
-    If you decorate a view with this, it will ensure that the current user is
-    logged in and authenticated before calling the actual view. (If they are
-    not, it calls the :attr:`LoginManager.unauthorized` callback.) For
-    example::
-
-        @app.route('/post')
-        @login_required
-        def post():
-            pass
-
-    If there are only certain times you need to require that your user is
-    logged in, you can do so with::
-
-        if not current_user.is_authenticated:
-~~            return current_app.login_manager.unauthorized()
-
-    ...which is essentially the code that this function adds to your views.
-
-    It can be convenient to globally turn off authentication when unit testing.
-    To enable this, if the application configuration variable `LOGIN_DISABLED`
-    is set to `True`, this decorator will be ignored.
-
-    .. Note ::
-
-        Per `W3 guidelines for CORS preflight requests
-        <http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0>`_,
-        HTTP ``OPTIONS`` requests are exempt from login checks.
-
-    :param func: The view function to decorate.
-    :type func: function
-    '''
     @wraps(func)
     def decorated_view(*args, **kwargs):
         if request.method in EXEMPT_METHODS:
@@ -956,29 +776,6 @@ def login_required(func):
 
 
 def fresh_login_required(func):
-    '''
-    If you decorate a view with this, it will ensure that the current user's
-    login is fresh - i.e. their session was not restored from a 'remember me'
-    cookie. Sensitive operations, like changing a password or e-mail, should
-    be protected with this, to impede the efforts of cookie thieves.
-
-    If the user is not authenticated, :meth:`LoginManager.unauthorized` is
-    called as normal. If they are authenticated, but their session is not
-    fresh, it will call :meth:`LoginManager.needs_refresh` instead. (In that
-    case, you will need to provide a :attr:`LoginManager.refresh_view`.)
-
-    Behaves identically to the :func:`login_required` decorator with respect
-    to configuration variables.
-
-    .. Note ::
-
-        Per `W3 guidelines for CORS preflight requests
-        <http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0>`_,
-        HTTP ``OPTIONS`` requests are exempt from login checks.
-
-    :param func: The view function to decorate.
-    :type func: function
-    '''
     @wraps(func)
     def decorated_view(*args, **kwargs):
         if request.method in EXEMPT_METHODS:
@@ -994,28 +791,18 @@ def fresh_login_required(func):
 
 
 def set_login_view(login_view, blueprint=None):
-    '''
-    Sets the login view for the app or blueprint. If a blueprint is passed,
-    the login view is set for this blueprint on ``blueprint_login_views``.
 
-    :param login_view: The user object to log in.
-    :type login_view: str
-    :param blueprint: The blueprint which this login view should be set on.
-        Defaults to ``None``.
-    :type blueprint: object
-    '''
-
-~~    num_login_views = len(current_app.login_manager.blueprint_login_views)
+    num_login_views = len(current_app.login_manager.blueprint_login_views)
     if blueprint is not None or num_login_views != 0:
 
-~~        (current_app.login_manager
+        (current_app.login_manager
             .blueprint_login_views[blueprint.name]) = login_view
 
-~~        if (current_app.login_manager.login_view is not None and
+        if (current_app.login_manager.login_view is not None and
 ~~                None not in current_app.login_manager.blueprint_login_views):
 
-~~            (current_app.login_manager
-~~                .blueprint_login_views[None]) = (current_app.login_manager
+            (current_app.login_manager
+                .blueprint_login_views[None]) = (current_app.login_manager
                                                  .login_view)
 
 ~~        current_app.login_manager.login_view = None
@@ -1039,8 +826,6 @@ def _cookie_digest(payload, key=None):
 def _get_remote_addr():
     address = request.headers.get('X-Forwarded-For', request.remote_addr)
     if address is not None:
-        # An 'X-Forwarded-For' header includes a comma separated list of the
-        # addresses, the first address being the actual remote address.
         address = address.encode('utf-8').split(b',')[0].strip()
     return address
 
@@ -1071,8 +856,8 @@ def _secret_key(key=None):
     return key
 
 
-## ... source file continues with no further current_app examples...
 
+## ... source file continues with no further current_app examples...
 
 ```
 
@@ -1092,7 +877,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # swagger.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals, absolute_import
 
 import itertools
@@ -1104,7 +888,6 @@ from collections import OrderedDict
 try:
     from collections.abc import Hashable
 except ImportError:
-    # TODO Remove this to drop Python2 support
     from collections import Hashable
 from six import string_types, itervalues, iteritems, iterkeys
 
@@ -1122,7 +905,6 @@ try:
 except ImportError:
     from urllib import quote
 
-#: Maps Flask/Werkzeug rooting types to Swagger ones
 PATH_TYPES = {
     "int": "integer",
     "float": "number",
@@ -1131,25 +913,26 @@ PATH_TYPES = {
 }
 
 
-#: Maps Python primitives types to Swagger ones
 PY_TYPES = {
+    int: "integer",
+    float: "number",
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
+    return {"$ref": "#/definitions/{0}".format(quote(name, safe=""))}
+
+
+def _v(value):
+    return value() if callable(value) else value
+
 
 def extract_path(path):
-    """
-    Transform a Flask/Werkzeug URL pattern in a Swagger one.
-    """
     return RE_URL.sub(r"{\1}", path)
 
 
 def extract_path_params(path):
-    """
-    Extract Flask-style parameters from an URL pattern as Swagger ones.
-    """
     params = OrderedDict()
     for converter, arguments, variable in parse_rule(path):
         if not converter:
@@ -1188,6 +971,8 @@ def _clean_header(header):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+            }
+        if self.api.license:
             infos["license"] = {"name": _v(self.api.license)}
             if self.api.license_url:
                 infos["license"]["url"] = _v(self.api.license_url)
@@ -1195,7 +980,6 @@ def _clean_header(header):
         paths = {}
         tags = self.extract_tags(self.api)
 
-        # register errors
         responses = self.register_errors()
 
         for ns in self.api.namespaces:
@@ -1207,12 +991,10 @@ def _clean_header(header):
                     )
                     paths[path] = serialized
 
-        # register all models if required
 ~~        if current_app.config["RESTX_INCLUDE_ALL_MODELS"]:
             for m in self.api.models:
                 self.register_model(m)
 
-        # merge in the top-level authorizations
         for ns in self.api.namespaces:
             if ns.authorizations:
                 if self.api.authorizations is None:
@@ -1258,16 +1040,17 @@ def _clean_header(header):
             tags.append(tag)
             by_name[tag["name"]] = tag
         for ns in api.namespaces:
-            # hide namespaces without any Resources
             if not ns.resources:
                 continue
-            # hide namespaces with all Resources hidden from Swagger documentation
             if all(is_hidden(r.resource, route_doc=r.route_doc) for r in ns.resources):
+                continue
+            if ns.name not in by_name:
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
+        for name, param in iteritems(doc["params"]):
             param["name"] = name
             if "type" not in param and "schema" not in param:
                 param["type"] = "string"
@@ -1286,7 +1069,6 @@ def _clean_header(header):
 
             params.append(param)
 
-        # Handle fields mask
         mask = doc.get("__mask__")
 ~~        if mask and current_app.config["RESTX_MASK_SWAGGER"]:
             param = {
@@ -1303,7 +1085,6 @@ def _clean_header(header):
         return params
 
     def responses_for(self, doc, method):
-        # TODO: simplify/refactor responses/model handling
         responses = {}
 
         for d in doc, doc[method]:
@@ -1315,10 +1096,10 @@ def _clean_header(header):
                         model = None
                         kwargs = {}
                     elif len(response) == 3:
+                        description, model, kwargs = response
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -1383,83 +1164,26 @@ def _make_table(db):
 ## ... source file abbreviated to get to current_app examples ...
 
 
-            return
+        state = get_state(app)
 
-        d.clear()
+        with self._engine_lock:
+            connector = state.connectors.get(bind)
 
-
-class _EngineDebuggingSignalEvents:
-    """Sets up handlers for two events that let us track the execution time of
-    queries."""
-
-    def __init__(self, engine, import_name):
-        self.engine = engine
-        self.app_package = import_name
-
-    def register(self):
-        event.listen(self.engine, "before_cursor_execute", self.before_cursor_execute)
-        event.listen(self.engine, "after_cursor_execute", self.after_cursor_execute)
-
-    def before_cursor_execute(
-        self, conn, cursor, statement, parameters, context, executemany
-    ):
-~~        if current_app:
-            context._query_start_time = perf_counter()
-
-    def after_cursor_execute(
-        self, conn, cursor, statement, parameters, context, executemany
-    ):
-~~        if current_app:
-            try:
-                queries = _app_ctx_stack.top.sqlalchemy_queries
-            except AttributeError:
-                queries = _app_ctx_stack.top.sqlalchemy_queries = []
-
-            queries.append(
-                _DebugQueryTuple(
-                    (
-                        statement,
-                        parameters,
-                        context._query_start_time,
-                        perf_counter(),
-                        _calling_context(self.app_package),
-                    )
-                )
-            )
-
-
-def get_debug_queries():
-    """In debug mode or testing mode, Flask-SQLAlchemy will log all the SQL
-    queries sent to the database. This information is available until the end
-    of request which makes it possible to easily ensure that the SQL generated
-    is the one expected on errors or in unittesting. Alternatively, you can also
-    enable the query recording by setting the ``'SQLALCHEMY_RECORD_QUERIES'``
-
-
-## ... source file abbreviated to get to current_app examples ...
-
-
+            if connector is None:
+                connector = self.make_connector(app, bind)
+                state.connectors[bind] = connector
 
             return connector.get_engine()
 
     def create_engine(self, sa_url, engine_opts):
-        """
-            Override this method to have final say over how the SQLAlchemy engine
-            is created.
-
-            In most cases, you will want to use ``'SQLALCHEMY_ENGINE_OPTIONS'``
-            config variable or set ``engine_options`` for :func:`SQLAlchemy`.
-        """
         return sqlalchemy.create_engine(sa_url, **engine_opts)
 
     def get_app(self, reference_app=None):
-        """Helper method that implements the logic to look up an
-        application."""
 
         if reference_app is not None:
             return reference_app
 
-~~        if current_app:
+        if current_app:
 ~~            return current_app._get_current_object()
 
         if self.app is not None:
@@ -1472,7 +1196,6 @@ def get_debug_queries():
         )
 
     def get_tables_for_bind(self, bind=None):
-        """Returns a list of all tables relevant for a bind."""
         result = []
         for table in self.Model.metadata.tables.values():
             if table.info.get("bind_key") == bind:
@@ -1480,15 +1203,15 @@ def get_debug_queries():
         return result
 
     def get_binds(self, app=None):
-        """Returns a dictionary with a table->engine mapping.
-
-        This is suitable for use of sessionmaker(binds=db.get_binds(app)).
-        """
         app = self.get_app(app)
+        binds = [None] + list(app.config.get("SQLALCHEMY_BINDS") or ())
+        retval = {}
+        for bind in binds:
+            engine = self.get_engine(app, bind)
+            tables = self.get_tables_for_bind(bind)
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -1528,17 +1251,6 @@ logger = logging.getLogger(__name__)
 
 
 def generate_csrf(secret_key=None, token_key=None):
-    """Generate a CSRF token. The token is cached for a request, so multiple
-    calls to this function will generate the same token.
-
-    During testing, it might be useful to access the signed token in
-    ``g.csrf_token`` and the raw token in ``session['csrf_token']``.
-
-    :param secret_key: Used to securely sign the token. Default is
-        ``WTF_CSRF_SECRET_KEY`` or ``SECRET_KEY``.
-    :param token_key: Key where token is stored in session for comparison.
-        Default is ``WTF_CSRF_FIELD_NAME`` or ``'csrf_token'``.
-    """
 
     secret_key = _get_config(
 ~~        secret_key, 'WTF_CSRF_SECRET_KEY', current_app.secret_key,
@@ -1567,23 +1279,6 @@ def generate_csrf(secret_key=None, token_key=None):
 
 
 def validate_csrf(data, secret_key=None, time_limit=None, token_key=None):
-    """Check if the given data is a valid CSRF token. This compares the given
-    signed token to the one stored in the session.
-
-    :param data: The signed CSRF token to be checked.
-    :param secret_key: Used to securely sign the token. Default is
-        ``WTF_CSRF_SECRET_KEY`` or ``SECRET_KEY``.
-    :param time_limit: Number of seconds that the token is valid. Default is
-        ``WTF_CSRF_TIME_LIMIT`` or 3600 seconds (60 minutes).
-    :param token_key: Key where token is stored in session for comparison.
-        Default is ``WTF_CSRF_FIELD_NAME`` or ``'csrf_token'``.
-
-    :raises ValidationError: Contains the reason that validation failed.
-
-    .. versionchanged:: 0.14
-        Raises ``ValidationError`` with a specific error message rather than
-        returning ``True`` or ``False``.
-    """
 
     secret_key = _get_config(
 ~~        secret_key, 'WTF_CSRF_SECRET_KEY', current_app.secret_key,
@@ -1612,10 +1307,6 @@ def validate_csrf(data, secret_key=None, time_limit=None, token_key=None):
     except BadData:
         raise ValidationError('The CSRF token is invalid.')
 
-
-## ... source file abbreviated to get to current_app examples ...
-
-
     if not safe_str_cmp(session[field_name], token):
         raise ValidationError('The CSRF tokens do not match.')
 
@@ -1624,16 +1315,6 @@ def _get_config(
     value, config_name, default=None,
     required=True, message='CSRF is not configured.'
 ):
-    """Find config value based on provided value, Flask config, and default
-    value.
-
-    :param value: already provided config value
-    :param config_name: Flask ``config`` key
-    :param default: default value if not provided or configured
-    :param required: whether the value must not be ``None``
-    :param message: error message if required config is not found
-    :raises KeyError: if required config is not found
-    """
 
     if value is None:
 ~~        value = current_app.config.get(config_name, default)
@@ -1657,15 +1338,16 @@ class _FlaskFormCSRF(CSRF):
 
     def validate_csrf_token(self, form, field):
         if g.get('csrf_valid', False):
-            # already validated by CSRFProtect
             return
 
         try:
+            validate_csrf(
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
+                return
 
             if request.method not in app.config['WTF_CSRF_METHODS']:
                 return
@@ -1685,14 +1367,12 @@ class _FlaskFormCSRF(CSRF):
             self.protect()
 
     def _get_csrf_token(self):
-        # find the token in the form data
 ~~        field_name = current_app.config['WTF_CSRF_FIELD_NAME']
         base_token = request.form.get(field_name)
 
         if base_token:
             return base_token
 
-        # if the form has a prefix, the name will be {prefix}-csrf_token
         for key in request.form:
             if key.endswith(field_name):
                 csrf_token = request.form[key]
@@ -1700,7 +1380,6 @@ class _FlaskFormCSRF(CSRF):
                 if csrf_token:
                     return csrf_token
 
-        # find the token in the headers
 ~~        for header_name in current_app.config['WTF_CSRF_HEADERS']:
             csrf_token = request.headers.get(header_name)
 
@@ -1731,35 +1410,23 @@ class _FlaskFormCSRF(CSRF):
         g.csrf_valid = True  # mark this request as CSRF valid
 
     def exempt(self, view):
-        """Mark a view or blueprint to be excluded from CSRF protection.
 
-        ::
+        if isinstance(view, Blueprint):
+            self._exempt_blueprints.add(view.name)
+            return view
 
-            @app.route('/some-view', methods=['POST'])
-            @csrf.exempt
-            def some_view():
-                ...
+        if isinstance(view, string_types):
+            view_location = view
+        else:
+            view_location = '.'.join((view.__module__, view.__name__))
 
-        ::
+        self._exempt_views.add(view_location)
+        return view
 
-            bp = Blueprint(...)
-            csrf.exempt(bp)
+    def _error_response(self, reason):
+        raise CSRFError(reason)
 
-
-## ... source file abbreviated to get to current_app examples ...
-
-
-
-        The function will be passed one argument, ``reason``. By default it
-        will raise a :class:`-flask_wtf.csrf.CSRFError`. ::
-
-            @csrf.error_handler
-            def csrf_error(reason):
-                return render_template('error.html', reason=reason)
-
-        Due to historical reasons, the function may either return a response
-        or raise an exception with :func:`flask.abort`.
-        """
+    def error_handler(self, view):
 
         warnings.warn(FlaskWTFDeprecationWarning(
             '"@csrf.error_handler" is deprecated. Use the standard Flask '
@@ -1777,10 +1444,6 @@ class _FlaskFormCSRF(CSRF):
 
 
 class CsrfProtect(CSRFProtect):
-    """
-    .. deprecated:: 0.14
-        Renamed to :class:`-flask_wtf.csrf.CSRFProtect`.
-    """
 
     def __init__(self, app=None):
         warnings.warn(FlaskWTFDeprecationWarning(
@@ -1791,13 +1454,16 @@ class CsrfProtect(CSRFProtect):
 
 
 class CSRFError(BadRequest):
-    """Raise if the client sends invalid CSRF data with the request.
 
-    Generates a 400 Bad Request response with the failure reason by default.
+    description = 'CSRF validation failed.'
+
+
+def same_origin(current_uri, compare_uri):
+    current = urlparse(current_uri)
+    compare = urlparse(compare_uri)
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -1819,49 +1485,40 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
 
-# this is the Alembic Config object, which provides
-# access to the values within the .ini file in use.
 config = context.config
 
-# Interpret the config file for Python logging.
-# This line sets up loggers basically.
 fileConfig(config.config_file_name)
 
-# add your model's MetaData object here
-# for 'autogenerate' support
-# from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
 ~~from flask import current_app
 ~~config.set_main_option('sqlalchemy.url', current_app.config.get('SQLALCHEMY_DATABASE_URI'))
 ~~target_metadata = current_app.extensions['migrate'].db.metadata
 
-# other values from the config, defined by the needs of env.py,
-# can be acquired:
-# my_important_option = config.get_main_option("my_important_option")
-# ... etc.
 
 def run_migrations_offline():
-    """Run migrations in 'offline' mode.
-
-    This configures the context with just a URL
-    and not an Engine, though an Engine is acceptable
-    here as well.  By skipping the Engine creation
-    we don't even need a DBAPI to be available.
-
-    Calls to context.execute() here emit the given string to the
-    script output.
-
-    """
     url = config.get_main_option("sqlalchemy.url")
     context.configure(url=url)
 
     with context.begin_transaction():
         context.run_migrations()
 
+def run_migrations_online():
+    engine = engine_from_config(
+                config.get_section(config.config_ini_section),
+                prefix='sqlalchemy.',
+                poolclass=pool.NullPool)
+
+    connection = engine.connect()
+    context.configure(
+                connection=connection,
+                target_metadata=target_metadata
+                )
+
+    try:
+        with context.begin_transaction():
+            context.run_migrations()
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -1886,13 +1543,10 @@ The sandman2 project is provided under the
 
 ```python
 # app.py
-"""Sandman2 main application setup code."""
 
-# Third-party imports
 ~~from flask import Flask, current_app, jsonify
 from sqlalchemy.sql import sqltypes
 
-# Application imports
 from sandman2.exception import (
     BadRequestException,
     ForbiddenException,
@@ -1909,32 +1563,33 @@ from sandman2.admin import CustomAdminView
 from flask_admin import Admin
 from flask_httpauth import HTTPBasicAuth
 
-# Augment sandman2's Model class with the Automap and Flask-SQLAlchemy model
-# classes
 auth = HTTPBasicAuth()
 
 def get_app(
+        database_uri,
+        exclude_tables=None,
+        user_models=None,
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
+def _register_error_handlers(app):
+    @app.errorhandler(BadRequestException)
+    @app.errorhandler(ForbiddenException)
+    @app.errorhandler(NotAcceptableException)
+    @app.errorhandler(NotFoundException)
+    @app.errorhandler(ConflictException)
+    @app.errorhandler(ServerErrorException)
+    @app.errorhandler(NotImplementedException)
     @app.errorhandler(ServiceUnavailableException)
     def handle_application_error(error):  # pylint:disable=unused-variable
-        """Handler used to send JSON error messages rather than default HTML
-        ones."""
         response = jsonify(error.to_dict())
         response.status_code = error.code
         return response
 
 
 def register_service(cls, primary_key_type):
-    """Register an API service endpoint.
-
-    :param cls: The class to register
-    :param str primary_key_type: The type (as a string) of the primary_key
-                                 field
-    """
     view_func = cls.as_view(cls.__name__.lower())  # pylint: disable=no-member
     methods = set(cls.__model__.__methods__)  # pylint: disable=no-member
 
@@ -1960,11 +1615,6 @@ def register_service(cls, primary_key_type):
 
 
 def _reflect_all(exclude_tables=None, admin=None, read_only=False, schema=None):
-    """Register all tables in the given database as services.
-
-    :param list exclude_tables: A list of tables to exclude from the API
-                                service
-    """
     AutomapModel.prepare(  # pylint:disable=maybe-no-member
         db.engine, reflect=True, schema=schema)
     for cls in AutomapModel.classes:
@@ -1976,15 +1626,19 @@ def _reflect_all(exclude_tables=None, admin=None, read_only=False, schema=None):
 
 
 def register_model(cls, admin=None):
-    """Register *cls* to be included in the API service
-
-    :param cls: Class deriving from :class:`sandman2.models.Model`
-    """
     cls.__url__ = '/{}'.format(cls.__name__.lower())
+    service_class = type(
+        cls.__name__ + 'Service',
+        (Service,),
+        {
+            '__model__': cls,
+        })
+
+    cols = list(cls().__table__.primary_key.columns)
+
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 
@@ -2011,7 +1665,6 @@ from functools import wraps
 
 
 def is_authorized_api_user(roles=False):
-    """Verify API Token and its owners permission to use it"""
     if 'API_ID' not in request.headers:
         return False
     if 'API_KEY' not in request.headers:
@@ -2047,7 +1700,6 @@ def api_credentials_required():
 
 
 ## ... source file continues with no further current_app examples...
-
 
 ```
 

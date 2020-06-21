@@ -33,10 +33,6 @@ import re
 
 
 class Stack(object):
-    """
-        Stack data structure will not insert
-        equal sequential data
-    """
 
     def __init__(self, list=None, size=5):
         self.size = size
@@ -54,69 +50,45 @@ class Stack(object):
     def pop(self):
         if len(self.data) == 0:
             return None
+        return self.data.pop(len(self.data) - 1)
 
-
-## ... source file abbreviated to get to request examples ...
-
+    def to_json(self):
+        return self.data
 
 
 def get_group_by_args():
-    """
-        Get page arguments for group by
-    """
-    group_by = request.args.get("group_by")
+~~    group_by = request.args.get("group_by")
     if not group_by:
         group_by = ""
     return group_by
 
 
 def get_page_args():
-    """
-        Get page arguments, returns a dictionary
-        { <VIEW_NAME>: PAGE_NUMBER }
-
-        Arguments are passed: page_<VIEW_NAME>=<PAGE_NUMBER>
-
-    """
     pages = {}
 ~~    for arg in request.args:
         re_match = re.findall("page_(.*)", arg)
         if re_match:
-~~            pages[re_match[0]] = int(request.args.get(arg))
+            pages[re_match[0]] = int(request.args.get(arg))
     return pages
 
 
 def get_page_size_args():
-    """
-        Get page size arguments, returns an int
-        { <VIEW_NAME>: PAGE_NUMBER }
-
-        Arguments are passed: psize_<VIEW_NAME>=<PAGE_SIZE>
-
-    """
     page_sizes = {}
 ~~    for arg in request.args:
         re_match = re.findall("psize_(.*)", arg)
         if re_match:
-~~            page_sizes[re_match[0]] = int(request.args.get(arg))
+            page_sizes[re_match[0]] = int(request.args.get(arg))
     return page_sizes
 
 
 def get_order_args():
-    """
-        Get order arguments, return a dictionary
-        { <VIEW_NAME>: (ORDER_COL, ORDER_DIRECTION) }
-
-        Arguments are passed like: _oc_<VIEW_NAME>=<COL_NAME>&_od_<VIEW_NAME>='asc'|'desc'
-
-    """
     orders = {}
 ~~    for arg in request.args:
         re_match = re.findall("_oc_(.*)", arg)
         if re_match:
 ~~            order_direction = request.args.get("_od_" + re_match[0])
             if order_direction in ("asc", "desc"):
-~~                orders[re_match[0]] = (request.args.get(arg), order_direction)
+                orders[re_match[0]] = (request.args.get(arg), order_direction)
     return orders
 
 
@@ -130,8 +102,8 @@ def get_filter_args(filters):
             )
 
 
-## ... source file continues with no further request examples...
 
+## ... source file continues with no further request examples...
 
 ```
 
@@ -146,107 +118,563 @@ message board or send private messages in plain text or
 FlaskBB is provided as open source
 [under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
 
-[**FlaskBB / flaskbb / app.py**](https://github.com/flaskbb/flaskbb/blob/master/flaskbb/./app.py)
+[**FlaskBB / flaskbb / management / views.py**](https://github.com/flaskbb/flaskbb/blob/master/flaskbb/management/views.py)
 
 ```python
-# app.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.app
-    -----------
-
-    manages the app creation and configuration process
-
-    :copyright: (c) 2014 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
+# views.py
 import logging
-import logging.config
-import os
 import sys
-import time
-import warnings
-from datetime import datetime
 
-~~from flask import Flask, request
-from flask_login import current_user
-from sqlalchemy import event
-from sqlalchemy.engine import Engine
-from sqlalchemy.exc import OperationalError, ProgrammingError
+from celery import __version__ as celery_version
+from flask import __version__ as flask_version
+~~from flask import (Blueprint, current_app, flash, jsonify, redirect, request,
+                   url_for)
+from flask.views import MethodView
+from flask_allows import Not, Permission
+from flask_babelplus import gettext as _
+from flask_login import current_user, login_fresh
+from pluggy import HookimplMarker
 
-from flaskbb._compat import iteritems, string_types
-# extensions
-from flaskbb.extensions import (alembic, allows, babel, cache, celery, csrf,
-                                db, debugtoolbar, limiter, login_manager, mail,
-                                redis_store, themes, whooshee)
-from flaskbb.plugins import spec
-from flaskbb.plugins.manager import FlaskBBPluginManager
-from flaskbb.plugins.models import PluginRegistry
-from flaskbb.plugins.utils import remove_zombie_plugins_from_db, template_hook
-# models
-from flaskbb.user.models import Guest, User
-# various helpers
-from flaskbb.utils.helpers import (app_config_from_env, crop_title,
-                                   format_date, format_datetime,
-                                   forum_is_unread, get_alembic_locations,
-                                   get_flaskbb_config, is_online, mark_online,
-                                   render_template, time_since, time_utcnow,
-                                   topic_is_unread)
-# permission checks (here they are used for the jinja filters)
+from flaskbb import __version__ as flaskbb_version
+from flaskbb.extensions import allows, celery, db
+from flaskbb.forum.forms import UserSearchForm
+from flaskbb.forum.models import Category, Forum, Post, Report, Topic
+from flaskbb.management.forms import (AddForumForm, AddGroupForm, AddUserForm,
+                                      CategoryForm, EditForumForm,
+                                      EditGroupForm, EditUserForm)
+from flaskbb.management.models import Setting, SettingsGroup
+from flaskbb.plugins.models import PluginRegistry, PluginStore
+from flaskbb.plugins.utils import validate_plugin
+from flaskbb.user.models import Group, Guest, User
+from flaskbb.utils.forms import populate_settings_dict, populate_settings_form
+from flaskbb.utils.helpers import (get_online_users, register_view,
+                                   render_template, time_diff, time_utcnow,
+                                   FlashAndRedirect)
+from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
+                                        IsAtleastModerator,
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+            all_groups=all_groups,
+            all_plugins=all_plugins,
+            active_nav=active_nav
+        )
+
+
+class ManageUsers(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+    form = UserSearchForm
+
+    def get(self):
+~~        page = request.args.get('page', 1, type=int)
+        form = self.form()
+
+        users = User.query.order_by(User.id.asc()).paginate(
+            page, flaskbb_config['USERS_PER_PAGE'], False
+        )
+
+        return render_template(
+            'management/users.html', users=users, search_form=form
+        )
+
+    def post(self):
+~~        page = request.args.get('page', 1, type=int)
+        form = self.form()
+
+        if form.validate():
+            users = form.get_results().\
+                paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+            return render_template(
+                'management/users.html', users=users, search_form=form
+            )
+
+        users = User.query.order_by(User.id.asc()).paginate(
+            page, flaskbb_config['USERS_PER_PAGE'], False
+        )
+
+        return render_template(
+            'management/users.html', users=users, search_form=form
+        )
+
+
+class EditUser(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator, CanEditUser,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+            return redirect(url_for('management.edit_user', user_id=user.id))
+
+        return render_template(
+            'management/user_form.html', form=form, title=_('Edit User')
+        )
+
+
+class DeleteUser(MethodView):
+    decorators = [
+        allows.requires(
+            IsAdmin,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def post(self, user_id=None):
+~~        if request.is_xhr:
+~~            ids = request.get_json()["ids"]
+
+            data = []
+            for user in User.query.filter(User.id.in_(ids)).all():
+                if current_user.id == user.id:
+                    continue
+
+                if user.delete():
+                    data.append(
+                        {
+                            "id": user.id,
+                            "type": "delete",
+                            "reverse": False,
+                            "reverse_name": None,
+                            "reverse_url": None
+                        }
+                    )
+
+            return jsonify(
+                message="{} users deleted.".format(len(data)),
+                category="success",
+                data=data,
+                status=200
+            )
+
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
 
-def configure_before_handlers(app):
-    """Configures the before request handlers."""
-
-    @app.before_request
-    def update_lastseen():
-        """Updates `lastseen` before every reguest if the user is
-        authenticated."""
-        if current_user.is_authenticated:
-            current_user.lastseen = time_utcnow()
-            db.session.add(current_user)
-            db.session.commit()
-
-    if app.config["REDIS_ENABLED"]:
-
-        @app.before_request
-        def mark_current_user_online():
-            if current_user.is_authenticated:
-                mark_online(current_user.username)
-            else:
-~~                mark_online(request.remote_addr, guest=True)
-
-    app.pluggy.hook.flaskbb_request_processors(app=app)
+        return render_template(
+            'management/user_form.html', form=form, title=_('Add User')
+        )
 
 
-def configure_errorhandlers(app):
-    """Configures the error handlers."""
+class BannedUsers(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+    form = UserSearchForm
 
-    @app.errorhandler(403)
-    def forbidden_page(error):
-        return render_template("errors/forbidden_page.html"), 403
+    def get(self):
+~~        page = request.args.get('page', 1, type=int)
+        search_form = self.form()
 
-    @app.errorhandler(404)
-    def page_not_found(error):
-        return render_template("errors/page_not_found.html"), 404
+        users = User.query.filter(
+            Group.banned == True, Group.id == User.primary_group_id
+        ).paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
 
-    @app.errorhandler(500)
-    def server_error_page(error):
-        return render_template("errors/server_error.html"), 500
+        return render_template(
+            'management/banned_users.html',
+            users=users,
+            search_form=search_form
+        )
 
-    app.pluggy.hook.flaskbb_errorhandlers(app=app)
+    def post(self):
+~~        page = request.args.get('page', 1, type=int)
+        search_form = self.form()
+
+        users = User.query.filter(
+            Group.banned == True, Group.id == User.primary_group_id
+        ).paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+
+        if search_form.validate():
+            users = search_form.get_results().\
+                paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+
+            return render_template(
+                'management/banned_users.html',
+                users=users,
+                search_form=search_form
+            )
+
+        return render_template(
+            'management/banned_users.html',
+            users=users,
+            search_form=search_form
+        )
 
 
-def configure_migrations(app):
-    """Configure migrations."""
+class BanUser(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def post(self, user_id=None):
+        if not Permission(CanBanUser, identity=current_user):
+            flash(
+                _("You do not have the permissions to ban this user."),
+                "danger"
+            )
+            return redirect(url_for("management.overview"))
+
+~~        if request.is_xhr:
+~~            ids = request.get_json()["ids"]
+
+            data = []
+            users = User.query.filter(User.id.in_(ids)).all()
+            for user in users:
+                if (current_user.id == user.id or
+                        Permission(IsAdmin, identity=user) and
+                        Permission(Not(IsAdmin), current_user)):
+                    continue
+
+                elif user.ban():
+                    data.append(
+                        {
+                            "id":
+                            user.id,
+                            "type":
+                            "ban",
+                            "reverse":
+                            "unban",
+                            "reverse_name":
+                            _("Unban"),
+                            "reverse_url":
+                            url_for("management.unban_user", user_id=user.id)
+                        }
+                    )
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
+
+        )
+    ]
+
+    def post(self, user_id=None):
+
+        if not Permission(CanBanUser, identity=current_user):
+            flash(
+                _("You do not have the permissions to unban this user."),
+                "danger"
+            )
+            return redirect(url_for("management.overview"))
+
+~~        if request.is_xhr:
+~~            ids = request.get_json()["ids"]
+
+            data = []
+            for user in User.query.filter(User.id.in_(ids)).all():
+                if user.unban():
+                    data.append(
+                        {
+                            "id": user.id,
+                            "type": "unban",
+                            "reverse": "ban",
+                            "reverse_name": _("Ban"),
+                            "reverse_url": url_for("management.ban_user",
+                                                   user_id=user.id)
+                        }
+                    )
+
+            return jsonify(
+                message="{} users unbanned.".format(len(data)),
+                category="success",
+                data=data,
+                status=200
+            )
+
+        user = User.query.filter_by(id=user_id).first_or_404()
+
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        else:
+            flash(_("Could not unban user."), "danger")
+
+        return redirect(url_for("management.banned_users"))
+
+
+class Groups(MethodView):
+    decorators = [
+        allows.requires(
+            IsAdmin,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to modify groups."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def get(self):
+
+~~        page = request.args.get("page", 1, type=int)
+
+        groups = Group.query.\
+            order_by(Group.id.asc()).\
+            paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+
+        return render_template("management/groups.html", groups=groups)
+
+
+class AddGroup(MethodView):
+    decorators = [
+        allows.requires(
+            IsAdmin,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to modify groups."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+    form = AddGroupForm
+
+    def get(self):
+        return render_template(
+            'management/group_form.html',
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+            return redirect(url_for('management.groups', group_id=group.id))
+
+        return render_template(
+            'management/group_form.html', form=form, title=_('Edit Group')
+        )
+
+
+class DeleteGroup(MethodView):
+    decorators = [
+        allows.requires(
+            IsAdmin,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to modify groups."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def post(self, group_id=None):
+~~        if request.is_xhr:
+~~            ids = request.get_json()["ids"]
+            if not (set(ids) & set(["1", "2", "3", "4", "5", "6"])):
+                data = []
+                for group in Group.query.filter(Group.id.in_(ids)).all():
+                    group.delete()
+                    data.append(
+                        {
+                            "id": group.id,
+                            "type": "delete",
+                            "reverse": False,
+                            "reverse_name": None,
+                            "reverse_url": None
+                        }
+                    )
+
+                return jsonify(
+                    message="{} groups deleted.".format(len(data)),
+                    category="success",
+                    data=data,
+                    status=200
+                )
+            return jsonify(
+                message=_("You cannot delete one of the standard groups."),
+                category="danger",
+                data=None,
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        ).all()
+
+        category.delete(involved_users)
+        flash(_("Category with all associated forums deleted."), "success")
+        return redirect(url_for("management.forums"))
+
+
+class Reports(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to view reports."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def get(self):
+~~        page = request.args.get("page", 1, type=int)
+        reports = Report.query.\
+            order_by(Report.id.asc()).\
+            paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+
+        return render_template("management/reports.html", reports=reports)
+
+
+class UnreadReports(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to view reports."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def get(self):
+~~        page = request.args.get("page", 1, type=int)
+        reports = Report.query.\
+            filter(Report.zapped == None).\
+            order_by(Report.id.desc()).\
+            paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+
+        return render_template("management/reports.html", reports=reports)
+
+
+class MarkReportRead(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to view reports."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def post(self, report_id=None):
+
+~~        if request.is_xhr:
+~~            ids = request.get_json()["ids"]
+            data = []
+
+            for report in Report.query.filter(Report.id.in_(ids)).all():
+                report.zapped_by = current_user.id
+                report.zapped = time_utcnow()
+                report.save()
+                data.append(
+                    {
+                        "id": report.id,
+                        "type": "read",
+                        "reverse": False,
+                        "reverse_name": None,
+                        "reverse_url": None
+                    }
+                )
+
+            return jsonify(
+                message="{} reports marked as read.".format(len(data)),
+                category="success",
+                data=data,
+                status=200
+            )
+
+        if report_id:
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        db.session.commit()
+
+        flash(_("All reports were marked as read."), "success")
+        return redirect(url_for("management.reports"))
+
+
+class DeleteReport(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to view reports."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def post(self, report_id=None):
+
+~~        if request.is_xhr:
+~~            ids = request.get_json()["ids"]
+            data = []
+
+            for report in Report.query.filter(Report.id.in_(ids)).all():
+                if report.delete():
+                    data.append(
+                        {
+                            "id": report.id,
+                            "type": "delete",
+                            "reverse": False,
+                            "reverse_name": None,
+                            "reverse_url": None
+                        }
+                    )
+
+            return jsonify(
+                message="{} reports deleted.".format(len(data)),
+                category="success",
+                data=data,
+                status=200
+            )
+
+        report = Report.query.filter_by(id=report_id).first_or_404()
+        report.delete()
+        flash(_("Report deleted."), "success")
 
 
 ## ... source file continues with no further request examples...
-
 
 ```
 
@@ -280,7 +708,6 @@ from flask_debugtoolbar.toolbar import DebugToolbar
 from flask_debugtoolbar.utils import decode_text
 
 try:
-    # Python 3.8+
     from importlib.metadata import version
 
     __version__ = version("Flask-DebugToolbar")
@@ -294,32 +721,33 @@ module = Blueprint('debugtoolbar', __name__)
 
 
 def replace_insensitive(string, target, replacement):
-    """Similar to string.replace() but is case insensitive
+    no_case = string.lower()
+    index = no_case.rfind(target.lower())
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
 
+    def dispatch_request(self):
+        req = _request_ctx_stack.top.request
+        app = current_app
+
         if req.routing_exception is not None:
             app.raise_routing_exception(req)
 
         rule = req.url_rule
 
-        # if we provide automatic options for this URL and the
-        # request came with the OPTIONS method, reply automatically
         if getattr(rule, 'provide_automatic_options', False) \
            and req.method == 'OPTIONS':
             return app.make_default_options_response()
 
-        # otherwise dispatch to the handler for that endpoint
         view_func = app.view_functions[rule.endpoint]
         view_func = self.process_view(app, view_func, req.view_args)
 
         return view_func(**req.view_args)
 
     def _show_toolbar(self):
-        """Return a boolean to indicate if we need to show the toolbar."""
 ~~        if request.blueprint == 'debugtoolbar':
             return False
 
@@ -330,7 +758,6 @@ def replace_insensitive(string, target, replacement):
         return True
 
     def send_static_file(self, filename):
-        """Send a static file from the flask-debugtoolbar static directory."""
         return send_from_directory(self._static_dir, filename)
 
     def process_request(self):
@@ -339,7 +766,7 @@ def replace_insensitive(string, target, replacement):
         if not self._show_toolbar():
             return
 
-        real_request = request._get_current_object()
+~~        real_request = request._get_current_object()
 
         self.debug_toolbars[real_request] = (
             DebugToolbar(real_request, self.jinja_env))
@@ -348,41 +775,48 @@ def replace_insensitive(string, target, replacement):
             panel.process_request(real_request)
 
     def process_view(self, app, view_func, view_kwargs):
-        """ This method is called just before the flask view is called.
-
-
-## ... source file abbreviated to get to request examples ...
-
-
-        else:
-            warnings.warn('Could not insert debug toolbar.'
-                          ' </body> tag not found in response.')
-            return response
-
-        toolbar = self.debug_toolbars[real_request]
+~~        real_request = request._get_current_object()
+        try:
+            toolbar = self.debug_toolbars[real_request]
+        except KeyError:
+            return view_func
 
         for panel in toolbar.panels:
-            panel.process_response(real_request, response)
+            new_view = panel.process_view(real_request, view_func, view_kwargs)
+            if new_view:
+                view_func = new_view
 
-        toolbar_html = toolbar.render_toolbar()
+        return view_func
 
-        content = ''.join((before, toolbar_html, after))
-        content = content.encode(response.charset)
-        response.response = [content]
-        response.content_length = len(content)
+    def process_response(self, response):
+~~        real_request = request._get_current_object()
+        if real_request not in self.debug_toolbars:
+            return response
 
-        return response
+        if current_app.config['DEBUG_TB_INTERCEPT_REDIRECTS']:
+            if response.status_code in self._redirect_codes:
+                redirect_to = response.location
+                redirect_code = response.status_code
+                if redirect_to:
+                    content = self.render('redirect.html', {
+                        'redirect_to': redirect_to,
+                        'redirect_code': redirect_code
+                    })
+                    response.content_length = len(content)
+                    response.location = None
+                    response.response = [content]
+                    response.status_code = 200
 
-    def teardown_request(self, exc):
-~~        self.debug_toolbars.pop(request._get_current_object(), None)
+        if not (response.status_code == 200 and
+                response.is_sequence and
+                response.headers['content-type'].startswith('text/html')):
+            return response
 
-    def render(self, template_name, context):
-        template = self.jinja_env.get_template(template_name)
-        return template.render(**context)
+        response_html = response.data.decode(response.charset)
+
 
 
 ## ... source file continues with no further request examples...
-
 
 ```
 
@@ -399,7 +833,6 @@ as open source under the
 
 ```python
 # app.py
-# -*- coding: utf-8 -*-
 
 from scripts import tabledef
 from scripts import forms
@@ -412,16 +845,11 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(12)  # Generic key for dev purposes only
 
-# Heroku
-#from flask_heroku import Heroku
-#heroku = Heroku(app)
 
-# ======== Routing =========================================================== #
-# -------- Login ------------------------------------------------------------- #
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if not session.get('logged_in'):
-~~        form = forms.LoginForm(request.form)
+        form = forms.LoginForm(request.form)
 ~~        if request.method == 'POST':
 ~~            username = request.form['username'].lower()
 ~~            password = request.form['password']
@@ -443,14 +871,13 @@ def logout():
     return redirect(url_for('login'))
 
 
-# -------- Signup ---------------------------------------------------------- #
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if not session.get('logged_in'):
-~~        form = forms.LoginForm(request.form)
+        form = forms.LoginForm(request.form)
 ~~        if request.method == 'POST':
 ~~            username = request.form['username'].lower()
-~~            password = helpers.hash_password(request.form['password'])
+            password = helpers.hash_password(request.form['password'])
 ~~            email = request.form['email']
             if form.validate():
                 if not helpers.username_taken(username):
@@ -464,7 +891,6 @@ def signup():
     return redirect(url_for('login'))
 
 
-# -------- Settings ---------------------------------------------------------- #
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
     if session.get('logged_in'):
@@ -480,13 +906,12 @@ def settings():
     return redirect(url_for('login'))
 
 
-# ======== Main ============================================================== #
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=True, host="0.0.0.0")
 
 
-## ... source file continues with no further request examples...
 
+## ... source file continues with no further request examples...
 
 ```
 
@@ -506,12 +931,6 @@ open sourced under the
 
 ```python
 # utils.py
-# -*- coding: utf-8 -*-
-'''
-    flask_login.utils
-    -----------------
-    General utilities.
-'''
 
 
 import hmac
@@ -529,28 +948,26 @@ from .config import COOKIE_NAME, EXEMPT_METHODS
 from .signals import user_logged_in, user_logged_out, user_login_confirmed
 
 
-#: A proxy for the current user. If no user is logged in, this will be an
-#: anonymous user
 current_user = LocalProxy(lambda: _get_user())
 
 
 def encode_cookie(payload, key=None):
-    '''
-    This will encode a ``unicode`` value into a cookie, and sign that cookie
-    with the app's secret key.
-
-    :param payload: The value to encode, as `unicode`.
-    :type payload: unicode
-
-    :param key: The key to use when creating the cookie digest. If not
-                specified, the SECRET_KEY value from app config will be used.
-    :type key: str
-    '''
+    return u'{0}|{1}'.format(payload, _cookie_digest(payload, key=key))
 
 
-## ... source file abbreviated to get to request examples ...
+def decode_cookie(cookie, key=None):
+    try:
+        payload, digest = cookie.rsplit(u'|', 1)
+        if hasattr(digest, 'decode'):
+            digest = digest.decode('ascii')  # pragma: no cover
+    except ValueError:
+        return
+
+    if safe_str_cmp(_cookie_digest(payload, key=key), digest):
+        return payload
 
 
+def make_next_param(login_url, current_url):
     l_url = urlparse(login_url)
     c_url = urlparse(current_url)
 
@@ -561,43 +978,33 @@ def encode_cookie(payload, key=None):
 
 
 def expand_login_view(login_view):
-    '''
-    Returns the url for the login view, expanding the view name to a url if
-    needed.
-
-    :param login_view: The name of the login view or a URL for the login view.
-    :type login_view: str
-    '''
     if login_view.startswith(('https://', 'http://', '/')):
         return login_view
     else:
 ~~        if request.view_args is None:
             return url_for(login_view)
         else:
-~~            return url_for(login_view, **request.view_args)
+            return url_for(login_view, **request.view_args)
 
 
 def login_url(login_view, next_url=None, next_field='next'):
-    '''
-    Creates a URL for redirecting to a login page. If only `login_view` is
-    provided, this will just return the URL for it. If `next_url` is provided,
-    however, this will append a ``next=URL`` parameter to the query string
-    so that the login view can redirect back to that URL. Flask-Login's default
-    unauthorized handler uses this function when redirecting to your login url.
-    To force the host name used, set `FORCE_HOST_FOR_REDIRECTS` to a host. This
-    prevents from redirecting to external sites if request headers Host or
-    X-Forwarded-For are present.
-
-    :param login_view: The name of the login view. (Alternately, the actual
-                       URL to the login view.)
-    :type login_view: str
-    :param next_url: The URL to give the login view for redirection.
-    :type next_url: str
-    :param next_field: What field to store the next URL in. (It defaults to
-                       ``next``.)
-    :type next_field: str
-    '''
     base = expand_login_view(login_view)
+
+    if next_url is None:
+        return base
+
+    parsed_result = urlparse(base)
+    md = url_decode(parsed_result.query)
+    md[next_field] = make_next_param(base, next_url)
+    netloc = current_app.config.get('FORCE_HOST_FOR_REDIRECTS') or \
+        parsed_result.netloc
+    parsed_result = parsed_result._replace(netloc=netloc,
+                                           query=url_encode(md, sort=True))
+    return urlunparse(parsed_result)
+
+
+def login_fresh():
+    return session.get('_fresh', False)
 
 
 
@@ -605,12 +1012,12 @@ def login_url(login_view, next_url=None, next_field='next'):
 
 
 
+    current_app.login_manager._update_request_context_with_user(user)
+    user_logged_in.send(current_app._get_current_object(), user=_get_user())
+    return True
+
 
 def logout_user():
-    '''
-    Logs a user out. (You do not need to pass the actual user.) This will
-    also clean up the remember me cookie if it exists.
-    '''
 
     user = _get_user()
 
@@ -636,42 +1043,12 @@ def logout_user():
 
 
 def confirm_login():
-    '''
-    This sets the current session as fresh. Sessions become stale when they
-    are reloaded from a cookie.
-    '''
     session['_fresh'] = True
     session['_id'] = current_app.login_manager._session_identifier_generator()
     user_login_confirmed.send(current_app._get_current_object())
 
 
 def login_required(func):
-    '''
-    If you decorate a view with this, it will ensure that the current user is
-    logged in and authenticated before calling the actual view. (If they are
-
-
-## ... source file abbreviated to get to request examples ...
-
-
-        if not current_user.is_authenticated:
-            return current_app.login_manager.unauthorized()
-
-    ...which is essentially the code that this function adds to your views.
-
-    It can be convenient to globally turn off authentication when unit testing.
-    To enable this, if the application configuration variable `LOGIN_DISABLED`
-    is set to `True`, this decorator will be ignored.
-
-    .. Note ::
-
-        Per `W3 guidelines for CORS preflight requests
-        <http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0>`_,
-        HTTP ``OPTIONS`` requests are exempt from login checks.
-
-    :param func: The view function to decorate.
-    :type func: function
-    '''
     @wraps(func)
     def decorated_view(*args, **kwargs):
 ~~        if request.method in EXEMPT_METHODS:
@@ -685,29 +1062,6 @@ def login_required(func):
 
 
 def fresh_login_required(func):
-    '''
-    If you decorate a view with this, it will ensure that the current user's
-    login is fresh - i.e. their session was not restored from a 'remember me'
-    cookie. Sensitive operations, like changing a password or e-mail, should
-    be protected with this, to impede the efforts of cookie thieves.
-
-    If the user is not authenticated, :meth:`LoginManager.unauthorized` is
-    called as normal. If they are authenticated, but their session is not
-    fresh, it will call :meth:`LoginManager.needs_refresh` instead. (In that
-    case, you will need to provide a :attr:`LoginManager.refresh_view`.)
-
-    Behaves identically to the :func:`login_required` decorator with respect
-    to configuration variables.
-
-    .. Note ::
-
-        Per `W3 guidelines for CORS preflight requests
-        <http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0>`_,
-        HTTP ``OPTIONS`` requests are exempt from login checks.
-
-    :param func: The view function to decorate.
-    :type func: function
-    '''
     @wraps(func)
     def decorated_view(*args, **kwargs):
 ~~        if request.method in EXEMPT_METHODS:
@@ -723,18 +1077,18 @@ def fresh_login_required(func):
 
 
 def set_login_view(login_view, blueprint=None):
-    '''
-    Sets the login view for the app or blueprint. If a blueprint is passed,
-    the login view is set for this blueprint on ``blueprint_login_views``.
-
-    :param login_view: The user object to log in.
-    :type login_view: str
-    :param blueprint: The blueprint which this login view should be set on.
-        Defaults to ``None``.
-    :type blueprint: object
-    '''
 
     num_login_views = len(current_app.login_manager.blueprint_login_views)
+    if blueprint is not None or num_login_views != 0:
+
+        (current_app.login_manager
+            .blueprint_login_views[blueprint.name]) = login_view
+
+        if (current_app.login_manager.login_view is not None and
+                None not in current_app.login_manager.blueprint_login_views):
+
+            (current_app.login_manager
+                .blueprint_login_views[None]) = (current_app.login_manager
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -762,8 +1116,6 @@ def _cookie_digest(payload, key=None):
 def _get_remote_addr():
 ~~    address = request.headers.get('X-Forwarded-For', request.remote_addr)
     if address is not None:
-        # An 'X-Forwarded-For' header includes a comma separated list of the
-        # addresses, the first address being the actual remote address.
         address = address.encode('utf-8').split(b',')[0].strip()
     return address
 
@@ -794,8 +1146,8 @@ def _secret_key(key=None):
     return key
 
 
-## ... source file continues with no further request examples...
 
+## ... source file continues with no further request examples...
 
 ```
 
@@ -815,7 +1167,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # marshalling.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from collections import OrderedDict
@@ -835,30 +1186,30 @@ def make(cls):
 
 
 def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=False):
-    """Takes raw data (in the form of a dict, list, object) and a dict of
-    fields to output and filters the data based on those fields.
+    out, has_wildcards = _marshal(data, fields, envelope, skip_none, mask, ordered)
 
-    :param data: the actual object(s) from which the fields are taken from
-    :param fields: a dict of whose keys will make up the final serialized
-                   response output
-    :param envelope: optional key that will be used to envelop the serialized
-                     response
-    :param bool skip_none: optional key will be used to eliminate fields
-                           which value is None or the field's key not
-                           exist in data
-    :param bool ordered: Wether or not to preserve order
+    if has_wildcards:
+        from .fields import Wildcard
+
+        items = []
+        keys = []
+        for dkey, val in fields.items():
+            key = dkey
+            if isinstance(val, dict):
+                value = marshal(data, val, skip_none=skip_none, ordered=ordered)
+            else:
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
+
+
+class marshal_with(object):
+
+    def __init__(
+        self, fields, envelope=None, skip_none=False, mask=None, ordered=False
     ):
-        """
-        :param fields: a dict of whose keys will make up the final
-                       serialized response output
-        :param envelope: optional key that will be used to envelop the serialized
-                         response
-        """
         self.fields = fields
         self.envelope = envelope
         self.skip_none = skip_none
@@ -896,142 +1247,15 @@ def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fal
 
 
 class marshal_with_field(object):
-    """
+
 
 
 ## ... source file continues with no further request examples...
 
-
 ```
 
 
-## Example 7 from flask-sqlalchemy
-[flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
-([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
-and
-[PyPI information](https://pypi.org/project/Flask-SQLAlchemy/)) is a
-[Flask](/flask.html) extension that makes it easier to use
-[SQLAlchemy](/sqlalchemy.html) when building Flask apps. flask-sqlalchemy
-provides helper functions that reduce the amount of common boilerplate
-code that you have to frequently write yourself if you did not use this
-library when combining Flask with SQLAlchemy.
-
-flask-sqlalchemy is provided as open source under the
-[BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
-
-[**flask-sqlalchemy / src/flask_sqlalchemy / __init__.py**](https://github.com/pallets/flask-sqlalchemy/blob/master/src/flask_sqlalchemy/./__init__.py)
-
-```python
-# __init__.py
-import functools
-import os
-import sys
-import warnings
-from math import ceil
-from operator import itemgetter
-from threading import Lock
-from time import perf_counter
-
-import sqlalchemy
-from flask import _app_ctx_stack
-from flask import abort
-from flask import current_app
-~~from flask import request
-from flask.signals import Namespace
-from sqlalchemy import event
-from sqlalchemy import inspect
-from sqlalchemy import orm
-from sqlalchemy.engine.url import make_url
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.ext.declarative import DeclarativeMeta
-from sqlalchemy.orm.exc import UnmappedClassError
-from sqlalchemy.orm.session import Session as SessionBase
-
-from .model import DefaultMeta
-from .model import Model
-
-__version__ = "3.0.0.dev"
-
-_signals = Namespace()
-models_committed = _signals.signal("models-committed")
-before_models_committed = _signals.signal("before-models-committed")
-
-
-def _make_table(db):
-    def _make_table(*args, **kwargs):
-        if len(args) > 1 and isinstance(args[1], db.Column):
-            args = (args[0], db.metadata) + args[1:]
-
-
-## ... source file abbreviated to get to request examples ...
-
-
-
-        If ``page`` or ``per_page`` are ``None``, they will be retrieved from
-        the request query. If ``max_per_page`` is specified, ``per_page`` will
-        be limited to that value. If there is no request or they aren't in the
-        query, they default to 1 and 20 respectively. If ``count`` is ``False``,
-        no query to help determine total page count will be run.
-
-        When ``error_out`` is ``True`` (default), the following rules will
-        cause a 404 response:
-
-        * No items are found and ``page`` is not 1.
-        * ``page`` is less than 1, or ``per_page`` is negative.
-        * ``page`` or ``per_page`` are not ints.
-
-        When ``error_out`` is ``False``, ``page`` and ``per_page`` default to
-        1 and 20 respectively.
-
-        Returns a :class:`Pagination` object.
-        """
-
-~~        if request:
-            if page is None:
-                try:
-~~                    page = int(request.args.get("page", 1))
-                except (TypeError, ValueError):
-                    if error_out:
-                        abort(404)
-
-                    page = 1
-
-            if per_page is None:
-                try:
-~~                    per_page = int(request.args.get("per_page", 20))
-                except (TypeError, ValueError):
-                    if error_out:
-                        abort(404)
-
-                    per_page = 20
-        else:
-            if page is None:
-                page = 1
-
-            if per_page is None:
-                per_page = 20
-
-        if max_per_page is not None:
-            per_page = min(per_page, max_per_page)
-
-        if page < 1:
-            if error_out:
-                abort(404)
-            else:
-                page = 1
-
-        if per_page < 0:
-            if error_out:
-                abort(404)
-
-
-## ... source file continues with no further request examples...
-
-
-```
-
-
-## Example 8 from Flask-WTF
+## Example 7 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1066,17 +1290,17 @@ logger = logging.getLogger(__name__)
 
 
 def generate_csrf(secret_key=None, token_key=None):
-    """Generate a CSRF token. The token is cached for a request, so multiple
-    calls to this function will generate the same token.
 
-    During testing, it might be useful to access the signed token in
-    ``g.csrf_token`` and the raw token in ``session['csrf_token']``.
+    secret_key = _get_config(
+        secret_key, 'WTF_CSRF_SECRET_KEY', current_app.secret_key,
+        message='A secret key is required to use CSRF.'
+    )
+    field_name = _get_config(
+        token_key, 'WTF_CSRF_FIELD_NAME', 'csrf_token',
+        message='A field name is required to use CSRF.'
+    )
 
-    :param secret_key: Used to securely sign the token. Default is
-        ``WTF_CSRF_SECRET_KEY`` or ``SECRET_KEY``.
-    :param token_key: Key where token is stored in session for comparison.
-        Default is ``WTF_CSRF_FIELD_NAME`` or ``'csrf_token'``.
-    """
+    if field_name not in g:
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -1111,7 +1335,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ~~            if request.blueprint in self._exempt_blueprints:
                 return
 
-~~            view = app.view_functions.get(request.endpoint)
+            view = app.view_functions.get(request.endpoint)
             dest = '{0}.{1}'.format(view.__module__, view.__name__)
 
             if dest in self._exempt_views:
@@ -1120,14 +1344,12 @@ def generate_csrf(secret_key=None, token_key=None):
             self.protect()
 
     def _get_csrf_token(self):
-        # find the token in the form data
         field_name = current_app.config['WTF_CSRF_FIELD_NAME']
 ~~        base_token = request.form.get(field_name)
 
         if base_token:
             return base_token
 
-        # if the form has a prefix, the name will be {prefix}-csrf_token
 ~~        for key in request.form:
             if key.endswith(field_name):
 ~~                csrf_token = request.form[key]
@@ -1135,7 +1357,6 @@ def generate_csrf(secret_key=None, token_key=None):
                 if csrf_token:
                     return csrf_token
 
-        # find the token in the headers
         for header_name in current_app.config['WTF_CSRF_HEADERS']:
 ~~            csrf_token = request.headers.get(header_name)
 
@@ -1158,42 +1379,36 @@ def generate_csrf(secret_key=None, token_key=None):
 ~~            if not request.referrer:
                 self._error_response('The referrer header is missing.')
 
-~~            good_referrer = 'https://{0}/'.format(request.host)
+            good_referrer = 'https://{0}/'.format(request.host)
 
-~~            if not same_origin(request.referrer, good_referrer):
+            if not same_origin(request.referrer, good_referrer):
                 self._error_response('The referrer does not match the host.')
 
         g.csrf_valid = True  # mark this request as CSRF valid
 
     def exempt(self, view):
-        """Mark a view or blueprint to be excluded from CSRF protection.
-
-        ::
-
-            @app.route('/some-view', methods=['POST'])
-            @csrf.exempt
-            def some_view():
-                ...
-
-        ::
-
-            bp = Blueprint(...)
-            csrf.exempt(bp)
-
-        """
 
         if isinstance(view, Blueprint):
             self._exempt_blueprints.add(view.name)
             return view
 
+        if isinstance(view, string_types):
+            view_location = view
+        else:
+            view_location = '.'.join((view.__module__, view.__name__))
+
+        self._exempt_views.add(view_location)
+        return view
+
+    def _error_response(self, reason):
+
 
 ## ... source file continues with no further request examples...
-
 
 ```
 
 
-## Example 9 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1232,21 +1447,19 @@ class ModelView(ModelView):
             ))
         return True
 
-# Users
 admin.add_view(ModelView(User, db.session))
 
-# Static files
 path = op.join(op.dirname(__file__), 'static')
 admin.add_view(FileAdmin(path, '/static/', name='Static'))
 
 
-## ... source file continues with no further request examples...
 
+## ... source file continues with no further request examples...
 
 ```
 
 
-## Example 10 from newspie
+## Example 9 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1258,13 +1471,6 @@ NewsPie is provided as open source under the
 
 ```python
 # news.py
-# -*- coding: utf-8 -*-
-'''
-NewsPie - a minimalistic news aggregator built with Flask and powered by
-News API (https://newsapi.org/).
-
-Created by @skamieniarz (https://github.com/skamieniarz) in 2019.
-'''
 import configparser
 import json
 import logging
@@ -1298,31 +1504,16 @@ APP = Flask(__name__)
 
 @APP.route('/', methods=['GET', 'POST'])
 def root():
-
-
-## ... source file abbreviated to get to request examples ...
-
-
+    return redirect(url_for('category', category='general', page=1))
 
 
 @APP.errorhandler(404)
 def page_not_found(error):
-    ''' Not existing pages redirect to the first page of general category. '''
     return redirect(url_for('category', category='general', page=1))
 
 
 @APP.route('/category/<string:category>', methods=['GET', 'POST'])
 def category(category):
-    ''' Handles category route.
-
-    Parameters:
-        - name: category
-          in: path
-          description: Name of the news category
-        - name: page
-          in: query
-          description: Number of the page
-    '''
 ~~    page = request.args.get('page', default=1, type=int)
     if page < 1:
         return redirect(url_for('category', category=category, page=1))
@@ -1350,16 +1541,6 @@ def category(category):
 
 @APP.route('/search/<string:query>', methods=['GET', 'POST'])
 def search(query):
-    ''' Handles category route.
-
-    Parameters:
-        - name: query
-          in: path
-          description: Query string to be searched
-        - name: page
-          in: query
-          description: Number of the page
-    '''
 ~~    page = request.args.get('page', default=1, type=int)
     if page < 1:
         return redirect(url_for('search', query=query, page=1))
@@ -1387,7 +1568,6 @@ def search(query):
 
 
 def do_post(page, category='general', current_query=None):
-    ''' Helper method that handles POST request basing on the input. '''
 ~~    new_query = request.form.get('search_query')
 ~~    country = request.form.get('country')
 ~~    next_page = request.form.get('next_page')
@@ -1409,20 +1589,26 @@ def do_post(page, category='general', current_query=None):
 
 
 def parse_articles(response):
-    ''' Parses articles fetched from News API.
-
-    Returns:
-        A list of dicts containing publishing date, title, URL and source of
-        articles.
-    '''
     parsed_articles = []
+    if response.get('status') == 'ok':
+        for article in response.get('articles'):
+            parsed_articles.append({
+                'published_at':
+                    parser.isoparse(article['publishedAt']
+                                   ).strftime('%Y-%m-%d %H:%M'),
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
-    ''' Renders the template with appropriate variables. Up to 12 pages
-        allowed. '''
+def count_pages(response):
+    pages = 0
+    if response.get('status') == 'ok':
+        pages = (-(-response.get('totalResults', 0) // PAGE_SIZE))
+    return pages
+
+
+def render(articles, page, pages, country, category):
     pages = pages if pages <= 12 else 12
     return render_template(CONFIG['VARIOUS']['TEMPLATE'],
                            articles=articles,
@@ -1435,12 +1621,6 @@ def parse_articles(response):
 
 
 def get_cookie(key):
-    ''' Helper method that gets cookie's value.
-
-    Returns:
-        A string with a value of a cookie with provided key. If a key is
-        missing, None is returned.
-    '''
 ~~    cookie_value = request.cookies.get(key)
     return cookie_value
 
@@ -1449,13 +1629,13 @@ if __name__ == '__main__':
     APP.run()
 
 
-## ... source file continues with no further request examples...
 
+## ... source file continues with no further request examples...
 
 ```
 
 
-## Example 11 from sandman2
+## Example 10 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1475,30 +1655,18 @@ The sandman2 project is provided under the
 
 ```python
 # service.py
-"""Automatically generated REST API services from SQLAlchemy
-ORM models or a database introspection."""
 
-# Third-party imports
 ~~from flask import request, make_response
 import flask
 from flask.views import MethodView
 from sqlalchemy import asc, desc
 
-# Application imports
 from sandman2.exception import NotFoundException, BadRequestException
 from sandman2.model import db
 from sandman2.decorators import etag, validate_fields
 
 
 def add_link_headers(response, links):
-    """Return *response* with the proper link headers set, based on the contents
-    of *links*.
-
-    :param response: :class:`flask.Response` response object for links to be
-                     added
-    :param dict links: Dictionary of links to be added
-    :rtype :class:`flask.Response` :
-    """
     link_string = '<{}>; rel=self'.format(links['self'])
     for link in links.values():
         link_string += ', <{}>; rel=related'.format(link)
@@ -1507,11 +1675,6 @@ def add_link_headers(response, links):
 
 
 def jsonify(resource):
-    """Return a Flask ``Response`` object containing a
-    JSON representation of *resource*.
-
-    :param resource: The resource to act as the basis of the response
-    """
 
     response = flask.jsonify(resource.to_dict())
     response = add_link_headers(response, resource.links())
@@ -1519,8 +1682,6 @@ def jsonify(resource):
 
 
 def is_valid_method(model, resource=None):
-    """Return the error message to be sent to the client if the current
-    request passes fails any user-defined validation."""
     validation_function_name = 'is_valid_{}'.format(
 ~~        request.method.lower())
     if hasattr(model, validation_function_name):
@@ -1528,43 +1689,23 @@ def is_valid_method(model, resource=None):
 
 class Service(MethodView):
 
-    """The *Service* class is a generic extension of Flask's *MethodView*,
-    providing default RESTful functionality for a given ORM resource.
 
-    Each service has an associated *__model__* attribute which represents the
-    ORM resource it exposes. Services are JSON-only. HTML-based representation
-    is available through the admin interface.
-    """
-
-    #: The sandman2.model.Model-derived class to expose
     __model__ = None
 
-    #: The string used to describe the elements when a collection is
-    #: returned.
     __json_collection_name__ = 'resources'
 
     def delete(self, resource_id):
-        """Return an HTTP response object resulting from a HTTP DELETE call.
-
-        :param resource_id: The value of the resource's primary key
-
-
-## ... source file abbreviated to get to request examples ...
-
-
+        resource = self._resource(resource_id)
+        error_message = is_valid_method(self.__model__, resource)
+        if error_message:
+            raise BadRequestException(error_message)
+        db.session().delete(resource)
         db.session().commit()
         return self._no_content_response()
 
     @etag
     def get(self, resource_id=None):
-        """Return an HTTP response object resulting from an HTTP GET call.
-
-        If *resource_id* is provided, return just the single resource.
-        Otherwise, return the full collection.
-
-        :param resource_id: The value of the resource's primary key
-        """
-        if request.path.endswith('meta'):
+~~        if request.path.endswith('meta'):
             return self._meta()
 
         if resource_id is None:
@@ -1586,33 +1727,19 @@ class Service(MethodView):
             return jsonify(resource)
 
     def patch(self, resource_id):
-        """Return an HTTP response object resulting from an HTTP PATCH call.
-
-        :returns: ``HTTP 200`` if the resource already exists
-        :returns: ``HTTP 400`` if the request is malformed
-        :returns: ``HTTP 404`` if the resource is not found
-        :param resource_id: The value of the resource's primary key
-        """
         resource = self._resource(resource_id)
         error_message = is_valid_method(self.__model__, resource)
         if error_message:
             raise BadRequestException(error_message)
 ~~        if not request.json:
             raise BadRequestException('No JSON data received')
-~~        resource.update(request.json)
+        resource.update(request.json)
         db.session().merge(resource)
         db.session().commit()
         return jsonify(resource)
 
     @validate_fields
     def post(self):
-        """Return the JSON representation of a new resource created through
-        an HTTP POST call.
-
-        :returns: ``HTTP 201`` if a resource is properly created
-        :returns: ``HTTP 204`` if the resource already exists
-        :returns: ``HTTP 400`` if the request is malformed or missing data
-        """
         resource = self.__model__.query.filter_by(**request.json).first()
         if resource:
             error_message = is_valid_method(self.__model__, resource)
@@ -1620,7 +1747,7 @@ class Service(MethodView):
                 raise BadRequestException(error_message)
             return self._no_content_response()
 
-~~        resource = self.__model__(**request.json)  # pylint: disable=not-callable
+        resource = self.__model__(**request.json)  # pylint: disable=not-callable
         error_message = is_valid_method(self.__model__, resource)
         if error_message:
             raise BadRequestException(error_message)
@@ -1629,29 +1756,13 @@ class Service(MethodView):
         return self._created_response(resource)
 
     def put(self, resource_id):
-        """Return the JSON representation of a new resource created or updated
-        through an HTTP PUT call.
 
-        If resource_id is not provided, it is assumed the primary key field is
-        included and a totally new resource is created. Otherwise, the existing
-        resource referred to by *resource_id* is updated with the provided JSON
-        data. This method is idempotent.
 
-        :returns: ``HTTP 201`` if a new resource is created
-        :returns: ``HTTP 200`` if a resource is updated
-        :returns: ``HTTP 400`` if the request is malformed or missing data
-        """
-        resource = self.__model__.query.get(resource_id)
-        if resource:
-            error_message = is_valid_method(self.__model__, resource)
-            if error_message:
-                raise BadRequestException(error_message)
-~~            resource.update(request.json)
-            db.session().merge(resource)
-            db.session().commit()
-            return jsonify(resource)
+## ... source file abbreviated to get to request examples ...
 
-~~        resource = self.__model__(**request.json)  # pylint: disable=not-callable
+
+
+        resource = self.__model__(**request.json)  # pylint: disable=not-callable
         error_message = is_valid_method(self.__model__, resource)
         if error_message:
             raise BadRequestException(error_message)
@@ -1660,27 +1771,15 @@ class Service(MethodView):
         return self._created_response(resource)
 
     def _meta(self):
-        """Return a description of this resource as reported by the
-        database."""
         return flask.jsonify(self.__model__.description())
 
     def _resource(self, resource_id):
-        """Return the ``sandman2.model.Model`` instance with the given
-        *resource_id*.
-
-        :rtype: :class:`sandman2.model.Model`
-        """
         resource = self.__model__.query.get(resource_id)
         if not resource:
             raise NotFoundException()
         return resource
 
     def _all_resources(self):
-        """Return the complete collection of resources as a list of
-        dictionaries.
-
-        :rtype: :class:`sandman2.model.Model`
-        """
         queryset = self.__model__.query
 ~~        args = {k: v for (k, v) in request.args.items() if k not in ('page', 'export')}
         limit = None
@@ -1701,17 +1800,13 @@ class Service(MethodView):
                     raise BadRequestException('Invalid field [{}]'.format(key))
             queryset = queryset.filter(*filters).order_by(*order)
 ~~        if 'page' in request.args:
-~~            resources = queryset.paginate(page=int(request.args['page']), per_page=limit).items
+            resources = queryset.paginate(page=int(request.args['page']), per_page=limit).items
         else:
             queryset = queryset.limit(limit)
             resources = queryset.all()
         return [r.to_dict() for r in resources]
 
     def _export(self, collection):
-        """Return a CSV of the resources in *collection*.
-
-        :param list collection: A list of resources represented by dicts
-        """
         fieldnames = collection[0].keys()
         faux_csv = ','.join(fieldnames) + '\r\n'
         for resource in collection:
@@ -1723,18 +1818,20 @@ class Service(MethodView):
 
     @staticmethod
     def _no_content_response():
-        """Return an HTTP 204 "No Content" response.
+        response = make_response()
+        response.status_code = 204
+        return response
 
-        :returns: HTTP Response
+    @staticmethod
+    def _created_response(resource):
 
 
 ## ... source file continues with no further request examples...
 
-
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 11 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1756,7 +1853,6 @@ from functools import wraps
 
 
 def is_authorized_api_user(roles=False):
-    """Verify API Token and its owners permission to use it"""
 ~~    if 'API_ID' not in request.headers:
         return False
 ~~    if 'API_KEY' not in request.headers:
@@ -1764,7 +1860,7 @@ def is_authorized_api_user(roles=False):
 ~~    api_key = users.ApiKey.query.filter(users.ApiKey.id==request.headers['API_ID']).first()
     if not api_key:
         return False
-~~    if not current_app.user_manager.verify_password(request.headers['API_KEY'], api_key.hash):
+    if not current_app.user_manager.verify_password(request.headers['API_KEY'], api_key.hash):
         return False
     if not roles:
         return True
@@ -1787,12 +1883,8 @@ def roles_accepted_api(*role_names):
     return wrapper
 
 
-def api_credentials_required():
-    def wrapper(view_function):
-
 
 ## ... source file continues with no further request examples...
-
 
 ```
 

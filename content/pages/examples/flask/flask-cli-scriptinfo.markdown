@@ -24,14 +24,6 @@ FlaskBB is provided as open source
 
 ```python
 # main.py
-    flaskbb.cli.commands
-    --------------------
-
-    This module contains the main commands.
-
-    :copyright: (c) 2016 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import binascii
 import logging
 import os
@@ -106,14 +98,11 @@ def make_app(script_info):
 
 
 def set_config(ctx, param, value):
-    """This will pass the config file to the create_app function."""
 ~~    ctx.ensure_object(ScriptInfo).config_file = value
 
 
 def set_instance(ctx, param, value):
-    """This will pass the instance path on the script info which can then
-    be used in 'make_app'."""
-    ctx.ensure_object(ScriptInfo).instance_path = value
+~~    ctx.ensure_object(ScriptInfo).instance_path = value
 
 
 @click.group(cls=FlaskBBGroup, create_app=make_app, add_version_option=False,
@@ -132,10 +121,15 @@ def set_instance(ctx, param, value):
               is_flag=True, is_eager=True, help="Show the FlaskBB version.")
 @click.pass_context
 @click_log.simple_verbosity_option(logger)
+def flaskbb(ctx):
+    if ctx.invoked_subcommand is None:
+        click.echo(ctx.get_help())
+
+
+flaskbb.add_command(alembic_click, "db")
 
 
 ## ... source file continues with no further ScriptInfo examples...
-
 
 ```
 

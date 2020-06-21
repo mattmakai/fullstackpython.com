@@ -1,7 +1,7 @@
 title: flask.views MethodView code examples
 category: page
 slug: flask-views-methodview-examples
-sortorder: 500021017
+sortorder: 500021018
 toc: False
 sidebartitle: flask.views MethodView
 meta: Python example code for the MethodView class from the flask.views module of the Flask project.
@@ -24,17 +24,6 @@ FlaskBB is provided as open source
 
 ```python
 # views.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.auth.views
-    ------------------
-
-    This view provides user authentication, registration and a view for
-    resetting the password of a user if he has lost his password
-
-    :copyright: (c) 2014 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 import logging
 from datetime import datetime
 
@@ -397,7 +386,6 @@ logger = logging.getLogger(__name__)
 
 ## ... source file continues with no further MethodView examples...
 
-
 ```
 
 
@@ -416,7 +404,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # resource.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from flask import request
@@ -429,17 +416,6 @@ from .utils import unpack
 
 
 ~~class Resource(MethodView):
-    """
-    Represents an abstract RESTX resource.
-
-    Concrete resources should extend from this class
-    and expose methods for each supported HTTP method.
-    If a resource is invoked with an unsupported HTTP method,
-    the API will return a response with status 405 Method Not Allowed.
-    Otherwise the appropriate method is called and passed all arguments
-    from the url rule used when adding the resource to an Api instance.
-    See :meth:`-flask_restx.Api.add_resource` for details.
-    """
 
     representations = None
     method_decorators = []
@@ -448,15 +424,25 @@ from .utils import unpack
         self.api = api
 
     def dispatch_request(self, *args, **kwargs):
-        # Taken from flask
         meth = getattr(self, request.method.lower(), None)
         if meth is None and request.method == "HEAD":
             meth = getattr(self, "get", None)
         assert meth is not None, "Unimplemented method %r" % request.method
 
+        for decorator in self.method_decorators:
+            meth = decorator(meth)
+
+        self.validate_payload(meth)
+
+        resp = meth(*args, **kwargs)
+
+        if isinstance(resp, BaseResponse):
+            return resp
+
+        representations = self.representations or {}
+
 
 ## ... source file continues with no further MethodView examples...
-
 
 ```
 
@@ -481,30 +467,18 @@ The sandman2 project is provided under the
 
 ```python
 # service.py
-"""Automatically generated REST API services from SQLAlchemy
-ORM models or a database introspection."""
 
-# Third-party imports
 from flask import request, make_response
 import flask
 ~~from flask.views import MethodView
 from sqlalchemy import asc, desc
 
-# Application imports
 from sandman2.exception import NotFoundException, BadRequestException
 from sandman2.model import db
 from sandman2.decorators import etag, validate_fields
 
 
 def add_link_headers(response, links):
-    """Return *response* with the proper link headers set, based on the contents
-    of *links*.
-
-    :param response: :class:`flask.Response` response object for links to be
-                     added
-    :param dict links: Dictionary of links to be added
-    :rtype :class:`flask.Response` :
-    """
     link_string = '<{}>; rel=self'.format(links['self'])
     for link in links.values():
         link_string += ', <{}>; rel=related'.format(link)
@@ -513,11 +487,6 @@ def add_link_headers(response, links):
 
 
 def jsonify(resource):
-    """Return a Flask ``Response`` object containing a
-    JSON representation of *resource*.
-
-    :param resource: The resource to act as the basis of the response
-    """
 
     response = flask.jsonify(resource.to_dict())
     response = add_link_headers(response, resource.links())
@@ -525,8 +494,6 @@ def jsonify(resource):
 
 
 def is_valid_method(model, resource=None):
-    """Return the error message to be sent to the client if the current
-    request passes fails any user-defined validation."""
     validation_function_name = 'is_valid_{}'.format(
         request.method.lower())
     if hasattr(model, validation_function_name):
@@ -534,33 +501,32 @@ def is_valid_method(model, resource=None):
 
 ~~class Service(MethodView):
 
-    """The *Service* class is a generic extension of Flask's *MethodView*,
-    providing default RESTful functionality for a given ORM resource.
 
-    Each service has an associated *__model__* attribute which represents the
-    ORM resource it exposes. Services are JSON-only. HTML-based representation
-    is available through the admin interface.
-    """
-
-    #: The sandman2.model.Model-derived class to expose
     __model__ = None
 
-    #: The string used to describe the elements when a collection is
-    #: returned.
     __json_collection_name__ = 'resources'
 
     def delete(self, resource_id):
-        """Return an HTTP response object resulting from a HTTP DELETE call.
-
-        :param resource_id: The value of the resource's primary key
-        """
         resource = self._resource(resource_id)
         error_message = is_valid_method(self.__model__, resource)
         if error_message:
+            raise BadRequestException(error_message)
+        db.session().delete(resource)
+        db.session().commit()
+        return self._no_content_response()
+
+    @etag
+    def get(self, resource_id=None):
+        if request.path.endswith('meta'):
+            return self._meta()
+
+        if resource_id is None:
+            error_message = is_valid_method(self.__model__)
+            if error_message:
+                raise BadRequestException(error_message)
 
 
 ## ... source file continues with no further MethodView examples...
-
 
 ```
 

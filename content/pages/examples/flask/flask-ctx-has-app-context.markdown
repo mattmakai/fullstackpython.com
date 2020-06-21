@@ -25,7 +25,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # marshalling.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from collections import OrderedDict
@@ -45,32 +44,32 @@ def make(cls):
 
 
 def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=False):
-    """Takes raw data (in the form of a dict, list, object) and a dict of
-    fields to output and filters the data based on those fields.
+    out, has_wildcards = _marshal(data, fields, envelope, skip_none, mask, ordered)
 
-    :param data: the actual object(s) from which the fields are taken from
-    :param fields: a dict of whose keys will make up the final serialized
-                   response output
-    :param envelope: optional key that will be used to envelop the serialized
-                     response
-    :param bool skip_none: optional key will be used to eliminate fields
-                           which value is None or the field's key not
-                           exist in data
-    :param bool ordered: Wether or not to preserve order
+    if has_wildcards:
+        from .fields import Wildcard
+
+        items = []
+        keys = []
+        for dkey, val in fields.items():
+            key = dkey
+            if isinstance(val, dict):
+                value = marshal(data, val, skip_none=skip_none, ordered=ordered)
+            else:
 
 
 ## ... source file abbreviated to get to has_app_context examples ...
 
 
+
+    return out, has_wildcards["present"]
+
+
+class marshal_with(object):
+
     def __init__(
         self, fields, envelope=None, skip_none=False, mask=None, ordered=False
     ):
-        """
-        :param fields: a dict of whose keys will make up the final
-                       serialized response output
-        :param envelope: optional key that will be used to envelop the serialized
-                         response
-        """
         self.fields = fields
         self.envelope = envelope
         self.skip_none = skip_none
@@ -110,7 +109,6 @@ def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fal
 
 
 ## ... source file continues with no further has_app_context examples...
-
 
 ```
 

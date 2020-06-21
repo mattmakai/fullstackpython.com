@@ -54,13 +54,18 @@ def get_first_last_name(fullname):
 
 
 class BaseRegisterUser(PublicFormView):
-    """
-        Make your own user registration view and inherit from this class if you
+
+    route_base = "/register"
 
 
 ## ... source file abbreviated to get to flash examples ...
 
 
+            self.email_template,
+            url=url,
+            username=register_user.username,
+            first_name=register_user.first_name,
+            last_name=register_user.last_name,
         )
         msg.recipients = [register_user.email]
         try:
@@ -71,11 +76,6 @@ class BaseRegisterUser(PublicFormView):
         return True
 
     def add_registration(self, username, first_name, last_name, email, password=""):
-        """
-            Add a registration request for the user.
-
-        :rtype : RegisterUser
-        """
         register_user = self.appbuilder.sm.add_register_user(
             username, first_name, last_name, email, password
         )
@@ -90,11 +90,6 @@ class BaseRegisterUser(PublicFormView):
 
     @expose("/activation/<string:activation_hash>")
     def activation(self, activation_hash):
-        """
-            Endpoint to expose an activation url, this url
-            is sent to the user by email, when accessed the user is inserted
-            and activated
-        """
         reg = self.appbuilder.sm.find_register_user(activation_hash)
         if not reg:
             log.error(c.LOGMSG_ERR_SEC_NO_REGISTER_HASH.format(activation_hash))
@@ -134,12 +129,13 @@ class BaseRegisterUser(PublicFormView):
 
 
 class RegisterUserDBView(BaseRegisterUser):
-    """
+
 
 
 ## ... source file abbreviated to get to flash examples ...
 
 
+            )
         resp = session.pop("oid_resp", None)
         if resp:
             self._init_vars()
@@ -151,7 +147,6 @@ class RegisterUserDBView(BaseRegisterUser):
             form.last_name.data = last_name
             form.email.data = resp.email
             widgets = self._get_edit_widget(form=form)
-            # self.update_redirect()
             return self.render_template(
                 self.form_template,
                 title=self.form_title,
@@ -164,9 +159,6 @@ class RegisterUserDBView(BaseRegisterUser):
             return redirect(self.get_redirect())
 
     def oid_login_handler(self, f, oid):
-        """
-            Hackish method to make use of oid.login_handler decorator.
-        """
         if request.args.get("openid_complete") != u"yes":
             return f(False)
         consumer = Consumer(SessionWrapper(self), oid.store_factory())
@@ -182,13 +174,15 @@ class RegisterUserDBView(BaseRegisterUser):
         return redirect(oid.get_current_url())
 
     def after_login(self, resp):
-        """
-            Method that adds the return OpenID response object on the session
-            this session key will be deleted
+        session["oid_resp"] = resp
+
+    def form_get(self, form):
+        self.add_form_unique_validations(form)
+
+    def form_post(self, form):
 
 
 ## ... source file continues with no further flash examples...
-
 
 ```
 
@@ -207,16 +201,7 @@ FlaskBB is provided as open source
 
 ```python
 # plugins.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.auth.plugins
-    --------------------
-    Plugin implementations for FlaskBB auth hooks
-
-    :copyright: (c) 2014-2018 the FlaskBB Team.
-    :license: BSD, see LICENSE for more details
-"""
-from flask import flash, redirect, url_for
+~~from flask import flash, redirect, url_for
 from flask_login import current_user, logout_user
 
 from . import impl
@@ -237,6 +222,10 @@ from .services.reauthentication import (
     MarkFailedReauth,
 )
 from .services.registration import (
+    AutoActivateUserPostProcessor,
+    AutologinPostProcessor,
+    EmailUniquenessValidator,
+    SendActivationPostProcessor,
 
 
 ## ... source file abbreviated to get to flash examples ...
@@ -291,7 +280,6 @@ def flaskbb_registration_post_processor(user):
 
 ## ... source file continues with no further flash examples...
 
-
 ```
 
 
@@ -306,17 +294,7 @@ is configured in JSON. The code is provided as open source under the
 
 ```python
 # charts_builder.py
-# -*- coding: utf-8 -*-
 
-"""
-flask_jsondash.charts_builder
------------------------------
-
-The chart blueprint that houses all functionality.
-
-:copyright: (c) 2016 by Chris Tabor.
-:license: MIT, see LICENSE for more details.
-"""
 
 import json
 import os
@@ -341,19 +319,20 @@ from flask_jsondash.schema import (
 TEMPLATE_DIR = os.path.dirname(templates.__file__)
 STATIC_DIR = os.path.dirname(static.__file__)
 
-# Internally required libs that are also shared in `settings.py`
-# for charts. These follow the same format as what is loaded in
-# `get_active_assets` so that shared libraries are loaded in the same manner
-# for simplicty and prevention of duplicate loading.
-# Note these are just LABELS, not files.
 REQUIRED_STATIC_FAMILES = ['D3']
 
 charts = Blueprint(
+    'jsondash',
+    __name__,
+    template_folder=TEMPLATE_DIR,
+    static_url_path=STATIC_DIR,
+    static_folder=STATIC_DIR,
 
 
 ## ... source file abbreviated to get to flash examples ...
 
 
+        pagination = None
     categorized = utils.categorize_views(views)
     kwargs = dict(
         total=len(views),
@@ -372,7 +351,6 @@ charts = Blueprint(
 
 @charts.route('/charts/<c_id>', methods=['GET'])
 def view(c_id):
-    """Load a json view config from the DB."""
     if not auth(authtype='view', view_id=c_id):
 ~~        flash('You do not have access to view this dashboard.', 'error')
         return redirect(url_for('jsondash.dashboard'))
@@ -380,23 +358,17 @@ def view(c_id):
     if not viewjson:
 ~~        flash('Could not find view: {}'.format(c_id), 'error')
         return redirect(url_for('jsondash.dashboard'))
-    # Remove _id, it's not JSON serializeable.
     if '_id' in viewjson:
         viewjson.pop('_id')
     if 'modules' not in viewjson:
 ~~        flash('Invalid configuration - missing modules.', 'error')
         return redirect(url_for('jsondash.dashboard'))
-    # Chart family is encoded in chart type value for lookup.
     active_charts = [v.get('family') for v in viewjson['modules']
                      if v.get('family') is not None]
-    # If the logged in user is also the creator of this dashboard,
-    # let me edit it. Otherwise, defer to any user-supplied auth function
-    # for this specific view.
     if metadata(key='username') == viewjson.get('created_by'):
         can_edit = True
     else:
         can_edit = auth(authtype='edit_others', view_id=c_id)
-    # Backwards compatible layout type
     layout_type = viewjson.get('layout', 'freeform')
     kwargs = dict(
         id=c_id,
@@ -416,7 +388,6 @@ def view(c_id):
 
 @charts.route('/charts/<c_id>/delete', methods=['POST'])
 def delete(c_id):
-    """Delete a json dashboard config."""
     dash_url = url_for('jsondash.dashboard')
     if not auth(authtype='delete'):
 ~~        flash('You do not have access to delete dashboards.', 'error')
@@ -428,7 +399,6 @@ def delete(c_id):
 
 @charts.route('/charts/<c_id>/update', methods=['POST'])
 def update(c_id):
-    """Normalize the form POST and setup the json view config object."""
     if not auth(authtype='update'):
 ~~        flash('You do not have access to update dashboards.', 'error')
         return redirect(url_for('jsondash.dashboard'))
@@ -454,7 +424,6 @@ def update(c_id):
     else:
         modules = db.format_charts(form_data)
         layout = form_data['mode']
-        # Disallow any values if they would cause an invalid layout.
         if layout == 'grid' and modules and modules[0].get('row') is None:
 ~~            flash('Cannot use grid layout without '
                   'specifying row(s)! Edit JSON manually '
@@ -471,12 +440,8 @@ def update(c_id):
             id=c_id,
             date=now,
         )
-    # Update metadata, but exclude some fields that should never
-    # be overwritten by user, once the view has been created.
     data.update(**metadata(exclude=['created_by']))
-    # Possibly override global user, if configured and valid.
     data.update(**check_global())
-    # Update db
     if edit_raw:
         adapter.update(c_id, data=data, fmt_charts=False)
     else:
@@ -486,14 +451,6 @@ def update(c_id):
 
 
 def check_global():
-    """Allow overriding of the user by making it global.
-
-    This also checks if the setting is enabled for the app,
-    otherwise it will not allow it.
-
-    Returns:
-        dict: A dictionary with certain global flags overriden.
-    """
     global_enabled = setting('JSONDASH_GLOBALDASH')
     global_flag = request.form.get('is_global') is not None
     can_make_global = auth(authtype='edit_global')
@@ -504,7 +461,6 @@ def check_global():
 
 @charts.route('/charts/create', methods=['POST'])
 def create():
-    """Normalize the form POST and setup the json view config object."""
     if not auth(authtype='create'):
 ~~        flash('You do not have access to create dashboards.', 'error')
         return redirect(url_for('jsondash.dashboard'))
@@ -518,9 +474,7 @@ def create():
         layout=data.get('mode', 'grid'),
     )
     d.update(**metadata())
-    # Possibly override global user, if configured and valid.
     d.update(**check_global())
-    # Add to DB
     adapter.create(data=d)
 ~~    flash('Created new dashboard "{}"'.format(data['name']))
     return redirect(url_for('jsondash.view', c_id=new_id))
@@ -528,7 +482,6 @@ def create():
 
 @charts.route('/charts/<c_id>/clone', methods=['POST'])
 def clone(c_id):
-    """Clone a json view config from the DB."""
     if not auth(authtype='clone'):
 ~~        flash('You do not have access to clone dashboards.', 'error')
         return redirect(url_for('jsondash.dashboard'))
@@ -536,7 +489,6 @@ def clone(c_id):
     if not viewjson:
 ~~        flash('Could not find view: {}'.format(c_id), 'error')
         return redirect(url_for('jsondash.dashboard'))
-    # Update some fields.
     newname = 'Clone of {}'.format(viewjson['name'])
     data = dict(
         name=newname,
@@ -546,14 +498,13 @@ def clone(c_id):
         layout=viewjson['layout'],
     )
     data.update(**metadata())
-    # Add to DB
     adapter.create(data=data)
 ~~    flash('Created new dashboard clone "{}"'.format(newname))
     return redirect(url_for('jsondash.view', c_id=data['id']))
 
 
-## ... source file continues with no further flash examples...
 
+## ... source file continues with no further flash examples...
 
 ```
 
@@ -573,12 +524,6 @@ open sourced under the
 
 ```python
 # login_manager.py
-# -*- coding: utf-8 -*-
-'''
-    flask_login.login_manager
-    -------------------------
-    The LoginManager class.
-'''
 
 
 import warnings
@@ -603,22 +548,22 @@ from .utils import (login_url as make_login_url, _create_identifier,
 
 
 class LoginManager(object):
-    '''This object is used to hold the settings used for logging in. Instances
-    of :class:`LoginManager` are *not* bound to specific apps, so you can
-    create one in the main body of your code and then bind it to your
-    app in a factory function.
-    '''
     def __init__(self, app=None, add_context_processor=True):
+        self.anonymous_user = AnonymousUserMixin
+
+        self.login_view = None
+
+        self.blueprint_login_views = {}
 
 
 ## ... source file abbreviated to get to flash examples ...
 
 
-        raise a HTTP 401 (Unauthorized) error instead.
 
-        This should be returned from a view or before/after_request function,
-        otherwise the redirect will have no effect.
-        '''
+        if add_context_processor:
+            app.context_processor(_user_context_processor)
+
+    def unauthorized(self):
         user_unauthorized.send(current_app._get_current_object())
 
         if self.unauthorized_callback:
@@ -651,32 +596,32 @@ class LoginManager(object):
         return redirect(redirect_url)
 
     def user_loader(self, callback):
-        '''
-        This sets the callback for reloading a user from the session. The
-        function you set should take a user ID (a ``unicode``) and return a
-        user object, or ``None`` if the user does not exist.
-
-        :param callback: The callback for retrieving a user object.
-        :type callback: callable
-        '''
         self._user_callback = callback
         return self.user_callback
+
+    @property
+    def user_callback(self):
+        return self._user_callback
+
+    def request_loader(self, callback):
+        self._request_callback = callback
+        return self.request_callback
 
 
 
 ## ... source file abbreviated to get to flash examples ...
 
 
-              they were attempting to access will be passed in the ``next``
-              query string variable, so you can redirect there if present
-              instead of the homepage.)
 
-        If :attr:`LoginManager.refresh_view` is not defined, then it will
-        simply raise a HTTP 401 (Unauthorized) error instead.
+    def unauthorized_handler(self, callback):
+        self.unauthorized_callback = callback
+        return callback
 
-        This should be returned from a view or before/after_request function,
-        otherwise the redirect will have no effect.
-        '''
+    def needs_refresh_handler(self, callback):
+        self.needs_refresh_callback = callback
+        return callback
+
+    def needs_refresh(self):
         user_needs_refresh.send(current_app._get_current_object())
 
         if self.needs_refresh_callback:
@@ -706,19 +651,18 @@ class LoginManager(object):
         return redirect(redirect_url)
 
     def header_loader(self, callback):
-        '''
-        This function has been deprecated. Please use
-        :meth:`LoginManager.request_loader` instead.
+        print('LoginManager.header_loader is deprecated. Use ' +
+              'LoginManager.request_loader instead.')
+        self._header_callback = callback
+        return callback
 
-        This sets the callback for loading a user from a header value.
-        The function you set should take an authentication token and
-        return a user object, or `None` if the user does not exist.
+    def _update_request_context_with_user(self, user=None):
 
-        :param callback: The callback for retrieving a user object.
+        ctx = _request_ctx_stack.top
+        ctx.user = self.anonymous_user() if user is None else user
 
 
 ## ... source file continues with no further flash examples...
-
 
 ```
 
@@ -739,7 +683,6 @@ The project's code is provided as open source under the
 
 ```python
 # misc_views.py
-# Copyright 2017 Twin Tech Labs. All rights reserved
 
 from flask import Blueprint, redirect, render_template, current_app, abort
 ~~from flask import request, url_for, flash, send_from_directory, jsonify, render_template_string
@@ -751,22 +694,22 @@ from app.utils.forms import ConfirmationForm
 import uuid, json, os
 import datetime
 
-# When using a Flask app factory we must use a blueprint to avoid needing 'app' for '@app.route'
 main_blueprint = Blueprint('main', __name__, template_folder='templates')
 
-# The User page is accessible to authenticated users (users that have logged in)
 @main_blueprint.route('/')
 def member_page():
     if not current_user.is_authenticated:
         return redirect(url_for('user.login'))
     return render_template('pages/member_base.html')
 
-# The Admin page is accessible to users with the 'admin' role
 @main_blueprint.route('/admin')
 @roles_accepted('admin')
 def admin_page():
     return redirect(url_for('main.user_admin_page'))
 
+@main_blueprint.route('/users')
+@roles_accepted('admin')
+def user_admin_page():
 
 
 ## ... source file abbreviated to get to flash examples ...
@@ -860,23 +803,22 @@ def user_profile_page():
     if current_app.config.get('USER_LDAP', False):
         abort(400)
 
-    # Initialize form
     form = UserProfileForm(request.form, obj=current_user)
 
-    # Process valid POST
     if request.method == 'POST' and form.validate():
-        # Copy form fields to user_profile fields
         form.populate_obj(current_user)
 
-        # Save user_profile
         db.session.commit()
 
-        # Redirect to home page
         return redirect(url_for('main.user_profile_page'))
+
+    return render_template('pages/user_profile_page.html',
+                           current_user=current_user,
+                           form=form)
+
 
 
 ## ... source file continues with no further flash examples...
-
 
 ```
 

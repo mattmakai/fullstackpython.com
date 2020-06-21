@@ -45,7 +45,6 @@ from beaker.cache import CacheManager
 from beaker.util import parse_cache_config_options
 from beaker.middleware import SessionMiddleware
 
-# Instantiate Flask extensions
 db = SQLAlchemy()
 csrf_protect = CSRFProtect()
 mail = Mail()
@@ -53,14 +52,15 @@ migrate = Migrate()
 
 
 def get_config():
-    # Instantiate Flask
     app = Flask(__name__)
 
-    # Load App Config settings
-    # Load common settings from 'app/settings.py' file
     app.config.from_object('app.settings')
-    # Load local settings from environmental variable
     if 'APPLICATION_SETTINGS' in os.environ:
+        app.config.from_envvar(os.environ['APPLICATION_SETTINGS'])
+    if 'AWS_SECRETS_MANAGER_CONFIG' in os.environ:
+        secret_config = get_secrets(os.environ['AWS_SECRETS_MANAGER_CONFIG'])
+        app.config.update(secret_config)
+    elif 'AWS_SECRETS_MANAGER_CONFIG' in app.config:
 
 
 ## ... source file abbreviated to get to SessionInterface examples ...
@@ -95,7 +95,7 @@ def get_config():
             session.save()
 
     app.wsgi_app = SessionMiddleware(app.wsgi_app, session_opts)
-~~    app.session_interface = BeakerSessionInterface()
+    app.session_interface = BeakerSessionInterface()
 
     @user_logged_out.connect_via(app)
     def clear_session(sender, user, **extra):
@@ -111,19 +111,9 @@ def init_error_handlers(app):
     def show_error(status, message='An unknown error has occured.'):
         return render_template('pages/errors.html', error_code=status, message=message), status
 
-    @app.errorhandler(401)
-    def error_unauthorized(e):
-        return show_error(401, 'Unauthorized')
-
-    @app.errorhandler(403)
-    def error_forbidden(e):
-        return show_error(403, 'Forbidden')
-
-    @app.errorhandler(404)
 
 
 ## ... source file continues with no further SessionInterface examples...
-
 
 ```
 

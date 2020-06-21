@@ -45,16 +45,16 @@ log = logging.getLogger(__name__)
 
 
 def protect(allow_browser_login=False):
-    """
-        Use this decorator to enable granular security permissions
-        to your API methods (BaseApi and child classes).
-        Permissions will be associated to a role, and roles are associated to users.
 
-        allow_browser_login will accept signed cookies obtained from the normal MVC app::
+    def _protect(f):
+        if hasattr(f, "_permission_name"):
+            permission_str = f._permission_name
+        else:
+            permission_str = f.__name__
 
-            class MyApi(BaseApi):
-                @expose('/dosonmething', methods=['GET'])
-                @protect(allow_browser_login=True)
+        def wraps(self, *args, **kwargs):
+            permission_str = "{}{}".format(PERMISSION_PREFIX, f._permission_name)
+            if self.method_permission_name:
 
 
 ## ... source file abbreviated to get to make_response examples ...
@@ -94,21 +94,16 @@ def protect(allow_browser_login=False):
 
 
 def permission_name(name):
-    """
-        Use this decorator to override the name of the permission.
-        has_access will use the methods name has the permission name
-        if you want to override this add this decorator to your methods.
-        This is useful if you want to aggregate methods to permissions
 
-        It will add '_permission_name' attribute to your method
-        that will be inspected by BaseView to collect your view's
-        permissions.
+    def wraps(f):
+        f._permission_name = name
+        return f
 
-        Note that you should use @has_access to execute after @permission_name
+    return wraps
+
 
 
 ## ... source file continues with no further make_response examples...
-
 
 ```
 
@@ -128,7 +123,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # cors.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from datetime import timedelta
@@ -146,9 +140,6 @@ def crossdomain(
     automatic_options=True,
     credentials=False,
 ):
-    """
-    http://flask.pocoo.org/snippets/56/
-    """
     if methods is not None:
         methods = ", ".join(sorted(x.upper() for x in methods))
     if headers is not None and not isinstance(headers, str):
@@ -195,8 +186,8 @@ def crossdomain(
     return decorator
 
 
-## ... source file continues with no further make_response examples...
 
+## ... source file continues with no further make_response examples...
 
 ```
 
@@ -213,13 +204,6 @@ NewsPie is provided as open source under the
 
 ```python
 # news.py
-# -*- coding: utf-8 -*-
-'''
-NewsPie - a minimalistic news aggregator built with Flask and powered by
-News API (https://newsapi.org/).
-
-Created by @skamieniarz (https://github.com/skamieniarz) in 2019.
-'''
 import configparser
 import json
 import logging
@@ -258,6 +242,7 @@ def root():
 ## ... source file abbreviated to get to make_response examples ...
 
 
+    pages = count_pages(response.json())
     if page > pages:
         page = pages
         return redirect(url_for('search', query=query, page=page))
@@ -270,7 +255,6 @@ def root():
 
 
 def do_post(page, category='general', current_query=None):
-    ''' Helper method that handles POST request basing on the input. '''
     new_query = request.form.get('search_query')
     country = request.form.get('country')
     next_page = request.form.get('next_page')
@@ -292,21 +276,20 @@ def do_post(page, category='general', current_query=None):
 
 
 def parse_articles(response):
-    ''' Parses articles fetched from News API.
-
-    Returns:
-        A list of dicts containing publishing date, title, URL and source of
-        articles.
-    '''
     parsed_articles = []
     if response.get('status') == 'ok':
         for article in response.get('articles'):
             parsed_articles.append({
                 'published_at':
+                    parser.isoparse(article['publishedAt']
+                                   ).strftime('%Y-%m-%d %H:%M'),
+                'title':
+                    article['title'],
+                'url':
+                    article['url'],
 
 
 ## ... source file continues with no further make_response examples...
-
 
 ```
 
@@ -331,30 +314,18 @@ The sandman2 project is provided under the
 
 ```python
 # service.py
-"""Automatically generated REST API services from SQLAlchemy
-ORM models or a database introspection."""
 
-# Third-party imports
 ~~from flask import request, make_response
 import flask
 from flask.views import MethodView
 from sqlalchemy import asc, desc
 
-# Application imports
 from sandman2.exception import NotFoundException, BadRequestException
 from sandman2.model import db
 from sandman2.decorators import etag, validate_fields
 
 
 def add_link_headers(response, links):
-    """Return *response* with the proper link headers set, based on the contents
-    of *links*.
-
-    :param response: :class:`flask.Response` response object for links to be
-                     added
-    :param dict links: Dictionary of links to be added
-    :rtype :class:`flask.Response` :
-    """
     link_string = '<{}>; rel=self'.format(links['self'])
     for link in links.values():
         link_string += ', <{}>; rel=related'.format(link)
@@ -362,9 +333,22 @@ def add_link_headers(response, links):
     return response
 
 
+def jsonify(resource):
+
+    response = flask.jsonify(resource.to_dict())
+    response = add_link_headers(response, resource.links())
+    return response
+
+
+
+
 ## ... source file abbreviated to get to make_response examples ...
 
 
+                    order.append(direction(getattr(self.__model__, value.lstrip('-'))))
+                elif key == 'limit':
+                    limit = int(value)
+                elif hasattr(self.__model__, key):
                     filters.append(getattr(self.__model__, key) == value)
                 else:
                     raise BadRequestException('Invalid field [{}]'.format(key))
@@ -377,10 +361,6 @@ def add_link_headers(response, links):
         return [r.to_dict() for r in resources]
 
     def _export(self, collection):
-        """Return a CSV of the resources in *collection*.
-
-        :param list collection: A list of resources represented by dicts
-        """
         fieldnames = collection[0].keys()
         faux_csv = ','.join(fieldnames) + '\r\n'
         for resource in collection:
@@ -392,27 +372,19 @@ def add_link_headers(response, links):
 
     @staticmethod
     def _no_content_response():
-        """Return an HTTP 204 "No Content" response.
-
-        :returns: HTTP Response
-        """
-        response = make_response()
+~~        response = make_response()
         response.status_code = 204
         return response
 
     @staticmethod
     def _created_response(resource):
-        """Return an HTTP 201 "Created" response.
-
-        :returns: HTTP Response
-        """
         response = jsonify(resource)
         response.status_code = 201
         return response
 
 
-## ... source file continues with no further make_response examples...
 
+## ... source file continues with no further make_response examples...
 
 ```
 

@@ -24,14 +24,6 @@ FlaskBB is provided as open source
 
 ```python
 # serializer.py
-# -*- coding: utf -*-
-"""
-    flaskbb.tokens.serializer
-    -------------------------
-
-    :copyright: (c) 2018 the FlaskBB Team.
-    :license: BSD, see LICENSE for more details
-"""
 
 from datetime import timedelta
 
@@ -45,60 +37,24 @@ _DEFAULT_EXPIRY = timedelta(hours=1)
 
 
 class FlaskBBTokenSerializer(tokens.TokenSerializer):
-    """
-    Default token serializer for FlaskBB. Generates JWTs
-    that are time sensitive. By default they will expire after
-    1 hour.
 
-    It creates tokens from flaskbb.core.tokens.Token instances
-    and creates instances of that class when loading tokens.
+    def __init__(self, secret_key, expiry=_DEFAULT_EXPIRY):
+        self._serializer = TimedJSONWebSignatureSerializer(
+            secret_key, int(expiry.total_seconds())
+        )
 
-    When loading a token, if an error occurs related to the
-    token itself, a flaskbb.core.tokens.TokenError will be
-    raised. Exceptions not caused by parsing the token
-    are simply propagated.
-
-    :str secret_key: The secret key used to sign the tokens
-    :timedelta expiry: Expiration of tokens
-
-
-## ... source file abbreviated to get to BadSignature examples ...
-
-
+    def dumps(self, token):
+        return self._serializer.dumps(
+            {
+                'id': token.user_id,
                 'op': token.operation,
             }
         )
 
     def loads(self, raw_token):
-        """
-        Transforms a JWT into a flaskbb.core.tokens.Token.
-
-        If a token is invalid due to it being malformed,
-        tampered with or expired, a flaskbb.core.tokens.TokenError
-        is raised. Errors not related to token parsing are
-        simply propagated.
-
-        :str raw_token: JWT to be parsed
-        :returns flaskbb.core.tokens.Token: Parsed token
-        """
-        try:
-            parsed = self._serializer.loads(raw_token)
-        except SignatureExpired:
-            raise tokens.TokenError.expired()
-~~        except BadSignature:  # pragma: no branch
-            raise tokens.TokenError.invalid()
-        # ideally we never end up here as BadSignature should
-        # catch everything else, however since this is the root
-        # exception for itsdangerous we'll catch it down and
-        # and re-raise our own
-        except BadData:  # pragma: no cover
-            raise tokens.TokenError.bad()
-        else:
-            return tokens.Token(user_id=parsed['id'], operation=parsed['op'])
 
 
 ## ... source file continues with no further BadSignature examples...
-
 
 ```
 
@@ -153,91 +109,7 @@ class Role(db.Model):
             'Administrator': (
 
 
-## ... source file abbreviated to get to BadSignature examples ...
-
-
-        s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'confirm': self.id})
-
-    def generate_email_change_token(self, new_email, expiration=3600):
-        """Generate an email change token to email an existing user."""
-        s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'change_email': self.id, 'new_email': new_email})
-
-    def generate_password_reset_token(self, expiration=3600):
-        """
-        Generate a password reset change token to email to an existing user.
-        """
-        s = Serializer(current_app.config['SECRET_KEY'], expiration)
-        return s.dumps({'reset': self.id})
-
-    def confirm_account(self, token):
-        """Verify that the provided token is for this user's id."""
-        s = Serializer(current_app.config['SECRET_KEY'])
-        try:
-            data = s.loads(token)
-~~        except (BadSignature, SignatureExpired):
-            return False
-        if data.get('confirm') != self.id:
-            return False
-        self.confirmed = True
-        db.session.add(self)
-        db.session.commit()
-        return True
-
-    def change_email(self, token):
-        """Verify the new email for this user."""
-        s = Serializer(current_app.config['SECRET_KEY'])
-        try:
-            data = s.loads(token)
-~~        except (BadSignature, SignatureExpired):
-            return False
-        if data.get('change_email') != self.id:
-            return False
-        new_email = data.get('new_email')
-        if new_email is None:
-            return False
-        if self.query.filter_by(email=new_email).first() is not None:
-            return False
-        self.email = new_email
-        db.session.add(self)
-        db.session.commit()
-        return True
-
-    def reset_password(self, token, new_password):
-        """Verify the new password for this user."""
-        s = Serializer(current_app.config['SECRET_KEY'])
-        try:
-            data = s.loads(token)
-~~        except (BadSignature, SignatureExpired):
-            return False
-        if data.get('reset') != self.id:
-            return False
-        self.password = new_password
-        db.session.add(self)
-        db.session.commit()
-        return True
-
-    @staticmethod
-    def generate_fake(count=100, **kwargs):
-        """Generate a number of fake users for testing."""
-        from sqlalchemy.exc import IntegrityError
-        from random import seed, choice
-        from faker import Faker
-
-        fake = Faker()
-        roles = Role.query.all()
-
-        seed()
-        for i in range(count):
-            u = User(
-                first_name=fake.first_name(),
-                last_name=fake.last_name(),
-                email=fake.email(),
-
-
 ## ... source file continues with no further BadSignature examples...
-
 
 ```
 

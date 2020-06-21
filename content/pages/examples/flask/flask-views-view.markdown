@@ -1,7 +1,7 @@
 title: flask.views View code examples
 category: page
 slug: flask-views-view-examples
-sortorder: 500021018
+sortorder: 500021019
 toc: False
 sidebartitle: flask.views View
 meta: Python example code for the View class from the flask.views module of the Flask project.
@@ -24,16 +24,6 @@ FlaskBB is provided as open source
 
 ```python
 # views.py
-# -*- coding: utf-8 -*-
-"""
-    flaskbb.utils.views
-    -------------------
-
-    This module contains some helpers for creating views.
-
-    :copyright: (c) 2016 by the FlaskBB Team.
-    :license: BSD, see LICENSE for more details.
-"""
 from flaskbb.utils.helpers import render_template
 ~~from flask.views import View
 
@@ -48,8 +38,8 @@ from flaskbb.utils.helpers import render_template
         return render_template(self.template, **view_model)
 
 
-## ... source file continues with no further View examples...
 
+## ... source file continues with no further View examples...
 
 ```
 

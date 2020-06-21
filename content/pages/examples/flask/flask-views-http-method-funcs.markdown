@@ -1,7 +1,7 @@
 title: flask.views http_method_funcs code examples
 category: page
 slug: flask-views-http-method-funcs-examples
-sortorder: 500021019
+sortorder: 500021020
 toc: False
 sidebartitle: flask.views http_method_funcs
 meta: Python example code for the http_method_funcs function from the flask.views module of the Flask project.
@@ -25,7 +25,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # namespace.py
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 import inspect
@@ -44,36 +43,36 @@ from .model import Model, OrderedModel, SchemaModel
 from .reqparse import RequestParser
 from .utils import merge
 
-# Container for each route applied to a Resource using @ns.route decorator
 ResourceRoute = namedtuple("ResourceRoute", "resource urls route_doc kwargs")
 
 
 class Namespace(object):
-    """
-    Group resources together.
 
-    Namespace is to API what :class:`flask:flask.Blueprint` is for :class:`flask:flask.Flask`.
-
-    :param str name: The namespace name
-    :param str description: An optional short description
-    :param str path: An optional prefix path. If not provided, prefix is ``/+name``
-    :param list decorators: A list of decorators to apply to each resources
-    :param bool validate: Whether or not to perform validation on this namespace
-    :param bool ordered: Whether or not to preserve order on models and marshalling
+    def __init__(
+        self,
+        name,
+        description=None,
+        path=None,
+        decorators=None,
+        validate=None,
+        authorizations=None,
+        ordered=False,
+        **kwargs
+    ):
 
 
 ## ... source file abbreviated to get to http_method_funcs examples ...
 
 
+        for api in self.apis:
+            ns_urls = api.ns_urls(self, urls)
+            api.register_resource(self, resource, *ns_urls, **kwargs)
+
     def route(self, *urls, **kwargs):
-        """
-        A decorator to route resources.
-        """
 
         def wrapper(cls):
             doc = kwargs.pop("doc", None)
             if doc is not None:
-                # build api doc intended only for this route
                 kwargs["route_doc"] = self._build_doc(cls, doc)
             self.add_resource(cls, *urls, **kwargs)
             return cls
@@ -98,7 +97,6 @@ class Namespace(object):
         return merge(getattr(cls, "__apidoc__", {}), doc)
 
     def doc(self, shortcut=None, **kwargs):
-        """A decorator to add some api documentation to the decorated object"""
         if isinstance(shortcut, six.text_type):
             kwargs["id"] = shortcut
         show = shortcut if isinstance(shortcut, bool) else True
@@ -112,8 +110,8 @@ class Namespace(object):
         return wrapper
 
 
-## ... source file continues with no further http_method_funcs examples...
 
+## ... source file continues with no further http_method_funcs examples...
 
 ```
 
