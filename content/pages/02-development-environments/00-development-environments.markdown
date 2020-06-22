@@ -8,17 +8,21 @@ meta: Development environments allow programmers to read, write and work with co
 
 
 A development environment is a combination of a 
-[text editor](/text-editors-ides.html) and a Python runtime environment. 
-The text editor allows you to write the code. The runtime environment 
-implementation such as [CPython](https://github.com/python/cpython) 
-or [PyPy](https://pypy.org/) provides the method for executing your code.
+[text editor](/text-editors-ides.html) and a Python runtime implementation.
+The text editor allows you to write code for your applications. The runtime
+implementation, such as [CPython](https://github.com/python/cpython) 
+or [PyPy](https://pypy.org/), provides the method for executing your code.
 
 <img src="/img/visuals/tmux-vim-editor.jpg" width="100%" alt="tmux plus Vim editor on a dark background." class="shot rnd outl">
 
-A text editor can be as simple as Notepad on Windows or more complicated 
-as a complete integrated development environment (IDE) such as 
-[PyCharm](https://www.jetbrains.com/pycharm/) which runs on any major 
-operating system.
+A text editor can be as simple as Notepad running on Windows or a more 
+complicated 
+[integrated development environment (IDE)](/text-editors-ides.html) with
+syntax checking, integrated [test runner](/testing.html) and code highlighting. 
+A couple of common IDEs for Python development are 
+[PyCharm](https://www.jetbrains.com/pycharm/) and 
+[VSCode](https://code.visualstudio.com/), both of which runs on any major 
+[operating system](/operating-systems.html).
 
 
 ## Why is a development environment necessary?
@@ -89,7 +93,7 @@ getting started and then require payment as you scale up your application.
   [Stdlib](https://stdlib.com/) that can integrate with external 
   [web APIs](/application-programming-interfaces.html).
 
-* [GitLab Web IDE](https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/)
+* [GitLab Web IDE](https://docs.gitlab.com/ee/user/project/web_ide/)
   is integrated into the GitLab web application for modifying your
   [Git](/git.html) repository files directly in your browser.
 

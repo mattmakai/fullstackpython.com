@@ -39,6 +39,13 @@ of a Python programmer's
   give historical perspective on how the Windows shell has evolved from
   MS-DOS days into the current Windows 10 world.
 
+* [Learning a New REST API with PowerShell](https://www.cloudsavvyit.com/2454/learning-a-new-rest-api-with-powershell/)
+  covers how to create the common GET, POST, PUT and DELETE requests that are 
+  used to work with [RESTful APIs](/application-programming-interfaces.html). 
+  The the tutorial also contains some tips and tricks for reading API 
+  documentation and how to use PowerShell more effectively in these 
+  situations. 
+
 * [PowerShell in Azure Functions](http://www.brianbunke.com/blog/2018/02/27/powershell-in-azure-functions/)
   shows you how to use PowerShell scripting language code in your Azure
   Functions. The language is only in experimental mode on Azure Functions 
