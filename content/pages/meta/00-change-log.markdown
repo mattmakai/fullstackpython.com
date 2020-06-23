@@ -16,6 +16,20 @@ on GitHub.
 ## 2020
 ### June
 * Added new example code for [Django](/django.html) modules:
+    * [django.contrib.admin.helpers](/django-contrib-admin-helpers-examples.html),
+      [ActionForm](/django-contrib-admin-helpers-actionform-examples.html),
+      and
+      [AdminForm](/django-contrib-admin-helpers-adminform-examples.html)
+    * django.contrib.admin.options 
+      [IS_POPUP_VAR](/django-contrib-admin-options-is-popup-var-examples.html),
+      [IncorrectLookupParameters](/django-contrib-admin-options-incorrectlookupparameters-examples.html),
+      [ModelAdmin](/django-contrib-admin-options-modeladmin-examples.html),
+      and
+      [csrf_protect_m](/django-contrib-admin-options-csrf-protect-m-examples.html)
+    * django.contrib.admin.sites
+      [NotRegistered](/django-contrib-admin-sites-notregistered-examples.html)
+      and
+      [site](/django-contrib-admin-sites-site-examples.html)
     * django.utils.translation 
       [LANGUAGE_SESSION_KEY](/django-utils-translation-language-session-key-examples.html),
       [activate](/django-utils-translation-activate-examples.html),
