@@ -7,7 +7,12 @@ sidebartitle: flask.views http_method_funcs
 meta: Python example code for the http_method_funcs function from the flask.views module of the Flask project.
 
 
-http_method_funcs is a function within the flask.views module of the Flask project.
+`http_method_funcs` is an immutable Python set within the
+[flask.views module](https://github.com/pallets/flask/blob/master/src/flask/views.py)
+of the [Flask](/flask.html) project. It contains strings of the HTTP methods
+"get", "post", "head", "options", "delete", "put", "trace", and "patch",
+which is useful for checking if an HTTP method is valid by comparing it
+against the items in this set.
 
 
 ## Example 1 from flask-restx
