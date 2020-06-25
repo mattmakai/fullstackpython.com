@@ -58,6 +58,11 @@ from flaskbb.utils.helpers import (
 ## ... source file abbreviated to get to MethodView examples ...
 
 
+    get_available_languages,
+    redirect_or_next,
+    register_view,
+    registration_enabled,
+    render_template,
     requires_unactivated,
 )
 from flaskbb.utils.settings import flaskbb_config
@@ -182,6 +187,11 @@ logger = logging.getLogger(__name__)
 ## ... source file abbreviated to get to MethodView examples ...
 
 
+            service = self.registration_service_factory()
+            try:
+                service.register(registration_info)
+            except StopValidation as e:
+                form.populate_errors(e.reasons)
                 return render_template("auth/register.html", form=form)
             except PersistenceError:
                     logger.exception("Database error while persisting user")
@@ -258,11 +268,8 @@ logger = logging.getLogger(__name__)
                 return redirect(url_for('auth.forgot_password'))
             except StopValidation as e:
                 form.populate_errors(e.reasons)
-
-
-## ... source file abbreviated to get to MethodView examples ...
-
-
+                form.token.data = token
+                return render_template("auth/reset_password.html", form=form)
             except Exception:
                 logger.exception("Error when resetting password")
                 flash(_('Error when resetting password'))

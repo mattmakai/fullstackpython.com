@@ -69,6 +69,11 @@ class Namespace(object):
 ## ... source file abbreviated to get to http_method_funcs examples ...
 
 
+        return (self._path or ("/" + self.name)).rstrip("/")
+
+    def add_resource(self, resource, *urls, **kwargs):
+        route_doc = kwargs.pop("route_doc", {})
+        self.resources.append(ResourceRoute(resource, urls, route_doc, kwargs))
         for api in self.apis:
             ns_urls = api.ns_urls(self, urls)
             api.register_resource(self, resource, *ns_urls, **kwargs)

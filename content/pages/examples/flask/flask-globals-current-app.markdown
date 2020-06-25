@@ -59,6 +59,11 @@ class MenuItem(object):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+        self.menu = []
+        if reverse:
+            extra_classes = extra_classes + "navbar-inverse"
+        self.extra_classes = extra_classes
+
     @property
     def reverse(self):
         return "navbar-inverse" in self.extra_classes
@@ -109,6 +114,11 @@ class MenuItem(object):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+                self.add_category(
+                    category=category, icon=category_icon, label=category_label
+                )
+                new_menu_item = MenuItem(
+                    name=name, href=href, icon=icon, label=label, baseview=baseview
                 )
                 self.find(category).childs.append(new_menu_item)
 
@@ -191,6 +201,11 @@ from flaskbb.utils.helpers import (
 ## ... source file abbreviated to get to current_app examples ...
 
 
+
+            reauth_manager = self.reauthentication_factory()
+            try:
+                reauth_manager.reauthenticate(
+                    user=current_user, secret=form.password.data
                 )
                 confirm_login()
                 flash(_("Reauthenticated."), "success")
@@ -332,6 +347,11 @@ class Role(db.Model):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+            if role is None:
+                role = Role(name=r)
+            role.permissions = roles[r][0]
+            role.index = roles[r][1]
+            role.default = roles[r][2]
             db.session.add(role)
         db.session.commit()
 
@@ -384,7 +404,112 @@ class User(UserMixin, db.Model):
 ```
 
 
-## Example 4 from flask-debugtoolbar
+## Example 4 from flask-bookshelf
+[flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
+example [Flask](/flask.html) application that developers create when
+going through
+[this Flask series of blog posts](https://damyanon.net/tags/flask-series/).
+
+[**flask-bookshelf / bookshelf / __init__.py**](https://github.com/damyanbogoev/flask-bookshelf/blob/master/bookshelf/./__init__.py)
+
+```python
+# __init__.py
+~~from flask import abort, Flask, g, render_template, request, current_app
+from flask_babel import Babel
+from flask_security import current_user
+from bookshelf.utils import get_instance_folder_path
+from bookshelf.main.controllers import main
+from bookshelf.admin.controllers import admin
+from bookshelf.cache import cache
+from bookshelf.config import configure_app
+from bookshelf.data.models import db
+
+app = Flask(
+    __name__,
+    instance_path=get_instance_folder_path(),
+    instance_relative_config=True,
+    template_folder="templates",
+)
+
+babel = Babel(app)
+configure_app(app)
+cache.init_app(app)
+db.init_app(app)
+app.jinja_env.add_extension("jinja2.ext.loopcontrols")
+
+
+@app.url_defaults
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+        g.lang_code = values.pop("lang_code", None)
+
+
+@app.before_request
+def ensure_lang_support():
+    lang_code = g.get("lang_code", None)
+    if lang_code and lang_code not in app.config["SUPPORTED_LANGUAGES"].keys():
+        abort(404)
+
+
+@babel.localeselector
+def get_locale():
+    return g.get("lang_code", app.config["BABEL_DEFAULT_LOCALE"])
+
+
+@babel.timezoneselector
+def get_timezone():
+    user = g.get("user", None)
+    if user is not None:
+        return user.timezone
+    return "UTC"
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+~~    current_app.logger.error("Page not found: %s", (request.path, error))
+    return render_template("404.htm"), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+~~    current_app.logger.error("Server Error: %s", (error))
+    return render_template("500.htm"), 500
+
+
+@app.errorhandler(Exception)
+def unhandled_exception(error):
+~~    current_app.logger.error("Unhandled Exception: %s", (error))
+    return render_template("500.htm"), 500
+
+
+@app.context_processor
+def inject_data():
+    return dict(user=current_user, lang_code=g.get("lang_code", None))
+
+
+@app.route("/")
+@app.route("/<lang_code>/")
+@cache.cached(300)
+def home(lang_code=None):
+    return render_template("index.htm")
+
+
+app.register_blueprint(main, url_prefix="/main")
+app.register_blueprint(main, url_prefix="/<lang_code>/main")
+app.register_blueprint(admin, url_prefix="/admin")
+app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
+
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 5 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -433,6 +558,11 @@ def replace_insensitive(string, target, replacement):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+            ),
+        }
+
+    def dispatch_request(self):
+        req = _request_ctx_stack.top.request
         app = current_app
 
         if req.routing_exception is not None:
@@ -527,7 +657,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 5 from flask_jsondash
+## Example 6 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -620,7 +750,7 @@ def local_static(chart_config, static_config):
 ```
 
 
-## Example 6 from flask-login
+## Example 7 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -673,6 +803,11 @@ def decode_cookie(cookie, key=None):
 
 ## ... source file abbreviated to get to current_app examples ...
 
+
+    if (not l_url.scheme or l_url.scheme == c_url.scheme) and \
+            (not l_url.netloc or l_url.netloc == c_url.netloc):
+        return urlunparse(('', '', c_url.path, c_url.params, c_url.query, ''))
+    return current_url
 
 
 def expand_login_view(login_view):
@@ -862,7 +997,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 7 from flask-restx
+## Example 8 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -921,6 +1056,11 @@ PY_TYPES = {
 ## ... source file abbreviated to get to current_app examples ...
 
 
+)
+
+
+def ref(model):
+    name = model.name if isinstance(model, ModelBase) else model
     return {"$ref": "#/definitions/{0}".format(quote(name, safe=""))}
 
 
@@ -971,6 +1111,11 @@ def _clean_header(header):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+        if self.api.contact and (self.api.contact_email or self.api.contact_url):
+            infos["contact"] = {
+                "name": _v(self.api.contact),
+                "email": _v(self.api.contact_email),
+                "url": _v(self.api.contact_url),
             }
         if self.api.license:
             infos["license"] = {"name": _v(self.api.license)}
@@ -1050,6 +1195,11 @@ def _clean_header(header):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+            else self.api.default_id(doc["name"], method)
+        )
+
+    def parameters_for(self, doc):
+        params = []
         for name, param in iteritems(doc["params"]):
             param["name"] = name
             if "type" not in param and "schema" not in param:
@@ -1104,7 +1254,7 @@ def _clean_header(header):
 ```
 
 
-## Example 8 from flask-sqlalchemy
+## Example 9 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -1164,6 +1314,11 @@ def _make_table(db):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+        return _EngineConnector(self, self.get_app(app), bind)
+
+    def get_engine(self, app=None, bind=None):
+
+        app = self.get_app(app)
         state = get_state(app)
 
         with self._engine_lock:
@@ -1216,7 +1371,7 @@ def _make_table(db):
 ```
 
 
-## Example 9 from Flask-WTF
+## Example 10 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1347,6 +1502,11 @@ class _FlaskFormCSRF(CSRF):
 ## ... source file abbreviated to get to current_app examples ...
 
 
+        def csrf_protect():
+            if not app.config['WTF_CSRF_ENABLED']:
+                return
+
+            if not app.config['WTF_CSRF_CHECK_DEFAULT']:
                 return
 
             if request.method not in app.config['WTF_CSRF_METHODS']:
@@ -1468,7 +1628,7 @@ def same_origin(current_uri, compare_uri):
 ```
 
 
-## Example 10 from Flasky
+## Example 11 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1523,7 +1683,7 @@ def run_migrations_online():
 ```
 
 
-## Example 11 from sandman2
+## Example 12 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1572,6 +1732,11 @@ def get_app(
 
 
 ## ... source file abbreviated to get to current_app examples ...
+
+
+                cls.__model__.primary_key())
+        return jsonify(routes)
+    return app
 
 
 def _register_error_handlers(app):
@@ -1643,7 +1808,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 13 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

@@ -54,11 +54,11 @@ class BabelManager(BaseManager):
             appbuilder_parent_dir, "translations"
         )
         if "BABEL_TRANSLATION_DIRECTORIES" in app.config:
-
-
-## ... source file abbreviated to get to has_request_context examples ...
-
-
+            current_translation_directories = app.config.get(
+                "BABEL_TRANSLATION_DIRECTORIES"
+            )
+            translations_path = (
+                appbuilder_translations_path + ";" + current_translation_directories
             )
         else:
             translations_path = appbuilder_translations_path + ";translations"

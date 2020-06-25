@@ -61,6 +61,11 @@ class BaseRegisterUser(PublicFormView):
 ## ... source file abbreviated to get to session examples ...
 
 
+            username=form.username.data,
+            first_name=form.first_name.data,
+            last_name=form.last_name.data,
+            email=form.email.data,
+            password=form.password.data,
         )
 
 
@@ -370,6 +375,11 @@ def decode_cookie(cookie, key=None):
 ## ... source file abbreviated to get to session examples ...
 
 
+        return login_view
+    else:
+        if request.view_args is None:
+            return url_for(login_view)
+        else:
             return url_for(login_view, **request.view_args)
 
 
@@ -704,6 +714,11 @@ def get_config():
 ## ... source file abbreviated to get to session examples ...
 
 
+    if 'CACHE_TYPE' not in app.config or not app.config['CACHE_TYPE']:
+        app.config['CACHE_TYPE'] = 'file'
+
+    if app.config['CACHE_TYPE'] == 'file':
+        if 'CACHE_ROOT' not in app.config or not app.config['CACHE_ROOT']:
             app.config['CACHE_ROOT'] = '/tmp/%s' % __name__
 
     session_opts['session.type'] = app.config['CACHE_TYPE']

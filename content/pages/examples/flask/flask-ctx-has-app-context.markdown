@@ -62,6 +62,11 @@ def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fal
 
 
 
+    out = OrderedDict(items) if ordered else dict(items)
+
+    if envelope:
+        out = OrderedDict([(envelope, out)]) if ordered else {envelope: out}
+
     return out, has_wildcards["present"]
 
 

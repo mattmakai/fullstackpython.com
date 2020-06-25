@@ -130,6 +130,15 @@ Allen Wirfs-Brock for more context on the language's evolution.
 * [Learn JS data](http://learnjsdata.com/) teaches how to manipulate data
   using JavaScript in a browser or on the server using Node.js. 
 
+* [A Beginner's Guide to JavaScript's Prototype](https://ui.dev/beginners-guide-to-javascript-prototype/)
+  explains the fundamentals of JavaScript's object system, which is
+  a prototype-based model and different from many other common
+  programming languages' object models.
+
+* [Understanding Data Types in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-javascript)
+  examines JavaScript's dynamic data type model and how it manifests
+  in the way numbers, string, Booleans and arrays are used.
+
 
 ### JavaScript learning checklist
 1. Create a simple HTML file with basic elements in it. Use the

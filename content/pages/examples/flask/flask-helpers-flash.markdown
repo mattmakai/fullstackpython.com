@@ -61,6 +61,11 @@ class BaseRegisterUser(PublicFormView):
 ## ... source file abbreviated to get to flash examples ...
 
 
+            ".activation",
+            _external=True,
+            activation_hash=register_user.registration_hash,
+        )
+        msg.html = self.render_template(
             self.email_template,
             url=url,
             username=register_user.username,
@@ -135,6 +140,11 @@ class RegisterUserDBView(BaseRegisterUser):
 ## ... source file abbreviated to get to flash examples ...
 
 
+        form = LoginForm_oid()
+        if form.validate_on_submit():
+            session["remember_me"] = form.remember_me.data
+            return self.appbuilder.sm.oid.try_login(
+                form.openid.data, ask_for=["email", "fullname"]
             )
         resp = session.pop("oid_resp", None)
         if resp:
@@ -233,6 +243,11 @@ from .services.registration import (
 
 
 
+@impl(trylast=True)
+def flaskbb_reauth_attempt(user, secret):
+    return DefaultFlaskBBReauthProvider().reauthenticate(user, secret)
+
+
 @impl
 def flaskbb_reauth_failed(user):
     MarkFailedReauth().handle_reauth_failure(user)
@@ -283,7 +298,66 @@ def flaskbb_registration_post_processor(user):
 ```
 
 
-## Example 3 from flask_jsondash
+## Example 3 from flask-bookshelf
+[flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
+example [Flask](/flask.html) application that developers create when
+going through
+[this Flask series of blog posts](https://damyanon.net/tags/flask-series/).
+
+[**flask-bookshelf / bookshelf / admin / controllers.py**](https://github.com/damyanbogoev/flask-bookshelf/blob/master/bookshelf/admin/controllers.py)
+
+```python
+# controllers.py
+from sqlalchemy import exc
+~~from flask import Blueprint, render_template, flash
+from flask import current_app, redirect, request, url_for
+from flask_security.decorators import roles_required
+from bookshelf.admin.forms.author_forms import CreateAuthorForm
+from bookshelf.cache import cache
+from bookshelf.data.models import Author, db
+
+
+admin = Blueprint("admin", __name__, template_folder="templates")
+
+
+@admin.route("/")
+@roles_required("admin")
+def index():
+    return render_template("admin_index.htm")
+
+
+@admin.route("/author/create", methods=["GET", "POST"])
+@roles_required("admin")
+def create_author():
+    form = CreateAuthorForm(request.form)
+    if request.method == "POST" and form.validate():
+        names = form.names.data
+        current_app.logger.info("Adding a new author %s.", (names))
+        author = Author(names)
+
+        try:
+            db.session.add(author)
+            db.session.commit()
+            cache.clear()
+~~            flash("Author successfully created.")
+        except exc.SQLAlchemyError as e:
+~~            flash("Author was not created.")
+            current_app.logger.error(e)
+
+            return redirect(url_for("admin.create_author"))
+
+        return redirect(url_for("main.display_authors"))
+
+    return render_template("create_author.htm", form=form)
+
+
+
+## ... source file continues with no further flash examples...
+
+```
+
+
+## Example 4 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -332,6 +406,11 @@ charts = Blueprint(
 ## ... source file abbreviated to get to flash examples ...
 
 
+        pagination = utils.paginator(count=len(views),
+                                     page=page, per_page=per_page)
+        opts.update(limit=pagination.limit, skip=pagination.skip)
+        views = views[pagination.skip:pagination.next]
+    else:
         pagination = None
     categorized = utils.categorize_views(views)
     kwargs = dict(
@@ -509,7 +588,7 @@ def clone(c_id):
 ```
 
 
-## Example 4 from flask-login
+## Example 5 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -559,6 +638,11 @@ class LoginManager(object):
 ## ... source file abbreviated to get to flash examples ...
 
 
+        self.init_app(app, add_context_processor)
+
+    def init_app(self, app, add_context_processor=True):
+        app.login_manager = self
+        app.after_request(self._update_remember_cookie)
 
         if add_context_processor:
             app.context_processor(_user_context_processor)
@@ -607,11 +691,9 @@ class LoginManager(object):
         self._request_callback = callback
         return self.request_callback
 
-
-
-## ... source file abbreviated to get to flash examples ...
-
-
+    @property
+    def request_callback(self):
+        return self._request_callback
 
     def unauthorized_handler(self, callback):
         self.unauthorized_callback = callback
@@ -667,7 +749,7 @@ class LoginManager(object):
 ```
 
 
-## Example 5 from tedivms-flask
+## Example 6 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -714,6 +796,11 @@ def user_admin_page():
 
 ## ... source file abbreviated to get to flash examples ...
 
+
+
+    form = UserProfileForm()
+    roles = Role.query.all()
+    form.roles.choices = [(x.id,x.name) for x in roles]
 
     if form.validate():
         user = User.query.filter(User.email == request.form['email']).first()

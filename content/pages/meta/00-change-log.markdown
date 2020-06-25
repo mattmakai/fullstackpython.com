@@ -30,6 +30,17 @@ on GitHub.
       [NotRegistered](/django-contrib-admin-sites-notregistered-examples.html)
       and
       [site](/django-contrib-admin-sites-site-examples.html)
+    * django.core
+      [cache](/django-core-cache-examples.html),
+      [checks](/django-core-checks-examples.html),
+      [exceptions](/django-core-exceptions-examples.html),
+      [mail](/django-core-mail-examples.html),
+      [management](/django-core-management-examples.html),
+      [serializers](/django-core-serializers-examples.html),
+      [signals](/django-core-signals-examples.html),
+      [signing](/django-core-signing-examples.html),
+      and
+      [validators](/django-core-validators-examples.html)
     * django.utils.translation 
       [LANGUAGE_SESSION_KEY](/django-utils-translation-language-session-key-examples.html),
       [activate](/django-utils-translation-activate-examples.html),

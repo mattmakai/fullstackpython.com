@@ -157,6 +157,11 @@ from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
 ## ... source file abbreviated to get to request examples ...
 
 
+            flash(_("Settings saved."), "success")
+
+        return render_template(
+            "management/settings.html",
+            form=form,
             all_groups=all_groups,
             all_plugins=all_plugins,
             active_nav=active_nav
@@ -219,6 +224,11 @@ class EditUser(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+                user.password = form.password.data
+
+            user.save(groups=form.secondary_groups.data)
+
+            flash(_('User updated.'), 'success')
             return redirect(url_for('management.edit_user', user_id=user.id))
 
         return render_template(
@@ -270,6 +280,11 @@ class DeleteUser(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+        form = self.form()
+        if form.validate_on_submit():
+            form.save()
+            flash(_('User added.'), 'success')
+            return redirect(url_for('management.users'))
 
         return render_template(
             'management/user_form.html', form=form, title=_('Add User')
@@ -379,6 +394,11 @@ class BanUser(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+        return redirect(url_for("management.banned_users"))
+
+
+class UnbanUser(MethodView):
+    decorators = [
         allows.requires(
             IsAtleastModerator,
             on_fail=FlashAndRedirect(
@@ -425,11 +445,8 @@ class BanUser(MethodView):
 
         user = User.query.filter_by(id=user_id).first_or_404()
 
-
-
-## ... source file abbreviated to get to request examples ...
-
-
+        if user.unban():
+            flash(_("User is now unbanned."), "success")
         else:
             flash(_("Could not unban user."), "danger")
 
@@ -480,6 +497,11 @@ class AddGroup(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+
+            if group.guest:
+                Guest.invalidate_cache()
+
+            flash(_('Group updated.'), 'success')
             return redirect(url_for('management.groups', group_id=group.id))
 
         return render_template(
@@ -531,6 +553,11 @@ class DeleteGroup(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+        category = Category.query.filter_by(id=category_id).first_or_404()
+
+        involved_users = User.query.filter(
+            Forum.category_id == category.id, Topic.forum_id == Forum.id,
+            Post.user_id == User.id
         ).all()
 
         category.delete(involved_users)
@@ -626,6 +653,11 @@ class MarkReportRead(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+            report.zapped_by = current_user.id
+            report.zapped = time_utcnow()
+            report_list.append(report)
+
+        db.session.add_all(report_list)
         db.session.commit()
 
         flash(_("All reports were marked as read."), "success")
@@ -679,7 +711,66 @@ class DeleteReport(MethodView):
 ```
 
 
-## Example 3 from flask-debugtoolbar
+## Example 3 from flask-bookshelf
+[flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
+example [Flask](/flask.html) application that developers create when
+going through
+[this Flask series of blog posts](https://damyanon.net/tags/flask-series/).
+
+[**flask-bookshelf / bookshelf / admin / controllers.py**](https://github.com/damyanbogoev/flask-bookshelf/blob/master/bookshelf/admin/controllers.py)
+
+```python
+# controllers.py
+from sqlalchemy import exc
+from flask import Blueprint, render_template, flash
+~~from flask import current_app, redirect, request, url_for
+from flask_security.decorators import roles_required
+from bookshelf.admin.forms.author_forms import CreateAuthorForm
+from bookshelf.cache import cache
+from bookshelf.data.models import Author, db
+
+
+admin = Blueprint("admin", __name__, template_folder="templates")
+
+
+@admin.route("/")
+@roles_required("admin")
+def index():
+    return render_template("admin_index.htm")
+
+
+@admin.route("/author/create", methods=["GET", "POST"])
+@roles_required("admin")
+def create_author():
+    form = CreateAuthorForm(request.form)
+~~    if request.method == "POST" and form.validate():
+        names = form.names.data
+        current_app.logger.info("Adding a new author %s.", (names))
+        author = Author(names)
+
+        try:
+            db.session.add(author)
+            db.session.commit()
+            cache.clear()
+            flash("Author successfully created.")
+        except exc.SQLAlchemyError as e:
+            flash("Author was not created.")
+            current_app.logger.error(e)
+
+            return redirect(url_for("admin.create_author"))
+
+        return redirect(url_for("main.display_authors"))
+
+    return render_template("create_author.htm", form=form)
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 4 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -728,6 +819,11 @@ def replace_insensitive(string, target, replacement):
 ## ... source file abbreviated to get to request examples ...
 
 
+                'flask_debugtoolbar.panels.route_list.RouteListDebugPanel',
+                'flask_debugtoolbar.panels.profiler.ProfilerDebugPanel',
+                'flask_debugtoolbar.panels.g.GDebugPanel',
+            ),
+        }
 
     def dispatch_request(self):
         req = _request_ctx_stack.top.request
@@ -821,7 +917,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 4 from flaskex
+## Example 5 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -916,7 +1012,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 5 from flask-login
+## Example 6 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1011,6 +1107,11 @@ def login_fresh():
 ## ... source file abbreviated to get to request examples ...
 
 
+                                                 duration.days * 24 * 3600) *
+                                                10**6) / 10.0**6
+            except AttributeError:
+                raise Exception('duration must be a datetime.timedelta, '
+                                'instead got: {0}'.format(duration))
 
     current_app.login_manager._update_request_context_with_user(user)
     user_logged_in.send(current_app._get_current_object(), user=_get_user())
@@ -1089,11 +1190,7 @@ def set_login_view(login_view, blueprint=None):
 
             (current_app.login_manager
                 .blueprint_login_views[None]) = (current_app.login_manager
-
-
-## ... source file abbreviated to get to request examples ...
-
-
+                                                 .login_view)
 
         current_app.login_manager.login_view = None
     else:
@@ -1152,7 +1249,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 6 from flask-restx
+## Example 7 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1203,6 +1300,11 @@ def marshal(data, fields, envelope=None, skip_none=False, mask=None, ordered=Fal
 ## ... source file abbreviated to get to request examples ...
 
 
+
+    if envelope:
+        out = OrderedDict([(envelope, out)]) if ordered else {envelope: out}
+
+    return out, has_wildcards["present"]
 
 
 class marshal_with(object):
@@ -1255,7 +1357,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 7 from Flask-WTF
+## Example 8 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1306,6 +1408,11 @@ def generate_csrf(secret_key=None, token_key=None):
 ## ... source file abbreviated to get to request examples ...
 
 
+        app.extensions['csrf'] = self
+
+        app.config.setdefault('WTF_CSRF_ENABLED', True)
+        app.config.setdefault('WTF_CSRF_CHECK_DEFAULT', True)
+        app.config['WTF_CSRF_METHODS'] = set(app.config.get(
             'WTF_CSRF_METHODS', ['POST', 'PUT', 'PATCH', 'DELETE']
         ))
         app.config.setdefault('WTF_CSRF_FIELD_NAME', 'csrf_token')
@@ -1408,7 +1515,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 8 from flaskSaaS
+## Example 9 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1459,7 +1566,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 9 from newspie
+## Example 10 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1601,6 +1708,11 @@ def parse_articles(response):
 ## ... source file abbreviated to get to request examples ...
 
 
+                    article['source']['name']
+            })
+    return parsed_articles
+
+
 def count_pages(response):
     pages = 0
     if response.get('status') == 'ok':
@@ -1635,7 +1747,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 10 from sandman2
+## Example 11 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1761,6 +1873,11 @@ class Service(MethodView):
 ## ... source file abbreviated to get to request examples ...
 
 
+                raise BadRequestException(error_message)
+            resource.update(request.json)
+            db.session().merge(resource)
+            db.session().commit()
+            return jsonify(resource)
 
         resource = self.__model__(**request.json)  # pylint: disable=not-callable
         error_message = is_valid_method(self.__model__, resource)
@@ -1831,7 +1948,7 @@ class Service(MethodView):
 ```
 
 
-## Example 11 from tedivms-flask
+## Example 12 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

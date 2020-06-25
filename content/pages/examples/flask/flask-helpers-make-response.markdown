@@ -60,6 +60,11 @@ def protect(allow_browser_login=False):
 ## ... source file abbreviated to get to make_response examples ...
 
 
+    return functools.update_wrapper(wraps, f)
+
+
+def has_access_api(f):
+    if hasattr(f, "_permission_name"):
         permission_str = f._permission_name
     else:
         permission_str = f.__name__
@@ -242,6 +247,11 @@ def root():
 ## ... source file abbreviated to get to make_response examples ...
 
 
+    if request.method == 'POST':
+        return do_post(page, category='search', current_query=query)
+    response = requests.get(EVERYTHING,
+                            params=params,
+                            headers={'Authorization': API_KEY})
     pages = count_pages(response.json())
     if page > pages:
         page = pages
@@ -345,6 +355,11 @@ def jsonify(resource):
 ## ... source file abbreviated to get to make_response examples ...
 
 
+            for key, value in args.items():
+                if value.startswith('%'):
+                    filters.append(getattr(self.__model__, key).like(str(value), escape='/'))
+                elif key == 'sort':
+                    direction = desc if value.startswith('-') else asc
                     order.append(direction(getattr(self.__model__, value.lstrip('-'))))
                 elif key == 'limit':
                     limit = int(value)

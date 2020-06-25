@@ -33,6 +33,13 @@ as open source under the
 [MIT license](https://github.com/anfederico/Flaskex/blob/master/LICENSE.txt).
 
 
+### Flask Bookshelf
+[flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
+example [Flask](/flask.html) application that developers create when
+going through 
+[this Flask series of blog posts](https://damyanon.net/tags/flask-series/).
+
+
 ### Flask JSONDash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a 
 configurable web application built in Flask that creates charts and

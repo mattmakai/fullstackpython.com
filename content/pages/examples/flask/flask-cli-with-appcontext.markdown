@@ -66,6 +66,11 @@ class FlaskBBGroup(FlaskGroup):
 ## ... source file abbreviated to get to with_appcontext examples ...
 
 
+                   "'instance' next to the package or module is assumed to "
+                   "be the instance path.")
+@click.option("--version", expose_value=False, callback=get_version,
+              is_flag=True, is_eager=True, help="Show the FlaskBB version.")
+@click.pass_context
 @click_log.simple_verbosity_option(logger)
 def flaskbb(ctx):
     if ctx.invoked_subcommand is None:
@@ -116,6 +121,11 @@ def install(welcome, force, username, email, password, no_plugins):
 ## ... source file abbreviated to get to with_appcontext examples ...
 
 
+
+    if fixture or all_latest:
+        try:
+            settings = import_string(
+                "flaskbb.fixtures.{}".format(fixture)
             )
             settings = settings.fixture
         except ImportError:

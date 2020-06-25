@@ -531,6 +531,11 @@ def signin():
 ## ... source file abbreviated to get to url_for examples ...
 
 
+            return redirect(url_for('userbp.signin'))
+    return render_template('user/signin.html', form=form, title='Sign in')
+
+
+@userbp.route('/signout')
 def signout():
     logout_user()
     flash('Succesfully signed out.', 'positive')
@@ -632,6 +637,11 @@ class Role(db.Model):
 
 
 
+    def unfollow(self, user):
+        f = self.followed.filter_by(followed_id=user.id).first()
+        if f:
+            db.session.delete(f)
+
     def is_following(self, user):
         if user.id is None:
             return False
@@ -684,6 +694,11 @@ class AnonymousUser(AnonymousUserMixin):
 
 
 ## ... source file abbreviated to get to url_for examples ...
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 
 class Post(db.Model):

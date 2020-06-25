@@ -52,6 +52,17 @@ class FlaskBBTokenSerializer(tokens.TokenSerializer):
         )
 
     def loads(self, raw_token):
+        try:
+            parsed = self._serializer.loads(raw_token)
+        except SignatureExpired:
+            raise tokens.TokenError.expired()
+~~        except BadSignature:  # pragma: no branch
+            raise tokens.TokenError.invalid()
+        except BadData:  # pragma: no cover
+            raise tokens.TokenError.bad()
+        else:
+            return tokens.Token(user_id=parsed['id'], operation=parsed['op'])
+
 
 
 ## ... source file continues with no further BadSignature examples...

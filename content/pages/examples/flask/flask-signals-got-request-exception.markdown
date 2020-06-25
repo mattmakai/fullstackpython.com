@@ -73,6 +73,11 @@ from ._http import HTTPStatus
 ## ... source file abbreviated to get to got_request_exception examples ...
 
 
+        except MethodNotAllowed as e:
+            valid_route_method = e.valid_methods[0]
+            rule, _ = adapter.match(method=valid_route_method, return_rule=True)
+            return self.owns_endpoint(rule.endpoint)
+        except NotFound:
             return self.catch_all_404s
         except Exception:
             pass

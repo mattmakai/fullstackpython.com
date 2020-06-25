@@ -66,6 +66,11 @@ def get_config():
 ## ... source file abbreviated to get to SessionInterface examples ...
 
 
+    cache = CacheManager(**parse_cache_config_options(cache_opts))
+
+
+def init_session_manager(app):
+    session_opts = {'cache.expire': 3600}
 
     if 'CACHE_TYPE' not in app.config or not app.config['CACHE_TYPE']:
         app.config['CACHE_TYPE'] = 'file'

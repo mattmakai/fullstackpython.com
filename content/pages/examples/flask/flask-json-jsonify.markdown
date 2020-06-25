@@ -60,6 +60,11 @@ def protect(allow_browser_login=False):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+
+
+def has_access_api(f):
+    if hasattr(f, "_permission_name"):
+        permission_str = f._permission_name
     else:
         permission_str = f.__name__
 
@@ -156,6 +161,11 @@ from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+                endpoint="management.overview"
+            )
+        )
+    ]
+
     def post(self, user_id=None):
         if request.is_xhr:
             ids = request.get_json()["ids"]
@@ -206,6 +216,11 @@ class AddUser(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+
+            data = []
+            users = User.query.filter(User.id.in_(ids)).all()
+            for user in users:
+                if (current_user.id == user.id or
                         Permission(IsAdmin, identity=user) and
                         Permission(Not(IsAdmin), current_user)):
                     continue
@@ -256,6 +271,11 @@ class UnbanUser(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+
+        if not Permission(CanBanUser, identity=current_user):
+            flash(
+                _("You do not have the permissions to unban this user."),
+                "danger"
             )
             return redirect(url_for("management.overview"))
 
@@ -306,6 +326,11 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to modify groups."),
+                level="danger",
+                endpoint="management.overview"
+            )
         )
     ]
 
@@ -362,6 +387,11 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+                endpoint="management.overview"
+            )
+        )
+    ]
+
     def post(self, report_id=None):
 
         if request.is_xhr:
@@ -412,6 +442,11 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+                message=_("You are not allowed to view reports."),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
     ]
 
     def post(self, report_id=None):
@@ -656,6 +691,11 @@ class Service(MethodView):
 
 ## ... source file abbreviated to get to jsonify examples ...
 
+
+            raise BadRequestException(error_message)
+        db.session().add(resource)
+        db.session().commit()
+        return self._created_response(resource)
 
     def put(self, resource_id):
         resource = self.__model__.query.get(resource_id)

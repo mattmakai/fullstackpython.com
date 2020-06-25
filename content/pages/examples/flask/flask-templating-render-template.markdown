@@ -136,7 +136,111 @@ def send_email(recipient, subject, template, **kwargs):
 ```
 
 
-## Example 3 from flaskex
+## Example 3 from flask-bookshelf
+[flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
+example [Flask](/flask.html) application that developers create when
+going through
+[this Flask series of blog posts](https://damyanon.net/tags/flask-series/).
+
+[**flask-bookshelf / bookshelf / __init__.py**](https://github.com/damyanbogoev/flask-bookshelf/blob/master/bookshelf/./__init__.py)
+
+```python
+# __init__.py
+~~from flask import abort, Flask, g, render_template, request, current_app
+from flask_babel import Babel
+from flask_security import current_user
+from bookshelf.utils import get_instance_folder_path
+from bookshelf.main.controllers import main
+from bookshelf.admin.controllers import admin
+from bookshelf.cache import cache
+from bookshelf.config import configure_app
+from bookshelf.data.models import db
+
+app = Flask(
+    __name__,
+    instance_path=get_instance_folder_path(),
+    instance_relative_config=True,
+    template_folder="templates",
+)
+
+babel = Babel(app)
+configure_app(app)
+cache.init_app(app)
+db.init_app(app)
+app.jinja_env.add_extension("jinja2.ext.loopcontrols")
+
+
+@app.url_defaults
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+
+
+@app.before_request
+def ensure_lang_support():
+    lang_code = g.get("lang_code", None)
+    if lang_code and lang_code not in app.config["SUPPORTED_LANGUAGES"].keys():
+        abort(404)
+
+
+@babel.localeselector
+def get_locale():
+    return g.get("lang_code", app.config["BABEL_DEFAULT_LOCALE"])
+
+
+@babel.timezoneselector
+def get_timezone():
+    user = g.get("user", None)
+    if user is not None:
+        return user.timezone
+    return "UTC"
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    current_app.logger.error("Page not found: %s", (request.path, error))
+~~    return render_template("404.htm"), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    current_app.logger.error("Server Error: %s", (error))
+~~    return render_template("500.htm"), 500
+
+
+@app.errorhandler(Exception)
+def unhandled_exception(error):
+    current_app.logger.error("Unhandled Exception: %s", (error))
+~~    return render_template("500.htm"), 500
+
+
+@app.context_processor
+def inject_data():
+    return dict(user=current_user, lang_code=g.get("lang_code", None))
+
+
+@app.route("/")
+@app.route("/<lang_code>/")
+@cache.cached(300)
+def home(lang_code=None):
+~~    return render_template("index.htm")
+
+
+app.register_blueprint(main, url_prefix="/main")
+app.register_blueprint(main, url_prefix="/<lang_code>/main")
+app.register_blueprint(admin, url_prefix="/admin")
+app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 4 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -231,7 +335,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 4 from flask_jsondash
+## Example 5 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -280,6 +384,11 @@ charts = Blueprint(
 ## ... source file abbreviated to get to render_template examples ...
 
 
+            opts.update(
+                filter=dict(created_by=setting('JSONDASH_GLOBAL_USER')))
+            views += list(adapter.read(**opts))
+    else:
+        views = list(adapter.read(**opts))
     if views:
         pagination = utils.paginator(count=len(views),
                                      page=page, per_page=per_page)
@@ -369,7 +478,7 @@ def update(c_id):
 ```
 
 
-## Example 5 from flask-phone-input
+## Example 6 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -427,7 +536,7 @@ def show_phone():
 ```
 
 
-## Example 6 from flask-restx
+## Example 7 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -482,7 +591,7 @@ def ui_for(api):
 ```
 
 
-## Example 7 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -685,7 +794,7 @@ def paySuccess():
 ```
 
 
-## Example 8 from Flasky
+## Example 9 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -725,7 +834,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 9 from newspie
+## Example 10 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -775,6 +884,11 @@ def root():
 ## ... source file abbreviated to get to render_template examples ...
 
 
+
+
+@APP.route('/category/<string:category>', methods=['GET', 'POST'])
+def category(category):
+    page = request.args.get('page', default=1, type=int)
     if page < 1:
         return redirect(url_for('category', category=category, page=1))
     if request.method == 'POST' and category in CATEGORIES:
@@ -825,6 +939,11 @@ def search(query):
 ## ... source file abbreviated to get to render_template examples ...
 
 
+    if response.get('status') == 'ok':
+        for article in response.get('articles'):
+            parsed_articles.append({
+                'published_at':
+                    parser.isoparse(article['publishedAt']
                                    ).strftime('%Y-%m-%d %H:%M'),
                 'title':
                     article['title'],
@@ -870,7 +989,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 10 from tedivms-flask
+## Example 11 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -923,6 +1042,11 @@ def get_config():
 ## ... source file abbreviated to get to render_template examples ...
 
 
+    session_opts['session.secret'] = app.secret_key
+
+    class BeakerSessionInterface(SessionInterface):
+        def open_session(self, app, request):
+            session = request.environ['beaker.session']
             return session
 
         def save_session(self, app, session, response):
