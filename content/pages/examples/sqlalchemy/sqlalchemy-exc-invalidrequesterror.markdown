@@ -1,7 +1,7 @@
 title: sqlalchemy.exc InvalidRequestError code examples
 category: page
 slug: sqlalchemy-exc-invalidrequesterror-examples
-sortorder: 500031002
+sortorder: 500031025
 toc: False
 sidebartitle: sqlalchemy.exc InvalidRequestError
 meta: Python example code for the InvalidRequestError class from the sqlalchemy.exc module of the SQLAlchemy project.
@@ -36,15 +36,6 @@ from .exceptions import GinoException
 
 
 class ColumnAttribute:
-    """The type of the column wrapper attributes on GINO models.
-
-    This is the core utility to enable GINO models so that:
-
-    * Accessing a column attribute on a model class returns the column itself
-    * Accessing a column attribute on a model instance returns the value for that column
-
-    This utility is customizable by defining ``__attr_factory__`` in the model class.
-    """
 
     def __init__(self, prop_name, column):
         self.prop_name = prop_name
@@ -54,15 +45,29 @@ class ColumnAttribute:
         if instance is None:
             return self.column
         else:
+            return instance.__values__.get(self.prop_name)
+
+    def __set__(self, instance, value):
+        instance.__values__[self.prop_name] = value
+
+    def __delete__(self, instance):
+        raise AttributeError("Cannot delete value.")
+
+
 
 
 ## ... source file abbreviated to get to InvalidRequestError examples ...
 
 
+                    updates[k] = sub_cls.__attr_factory__(k, v)
+                elif isinstance(v, (sa.Index, sa.Constraint)):
+                    inspected_args.append(v)
+                elif isinstance(v, json_support.JSONProperty):
+                    updates[k] = v
+        if table_name is None:
             return
         sub_cls._column_name_map = column_name_map
 
-        # handle __table_args__
         table_args = updates.get(
             "__table_args__", getattr(sub_cls, "__table_args__", None)
         )
@@ -91,23 +96,22 @@ class ColumnAttribute:
         rv = sa.Table(table_name, sub_cls.__metadata__, *args, **table_kw)
         for k, v in updates.items():
             setattr(sub_cls, k, v)
+
+        json_prop_names = set()
         for each_cls in sub_cls.__mro__[::-1]:
             for k, v in each_cls.__dict__.items():
                 if isinstance(v, json_support.JSONProperty):
+                    if not v.name:
+                        v.name = k
+                    json_prop_names.add(v.prop_name)
                     json_col = getattr(
                         sub_cls.__dict__.get(v.prop_name), "column", None
                     )
                     if not isinstance(json_col, sa.Column) or not isinstance(
                         json_col.type, sa.JSON
-                    ):
-                        raise AttributeError(
-                            '{} "{}" requires a JSON[B] column "{}" '
-                            "which is not found or has a wrong type.".format(
-                                type(v).__name__, v.name, v.prop_name,
 
 
 ## ... source file continues with no further InvalidRequestError examples...
-
 
 ```
 

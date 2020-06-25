@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.mutable Mutable code examples
 category: page
 slug: sqlalchemy-ext-mutable-mutable-examples
-sortorder: 500031000
+sortorder: 500031035
 toc: False
 sidebartitle: sqlalchemy.ext.mutable Mutable
 meta: Python example code for the Mutable class from the sqlalchemy.ext.mutable module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ Mutable is a class within the sqlalchemy.ext.mutable module of the SQLAlchemy pr
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -59,22 +59,21 @@ except ImportError:
         super(Password, cls).coerce(key, value)
 
     def __init__(self, value, context=None, secret=False):
-        # Store the hash (if it is one).
         self.hash = value if not secret else None
 
-        # Store the secret if we have one.
         self.secret = value if secret else None
 
-        # The hash should be bytes.
         if isinstance(self.hash, six.text_type):
             self.hash = self.hash.encode('utf8')
 
-        # Save weakref of the password context (if we have one)
         self.context = weakref.proxy(context) if context is not None else None
+
+    def __eq__(self, value):
+        if self.hash is None or value is None:
+            return self.hash is value
 
 
 ## ... source file continues with no further Mutable examples...
-
 
 ```
 

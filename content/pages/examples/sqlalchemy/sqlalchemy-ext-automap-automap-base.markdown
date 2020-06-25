@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.automap automap_base code examples
 category: page
 slug: sqlalchemy-ext-automap-automap-base-examples
-sortorder: 500031000
+sortorder: 500031030
 toc: False
 sidebartitle: sqlalchemy.ext.automap automap_base
 meta: Python example code for the automap_base function from the sqlalchemy.ext.automap module of the SQLAlchemy project.
@@ -30,13 +30,10 @@ The sandman2 project is provided under the
 
 ```python
 # model.py
-"""Module containing code related to *sandman2* ORM models."""
 
-# Standard library imports
 import datetime
 from decimal import Decimal
 
-# Third-party imports
 from sqlalchemy.inspection import inspect
 from flask_sqlalchemy import SQLAlchemy  # pylint: disable=import-error,no-name-in-module
 ~~from sqlalchemy.ext.automap import automap_base
@@ -46,39 +43,44 @@ db = SQLAlchemy()
 
 class Model(object):
 
-    """The sandman2 Model class is the base class for all RESTful resources.
-    There is a one-to-one mapping between a table in the database and a
-    :class:`sandman2.model.Model`.
-    """
 
-    #: The relative URL this resource should live at.
     __url__ = None
 
-    #: The API version of this resource (not yet used).
     __version__ = '1'
 
-    #: The HTTP methods this resource supports (default=all).
     __methods__ = {
         'GET',
         'POST',
         'PUT',
         'PATCH',
         'DELETE',
+        'HEAD',
+        'OPTIONS'
+        }
+
+    @classmethod
+    def required(cls):
+        columns = []
 
 
 ## ... source file abbreviated to get to automap_base examples ...
 
 
+                instance = getattr(self, relationship.key)
+                if instance:
+                    link_dict[str(relationship.key)] = instance.resource_uri()
+        return link_dict
+
+    def resource_uri(self):
+        return self.__url__ + '/' + str(getattr(self, self.primary_key()))
+
+    def update(self, attributes):
+        for attribute in attributes:
             setattr(self, attribute, attributes[attribute])
         return self
 
     @classmethod
     def description(cls):
-        """Return a field->data type dictionary describing this model
-        as reported by the database.
-
-        :rtype: dict
-        """
 
         description = {}
         for column in cls.__table__.columns:  # pylint: disable=no-member
@@ -92,8 +94,8 @@ DeclarativeModel = declarative_base(cls=(db.Model, Model))
 ~~AutomapModel = automap_base(DeclarativeModel)
 
 
-## ... source file continues with no further automap_base examples...
 
+## ... source file continues with no further automap_base examples...
 
 ```
 

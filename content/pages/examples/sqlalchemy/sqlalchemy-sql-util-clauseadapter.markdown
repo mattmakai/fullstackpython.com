@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.util ClauseAdapter code examples
 category: page
 slug: sqlalchemy-sql-util-clauseadapter-examples
-sortorder: 500031000
+sortorder: 500031080
 toc: False
 sidebartitle: sqlalchemy.sql.util ClauseAdapter
 meta: Python example code for the ClauseAdapter class from the sqlalchemy.sql.util module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ ClauseAdapter is a class within the sqlalchemy.sql.util module of the SQLAlchemy
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -73,7 +73,6 @@ def inverse_join(selectable, left_alias, right_alias, relationship):
 
 
 ## ... source file continues with no further ClauseAdapter examples...
-
 
 ```
 

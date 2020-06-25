@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.exc UnmappedInstanceError code examples
 category: page
 slug: sqlalchemy-orm-exc-unmappedinstanceerror-examples
-sortorder: 500031002
+sortorder: 500031048
 toc: False
 sidebartitle: sqlalchemy.orm.exc UnmappedInstanceError
 meta: Python example code for the UnmappedInstanceError class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ UnmappedInstanceError is a class within the sqlalchemy.orm.exc module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -49,41 +49,46 @@ from ..utils import is_sequence
 
 
 def get_class_by_table(base, table, data=None):
-    """
-    Return declarative class associated with given table. If no class is found
-    this function returns `None`. If multiple classes were found (polymorphic
-    cases) additional `data` parameter can be given to hint which class
-    to return.
-
-    ::
-
-        class User(Base):
-            __tablename__ = 'entity'
-            id = sa.Column(sa.Integer, primary_key=True)
-            name = sa.Column(sa.String)
-
-
-        get_class_by_table(Base, User.__table__)  # User class
+    found_classes = set(
+        c for c in base._decl_class_registry.values()
+        if hasattr(c, '__table__') and c.__table__ is table
+    )
+    if len(found_classes) > 1:
+        if not data:
+            raise ValueError(
+                "Multiple declarative classes found for table '{0}'. "
+                "Please provide data parameter for this function to be able "
+                "to determine polymorphic scenarios.".format(
+                    table.name
+                )
+            )
+        else:
+            for cls in found_classes:
 
 
 ## ... source file abbreviated to get to UnmappedInstanceError examples ...
 
 
-    Return the bind for given SQLAlchemy Engine / Connection / declarative
-    model object.
+        mappers = [
+            mapper for mapper in mapperlib._mapper_registry
+            if mixed in mapper.tables
+        ]
+        if len(mappers) > 1:
+            raise ValueError(
+                "Multiple mappers found for table '%s'." % mixed.name
+            )
+        elif not mappers:
+            raise ValueError(
+                "Could not get mapper for table '%s'." % mixed.name
+            )
+        else:
+            return mappers[0]
+    if not isclass(mixed):
+        mixed = type(mixed)
+    return sa.inspect(mixed)
 
-    :param obj: SQLAlchemy Engine / Connection / declarative model object
 
-    ::
-
-        from sqlalchemy_utils import get_bind
-
-
-        get_bind(session)  # Connection object
-
-        get_bind(user)
-
-    """
+def get_bind(obj):
     if hasattr(obj, 'bind'):
         conn = obj.bind
     else:
@@ -101,23 +106,22 @@ def get_class_by_table(base, table, data=None):
 
 
 def get_primary_keys(mixed):
-    """
-    Return an OrderedDict of all primary keys for given Table object,
-    declarative class or declarative class instance.
+    return OrderedDict(
+        (
+            (key, column) for key, column in get_columns(mixed).items()
+            if column.primary_key
+        )
+    )
 
-    :param mixed:
-        SA Table object, SA declarative class or SA declarative class instance
 
-    ::
-
-        get_primary_keys(User)
-
-        get_primary_keys(User())
-
+def get_tables(mixed):
+    if isinstance(mixed, sa.Table):
+        return [mixed]
+    elif isinstance(mixed, sa.Column):
+        return [mixed.table]
 
 
 ## ... source file continues with no further UnmappedInstanceError examples...
-
 
 ```
 

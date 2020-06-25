@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.compiler compiles code examples
 category: page
 slug: sqlalchemy-ext-compiler-compiles-examples
-sortorder: 500031000
+sortorder: 500031031
 toc: False
 sidebartitle: sqlalchemy.ext.compiler compiles
 meta: Python example code for the compiles function from the sqlalchemy.ext.compiler module of the SQLAlchemy project.
@@ -59,12 +59,17 @@ sqla_120 = _vers >= (1, 2, 0)
 ## ... source file abbreviated to get to compiles examples ...
 
 
-    is the same length as the .expressions collection.  Ultimately
-    SQLAlchemy should support text() expressions in indexes.
+    if isinstance(text_, compat.string_types):
+        c = Column(text_, sqltypes.NULLTYPE)
+        table.append_column(c)
+        return c
+    elif isinstance(text_, TextClause):
+        return _textual_index_element(table, text_)
+    else:
+        raise ValueError("String or text() construct expected")
 
-    See SQLAlchemy issue 3174.
 
-    """
+class _textual_index_element(sql.ColumnElement):
 
     __visit_name__ = "_textual_idx_element"
 
@@ -112,11 +117,10 @@ def _get_constraint_final_name(constraint, dialect):
     if constraint.name is None:
         return None
     elif sqla_14:
-        # for SQLAlchemy 1.4 we would like to have the option to expand
+        return dialect.identifier_preparer.format_constraint(
 
 
 ## ... source file continues with no further compiles examples...
-
 
 ```
 
@@ -127,7 +131,7 @@ def _get_constraint_final_name(constraint, dialect):
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -201,8 +205,8 @@ def compile_asterisk(element, compiler, **kw):
     return '%s.*' % quote(compiler.dialect, element.selectable.name)
 
 
-## ... source file continues with no further compiles examples...
 
+## ... source file continues with no further compiles examples...
 
 ```
 

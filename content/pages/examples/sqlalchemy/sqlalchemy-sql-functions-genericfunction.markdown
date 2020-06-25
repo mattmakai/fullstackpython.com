@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.functions GenericFunction code examples
 category: page
 slug: sqlalchemy-sql-functions-genericfunction-examples
-sortorder: 500031000
+sortorder: 500031077
 toc: False
 sidebartitle: sqlalchemy.sql.functions GenericFunction
 meta: Python example code for the GenericFunction class from the sqlalchemy.sql.functions module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ GenericFunction is a class within the sqlalchemy.sql.functions module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -90,8 +90,8 @@ def compile_asterisk(element, compiler, **kw):
     return '%s.*' % quote(compiler.dialect, element.selectable.name)
 
 
-## ... source file continues with no further GenericFunction examples...
 
+## ... source file continues with no further GenericFunction examples...
 
 ```
 

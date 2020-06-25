@@ -488,6 +488,61 @@ def generate_csrf(secret_key=None, token_key=None):
     if field_name not in g:
 
 
+## ... source file abbreviated to get to Blueprint examples ...
+
+
+        return None
+
+    def protect(self):
+        if request.method not in current_app.config['WTF_CSRF_METHODS']:
+            return
+
+        try:
+            validate_csrf(self._get_csrf_token())
+        except ValidationError as e:
+            logger.info(e.args[0])
+            self._error_response(e.args[0])
+
+        if request.is_secure and current_app.config['WTF_CSRF_SSL_STRICT']:
+            if not request.referrer:
+                self._error_response('The referrer header is missing.')
+
+            good_referrer = 'https://{0}/'.format(request.host)
+
+            if not same_origin(request.referrer, good_referrer):
+                self._error_response('The referrer does not match the host.')
+
+        g.csrf_valid = True  # mark this request as CSRF valid
+
+    def exempt(self, view):
+
+~~        if isinstance(view, Blueprint):
+            self._exempt_blueprints.add(view.name)
+            return view
+
+        if isinstance(view, string_types):
+            view_location = view
+        else:
+            view_location = '.'.join((view.__module__, view.__name__))
+
+        self._exempt_views.add(view_location)
+        return view
+
+    def _error_response(self, reason):
+        raise CSRFError(reason)
+
+    def error_handler(self, view):
+
+        warnings.warn(FlaskWTFDeprecationWarning(
+            '"@csrf.error_handler" is deprecated. Use the standard Flask '
+            'error system with "@app.errorhandler(CSRFError)" instead. This '
+            'will be removed in 1.0.'
+        ), stacklevel=2)
+
+        @wraps(view)
+        def handler(reason):
+
+
 ## ... source file continues with no further Blueprint examples...
 
 ```

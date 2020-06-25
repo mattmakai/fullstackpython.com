@@ -1,7 +1,7 @@
 title: sqlalchemy.events SchemaEventTarget code examples
 category: page
 slug: sqlalchemy-events-schemaeventtarget-examples
-sortorder: 500031000
+sortorder: 500031022
 toc: False
 sidebartitle: sqlalchemy.events SchemaEventTarget
 meta: Python example code for the SchemaEventTarget class from the sqlalchemy.events module of the SQLAlchemy project.
@@ -62,6 +62,13 @@ class BatchOperationsImpl(object):
 ## ... source file abbreviated to get to SchemaEventTarget examples ...
 
 
+        self.table_kwargs = table_kwargs
+        self.temp_table_name = self._calc_temp_name(table.name)
+        self.new_table = None
+
+        self.partial_reordering = partial_reordering  # tuple of tuples
+        self.add_col_ordering = ()  # tuple of tuples
+
         self.column_transfers = OrderedDict(
             (c.name, {"expr": c}) for c in self.table.c
         )
@@ -80,8 +87,6 @@ class BatchOperationsImpl(object):
         for c in self.table.c:
             c_copy = c.copy(schema=schema)
             c_copy.unique = c_copy.index = False
-            # ensure that the type object was copied,
-            # as we may need to modify it in-place
 ~~            if isinstance(c.type, SchemaEventTarget):
                 assert c_copy.type is not c.type
             self.columns[c.name] = c_copy
@@ -93,8 +98,6 @@ class BatchOperationsImpl(object):
             if _is_type_bound(const):
                 continue
             elif self.reflected and isinstance(const, CheckConstraint):
-                # TODO: we are skipping reflected CheckConstraint because
-                # we have no way to determine _is_type_bound() for these.
                 pass
             elif const.name:
                 self.named_constraints[const.name] = const
@@ -107,11 +110,25 @@ class BatchOperationsImpl(object):
         for k in self.table.kwargs:
             self.table_kwargs.setdefault(k, self.table.kwargs[k])
 
+    def _adjust_self_columns_for_partial_reordering(self):
+        pairs = set()
 
 
 ## ... source file abbreviated to get to SchemaEventTarget examples ...
 
 
+            try:
+                for idx in self._gather_indexes_from_both_tables():
+                    op_impl.create_index(idx)
+            finally:
+                self.new_table.name = self.temp_table_name
+
+    def alter_column(
+        self,
+        table_name,
+        column_name,
+        nullable=None,
+        server_default=False,
         name=None,
         type_=None,
         autoincrement=None,
@@ -120,18 +137,11 @@ class BatchOperationsImpl(object):
         existing = self.columns[column_name]
         existing_transfer = self.column_transfers[column_name]
         if name is not None and name != column_name:
-            # note that we don't change '.key' - we keep referring
-            # to the renamed column by its old key in _create().  neat!
             existing.name = name
             existing_transfer["name"] = name
 
         if type_ is not None:
             type_ = sqltypes.to_instance(type_)
-            # old type is being discarded so turn off eventing
-            # rules. Alternatively we can
-            # erase the events set up by this type, but this is simpler.
-            # we also ignore the drop_constraint that will come here from
-            # Operations.implementation_for(alter_column)
 ~~            if isinstance(existing.type, SchemaEventTarget):
                 existing.type._create_events = (
                     existing.type.create_constraint
@@ -143,10 +153,6 @@ class BatchOperationsImpl(object):
 
             existing.type = type_
 
-            # we *dont* however set events for the new type, because
-            # alter_column is invoked from
-            # Operations.implementation_for(alter_column) which already
-            # will emit an add_constraint()
 
         if nullable is not None:
             existing.nullable = nullable
@@ -158,9 +164,12 @@ class BatchOperationsImpl(object):
         if autoincrement is not None:
             existing.autoincrement = bool(autoincrement)
 
+    def _setup_dependencies_for_add_column(
+        self, colname, insert_before, insert_after
+    ):
+
 
 ## ... source file continues with no further SchemaEventTarget examples...
-
 
 ```
 

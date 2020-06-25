@@ -1,7 +1,7 @@
 title: sqlalchemy.schema Table code examples
 category: page
 slug: sqlalchemy-schema-table-examples
-sortorder: 500031008
+sortorder: 500031064
 toc: False
 sidebartitle: sqlalchemy.schema Table
 meta: Python example code for the Table class from the sqlalchemy.schema module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ Table is a class within the sqlalchemy.schema module of the SQLAlchemy project.
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -55,74 +55,29 @@ def get_foreign_key_values(fk, obj):
 
 
 def group_foreign_keys(foreign_keys):
-    """
-    Return a groupby iterator that groups given foreign keys by table.
-
-    :param foreign_keys: a sequence of foreign keys
-
-
-## ... source file abbreviated to get to Table examples ...
-
-
-            # do something
-            pass
-
-
-    .. seealso:: :func:`get_referencing_foreign_keys`
-
-    .. versionadded: 0.26.1
-    """
     foreign_keys = sorted(
         foreign_keys, key=lambda key: key.constraint.table.name
     )
     return groupby(foreign_keys, lambda key: key.constraint.table)
 
 
-def get_referencing_foreign_keys(mixed):
-    """
-    Returns referencing foreign keys for given Table object or declarative
-    class.
-
-    :param mixed:
-~~        SA Table object or SA declarative class
-
-    ::
-
-        get_referencing_foreign_keys(User)  # set([ForeignKey('user.id')])
-
-        get_referencing_foreign_keys(User.__table__)
-
-
-    This function also understands inheritance. This means it returns
-    all foreign keys that reference any table in the class inheritance tree.
-
-    Let's say you have three classes which use joined table inheritance,
-    namely TextItem, Article and BlogPost with Article and BlogPost inheriting
-    TextItem.
-
-    ::
-
-        # This will check all foreign keys that reference either article table
-        # or textitem table.
-        get_referencing_foreign_keys(Article)
-
-    .. seealso:: :func:`get_tables`
-    """
-    if isinstance(mixed, sa.Table):
-
-
 ## ... source file abbreviated to get to Table examples ...
 
 
+                getattr(class_, get_column_key(class_, column)) ==
+                getattr(
+                    obj,
+                    sa.inspect(type(obj))
+                    .get_property_by_column(
+                        foreign_column
+                    ).key
+                )
+            )
+        criteria.append(sa.and_(*subcriteria))
+    return criteria
+
+
 def non_indexed_foreign_keys(metadata, engine=None):
-    """
-    Finds all non indexed foreign keys from all tables of given MetaData.
-
-    Very useful for optimizing postgresql database and finding out which
-    foreign keys need indexes.
-
-    :param metadata: MetaData object to inspect tables from
-    """
     reflected_metadata = MetaData()
 
     if metadata.bind is None and engine is None:
@@ -157,8 +112,8 @@ def get_fk_constraint_for_columns(table, *columns):
             return constraint
 
 
-## ... source file continues with no further Table examples...
 
+## ... source file continues with no further Table examples...
 
 ```
 

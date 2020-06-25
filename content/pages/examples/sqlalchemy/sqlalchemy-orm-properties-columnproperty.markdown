@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.properties ColumnProperty code examples
 category: page
 slug: sqlalchemy-orm-properties-columnproperty-examples
-sortorder: 500031000
+sortorder: 500031051
 toc: False
 sidebartitle: sqlalchemy.orm.properties ColumnProperty
 meta: Python example code for the ColumnProperty class from the sqlalchemy.orm.properties module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ ColumnProperty is a class within the sqlalchemy.orm.properties module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -49,27 +49,21 @@ from ..utils import is_sequence
 
 
 def get_class_by_table(base, table, data=None):
-    """
-    Return declarative class associated with given table. If no class is found
-    this function returns `None`. If multiple classes were found (polymorphic
-    cases) additional `data` parameter can be given to hint which class
-    to return.
-
-    ::
-
-        class User(Base):
-            __tablename__ = 'entity'
-            id = sa.Column(sa.Integer, primary_key=True)
-            name = sa.Column(sa.String)
-
-
-        get_class_by_table(Base, User.__table__)  # User class
-
-
-
-## ... source file abbreviated to get to ColumnProperty examples ...
-
-
+    found_classes = set(
+        c for c in base._decl_class_registry.values()
+        if hasattr(c, '__table__') and c.__table__ is table
+    )
+    if len(found_classes) > 1:
+        if not data:
+            raise ValueError(
+                "Multiple declarative classes found for table '{0}'. "
+                "Please provide data parameter for this function to be able "
+                "to determine polymorphic scenarios.".format(
+                    table.name
+                )
+            )
+        else:
+            for cls in found_classes:
                 mapper = sa.inspect(cls)
                 polymorphic_on = mapper.polymorphic_on.name
                 if polymorphic_on in data:
@@ -88,41 +82,6 @@ def get_class_by_table(base, table, data=None):
 
 
 def get_type(expr):
-    """
-    Return the associated type with given Column, InstrumentedAttribute,
-~~    ColumnProperty, RelationshipProperty or other similar SQLAlchemy construct.
-
-    For constructs wrapping columns this is the column type. For relationships
-    this function returns the relationship mapper class.
-
-    :param expr:
-~~        SQLAlchemy Column, InstrumentedAttribute, ColumnProperty or other
-        similar SA construct.
-
-    ::
-
-        class User(Base):
-            __tablename__ = 'user'
-            id = sa.Column(sa.Integer, primary_key=True)
-            name = sa.Column(sa.String)
-
-
-        class Article(Base):
-            __tablename__ = 'article'
-            id = sa.Column(sa.Integer, primary_key=True)
-            author_id = sa.Column(sa.Integer, sa.ForeignKey(User.id))
-            author = sa.orm.relationship(User)
-
-
-        get_type(User.__table__.c.name)  # sa.String()
-        get_type(User.name)  # sa.String()
-        get_type(User.name.property)  # sa.String()
-
-        get_type(Article.author)  # User
-
-
-    .. versionadded: 0.30.9
-    """
     if hasattr(expr, 'type'):
         return expr.type
     elif isinstance(expr, InstrumentedAttribute):
@@ -136,40 +95,45 @@ def get_type(expr):
 
 
 def cast_if(expression, type_):
-    """
-    Produce a CAST expression but only if given expression is not of given type
-    already.
+    try:
+        expr_type = get_type(expression)
+    except TypeError:
+        expr_type = expression
+        check_type = type_().python_type
+    else:
+        check_type = type_
 
-    Assume we have a model with two fields id (Integer) and name (String).
-
-    ::
-
-        import sqlalchemy as sa
-        from sqlalchemy_utils import cast_if
-
-
-        cast_if(User.id, sa.Integer)    # "user".id
-        cast_if(User.name, sa.String)   # "user".name
-        cast_if(User.id, sa.String)     # CAST("user".id AS TEXT)
+    return (
+        sa.cast(expression, type_)
+        if not isinstance(expr_type, check_type)
+        else expression
+    )
 
 
+def get_column_key(model, column):
+    mapper = sa.inspect(model)
 
 
 ## ... source file abbreviated to get to ColumnProperty examples ...
 
 
+        return [mixed.table]
+    elif isinstance(mixed, sa.orm.attributes.InstrumentedAttribute):
+        return mixed.parent.tables
+    elif isinstance(mixed, sa.orm.query._ColumnEntity):
+        mixed = mixed.expr
 
-        get_columns(User.__mapper__)
+    mapper = get_mapper(mixed)
 
-        get_columns(sa.orm.aliased(User))
+    polymorphic_mappers = get_polymorphic_mappers(mapper)
+    if polymorphic_mappers:
+        tables = sum((m.tables for m in polymorphic_mappers), [])
+    else:
+        tables = mapper.tables
+    return tables
 
-        get_columns(sa.orm.alised(User.__table__))
 
-
-    :param mixed:
-        SA Table object, SA Mapper, SA declarative class, SA declarative class
-        instance or an alias of any of these objects
-    """
+def get_columns(mixed):
     if isinstance(mixed, sa.sql.selectable.Selectable):
         return mixed.c
     if isinstance(mixed, sa.orm.util.AliasedClass):
@@ -188,10 +152,6 @@ def cast_if(expression, type_):
 
 
 def table_name(obj):
-    """
-    Return table name of given target, declarative class or the
-    table name where the declarative attribute is bound to.
-    """
     class_ = getattr(obj, 'class_', obj)
 
     try:
@@ -205,9 +165,18 @@ def table_name(obj):
         pass
 
 
+def getattrs(obj, attrs):
+    return map(partial(getattr, obj), attrs)
+
+
 ## ... source file abbreviated to get to ColumnProperty examples ...
 
 
+def get_query_descriptor(query, entity, attr):
+    if attr in query_labels(query):
+        return attr
+    else:
+        entity = get_query_entity_by_alias(query, entity)
         if entity:
             descriptor = get_descriptor(entity, attr)
             if (
@@ -234,14 +203,8 @@ def get_descriptor(entity, attr):
                         if c.key == attr:
                             return c
                 else:
-                    # If the property belongs to a class that uses
-                    # polymorphic inheritance we have to take into account
-                    # situations where the attribute exists in child class
-                    # but not in parent class.
                     return getattr(prop.parent.class_, attr)
             else:
-                # Handle synonyms, relationship properties and hybrid
-                # properties
 
                 if isinstance(entity, sa.orm.util.AliasedClass):
                     return getattr(entity, attr)
@@ -253,10 +216,15 @@ def get_descriptor(entity, attr):
 
 def get_all_descriptors(expr):
     if isinstance(expr, sa.sql.selectable.Selectable):
+        return expr.c
+    insp = sa.inspect(expr)
+    try:
+        polymorphic_mappers = get_polymorphic_mappers(insp)
+    except sa.exc.NoInspectionAvailable:
+        return get_mapper(expr).all_orm_descriptors
 
 
 ## ... source file continues with no further ColumnProperty examples...
-
 
 ```
 

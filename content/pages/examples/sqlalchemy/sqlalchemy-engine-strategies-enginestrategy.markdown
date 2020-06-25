@@ -1,7 +1,7 @@
 title: sqlalchemy.engine.strategies EngineStrategy code examples
 category: page
 slug: sqlalchemy-engine-strategies-enginestrategy-examples
-sortorder: 500031000
+sortorder: 500031019
 toc: False
 sidebartitle: sqlalchemy.engine.strategies EngineStrategy
 meta: Python example code for the EngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.
@@ -37,14 +37,6 @@ from .engine import GinoEngine
 
 
 ~~class GinoStrategy(EngineStrategy):
-    """A SQLAlchemy engine strategy for GINO.
-
-    This strategy is initialized automatically as :mod:`gino` is imported.
-
-    If :func:`sqlalchemy.create_engine` uses ``strategy="gino"``, it will return a
-    :class:`-collections.abc.Coroutine`, and treat URL prefix ``postgresql://`` or
-    ``postgres://`` as ``postgresql+asyncpg://``.
-    """
 
     name = "gino"
     engine_cls = GinoEngine
@@ -62,9 +54,16 @@ from .engine import GinoEngine
 
         pop_kwarg = kwargs.pop
 
+        dialect_args = {}
+        for k in util.get_cls_kwargs(dialect_cls).union(
+            getattr(dialect_cls, "init_kwargs", set())
+        ):
+            if k in kwargs:
+                dialect_args[k] = pop_kwarg(k)
+
+
 
 ## ... source file continues with no further EngineStrategy examples...
-
 
 ```
 

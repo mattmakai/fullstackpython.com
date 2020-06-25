@@ -1,7 +1,7 @@
 title: sqlalchemy.exc OperationalError code examples
 category: page
 slug: sqlalchemy-exc-operationalerror-examples
-sortorder: 500031004
+sortorder: 500031027
 toc: False
 sidebartitle: sqlalchemy.exc OperationalError
 meta: Python example code for the OperationalError class from the sqlalchemy.exc module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ OperationalError is a class within the sqlalchemy.exc module of the SQLAlchemy p
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -45,36 +45,41 @@ from .orm import quote
 
 
 def escape_like(string, escape_char='*'):
-    """
-    Escape the string paremeter used in SQL LIKE expressions.
-
-    ::
-
-        from sqlalchemy_utils import escape_like
-
-
-        query = session.query(User).filter(
-            User.name.ilike(escape_like('John'))
-        )
-
-
-    :param string: a string to escape
-    :param escape_char: escape character
-    """
     return (
         string
+        .replace(escape_char, escape_char * 2)
+        .replace('%', escape_char + '%')
+        .replace('_', escape_char + '_')
+    )
+
+
+def json_sql(value, scalars_to_json=True):
+    scalar_convert = sa.text
+    if scalars_to_json:
+        def scalar_convert(a):
+            return sa.func.to_json(sa.text(a))
+
+    if isinstance(value, Mapping):
+        return sa.func.json_build_object(
+            *(
+                json_sql(v, scalars_to_json=False)
 
 
 ## ... source file abbreviated to get to OperationalError examples ...
 
 
+        text = "SELECT 1 FROM pg_database WHERE datname='%s'" % database
+        return bool(get_scalar_result(engine, text))
+
+    elif engine.dialect.name == 'mysql':
+        text = ("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA "
+                "WHERE SCHEMA_NAME = '%s'" % database)
+        return bool(get_scalar_result(engine, text))
 
     elif engine.dialect.name == 'sqlite':
         if database:
             return database == ':memory:' or sqlite_file_exists(database)
         else:
-            # The default SQLAlchemy database is in memory,
-            # and :memory is not required, thus we should support that use-case
             return True
 
     else:
@@ -96,27 +101,26 @@ def escape_like(string, escape_char='*'):
 
 
 def create_database(url, encoding='utf8', template=None):
-    """Issue the appropriate CREATE DATABASE statement.
 
-    :param url: A SQLAlchemy engine URL.
-    :param encoding: The encoding to create the database as.
-    :param template:
-        The name of the template from which to create the new database. At the
-        moment only supported by PostgreSQL driver.
+    url = copy(make_url(url))
 
-    To create a database, you can pass a simple URL that would have
-    been passed to ``create_engine``. ::
+    database = url.database
 
-        create_database('postgresql://postgres@localhost/name')
+    if url.drivername.startswith('postgres'):
+        url.database = 'postgres'
+    elif url.drivername.startswith('mssql'):
+        url.database = 'master'
+    elif not url.drivername.startswith('sqlite'):
+        url.database = None
 
-    You may also pass the url from an existing engine. ::
-
-        create_database(engine.url)
-
+    if url.drivername == 'mssql+pyodbc':
+        engine = sa.create_engine(url, connect_args={'autocommit': True})
+    elif url.drivername == 'postgresql+pg8000':
+        engine = sa.create_engine(url, isolation_level='AUTOCOMMIT')
+    else:
 
 
 ## ... source file continues with no further OperationalError examples...
-
 
 ```
 

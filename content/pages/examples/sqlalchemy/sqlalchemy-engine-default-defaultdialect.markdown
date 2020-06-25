@@ -1,7 +1,7 @@
 title: sqlalchemy.engine.default DefaultDialect code examples
 category: page
 slug: sqlalchemy-engine-default-defaultdialect-examples
-sortorder: 500031000
+sortorder: 500031018
 toc: False
 sidebartitle: sqlalchemy.engine.default DefaultDialect
 meta: Python example code for the DefaultDialect class from the sqlalchemy.engine.default module of the SQLAlchemy project.
@@ -22,52 +22,22 @@ database schema changes. The Alembic project is open sourced under the
 
 ```python
 # api.py
-"""Provide the 'autogenerate' feature which can produce migration operations
-automatically."""
+    )
 
-import contextlib
+    compare._populate_migration_script(autogen_context, migration_script)
 
-from sqlalchemy import inspect
-
-from . import compare
-from . import render
-from .. import util
-from ..operations import ops
+    return migration_script
 
 
-def compare_metadata(context, metadata):
-    """Compare a database schema to that given in a
-    :class:`-sqlalchemy.schema.MetaData` instance.
-
-    The database connection is presented in the context
-    of a :class:`.MigrationContext` object, which
-    provides database connectivity as well as optional
-    comparison functions to use for datatypes and
-    server defaults - see the "autogenerate" arguments
-    at :meth:`.EnvironmentContext.configure`
-    for details on these.
-
-    The return format is a list of "diff" directives,
-    each representing individual differences::
-
-        from alembic.migration import MigrationContext
-        from alembic.autogenerate import compare_metadata
-
-
-## ... source file abbreviated to get to DefaultDialect examples ...
-
-
+def render_python_code(
+    up_or_down_op,
+    sqlalchemy_module_prefix="sa.",
+    alembic_module_prefix="op.",
+    render_as_batch=False,
     imports=(),
     render_item=None,
     migration_context=None,
 ):
-    """Render Python code given an :class:`.UpgradeOps` or
-    :class:`.DowngradeOps` object.
-
-    This is a convenience function that can be used to test the
-    autogenerate output of a user-defined :class:`.MigrationScript` structure.
-
-    """
     opts = {
         "sqlalchemy_module_prefix": sqlalchemy_module_prefix,
         "alembic_module_prefix": alembic_module_prefix,
@@ -91,7 +61,6 @@ def compare_metadata(context, metadata):
 
 
 def _render_migration_diffs(context, template_args):
-    """legacy, used by test_autogen_composition at the moment"""
 
     autogen_context = AutogenContext(context)
 
@@ -105,10 +74,10 @@ def _render_migration_diffs(context, template_args):
     )
 
     render._render_python_into_templatevars(
+        autogen_context, migration_script, template_args
 
 
 ## ... source file continues with no further DefaultDialect examples...
-
 
 ```
 

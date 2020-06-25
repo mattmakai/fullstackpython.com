@@ -1,7 +1,7 @@
 title: sqlalchemy.util.langhelpers symbol code examples
 category: page
 slug: sqlalchemy-util-langhelpers-symbol-examples
-sortorder: 500031000
+sortorder: 500031088
 toc: False
 sidebartitle: sqlalchemy.util.langhelpers symbol
 meta: Python example code for the symbol function from the sqlalchemy.util.langhelpers module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ symbol is a function within the sqlalchemy.util.langhelpers module of the SQLAlc
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -35,23 +35,6 @@ import sqlalchemy as sa
 
 
 class Timestamp(object):
-    """Adds `created` and `updated` columns to a derived declarative model.
-
-    The `created` column is handled through a default and the `updated`
-    column is handled through a `before_update` event that propagates
-    for all derived declarative models.
-
-    ::
-
-
-        import sqlalchemy as sa
-        from sqlalchemy_utils import Timestamp
-
-
-        class SomeModel(Base, Timestamp):
-            __tablename__ = 'somemodel'
-            id = sa.Column(sa.Integer, primary_key=True)
-    """
 
     created = sa.Column(sa.DateTime, default=datetime.utcnow, nullable=False)
     updated = sa.Column(sa.DateTime, default=datetime.utcnow, nullable=False)
@@ -59,8 +42,6 @@ class Timestamp(object):
 
 @sa.event.listens_for(Timestamp, 'before_update', propagate=True)
 def timestamp_before_update(mapper, connection, target):
-    # When a model with a timestamp is updated; force update the updated
-    # timestamp.
     target.updated = datetime.utcnow()
 
 
@@ -85,14 +66,13 @@ def _generic_repr_method(self, fields):
 
 
 def generic_repr(*fields):
-    """Adds generic ``__repr__()`` method to a declarative SQLAlchemy model.
-
-    In case if some fields are not loaded from a database, it doesn't
-    force their loading and instead repesents them as ``<not loaded>``.
+    if len(fields) == 1 and callable(fields[0]):
+        target = fields[0]
+        target.__repr__ = lambda self: _generic_repr_method(self, fields=None)
+        return target
 
 
 ## ... source file continues with no further symbol examples...
-
 
 ```
 

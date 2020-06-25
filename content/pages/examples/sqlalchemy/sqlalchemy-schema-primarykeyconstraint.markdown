@@ -1,7 +1,7 @@
 title: sqlalchemy.schema PrimaryKeyConstraint code examples
 category: page
 slug: sqlalchemy-schema-primarykeyconstraint-examples
-sortorder: 500031007
+sortorder: 500031063
 toc: False
 sidebartitle: sqlalchemy.schema PrimaryKeyConstraint
 meta: Python example code for the PrimaryKeyConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ PrimaryKeyConstraint is a class within the sqlalchemy.schema module of the SQLAl
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -60,6 +60,11 @@ class DropView(DDLElement):
 ## ... source file abbreviated to get to PrimaryKeyConstraint examples ...
 
 
+    name,
+    selectable,
+    indexes=None,
+    metadata=None,
+    aliases=None
 ):
     if indexes is None:
         indexes = []
@@ -92,23 +97,22 @@ def create_materialized_view(
     indexes=None,
     aliases=None
 ):
-    """ Create a view on a given metadata
+    table = create_table_from_selectable(
+        name=name,
+        selectable=selectable,
+        indexes=indexes,
+        metadata=None,
+        aliases=aliases
+    )
 
-    :param name: The name of the view to create.
-    :param selectable: An SQLAlchemy selectable e.g. a select() statement.
-    :param metadata:
-        An SQLAlchemy Metadata instance that stores the features of the
-        database being described.
-    :param indexes: An optional list of SQLAlchemy Index instances.
-    :param aliases:
-        An optional dictionary containing with keys as column names and values
-        as column aliases.
-
-    Same as for ``create_view`` except that a ``CREATE MATERIALIZED VIEW``
+    sa.event.listen(
+        metadata,
+        'after_create',
+        CreateView(name, selectable, materialized=True)
+    )
 
 
 ## ... source file continues with no further PrimaryKeyConstraint examples...
-
 
 ```
 

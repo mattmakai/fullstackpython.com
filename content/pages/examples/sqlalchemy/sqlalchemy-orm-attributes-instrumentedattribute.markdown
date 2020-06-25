@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.attributes InstrumentedAttribute code examples
 category: page
 slug: sqlalchemy-orm-attributes-instrumentedattribute-examples
-sortorder: 500031000
+sortorder: 500031044
 toc: False
 sidebartitle: sqlalchemy.orm.attributes InstrumentedAttribute
 meta: Python example code for the InstrumentedAttribute class from the sqlalchemy.orm.attributes module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ InstrumentedAttribute is a class within the sqlalchemy.orm.attributes module of 
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -58,6 +58,11 @@ class Path(object):
 
 ## ... source file abbreviated to get to InstrumentedAttribute examples ...
 
+
+        return "%s('%s')" % (self.__class__.__name__, self.path)
+
+    def index(self, element):
+        return self.parts.index(element)
 
     def __getitem__(self, slice):
         result = self.parts[slice]
@@ -107,7 +112,6 @@ class AttrPath(object):
 
 
 ## ... source file continues with no further InstrumentedAttribute examples...
-
 
 ```
 

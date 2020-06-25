@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.interfaces MapperProperty code examples
 category: page
 slug: sqlalchemy-orm-interfaces-mapperproperty-examples
-sortorder: 500031000
+sortorder: 500031049
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces MapperProperty
 meta: Python example code for the MapperProperty class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ MapperProperty is a class within the sqlalchemy.orm.interfaces module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -50,36 +50,41 @@ class GenericAttributeImpl(attributes.ScalarAttributeImpl):
         if self.key in dict_:
             return dict_[self.key]
 
-        # Retrieve the session bound to the state in order to perform
-        # a lazy query for the attribute.
         session = _state_session(state)
         if session is None:
-            # State is not bound to a session; we cannot proceed.
             return None
 
-        # Find class for discriminator.
-        # TODO: Perhaps optimize with some sort of lookup?
         discriminator = self.get_state_discriminator(state)
         target_class = state.class_._decl_class_registry.get(discriminator)
+
+        if target_class is None:
+            return None
+
+        id = self.get_state_id(state)
 
 
 
 ## ... source file abbreviated to get to MapperProperty examples ...
 
 
-            # Nullify relationship args
+
+    def set(self, state, dict_, initiator,
+            passive=attributes.PASSIVE_OFF,
+            check_old=None,
+            pop=False):
+
+        dict_[self.key] = initiator
+
+        if initiator is None:
             for id in self.parent_token.id:
                 dict_[id.key] = None
             dict_[self.parent_token.discriminator.key] = None
         else:
-            # Get the primary key of the initiator and ensure we
-            # can support this assignment.
             class_ = type(initiator)
             mapper = class_mapper(class_)
 
             pk = mapper.identity_key_from_instance(initiator)[1]
 
-            # Set the identifier and the discriminator.
             discriminator = six.text_type(class_.__name__)
 
             for index, id in enumerate(self.parent_token.id):
@@ -88,16 +93,6 @@ class GenericAttributeImpl(attributes.ScalarAttributeImpl):
 
 
 ~~class GenericRelationshipProperty(MapperProperty):
-    """A generic form of the relationship property.
-
-    Creates a 1 to many relationship between the parent model
-    and any other models using a descriminator (the table name).
-
-    :param discriminator
-        Field to discriminate which model we are referring to.
-    :param id:
-        Field to point to the model we are referring to.
-    """
 
     def __init__(self, discriminator, id, doc=None):
         super(GenericRelationshipProperty, self).__init__()
@@ -112,10 +107,19 @@ class GenericAttributeImpl(attributes.ScalarAttributeImpl):
     def _column_to_property(self, column):
         if isinstance(column, hybrid_property):
             attr_key = column.__name__
+            for key, attr in self.parent.all_orm_descriptors.items():
+                if key == attr_key:
+                    return attr
+        else:
+            for key, attr in self.parent.attrs.items():
+                if isinstance(attr, ColumnProperty):
+                    if attr.columns[0].name == column.name:
+                        return attr
+
+    def init(self):
 
 
 ## ... source file continues with no further MapperProperty examples...
-
 
 ```
 

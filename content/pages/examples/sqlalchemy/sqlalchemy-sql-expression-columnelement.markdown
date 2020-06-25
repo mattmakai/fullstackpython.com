@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression ColumnElement code examples
 category: page
 slug: sqlalchemy-sql-expression-columnelement-examples
-sortorder: 500031002
+sortorder: 500031073
 toc: False
 sidebartitle: sqlalchemy.sql.expression ColumnElement
 meta: Python example code for the ColumnElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ ColumnElement is a class within the sqlalchemy.sql.expression module of the SQLA
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -56,9 +56,8 @@ def compile_array_get(element, compiler, **kw):
         )
     return '(%s)[%s]' % (
         compiler.process(args[0]),
-
-
-## ... source file abbreviated to get to ColumnElement examples ...
+        sa.text(str(args[1].value + 1))
+    )
 
 
 class row_to_json(GenericFunction):
@@ -91,8 +90,8 @@ def compile_asterisk(element, compiler, **kw):
     return '%s.*' % quote(compiler.dialect, element.selectable.name)
 
 
-## ... source file continues with no further ColumnElement examples...
 
+## ... source file continues with no further ColumnElement examples...
 
 ```
 

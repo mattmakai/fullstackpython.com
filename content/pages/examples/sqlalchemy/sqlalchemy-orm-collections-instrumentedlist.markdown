@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.collections InstrumentedList code examples
 category: page
 slug: sqlalchemy-orm-collections-instrumentedlist-examples
-sortorder: 500031000
+sortorder: 500031045
 toc: False
 sidebartitle: sqlalchemy.orm.collections InstrumentedList
 meta: Python example code for the InstrumentedList class from the sqlalchemy.orm.collections module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ InstrumentedList is a class within the sqlalchemy.orm.collections module of the 
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -74,8 +74,6 @@ from .enriched_datetime.enriched_datetime_type import EnrichedDateTimeType  # no
 
 
 ~~class InstrumentedList(_InstrumentedList):
-    """Enhanced version of SQLAlchemy InstrumentedList. Provides some
-    additional functionality."""
 
     def any(self, attr):
         return any(getattr(item, attr) for item in self)
@@ -91,8 +89,8 @@ def instrumented_list(f):
     return wrapper
 
 
-## ... source file continues with no further InstrumentedList examples...
 
+## ... source file continues with no further InstrumentedList examples...
 
 ```
 

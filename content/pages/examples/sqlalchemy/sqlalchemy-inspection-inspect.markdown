@@ -1,7 +1,7 @@
 title: sqlalchemy.inspection inspect code examples
 category: page
 slug: sqlalchemy-inspection-inspect-examples
-sortorder: 500031000
+sortorder: 500031036
 toc: False
 sidebartitle: sqlalchemy.inspection inspect
 meta: Python example code for the inspect function from the sqlalchemy.inspection module of the SQLAlchemy project.
@@ -30,13 +30,10 @@ The sandman2 project is provided under the
 
 ```python
 # model.py
-"""Module containing code related to *sandman2* ORM models."""
 
-# Standard library imports
 import datetime
 from decimal import Decimal
 
-# Third-party imports
 ~~from sqlalchemy.inspection import inspect
 from flask_sqlalchemy import SQLAlchemy  # pylint: disable=import-error,no-name-in-module
 from sqlalchemy.ext.automap import automap_base
@@ -46,28 +43,39 @@ db = SQLAlchemy()
 
 class Model(object):
 
-    """The sandman2 Model class is the base class for all RESTful resources.
-    There is a one-to-one mapping between a table in the database and a
-    :class:`sandman2.model.Model`.
-    """
 
-    #: The relative URL this resource should live at.
     __url__ = None
 
-    #: The API version of this resource (not yet used).
     __version__ = '1'
 
-    #: The HTTP methods this resource supports (default=all).
     __methods__ = {
         'GET',
         'POST',
         'PUT',
+        'PATCH',
+        'DELETE',
+        'HEAD',
+        'OPTIONS'
+        }
+
+    @classmethod
 
 
 ## ... source file abbreviated to get to inspect examples ...
 
 
-        """
+        for column in cls.__table__.columns:  # pylint: disable=no-member
+            if column.nullable:
+                columns.append(column.name)
+        return columns
+
+    @classmethod
+    def primary_key(cls):
+        return list(
+            cls.__table__.primary_key.columns)[  # pylint: disable=no-member
+                0].key
+
+    def to_dict(self):
         result_dict = {}
         for column in self.__table__.columns.keys():  # pylint: disable=no-member
             value = result_dict[column] = getattr(self, column, None)
@@ -80,12 +88,6 @@ class Model(object):
         return result_dict
 
     def links(self):
-        """Return a dictionary of links to related resources that should be
-        included in the *Link* header of an HTTP response.
-
-        :rtype: dict
-
-        """
         link_dict = {'self': self.resource_uri()}
 ~~        for relationship in inspect(  # pylint: disable=maybe-no-member
                 self.__class__).relationships:
@@ -96,26 +98,25 @@ class Model(object):
         return link_dict
 
     def resource_uri(self):
-        """Return the URI to this specific resource.
-
-        :rtype: str
-
-        """
         return self.__url__ + '/' + str(getattr(self, self.primary_key()))
 
     def update(self, attributes):
-        """Update the current instance based on attribute->value items in
-        *attributes*.
-
-        :param dict attributes: Dictionary of attributes to be updated
-        :rtype: :class:`sandman2.model.Model`
-        """
         for attribute in attributes:
             setattr(self, attribute, attributes[attribute])
+        return self
+
+    @classmethod
+    def description(cls):
+
+        description = {}
+        for column in cls.__table__.columns:  # pylint: disable=no-member
+            column_description = str(column.type)
+            if not column.nullable:
+                column_description += ' (required)'
+            description[column.name] = column_description
 
 
 ## ... source file continues with no further inspect examples...
-
 
 ```
 

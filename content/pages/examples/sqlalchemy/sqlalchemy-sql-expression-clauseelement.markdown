@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression ClauseElement code examples
 category: page
 slug: sqlalchemy-sql-expression-clauseelement-examples
-sortorder: 500031000
+sortorder: 500031071
 toc: False
 sidebartitle: sqlalchemy.sql.expression ClauseElement
 meta: Python example code for the ClauseElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
@@ -56,6 +56,11 @@ class MSSQLImpl(DefaultImpl):
 ## ... source file abbreviated to get to ClauseElement examples ...
 
 
+            super(MSSQLImpl, self).bulk_insert(table, rows, **kw)
+
+    def drop_column(self, table_name, column, schema=None, **kw):
+        drop_default = kw.pop("mssql_drop_default", False)
+        if drop_default:
             self._exec(
                 _ExecDropConstraint(
                     table_name, column, "sys.default_constraints", schema
@@ -99,9 +104,6 @@ def _exec_drop_col_constraint(element, compiler, **kw):
         element.colname,
         element.type_,
     )
-    # from http://www.mssqltips.com/sqlservertip/1425/\
-    # working-with-default-constraints-in-sql-server/
-    # TODO: needs table formatting, etc.
     return """declare @const_name varchar(256)
 select @const_name = [name] from %(type)s
 where parent_object_id = object_id('%(schema_dot)s%(tname)s')
@@ -109,10 +111,12 @@ and col_name(parent_object_id, parent_column_id) = '%(colname)s'
 exec('alter table %(tname_quoted)s drop constraint ' + @const_name)""" % {
         "type": type_,
         "tname": tname,
+        "colname": colname,
+        "tname_quoted": format_table_name(compiler, tname, schema),
+        "schema_dot": schema + "." if schema else "",
 
 
 ## ... source file continues with no further ClauseElement examples...
-
 
 ```
 

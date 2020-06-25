@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.elements Label code examples
 category: page
 slug: sqlalchemy-sql-elements-label-examples
-sortorder: 500031000
+sortorder: 500031070
 toc: False
 sidebartitle: sqlalchemy.sql.elements Label
 meta: Python example code for the Label class from the sqlalchemy.sql.elements module of the SQLAlchemy project.
@@ -37,48 +37,9 @@ from .declarative import Model
 
 
 class Loader:
-    """The abstract base class of loaders.
-
-    Loaders are used to load raw database rows into expected results.
-    :class:`-gino.engine.GinoEngine` will use the loader set on the ``loader`` value of
-    the :meth:`-sqlalchemy.sql.expression.Executable.execution_options`, for example::
-
-        from sqlalchemy import text, create_engine
-        from gino.loader import ColumnLoader
-
-        e = await create_engine("postgresql://localhost/gino", strategy="gino")
-        q = text("SELECT now() as ts")
-        loader = ColumnLoader("ts")
-        ts = await e.first(q.execution_options(loader=loader))  # datetime
-
-    """
 
     @classmethod
     def get(cls, value):
-        """Automatically create a loader based on the type of the given value.
-
-        +-------------------------------------------+--------------------------+
-        | value type                                | loader type              |
-        +===========================================+==========================+
-        | :class:`tuple`                            | :class:`-TupleLoader`    |
-        +-------------------------------------------+--------------------------+
-        | :func:`callable`                          | :class:`-CallableLoader` |
-        +-------------------------------------------+--------------------------+
-        | :class:`-sqlalchemy.schema.Column`,       | :class:`-ColumnLoader`   |
-~~        | :class:`-sqlalchemy.sql.expression.Label` |                          |
-        +-------------------------------------------+--------------------------+
-        | :class:`-gino.declarative.Model`          | :class:`-ModelLoader`    |
-        +-------------------------------------------+--------------------------+
-        | :class:`-gino.crud.Alias`                 | :class:`-AliasLoader`    |
-        +-------------------------------------------+--------------------------+
-        | :class:`-Loader`                          | as is                    |
-        +-------------------------------------------+--------------------------+
-        | any other types                           | :class:`-ValueLoader`    |
-        +-------------------------------------------+--------------------------+
-
-        :param value: Any supported value above.
-        :return: A loader instance.
-        """
         from .crud import Alias
 
         if isinstance(value, Loader):
@@ -101,12 +62,6 @@ class Loader:
 
     @property
     def query(self):
-        """Generate a query from this loader.
-
-        This is an experimental feature, not all loaders support this.
-
-        :return: A query instance with the ``loader`` execution option set to self.
-        """
         rv = select(self.get_columns())
         from_clause = self.get_from()
         if from_clause is not None:
@@ -114,10 +69,15 @@ class Loader:
         return rv.execution_options(loader=self)
 
     def do_load(self, row, context):
+        raise NotImplementedError
+
+    def get_columns(self):
+        return []
+
+    def get_from(self):
 
 
 ## ... source file continues with no further Label examples...
-
 
 ```
 

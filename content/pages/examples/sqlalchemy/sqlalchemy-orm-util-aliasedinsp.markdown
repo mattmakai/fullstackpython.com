@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.util AliasedInsp code examples
 category: page
 slug: sqlalchemy-orm-util-aliasedinsp-examples
-sortorder: 500031000
+sortorder: 500031055
 toc: False
 sidebartitle: sqlalchemy.orm.util AliasedInsp
 meta: Python example code for the AliasedInsp class from the sqlalchemy.orm.util module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ AliasedInsp is a class within the sqlalchemy.orm.util module of the SQLAlchemy p
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -49,37 +49,42 @@ from ..utils import is_sequence
 
 
 def get_class_by_table(base, table, data=None):
-    """
-    Return declarative class associated with given table. If no class is found
-    this function returns `None`. If multiple classes were found (polymorphic
-    cases) additional `data` parameter can be given to hint which class
-    to return.
-
-    ::
-
-        class User(Base):
-            __tablename__ = 'entity'
-            id = sa.Column(sa.Integer, primary_key=True)
-            name = sa.Column(sa.String)
-
-
-        get_class_by_table(Base, User.__table__)  # User class
-
-
-    This function also supports models using single table inheritance.
-    Additional data paratemer should be provided in these case.
+    found_classes = set(
+        c for c in base._decl_class_registry.values()
+        if hasattr(c, '__table__') and c.__table__ is table
+    )
+    if len(found_classes) > 1:
+        if not data:
+            raise ValueError(
+                "Multiple declarative classes found for table '{0}'. "
+                "Please provide data parameter for this function to be able "
+                "to determine polymorphic scenarios.".format(
+                    table.name
+                )
+            )
+        else:
+            for cls in found_classes:
+                mapper = sa.inspect(cls)
+                polymorphic_on = mapper.polymorphic_on.name
+                if polymorphic_on in data:
+                    if data[polymorphic_on] == mapper.polymorphic_identity:
 
 
 ## ... source file abbreviated to get to AliasedInsp examples ...
 
 
+        return mapper.get_property_by_column(column).key
+    except sa.orm.exc.UnmappedColumnError:
+        for key, c in mapper.columns.items():
+            if c.name == column.name and c.table is column.table:
+                return key
+    raise sa.orm.exc.UnmappedColumnError(
+        'No column %s is configured on mapper %s...' %
+        (column, mapper)
+    )
 
 
-    Raises:
-        ValueError: if multiple mappers were found for given argument
-
-    .. versionadded: 0.26.1
-    """
+def get_mapper(mixed):
     if isinstance(mixed, sa.orm.query._MapperEntity):
         mixed = mixed.expr
     elif isinstance(mixed, sa.Column):
@@ -123,6 +128,11 @@ def get_bind(obj):
 ## ... source file abbreviated to get to AliasedInsp examples ...
 
 
+        else d['entity']
+        for d in query.column_descriptions
+    ]
+    return [
+        get_query_entity(expr) for expr in exprs
     ] + [
         get_query_entity(entity) for entity in query._join_entities
     ]
@@ -193,7 +203,6 @@ def get_descriptor(entity, attr):
 
 
 ## ... source file continues with no further AliasedInsp examples...
-
 
 ```
 

@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression FunctionElement code examples
 category: page
 slug: sqlalchemy-sql-expression-functionelement-examples
-sortorder: 500031005
+sortorder: 500031075
 toc: False
 sidebartitle: sqlalchemy.sql.expression FunctionElement
 meta: Python example code for the FunctionElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ FunctionElement is a class within the sqlalchemy.sql.expression module of the SQ
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -65,7 +65,6 @@ class row_to_json(GenericFunction):
 
 
 ## ... source file continues with no further FunctionElement examples...
-
 
 ```
 

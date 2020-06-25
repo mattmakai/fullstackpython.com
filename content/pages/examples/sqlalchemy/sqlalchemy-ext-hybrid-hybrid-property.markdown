@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.hybrid hybrid_property code examples
 category: page
 slug: sqlalchemy-ext-hybrid-hybrid-property-examples
-sortorder: 500031000
+sortorder: 500031034
 toc: False
 sidebartitle: sqlalchemy.ext.hybrid hybrid_property
 meta: Python example code for the hybrid_property function from the sqlalchemy.ext.hybrid module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ hybrid_property is a function within the sqlalchemy.ext.hybrid module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -49,7 +49,6 @@ def get_locale():
     try:
         return babel.Locale('en')
     except AttributeError:
-        # As babel is optional, we may raise an AttributeError accessing it
         raise ImproperlyConfigured(
             'Could not load get_locale function using Babel. Either '
             'install Babel or make a similar function and override it '
@@ -58,10 +57,16 @@ def get_locale():
 
 
 if six.PY2:
+    def get_args_count(func):
 
 
 ## ... source file abbreviated to get to hybrid_property examples ...
 
+
+                    return getattr(obj, attr.key)[default_locale]
+                except (TypeError, KeyError):
+                    return self.default_value
+        return getter
 
     def setter_factory(self, attr):
         def setter(obj, value):
@@ -90,8 +95,8 @@ if six.PY2:
         )
 
 
-## ... source file continues with no further hybrid_property examples...
 
+## ... source file continues with no further hybrid_property examples...
 
 ```
 

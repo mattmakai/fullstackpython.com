@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.exc UnmappedClassError code examples
 category: page
 slug: sqlalchemy-orm-exc-unmappedclasserror-examples
-sortorder: 500031001
+sortorder: 500031047
 toc: False
 sidebartitle: sqlalchemy.orm.exc UnmappedClassError
 meta: Python example code for the UnmappedClassError class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
@@ -28,6 +28,7 @@ flask-sqlalchemy is provided as open source under the
 
 ```python
 # __init__.py
+import functools
 import os
 import sys
 import warnings
@@ -78,6 +79,11 @@ def _make_table(db):
 ## ... source file abbreviated to get to UnmappedClassError examples ...
 
 
+            else:
+                per_page = 20
+
+        items = self.limit(per_page).offset((page - 1) * per_page).all()
+
         if not items and page != 1 and error_out:
             abort(404)
 
@@ -126,7 +132,6 @@ class _EngineConnector:
 
 
 ## ... source file continues with no further UnmappedClassError examples...
-
 
 ```
 

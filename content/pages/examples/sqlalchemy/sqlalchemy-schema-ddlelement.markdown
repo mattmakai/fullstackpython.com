@@ -1,7 +1,7 @@
 title: sqlalchemy.schema DDLElement code examples
 category: page
 slug: sqlalchemy-schema-ddlelement-examples
-sortorder: 500031004
+sortorder: 500031061
 toc: False
 sidebartitle: sqlalchemy.schema DDLElement
 meta: Python example code for the DDLElement class from the sqlalchemy.schema module of the SQLAlchemy project.
@@ -42,12 +42,6 @@ from ..util.sqla_compat import _table_for_constraint  # noqa
 
 ~~class AlterTable(DDLElement):
 
-    """Represent an ALTER TABLE statement.
-
-    Only the string name and optional schema name of the table
-    is required, not a full Table object.
-
-    """
 
     def __init__(self, table_name, schema=None):
         self.table_name = table_name
@@ -65,10 +59,15 @@ class AlterColumn(AlterTable):
         self,
         name,
         column_name,
+        schema=None,
+        existing_type=None,
+        existing_nullable=None,
+        existing_server_default=None,
+        existing_comment=None,
+    ):
 
 
 ## ... source file continues with no further DDLElement examples...
-
 
 ```
 
@@ -79,7 +78,7 @@ class AlterColumn(AlterTable):
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -140,7 +139,6 @@ def create_table_from_selectable(
 
 
 ## ... source file continues with no further DDLElement examples...
-
 
 ```
 

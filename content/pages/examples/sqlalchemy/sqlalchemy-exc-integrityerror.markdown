@@ -1,7 +1,7 @@
 title: sqlalchemy.exc IntegrityError code examples
 category: page
 slug: sqlalchemy-exc-integrityerror-examples
-sortorder: 500031001
+sortorder: 500031024
 toc: False
 sidebartitle: sqlalchemy.exc IntegrityError
 meta: Python example code for the IntegrityError class from the sqlalchemy.exc module of the SQLAlchemy project.
@@ -60,16 +60,27 @@ class Role(db.Model):
             'Administrator': (
                 Permission.ADMINISTER,
                 'admin',
+                False  # grants all permissions
+            )
+        }
+        for r in roles:
+            role = Role.query.filter_by(name=r).first()
 
 
 ## ... source file abbreviated to get to IntegrityError examples ...
 
 
+        new_email = data.get('new_email')
+        if new_email is None:
+            return False
+        if self.query.filter_by(email=new_email).first() is not None:
+            return False
+        self.email = new_email
+        db.session.add(self)
         db.session.commit()
         return True
 
     def reset_password(self, token, new_password):
-        """Verify the new password for this user."""
         s = Serializer(current_app.config['SECRET_KEY'])
         try:
             data = s.loads(token)
@@ -84,7 +95,6 @@ class Role(db.Model):
 
     @staticmethod
     def generate_fake(count=100, **kwargs):
-        """Generate a number of fake users for testing."""
 ~~        from sqlalchemy.exc import IntegrityError
         from random import seed, choice
         from faker import Faker
@@ -128,8 +138,8 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-## ... source file continues with no further IntegrityError examples...
 
+## ... source file continues with no further IntegrityError examples...
 
 ```
 
@@ -140,7 +150,7 @@ def load_user(user_id):
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -152,22 +162,6 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # asserts.py
-We can easily test the constraints by assert_* functions::
-
-
-    from sqlalchemy_utils import (
-        assert_nullable,
-        assert_non_nullable,
-        assert_max_length
-    )
-
-    assert_nullable(user, 'name')
-    assert_non_nullable(user, 'email')
-    assert_max_length(user, 'name', 200)
-
-    # raises AssertionError because the max length of email is 255
-    assert_max_length(user, 'email', 300)
-"""
 from decimal import Decimal
 
 import sqlalchemy as sa
@@ -199,96 +193,7 @@ def _expect_failing_update(obj, field, value, expected_exc):
         pass
 
 
-## ... source file abbreviated to get to IntegrityError examples ...
-
-
-        session = sa.orm.object_session(obj)
-        session.rollback()
-
-
-def _repeated_value(type_):
-    if isinstance(type_, ARRAY):
-        if isinstance(type_.item_type, sa.Integer):
-            return [0]
-        elif isinstance(type_.item_type, sa.String):
-            return [u'a']
-        elif isinstance(type_.item_type, sa.Numeric):
-            return [Decimal('0')]
-        else:
-            raise TypeError('Unknown array item type')
-    else:
-        return u'a'
-
-
-def _expected_exception(type_):
-    if isinstance(type_, ARRAY):
-~~        return IntegrityError
-    else:
-        return DataError
-
-
-def assert_nullable(obj, column):
-    """
-    Assert that given column is nullable. This is checked by running an SQL
-    update that assigns given column as None.
-
-    :param obj: SQLAlchemy declarative model object
-    :param column: Name of the column
-    """
-    _expect_successful_update(obj, column, None, IntegrityError)
-
-
-def assert_non_nullable(obj, column):
-    """
-    Assert that given column is not nullable. This is checked by running an SQL
-    update that assigns given column as None.
-
-    :param obj: SQLAlchemy declarative model object
-    :param column: Name of the column
-    """
-    _expect_failing_update(obj, column, None, IntegrityError)
-
-
-## ... source file abbreviated to get to IntegrityError examples ...
-
-
-        _repeated_value(type_) * max_length,
-        _expected_exception(type_)
-    )
-    _expect_failing_update(
-        obj,
-        column,
-        _repeated_value(type_) * (max_length + 1),
-        _expected_exception(type_)
-    )
-
-
-def assert_min_value(obj, column, min_value):
-    """
-    Assert that the given column must have a minimum value of `min_value`.
-
-    :param obj: SQLAlchemy declarative model object
-    :param column: Name of the column
-    :param min_value: The minimum allowed value for given column
-    """
-    _expect_successful_update(obj, column, min_value, IntegrityError)
-~~    _expect_failing_update(obj, column, min_value - 1, IntegrityError)
-
-
-def assert_max_value(obj, column, min_value):
-    """
-    Assert that the given column must have a minimum value of `max_value`.
-
-    :param obj: SQLAlchemy declarative model object
-    :param column: Name of the column
-    :param max_value: The maximum allowed value for given column
-    """
-    _expect_successful_update(obj, column, min_value, IntegrityError)
-~~    _expect_failing_update(obj, column, min_value + 1, IntegrityError)
-
-
 ## ... source file continues with no further IntegrityError examples...
-
 
 ```
 

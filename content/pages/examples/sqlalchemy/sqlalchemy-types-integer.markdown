@@ -1,7 +1,7 @@
 title: sqlalchemy.types Integer code examples
 category: page
 slug: sqlalchemy-types-integer-examples
-sortorder: 500031000
+sortorder: 500031082
 toc: False
 sidebartitle: sqlalchemy.types Integer
 meta: Python example code for the Integer class from the sqlalchemy.types module of the SQLAlchemy project.
@@ -50,58 +50,7 @@ class SchemaObjects(object):
         local_cols,
 
 
-## ... source file abbreviated to get to Integer examples ...
-
-
-        return f
-
-    def unique_constraint(self, name, source, local_cols, schema=None, **kw):
-        t = sa_schema.Table(
-            source,
-            self.metadata(),
-            *[sa_schema.Column(n, NULLTYPE) for n in local_cols],
-            schema=schema
-        )
-        kw["name"] = name
-        uq = sa_schema.UniqueConstraint(*[t.c[n] for n in local_cols], **kw)
-        # TODO: need event tests to ensure the event
-        # is fired off here
-        t.append_constraint(uq)
-        return uq
-
-    def check_constraint(self, name, source, condition, schema=None, **kw):
-        t = sa_schema.Table(
-            source,
-            self.metadata(),
-~~            sa_schema.Column("x", Integer),
-            schema=schema,
-        )
-        ck = sa_schema.CheckConstraint(condition, name=name, **kw)
-        t.append_constraint(ck)
-        return ck
-
-    def generic_constraint(self, name, table_name, type_, schema=None, **kw):
-        t = self.table(table_name, schema=schema)
-        types = {
-            "foreignkey": lambda name: sa_schema.ForeignKeyConstraint(
-                [], [], name=name
-            ),
-            "primary": sa_schema.PrimaryKeyConstraint,
-            "unique": sa_schema.UniqueConstraint,
-            "check": lambda name: sa_schema.CheckConstraint("", name=name),
-            None: sa_schema.Constraint,
-        }
-        try:
-            const = types[type_]
-        except KeyError:
-            raise TypeError(
-                "'type' can be one of %s"
-                % ", ".join(sorted(repr(x) for x in types))
-            )
-
-
 ## ... source file continues with no further Integer examples...
-
 
 ```
 

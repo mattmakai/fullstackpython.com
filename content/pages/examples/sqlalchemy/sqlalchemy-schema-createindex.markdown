@@ -1,7 +1,7 @@
 title: sqlalchemy.schema CreateIndex code examples
 category: page
 slug: sqlalchemy-schema-createindex-examples
-sortorder: 500031002
+sortorder: 500031060
 toc: False
 sidebartitle: sqlalchemy.schema CreateIndex
 meta: Python example code for the CreateIndex class from the sqlalchemy.schema module of the SQLAlchemy project.
@@ -52,58 +52,7 @@ class MSSQLImpl(DefaultImpl):
 
 
 
-## ... source file abbreviated to get to CreateIndex examples ...
-
-
-                super(MSSQLImpl, self).alter_column(
-                    table_name,
-                    column_name,
-                    schema=schema,
-                    server_default=server_default,
-                )
-
-        if name is not None:
-            super(MSSQLImpl, self).alter_column(
-                table_name, column_name, schema=schema, name=name
-            )
-
-    def create_index(self, index):
-        # this likely defaults to None if not present, so get()
-        # should normally not return the default value.  being
-        # defensive in any case
-        mssql_include = index.kwargs.get("mssql_include", None) or ()
-        for col in mssql_include:
-            if col not in index.table.c:
-                index.table.append_column(Column(col, sqltypes.NullType))
-~~        self._exec(CreateIndex(index))
-
-    def bulk_insert(self, table, rows, **kw):
-        if self.as_sql:
-            self._exec(
-                "SET IDENTITY_INSERT %s ON"
-                % self.dialect.identifier_preparer.format_table(table)
-            )
-            super(MSSQLImpl, self).bulk_insert(table, rows, **kw)
-            self._exec(
-                "SET IDENTITY_INSERT %s OFF"
-                % self.dialect.identifier_preparer.format_table(table)
-            )
-        else:
-            super(MSSQLImpl, self).bulk_insert(table, rows, **kw)
-
-    def drop_column(self, table_name, column, schema=None, **kw):
-        drop_default = kw.pop("mssql_drop_default", False)
-        if drop_default:
-            self._exec(
-                _ExecDropConstraint(
-                    table_name, column, "sys.default_constraints", schema
-                )
-            )
-        drop_check = kw.pop("mssql_drop_check", False)
-
-
 ## ... source file continues with no further CreateIndex examples...
-
 
 ```
 

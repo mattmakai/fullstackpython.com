@@ -1,7 +1,7 @@
 title: sqlalchemy.engine.strategies MockEngineStrategy code examples
 category: page
 slug: sqlalchemy-engine-strategies-mockenginestrategy-examples
-sortorder: 500031001
+sortorder: 500031020
 toc: False
 sidebartitle: sqlalchemy.engine.strategies MockEngineStrategy
 meta: Python example code for the MockEngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.
@@ -61,58 +61,7 @@ class _ProxyTransaction(object):
 
 
 
-## ... source file abbreviated to get to MockEngineStrategy examples ...
-
-
-        except AttributeError:
-            return False
-        else:
-            return meth()
-
-    def execute(self, sql, execution_options=None):
-        """Execute a SQL construct or string statement.
-
-        The underlying execution mechanics are used, that is
-        if this is "offline mode" the SQL is written to the
-        output buffer, otherwise the SQL is emitted on
-        the current SQLAlchemy connection.
-
-        """
-        self.impl._exec(sql, execution_options)
-
-    def _stdout_connection(self, connection):
-        def dump(construct, *multiparams, **params):
-            self.impl._exec(construct)
-
-~~        return MockEngineStrategy.MockConnection(self.dialect, dump)
-
-    @property
-    def bind(self):
-        """Return the current "bind".
-
-        In online mode, this is an instance of
-        :class:`sqlalchemy.engine.Connection`, and is suitable
-        for ad-hoc execution of any kind of usage described
-        in :ref:`sqlexpression_toplevel` as well as
-        for usage with the :meth:`sqlalchemy.schema.Table.create`
-        and :meth:`sqlalchemy.schema.MetaData.create_all` methods
-        of :class:`-sqlalchemy.schema.Table`,
-        :class:`-sqlalchemy.schema.MetaData`.
-
-        Note that when "standard output" mode is enabled,
-        this bind will be a "mock" connection handler that cannot
-        return results and is only appropriate for a very limited
-        subset of commands.
-
-        """
-        return self.connection
-
-    @property
-    def config(self):
-
-
 ## ... source file continues with no further MockEngineStrategy examples...
-
 
 ```
 

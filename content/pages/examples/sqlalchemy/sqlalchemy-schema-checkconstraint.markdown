@@ -1,7 +1,7 @@
 title: sqlalchemy.schema CheckConstraint code examples
 category: page
 slug: sqlalchemy-schema-checkconstraint-examples
-sortorder: 500031000
+sortorder: 500031058
 toc: False
 sidebartitle: sqlalchemy.schema CheckConstraint
 meta: Python example code for the CheckConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.
@@ -60,6 +60,11 @@ sqla_1216 = _vers >= (1, 2, 16)
 ## ... source file abbreviated to get to CheckConstraint examples ...
 
 
+def _exec_on_inspector(inspector, statement, **params):
+    if sqla_14:
+        with inspector._operation_context() as conn:
+            return conn.execute(statement, params)
+    else:
         return inspector.bind.execute(statement, params)
 
 
@@ -108,7 +113,6 @@ def _fk_spec(constraint):
 
 
 ## ... source file continues with no further CheckConstraint examples...
-
 
 ```
 

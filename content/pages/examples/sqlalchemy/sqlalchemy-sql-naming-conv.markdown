@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.naming conv code examples
 category: page
 slug: sqlalchemy-sql-naming-conv-examples
-sortorder: 500031000
+sortorder: 500031078
 toc: False
 sidebartitle: sqlalchemy.sql.naming conv
 meta: Python example code for the conv function from the sqlalchemy.sql.naming module of the SQLAlchemy project.
@@ -43,48 +43,53 @@ except:
 
 class Operations(util.ModuleClsProxy):
 
-    """Define high level migration operations.
 
-    Each operation corresponds to some schema migration operation,
-    executed against a particular :class:`.MigrationContext`
-    which in turn represents connectivity to a database,
-    or a file output stream.
+    _to_impl = util.Dispatcher()
 
-    While :class:`.Operations` is normally configured as
-    part of the :meth:`.EnvironmentContext.run_migrations`
-    method called from an ``env.py`` script, a standalone
-    :class:`.Operations` instance can be
-    made for use cases external to regular Alembic
-    migrations by passing in a :class:`.MigrationContext`::
+    def __init__(self, migration_context, impl=None):
+        self.migration_context = migration_context
+        if impl is None:
+            self.impl = migration_context.impl
+        else:
+            self.impl = impl
 
-        from alembic.migration import MigrationContext
-        from alembic.operations import Operations
+        self.schema_obj = schemaobj.SchemaObjects(migration_context)
 
-        conn = myengine.connect()
+    @classmethod
+    def register_operation(cls, name, sourcename=None):
+
+        def register(op_cls):
+            if sourcename is None:
+                fn = getattr(op_cls, name)
 
 
 ## ... source file abbreviated to get to conv examples ...
 
 
-        contains the naming convention
-        ``{"ck": "ck_bool_%(table_name)s_%(constraint_name)s"}``, then the
-        output of the following:
+            recreate,
+            copy_from,
+            table_args,
+            table_kwargs,
+            reflect_args,
+            reflect_kwargs,
+            naming_convention,
+            partial_reordering,
+        )
+        batch_op = BatchOperations(self.migration_context, impl=impl)
+        yield batch_op
+        impl.flush()
 
-            op.add_column('t', 'x', Boolean(name='x'))
+    def get_context(self):
 
-        will be::
+        return self.migration_context
 
-            CONSTRAINT ck_bool_t_x CHECK (x in (1, 0)))
+    def invoke(self, operation):
+        fn = self._to_impl.dispatch(
+            operation, self.migration_context.impl.__dialect__
+        )
+        return fn(self, operation)
 
-        The function is rendered in the output of autogenerate when
-        a particular constraint name is already converted, for SQLAlchemy
-        version **0.9.4 and greater only**.   Even though ``naming_convention``
-        was introduced in 0.9.2, the string disambiguation service is new
-        as of 0.9.4.
-
-        .. versionadded:: 0.6.4
-
-        """
+    def f(self, name):
         if conv:
 ~~            return conv(name)
         else:
@@ -114,7 +119,6 @@ class Operations(util.ModuleClsProxy):
 
 
 ## ... source file continues with no further conv examples...
-
 
 ```
 

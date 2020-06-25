@@ -1,7 +1,7 @@
 title: sqlalchemy.engine.url make_url code examples
 category: page
 slug: sqlalchemy-engine-url-make-url-examples
-sortorder: 500031000
+sortorder: 500031021
 toc: False
 sidebartitle: sqlalchemy.engine.url make_url
 meta: Python example code for the make_url function from the sqlalchemy.engine.url module of the SQLAlchemy project.
@@ -76,6 +76,11 @@ def _make_table(db):
 ## ... source file abbreviated to get to make_url examples ...
 
 
+class _EngineConnector:
+    def __init__(self, sa, app, bind=None):
+        self._sa = sa
+        self._app = app
+        self._engine = None
         self._connected_for = None
         self._bind = bind
         self._lock = Lock()
@@ -117,229 +122,18 @@ def _make_table(db):
         if echo:
             options["echo"] = echo
 
-        # Give the config options set by a developer explicitly priority
-        # over decisions FSA makes.
         options.update(self._app.config["SQLALCHEMY_ENGINE_OPTIONS"])
-        # Give options set in SQLAlchemy.__init__() ultimate priority
+        options.update(self._sa._engine_options)
+        return options
+
 
 
 ## ... source file continues with no further make_url examples...
 
-
 ```
 
 
-## Example 2 from sqlalchemy-utils
-[sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
-([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
-and
-[PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
-is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
-projects that involve more specific storage requirements such as
-[currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
-The wide array of
-[data types](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html)
-includes [ranged values](https://sqlalchemy-utils.readthedocs.io/en/latest/range_data_types.html)
-and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/aggregates.html).
-
-[**sqlalchemy-utils / sqlalchemy_utils / functions / database.py**](https://github.com/kvesteri/sqlalchemy-utils/blob/master/sqlalchemy_utils/functions/database.py)
-
-```python
-# database.py
-try:
-    from collections.abc import Mapping, Sequence
-except ImportError:  # For python 2.7 support
-    from collections import Mapping, Sequence
-import itertools
-import os
-from copy import copy
-
-import sqlalchemy as sa
-~~from sqlalchemy.engine.url import make_url
-from sqlalchemy.exc import OperationalError, ProgrammingError
-
-from ..utils import starts_with
-from .orm import quote
-
-
-def escape_like(string, escape_char='*'):
-    """
-    Escape the string paremeter used in SQL LIKE expressions.
-
-    ::
-
-        from sqlalchemy_utils import escape_like
-
-
-        query = session.query(User).filter(
-            User.name.ilike(escape_like('John'))
-        )
-
-
-    :param string: a string to escape
-    :param escape_char: escape character
-    """
-    return (
-
-
-## ... source file abbreviated to get to make_url examples ...
-
-
-        database_exists(engine.url)  #=> True
-
-    """
-
-    def get_scalar_result(engine, sql):
-        result_proxy = engine.execute(sql)
-        result = result_proxy.scalar()
-        result_proxy.close()
-        engine.dispose()
-        return result
-
-    def sqlite_file_exists(database):
-        if not os.path.isfile(database) or os.path.getsize(database) < 100:
-            return False
-
-        with open(database, 'rb') as f:
-            header = f.read(100)
-
-        return header[:16] == b'SQLite format 3\x00'
-
-~~    url = copy(make_url(url))
-    database = url.database
-    if url.drivername.startswith('postgres'):
-        url.database = 'postgres'
-    else:
-        url.database = None
-
-    engine = sa.create_engine(url)
-
-    if engine.dialect.name == 'postgresql':
-        text = "SELECT 1 FROM pg_database WHERE datname='%s'" % database
-        return bool(get_scalar_result(engine, text))
-
-    elif engine.dialect.name == 'mysql':
-        text = ("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA "
-                "WHERE SCHEMA_NAME = '%s'" % database)
-        return bool(get_scalar_result(engine, text))
-
-    elif engine.dialect.name == 'sqlite':
-        if database:
-            return database == ':memory:' or sqlite_file_exists(database)
-        else:
-            # The default SQLAlchemy database is in memory,
-            # and :memory is not required, thus we should support that use-case
-            return True
-
-
-## ... source file abbreviated to get to make_url examples ...
-
-
-
-    :param url: A SQLAlchemy engine URL.
-    :param encoding: The encoding to create the database as.
-    :param template:
-        The name of the template from which to create the new database. At the
-        moment only supported by PostgreSQL driver.
-
-    To create a database, you can pass a simple URL that would have
-    been passed to ``create_engine``. ::
-
-        create_database('postgresql://postgres@localhost/name')
-
-    You may also pass the url from an existing engine. ::
-
-        create_database(engine.url)
-
-    Has full support for mysql, postgres, and sqlite. In theory,
-    other database engines should be supported.
-    """
-
-~~    url = copy(make_url(url))
-
-    database = url.database
-
-    if url.drivername.startswith('postgres'):
-        url.database = 'postgres'
-    elif url.drivername.startswith('mssql'):
-        url.database = 'master'
-    elif not url.drivername.startswith('sqlite'):
-        url.database = None
-
-    if url.drivername == 'mssql+pyodbc':
-        engine = sa.create_engine(url, connect_args={'autocommit': True})
-    elif url.drivername == 'postgresql+pg8000':
-        engine = sa.create_engine(url, isolation_level='AUTOCOMMIT')
-    else:
-        engine = sa.create_engine(url)
-    result_proxy = None
-
-    if engine.dialect.name == 'postgresql':
-        if not template:
-            template = 'template1'
-
-        text = "CREATE DATABASE {0} ENCODING '{1}' TEMPLATE {2}".format(
-            quote(engine, database),
-
-
-## ... source file abbreviated to get to make_url examples ...
-
-
-        result_proxy = engine.execute(text)
-
-    if result_proxy is not None:
-        result_proxy.close()
-    engine.dispose()
-
-
-def drop_database(url):
-    """Issue the appropriate DROP DATABASE statement.
-
-    :param url: A SQLAlchemy engine URL.
-
-    Works similar to the :ref:`create_database` method in that both url text
-    and a constructed url are accepted. ::
-
-        drop_database('postgresql://postgres@localhost/name')
-        drop_database(engine.url)
-
-    """
-
-~~    url = copy(make_url(url))
-
-    database = url.database
-
-    if url.drivername.startswith('postgres'):
-        url.database = 'postgres'
-    elif url.drivername.startswith('mssql'):
-        url.database = 'master'
-    elif not url.drivername.startswith('sqlite'):
-        url.database = None
-
-    if url.drivername == 'mssql+pyodbc':
-        engine = sa.create_engine(url, connect_args={'autocommit': True})
-    elif url.drivername == 'postgresql+pg8000':
-        engine = sa.create_engine(url, isolation_level='AUTOCOMMIT')
-    else:
-        engine = sa.create_engine(url)
-    conn_resource = None
-
-    if engine.dialect.name == 'sqlite' and database != ':memory:':
-        if database:
-            os.remove(database)
-
-    elif (
-                engine.dialect.name == 'postgresql' and
-
-
-## ... source file continues with no further make_url examples...
-
-
-```
-
-
-## Example 3 from GINO
+## Example 2 from GINO
 [GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
 and
@@ -370,43 +164,48 @@ from .schema import GinoSchemaVisitor, patch_schema
 
 
 class GinoExecutor:
-    """
-    The default ``gino`` extension on
-    :class:`-sqlalchemy.sql.expression.Executable` constructs for implicit
-    execution.
 
-    Instances of this class are created when visiting the ``gino`` property of
-    :class:`-sqlalchemy.sql.expression.Executable` instances (also referred as
-    queries or clause elements), for example::
+    __slots__ = ("_query",)
 
-        await User.query.gino.first()
+    def __init__(self, query):
+        self._query = query
 
-    This allows GINO to add the asynchronous query APIs (:meth:`all`,
-    :meth:`first`, :meth:`one`, :meth:`one_or_none`, :meth:`scalar`,
+    @property
+    def query(self):
+        return self._query
+
+    def model(self, model):
+        if model is not None:
+            model = weakref.ref(model)
 
 
 ## ... source file abbreviated to get to make_url examples ...
 
 
+                if not hasattr(self, key) and key not in self.no_delegate:
+                    setattr(self, key, getattr(mod, key))
+        if ext:
+            if query_ext:
+                Executable.gino = property(self.query_executor)
+            if schema_ext:
+                SchemaItem.gino = property(self.schema_visitor)
+                patch_schema(self)
+
+    @property
+    def Model(self):
+        return self._model
+
+    @property
+    def bind(self):
+        if self._bind is None:
             return _PlaceHolder(UninitializedError("Gino engine is not initialized."))
         return self._bind
 
-    # noinspection PyMethodOverriding,PyAttributeOutsideInit
     @bind.setter
     def bind(self, bind):
         self._bind = bind
 
     async def set_bind(self, bind, loop=None, **kwargs):
-        """
-        Bind self to the given :class:`-.engine.GinoEngine` and return it.
-
-        If the given ``bind`` is a string or
-        :class:`-sqlalchemy.engine.url.URL`, all arguments will be sent to
-        :func:`-gino.create_engine` to create a new engine, and return it.
-
-        :return: :class:`-.engine.GinoEngine`
-
-        """
         if isinstance(bind, str):
 ~~            bind = make_url(bind)
         if isinstance(bind, URL):
@@ -417,26 +216,25 @@ class GinoExecutor:
         return bind
 
     def pop_bind(self):
-        """
-        Unbind self, and return the bound engine.
-
-        This is usually used in a chained call to close the engine::
-
-            await db.pop_bind().close()
-
-        :return: :class:`-.engine.GinoEngine` or ``None`` if self is not bound.
-
-        """
         from .bakery import Bakery
 
         self._bakery = Bakery()
         bind, self.bind = self.bind, None
         return bind
 
+    def with_bind(self, bind, loop=None, **kwargs):
+        return _BindContext(self, bind, loop, kwargs)
+
+    def __await__(self):
+        async def init():
+            await self.set_bind(self.bind)
+            return self
+
+        return init().__await__()
+
 
 
 ## ... source file continues with no further make_url examples...
-
 
 ```
 

@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.interfaces PropComparator code examples
 category: page
 slug: sqlalchemy-orm-interfaces-propcomparator-examples
-sortorder: 500031001
+sortorder: 500031050
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces PropComparator
 meta: Python example code for the PropComparator class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ PropComparator is a class within the sqlalchemy.orm.interfaces module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -50,23 +50,28 @@ class GenericAttributeImpl(attributes.ScalarAttributeImpl):
         if self.key in dict_:
             return dict_[self.key]
 
-        # Retrieve the session bound to the state in order to perform
-        # a lazy query for the attribute.
         session = _state_session(state)
         if session is None:
-            # State is not bound to a session; we cannot proceed.
             return None
 
-        # Find class for discriminator.
-        # TODO: Perhaps optimize with some sort of lookup?
         discriminator = self.get_state_discriminator(state)
         target_class = state.class_._decl_class_registry.get(discriminator)
+
+        if target_class is None:
+            return None
+
+        id = self.get_state_id(state)
 
 
 
 ## ... source file abbreviated to get to PropComparator examples ...
 
 
+                        return attr
+
+    def init(self):
+        def convert_strings(column):
+            if isinstance(column, six.string_types):
                 return self.parent.columns[column]
             return column
 
@@ -105,17 +110,16 @@ class GenericAttributeImpl(attributes.ScalarAttributeImpl):
 
         def is_type(self, other):
             mapper = sa.inspect(other)
-            # Iterate through the weak sequence in order to get the actual
-            # mappers
             class_names = [six.text_type(other.__name__)]
             class_names.extend([
                 six.text_type(submapper.class_.__name__)
                 for submapper in mapper._inheriting_mappers
             ])
 
+            return self.property._discriminator_col.in_(class_names)
+
 
 ## ... source file continues with no further PropComparator examples...
-
 
 ```
 

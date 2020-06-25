@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression UnaryExpression code examples
 category: page
 slug: sqlalchemy-sql-expression-unaryexpression-examples
-sortorder: 500031006
+sortorder: 500031076
 toc: False
 sidebartitle: sqlalchemy.sql.expression UnaryExpression
 meta: Python example code for the UnaryExpression class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
@@ -63,6 +63,11 @@ log = logging.getLogger(__name__)
 ## ... source file abbreviated to get to UnaryExpression examples ...
 
 
+
+    def correct_for_autogen_constraints(
+        self,
+        conn_unique_constraints,
+        conn_indexes,
         metadata_unique_constraints,
         metadata_indexes,
     ):
@@ -111,7 +116,6 @@ log = logging.getLogger(__name__)
 
 
 ## ... source file continues with no further UnaryExpression examples...
-
 
 ```
 

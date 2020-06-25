@@ -1,7 +1,7 @@
 title: sqlalchemy.schema ForeignKeyConstraint code examples
 category: page
 slug: sqlalchemy-schema-foreignkeyconstraint-examples
-sortorder: 500031006
+sortorder: 500031062
 toc: False
 sidebartitle: sqlalchemy.schema ForeignKeyConstraint
 meta: Python example code for the ForeignKeyConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.
@@ -62,6 +62,11 @@ sqla_14 = _vers >= (1, 4)
 ## ... source file abbreviated to get to ForeignKeyConstraint examples ...
 
 
+def _connectable_has_table(connectable, tablename, schemaname):
+    if sqla_14:
+        return inspect(connectable).has_table(tablename, schemaname)
+    else:
+        return connectable.dialect.has_table(
             connectable, tablename, schemaname
         )
 
@@ -118,7 +123,6 @@ def _fk_spec(constraint):
 
 ## ... source file continues with no further ForeignKeyConstraint examples...
 
-
 ```
 
 
@@ -128,7 +132,7 @@ def _fk_spec(constraint):
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -167,66 +171,21 @@ def get_foreign_key_values(fk, obj):
 
 
 def group_foreign_keys(foreign_keys):
-    """
-    Return a groupby iterator that groups given foreign keys by table.
-
-    :param foreign_keys: a sequence of foreign keys
-
-
-## ... source file abbreviated to get to ForeignKeyConstraint examples ...
-
-
-    TextItem.
-
-    ::
-
-        # This will check all foreign keys that reference either article table
-        # or textitem table.
-        get_referencing_foreign_keys(Article)
-
-    .. seealso:: :func:`get_tables`
-    """
-    if isinstance(mixed, sa.Table):
-        tables = [mixed]
-    else:
-        tables = get_tables(mixed)
-
-    referencing_foreign_keys = set()
-
-    for table in mixed.metadata.tables.values():
-        if table not in tables:
-            for constraint in table.constraints:
-~~                if isinstance(constraint, sa.sql.schema.ForeignKeyConstraint):
-                    for fk in constraint.elements:
-                        if any(fk.references(t) for t in tables):
-                            referencing_foreign_keys.add(fk)
-    return referencing_foreign_keys
-
-
-def merge_references(from_, to, foreign_keys=None):
-    """
-    Merge the references of an entity into another entity.
-
-    Consider the following models::
-
-        class User(self.Base):
-            __tablename__ = 'user'
-            id = sa.Column(sa.Integer, primary_key=True)
-            name = sa.Column(sa.String(255))
-
-            def __repr__(self):
-                return 'User(name=%r)' % self.name
-
-        class BlogPost(self.Base):
-            __tablename__ = 'blog_post'
-            id = sa.Column(sa.Integer, primary_key=True)
-            title = sa.Column(sa.String(255))
+    foreign_keys = sorted(
+        foreign_keys, key=lambda key: key.constraint.table.name
+    )
+    return groupby(foreign_keys, lambda key: key.constraint.table)
 
 
 ## ... source file abbreviated to get to ForeignKeyConstraint examples ...
 
 
-    """
+            )
+        criteria.append(sa.and_(*subcriteria))
+    return criteria
+
+
+def non_indexed_foreign_keys(metadata, engine=None):
     reflected_metadata = MetaData()
 
     if metadata.bind is None and engine is None:
@@ -261,8 +220,8 @@ def get_fk_constraint_for_columns(table, *columns):
             return constraint
 
 
-## ... source file continues with no further ForeignKeyConstraint examples...
 
+## ... source file continues with no further ForeignKeyConstraint examples...
 
 ```
 

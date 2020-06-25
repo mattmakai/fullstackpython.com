@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression ColumnClause code examples
 category: page
 slug: sqlalchemy-sql-expression-columnclause-examples
-sortorder: 500031001
+sortorder: 500031072
 toc: False
 sidebartitle: sqlalchemy.sql.expression ColumnClause
 meta: Python example code for the ColumnClause class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
@@ -62,6 +62,11 @@ log = logging.getLogger(__name__)
 ## ... source file abbreviated to get to ColumnClause examples ...
 
 
+        return "%(prefix)screate_exclude_constraint(%(args)s)" % {
+            "prefix": render._alembic_autogenerate_prefix(autogen_context),
+            "args": ", ".join(args),
+        }
+    else:
         args = [
             "(%s, %r)"
             % (_render_potential_column(sqltext, autogen_context), opstring)
@@ -96,8 +101,8 @@ def _render_potential_column(value, autogen_context):
         )
 
 
-## ... source file continues with no further ColumnClause examples...
 
+## ... source file continues with no further ColumnClause examples...
 
 ```
 

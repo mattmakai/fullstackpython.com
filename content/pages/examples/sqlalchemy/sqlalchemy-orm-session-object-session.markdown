@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.session object_session code examples
 category: page
 slug: sqlalchemy-orm-session-object-session-examples
-sortorder: 500031001
+sortorder: 500031054
 toc: False
 sidebartitle: sqlalchemy.orm.session object_session
 meta: Python example code for the object_session function from the sqlalchemy.orm.session module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ object_session is a function within the sqlalchemy.orm.session module of the SQL
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -49,45 +49,50 @@ from ..utils import is_sequence
 
 
 def get_class_by_table(base, table, data=None):
-    """
-    Return declarative class associated with given table. If no class is found
-    this function returns `None`. If multiple classes were found (polymorphic
-    cases) additional `data` parameter can be given to hint which class
-    to return.
-
-    ::
-
-        class User(Base):
-            __tablename__ = 'entity'
-            id = sa.Column(sa.Integer, primary_key=True)
-            name = sa.Column(sa.String)
-
-
-        get_class_by_table(Base, User.__table__)  # User class
-
-
-    This function also supports models using single table inheritance.
+    found_classes = set(
+        c for c in base._decl_class_registry.values()
+        if hasattr(c, '__table__') and c.__table__ is table
+    )
+    if len(found_classes) > 1:
+        if not data:
+            raise ValueError(
+                "Multiple declarative classes found for table '{0}'. "
+                "Please provide data parameter for this function to be able "
+                "to determine polymorphic scenarios.".format(
+                    table.name
+                )
+            )
+        else:
+            for cls in found_classes:
+                mapper = sa.inspect(cls)
+                polymorphic_on = mapper.polymorphic_on.name
+                if polymorphic_on in data:
 
 
 ## ... source file abbreviated to get to object_session examples ...
 
 
-    """
-    Return the bind for given SQLAlchemy Engine / Connection / declarative
-    model object.
+    if isinstance(mixed, sa.Table):
+        mappers = [
+            mapper for mapper in mapperlib._mapper_registry
+            if mixed in mapper.tables
+        ]
+        if len(mappers) > 1:
+            raise ValueError(
+                "Multiple mappers found for table '%s'." % mixed.name
+            )
+        elif not mappers:
+            raise ValueError(
+                "Could not get mapper for table '%s'." % mixed.name
+            )
+        else:
+            return mappers[0]
+    if not isclass(mixed):
+        mixed = type(mixed)
+    return sa.inspect(mixed)
 
-    :param obj: SQLAlchemy Engine / Connection / declarative model object
 
-    ::
-
-        from sqlalchemy_utils import get_bind
-
-
-        get_bind(session)  # Connection object
-
-        get_bind(user)
-
-    """
+def get_bind(obj):
     if hasattr(obj, 'bind'):
         conn = obj.bind
     else:
@@ -105,72 +110,21 @@ def get_class_by_table(base, table, data=None):
 
 
 def get_primary_keys(mixed):
-    """
-    Return an OrderedDict of all primary keys for given Table object,
-    declarative class or declarative class instance.
-
-    :param mixed:
-        SA Table object, SA declarative class or SA declarative class instance
-
-    ::
-
-        get_primary_keys(User)
-
-        get_primary_keys(User())
+    return OrderedDict(
+        (
+            (key, column) for key, column in get_columns(mixed).items()
+            if column.primary_key
+        )
+    )
 
 
-## ... source file abbreviated to get to object_session examples ...
-
-
-                else:
-                    tmp.append(value)
-            last = tmp
-        elif isinstance(last, InstrumentedAttribute):
-            last = getter(last.property.mapper.class_)
-        elif last is None:
-            return None
-        else:
-            last = getter(last)
-        if condition is not None:
-            if is_sequence(last):
-                last = [v for v in last if condition(v)]
-            else:
-                if not condition(last):
-                    return None
-
-    return last
-
-
-def is_deleted(obj):
-~~    return obj in sa.orm.object_session(obj).deleted
-
-
-def has_changes(obj, attrs=None, exclude=None):
-    """
-    Simple shortcut function for checking if given attributes of given
-    declarative model object have changed during the session. Without
-    parameters this checks if given object has any modificiations. Additionally
-    exclude parameter can be given to check if given object has any changes
-    in any attributes other than the ones given in exclude.
-
-
-    ::
-
-
-        from sqlalchemy_utils import has_changes
-
-
-        user = User()
-
-        has_changes(user, 'name')  # False
-
-        user.name = u'someone'
-
-        has_changes(user, 'name')  # True
+def get_tables(mixed):
+    if isinstance(mixed, sa.Table):
+        return [mixed]
+    elif isinstance(mixed, sa.Column):
 
 
 ## ... source file continues with no further object_session examples...
-
 
 ```
 

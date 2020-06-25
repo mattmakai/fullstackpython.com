@@ -1,7 +1,7 @@
 title: sqlalchemy.types NULLTYPE code examples
 category: page
 slug: sqlalchemy-types-nulltype-examples
-sortorder: 500031001
+sortorder: 500031083
 toc: False
 sidebartitle: sqlalchemy.types NULLTYPE
 meta: Python example code for the NULLTYPE class from the sqlalchemy.types module of the SQLAlchemy project.
@@ -61,58 +61,7 @@ log = logging.getLogger(__name__)
 
 
 
-## ... source file abbreviated to get to NULLTYPE examples ...
-
-
-            where=constraint.where,
-            schema=constraint_table.schema,
-            _orig_constraint=constraint,
-            deferrable=constraint.deferrable,
-            initially=constraint.initially,
-            using=constraint.using,
-        )
-
-    def to_constraint(self, migration_context=None):
-        if self._orig_constraint is not None:
-            return self._orig_constraint
-        schema_obj = schemaobj.SchemaObjects(migration_context)
-        t = schema_obj.table(self.table_name, schema=self.schema)
-        excl = ExcludeConstraint(
-            *self.elements,
-            name=self.constraint_name,
-            where=self.where,
-            **self.kw
-        )
-        for expr, name, oper in excl._render_exprs:
-~~            t.append_column(Column(name, NULLTYPE))
-        t.append_constraint(excl)
-        return excl
-
-    @classmethod
-    def create_exclude_constraint(
-        cls, operations, constraint_name, table_name, *elements, **kw
-    ):
-        """Issue an alter to create an EXCLUDE constraint using the
-        current migration context.
-
-        .. note::  This method is Postgresql specific, and additionally
-           requires at least SQLAlchemy 1.0.
-
-        e.g.::
-
-            from alembic import op
-
-            op.create_exclude_constraint(
-                "user_excl",
-                "user",
-
-                ("period", '&&'),
-                ("group", '='),
-                where=("group != 'some group'")
-
-
 ## ... source file continues with no further NULLTYPE examples...
-
 
 ```
 

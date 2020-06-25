@@ -1,7 +1,7 @@
 title: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2 code examples
 category: page
 slug: sqlalchemy-dialects-postgresql-psycopg2-pgdialect-psycopg2-examples
-sortorder: 500031000
+sortorder: 500031013
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2
 meta: Python example code for the PGDialect_psycopg2 class from the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ PGDialect_psycopg2 is a class within the sqlalchemy.dialects.postgresql.psycopg2
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -28,56 +28,6 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # pg_composite.py
-"""
-CompositeType provides means to interact with
-`PostgreSQL composite types`_. Currently this type features:
-
-* Easy attribute access to composite type fields
-* Supports SQLAlchemy TypeDecorator types
-* Ability to include composite types as part of PostgreSQL arrays
-* Type creation and dropping
-
-Installation
-^^^^^^^^^^^^
-
-CompositeType automatically attaches `before_create` and `after_drop` DDL
-listeners. These listeners create and drop the composite type in the
-database. This means it works out of the box in your test environment where
-you create the tables on each test run.
-
-When you already have your database set up you should call
-:func:`register_composites` after you've set up all models.
-
-::
-
-    register_composites(conn)
-
-
-
-Usage
-^^^^^
-
-::
-
-
-## ... source file abbreviated to get to PGDialect_psycopg2 examples ...
-
-
-                        sa.Column('amount', sa.Integer)
-                    ]
-                )
-            )
-        )
-
-
-.. _PostgreSQL composite types:
-    http://www.postgresql.org/docs/current/static/rowtypes.html
-
-
-Related links:
-
-http://schinckel.net/2014/09/24/using-postgres-composite-types-in-django/
-"""
 from collections import namedtuple
 
 import six
@@ -113,6 +63,11 @@ except ImportError:
 ## ... source file abbreviated to get to PGDialect_psycopg2 examples ...
 
 
+            bind.execute(CreateCompositeType(self))
+
+    def drop(self, bind=None, checkfirst=True):
+        if (
+            checkfirst and
             bind.dialect.has_type(bind, self.name, schema=self.schema)
         ):
             bind.execute(DropCompositeType(self))
@@ -161,7 +116,6 @@ def before_create(target, connection, **kw):
 
 
 ## ... source file continues with no further PGDialect_psycopg2 examples...
-
 
 ```
 

@@ -1,7 +1,7 @@
 title: sqlalchemy.dialects.postgresql.base PGTypeCompiler code examples
 category: page
 slug: sqlalchemy-dialects-postgresql-base-pgtypecompiler-examples
-sortorder: 500031000
+sortorder: 500031012
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.base PGTypeCompiler
 meta: Python example code for the PGTypeCompiler class from the sqlalchemy.dialects.postgresql.base module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ PGTypeCompiler is a class within the sqlalchemy.dialects.postgresql.base module 
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -40,55 +40,26 @@ from .scalar_coercible import ScalarCoercible
 
 
 class LtreeType(types.Concatenable, types.UserDefinedType, ScalarCoercible):
-    """Postgresql LtreeType type.
 
-    The LtreeType datatype can be used for representing labels of data stored
-    in hierarchial tree-like structure. For more detailed information please
-    refer to http://www.postgresql.org/docs/current/static/ltree.html
+    class comparator_factory(types.Concatenable.Comparator):
+        def ancestor_of(self, other):
+            if isinstance(other, list):
+                return self.op('@>')(expression.cast(other, ARRAY(LtreeType)))
+            else:
+                return self.op('@>')(other)
 
-    ::
+        def descendant_of(self, other):
+            if isinstance(other, list):
+                return self.op('<@')(expression.cast(other, ARRAY(LtreeType)))
+            else:
+                return self.op('<@')(other)
 
-        from sqlalchemy_utils import LtreeType, Ltree
-
-
-        class DocumentSection(Base):
-            __tablename__ = 'document_section'
-            id = sa.Column(sa.Integer, autoincrement=True, primary_key=True)
-            path = sa.Column(LtreeType)
-
-
-
-
-## ... source file abbreviated to get to PGTypeCompiler examples ...
-
-
-    __visit_name__ = 'LTXTQUERY'
-
-
-ischema_names['ltree'] = LtreeType
-ischema_names['lquery'] = LQUERY
-ischema_names['ltxtquery'] = LTXTQUERY
-
-
-def visit_LTREE(self, type_, **kw):
-    return 'LTREE'
-
-
-def visit_LQUERY(self, type_, **kw):
-    return 'LQUERY'
-
-
-def visit_LTXTQUERY(self, type_, **kw):
-    return 'LTXTQUERY'
-
-
-~~PGTypeCompiler.visit_LTREE = visit_LTREE
-~~PGTypeCompiler.visit_LQUERY = visit_LQUERY
-~~PGTypeCompiler.visit_LTXTQUERY = visit_LTXTQUERY
+        def lquery(self, other):
+            if isinstance(other, list):
+                return self.op('?')(expression.cast(other, ARRAY(LQUERY)))
 
 
 ## ... source file continues with no further PGTypeCompiler examples...
-
 
 ```
 

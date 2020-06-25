@@ -1,7 +1,7 @@
 title: sqlalchemy.exc NoInspectionAvailable code examples
 category: page
 slug: sqlalchemy-exc-noinspectionavailable-examples
-sortorder: 500031003
+sortorder: 500031026
 toc: False
 sidebartitle: sqlalchemy.exc NoInspectionAvailable
 meta: Python example code for the NoInspectionAvailable class from the sqlalchemy.exc module of the SQLAlchemy project.
@@ -16,7 +16,7 @@ NoInspectionAvailable is a class within the sqlalchemy.exc module of the SQLAlch
 and
 [PyPI package information](https://pypi.org/project/SQLAlchemy-Utils/))
 is a code library with various helper functions and new data types
-that make it easier to use [SQLAlchemy](/sqlachemy.html) when building
+that make it easier to use [SQLAlchemy](/sqlalchemy.html) when building
 projects that involve more specific storage requirements such as
 [currency](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html#module-sqlalchemy_utils.types.currency).
 The wide array of
@@ -55,20 +55,25 @@ def get_foreign_key_values(fk, obj):
 
 
 def group_foreign_keys(foreign_keys):
-    """
-    Return a groupby iterator that groups given foreign keys by table.
+    foreign_keys = sorted(
+        foreign_keys, key=lambda key: key.constraint.table.name
 
 
 ## ... source file abbreviated to get to NoInspectionAvailable examples ...
 
 
-        This function does not support exotic mappers that use multiple tables
+        else:
+            (
+                session.query(mapper.class_)
+                .filter_by(**old_values)
+                .update(
+                    new_values,
+                    'evaluate'
+                )
+            )
 
-    .. seealso:: :func:`get_referencing_foreign_keys`
-    .. seealso:: :func:`merge_references`
 
-    .. versionadded: 0.26.0
-    """
+def dependent_objects(obj, foreign_keys=None):
     if foreign_keys is None:
         foreign_keys = get_referencing_foreign_keys(obj)
 
@@ -110,7 +115,6 @@ def _get_criteria(keys, class_, obj):
 
 
 ## ... source file continues with no further NoInspectionAvailable examples...
-
 
 ```
 
