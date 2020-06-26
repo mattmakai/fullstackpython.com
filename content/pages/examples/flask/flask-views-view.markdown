@@ -1,7 +1,7 @@
 title: flask.views View code examples
 category: page
 slug: flask-views-view-examples
-sortorder: 500021019
+sortorder: 500021022
 toc: False
 sidebartitle: flask.views View
 meta: Python example code for the View class from the flask.views module of the Flask project.

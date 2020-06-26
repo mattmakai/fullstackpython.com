@@ -1,13 +1,14 @@
 title: flask.blueprints Blueprint code examples
 category: page
 slug: flask-blueprints-blueprint-examples
-sortorder: 500021000
+sortorder: 500021002
 toc: False
 sidebartitle: flask.blueprints Blueprint
 meta: Python example code for the Blueprint class from the flask.blueprints module of the Flask project.
 
 
-Blueprint is a class within the flask.blueprints module of the Flask project.
+A Blueprint in [Flask](/flask.html) is
+[a "mold" or template for creating parts of web applications](https://stackoverflow.com/questions/24420857/what-are-flask-blueprints-exactly).
 
 
 ## Example 1 from Flask AppBuilder

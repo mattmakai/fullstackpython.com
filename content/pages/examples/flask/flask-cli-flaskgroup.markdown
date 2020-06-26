@@ -1,7 +1,7 @@
 title: flask.cli FlaskGroup code examples
 category: page
 slug: flask-cli-flaskgroup-examples
-sortorder: 500021001
+sortorder: 500021003
 toc: False
 sidebartitle: flask.cli FlaskGroup
 meta: Python example code for the FlaskGroup class from the flask.cli module of the Flask project.
