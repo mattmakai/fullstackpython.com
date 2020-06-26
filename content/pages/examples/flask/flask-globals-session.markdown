@@ -1,7 +1,7 @@
 title: flask.globals session code examples
 category: page
 slug: flask-globals-session-examples
-sortorder: 500021011
+sortorder: 500021012
 toc: False
 sidebartitle: flask.globals session
 meta: Python example code for the session function from the flask.globals module of the Flask project.

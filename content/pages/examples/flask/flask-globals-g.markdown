@@ -1,7 +1,7 @@
 title: flask.globals g code examples
 category: page
 slug: flask-globals-g-examples
-sortorder: 500021009
+sortorder: 500021010
 toc: False
 sidebartitle: flask.globals g
 meta: Python example code for the g function from the flask.globals module of the Flask project.

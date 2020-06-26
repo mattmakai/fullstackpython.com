@@ -1,7 +1,7 @@
 title: flask.app Headers code examples
 category: page
 slug: flask-app-headers-examples
-sortorder: 500021001
+sortorder: 500021002
 toc: False
 sidebartitle: flask.app Headers
 meta: Python example code for the Headers class from the flask.app module of the Flask project.

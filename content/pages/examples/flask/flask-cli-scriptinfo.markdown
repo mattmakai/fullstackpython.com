@@ -1,7 +1,7 @@
 title: flask.cli ScriptInfo code examples
 category: page
 slug: flask-cli-scriptinfo-examples
-sortorder: 500021004
+sortorder: 500021005
 toc: False
 sidebartitle: flask.cli ScriptInfo
 meta: Python example code for the ScriptInfo class from the flask.cli module of the Flask project.

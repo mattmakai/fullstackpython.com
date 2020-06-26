@@ -1,7 +1,7 @@
 title: flask.signals got_request_exception code examples
 category: page
 slug: flask-signals-got-request-exception-examples
-sortorder: 500021019
+sortorder: 500021020
 toc: False
 sidebartitle: flask.signals got_request_exception
 meta: Python example code for the got_request_exception function from the flask.signals module of the Flask project.

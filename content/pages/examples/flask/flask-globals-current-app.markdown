@@ -1,7 +1,7 @@
 title: flask.globals current_app code examples
 category: page
 slug: flask-globals-current-app-examples
-sortorder: 500021008
+sortorder: 500021009
 toc: False
 sidebartitle: flask.globals current_app
 meta: Python example code for the current_app function from the flask.globals module of the Flask project.

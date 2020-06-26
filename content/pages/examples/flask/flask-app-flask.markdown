@@ -1,7 +1,7 @@
 title: flask.app Flask code examples
 category: page
 slug: flask-app-flask-examples
-sortorder: 500021000
+sortorder: 500021001
 toc: False
 sidebartitle: flask.app Flask
 meta: Python example code for the Flask class from the flask.app module of the Flask project.
@@ -23,18 +23,15 @@ forms, and internationalization support.
 Flask App Builder is provided under the
 [BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
 
-[**Flask AppBuilder / flask_appbuilder / tests / _test_ldapsearch.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/tests/_test_ldapsearch.py)
+[**Flask AppBuilder / flask_appbuilder / tests / _test_oauth_registration_role.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/tests/_test_oauth_registration_role.py)
 
 ```python
-# _test_ldapsearch.py
+# _test_oauth_registration_role.py
 import logging
 import unittest
 
 ~~from flask import Flask
 from flask_appbuilder import AppBuilder, SQLA
-import jinja2
-import ldap
-from mockldap import MockLdap
 
 
 logging.basicConfig(format="%(asctime)s:%(levelname)s:%(name)s:%(message)s")
@@ -42,67 +39,33 @@ logging.getLogger().setLevel(logging.DEBUG)
 log = logging.getLogger(__name__)
 
 
-class LDAPSearchTestCase(unittest.TestCase):
-
-    top = ("o=test", {"o": ["test"]})
-    example = ("ou=example,o=test", {"ou": ["example"]})
-    manager = (
-        "cn=manager,ou=example,o=test",
-        {"cn": ["manager"], "userPassword": ["ldaptest"]},
-    )
-    alice = (
-        "cn=alice,ou=example,o=test",
-        {
-            "cn": ["alice"],
-            "memberOf": ["cn=group,ou=groups,o=test"],
-            "userPassword": ["alicepw"],
-        },
-    )
-    group = (
-        "cn=group,ou=groups,o=test",
-        {"cn": ["group"], "member": ["cn=alice,ou=example,o=test"]},
-    )
-
-    directory = dict([top, example, group, manager, alice])
-
-    @classmethod
-    def setUpClass(cls):
-        cls.mockldap = MockLdap(cls.directory)
-
-    @classmethod
-    def tearDownClass(cls):
-        del cls.mockldap
-
+class OAuthRegistrationRoleTestCase(unittest.TestCase):
     def setUp(self):
-
-        self.mockldap.start()
-        self.ldapobj = self.mockldap["ldap://localhost/"]
-
 ~~        self.app = Flask(__name__)
-        self.app.jinja_env.undefined = jinja2.StrictUndefined
+        self.app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
         self.db = SQLA(self.app)
 
-        self.app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-        self.app.config["AUTH_LDAP_UID_FIELD"] = "cn"
-        self.app.config["AUTH_LDAP_ALLOW_SELF_SIGNED"] = False
-        self.app.config["AUTH_LDAP_USE_TLS"] = False
-        self.app.config["AUTH_LDAP_SERVER"] = "ldap://localhost/"
-        self.app.config["AUTH_LDAP_SEARCH"] = "ou=example,o=test"
-        self.app.config["AUTH_LDAP_APPEND_DOMAIN"] = False
-        self.app.config["AUTH_LDAP_FIRSTNAME_FIELD"] = None
-        self.app.config["AUTH_LDAP_LASTNAME_FIELD"] = None
-        self.app.config["AUTH_LDAP_EMAIL_FIELD"] = None
-
     def tearDown(self):
-        self.mockldap.stop()
-        del self.ldapobj
-        log.debug("TEAR DOWN")
-
         self.appbuilder = None
         self.app = None
         self.db = None
 
-    def test_ldapsearch(self):
+    def test_self_registration_not_enabled(self):
+        self.app.config["AUTH_USER_REGISTRATION"] = False
+        self.appbuilder = AppBuilder(self.app, self.db.session)
+
+        result = self.appbuilder.sm.auth_user_oauth(userinfo={"username": "testuser"})
+
+        self.assertIsNone(result)
+        self.assertEqual(len(self.appbuilder.sm.get_all_users()), 0)
+
+    def test_register_and_attach_static_role(self):
+        self.app.config["AUTH_USER_REGISTRATION"] = True
+        self.app.config["AUTH_USER_REGISTRATION_ROLE"] = "Public"
+        self.appbuilder = AppBuilder(self.app, self.db.session)
+
+        user = self.appbuilder.sm.auth_user_oauth(userinfo={"username": "testuser"})
+
 
 
 ## ... source file continues with no further Flask examples...
