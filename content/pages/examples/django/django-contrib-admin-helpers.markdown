@@ -62,6 +62,11 @@ from ..utils.loader import load_model
 ## ... source file abbreviated to get to helpers examples ...
 
 
+                if "move-to-clipboard-%d" % (f.id,) in request.POST:
+                    clipboard = tools.get_user_clipboard(request.user)
+                    if f.has_edit_permission(request):
+                        tools.move_file_to_clipboard([f], clipboard)
+                        return HttpResponseRedirect(request.get_full_path())
                     else:
                         raise PermissionDenied
 
@@ -111,6 +116,11 @@ from ..utils.loader import load_model
 
 ## ... source file abbreviated to get to helpers examples ...
 
+
+                    self.log_deletion(request, f, force_text(f))
+                    f.delete()
+                self.message_user(request, _("Successfully deleted %(count)d files and/or folders.") % {"count": n, })
+            return None
 
         if all_perms_needed or all_protected:
             title = _("Cannot delete files and/or folders")
@@ -162,6 +172,11 @@ from ..utils.loader import load_model
 ## ... source file abbreviated to get to helpers examples ...
 
 
+            conflicting_names = [folder.name for folder in self.get_queryset(request).filter(parent=destination, name__in=folders_queryset.values('name'))]
+            if conflicting_names:
+                messages.error(request, _("Folders with names %s already exist at the selected "
+                                          "destination") % ", ".join(conflicting_names))
+            elif n:
                 self._move_files_and_folders_impl(files_queryset, folders_queryset, destination)
                 self.message_user(request, _("Successfully moved %(count)d files and/or folders to folder '%(destination)s'.") % {
                     "count": n,
@@ -212,6 +227,11 @@ from ..utils.loader import load_model
 ## ... source file abbreviated to get to helpers examples ...
 
 
+                raise PermissionDenied
+            form = RenameFilesForm(request.POST)
+            if form.is_valid():
+                if files_queryset.count() + folders_queryset.count():
+                    n = self._rename_files_impl(files_queryset, folders_queryset, form.cleaned_data, 0)
                     self.message_user(request, _("Successfully renamed %(count)d files.") % {
                         "count": n,
                     })
@@ -262,6 +282,11 @@ from ..utils.loader import load_model
 ## ... source file abbreviated to get to helpers examples ...
 
 
+            form = CopyFilesAndFoldersForm()
+
+        try:
+            selected_destination_folder = int(request.POST.get('destination', 0))
+        except ValueError:
             if current_folder:
                 selected_destination_folder = current_folder.pk
             else:
@@ -312,6 +337,11 @@ from ..utils.loader import load_model
 ## ... source file abbreviated to get to helpers examples ...
 
 
+                    form.cleaned_data['width'] = form.cleaned_data['thumbnail_option'].width
+                    form.cleaned_data['height'] = form.cleaned_data['thumbnail_option'].height
+                    form.cleaned_data['crop'] = form.cleaned_data['thumbnail_option'].crop
+                    form.cleaned_data['upscale'] = form.cleaned_data['thumbnail_option'].upscale
+                if files_queryset.count() + folders_queryset.count():
                     n = self._resize_images_impl(files_queryset, folders_queryset, form.cleaned_data)
                     self.message_user(request, _("Successfully resized %(count)d images.") % {"count": n, })
                 return None

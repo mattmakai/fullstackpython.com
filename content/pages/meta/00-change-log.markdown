@@ -16,7 +16,7 @@ on GitHub.
 ## 2020
 ### June
 * Added new example code for [Django](/django.html) modules:
-    * [django.contrib.admin.helpers](/django-contrib-admin-helpers-examples.html),
+    * [django.contrib.admin.helpers](/django-contrib-admin-helpers-examples.html)
       [ActionForm](/django-contrib-admin-helpers-actionform-examples.html),
       and
       [AdminForm](/django-contrib-admin-helpers-adminform-examples.html)

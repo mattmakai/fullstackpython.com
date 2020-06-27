@@ -55,6 +55,39 @@ class SearchChangeList(ChangeList):
             SearchQuerySet(self.haystack_connection)
 
 
+## ... source file abbreviated to get to ModelAdmin examples ...
+
+
+            "cl": changelist,
+            "media": media,
+            "has_add_permission": self.has_add_permission(request),
+            "opts": changelist.opts,
+            "app_label": self.model._meta.app_label,
+            "action_form": action_form,
+            "actions_on_top": self.actions_on_top,
+            "actions_on_bottom": self.actions_on_bottom,
+            "actions_selection_counter": getattr(self, "actions_selection_counter", 0),
+        }
+        context.update(extra_context or {})
+        request.current_app = self.admin_site.name
+        app_name, model_name = get_model_ct_tuple(self.model)
+        return render(
+            request,
+            self.change_list_template
+            or [
+                "admin/%s/%s/change_list.html" % (app_name, model_name),
+                "admin/%s/change_list.html" % app_name,
+                "admin/change_list.html",
+            ],
+            context,
+        )
+
+
+~~class SearchModelAdmin(SearchModelAdminMixin, ModelAdmin):
+    pass
+
+
+
 ## ... source file continues with no further ModelAdmin examples...
 
 ```

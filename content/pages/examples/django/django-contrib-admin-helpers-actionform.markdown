@@ -57,6 +57,11 @@ class ConfirmImportForm(forms.Form):
 
 
 
+    def clean_import_file_name(self):
+        data = self.cleaned_data['import_file_name']
+        data = os.path.basename(data)
+        return data
+
 
 class ExportForm(forms.Form):
     file_format = forms.ChoiceField(

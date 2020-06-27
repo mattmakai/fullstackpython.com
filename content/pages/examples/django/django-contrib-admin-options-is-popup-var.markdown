@@ -107,6 +107,47 @@ def check_files_read_permissions(request, files):
         if not f.has_read_permission(request):
 
 
+## ... source file abbreviated to get to IS_POPUP_VAR examples ...
+
+
+    params = params or {}
+    if popup_status(request):
+        params[IS_POPUP_VAR] = '1'
+    pick_type = popup_pick_type(request)
+    if pick_type:
+        params['_pick'] = pick_type
+    return params
+
+
+def admin_url_params_encoded(request, first_separator='?', params=None):
+    params = urlencode(
+        sorted(admin_url_params(request, params=params).items())
+    )
+    if not params:
+        return ''
+    return '{0}{1}'.format(first_separator, params)
+
+
+class AdminContext(dict):
+    def __init__(self, request):
+        super(AdminContext, self).__init__()
+        self.update(admin_url_params(request))
+
+    def __missing__(self, key):
+        if key == 'popup':
+~~            return self.get(IS_POPUP_VAR, False) == '1'
+        elif key == 'pick':
+            return self.get('_pick', '')
+        elif key.startswith('pick_'):
+            return self.get('_pick', '') == key.split('pick_')[1]
+
+    def __getattr__(self, name):
+        if name in ('popup', 'pick') or name.startswith('pick_'):
+            return self.get(name)
+        raise AttributeError
+
+
+
 ## ... source file continues with no further IS_POPUP_VAR examples...
 
 ```

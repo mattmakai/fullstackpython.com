@@ -58,6 +58,11 @@ class SearchChangeList(ChangeList):
 ## ... source file abbreviated to get to csrf_protect_m examples ...
 
 
+        result_count = paginator.count
+        full_result_count = (
+            SearchQuerySet(self.haystack_connection).models(self.model).all().count()
+        )
+
         can_show_all = result_count <= self.list_max_show_all
         multi_page = result_count > self.list_per_page
 

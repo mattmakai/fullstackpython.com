@@ -56,6 +56,11 @@ from cms import operations
 ## ... source file abbreviated to get to AdminForm examples ...
 
 
+        saved_successfully = False
+        cancel_clicked = request.POST.get("_cancel", False)
+        raw_fields = request.GET.get("edit_fields")
+        fields = [field for field in raw_fields.split(",") if field in self.frontend_editable_fields]
+        if not fields:
             context = {
                 'opts': opts,
                 'message': force_text(_("Field %s not found")) % raw_fields

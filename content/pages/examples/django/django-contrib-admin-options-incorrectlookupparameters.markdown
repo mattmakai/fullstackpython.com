@@ -24,6 +24,11 @@ The django-jet project is open source under the
 
 ```python
 # utils.py
+from django.template import Context
+from django.utils import translation
+from jet import settings
+from jet.models import PinnedApplication
+
 try:
     from django.apps.registry import apps
 except ImportError:
@@ -69,6 +74,61 @@ class JsonResponse(HttpResponse):
 def get_app_list(context, order=True):
     admin_site = get_admin_site(context)
     request = context['request']
+
+
+## ... source file abbreviated to get to IncorrectLookupParameters examples ...
+
+
+        if hasattr(model_admin, 'get_search_fields') else model_admin.search_fields
+    list_select_related = model_admin.get_list_select_related(request) \
+        if hasattr(model_admin, 'get_list_select_related') else model_admin.list_select_related
+
+    actions = model_admin.get_actions(request)
+    if actions:
+        list_display = ['action_checkbox'] + list(list_display)
+
+    ChangeList = model_admin.get_changelist(request)
+
+    change_list_args = [
+        request, model, list_display, list_display_links, list_filter,
+        model_admin.date_hierarchy, search_fields, list_select_related,
+        model_admin.list_per_page, model_admin.list_max_show_all,
+        model_admin.list_editable, model_admin]
+
+    try:
+        sortable_by = model_admin.get_sortable_by(request)
+        change_list_args.append(sortable_by)
+    except AttributeError:
+        pass
+
+    try:
+        cl = ChangeList(*change_list_args)
+        queryset = cl.get_queryset(request)
+~~    except IncorrectLookupParameters:
+        pass
+
+    return queryset
+
+
+def get_possible_language_codes():
+    language_code = translation.get_language()
+
+    language_code = language_code.replace('_', '-').lower()
+    language_codes = []
+
+    split = language_code.split('-', 2)
+    if len(split) == 2:
+        language_code = '%s-%s' % (split[0].lower(), split[1].upper()) if split[0] != split[1] else split[0]
+
+    language_codes.append(language_code)
+
+    if len(split) == 2:
+        language_codes.append(split[0].lower())
+
+    return language_codes
+
+
+def get_original_menu_items(context):
 
 
 ## ... source file continues with no further IncorrectLookupParameters examples...
