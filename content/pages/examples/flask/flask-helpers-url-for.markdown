@@ -1,7 +1,7 @@
 title: flask.helpers url_for code examples
 category: page
 slug: flask-helpers-url-for-examples
-sortorder: 500021015
+sortorder: 500021016
 toc: False
 sidebartitle: flask.helpers url_for
 meta: Python example code for the url_for function from the flask.helpers module of the Flask project.
@@ -588,7 +588,127 @@ def reset(token):
 ```
 
 
-## Example 8 from Flasky
+## Example 8 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / utils.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./utils.py)
+
+```python
+# utils.py
+import abc
+import base64
+import datetime
+from functools import partial
+import hashlib
+import hmac
+import time
+from typing import Dict, List
+import warnings
+from datetime import timedelta
+from urllib.parse import parse_qsl, parse_qs, urlsplit, urlunsplit, urlencode
+import urllib.request
+import urllib.error
+
+~~from flask import _request_ctx_stack, current_app, flash, g, request, session, url_for
+from flask.json import JSONEncoder
+from flask_login import login_user as _login_user
+from flask_login import logout_user as _logout_user
+from flask_login import current_user
+from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
+from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
+from flask_wtf import csrf
+from wtforms import validators, ValidationError
+from itsdangerous import BadSignature, SignatureExpired
+from speaklater import is_lazy_string
+from werkzeug.local import LocalProxy
+from werkzeug.datastructures import MultiDict
+from .quart_compat import best
+from .signals import user_authenticated
+
+_security = LocalProxy(lambda: current_app.extensions["security"])
+
+_datastore = LocalProxy(lambda: _security.datastore)
+
+_pwd_context = LocalProxy(lambda: _security.pwd_context)
+
+_hashing_context = LocalProxy(lambda: _security.hashing_context)
+
+localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+        return url
+
+
+def slash_url_suffix(url, suffix):
+
+    return url.endswith("/") and ("%s/" % suffix) or ("/%s" % suffix)
+
+
+def transform_url(url, qparams=None, **kwargs):
+    if not url:
+        return url
+    link_parse = urlsplit(url)
+    if qparams:
+        current_query = dict(parse_qsl(link_parse.query))
+        current_query.update(qparams)
+        link_parse = link_parse._replace(query=urlencode(current_query))
+    return urlunsplit(link_parse._replace(**kwargs))
+
+
+def get_security_endpoint_name(endpoint):
+    return f"{_security.blueprint_name}.{endpoint}"
+
+
+def url_for_security(endpoint, **values):
+    endpoint = get_security_endpoint_name(endpoint)
+~~    return url_for(endpoint, **values)
+
+
+def validate_redirect_url(url):
+    if url is None or url.strip() == "":
+        return False
+    url_next = urlsplit(url)
+    url_base = urlsplit(request.host_url)
+    if (url_next.netloc or url_next.scheme) and url_next.netloc != url_base.netloc:
+        return False
+    return True
+
+
+def get_post_action_redirect(config_key, declared=None):
+    urls = [
+        get_url(request.args.get("next", None)),
+        get_url(request.form.get("next", None)),
+        find_redirect(config_key),
+    ]
+    if declared:
+        urls.insert(0, declared)
+    for url in urls:
+        if validate_redirect_url(url):
+            return url
+
+
+
+## ... source file continues with no further url_for examples...
+
+```
+
+
+## Example 9 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -788,7 +908,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 9 from Datadog Flask Example App
+## Example 10 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).

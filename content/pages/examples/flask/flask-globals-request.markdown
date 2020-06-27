@@ -1,7 +1,7 @@
 title: flask.globals request code examples
 category: page
 slug: flask-globals-request-examples
-sortorder: 500021011
+sortorder: 500021012
 toc: False
 sidebartitle: flask.globals request
 meta: Python example code for the request function from the flask.globals module of the Flask project.
@@ -1566,7 +1566,227 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 10 from newspie
+## Example 10 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / forms.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./forms.py)
+
+```python
+# forms.py
+
+import inspect
+
+~~from flask import Markup, current_app, request
+from flask_login import current_user
+from flask_wtf import FlaskForm as BaseForm
+from speaklater import is_lazy_string, make_lazy_string
+from werkzeug.local import LocalProxy
+from wtforms import (
+    BooleanField,
+    Field,
+    HiddenField,
+    PasswordField,
+    RadioField,
+    StringField,
+    SubmitField,
+    ValidationError,
+    validators,
+)
+
+from .confirmable import requires_confirmation
+from .utils import (
+    _,
+    _datastore,
+    config_value,
+    do_flash,
+    find_user,
+    get_identity_attribute,
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+class RegisterFormMixin:
+    submit = SubmitField(get_form_field_label("register"))
+
+    def to_dict(self, only_user):
+
+        def is_field_and_user_attr(member):
+            if not isinstance(member, Field):
+                return False
+
+            if only_user is True:
+                return hasattr(_datastore.user_model, member.name)
+            else:
+                return True
+
+        fields = inspect.getmembers(self, is_field_and_user_attr)
+        return {key: value.data for key, value in fields}
+
+
+class SendConfirmationForm(Form, UserEmailFormMixin):
+
+    submit = SubmitField(get_form_field_label("send_confirmation"))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+~~        if request.method == "GET":
+~~            self.email.data = request.args.get("email", None)
+
+    def validate(self):
+        if not super().validate():
+            return False
+        if self.user.confirmed_at is not None:
+            self.email.errors.append(get_message("ALREADY_CONFIRMED")[0])
+            return False
+        return True
+
+
+class ForgotPasswordForm(Form, UserEmailFormMixin):
+
+    submit = SubmitField(get_form_field_label("recover_password"))
+
+    def validate(self):
+        if not super().validate():
+            return False
+        if not self.user.is_active:
+            self.email.errors.append(get_message("DISABLED_ACCOUNT")[0])
+            return False
+        if requires_confirmation(self.user):
+            self.email.errors.append(get_message("CONFIRMATION_REQUIRED")[0])
+            return False
+        return True
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def validate(self):
+        if not super().validate():
+            return False
+        if not self.user.is_active:
+            self.email.errors.append(get_message("DISABLED_ACCOUNT")[0])
+            return False
+        return True
+
+
+class LoginForm(Form, NextFormMixin):
+
+    email = StringField(get_form_field_label("email"), validators=[email_required])
+    password = PasswordField(
+        get_form_field_label("password"), validators=[password_required]
+    )
+    remember = BooleanField(get_form_field_label("remember_me"))
+    submit = SubmitField(get_form_field_label("login"))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if not self.next.data:
+~~            self.next.data = request.args.get("next", "")
+        self.remember.default = config_value("DEFAULT_REMEMBER_ME")
+        if (
+            current_app.extensions["security"].recoverable
+            and not self.password.description
+        ):
+            html = Markup(
+                '<a href="{url}">{message}</a>'.format(
+                    url=url_for_security("forgot_password"),
+                    message=get_message("FORGOT_PASSWORD")[0],
+                )
+            )
+            self.password.description = html
+
+    def validate(self):
+        if not super().validate():
+            return False
+
+        self.user = find_user(self.email.data)
+
+        if self.user is None:
+            self.email.errors.append(get_message("USER_DOES_NOT_EXIST")[0])
+            hash_password(self.password.data)
+            return False
+        if not self.user.password:
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+class RegisterForm(ConfirmRegisterForm, NextFormMixin):
+
+    password_confirm = PasswordField(
+        get_form_field_label("retype_password"),
+        validators=[
+            EqualTo("password", message="RETYPE_PASSWORD_MISMATCH"),
+            validators.Optional(),
+        ],
+    )
+
+    def validate(self):
+        if not super().validate():
+            return False
+        if not config_value("UNIFIED_SIGNIN"):
+            if not self.password_confirm.data or not self.password_confirm.data.strip():
+                self.password_confirm.errors.append(
+                    get_message("PASSWORD_NOT_PROVIDED")[0]
+                )
+                return False
+        return True
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if not self.next.data:
+~~            self.next.data = request.args.get("next", "")
+
+
+class ResetPasswordForm(Form, NewPasswordFormMixin, PasswordConfirmFormMixin):
+
+    submit = SubmitField(get_form_field_label("reset_password"))
+
+    def validate(self):
+        if not super().validate():
+            return False
+
+        pbad = _security._password_validator(
+            self.password.data, False, user=current_user
+        )
+        if pbad:
+            self.password.errors.extend(pbad)
+            return False
+        return True
+
+
+class ChangePasswordForm(Form, PasswordFormMixin):
+
+    new_password = PasswordField(
+        get_form_field_label("new_password"), validators=[password_required]
+    )
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 11 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1747,7 +1967,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 11 from sandman2
+## Example 12 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1948,7 +2168,7 @@ class Service(MethodView):
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 13 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

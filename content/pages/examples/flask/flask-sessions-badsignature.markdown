@@ -1,7 +1,7 @@
 title: flask.sessions BadSignature code examples
 category: page
 slug: flask-sessions-badsignature-examples
-sortorder: 500021017
+sortorder: 500021019
 toc: False
 sidebartitle: flask.sessions BadSignature
 meta: Python example code for the BadSignature class from the flask.sessions module of the Flask project.
@@ -204,6 +204,160 @@ class Role(db.Model):
                 last_name=fake.last_name(),
                 email=fake.email(),
                 password='password',
+
+
+## ... source file continues with no further BadSignature examples...
+
+```
+
+
+## Example 3 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / utils.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./utils.py)
+
+```python
+# utils.py
+import abc
+import base64
+import datetime
+from functools import partial
+import hashlib
+import hmac
+import time
+from typing import Dict, List
+import warnings
+from datetime import timedelta
+from urllib.parse import parse_qsl, parse_qs, urlsplit, urlunsplit, urlencode
+import urllib.request
+import urllib.error
+
+from flask import _request_ctx_stack, current_app, flash, g, request, session, url_for
+from flask.json import JSONEncoder
+from flask_login import login_user as _login_user
+from flask_login import logout_user as _logout_user
+from flask_login import current_user
+from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
+from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
+from flask_wtf import csrf
+from wtforms import validators, ValidationError
+~~from itsdangerous import BadSignature, SignatureExpired
+from speaklater import is_lazy_string
+from werkzeug.local import LocalProxy
+from werkzeug.datastructures import MultiDict
+from .quart_compat import best
+from .signals import user_authenticated
+
+_security = LocalProxy(lambda: current_app.extensions["security"])
+
+_datastore = LocalProxy(lambda: _security.datastore)
+
+_pwd_context = LocalProxy(lambda: _security.pwd_context)
+
+_hashing_context = LocalProxy(lambda: _security.hashing_context)
+
+localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
+
+FsPermNeed = partial(Need, "fsperm")
+FsPermNeed.__doc__ = """A need with the method preset to `"fsperm"`."""
+
+
+def _(translate):
+    return translate
+
+
+
+
+## ... source file abbreviated to get to BadSignature examples ...
+
+
+    if config_value("EMAIL_PLAINTEXT"):
+        body = _security.render_template("%s/%s.txt" % ctx, **context)
+    if config_value("EMAIL_HTML"):
+        html = _security.render_template("%s/%s.html" % ctx, **context)
+
+    sender = _security.email_sender
+    if isinstance(sender, LocalProxy):
+        sender = sender._get_current_object()
+
+    _security._mail_util.send_mail(
+        template, subject, recipient, str(sender), body, html, context.get("user", None)
+    )
+
+
+def get_token_status(token, serializer, max_age=None, return_data=False):
+    serializer = getattr(_security, serializer + "_serializer")
+    max_age = get_max_age(max_age)
+    user, data = None, None
+    expired, invalid = False, False
+
+    try:
+        data = serializer.loads(token, max_age=max_age)
+    except SignatureExpired:
+        d, data = serializer.loads_unsafe(token)
+        expired = True
+~~    except (BadSignature, TypeError, ValueError):
+        invalid = True
+
+    if data:
+        user = _datastore.find_user(fs_uniquifier=data[0])
+
+    expired = expired and (user is not None)
+
+    if return_data:
+        return expired, invalid, user, data
+    else:
+        return expired, invalid, user
+
+
+def check_and_get_token_status(token, serializer, within=None):
+    serializer = getattr(_security, serializer + "_serializer")
+    max_age = within.total_seconds()
+    data = None
+    expired, invalid = False, False
+
+    try:
+        data = serializer.loads(token, max_age=max_age)
+    except SignatureExpired:
+        d, data = serializer.loads_unsafe(token)
+        expired = True
+~~    except (BadSignature, TypeError, ValueError):
+        invalid = True
+
+    return expired, invalid, data
+
+
+def get_identity_attributes(app=None) -> List:
+    app = app or current_app
+    iattrs = app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"]
+    if iattrs:
+        return [[*f][0] for f in iattrs]
+    return []
+
+
+def get_identity_attribute(attr, app=None) -> Dict:
+    app = app or current_app
+    iattrs = app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"]
+    if iattrs:
+        details = [
+            mapping[attr] for mapping in iattrs if list(mapping.keys())[0] == attr
+        ]
+        if details:
+            return details[0]
+    return {}
+
 
 
 ## ... source file continues with no further BadSignature examples...

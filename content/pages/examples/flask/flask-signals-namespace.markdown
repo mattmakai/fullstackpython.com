@@ -1,7 +1,7 @@
 title: flask.signals Namespace code examples
 category: page
 slug: flask-signals-namespace-examples
-sortorder: 500021019
+sortorder: 500021021
 toc: False
 sidebartitle: flask.signals Namespace
 meta: Python example code for the Namespace class from the flask.signals module of the Flask project.

@@ -1,7 +1,7 @@
 title: flask.globals g code examples
 category: page
 slug: flask-globals-g-examples
-sortorder: 500021010
+sortorder: 500021011
 toc: False
 sidebartitle: flask.globals g
 meta: Python example code for the g function from the flask.globals module of the Flask project.
@@ -630,7 +630,127 @@ class CSRFProtect(object):
 ```
 
 
-## Example 5 from tedivms-flask
+## Example 5 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / utils.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./utils.py)
+
+```python
+# utils.py
+import abc
+import base64
+import datetime
+from functools import partial
+import hashlib
+import hmac
+import time
+from typing import Dict, List
+import warnings
+from datetime import timedelta
+from urllib.parse import parse_qsl, parse_qs, urlsplit, urlunsplit, urlencode
+import urllib.request
+import urllib.error
+
+~~from flask import _request_ctx_stack, current_app, flash, g, request, session, url_for
+from flask.json import JSONEncoder
+from flask_login import login_user as _login_user
+from flask_login import logout_user as _logout_user
+from flask_login import current_user
+from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
+from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
+from flask_wtf import csrf
+from wtforms import validators, ValidationError
+from itsdangerous import BadSignature, SignatureExpired
+from speaklater import is_lazy_string
+from werkzeug.local import LocalProxy
+from werkzeug.datastructures import MultiDict
+from .quart_compat import best
+from .signals import user_authenticated
+
+_security = LocalProxy(lambda: current_app.extensions["security"])
+
+_datastore = LocalProxy(lambda: _security.datastore)
+
+_pwd_context = LocalProxy(lambda: _security.pwd_context)
+
+_hashing_context = LocalProxy(lambda: _security.hashing_context)
+
+localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
+
+
+## ... source file abbreviated to get to g examples ...
+
+
+        user.login_count = user.login_count + 1 if user.login_count else 1
+
+        _datastore.put(user)
+
+    session["fs_cc"] = "set"  # CSRF cookie
+    session["fs_paa"] = time.time()  # Primary authentication at - timestamp
+
+    identity_changed.send(
+        current_app._get_current_object(), identity=Identity(user.fs_uniquifier)
+    )
+
+    user_authenticated.send(
+        current_app._get_current_object(), user=user, authn_via=authn_via
+    )
+    return True
+
+
+def logout_user():
+
+    for key in ("identity.name", "identity.auth_type", "fs_paa", "fs_gexp"):
+        session.pop(key, None)
+
+    csrf_field_name = find_csrf_field_name()
+    if csrf_field_name:
+        session.pop(csrf_field_name, None)
+~~        g.pop(csrf_field_name, None)
+    session["fs_cc"] = "clear"
+    identity_changed.send(
+        current_app._get_current_object(), identity=AnonymousIdentity()
+    )
+    _logout_user()
+
+
+def check_and_update_authn_fresh(within, grace, method=None):
+
+    if method == "basic":
+        return True
+
+    if within.total_seconds() < 0:
+        return True
+
+    if "fs_paa" not in session:
+        return False
+
+    now = datetime.datetime.utcnow()
+    new_exp = now + grace
+    grace_ts = int(new_exp.timestamp())
+
+    fs_gexp = session.get("fs_gexp", None)
+    if fs_gexp:
+
+
+## ... source file continues with no further g examples...
+
+```
+
+
+## Example 6 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

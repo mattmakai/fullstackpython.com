@@ -1,7 +1,7 @@
 title: flask.templating render_template code examples
 category: page
 slug: flask-templating-render-template-examples
-sortorder: 500021021
+sortorder: 500021023
 toc: False
 sidebartitle: flask.templating render_template
 meta: Python example code for the render_template function from the flask.templating module of the Flask project.
@@ -794,7 +794,117 @@ def paySuccess():
 ```
 
 
-## Example 9 from Flasky
+## Example 9 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / core.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./core.py)
+
+```python
+# core.py
+
+from datetime import datetime, timedelta
+import warnings
+
+import pkg_resources
+~~from flask import _request_ctx_stack, current_app, render_template
+from flask_babelex import Domain
+from flask_login import AnonymousUserMixin, LoginManager
+from flask_login import UserMixin as BaseUserMixin
+from flask_login import current_user
+from flask_principal import Identity, Principal, RoleNeed, UserNeed, identity_loaded
+from itsdangerous import URLSafeTimedSerializer
+from passlib.context import CryptContext
+from werkzeug.datastructures import ImmutableList
+from werkzeug.local import LocalProxy
+
+from .decorators import (
+    default_reauthn_handler,
+    default_unauthn_handler,
+    default_unauthz_handler,
+)
+from .forms import (
+    ChangePasswordForm,
+    ConfirmRegisterForm,
+    ForgotPasswordForm,
+    LoginForm,
+    PasswordlessLoginForm,
+    RegisterForm,
+    ResetPasswordForm,
+    SendConfirmationForm,
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+                sms_service = cv("SMS_SERVICE", app=app)
+                if sms_service == "Twilio":  # pragma: no cover
+                    self._check_modules("twilio", "SMS")
+                if state.phone_util_cls == PhoneUtil:
+                    self._check_modules("phonenumbers", "SMS")
+
+            secrets = cv("TOTP_SECRETS", app=app)
+            issuer = cv("TOTP_ISSUER", app=app)
+            if not secrets or not issuer:
+                raise ValueError("Both TOTP_SECRETS and TOTP_ISSUER must be set")
+            state.totp_factory(state.totp_cls(secrets, issuer))
+
+        if cv("PASSWORD_COMPLEXITY_CHECKER", app=app) == "zxcvbn":
+            self._check_modules("zxcvbn", "PASSWORD_COMPLEXITY_CHECKER")
+        return state
+
+    def _check_modules(self, module, config_name):  # pragma: no cover
+        from importlib.util import find_spec
+
+        module_exists = find_spec(module)
+        if not module_exists:
+            raise ValueError(f"{module} is required for {config_name}")
+
+        return module_exists
+
+~~    def render_template(self, *args, **kwargs):
+~~        return render_template(*args, **kwargs)
+
+    def render_json(self, cb):
+        self._state._render_json = cb
+
+    def want_json(self, fn):
+        self._state._want_json = fn
+
+    def unauthz_handler(self, cb):
+        self._state._unauthz_handler = cb
+
+    def unauthn_handler(self, cb):
+        self._state._unauthn_handler = cb
+
+    def reauthn_handler(self, cb):
+        self._state._reauthn_handler = cb
+
+    def password_validator(self, cb):
+        self._state._password_validator = cb
+
+    def __getattr__(self, name):
+        return getattr(self._state, name, None)
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 10 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -834,7 +944,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 10 from Datadog Flask Example App
+## Example 11 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -936,7 +1046,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 11 from newspie
+## Example 12 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1091,7 +1201,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 13 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

@@ -1,7 +1,7 @@
 title: flask.globals session code examples
 category: page
 slug: flask-globals-session-examples
-sortorder: 500021012
+sortorder: 500021013
 toc: False
 sidebartitle: flask.globals session
 meta: Python example code for the session function from the flask.globals module of the Flask project.
@@ -661,7 +661,93 @@ logger = wrap_logger(
 ```
 
 
-## Example 7 from tedivms-flask
+## Example 7 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / twofactor.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./twofactor.py)
+
+```python
+# twofactor.py
+
+~~from flask import current_app as app, redirect, request, session
+from werkzeug.datastructures import MultiDict
+from werkzeug.local import LocalProxy
+
+from .utils import (
+    SmsSenderFactory,
+    base_render_json,
+    config_value,
+    do_flash,
+    login_user,
+    json_error_response,
+    send_mail,
+    url_for_security,
+)
+from .signals import (
+    tf_code_confirmed,
+    tf_disabled,
+    tf_security_token_sent,
+    tf_profile_changed,
+)
+
+_security = LocalProxy(lambda: app.extensions["security"])
+_datastore = LocalProxy(lambda: _security.datastore)
+
+
+def tf_clean_session():
+    if config_value("TWO_FACTOR"):
+        for k in [
+            "tf_state",
+            "tf_user_id",
+            "tf_primary_method",
+            "tf_remember_login",
+            "tf_totp_secret",
+        ]:
+~~            session.pop(k, None)
+
+
+def tf_send_security_token(user, method, totp_secret, phone_number):
+    token_to_be_sent = _security._totp_factory.generate_totp_password(totp_secret)
+    if method == "email" or method == "mail":
+        send_mail(
+            config_value("EMAIL_SUBJECT_TWO_FACTOR"),
+            user.email,
+            "two_factor_instructions",
+            user=user,
+            token=token_to_be_sent,
+            username=user.calc_username(),
+        )
+    elif method == "sms":
+        msg = "Use this code to log in: %s" % token_to_be_sent
+        from_number = config_value("SMS_SERVICE_CONFIG")["PHONE_NUMBER"]
+        to_number = phone_number
+        sms_sender = SmsSenderFactory.createSender(config_value("SMS_SERVICE"))
+        sms_sender.send_sms(from_number=from_number, to_number=to_number, msg=msg)
+
+    elif method == "google_authenticator" or method == "authenticator":
+        pass
+    tf_security_token_sent.send(
+        app._get_current_object(),
+
+
+## ... source file continues with no further session examples...
+
+```
+
+
+## Example 8 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

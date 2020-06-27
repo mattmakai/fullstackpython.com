@@ -1,7 +1,7 @@
 title: flask.globals current_app code examples
 category: page
 slug: flask-globals-current-app-examples
-sortorder: 500021009
+sortorder: 500021010
 toc: False
 sidebartitle: flask.globals current_app
 meta: Python example code for the current_app function from the flask.globals module of the Flask project.
@@ -1628,7 +1628,268 @@ def same_origin(current_uri, compare_uri):
 ```
 
 
-## Example 11 from Flasky
+## Example 11 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / core.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./core.py)
+
+```python
+# core.py
+
+from datetime import datetime, timedelta
+import warnings
+
+import pkg_resources
+~~from flask import _request_ctx_stack, current_app, render_template
+from flask_babelex import Domain
+from flask_login import AnonymousUserMixin, LoginManager
+from flask_login import UserMixin as BaseUserMixin
+from flask_login import current_user
+from flask_principal import Identity, Principal, RoleNeed, UserNeed, identity_loaded
+from itsdangerous import URLSafeTimedSerializer
+from passlib.context import CryptContext
+from werkzeug.datastructures import ImmutableList
+from werkzeug.local import LocalProxy
+
+from .decorators import (
+    default_reauthn_handler,
+    default_unauthn_handler,
+    default_unauthz_handler,
+)
+from .forms import (
+    ChangePasswordForm,
+    ConfirmRegisterForm,
+    ForgotPasswordForm,
+    LoginForm,
+    PasswordlessLoginForm,
+    RegisterForm,
+    ResetPasswordForm,
+    SendConfirmationForm,
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+    UnifiedSigninSetupValidateForm,
+    UnifiedVerifyForm,
+    us_send_security_token,
+)
+from .totp import Totp
+from .utils import _
+from .utils import config_value as cv
+from .utils import (
+    FsJsonEncoder,
+    FsPermNeed,
+    csrf_cookie_handler,
+    default_want_json,
+    default_password_validator,
+    get_config,
+    get_identity_attribute,
+    get_identity_attributes,
+    get_message,
+    localize_callback,
+    set_request_attr,
+    uia_email_mapper,
+    url_for_security,
+    verify_and_update_password,
+)
+from .views import create_blueprint, default_render_json
+
+~~_security = LocalProxy(lambda: current_app.extensions["security"])
+_datastore = LocalProxy(lambda: _security.datastore)
+
+AUTHN_MECHANISMS = ("basic", "session", "token")
+
+
+_default_config = {
+    "BLUEPRINT_NAME": "security",
+    "CLI_ROLES_NAME": "roles",
+    "CLI_USERS_NAME": "users",
+    "URL_PREFIX": None,
+    "SUBDOMAIN": None,
+    "FLASH_MESSAGES": True,
+    "I18N_DOMAIN": "flask_security",
+    "I18N_DIRNAME": pkg_resources.resource_filename("flask_security", "translations"),
+    "PASSWORD_HASH": "bcrypt",
+    "PASSWORD_SALT": None,
+    "PASSWORD_SINGLE_HASH": {
+        "django_argon2",
+        "django_bcrypt_sha256",
+        "django_pbkdf2_sha256",
+        "django_pbkdf2_sha1",
+        "django_bcrypt",
+        "django_salted_md5",
+        "django_salted_sha1",
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+    "SEND_CONFIRMATION_TEMPLATE": "security/send_confirmation.html",
+    "SEND_LOGIN_TEMPLATE": "security/send_login.html",
+    "VERIFY_TEMPLATE": "security/verify.html",
+    "TWO_FACTOR_VERIFY_CODE_TEMPLATE": "security/two_factor_verify_code.html",
+    "TWO_FACTOR_SETUP_TEMPLATE": "security/two_factor_setup.html",
+    "CONFIRMABLE": False,
+    "REGISTERABLE": False,
+    "RECOVERABLE": False,
+    "TRACKABLE": False,
+    "PASSWORDLESS": False,
+    "CHANGEABLE": False,
+    "TWO_FACTOR": False,
+    "SEND_REGISTER_EMAIL": True,
+    "SEND_PASSWORD_CHANGE_EMAIL": True,
+    "SEND_PASSWORD_RESET_EMAIL": True,
+    "SEND_PASSWORD_RESET_NOTICE_EMAIL": True,
+    "LOGIN_WITHIN": "1 days",
+    "TWO_FACTOR_AUTHENTICATOR_VALIDITY": 120,
+    "TWO_FACTOR_MAIL_VALIDITY": 300,
+    "TWO_FACTOR_SMS_VALIDITY": 120,
+    "CONFIRM_EMAIL_WITHIN": "5 days",
+    "RESET_PASSWORD_WITHIN": "5 days",
+    "LOGIN_WITHOUT_CONFIRMATION": False,
+    "AUTO_LOGIN_AFTER_CONFIRM": True,
+    "EMAIL_SENDER": LocalProxy(
+~~        lambda: current_app.config.get("MAIL_DEFAULT_SENDER", "no-reply@localhost")
+    ),
+    "TWO_FACTOR_RESCUE_MAIL": "no-reply@localhost",
+    "TOKEN_AUTHENTICATION_KEY": "auth_token",
+    "TOKEN_AUTHENTICATION_HEADER": "Authentication-Token",
+    "TOKEN_MAX_AGE": None,
+    "CONFIRM_SALT": "confirm-salt",
+    "RESET_SALT": "reset-salt",
+    "LOGIN_SALT": "login-salt",
+    "CHANGE_SALT": "change-salt",
+    "REMEMBER_SALT": "remember-salt",
+    "DEFAULT_REMEMBER_ME": False,
+    "DEFAULT_HTTP_AUTH_REALM": _("Login Required"),
+    "EMAIL_SUBJECT_REGISTER": _("Welcome"),
+    "EMAIL_SUBJECT_CONFIRM": _("Please confirm your email"),
+    "EMAIL_SUBJECT_PASSWORDLESS": _("Login instructions"),
+    "EMAIL_SUBJECT_PASSWORD_NOTICE": _("Your password has been reset"),
+    "EMAIL_SUBJECT_PASSWORD_CHANGE_NOTICE": _("Your password has been changed"),
+    "EMAIL_SUBJECT_PASSWORD_RESET": _("Password reset instructions"),
+    "EMAIL_PLAINTEXT": True,
+    "EMAIL_HTML": True,
+    "EMAIL_SUBJECT_TWO_FACTOR": _("Two-factor Login"),
+    "EMAIL_SUBJECT_TWO_FACTOR_RESCUE": _("Two-factor Rescue"),
+    "USER_IDENTITY_ATTRIBUTES": [
+        {"email": {"mapper": uia_email_mapper, "case_insensitive": True}}
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+
+        for key, value in _default_config.items():
+            app.config.setdefault("SECURITY_" + key, value)
+
+        for key, value in _default_messages.items():
+            app.config.setdefault("SECURITY_MSG_" + key, value)
+
+        identity_loaded.connect_via(app)(_on_identity_loaded)
+
+        self._state = state = _get_state(app, datastore, **kwargs)
+        if hasattr(datastore, "user_model") and not hasattr(
+            datastore.user_model, "fs_uniquifier"
+        ):  # pragma: no cover
+            raise ValueError("User model must contain fs_uniquifier as of 4.0.0")
+
+        if register_blueprint:
+            bp = create_blueprint(
+                app, state, __name__, json_encoder=kwargs["json_encoder_cls"]
+            )
+            app.register_blueprint(bp)
+            app.context_processor(_context_processor)
+
+        @app.before_first_request
+        def _register_i18n():
+            if "_" not in app.jinja_env.globals:
+~~                current_app.jinja_env.globals["_"] = state.i18n_domain.gettext
+~~            current_app.jinja_env.globals["_fsdomain"] = state.i18n_domain.gettext
+
+        @app.before_first_request
+        def _csrf_init():
+~~            if not current_app.config.get("WTF_CSRF_ENABLED", True):
+                return
+~~            csrf = current_app.extensions.get("csrf", None)
+
+            if cv("CSRF_PROTECT_MECHANISMS") != AUTHN_MECHANISMS:
+                if not csrf:
+                    raise ValueError(
+                        "CSRF_PROTECT_MECHANISMS defined but"
+                        " CsrfProtect not part of application"
+                    )
+~~                if current_app.config.get("WTF_CSRF_CHECK_DEFAULT", True):
+                    raise ValueError(
+                        "WTF_CSRF_CHECK_DEFAULT must be set to False if"
+                        " CSRF_PROTECT_MECHANISMS is set"
+                    )
+            if (
+                cv("CSRF_IGNORE_UNAUTH_ENDPOINTS")
+                and csrf
+~~                and current_app.config.get("WTF_CSRF_CHECK_DEFAULT", False)
+            ):
+                raise ValueError(
+                    "To ignore unauth endpoints you must set WTF_CSRF_CHECK_DEFAULT"
+                    " to False"
+                )
+
+            csrf_cookie = cv("CSRF_COOKIE")
+            if csrf_cookie and csrf_cookie["key"] and not csrf:
+                raise ValueError(
+                    "CSRF_COOKIE defined however CsrfProtect not part of application"
+                )
+
+            if csrf:
+                csrf.exempt("flask_security.views.logout")
+            if csrf_cookie and csrf_cookie["key"]:
+~~                current_app.after_request(csrf_cookie_handler)
+~~                current_app.config["WTF_CSRF_HEADERS"].append(cv("CSRF_HEADER"))
+
+        @app.before_first_request
+        def _init_phone_util():
+            state._phone_util = state.phone_util_cls()
+
+        @app.before_first_request
+        def _init_mail_util():
+            state._mail_util = state.mail_util_cls()
+
+        app.extensions["security"] = state
+
+        if hasattr(app, "cli"):
+            from .cli import users, roles
+
+            if state.cli_users_name:
+                app.cli.add_command(users, state.cli_users_name)
+            if state.cli_roles_name:
+                app.cli.add_command(roles, state.cli_roles_name)
+
+        for newc, oldc in [
+            ("SECURITY_SMS_SERVICE", "SECURITY_TWO_FACTOR_SMS_SERVICE"),
+            ("SECURITY_SMS_SERVICE_CONFIG", "SECURITY_TWO_FACTOR_SMS_SERVICE_CONFIG"),
+            ("SECURITY_TOTP_SECRETS", "SECURITY_TWO_FACTOR_SECRET"),
+            ("SECURITY_TOTP_ISSUER", "SECURITY_TWO_FACTOR_URI_SERVICE_NAME"),
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 12 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1683,7 +1944,7 @@ def run_migrations_online():
 ```
 
 
-## Example 12 from sandman2
+## Example 13 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1808,7 +2069,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 13 from tedivms-flask
+## Example 14 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

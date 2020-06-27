@@ -1,7 +1,7 @@
 title: flask.json jsonify code examples
 category: page
 slug: flask-json-jsonify-examples
-sortorder: 500021016
+sortorder: 500021018
 toc: False
 sidebartitle: flask.json jsonify
 meta: Python example code for the jsonify function from the flask.json module of the Flask project.

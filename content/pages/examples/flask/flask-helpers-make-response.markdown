@@ -1,7 +1,7 @@
 title: flask.helpers make_response code examples
 category: page
 slug: flask-helpers-make-response-examples
-sortorder: 500021014
+sortorder: 500021015
 toc: False
 sidebartitle: flask.helpers make_response
 meta: Python example code for the make_response function from the flask.helpers module of the Flask project.
@@ -197,7 +197,139 @@ def crossdomain(
 ```
 
 
-## Example 3 from newspie
+## Example 3 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / views.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./views.py)
+
+```python
+# views.py
+
+import time
+
+from flask import (
+    Blueprint,
+    abort,
+    after_this_request,
+    current_app,
+    jsonify,
+    request,
+    session,
+)
+from flask_login import current_user
+from werkzeug.datastructures import MultiDict
+from werkzeug.local import LocalProxy
+
+from .changeable import change_user_password
+from .confirmable import (
+    confirm_email_token_status,
+    confirm_user,
+    send_confirmation_instructions,
+)
+from .decorators import anonymous_user_required, auth_required, unauth_csrf
+from .passwordless import login_token_status, send_login_instructions
+from .quart_compat import get_quart_status
+from .unified_signin import (
+    us_signin,
+    us_signin_send_code,
+    us_qrcode,
+    us_setup,
+    us_setup_validate,
+    us_verify,
+    us_verify_link,
+    us_verify_send_code,
+)
+
+
+## ... source file abbreviated to get to make_response examples ...
+
+
+    get_message,
+    get_post_login_redirect,
+    get_post_logout_redirect,
+    get_post_register_redirect,
+    get_post_verify_redirect,
+    get_request_attr,
+    get_url,
+    json_error_response,
+    login_user,
+    logout_user,
+    send_mail,
+    slash_url_suffix,
+    suppress_form_csrf,
+    url_for_security,
+)
+
+if get_quart_status():  # pragma: no cover
+    from quart import make_response, redirect
+
+    async def _commit(response=None):
+        _datastore.commit()
+        return response
+
+
+else:
+~~    from flask import make_response, redirect
+
+    def _commit(response=None):
+        _datastore.commit()
+        return response
+
+
+_security = LocalProxy(lambda: current_app.extensions["security"])
+_datastore = LocalProxy(lambda: _security.datastore)
+
+
+def default_render_json(payload, code, headers, user):
+    if headers is None:
+        headers = dict()
+    headers["Content-Type"] = "application/json"
+    payload = dict(meta=dict(code=code), response=payload)
+~~    return make_response(jsonify(payload), code, headers)
+
+
+def _ctx(endpoint):
+    return _security._run_ctx_processor(endpoint)
+
+
+@unauth_csrf(fall_through=True)
+def login():
+
+    if current_user.is_authenticated and request.method == "POST":
+
+        if _security._want_json(request):
+            payload = json_error_response(
+                errors=get_message("ANONYMOUS_USER_REQUIRED")[0]
+            )
+            return _security._render_json(payload, 400, None, None)
+        else:
+            return redirect(get_post_login_redirect())
+
+    form_class = _security.login_form
+
+    if request.is_json:
+        if request.content_length:
+            form = form_class(MultiDict(request.get_json()), meta=suppress_form_csrf())
+
+
+## ... source file continues with no further make_response examples...
+
+```
+
+
+## Example 4 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -304,7 +436,7 @@ def parse_articles(response):
 ```
 
 
-## Example 4 from sandman2
+## Example 5 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
