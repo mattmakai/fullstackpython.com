@@ -4,10 +4,10 @@ slug: flask-globals-current-app-examples
 sortorder: 500021010
 toc: False
 sidebartitle: flask.globals current_app
-meta: Python example code for the current_app function from the flask.globals module of the Flask project.
+meta: Python example code for the current_app callable from the flask.globals module of the Flask project.
 
 
-current_app is a function within the flask.globals module of the Flask project.
+current_app is a callable within the flask.globals module of the Flask project.
 
 
 ## Example 1 from Flask AppBuilder

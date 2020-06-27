@@ -4,10 +4,10 @@ slug: flask-helpers-make-response-examples
 sortorder: 500021015
 toc: False
 sidebartitle: flask.helpers make_response
-meta: Python example code for the make_response function from the flask.helpers module of the Flask project.
+meta: Python example code for the make_response callable from the flask.helpers module of the Flask project.
 
 
-make_response is a function within the flask.helpers module of the Flask project.
+make_response is a callable within the flask.helpers module of the Flask project.
 
 
 ## Example 1 from Flask AppBuilder

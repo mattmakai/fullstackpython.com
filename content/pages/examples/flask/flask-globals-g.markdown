@@ -4,10 +4,10 @@ slug: flask-globals-g-examples
 sortorder: 500021011
 toc: False
 sidebartitle: flask.globals g
-meta: Python example code for the g function from the flask.globals module of the Flask project.
+meta: Python example code for the g callable from the flask.globals module of the Flask project.
 
 
-g is a function within the flask.globals module of the Flask project.
+g is a callable within the flask.globals module of the Flask project.
 
 
 ## Example 1 from Flask AppBuilder

@@ -4,10 +4,10 @@ slug: flask-helpers-send-file-examples
 sortorder: 500021016
 toc: False
 sidebartitle: flask.helpers send_file
-meta: Python example code for the send_file function from the flask.helpers module of the Flask project.
+meta: Python example code for the send_file callable from the flask.helpers module of the Flask project.
 
 
-send_file is a function within the flask.helpers module of the Flask project.
+send_file is a callable within the flask.helpers module of the Flask project.
 
 
 ## Example 1 from Flask-VueJs-Template

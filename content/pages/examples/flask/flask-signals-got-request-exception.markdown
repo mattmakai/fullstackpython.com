@@ -4,10 +4,10 @@ slug: flask-signals-got-request-exception-examples
 sortorder: 500021024
 toc: False
 sidebartitle: flask.signals got_request_exception
-meta: Python example code for the got_request_exception function from the flask.signals module of the Flask project.
+meta: Python example code for the got_request_exception callable from the flask.signals module of the Flask project.
 
 
-got_request_exception is a function within the flask.signals module of the Flask project.
+got_request_exception is a callable within the flask.signals module of the Flask project.
 
 
 ## Example 1 from flask-restx

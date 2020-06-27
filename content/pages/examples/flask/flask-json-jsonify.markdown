@@ -4,10 +4,10 @@ slug: flask-json-jsonify-examples
 sortorder: 500021019
 toc: False
 sidebartitle: flask.json jsonify
-meta: Python example code for the jsonify function from the flask.json module of the Flask project.
+meta: Python example code for the jsonify callable from the flask.json module of the Flask project.
 
 
-jsonify is a function within the flask.json module of the Flask project.
+jsonify is a callable within the flask.json module of the Flask project.
 
 
 ## Example 1 from Flask AppBuilder

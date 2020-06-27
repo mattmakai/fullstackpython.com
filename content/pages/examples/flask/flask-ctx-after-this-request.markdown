@@ -4,10 +4,10 @@ slug: flask-ctx-after-this-request-examples
 sortorder: 500021007
 toc: False
 sidebartitle: flask.ctx after_this_request
-meta: Python example code for the after_this_request function from the flask.ctx module of the Flask project.
+meta: Python example code for the after_this_request callable from the flask.ctx module of the Flask project.
 
 
-after_this_request is a function within the flask.ctx module of the Flask project.
+after_this_request is a callable within the flask.ctx module of the Flask project.
 
 
 ## Example 1 from Flask-Security-Too
