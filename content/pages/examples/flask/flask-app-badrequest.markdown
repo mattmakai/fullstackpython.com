@@ -71,6 +71,61 @@ from ..const import (
     API_LIST_TITLE_RIS_KEY,
 
 
+## ... source file abbreviated to get to BadRequest examples ...
+
+
+    API_SELECT_COLUMNS_RIS_KEY,
+    API_SHOW_COLUMNS_RES_KEY,
+    API_SHOW_COLUMNS_RIS_KEY,
+    API_SHOW_TITLE_RES_KEY,
+    API_SHOW_TITLE_RIS_KEY,
+    API_URI_RIS_KEY,
+    PERMISSION_PREFIX,
+)
+from ..exceptions import FABException, InvalidOrderByColumnFABException
+from ..security.decorators import permission_name, protect
+
+log = logging.getLogger(__name__)
+
+
+def get_error_msg():
+    if current_app.config.get("FAB_API_SHOW_STACKTRACE"):
+        return traceback.format_exc()
+    return "Fatal error"
+
+
+def safe(f):
+
+    def wraps(self, *args, **kwargs):
+        try:
+            return f(self, *args, **kwargs)
+~~        except BadRequest as e:
+            return self.response_400(message=str(e))
+        except Exception as e:
+            logging.exception(e)
+            return self.response_500(message=get_error_msg())
+
+    return functools.update_wrapper(wraps, f)
+
+
+def rison(schema=None):
+
+    def _rison(f):
+        def wraps(self, *args, **kwargs):
+            value = request.args.get(API_URI_RIS_KEY, None)
+            kwargs["rison"] = dict()
+            if value:
+                try:
+                    kwargs["rison"] = prison.loads(value)
+                except prison.decoder.ParserException:
+                    if current_app.config.get("FAB_API_ALLOW_JSON_QS", True):
+                        try:
+                            kwargs["rison"] = json.loads(
+                                urllib.parse.parse_qs(f"{API_URI_RIS_KEY}={value}").get(
+                                    API_URI_RIS_KEY
+                                )[0]
+
+
 ## ... source file continues with no further BadRequest examples...
 
 ```
