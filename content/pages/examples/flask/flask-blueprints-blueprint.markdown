@@ -656,7 +656,39 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 9 from Datadog Flask Example App
+## Example 9 from Flask-VueJs-Template
+[Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
+([demo site](https://flask-vuejs-template.herokuapp.com/))
+is a minimal [Flask](/flask.html) boilerplate starter project that
+combines Flask, [Vue.js](https://www.fullstackpython.com/vuejs.html),
+and [Flask-RESTPlus](https://flask-restplus.readthedocs.io/en/stable/).
+The project provides some sensible defaults that are easy to continue
+building on, and the source code is open source under the
+[MIT license](https://github.com/gtalarico/flask-vuejs-template/blob/master/LICENSE.md).
+
+[**Flask-VueJs-Template / app / client.py**](https://github.com/gtalarico/flask-vuejs-template/blob/master/app/./client.py)
+
+```python
+# client.py
+
+import os
+~~from flask import Blueprint, render_template
+
+~~client_bp = Blueprint('client_app', __name__,
+                      url_prefix='',
+                      static_url_path='',
+                      static_folder='./dist/static/',
+                      template_folder='./dist/',
+                      )
+
+
+
+## ... source file continues with no further Blueprint examples...
+
+```
+
+
+## Example 10 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -703,7 +735,7 @@ def bp_after_request(response):
 ```
 
 
-## Example 10 from tedivms-flask
+## Example 11 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

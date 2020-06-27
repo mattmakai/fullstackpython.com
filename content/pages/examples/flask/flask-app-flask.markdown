@@ -457,7 +457,118 @@ from app.models import User
 ```
 
 
-## Example 8 from Flask-User
+## Example 8 from Flask-SocketIO
+[Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
+([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
+[official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+and
+[project documentation](https://flask-socketio.readthedocs.io/en/latest/))
+is a code library by [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+that provides Socket.IO integration for [Flask](/flask.html) applications.
+This extension makes it easier to add bi-directional communications on the
+web via the [WebSockets](/websockets.html) protocol.
+
+The Flask-SocketIO project is open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/LICENSE).
+
+[**Flask-SocketIO / test_socketio.py**](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/././test_socketio.py)
+
+```python
+# test_socketio.py
+import json
+import unittest
+import coverage
+
+cov = coverage.coverage(branch=True)
+cov.start()
+
+~~from flask import Flask, session, request, json as flask_json
+from flask_socketio import SocketIO, send, emit, join_room, leave_room, \
+    Namespace, disconnect
+
+~~app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret'
+socketio = SocketIO(app)
+disconnected = None
+
+
+@socketio.on('connect')
+def on_connect():
+    if request.args.get('fail'):
+        return False
+    send('connected')
+    send(json.dumps(request.args.to_dict(flat=False)))
+    send(json.dumps({h: request.headers[h] for h in request.headers.keys()
+                     if h not in ['Host', 'Content-Type', 'Content-Length']}))
+
+
+@socketio.on('disconnect')
+def on_disconnect():
+    global disconnected
+    disconnected = '/'
+
+
+@socketio.on('connect', namespace='/test')
+def on_connect_test():
+    send('connected-test')
+
+
+## ... source file abbreviated to get to Flask examples ...
+
+
+        client.emit('exit', {}, namespace='/ns')
+        self.assertFalse(client.is_connected('/ns'))
+        with self.assertRaises(RuntimeError):
+            client.emit('hello', {}, namespace='/ns')
+
+    def test_emit_class_based(self):
+        client = socketio.test_client(app, namespace='/ns')
+        client.get_received('/ns')
+        client.emit('my_custom_event', {'a': 'b'}, namespace='/ns')
+        received = client.get_received('/ns')
+        self.assertEqual(len(received), 1)
+        self.assertEqual(len(received[0]['args']), 1)
+        self.assertEqual(received[0]['name'], 'my custom response')
+        self.assertEqual(received[0]['args'][0]['a'], 'b')
+
+    def test_request_event_data_class_based(self):
+        client = socketio.test_client(app, namespace='/ns')
+        client.get_received('/ns')
+        global request_event_data
+        request_event_data = None
+        client.emit('other_custom_event', 'foo', namespace='/ns')
+        expected_data = {'message': 'other_custom_event', 'args': ('foo',)}
+        self.assertEqual(request_event_data, expected_data)
+
+    def test_delayed_init(self):
+~~        app = Flask(__name__)
+        socketio = SocketIO(allow_upgrades=False, json=flask_json)
+
+        @socketio.on('connect')
+        def on_connect():
+            send({'connected': 'foo'}, json=True)
+
+        socketio.init_app(app, cookie='foo')
+        self.assertFalse(socketio.server.eio.allow_upgrades)
+        self.assertEqual(socketio.server.eio.cookie, 'foo')
+
+        client = socketio.test_client(app)
+        received = client.get_received()
+        self.assertEqual(len(received), 1)
+        self.assertEqual(received[0]['args'], {'connected': 'foo'})
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 9 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -540,7 +651,48 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 9 from Flasky
+## Example 10 from Flask-VueJs-Template
+[Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
+([demo site](https://flask-vuejs-template.herokuapp.com/))
+is a minimal [Flask](/flask.html) boilerplate starter project that
+combines Flask, [Vue.js](https://www.fullstackpython.com/vuejs.html),
+and [Flask-RESTPlus](https://flask-restplus.readthedocs.io/en/stable/).
+The project provides some sensible defaults that are easy to continue
+building on, and the source code is open source under the
+[MIT license](https://github.com/gtalarico/flask-vuejs-template/blob/master/LICENSE.md).
+
+[**Flask-VueJs-Template / app / __init__.py**](https://github.com/gtalarico/flask-vuejs-template/blob/master/app/./__init__.py)
+
+```python
+# __init__.py
+import os
+~~from flask import Flask, current_app, send_file
+
+from .api import api_bp
+from .client import client_bp
+
+~~app = Flask(__name__, static_folder='../dist/static')
+app.register_blueprint(api_bp)
+
+from .config import Config
+app.logger.info('>>> {}'.format(Config.FLASK_ENV))
+
+@app.route('/')
+def index_client():
+    dist_dir = current_app.config['DIST_DIR']
+    entry = os.path.join(dist_dir, 'index.html')
+    return send_file(entry)
+
+
+
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 11 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -604,7 +756,7 @@ def create_app(config_name):
 ```
 
 
-## Example 10 from Datadog Flask Example App
+## Example 12 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -665,7 +817,7 @@ def before_request():
 ```
 
 
-## Example 11 from sandman2
+## Example 13 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -746,7 +898,7 @@ def get_app(
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 14 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

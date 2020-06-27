@@ -64,8 +64,11 @@ on GitHub.
       [has_app_context](/flask-ctx-has-app-context-examples.html) and
       [has_request_context](/flask-ctx-has-request-context-examples.html)
     * flask.globals [current_app](/flask-globals-current-app-examples.html)
+    * flask.helpers [send_file](flask-helpers-send-file-examples.html)
     * flask.json [JSONEncoder](/flask-json-jsonencoder-examples.html)
     * flask.sessions [BadSignature](/flask-sessions-badsignature-examples.html)
+      and
+      [SessionMixin](/flask-sessions-sessionmixin-examples.html)
 
 ### May
 * Added new example code pages for Flask modules:

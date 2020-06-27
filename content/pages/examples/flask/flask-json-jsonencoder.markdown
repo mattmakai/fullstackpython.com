@@ -1,7 +1,7 @@
 title: flask.json JSONEncoder code examples
 category: page
 slug: flask-json-jsonencoder-examples
-sortorder: 500021017
+sortorder: 500021018
 toc: False
 sidebartitle: flask.json JSONEncoder
 meta: Python example code for the JSONEncoder class from the flask.json module of the Flask project.

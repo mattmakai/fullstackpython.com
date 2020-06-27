@@ -99,7 +99,7 @@ get basic APIs running for existing applications and it exposes
 endpoint documentation using [Swagger](https://swagger.io/).
 
 Flask RESTX is provided as open source under the
-[BSD  3-Clause license](https://github.com/python-restx/flask-restx/blob/master/LICENSE).
+[BSD 3-Clause license](https://github.com/python-restx/flask-restx/blob/master/LICENSE).
 
 
 ### Flask-Security-Too
@@ -118,6 +118,21 @@ The Flask-Security-Too project is provided as open source under the
 [MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
 
 
+### Flask-SocketIO
+[Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
+([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
+[official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+and
+[project documentation](https://flask-socketio.readthedocs.io/en/latest/))
+is a code library by [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+that provides Socket.IO integration for [Flask](/flask.html) applications.
+This extension makes it easier to add bi-directional communications on the 
+web via the [WebSockets](/websockets.html) protocol.
+
+The Flask-SocketIO project is open source under the 
+[MIT license](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/LICENSE).
+
+
 ### Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
@@ -129,6 +144,17 @@ you are building. The extension supports persistent data storage
 through both [relational databases](/databases.html) and
 [MongoDB](/mongodb.html). The project is provided as open source under
 the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+
+### Flask-VueJs-Template
+[Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
+([demo site](https://flask-vuejs-template.herokuapp.com/))
+is a minimal [Flask](/flask.html) boilerplate starter project that
+combines Flask, [Vue.js](https://www.fullstackpython.com/vuejs.html),
+and [Flask-RESTPlus](https://flask-restplus.readthedocs.io/en/stable/).
+The project provides some sensible defaults that are easy to continue
+building on, and the source code is open source under the
+[MIT license](https://github.com/gtalarico/flask-vuejs-template/blob/master/LICENSE.md).
 
 
 ### Flask-WTF

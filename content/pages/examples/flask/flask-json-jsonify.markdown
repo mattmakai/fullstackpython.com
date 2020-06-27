@@ -1,7 +1,7 @@
 title: flask.json jsonify code examples
 category: page
 slug: flask-json-jsonify-examples
-sortorder: 500021018
+sortorder: 500021019
 toc: False
 sidebartitle: flask.json jsonify
 meta: Python example code for the jsonify function from the flask.json module of the Flask project.
@@ -581,7 +581,89 @@ def contact():
 ```
 
 
-## Example 4 from Datadog Flask Example App
+## Example 4 from Flask-SocketIO
+[Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
+([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
+[official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+and
+[project documentation](https://flask-socketio.readthedocs.io/en/latest/))
+is a code library by [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+that provides Socket.IO integration for [Flask](/flask.html) applications.
+This extension makes it easier to add bi-directional communications on the
+web via the [WebSockets](/websockets.html) protocol.
+
+The Flask-SocketIO project is open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/LICENSE).
+
+[**Flask-SocketIO / example / sessions.py**](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/./example/sessions.py)
+
+```python
+# sessions.py
+~~from flask import Flask, render_template, session, request, jsonify
+from flask_login import LoginManager, UserMixin, current_user, login_user, \
+    logout_user
+from flask_session import Session
+from flask_socketio import SocketIO, emit
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'top-secret!'
+app.config['SESSION_TYPE'] = 'filesystem'
+login = LoginManager(app)
+Session(app)
+socketio = SocketIO(app, manage_session=False)
+
+
+class User(UserMixin, object):
+    def __init__(self, id=None):
+        self.id = id
+
+
+@login.user_loader
+def load_user(id):
+    return User(id)
+
+
+@app.route('/')
+def index():
+    return render_template('sessions.html')
+
+
+@app.route('/session', methods=['GET', 'POST'])
+def session_access():
+    if request.method == 'GET':
+~~        return jsonify({
+            'session': session.get('value', ''),
+            'user': current_user.id
+                if current_user.is_authenticated else 'anonymous'
+        })
+    data = request.get_json()
+    if 'session' in data:
+        session['value'] = data['session']
+    elif 'user' in data:
+        if data['user']:
+            login_user(User(data['user']))
+        else:
+            logout_user()
+    return '', 204
+
+
+@socketio.on('get-session')
+def get_session():
+    emit('refresh-session', {
+        'session': session.get('value', ''),
+        'user': current_user.id
+            if current_user.is_authenticated else 'anonymous'
+    })
+
+
+
+
+## ... source file continues with no further jsonify examples...
+
+```
+
+
+## Example 5 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -683,7 +765,7 @@ def stream():
 ```
 
 
-## Example 5 from sandman2
+## Example 6 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -851,7 +933,7 @@ class Service(MethodView):
 ```
 
 
-## Example 6 from tedivms-flask
+## Example 7 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

@@ -1,7 +1,7 @@
 title: flask.templating render_template code examples
 category: page
 slug: flask-templating-render-template-examples
-sortorder: 500021023
+sortorder: 500021025
 toc: False
 sidebartitle: flask.templating render_template
 meta: Python example code for the render_template function from the flask.templating module of the Flask project.
@@ -904,7 +904,83 @@ from .forms import (
 ```
 
 
-## Example 10 from Flask-User
+## Example 10 from Flask-SocketIO
+[Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
+([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
+[official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+and
+[project documentation](https://flask-socketio.readthedocs.io/en/latest/))
+is a code library by [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+that provides Socket.IO integration for [Flask](/flask.html) applications.
+This extension makes it easier to add bi-directional communications on the
+web via the [WebSockets](/websockets.html) protocol.
+
+The Flask-SocketIO project is open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/LICENSE).
+
+[**Flask-SocketIO / example / sessions.py**](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/./example/sessions.py)
+
+```python
+# sessions.py
+~~from flask import Flask, render_template, session, request, jsonify
+from flask_login import LoginManager, UserMixin, current_user, login_user, \
+    logout_user
+from flask_session import Session
+from flask_socketio import SocketIO, emit
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'top-secret!'
+app.config['SESSION_TYPE'] = 'filesystem'
+login = LoginManager(app)
+Session(app)
+socketio = SocketIO(app, manage_session=False)
+
+
+class User(UserMixin, object):
+    def __init__(self, id=None):
+        self.id = id
+
+
+@login.user_loader
+def load_user(id):
+    return User(id)
+
+
+@app.route('/')
+def index():
+~~    return render_template('sessions.html')
+
+
+@app.route('/session', methods=['GET', 'POST'])
+def session_access():
+    if request.method == 'GET':
+        return jsonify({
+            'session': session.get('value', ''),
+            'user': current_user.id
+                if current_user.is_authenticated else 'anonymous'
+        })
+    data = request.get_json()
+    if 'session' in data:
+        session['value'] = data['session']
+    elif 'user' in data:
+        if data['user']:
+            login_user(User(data['user']))
+        else:
+            logout_user()
+    return '', 204
+
+
+@socketio.on('get-session')
+def get_session():
+    emit('refresh-session', {
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 11 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -996,7 +1072,7 @@ class EmailManager(object):
 ```
 
 
-## Example 11 from Flasky
+## Example 12 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1036,7 +1112,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 12 from Datadog Flask Example App
+## Example 13 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1138,7 +1214,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 13 from newspie
+## Example 14 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1293,7 +1369,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 14 from tedivms-flask
+## Example 15 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

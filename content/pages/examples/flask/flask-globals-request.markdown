@@ -1786,7 +1786,231 @@ class ChangePasswordForm(Form, PasswordFormMixin):
 ```
 
 
-## Example 11 from Flask-User
+## Example 11 from Flask-SocketIO
+[Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
+([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
+[official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+and
+[project documentation](https://flask-socketio.readthedocs.io/en/latest/))
+is a code library by [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+that provides Socket.IO integration for [Flask](/flask.html) applications.
+This extension makes it easier to add bi-directional communications on the
+web via the [WebSockets](/websockets.html) protocol.
+
+The Flask-SocketIO project is open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/LICENSE).
+
+[**Flask-SocketIO / test_socketio.py**](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/././test_socketio.py)
+
+```python
+# test_socketio.py
+import json
+import unittest
+import coverage
+
+cov = coverage.coverage(branch=True)
+cov.start()
+
+~~from flask import Flask, session, request, json as flask_json
+from flask_socketio import SocketIO, send, emit, join_room, leave_room, \
+    Namespace, disconnect
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret'
+socketio = SocketIO(app)
+disconnected = None
+
+
+@socketio.on('connect')
+def on_connect():
+~~    if request.args.get('fail'):
+        return False
+    send('connected')
+    send(json.dumps(request.args.to_dict(flat=False)))
+~~    send(json.dumps({h: request.headers[h] for h in request.headers.keys()
+                     if h not in ['Host', 'Content-Type', 'Content-Length']}))
+
+
+@socketio.on('disconnect')
+def on_disconnect():
+    global disconnected
+    disconnected = '/'
+
+
+@socketio.on('connect', namespace='/test')
+def on_connect_test():
+    send('connected-test')
+    send(json.dumps(request.args.to_dict(flat=False)))
+~~    send(json.dumps({h: request.headers[h] for h in request.headers.keys()
+                     if h not in ['Host', 'Content-Type', 'Content-Length']}))
+
+
+@socketio.on('disconnect', namespace='/test')
+def on_disconnect_test():
+    global disconnected
+    disconnected = '/test'
+
+
+@socketio.on('message')
+def on_message(message):
+    send(message)
+    if message == 'test session':
+        session['a'] = 'b'
+    if message not in "test noackargs":
+        return message
+
+
+@socketio.on('json')
+def on_json(data):
+    send(data, json=True, broadcast=True)
+    if not data.get('noackargs'):
+        return data
+
+
+@socketio.on('message', namespace='/test')
+def on_message_test(message):
+    send(message)
+
+
+@socketio.on('json', namespace='/test')
+def on_json_test(data):
+    send(data, json=True, namespace='/test')
+
+
+@socketio.on('my custom event')
+def on_custom_event(data):
+    emit('my custom response', data)
+    if not data.get('noackargs'):
+        return data
+
+
+@socketio.on('other custom event')
+@socketio.on('and another custom event')
+def get_request_event(data):
+    global request_event_data
+~~    request_event_data = request.event
+    emit('my custom response', data)
+
+
+def get_request_event2(data):
+    global request_event_data
+~~    request_event_data = request.event
+    emit('my custom response', data)
+
+socketio.on_event('yet another custom event', get_request_event2)
+
+
+@socketio.on('my custom namespace event', namespace='/test')
+def on_custom_event_test(data):
+    emit('my custom namespace response', data, namespace='/test')
+
+
+def on_custom_event_test2(data):
+    emit('my custom namespace response', data, namespace='/test')
+
+socketio.on_event('yet another custom namespace event', on_custom_event_test2,
+                  namespace='/test')
+
+
+@socketio.on('my custom broadcast event')
+def on_custom_event_broadcast(data):
+    emit('my custom response', data, broadcast=True)
+
+
+@socketio.on('my custom broadcast namespace event', namespace='/test')
+def on_custom_event_broadcast_test(data):
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+@socketio.on("error testing", namespace='/test')
+def raise_error_namespace(data):
+    raise AssertionError()
+
+
+@socketio.on_error_default
+def error_handler_default(value):
+    if isinstance(value, AssertionError):
+        global error_testing_default
+        error_testing_default = True
+    else:
+        raise value
+    return value
+
+
+@socketio.on("error testing", namespace='/unused_namespace')
+def raise_error_default(data):
+    raise AssertionError()
+
+
+class MyNamespace(Namespace):
+    def on_connect(self):
+        send('connected-ns')
+        send(json.dumps(request.args.to_dict(flat=False)))
+        send(json.dumps(
+~~            {h: request.headers[h] for h in request.headers.keys()
+             if h not in ['Host', 'Content-Type', 'Content-Length']}))
+
+    def on_disconnect(self):
+        global disconnected
+        disconnected = '/ns'
+
+    def on_message(self, message):
+        send(message)
+        if message == 'test session':
+            session['a'] = 'b'
+        if message not in "test noackargs":
+            return message
+
+    def on_json(self, data):
+        send(data, json=True, broadcast=True)
+        if not data.get('noackargs'):
+            return data
+
+    def on_exit(self, data):
+        disconnect()
+
+    def on_my_custom_event(self, data):
+        emit('my custom response', data)
+        if not data.get('noackargs'):
+            return data
+
+    def on_other_custom_event(self, data):
+        global request_event_data
+~~        request_event_data = request.event
+        emit('my custom response', data)
+
+
+socketio.on_namespace(MyNamespace('/ns'))
+
+
+@app.route('/session')
+def session_route():
+    session['foo'] = 'bar'
+    return ''
+
+
+class TestSocketIO(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        cov.stop()
+        cov.report(include='flask_socketio/*', show_missing=True)
+
+    def setUp(self):
+        pass
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 12 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1850,7 +2074,42 @@ def init_translations(babel):
 ```
 
 
-## Example 12 from newspie
+## Example 13 from Flask-VueJs-Template
+[Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
+([demo site](https://flask-vuejs-template.herokuapp.com/))
+is a minimal [Flask](/flask.html) boilerplate starter project that
+combines Flask, [Vue.js](https://www.fullstackpython.com/vuejs.html),
+and [Flask-RESTPlus](https://flask-restplus.readthedocs.io/en/stable/).
+The project provides some sensible defaults that are easy to continue
+building on, and the source code is open source under the
+[MIT license](https://github.com/gtalarico/flask-vuejs-template/blob/master/LICENSE.md).
+
+[**Flask-VueJs-Template / app / api / security.py**](https://github.com/gtalarico/flask-vuejs-template/blob/master/app/api/security.py)
+
+```python
+# security.py
+from functools import wraps
+~~from flask import request
+from flask_restplus import abort
+
+
+def require_auth(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+~~        if request.headers.get('authorization'):
+            return func(*args, **kwargs)
+        else:
+            return abort(401)
+    return wrapper
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 14 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2031,7 +2290,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 13 from sandman2
+## Example 15 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2232,7 +2491,7 @@ class Service(MethodView):
 ```
 
 
-## Example 14 from tedivms-flask
+## Example 16 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
