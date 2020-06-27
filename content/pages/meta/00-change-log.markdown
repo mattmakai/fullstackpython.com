@@ -60,9 +60,11 @@ on GitHub.
       [ungettext_lazy](/django-utils-translation-ungettext-lazy-examples.html)
 * Added new example code pages for Flask modules:
     * flask.blueprints [Blueprint](/flask-blueprints-blueprint-examples.html)
-    * flask.ctx [has_app_context](/flask-ctx-has-app-context-examples.html) and
+    * flask.ctx [after_this_request](/flask-ctx-after-this-request-examples.html),
+      [has_app_context](/flask-ctx-has-app-context-examples.html) and
       [has_request_context](/flask-ctx-has-request-context-examples.html)
     * flask.globals [current_app](/flask-globals-current-app-examples.html)
+    * flask.json [JSONEncoder](/flask-json-jsonencoder-examples.html)
     * flask.sessions [BadSignature](/flask-sessions-badsignature-examples.html)
 
 ### May
