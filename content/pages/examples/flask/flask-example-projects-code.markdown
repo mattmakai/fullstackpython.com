@@ -63,6 +63,7 @@ JavaScript plugin with the
 library. flask-phone-input is provided as open source under the
 [MIT license](https://github.com/miguelgrinberg/flask-phone-input/blob/1a1c227c044474ce0fe133493d7f8b0fb8312409/LICENSE).
 
+
 ### flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate 
 starter project to build a software-as-a-service (SaaS) web application
@@ -82,6 +83,17 @@ example application by
 while teaching developers how to use [Flask](/flask.html) in 
 [his books and videos](https://courses.miguelgrinberg.com/). Flasky
 is [open sourced under the MIT license](https://github.com/miguelgrinberg/flasky/blob/master/LICENSE).
+
+
+### Deploy Keras Model with Flask as Web App in 10 Minutes
+The 
+[keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
+project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
+with the [Keras deep learning library](https://keras.io/) to provide
+an example image classifier that is easy to [deploy](/deployment.html).
+The application can be quckly run in a [Docker](/docker.html) container
+on your local development environment. The project is licensed under the
+[GNU General Public License v3.0](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/LICENSE).
 
 
 ### newspie

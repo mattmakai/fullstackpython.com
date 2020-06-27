@@ -113,7 +113,97 @@ def permission_name(name):
 ```
 
 
-## Example 2 from flask-restx
+## Example 2 from Flask-HTTPAuth
+[Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
+([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/Flask-HTTPAuth/))
+is a [Flask](/flask.html) framework extension that creates
+Basic and Digest HTTP authentication for routes. This project
+is primarily built and maintained by
+[Miguel Grinberg](https://blog.miguelgrinberg.com/). It is provided
+as open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/LICENSE).
+
+[**Flask-HTTPAuth / flask_httpauth.py**](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/././flask_httpauth.py)
+
+```python
+# flask_httpauth.py
+
+from base64 import b64decode
+from functools import wraps
+from hashlib import md5
+from random import Random, SystemRandom
+~~from flask import request, make_response, session, g
+from werkzeug.datastructures import Authorization
+from werkzeug.security import safe_str_cmp
+
+__version__ = '4.1.1dev'
+
+
+class HTTPAuth(object):
+    def __init__(self, scheme=None, realm=None, header=None):
+        self.scheme = scheme
+        self.realm = realm or "Authentication Required"
+        self.header = header
+        self.get_password_callback = None
+        self.get_user_roles_callback = None
+        self.auth_error_callback = None
+
+        def default_get_password(username):
+            return None
+
+        def default_auth_error(status):
+            return "Unauthorized Access", status
+
+        self.get_password(default_get_password)
+        self.error_handler(default_auth_error)
+
+    def get_password(self, f):
+        self.get_password_callback = f
+        return f
+
+    def get_user_roles(self, f):
+        self.get_user_roles_callback = f
+        return f
+
+    def error_handler(self, f):
+        @wraps(f)
+        def decorated(*args, **kwargs):
+            res = f(*args, **kwargs)
+~~            res = make_response(res)
+            if res.status_code == 200:
+                res.status_code = 401
+            if 'WWW-Authenticate' not in res.headers.keys():
+                res.headers['WWW-Authenticate'] = self.authenticate_header()
+            return res
+        self.auth_error_callback = decorated
+        return decorated
+
+    def authenticate_header(self):
+        return '{0} realm="{1}"'.format(self.scheme, self.realm)
+
+    def get_auth(self):
+        auth = None
+        if self.header is None or self.header == 'Authorization':
+            auth = request.authorization
+            if auth is None and 'Authorization' in request.headers:
+                try:
+                    auth_type, token = request.headers['Authorization'].split(
+                        None, 1)
+                    auth = Authorization(auth_type, {'token': token})
+                except (ValueError, KeyError):
+                    pass
+        elif self.header in request.headers:
+            auth = Authorization(self.scheme,
+
+
+## ... source file continues with no further make_response examples...
+
+```
+
+
+## Example 3 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -197,7 +287,7 @@ def crossdomain(
 ```
 
 
-## Example 3 from Flask-Security-Too
+## Example 4 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -329,7 +419,7 @@ def login():
 ```
 
 
-## Example 4 from newspie
+## Example 5 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -436,7 +526,7 @@ def parse_articles(response):
 ```
 
 
-## Example 5 from sandman2
+## Example 6 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and

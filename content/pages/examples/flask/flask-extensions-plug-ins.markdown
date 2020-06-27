@@ -78,6 +78,19 @@ mode. The project is provided as open source under
 [this license](https://github.com/flask-debugtoolbar/flask-debugtoolbar/blob/master/LICENSE).
 
 
+### Flask-HTTPAuth
+[Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
+([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/Flask-HTTPAuth/))
+is a [Flask](/flask.html) framework extension that creates
+Basic and Digest HTTP authentication for routes. This project
+is primarily built and maintained by 
+[Miguel Grinberg](https://blog.miguelgrinberg.com/). It is provided
+as open source under the 
+[MIT license](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/LICENSE).
+
+
 ### Flask-Login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)

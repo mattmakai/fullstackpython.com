@@ -429,7 +429,163 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 4 from Flask-WTF
+## Example 4 from Flask-HTTPAuth
+[Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
+([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/Flask-HTTPAuth/))
+is a [Flask](/flask.html) framework extension that creates
+Basic and Digest HTTP authentication for routes. This project
+is primarily built and maintained by
+[Miguel Grinberg](https://blog.miguelgrinberg.com/). It is provided
+as open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/LICENSE).
+
+[**Flask-HTTPAuth / flask_httpauth.py**](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/././flask_httpauth.py)
+
+```python
+# flask_httpauth.py
+
+from base64 import b64decode
+from functools import wraps
+from hashlib import md5
+from random import Random, SystemRandom
+~~from flask import request, make_response, session, g
+from werkzeug.datastructures import Authorization
+from werkzeug.security import safe_str_cmp
+
+__version__ = '4.1.1dev'
+
+
+class HTTPAuth(object):
+    def __init__(self, scheme=None, realm=None, header=None):
+        self.scheme = scheme
+        self.realm = realm or "Authentication Required"
+        self.header = header
+        self.get_password_callback = None
+        self.get_user_roles_callback = None
+        self.auth_error_callback = None
+
+        def default_get_password(username):
+            return None
+
+        def default_auth_error(status):
+            return "Unauthorized Access", status
+
+        self.get_password(default_get_password)
+        self.error_handler(default_auth_error)
+
+
+
+## ... source file abbreviated to get to g examples ...
+
+
+                (role is not None or optional is not None):  # pragma: no cover
+            raise ValueError(
+                'role and optional are the only supported arguments')
+
+        def login_required_internal(f):
+            @wraps(f)
+            def decorated(*args, **kwargs):
+                auth = self.get_auth()
+
+                if request.method != 'OPTIONS':  # pragma: no cover
+                    password = self.get_auth_password(auth)
+
+                    status = None
+                    user = self.authenticate(auth, password)
+                    if user in (False, None):
+                        status = 401
+                    elif not self.authorize(role, user, auth):
+                        status = 403
+                    if not optional and status:
+                        request.data
+                        try:
+                            return self.auth_error_callback(status)
+                        except TypeError:
+                            return self.auth_error_callback()
+
+~~                    g.flask_httpauth_user = user if user is not True \
+                        else auth.username if auth else None
+                return f(*args, **kwargs)
+            return decorated
+
+        if f:
+            return login_required_internal(f)
+        return login_required_internal
+
+    def username(self):
+        if not request.authorization:
+            return ""
+        return request.authorization.username
+
+    def current_user(self):
+        if hasattr(g, 'flask_httpauth_user'):
+~~            return g.flask_httpauth_user
+
+
+class HTTPBasicAuth(HTTPAuth):
+    def __init__(self, scheme=None, realm=None):
+        super(HTTPBasicAuth, self).__init__(scheme or 'Basic', realm)
+
+        self.hash_password_callback = None
+        self.verify_password_callback = None
+
+    def hash_password(self, f):
+        self.hash_password_callback = f
+        return f
+
+    def verify_password(self, f):
+        self.verify_password_callback = f
+        return f
+
+    def get_auth(self):
+        header = self.header or 'Authorization'
+        if header not in request.headers:
+            return None
+        value = request.headers[header].encode('utf-8')
+        try:
+            scheme, credentials = value.split(b' ', 1)
+
+
+## ... source file abbreviated to get to g examples ...
+
+
+            def decorated(*args, **kwargs):
+                selected_auth = None
+                if 'Authorization' in request.headers:
+                    try:
+                        scheme, creds = request.headers[
+                            'Authorization'].split(None, 1)
+                    except ValueError:
+                        pass
+                    else:
+                        for auth in self.additional_auth:
+                            if auth.scheme == scheme:
+                                selected_auth = auth
+                                break
+                if selected_auth is None:
+                    selected_auth = self.main_auth
+                return selected_auth.login_required(role=role)(f)(
+                    *args, **kwargs)
+            return decorated
+
+        if f:
+            return login_required_internal(f)
+        return login_required_internal
+
+    def current_user(self):
+        if hasattr(g, 'flask_httpauth_user'):  # pragma: no cover
+~~            return g.flask_httpauth_user
+
+
+
+## ... source file continues with no further g examples...
+
+```
+
+
+## Example 5 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -630,7 +786,7 @@ class CSRFProtect(object):
 ```
 
 
-## Example 5 from Flask-Security-Too
+## Example 6 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -750,7 +906,7 @@ def check_and_update_authn_fresh(within, grace, method=None):
 ```
 
 
-## Example 6 from Flask-User
+## Example 7 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -847,7 +1003,7 @@ def allow_unconfirmed_email(view_function):
 ```
 
 
-## Example 7 from tedivms-flask
+## Example 8 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

@@ -356,7 +356,63 @@ def logout():
 ```
 
 
-## Example 6 from flask-phone-input
+## Example 6 from Flask-HTTPAuth
+[Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
+([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/Flask-HTTPAuth/))
+is a [Flask](/flask.html) framework extension that creates
+Basic and Digest HTTP authentication for routes. This project
+is primarily built and maintained by
+[Miguel Grinberg](https://blog.miguelgrinberg.com/). It is provided
+as open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/LICENSE).
+
+[**Flask-HTTPAuth / tests / test_basic_get_password.py**](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/./tests/test_basic_get_password.py)
+
+```python
+# test_basic_get_password.py
+import unittest
+import base64
+~~from flask import Flask
+from flask_httpauth import HTTPBasicAuth
+
+
+class HTTPAuthTestCase(unittest.TestCase):
+    def setUp(self):
+~~        app = Flask(__name__)
+        app.config['SECRET_KEY'] = 'my secret'
+
+        basic_auth = HTTPBasicAuth()
+
+        @basic_auth.get_password
+        def get_basic_password(username):
+            if username == 'john':
+                return 'hello'
+            elif username == 'susan':
+                return 'bye'
+            else:
+                return None
+
+        @app.route('/')
+        def index():
+            return 'index'
+
+        @app.route('/basic')
+        @basic_auth.login_required
+        def basic_auth_route():
+            return 'basic_auth:' + basic_auth.username()
+
+        self.app = app
+        self.basic_auth = basic_auth
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 7 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -408,7 +464,7 @@ def index():
 ```
 
 
-## Example 7 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -457,7 +513,7 @@ from app.models import User
 ```
 
 
-## Example 8 from Flask-SocketIO
+## Example 9 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -568,7 +624,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 9 from Flask-User
+## Example 10 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -651,7 +707,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 10 from Flask-VueJs-Template
+## Example 11 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -692,7 +748,7 @@ def index_client():
 ```
 
 
-## Example 11 from Flasky
+## Example 12 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -756,7 +812,7 @@ def create_app(config_name):
 ```
 
 
-## Example 12 from Datadog Flask Example App
+## Example 13 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -817,7 +873,71 @@ def before_request():
 ```
 
 
-## Example 13 from sandman2
+## Example 14 from keras-flask-deploy-webapp
+The
+[keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
+project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
+with the [Keras deep learning library](https://keras.io/) to provide
+an example image classifier that is easy to [deploy](/deployment.html).
+The application can be quckly run in a [Docker](/docker.html) container
+on your local development environment. The project is licensed under the
+[GNU General Public License v3.0](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/LICENSE).
+
+[**keras-flask-deploy-webapp / app.py**](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/././app.py)
+
+```python
+# app.py
+import os
+import sys
+
+~~from flask import Flask, redirect, url_for, request, render_template, Response, jsonify, redirect
+from werkzeug.utils import secure_filename
+from gevent.pywsgi import WSGIServer
+
+import tensorflow as tf
+from tensorflow import keras
+
+from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
+
+import numpy as np
+from util import base64_to_pil
+
+
+~~app = Flask(__name__)
+
+
+from keras.applications.mobilenet_v2 import MobileNetV2
+model = MobileNetV2(weights='imagenet')
+
+print('Model loaded. Check http://127.0.0.1:5000/')
+
+
+MODEL_PATH = 'models/your_model.h5'
+
+
+
+def model_predict(img, model):
+    img = img.resize((224, 224))
+
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+
+    x = preprocess_input(x, mode='tf')
+
+    preds = model.predict(x)
+    return preds
+
+
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 15 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -898,7 +1018,7 @@ def get_app(
 ```
 
 
-## Example 14 from tedivms-flask
+## Example 16 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

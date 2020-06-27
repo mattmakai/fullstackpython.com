@@ -321,7 +321,125 @@ if __name__ == "__main__":
 ```
 
 
-## Example 4 from flask-login
+## Example 4 from Flask-HTTPAuth
+[Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
+([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/Flask-HTTPAuth/))
+is a [Flask](/flask.html) framework extension that creates
+Basic and Digest HTTP authentication for routes. This project
+is primarily built and maintained by
+[Miguel Grinberg](https://blog.miguelgrinberg.com/). It is provided
+as open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/LICENSE).
+
+[**Flask-HTTPAuth / flask_httpauth.py**](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/././flask_httpauth.py)
+
+```python
+# flask_httpauth.py
+
+from base64 import b64decode
+from functools import wraps
+from hashlib import md5
+from random import Random, SystemRandom
+~~from flask import request, make_response, session, g
+from werkzeug.datastructures import Authorization
+from werkzeug.security import safe_str_cmp
+
+__version__ = '4.1.1dev'
+
+
+class HTTPAuth(object):
+    def __init__(self, scheme=None, realm=None, header=None):
+        self.scheme = scheme
+        self.realm = realm or "Authentication Required"
+        self.header = header
+        self.get_password_callback = None
+        self.get_user_roles_callback = None
+        self.auth_error_callback = None
+
+        def default_get_password(username):
+            return None
+
+        def default_auth_error(status):
+            return "Unauthorized Access", status
+
+        self.get_password(default_get_password)
+        self.error_handler(default_auth_error)
+
+
+
+## ... source file abbreviated to get to session examples ...
+
+
+
+
+class HTTPDigestAuth(HTTPAuth):
+    def __init__(self, scheme=None, realm=None, use_ha1_pw=False):
+        super(HTTPDigestAuth, self).__init__(scheme or 'Digest', realm)
+        self.use_ha1_pw = use_ha1_pw
+        self.random = SystemRandom()
+        try:
+            self.random.random()
+        except NotImplementedError:  # pragma: no cover
+            self.random = Random()
+
+        self.generate_nonce_callback = None
+        self.verify_nonce_callback = None
+        self.generate_opaque_callback = None
+        self.verify_opaque_callback = None
+
+        def _generate_random():
+            return md5(str(self.random.random()).encode('utf-8')).hexdigest()
+
+        def default_generate_nonce():
+            session["auth_nonce"] = _generate_random()
+            return session["auth_nonce"]
+
+        def default_verify_nonce(nonce):
+~~            session_nonce = session.get("auth_nonce")
+            if nonce is None or session_nonce is None:
+                return False
+            return safe_str_cmp(nonce, session_nonce)
+
+        def default_generate_opaque():
+            session["auth_opaque"] = _generate_random()
+            return session["auth_opaque"]
+
+        def default_verify_opaque(opaque):
+~~            session_opaque = session.get("auth_opaque")
+            if opaque is None or session_opaque is None:  # pragma: no cover
+                return False
+            return safe_str_cmp(opaque, session_opaque)
+
+        self.generate_nonce(default_generate_nonce)
+        self.generate_opaque(default_generate_opaque)
+        self.verify_nonce(default_verify_nonce)
+        self.verify_opaque(default_verify_opaque)
+
+    def generate_nonce(self, f):
+        self.generate_nonce_callback = f
+        return f
+
+    def verify_nonce(self, f):
+        self.verify_nonce_callback = f
+        return f
+
+    def generate_opaque(self, f):
+        self.generate_opaque_callback = f
+        return f
+
+    def verify_opaque(self, f):
+        self.verify_opaque_callback = f
+        return f
+
+
+## ... source file continues with no further session examples...
+
+```
+
+
+## Example 5 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -478,7 +596,7 @@ def login_required(func):
 ```
 
 
-## Example 5 from Flask-WTF
+## Example 6 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -589,7 +707,7 @@ def _get_config(
 ```
 
 
-## Example 6 from flaskSaaS
+## Example 7 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -661,7 +779,7 @@ logger = wrap_logger(
 ```
 
 
-## Example 7 from Flask-Security-Too
+## Example 8 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -747,7 +865,7 @@ def tf_send_security_token(user, method, totp_secret, phone_number):
 ```
 
 
-## Example 8 from Flask-SocketIO
+## Example 9 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -843,7 +961,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 9 from Flask-User
+## Example 10 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -951,7 +1069,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 10 from tedivms-flask
+## Example 11 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

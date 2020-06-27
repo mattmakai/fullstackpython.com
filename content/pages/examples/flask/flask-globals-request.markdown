@@ -1012,7 +1012,328 @@ if __name__ == "__main__":
 ```
 
 
-## Example 6 from flask-login
+## Example 6 from Flask-HTTPAuth
+[Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
+([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/Flask-HTTPAuth/))
+is a [Flask](/flask.html) framework extension that creates
+Basic and Digest HTTP authentication for routes. This project
+is primarily built and maintained by
+[Miguel Grinberg](https://blog.miguelgrinberg.com/). It is provided
+as open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/LICENSE).
+
+[**Flask-HTTPAuth / flask_httpauth.py**](https://github.com/miguelgrinberg/Flask-HTTPAuth/blob/master/././flask_httpauth.py)
+
+```python
+# flask_httpauth.py
+
+from base64 import b64decode
+from functools import wraps
+from hashlib import md5
+from random import Random, SystemRandom
+~~from flask import request, make_response, session, g
+from werkzeug.datastructures import Authorization
+from werkzeug.security import safe_str_cmp
+
+__version__ = '4.1.1dev'
+
+
+class HTTPAuth(object):
+    def __init__(self, scheme=None, realm=None, header=None):
+        self.scheme = scheme
+        self.realm = realm or "Authentication Required"
+        self.header = header
+        self.get_password_callback = None
+        self.get_user_roles_callback = None
+        self.auth_error_callback = None
+
+        def default_get_password(username):
+            return None
+
+        def default_auth_error(status):
+            return "Unauthorized Access", status
+
+        self.get_password(default_get_password)
+        self.error_handler(default_auth_error)
+
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        return f
+
+    def get_user_roles(self, f):
+        self.get_user_roles_callback = f
+        return f
+
+    def error_handler(self, f):
+        @wraps(f)
+        def decorated(*args, **kwargs):
+            res = f(*args, **kwargs)
+            res = make_response(res)
+            if res.status_code == 200:
+                res.status_code = 401
+            if 'WWW-Authenticate' not in res.headers.keys():
+                res.headers['WWW-Authenticate'] = self.authenticate_header()
+            return res
+        self.auth_error_callback = decorated
+        return decorated
+
+    def authenticate_header(self):
+        return '{0} realm="{1}"'.format(self.scheme, self.realm)
+
+    def get_auth(self):
+        auth = None
+        if self.header is None or self.header == 'Authorization':
+~~            auth = request.authorization
+~~            if auth is None and 'Authorization' in request.headers:
+                try:
+~~                    auth_type, token = request.headers['Authorization'].split(
+                        None, 1)
+                    auth = Authorization(auth_type, {'token': token})
+                except (ValueError, KeyError):
+                    pass
+~~        elif self.header in request.headers:
+            auth = Authorization(self.scheme,
+~~                                 {'token': request.headers[self.header]})
+
+        if auth is not None and auth.type.lower() != self.scheme.lower():
+            auth = None
+
+        return auth
+
+    def get_auth_password(self, auth):
+        password = None
+
+        if auth and auth.username:
+            password = self.get_password_callback(auth.username)
+
+        return password
+
+    def authorize(self, role, user, auth):
+        if role is None:
+            return True
+        if isinstance(role, (list, tuple)):
+            roles = role
+        else:
+            roles = [role]
+        if user is True:
+            user = auth
+        if self.get_user_roles_callback is None:  # pragma: no cover
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        if user_roles is None:
+            user_roles = {}
+        elif not isinstance(user_roles, (list, tuple)):
+            user_roles = {user_roles}
+        else:
+            user_roles = set(user_roles)
+        for role in roles:
+            if isinstance(role, (list, tuple)):
+                role = set(role)
+                if role & user_roles == role:
+                    return True
+            elif role in user_roles:
+                return True
+
+    def login_required(self, f=None, role=None, optional=None):
+        if f is not None and \
+                (role is not None or optional is not None):  # pragma: no cover
+            raise ValueError(
+                'role and optional are the only supported arguments')
+
+        def login_required_internal(f):
+            @wraps(f)
+            def decorated(*args, **kwargs):
+                auth = self.get_auth()
+
+~~                if request.method != 'OPTIONS':  # pragma: no cover
+                    password = self.get_auth_password(auth)
+
+                    status = None
+                    user = self.authenticate(auth, password)
+                    if user in (False, None):
+                        status = 401
+                    elif not self.authorize(role, user, auth):
+                        status = 403
+                    if not optional and status:
+~~                        request.data
+                        try:
+                            return self.auth_error_callback(status)
+                        except TypeError:
+                            return self.auth_error_callback()
+
+                    g.flask_httpauth_user = user if user is not True \
+                        else auth.username if auth else None
+                return f(*args, **kwargs)
+            return decorated
+
+        if f:
+            return login_required_internal(f)
+        return login_required_internal
+
+    def username(self):
+~~        if not request.authorization:
+            return ""
+~~        return request.authorization.username
+
+    def current_user(self):
+        if hasattr(g, 'flask_httpauth_user'):
+            return g.flask_httpauth_user
+
+
+class HTTPBasicAuth(HTTPAuth):
+    def __init__(self, scheme=None, realm=None):
+        super(HTTPBasicAuth, self).__init__(scheme or 'Basic', realm)
+
+        self.hash_password_callback = None
+        self.verify_password_callback = None
+
+    def hash_password(self, f):
+        self.hash_password_callback = f
+        return f
+
+    def verify_password(self, f):
+        self.verify_password_callback = f
+        return f
+
+    def get_auth(self):
+        header = self.header or 'Authorization'
+~~        if header not in request.headers:
+            return None
+~~        value = request.headers[header].encode('utf-8')
+        try:
+            scheme, credentials = value.split(b' ', 1)
+            username, password = b64decode(credentials).split(b':', 1)
+        except (ValueError, TypeError):
+            return None
+        return Authorization(
+            scheme, {'username': username.decode('utf-8'),
+                     'password': password.decode('utf-8')})
+
+    def authenticate(self, auth, stored_password):
+        if auth:
+            username = auth.username
+            client_password = auth.password
+        else:
+            username = ""
+            client_password = ""
+        if self.verify_password_callback:
+            return self.verify_password_callback(username, client_password)
+        if not auth:
+            return
+        if self.hash_password_callback:
+            try:
+                client_password = self.hash_password_callback(client_password)
+            except TypeError:
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+        a1 = username + ":" + self.realm + ":" + password
+        a1 = a1.encode('utf-8')
+        return md5(a1).hexdigest()
+
+    def authenticate_header(self):
+        nonce = self.get_nonce()
+        opaque = self.get_opaque()
+        return '{0} realm="{1}",nonce="{2}",opaque="{3}"'.format(
+            self.scheme, self.realm, nonce,
+            opaque)
+
+    def authenticate(self, auth, stored_password_or_ha1):
+        if not auth or not auth.username or not auth.realm or not auth.uri \
+                or not auth.nonce or not auth.response \
+                or not stored_password_or_ha1:
+            return False
+        if not(self.verify_nonce_callback(auth.nonce)) or \
+                not(self.verify_opaque_callback(auth.opaque)):
+            return False
+        if self.use_ha1_pw:
+            ha1 = stored_password_or_ha1
+        else:
+            a1 = auth.username + ":" + auth.realm + ":" + \
+                stored_password_or_ha1
+            ha1 = md5(a1.encode('utf-8')).hexdigest()
+~~        a2 = request.method + ":" + auth.uri
+        ha2 = md5(a2.encode('utf-8')).hexdigest()
+        a3 = ha1 + ":" + auth.nonce + ":" + ha2
+        response = md5(a3.encode('utf-8')).hexdigest()
+        return safe_str_cmp(response, auth.response)
+
+
+class HTTPTokenAuth(HTTPAuth):
+    def __init__(self, scheme='Bearer', realm=None, header=None):
+        super(HTTPTokenAuth, self).__init__(scheme, realm, header)
+
+        self.verify_token_callback = None
+
+    def verify_token(self, f):
+        self.verify_token_callback = f
+        return f
+
+    def authenticate(self, auth, stored_password):
+        if auth:
+            token = auth['token']
+        else:
+            token = ""
+        if self.verify_token_callback:
+            return self.verify_token_callback(token)
+
+
+class MultiAuth(object):
+    def __init__(self, main_auth, *args):
+        self.main_auth = main_auth
+        self.additional_auth = args
+
+    def login_required(self, f=None, role=None):
+        if f is not None and role is not None:  # pragma: no cover
+            raise ValueError('role is the only supported argument')
+
+        def login_required_internal(f):
+            @wraps(f)
+            def decorated(*args, **kwargs):
+                selected_auth = None
+~~                if 'Authorization' in request.headers:
+                    try:
+~~                        scheme, creds = request.headers[
+                            'Authorization'].split(None, 1)
+                    except ValueError:
+                        pass
+                    else:
+                        for auth in self.additional_auth:
+                            if auth.scheme == scheme:
+                                selected_auth = auth
+                                break
+                if selected_auth is None:
+                    selected_auth = self.main_auth
+                return selected_auth.login_required(role=role)(f)(
+                    *args, **kwargs)
+            return decorated
+
+        if f:
+            return login_required_internal(f)
+        return login_required_internal
+
+    def current_user(self):
+        if hasattr(g, 'flask_httpauth_user'):  # pragma: no cover
+            return g.flask_httpauth_user
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 7 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1249,7 +1570,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 7 from flask-restx
+## Example 8 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1357,7 +1678,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 8 from Flask-WTF
+## Example 9 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1515,7 +1836,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 9 from flaskSaaS
+## Example 10 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1566,7 +1887,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 10 from Flask-Security-Too
+## Example 11 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -1786,7 +2107,7 @@ class ChangePasswordForm(Form, PasswordFormMixin):
 ```
 
 
-## Example 11 from Flask-SocketIO
+## Example 12 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -2010,7 +2331,7 @@ class TestSocketIO(unittest.TestCase):
 ```
 
 
-## Example 12 from Flask-User
+## Example 13 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2074,7 +2395,7 @@ def init_translations(babel):
 ```
 
 
-## Example 13 from Flask-VueJs-Template
+## Example 14 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2109,7 +2430,100 @@ def require_auth(func):
 ```
 
 
-## Example 14 from newspie
+## Example 15 from keras-flask-deploy-webapp
+The
+[keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
+project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
+with the [Keras deep learning library](https://keras.io/) to provide
+an example image classifier that is easy to [deploy](/deployment.html).
+The application can be quckly run in a [Docker](/docker.html) container
+on your local development environment. The project is licensed under the
+[GNU General Public License v3.0](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/LICENSE).
+
+[**keras-flask-deploy-webapp / app.py**](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/././app.py)
+
+```python
+# app.py
+import os
+import sys
+
+~~from flask import Flask, redirect, url_for, request, render_template, Response, jsonify, redirect
+from werkzeug.utils import secure_filename
+from gevent.pywsgi import WSGIServer
+
+import tensorflow as tf
+from tensorflow import keras
+
+from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
+
+import numpy as np
+from util import base64_to_pil
+
+
+app = Flask(__name__)
+
+
+from keras.applications.mobilenet_v2 import MobileNetV2
+model = MobileNetV2(weights='imagenet')
+
+print('Model loaded. Check http://127.0.0.1:5000/')
+
+
+MODEL_PATH = 'models/your_model.h5'
+
+
+
+def model_predict(img, model):
+    img = img.resize((224, 224))
+
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+
+    x = preprocess_input(x, mode='tf')
+
+    preds = model.predict(x)
+    return preds
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
+
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
+~~    if request.method == 'POST':
+        img = base64_to_pil(request.json)
+
+
+        preds = model_predict(img, model)
+
+        pred_proba = "{:.3f}".format(np.amax(preds))    # Max probability
+        pred_class = decode_predictions(preds, top=1)   # ImageNet Decode
+
+        result = str(pred_class[0][0][1])               # Convert to string
+        result = result.replace('_', ' ').capitalize()
+        
+        return jsonify(result=result, probability=pred_proba)
+
+    return None
+
+
+if __name__ == '__main__':
+
+    http_server = WSGIServer(('0.0.0.0', 5000), app)
+    http_server.serve_forever()
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 16 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2290,7 +2704,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 15 from sandman2
+## Example 17 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2491,7 +2905,7 @@ class Service(MethodView):
 ```
 
 
-## Example 16 from tedivms-flask
+## Example 18 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
