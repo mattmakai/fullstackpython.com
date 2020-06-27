@@ -549,7 +549,54 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 8 from tedivms-flask
+## Example 8 from Datadog Flask Example App
+The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
+contains many examples of the [Flask](/flask.html) core functions
+available to a developer using the [web framework](/web-frameworks.html).
+
+[**Datadog Flask Example App / python/flask/app / blueprint.py**](https://github.com/DataDog/trace-examples/blob/master/python/flask/app/./blueprint.py)
+
+```python
+# blueprint.py
+from ddtrace import Pin
+~~from flask import abort, Blueprint, render_template_string
+
+from .limiter import limiter
+
+
+~~bp = Blueprint('bp', __name__, url_prefix='/bp/')
+
+Pin.override(bp, service='flask-bp', app='flask', app_type='web')
+
+
+@bp.before_request
+def bp_before_request():
+    print('Hook: bp_before_request')
+
+
+@bp.before_app_request
+def bp_before_app_request():
+    print('Hook: bp_before_app_request')
+
+
+@bp.before_app_first_request
+def bp_before_app_first_request():
+    print('Hook: bp_before_app_first_request')
+
+
+@bp.after_request
+def bp_after_request(response):
+    print('Hook: bp_after_request')
+    return response
+
+
+
+## ... source file continues with no further Blueprint examples...
+
+```
+
+
+## Example 9 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

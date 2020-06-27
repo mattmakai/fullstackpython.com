@@ -787,3 +787,202 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 
 ```
 
+
+## Example 9 from Datadog Flask Example App
+The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
+contains many examples of the [Flask](/flask.html) core functions
+available to a developer using the [web framework](/web-frameworks.html).
+
+[**Datadog Flask Example App / python/flask/app / app.py**](https://github.com/DataDog/trace-examples/blob/master/python/flask/app/./app.py)
+
+```python
+# app.py
+from ddtrace import patch_all; patch_all(flask=True, requests=True)  # noqa
+
+from ddtrace import tracer
+
+from flask import Flask, Response
+from flask import after_this_request
+~~from flask import abort, jsonify, render_template, url_for
+from flask.views import View
+from werkzeug.routing import Rule
+
+from flask_caching import Cache
+from flask_cors import CORS
+
+import requests
+
+from .blueprint import bp
+from .exceptions import AppException
+from .limiter import limiter
+from .signals import connect_signals
+
+app = Flask(__name__)
+
+app.register_blueprint(bp)
+
+connect_signals(app)
+
+CORS(app)
+Cache(app, config=dict(CACHE_TYPE='simple'))
+limiter.init_app(app)
+
+
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+@app.after_request
+def after_request(response):
+    print('Hook: after_request')
+    return response
+
+
+@app.teardown_request
+def teardown_request(response):
+    print('Hook: teardown_request')
+    return response
+
+
+@app.teardown_appcontext
+def teardown_appcontext(appcontext):
+    print('Hook: teardown_appcontext')
+
+
+@app.route('/')
+@limiter.limit('10 per second')
+def index():
+    routes = [
+        dict(
+            rule='GET /',
+            description=['Endpoint for this page, which uses <code>render_template()</code>.'],
+            links=[
+~~                dict(label='GET /', url=url_for('index')),
+            ],
+        ),
+        dict(
+            rule='GET /joke',
+            description=[
+                'Endpoint which uses <code>requests</code> to fetch a joke from icanhazdadjoke.com.',
+                'This endpoint also registers a <code>flask.after_this_request</code> hook.'
+            ],
+            links=[
+~~                dict(label='GET /joke', url=url_for('joke')),
+            ],
+        ),
+        dict(
+            rule='GET /json',
+            description=[
+                'Endpoint which uses <code>jsonify</code> to return a JSON object to the user.',
+            ],
+            links=[
+~~                dict(label='GET /json', url=url_for('json')),
+            ],
+        ),
+        dict(
+            rule='GET /custom-endpoint/<msg>',
+            description=[
+                ('Endpoint which was registered manually using <code>@app.endpoint()</code> '
+                 'and <code>app.add_url_rule()</code>'),
+                'This endpoint also has a /custom-endpoint/ url configured with a default <msg>',
+                ('We have also attached a @tracer.wrap() to the endpoint and added a '
+                 'with tracer.trace(): to the body of the view as well.'),
+            ],
+            links=[
+~~                dict(label='GET /custom-endpoint', url=url_for('custom-endpoint')),
+~~                dict(label='GET /custom-endpoint/hello', url=url_for('custom-endpoint', msg='hello')),
+            ],
+        ),
+        dict(
+            rule='GET /custom-error',
+            description=[
+                'Endpoint which raises a customer user-defined Exception (non HTTPException)',
+            ],
+            links=[
+~~                dict(label='GET /custom-error', url=url_for('custom_error')),
+            ],
+        ),
+        dict(
+            rule='GET /stream',
+            description=[
+                'Endpoint which uses a generator to stream the response back to the user.',
+            ],
+            links=[
+~~                dict(label='GET /stream', url=url_for('stream')),
+            ],
+        ),
+        dict(
+            rule='GET /abort/<int:code>',
+            description=[
+                'Endpoint which calls <code>abort(code)</code> for us',
+            ],
+            links=[
+~~                dict(label='GET /abort/{}'.format(code), url=url_for('abort_endpoint', code=code))
+                for code in [400, 401, 403, 404, 500]
+            ],
+        ),
+        dict(
+            rule='GET /hello/<name>',
+            description=[
+                'Endpoint which was generated from a <code>flask.views.View</code>',
+            ],
+            links=[
+~~                dict(label='GET /hello/Flask', url=url_for('myview', name='Flask')),
+            ],
+        ),
+        dict(
+            rule='GET /bp/<name>',
+            description=[
+                'Blueprint endpoint that uses <code>render_template_string()</code>',
+            ],
+            links=[
+~~                dict(label='GET /bp/', url=url_for('bp.index')),
+            ],
+        ),
+        dict(
+            rule='GET /bp/unknown',
+            description=[
+                'Blueprint endpoint that calls <code>abort(404)</code>',
+            ],
+            links=[
+~~                dict(label='GET /bp/unkown', url=url_for('bp.unknown')),
+            ],
+        ),
+        dict(
+            rule='GET /static/test.txt',
+            description=[
+                'Endpoint to fetch a simple .txt static file.',
+            ],
+            links=[
+~~                dict(label='GET /static/test.txt', url=url_for('static', filename='test.txt')),
+            ],
+        ),
+    ]
+    return render_template('index.jinja2', routes=routes)
+
+
+@app.route('/joke')
+def joke():
+    res = requests.get('https://icanhazdadjoke.com/', headers=dict(Accept='text/plain'))
+    res.raise_for_status()
+
+    @after_this_request
+    def after_joke(response):
+        print('Hook: after_this_request')
+        return response
+
+    return res.content
+
+
+@app.route('/json')
+def json():
+    return jsonify(hello='world')
+
+
+
+
+## ... source file continues with no further url_for examples...
+
+```
+

@@ -13,6 +13,12 @@ in various ways. The code within the projects can show you how to build
 your own applications.
 
 
+### Datadog Flask example
+The [Datadog Flask app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
+contains many examples of the [Flask](/flask.html) core functions
+available to a developer using the [web framework](/web-frameworks.html).
+
+
 ### FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based

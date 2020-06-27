@@ -581,7 +581,109 @@ def contact():
 ```
 
 
-## Example 4 from sandman2
+## Example 4 from Datadog Flask Example App
+The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
+contains many examples of the [Flask](/flask.html) core functions
+available to a developer using the [web framework](/web-frameworks.html).
+
+[**Datadog Flask Example App / python/flask/app / app.py**](https://github.com/DataDog/trace-examples/blob/master/python/flask/app/./app.py)
+
+```python
+# app.py
+from ddtrace import patch_all; patch_all(flask=True, requests=True)  # noqa
+
+from ddtrace import tracer
+
+from flask import Flask, Response
+from flask import after_this_request
+~~from flask import abort, jsonify, render_template, url_for
+from flask.views import View
+from werkzeug.routing import Rule
+
+from flask_caching import Cache
+from flask_cors import CORS
+
+import requests
+
+from .blueprint import bp
+from .exceptions import AppException
+from .limiter import limiter
+from .signals import connect_signals
+
+app = Flask(__name__)
+
+app.register_blueprint(bp)
+
+connect_signals(app)
+
+CORS(app)
+Cache(app, config=dict(CACHE_TYPE='simple'))
+limiter.init_app(app)
+
+
+
+
+## ... source file abbreviated to get to jsonify examples ...
+
+
+                'Endpoint to fetch a simple .txt static file.',
+            ],
+            links=[
+                dict(label='GET /static/test.txt', url=url_for('static', filename='test.txt')),
+            ],
+        ),
+    ]
+    return render_template('index.jinja2', routes=routes)
+
+
+@app.route('/joke')
+def joke():
+    res = requests.get('https://icanhazdadjoke.com/', headers=dict(Accept='text/plain'))
+    res.raise_for_status()
+
+    @after_this_request
+    def after_joke(response):
+        print('Hook: after_this_request')
+        return response
+
+    return res.content
+
+
+@app.route('/json')
+def json():
+~~    return jsonify(hello='world')
+
+
+app.url_map.add(Rule('/custom-endpoint/', endpoint='custom-endpoint', defaults=dict(msg='Hello')))
+app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
+
+@app.endpoint('custom-endpoint')
+@tracer.wrap('my-custom-endpoint')
+def custom_endpoint(msg):
+    with tracer.trace('my-custom-endpoint.respond'):
+        return msg
+
+
+@app.route('/custom-error')
+def custom_error():
+    raise AppException('custom app exception')
+
+
+@app.route('/stream')
+def stream():
+    def generate():
+        for i in range(100):
+            yield '{}\n'.format(i)
+
+    return Response(generate(), mimetype='text/plain')
+
+
+## ... source file continues with no further jsonify examples...
+
+```
+
+
+## Example 5 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -749,7 +851,7 @@ class Service(MethodView):
 ```
 
 
-## Example 5 from tedivms-flask
+## Example 6 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
