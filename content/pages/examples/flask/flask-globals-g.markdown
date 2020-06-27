@@ -750,7 +750,104 @@ def check_and_update_authn_fresh(within, grace, method=None):
 ```
 
 
-## Example 6 from tedivms-flask
+## Example 6 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / decorators.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./decorators.py)
+
+```python
+# decorators.py
+
+
+from functools import wraps
+~~from flask import current_app, g
+from flask_login import current_user
+
+def _is_logged_in_with_confirmed_email(user_manager):
+    if user_manager.call_or_get(current_user.is_authenticated):
+        unconfirmed_email_allowed = \
+            getattr(g, '_flask_user_allow_unconfirmed_email', False)
+        
+        if unconfirmed_email_allowed or user_manager.db_manager.user_has_confirmed_email(current_user):
+            return True
+
+    return False
+
+
+def login_required(view_function):
+    @wraps(view_function)    # Tells debuggers that is is a function wrapper
+    def decorator(*args, **kwargs):
+        user_manager = current_app.user_manager
+        
+        allowed = _is_logged_in_with_confirmed_email(user_manager)
+        if not allowed:
+            return user_manager.unauthenticated_view()
+
+        return view_function(*args, **kwargs)
+
+
+
+## ... source file abbreviated to get to g examples ...
+
+
+def roles_required(*role_names):
+    def wrapper(view_function):
+
+        @wraps(view_function)    # Tells debuggers that is is a function wrapper
+        def decorator(*args, **kwargs):
+            user_manager = current_app.user_manager
+
+            allowed = _is_logged_in_with_confirmed_email(user_manager)
+            if not allowed:
+                return user_manager.unauthenticated_view()
+
+            if not current_user.has_roles(*role_names):
+                return user_manager.unauthorized_view()
+
+            return view_function(*args, **kwargs)
+
+        return decorator
+
+    return wrapper
+
+
+
+def allow_unconfirmed_email(view_function):
+    @wraps(view_function)    # Tells debuggers that is is a function wrapper
+    def decorator(*args, **kwargs):
+~~        g._flask_user_allow_unconfirmed_email = True
+
+        try:
+            user_manager = current_app.user_manager
+
+            allowed = _is_logged_in_with_confirmed_email(user_manager)
+            if not allowed:
+                return user_manager.unauthenticated_view()
+
+            return view_function(*args, **kwargs)
+
+        finally:
+~~            g._flask_user_allow_unconfirmed_email = False
+
+    return decorator
+
+
+
+## ... source file continues with no further g examples...
+
+```
+
+
+## Example 7 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

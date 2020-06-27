@@ -118,6 +118,19 @@ The Flask-Security-Too project is provided as open source under the
 [MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
 
 
+### Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+
 ### Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)

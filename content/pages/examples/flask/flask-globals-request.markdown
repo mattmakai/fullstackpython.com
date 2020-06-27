@@ -1786,7 +1786,71 @@ class ChangePasswordForm(Form, PasswordFormMixin):
 ```
 
 
-## Example 11 from newspie
+## Example 11 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / translation_utils.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./translation_utils.py)
+
+```python
+# translation_utils.py
+
+
+import os
+~~from flask import request
+
+_translations_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'translations')
+
+try:
+    from flask_babelex import Domain
+
+    domain_translations = Domain(_translations_dir, domain='flask_user')
+except ImportError:
+    domain_translations = None
+
+def gettext(string, **variables):
+    return domain_translations.gettext(string, **variables) if domain_translations else string % variables
+
+def lazy_gettext(string, **variables):
+    return domain_translations.lazy_gettext(string, **variables) if domain_translations else string % variables
+
+def get_language_codes():
+    language_codes = []
+    for folder in os.listdir(_translations_dir):
+        locale_dir = os.path.join(_translations_dir, folder, 'LC_MESSAGES')
+        if not os.path.isdir(locale_dir):
+            continue
+        language_codes.append(folder)
+    return language_codes
+
+def init_translations(babel):
+    if babel:
+        babel._default_domain = domain_translations
+
+        if babel.locale_selector_func is None:
+            def get_locale():
+                available_language_codes = get_language_codes()
+~~                language_code = request.accept_languages.best_match(available_language_codes)
+                return language_code
+
+            babel.locale_selector_func = get_locale
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 12 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1967,7 +2031,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 12 from sandman2
+## Example 13 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2168,7 +2232,7 @@ class Service(MethodView):
 ```
 
 
-## Example 13 from tedivms-flask
+## Example 14 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

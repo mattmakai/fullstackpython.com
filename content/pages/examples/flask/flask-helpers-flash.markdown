@@ -869,7 +869,480 @@ def transform_url(url, qparams=None, **kwargs):
 ```
 
 
-## Example 7 from tedivms-flask
+## Example 7 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / user_manager__views.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./user_manager__views.py)
+
+```python
+# user_manager__views.py
+
+
+from datetime import datetime
+try:
+    from urllib.parse import quote, unquote    # Python 3
+except ImportError:
+    from urllib import quote, unquote          # Python 2
+
+~~from flask import current_app, flash, redirect, render_template, request, url_for
+from flask_login import current_user, login_user, logout_user
+
+from .decorators import login_required
+from . import signals
+from .translation_utils import gettext as _    # map _() to gettext()
+
+
+class UserManager__Views(object):
+
+
+    @login_required
+    def change_password_view(self):
+
+        form = self.ChangePasswordFormClass(request.form)
+
+        if request.method == 'POST':
+            if not form.validate():
+~~                flash(_('There was an error changing your password.'), 'error')
+                return redirect(url_for('user.change_password'))
+
+            new_password = form.new_password.data
+            password_hash = self.hash_password(new_password)
+
+            current_user.password = password_hash
+            self.db_manager.save_object(current_user)
+            self.db_manager.commit()
+
+            if self.USER_ENABLE_EMAIL and self.USER_SEND_PASSWORD_CHANGED_EMAIL:
+                self.email_manager.send_password_changed_email(current_user)
+
+            signals.user_changed_password.send(current_app._get_current_object(), user=current_user)
+
+~~            flash(_('Your password has been changed successfully.'), 'success')
+
+            safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_CHANGE_PASSWORD_ENDPOINT)
+            return redirect(safe_next_url)
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_CHANGE_PASSWORD_TEMPLATE, form=form)
+
+
+    @login_required
+    def change_username_view(self):
+
+        form = self.ChangeUsernameFormClass(request.form)
+
+        if request.method == 'POST' and form.validate():
+
+            new_username = form.new_username.data
+            current_user.username=new_username
+            self.db_manager.save_object(current_user)
+            self.db_manager.commit()
+
+            if self.USER_ENABLE_EMAIL and self.USER_SEND_USERNAME_CHANGED_EMAIL:
+                self.email_manager.send_username_changed_email(current_user)
+
+            signals.user_changed_username.send(current_app._get_current_object(), user=current_user)
+
+~~            flash(_("Your username has been changed to '%(username)s'.", username=new_username), 'success')
+
+            safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_CHANGE_USERNAME_ENDPOINT)
+            return redirect(safe_next_url)
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_CHANGE_USERNAME_TEMPLATE, form=form)
+
+
+    def confirm_email_view(self, token):
+        data_items = self.token_manager.verify_token(
+            token,
+            self.USER_CONFIRM_EMAIL_EXPIRATION)
+
+        user = None
+        user_email = None
+        if data_items:
+            user, user_email = self.db_manager.get_user_and_user_email_by_id(data_items[0])
+
+        if not user or not user_email:
+~~            flash(_('Invalid confirmation token.'), 'error')
+            return redirect(url_for('user.login'))
+
+        user_email.email_confirmed_at=datetime.utcnow()
+        self.db_manager.save_user_and_user_email(user, user_email)
+        self.db_manager.commit()
+
+        signals.user_confirmed_email.send(current_app._get_current_object(), user=user)
+
+~~        flash(_('Your email has been confirmed.'), 'success')
+
+        safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_CONFIRM_ENDPOINT)
+        if self.USER_AUTO_LOGIN_AFTER_CONFIRM:
+            return self._do_login_user(user, safe_next_url)  # auto-login
+        else:
+            return redirect(url_for('user.login') + '?next=' + quote(safe_next_url))  # redirect to login page
+
+
+    @login_required
+    def edit_user_profile_view(self):
+        form = self.EditUserProfileFormClass(request.form, obj=current_user)
+
+        if request.method == 'POST' and form.validate():
+            form.populate_obj(current_user)
+
+            self.db_manager.save_object(current_user)
+            self.db_manager.commit()
+
+            return redirect(self._endpoint_url(self.USER_AFTER_EDIT_USER_PROFILE_ENDPOINT))
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_EDIT_USER_PROFILE_TEMPLATE, form=form)
+
+    @login_required
+
+
+## ... source file abbreviated to get to flash examples ...
+
+
+            user_email.is_primary=True
+            self.db_manager.save_object(user_email)
+            self.db_manager.commit()
+
+        elif action == 'confirm':
+            self._send_confirm_email_email(user_email.user, user_email)
+        else:
+            return self.unauthorized_view()
+
+        return redirect(url_for('user.manage_emails'))
+
+
+    def forgot_password_view(self):
+
+        form = self.ForgotPasswordFormClass(request.form)
+
+        if request.method == 'POST' and form.validate():
+            email = form.email.data
+            user, user_email = self.db_manager.get_user_and_user_email_by_email(email)
+
+            if user and user_email:
+                self.email_manager.send_reset_password_email(user, user_email)
+
+                signals.user_forgot_password.send(current_app._get_current_object(), user=user)
+
+~~            flash(_(
+                "A reset password email has been sent to '%(email)s'. Open that email and follow the instructions to reset your password.",
+                email=email), 'success')
+
+            return redirect(self._endpoint_url(self.USER_AFTER_FORGOT_PASSWORD_ENDPOINT))
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_FORGOT_PASSWORD_TEMPLATE, form=form)
+
+    @login_required
+    def manage_emails_view(self):
+
+        user_emails = self.db_manager.find_user_emails(user=current_user)
+        form = self.AddEmailFormClass()
+
+        if request.method == "POST" and form.validate():
+            new_email = form.email.data
+            user_email = self.db_manager.add_user_email(user=current_user, email=new_email)
+            self.db_manager.save_object(user_email)
+            self.db_manager.commit()
+            return redirect(url_for('user.manage_emails'))
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_MANAGE_EMAILS_TEMPLATE,
+                      user_emails=user_emails,
+                      form=form,
+                      )
+
+    @login_required
+    def invite_user_view(self):
+
+        invite_user_form = self.InviteUserFormClass(request.form)
+
+        if request.method == 'POST' and invite_user_form.validate():
+            email = invite_user_form.email.data
+            user, user_email = self.db_manager.get_user_and_user_email_by_email(email)
+            if user:
+~~                flash("User with that email has already registered", "error")
+                return redirect(url_for('user.invite_user'))
+
+            user_invitation = self.db_manager.add_user_invitation(
+                email=email,
+                invited_by_user_id=current_user.id)
+            self.db_manager.commit()
+
+            try:
+                self.email_manager.send_invite_user_email(current_user, user_invitation)
+            except Exception as e:
+                self.db_manager.delete_object(user_invitation)
+                self.db_manager.commit()
+                raise
+
+            signals \
+                .user_sent_invitation \
+                .send(current_app._get_current_object(), user_invitation=user_invitation,
+                      form=invite_user_form)
+
+~~            flash(_('Invitation has been sent.'), 'success')
+
+            safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_INVITE_ENDPOINT)
+            return redirect(safe_next_url)
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_INVITE_USER_TEMPLATE, form=invite_user_form)
+
+
+    def login_view(self):
+
+
+        safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_LOGIN_ENDPOINT)
+        safe_reg_next = self._get_safe_next_url('reg_next', self.USER_AFTER_REGISTER_ENDPOINT)
+
+        if self.call_or_get(current_user.is_authenticated) and self.USER_AUTO_LOGIN_AT_LOGIN:
+            return redirect(safe_next_url)
+
+        login_form = self.LoginFormClass(request.form)  # for login.html
+        register_form = self.RegisterFormClass()  # for login_or_register.html
+        if request.method != 'POST':
+            login_form.next.data = register_form.next.data = safe_next_url
+            login_form.reg_next.data = register_form.reg_next.data = safe_reg_next
+
+        if request.method == 'POST' and login_form.validate():
+
+
+## ... source file abbreviated to get to flash examples ...
+
+
+            if self.USER_ENABLE_USERNAME:
+                user = self.db_manager.find_user_by_username(login_form.username.data)
+
+                if not user and self.USER_ENABLE_EMAIL:
+                    user, user_email = self.db_manager.get_user_and_user_email_by_email(login_form.username.data)
+            else:
+                user, user_email = self.db_manager.get_user_and_user_email_by_email(login_form.email.data)
+
+            if user:
+                safe_next_url = self.make_safe_url(login_form.next.data)
+                return self._do_login_user(user, safe_next_url, login_form.remember_me.data)
+
+        self.prepare_domain_translations()
+        template_filename = self.USER_LOGIN_AUTH0_TEMPLATE if self.USER_ENABLE_AUTH0 else self.USER_LOGIN_TEMPLATE
+        return render_template(template_filename,
+                      form=login_form,
+                      login_form=login_form,
+                      register_form=register_form)
+
+    def logout_view(self):
+
+        signals.user_logged_out.send(current_app._get_current_object(), user=current_user)
+
+        logout_user()
+
+~~        flash(_('You have signed out successfully.'), 'success')
+
+        safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_LOGOUT_ENDPOINT)
+        return redirect(safe_next_url)
+
+    def register_view(self):
+
+        safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_LOGIN_ENDPOINT)
+        safe_reg_next_url = self._get_safe_next_url('reg_next', self.USER_AFTER_REGISTER_ENDPOINT)
+
+        login_form = self.LoginFormClass()  # for login_or_register.html
+        register_form = self.RegisterFormClass(request.form)  # for register.html
+
+        invite_token = request.values.get("token")
+
+        if self.USER_REQUIRE_INVITATION and not invite_token:
+~~            flash("Registration is invite only", "error")
+            return redirect(url_for('user.login'))
+
+        user_invitation = None
+        if invite_token and self.db_manager.UserInvitationClass:
+            data_items = self.token_manager.verify_token(invite_token, self.USER_INVITE_EXPIRATION)
+            if data_items:
+                user_invitation_id = data_items[0]
+                user_invitation = self.db_manager.get_user_invitation_by_id(user_invitation_id)
+
+            if not user_invitation:
+~~                flash("Invalid invitation token", "error")
+                return redirect(url_for('user.login'))
+
+            register_form.invite_token.data = invite_token
+
+        if request.method != 'POST':
+            login_form.next.data = register_form.next.data = safe_next_url
+            login_form.reg_next.data = register_form.reg_next.data = safe_reg_next_url
+            if user_invitation:
+                register_form.email.data = user_invitation.email
+
+        if request.method == 'POST' and register_form.validate():
+            user = self.db_manager.add_user()
+            register_form.populate_obj(user)
+            user_email = self.db_manager.add_user_email(user=user, is_primary=True)
+            register_form.populate_obj(user_email)
+
+            user.password = self.hash_password(user.password)
+
+            request_email_confirmation = self.USER_ENABLE_CONFIRM_EMAIL
+            if user_invitation:
+                if user_invitation.email.lower() == register_form.email.data.lower():
+                    user_email.email_confirmed_at=datetime.utcnow()
+                    request_email_confirmation = False
+
+
+
+## ... source file abbreviated to get to flash examples ...
+
+
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_RESEND_CONFIRM_EMAIL_TEMPLATE, form=form)
+
+
+    def reset_password_view(self, token):
+
+        if self.call_or_get(current_user.is_authenticated):
+            logout_user()
+
+        data_items = self.token_manager.verify_token(
+            token,
+            self.USER_RESET_PASSWORD_EXPIRATION)
+
+        user = None
+        if data_items:
+            user_id = data_items[0]
+            user = self.db_manager.get_user_by_id(user_id)
+
+            user_or_user_email_object = self.db_manager.get_primary_user_email_object(user)
+            user_or_user_email_object.email_confirmed_at = datetime.utcnow()
+            self.db_manager.save_object(user_or_user_email_object)
+            self.db_manager.commit()
+
+        if not user:
+~~            flash(_('Your reset password token is invalid.'), 'error')
+            return redirect(self._endpoint_url('user.login'))
+
+
+        form = self.ResetPasswordFormClass(request.form)
+
+        if request.method == 'POST' and form.validate():
+            password_hash = self.hash_password(form.new_password.data)
+            user.password=password_hash
+            self.db_manager.save_object(user)
+            self.db_manager.commit()
+
+            if self.USER_ENABLE_EMAIL and self.USER_SEND_PASSWORD_CHANGED_EMAIL:
+                self.email_manager.send_password_changed_email(user)
+
+            signals.user_reset_password.send(current_app._get_current_object(), user=user)
+
+~~            flash(_("Your password has been reset successfully."), 'success')
+
+            safe_next_url = self._get_safe_next_url('next', self.USER_AFTER_RESET_PASSWORD_ENDPOINT)
+            if self.USER_AUTO_LOGIN_AFTER_RESET_PASSWORD:
+                return self._do_login_user(user, safe_next_url)  # auto-login
+            else:
+                return redirect(url_for('user.login') + '?next=' + quote(safe_next_url))  # redirect to login page
+
+        self.prepare_domain_translations()
+        return render_template(self.USER_RESET_PASSWORD_TEMPLATE, form=form)
+
+    def unauthenticated_view(self):
+        url = request.url
+~~        flash(_("You must be signed in to access '%(url)s'.", url=url), 'error')
+
+        safe_next_url = self.make_safe_url(url)
+        return redirect(self._endpoint_url(self.USER_UNAUTHENTICATED_ENDPOINT)+'?next='+quote(safe_next_url))
+
+
+    def unauthorized_view(self):
+        url = request.script_root + request.path
+~~        flash(_("You do not have permission to access '%(url)s'.", url=url), 'error')
+
+        return redirect(self._endpoint_url(self.USER_UNAUTHORIZED_ENDPOINT))
+
+
+
+    def _send_registered_email(self, user, user_email, request_email_confirmation):
+        um =  current_app.user_manager
+
+        if self.USER_ENABLE_EMAIL and self.USER_SEND_REGISTERED_EMAIL:
+
+            self.email_manager.send_registered_email(user, user_email, request_email_confirmation)
+
+            if request_email_confirmation:
+                email = user_email.email if user_email else user.email
+~~                flash(_('A confirmation email has been sent to %(email)s with instructions to complete your registration.', email=email), 'success')
+            else:
+~~                flash(_('You have registered successfully.'), 'success')
+
+
+    def _send_confirm_email_email(self, user, user_email):
+
+        if self.USER_ENABLE_EMAIL and self.USER_ENABLE_CONFIRM_EMAIL:
+            self.email_manager.send_confirm_email_email(user, user_email)
+
+            email = user_email.email if user_email else user.email
+~~            flash(_('A confirmation email has been sent to %(email)s with instructions to complete your registration.', email=email), 'success')
+
+
+    def _do_login_user(self, user, safe_next_url, remember_me=False):
+        if not user: return self.unauthenticated()
+
+        if not user.active:
+~~            flash(_('Your account has not been enabled.'), 'error')
+            return redirect(url_for('user.login'))
+
+        if self.USER_ENABLE_EMAIL \
+                and self.USER_ENABLE_CONFIRM_EMAIL \
+                and not current_app.user_manager.USER_ALLOW_LOGIN_WITHOUT_CONFIRMED_EMAIL \
+                and not self.db_manager.user_has_confirmed_email(user):
+            url = url_for('user.resend_email_confirmation')
+~~            flash(_('Your email address has not yet been confirmed. Check your email Inbox and Spam folders for the confirmation email or <a href="%(url)s">Re-send confirmation email</a>.', url=url), 'error')
+            return redirect(url_for('user.login'))
+
+        login_user(user, remember=remember_me)
+
+        signals.user_logged_in.send(current_app._get_current_object(), user=user)
+
+~~        flash(_('You have signed in successfully.'), 'success')
+
+        return redirect(safe_next_url)
+
+
+    def _get_safe_next_url(self, param_name, default_endpoint):
+
+        if param_name in request.args:
+            safe_next_url = current_app.user_manager.make_safe_url(unquote(request.args[param_name]))
+
+        else:
+            safe_next_url = self._endpoint_url(default_endpoint)
+
+        return safe_next_url
+
+
+    def _endpoint_url(self, endpoint):
+        return url_for(endpoint) if endpoint else '/'
+
+
+
+## ... source file continues with no further flash examples...
+
+```
+
+
+## Example 8 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

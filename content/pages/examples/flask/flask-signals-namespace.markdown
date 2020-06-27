@@ -138,3 +138,53 @@ def _wrap_with_default_query_class(fn, cls):
 
 ```
 
+
+## Example 3 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / signals.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./signals.py)
+
+```python
+# signals.py
+
+
+
+~~from flask.signals import Namespace
+
+~~_signals = Namespace()                              # Place Flask-User signals in our own namespace
+
+
+user_changed_password = _signals.signal('user.user_changed_password')
+
+user_changed_username = _signals.signal('user.user_changed_username')
+
+user_confirmed_email = _signals.signal('user.user_confirmed_email')
+
+user_forgot_password = _signals.signal('user.forgot_password')
+
+user_logged_in = _signals.signal('user.user_logged_in')
+
+user_logged_out = _signals.signal('user.user_logged_out')
+
+user_registered = _signals.signal('user.user_registered')
+
+user_reset_password = _signals.signal('user.user_reset_password')
+
+user_sent_invitation = _signals.signal('user.user_sent_invitation')
+
+
+
+
+## ... source file continues with no further Namespace examples...
+
+```
+

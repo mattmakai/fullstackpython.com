@@ -457,7 +457,90 @@ from app.models import User
 ```
 
 
-## Example 8 from Flasky
+## Example 8 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / user_manager.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./user_manager.py)
+
+```python
+# user_manager.py
+
+
+import datetime
+
+~~from flask import abort, Blueprint, current_app, Flask, session
+from flask_login import LoginManager
+from wtforms import ValidationError
+
+from . import ConfigError
+from . import forms
+from .db_manager import DBManager
+from .email_manager import EmailManager
+from .password_manager import PasswordManager
+from .token_manager import TokenManager
+from .translation_utils import lazy_gettext as _  # map _() to lazy_gettext()
+from .user_manager__settings import UserManager__Settings
+from .user_manager__utils import UserManager__Utils
+from .user_manager__views import UserManager__Views
+
+
+class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views):
+
+    def __init__(self, app, db, UserClass, **kwargs):
+
+        self.app = app
+        if app:
+            self.init_app(app, db, UserClass, **kwargs)
+
+    def init_app(
+        self, app, db, UserClass,
+        UserInvitationClass=None,
+        UserEmailClass=None,
+        RoleClass=None,    # Only used for testing
+        ):
+
+~~        if not isinstance(app, Flask):
+            raise TypeError("flask_user.UserManager.init_app(): Parameter 'app' is an instance of class '%s' "
+                            "instead of a subclass of class 'flask.Flask'."
+                            % app.__class__.__name__)
+
+        app.user_manager = self
+
+        self.db = db
+
+        for attrib_name in dir(self):
+            if attrib_name[0:5] == 'USER_':
+                default_value = getattr(UserManager, attrib_name)
+                setattr(self, attrib_name, app.config.get(attrib_name, default_value))
+
+        if not self.USER_EMAIL_SENDER_EMAIL:
+            default_sender = app.config.get('DEFAULT_MAIL_SENDER', None)
+            default_sender = app.config.get('MAIL_DEFAULT_SENDER', default_sender)
+            if default_sender:
+                if default_sender[-1:] == '>':
+                    start = default_sender.rfind('<')
+                    if start >= 1:
+                        self.USER_EMAIL_SENDER_EMAIL = default_sender[start + 1:-1]
+                        if not self.USER_EMAIL_SENDER_NAME:
+                            self.USER_EMAIL_SENDER_NAME = default_sender[0:start].strip(' "')
+                else:
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 9 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -521,7 +604,7 @@ def create_app(config_name):
 ```
 
 
-## Example 9 from Datadog Flask Example App
+## Example 10 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -582,7 +665,7 @@ def before_request():
 ```
 
 
-## Example 10 from sandman2
+## Example 11 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -663,7 +746,7 @@ def get_app(
 ```
 
 
-## Example 11 from tedivms-flask
+## Example 12 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

@@ -747,7 +747,115 @@ def tf_send_security_token(user, method, totp_secret, phone_number):
 ```
 
 
-## Example 8 from tedivms-flask
+## Example 8 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / user_manager.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./user_manager.py)
+
+```python
+# user_manager.py
+
+
+import datetime
+
+~~from flask import abort, Blueprint, current_app, Flask, session
+from flask_login import LoginManager
+from wtforms import ValidationError
+
+from . import ConfigError
+from . import forms
+from .db_manager import DBManager
+from .email_manager import EmailManager
+from .password_manager import PasswordManager
+from .token_manager import TokenManager
+from .translation_utils import lazy_gettext as _  # map _() to lazy_gettext()
+from .user_manager__settings import UserManager__Settings
+from .user_manager__utils import UserManager__Utils
+from .user_manager__views import UserManager__Views
+
+
+class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views):
+
+    def __init__(self, app, db, UserClass, **kwargs):
+
+        self.app = app
+        if app:
+            self.init_app(app, db, UserClass, **kwargs)
+
+    def init_app(
+
+
+## ... source file abbreviated to get to session examples ...
+
+
+            if attrib_name[0:5] == 'USER_':
+                default_value = getattr(UserManager, attrib_name)
+                setattr(self, attrib_name, app.config.get(attrib_name, default_value))
+
+        if not self.USER_EMAIL_SENDER_EMAIL:
+            default_sender = app.config.get('DEFAULT_MAIL_SENDER', None)
+            default_sender = app.config.get('MAIL_DEFAULT_SENDER', default_sender)
+            if default_sender:
+                if default_sender[-1:] == '>':
+                    start = default_sender.rfind('<')
+                    if start >= 1:
+                        self.USER_EMAIL_SENDER_EMAIL = default_sender[start + 1:-1]
+                        if not self.USER_EMAIL_SENDER_NAME:
+                            self.USER_EMAIL_SENDER_NAME = default_sender[0:start].strip(' "')
+                else:
+                    self.USER_EMAIL_SENDER_EMAIL = default_sender
+
+        if not self.USER_EMAIL_SENDER_NAME:
+            self.USER_EMAIL_SENDER_NAME = self.USER_APP_NAME
+
+        if self.USER_USER_SESSION_EXPIRATION:
+            app.permanent_session_lifetime = datetime.timedelta(seconds=self.USER_USER_SESSION_EXPIRATION)
+
+            @app.before_request
+            def advance_session_timeout():
+~~                session.permanent = True    # Timeout after app.permanent_session_lifetime period
+~~                session.modified = True     # Advance session timeout each time a user visits a page
+
+        self.login_manager = LoginManager(app)
+        self.login_manager.login_view = 'user.login'
+
+        @self.login_manager.user_loader
+        def load_user_by_user_token(user_token):
+            user = self.db_manager.UserClass.get_user_by_token(user_token)
+            return user
+
+        self.babel = app.extensions.get('babel', None)
+        from .translation_utils import init_translations
+        init_translations(self.babel)
+
+        if not hasattr(app.jinja_env, 'install_gettext_callables'):
+            app.jinja_env.add_extension('jinja2.ext.i18n')
+            app.jinja_env.install_null_translations()
+
+        def flask_user_context_processor():
+            def call_or_get(function_or_property):
+                return function_or_property() if callable(function_or_property) else function_or_property
+
+            return dict(
+                user_manager=current_app.user_manager,
+                call_or_get=call_or_get,
+
+
+## ... source file continues with no further session examples...
+
+```
+
+
+## Example 9 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

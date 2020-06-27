@@ -904,7 +904,99 @@ from .forms import (
 ```
 
 
-## Example 10 from Flasky
+## Example 10 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / email_manager.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./email_manager.py)
+
+```python
+# email_manager.py
+
+
+~~from flask import render_template, url_for
+
+from flask_user import ConfigError
+
+class EmailManager(object):
+
+    def __init__(self, app):
+        self.app = app
+        self.user_manager = app.user_manager
+        self.sender_name = self.user_manager.USER_EMAIL_SENDER_NAME
+        self.sender_email = self.user_manager.USER_EMAIL_SENDER_EMAIL
+
+        if not self.sender_email:
+            raise ConfigError('Config setting USER_EMAIL_SENDER_EMAIL is missing.')
+
+        if '@' not in self.sender_email:
+            raise ConfigError('Config setting USER_EMAIL_SENDER_EMAIL is not a valid email address.')
+
+
+    def send_confirm_email_email(self, user, user_email):
+        
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_ENABLE_CONFIRM_EMAIL: return
+
+        email = user_email.email if user_email else user.email
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+            user,
+            self.user_manager.USER_REGISTERED_EMAIL_TEMPLATE,
+            confirm_email_link=confirm_email_link,
+        )
+
+    def send_username_changed_email(self, user):
+
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_SEND_USERNAME_CHANGED_EMAIL: return
+
+        user_or_user_email_object = self.user_manager.db_manager.get_primary_user_email_object(user)
+        email = user_or_user_email_object.email
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_USERNAME_CHANGED_EMAIL_TEMPLATE,
+        )
+
+    def _render_and_send_email(self, email, user, template_filename, **kwargs):
+        kwargs['app_name'] = self.user_manager.USER_APP_NAME
+        kwargs['email'] = email
+        kwargs['user'] = user
+        kwargs['user_manager'] = self.user_manager
+
+~~        subject = render_template(template_filename+'_subject.txt', **kwargs)
+        subject = subject.replace('\n', ' ')
+        subject = subject.replace('\r', ' ')
+~~        html_message = render_template(template_filename+'_message.html', **kwargs)
+~~        text_message = render_template(template_filename+'_message.txt', **kwargs)
+
+        self.user_manager.email_adapter.send_email_message(
+            email, subject, html_message, text_message,
+            self.sender_email, self.sender_name)
+
+
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 11 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -944,7 +1036,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 11 from Datadog Flask Example App
+## Example 12 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1046,7 +1138,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 12 from newspie
+## Example 13 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1201,7 +1293,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 13 from tedivms-flask
+## Example 14 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

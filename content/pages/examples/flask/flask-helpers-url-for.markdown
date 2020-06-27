@@ -708,7 +708,156 @@ def get_post_action_redirect(config_key, declared=None):
 ```
 
 
-## Example 9 from Flasky
+## Example 9 from Flask-User
+[Flask-User](https://github.com/lingthio/Flask-User)
+([PyPI information](https://pypi.org/project/Flask-User/)
+and
+[project documentation](https://flask-user.readthedocs.io/en/latest/))
+is a [Flask](/flask.html) extension that makes it easier to add
+custom user account management and authentication to the projects
+you are building. The extension supports persistent data storage
+through both [relational databases](/databases.html) and
+[MongoDB](/mongodb.html). The project is provided as open source under
+the [MIT license](https://github.com/lingthio/Flask-User/blob/master/LICENSE.txt).
+
+[**Flask-User / flask_user / email_manager.py**](https://github.com/lingthio/Flask-User/blob/master/flask_user/./email_manager.py)
+
+```python
+# email_manager.py
+
+
+~~from flask import render_template, url_for
+
+from flask_user import ConfigError
+
+class EmailManager(object):
+
+    def __init__(self, app):
+        self.app = app
+        self.user_manager = app.user_manager
+        self.sender_name = self.user_manager.USER_EMAIL_SENDER_NAME
+        self.sender_email = self.user_manager.USER_EMAIL_SENDER_EMAIL
+
+        if not self.sender_email:
+            raise ConfigError('Config setting USER_EMAIL_SENDER_EMAIL is missing.')
+
+        if '@' not in self.sender_email:
+            raise ConfigError('Config setting USER_EMAIL_SENDER_EMAIL is not a valid email address.')
+
+
+    def send_confirm_email_email(self, user, user_email):
+        
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_ENABLE_CONFIRM_EMAIL: return
+
+        email = user_email.email if user_email else user.email
+
+        object_id = user_email.id if user_email else user.id
+        token = self.user_manager.generate_token(object_id)
+~~        confirm_email_link = url_for('user.confirm_email', token=token, _external=True)
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_CONFIRM_EMAIL_TEMPLATE,
+            confirm_email_link=confirm_email_link,
+        )
+
+    def send_password_changed_email(self, user):
+
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_SEND_PASSWORD_CHANGED_EMAIL: return
+
+        user_or_user_email_object = self.user_manager.db_manager.get_primary_user_email_object(user)
+        email = user_or_user_email_object.email
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_PASSWORD_CHANGED_EMAIL_TEMPLATE,
+        )
+
+    def send_reset_password_email(self, user, user_email):
+
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        assert self.user_manager.USER_ENABLE_FORGOT_PASSWORD
+
+        email = user_email.email if user_email else user.email
+
+        token = self.user_manager.generate_token(user.id)
+~~        reset_password_link = url_for('user.reset_password', token=token, _external=True)
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_RESET_PASSWORD_EMAIL_TEMPLATE,
+            reset_password_link=reset_password_link,
+        )
+
+    def send_invite_user_email(self, user, user_invitation):
+
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_ENABLE_INVITE_USER: return
+
+        invited_by_user = user
+
+        email = user_invitation.email
+
+        user = self.user_manager.db_manager.UserClass(email=email)
+
+        token = self.user_manager.generate_token(user_invitation.id)
+~~        accept_invitation_link = url_for('user.register', token=token, _external=True)
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_INVITE_USER_EMAIL_TEMPLATE,
+            accept_invitation_link=accept_invitation_link,
+            invited_by_user=invited_by_user,
+        )
+
+    def send_registered_email(self, user, user_email, request_email_confirmation):
+
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_SEND_REGISTERED_EMAIL: return
+
+        email = user_email.email if user_email else user.email
+
+        if request_email_confirmation:
+            token = self.user_manager.generate_token(user_email.id if user_email else user.id)
+~~            confirm_email_link = url_for('user.confirm_email', token=token, _external=True)
+        else:
+            confirm_email_link = None
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_REGISTERED_EMAIL_TEMPLATE,
+            confirm_email_link=confirm_email_link,
+        )
+
+    def send_username_changed_email(self, user):
+
+        if not self.user_manager.USER_ENABLE_EMAIL: return
+        if not self.user_manager.USER_SEND_USERNAME_CHANGED_EMAIL: return
+
+        user_or_user_email_object = self.user_manager.db_manager.get_primary_user_email_object(user)
+        email = user_or_user_email_object.email
+
+        self._render_and_send_email(
+            email,
+            user,
+            self.user_manager.USER_USERNAME_CHANGED_EMAIL_TEMPLATE,
+        )
+
+
+
+## ... source file continues with no further url_for examples...
+
+```
+
+
+## Example 10 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -908,7 +1057,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 10 from Datadog Flask Example App
+## Example 11 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
