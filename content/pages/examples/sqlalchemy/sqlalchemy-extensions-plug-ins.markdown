@@ -61,6 +61,18 @@ flask-sqlalchemy is provided as open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/pallets/flask-sqlalchemy/blob/master/LICENSE.rst).
 
 
+### GeoAlchemy2
+[GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2) 
+([project documentation](https://geoalchemy-2.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/GeoAlchemy2/))
+extends [SQLAlchemy](/sqlalchemy.html) with new data types for working
+with geospatial databases, particularly [PostGIS](http://postgis.net/),
+which is a spatial database extender for [PostgreSQL](/postgresql.html).
+The project is provided as open source under the 
+[MIT license](https://github.com/geoalchemy/geoalchemy2/blob/master/COPYING.rst).
+
+
 ### GINO
 [GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
@@ -72,6 +84,21 @@ with asynchronously-run code, for example, an application written with
 [asyncio](https://docs.python.org/3/library/asyncio.html).
 
 GINO is open sourced under the [BSD License](https://github.com/python-gino/gino/blob/master/LICENSE).
+
+
+### graphene-sqlalchemy
+[graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy)
+([project documentation](https://docs.graphene-python.org/projects/sqlalchemy/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/graphene-sqlalchemy/))
+is a [SQLAlchemy](/sqlalchemy.html) integration for 
+[Graphene](https://graphene-python.org/), which makes it easier to build
+GraphQL-based [APIs](/application-programming-interfaces.html) into Python
+[web applications](/web-development.html). The package allows you to
+subclass SQLAlchemy classes and build queries around them with custom
+code to match the backend queries with the GraphQL-based request queries.
+The project is provided as open source under the
+[MIT license](https://github.com/graphql-python/graphene-sqlalchemy/blob/master/LICENSE.md).
 
 
 ### marshmallow-sqlalchemy
