@@ -1,13 +1,13 @@
 title: sqlalchemy.sql table code examples
 category: page
 slug: sqlalchemy-sql-table-examples
-sortorder: 500031069
+sortorder: 500031087
 toc: False
 sidebartitle: sqlalchemy.sql table
-meta: Python example code for the table function from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code for the table callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-table is a function within the sqlalchemy.sql module of the SQLAlchemy project.
+table is a callable within the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

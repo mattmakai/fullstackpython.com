@@ -4,10 +4,10 @@ slug: sqlalchemy-dialects-mssql-examples
 sortorder: 500031000
 toc: False
 sidebartitle: sqlalchemy.dialects mssql
-meta: Python example code for the mssql function from the sqlalchemy.dialects module of the SQLAlchemy project.
+meta: Python example code for the mssql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-mssql is a function within the sqlalchemy.dialects module of the SQLAlchemy project.
+mssql is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
 ## Example 1 from marshmallow-sqlalchemy

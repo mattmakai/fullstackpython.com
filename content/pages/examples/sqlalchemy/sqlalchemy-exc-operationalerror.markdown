@@ -1,7 +1,7 @@
 title: sqlalchemy.exc OperationalError code examples
 category: page
 slug: sqlalchemy-exc-operationalerror-examples
-sortorder: 500031027
+sortorder: 500031029
 toc: False
 sidebartitle: sqlalchemy.exc OperationalError
 meta: Python example code for the OperationalError class from the sqlalchemy.exc module of the SQLAlchemy project.

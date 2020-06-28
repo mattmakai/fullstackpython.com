@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.properties ColumnProperty code examples
 category: page
 slug: sqlalchemy-orm-properties-columnproperty-examples
-sortorder: 500031051
+sortorder: 500031063
 toc: False
 sidebartitle: sqlalchemy.orm.properties ColumnProperty
 meta: Python example code for the ColumnProperty class from the sqlalchemy.orm.properties module of the SQLAlchemy project.

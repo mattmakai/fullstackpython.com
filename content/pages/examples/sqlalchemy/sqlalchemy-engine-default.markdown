@@ -1,13 +1,13 @@
 title: sqlalchemy.engine default code examples
 category: page
 slug: sqlalchemy-engine-default-examples
-sortorder: 500031016
+sortorder: 500031017
 toc: False
 sidebartitle: sqlalchemy.engine default
-meta: Python example code for the default function from the sqlalchemy.engine module of the SQLAlchemy project.
+meta: Python example code for the default callable from the sqlalchemy.engine module of the SQLAlchemy project.
 
 
-default is a function within the sqlalchemy.engine module of the SQLAlchemy project.
+default is a callable within the sqlalchemy.engine module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

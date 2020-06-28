@@ -1,13 +1,13 @@
 title: sqlalchemy.dialects.postgresql INTEGER code examples
 category: page
 slug: sqlalchemy-dialects-postgresql-integer-examples
-sortorder: 500031009
+sortorder: 500031010
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql INTEGER
-meta: Python example code for the INTEGER class from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code for the INTEGER constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-INTEGER is a class within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+INTEGER is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

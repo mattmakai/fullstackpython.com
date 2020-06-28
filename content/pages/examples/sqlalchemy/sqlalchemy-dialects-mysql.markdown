@@ -4,10 +4,10 @@ slug: sqlalchemy-dialects-mysql-examples
 sortorder: 500031001
 toc: False
 sidebartitle: sqlalchemy.dialects mysql
-meta: Python example code for the mysql function from the sqlalchemy.dialects module of the SQLAlchemy project.
+meta: Python example code for the mysql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-mysql is a function within the sqlalchemy.dialects module of the SQLAlchemy project.
+mysql is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
 ## Example 1 from marshmallow-sqlalchemy

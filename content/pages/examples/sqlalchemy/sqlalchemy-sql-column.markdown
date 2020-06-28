@@ -1,13 +1,13 @@
 title: sqlalchemy.sql column code examples
 category: page
 slug: sqlalchemy-sql-column-examples
-sortorder: 500031066
+sortorder: 500031080
 toc: False
 sidebartitle: sqlalchemy.sql column
-meta: Python example code for the column function from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code for the column callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-column is a function within the sqlalchemy.sql module of the SQLAlchemy project.
+column is a callable within the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

@@ -1,13 +1,13 @@
 title: sqlalchemy.sql.naming conv code examples
 category: page
 slug: sqlalchemy-sql-naming-conv-examples
-sortorder: 500031078
+sortorder: 500031098
 toc: False
 sidebartitle: sqlalchemy.sql.naming conv
-meta: Python example code for the conv function from the sqlalchemy.sql.naming module of the SQLAlchemy project.
+meta: Python example code for the conv callable from the sqlalchemy.sql.naming module of the SQLAlchemy project.
 
 
-conv is a function within the sqlalchemy.sql.naming module of the SQLAlchemy project.
+conv is a callable within the sqlalchemy.sql.naming module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

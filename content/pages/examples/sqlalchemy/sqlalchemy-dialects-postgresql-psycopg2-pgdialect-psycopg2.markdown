@@ -1,7 +1,7 @@
 title: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2 code examples
 category: page
 slug: sqlalchemy-dialects-postgresql-psycopg2-pgdialect-psycopg2-examples
-sortorder: 500031013
+sortorder: 500031014
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2
 meta: Python example code for the PGDialect_psycopg2 class from the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.

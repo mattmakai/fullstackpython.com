@@ -4,10 +4,10 @@ slug: sqlalchemy-dialects-oracle-examples
 sortorder: 500031002
 toc: False
 sidebartitle: sqlalchemy.dialects oracle
-meta: Python example code for the oracle function from the sqlalchemy.dialects module of the SQLAlchemy project.
+meta: Python example code for the oracle callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-oracle is a function within the sqlalchemy.dialects module of the SQLAlchemy project.
+oracle is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
 ## Example 1 from sqlalchemy-utils

@@ -1,13 +1,13 @@
 title: sqlalchemy.sql.visitors traverse code examples
 category: page
 slug: sqlalchemy-sql-visitors-traverse-examples
-sortorder: 500031081
+sortorder: 500031101
 toc: False
 sidebartitle: sqlalchemy.sql.visitors traverse
-meta: Python example code for the traverse function from the sqlalchemy.sql.visitors module of the SQLAlchemy project.
+meta: Python example code for the traverse callable from the sqlalchemy.sql.visitors module of the SQLAlchemy project.
 
 
-traverse is a function within the sqlalchemy.sql.visitors module of the SQLAlchemy project.
+traverse is a callable within the sqlalchemy.sql.visitors module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

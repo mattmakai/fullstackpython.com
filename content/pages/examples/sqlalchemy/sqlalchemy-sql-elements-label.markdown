@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.elements Label code examples
 category: page
 slug: sqlalchemy-sql-elements-label-examples
-sortorder: 500031070
+sortorder: 500031089
 toc: False
 sidebartitle: sqlalchemy.sql.elements Label
 meta: Python example code for the Label class from the sqlalchemy.sql.elements module of the SQLAlchemy project.

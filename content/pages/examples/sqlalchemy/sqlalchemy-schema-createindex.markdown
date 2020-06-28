@@ -1,7 +1,7 @@
 title: sqlalchemy.schema CreateIndex code examples
 category: page
 slug: sqlalchemy-schema-createindex-examples
-sortorder: 500031060
+sortorder: 500031074
 toc: False
 sidebartitle: sqlalchemy.schema CreateIndex
 meta: Python example code for the CreateIndex class from the sqlalchemy.schema module of the SQLAlchemy project.

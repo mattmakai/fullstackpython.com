@@ -4,10 +4,10 @@ slug: sqlalchemy-dialects-postgresql-bigint-examples
 sortorder: 500031006
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql BIGINT
-meta: Python example code for the BIGINT class from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code for the BIGINT constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-BIGINT is a class within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+BIGINT is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

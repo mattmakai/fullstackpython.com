@@ -1,13 +1,13 @@
 title: sqlalchemy.ext compiler code examples
 category: page
 slug: sqlalchemy-ext-compiler-examples
-sortorder: 500031029
+sortorder: 500031031
 toc: False
 sidebartitle: sqlalchemy.ext compiler
-meta: Python example code for the compiler function from the sqlalchemy.ext module of the SQLAlchemy project.
+meta: Python example code for the compiler callable from the sqlalchemy.ext module of the SQLAlchemy project.
 
 
-compiler is a function within the sqlalchemy.ext module of the SQLAlchemy project.
+compiler is a callable within the sqlalchemy.ext module of the SQLAlchemy project.
 
 
 ## Example 1 from sqlalchemy-utils

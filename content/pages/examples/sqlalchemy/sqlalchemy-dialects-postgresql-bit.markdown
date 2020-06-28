@@ -4,10 +4,10 @@ slug: sqlalchemy-dialects-postgresql-bit-examples
 sortorder: 500031007
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql BIT
-meta: Python example code for the BIT class from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code for the BIT constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-BIT is a class within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+BIT is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 ## Example 1 from sqlalchemy-utils

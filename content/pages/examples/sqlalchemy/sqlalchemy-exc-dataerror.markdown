@@ -1,7 +1,7 @@
 title: sqlalchemy.exc DataError code examples
 category: page
 slug: sqlalchemy-exc-dataerror-examples
-sortorder: 500031023
+sortorder: 500031025
 toc: False
 sidebartitle: sqlalchemy.exc DataError
 meta: Python example code for the DataError class from the sqlalchemy.exc module of the SQLAlchemy project.

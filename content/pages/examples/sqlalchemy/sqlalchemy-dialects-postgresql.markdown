@@ -4,13 +4,101 @@ slug: sqlalchemy-dialects-postgresql-examples
 sortorder: 500031003
 toc: False
 sidebartitle: sqlalchemy.dialects postgresql
-meta: Python example code for the postgresql function from the sqlalchemy.dialects module of the SQLAlchemy project.
+meta: Python example code for the postgresql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-postgresql is a function within the sqlalchemy.dialects module of the SQLAlchemy project.
+postgresql is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-## Example 1 from marshmallow-sqlalchemy
+## Example 1 from GeoAlchemy2
+[GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)
+([project documentation](https://geoalchemy-2.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/GeoAlchemy2/))
+extends [SQLAlchemy](/sqlalchemy.html) with new data types for working
+with geospatial databases, particularly [PostGIS](http://postgis.net/),
+which is a spatial database extender for [PostgreSQL](/postgresql.html).
+The project is provided as open source under the
+[MIT license](https://github.com/geoalchemy/geoalchemy2/blob/master/COPYING.rst).
+
+[**GeoAlchemy2 / geoalchemy2 / types.py**](https://github.com/geoalchemy/geoalchemy2/blob/master/geoalchemy2/./types.py)
+
+```python
+# types.py
+import warnings
+
+from sqlalchemy.types import UserDefinedType, Integer
+from sqlalchemy.sql import func
+~~from sqlalchemy.dialects import postgresql
+from sqlalchemy.dialects.postgresql.base import ischema_names
+
+try:
+    from .shape import to_shape
+    SHAPELY = True
+except ImportError:
+    SHAPELY = False
+
+
+from .comparator import BaseComparator, Comparator
+from .elements import WKBElement, WKTElement, RasterElement, CompositeElement
+from .exc import ArgumentError
+
+
+class _GISType(UserDefinedType):
+
+    name = None
+
+    from_text = None
+
+    as_binary = None
+
+    comparator_factory = Comparator
+
+
+
+## ... source file abbreviated to get to postgresql examples ...
+
+
+
+    def __init__(self, *args, **kwargs):
+        kwargs['geometry_type'] = None
+        kwargs['srid'] = -1
+        super(Raster, self).__init__(*args, **kwargs)
+        self.extended = None
+
+
+class CompositeType(UserDefinedType):
+
+    typemap = {}
+
+    class comparator_factory(UserDefinedType.Comparator):
+        def __getattr__(self, key):
+            try:
+                type_ = self.type.typemap[key]
+            except KeyError:
+                raise KeyError("Type '%s' doesn't have an attribute: '%s'"
+                               % (self.type, key))
+
+            return CompositeElement(self.expr, key, type_)
+
+
+class GeometryDump(CompositeType):
+
+~~    typemap = {'path': postgresql.ARRAY(Integer), 'geom': Geometry}
+
+
+ischema_names['geometry'] = Geometry
+ischema_names['geography'] = Geography
+ischema_names['raster'] = Raster
+
+
+
+## ... source file continues with no further postgresql examples...
+
+```
+
+
+## Example 2 from marshmallow-sqlalchemy
 [marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)
 ([project documentation](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/))
 is a code library that makes it easier to use
@@ -111,7 +199,7 @@ class ModelConverter:
 ```
 
 
-## Example 2 from sqlalchemy-utils
+## Example 3 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

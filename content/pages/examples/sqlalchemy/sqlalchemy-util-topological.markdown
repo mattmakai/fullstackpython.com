@@ -1,13 +1,13 @@
 title: sqlalchemy.util topological code examples
 category: page
 slug: sqlalchemy-util-topological-examples
-sortorder: 500031087
+sortorder: 500031110
 toc: False
 sidebartitle: sqlalchemy.util topological
-meta: Python example code for the topological function from the sqlalchemy.util module of the SQLAlchemy project.
+meta: Python example code for the topological callable from the sqlalchemy.util module of the SQLAlchemy project.
 
 
-topological is a function within the sqlalchemy.util module of the SQLAlchemy project.
+topological is a callable within the sqlalchemy.util module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic

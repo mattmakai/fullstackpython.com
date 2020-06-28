@@ -1,13 +1,13 @@
 title: sqlalchemy.orm attributes code examples
 category: page
 slug: sqlalchemy-orm-attributes-examples
-sortorder: 500031039
+sortorder: 500031043
 toc: False
 sidebartitle: sqlalchemy.orm attributes
-meta: Python example code for the attributes function from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code for the attributes callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
-attributes is a function within the sqlalchemy.orm module of the SQLAlchemy project.
+attributes is a callable within the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 ## Example 1 from sqlalchemy-utils

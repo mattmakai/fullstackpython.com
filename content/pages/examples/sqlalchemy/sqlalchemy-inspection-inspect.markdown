@@ -1,16 +1,111 @@
 title: sqlalchemy.inspection inspect code examples
 category: page
 slug: sqlalchemy-inspection-inspect-examples
-sortorder: 500031036
+sortorder: 500031038
 toc: False
 sidebartitle: sqlalchemy.inspection inspect
-meta: Python example code for the inspect function from the sqlalchemy.inspection module of the SQLAlchemy project.
+meta: Python example code for the inspect callable from the sqlalchemy.inspection module of the SQLAlchemy project.
 
 
-inspect is a function within the sqlalchemy.inspection module of the SQLAlchemy project.
+inspect is a callable within the sqlalchemy.inspection module of the SQLAlchemy project.
 
 
-## Example 1 from sandman2
+## Example 1 from graphene-sqlalchemy
+[graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy)
+([project documentation](https://docs.graphene-python.org/projects/sqlalchemy/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/graphene-sqlalchemy/))
+is a [SQLAlchemy](/sqlalchemy.html) integration for
+[Graphene](https://graphene-python.org/), which makes it easier to build
+GraphQL-based [APIs](/application-programming-interfaces.html) into Python
+[web applications](/web-development.html). The package allows you to
+subclass SQLAlchemy classes and build queries around them with custom
+code to match the backend queries with the GraphQL-based request queries.
+The project is provided as open source under the
+[MIT license](https://github.com/graphql-python/graphene-sqlalchemy/blob/master/LICENSE.md).
+
+[**graphene-sqlalchemy / graphene_sqlalchemy / tests / test_converter.py**](https://github.com/graphql-python/graphene-sqlalchemy/blob/master/graphene_sqlalchemy/tests/test_converter.py)
+
+```python
+# test_converter.py
+import enum
+
+import pytest
+from sqlalchemy import Column, func, select, types
+from sqlalchemy.dialects import postgresql
+from sqlalchemy.ext.declarative import declarative_base
+~~from sqlalchemy.inspection import inspect
+from sqlalchemy.orm import column_property, composite
+from sqlalchemy_utils import ChoiceType, JSONType, ScalarListType
+
+import graphene
+from graphene.relay import Node
+from graphene.types.datetime import DateTime
+from graphene.types.json import JSONString
+
+from ..converter import (convert_sqlalchemy_column,
+                         convert_sqlalchemy_composite,
+                         convert_sqlalchemy_relationship)
+from ..fields import (UnsortedSQLAlchemyConnectionField,
+                      default_connection_field_factory)
+from ..registry import Registry, get_global_registry
+from ..types import SQLAlchemyObjectType
+from .models import Article, CompositeFullName, Pet, Reporter
+
+
+def mock_resolver():
+    pass
+
+
+def get_field(sqlalchemy_type, **column_kwargs):
+    class Model(declarative_base()):
+        __tablename__ = 'model'
+        id_ = Column(types.Integer, primary_key=True)
+        column = Column(sqlalchemy_type, doc="Custom Help Text", **column_kwargs)
+
+~~    column_prop = inspect(Model).column_attrs['column']
+    return convert_sqlalchemy_column(column_prop, get_global_registry(), mock_resolver)
+
+
+def get_field_from_column(column_):
+    class Model(declarative_base()):
+        __tablename__ = 'model'
+        id_ = Column(types.Integer, primary_key=True)
+        column = column_
+
+~~    column_prop = inspect(Model).column_attrs['column']
+    return convert_sqlalchemy_column(column_prop, get_global_registry(), mock_resolver)
+
+
+def test_should_unknown_sqlalchemy_field_raise_exception():
+    re_err = "Don't know how to convert the SQLAlchemy field"
+    with pytest.raises(Exception, match=re_err):
+        get_field(getattr(types, 'LargeBinary', types.Binary)())
+
+
+def test_should_date_convert_string():
+    assert get_field(types.Date()).type == graphene.String
+
+
+def test_should_datetime_convert_datetime():
+    assert get_field(types.DateTime()).type == DateTime
+
+
+def test_should_time_convert_string():
+    assert get_field(types.Time()).type == graphene.String
+
+
+def test_should_string_convert_string():
+    assert get_field(types.String()).type == graphene.String
+
+
+
+## ... source file continues with no further inspect examples...
+
+```
+
+
+## Example 2 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and

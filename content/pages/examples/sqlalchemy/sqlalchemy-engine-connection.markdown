@@ -1,7 +1,7 @@
 title: sqlalchemy.engine Connection code examples
 category: page
 slug: sqlalchemy-engine-connection-examples
-sortorder: 500031014
+sortorder: 500031015
 toc: False
 sidebartitle: sqlalchemy.engine Connection
 meta: Python example code for the Connection class from the sqlalchemy.engine module of the SQLAlchemy project.
@@ -223,6 +223,52 @@ _bypass_no_param = _bypass_no_param()
             self.dialect.execution_ctx_cls._init_baked_query,
             bq.compiled_sql,
             distilled_params,
+
+
+## ... source file abbreviated to get to Connection examples ...
+
+
+
+    async def one(self, clause, *multiparams, **params):
+        async with self.acquire(reuse=True) as conn:
+            return await conn.one(clause, *multiparams, **params)
+
+    async def scalar(self, clause, *multiparams, **params):
+        async with self.acquire(reuse=True) as conn:
+            return await conn.scalar(clause, *multiparams, **params)
+
+    async def status(self, clause, *multiparams, **params):
+        async with self.acquire(reuse=True) as conn:
+            return await conn.status(clause, *multiparams, **params)
+
+    def compile(self, clause, *multiparams, **params):
+        return self._dialect.compile(clause, *multiparams, **params)
+
+    def transaction(self, *args, timeout=None, reuse=True, reusable=True, **kwargs):
+        return _TransactionContext(
+            self.acquire(timeout=timeout, reuse=reuse, reusable=reusable),
+            (args, kwargs),
+        )
+
+    def iterate(self, clause, *multiparams, **params):
+        connection = self.current_connection
+        if connection is None:
+~~            raise ValueError("No Connection in context, please provide one")
+        return connection.iterate(clause, *multiparams, **params)
+
+    def update_execution_options(self, **opt):
+        self._sa_engine.update_execution_options(**opt)
+
+    async def _run_visitor(self, *args, **kwargs):
+        async with self.acquire(reuse=True) as conn:
+            await getattr(conn, "_run_visitor")(*args, **kwargs)
+
+    def repr(self, color=False):
+        return self._pool.repr(color)
+
+    def __repr__(self):
+        return self.repr()
+
 
 
 ## ... source file continues with no further Connection examples...

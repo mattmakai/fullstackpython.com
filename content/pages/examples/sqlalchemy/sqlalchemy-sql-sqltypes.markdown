@@ -1,13 +1,13 @@
 title: sqlalchemy.sql sqltypes code examples
 category: page
 slug: sqlalchemy-sql-sqltypes-examples
-sortorder: 500031068
+sortorder: 500031086
 toc: False
 sidebartitle: sqlalchemy.sql sqltypes
-meta: Python example code for the sqltypes function from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code for the sqltypes callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-sqltypes is a function within the sqlalchemy.sql module of the SQLAlchemy project.
+sqltypes is a callable within the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 ## Example 1 from alembic
@@ -110,111 +110,7 @@ def add_column(compiler, column, **kw):
 ```
 
 
-## Example 2 from sandman2
-[sandman2](https://github.com/jeffknupp/sandman2)
-([project documentation](https://sandman2.readthedocs.io/en/latest/)
-and
-[PyPI package information](https://pypi.org/project/sandman2/))
-is a code library for automatically generating
-[RESTful APIs](/application-programming-interfaces.html) from
-existing database schemas. This approach is handy for solving
-straightforward situations where you want to put an abstraction
-layer between one or more applications and your
-[relational database](/databases.html) to prevent or reduce
-direct database access.
-
-The sandman2 project is provided under the
-[Apache License 2.0](https://github.com/jeffknupp/sandman2/blob/master/LICENSE).
-
-[**sandman2 / sandman2 / app.py**](https://github.com/jeffknupp/sandman2/blob/master/sandman2/./app.py)
-
-```python
-# app.py
-
-from flask import Flask, current_app, jsonify
-~~from sqlalchemy.sql import sqltypes
-
-from sandman2.exception import (
-    BadRequestException,
-    ForbiddenException,
-    NotFoundException,
-    NotAcceptableException,
-    NotImplementedException,
-    ConflictException,
-    ServerErrorException,
-    ServiceUnavailableException,
-    )
-from sandman2.service import Service
-from sandman2.model import db, Model, AutomapModel
-from sandman2.admin import CustomAdminView
-from flask_admin import Admin
-from flask_httpauth import HTTPBasicAuth
-
-auth = HTTPBasicAuth()
-
-def get_app(
-        database_uri,
-        exclude_tables=None,
-        user_models=None,
-        reflect_all=True,
-
-
-## ... source file abbreviated to get to sqltypes examples ...
-
-
-def _reflect_all(exclude_tables=None, admin=None, read_only=False, schema=None):
-    AutomapModel.prepare(  # pylint:disable=maybe-no-member
-        db.engine, reflect=True, schema=schema)
-    for cls in AutomapModel.classes:
-        if exclude_tables and cls.__table__.name in exclude_tables:
-            continue
-        if read_only:
-            cls.__methods__ = {'GET'}
-        register_model(cls, admin)
-
-
-def register_model(cls, admin=None):
-    cls.__url__ = '/{}'.format(cls.__name__.lower())
-    service_class = type(
-        cls.__name__ + 'Service',
-        (Service,),
-        {
-            '__model__': cls,
-        })
-
-    cols = list(cls().__table__.primary_key.columns)
-
-    primary_key_type = 'string'
-    if len(cols) == 1:
-        col_type = cols[0].type
-~~        if isinstance(col_type, sqltypes.String):
-            primary_key_type = 'string'
-~~        elif isinstance(col_type, sqltypes.Integer):
-            primary_key_type = 'int'
-~~        elif isinstance(col_type, sqltypes.Numeric):
-            primary_key_type = 'float'
-
-    register_service(service_class, primary_key_type)
-    if admin is not None:
-        admin.add_view(CustomAdminView(cls, db.session))
-
-
-def _register_user_models(user_models, admin=None, schema=None):
-    if any([issubclass(cls, AutomapModel) for cls in user_models]):
-        AutomapModel.prepare(  # pylint:disable=maybe-no-member
-                               db.engine, reflect=True, schema=schema)
-
-    for user_model in user_models:
-        register_model(user_model, admin)
-
-
-
-## ... source file continues with no further sqltypes examples...
-
-```
-
-
-## Example 3 from GINO
+## Example 2 from GINO
 [GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
 and
@@ -447,6 +343,110 @@ class AsyncpgDialect(PGDialect, base.AsyncDialectMixin):
                 WHERE t.typname = :typname
                 AND pg_type_is_visible(t.oid)
                 )
+
+
+
+## ... source file continues with no further sqltypes examples...
+
+```
+
+
+## Example 3 from sandman2
+[sandman2](https://github.com/jeffknupp/sandman2)
+([project documentation](https://sandman2.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/sandman2/))
+is a code library for automatically generating
+[RESTful APIs](/application-programming-interfaces.html) from
+existing database schemas. This approach is handy for solving
+straightforward situations where you want to put an abstraction
+layer between one or more applications and your
+[relational database](/databases.html) to prevent or reduce
+direct database access.
+
+The sandman2 project is provided under the
+[Apache License 2.0](https://github.com/jeffknupp/sandman2/blob/master/LICENSE).
+
+[**sandman2 / sandman2 / app.py**](https://github.com/jeffknupp/sandman2/blob/master/sandman2/./app.py)
+
+```python
+# app.py
+
+from flask import Flask, current_app, jsonify
+~~from sqlalchemy.sql import sqltypes
+
+from sandman2.exception import (
+    BadRequestException,
+    ForbiddenException,
+    NotFoundException,
+    NotAcceptableException,
+    NotImplementedException,
+    ConflictException,
+    ServerErrorException,
+    ServiceUnavailableException,
+    )
+from sandman2.service import Service
+from sandman2.model import db, Model, AutomapModel
+from sandman2.admin import CustomAdminView
+from flask_admin import Admin
+from flask_httpauth import HTTPBasicAuth
+
+auth = HTTPBasicAuth()
+
+def get_app(
+        database_uri,
+        exclude_tables=None,
+        user_models=None,
+        reflect_all=True,
+
+
+## ... source file abbreviated to get to sqltypes examples ...
+
+
+def _reflect_all(exclude_tables=None, admin=None, read_only=False, schema=None):
+    AutomapModel.prepare(  # pylint:disable=maybe-no-member
+        db.engine, reflect=True, schema=schema)
+    for cls in AutomapModel.classes:
+        if exclude_tables and cls.__table__.name in exclude_tables:
+            continue
+        if read_only:
+            cls.__methods__ = {'GET'}
+        register_model(cls, admin)
+
+
+def register_model(cls, admin=None):
+    cls.__url__ = '/{}'.format(cls.__name__.lower())
+    service_class = type(
+        cls.__name__ + 'Service',
+        (Service,),
+        {
+            '__model__': cls,
+        })
+
+    cols = list(cls().__table__.primary_key.columns)
+
+    primary_key_type = 'string'
+    if len(cols) == 1:
+        col_type = cols[0].type
+~~        if isinstance(col_type, sqltypes.String):
+            primary_key_type = 'string'
+~~        elif isinstance(col_type, sqltypes.Integer):
+            primary_key_type = 'int'
+~~        elif isinstance(col_type, sqltypes.Numeric):
+            primary_key_type = 'float'
+
+    register_service(service_class, primary_key_type)
+    if admin is not None:
+        admin.add_view(CustomAdminView(cls, db.session))
+
+
+def _register_user_models(user_models, admin=None, schema=None):
+    if any([issubclass(cls, AutomapModel) for cls in user_models]):
+        AutomapModel.prepare(  # pylint:disable=maybe-no-member
+                               db.engine, reflect=True, schema=schema)
+
+    for user_model in user_models:
+        register_model(user_model, admin)
 
 
 

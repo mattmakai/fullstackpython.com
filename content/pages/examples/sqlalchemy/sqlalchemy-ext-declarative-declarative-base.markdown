@@ -1,13 +1,13 @@
 title: sqlalchemy.ext.declarative declarative_base code examples
 category: page
 slug: sqlalchemy-ext-declarative-declarative-base-examples
-sortorder: 500031033
+sortorder: 500031035
 toc: False
 sidebartitle: sqlalchemy.ext.declarative declarative_base
-meta: Python example code for the declarative_base function from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
+meta: Python example code for the declarative_base callable from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
 
 
-declarative_base is a function within the sqlalchemy.ext.declarative module of the SQLAlchemy project.
+declarative_base is a callable within the sqlalchemy.ext.declarative module of the SQLAlchemy project.
 
 
 ## Example 1 from flask-sqlalchemy
@@ -134,7 +134,75 @@ def _make_table(db):
 ```
 
 
-## Example 2 from sandman2
+## Example 2 from graphene-sqlalchemy
+[graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy)
+([project documentation](https://docs.graphene-python.org/projects/sqlalchemy/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/graphene-sqlalchemy/))
+is a [SQLAlchemy](/sqlalchemy.html) integration for
+[Graphene](https://graphene-python.org/), which makes it easier to build
+GraphQL-based [APIs](/application-programming-interfaces.html) into Python
+[web applications](/web-development.html). The package allows you to
+subclass SQLAlchemy classes and build queries around them with custom
+code to match the backend queries with the GraphQL-based request queries.
+The project is provided as open source under the
+[MIT license](https://github.com/graphql-python/graphene-sqlalchemy/blob/master/LICENSE.md).
+
+[**graphene-sqlalchemy / graphene_sqlalchemy / tests / models.py**](https://github.com/graphql-python/graphene-sqlalchemy/blob/master/graphene_sqlalchemy/tests/models.py)
+
+```python
+# models.py
+from __future__ import absolute_import
+
+import enum
+
+from sqlalchemy import (Column, Date, Enum, ForeignKey, Integer, String, Table,
+                        func, select)
+~~from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.hybrid import hybrid_property
+from sqlalchemy.orm import column_property, composite, mapper, relationship
+
+PetKind = Enum("cat", "dog", name="pet_kind")
+
+
+class HairKind(enum.Enum):
+    LONG = 'long'
+    SHORT = 'short'
+
+
+~~Base = declarative_base()
+
+association_table = Table(
+    "association",
+    Base.metadata,
+    Column("pet_id", Integer, ForeignKey("pets.id")),
+    Column("reporter_id", Integer, ForeignKey("reporters.id")),
+)
+
+
+class Editor(Base):
+    __tablename__ = "editors"
+    editor_id = Column(Integer(), primary_key=True)
+    name = Column(String(100))
+
+
+class Pet(Base):
+    __tablename__ = "pets"
+    id = Column(Integer(), primary_key=True)
+    name = Column(String(30))
+    pet_kind = Column(PetKind, nullable=False)
+    hair_kind = Column(Enum(HairKind, name="hair_kind"), nullable=False)
+    reporter_id = Column(Integer(), ForeignKey("reporters.id"))
+
+
+
+
+## ... source file continues with no further declarative_base examples...
+
+```
+
+
+## Example 3 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
