@@ -172,3 +172,7 @@ should upgrade as soon as possible.
   is a great slideshow with code snippets that show useful new features
   of Python 3 that are not available in 2.x such as keyword-only
   arguments, chained exceptions and the `yield from` keyword.
+
+* [Python 2 vs 3, what's different?](https://python-commandments.org/python-2-vs-3/) 
+  goes over some of the differences between Python 2 and Python 3
+  
