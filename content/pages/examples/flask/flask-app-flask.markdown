@@ -1146,3 +1146,49 @@ def create_app(extra_config_settings={}):
 
 ```
 
+
+## Example 17 from trape
+[trape](https://github.com/jofpin/trape) is a research tool for tracking
+people's activities that are logged digitally. The tool uses
+[Flask](/flask.html) to create a web front end to view aggregated data
+on an individual the application is set to track. The source code is
+provided as open source under the MIT license, according to the
+[README](https://github.com/jofpin/trape/blob/master/README.md).
+
+[**trape / core / user.py**](https://github.com/jofpin/trape/blob/master/./core/user.py)
+
+```python
+# user.py
+import time
+from core.dependence import urllib2
+~~from flask import Flask, render_template, session, request, json, Response
+from core.user_objects import *
+import core.stats
+from core.utils import utils
+from core.db import Database
+import os
+import sys
+import platform
+from multiprocessing import Process
+
+trape = core.stats.trape
+app = core.stats.app
+
+db = Database()
+
+class victim_server(object):
+    @app.route("/" + trape.victim_path)
+    def homeVictim():
+        opener = urllib2.build_opener()
+        headers = victim_headers(request.user_agent)
+        opener.addheaders = headers
+        if (trape.type_lure == 'local'):
+            html = assignScripts(victim_inject_code(render_template("/" + trape.url_to_clone), 'payload', '/', trape.gmaps, trape.ipinfo))
+        else:
+            html = assignScripts(victim_inject_code(opener.open(trape.url_to_clone).read(), 'payload', trape.url_to_clone, trape.gmaps, trape.ipinfo))
+
+
+## ... source file continues with no further Flask examples...
+
+```
+

@@ -115,3 +115,12 @@ often used with Flask.
 The project's code is provided as open source under the
 [BSD 2-Clause "Simplified" license](https://github.com/tedivm/tedivms-flask/blob/master/LICENSE.txt).
 
+
+### trape
+[trape](https://github.com/jofpin/trape) is a research tool for tracking
+people's activities that are logged digitally. The tool uses 
+[Flask](/flask.html) to create a web front end to view aggregated data
+on an individual the application is set to track. The source code is
+provided as open source under the MIT license, according to the
+[README](https://github.com/jofpin/trape/blob/master/README.md).
+

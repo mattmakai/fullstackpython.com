@@ -1562,3 +1562,96 @@ def init_error_handlers(app):
 
 ```
 
+
+## Example 17 from trape
+[trape](https://github.com/jofpin/trape) is a research tool for tracking
+people's activities that are logged digitally. The tool uses
+[Flask](/flask.html) to create a web front end to view aggregated data
+on an individual the application is set to track. The source code is
+provided as open source under the MIT license, according to the
+[README](https://github.com/jofpin/trape/blob/master/README.md).
+
+[**trape / core / stats.py**](https://github.com/jofpin/trape/blob/master/./core/stats.py)
+
+```python
+# stats.py
+from core.dependence import urllib2
+import sys
+import os
+~~from flask import Flask, render_template, session, request, json, redirect, url_for, send_from_directory
+from flask_cors import CORS
+from trape import Trape
+from core.db import Database
+
+trape = Trape(1)
+
+if getattr(sys, 'frozen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    static_folder = os.path.join(sys._MEIPASS, 'static')
+    app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+else:
+    app = Flask(__name__, template_folder='../templates', static_folder='../static')
+
+cors = CORS(app)
+
+db = Database()
+
+trape.header()
+
+
+@app.route("/" + trape.stats_path)
+def index():
+    return trape.injectCSS_Paths(render_template("/login.html").replace('[LOGIN_SRC]', trape.JSFiles[2]['src']).replace('[LIBS_SRC]', trape.JSFiles[1]['src']))
+
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+    server_code = ''
+    if trape.nGrokUrl != '':
+        server_code = str(trape.nGrokUrl) 
+    else:
+        server_code = str(trape.localIp) + ':' + str(trape.app_port) 
+
+    codeToInject = codeToInject.replace('[HOST_ADDRESS]', server_code)
+    codeToInject = codeToInject.replace('[YOUR_GMAPS_API_KEY]', trape.gmaps)
+    return codeToInject
+
+@app.route("/static/js/<JSFile>")
+def busted(JSFile):
+    code = ''
+    mPath = ''
+    if getattr(sys, 'frozen', False):
+        mPath = sys._MEIPASS + '/'
+    for obj in trape.JSFiles:
+        if str(obj['src']) == str(JSFile):
+            s_code = open(mPath + "static/js/" + obj['path'],"r") 
+            code = s_code.read()
+            s_code.close()
+            break
+    if code != '':
+        return code
+    else:
+~~        return render_template('404.html') 
+
+@app.route("/styles/<CSSFile>")
+def style_redirect(CSSFile):
+    code = ''
+    for obj in trape.CSSFiles:
+        if str(obj['src']) == str(CSSFile):
+            code = obj['path']
+            break
+    return redirect(code)
+
+@app.route("/static/files/<File>")
+def file_redirect(File):
+    uploads = os.path.join(os.getcwd(), './')
+    return send_from_directory(directory=uploads, filename=File)
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
