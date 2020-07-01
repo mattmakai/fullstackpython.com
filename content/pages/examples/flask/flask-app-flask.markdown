@@ -10,7 +10,61 @@ meta: Python example code for the Flask class from the flask.app module of the F
 Flask is a class within the flask.app module of the Flask project.
 
 
-## Example 1 from Flask AppBuilder
+## Example 1 from Braintree Flask app
+[Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)
+demonstrates how to incorporate this payment provider's
+[API](/application-programming-interfaces.html) into your
+[Flask](/flask.html) [web application](/web-development.html).
+The code is open sourced under the
+[MIT license](https://github.com/braintree/braintree_flask_example/blob/master/LICENSE).
+
+[**Braintree Flask app / app.py**](https://github.com/braintree/braintree_flask_example/blob/master/././app.py)
+
+```python
+# app.py
+~~from flask import Flask, redirect, url_for, render_template, request, flash
+
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+import braintree
+from gateway import generate_client_token, transact, find_transaction
+
+load_dotenv()
+
+~~app = Flask(__name__)
+app.secret_key = os.environ.get('APP_SECRET_KEY')
+
+PORT = int(os.environ.get('PORT', 4567))
+
+TRANSACTION_SUCCESS_STATUSES = [
+    braintree.Transaction.Status.Authorized,
+    braintree.Transaction.Status.Authorizing,
+    braintree.Transaction.Status.Settled,
+    braintree.Transaction.Status.SettlementConfirmed,
+    braintree.Transaction.Status.SettlementPending,
+    braintree.Transaction.Status.Settling,
+    braintree.Transaction.Status.SubmittedForSettlement
+]
+
+@app.route('/', methods=['GET'])
+def index():
+    return redirect(url_for('new_checkout'))
+
+@app.route('/checkouts/new', methods=['GET'])
+def new_checkout():
+    client_token = generate_client_token()
+    return render_template('checkouts/new.html', client_token=client_token)
+
+@app.route('/checkouts/<transaction_id>', methods=['GET'])
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 2 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -73,7 +127,7 @@ class OAuthRegistrationRoleTestCase(unittest.TestCase):
 ```
 
 
-## Example 2 from FlaskBB
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -172,7 +226,7 @@ def configure_app(app, config):
 ```
 
 
-## Example 3 from flask-base
+## Example 4 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -251,7 +305,7 @@ def create_app(config):
 ```
 
 
-## Example 4 from flask-bookshelf
+## Example 5 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -303,7 +357,7 @@ def get_lang_code(endpoint, values):
 ```
 
 
-## Example 5 from flaskex
+## Example 6 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -356,7 +410,7 @@ def logout():
 ```
 
 
-## Example 6 from Flask-HTTPAuth
+## Example 7 from Flask-HTTPAuth
 [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
 ([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
 and
@@ -412,7 +466,7 @@ class HTTPAuthTestCase(unittest.TestCase):
 ```
 
 
-## Example 7 from flask-phone-input
+## Example 8 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -464,7 +518,7 @@ def index():
 ```
 
 
-## Example 8 from flaskSaaS
+## Example 9 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -513,7 +567,7 @@ from app.models import User
 ```
 
 
-## Example 9 from Flask-SocketIO
+## Example 10 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -624,7 +678,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 10 from Flask-User
+## Example 11 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -707,7 +761,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 11 from Flask-VueJs-Template
+## Example 12 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -748,7 +802,7 @@ def index_client():
 ```
 
 
-## Example 12 from Flasky
+## Example 13 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -812,7 +866,7 @@ def create_app(config_name):
 ```
 
 
-## Example 13 from Datadog Flask Example App
+## Example 14 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -873,7 +927,7 @@ def before_request():
 ```
 
 
-## Example 14 from keras-flask-deploy-webapp
+## Example 15 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -937,7 +991,7 @@ def model_predict(img, model):
 ```
 
 
-## Example 15 from sandman2
+## Example 16 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1018,7 +1072,7 @@ def get_app(
 ```
 
 
-## Example 16 from tedivms-flask
+## Example 17 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1147,7 +1201,7 @@ def create_app(extra_config_settings={}):
 ```
 
 
-## Example 17 from trape
+## Example 18 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

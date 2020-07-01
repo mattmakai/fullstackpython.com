@@ -10,7 +10,87 @@ meta: Python example code for the flash callable from the flask.helpers module o
 flash is a callable within the flask.helpers module of the Flask project.
 
 
-## Example 1 from Flask AppBuilder
+## Example 1 from Braintree Flask app
+[Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)
+demonstrates how to incorporate this payment provider's
+[API](/application-programming-interfaces.html) into your
+[Flask](/flask.html) [web application](/web-development.html).
+The code is open sourced under the
+[MIT license](https://github.com/braintree/braintree_flask_example/blob/master/LICENSE).
+
+[**Braintree Flask app / app.py**](https://github.com/braintree/braintree_flask_example/blob/master/././app.py)
+
+```python
+# app.py
+~~from flask import Flask, redirect, url_for, render_template, request, flash
+
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+import braintree
+from gateway import generate_client_token, transact, find_transaction
+
+load_dotenv()
+
+app = Flask(__name__)
+app.secret_key = os.environ.get('APP_SECRET_KEY')
+
+PORT = int(os.environ.get('PORT', 4567))
+
+TRANSACTION_SUCCESS_STATUSES = [
+    braintree.Transaction.Status.Authorized,
+    braintree.Transaction.Status.Authorizing,
+    braintree.Transaction.Status.Settled,
+    braintree.Transaction.Status.SettlementConfirmed,
+    braintree.Transaction.Status.SettlementPending,
+    braintree.Transaction.Status.Settling,
+    braintree.Transaction.Status.SubmittedForSettlement
+]
+
+
+
+## ... source file abbreviated to get to flash examples ...
+
+
+            'icon': 'success',
+            'message': 'Your test transaction has been successfully processed. See the Braintree API response and try again.'
+        }
+    else:
+        result = {
+            'header': 'Transaction Failed',
+            'icon': 'fail',
+            'message': 'Your test transaction has a status of ' + transaction.status + '. See the Braintree API response and try again.'
+        }
+
+    return render_template('checkouts/show.html', transaction=transaction, result=result)
+
+@app.route('/checkouts', methods=['POST'])
+def create_checkout():
+    result = transact({
+        'amount': request.form['amount'],
+        'payment_method_nonce': request.form['payment_method_nonce'],
+        'options': {
+            "submit_for_settlement": True
+        }
+    })
+
+    if result.is_success or result.transaction:
+        return redirect(url_for('show_checkout',transaction_id=result.transaction.id))
+    else:
+~~        for x in result.errors.deep_errors: flash('Error: %s: %s' % (x.code, x.message))
+        return redirect(url_for('new_checkout'))
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=PORT, debug=True)
+
+
+
+## ... source file continues with no further flash examples...
+
+```
+
+
+## Example 2 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -197,7 +277,7 @@ class RegisterUserDBView(BaseRegisterUser):
 ```
 
 
-## Example 2 from FlaskBB
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -298,7 +378,7 @@ def flaskbb_registration_post_processor(user):
 ```
 
 
-## Example 3 from flask-bookshelf
+## Example 4 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -357,7 +437,7 @@ def create_author():
 ```
 
 
-## Example 4 from flask_jsondash
+## Example 5 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -588,7 +668,7 @@ def clone(c_id):
 ```
 
 
-## Example 5 from flask-login
+## Example 6 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -749,7 +829,7 @@ class LoginManager(object):
 ```
 
 
-## Example 6 from Flask-Security-Too
+## Example 7 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -869,7 +949,7 @@ def transform_url(url, qparams=None, **kwargs):
 ```
 
 
-## Example 7 from Flask-User
+## Example 8 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1342,7 +1422,7 @@ class UserManager__Views(object):
 ```
 
 
-## Example 8 from tedivms-flask
+## Example 9 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

@@ -13,6 +13,15 @@ in various ways. The code within the projects can show you how to build
 your own applications.
 
 
+### Braintree Flask example
+[Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)
+demonstrates how to incorporate this payment provider's
+[API](/application-programming-interfaces.html) into your
+[Flask](/flask.html) [web application](/web-development.html).
+The code is open sourced under the
+[MIT license](https://github.com/braintree/braintree_flask_example/blob/master/LICENSE).
+
+
 ### Datadog Flask example
 The [Datadog Flask app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions

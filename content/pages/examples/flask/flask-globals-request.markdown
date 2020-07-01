@@ -10,7 +10,97 @@ meta: Python example code for the request callable from the flask.globals module
 request is a callable within the flask.globals module of the Flask project.
 
 
-## Example 1 from Flask AppBuilder
+## Example 1 from Braintree Flask app
+[Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)
+demonstrates how to incorporate this payment provider's
+[API](/application-programming-interfaces.html) into your
+[Flask](/flask.html) [web application](/web-development.html).
+The code is open sourced under the
+[MIT license](https://github.com/braintree/braintree_flask_example/blob/master/LICENSE).
+
+[**Braintree Flask app / app.py**](https://github.com/braintree/braintree_flask_example/blob/master/././app.py)
+
+```python
+# app.py
+~~from flask import Flask, redirect, url_for, render_template, request, flash
+
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+import braintree
+from gateway import generate_client_token, transact, find_transaction
+
+load_dotenv()
+
+app = Flask(__name__)
+app.secret_key = os.environ.get('APP_SECRET_KEY')
+
+PORT = int(os.environ.get('PORT', 4567))
+
+TRANSACTION_SUCCESS_STATUSES = [
+    braintree.Transaction.Status.Authorized,
+    braintree.Transaction.Status.Authorizing,
+    braintree.Transaction.Status.Settled,
+    braintree.Transaction.Status.SettlementConfirmed,
+    braintree.Transaction.Status.SettlementPending,
+    braintree.Transaction.Status.Settling,
+    braintree.Transaction.Status.SubmittedForSettlement
+]
+
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+    client_token = generate_client_token()
+    return render_template('checkouts/new.html', client_token=client_token)
+
+@app.route('/checkouts/<transaction_id>', methods=['GET'])
+def show_checkout(transaction_id):
+    transaction = find_transaction(transaction_id)
+    result = {}
+    if transaction.status in TRANSACTION_SUCCESS_STATUSES:
+        result = {
+            'header': 'Sweet Success!',
+            'icon': 'success',
+            'message': 'Your test transaction has been successfully processed. See the Braintree API response and try again.'
+        }
+    else:
+        result = {
+            'header': 'Transaction Failed',
+            'icon': 'fail',
+            'message': 'Your test transaction has a status of ' + transaction.status + '. See the Braintree API response and try again.'
+        }
+
+    return render_template('checkouts/show.html', transaction=transaction, result=result)
+
+@app.route('/checkouts', methods=['POST'])
+def create_checkout():
+    result = transact({
+~~        'amount': request.form['amount'],
+~~        'payment_method_nonce': request.form['payment_method_nonce'],
+        'options': {
+            "submit_for_settlement": True
+        }
+    })
+
+    if result.is_success or result.transaction:
+        return redirect(url_for('show_checkout',transaction_id=result.transaction.id))
+    else:
+        for x in result.errors.deep_errors: flash('Error: %s: %s' % (x.code, x.message))
+        return redirect(url_for('new_checkout'))
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=PORT, debug=True)
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 2 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -108,7 +198,7 @@ def get_filter_args(filters):
 ```
 
 
-## Example 2 from FlaskBB
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -711,7 +801,7 @@ class DeleteReport(MethodView):
 ```
 
 
-## Example 3 from flask-bookshelf
+## Example 4 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -770,7 +860,7 @@ def create_author():
 ```
 
 
-## Example 4 from flask-debugtoolbar
+## Example 5 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -917,7 +1007,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 5 from flaskex
+## Example 6 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -1012,7 +1102,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 6 from Flask-HTTPAuth
+## Example 7 from Flask-HTTPAuth
 [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
 ([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
 and
@@ -1333,7 +1423,7 @@ class MultiAuth(object):
 ```
 
 
-## Example 7 from flask-login
+## Example 8 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1570,7 +1660,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 8 from flask-restx
+## Example 9 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1678,7 +1768,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 9 from Flask-WTF
+## Example 10 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1836,7 +1926,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 10 from flaskSaaS
+## Example 11 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1887,7 +1977,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 11 from Flask-Security-Too
+## Example 12 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -2107,7 +2197,7 @@ class ChangePasswordForm(Form, PasswordFormMixin):
 ```
 
 
-## Example 12 from Flask-SocketIO
+## Example 13 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -2331,7 +2421,7 @@ class TestSocketIO(unittest.TestCase):
 ```
 
 
-## Example 13 from Flask-User
+## Example 14 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2395,7 +2485,7 @@ def init_translations(babel):
 ```
 
 
-## Example 14 from Flask-VueJs-Template
+## Example 15 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2430,7 +2520,7 @@ def require_auth(func):
 ```
 
 
-## Example 15 from keras-flask-deploy-webapp
+## Example 16 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -2523,7 +2613,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 16 from newspie
+## Example 17 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2704,7 +2794,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 17 from sandman2
+## Example 18 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2905,7 +2995,7 @@ class Service(MethodView):
 ```
 
 
-## Example 18 from tedivms-flask
+## Example 19 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -2963,7 +3053,7 @@ def roles_accepted_api(*role_names):
 ```
 
 
-## Example 19 from trape
+## Example 20 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data
