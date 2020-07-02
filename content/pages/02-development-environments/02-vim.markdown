@@ -20,7 +20,10 @@ Vim's philosophy is that developers are more productive when they avoid
 taking their hands off the keyboard. Code should flow naturally from the
 developer's thoughts through the keyboard and onto the screen. Using a mouse
 or other peripheral is a detriment to the rate at which a developer's
-thoughts become code.
+thoughts become code. This "efficiency by keyboard" 
+[keeps Vim as one of the most popular text editors](https://pragmaticpineapple.com/how-did-vim-become-so-popular/)
+despite having been around for decades. Few programming tools have that kind 
+of staying power.
 
 Vim has a logical, structured command language. When a beginner is learning
 the editor she may feel like it is impossible to understand all the key

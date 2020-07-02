@@ -141,6 +141,12 @@ workflow. These resources will come in handy for specific Git subjects.
   important when working with others on a long-lasting project where you
   dive through the commit history via `git log` and related commands.
 
+* [How to squash Git commits](https://gitbetter.substack.com/p/how-to-squash-git-commits)
+  explains how to use the `git rebase` command in interactive mode to
+  consolidated the number of commits in your history. This technique is
+  useful when a group of commits are related and it's easier to understand
+  them as a single commit rather than a collection of smaller commits.
+
 * [Oh shit, Git!](http://ohshitgit.com/) is a profanity-filled description
   of tips to get you out of binds you may find yourself in when you get too 
   tricky with Git commands. 

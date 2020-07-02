@@ -47,6 +47,9 @@ specific situation.
   is an awesome tutorial that goes through many of the main Bootstrap
   elements such as icons, navigation bars and "jumbotron"-style webpages.
 
+* [Bootstrap 5 tutorial](https://www.youtube.com/watch?v=c9B4TPnak1A) covers
+  the alpha version of the fifth major revision for Bootstrap.
+
 * [Bootstrap 4: What's New?](https://medium.com/wdstack/bootstrap-4-whats-new-visual-guide-c84dd81d8387)
   shows a slew of comparisons for how user interface elements have changed
   design over the past several Bootstrap major version iterations.

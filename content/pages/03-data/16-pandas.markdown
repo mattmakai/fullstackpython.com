@@ -126,3 +126,6 @@ is a data structures and analysis library.
 * [How to download fundamentals data with Python](http://theautomatic.net/2020/05/05/how-to-download-fundamentals-data-with-python/)
   shows how to obtain and use financial data, such as balance sheets,
   stock prices, and various ratios to perform your own analysis on.
+
+* [How to convert JSON to Excel with Python and pandas](https://www.marsja.se/how-to-convert-json-to-excel-python-pandas/)
+  provides instructions for creating a spreadsheet out of JSON file.
