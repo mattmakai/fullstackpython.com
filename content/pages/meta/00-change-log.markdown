@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### July
+* New blog post on
+  [How to report errors in Flask web apps with Sentry](/blog/report-errors-flask-web-apps-sentry.html)
+
 ### June
 * Added new example code for [Django](/django.html) modules:
     * [django.contrib.admin.helpers](/django-contrib-admin-helpers-examples.html)
