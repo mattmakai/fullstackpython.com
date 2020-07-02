@@ -1072,7 +1072,76 @@ def get_app(
 ```
 
 
-## Example 17 from tedivms-flask
+## Example 17 from Science Flask
+[Science Flask](https://github.com/danielhomola/science_flask)
+is a [Flask](/flask.html)-powered web application for online
+scientific research tools. The project was built as a template
+for any scientist or groups of scientists to use when working
+together without having to really understand how the application
+is built. The application includes an academic registration
+process (only valid academic email addresses can be used), an
+admin panel, logging, and analysis forms.
+
+[@danielhomola](https://github.com/danielhomola) is the
+primary creator of Science Flask and the project is open
+source under the
+[GNU General Public License](https://github.com/danielhomola/science_flask/blob/master/LICENSE).
+
+[**Science Flask / frontend / __init__.py**](https://github.com/danielhomola/science_flask/blob/master/./frontend/__init__.py)
+
+```python
+# __init__.py
+import os
+~~from flask import Flask, url_for, redirect, request, abort
+from flask_mail import Mail
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from flask_security import Security, SQLAlchemyUserDatastore, signals, \
+                           current_user
+import flask_admin
+from flask_admin.contrib import sqla
+from flask_admin import helpers as admin_helpers
+from flask_wtf.csrf import CSRFProtect
+from celery import Celery
+
+
+appdir = os.path.abspath(os.path.dirname(__file__))
+ROOTDIR = os.path.abspath(os.path.join(appdir, os.pardir))
+user_data_folder = os.path.join(ROOTDIR, 'userData')
+
+~~app = Flask(__name__, instance_path=user_data_folder)
+
+app.config.from_pyfile('config.py')
+
+db = SQLAlchemy(app)
+
+mail = Mail(app)
+
+csrf = CSRFProtect(app)
+
+def create_celery_app():
+    celery = Celery(__name__, broker=app.config['CELERY_BROKER_URL'])
+    celery.conf.update(app.config)
+    TaskBase = celery.Task
+
+    class ContextTask(TaskBase):
+        abstract = True
+
+        def __call__(self, *args, **kwargs):
+            with app.app_context():
+                return TaskBase.__call__(self, *args, **kwargs)
+
+    celery.Task = ContextTask
+    celery.app = app
+    return celery
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 18 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1201,7 +1270,7 @@ def create_app(extra_config_settings={}):
 ```
 
 
-## Example 18 from trape
+## Example 19 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

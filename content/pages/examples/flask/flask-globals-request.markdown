@@ -2995,7 +2995,114 @@ class Service(MethodView):
 ```
 
 
-## Example 19 from tedivms-flask
+## Example 19 from Science Flask
+[Science Flask](https://github.com/danielhomola/science_flask)
+is a [Flask](/flask.html)-powered web application for online
+scientific research tools. The project was built as a template
+for any scientist or groups of scientists to use when working
+together without having to really understand how the application
+is built. The application includes an academic registration
+process (only valid academic email addresses can be used), an
+admin panel, logging, and analysis forms.
+
+[@danielhomola](https://github.com/danielhomola) is the
+primary creator of Science Flask and the project is open
+source under the
+[GNU General Public License](https://github.com/danielhomola/science_flask/blob/master/LICENSE).
+
+[**Science Flask / frontend / __init__.py**](https://github.com/danielhomola/science_flask/blob/master/./frontend/__init__.py)
+
+```python
+# __init__.py
+import os
+~~from flask import Flask, url_for, redirect, request, abort
+from flask_mail import Mail
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from flask_security import Security, SQLAlchemyUserDatastore, signals, \
+                           current_user
+import flask_admin
+from flask_admin.contrib import sqla
+from flask_admin import helpers as admin_helpers
+from flask_wtf.csrf import CSRFProtect
+from celery import Celery
+
+
+appdir = os.path.abspath(os.path.dirname(__file__))
+ROOTDIR = os.path.abspath(os.path.join(appdir, os.pardir))
+user_data_folder = os.path.join(ROOTDIR, 'userData')
+
+app = Flask(__name__, instance_path=user_data_folder)
+
+app.config.from_pyfile('config.py')
+
+db = SQLAlchemy(app)
+
+mail = Mail(app)
+
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+
+class MyModelView(sqla.ModelView):
+
+    def __init__(self, model, session, name=None, category=None, endpoint=None,
+                 url=None, **kwargs):
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+
+        super(MyModelView, self).__init__(model, session, name=name,
+                                          category=category, endpoint=endpoint,
+                                          url=url)
+
+    def is_accessible(self):
+        if not current_user.is_active or not current_user.is_authenticated:
+            return False
+
+        if current_user.has_role('superuser'):
+            return True
+        return False
+
+    def _handle_view(self, name, **kwargs):
+        if not self.is_accessible():
+            if current_user.is_authenticated:
+                abort(403)
+            else:
+~~                return redirect(url_for('security.login', next=request.url))
+
+admin = flask_admin.Admin(
+    app,
+    'Admin panel',
+    base_template='admin_base.html',
+    template_mode='bootstrap3',
+)
+
+from .models import Studies, Analyses
+admin.add_view(MyModelView(Role, db.session))
+cols = [c for c in User.__table__.columns]
+admin.add_view(MyModelView(User, db.session, column_list=cols))
+cols = [c for c in Studies.__table__.columns]
+admin.add_view(MyModelView(Studies, db.session, column_list=cols))
+cols = [c for c in Analyses.__table__.columns]
+admin.add_view(MyModelView(Analyses, db.session, column_list=cols))
+
+@security.context_processor
+def security_context_processor():
+    return dict(
+        admin_base_template=admin.base_template,
+        admin_view=admin.index_view,
+        h=admin_helpers,
+        get_url=url_for
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 20 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -3053,7 +3160,7 @@ def roles_accepted_api(*role_names):
 ```
 
 
-## Example 20 from trape
+## Example 21 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

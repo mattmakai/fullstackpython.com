@@ -112,6 +112,22 @@ aggregator created with [Flask](/flask.html) and the
 the [MIT license](https://github.com/skamieniarz/newspie/blob/master/LICENSE).
 
 
+### Science Flask
+[Science Flask](https://github.com/danielhomola/science_flask)
+is a [Flask](/flask.html)-powered web application for online
+scientific research tools. The project was built as a template
+for any scientist or groups of scientists to use when working
+together without having to really understand how the application
+is built. The application includes an academic registration
+process (only valid academic email addresses can be used), an
+admin panel, logging, and analysis forms.
+
+[@danielhomola](https://github.com/danielhomola) is the
+primary creator of Science Flask and the project is open
+source under the 
+[GNU General Public License](https://github.com/danielhomola/science_flask/blob/master/LICENSE).
+
+
 ### tedivm's flask starter app
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a 
 base of [Flask](/flask.html) code and related projects such as 

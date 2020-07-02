@@ -1551,7 +1551,295 @@ if __name__ == '__main__':
 ```
 
 
-## Example 17 from tedivms-flask
+## Example 17 from Science Flask
+[Science Flask](https://github.com/danielhomola/science_flask)
+is a [Flask](/flask.html)-powered web application for online
+scientific research tools. The project was built as a template
+for any scientist or groups of scientists to use when working
+together without having to really understand how the application
+is built. The application includes an academic registration
+process (only valid academic email addresses can be used), an
+admin panel, logging, and analysis forms.
+
+[@danielhomola](https://github.com/danielhomola) is the
+primary creator of Science Flask and the project is open
+source under the
+[GNU General Public License](https://github.com/danielhomola/science_flask/blob/master/LICENSE).
+
+[**Science Flask / frontend / views.py**](https://github.com/danielhomola/science_flask/blob/master/./frontend/views.py)
+
+```python
+# views.py
+import datetime
+import json
+import os
+import shutil
+~~from flask import render_template, redirect, request, g, url_for, flash, abort,\
+                  send_from_directory, session
+from flask_login import login_required
+from flask_security import current_user
+from werkzeug.utils import secure_filename
+
+from .analysis import run_analysis, terminate_analysis
+from .view_functions import save_study, get_form, save_analysis, \
+                           get_studies_array, get_analyses_array, \
+                           get_user_folder, security_check
+from backend.utils.check_uploaded_files import clear_up_study
+from . import app, db, models
+from .forms import UploadForm, AnalysisForm
+
+
+@app.route('/')
+def index():
+~~    return render_template('index.html')
+
+@app.route('/about')
+def about():
+~~    return render_template('about.html')
+
+@app.route('/help')
+def help():
+~~    return render_template('help.html')
+
+@app.route('/tc')
+def tc():
+~~    return render_template('tc.html')
+
+
+@app.route('/upload', methods=['GET', 'POST'])
+@login_required
+def upload():
+
+    if request.method == 'POST':
+        form = UploadForm(data=get_form(request.values, request.files))
+        try:
+            check = request.form['check']
+            if check == 'true':
+                check = True
+            else:
+                check = False
+        except:
+            return json.dumps(dict(status='invalid'))
+
+        if check:
+            if form.validate_on_submit():
+                return json.dumps(dict(status='OK'))
+            else:
+                return json.dumps(dict(status='errors', errors=form.errors))
+
+        else:
+            try:
+                return save_study(form, request.files)
+            except:
+                user_folder = get_user_folder()
+                study_folder = secure_filename(form.study_name.data)
+                user_data_folder = os.path.join(user_folder, study_folder)
+                clear_up_study(user_data_folder)
+                return json.dumps(dict(status='invalid'))
+
+    else:
+        form = UploadForm()
+        too_many_studies = 0
+        if len(current_user.studies.all()) >= app.config['ACTIVE_STUDY_PER_USER']:
+            too_many_studies = 1
+        if current_user.num_studies >= app.config['STUDY_PER_USER']:
+            too_many_studies = 2
+~~        return render_template('upload.html', form=form,
+                               too_many_studies=too_many_studies)
+
+
+@app.route('/too_large_file')
+@login_required
+def too_large_file():
+~~    return render_template('utils/max_file_size.html')
+
+
+@app.route('/something_wrong/<page>')
+@login_required
+def something_wrong(page):
+~~    return render_template('utils/something_wrong.html', page=page)
+
+
+@app.route('/analysis/<int:user_id>_<int:study_id>', methods=['GET', 'POST'])
+@login_required
+def analysis(user_id, study_id):
+    if not security_check(user_id, study_id):
+        abort(403)
+
+    if len(current_user.analyses.filter_by(status=1).all()) > 0:
+~~        return render_template('utils/analysis_in_progress.html')
+
+    if request.method == 'POST':
+        form = AnalysisForm(data=get_form(request.values, request.files))
+        try:
+            check = request.form['check']
+            if check == 'true':
+                check = True
+            else:
+                check = False
+        except:
+            return json.dumps(dict(status='invalid'))
+
+        if check:
+            session['study_id'] = study_id
+            if form.validate_on_submit():
+                return json.dumps(dict(status='OK'))
+            else:
+                return json.dumps(dict(status='errors', errors=form.errors))
+
+        else:
+            try:
+                save_analysis(form, study_id)
+                task = run_analysis.apply_async(args=[current_user.id], countdown=1)
+                session['task_id'] = task.id
+                return json.dumps(dict(status='OK'))
+            except:
+                return json.dumps(dict(status='invalid'))
+
+    else:
+        form = AnalysisForm()
+        too_many_analyses = 0
+        if len(current_user.analyses.all()) >= app.config['ACTIVE_ANALYSIS_PER_USER']:
+            too_many_analyses = 1
+        if current_user.num_analyses >= app.config['ANALYSIS_PER_USER']:
+            too_many_analyses = 2
+
+        study = models.Studies.query.get(study_id)
+        study_name = study.study_name
+~~        return render_template('analysis.html', form=form, user_id=user_id,
+                               study_id=study_id, study_name=study_name,
+                               too_many_analyses=too_many_analyses)
+
+
+@app.route('/profile')
+@login_required
+def profile():
+    studies_array = get_studies_array()
+    analyses_array = get_analyses_array()
+    user_id = current_user.id
+    if len(studies_array) > 0:
+        study_id = studies_array[0]['id']
+    else:
+        study_id = 0
+
+    if current_user.profile_intro == 0:
+        profile_intro = True
+        current_user.profile_intro = 1
+        db.session.add(current_user)
+        db.session.commit()
+    else:
+        profile_intro = False
+
+    stats = {
+        'active_studies': len(current_user.studies.all()),
+        'all_studies': current_user.num_studies,
+        'active_analyses': len(current_user.analyses.all()),
+        'all_analyses': current_user.num_analyses
+    }
+~~    return render_template('profile.html', studies=studies_array, stats=stats,
+                           analyses=analyses_array, profile_intro=profile_intro,
+                           user_id=user_id, study_id=study_id)
+
+
+@app.route('/delete_study/<int:user_id>_<int:study_id>/', methods=['POST'])
+@login_required
+def delete_study(user_id, study_id):
+    if not security_check(user_id, study_id):
+        abort(403)
+
+    study = models.Studies.query.get(study_id)
+    study_name = study.study_name
+    for analysis in study.analyses.all():
+        db.session.delete(analysis)
+    db.session.delete(study)
+    db.session.commit()
+
+    user_folder = get_user_folder()
+    study_folder = secure_filename(study_name)
+    folder_to_delete = os.path.join(user_folder, study_folder)
+    if os.path.exists(folder_to_delete):
+        shutil.rmtree(folder_to_delete)
+    return redirect(url_for('profile'))
+
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+
+
+@app.route('/vis/<int:user_id>_<int:analysis_id>_<path:data_file>')
+@login_required
+def vis(user_id, analysis_id, data_file):
+    if not security_check(user_id, analysis_id, True):
+        abort(403)
+
+    if data_file not in ['dataset1_2', 'dataset1', 'dataset2']:
+        abort(403)
+
+    analysis = models.Analyses.query.get(analysis_id)
+    analysis_name = analysis.analysis_name
+    study = models.Studies.query.get(analysis.study_id)
+    study_name = study.study_name
+    username = app.config['USER_PREFIX'] + str(current_user.id)
+    analysis_folder = os.path.join(username, secure_filename(study_name),
+                                   secure_filename(analysis_name))
+    autocorr = bool(study.autocorr)
+    dataset_names = [study.dataset1_type]
+    if autocorr:
+        dataset_names += study.dataset1_type
+    else:
+        dataset_names += [study.dataset2_type]
+
+~~    return render_template('vis.html', analysis_folder=analysis_folder,
+                           analysis_name=analysis_name, autocorr=autocorr,
+                           user_id=user_id, analysis_id=analysis_id,
+                           data_file=data_file,
+                           dataset_names=dataset_names)
+
+
+@app.errorhandler(403)
+def forbidden_error(error):
+    app.logger.error('403 - Forbidden request: %s', request.path)
+~~    return render_template('utils/403.html'), 403
+
+
+@app.errorhandler(404)
+def not_found_error(error):
+    if "/get_file/" not in request.path:
+        app.logger.error('404 - Page not found: %s', request.path)
+~~    return render_template('utils/404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    db.session.rollback()
+    app.logger.error('500 - Internal server error: %s', request.path)
+~~    return render_template('utils/500.html'), 500
+
+
+@app.errorhandler(500)
+def all_exception_error(exception):
+    db.session.rollback()
+    app.logger.error('All other exception error: %s', request.path)
+~~    return render_template('utils/500.html'), 500
+
+
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+@app.route('/favicon.ico')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 18 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1654,7 +1942,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 18 from trape
+## Example 19 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data
