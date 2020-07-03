@@ -1,7 +1,7 @@
 title: sqlalchemy.events SchemaEventTarget code examples
 category: page
 slug: sqlalchemy-events-schemaeventtarget-examples
-sortorder: 500031023
+sortorder: 500031024
 toc: False
 sidebartitle: sqlalchemy.events SchemaEventTarget
 meta: Python example code for the SchemaEventTarget class from the sqlalchemy.events module of the SQLAlchemy project.

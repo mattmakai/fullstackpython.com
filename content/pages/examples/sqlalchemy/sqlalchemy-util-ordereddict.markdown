@@ -1,7 +1,7 @@
 title: sqlalchemy.util OrderedDict code examples
 category: page
 slug: sqlalchemy-util-ordereddict-examples
-sortorder: 500031107
+sortorder: 500031113
 toc: False
 sidebartitle: sqlalchemy.util OrderedDict
 meta: Python example code for the OrderedDict class from the sqlalchemy.util module of the SQLAlchemy project.
@@ -177,6 +177,223 @@ class ApplyBatchImpl(object):
             list(self.named_constraints.values()) + self.unnamed_constraints
         ):
 
+
+
+## ... source file continues with no further OrderedDict examples...
+
+```
+
+
+## Example 2 from sqlacodegen
+[sqlacodegen](https://github.com/agronholm/sqlacodegen)
+([PyPI package information](https://pypi.org/project/sqlacodegen/))
+is a tool for
+reading from an existing [relational database](/databases.html) to
+generate code to create [SQLAlchemy](/sqlalchemy.html) models based
+on that database. The project is primarily written and maintained
+by [Alex Grönholm (agronholm)](https://github.com/agronholm) and it
+is open sourced under the
+[MIT license](https://github.com/agronholm/sqlacodegen/blob/master/LICENSE).
+
+[**sqlacodegen / sqlacodegen / codegen.py**](https://github.com/agronholm/sqlacodegen/blob/master/sqlacodegen/./codegen.py)
+
+```python
+# codegen.py
+from __future__ import unicode_literals, division, print_function, absolute_import
+
+import inspect
+import re
+import sys
+from collections import defaultdict
+from importlib import import_module
+from inspect import ArgSpec
+from keyword import iskeyword
+
+import sqlalchemy
+import sqlalchemy.exc
+from sqlalchemy import (
+    Enum, ForeignKeyConstraint, PrimaryKeyConstraint, CheckConstraint, UniqueConstraint, Table,
+    Column, Float)
+from sqlalchemy.schema import ForeignKey
+from sqlalchemy.sql.sqltypes import NullType
+from sqlalchemy.types import Boolean, String
+~~from sqlalchemy.util import OrderedDict
+
+try:
+    from sqlalchemy import ARRAY
+except ImportError:
+    from sqlalchemy.dialects.postgresql import ARRAY
+
+try:
+    from sqlalchemy import Computed
+except ImportError:
+    Computed = None
+
+try:
+    import geoalchemy2  # noqa: F401
+except ImportError:
+    pass
+
+_re_boolean_check_constraint = re.compile(r"(?:(?:.*?)\.)?(.*?) IN \(0, 1\)")
+_re_column_name = re.compile(r'(?:(["`]?)(?:.*)\1\.)?(["`]?)(.*)\2')
+_re_enum_check_constraint = re.compile(r"(?:(?:.*?)\.)?(.*?) IN \((.+)\)")
+_re_enum_item = re.compile(r"'(.*?)(?<!\\)'")
+_re_invalid_identifier = re.compile(r'[^a-zA-Z0-9_]' if sys.version_info[0] < 3 else r'(?u)\W')
+
+
+class _DummyInflectEngine(object):
+
+
+## ... source file abbreviated to get to OrderedDict examples ...
+
+
+        if name[0].isdigit() or iskeyword(name):
+            name = '_' + name
+        elif name == 'metadata':
+            name = 'metadata_'
+
+        return _re_invalid_identifier.sub('_', name)
+
+
+class ModelTable(Model):
+    def __init__(self, table):
+        super(ModelTable, self).__init__(table)
+        self.name = self._convert_to_valid_identifier(table.name)
+
+    def add_imports(self, collector):
+        super(ModelTable, self).add_imports(collector)
+        collector.add_import(Table)
+
+
+class ModelClass(Model):
+    parent_name = 'Base'
+
+    def __init__(self, table, association_tables, inflect_engine, detect_joined):
+        super(ModelClass, self).__init__(table)
+        self.name = self._tablename_to_classname(table.name, inflect_engine)
+        self.children = []
+~~        self.attributes = OrderedDict()
+
+        for column in table.columns:
+            self._add_attribute(column.name, column)
+
+        pk_column_names = set(col.name for col in table.primary_key.columns)
+        for constraint in sorted(table.constraints, key=_get_constraint_sort_key):
+            if isinstance(constraint, ForeignKeyConstraint):
+                target_cls = self._tablename_to_classname(constraint.elements[0].column.table.name,
+                                                          inflect_engine)
+                if (detect_joined and self.parent_name == 'Base' and
+                        set(_get_column_names(constraint)) == pk_column_names):
+                    self.parent_name = target_cls
+                else:
+                    relationship_ = ManyToOneRelationship(self.name, target_cls, constraint,
+                                                          inflect_engine)
+                    self._add_attribute(relationship_.preferred_name, relationship_)
+
+        for association_table in association_tables:
+            fk_constraints = [c for c in association_table.constraints
+                              if isinstance(c, ForeignKeyConstraint)]
+            fk_constraints.sort(key=_get_constraint_sort_key)
+            target_cls = self._tablename_to_classname(
+                fk_constraints[1].elements[0].column.table.name, inflect_engine)
+            relationship_ = ManyToManyRelationship(self.name, target_cls, association_table)
+
+
+## ... source file abbreviated to get to OrderedDict examples ...
+
+
+    def _add_attribute(self, attrname, value):
+        attrname = tempname = self._convert_to_valid_identifier(attrname)
+        counter = 1
+        while tempname in self.attributes:
+            tempname = attrname + str(counter)
+            counter += 1
+
+        self.attributes[tempname] = value
+        return tempname
+
+    def add_imports(self, collector):
+        super(ModelClass, self).add_imports(collector)
+
+        if any(isinstance(value, Relationship) for value in self.attributes.values()):
+            collector.add_literal_import('sqlalchemy.orm', 'relationship')
+
+        for child in self.children:
+            child.add_imports(collector)
+
+
+class Relationship(object):
+    def __init__(self, source_cls, target_cls):
+        super(Relationship, self).__init__()
+        self.source_cls = source_cls
+        self.target_cls = target_cls
+~~        self.kwargs = OrderedDict()
+
+
+class ManyToOneRelationship(Relationship):
+    def __init__(self, source_cls, target_cls, constraint, inflect_engine):
+        super(ManyToOneRelationship, self).__init__(source_cls, target_cls)
+
+        column_names = _get_column_names(constraint)
+        colname = column_names[0]
+        tablename = constraint.elements[0].column.table.name
+        if not colname.endswith('_id'):
+            self.preferred_name = inflect_engine.singular_noun(tablename) or tablename
+        else:
+            self.preferred_name = colname[:-3]
+
+        if any(isinstance(c, (PrimaryKeyConstraint, UniqueConstraint)) and
+               set(col.name for col in c.columns) == set(column_names)
+               for c in constraint.table.constraints):
+            self.kwargs['uselist'] = 'False'
+
+        if source_cls == target_cls:
+            self.preferred_name = 'parent' if not colname.endswith('_id') else colname[:-3]
+            pk_col_names = [col.name for col in constraint.table.primary_key]
+            self.kwargs['remote_side'] = '[{0}]'.format(', '.join(pk_col_names))
+
+    @staticmethod
+    def singular_noun(noun):
+        return noun
+
+
+def _get_column_names(constraint):
+    if isinstance(constraint.columns, list):
+        return constraint.columns
+    return list(constraint.columns.keys())
+
+
+def _get_constraint_sort_key(constraint):
+    if isinstance(constraint, CheckConstraint):
+        return 'C{0}'.format(constraint.sqltext)
+    return constraint.__class__.__name__[0] + repr(_get_column_names(constraint))
+
+
+~~class ImportCollector(OrderedDict):
+    def add_import(self, obj):
+        type_ = type(obj) if not isinstance(obj, type) else obj
+        pkgname = type_.__module__
+
+        if pkgname.startswith('sqlalchemy.dialects.'):
+            dialect_pkgname = '.'.join(pkgname.split('.')[0:3])
+            dialect_pkg = import_module(dialect_pkgname)
+
+            if type_.__name__ in dialect_pkg.__all__:
+                pkgname = dialect_pkgname
+        else:
+            pkgname = 'sqlalchemy' if type_.__name__ in sqlalchemy.__all__ else type_.__module__
+        self.add_literal_import(pkgname, type_.__name__)
+
+    def add_literal_import(self, pkgname, name):
+        names = self.setdefault(pkgname, set())
+        names.add(name)
+
+
+class Model(object):
+    def __init__(self, table):
+        super(Model, self).__init__()
+        self.table = table
+        self.schema = table.schema
 
 
 ## ... source file continues with no further OrderedDict examples...

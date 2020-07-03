@@ -10,7 +10,162 @@ meta: Python example code for the ARRAY constant from the sqlalchemy.dialects.po
 ARRAY is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-## Example 1 from sqlalchemy-utils
+## Example 1 from sqlacodegen
+[sqlacodegen](https://github.com/agronholm/sqlacodegen)
+([PyPI package information](https://pypi.org/project/sqlacodegen/))
+is a tool for
+reading from an existing [relational database](/databases.html) to
+generate code to create [SQLAlchemy](/sqlalchemy.html) models based
+on that database. The project is primarily written and maintained
+by [Alex Grönholm (agronholm)](https://github.com/agronholm) and it
+is open sourced under the
+[MIT license](https://github.com/agronholm/sqlacodegen/blob/master/LICENSE).
+
+[**sqlacodegen / sqlacodegen / codegen.py**](https://github.com/agronholm/sqlacodegen/blob/master/sqlacodegen/./codegen.py)
+
+```python
+# codegen.py
+from __future__ import unicode_literals, division, print_function, absolute_import
+
+import inspect
+import re
+import sys
+from collections import defaultdict
+from importlib import import_module
+from inspect import ArgSpec
+from keyword import iskeyword
+
+import sqlalchemy
+import sqlalchemy.exc
+from sqlalchemy import (
+    Enum, ForeignKeyConstraint, PrimaryKeyConstraint, CheckConstraint, UniqueConstraint, Table,
+    Column, Float)
+from sqlalchemy.schema import ForeignKey
+from sqlalchemy.sql.sqltypes import NullType
+from sqlalchemy.types import Boolean, String
+from sqlalchemy.util import OrderedDict
+
+try:
+    from sqlalchemy import ARRAY
+except ImportError:
+~~    from sqlalchemy.dialects.postgresql import ARRAY
+
+try:
+    from sqlalchemy import Computed
+except ImportError:
+    Computed = None
+
+try:
+    import geoalchemy2  # noqa: F401
+except ImportError:
+    pass
+
+_re_boolean_check_constraint = re.compile(r"(?:(?:.*?)\.)?(.*?) IN \(0, 1\)")
+_re_column_name = re.compile(r'(?:(["`]?)(?:.*)\1\.)?(["`]?)(.*)\2')
+_re_enum_check_constraint = re.compile(r"(?:(?:.*?)\.)?(.*?) IN \((.+)\)")
+_re_enum_item = re.compile(r"'(.*?)(?<!\\)'")
+_re_invalid_identifier = re.compile(r'[^a-zA-Z0-9_]' if sys.version_info[0] < 3 else r'(?u)\W')
+
+
+class _DummyInflectEngine(object):
+    @staticmethod
+    def singular_noun(noun):
+        return noun
+
+
+
+
+## ... source file abbreviated to get to ARRAY examples ...
+
+
+        names.add(name)
+
+
+class Model(object):
+    def __init__(self, table):
+        super(Model, self).__init__()
+        self.table = table
+        self.schema = table.schema
+
+        for column in table.columns:
+            if not isinstance(column.type, NullType):
+                column.type = self._get_adapted_type(column.type, column.table.bind)
+
+    def _get_adapted_type(self, coltype, bind):
+        compiled_type = coltype.compile(bind.dialect)
+        for supercls in coltype.__class__.__mro__:
+            if not supercls.__name__.startswith('_') and hasattr(supercls, '__visit_name__'):
+                kw = {}
+                if supercls is Enum:
+                    kw['name'] = coltype.name
+
+                new_coltype = coltype.adapt(supercls)
+                for key, value in kw.items():
+                    setattr(new_coltype, key, value)
+
+~~                if isinstance(coltype, ARRAY):
+                    new_coltype.item_type = self._get_adapted_type(new_coltype.item_type, bind)
+
+                try:
+                    if new_coltype.compile(bind.dialect) != compiled_type:
+                        if not isinstance(new_coltype, Float) and \
+                           not (isinstance(new_coltype, ARRAY) and
+                                isinstance(new_coltype.item_type, Float)):
+                            break
+                except sqlalchemy.exc.CompileError:
+                    break
+
+                coltype = new_coltype
+                if supercls.__name__ != supercls.__name__.upper():
+                    break
+
+        return coltype
+
+    def add_imports(self, collector):
+        if self.table.columns:
+            collector.add_import(Column)
+
+        for column in self.table.columns:
+            collector.add_import(column.type)
+            if column.server_default:
+                if isinstance(column.server_default, Computed):
+                    collector.add_literal_import('sqlalchemy', 'Computed')
+                else:
+                    collector.add_literal_import('sqlalchemy', 'text')
+
+~~            if isinstance(column.type, ARRAY):
+                collector.add_import(column.type.item_type.__class__)
+
+        for constraint in sorted(self.table.constraints, key=_get_constraint_sort_key):
+            if isinstance(constraint, ForeignKeyConstraint):
+                if len(constraint.columns) > 1:
+                    collector.add_literal_import('sqlalchemy', 'ForeignKeyConstraint')
+                else:
+                    collector.add_literal_import('sqlalchemy', 'ForeignKey')
+            elif isinstance(constraint, UniqueConstraint):
+                if len(constraint.columns) > 1:
+                    collector.add_literal_import('sqlalchemy', 'UniqueConstraint')
+            elif not isinstance(constraint, PrimaryKeyConstraint):
+                collector.add_import(constraint)
+
+        for index in self.table.indexes:
+            if len(index.columns) > 1:
+                collector.add_import(index)
+
+    @staticmethod
+    def _convert_to_valid_identifier(name):
+        assert name, 'Identifier cannot be empty'
+        if name[0].isdigit() or iskeyword(name):
+            name = '_' + name
+        elif name == 'metadata':
+
+
+## ... source file continues with no further ARRAY examples...
+
+```
+
+
+## Example 2 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

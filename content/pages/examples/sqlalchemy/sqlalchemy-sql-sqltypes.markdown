@@ -1,7 +1,7 @@
 title: sqlalchemy.sql sqltypes code examples
 category: page
 slug: sqlalchemy-sql-sqltypes-examples
-sortorder: 500031086
+sortorder: 500031089
 toc: False
 sidebartitle: sqlalchemy.sql sqltypes
 meta: Python example code for the sqltypes callable from the sqlalchemy.sql module of the SQLAlchemy project.

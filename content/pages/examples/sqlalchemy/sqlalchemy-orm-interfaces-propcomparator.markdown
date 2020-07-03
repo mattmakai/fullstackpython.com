@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.interfaces PropComparator code examples
 category: page
 slug: sqlalchemy-orm-interfaces-propcomparator-examples
-sortorder: 500031062
+sortorder: 500031064
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces PropComparator
 meta: Python example code for the PropComparator class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.

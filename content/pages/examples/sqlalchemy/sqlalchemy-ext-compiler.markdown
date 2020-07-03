@@ -1,7 +1,7 @@
 title: sqlalchemy.ext compiler code examples
 category: page
 slug: sqlalchemy-ext-compiler-examples
-sortorder: 500031031
+sortorder: 500031032
 toc: False
 sidebartitle: sqlalchemy.ext compiler
 meta: Python example code for the compiler callable from the sqlalchemy.ext module of the SQLAlchemy project.

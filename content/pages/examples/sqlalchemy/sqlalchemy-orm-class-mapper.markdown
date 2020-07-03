@@ -1,7 +1,7 @@
 title: sqlalchemy.orm class_mapper code examples
 category: page
 slug: sqlalchemy-orm-class-mapper-examples
-sortorder: 500031044
+sortorder: 500031046
 toc: False
 sidebartitle: sqlalchemy.orm class_mapper
 meta: Python example code for the class_mapper callable from the sqlalchemy.orm module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.automap automap_base code examples
 category: page
 slug: sqlalchemy-ext-automap-automap-base-examples
-sortorder: 500031032
+sortorder: 500031033
 toc: False
 sidebartitle: sqlalchemy.ext.automap automap_base
 meta: Python example code for the automap_base callable from the sqlalchemy.ext.automap module of the SQLAlchemy project.

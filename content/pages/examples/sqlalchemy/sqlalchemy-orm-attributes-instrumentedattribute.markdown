@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.attributes InstrumentedAttribute code examples
 category: page
 slug: sqlalchemy-orm-attributes-instrumentedattribute-examples
-sortorder: 500031056
+sortorder: 500031058
 toc: False
 sidebartitle: sqlalchemy.orm.attributes InstrumentedAttribute
 meta: Python example code for the InstrumentedAttribute class from the sqlalchemy.orm.attributes module of the SQLAlchemy project.

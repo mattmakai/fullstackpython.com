@@ -1,7 +1,7 @@
 title: sqlalchemy.orm CompositeProperty code examples
 category: page
 slug: sqlalchemy-orm-compositeproperty-examples
-sortorder: 500031040
+sortorder: 500031041
 toc: False
 sidebartitle: sqlalchemy.orm CompositeProperty
 meta: Python example code for the CompositeProperty class from the sqlalchemy.orm module of the SQLAlchemy project.

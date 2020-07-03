@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression FunctionElement code examples
 category: page
 slug: sqlalchemy-sql-expression-functionelement-examples
-sortorder: 500031094
+sortorder: 500031097
 toc: False
 sidebartitle: sqlalchemy.sql.expression FunctionElement
 meta: Python example code for the FunctionElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

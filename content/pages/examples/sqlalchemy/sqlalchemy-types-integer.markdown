@@ -1,7 +1,7 @@
 title: sqlalchemy.types Integer code examples
 category: page
 slug: sqlalchemy-types-integer-examples
-sortorder: 500031103
+sortorder: 500031108
 toc: False
 sidebartitle: sqlalchemy.types Integer
 meta: Python example code for the Integer class from the sqlalchemy.types module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
 title: sqlalchemy.engine default code examples
 category: page
 slug: sqlalchemy-engine-default-examples
-sortorder: 500031017
+sortorder: 500031018
 toc: False
 sidebartitle: sqlalchemy.engine default
 meta: Python example code for the default callable from the sqlalchemy.engine module of the SQLAlchemy project.

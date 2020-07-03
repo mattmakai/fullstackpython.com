@@ -1,7 +1,7 @@
 title: sqlalchemy.types NULLTYPE code examples
 category: page
 slug: sqlalchemy-types-nulltype-examples
-sortorder: 500031104
+sortorder: 500031109
 toc: False
 sidebartitle: sqlalchemy.types NULLTYPE
 meta: Python example code for the NULLTYPE constant from the sqlalchemy.types module of the SQLAlchemy project.

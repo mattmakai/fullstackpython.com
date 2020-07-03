@@ -1,7 +1,7 @@
 title: sqlalchemy.orm composite code examples
 category: page
 slug: sqlalchemy-orm-composite-examples
-sortorder: 500031046
+sortorder: 500031048
 toc: False
 sidebartitle: sqlalchemy.orm composite
 meta: Python example code for the composite callable from the sqlalchemy.orm module of the SQLAlchemy project.

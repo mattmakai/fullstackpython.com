@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.exc UnmappedClassError code examples
 category: page
 slug: sqlalchemy-orm-exc-unmappedclasserror-examples
-sortorder: 500031059
+sortorder: 500031061
 toc: False
 sidebartitle: sqlalchemy.orm.exc UnmappedClassError
 meta: Python example code for the UnmappedClassError class from the sqlalchemy.orm.exc module of the SQLAlchemy project.

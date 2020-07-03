@@ -1,7 +1,7 @@
 title: sqlalchemy.pool NullPool code examples
 category: page
 slug: sqlalchemy-pool-nullpool-examples
-sortorder: 500031070
+sortorder: 500031072
 toc: False
 sidebartitle: sqlalchemy.pool NullPool
 meta: Python example code for the NullPool class from the sqlalchemy.pool module of the SQLAlchemy project.

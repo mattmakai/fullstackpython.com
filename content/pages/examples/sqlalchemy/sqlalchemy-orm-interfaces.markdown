@@ -1,7 +1,7 @@
 title: sqlalchemy.orm interfaces code examples
 category: page
 slug: sqlalchemy-orm-interfaces-examples
-sortorder: 500031047
+sortorder: 500031049
 toc: False
 sidebartitle: sqlalchemy.orm interfaces
 meta: Python example code for the interfaces callable from the sqlalchemy.orm module of the SQLAlchemy project.

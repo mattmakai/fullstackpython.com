@@ -1,7 +1,7 @@
 title: sqlalchemy.types UserDefinedType code examples
 category: page
 slug: sqlalchemy-types-userdefinedtype-examples
-sortorder: 500031105
+sortorder: 500031111
 toc: False
 sidebartitle: sqlalchemy.types UserDefinedType
 meta: Python example code for the UserDefinedType class from the sqlalchemy.types module of the SQLAlchemy project.

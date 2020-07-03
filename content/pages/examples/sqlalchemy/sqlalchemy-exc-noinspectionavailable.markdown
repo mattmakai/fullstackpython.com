@@ -1,7 +1,7 @@
 title: sqlalchemy.exc NoInspectionAvailable code examples
 category: page
 slug: sqlalchemy-exc-noinspectionavailable-examples
-sortorder: 500031028
+sortorder: 500031029
 toc: False
 sidebartitle: sqlalchemy.exc NoInspectionAvailable
 meta: Python example code for the NoInspectionAvailable class from the sqlalchemy.exc module of the SQLAlchemy project.

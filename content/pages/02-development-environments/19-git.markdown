@@ -169,6 +169,11 @@ workflow. These resources will come in handy for specific Git subjects.
   the Git history, and good practices for using Git based on the
   knowledge of how it works internally.
 
+* [Chasing a bad commit](https://vishaltelangre.com/chasing-a-bad-commit/) 
+  examines the `git bisect` command and how it can be used in either
+  interactive mode or on its own with `git bisect run` to find the
+  problematic code commit that needs to be fixed.
+
 * [How Microsoft uses Git](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/use-git-microsoft)
   gives a high-level overview of their repository structure and hosting 
   at the extremely large scale organization.

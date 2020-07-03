@@ -1,7 +1,7 @@
 title: sqlalchemy.orm mapper code examples
 category: page
 slug: sqlalchemy-orm-mapper-examples
-sortorder: 500031048
+sortorder: 500031050
 toc: False
 sidebartitle: sqlalchemy.orm mapper
 meta: Python example code for the mapper callable from the sqlalchemy.orm module of the SQLAlchemy project.

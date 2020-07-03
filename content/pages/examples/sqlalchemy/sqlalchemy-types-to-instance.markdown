@@ -1,7 +1,7 @@
 title: sqlalchemy.types to_instance code examples
 category: page
 slug: sqlalchemy-types-to-instance-examples
-sortorder: 500031106
+sortorder: 500031112
 toc: False
 sidebartitle: sqlalchemy.types to_instance
 meta: Python example code for the to_instance callable from the sqlalchemy.types module of the SQLAlchemy project.

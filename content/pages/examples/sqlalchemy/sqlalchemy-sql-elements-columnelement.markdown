@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.elements ColumnElement code examples
 category: page
 slug: sqlalchemy-sql-elements-columnelement-examples
-sortorder: 500031088
+sortorder: 500031091
 toc: False
 sidebartitle: sqlalchemy.sql.elements ColumnElement
 meta: Python example code for the ColumnElement class from the sqlalchemy.sql.elements module of the SQLAlchemy project.

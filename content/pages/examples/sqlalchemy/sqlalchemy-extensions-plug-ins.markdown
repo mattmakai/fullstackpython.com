@@ -115,6 +115,33 @@ The marshmallow-sqlalchemy project is provided as open source under the
 [MIT license](https://github.com/marshmallow-code/marshmallow-sqlalchemy/blob/dev/LICENSE).
 
 
+### sqlacodegen
+[sqlacodegen](https://github.com/agronholm/sqlacodegen) 
+([PyPI package information](https://pypi.org/project/sqlacodegen/))
+is a tool for
+reading from an existing [relational database](/databases.html) to
+generate code to create [SQLAlchemy](/sqlalchemy.html) models based
+on that database. The project is primarily written and maintained
+by [Alex Grönholm (agronholm)](https://github.com/agronholm) and it
+is open sourced under the 
+[MIT license](https://github.com/agronholm/sqlacodegen/blob/master/LICENSE).
+
+
+### sqlalchemy-datatables
+[sqlalchemy-datatables](https://github.com/Pegase745/sqlalchemy-datatables)
+([PyPI package information](https://pypi.org/project/sqlalchemy-datatables/))
+is a helper library that makes it easier to use [SQLAlchemy](/sqlalchemy.html)
+with the jQuery [JavaScript](/javascript.html)
+[DataTables](https://datatables.net/) plugin. This library is designed to
+be [web framework](/web-frameworks.html) agnostic and provides code examples
+for both [Flask](/flask.html) and [Pyramid](/pyramid.html).
+
+The project is built and maintained by 
+[Michel Nemnom (Pegase745)](https://github.com/Pegase745) and is open
+sourced under the 
+[MIT license](https://github.com/Pegase745/sqlalchemy-datatables/blob/master/LICENSE).
+
+
 ### sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)

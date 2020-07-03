@@ -1,7 +1,7 @@
 title: sqlalchemy.sql operators code examples
 category: page
 slug: sqlalchemy-sql-operators-examples
-sortorder: 500031083
+sortorder: 500031086
 toc: False
 sidebartitle: sqlalchemy.sql operators
 meta: Python example code for the operators callable from the sqlalchemy.sql module of the SQLAlchemy project.
