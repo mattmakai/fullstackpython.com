@@ -35,11 +35,6 @@ of the database.
   Transform and Load (ETL) tool to move your data from one database such as
   [MySQL](/mysql.html) into Neo4j.
 
-* [Migrating from MySQL to Neo4j](https://engineering.logicgate.com/migrating-from-mysql-to-neo4j-2f6cb63a73c8)
-  gives specific advice about how your data can change during a migration from
-  a relational database to a graph database which the author did not know 
-  before undertaking their own migration.
-
 
 ### Neo4j resources
 * [Building a Recommendation Engine with Neo4j and Python](https://www.youtube.com/watch?v=ILjTikVhT9k)
