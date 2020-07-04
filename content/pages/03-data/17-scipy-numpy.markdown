@@ -70,7 +70,7 @@ following resources are broader walkthroughs for the SciPy ecosystem:
 * [Math to Code](https://mathtocode.com/) provides an interactive
   tutorial to learn how to implement math in NumPy.
 
-* [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/101-numpy-exercises-python/)
+* [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/python/101-numpy-exercises-python/)
 
 * [NumPy: creating and manipulating numerical data](http://www.scipy-lectures.org/intro/numpy/index.html)
 

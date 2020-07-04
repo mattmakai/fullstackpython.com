@@ -53,7 +53,7 @@ often also called "chatbots", "assistants" or "agents."
 * [Making a Reddit + Facebook Messenger Bot](https://pythontips.com/2017/04/13/making-a-reddit-facebook-messenger-bot/)
   builds a bot for two platforms and shows how to deploy it to Heroku.
 
-* [Build a Slack Bot that Mimics Your Colleagues with Python](http://hirelofty.com/blog/how-build-slack-bot-mimics-your-colleague/)
+* [Build a Slack Bot that Mimics Your Colleagues with Python](https://hirelofty.com/blog/software-development/how-build-slack-bot-mimics-your-colleague/)
   is a humorous post that uses the 
   [markovify](https://github.com/jsvine/markovify) Markov Chains library to 
   generate responses that are similar to ones other Slack users have said.

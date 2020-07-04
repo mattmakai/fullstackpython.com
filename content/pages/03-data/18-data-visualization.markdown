@@ -36,7 +36,6 @@ easier for humans to see patterns, trends and other useful information.
 
 * [Python & OpenGL for Scientific Visualization](https://www.labri.fr/perso/nrougier/python-opengl/)
   is a free book that shows how to combine open source tools such as 
-  [Pyglet](https://pyglet.readthedocs.io/en/stable/) and 
   [PyOpenGL](http://pyopengl.sourceforge.net/) with Python 
   [data analysis](/data-analysis.html) libraries to generate interactive
   scientific data visualizations.
@@ -163,8 +162,7 @@ visualization and gave me ideas for what to build.
 * [Engineering Intelligence Through Data Visualization at Uber](https://eng.uber.com/data-viz-intel/)
   explains how Uber's data visualization team grew from 1 person to 15
   and the output they created along the way, including the open source
-  tools [react-vis](https://uber.github.io/react-vis/) and 
-  [react-map-gl](https://uber.github.io/react-map-gl/).
+  tool [react-vis](https://uber.github.io/react-vis/).
 
 * The Practitioner's Guide to System Dashboard Design series covers a
   lot of ground for what you should consider when building one form

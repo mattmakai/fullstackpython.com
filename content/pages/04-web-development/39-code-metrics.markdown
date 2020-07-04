@@ -151,10 +151,6 @@ diminishing returns.
   covers Pylint, PyFlakes and mypy with a short description of the 
   advantages and disadvantage for each one.
 
-* [Dynamic tracing a Pony + Python program with DTrace](https://blog.wallaroolabs.com/2017/12/dynamic-tracing-a-pony---python-program-with-dtrace/)
-  shows how to use dynamic tracing programs to analyze code
-  at runtime.
-
 * This [Stack Overflow question on Python static code analysis tools](http://stackoverflow.com/questions/1428872/pylint-pychecker-or-pyflakes)
   contains comparison discussions of PyLint, PyChecker and PyFlakes.
 

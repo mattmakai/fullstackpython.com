@@ -26,7 +26,7 @@ across many implementation areas.
   add them to applications with a bunch of useful code examples.
 
 * Some developers prefer to use 
-  [Requests](http://docs.python-requests.org/en/latest/) instead of an API's 
+  [Requests](https://requests.readthedocs.io/en/master/) instead of an API's 
   helper library. In that case check out this 
   [tutorial on using requests to access web APIs](http://engineering.hackerearth.com/2014/08/21/python-requests-module/).
 
@@ -98,7 +98,7 @@ across many implementation areas.
    requests and responses.
 
 1. Evaluate whether to use a helper library or work with 
-   [Requests](http://docs.python-requests.org/en/latest/). Helper libraries 
+   [Requests](https://requests.readthedocs.io/en/master/). Helper libraries 
    are usually easier to get started with while Requests gives you more 
    control over the HTTP calls.
 
