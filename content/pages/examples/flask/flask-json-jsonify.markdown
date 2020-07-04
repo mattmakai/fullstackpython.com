@@ -1,4 +1,4 @@
-title: flask.json jsonify code examples
+title: flask.json jsonify Example Code
 category: page
 slug: flask-json-jsonify-examples
 sortorder: 500021019

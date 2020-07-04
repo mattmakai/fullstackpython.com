@@ -1,4 +1,4 @@
-title: flask.blueprints Blueprint code examples
+title: flask.blueprints Blueprint Example Code
 category: page
 slug: flask-blueprints-blueprint-examples
 sortorder: 500021003

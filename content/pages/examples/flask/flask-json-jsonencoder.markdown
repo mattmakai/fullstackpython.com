@@ -1,4 +1,4 @@
-title: flask.json JSONEncoder code examples
+title: flask.json JSONEncoder Example Code
 category: page
 slug: flask-json-jsonencoder-examples
 sortorder: 500021018

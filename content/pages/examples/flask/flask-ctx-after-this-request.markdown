@@ -1,4 +1,4 @@
-title: flask.ctx after_this_request code examples
+title: flask.ctx after_this_request Example Code
 category: page
 slug: flask-ctx-after-this-request-examples
 sortorder: 500021007

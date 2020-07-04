@@ -1,4 +1,4 @@
-title: flask.sessions SessionMixin code examples
+title: flask.sessions SessionMixin Example Code
 category: page
 slug: flask-sessions-sessionmixin-examples
 sortorder: 500021022

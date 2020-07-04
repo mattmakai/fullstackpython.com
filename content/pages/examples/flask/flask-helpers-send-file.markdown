@@ -1,4 +1,4 @@
-title: flask.helpers send_file code examples
+title: flask.helpers send_file Example Code
 category: page
 slug: flask-helpers-send-file-examples
 sortorder: 500021016

@@ -1,4 +1,4 @@
-title: flask.sessions SessionInterface code examples
+title: flask.sessions SessionInterface Example Code
 category: page
 slug: flask-sessions-sessioninterface-examples
 sortorder: 500021021

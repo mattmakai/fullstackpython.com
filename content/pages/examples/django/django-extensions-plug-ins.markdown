@@ -331,6 +331,15 @@ django-loginas is open source under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/skorokithakis/django-loginas/blob/master/LICENSE).
 
 
+### django-markdown-view
+[django-markdown-view](https://github.com/rgs258/django-markdown-view)
+([PyPI package information](https://pypi.org/project/django-markdown-view/))
+is a Django extension for serving [Markdown](/markdown.html) files as
+[Django templates](/django-templates.html). The project is open
+sourced under the 
+[BSD 3-Clause "New" or "Revised" license](https://github.com/rgs258/django-markdown-view/blob/master/LICENSE).
+
+
 ### django-migration-linter
 [django-migration-linter](https://github.com/3YOURMIND/django-migration-linter)
 ([PyPI package information](https://pypi.org/project/django-migration-linter/))

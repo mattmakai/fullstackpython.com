@@ -1,4 +1,4 @@
-title: flask.app BadRequest code examples
+title: flask.app BadRequest Example Code
 category: page
 slug: flask-app-badrequest-examples
 sortorder: 500021000
@@ -7,7 +7,13 @@ sidebartitle: flask.app BadRequest
 meta: Python example code for the BadRequest class from the flask.app module of the Flask project.
 
 
-BadRequest is a class within the flask.app module of the Flask project.
+[BadRequest](https://github.com/pallets/flask/blob/master/src/flask/app.py)
+is an [Exception](https://docs.python.org/3/library/exceptions.html#Exception)
+imported into the [Flask](/flask.html) [web framework](/web-frameworks.html)
+from the [Werkzeug](https://github.com/pallets/werkzeug) project. It can occur
+at runtime when an
+[invalid POST request is sent to a URL route](https://stackoverflow.com/questions/14105452/what-is-the-cause-of-the-bad-request-error-when-submitting-form-in-flask-applica)
+that accepts POSTs.
 
 
 ## Example 1 from Flask AppBuilder

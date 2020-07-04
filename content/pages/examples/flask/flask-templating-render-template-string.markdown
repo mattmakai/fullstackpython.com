@@ -1,4 +1,4 @@
-title: flask.templating render_template_string code examples
+title: flask.templating render_template_string Example Code
 category: page
 slug: flask-templating-render-template-string-examples
 sortorder: 500021026

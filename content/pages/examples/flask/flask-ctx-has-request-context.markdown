@@ -1,4 +1,4 @@
-title: flask.ctx has_request_context code examples
+title: flask.ctx has_request_context Example Code
 category: page
 slug: flask-ctx-has-request-context-examples
 sortorder: 500021009

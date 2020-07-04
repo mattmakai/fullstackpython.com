@@ -1,4 +1,4 @@
-title: flask.app Flask code examples
+title: flask.app Flask Example Code
 category: page
 slug: flask-app-flask-examples
 sortorder: 500021001

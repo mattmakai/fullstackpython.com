@@ -1,4 +1,4 @@
-title: flask.globals current_app code examples
+title: flask.globals current_app Example Code
 category: page
 slug: flask-globals-current-app-examples
 sortorder: 500021010

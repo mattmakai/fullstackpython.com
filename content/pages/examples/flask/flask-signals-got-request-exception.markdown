@@ -1,4 +1,4 @@
-title: flask.signals got_request_exception code examples
+title: flask.signals got_request_exception Example Code
 category: page
 slug: flask-signals-got-request-exception-examples
 sortorder: 500021024

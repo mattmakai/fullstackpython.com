@@ -1,4 +1,4 @@
-title: django.contrib.admin.helpers AdminForm code examples
+title: django.contrib.admin.helpers AdminForm Example Code
 category: page
 slug: django-contrib-admin-helpers-adminform-examples
 sortorder: 500011021
@@ -7,7 +7,13 @@ sidebartitle: django.contrib.admin.helpers AdminForm
 meta: Python example code for the AdminForm class from the django.contrib.admin.helpers module of the Django project.
 
 
-AdminForm is a class within the django.contrib.admin.helpers module of the Django project.
+[AdminForm](https://github.com/django/django/blob/master/django/contrib/admin/helpers.py)
+is a class within the django.contrib.admin.helpers module of the
+[Django](/django.html) project. AdminForm is not usually used directly by
+developers but can be used by libraries that want to extend the
+[forms](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/admindocs/)
+within the
+[Django Admin](https://docs.djangoproject.com/en/stable/ref/contrib/admin/).
 
 
 ## Example 1 from django-cms

@@ -1,4 +1,4 @@
-title: flask.ctx has_app_context code examples
+title: flask.ctx has_app_context Example Code
 category: page
 slug: flask-ctx-has-app-context-examples
 sortorder: 500021008

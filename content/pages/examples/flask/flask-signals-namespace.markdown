@@ -1,4 +1,4 @@
-title: flask.signals Namespace code examples
+title: flask.signals Namespace Example Code
 category: page
 slug: flask-signals-namespace-examples
 sortorder: 500021023

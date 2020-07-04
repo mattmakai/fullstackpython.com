@@ -1,4 +1,4 @@
-title: flask.globals request code examples
+title: flask.globals request Example Code
 category: page
 slug: flask-globals-request-examples
 sortorder: 500021012

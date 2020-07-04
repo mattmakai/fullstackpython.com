@@ -1,13 +1,18 @@
-title: django.contrib.admin helpers code examples
+title: django.contrib.admin helpers Example Code
 category: page
 slug: django-contrib-admin-helpers-examples
 sortorder: 500011017
 toc: False
 sidebartitle: django.contrib.admin helpers
-meta: Python example code for the helpers function from the django.contrib.admin module of the Django project.
+meta: Python example code for the helpers callable from the django.contrib.admin module of the Django project.
 
 
-helpers is a function within the django.contrib.admin module of the Django project.
+[helpers](https://github.com/django/django/blob/master/django/contrib/admin/helpers.py)
+is a module within the [Django](/django.html) project code base. It
+contains classes related to extending the functionality of the
+[Django Admin](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/actions/),
+such as [ActionForm](/django-contrib-admin-helpers-actionform-examples.html)
+and [AdminForm](/django-contrib-admin-helpers-adminform-examples.html).
 
 
 ## Example 1 from django-filer

@@ -1,4 +1,4 @@
-title: flask.cli FlaskGroup code examples
+title: flask.cli FlaskGroup Example Code
 category: page
 slug: flask-cli-flaskgroup-examples
 sortorder: 500021004

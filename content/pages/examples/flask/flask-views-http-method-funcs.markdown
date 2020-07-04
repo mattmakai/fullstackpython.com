@@ -1,4 +1,4 @@
-title: flask.views http_method_funcs code examples
+title: flask.views http_method_funcs Example Code
 category: page
 slug: flask-views-http-method-funcs-examples
 sortorder: 500021029

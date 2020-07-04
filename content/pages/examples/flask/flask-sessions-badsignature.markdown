@@ -1,4 +1,4 @@
-title: flask.sessions BadSignature code examples
+title: flask.sessions BadSignature Example Code
 category: page
 slug: flask-sessions-badsignature-examples
 sortorder: 500021020

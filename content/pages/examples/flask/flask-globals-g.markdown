@@ -1,4 +1,4 @@
-title: flask.globals g code examples
+title: flask.globals g Example Code
 category: page
 slug: flask-globals-g-examples
 sortorder: 500021011

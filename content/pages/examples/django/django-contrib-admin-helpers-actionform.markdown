@@ -1,4 +1,4 @@
-title: django.contrib.admin.helpers ActionForm code examples
+title: django.contrib.admin.helpers ActionForm Example Code
 category: page
 slug: django-contrib-admin-helpers-actionform-examples
 sortorder: 500011020
@@ -7,7 +7,13 @@ sidebartitle: django.contrib.admin.helpers ActionForm
 meta: Python example code for the ActionForm class from the django.contrib.admin.helpers module of the Django project.
 
 
-ActionForm is a class within the django.contrib.admin.helpers module of the Django project.
+[ActionForm](https://github.com/django/django/blob/master/django/contrib/admin/helpers.py)
+is a class within the django.contrib.admin.helpers module of the
+[Django](/django.html) project. It is not typically used when creating
+applications but is sometimes used by libraries that want to extend the
+[actions available](https://docs.djangoproject.com/en/stable/ref/contrib/admin/actions/)
+within the
+[Django Admin](https://docs.djangoproject.com/en/stable/ref/contrib/admin/).
 
 
 ## Example 1 from django-import-export

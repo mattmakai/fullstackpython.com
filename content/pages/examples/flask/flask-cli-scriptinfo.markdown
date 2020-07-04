@@ -1,4 +1,4 @@
-title: flask.cli ScriptInfo code examples
+title: flask.cli ScriptInfo Example Code
 category: page
 slug: flask-cli-scriptinfo-examples
 sortorder: 500021005

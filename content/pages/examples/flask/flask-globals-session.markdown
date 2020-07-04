@@ -1,4 +1,4 @@
-title: flask.globals session code examples
+title: flask.globals session Example Code
 category: page
 slug: flask-globals-session-examples
 sortorder: 500021013
