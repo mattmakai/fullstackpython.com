@@ -6,9 +6,40 @@ run:
 	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/pages/*.html
 	sed -i '' 's/~~//g' generated/updated_site/pages/*.html
 	cp generated/updated_site/pages/* generated/updated_site/
-	rm -rf generated/updated_site/pages/
-	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/blog/*.html
 	sed -i '' 's/~~//g' generated/updated_site/blog/*.html
+
+
+prod: run
+	rm -rf generated/updated_site/pages/
+	sed -i '' 's/<span class="n">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="n">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="k">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="k">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="ow">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="ow">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="o"><\/span>//g' generated/updated_site/*.html
+	sed -i '' 's/<span class="o"><\/span>//g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="o">\(.[a-zA-Z0-9 ()_.~*=&;/-]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="o">\(.[a-zA-Z0-9 ()_.~*=&;/-]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="nb">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="nb">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="nd">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="nd">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="nn">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="nn">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="kn">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="kn">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="p">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="p">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="bp">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="bp">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="nt">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="nt">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="s1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="s1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="c1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*@`!%-]*\)<\/span>/\1/g' generated/updated_site/*.html
+	sed -i '' 's/<span class="c1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*@`!%-]*\)<\/span>/\1/g' generated/updated_site/blog/*.html
+	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/blog/*.html
 
 
 bookbuild:                                                                   
