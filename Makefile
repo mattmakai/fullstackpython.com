@@ -21,13 +21,16 @@ prod: run
 	sed -i '' 's/<span class="ow">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="nb">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="nd">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="ne">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="nn">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="kn">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="bp">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="nc">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="nf">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="fm">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="nt">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="s1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="si">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="sd">\(.[][a-zA-Z0-9 /()_,.&^\\\;:+#{}~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="s2">\(.[][a-zA-Z0-9 /\\\()_,.&$^;:+#{}|=~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="c1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*@`!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
