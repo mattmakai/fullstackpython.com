@@ -225,7 +225,97 @@ class CustomSelectField(Field):
 ```
 
 
-## Example 4 from flask-debugtoolbar
+## Example 4 from Flask-Bootstrap
+[flask-bootstrap](https://github.com/mbr/flask-bootstrap)
+([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
+makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
+in your [Flask](/flask.html) applications with less boilerplate
+code. The project was primarily created by
+[Marc Brinkmann @mbr](https://github.com/mbr) and the source code is
+open sourced under the
+[Apache 2.0 license](https://github.com/mbr/flask-bootstrap/blob/master/LICENSE).
+
+[**Flask-Bootstrap / flask_bootstrap / __init__.py**](https://github.com/mbr/flask-bootstrap/blob/master/flask_bootstrap/./__init__.py)
+
+```python
+# __init__.py
+
+import re
+
+~~from flask import Blueprint, current_app, url_for
+
+try:
+    from wtforms.fields import HiddenField
+except ImportError:
+
+    def is_hidden_field_filter(field):
+        raise RuntimeError('WTForms is not installed.')
+else:
+
+    def is_hidden_field_filter(field):
+        return isinstance(field, HiddenField)
+
+
+from .forms import render_form
+
+__version__ = '3.3.7.1.dev1'
+BOOTSTRAP_VERSION = re.sub(r'^(\d+\.\d+\.\d+).*', r'\1', __version__)
+JQUERY_VERSION = '1.12.4'
+HTML5SHIV_VERSION = '3.7.3'
+RESPONDJS_VERSION = '1.4.2'
+
+
+class CDN(object):
+
+    def get_resource_url(self, filename):
+        raise NotImplementedError
+
+
+class StaticCDN(object):
+
+    def __init__(self, static_endpoint='static', rev=False):
+        self.static_endpoint = static_endpoint
+        self.rev = rev
+
+    def get_resource_url(self, filename):
+        extra_args = {}
+
+        if self.rev and current_app.config['BOOTSTRAP_QUERYSTRING_REVVING']:
+            extra_args['bootstrap'] = __version__
+
+~~        return url_for(self.static_endpoint, filename=filename, **extra_args)
+
+
+class WebCDN(object):
+
+    def __init__(self, baseurl):
+        self.baseurl = baseurl
+
+    def get_resource_url(self, filename):
+        return self.baseurl + filename
+
+
+class ConditionalCDN(object):
+
+    def __init__(self, confvar, primary, fallback):
+        self.confvar = confvar
+        self.primary = primary
+        self.fallback = fallback
+
+    def get_resource_url(self, filename):
+        if current_app.config[self.confvar]:
+            return self.primary.get_resource_url(filename)
+        return self.fallback.get_resource_url(filename)
+
+
+
+
+## ... source file continues with no further url_for examples...
+
+```
+
+
+## Example 5 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -292,7 +382,7 @@ class DebugToolbar(object):
 ```
 
 
-## Example 5 from flask-login
+## Example 6 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -392,7 +482,7 @@ def login_user(user, remember=False, duration=None, force=False, fresh=True):
 ```
 
 
-## Example 6 from flask-restx
+## Example 7 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -447,7 +537,7 @@ def ui_for(api):
 ```
 
 
-## Example 7 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -588,7 +678,7 @@ def reset(token):
 ```
 
 
-## Example 8 from Flask-Security-Too
+## Example 9 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -708,7 +798,7 @@ def get_post_action_redirect(config_key, declared=None):
 ```
 
 
-## Example 9 from Flask-User
+## Example 10 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -857,7 +947,7 @@ class EmailManager(object):
 ```
 
 
-## Example 10 from Flasky
+## Example 11 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1057,7 +1147,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 11 from Datadog Flask Example App
+## Example 12 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).

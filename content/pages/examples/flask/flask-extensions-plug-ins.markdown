@@ -65,6 +65,17 @@ flask-base's code is open sourced
 [under the MIT license](https://github.com/hack4impact/flask-base/blob/master/LICENSE.md).
 
 
+### flask-bootstrap
+[flask-bootstrap](https://github.com/mbr/flask-bootstrap)
+([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
+makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
+in your [Flask](/flask.html) applications with less boilerplate
+code. The project was primarily created by
+[Marc Brinkmann @mbr](https://github.com/mbr) and the source code is
+open sourced under the
+[Apache 2.0 license](https://github.com/mbr/flask-bootstrap/blob/master/LICENSE).
+
+
 ### Flask Debug-toolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)

@@ -509,7 +509,131 @@ app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
 ```
 
 
-## Example 5 from flask-debugtoolbar
+## Example 5 from Flask-Bootstrap
+[flask-bootstrap](https://github.com/mbr/flask-bootstrap)
+([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
+makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
+in your [Flask](/flask.html) applications with less boilerplate
+code. The project was primarily created by
+[Marc Brinkmann @mbr](https://github.com/mbr) and the source code is
+open sourced under the
+[Apache 2.0 license](https://github.com/mbr/flask-bootstrap/blob/master/LICENSE).
+
+[**Flask-Bootstrap / flask_bootstrap / __init__.py**](https://github.com/mbr/flask-bootstrap/blob/master/flask_bootstrap/./__init__.py)
+
+```python
+# __init__.py
+
+import re
+
+~~from flask import Blueprint, current_app, url_for
+
+try:
+    from wtforms.fields import HiddenField
+except ImportError:
+
+    def is_hidden_field_filter(field):
+        raise RuntimeError('WTForms is not installed.')
+else:
+
+    def is_hidden_field_filter(field):
+        return isinstance(field, HiddenField)
+
+
+from .forms import render_form
+
+__version__ = '3.3.7.1.dev1'
+BOOTSTRAP_VERSION = re.sub(r'^(\d+\.\d+\.\d+).*', r'\1', __version__)
+JQUERY_VERSION = '1.12.4'
+HTML5SHIV_VERSION = '3.7.3'
+RESPONDJS_VERSION = '1.4.2'
+
+
+class CDN(object):
+
+    def get_resource_url(self, filename):
+        raise NotImplementedError
+
+
+class StaticCDN(object):
+
+    def __init__(self, static_endpoint='static', rev=False):
+        self.static_endpoint = static_endpoint
+        self.rev = rev
+
+    def get_resource_url(self, filename):
+        extra_args = {}
+
+~~        if self.rev and current_app.config['BOOTSTRAP_QUERYSTRING_REVVING']:
+            extra_args['bootstrap'] = __version__
+
+        return url_for(self.static_endpoint, filename=filename, **extra_args)
+
+
+class WebCDN(object):
+
+    def __init__(self, baseurl):
+        self.baseurl = baseurl
+
+    def get_resource_url(self, filename):
+        return self.baseurl + filename
+
+
+class ConditionalCDN(object):
+
+    def __init__(self, confvar, primary, fallback):
+        self.confvar = confvar
+        self.primary = primary
+        self.fallback = fallback
+
+    def get_resource_url(self, filename):
+~~        if current_app.config[self.confvar]:
+            return self.primary.get_resource_url(filename)
+        return self.fallback.get_resource_url(filename)
+
+
+def bootstrap_find_resource(filename, cdn, use_minified=None, local=True):
+~~    config = current_app.config
+
+    if None == use_minified:
+        use_minified = config['BOOTSTRAP_USE_MINIFIED']
+
+    if use_minified:
+        filename = '%s.min.%s' % tuple(filename.rsplit('.', 1))
+
+~~    cdns = current_app.extensions['bootstrap']['cdns']
+    resource_url = cdns[cdn].get_resource_url(filename)
+
+    if resource_url.startswith('//') and config['BOOTSTRAP_CDN_FORCE_SSL']:
+        resource_url = 'https:%s' % resource_url
+
+    return resource_url
+
+
+class Bootstrap(object):
+    def __init__(self, app=None):
+        if app is not None:
+            self.init_app(app)
+
+    def init_app(self, app):
+        app.config.setdefault('BOOTSTRAP_USE_MINIFIED', True)
+        app.config.setdefault('BOOTSTRAP_CDN_FORCE_SSL', False)
+
+        app.config.setdefault('BOOTSTRAP_QUERYSTRING_REVVING', True)
+        app.config.setdefault('BOOTSTRAP_SERVE_LOCAL', False)
+
+        app.config.setdefault('BOOTSTRAP_LOCAL_SUBDOMAIN', None)
+
+        blueprint = Blueprint(
+            'bootstrap',
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 6 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -657,7 +781,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 6 from flask_jsondash
+## Example 7 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -750,7 +874,7 @@ def local_static(chart_config, static_config):
 ```
 
 
-## Example 7 from flask-login
+## Example 8 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -997,7 +1121,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 8 from flask-restx
+## Example 9 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1254,7 +1378,7 @@ def _clean_header(header):
 ```
 
 
-## Example 9 from flask-sqlalchemy
+## Example 10 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -1371,7 +1495,7 @@ def _make_table(db):
 ```
 
 
-## Example 10 from Flask-WTF
+## Example 11 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1628,7 +1752,7 @@ def same_origin(current_uri, compare_uri):
 ```
 
 
-## Example 11 from Flask-Security-Too
+## Example 12 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -1889,7 +2013,7 @@ _default_config = {
 ```
 
 
-## Example 12 from Flask-User
+## Example 13 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1996,7 +2120,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 13 from Flask-VueJs-Template
+## Example 14 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2037,7 +2161,7 @@ def index_client():
 ```
 
 
-## Example 14 from Flasky
+## Example 15 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -2092,7 +2216,7 @@ def run_migrations_online():
 ```
 
 
-## Example 15 from sandman2
+## Example 16 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2217,7 +2341,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 16 from tedivms-flask
+## Example 17 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
