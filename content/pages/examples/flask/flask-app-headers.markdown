@@ -7,7 +7,14 @@ sidebartitle: flask.app Headers
 meta: Python example code for the Headers class from the flask.app module of the Flask project.
 
 
-Headers is a class within the flask.app module of the Flask project.
+[Headers](https://github.com/pallets/flask/blob/master/src/flask/app.py)
+is class within the flask.app module of the [Flask](/flask.html)
+[web framework](/web-frameworks.html) that is imported from the
+[datastructures](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/datastructures.py)
+module of the [Werkzeug](https://palletsprojects.com/p/werkzeug/) project.
+Headers handles the
+[HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+from requests and responses for Flask web applications.
 
 
 ## Example 1 from flask-restx
