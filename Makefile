@@ -3,8 +3,9 @@ run:
 	cp -R static-html/* generated/updated_site/
 	cp -R redirects/* generated/updated_site/
 	cp -R static/* generated/updated_site/
-	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/pages/*.html
-	sed -i '' 's/~~//g' generated/updated_site/pages/*.html
+	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/pages/*.html 
+	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/blog/*.html
+	sed -i '' 's/~~//g' generated/updated_site/pages/*.html 
 	cp generated/updated_site/pages/* generated/updated_site/
 	sed -i '' 's/~~//g' generated/updated_site/blog/*.html
 
@@ -34,7 +35,6 @@ prod: run
 	sed -i '' 's/<span class="sd">\(.[][a-zA-Z0-9 /()_,.&^\\\;:+#{}~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="s2">\(.[][a-zA-Z0-9 /\\\()_,.&$^;:+#{}|=~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="c1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*@`!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/\(^.*~~.*$$\)/<span class="highlight">\1<\/span>/g' generated/updated_site/blog/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="o"><\/span>//g' generated/updated_site/*.html generated/updated_site/blog/*.html
 	sed -i '' 's/<span class="s2"><\/span>//g' generated/updated_site/*.html generated/updated_site/blog/*.html
 
