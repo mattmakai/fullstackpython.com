@@ -1,7 +1,7 @@
-title: sqlalchemy.sql.functions FunctionElement code examples
+title: sqlalchemy.sql.functions FunctionElement Example Code
 category: page
 slug: sqlalchemy-sql-functions-functionelement-examples
-sortorder: 500031099
+sortorder: 500031105
 toc: False
 sidebartitle: sqlalchemy.sql.functions FunctionElement
 meta: Python example code for the FunctionElement class from the sqlalchemy.sql.functions module of the SQLAlchemy project.

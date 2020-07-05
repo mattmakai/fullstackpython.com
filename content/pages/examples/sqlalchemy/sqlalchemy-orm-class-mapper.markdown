@@ -1,7 +1,7 @@
-title: sqlalchemy.orm class_mapper code examples
+title: sqlalchemy.orm class_mapper Example Code
 category: page
 slug: sqlalchemy-orm-class-mapper-examples
-sortorder: 500031046
+sortorder: 500031052
 toc: False
 sidebartitle: sqlalchemy.orm class_mapper
 meta: Python example code for the class_mapper callable from the sqlalchemy.orm module of the SQLAlchemy project.
@@ -105,10 +105,7 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # generic.py
-try:
-    from collections.abc import Iterable
-except ImportError:  # For python 2.7 support
-    from collections import Iterable
+from collections.abc import Iterable
 
 import six
 import sqlalchemy as sa

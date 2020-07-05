@@ -1,7 +1,7 @@
-title: sqlalchemy.ext.hybrid hybrid_property code examples
+title: sqlalchemy.ext.hybrid hybrid_property Example Code
 category: page
 slug: sqlalchemy-ext-hybrid-hybrid-property-examples
-sortorder: 500031037
+sortorder: 500031043
 toc: False
 sidebartitle: sqlalchemy.ext.hybrid hybrid_property
 meta: Python example code for the hybrid_property callable from the sqlalchemy.ext.hybrid module of the SQLAlchemy project.

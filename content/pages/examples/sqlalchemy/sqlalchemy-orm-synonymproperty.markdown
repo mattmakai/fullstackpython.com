@@ -1,7 +1,7 @@
-title: sqlalchemy.orm SynonymProperty code examples
+title: sqlalchemy.orm SynonymProperty Example Code
 category: page
 slug: sqlalchemy-orm-synonymproperty-examples
-sortorder: 500031043
+sortorder: 500031049
 toc: False
 sidebartitle: sqlalchemy.orm SynonymProperty
 meta: Python example code for the SynonymProperty class from the sqlalchemy.orm module of the SQLAlchemy project.

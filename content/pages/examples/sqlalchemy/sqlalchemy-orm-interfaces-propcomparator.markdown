@@ -1,7 +1,7 @@
-title: sqlalchemy.orm.interfaces PropComparator code examples
+title: sqlalchemy.orm.interfaces PropComparator Example Code
 category: page
 slug: sqlalchemy-orm-interfaces-propcomparator-examples
-sortorder: 500031064
+sortorder: 500031070
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces PropComparator
 meta: Python example code for the PropComparator class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
@@ -28,10 +28,7 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # generic.py
-try:
-    from collections.abc import Iterable
-except ImportError:  # For python 2.7 support
-    from collections import Iterable
+from collections.abc import Iterable
 
 import six
 import sqlalchemy as sa

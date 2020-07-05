@@ -1,4 +1,4 @@
-title: sqlalchemy.dialects sqlite code examples
+title: sqlalchemy.dialects sqlite Example Code
 category: page
 slug: sqlalchemy-dialects-sqlite-examples
 sortorder: 500031004

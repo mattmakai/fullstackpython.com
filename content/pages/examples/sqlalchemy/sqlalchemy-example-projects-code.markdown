@@ -12,6 +12,21 @@ The following open source projects can serve as example code for you as
 you build your own applications with SQLAlchemy.
 
 
+### databases
+[databases](https://github.com/encode/databases) 
+([project homepage](https://www.encode.io/databases/)
+and
+[PyPI page](https://pypi.org/project/databases/) provides 
+[asyncio](https://docs.python.org/3/library/asyncio.html) support
+with an [SQLALchemy](/sqlalchemy.html) Core interface for common 
+[relational databases](/databases.html) such as [MySQL](/mysql.html), 
+[PostgreSQL](/postgresql.html) and [SQLite](/sqlite.html). This is
+handy for integrating with asynchronous I/O 
+[web frameworks](/web-frameworks.html) like [Sanic](/sanic.html).
+The project is open sourced under the 
+[BSD 3-Clause "New" or "Revised" License](https://github.com/encode/databases/blob/master/LICENSE.md).
+
+
 ### sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)

@@ -1,7 +1,7 @@
-title: sqlalchemy.engine.default DefaultDialect code examples
+title: sqlalchemy.engine.default DefaultDialect Example Code
 category: page
 slug: sqlalchemy-engine-default-defaultdialect-examples
-sortorder: 500031020
+sortorder: 500031023
 toc: False
 sidebartitle: sqlalchemy.engine.default DefaultDialect
 meta: Python example code for the DefaultDialect class from the sqlalchemy.engine.default module of the SQLAlchemy project.

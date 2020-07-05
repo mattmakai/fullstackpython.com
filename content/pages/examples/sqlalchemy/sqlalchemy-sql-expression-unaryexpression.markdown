@@ -1,7 +1,7 @@
-title: sqlalchemy.sql.expression UnaryExpression code examples
+title: sqlalchemy.sql.expression UnaryExpression Example Code
 category: page
 slug: sqlalchemy-sql-expression-unaryexpression-examples
-sortorder: 500031098
+sortorder: 500031104
 toc: False
 sidebartitle: sqlalchemy.sql.expression UnaryExpression
 meta: Python example code for the UnaryExpression class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

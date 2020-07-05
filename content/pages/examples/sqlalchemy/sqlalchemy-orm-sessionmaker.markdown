@@ -1,7 +1,7 @@
-title: sqlalchemy.orm sessionmaker code examples
+title: sqlalchemy.orm sessionmaker Example Code
 category: page
 slug: sqlalchemy-orm-sessionmaker-examples
-sortorder: 500031056
+sortorder: 500031062
 toc: False
 sidebartitle: sqlalchemy.orm sessionmaker
 meta: Python example code for the sessionmaker callable from the sqlalchemy.orm module of the SQLAlchemy project.

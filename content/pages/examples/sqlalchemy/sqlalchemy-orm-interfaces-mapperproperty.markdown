@@ -1,7 +1,7 @@
-title: sqlalchemy.orm.interfaces MapperProperty code examples
+title: sqlalchemy.orm.interfaces MapperProperty Example Code
 category: page
 slug: sqlalchemy-orm-interfaces-mapperproperty-examples
-sortorder: 500031063
+sortorder: 500031069
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces MapperProperty
 meta: Python example code for the MapperProperty class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
@@ -28,10 +28,7 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # generic.py
-try:
-    from collections.abc import Iterable
-except ImportError:  # For python 2.7 support
-    from collections import Iterable
+from collections.abc import Iterable
 
 import six
 import sqlalchemy as sa

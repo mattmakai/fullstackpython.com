@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql DOUBLE_PRECISION code examples
+title: sqlalchemy.dialects.postgresql DOUBLE_PRECISION Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-double-precision-examples
-sortorder: 500031008
+sortorder: 500031009
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql DOUBLE_PRECISION
 meta: Python example code for the DOUBLE_PRECISION constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

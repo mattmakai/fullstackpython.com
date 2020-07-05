@@ -1,7 +1,7 @@
-title: sqlalchemy.exc InvalidRequestError code examples
+title: sqlalchemy.exc InvalidRequestError Example Code
 category: page
 slug: sqlalchemy-exc-invalidrequesterror-examples
-sortorder: 500031028
+sortorder: 500031034
 toc: False
 sidebartitle: sqlalchemy.exc InvalidRequestError
 meta: Python example code for the InvalidRequestError class from the sqlalchemy.exc module of the SQLAlchemy project.

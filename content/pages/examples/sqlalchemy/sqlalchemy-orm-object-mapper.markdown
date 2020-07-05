@@ -1,7 +1,7 @@
-title: sqlalchemy.orm object_mapper code examples
+title: sqlalchemy.orm object_mapper Example Code
 category: page
 slug: sqlalchemy-orm-object-mapper-examples
-sortorder: 500031052
+sortorder: 500031058
 toc: False
 sidebartitle: sqlalchemy.orm object_mapper
 meta: Python example code for the object_mapper callable from the sqlalchemy.orm module of the SQLAlchemy project.

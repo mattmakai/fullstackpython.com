@@ -1,7 +1,7 @@
-title: sqlalchemy.engine create_engine code examples
+title: sqlalchemy.engine create_engine Example Code
 category: page
 slug: sqlalchemy-engine-create-engine-examples
-sortorder: 500031017
+sortorder: 500031020
 toc: False
 sidebartitle: sqlalchemy.engine create_engine
 meta: Python example code for the create_engine callable from the sqlalchemy.engine module of the SQLAlchemy project.

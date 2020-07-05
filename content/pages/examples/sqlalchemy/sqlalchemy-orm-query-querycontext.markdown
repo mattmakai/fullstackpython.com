@@ -1,7 +1,7 @@
-title: sqlalchemy.orm.query QueryContext code examples
+title: sqlalchemy.orm.query QueryContext Example Code
 category: page
 slug: sqlalchemy-orm-query-querycontext-examples
-sortorder: 500031068
+sortorder: 500031074
 toc: False
 sidebartitle: sqlalchemy.orm.query QueryContext
 meta: Python example code for the QueryContext class from the sqlalchemy.orm.query module of the SQLAlchemy project.

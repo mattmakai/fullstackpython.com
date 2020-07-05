@@ -1,4 +1,4 @@
-title: sqlalchemy.dialects mssql code examples
+title: sqlalchemy.dialects mssql Example Code
 category: page
 slug: sqlalchemy-dialects-mssql-examples
 sortorder: 500031000

@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql BIGINT code examples
+title: sqlalchemy.dialects.postgresql BIGINT Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-bigint-examples
-sortorder: 500031006
+sortorder: 500031007
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql BIGINT
 meta: Python example code for the BIGINT constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

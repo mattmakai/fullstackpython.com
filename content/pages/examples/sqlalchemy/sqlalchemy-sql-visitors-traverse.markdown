@@ -1,7 +1,7 @@
-title: sqlalchemy.sql.visitors traverse code examples
+title: sqlalchemy.sql.visitors traverse Example Code
 category: page
 slug: sqlalchemy-sql-visitors-traverse-examples
-sortorder: 500031105
+sortorder: 500031112
 toc: False
 sidebartitle: sqlalchemy.sql.visitors traverse
 meta: Python example code for the traverse callable from the sqlalchemy.sql.visitors module of the SQLAlchemy project.

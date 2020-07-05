@@ -1,7 +1,7 @@
-title: sqlalchemy.sql ClauseElement code examples
+title: sqlalchemy.sql ClauseElement Example Code
 category: page
 slug: sqlalchemy-sql-clauseelement-examples
-sortorder: 500031082
+sortorder: 500031088
 toc: False
 sidebartitle: sqlalchemy.sql ClauseElement
 meta: Python example code for the ClauseElement class from the sqlalchemy.sql module of the SQLAlchemy project.
@@ -10,7 +10,59 @@ meta: Python example code for the ClauseElement class from the sqlalchemy.sql mo
 ClauseElement is a class within the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-## Example 1 from GINO
+## Example 1 from databases
+[databases](https://github.com/encode/databases)
+([project homepage](https://www.encode.io/databases/)
+and
+[PyPI page](https://pypi.org/project/databases/) provides
+[asyncio](https://docs.python.org/3/library/asyncio.html) support
+with an [SQLALchemy](/sqlalchemy.html) Core interface for common
+[relational databases](/databases.html) such as [MySQL](/mysql.html),
+[PostgreSQL](/postgresql.html) and [SQLite](/sqlite.html). This is
+handy for integrating with asynchronous I/O
+[web frameworks](/web-frameworks.html) like [Sanic](/sanic.html).
+The project is open sourced under the
+[BSD 3-Clause "New" or "Revised" License](https://github.com/encode/databases/blob/master/LICENSE.md).
+
+[**databases / databases / interfaces.py**](https://github.com/encode/databases/blob/master/databases/./interfaces.py)
+
+```python
+# interfaces.py
+import typing
+
+~~from sqlalchemy.sql import ClauseElement
+
+
+class DatabaseBackend:
+    async def connect(self) -> None:
+        raise NotImplementedError()  # pragma: no cover
+
+    async def disconnect(self) -> None:
+        raise NotImplementedError()  # pragma: no cover
+
+    def connection(self) -> "ConnectionBackend":
+        raise NotImplementedError()  # pragma: no cover
+
+
+class ConnectionBackend:
+    async def acquire(self) -> None:
+        raise NotImplementedError()  # pragma: no cover
+
+    async def release(self) -> None:
+        raise NotImplementedError()  # pragma: no cover
+
+    async def fetch_all(self, query: ClauseElement) -> typing.List[typing.Mapping]:
+        raise NotImplementedError()  # pragma: no cover
+
+    async def fetch_one(self, query: ClauseElement) -> typing.Optional[typing.Mapping]:
+
+
+## ... source file continues with no further ClauseElement examples...
+
+```
+
+
+## Example 2 from GINO
 [GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
 and

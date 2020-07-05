@@ -1,7 +1,7 @@
-title: sqlalchemy.orm.collections InstrumentedList code examples
+title: sqlalchemy.orm.collections InstrumentedList Example Code
 category: page
 slug: sqlalchemy-orm-collections-instrumentedlist-examples
-sortorder: 500031059
+sortorder: 500031065
 toc: False
 sidebartitle: sqlalchemy.orm.collections InstrumentedList
 meta: Python example code for the InstrumentedList class from the sqlalchemy.orm.collections module of the SQLAlchemy project.

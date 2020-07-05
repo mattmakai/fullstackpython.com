@@ -1,7 +1,7 @@
-title: sqlalchemy.schema PrimaryKeyConstraint code examples
+title: sqlalchemy.schema PrimaryKeyConstraint Example Code
 category: page
 slug: sqlalchemy-schema-primarykeyconstraint-examples
-sortorder: 500031080
+sortorder: 500031086
 toc: False
 sidebartitle: sqlalchemy.schema PrimaryKeyConstraint
 meta: Python example code for the PrimaryKeyConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.

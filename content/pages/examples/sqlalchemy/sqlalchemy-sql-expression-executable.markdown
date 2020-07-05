@@ -1,7 +1,7 @@
-title: sqlalchemy.sql.expression Executable code examples
+title: sqlalchemy.sql.expression Executable Example Code
 category: page
 slug: sqlalchemy-sql-expression-executable-examples
-sortorder: 500031096
+sortorder: 500031102
 toc: False
 sidebartitle: sqlalchemy.sql.expression Executable
 meta: Python example code for the Executable class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

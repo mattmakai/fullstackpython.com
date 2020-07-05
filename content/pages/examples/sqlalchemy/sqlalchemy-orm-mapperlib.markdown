@@ -1,7 +1,7 @@
-title: sqlalchemy.orm mapperlib code examples
+title: sqlalchemy.orm mapperlib Example Code
 category: page
 slug: sqlalchemy-orm-mapperlib-examples
-sortorder: 500031051
+sortorder: 500031057
 toc: False
 sidebartitle: sqlalchemy.orm mapperlib
 meta: Python example code for the mapperlib callable from the sqlalchemy.orm module of the SQLAlchemy project.

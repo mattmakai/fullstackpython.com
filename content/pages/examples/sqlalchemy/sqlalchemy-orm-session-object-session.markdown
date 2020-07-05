@@ -1,7 +1,7 @@
-title: sqlalchemy.orm.session object_session code examples
+title: sqlalchemy.orm.session object_session Example Code
 category: page
 slug: sqlalchemy-orm-session-object-session-examples
-sortorder: 500031070
+sortorder: 500031076
 toc: False
 sidebartitle: sqlalchemy.orm.session object_session
 meta: Python example code for the object_session callable from the sqlalchemy.orm.session module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql ARRAY code examples
+title: sqlalchemy.dialects.postgresql ARRAY Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-array-examples
-sortorder: 500031005
+sortorder: 500031006
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql ARRAY
 meta: Python example code for the ARRAY constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

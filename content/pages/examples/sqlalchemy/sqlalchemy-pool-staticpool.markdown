@@ -1,7 +1,7 @@
-title: sqlalchemy.pool StaticPool code examples
+title: sqlalchemy.pool StaticPool Example Code
 category: page
 slug: sqlalchemy-pool-staticpool-examples
-sortorder: 500031073
+sortorder: 500031079
 toc: False
 sidebartitle: sqlalchemy.pool StaticPool
 meta: Python example code for the StaticPool class from the sqlalchemy.pool module of the SQLAlchemy project.

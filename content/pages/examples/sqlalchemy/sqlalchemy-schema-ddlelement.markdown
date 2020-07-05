@@ -1,7 +1,7 @@
-title: sqlalchemy.schema DDLElement code examples
+title: sqlalchemy.schema DDLElement Example Code
 category: page
 slug: sqlalchemy-schema-ddlelement-examples
-sortorder: 500031077
+sortorder: 500031083
 toc: False
 sidebartitle: sqlalchemy.schema DDLElement
 meta: Python example code for the DDLElement class from the sqlalchemy.schema module of the SQLAlchemy project.

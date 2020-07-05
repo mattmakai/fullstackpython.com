@@ -1,7 +1,7 @@
-title: sqlalchemy.ext.declarative declarative_base code examples
+title: sqlalchemy.ext.declarative declarative_base Example Code
 category: page
 slug: sqlalchemy-ext-declarative-declarative-base-examples
-sortorder: 500031036
+sortorder: 500031042
 toc: False
 sidebartitle: sqlalchemy.ext.declarative declarative_base
 meta: Python example code for the declarative_base callable from the sqlalchemy.ext.declarative module of the SQLAlchemy project.

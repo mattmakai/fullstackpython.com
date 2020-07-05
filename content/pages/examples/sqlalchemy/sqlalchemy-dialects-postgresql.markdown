@@ -1,4 +1,4 @@
-title: sqlalchemy.dialects postgresql code examples
+title: sqlalchemy.dialects postgresql Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-examples
 sortorder: 500031003

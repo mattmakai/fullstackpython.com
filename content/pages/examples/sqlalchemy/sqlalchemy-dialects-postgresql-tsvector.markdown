@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql TSVECTOR code examples
+title: sqlalchemy.dialects.postgresql TSVECTOR Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-tsvector-examples
-sortorder: 500031012
+sortorder: 500031013
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql TSVECTOR
 meta: Python example code for the TSVECTOR constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

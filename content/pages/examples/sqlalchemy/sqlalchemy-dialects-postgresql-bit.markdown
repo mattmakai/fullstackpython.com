@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql BIT code examples
+title: sqlalchemy.dialects.postgresql BIT Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-bit-examples
-sortorder: 500031007
+sortorder: 500031008
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql BIT
 meta: Python example code for the BIT constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

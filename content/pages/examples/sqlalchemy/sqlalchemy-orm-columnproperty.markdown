@@ -1,7 +1,7 @@
-title: sqlalchemy.orm ColumnProperty code examples
+title: sqlalchemy.orm ColumnProperty Example Code
 category: page
 slug: sqlalchemy-orm-columnproperty-examples
-sortorder: 500031040
+sortorder: 500031046
 toc: False
 sidebartitle: sqlalchemy.orm ColumnProperty
 meta: Python example code for the ColumnProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
@@ -181,10 +181,7 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # generic.py
-try:
-    from collections.abc import Iterable
-except ImportError:  # For python 2.7 support
-    from collections import Iterable
+from collections.abc import Iterable
 
 import six
 import sqlalchemy as sa

@@ -1,7 +1,7 @@
-title: sqlalchemy.inspection inspect code examples
+title: sqlalchemy.inspection inspect Example Code
 category: page
 slug: sqlalchemy-inspection-inspect-examples
-sortorder: 500031039
+sortorder: 500031045
 toc: False
 sidebartitle: sqlalchemy.inspection inspect
 meta: Python example code for the inspect callable from the sqlalchemy.inspection module of the SQLAlchemy project.

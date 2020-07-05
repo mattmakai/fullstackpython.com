@@ -1,7 +1,7 @@
-title: sqlalchemy.exc OperationalError code examples
+title: sqlalchemy.exc OperationalError Example Code
 category: page
 slug: sqlalchemy-exc-operationalerror-examples
-sortorder: 500031030
+sortorder: 500031036
 toc: False
 sidebartitle: sqlalchemy.exc OperationalError
 meta: Python example code for the OperationalError class from the sqlalchemy.exc module of the SQLAlchemy project.
@@ -28,12 +28,9 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # database.py
-try:
-    from collections.abc import Mapping, Sequence
-except ImportError:  # For python 2.7 support
-    from collections import Mapping, Sequence
 import itertools
 import os
+from collections.abc import Mapping, Sequence
 from copy import copy
 
 import sqlalchemy as sa

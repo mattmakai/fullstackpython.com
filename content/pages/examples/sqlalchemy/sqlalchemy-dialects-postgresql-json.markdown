@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql JSON code examples
+title: sqlalchemy.dialects.postgresql JSON Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-json-examples
-sortorder: 500031011
+sortorder: 500031012
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql JSON
 meta: Python example code for the JSON constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
-title: sqlalchemy.schema CheckConstraint code examples
+title: sqlalchemy.schema CheckConstraint Example Code
 category: page
 slug: sqlalchemy-schema-checkconstraint-examples
-sortorder: 500031074
+sortorder: 500031080
 toc: False
 sidebartitle: sqlalchemy.schema CheckConstraint
 meta: Python example code for the CheckConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.

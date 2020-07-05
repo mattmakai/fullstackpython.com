@@ -1,7 +1,7 @@
-title: sqlalchemy.orm backref code examples
+title: sqlalchemy.orm backref Example Code
 category: page
 slug: sqlalchemy-orm-backref-examples
-sortorder: 500031045
+sortorder: 500031051
 toc: False
 sidebartitle: sqlalchemy.orm backref
 meta: Python example code for the backref callable from the sqlalchemy.orm module of the SQLAlchemy project.

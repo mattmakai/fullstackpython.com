@@ -1,7 +1,7 @@
-title: sqlalchemy.exc IntegrityError code examples
+title: sqlalchemy.exc IntegrityError Example Code
 category: page
 slug: sqlalchemy-exc-integrityerror-examples
-sortorder: 500031027
+sortorder: 500031033
 toc: False
 sidebartitle: sqlalchemy.exc IntegrityError
 meta: Python example code for the IntegrityError class from the sqlalchemy.exc module of the SQLAlchemy project.

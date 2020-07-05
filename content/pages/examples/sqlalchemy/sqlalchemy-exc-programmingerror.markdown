@@ -1,7 +1,7 @@
-title: sqlalchemy.exc ProgrammingError code examples
+title: sqlalchemy.exc ProgrammingError Example Code
 category: page
 slug: sqlalchemy-exc-programmingerror-examples
-sortorder: 500031031
+sortorder: 500031037
 toc: False
 sidebartitle: sqlalchemy.exc ProgrammingError
 meta: Python example code for the ProgrammingError class from the sqlalchemy.exc module of the SQLAlchemy project.
@@ -28,12 +28,9 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # database.py
-try:
-    from collections.abc import Mapping, Sequence
-except ImportError:  # For python 2.7 support
-    from collections import Mapping, Sequence
 import itertools
 import os
+from collections.abc import Mapping, Sequence
 from copy import copy
 
 import sqlalchemy as sa

@@ -1,7 +1,7 @@
-title: sqlalchemy.util set_creation_order code examples
+title: sqlalchemy.util set_creation_order Example Code
 category: page
 slug: sqlalchemy-util-set-creation-order-examples
-sortorder: 500031115
+sortorder: 500031123
 toc: False
 sidebartitle: sqlalchemy.util set_creation_order
 meta: Python example code for the set_creation_order callable from the sqlalchemy.util module of the SQLAlchemy project.
@@ -28,10 +28,7 @@ and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/ag
 
 ```python
 # generic.py
-try:
-    from collections.abc import Iterable
-except ImportError:  # For python 2.7 support
-    from collections import Iterable
+from collections.abc import Iterable
 
 import six
 import sqlalchemy as sa

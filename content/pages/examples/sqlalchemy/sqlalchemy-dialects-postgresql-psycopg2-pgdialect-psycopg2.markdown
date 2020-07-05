@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2 code examples
+title: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2 Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-psycopg2-pgdialect-psycopg2-examples
-sortorder: 500031014
+sortorder: 500031016
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2
 meta: Python example code for the PGDialect_psycopg2 class from the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
@@ -10,7 +10,87 @@ meta: Python example code for the PGDialect_psycopg2 class from the sqlalchemy.d
 PGDialect_psycopg2 is a class within the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
 
 
-## Example 1 from sqlalchemy-utils
+## Example 1 from databases
+[databases](https://github.com/encode/databases)
+([project homepage](https://www.encode.io/databases/)
+and
+[PyPI page](https://pypi.org/project/databases/) provides
+[asyncio](https://docs.python.org/3/library/asyncio.html) support
+with an [SQLALchemy](/sqlalchemy.html) Core interface for common
+[relational databases](/databases.html) such as [MySQL](/mysql.html),
+[PostgreSQL](/postgresql.html) and [SQLite](/sqlite.html). This is
+handy for integrating with asynchronous I/O
+[web frameworks](/web-frameworks.html) like [Sanic](/sanic.html).
+The project is open sourced under the
+[BSD 3-Clause "New" or "Revised" License](https://github.com/encode/databases/blob/master/LICENSE.md).
+
+[**databases / databases / backends / aiopg.py**](https://github.com/encode/databases/blob/master/databases/backends/aiopg.py)
+
+```python
+# aiopg.py
+import getpass
+import json
+import logging
+import typing
+import uuid
+
+import aiopg
+from aiopg.sa.engine import APGCompiler_psycopg2
+~~from sqlalchemy.dialects.postgresql.psycopg2 import PGDialect_psycopg2
+from sqlalchemy.engine.interfaces import Dialect, ExecutionContext
+from sqlalchemy.engine.result import ResultMetaData, RowProxy
+from sqlalchemy.sql import ClauseElement
+from sqlalchemy.types import TypeEngine
+
+from databases.core import DatabaseURL
+from databases.interfaces import ConnectionBackend, DatabaseBackend, TransactionBackend
+
+logger = logging.getLogger("databases")
+
+
+class AiopgBackend(DatabaseBackend):
+    def __init__(
+        self, database_url: typing.Union[DatabaseURL, str], **options: typing.Any
+    ) -> None:
+        self._database_url = DatabaseURL(database_url)
+        self._options = options
+        self._dialect = self._get_dialect()
+        self._pool = None
+
+    def _get_dialect(self) -> Dialect:
+~~        dialect = PGDialect_psycopg2(
+            json_serializer=json.dumps, json_deserializer=lambda x: x
+        )
+        dialect.statement_compiler = APGCompiler_psycopg2
+        dialect.implicit_returning = True
+        dialect.supports_native_enum = True
+        dialect.supports_smallserial = True  # 9.2+
+        dialect._backslash_escapes = False
+        dialect.supports_sane_multi_rowcount = True  # psycopg 2.0.9+
+        dialect._has_native_hstore = True
+        dialect.supports_native_decimal = True
+
+        return dialect
+
+    def _get_connection_kwargs(self) -> dict:
+        url_options = self._database_url.options
+
+        kwargs = {}
+        min_size = url_options.get("min_size")
+        max_size = url_options.get("max_size")
+        ssl = url_options.get("ssl")
+
+        if min_size is not None:
+            kwargs["minsize"] = int(min_size)
+        if max_size is not None:
+
+
+## ... source file continues with no further PGDialect_psycopg2 examples...
+
+```
+
+
+## Example 2 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

@@ -1,7 +1,7 @@
-title: sqlalchemy.schema Column code examples
+title: sqlalchemy.schema Column Example Code
 category: page
 slug: sqlalchemy-schema-column-examples
-sortorder: 500031075
+sortorder: 500031081
 toc: False
 sidebartitle: sqlalchemy.schema Column
 meta: Python example code for the Column class from the sqlalchemy.schema module of the SQLAlchemy project.

@@ -1,4 +1,4 @@
-title: sqlalchemy.dialects oracle code examples
+title: sqlalchemy.dialects oracle Example Code
 category: page
 slug: sqlalchemy-dialects-oracle-examples
 sortorder: 500031002

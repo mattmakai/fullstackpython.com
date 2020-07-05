@@ -1,4 +1,4 @@
-title: sqlalchemy.dialects mysql code examples
+title: sqlalchemy.dialects mysql Example Code
 category: page
 slug: sqlalchemy-dialects-mysql-examples
 sortorder: 500031001

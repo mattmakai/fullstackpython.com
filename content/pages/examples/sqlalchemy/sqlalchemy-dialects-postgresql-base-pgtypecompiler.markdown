@@ -1,7 +1,7 @@
-title: sqlalchemy.dialects.postgresql.base PGTypeCompiler code examples
+title: sqlalchemy.dialects.postgresql.base PGTypeCompiler Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-base-pgtypecompiler-examples
-sortorder: 500031013
+sortorder: 500031015
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.base PGTypeCompiler
 meta: Python example code for the PGTypeCompiler class from the sqlalchemy.dialects.postgresql.base module of the SQLAlchemy project.

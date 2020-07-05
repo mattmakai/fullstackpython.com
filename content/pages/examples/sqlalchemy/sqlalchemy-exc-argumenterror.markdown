@@ -1,7 +1,7 @@
-title: sqlalchemy.exc ArgumentError code examples
+title: sqlalchemy.exc ArgumentError Example Code
 category: page
 slug: sqlalchemy-exc-argumenterror-examples
-sortorder: 500031025
+sortorder: 500031031
 toc: False
 sidebartitle: sqlalchemy.exc ArgumentError
 meta: Python example code for the ArgumentError class from the sqlalchemy.exc module of the SQLAlchemy project.

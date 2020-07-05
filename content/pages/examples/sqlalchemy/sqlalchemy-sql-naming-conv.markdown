@@ -1,7 +1,7 @@
-title: sqlalchemy.sql.naming conv code examples
+title: sqlalchemy.sql.naming conv Example Code
 category: page
 slug: sqlalchemy-sql-naming-conv-examples
-sortorder: 500031101
+sortorder: 500031107
 toc: False
 sidebartitle: sqlalchemy.sql.naming conv
 meta: Python example code for the conv callable from the sqlalchemy.sql.naming module of the SQLAlchemy project.

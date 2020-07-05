@@ -1,7 +1,7 @@
-title: sqlalchemy.engine.strategies EngineStrategy code examples
+title: sqlalchemy.engine.strategies EngineStrategy Example Code
 category: page
 slug: sqlalchemy-engine-strategies-enginestrategy-examples
-sortorder: 500031021
+sortorder: 500031027
 toc: False
 sidebartitle: sqlalchemy.engine.strategies EngineStrategy
 meta: Python example code for the EngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.

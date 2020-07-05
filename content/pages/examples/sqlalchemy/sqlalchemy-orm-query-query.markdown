@@ -1,7 +1,7 @@
-title: sqlalchemy.orm.query Query code examples
+title: sqlalchemy.orm.query Query Example Code
 category: page
 slug: sqlalchemy-orm-query-query-examples
-sortorder: 500031067
+sortorder: 500031073
 toc: False
 sidebartitle: sqlalchemy.orm.query Query
 meta: Python example code for the Query class from the sqlalchemy.orm.query module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
-title: sqlalchemy.orm relationship code examples
+title: sqlalchemy.orm relationship Example Code
 category: page
 slug: sqlalchemy-orm-relationship-examples
-sortorder: 500031054
+sortorder: 500031060
 toc: False
 sidebartitle: sqlalchemy.orm relationship
 meta: Python example code for the relationship callable from the sqlalchemy.orm module of the SQLAlchemy project.
