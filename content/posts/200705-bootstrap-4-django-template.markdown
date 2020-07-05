@@ -345,6 +345,6 @@ Questions? Contact me via Twitter
 or [@mattmakai](https://twitter.com/mattmakai). I am also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 If you see an issue or error in this tutorial, please
-[fork the source repository on GitHub](https://github.com/mattmakai/fullstackpython/blob/master/content/posts/200705-bootstrap-4-django-template.markdown)
+[fork the source repository on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/200705-bootstrap-4-django-template.markdown)
 and submit a pull request with the fix.
 
