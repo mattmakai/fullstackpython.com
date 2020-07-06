@@ -4,7 +4,7 @@ slug: flask-json-jsonencoder-examples
 sortorder: 500021018
 toc: False
 sidebartitle: flask.json JSONEncoder
-meta: Python example code for the JSONEncoder class from the flask.json module of the Flask project.
+meta: Example code for understanding how to use the JSONEncoder class from the flask.json module of the Flask project.
 
 
 JSONEncoder is a class within the flask.json module of the Flask project.

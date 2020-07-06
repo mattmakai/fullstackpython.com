@@ -4,7 +4,7 @@ slug: flask-globals-request-examples
 sortorder: 500021012
 toc: False
 sidebartitle: flask.globals request
-meta: Python example code for the request callable from the flask.globals module of the Flask project.
+meta: Python example code that shows how to use the request callable from the flask.globals module of the Flask project.
 
 
 request is a callable within the flask.globals module of the Flask project.

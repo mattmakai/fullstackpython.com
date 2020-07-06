@@ -4,7 +4,7 @@ slug: flask-app-headers-examples
 sortorder: 500021002
 toc: False
 sidebartitle: flask.app Headers
-meta: Python example code for the Headers class from the flask.app module of the Flask project.
+meta: Example code for understanding how to use the Headers class from the flask.app module of the Flask project.
 
 
 [Headers](https://github.com/pallets/flask/blob/master/src/flask/app.py)

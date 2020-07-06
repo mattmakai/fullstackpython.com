@@ -4,7 +4,7 @@ slug: flask-app-badrequest-examples
 sortorder: 500021000
 toc: False
 sidebartitle: flask.app BadRequest
-meta: Python example code for the BadRequest class from the flask.app module of the Flask project.
+meta: Example code for understanding how to use the BadRequest class from the flask.app module of the Flask project.
 
 
 [BadRequest](https://github.com/pallets/flask/blob/master/src/flask/app.py)
@@ -38,7 +38,7 @@ import json
 import logging
 import re
 import traceback
-from typing import Dict, Optional
+from typing import Callable, Dict, List, Optional, Set
 import urllib.parse
 
 from apispec import APISpec, yaml_utils
@@ -46,7 +46,7 @@ from apispec.exceptions import DuplicateComponentNameError
 from flask import Blueprint, current_app, jsonify, make_response, request, Response
 from flask_babel import lazy_gettext as _
 import jsonschema
-from marshmallow import ValidationError
+from marshmallow import Schema, ValidationError
 from marshmallow_sqlalchemy.fields import Related, RelatedList
 import prison
 from sqlalchemy.exc import IntegrityError

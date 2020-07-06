@@ -4,7 +4,7 @@ slug: flask-views-view-examples
 sortorder: 500021028
 toc: False
 sidebartitle: flask.views View
-meta: Python example code for the View class from the flask.views module of the Flask project.
+meta: Example code for understanding how to use the View class from the flask.views module of the Flask project.
 
 
 View is a class within the flask.views module of the Flask project.

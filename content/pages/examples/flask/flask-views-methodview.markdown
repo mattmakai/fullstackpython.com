@@ -4,7 +4,7 @@ slug: flask-views-methodview-examples
 sortorder: 500021027
 toc: False
 sidebartitle: flask.views MethodView
-meta: Python example code for the MethodView class from the flask.views module of the Flask project.
+meta: Example code for understanding how to use the MethodView class from the flask.views module of the Flask project.
 
 
 MethodView is a class within the flask.views module of the Flask project.

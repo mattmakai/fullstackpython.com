@@ -4,7 +4,7 @@ slug: flask-helpers-flash-examples
 sortorder: 500021014
 toc: False
 sidebartitle: flask.helpers flash
-meta: Python example code for the flash callable from the flask.helpers module of the Flask project.
+meta: Python example code that shows how to use the flash callable from the flask.helpers module of the Flask project.
 
 
 flash is a callable within the flask.helpers module of the Flask project.

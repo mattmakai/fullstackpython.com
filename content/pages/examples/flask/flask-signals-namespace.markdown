@@ -4,7 +4,7 @@ slug: flask-signals-namespace-examples
 sortorder: 500021023
 toc: False
 sidebartitle: flask.signals Namespace
-meta: Python example code for the Namespace class from the flask.signals module of the Flask project.
+meta: Example code for understanding how to use the Namespace class from the flask.signals module of the Flask project.
 
 
 Namespace is a class within the flask.signals module of the Flask project.

@@ -4,7 +4,7 @@ slug: flask-globals-session-examples
 sortorder: 500021013
 toc: False
 sidebartitle: flask.globals session
-meta: Python example code for the session callable from the flask.globals module of the Flask project.
+meta: Python example code that shows how to use the session callable from the flask.globals module of the Flask project.
 
 
 session is a callable within the flask.globals module of the Flask project.

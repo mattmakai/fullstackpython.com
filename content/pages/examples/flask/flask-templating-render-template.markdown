@@ -4,7 +4,7 @@ slug: flask-templating-render-template-examples
 sortorder: 500021025
 toc: False
 sidebartitle: flask.templating render_template
-meta: Python example code for the render_template callable from the flask.templating module of the Flask project.
+meta: Python example code that shows how to use the render_template callable from the flask.templating module of the Flask project.
 
 
 render_template is a callable within the flask.templating module of the Flask project.

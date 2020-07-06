@@ -4,7 +4,7 @@ slug: flask-sessions-sessionmixin-examples
 sortorder: 500021022
 toc: False
 sidebartitle: flask.sessions SessionMixin
-meta: Python example code for the SessionMixin class from the flask.sessions module of the Flask project.
+meta: Example code for understanding how to use the SessionMixin class from the flask.sessions module of the Flask project.
 
 
 SessionMixin is a class within the flask.sessions module of the Flask project.
@@ -54,7 +54,7 @@ from werkzeug.serving import run_with_reloader
 from .namespace import Namespace
 from .test_client import SocketIOTestClient
 
-__version__ = '4.3.1dev'
+__version__ = '4.3.2dev'
 
 
 class _SocketIOMiddleware(socketio.WSGIApp):

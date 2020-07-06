@@ -4,10 +4,16 @@ slug: flask-globals-current-app-examples
 sortorder: 500021010
 toc: False
 sidebartitle: flask.globals current_app
-meta: Python example code for the current_app callable from the flask.globals module of the Flask project.
+meta: Python example code that shows how to use the current_app callable from the flask.globals module of the Flask project.
 
 
-current_app is a callable within the flask.globals module of the Flask project.
+[current_app](https://github.com/pallets/flask/blob/master/src/flask/globals.py)
+is function in [Flask](/flask.html)'s flask.globals module and is an
+instance of
+[LocalProxy](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/local.py)
+from the Werkzeug framework. `current_app` can be used to access data about the
+running application, including the configuration. This is useful for both
+developers using the framework and ones building extensions for Flask.
 
 
 ## Example 1 from Flask AppBuilder
@@ -114,7 +120,6 @@ class MenuItem(object):
 ## ... source file abbreviated to get to current_app examples ...
 
 
-                self.add_category(
                     category=category, icon=category_icon, label=category_label
                 )
                 new_menu_item = MenuItem(
@@ -134,6 +139,7 @@ class MenuItem(object):
 
 class MenuApi(BaseApi):
     resource_name = "menu"
+    openapi_spec_tag = "Menu"
 
     @expose("/", methods=["GET"])
     @protect(allow_browser_login=True)
@@ -1983,13 +1989,8 @@ _default_config = {
 ~~                current_app.after_request(csrf_cookie_handler)
 ~~                current_app.config["WTF_CSRF_HEADERS"].append(cv("CSRF_HEADER"))
 
-        @app.before_first_request
-        def _init_phone_util():
-            state._phone_util = state.phone_util_cls()
-
-        @app.before_first_request
-        def _init_mail_util():
-            state._mail_util = state.mail_util_cls()
+        state._phone_util = state.phone_util_cls(app)
+        state._mail_util = state.mail_util_cls(app)
 
         app.extensions["security"] = state
 
@@ -2006,6 +2007,11 @@ _default_config = {
             ("SECURITY_SMS_SERVICE_CONFIG", "SECURITY_TWO_FACTOR_SMS_SERVICE_CONFIG"),
             ("SECURITY_TOTP_SECRETS", "SECURITY_TWO_FACTOR_SECRET"),
             ("SECURITY_TOTP_ISSUER", "SECURITY_TWO_FACTOR_URI_SERVICE_NAME"),
+        ]:
+            if not app.config.get(newc, None):
+                app.config[newc] = app.config.get(oldc, None)
+
+        for uia in cv("USER_IDENTITY_ATTRIBUTES", app=app):  # pragma: no cover
 
 
 ## ... source file continues with no further current_app examples...

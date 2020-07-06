@@ -114,6 +114,22 @@ open sourced under the
 [MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
 
 
+### flask-praetorian
+[flask-praetorian](https://github.com/dusktreader/flask-praetorian)
+([project documentation](https://flask-praetorian.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/flask-praetorian/))
+extends the [Flask](/flask.html) framework security model with JWT tokens,
+which is particularly useful when using a front end 
+[JavaScript](/javascript.html) framework such as [React](/react.html)
+or [Angular](/angular.html). [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
+is used under the hood to ensure a solid JWT implementation.
+This extension makes it much easier to add functionality that checks
+user roles on URLs before allowing access to a resource. flask-praetorian
+is open sourced under the 
+[MIT license](https://github.com/dusktreader/flask-praetorian/blob/master/LICENSE.rst).
+
+
 ### Flask RESTX
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build

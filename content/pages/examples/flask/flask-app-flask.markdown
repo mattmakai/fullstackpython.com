@@ -4,7 +4,7 @@ slug: flask-app-flask-examples
 sortorder: 500021001
 toc: False
 sidebartitle: flask.app Flask
-meta: Python example code for the Flask class from the flask.app module of the Flask project.
+meta: Example code for understanding how to use the Flask class from the flask.app module of the Flask project.
 
 
 [Flask](https://github.com/pallets/flask/blob/master/src/flask/app.py) is

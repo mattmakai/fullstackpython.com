@@ -4,7 +4,7 @@ slug: flask-sessions-badsignature-examples
 sortorder: 500021020
 toc: False
 sidebartitle: flask.sessions BadSignature
-meta: Python example code for the BadSignature class from the flask.sessions module of the Flask project.
+meta: Example code for understanding how to use the BadSignature class from the flask.sessions module of the Flask project.
 
 
 BadSignature is a class within the flask.sessions module of the Flask project.

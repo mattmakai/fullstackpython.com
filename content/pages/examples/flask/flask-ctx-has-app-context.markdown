@@ -4,10 +4,15 @@ slug: flask-ctx-has-app-context-examples
 sortorder: 500021008
 toc: False
 sidebartitle: flask.ctx has_app_context
-meta: Python example code for the has_app_context callable from the flask.ctx module of the Flask project.
+meta: Python example code that shows how to use the has_app_context callable from the flask.ctx module of the Flask project.
 
 
-has_app_context is a callable within the flask.ctx module of the Flask project.
+[has_app_context](https://github.com/pallets/flask/blob/master/src/flask/ctx.py)
+is a function in the flask.ctx module that is similar to
+[has_request_context](/flask-ctx-has-request-context-examples.html)
+but for the
+[application context](https://flask.palletsprojects.com/en/1.1.x/appcontext/)
+rather than the request.
 
 
 ## Example 1 from flask-restx

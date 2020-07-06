@@ -4,10 +4,18 @@ slug: flask-ctx-has-request-context-examples
 sortorder: 500021009
 toc: False
 sidebartitle: flask.ctx has_request_context
-meta: Python example code for the has_request_context callable from the flask.ctx module of the Flask project.
+meta: Python example code that shows how to use the has_request_context callable from the flask.ctx module of the Flask project.
 
 
-has_request_context is a callable within the flask.ctx module of the Flask project.
+[has_request_context](https://github.com/pallets/flask/blob/master/src/flask/ctx.py)
+is a function within the flask.ctx module that is useful for
+determining if a
+[request context](https://flask.palletsprojects.com/en/1.1.x/reqcontext/)
+is available or not. There is a similar
+[has_app_context](/flask-ctx-has-app-context-examples.html)
+function as well that works for the
+[application context](https://flask.palletsprojects.com/en/1.1.x/appcontext/).
+
 
 
 ## Example 1 from Flask AppBuilder

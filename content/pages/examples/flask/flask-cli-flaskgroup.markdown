@@ -4,7 +4,7 @@ slug: flask-cli-flaskgroup-examples
 sortorder: 500021004
 toc: False
 sidebartitle: flask.cli FlaskGroup
-meta: Python example code for the FlaskGroup class from the flask.cli module of the Flask project.
+meta: Example code for understanding how to use the FlaskGroup class from the flask.cli module of the Flask project.
 
 
 [FlaskGroup](https://github.com/pallets/flask/blob/master/src/flask/cli.py)

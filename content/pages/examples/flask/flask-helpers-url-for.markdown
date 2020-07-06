@@ -4,7 +4,7 @@ slug: flask-helpers-url-for-examples
 sortorder: 500021017
 toc: False
 sidebartitle: flask.helpers url_for
-meta: Python example code for the url_for callable from the flask.helpers module of the Flask project.
+meta: Python example code that shows how to use the url_for callable from the flask.helpers module of the Flask project.
 
 
 url_for is a callable within the flask.helpers module of the Flask project.
