@@ -545,6 +545,18 @@ and maintained by the collaborative developer community group
 [Jazzband](https://jazzband.co/).
 
 
+### django-user-visit
+[django-user-visit](https://github.com/yunojuno/django-user-visit)
+([PyPI package information](https://pypi.org/project/django-user-visit/))
+is a [Django](/django.html) app and 
+[middleware](https://docs.djangoproject.com/en/stable/topics/http/middleware/)
+for tracking daily user visits to your web application. The goal
+is to record per user per day instead of for every request a user
+sends to the application. The project is provided as open source
+under the 
+[MIT license](https://github.com/yunojuno/django-user-visit/blob/master/LICENSE).
+
+
 ### django-webshell
 [django-webshell](https://github.com/onrik/django-webshell) is an extension
 for executing arbitrary code in the 
@@ -582,6 +594,16 @@ named [django-simplewiki](https://code.google.com/p/django-simple-wiki/).
 
 The code for django-wiki is provided as open source under the
 [GNU General Public License 3.0](https://github.com/django-wiki/django-wiki/blob/master/COPYING).
+
+
+### elasticsearch-django
+[elasticsearch-django](https://github.com/yunojuno/elasticsearch-django)
+([PyPI package information](https://pypi.org/project/elasticsearch-django/))
+is a [Django](/django.html) app for managing 
+[ElasticSearch](https://github.com/elastic/elasticsearch) indexes
+populated by [Django ORM](/django-orm.html) models. The project is
+available as open source under the
+[MIT license](https://github.com/yunojuno/elasticsearch-django/blob/master/LICENSE).
 
 
 ### pytest-django
