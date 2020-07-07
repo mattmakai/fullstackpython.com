@@ -1,7 +1,7 @@
 title: flask.ctx has_app_context Example Code
 category: page
 slug: flask-ctx-has-app-context-examples
-sortorder: 500021008
+sortorder: 500021012
 toc: False
 sidebartitle: flask.ctx has_app_context
 meta: Python example code that shows how to use the has_app_context callable from the flask.ctx module of the Flask project.
@@ -116,6 +116,84 @@ class marshal_with(object):
         return wrapper
 
 
+
+
+## ... source file continues with no further has_app_context examples...
+
+```
+
+
+## Example 2 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / util / i18n.py**](https://github.com/indico/indico/blob/master/indico/util/i18n.py)
+
+```python
+# i18n.py
+
+import ast
+import re
+import textwrap
+import traceback
+import warnings
+from contextlib import contextmanager
+
+from babel import negotiate_locale
+from babel.core import LOCALE_ALIASES, Locale
+from babel.messages.pofile import read_po
+from babel.support import NullTranslations, Translations
+~~from flask import current_app, g, has_app_context, has_request_context, request, session
+from flask_babelex import Babel, Domain, get_domain
+from flask_pluginengine import current_plugin
+from speaklater import is_lazy_string, make_lazy_string
+from werkzeug.utils import cached_property
+
+from indico.util.caching import memoize_request
+
+
+LOCALE_ALIASES = dict(LOCALE_ALIASES, en='en_GB')
+RE_TR_FUNCTION = re.compile(r'''_\("([^"]*)"\)|_\('([^']*)'\)''', re.DOTALL | re.MULTILINE)
+
+babel = Babel()
+_use_context = object()
+
+
+def get_translation_domain(plugin_name=_use_context):
+    if plugin_name is None:
+        return get_domain()
+    else:
+        plugin = None
+~~        if has_app_context():
+            from indico.core.plugins import plugin_engine
+            plugin = plugin_engine.get_plugin(plugin_name) if plugin_name is not _use_context else current_plugin
+        if plugin:
+            return plugin.translation_domain
+        else:
+            return get_domain()
+
+
+def gettext_unicode(*args, **kwargs):
+    from indico.util.string import inject_unicode_debug
+    func_name = kwargs.pop('func_name', 'ugettext')
+    plugin_name = kwargs.pop('plugin_name', None)
+    force_unicode = kwargs.pop('force_unicode', False)
+
+    if not isinstance(args[0], unicode):
+        args = [(text.decode('utf-8') if isinstance(text, str) else text) for text in args]
+        using_unicode = force_unicode
+    else:
+        using_unicode = True
+
+    translations = get_translation_domain(plugin_name).get_translations()
+    res = getattr(translations, func_name)(*args, **kwargs)
+    res = inject_unicode_debug(res)
+    if not using_unicode:
 
 
 ## ... source file continues with no further has_app_context examples...

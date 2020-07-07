@@ -1,7 +1,7 @@
 title: flask.sessions SessionInterface Example Code
 category: page
 slug: flask-sessions-sessioninterface-examples
-sortorder: 500021021
+sortorder: 500021026
 toc: False
 sidebartitle: flask.sessions SessionInterface
 meta: Example code for understanding how to use the SessionInterface class from the flask.sessions module of the Flask project.

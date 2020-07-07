@@ -1,7 +1,7 @@
 title: flask.views View Example Code
 category: page
 slug: flask-views-view-examples
-sortorder: 500021028
+sortorder: 500021033
 toc: False
 sidebartitle: flask.views View
 meta: Example code for understanding how to use the View class from the flask.views module of the Flask project.

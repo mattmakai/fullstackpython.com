@@ -1,7 +1,7 @@
 title: flask.sessions SessionMixin Example Code
 category: page
 slug: flask-sessions-sessionmixin-examples
-sortorder: 500021022
+sortorder: 500021027
 toc: False
 sidebartitle: flask.sessions SessionMixin
 meta: Example code for understanding how to use the SessionMixin class from the flask.sessions module of the Flask project.

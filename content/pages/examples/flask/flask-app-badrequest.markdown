@@ -236,3 +236,61 @@ def same_origin(current_uri, compare_uri):
 
 ```
 
+
+## Example 3 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / core / errors.py**](https://github.com/indico/indico/blob/master/indico/core/errors.py)
+
+```python
+# errors.py
+
+
+~~from werkzeug.exceptions import BadRequest, Forbidden, HTTPException, NotFound
+
+from indico.util.i18n import _
+from indico.util.string import to_unicode
+
+
+def get_error_description(exception):
+    try:
+        description = exception.description
+    except AttributeError:
+        return to_unicode(exception.message)
+    if isinstance(exception, Forbidden) and description == Forbidden.description:
+        return _(u"You are not allowed to access this page.")
+    elif isinstance(exception, NotFound) and description == NotFound.description:
+        return _(u"The page you are looking for doesn't exist.")
+~~    elif isinstance(exception, BadRequest) and description == BadRequest.description:
+        return _(u"The request was invalid or contained invalid arguments.")
+    else:
+        return to_unicode(description)
+
+
+class IndicoError(Exception):
+
+
+class NoReportError(IndicoError):
+
+    @classmethod
+    def wrap_exc(cls, exc):
+        assert isinstance(exc, HTTPException)
+        exc._disallow_report = True
+        return exc
+
+
+class UserValueError(NoReportError):
+    http_status_code = 400
+
+
+
+## ... source file continues with no further BadRequest examples...
+
+```
+

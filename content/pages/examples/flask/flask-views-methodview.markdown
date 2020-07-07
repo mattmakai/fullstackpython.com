@@ -1,7 +1,7 @@
 title: flask.views MethodView Example Code
 category: page
 slug: flask-views-methodview-examples
-sortorder: 500021027
+sortorder: 500021032
 toc: False
 sidebartitle: flask.views MethodView
 meta: Example code for understanding how to use the MethodView class from the flask.views module of the Flask project.

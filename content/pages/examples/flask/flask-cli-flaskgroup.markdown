@@ -1,7 +1,7 @@
 title: flask.cli FlaskGroup Example Code
 category: page
 slug: flask-cli-flaskgroup-examples
-sortorder: 500021004
+sortorder: 500021007
 toc: False
 sidebartitle: flask.cli FlaskGroup
 meta: Example code for understanding how to use the FlaskGroup class from the flask.cli module of the Flask project.
@@ -88,6 +88,70 @@ click_log.basic_config(logger)
 
     def get_command(self, ctx, name):
         self._load_flaskbb_plugins(ctx)
+
+
+## ... source file continues with no further FlaskGroup examples...
+
+```
+
+
+## Example 2 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / cli / util.py**](https://github.com/indico/indico/blob/master/indico/cli/util.py)
+
+```python
+# util.py
+
+from __future__ import unicode_literals
+
+import traceback
+from importlib import import_module
+
+import click
+~~from flask.cli import AppGroup, FlaskGroup, ScriptInfo
+from flask_pluginengine import wrap_in_plugin_context
+from werkzeug.utils import cached_property
+
+
+
+
+def _create_app(info):
+    from indico.web.flask.app import make_app
+    return make_app(set_path=True)
+
+
+~~class IndicoFlaskGroup(FlaskGroup):
+
+    def __init__(self, **extra):
+        super(IndicoFlaskGroup, self).__init__(create_app=_create_app, add_default_commands=False,
+                                               add_version_option=False, set_debug_flag=False, **extra)
+        self._indico_plugin_commands = None
+
+    def _load_plugin_commands(self):
+        assert False
+
+    def _wrap_in_plugin_context(self, plugin, cmd):
+        cmd.callback = wrap_in_plugin_context(plugin, cmd.callback)
+        for subcmd in getattr(cmd, 'commands', {}).viewvalues():
+            self._wrap_in_plugin_context(plugin, subcmd)
+
+    def _get_indico_plugin_commands(self, ctx):
+        if self._indico_plugin_commands is not None:
+            return self._indico_plugin_commands
+        try:
+            from indico.core import signals
+            from indico.util.signals import named_objects_from_signal
+            ctx.ensure_object(ScriptInfo).load_app()
+            cmds = named_objects_from_signal(signals.plugin.cli.send(), plugin_attr='_indico_plugin')
+            rv = {}
+            for name, cmd in cmds.viewitems():
 
 
 ## ... source file continues with no further FlaskGroup examples...

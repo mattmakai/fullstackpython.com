@@ -1,7 +1,7 @@
 title: flask.helpers make_response Example Code
 category: page
 slug: flask-helpers-make-response-examples
-sortorder: 500021015
+sortorder: 500021020
 toc: False
 sidebartitle: flask.helpers make_response
 meta: Python example code that shows how to use the make_response callable from the flask.helpers module of the Flask project.

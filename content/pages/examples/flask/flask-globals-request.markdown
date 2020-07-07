@@ -1,7 +1,7 @@
 title: flask.globals request Example Code
 category: page
 slug: flask-globals-request-examples
-sortorder: 500021012
+sortorder: 500021016
 toc: False
 sidebartitle: flask.globals request
 meta: Python example code that shows how to use the request callable from the flask.globals module of the Flask project.
@@ -2520,7 +2520,96 @@ def require_auth(func):
 ```
 
 
-## Example 16 from keras-flask-deploy-webapp
+## Example 16 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / core / auth.py**](https://github.com/indico/indico/blob/master/indico/core/auth.py)
+
+```python
+# auth.py
+
+from __future__ import unicode_literals
+
+~~from flask import current_app, request
+from flask_multipass import InvalidCredentials, Multipass, NoSuchUser
+
+from indico.core.logger import Logger
+
+
+try:
+    from flask_multipass.providers.oauth import OAuthInvalidSessionState
+except ImportError:
+    OAuthInvalidSessionState = None
+
+
+logger = Logger.get('auth')
+
+
+class IndicoMultipass(Multipass):
+    @property
+    def default_local_auth_provider(self):
+        return next((p for p in self.auth_providers.itervalues() if not p.is_external and p.settings.get('default')),
+                    None)
+
+    @property
+    def sync_provider(self):
+        return next((p for p in self.identity_providers.itervalues() if p.settings.get('synced_fields')), None)
+
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+            self._check_default_provider()
+
+    def _check_default_provider(self):
+        sync_providers = [p for p in self.identity_providers.itervalues() if p.settings.get('synced_fields')]
+        if len(sync_providers) > 1:
+            raise ValueError('There can only be one sync provider.')
+        auth_providers = self.auth_providers.values()
+        external_providers = [p for p in auth_providers if p.is_external]
+        local_providers = [p for p in auth_providers if not p.is_external]
+        if any(p.settings.get('default') for p in external_providers):
+            raise ValueError('The default provider cannot be external')
+        if all(p.is_external for p in auth_providers):
+            return
+        default_providers = [p for p in auth_providers if p.settings.get('default')]
+        if len(default_providers) > 1:
+            raise ValueError('There can only be one default auth provider')
+        elif not default_providers:
+            if len(local_providers) == 1:
+                local_providers[0].settings['default'] = True
+            else:
+                raise ValueError('There is no default auth provider')
+
+    def handle_auth_error(self, exc, redirect_to_login=False):
+        if isinstance(exc, (NoSuchUser, InvalidCredentials)):
+            logger.warning('Invalid credentials (ip=%s, provider=%s): %s',
+~~                           request.remote_addr, exc.provider.name if exc.provider else None, exc)
+        else:
+            fn = logger.error
+            if OAuthInvalidSessionState is not None and isinstance(exc, OAuthInvalidSessionState):
+                fn = logger.debug
+            fn('Authentication via %s failed: %s (%r)', exc.provider.name if exc.provider else None, exc, exc.details)
+        return super(IndicoMultipass, self).handle_auth_error(exc, redirect_to_login=redirect_to_login)
+
+
+multipass = IndicoMultipass()
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 17 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -2613,7 +2702,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 17 from newspie
+## Example 18 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2794,7 +2883,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 18 from sandman2
+## Example 19 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2995,7 +3084,7 @@ class Service(MethodView):
 ```
 
 
-## Example 19 from Science Flask
+## Example 20 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -3102,7 +3191,7 @@ def security_context_processor():
 ```
 
 
-## Example 20 from tedivms-flask
+## Example 21 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -3160,7 +3249,7 @@ def roles_accepted_api(*role_names):
 ```
 
 
-## Example 21 from trape
+## Example 22 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

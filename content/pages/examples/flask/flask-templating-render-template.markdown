@@ -1,7 +1,7 @@
 title: flask.templating render_template Example Code
 category: page
 slug: flask-templating-render-template-examples
-sortorder: 500021025
+sortorder: 500021030
 toc: False
 sidebartitle: flask.templating render_template
 meta: Python example code that shows how to use the render_template callable from the flask.templating module of the Flask project.
@@ -1305,7 +1305,37 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 15 from keras-flask-deploy-webapp
+## Example 15 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / util / mathjax.py**](https://github.com/indico/indico/blob/master/indico/util/mathjax.py)
+
+```python
+# mathjax.py
+
+from __future__ import absolute_import
+
+~~from flask import current_app, render_template
+
+
+class MathjaxMixin(object):
+    def _get_head_content(self):
+~~        return render_template('mathjax_config.html') + unicode(current_app.manifest['mathjax.js'])
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 16 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1396,7 +1426,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 16 from newspie
+## Example 17 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1551,7 +1581,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 17 from Science Flask
+## Example 18 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -1839,7 +1869,7 @@ def static_from_root():
 ```
 
 
-## Example 18 from tedivms-flask
+## Example 19 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1942,7 +1972,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 19 from trape
+## Example 20 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

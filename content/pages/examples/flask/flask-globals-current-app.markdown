@@ -1,7 +1,7 @@
 title: flask.globals current_app Example Code
 category: page
 slug: flask-globals-current-app-examples
-sortorder: 500021010
+sortorder: 500021014
 toc: False
 sidebartitle: flask.globals current_app
 meta: Python example code that shows how to use the current_app callable from the flask.globals module of the Flask project.
@@ -2222,7 +2222,68 @@ def run_migrations_online():
 ```
 
 
-## Example 16 from sandman2
+## Example 16 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / migrations / env.py**](https://github.com/indico/indico/blob/master/indico/migrations/env.py)
+
+```python
+# env.py
+
+import logging.config
+
+from alembic import context
+~~from flask import current_app
+from sqlalchemy import engine_from_config, pool
+
+from indico.core.db.sqlalchemy.util.models import import_all_models
+
+
+import_all_models()
+
+config = context.config
+logging.config.fileConfig(config.config_file_name)
+
+~~config.set_main_option('sqlalchemy.url', current_app.config.get('SQLALCHEMY_DATABASE_URI'))
+~~target_metadata = current_app.extensions['migrate'].db.metadata
+
+
+def _include_symbol(tablename, schema):
+    if schema and schema.startswith('plugin_'):
+        return False
+    return tablename != 'alembic_version' and not tablename.startswith('alembic_version_')
+
+
+def _render_item(type_, obj, autogen_context):
+    if hasattr(obj, 'info') and obj.info.get('alembic_dont_render'):
+        return None
+    func = getattr(obj, 'alembic_render_' + type_, None)
+    if func is None:
+        return False
+    return func(autogen_context, autogen_context.opts['template_args']['toplevel_code'])
+
+
+def run_migrations_offline():
+    url = config.get_main_option('sqlalchemy.url')
+    context.configure(url=url, target_metadata=target_metadata, include_schemas=True,
+                      version_table_schema='public', include_symbol=_include_symbol, render_item=_render_item,
+                      template_args={'toplevel_code': set()})
+
+    with context.begin_transaction():
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 17 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2347,7 +2408,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 17 from tedivms-flask
+## Example 18 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

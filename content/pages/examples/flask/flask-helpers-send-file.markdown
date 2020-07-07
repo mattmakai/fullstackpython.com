@@ -1,7 +1,7 @@
 title: flask.helpers send_file Example Code
 category: page
 slug: flask-helpers-send-file-examples
-sortorder: 500021016
+sortorder: 500021021
 toc: False
 sidebartitle: flask.helpers send_file
 meta: Python example code that shows how to use the send_file callable from the flask.helpers module of the Flask project.

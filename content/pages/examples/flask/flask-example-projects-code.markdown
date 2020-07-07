@@ -28,6 +28,17 @@ contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
 
 
+### Deploy Keras Model with Flask as Web App in 10 Minutes
+The 
+[keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
+project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
+with the [Keras deep learning library](https://keras.io/) to provide
+an example image classifier that is easy to [deploy](/deployment.html).
+The application can be quckly run in a [Docker](/docker.html) container
+on your local development environment. The project is licensed under the
+[GNU General Public License v3.0](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/LICENSE).
+
+
 ### FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
@@ -94,15 +105,14 @@ while teaching developers how to use [Flask](/flask.html) in
 is [open sourced under the MIT license](https://github.com/miguelgrinberg/flasky/blob/master/LICENSE).
 
 
-### Deploy Keras Model with Flask as Web App in 10 Minutes
-The 
-[keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
-project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
-with the [Keras deep learning library](https://keras.io/) to provide
-an example image classifier that is easy to [deploy](/deployment.html).
-The application can be quckly run in a [Docker](/docker.html) container
-on your local development environment. The project is licensed under the
-[GNU General Public License v3.0](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/LICENSE).
+### indico
+[indico](https://github.com/indico/indico) 
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
 
 
 ### newspie

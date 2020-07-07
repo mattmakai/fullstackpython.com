@@ -1,7 +1,7 @@
 title: flask.globals g Example Code
 category: page
 slug: flask-globals-g-examples
-sortorder: 500021011
+sortorder: 500021015
 toc: False
 sidebartitle: flask.globals g
 meta: Python example code that shows how to use the g callable from the flask.globals module of the Flask project.
@@ -1003,7 +1003,116 @@ def allow_unconfirmed_email(view_function):
 ```
 
 
-## Example 8 from tedivms-flask
+## Example 8 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / core / config.py**](https://github.com/indico/indico/blob/master/indico/core/config.py)
+
+```python
+# config.py
+
+from __future__ import absolute_import, unicode_literals
+
+import ast
+import codecs
+import os
+import re
+import socket
+import warnings
+from datetime import timedelta
+
+import pytz
+from celery.schedules import crontab
+~~from flask import current_app, g
+from flask.helpers import get_root_path
+from werkzeug.datastructures import ImmutableDict
+from werkzeug.urls import url_parse
+
+from indico.util.caching import make_hashable
+from indico.util.fs import resolve_link
+from indico.util.packaging import package_is_editable
+from indico.util.string import crc32, snakify
+
+
+DEFAULTS = {
+    'ATTACHMENT_STORAGE': 'default',
+    'AUTH_PROVIDERS': {},
+    'BASE_URL': None,
+    'CACHE_BACKEND': 'files',
+    'CACHE_DIR': '/opt/indico/cache',
+    'CATEGORY_CLEANUP': {},
+    'CELERY_BROKER': None,
+    'CELERY_CONFIG': {},
+    'CELERY_RESULT_BACKEND': None,
+    'COMMUNITY_HUB_URL': 'https://hub.getindico.io',
+    'CUSTOMIZATION_DEBUG': False,
+    'CUSTOMIZATION_DIR': None,
+    'CUSTOM_COUNTRIES': {},
+
+
+## ... source file abbreviated to get to g examples ...
+
+
+class IndicoConfig(object):
+
+    __slots__ = ('_config', '_exc')
+
+    def __init__(self, config=None, exc=AttributeError):
+        object.__setattr__(self, '_config', config)
+        object.__setattr__(self, '_exc', exc)
+
+    @property
+    def data(self):
+        try:
+            return self._config or current_app.config['INDICO']
+        except KeyError:
+            raise RuntimeError('config not loaded')
+
+    @property
+    def hash(self):
+        return crc32(repr(make_hashable(sorted(self.data.items()))))
+
+    @property
+    def CONFERENCE_CSS_TEMPLATES_BASE_URL(self):
+        return self.BASE_URL + '/css/confTemplates'
+
+    @property
+    def IMAGES_BASE_URL(self):
+~~        return 'static/images' if g.get('static_site') else url_parse('{}/images'.format(self.BASE_URL)).path
+
+    @property
+    def LATEX_ENABLED(self):
+        return bool(self.XELATEX_PATH)
+
+    def __getattr__(self, name):
+        try:
+            return self.data[name]
+        except KeyError:
+            raise self._exc('no such setting: ' + name)
+
+    def __setattr__(self, key, value):
+        raise AttributeError('cannot change config at runtime')
+
+    def __delattr__(self, key):
+        raise AttributeError('cannot change config at runtime')
+
+
+config = IndicoConfig()
+
+
+
+## ... source file continues with no further g examples...
+
+```
+
+
+## Example 9 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

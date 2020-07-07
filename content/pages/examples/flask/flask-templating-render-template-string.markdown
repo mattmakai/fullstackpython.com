@@ -1,7 +1,7 @@
 title: flask.templating render_template_string Example Code
 category: page
 slug: flask-templating-render-template-string-examples
-sortorder: 500021026
+sortorder: 500021031
 toc: False
 sidebartitle: flask.templating render_template_string
 meta: Python example code that shows how to use the render_template_string callable from the flask.templating module of the Flask project.

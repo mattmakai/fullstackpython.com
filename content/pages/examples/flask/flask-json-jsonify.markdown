@@ -1,7 +1,7 @@
 title: flask.json jsonify Example Code
 category: page
 slug: flask-json-jsonify-examples
-sortorder: 500021019
+sortorder: 500021024
 toc: False
 sidebartitle: flask.json jsonify
 meta: Python example code that shows how to use the jsonify callable from the flask.json module of the Flask project.
@@ -765,7 +765,110 @@ def stream():
 ```
 
 
-## Example 6 from keras-flask-deploy-webapp
+## Example 6 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / web / util.py**](https://github.com/indico/indico/blob/master/indico/web/util.py)
+
+```python
+# util.py
+
+from __future__ import absolute_import, unicode_literals
+
+from datetime import datetime
+
+~~from flask import g, has_request_context, jsonify, render_template, request, session
+from itsdangerous import Signer
+from markupsafe import Markup
+from werkzeug.exceptions import ImATeapot
+from werkzeug.urls import url_decode, url_encode, url_parse, url_unparse
+
+from indico.util.i18n import _
+from indico.web.flask.templating import get_template_module
+
+
+def inject_js(js):
+    if 'injected_js' not in g:
+        g.injected_js = []
+    g.injected_js.append(Markup(js))
+
+
+def _pop_injected_js():
+    js = None
+    if 'injected_js' in g:
+        js = g.injected_js
+        del g.injected_js
+    return js
+
+
+def jsonify_form(form, fields=None, submit=None, back=None, back_url=None, back_button=True, disabled_until_change=True,
+                 disabled_fields=(), form_header_kwargs=None, skip_labels=False, save_reminder=False,
+                 footer_align_right=False, disable_if_locked=True):
+    if submit is None:
+        submit = _('Save')
+    if back is None:
+        back = _('Cancel')
+    if form_header_kwargs is None:
+        form_header_kwargs = {}
+    tpl = get_template_module('forms/_form.html')
+    html = tpl.simple_form(form, fields=fields, submit=submit, back=back, back_url=back_url, back_button=back_button,
+                           disabled_until_change=disabled_until_change, disabled_fields=disabled_fields,
+                           form_header_kwargs=form_header_kwargs, skip_labels=skip_labels, save_reminder=save_reminder,
+                           footer_align_right=footer_align_right, disable_if_locked=disable_if_locked)
+~~    return jsonify(html=html, js=_pop_injected_js())
+
+
+def jsonify_template(template, _render_func=render_template, _success=None, **context):
+    html = _render_func(template, **context)
+    jsonify_kw = {}
+    if _success is not None:
+        jsonify_kw['success'] = _success
+~~    return jsonify(html=html, js=_pop_injected_js(), **jsonify_kw)
+
+
+def jsonify_data(flash=True, **json_data):
+    json_data.setdefault('success', True)
+    if flash:
+        json_data['flashed_messages'] = render_template('flashed_messages.html')
+~~    return jsonify(**json_data)
+
+
+class ExpectedError(ImATeapot):
+    def __init__(self, message, **data):
+        super(ExpectedError, self).__init__(message or 'Something went wrong')
+        self.data = dict(data, message=message)
+
+
+def _format_request_data(data, hide_passwords=False):
+    if not hasattr(data, 'iterlists'):
+        data = ((k, [v]) for k, v in data.iteritems())
+    else:
+        data = data.iterlists()
+    rv = {}
+    for key, values in data:
+        if hide_passwords and 'password' in key:
+            values = [v if not v else '<{} chars hidden>'.format(len(v)) for v in values]
+        rv[key] = values if len(values) != 1 else values[0]
+    return rv
+
+
+def get_request_info(hide_passwords=True):
+    if not has_request_context():
+        return None
+
+
+## ... source file continues with no further jsonify examples...
+
+```
+
+
+## Example 7 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -854,7 +957,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 7 from sandman2
+## Example 8 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1022,7 +1125,7 @@ class Service(MethodView):
 ```
 
 
-## Example 8 from tedivms-flask
+## Example 9 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

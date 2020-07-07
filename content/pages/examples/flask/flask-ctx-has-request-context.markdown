@@ -1,7 +1,7 @@
 title: flask.ctx has_request_context Example Code
 category: page
 slug: flask-ctx-has-request-context-examples
-sortorder: 500021009
+sortorder: 500021013
 toc: False
 sidebartitle: flask.ctx has_request_context
 meta: Python example code that shows how to use the has_request_context callable from the flask.ctx module of the Flask project.
@@ -167,6 +167,149 @@ def _get_item(model, view_arg, name):
         )
 
     return getattr(_request_ctx_stack.top, name, None)
+
+
+
+## ... source file continues with no further has_request_context examples...
+
+```
+
+
+## Example 3 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management.
+The code is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / core / logger.py**](https://github.com/indico/indico/blob/master/indico/core/logger.py)
+
+```python
+# logger.py
+
+from __future__ import unicode_literals
+
+import logging
+import logging.config
+import logging.handlers
+import os
+import smtplib
+import warnings
+from email.mime.text import MIMEText
+from email.utils import formatdate
+from pprint import pformat
+
+import yaml
+~~from flask import current_app, has_request_context, request, session
+
+from indico.core.config import config
+from indico.util.i18n import set_best_lang
+from indico.web.util import get_request_info
+
+
+try:
+    from raven import setup_logging
+    from raven.contrib.celery import register_logger_signal, register_signal
+    from raven.contrib.flask import Sentry
+    from raven.handlers.logging import SentryHandler
+except ImportError:
+    Sentry = object  # so we can subclass
+    has_sentry = False
+else:
+    has_sentry = True
+
+
+class AddRequestIDFilter(object):
+    def filter(self, record):
+~~        record.request_id = request.id if has_request_context() else '0' * 16
+        return True
+
+
+class RequestInfoFormatter(logging.Formatter):
+    def format(self, record):
+        rv = super(RequestInfoFormatter, self).format(record)
+        info = get_request_info()
+        if info:
+            rv += '\n\n' + pformat(info)
+        return rv
+
+
+class FormattedSubjectSMTPHandler(logging.handlers.SMTPHandler):
+    def getSubject(self, record):
+        return self.subject % record.__dict__
+
+    def emit(self, record):
+        try:
+            port = self.mailport
+            if not port:
+                port = smtplib.SMTP_PORT
+            smtp = smtplib.SMTP(self.mailhost, port, timeout=self._timeout)
+            msg = MIMEText(self.format(record), 'plain', 'utf-8')
+            msg['From'] = self.fromaddr
+
+
+## ... source file abbreviated to get to has_request_context examples ...
+
+
+            if formatter.pop('append_request_info', False):
+                assert '()' not in formatter
+                formatter['()'] = RequestInfoFormatter
+        if config.DB_LOG:
+            data['loggers']['indico._db'] = {'level': 'DEBUG', 'propagate': False, 'handlers': ['_db']}
+            data['handlers']['_db'] = {'class': 'logging.handlers.SocketHandler', 'host': '127.0.0.1', 'port': 9020}
+        if config.CUSTOMIZATION_DEBUG and config.CUSTOMIZATION_DIR:
+            data['loggers'].setdefault('indico.customization', {})['level'] = 'DEBUG'
+        logging.config.dictConfig(data)
+        if config.SENTRY_DSN:
+            if not has_sentry:
+                raise Exception('`raven` must be installed to use sentry logging')
+            init_sentry(app)
+
+    @classmethod
+    def get(cls, name=None):
+        if name is None:
+            name = 'indico'
+        elif name != 'indico' and not name.startswith('indico.'):
+            name = 'indico.' + name
+        return logging.getLogger(name)
+
+
+class IndicoSentry(Sentry):
+    def get_user_info(self, request):
+~~        if not has_request_context() or not session.user:
+            return None
+        return {'id': session.user.id,
+                'email': session.user.email,
+                'name': session.user.full_name}
+
+    def before_request(self, *args, **kwargs):
+        super(IndicoSentry, self).before_request()
+~~        if not has_request_context():
+            return
+        self.client.extra_context({'Endpoint': str(request.url_rule.endpoint) if request.url_rule else None,
+                                   'Request ID': request.id})
+        self.client.tags_context({'locale': set_best_lang()})
+
+
+def init_sentry(app):
+    sentry = IndicoSentry(wrap_wsgi=False, register_signal=True, logging=False)
+    sentry.init_app(app)
+    handler = SentryHandler(sentry.client, level=getattr(logging, config.SENTRY_LOGGING_LEVEL))
+    handler.addFilter(BlacklistFilter({'indico.flask', 'celery.redirected'}))
+    setup_logging(handler)
+    register_logger_signal(sentry.client)
+    register_signal(sentry.client)
+
+
+def sentry_log_exception():
+    try:
+        sentry = current_app.extensions['sentry']
+    except KeyError:
+        return
+    sentry.captureException()
+
 
 
 

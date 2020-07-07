@@ -1,7 +1,7 @@
 title: flask.cli with_appcontext Example Code
 category: page
 slug: flask-cli-with-appcontext-examples
-sortorder: 500021006
+sortorder: 500021010
 toc: False
 sidebartitle: flask.cli with_appcontext
 meta: Python example code that shows how to use the with_appcontext callable from the flask.cli module of the Flask project.

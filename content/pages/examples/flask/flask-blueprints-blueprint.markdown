@@ -1,7 +1,7 @@
 title: flask.blueprints Blueprint Example Code
 category: page
 slug: flask-blueprints-blueprint-examples
-sortorder: 500021003
+sortorder: 500021004
 toc: False
 sidebartitle: flask.blueprints Blueprint
 meta: Example code for understanding how to use the Blueprint class from the flask.blueprints module of the Flask project.
