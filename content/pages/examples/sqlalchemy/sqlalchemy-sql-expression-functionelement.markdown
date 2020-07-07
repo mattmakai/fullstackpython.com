@@ -1,10 +1,10 @@
 title: sqlalchemy.sql.expression FunctionElement Example Code
 category: page
 slug: sqlalchemy-sql-expression-functionelement-examples
-sortorder: 500031103
+sortorder: 500031114
 toc: False
 sidebartitle: sqlalchemy.sql.expression FunctionElement
-meta: Python example code for the FunctionElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
+meta: Example code for understanding how to use the FunctionElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
 
 
 FunctionElement is a class within the sqlalchemy.sql.expression module of the SQLAlchemy project.

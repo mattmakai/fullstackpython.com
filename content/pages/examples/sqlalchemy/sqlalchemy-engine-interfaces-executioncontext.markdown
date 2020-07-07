@@ -1,10 +1,10 @@
 title: sqlalchemy.engine.interfaces ExecutionContext Example Code
 category: page
 slug: sqlalchemy-engine-interfaces-executioncontext-examples
-sortorder: 500031024
+sortorder: 500031026
 toc: False
 sidebartitle: sqlalchemy.engine.interfaces ExecutionContext
-meta: Python example code for the ExecutionContext class from the sqlalchemy.engine.interfaces module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ExecutionContext class from the sqlalchemy.engine.interfaces module of the SQLAlchemy project.
 
 
 ExecutionContext is a class within the sqlalchemy.engine.interfaces module of the SQLAlchemy project.

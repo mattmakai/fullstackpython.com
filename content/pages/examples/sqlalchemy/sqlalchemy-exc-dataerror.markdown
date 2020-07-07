@@ -1,10 +1,10 @@
 title: sqlalchemy.exc DataError Example Code
 category: page
 slug: sqlalchemy-exc-dataerror-examples
-sortorder: 500031032
+sortorder: 500031034
 toc: False
 sidebartitle: sqlalchemy.exc DataError
-meta: Python example code for the DataError class from the sqlalchemy.exc module of the SQLAlchemy project.
+meta: Example code for understanding how to use the DataError class from the sqlalchemy.exc module of the SQLAlchemy project.
 
 
 DataError is a class within the sqlalchemy.exc module of the SQLAlchemy project.

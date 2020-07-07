@@ -4,7 +4,7 @@ slug: sqlalchemy-dialects-sqlite-examples
 sortorder: 500031004
 toc: False
 sidebartitle: sqlalchemy.dialects sqlite
-meta: Python example code for the sqlite callable from the sqlalchemy.dialects module of the SQLAlchemy project.
+meta: Python example code that shows how to use the sqlite callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
 sqlite is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.

@@ -1,10 +1,10 @@
 title: sqlalchemy.sql functions Example Code
 category: page
 slug: sqlalchemy-sql-functions-examples
-sortorder: 500031091
+sortorder: 500031102
 toc: False
 sidebartitle: sqlalchemy.sql functions
-meta: Python example code for the functions callable from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the functions callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 functions is a callable within the sqlalchemy.sql module of the SQLAlchemy project.

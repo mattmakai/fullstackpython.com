@@ -1,10 +1,10 @@
 title: sqlalchemy.engine.result ResultMetaData Example Code
 category: page
 slug: sqlalchemy-engine-result-resultmetadata-examples
-sortorder: 500031025
+sortorder: 500031027
 toc: False
 sidebartitle: sqlalchemy.engine.result ResultMetaData
-meta: Python example code for the ResultMetaData class from the sqlalchemy.engine.result module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ResultMetaData class from the sqlalchemy.engine.result module of the SQLAlchemy project.
 
 
 ResultMetaData is a class within the sqlalchemy.engine.result module of the SQLAlchemy project.

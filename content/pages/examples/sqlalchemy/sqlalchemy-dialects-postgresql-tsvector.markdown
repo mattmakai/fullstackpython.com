@@ -4,7 +4,7 @@ slug: sqlalchemy-dialects-postgresql-tsvector-examples
 sortorder: 500031013
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql TSVECTOR
-meta: Python example code for the TSVECTOR constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the TSVECTOR constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 TSVECTOR is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

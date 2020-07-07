@@ -1,16 +1,85 @@
 title: sqlalchemy.orm.attributes InstrumentedAttribute Example Code
 category: page
 slug: sqlalchemy-orm-attributes-instrumentedattribute-examples
-sortorder: 500031064
+sortorder: 500031071
 toc: False
 sidebartitle: sqlalchemy.orm.attributes InstrumentedAttribute
-meta: Python example code for the InstrumentedAttribute class from the sqlalchemy.orm.attributes module of the SQLAlchemy project.
+meta: Example code for understanding how to use the InstrumentedAttribute class from the sqlalchemy.orm.attributes module of the SQLAlchemy project.
 
 
 InstrumentedAttribute is a class within the sqlalchemy.orm.attributes module of the SQLAlchemy project.
 
 
-## Example 1 from sqlalchemy-utils
+## Example 1 from SQLAlchemy Mixins
+[SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)
+([PyPI package information](https://pypi.org/project/sqlalchemy-mixins/))
+is a collection of
+[mixins](https://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)
+useful for extending [SQLAlchemy](/sqlalchemy.html) and simplifying
+your [database](/databases.html)-interacting code for some common
+use cases. SQLAlchemy Mixins is open sourced under the
+[MIT license](https://github.com/absent1706/sqlalchemy-mixins/blob/master/LICENSE.txt).
+
+[**SQLAlchemy Mixins / sqlalchemy_mixins / eagerload.py**](https://github.com/absent1706/sqlalchemy-mixins/blob/master/sqlalchemy_mixins/./eagerload.py)
+
+```python
+# eagerload.py
+try:
+    from typing import List
+except ImportError: # pragma: no cover
+    pass
+
+from sqlalchemy.orm import joinedload
+from sqlalchemy.orm import subqueryload
+~~from sqlalchemy.orm.attributes import InstrumentedAttribute
+
+from .session import SessionMixin
+
+JOINED = 'joined'
+SUBQUERY = 'subquery'
+
+
+def eager_expr(schema):
+    flat_schema = _flatten_schema(schema)
+    return _eager_expr_from_flat_schema(flat_schema)
+
+
+def _flatten_schema(schema):
+    def _flatten(schema, parent_path, result):
+        for path, value in schema.items():
+~~            if isinstance(path, InstrumentedAttribute):
+                path = path.key
+
+            if isinstance(value, tuple):
+                join_method, inner_schema = value[0], value[1]
+            elif isinstance(value, dict):
+                join_method, inner_schema = JOINED, value
+            else:
+                join_method, inner_schema = value, None
+
+            full_path = parent_path + '.' + path if parent_path else path
+            result[full_path] = join_method
+
+            if inner_schema:
+                _flatten(inner_schema, full_path, result)
+
+    result = {}
+    _flatten(schema, '', result)
+    return result
+
+
+def _eager_expr_from_flat_schema(flat_schema):
+    result = []
+    for path, join_method in flat_schema.items():
+        if join_method == JOINED:
+
+
+## ... source file continues with no further InstrumentedAttribute examples...
+
+```
+
+
+## Example 2 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

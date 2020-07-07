@@ -1,10 +1,10 @@
 title: sqlalchemy.types to_instance Example Code
 category: page
 slug: sqlalchemy-types-to-instance-examples
-sortorder: 500031120
+sortorder: 500031131
 toc: False
 sidebartitle: sqlalchemy.types to_instance
-meta: Python example code for the to_instance callable from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Python example code that shows how to use the to_instance callable from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 to_instance is a callable within the sqlalchemy.types module of the SQLAlchemy project.

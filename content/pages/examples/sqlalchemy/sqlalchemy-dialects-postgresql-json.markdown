@@ -4,7 +4,7 @@ slug: sqlalchemy-dialects-postgresql-json-examples
 sortorder: 500031012
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql JSON
-meta: Python example code for the JSON constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the JSON constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 JSON is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

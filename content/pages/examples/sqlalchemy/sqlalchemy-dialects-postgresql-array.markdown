@@ -4,7 +4,7 @@ slug: sqlalchemy-dialects-postgresql-array-examples
 sortorder: 500031006
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql ARRAY
-meta: Python example code for the ARRAY constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the ARRAY constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 ARRAY is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

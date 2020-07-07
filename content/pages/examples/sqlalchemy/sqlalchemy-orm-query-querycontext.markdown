@@ -1,10 +1,10 @@
 title: sqlalchemy.orm.query QueryContext Example Code
 category: page
 slug: sqlalchemy-orm-query-querycontext-examples
-sortorder: 500031074
+sortorder: 500031082
 toc: False
 sidebartitle: sqlalchemy.orm.query QueryContext
-meta: Python example code for the QueryContext class from the sqlalchemy.orm.query module of the SQLAlchemy project.
+meta: Example code for understanding how to use the QueryContext class from the sqlalchemy.orm.query module of the SQLAlchemy project.
 
 
 QueryContext is a class within the sqlalchemy.orm.query module of the SQLAlchemy project.

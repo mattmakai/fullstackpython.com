@@ -4,7 +4,7 @@ slug: sqlalchemy-dialects-postgresql-excludeconstraint-examples
 sortorder: 500031010
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql ExcludeConstraint
-meta: Python example code for the ExcludeConstraint class from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ExcludeConstraint class from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 ExcludeConstraint is a class within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.

@@ -1,10 +1,10 @@
 title: sqlalchemy.sql.expression Executable Example Code
 category: page
 slug: sqlalchemy-sql-expression-executable-examples
-sortorder: 500031102
+sortorder: 500031113
 toc: False
 sidebartitle: sqlalchemy.sql.expression Executable
-meta: Python example code for the Executable class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Executable class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
 
 
 Executable is a class within the sqlalchemy.sql.expression module of the SQLAlchemy project.

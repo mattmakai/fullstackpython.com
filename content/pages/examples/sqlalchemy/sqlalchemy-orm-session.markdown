@@ -1,10 +1,10 @@
 title: sqlalchemy.orm session Example Code
 category: page
 slug: sqlalchemy-orm-session-examples
-sortorder: 500031061
+sortorder: 500031068
 toc: False
 sidebartitle: sqlalchemy.orm session
-meta: Python example code for the session callable from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code that shows how to use the session callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 session is a callable within the sqlalchemy.orm module of the SQLAlchemy project.

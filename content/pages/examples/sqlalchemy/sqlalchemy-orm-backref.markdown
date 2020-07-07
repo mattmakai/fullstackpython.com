@@ -1,10 +1,10 @@
 title: sqlalchemy.orm backref Example Code
 category: page
 slug: sqlalchemy-orm-backref-examples
-sortorder: 500031051
+sortorder: 500031058
 toc: False
 sidebartitle: sqlalchemy.orm backref
-meta: Python example code for the backref callable from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code that shows how to use the backref callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 backref is a callable within the sqlalchemy.orm module of the SQLAlchemy project.

@@ -1,10 +1,10 @@
 title: sqlalchemy.sql table Example Code
 category: page
 slug: sqlalchemy-sql-table-examples
-sortorder: 500031096
+sortorder: 500031107
 toc: False
 sidebartitle: sqlalchemy.sql table
-meta: Python example code for the table callable from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the table callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 table is a callable within the sqlalchemy.sql module of the SQLAlchemy project.

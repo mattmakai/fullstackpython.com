@@ -7,7 +7,12 @@ sidebartitle: flask.cli AppGroup
 meta: Example code for understanding how to use the AppGroup class from the flask.cli module of the Flask project.
 
 
-AppGroup is a class within the flask.cli module of the Flask project.
+[AppGroup](https://github.com/pallets/flask/blob/master/src/flask/cli.py)
+is a class within the flask.cli module of the Flask project. It
+works like the
+[Click Group](https://click.palletsprojects.com/en/7.x/commands/)
+class and automatically wraps the functions using
+[with_appcontext](/flask-cli-with-appcontext-examples.html).
 
 
 ## Example 1 from indico

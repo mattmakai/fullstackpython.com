@@ -1,10 +1,10 @@
 title: sqlalchemy.orm relationship Example Code
 category: page
 slug: sqlalchemy-orm-relationship-examples
-sortorder: 500031060
+sortorder: 500031067
 toc: False
 sidebartitle: sqlalchemy.orm relationship
-meta: Python example code for the relationship callable from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code that shows how to use the relationship callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 relationship is a callable within the sqlalchemy.orm module of the SQLAlchemy project.

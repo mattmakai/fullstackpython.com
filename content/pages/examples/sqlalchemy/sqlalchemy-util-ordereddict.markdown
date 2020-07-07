@@ -1,10 +1,10 @@
 title: sqlalchemy.util OrderedDict Example Code
 category: page
 slug: sqlalchemy-util-ordereddict-examples
-sortorder: 500031121
+sortorder: 500031132
 toc: False
 sidebartitle: sqlalchemy.util OrderedDict
-meta: Python example code for the OrderedDict class from the sqlalchemy.util module of the SQLAlchemy project.
+meta: Example code for understanding how to use the OrderedDict class from the sqlalchemy.util module of the SQLAlchemy project.
 
 
 OrderedDict is a class within the sqlalchemy.util module of the SQLAlchemy project.

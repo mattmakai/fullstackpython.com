@@ -1,10 +1,10 @@
 title: sqlalchemy.types Enum Example Code
 category: page
 slug: sqlalchemy-types-enum-examples
-sortorder: 500031114
+sortorder: 500031125
 toc: False
 sidebartitle: sqlalchemy.types Enum
-meta: Python example code for the Enum class from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Enum class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 Enum is a class within the sqlalchemy.types module of the SQLAlchemy project.

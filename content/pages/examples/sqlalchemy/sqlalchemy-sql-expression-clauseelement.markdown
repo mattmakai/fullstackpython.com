@@ -1,10 +1,10 @@
 title: sqlalchemy.sql.expression ClauseElement Example Code
 category: page
 slug: sqlalchemy-sql-expression-clauseelement-examples
-sortorder: 500031099
+sortorder: 500031110
 toc: False
 sidebartitle: sqlalchemy.sql.expression ClauseElement
-meta: Python example code for the ClauseElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ClauseElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
 
 
 ClauseElement is a class within the sqlalchemy.sql.expression module of the SQLAlchemy project.

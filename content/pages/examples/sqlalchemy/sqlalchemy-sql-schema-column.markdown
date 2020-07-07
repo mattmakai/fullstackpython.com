@@ -1,10 +1,10 @@
 title: sqlalchemy.sql.schema Column Example Code
 category: page
 slug: sqlalchemy-sql-schema-column-examples
-sortorder: 500031108
+sortorder: 500031119
 toc: False
 sidebartitle: sqlalchemy.sql.schema Column
-meta: Python example code for the Column class from the sqlalchemy.sql.schema module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Column class from the sqlalchemy.sql.schema module of the SQLAlchemy project.
 
 
 Column is a class within the sqlalchemy.sql.schema module of the SQLAlchemy project.

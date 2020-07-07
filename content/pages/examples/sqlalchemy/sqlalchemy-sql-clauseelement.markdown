@@ -1,10 +1,10 @@
 title: sqlalchemy.sql ClauseElement Example Code
 category: page
 slug: sqlalchemy-sql-clauseelement-examples
-sortorder: 500031088
+sortorder: 500031098
 toc: False
 sidebartitle: sqlalchemy.sql ClauseElement
-meta: Python example code for the ClauseElement class from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ClauseElement class from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 ClauseElement is a class within the sqlalchemy.sql module of the SQLAlchemy project.

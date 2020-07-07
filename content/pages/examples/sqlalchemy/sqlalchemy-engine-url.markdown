@@ -1,10 +1,10 @@
 title: sqlalchemy.engine url Example Code
 category: page
 slug: sqlalchemy-engine-url-examples
-sortorder: 500031022
+sortorder: 500031024
 toc: False
 sidebartitle: sqlalchemy.engine url
-meta: Python example code for the url callable from the sqlalchemy.engine module of the SQLAlchemy project.
+meta: Python example code that shows how to use the url callable from the sqlalchemy.engine module of the SQLAlchemy project.
 
 
 url is a callable within the sqlalchemy.engine module of the SQLAlchemy project.

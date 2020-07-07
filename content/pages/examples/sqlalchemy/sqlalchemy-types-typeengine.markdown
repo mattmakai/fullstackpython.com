@@ -1,10 +1,10 @@
 title: sqlalchemy.types TypeEngine Example Code
 category: page
 slug: sqlalchemy-types-typeengine-examples
-sortorder: 500031118
+sortorder: 500031129
 toc: False
 sidebartitle: sqlalchemy.types TypeEngine
-meta: Python example code for the TypeEngine class from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Example code for understanding how to use the TypeEngine class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 TypeEngine is a class within the sqlalchemy.types module of the SQLAlchemy project.

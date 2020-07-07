@@ -1,10 +1,10 @@
 title: sqlalchemy.sql sqltypes Example Code
 category: page
 slug: sqlalchemy-sql-sqltypes-examples
-sortorder: 500031095
+sortorder: 500031106
 toc: False
 sidebartitle: sqlalchemy.sql sqltypes
-meta: Python example code for the sqltypes callable from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the sqltypes callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 sqltypes is a callable within the sqlalchemy.sql module of the SQLAlchemy project.

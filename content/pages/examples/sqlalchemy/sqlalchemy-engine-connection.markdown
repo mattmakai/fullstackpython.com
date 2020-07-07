@@ -1,10 +1,10 @@
 title: sqlalchemy.engine Connection Example Code
 category: page
 slug: sqlalchemy-engine-connection-examples
-sortorder: 500031018
+sortorder: 500031020
 toc: False
 sidebartitle: sqlalchemy.engine Connection
-meta: Python example code for the Connection class from the sqlalchemy.engine module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Connection class from the sqlalchemy.engine module of the SQLAlchemy project.
 
 
 Connection is a class within the sqlalchemy.engine module of the SQLAlchemy project.

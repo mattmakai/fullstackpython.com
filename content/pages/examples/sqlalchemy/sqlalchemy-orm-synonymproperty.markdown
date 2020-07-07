@@ -1,10 +1,10 @@
 title: sqlalchemy.orm SynonymProperty Example Code
 category: page
 slug: sqlalchemy-orm-synonymproperty-examples
-sortorder: 500031049
+sortorder: 500031055
 toc: False
 sidebartitle: sqlalchemy.orm SynonymProperty
-meta: Python example code for the SynonymProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Example code for understanding how to use the SynonymProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 SynonymProperty is a class within the sqlalchemy.orm module of the SQLAlchemy project.

@@ -113,6 +113,14 @@ this short list as my absolute favorites that help developers become
   examples and further details for the four principles, which are contrast, 
   consistency, Occam's Razor and space.
 
+* [Gallery of web design history](https://www.webdesignmuseum.org/gallery) is 
+  a collection of websites from between 1991 and 2006 that show the evolution
+  of what the web looked like before the modern 
+  [CSS](/cascading-style-sheets.html) era. This is a great resource to see
+  how websites evolved, such as 
+  [Microsoft in 1996](https://www.webdesignmuseum.org/gallery/microsoft-1996)
+  and [YouTube in 2005](https://www.webdesignmuseum.org/gallery/youtube-2005).
+
 * [The Average Web Page (Data from Analyzing 8 Million Websites)](https://css-tricks.com/average-web-page-data-analyzing-8-million-websites/)
   shows the most frequently used HTML elements, metadata, text
   content and other statistics from a large scale analysis of the web.

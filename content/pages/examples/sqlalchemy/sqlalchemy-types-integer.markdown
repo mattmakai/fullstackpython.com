@@ -1,10 +1,10 @@
 title: sqlalchemy.types Integer Example Code
 category: page
 slug: sqlalchemy-types-integer-examples
-sortorder: 500031115
+sortorder: 500031126
 toc: False
 sidebartitle: sqlalchemy.types Integer
-meta: Python example code for the Integer class from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Integer class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 Integer is a class within the sqlalchemy.types module of the SQLAlchemy project.

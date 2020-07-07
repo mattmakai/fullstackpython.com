@@ -1,10 +1,10 @@
 title: sqlalchemy.engine.strategies EngineStrategy Example Code
 category: page
 slug: sqlalchemy-engine-strategies-enginestrategy-examples
-sortorder: 500031027
+sortorder: 500031029
 toc: False
 sidebartitle: sqlalchemy.engine.strategies EngineStrategy
-meta: Python example code for the EngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.
+meta: Example code for understanding how to use the EngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.
 
 
 EngineStrategy is a class within the sqlalchemy.engine.strategies module of the SQLAlchemy project.

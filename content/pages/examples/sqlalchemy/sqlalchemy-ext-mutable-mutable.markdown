@@ -1,10 +1,10 @@
 title: sqlalchemy.ext.mutable Mutable Example Code
 category: page
 slug: sqlalchemy-ext-mutable-mutable-examples
-sortorder: 500031044
+sortorder: 500031048
 toc: False
 sidebartitle: sqlalchemy.ext.mutable Mutable
-meta: Python example code for the Mutable class from the sqlalchemy.ext.mutable module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Mutable class from the sqlalchemy.ext.mutable module of the SQLAlchemy project.
 
 
 Mutable is a class within the sqlalchemy.ext.mutable module of the SQLAlchemy project.

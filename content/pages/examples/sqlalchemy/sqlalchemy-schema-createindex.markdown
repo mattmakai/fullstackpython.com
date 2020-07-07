@@ -1,10 +1,10 @@
 title: sqlalchemy.schema CreateIndex Example Code
 category: page
 slug: sqlalchemy-schema-createindex-examples
-sortorder: 500031082
+sortorder: 500031091
 toc: False
 sidebartitle: sqlalchemy.schema CreateIndex
-meta: Python example code for the CreateIndex class from the sqlalchemy.schema module of the SQLAlchemy project.
+meta: Example code for understanding how to use the CreateIndex class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
 CreateIndex is a class within the sqlalchemy.schema module of the SQLAlchemy project.

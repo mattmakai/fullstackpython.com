@@ -1,10 +1,10 @@
 title: sqlalchemy.types UserDefinedType Example Code
 category: page
 slug: sqlalchemy-types-userdefinedtype-examples
-sortorder: 500031119
+sortorder: 500031130
 toc: False
 sidebartitle: sqlalchemy.types UserDefinedType
-meta: Python example code for the UserDefinedType class from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Example code for understanding how to use the UserDefinedType class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 UserDefinedType is a class within the sqlalchemy.types module of the SQLAlchemy project.

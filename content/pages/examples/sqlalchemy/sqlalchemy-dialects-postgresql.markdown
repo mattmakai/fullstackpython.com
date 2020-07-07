@@ -4,7 +4,7 @@ slug: sqlalchemy-dialects-postgresql-examples
 sortorder: 500031003
 toc: False
 sidebartitle: sqlalchemy.dialects postgresql
-meta: Python example code for the postgresql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
+meta: Python example code that shows how to use the postgresql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
 postgresql is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.

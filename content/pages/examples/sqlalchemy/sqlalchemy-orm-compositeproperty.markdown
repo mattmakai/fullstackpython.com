@@ -1,10 +1,10 @@
 title: sqlalchemy.orm CompositeProperty Example Code
 category: page
 slug: sqlalchemy-orm-compositeproperty-examples
-sortorder: 500031047
+sortorder: 500031051
 toc: False
 sidebartitle: sqlalchemy.orm CompositeProperty
-meta: Python example code for the CompositeProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Example code for understanding how to use the CompositeProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 CompositeProperty is a class within the sqlalchemy.orm module of the SQLAlchemy project.

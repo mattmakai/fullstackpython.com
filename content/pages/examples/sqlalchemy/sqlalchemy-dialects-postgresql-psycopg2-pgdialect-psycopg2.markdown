@@ -1,16 +1,71 @@
 title: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2 Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-psycopg2-pgdialect-psycopg2-examples
-sortorder: 500031016
+sortorder: 500031018
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2
-meta: Python example code for the PGDialect_psycopg2 class from the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
+meta: Example code for understanding how to use the PGDialect_psycopg2 class from the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
 
 
 PGDialect_psycopg2 is a class within the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
 
 
-## Example 1 from databases
+## Example 1 from Amazon Redshift SQLAlchemy Dialect
+[Amazon Redshift SQLAlchemy Dialect](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift)
+is a [SQLAlchemy Dialect](https://docs.sqlalchemy.org/en/13/dialects/)
+that can communicate with the [AWS Redshift](https://aws.amazon.com/redshift/)
+data store. The SQL is essentially [PostgreSQL](/postgresql.html)
+and requires [psycopg2](https://www.psycopg.org/) to properly
+operate. This project and its code are open sourced under the
+[MIT license](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/LICENSE).
+
+[**Amazon Redshift SQLAlchemy Dialect / sqlalchemy_redshift / dialect.py**](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/sqlalchemy_redshift/./dialect.py)
+
+```python
+# dialect.py
+import re
+from collections import defaultdict, namedtuple
+
+from packaging.version import Version
+import pkg_resources
+import sqlalchemy as sa
+from sqlalchemy import inspect
+from sqlalchemy.dialects.postgresql.base import (
+    PGCompiler, PGDDLCompiler, PGIdentifierPreparer, PGTypeCompiler
+)
+~~from sqlalchemy.dialects.postgresql.psycopg2 import PGDialect_psycopg2
+from sqlalchemy.engine import reflection
+from sqlalchemy.ext.compiler import compiles
+from sqlalchemy.sql.expression import (
+    BinaryExpression, BooleanClauseList, Delete
+)
+from sqlalchemy.types import (
+    VARCHAR, NullType, SMALLINT, INTEGER, BIGINT,
+    DECIMAL, REAL, BOOLEAN, CHAR, DATE, TIMESTAMP)
+from sqlalchemy.dialects.postgresql import DOUBLE_PRECISION
+
+from .commands import (
+    CopyCommand, UnloadFromSelect, Format, Compression, Encoding,
+    CreateLibraryCommand, AlterTableAppendCommand, RefreshMaterializedView
+)
+from .ddl import (
+    CreateMaterializedView, DropMaterializedView, get_table_attributes
+)
+
+sa_version = Version(sa.__version__)
+
+try:
+    import alembic
+except ImportError:
+    pass
+
+
+## ... source file continues with no further PGDialect_psycopg2 examples...
+
+```
+
+
+## Example 2 from databases
 [databases](https://github.com/encode/databases)
 ([project homepage](https://www.encode.io/databases/)
 and
@@ -90,7 +145,7 @@ class AiopgBackend(DatabaseBackend):
 ```
 
 
-## Example 2 from sqlalchemy-utils
+## Example 3 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

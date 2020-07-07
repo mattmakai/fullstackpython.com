@@ -1,10 +1,10 @@
 title: sqlalchemy.util set_creation_order Example Code
 category: page
 slug: sqlalchemy-util-set-creation-order-examples
-sortorder: 500031123
+sortorder: 500031134
 toc: False
 sidebartitle: sqlalchemy.util set_creation_order
-meta: Python example code for the set_creation_order callable from the sqlalchemy.util module of the SQLAlchemy project.
+meta: Python example code that shows how to use the set_creation_order callable from the sqlalchemy.util module of the SQLAlchemy project.
 
 
 set_creation_order is a callable within the sqlalchemy.util module of the SQLAlchemy project.

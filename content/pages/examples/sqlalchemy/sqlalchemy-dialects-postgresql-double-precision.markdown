@@ -4,13 +4,77 @@ slug: sqlalchemy-dialects-postgresql-double-precision-examples
 sortorder: 500031009
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql DOUBLE_PRECISION
-meta: Python example code for the DOUBLE_PRECISION constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the DOUBLE_PRECISION constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
 DOUBLE_PRECISION is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-## Example 1 from GeoAlchemy2
+## Example 1 from Amazon Redshift SQLAlchemy Dialect
+[Amazon Redshift SQLAlchemy Dialect](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift)
+is a [SQLAlchemy Dialect](https://docs.sqlalchemy.org/en/13/dialects/)
+that can communicate with the [AWS Redshift](https://aws.amazon.com/redshift/)
+data store. The SQL is essentially [PostgreSQL](/postgresql.html)
+and requires [psycopg2](https://www.psycopg.org/) to properly
+operate. This project and its code are open sourced under the
+[MIT license](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/LICENSE).
+
+[**Amazon Redshift SQLAlchemy Dialect / sqlalchemy_redshift / dialect.py**](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/sqlalchemy_redshift/./dialect.py)
+
+```python
+# dialect.py
+import re
+from collections import defaultdict, namedtuple
+
+from packaging.version import Version
+import pkg_resources
+import sqlalchemy as sa
+from sqlalchemy import inspect
+from sqlalchemy.dialects.postgresql.base import (
+    PGCompiler, PGDDLCompiler, PGIdentifierPreparer, PGTypeCompiler
+)
+from sqlalchemy.dialects.postgresql.psycopg2 import PGDialect_psycopg2
+from sqlalchemy.engine import reflection
+from sqlalchemy.ext.compiler import compiles
+from sqlalchemy.sql.expression import (
+    BinaryExpression, BooleanClauseList, Delete
+)
+from sqlalchemy.types import (
+    VARCHAR, NullType, SMALLINT, INTEGER, BIGINT,
+    DECIMAL, REAL, BOOLEAN, CHAR, DATE, TIMESTAMP)
+~~from sqlalchemy.dialects.postgresql import DOUBLE_PRECISION
+
+from .commands import (
+    CopyCommand, UnloadFromSelect, Format, Compression, Encoding,
+    CreateLibraryCommand, AlterTableAppendCommand, RefreshMaterializedView
+)
+from .ddl import (
+    CreateMaterializedView, DropMaterializedView, get_table_attributes
+)
+
+sa_version = Version(sa.__version__)
+
+try:
+    import alembic
+except ImportError:
+    pass
+else:
+    from alembic.ddl import postgresql
+
+    from alembic.ddl.base import RenameTable
+    compiles(RenameTable, 'redshift')(postgresql.visit_rename_table)
+
+    if Version(alembic.__version__) >= Version('1.0.6'):
+        from alembic.ddl.base import ColumnComment
+        compiles(ColumnComment, 'redshift')(postgresql.visit_column_comment)
+
+
+## ... source file continues with no further DOUBLE_PRECISION examples...
+
+```
+
+
+## Example 2 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)
 ([project documentation](https://geoalchemy-2.readthedocs.io/en/latest/)
 and

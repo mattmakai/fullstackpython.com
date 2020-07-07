@@ -1,10 +1,10 @@
 title: sqlalchemy.sql.elements ColumnElement Example Code
 category: page
 slug: sqlalchemy-sql-elements-columnelement-examples
-sortorder: 500031097
+sortorder: 500031108
 toc: False
 sidebartitle: sqlalchemy.sql.elements ColumnElement
-meta: Python example code for the ColumnElement class from the sqlalchemy.sql.elements module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ColumnElement class from the sqlalchemy.sql.elements module of the SQLAlchemy project.
 
 
 ColumnElement is a class within the sqlalchemy.sql.elements module of the SQLAlchemy project.

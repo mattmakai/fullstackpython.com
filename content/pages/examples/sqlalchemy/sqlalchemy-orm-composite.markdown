@@ -1,10 +1,10 @@
 title: sqlalchemy.orm composite Example Code
 category: page
 slug: sqlalchemy-orm-composite-examples
-sortorder: 500031054
+sortorder: 500031061
 toc: False
 sidebartitle: sqlalchemy.orm composite
-meta: Python example code for the composite callable from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code that shows how to use the composite callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 composite is a callable within the sqlalchemy.orm module of the SQLAlchemy project.

@@ -1,10 +1,10 @@
 title: sqlalchemy.orm strategies Example Code
 category: page
 slug: sqlalchemy-orm-strategies-examples
-sortorder: 500031063
+sortorder: 500031070
 toc: False
 sidebartitle: sqlalchemy.orm strategies
-meta: Python example code for the strategies callable from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code that shows how to use the strategies callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 strategies is a callable within the sqlalchemy.orm module of the SQLAlchemy project.

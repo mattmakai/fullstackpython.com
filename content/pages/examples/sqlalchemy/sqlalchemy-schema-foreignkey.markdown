@@ -1,10 +1,10 @@
 title: sqlalchemy.schema ForeignKey Example Code
 category: page
 slug: sqlalchemy-schema-foreignkey-examples
-sortorder: 500031084
+sortorder: 500031094
 toc: False
 sidebartitle: sqlalchemy.schema ForeignKey
-meta: Python example code for the ForeignKey class from the sqlalchemy.schema module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ForeignKey class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
 ForeignKey is a class within the sqlalchemy.schema module of the SQLAlchemy project.

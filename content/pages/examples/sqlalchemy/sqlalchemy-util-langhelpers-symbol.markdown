@@ -1,10 +1,10 @@
 title: sqlalchemy.util.langhelpers symbol Example Code
 category: page
 slug: sqlalchemy-util-langhelpers-symbol-examples
-sortorder: 500031125
+sortorder: 500031136
 toc: False
 sidebartitle: sqlalchemy.util.langhelpers symbol
-meta: Python example code for the symbol callable from the sqlalchemy.util.langhelpers module of the SQLAlchemy project.
+meta: Python example code that shows how to use the symbol callable from the sqlalchemy.util.langhelpers module of the SQLAlchemy project.
 
 
 symbol is a callable within the sqlalchemy.util.langhelpers module of the SQLAlchemy project.

@@ -27,6 +27,17 @@ The project is open sourced under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/encode/databases/blob/master/LICENSE.md).
 
 
+### indico
+[indico](https://github.com/indico/indico) 
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management that is
+powered by [SQLAlchemy](/sqlalchemy.html) on the backend. The code 
+for this project is open sourced under the 
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+
 ### sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)

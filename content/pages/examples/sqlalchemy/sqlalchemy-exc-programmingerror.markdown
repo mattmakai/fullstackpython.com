@@ -1,10 +1,10 @@
 title: sqlalchemy.exc ProgrammingError Example Code
 category: page
 slug: sqlalchemy-exc-programmingerror-examples
-sortorder: 500031037
+sortorder: 500031040
 toc: False
 sidebartitle: sqlalchemy.exc ProgrammingError
-meta: Python example code for the ProgrammingError class from the sqlalchemy.exc module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ProgrammingError class from the sqlalchemy.exc module of the SQLAlchemy project.
 
 
 ProgrammingError is a class within the sqlalchemy.exc module of the SQLAlchemy project.

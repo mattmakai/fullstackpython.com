@@ -29,6 +29,16 @@ database schema changes. The Alembic project is open sourced under the
 [MIT license](https://github.com/sqlalchemy/alembic/blob/master/LICENSE).
 
 
+### Amazon Redshift SQLAlchemy Dialect
+[Amazon Redshift SQLAlchemy Dialect](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift)
+is a [SQLAlchemy Dialect](https://docs.sqlalchemy.org/en/13/dialects/)
+that can communicate with the [AWS Redshift](https://aws.amazon.com/redshift/)
+data store. The SQL is essentially [PostgreSQL](/postgresql.html)
+and requires [psycopg2](https://www.psycopg.org/) to properly
+operate. This project and its code are open sourced under the
+[MIT license](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/LICENSE).
+
+
 ### flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
@@ -127,6 +137,20 @@ is open sourced under the
 [MIT license](https://github.com/agronholm/sqlacodegen/blob/master/LICENSE).
 
 
+### sqlalchemy-clickhouse
+[sqlalchemy-clickhouse](https://github.com/cloudflare/sqlalchemy-clickhouse)
+is a [SQLAlchemy Dialect](https://docs.sqlalchemy.org/en/13/dialects/)
+for communicating with the open source [ClickHouse](https://clickhouse.tech/)
+database management system. ClickHouse is column-oriented and therefore
+better for some use cases and worse for others compared to a traditional
+[relational database](/databases.html). 
+
+The code for this project is open sourced under the
+[MIT license](https://github.com/cloudflare/sqlalchemy-clickhouse/blob/master/LICENSE.txt)
+while ClickHouse is provided as open source under the
+[Apache License 2.0](https://github.com/ClickHouse/ClickHouse/blob/master/LICENSE).
+
+
 ### sqlalchemy-datatables
 [sqlalchemy-datatables](https://github.com/Pegase745/sqlalchemy-datatables)
 ([PyPI package information](https://pypi.org/project/sqlalchemy-datatables/))
@@ -140,6 +164,17 @@ The project is built and maintained by
 [Michel Nemnom (Pegase745)](https://github.com/Pegase745) and is open
 sourced under the 
 [MIT license](https://github.com/Pegase745/sqlalchemy-datatables/blob/master/LICENSE).
+
+
+### SQLAlchemy Mixins
+[SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)
+([PyPI package information](https://pypi.org/project/sqlalchemy-mixins/))
+is a collection of
+[mixins](https://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)
+useful for extending [SQLAlchemy](/sqlalchemy.html) and simplifying
+your [database](/databases.html)-interacting code for some common
+use cases. SQLAlchemy Mixins is open sourced under the
+[MIT license](https://github.com/absent1706/sqlalchemy-mixins/blob/master/LICENSE.txt).
 
 
 ### sqlalchemy-utils

@@ -1,10 +1,10 @@
 title: sqlalchemy.orm.exc NoResultFound Example Code
 category: page
 slug: sqlalchemy-orm-exc-noresultfound-examples
-sortorder: 500031066
+sortorder: 500031074
 toc: False
 sidebartitle: sqlalchemy.orm.exc NoResultFound
-meta: Python example code for the NoResultFound class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
+meta: Example code for understanding how to use the NoResultFound class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
 
 
 NoResultFound is a class within the sqlalchemy.orm.exc module of the SQLAlchemy project.
@@ -111,7 +111,121 @@ class ORMField(OrderedType):
 ```
 
 
-## Example 2 from marshmallow-sqlalchemy
+## Example 2 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management that is
+powered by [SQLAlchemy](/sqlalchemy.html) on the backend. The code
+for this project is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / web / rh.py**](https://github.com/indico/indico/blob/master/indico/web/rh.py)
+
+```python
+# rh.py
+
+from __future__ import absolute_import, unicode_literals
+
+import cProfile
+import inspect
+import itertools
+import os
+import time
+from functools import partial, wraps
+
+import jsonschema
+from flask import current_app, g, redirect, request, session
+from sqlalchemy.exc import DatabaseError
+~~from sqlalchemy.orm.exc import NoResultFound
+from werkzeug.exceptions import BadRequest, Forbidden, MethodNotAllowed, NotFound
+from werkzeug.routing import BuildError
+from werkzeug.wrappers import Response
+
+from indico.core import signals
+from indico.core.config import config
+from indico.core.db import db
+from indico.core.db.sqlalchemy.core import handle_sqlalchemy_database_error
+from indico.core.logger import Logger, sentry_set_tags
+from indico.core.notifications import flush_email_queue, init_email_queue
+from indico.util import fossilize
+from indico.util.i18n import _
+from indico.util.locators import get_locator
+from indico.util.signals import values_from_signal
+from indico.web.flask.util import url_for
+from indico.web.util import is_signed_url_valid
+
+
+HTTP_VERBS = {'GET', 'PATCH', 'POST', 'PUT', 'DELETE'}
+logger = Logger.get('rh')
+
+
+class RH(object):
+    CSRF_ENABLED = True  # require a csrf_token when accessing the RH with anything but GET
+
+
+## ... source file abbreviated to get to NoResultFound examples ...
+
+
+            valid_methods = [m for m in HTTP_VERBS if hasattr(self, '_process_' + m)]
+            raise MethodNotAllowed(valid_methods)
+        return method()
+
+    def _check_csrf(self):
+        token = request.headers.get('X-CSRF-Token') or request.form.get('csrf_token')
+        if token is None:
+            token = next((v for k, v in request.form.iteritems() if k.endswith('-csrf_token')), None)
+        if self.CSRF_ENABLED and request.method != 'GET' and token != session.csrf_token:
+            msg = _("It looks like there was a problem with your current session. Please use your browser's back "
+                    "button, reload the page and try again.")
+            raise BadRequest(msg)
+
+    def _check_event_feature(self):
+        from indico.modules.events.features.util import require_feature
+        event_id = request.view_args.get('confId') or request.view_args.get('event_id')
+        if event_id is not None:
+            require_feature(event_id, self.EVENT_FEATURE)
+
+    def _do_process(self):
+        try:
+            args_result = self._process_args()
+            signals.rh.process_args.send(type(self), rh=self, result=args_result)
+            if isinstance(args_result, (current_app.response_class, Response)):
+                return args_result
+~~        except NoResultFound:  # sqlalchemy .one() not finding anything
+            raise NotFound(_('The specified item could not be found.'))
+
+        rv = self.normalize_url()
+        if rv is not None:
+            return rv
+
+        self._check_access()
+        signals.rh.check_access.send(type(self), rh=self)
+
+        signal_rv = values_from_signal(signals.rh.before_process.send(type(self), rh=self),
+                                       single_value=True, as_list=True)
+        if signal_rv and len(signal_rv) != 1:
+            raise Exception('More than one signal handler returned custom RH result')
+        elif signal_rv:
+            return signal_rv[0]
+
+        if config.PROFILE:
+            result = [None]
+            profile_path = os.path.join(config.TEMP_DIR, '{}-{}.prof'.format(type(self).__name__, time.time()))
+            cProfile.runctx('result[0] = self._process()', globals(), locals(), profile_path)
+            rv = result[0]
+        else:
+            rv = self._process()
+
+
+
+## ... source file continues with no further NoResultFound examples...
+
+```
+
+
+## Example 3 from marshmallow-sqlalchemy
 [marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)
 ([project documentation](https://marshmallow-sqlalchemy.readthedocs.io/en/latest/))
 is a code library that makes it easier to use

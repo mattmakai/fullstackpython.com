@@ -1,10 +1,10 @@
 title: sqlalchemy.types Boolean Example Code
 category: page
 slug: sqlalchemy-types-boolean-examples
-sortorder: 500031113
+sortorder: 500031124
 toc: False
 sidebartitle: sqlalchemy.types Boolean
-meta: Python example code for the Boolean class from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Example code for understanding how to use the Boolean class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 Boolean is a class within the sqlalchemy.types module of the SQLAlchemy project.

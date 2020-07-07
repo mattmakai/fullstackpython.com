@@ -1,10 +1,10 @@
 title: sqlalchemy.pool NullPool Example Code
 category: page
 slug: sqlalchemy-pool-nullpool-examples
-sortorder: 500031078
+sortorder: 500031087
 toc: False
 sidebartitle: sqlalchemy.pool NullPool
-meta: Python example code for the NullPool class from the sqlalchemy.pool module of the SQLAlchemy project.
+meta: Example code for understanding how to use the NullPool class from the sqlalchemy.pool module of the SQLAlchemy project.
 
 
 NullPool is a class within the sqlalchemy.pool module of the SQLAlchemy project.
@@ -118,6 +118,76 @@ def _make_table(db):
 
             if connector is None:
                 connector = self.make_connector(app, bind)
+
+
+## ... source file continues with no further NullPool examples...
+
+```
+
+
+## Example 2 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management that is
+powered by [SQLAlchemy](/sqlalchemy.html) on the backend. The code
+for this project is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / cli / setup.py**](https://github.com/indico/indico/blob/master/indico/cli/setup.py)
+
+```python
+# setup.py
+
+from __future__ import unicode_literals
+
+import os
+import re
+import shutil
+import socket
+import sys
+from operator import attrgetter
+from smtplib import SMTP
+
+import click
+from click import wrap_text
+from flask.helpers import get_root_path
+from pkg_resources import iter_entry_points
+from prompt_toolkit import prompt
+from prompt_toolkit.contrib.completers import PathCompleter, WordCompleter
+from prompt_toolkit.layout.lexers import SimpleLexer
+from prompt_toolkit.styles import style_from_dict
+from prompt_toolkit.token import Token
+from pytz import all_timezones, common_timezones
+from redis import RedisError, StrictRedis
+from sqlalchemy import create_engine
+from sqlalchemy.exc import OperationalError
+~~from sqlalchemy.pool import NullPool
+from terminaltables import AsciiTable
+from werkzeug.urls import url_parse
+
+from indico.core.db.sqlalchemy.util.models import import_all_models
+from indico.util.console import cformat
+from indico.util.string import validate_email
+
+
+click.disable_unicode_literals_warning = True
+
+
+def _echo(msg=''):
+    click.echo(msg, err=True)
+
+
+def _warn(msg):
+    msg = wrap_text(msg)
+    click.echo(click.style(msg, fg='yellow'), err=True)
+
+
+def _error(msg):
+    msg = wrap_text(msg)
+    click.echo(click.style(msg, fg='red', bold=True), err=True)
+
 
 
 ## ... source file continues with no further NullPool examples...

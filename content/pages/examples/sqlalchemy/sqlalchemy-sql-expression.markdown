@@ -1,10 +1,10 @@
 title: sqlalchemy.sql expression Example Code
 category: page
 slug: sqlalchemy-sql-expression-examples
-sortorder: 500031090
+sortorder: 500031100
 toc: False
 sidebartitle: sqlalchemy.sql expression
-meta: Python example code for the expression callable from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the expression callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 expression is a callable within the sqlalchemy.sql module of the SQLAlchemy project.

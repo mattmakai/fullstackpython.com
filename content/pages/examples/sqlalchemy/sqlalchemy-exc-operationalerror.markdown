@@ -1,16 +1,88 @@
 title: sqlalchemy.exc OperationalError Example Code
 category: page
 slug: sqlalchemy-exc-operationalerror-examples
-sortorder: 500031036
+sortorder: 500031039
 toc: False
 sidebartitle: sqlalchemy.exc OperationalError
-meta: Python example code for the OperationalError class from the sqlalchemy.exc module of the SQLAlchemy project.
+meta: Example code for understanding how to use the OperationalError class from the sqlalchemy.exc module of the SQLAlchemy project.
 
 
 OperationalError is a class within the sqlalchemy.exc module of the SQLAlchemy project.
 
 
-## Example 1 from sqlalchemy-utils
+## Example 1 from indico
+[indico](https://github.com/indico/indico)
+([project website](https://getindico.io/),
+[documentation](https://docs.getindico.io/en/stable/installation/)
+and [sandbox demo](https://sandbox.getindico.io/))
+is a [Flask](/flask.html)-based web app for event management that is
+powered by [SQLAlchemy](/sqlalchemy.html) on the backend. The code
+for this project is open sourced under the
+[MIT license](https://github.com/indico/indico/blob/master/LICENSE).
+
+[**indico / indico / web / errors.py**](https://github.com/indico/indico/blob/master/indico/web/errors.py)
+
+```python
+# errors.py
+
+from __future__ import absolute_import, unicode_literals
+
+import traceback
+from uuid import uuid4
+
+from flask import g, jsonify, render_template, request, session
+from itsdangerous import BadData
+~~from sqlalchemy.exc import OperationalError
+from werkzeug.exceptions import Forbidden, HTTPException
+
+from indico.core.errors import NoReportError
+from indico.legacy.common.cache import GenericCache
+from indico.web.util import get_request_info
+from indico.web.views import WPError
+
+
+def render_error(exc, title, message, code, standalone=False):
+    _save_error(exc, title, message)
+    if _need_json_response():
+        return _jsonify_error(exc, title, message, code)
+    elif standalone:
+        return render_template('standalone_error.html', error_message=title, error_description=message), code
+    else:
+        try:
+            return WPError(title, message).getHTML(), code
+~~        except OperationalError:
+            return render_error(exc, title, message, code, standalone=True)
+
+
+def load_error_data(uuid):
+    return GenericCache('errors').get(uuid)
+
+
+def _save_error(exc, title, message):
+    if 'saved_error_uuid' in g:
+        return
+    if not _is_error_reportable(exc):
+        return
+    g.saved_error_uuid = uuid = unicode(uuid4())
+    tb = traceback.format_exc()
+    data = {'title': title,
+            'message': message,
+            'request_info': get_request_info(),
+            'traceback': tb,
+            'sentry_event_id': g.get('sentry_event_id')}
+    GenericCache('errors').set(uuid, data, 7200)
+
+
+def _need_json_response():
+    return request.is_xhr or request.is_json
+
+
+## ... source file continues with no further OperationalError examples...
+
+```
+
+
+## Example 2 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

@@ -1,10 +1,10 @@
 title: sqlalchemy.orm.properties RelationshipProperty Example Code
 category: page
 slug: sqlalchemy-orm-properties-relationshipproperty-examples
-sortorder: 500031072
+sortorder: 500031080
 toc: False
 sidebartitle: sqlalchemy.orm.properties RelationshipProperty
-meta: Python example code for the RelationshipProperty class from the sqlalchemy.orm.properties module of the SQLAlchemy project.
+meta: Example code for understanding how to use the RelationshipProperty class from the sqlalchemy.orm.properties module of the SQLAlchemy project.
 
 
 RelationshipProperty is a class within the sqlalchemy.orm.properties module of the SQLAlchemy project.

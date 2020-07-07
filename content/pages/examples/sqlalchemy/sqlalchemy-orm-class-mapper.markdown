@@ -1,10 +1,10 @@
 title: sqlalchemy.orm class_mapper Example Code
 category: page
 slug: sqlalchemy-orm-class-mapper-examples
-sortorder: 500031052
+sortorder: 500031059
 toc: False
 sidebartitle: sqlalchemy.orm class_mapper
-meta: Python example code for the class_mapper callable from the sqlalchemy.orm module of the SQLAlchemy project.
+meta: Python example code that shows how to use the class_mapper callable from the sqlalchemy.orm module of the SQLAlchemy project.
 
 
 class_mapper is a callable within the sqlalchemy.orm module of the SQLAlchemy project.

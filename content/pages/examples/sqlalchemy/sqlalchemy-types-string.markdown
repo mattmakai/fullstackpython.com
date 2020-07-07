@@ -1,10 +1,10 @@
 title: sqlalchemy.types String Example Code
 category: page
 slug: sqlalchemy-types-string-examples
-sortorder: 500031117
+sortorder: 500031128
 toc: False
 sidebartitle: sqlalchemy.types String
-meta: Python example code for the String class from the sqlalchemy.types module of the SQLAlchemy project.
+meta: Example code for understanding how to use the String class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
 String is a class within the sqlalchemy.types module of the SQLAlchemy project.

@@ -1,10 +1,10 @@
 title: sqlalchemy.orm.interfaces PropComparator Example Code
 category: page
 slug: sqlalchemy-orm-interfaces-propcomparator-examples
-sortorder: 500031070
+sortorder: 500031078
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces PropComparator
-meta: Python example code for the PropComparator class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
+meta: Example code for understanding how to use the PropComparator class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
 
 
 PropComparator is a class within the sqlalchemy.orm.interfaces module of the SQLAlchemy project.

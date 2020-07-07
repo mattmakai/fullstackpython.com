@@ -1,10 +1,10 @@
 title: sqlalchemy.sql select Example Code
 category: page
 slug: sqlalchemy-sql-select-examples
-sortorder: 500031094
+sortorder: 500031105
 toc: False
 sidebartitle: sqlalchemy.sql select
-meta: Python example code for the select callable from the sqlalchemy.sql module of the SQLAlchemy project.
+meta: Python example code that shows how to use the select callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
 select is a callable within the sqlalchemy.sql module of the SQLAlchemy project.

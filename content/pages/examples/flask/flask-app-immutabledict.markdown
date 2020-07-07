@@ -7,7 +7,13 @@ sidebartitle: flask.app ImmutableDict
 meta: Example code for understanding how to use the ImmutableDict class from the flask.app module of the Flask project.
 
 
-ImmutableDict is a class within the flask.app module of the Flask project.
+[ImmutableDict](https://github.com/pallets/flask/blob/master/src/flask/app.py)
+is a class within the flask.app module of the [Flask](/flask.html)
+framework that is actually imported from the Werkzeug
+[datastructures module](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/datastructures.py).
+The ImmutableDict class wraps a
+[standard Python dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+so that values cannot be modified after initially being set.
 
 
 ## Example 1 from indico

@@ -1,10 +1,10 @@
 title: sqlalchemy.engine create_engine Example Code
 category: page
 slug: sqlalchemy-engine-create-engine-examples
-sortorder: 500031020
+sortorder: 500031022
 toc: False
 sidebartitle: sqlalchemy.engine create_engine
-meta: Python example code for the create_engine callable from the sqlalchemy.engine module of the SQLAlchemy project.
+meta: Python example code that shows how to use the create_engine callable from the sqlalchemy.engine module of the SQLAlchemy project.
 
 
 create_engine is a callable within the sqlalchemy.engine module of the SQLAlchemy project.
@@ -76,6 +76,47 @@ def main():
     generator = CodeGenerator(metadata, args.noindexes, args.noconstraints, args.nojoined,
                               args.noinflect, args.noclasses, nocomments=args.nocomments)
     generator.render(outfile)
+
+
+
+## ... source file continues with no further create_engine examples...
+
+```
+
+
+## Example 2 from sqlalchemy-clickhouse
+[sqlalchemy-clickhouse](https://github.com/cloudflare/sqlalchemy-clickhouse)
+is a [SQLAlchemy Dialect](https://docs.sqlalchemy.org/en/13/dialects/)
+for communicating with the open source [ClickHouse](https://clickhouse.tech/)
+database management system. ClickHouse is column-oriented and therefore
+better for some use cases and worse for others compared to a traditional
+[relational database](/databases.html).
+
+The code for this project is open sourced under the
+[MIT license](https://github.com/cloudflare/sqlalchemy-clickhouse/blob/master/LICENSE.txt)
+while ClickHouse is provided as open source under the
+[Apache License 2.0](https://github.com/ClickHouse/ClickHouse/blob/master/LICENSE).
+
+[**sqlalchemy-clickhouse / example.py**](https://github.com/cloudflare/sqlalchemy-clickhouse/blob/master/././example.py)
+
+```python
+# example.py
+
+import connector
+cursor = connector.connect('default').cursor()
+cursor.execute('SELECT * FROM test LIMIT 10')
+print(cursor.fetchone())
+
+from sqlalchemy.dialects import registry
+registry.register("clickhouse", "base", "dialect")
+
+from sqlalchemy import *
+~~from sqlalchemy.engine import create_engine
+from sqlalchemy.schema import *
+
+~~engine = create_engine('clickhouse://default:@localhost:8123/default')
+logs = Table('test', MetaData(bind=engine), autoload=True)
+print(select([func.count('*')], from_obj=logs).scalar())
 
 
 

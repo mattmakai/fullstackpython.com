@@ -1,10 +1,10 @@
 title: sqlalchemy.dialects.sqlite pysqlite Example Code
 category: page
 slug: sqlalchemy-dialects-sqlite-pysqlite-examples
-sortorder: 500031017
+sortorder: 500031019
 toc: False
 sidebartitle: sqlalchemy.dialects.sqlite pysqlite
-meta: Python example code for the pysqlite callable from the sqlalchemy.dialects.sqlite module of the SQLAlchemy project.
+meta: Python example code that shows how to use the pysqlite callable from the sqlalchemy.dialects.sqlite module of the SQLAlchemy project.
 
 
 pysqlite is a callable within the sqlalchemy.dialects.sqlite module of the SQLAlchemy project.

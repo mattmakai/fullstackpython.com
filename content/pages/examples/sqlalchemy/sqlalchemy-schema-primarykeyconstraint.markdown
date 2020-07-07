@@ -1,10 +1,10 @@
 title: sqlalchemy.schema PrimaryKeyConstraint Example Code
 category: page
 slug: sqlalchemy-schema-primarykeyconstraint-examples
-sortorder: 500031086
+sortorder: 500031096
 toc: False
 sidebartitle: sqlalchemy.schema PrimaryKeyConstraint
-meta: Python example code for the PrimaryKeyConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.
+meta: Example code for understanding how to use the PrimaryKeyConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
 PrimaryKeyConstraint is a class within the sqlalchemy.schema module of the SQLAlchemy project.

@@ -1,10 +1,10 @@
 title: sqlalchemy.schema DDLElement Example Code
 category: page
 slug: sqlalchemy-schema-ddlelement-examples
-sortorder: 500031083
+sortorder: 500031093
 toc: False
 sidebartitle: sqlalchemy.schema DDLElement
-meta: Python example code for the DDLElement class from the sqlalchemy.schema module of the SQLAlchemy project.
+meta: Example code for understanding how to use the DDLElement class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
 DDLElement is a class within the sqlalchemy.schema module of the SQLAlchemy project.
@@ -72,7 +72,140 @@ class AlterColumn(AlterTable):
 ```
 
 
-## Example 2 from sqlalchemy-utils
+## Example 2 from Amazon Redshift SQLAlchemy Dialect
+[Amazon Redshift SQLAlchemy Dialect](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift)
+is a [SQLAlchemy Dialect](https://docs.sqlalchemy.org/en/13/dialects/)
+that can communicate with the [AWS Redshift](https://aws.amazon.com/redshift/)
+data store. The SQL is essentially [PostgreSQL](/postgresql.html)
+and requires [psycopg2](https://www.psycopg.org/) to properly
+operate. This project and its code are open sourced under the
+[MIT license](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/LICENSE).
+
+[**Amazon Redshift SQLAlchemy Dialect / sqlalchemy_redshift / ddl.py**](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift/blob/master/sqlalchemy_redshift/./ddl.py)
+
+```python
+# ddl.py
+import sqlalchemy as sa
+from sqlalchemy.ext import compiler as sa_compiler
+~~from sqlalchemy.schema import DDLElement
+
+from .compat import string_types
+
+
+def _check_if_key_exists(key):
+    return isinstance(key, sa.Column) or key
+
+
+def get_table_attributes(preparer,
+                         diststyle=None,
+                         distkey=None,
+                         sortkey=None,
+                         interleaved_sortkey=None):
+    text = ""
+
+    has_distkey = _check_if_key_exists(distkey)
+    if diststyle:
+        diststyle = diststyle.upper()
+        if diststyle not in ('EVEN', 'KEY', 'ALL'):
+            raise sa.exc.ArgumentError(
+                u"diststyle {0} is invalid".format(diststyle)
+            )
+        if diststyle != 'KEY' and has_distkey:
+            raise sa.exc.ArgumentError(
+
+
+## ... source file abbreviated to get to DDLElement examples ...
+
+
+    text = """\
+        CREATE MATERIALIZED VIEW {name}
+        {backup}
+        {table_attributes}
+        AS {selectable}\
+    Drop the materialized view from the database.
+    SEE:
+    docs.aws.amazon.com/redshift/latest/dg/materialized-view-drop-sql-command
+
+    This undoes the create command, as expected:
+
+    >>> import sqlalchemy as sa
+    >>> from sqlalchemy_redshift.dialect import DropMaterializedView
+    >>> engine = sa.create_engine('redshift+psycopg2://example')
+    >>> drop = DropMaterializedView(
+    ...     'materialized_view_of_users',
+    ...     if_exists=True
+    ... )
+    >>> print(drop.compile(engine))
+    <BLANKLINE>
+    DROP MATERIALIZED VIEW IF EXISTS materialized_view_of_users
+    <BLANKLINE>
+    <BLANKLINE>
+
+    This can be included in any execute() statement.
+~~        Build the DropMaterializedView DDLElement.
+
+        Parameters
+        ----------
+        name: str
+            name of the materialized view to drop
+        if_exists: bool, optional
+            if True, the IF EXISTS clause is added. This will make the query
+            successful even if the view does not exist, i.e. it lets you drop
+            a non-existant view. Defaults to False.
+        cascade: bool, optional
+            if True, the CASCADE clause is added. This will drop all
+            views/objects in the DB that depend on this materialized view.
+            Defaults to False.
+    Formats and returns the drop statement for materialized views.
+
+            distkey = distkey.name
+        text += " DISTKEY ({0})".format(preparer.quote(distkey))
+
+    has_sortkey = _check_if_key_exists(sortkey)
+    has_interleaved = _check_if_key_exists(interleaved_sortkey)
+    if has_sortkey and has_interleaved:
+        raise sa.exc.ArgumentError(
+            "Parameters sortkey and interleaved_sortkey are "
+            "mutually exclusive; you may not specify both."
+        )
+
+    if has_sortkey or has_interleaved:
+        keys = sortkey if has_sortkey else interleaved_sortkey
+        if isinstance(keys, (string_types, sa.Column)):
+            keys = [keys]
+        keys = [key.name if isinstance(key, sa.Column) else key
+                for key in keys]
+        if has_interleaved:
+            text += " INTERLEAVED"
+        sortkey_string = ", ".join(preparer.quote(key)
+                                   for key in keys)
+        text += " SORTKEY ({0})".format(sortkey_string)
+    return text
+
+
+~~class CreateMaterializedView(DDLElement):
+    def __init__(self, name, selectable, backup=True, diststyle=None,
+                 distkey=None, sortkey=None, interleaved_sortkey=None):
+        self.name = name
+        self.selectable = selectable
+        self.backup = backup
+        self.diststyle = diststyle
+        self.distkey = distkey
+        self.sortkey = sortkey
+        self.interleaved_sortkey = interleaved_sortkey
+
+
+@sa_compiler.compiles(CreateMaterializedView)
+def compile_create_materialized_view(element, compiler, **kw):
+
+
+
+## ... source file continues with no further DDLElement examples...
+
+```
+
+
+## Example 3 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

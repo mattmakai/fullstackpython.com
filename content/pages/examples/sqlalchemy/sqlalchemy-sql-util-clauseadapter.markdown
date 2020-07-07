@@ -1,10 +1,10 @@
 title: sqlalchemy.sql.util ClauseAdapter Example Code
 category: page
 slug: sqlalchemy-sql-util-clauseadapter-examples
-sortorder: 500031111
+sortorder: 500031122
 toc: False
 sidebartitle: sqlalchemy.sql.util ClauseAdapter
-meta: Python example code for the ClauseAdapter class from the sqlalchemy.sql.util module of the SQLAlchemy project.
+meta: Example code for understanding how to use the ClauseAdapter class from the sqlalchemy.sql.util module of the SQLAlchemy project.
 
 
 ClauseAdapter is a class within the sqlalchemy.sql.util module of the SQLAlchemy project.

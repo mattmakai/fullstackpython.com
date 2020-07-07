@@ -1,10 +1,10 @@
 title: sqlalchemy.ext.declarative declarative_base Example Code
 category: page
 slug: sqlalchemy-ext-declarative-declarative-base-examples
-sortorder: 500031042
+sortorder: 500031045
 toc: False
 sidebartitle: sqlalchemy.ext.declarative declarative_base
-meta: Python example code for the declarative_base callable from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
+meta: Python example code that shows how to use the declarative_base callable from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
 
 
 declarative_base is a callable within the sqlalchemy.ext.declarative module of the SQLAlchemy project.
@@ -259,7 +259,61 @@ class User(Base):
 ```
 
 
-## Example 4 from sandman2
+## Example 4 from SQLAlchemy Mixins
+[SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)
+([PyPI package information](https://pypi.org/project/sqlalchemy-mixins/))
+is a collection of
+[mixins](https://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)
+useful for extending [SQLAlchemy](/sqlalchemy.html) and simplifying
+your [database](/databases.html)-interacting code for some common
+use cases. SQLAlchemy Mixins is open sourced under the
+[MIT license](https://github.com/absent1706/sqlalchemy-mixins/blob/master/LICENSE.txt).
+
+[**SQLAlchemy Mixins / sqlalchemy_mixins / inspection.py**](https://github.com/absent1706/sqlalchemy-mixins/blob/master/sqlalchemy_mixins/./inspection.py)
+
+```python
+# inspection.py
+from sqlalchemy import inspect
+~~from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
+from sqlalchemy.orm import RelationshipProperty
+
+from .utils import classproperty
+
+
+~~Base = declarative_base()
+
+
+class InspectionMixin(Base):
+    __abstract__ = True
+
+    @classproperty
+    def columns(cls):
+        return inspect(cls).columns.keys()
+
+    @classproperty
+    def primary_keys_full(cls):
+        mapper = cls.__mapper__
+        return [
+            mapper.get_property_by_column(column)
+            for column in mapper.primary_key
+        ]
+
+    @classproperty
+    def primary_keys(cls):
+        return [pk.key for pk in cls.primary_keys_full]
+
+    @classproperty
+    def relations(cls):
+        return [c.key for c in cls.__mapper__.iterate_properties
+
+
+## ... source file continues with no further declarative_base examples...
+
+```
+
+
+## Example 5 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and

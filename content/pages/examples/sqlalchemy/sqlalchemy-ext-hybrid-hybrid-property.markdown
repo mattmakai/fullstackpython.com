@@ -1,10 +1,10 @@
 title: sqlalchemy.ext.hybrid hybrid_property Example Code
 category: page
 slug: sqlalchemy-ext-hybrid-hybrid-property-examples
-sortorder: 500031043
+sortorder: 500031047
 toc: False
 sidebartitle: sqlalchemy.ext.hybrid hybrid_property
-meta: Python example code for the hybrid_property callable from the sqlalchemy.ext.hybrid module of the SQLAlchemy project.
+meta: Python example code that shows how to use the hybrid_property callable from the sqlalchemy.ext.hybrid module of the SQLAlchemy project.
 
 
 hybrid_property is a callable within the sqlalchemy.ext.hybrid module of the SQLAlchemy project.
