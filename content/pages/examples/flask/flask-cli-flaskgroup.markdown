@@ -8,10 +8,10 @@ meta: Example code for understanding how to use the FlaskGroup class from the fl
 
 
 [FlaskGroup](https://github.com/pallets/flask/blob/master/src/flask/cli.py)
-is a class within the flask.cli module of the Flask project. FlaskGroup
-is a subclass of [AppGroup](/flask-cli-appgroup-examples.html) that provides
-for loading more commands from a configured Flask app. Generally, only
-advanced use cases will need to use this class.
+is a class within the flask.cli module of the [Flask project](/flask.html).
+FlaskGroup is a subclass of [AppGroup](/flask-cli-appgroup-examples.html)
+that provides for loading more commands from a configured Flask app.
+Generally, only advanced use cases will need to use this class.
 
 
 ## Example 1 from FlaskBB

@@ -221,3 +221,9 @@ implementations.
   [which is better and why: Django ORM or SQLALchemy](https://www.quora.com/Which-is-better-and-why-Djangos-ORM-or-SQLAlchemy)
   based on various developers' experiences.
 
+
+### Open source code for using SQLAlchemy
+Many open source projects rely on SQLAlchemy. A great way to learn
+how to properly work with this tool is to read the code that shows
+how those projects use SQLAlchemy. This section alphabetically lists 
+these code examples by class and function in the SQLAlchemy code base.

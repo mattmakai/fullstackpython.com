@@ -63,6 +63,12 @@
     {% include "examples-extensions-descriptions/pandas.html" %}
    {% endif %}
    {{ page.content }}
+   {% if page.slug == "flask" %}
+    {% include "code-examples/flask.html" %}
+   {% endif %}
+   {% if page.slug == "sqlalchemy" %}
+    {% include "code-examples/sqlalchemy.html" %}
+   {% endif %}
   {% endif %}
   {% if page.sortorder[0:2] == "50" %}
   {% else %}

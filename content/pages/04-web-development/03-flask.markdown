@@ -337,20 +337,8 @@ ways to structure your code.
   in the JavaScript world.
 
 
-### Flask framework learning checklist
-1. [Install Flask](http://flask.pocoo.org/docs/installation/) on
-   your local development machine.
-
-1. Work through the 18-part Flask tutorial listed first under "Flask 
-   resources" above.
- 
-1. Read through 
-   [Flask Extensions Registry](http://flask.pocoo.org/extensions/) to find 
-   out what extensions you'll need to build your project.
-
-1. Start coding your Flask app based on what you learned from the 18 part
-   Flask tutorial plus open source example applications found below. 
-
-1. Move on to the [deployment section](/deployment.html) to get your initial 
-   Flask project on the web.
-
+### Open source code for using Flask
+There are many open source projects that rely on Flask to operate.
+One of the best ways to learn how to use this framework is to read
+how other projects use it in real-world code. This section lists
+these code examples by class and method in Flask.
