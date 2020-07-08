@@ -7,7 +7,10 @@ sidebartitle: flask.globals g
 meta: Python example code that shows how to use the g callable from the flask.globals module of the Flask project.
 
 
-g is a callable within the flask.globals module of the Flask project.
+[g](https://flask.palletsprojects.com/en/1.1.x/api/#flask.g) is
+an object for storing data during the
+[application context](https://flask.palletsprojects.com/en/1.1.x/appcontext/)
+of a running [Flask](/flask.html) web app.
 
 
 ## Example 1 from Flask AppBuilder
