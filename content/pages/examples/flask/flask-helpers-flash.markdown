@@ -7,7 +7,14 @@ sidebartitle: flask.helpers flash
 meta: Python example code that shows how to use the flash callable from the flask.helpers module of the Flask project.
 
 
-flash is a callable within the flask.helpers module of the Flask project.
+[flash](https://github.com/pallets/flask/blob/master/src/flask/helpers.py)
+is a function within the `flask.helpers` module of the [Flask](/flask.html)
+framework. `flash` passes a string message to the *next* request. The
+following request can access it in a template by using the
+`get_flashed_messages` function.
+
+`flash` can also be imported directly from the `flask` module instead
+of `flask.helpers` so you will often see that shortcut in example code.
 
 
 ## Example 1 from Braintree Flask app

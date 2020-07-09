@@ -8,13 +8,14 @@ meta: Example code for understanding how to use the Headers class from the flask
 
 
 [Headers](https://github.com/pallets/flask/blob/master/src/flask/app.py)
-is class within the flask.app module of the [Flask](/flask.html)
+is class within the `flask.app` module of the [Flask](/flask.html)
 [web framework](/web-frameworks.html) that is imported from the
 [datastructures](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/datastructures.py)
 module of the [Werkzeug](https://palletsprojects.com/p/werkzeug/) project.
 Headers handles the
 [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
-from requests and responses for Flask web applications.
+from [requests](/flask-globals-request-examples.html) and responses for
+Flask web applications.
 
 
 ## Example 1 from flask-restx

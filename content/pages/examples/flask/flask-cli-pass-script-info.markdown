@@ -9,7 +9,7 @@ meta: Python example code that shows how to use the pass_script_info callable fr
 
 [pass_script_info](https://github.com/pallets/flask/blob/master/src/flask/cli.py)
 is simply a decorator around the [ScriptInfo](/flask-cli-scriptinfo-examples.html)
-class within this same flask.cli module.
+class within this same `flask.cli` module.
 
 
 ## Example 1 from indico

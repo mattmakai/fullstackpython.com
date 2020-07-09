@@ -8,7 +8,7 @@ meta: Example code for understanding how to use the ScriptInfo class from the fl
 
 
 [ScriptInfo](https://github.com/pallets/flask/blob/master/src/flask/cli.py)
-is a class within the flask.app module of the [Flask](/flask.html)
+is a class within the `flask.cli` module of the [Flask](/flask.html)
 framework. It is a helper object for Flask application and not usually
 dealt with directly by developers, instead it is created automatically
 by the [FlaskGroup](/flask-cli-flaskgroup-examples.html) object.

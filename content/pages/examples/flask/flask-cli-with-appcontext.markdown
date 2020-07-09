@@ -8,7 +8,7 @@ meta: Python example code that shows how to use the with_appcontext callable fro
 
 
 [with_appcontext](https://github.com/pallets/flask/blob/master/src/flask/cli.py)
-is a [Flask](/flask.html) decorator in the flask.cli module that
+is a [Flask](/flask.html) decorator in the `flask.cli` module that
 wraps a callback to guarantee it will be called with a script's
 application context. Any callbacks registered with `app.cli` are
 wrapped with this function by default.

@@ -11,8 +11,8 @@ A Blueprint in [Flask](/flask.html) is
 [a "mold" or template for creating parts of web applications](https://stackoverflow.com/questions/24420857/what-are-flask-blueprints-exactly).
 This
 [Blueprint](https://github.com/pallets/flask/blob/master/src/flask/blueprints.py)
-class within the flask.blueprints module implements that functionality
-for Flask web apps.
+class within the `flask.blueprints` module implements that functionality
+for Flask [web apps](/web-development.html).
 
 
 ## Example 1 from Flask AppBuilder

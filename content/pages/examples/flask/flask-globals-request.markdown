@@ -7,7 +7,18 @@ sidebartitle: flask.globals request
 meta: Python example code that shows how to use the request callable from the flask.globals module of the Flask project.
 
 
-request is a callable within the flask.globals module of the Flask project.
+[request](https://github.com/pallets/flask/blob/master/src/flask/globals.py)
+is function in [Flask](/flask.html)'s `flask.globals` module and is an
+instance of
+[LocalProxy](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/local.py)
+from the [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) library.
+`request` stores data about the active HTTP request and can be used to access
+data about that request.
+
+Note that `request` is typically imported directly from `flask` instead of
+from `flask.globals`, even though it is defined within the `globals` module.
+It's the same import, just less characters to type when you import it
+from `flask`.
 
 
 ## Example 1 from Braintree Flask app

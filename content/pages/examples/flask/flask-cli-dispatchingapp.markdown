@@ -8,7 +8,7 @@ meta: Example code for understanding how to use the DispatchingApp class from th
 
 
 [DispatchingApp](https://github.com/pallets/flask/blob/master/src/flask/cli.py)
-is a class within the flask.cli module of the [Flask](/flask.html) project.
+is a class within the `flask.cli` module of the [Flask](/flask.html) project.
 DispatchingApp is a special application that dispatches to a Flask app
 if it is imported by name in a background thread.
 

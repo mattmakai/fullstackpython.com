@@ -8,7 +8,7 @@ meta: Python example code that shows how to use the has_request_context callable
 
 
 [has_request_context](https://github.com/pallets/flask/blob/master/src/flask/ctx.py)
-is a function within the flask.ctx module that is useful for
+is a function within the `flask.ctx` module that is useful for
 determining if a
 [request context](https://flask.palletsprojects.com/en/1.1.x/reqcontext/)
 is available or not. There is a similar

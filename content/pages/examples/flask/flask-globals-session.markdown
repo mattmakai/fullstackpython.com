@@ -7,7 +7,18 @@ sidebartitle: flask.globals session
 meta: Python example code that shows how to use the session callable from the flask.globals module of the Flask project.
 
 
-session is a callable within the flask.globals module of the Flask project.
+[session](https://github.com/pallets/flask/blob/master/src/flask/globals.py)
+is function in the [Flask](/flask.html) `flask.globals` module and is an
+instance of
+[LocalProxy](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/local.py)
+from the [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) library.
+`session` stores data about the user session for the current request and it
+can be used to access session data.
+
+Note that `session` is usually imported directly from `flask` instead of
+from `flask.globals`, even though it is defined within the `globals` module.
+It's the same function that is imported, but it's less characters to type
+when you leave off the `.globals` part.
 
 
 ## Example 1 from Flask AppBuilder

@@ -8,7 +8,7 @@ meta: Python example code that shows how to use the current_app callable from th
 
 
 [current_app](https://github.com/pallets/flask/blob/master/src/flask/globals.py)
-is function in [Flask](/flask.html)'s flask.globals module and is an
+is function in [Flask](/flask.html)'s `flask.globals` module and is an
 instance of
 [LocalProxy](https://github.com/pallets/werkzeug/blob/master/src/werkzeug/local.py)
 from the Werkzeug framework. `current_app` can be used to access data about the

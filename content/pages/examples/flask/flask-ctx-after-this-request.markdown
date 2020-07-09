@@ -8,7 +8,7 @@ meta: Python example code that shows how to use the after_this_request callable 
 
 
 [after_this_request](https://github.com/pallets/flask/blob/master/src/flask/ctx.py)
-is a function in the flask.ctx module of the [Flask](/flask.html)
+is a function in the `flask.ctx` module of the [Flask](/flask.html)
 [web framework](/web-frameworks.html). The function's name is strongly
 descriptive of what it does and it particularly useful for modifying
 response objects, especially when you want a function other than the

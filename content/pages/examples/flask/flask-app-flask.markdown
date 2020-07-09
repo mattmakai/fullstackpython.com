@@ -8,7 +8,7 @@ meta: Example code for understanding how to use the Flask class from the flask.a
 
 
 [Flask](https://github.com/pallets/flask/blob/master/src/flask/app.py) is
-a class within the flask.app module of the [Flask](/flask.html) framework
+a class within the `flask.app` module of the [Flask](/flask.html) framework
 that implements the [WSGI application specification](/wsgi-servers.html).
 This class acts as a central registry for a significant amount of a Flask
 application's functionality, including URL rounting,
