@@ -32,7 +32,7 @@ during development so they can be addressed immediately.
 
 
 ### Integration testing resources
-* [Integration testing with Context Managers](http://eigenhombre.com/introduction-to-context-managers-in-python.html)
+* [Integration testing with Context Managers](http://eigenhombre.com/2013/04/13/integration-testing-in-python-with-context-managers)
   gives an example of a system that needs integration tests and shows how
   context managers can be used to address the problem.
 
