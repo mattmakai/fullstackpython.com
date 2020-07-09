@@ -7,7 +7,17 @@ sidebartitle: flask.helpers send_file
 meta: Python example code that shows how to use the send_file callable from the flask.helpers module of the Flask project.
 
 
-send_file is a callable within the flask.helpers module of the Flask project.
+[send_file](https://github.com/pallets/flask/blob/master/src/flask/helpers.py)
+is function in the [Flask](/flask.html) `flask.helpers` module.
+`send_file` transfers the contents of a file to the client using the most
+efficient method available and configured in the Flask settings. It
+attempts to guess the correct mimetype to use but it can also be
+explicitly configured.
+
+Note that `send_file` is usually imported directly from `flask` instead of
+from `flask.helpers`, even though it is defined within the `helpers` module.
+It's the same function that is imported, but it's less characters to type
+when you leave off the `.helpers` part.
 
 
 ## Example 1 from Flask-VueJs-Template

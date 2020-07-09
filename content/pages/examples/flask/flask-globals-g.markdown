@@ -12,6 +12,9 @@ an object for storing data during the
 [application context](https://flask.palletsprojects.com/en/1.1.x/appcontext/)
 of a running [Flask](/flask.html) web app.
 
+`g` can also be imported directly from the `flask` module instead
+of `flask.globals`, so you will often see that shortcut in example code.
+
 
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)

@@ -7,7 +7,10 @@ sidebartitle: flask.helpers get_root_path
 meta: Python example code that shows how to use the get_root_path callable from the flask.helpers module of the Flask project.
 
 
-get_root_path is a callable within the flask.helpers module of the Flask project.
+[get_root_path](https://github.com/pallets/flask/blob/master/src/flask/helpers.py)
+is a function within the `flask.helpers` module of the [Flask](/flask.html)
+framework. `get_root_path` returns the filesystem path to a package
+or the current working directly if the path cannot be found.
 
 
 ## Example 1 from indico

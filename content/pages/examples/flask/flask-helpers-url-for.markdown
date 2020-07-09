@@ -7,7 +7,15 @@ sidebartitle: flask.helpers url_for
 meta: Python example code that shows how to use the url_for callable from the flask.helpers module of the Flask project.
 
 
-url_for is a callable within the flask.helpers module of the Flask project.
+[url_for](https://github.com/pallets/flask/blob/master/src/flask/helpers.py)
+is function in the [Flask](/flask.html) `flask.helpers` module.
+`url_for` generates a URL to an endpoint using the method passed in
+as an argument.
+
+Note that `url_for` is typically imported directly from `flask` instead of
+from `flask.helpers`, even though it is defined within the `helpers` module.
+It is the same function that is imported, but it's less characters to type
+when you leave off the `.helpers` part.
 
 
 ## Example 1 from Flask AppBuilder

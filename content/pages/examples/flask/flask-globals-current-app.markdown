@@ -15,6 +15,10 @@ from the Werkzeug framework. `current_app` can be used to access data about the
 running application, including the configuration. This is useful for both
 developers using the framework and ones building extensions for Flask.
 
+You will often see `current_app` imported directly from `flask` instead
+of `flask.globals`. These imports are equivalent because `flask` is simply
+importing `current_app` from `flask.globals`.
+
 
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)

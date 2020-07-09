@@ -7,7 +7,17 @@ sidebartitle: flask.helpers make_response
 meta: Python example code that shows how to use the make_response callable from the flask.helpers module of the Flask project.
 
 
-make_response is a callable within the flask.helpers module of the Flask project.
+[make_response](https://github.com/pallets/flask/blob/master/src/flask/helpers.py)
+is a function in the `flask.helpers` module of the [Flask](/flask.html)
+[web framework](/web-framework.html). `make_response` is for adding additional
+HTTP headers to a response within a view's code. Sometimes views do not return
+a response object so it's unclear how to add headers to the response, which
+is where `make_response` is particularly useful in solving that specific
+problem.
+
+`make_response` can also be imported directly from the `flask` module
+instead of `flask.helpers` so you will typically see that shortcut
+in example code.
 
 
 ## Example 1 from Flask AppBuilder
