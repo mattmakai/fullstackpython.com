@@ -1,13 +1,13 @@
-title: django.utils.translation gettext_lazy code examples
+title: django.utils.translation gettext_lazy Example Code
 category: page
 slug: django-utils-translation-gettext-lazy-examples
-sortorder: 500011499
+sortorder: 500011504
 toc: False
 sidebartitle: django.utils.translation gettext_lazy
-meta: Python example code for the gettext_lazy function from the django.utils.translation module of the Django project.
+meta: Python example code for the gettext_lazy callable from the django.utils.translation module of the Django project.
 
 
-gettext_lazy is a function within the django.utils.translation module of the Django project.
+gettext_lazy is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from wagtail

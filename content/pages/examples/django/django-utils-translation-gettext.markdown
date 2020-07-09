@@ -1,13 +1,13 @@
-title: django.utils.translation gettext code examples
+title: django.utils.translation gettext Example Code
 category: page
 slug: django-utils-translation-gettext-examples
-sortorder: 500011498
+sortorder: 500011503
 toc: False
 sidebartitle: django.utils.translation gettext
-meta: Python example code for the gettext function from the django.utils.translation module of the Django project.
+meta: Python example code for the gettext callable from the django.utils.translation module of the Django project.
 
 
-gettext is a function within the django.utils.translation module of the Django project.
+gettext is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-allauth
@@ -62,6 +62,11 @@ class EmailAwarePasswordResetTokenGenerator(PasswordResetTokenGenerator):
 ## ... source file abbreviated to get to gettext examples ...
 
 
+        username_field = self.fields['username']
+        username_field.max_length = get_username_max_length()
+        username_field.validators.append(
+            validators.MaxLengthValidator(username_field.max_length))
+        username_field.widget.attrs['maxlength'] = str(
             username_field.max_length)
 
         default_field_order = [
@@ -171,6 +176,11 @@ class GuardedModelAdminMixin:
 ## ... source file abbreviated to get to gettext examples ...
 
 
+        context['groups_perms'] = groups_perms
+        context['user_form'] = user_form
+        context['group_form'] = group_form
+
+        request.current_app = self.admin_site.name
 
         return render(request, self.get_obj_perms_manage_template(), context)
 
@@ -216,11 +226,9 @@ class GuardedModelAdminMixin:
     def get_obj_perms_manage_user_template(self):
         if 'grappelli' in settings.INSTALLED_APPS:
             return 'admin/guardian/contrib/grappelli/obj_perms_manage_user.html'
+        return self.obj_perms_manage_user_template
 
-
-## ... source file abbreviated to get to gettext examples ...
-
-
+    def get_obj_perms_user_select_form(self, request):
         return UserManage
 
     def get_obj_perms_group_select_form(self, request):
@@ -274,9 +282,8 @@ class GuardedModelAdminMixin:
 
 
 ## Example 3 from django-taggit
-[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
-([source code](https://github.com/jazzband/django-debug-toolbar) and
-[PyPI page](https://pypi.org/project/django-taggit/)) provides a way
+[django-taggit](https://github.com/jazzband/django-taggit/)
+([PyPI page](https://pypi.org/project/django-taggit/)) provides a way
 to create, store, manage and use tags in a [Django](/django.html) project.
 The code for django-taggit is
 [open source](https://github.com/jazzband/django-taggit/blob/master/LICENSE)
@@ -321,6 +328,11 @@ class TagBase(models.Model):
 ## ... source file abbreviated to get to gettext examples ...
 
 
+            while True:
+                slug = self.slugify(self.name, i)
+                if slug not in slugs:
+                    self.slug = slug
+                    return super().save(*args, **kwargs)
                 i += 1
         else:
             return super().save(*args, **kwargs)
@@ -393,6 +405,11 @@ The code for django-wiki is provided as open source under the
 
 ```python
 # forms.py
+    "SpamProtectionMixin",
+    "CreateRootForm",
+    "MoveForm",
+    "EditForm",
+    "SelectWidgetBootstrap",
     "TextInputPrepend",
     "CreateForm",
     "DeleteForm",
@@ -438,11 +455,10 @@ class WikiSlugField(forms.CharField):
     def __init__(self, *args, **kwargs):
         self.allow_unicode = kwargs.pop("allow_unicode", False)
         if self.allow_unicode:
-
-
-## ... source file abbreviated to get to gettext examples ...
-
-
+            self.default_validators = [
+                validators.validate_unicode_slug,
+                validate_slug_numbers,
+            ]
         super().__init__(*args, **kwargs)
 
 
@@ -551,6 +567,11 @@ class SpamProtectionMixin:
 ## ... source file abbreviated to get to gettext examples ...
 
 
+                if not str(self.presumed_revision) == str(self.initial_revision.id):
+                    newdata = {}
+                    for k, v in data.items():
+                        newdata[k] = v
+                    newdata["current_revision"] = self.initial_revision.id
                     if provided_content:
                         self.presumed_revision = self.initial_revision.id
                     else:
@@ -610,6 +631,11 @@ class SelectWidgetBootstrap(forms.Select):
 ## ... source file abbreviated to get to gettext examples ...
 
 
+
+class DeleteForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        self.article = kwargs.pop("article")
+        self.has_children = kwargs.pop("has_children")
         super().__init__(*args, **kwargs)
 
     confirm = forms.BooleanField(required=False, label=_("Yes, I am sure"))
@@ -707,6 +733,11 @@ def register_admin_urls():
 ## ... source file abbreviated to get to gettext examples ...
 
 
+        reverse('wagtailimages:chooser')
+    )
+
+
+@hooks.register('register_rich_text_features')
 def register_image_feature(features):
     features.register_embed_type(ImageEmbedHandler)
 

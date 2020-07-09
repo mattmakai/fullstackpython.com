@@ -1,13 +1,13 @@
-title: django.utils.translation ungettext code examples
+title: django.utils.translation ungettext Example Code
 category: page
 slug: django-utils-translation-ungettext-examples
-sortorder: 500011506
+sortorder: 500011511
 toc: False
 sidebartitle: django.utils.translation ungettext
-meta: Python example code for the ungettext function from the django.utils.translation module of the Django project.
+meta: Python example code for the ungettext callable from the django.utils.translation module of the Django project.
 
 
-ungettext is a function within the django.utils.translation module of the Django project.
+ungettext is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-filer
@@ -21,6 +21,10 @@ in Django's admin interface. The project's code is available under the
 
 ```python
 # folderadmin.py
+from __future__ import absolute_import, division, unicode_literals
+
+import itertools
+import os
 import re
 from collections import OrderedDict
 
@@ -71,6 +75,11 @@ Image = load_model(FILER_IMAGE_MODEL)
 ## ... source file abbreviated to get to ungettext examples ...
 
 
+                response = self.response_action(request, files_queryset=file_qs, folders_queryset=folder_qs)
+                if response:
+                    return response
+            else:
+                msg = _("Items must be selected in order to perform "
                         "actions on them. No items have been changed.")
                 self.message_user(request, msg)
 
@@ -177,6 +186,11 @@ class SearchChangeList(ChangeList):
 ## ... source file abbreviated to get to ungettext examples ...
 
 
+            "model": self.model,
+            "list_display": list_display,
+            "list_display_links": self.list_display_links,
+            "list_filter": self.list_filter,
+            "date_hierarchy": self.date_hierarchy,
             "search_fields": self.search_fields,
             "list_select_related": self.list_select_related,
             "list_per_page": self.list_per_page,

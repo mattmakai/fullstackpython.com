@@ -1,13 +1,13 @@
-title: django.utils.translation ugettext code examples
+title: django.utils.translation ugettext Example Code
 category: page
 slug: django-utils-translation-ugettext-examples
-sortorder: 500011504
+sortorder: 500011509
 toc: False
 sidebartitle: django.utils.translation ugettext
-meta: Python example code for the ugettext function from the django.utils.translation module of the Django project.
+meta: Python example code for the ugettext callable from the django.utils.translation module of the Django project.
 
 
-ugettext is a function within the django.utils.translation module of the Django project.
+ugettext is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -67,6 +67,11 @@ class CMSPluginBaseMetaclass(forms.MediaDefiningClass):
 ## ... source file abbreviated to get to ugettext examples ...
 
 
+
+    def icon_src(self, instance):
+        return ""
+
+    def icon_alt(self, instance):
         return "%s - %s" % (force_text(self.name), force_text(instance))
 
     def get_fieldsets(self, request, obj=None):

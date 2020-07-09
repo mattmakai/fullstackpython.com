@@ -1,13 +1,13 @@
-title: django.utils.translation LANGUAGE_SESSION_KEY code examples
+title: django.utils.translation LANGUAGE_SESSION_KEY Example Code
 category: page
 slug: django-utils-translation-language-session-key-examples
-sortorder: 500011493
+sortorder: 500011498
 toc: False
 sidebartitle: django.utils.translation LANGUAGE_SESSION_KEY
-meta: Python example code for the LANGUAGE_SESSION_KEY class from the django.utils.translation module of the Django project.
+meta: Python example code for the LANGUAGE_SESSION_KEY constant from the django.utils.translation module of the Django project.
 
 
-LANGUAGE_SESSION_KEY is a class within the django.utils.translation module of the Django project.
+LANGUAGE_SESSION_KEY is a constant within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -37,7 +37,7 @@ class LanguageCookieMiddleware(MiddlewareMixin):
         if hasattr(request, 'session') and DJANGO_2_2:
 ~~            session_language = request.session.get(LANGUAGE_SESSION_KEY, None)
             if session_language and not session_language == language:
-~~                request.session[LANGUAGE_SESSION_KEY] = language
+                request.session[LANGUAGE_SESSION_KEY] = language
                 request.session.save()
         if settings.LANGUAGE_COOKIE_NAME in request.COOKIES and \
                         request.COOKIES[settings.LANGUAGE_COOKIE_NAME] == language:

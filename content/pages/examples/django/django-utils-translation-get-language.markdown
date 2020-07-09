@@ -1,13 +1,13 @@
-title: django.utils.translation get_language code examples
+title: django.utils.translation get_language Example Code
 category: page
 slug: django-utils-translation-get-language-examples
-sortorder: 500011496
+sortorder: 500011501
 toc: False
 sidebartitle: django.utils.translation get_language
-meta: Python example code for the get_language function from the django.utils.translation module of the Django project.
+meta: Python example code for the get_language callable from the django.utils.translation module of the Django project.
 
 
-get_language is a function within the django.utils.translation module of the Django project.
+get_language is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -60,6 +60,11 @@ class PluginPool(object):
 ## ... source file abbreviated to get to get_language examples ...
 
 
+
+        if allowed_plugins:
+            plugins = (plugin for plugin in plugins if plugin.__name__ in allowed_plugins)
+
+        if excluded_plugins:
             plugins = (plugin for plugin in plugins if plugin.__name__ not in excluded_plugins)
 
         if placeholder:
@@ -175,6 +180,11 @@ _I18N_TREES: List[str] = []
 ## ... source file abbreviated to get to get_language examples ...
 
 
+
+    def get_entry(self, entry_name: str, key) -> Any:
+        return self.cache[entry_name].get(key, False)
+
+    def update_entry_value(self, entry_name: str, key: str, value: Any):
         if key not in self.cache[entry_name]:
             self.cache[entry_name][key] = {}
 
@@ -274,6 +284,11 @@ class UserProfile(models.Model):
 ## ... source file abbreviated to get to get_language examples ...
 
 
+    preferred_language = models.CharField(
+        verbose_name=_('preferred language'),
+        max_length=10,
+        help_text=_("Select language for the admin"),
+        default=''
     )
 
     current_time_zone = models.CharField(

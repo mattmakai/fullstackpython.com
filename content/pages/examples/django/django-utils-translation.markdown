@@ -1,13 +1,13 @@
-title: django.utils translation code examples
+title: django.utils translation Example Code
 category: page
 slug: django-utils-translation-examples
-sortorder: 500011417
+sortorder: 500011422
 toc: False
 sidebartitle: django.utils translation
-meta: Python example code for the translation function from the django.utils module of the Django project.
+meta: Python example code for the translation callable from the django.utils module of the Django project.
 
 
-translation is a function within the django.utils module of the Django project.
+translation is a callable within the django.utils module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -71,6 +71,11 @@ from cms.utils.urlutils import admin_reverse
 ## ... source file abbreviated to get to translation examples ...
 
 
+            'has_add_permission': False,
+            'window_close_timeout': 10,
+        }
+        if cancel_clicked:
+            context.update({
                 'cancel': True,
             })
             return render(request, 'admin/cms/page/plugin/confirm_form.html', context)
@@ -172,6 +177,11 @@ class BaseGeometryWidget(forms.Textarea):
 ## ... source file abbreviated to get to translation examples ...
 
 
+
+        if value and value.geom_type.upper() != self.geom_type and self.geom_type != 'GEOMETRY':
+            value = None
+
+        wkt = ''
         if value:
             srid = self.map_srid
             if value.srid != srid:
@@ -271,6 +281,11 @@ from django.contrib.admin.options import IncorrectLookupParameters
 ## ... source file abbreviated to get to translation examples ...
 
 
+
+    ChangeList = model_admin.get_changelist(request)
+
+    change_list_args = [
+        request, model, list_display, list_display_links, list_filter,
         model_admin.date_hierarchy, search_fields, list_select_related,
         model_admin.list_per_page, model_admin.list_max_show_all,
         model_admin.list_editable, model_admin]
@@ -383,6 +398,11 @@ class Article(models.Model):
 ## ... source file abbreviated to get to translation examples ...
 
 
+            return self.current_revision.title
+        obj_name = _("Article without content (%(id)d)") % {"id": self.id}
+        return str(obj_name)
+
+    class Meta:
         permissions = (
             ("moderate", _("Can edit all articles and lock/unlock/restore")),
             ("assign", _("Can change ownership of any article")),

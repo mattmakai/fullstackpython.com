@@ -1,13 +1,13 @@
-title: django.utils.translation ngettext code examples
+title: django.utils.translation ngettext Example Code
 category: page
 slug: django-utils-translation-ngettext-examples
-sortorder: 500011500
+sortorder: 500011505
 toc: False
 sidebartitle: django.utils.translation ngettext
-meta: Python example code for the ngettext function from the django.utils.translation module of the Django project.
+meta: Python example code for the ngettext callable from the django.utils.translation module of the Django project.
 
 
-ngettext is a function within the django.utils.translation module of the Django project.
+ngettext is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-wiki
@@ -75,6 +75,11 @@ class ArticleView(ArticleMixin, TemplateView):
 ## ... source file abbreviated to get to ngettext examples ...
 
 
+
+            for descendant in descendants:
+                descendant.refresh_from_db()
+                dst_path = descendant.path
+                src_path = urljoin(old_path, dst_path[root_len:])
                 src_len = len(src_path)
                 pos = src_path.rfind("/", 0, src_len - 1)
                 slug = src_path[pos + 1 : src_len - 1]
@@ -172,6 +177,11 @@ def register_admin_urls():
 ## ... source file abbreviated to get to ngettext examples ...
 
 
+            request.user, ['add', 'change', 'delete']
+        )
+
+
+@hooks.register('register_admin_search_area')
 def register_images_search_area():
     return ImagesSearchArea(
         _('Images'), reverse('wagtailimages:index'),

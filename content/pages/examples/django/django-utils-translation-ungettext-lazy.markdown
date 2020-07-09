@@ -1,13 +1,13 @@
-title: django.utils.translation ungettext_lazy code examples
+title: django.utils.translation ungettext_lazy Example Code
 category: page
 slug: django-utils-translation-ungettext-lazy-examples
-sortorder: 500011507
+sortorder: 500011512
 toc: False
 sidebartitle: django.utils.translation ungettext_lazy
-meta: Python example code for the ungettext_lazy function from the django.utils.translation module of the Django project.
+meta: Python example code for the ungettext_lazy callable from the django.utils.translation module of the Django project.
 
 
-ungettext_lazy is a function within the django.utils.translation module of the Django project.
+ungettext_lazy is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-angular

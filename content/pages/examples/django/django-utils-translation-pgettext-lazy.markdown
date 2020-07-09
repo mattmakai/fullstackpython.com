@@ -1,13 +1,13 @@
-title: django.utils.translation pgettext_lazy code examples
+title: django.utils.translation pgettext_lazy Example Code
 category: page
 slug: django-utils-translation-pgettext-lazy-examples
-sortorder: 500011503
+sortorder: 500011508
 toc: False
 sidebartitle: django.utils.translation pgettext_lazy
-meta: Python example code for the pgettext_lazy function from the django.utils.translation module of the Django project.
+meta: Python example code for the pgettext_lazy callable from the django.utils.translation module of the Django project.
 
 
-pgettext_lazy is a function within the django.utils.translation module of the Django project.
+pgettext_lazy is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-wiki
@@ -30,6 +30,11 @@ The code for django-wiki is provided as open source under the
 
 ```python
 # forms.py
+    "SpamProtectionMixin",
+    "CreateRootForm",
+    "MoveForm",
+    "EditForm",
+    "SelectWidgetBootstrap",
     "TextInputPrepend",
     "CreateForm",
     "DeleteForm",
@@ -80,6 +85,11 @@ class WikiSlugField(forms.CharField):
 ## ... source file abbreviated to get to pgettext_lazy examples ...
 
 
+    slug = WikiSlugField(max_length=models.URLPath.SLUG_MAX_LENGTH)
+    redirect = forms.BooleanField(
+        label=_("Redirect pages"),
+        help_text=_("Create a redirect page for every moved article?"),
+        required=False,
     )
 
     def clean(self):
@@ -129,6 +139,11 @@ class EditForm(forms.Form, SpamProtectionMixin):
 
 ## ... source file abbreviated to get to pgettext_lazy examples ...
 
+
+    def get_context(self, name, value, attrs):
+        context = super().get_context(name, value, attrs)
+        context["prepend"] = mark_safe(self.prepend)
+        return context
 
 
 class CreateForm(forms.Form, SpamProtectionMixin):

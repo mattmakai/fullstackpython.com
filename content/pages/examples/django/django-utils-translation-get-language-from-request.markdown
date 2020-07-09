@@ -1,13 +1,13 @@
-title: django.utils.translation get_language_from_request code examples
+title: django.utils.translation get_language_from_request Example Code
 category: page
 slug: django-utils-translation-get-language-from-request-examples
-sortorder: 500011497
+sortorder: 500011502
 toc: False
 sidebartitle: django.utils.translation get_language_from_request
-meta: Python example code for the get_language_from_request function from the django.utils.translation module of the Django project.
+meta: Python example code for the get_language_from_request callable from the django.utils.translation module of the Django project.
 
 
-get_language_from_request is a function within the django.utils.translation module of the Django project.
+get_language_from_request is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-angular
@@ -58,6 +58,11 @@ def djng_urls(context, *namespaces):
 ## ... source file abbreviated to get to get_language_from_request examples ...
 
 
+@register.tag
+def angularjs(parser, token):
+    bits = token.contents.split()
+    if len(bits) < 2:
+        bits.append('1')
     values = [parser.compile_filter(bit) for bit in bits[1:]]
     django_nodelist = parser.parse(('endangularjs',))
     angular_nodelist = NodeList()
@@ -141,6 +146,11 @@ def _clean_redirect_url(redirect_url, language):
 ## ... source file abbreviated to get to get_language_from_request examples ...
 
 
+            response.xframe_options_exempt = True
+            response._headers = headers
+            max_age = int(
+                (expires_datetime - response_timestamp).total_seconds() + 0.5)
+            patch_cache_control(response, max_age=max_age)
             return response
 
     site = get_current_site()

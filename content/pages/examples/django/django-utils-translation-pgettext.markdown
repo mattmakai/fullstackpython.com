@@ -1,13 +1,13 @@
-title: django.utils.translation pgettext code examples
+title: django.utils.translation pgettext Example Code
 category: page
 slug: django-utils-translation-pgettext-examples
-sortorder: 500011502
+sortorder: 500011507
 toc: False
 sidebartitle: django.utils.translation pgettext
-meta: Python example code for the pgettext function from the django.utils.translation module of the Django project.
+meta: Python example code for the pgettext callable from the django.utils.translation module of the Django project.
 
 
-pgettext is a function within the django.utils.translation module of the Django project.
+pgettext is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-allauth
@@ -62,6 +62,11 @@ class EmailAwarePasswordResetTokenGenerator(PasswordResetTokenGenerator):
 ## ... source file abbreviated to get to pgettext examples ...
 
 
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        super(LoginForm, self).__init__(*args, **kwargs)
+        if app_settings.AUTHENTICATION_METHOD == AuthenticationMethod.EMAIL:
+            login_widget = forms.TextInput(attrs={'type': 'email',
                                                   'placeholder':
                                                   _('E-mail address'),
                                                   'autofocus': 'autofocus'})

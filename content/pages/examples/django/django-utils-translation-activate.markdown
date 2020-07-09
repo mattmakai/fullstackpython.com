@@ -1,13 +1,13 @@
-title: django.utils.translation activate code examples
+title: django.utils.translation activate Example Code
 category: page
 slug: django-utils-translation-activate-examples
-sortorder: 500011494
+sortorder: 500011499
 toc: False
 sidebartitle: django.utils.translation activate
-meta: Python example code for the activate function from the django.utils.translation module of the Django project.
+meta: Python example code for the activate callable from the django.utils.translation module of the Django project.
 
 
-activate is a function within the django.utils.translation module of the Django project.
+activate is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -60,6 +60,11 @@ class PluginPool(object):
 ## ... source file abbreviated to get to activate examples ...
 
 
+    def get_text_enabled_plugins(self, placeholder, page):
+        plugins = set(self.get_all_plugins(placeholder, page))
+        plugins.update(self.get_all_plugins(placeholder, page, 'text_only_plugins'))
+        return sorted((p for p in plugins if p.text_enabled),
+                      key=attrgetter('module', 'name'))
 
     def get_plugin(self, name):
         self.discover_plugins()
@@ -159,6 +164,11 @@ def test_items_hook(template_render_tag, template_context, common_tree):
 
 ## ... source file abbreviated to get to activate examples ...
 
+
+    register_items_hook(None)  # Reset.
+
+
+def test_i18n(build_tree, template_render_tag, template_context):
 
     from sitetree.toolbox import register_i18n_trees
 

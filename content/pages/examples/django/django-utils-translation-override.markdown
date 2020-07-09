@@ -1,13 +1,13 @@
-title: django.utils.translation override code examples
+title: django.utils.translation override Example Code
 category: page
 slug: django-utils-translation-override-examples
-sortorder: 500011501
+sortorder: 500011506
 toc: False
 sidebartitle: django.utils.translation override
-meta: Python example code for the override function from the django.utils.translation module of the Django project.
+meta: Python example code for the override callable from the django.utils.translation module of the Django project.
 
 
-override is a function within the django.utils.translation module of the Django project.
+override is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -58,6 +58,11 @@ def applications_page_check(request, current_page=None, path=None):
 ## ... source file abbreviated to get to override examples ...
 
 
+    from cms.models import Title
+
+    included = []
+
+    title_qs = Title.objects.public().filter(page__node__site=site)
 
     hooked_applications = OrderedDict()
 
@@ -154,6 +159,11 @@ def send_mail(subject, message, recipient_list, from_email=None, **kwargs):
 ## ... source file abbreviated to get to override examples ...
 
 
+    email_recipients = [
+        recipient for recipient in recipients
+        if recipient.email and recipient.pk != excluded_user_id and getattr(
+            UserProfile.get_for_user(recipient),
+            notification + '_notifications'
         )
     ]
 

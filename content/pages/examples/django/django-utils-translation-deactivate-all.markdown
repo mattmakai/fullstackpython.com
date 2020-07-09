@@ -1,13 +1,13 @@
-title: django.utils.translation deactivate_all code examples
+title: django.utils.translation deactivate_all Example Code
 category: page
 slug: django-utils-translation-deactivate-all-examples
-sortorder: 500011495
+sortorder: 500011500
 toc: False
 sidebartitle: django.utils.translation deactivate_all
-meta: Python example code for the deactivate_all function from the django.utils.translation module of the Django project.
+meta: Python example code for the deactivate_all callable from the django.utils.translation module of the Django project.
 
 
-deactivate_all is a function within the django.utils.translation module of the Django project.
+deactivate_all is a callable within the django.utils.translation module of the Django project.
 
 
 ## Example 1 from django-cms
@@ -60,6 +60,11 @@ class PluginPool(object):
 ## ... source file abbreviated to get to deactivate_all examples ...
 
 
+        if allowed_plugins:
+            plugins = (plugin for plugin in plugins if plugin.__name__ in allowed_plugins)
+
+        if excluded_plugins:
+            plugins = (plugin for plugin in plugins if plugin.__name__ not in excluded_plugins)
 
         if placeholder:
             plugins = (plugin for plugin in plugins
@@ -160,6 +165,11 @@ def test_items_hook(template_render_tag, template_context, common_tree):
 ## ... source file abbreviated to get to deactivate_all examples ...
 
 
+
+    activate('en')
+    result = template_render_tag('sitetree', 'sitetree_tree from "i18tree"', template_context())
+
+    assert '/url_default/' in result
     assert 'My title' in result
 
     activate('ru')
