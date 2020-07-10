@@ -7,7 +7,11 @@ sidebartitle: flask.signals got_request_exception
 meta: Python example code that shows how to use the got_request_exception callable from the flask.signals module of the Flask project.
 
 
-got_request_exception is a callable within the flask.signals module of the Flask project.
+[got_request_exception](https://github.com/pallets/flask/blob/master/src/flask/signals.py)
+is a signal defined in the [Flask](/flask.html) project's
+`flask.signals` module that interrupts the WSGI flow when there is an
+issue with the HTTP request. It can also be thrown by your own
+view functions if there is an error and you want to raise it via a signal.
 
 
 ## Example 1 from flask-restx

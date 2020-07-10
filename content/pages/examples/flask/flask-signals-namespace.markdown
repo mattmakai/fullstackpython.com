@@ -7,7 +7,16 @@ sidebartitle: flask.signals Namespace
 meta: Example code for understanding how to use the Namespace class from the flask.signals module of the Flask project.
 
 
-Namespace is a class within the flask.signals module of the Flask project.
+[Namespace](https://github.com/pallets/flask/blob/master/src/flask/signals.py)
+is a class used within the `flask.signals` module, but it is
+actually imported from the
+[Blinker project](https://github.com/jek/blinker). Blinker
+is a fast dispatching system for event subscriptions, also known as
+"signals". [Flask](/flask.html) uses this library instead of
+implementing its own event subscription signaling model.
+[Namespace is defined within Blinker](https://github.com/jek/blinker/blob/master/blinker/base.py)
+as a mapping of signal names to signals, and it serves the
+same purpose in the Flask project.
 
 
 ## Example 1 from flask-login

@@ -7,7 +7,16 @@ sidebartitle: flask.templating render_template
 meta: Python example code that shows how to use the render_template callable from the flask.templating module of the Flask project.
 
 
-render_template is a callable within the flask.templating module of the Flask project.
+[render_template](https://github.com/pallets/flask/blob/master/src/flask/templating.py)
+is a [Flask](/flask.html) function from the `flask.templating` package.
+`render_template` is used to generate output from a
+[template file based on the Jinja2 engine](/template-engines.html)
+that is found in the application's templates folder.
+
+Note that `render_template` is typically imported directly from the `flask`
+package instead of from `flask.templating`. It is the same function that is
+imported, but there are less characters to type when you leave off
+the `.templating` part.
 
 
 ## Example 1 from Braintree Flask app
