@@ -15,6 +15,12 @@ application's functionality, including URL rounting,
 [template configurations](/template-engines.html), and handling view functions.
 
 
+These subjects go along with the `Flask` code examples:
+
+* [web development](/web-development.html) and [web design](/web-design.html)
+* [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
+
+
 ## Example 1 from Braintree Flask app
 [Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)
 demonstrates how to incorporate this payment provider's

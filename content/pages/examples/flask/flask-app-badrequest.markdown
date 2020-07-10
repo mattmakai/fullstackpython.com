@@ -16,6 +16,12 @@ at runtime when an
 that accepts POSTs.
 
 
+These topics are also useful while reading the `BadRequest` examples:
+
+* [web development](/web-development.html) and [web design](/web-design.html)
+* [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
+
+
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)

@@ -18,6 +18,12 @@ from [requests](/flask-globals-request-examples.html) and responses for
 Flask web applications.
 
 
+These topics are also useful while reading the `Headers` examples:
+
+* [web development](/web-development.html) and [web design](/web-design.html)
+* [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
+
+
 ## Example 1 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build

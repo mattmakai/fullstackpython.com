@@ -16,6 +16,12 @@ situations such as extending the Flask source code, rather than
 a standard way of interacting with the framework.
 
 
+You should read up on these subjects along with these `View` examples:
+
+* [web development](/web-development.html) and [web design](/web-design.html)
+* [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)
+
+
 ## Example 1 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based

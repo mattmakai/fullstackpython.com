@@ -15,6 +15,12 @@ which is useful for checking if an HTTP method is valid by comparing it
 against the items in this set.
 
 
+These topics are also useful while reading the `http_method_funcs` examples:
+
+* [web development](/web-development.html) and [web design](/web-design.html)
+* [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)
+
+
 ## Example 1 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
