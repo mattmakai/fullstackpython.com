@@ -7,7 +7,12 @@ sidebartitle: flask.views MethodView
 meta: Example code for understanding how to use the MethodView class from the flask.views module of the Flask project.
 
 
-MethodView is a class within the flask.views module of the Flask project.
+[MethodView](https://github.com/pallets/flask/blob/master/src/flask/views.py)
+is a class within the `flask.views` module of the [Flask](/flask.html)
+project. `MethodView` is a
+[Python Metaclass](https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python)
+that determines the methods, such as GET, POST, PUT, etc, that
+a view defines.
 
 
 ## Example 1 from FlaskBB

@@ -7,7 +7,13 @@ sidebartitle: flask.views View
 meta: Example code for understanding how to use the View class from the flask.views module of the Flask project.
 
 
-View is a class within the flask.views module of the Flask project.
+[View](https://github.com/pallets/flask/blob/master/src/flask/views.py)
+is a class within the `flask.views` module of the [Flask](/flask.html)
+project. `View` provides an alternative way to use view functions
+by subclassing this class and implementing `dispatch_request`
+for the routing system. This is typically only used in more advanced
+situations such as extending the Flask source code, rather than
+a standard way of interacting with the framework.
 
 
 ## Example 1 from FlaskBB

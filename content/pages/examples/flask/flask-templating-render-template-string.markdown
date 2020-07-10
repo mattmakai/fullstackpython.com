@@ -7,7 +7,20 @@ sidebartitle: flask.templating render_template_string
 meta: Python example code that shows how to use the render_template_string callable from the flask.templating module of the Flask project.
 
 
-render_template_string is a callable within the flask.templating module of the Flask project.
+[render_template_string](https://github.com/pallets/flask/blob/master/src/flask/templating.py)
+is a [Flask](/flask.html) function from the `flask.templating` package.
+`render_template` is used to generate output from a string
+that is passed in rather than from a file in the templates folder.
+
+Note that `render_template_string` is sometimes imported from the `flask`
+package instead of from `flask.templating`. It is the same function that is
+imported, but there are less characters to type when you leave off
+the `.templating` part.
+Understanding the following concepts are useful when coding projects that use `render_template_string`:
+
+
+* [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
+* [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
 
 
 ## Example 1 from Flask-User

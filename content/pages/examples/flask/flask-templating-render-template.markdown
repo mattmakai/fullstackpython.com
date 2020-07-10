@@ -17,6 +17,11 @@ Note that `render_template` is typically imported directly from the `flask`
 package instead of from `flask.templating`. It is the same function that is
 imported, but there are less characters to type when you leave off
 the `.templating` part.
+Understanding the following concepts are useful when coding projects that use `render_template`:
+
+
+* [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
+* [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
 
 
 ## Example 1 from Braintree Flask app
