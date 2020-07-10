@@ -7,7 +7,12 @@ sidebartitle: flask.json JSONEncoder
 meta: Example code for understanding how to use the JSONEncoder class from the flask.json module of the Flask project.
 
 
-JSONEncoder is a class within the flask.json module of the Flask project.
+[JSONEncoder](https://github.com/pallets/flask/blob/master/src/flask/json/__init__.py)
+is a class within the [Flask](/flask.html) project under the `flask.json`
+module. `JSONEncoder` is the default [JSON](https://www.json.org/json-en.html)
+encoder for Flask and was designed to handle more types than Python's
+standard library [json](https://docs.python.org/3/library/json.html) module.
+
 
 
 ## Example 1 from Flask-Security-Too

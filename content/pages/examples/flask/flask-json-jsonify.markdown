@@ -7,7 +7,17 @@ sidebartitle: flask.json jsonify
 meta: Python example code that shows how to use the jsonify callable from the flask.json module of the Flask project.
 
 
-jsonify is a callable within the flask.json module of the Flask project.
+[jsonify](https://github.com/pallets/flask/blob/master/src/flask/json/__init__.py)
+is a function in [Flask](/flask.html)'s `flask.json` module. `jsonify`
+serializes data to
+[JavaScript Object Notation (JSON)](https://www.json.org/json-en.html) format,
+wraps it in a
+[Response](https://blog.miguelgrinberg.com/post/customizing-the-flask-response-class)
+object with the application/json mimetype.
+
+Note that `jsonify` is sometimes imported directly from the `flask` module
+instead of from `flask.json`. It is the same function that is imported, but
+there are less characters to type when you leave off the `.json` part.
 
 
 ## Example 1 from Flask AppBuilder

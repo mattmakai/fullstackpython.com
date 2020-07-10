@@ -7,7 +7,12 @@ sidebartitle: flask.sessions SessionMixin
 meta: Example code for understanding how to use the SessionMixin class from the flask.sessions module of the Flask project.
 
 
-SessionMixin is a class within the flask.sessions module of the Flask project.
+[SessionMixin](https://github.com/pallets/flask/blob/master/src/flask/sessions.py)
+is a class used with [Flask](/flask.html) projects that is defined in
+the `flask.sessions` module. `SessionMixin` expands a standard
+[Python dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+with [session](https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions)
+attributes.
 
 
 ## Example 1 from Flask-SocketIO

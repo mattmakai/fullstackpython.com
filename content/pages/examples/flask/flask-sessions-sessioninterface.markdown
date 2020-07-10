@@ -7,7 +7,10 @@ sidebartitle: flask.sessions SessionInterface
 meta: Example code for understanding how to use the SessionInterface class from the flask.sessions module of the Flask project.
 
 
-SessionInterface is a class within the flask.sessions module of the Flask project.
+[SessionInterface](https://github.com/pallets/flask/blob/master/src/flask/sessions.py)
+is a class used with [Flask](/flask.html) projects that is defined in
+the `flask.sessions` module. `SessionInterface` is the basic interface
+that must be implemented to replace the default session interface.
 
 
 ## Example 1 from tedivms-flask

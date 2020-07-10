@@ -7,7 +7,11 @@ sidebartitle: flask.sessions BadSignature
 meta: Example code for understanding how to use the BadSignature class from the flask.sessions module of the Flask project.
 
 
-BadSignature is a class within the flask.sessions module of the Flask project.
+[BadSignature](https://github.com/pallets/flask/blob/master/src/flask/sessions.py)
+is a class often imported into [Flask](/flask.html) applications from
+the `flask.sessions` module. `BadSignature` is actually defined in the
+[itsdangerous](https://github.com/pallets/itsdangerous) project and
+imported into Flask sessions for applications to use.
 
 
 ## Example 1 from FlaskBB
