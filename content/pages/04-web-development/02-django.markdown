@@ -21,7 +21,7 @@ For example,
 [template engine](/django-templates.html),
 an [object-relational mapper](/object-relational-mappers-orms.html) (ORM),
 and [database schema migrations](https://docs.djangoproject.com/en/dev/topics/migrations/)
-(as of version 1.7) are all included with the [Django framework](https://pypi.org/project/Django/). 
+are all included with the [Django framework](https://pypi.org/project/Django/). 
 Compare that included functionality to the Flask framework which requires a 
 separate library such as 
 [Flask-Login](https://flask-login.readthedocs.org/en/latest/)
@@ -315,15 +315,38 @@ to handle these files properly.
   shows how to configure Django to load and serve up static and media files, public and private, via an Amazon S3 bucket.
 
 
+## Django project templates
+Project templates, not to be confused with a 
+[template engine](/template-engines.html), generate boilerplate code for
+a base Django project plus optional libraries that are often used when 
+developing web applications.
+
+* [Caktus Group's Django project template](https://github.com/caktus/django-project-template) 
+  is Django 2.2+ ready.
+
+* [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
+  project template from Daniel Greenfeld, for use with Audrey Roy's 
+  [Cookiecutter](https://github.com/audreyr/cookiecutter). The template results
+  are Heroku deployment-ready.
+
+* [Two Scoops Django project template](https://github.com/twoscoops/django-twoscoops-project)
+  is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
+  described in the Two Scoops of Django book.
+
+* [Sugardough](https://github.com/mozilla/sugardough) is a Django project
+  template from Mozilla that is compatible with cookiecutter.
+
+
 ## Open source Django example projects
+Reading open source code can be useful when you are trying to figure
+out how to build your own projects. This is a short list of some
+real-world example applications, and many more can be found on the
+[Django example projects and code](/django-code-examples.html) page.
+
 * [Browser calls with Django and Twilio](https://www.twilio.com/docs/howto/walkthrough/browser-calls/python/django)
   shows how to build a web app with Django and 
   [Twilio Client](https://www.twilio.com/client) to turn a user's web 
   browser into a full-fledged phone. Pretty awesome!
-
-* [Txt 2 React](https://github.com/mattmakai/txt2react) is a full Django web
-  app that allows audiences to text in during a presentation with feedback
-  or questions.
 
 * [Openduty](https://github.com/ustream/openduty) is a website status checking
   and alert system similar to PagerDuty.
@@ -342,47 +365,8 @@ to handle these files properly.
   tool built with Django as the backend and AngularJS as the front end.
 
 
-## Django project templates
-Project templates, not to be confused with a 
-[template engine](/template-engines.html), generate boilerplate code for
-a base Django project plus optional libraries that are often used when 
-developing web applications.
-
-* [Caktus Group's Django project template](https://github.com/caktus/django-project-template) 
-  is Django 1.6+ ready.
-
-* [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django) is a 
-  project template from Daniel Greenfeld, for use with Audrey Roy's 
-  [Cookiecutter](https://github.com/audreyr/cookiecutter). The template results
-  are Heroku deployment-ready.
-
-* [Two Scoops Django project template](https://github.com/twoscoops/django-twoscoops-project)
-  is also from the PyDanny and Audrey Roy. This one provides a quick scaffold
-  described in the Two Scoops of Django book.
-
-* [Sugardough](https://github.com/mozilla/sugardough) is a Django project
-  template from Mozilla that is compatible with cookiecutter.
-
-
-## Django learning checklist
-1. [Install Django](https://docs.djangoproject.com/en/dev/topics/install/) on
-   your local development machine.
-
-1. Work through the initial 
-   ["polls" tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/).
- 
-1. Build a few more simple applications using the tutorial resources found
-   in the "Django resources" section.
-
-1. Start coding your own Django project with help from the 
-   [official documentation](https://docs.djangoproject.com/en/dev/) and 
-   resource links below. You'll make plenty of mistakes which is critical
-   on your path to learning the right way to build applications.
-
-1. Read [2 Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342) 
-   to understand Django good practices and learn better ways of building 
-   Django web applications.
-
-1. Move on to the [deployment section](/deployment.html) to get your Django 
-   project on the web.
-
+## Open source code to learn Django
+There are many open source projects that rely on Django.
+One of the best ways to learn how to use this framework is to read
+how other projects use it in real-world code. This section lists
+these code examples by class and method in Django's code base.

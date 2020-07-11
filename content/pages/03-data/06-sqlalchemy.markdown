@@ -222,7 +222,7 @@ implementations.
   based on various developers' experiences.
 
 
-### Open source code for using SQLAlchemy
+## Open source code for learning SQLAlchemy
 Many open source projects rely on SQLAlchemy. A great way to learn
 how to properly work with this tool is to read the code that shows
 how those projects use SQLAlchemy. This section alphabetically lists 

@@ -337,7 +337,7 @@ ways to structure your code.
   in the JavaScript world.
 
 
-### Open source code for using Flask
+## Open source code for learning Flask
 There are many open source projects that rely on Flask to operate.
 One of the best ways to learn how to use this framework is to read
 how other projects use it in real-world code. This section lists
