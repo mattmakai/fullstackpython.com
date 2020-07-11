@@ -470,6 +470,17 @@ The project is open sourced under the
 [Encode OSS Ltd. license](https://github.com/encode/django-rest-framework/blob/master/LICENSE.md).
 
 
+### django-rq
+[django-rq](https://github.com/rq/django-rq)
+([PyPI package information](https://pypi.org/project/django-rq/))
+is an [RQ](/redis-queue-rq.html)-based [task queue](/task-queues.html)
+that integrates with [Django](/django.html) as an app. This project
+is useful when you need a lightweight task queue and do not want
+to go through configuring [Celery](/celery.html) in your project.
+django-rq is open sourced under the
+[MIT license](https://github.com/rq/django-rq/blob/master/LICENSE.txt).
+
+
 ### django-simple-task
 [django-simple-task](https://github.com/ericls/django-simple-task) 
 ([project documentation](https://django-simple-task.readthedocs.io/)
