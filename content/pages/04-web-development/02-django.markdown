@@ -364,6 +364,10 @@ real-world example applications, and many more can be found on the
 * [Taiga](https://github.com/taigaio/taiga-back) is a project management
   tool built with Django as the backend and AngularJS as the front end.
 
+* [Chowist](https://github.com/huangsam/chowist) is a web application
+  that replicates core features of Yelp and adds a couple more bells
+  and whistles.
+
 
 ## Open source code to learn Django
 There are many open source projects that rely on Django.
