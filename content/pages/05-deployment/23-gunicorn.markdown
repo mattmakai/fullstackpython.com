@@ -115,7 +115,7 @@ perform the request handling. Each worker is independent of the controller.
   screenshots along the way with what to expect while you are configuring
   the deployment server.
 
-* The [Django](https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/gunicorn/) 
+* The [Django](https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/gunicorn/) 
   and [Flask](http://flask.pocoo.org/docs/latest/deploying/wsgi-standalone/)
   documentation each contain instructions for deploying the respective
   frameworks with Gunicorn.

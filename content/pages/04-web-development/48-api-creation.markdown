@@ -50,7 +50,7 @@ applications through machine-to-machine communication.
 * [Falcon](http://falconframework.org/) is a fast and lightweight framework
   well suited to create RESTful APIs. 
 
-* [Hug](https://github.com/timothycrosley/hug) built on-top of Falcon and Python3 with an aim to make developing Python driven APIs as simple as possible, but no simpler. Hug leverages Python3 annotations to automatically validate and convert incoming and outgoing API parameters.
+* [Hug](https://github.com/hugapi/hug) built on-top of Falcon and Python3 with an aim to make developing Python driven APIs as simple as possible, but no simpler. Hug leverages Python3 annotations to automatically validate and convert incoming and outgoing API parameters.
 
 * [Pycnic](http://pycnic.nullism.com) is a JSON-API-only framework designed 
   with REST in mind. 
@@ -218,10 +218,6 @@ equivalent of browser testing in the web application world.
   framework was lacking so they created 
   [Serpy](https://github.com/clarkduvall/serpy) and 
   [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
-
-* [Designing a Web API](http://restlet.com/company/blog/2015/03/16/api-design-designing-a-web-api/)
-  gives a detailed walkthrough of concepts and design decisions you need
-  to make when building an API.
 
 * Microsoft's 
   [REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)

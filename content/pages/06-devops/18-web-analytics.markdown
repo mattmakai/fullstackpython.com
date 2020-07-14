@@ -109,10 +109,6 @@ application before taking some action, such as purchasing your service.
   is not for everyone but it is really useful if you want to avoid the Google
   data trap.
 
-* This beginner's guide to 
-  [math and stats behind web analytics](http://www.seotakeaways.com/beginners-guide-maths-stats-web-analytics/)
-  provides some context for understanding and reasoning about web traffic. 
-
 * [An Analytics Primer for Developers](https://hacks.mozilla.org/2015/03/an-analytics-primer-for-developers/)
   by Mozilla explains what to track, choosing an analytics platform and how
   to serve up the analytics JavaScript asynchronously.

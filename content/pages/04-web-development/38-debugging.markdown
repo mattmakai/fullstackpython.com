@@ -86,7 +86,7 @@ an overview of the debugging ecosystem for Python.
   provides a list of tools such as pdb and its derivatives ipdb, pudb and
   pdb++ along with how they can be used in the hunt for defects.
 
-* [Profiling Python web applications with visual tools](https://mitjafelicijan.com/profiling-python-web-applications-with-visual-tools)
+* [Profiling Python web applications with visual tools](https://mitjafelicijan.com/profiling-python-web-applications-with-visual-tools.html)
   details a configuration for visualizing code execution using 
   [KCachegrind](http://kcachegrind.sourceforge.net/html/Home.html).
 

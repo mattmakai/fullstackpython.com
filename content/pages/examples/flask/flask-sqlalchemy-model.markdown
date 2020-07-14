@@ -7,7 +7,7 @@ sidebartitle: flask_sqlalchemy.SQLAlchemy Model
 meta: Python code examples for the Model class within the flask_sqlalchemy.SQLAlchemy module of the Flask-SQLAlchemy project. 
 
 
-[flask_sqlalchemy.SQLAlchemy.Model](https://github.com/pallets/flask-sqlalchemy/blob/master/flask_sqlalchemy/model.py)
+[flask_sqlalchemy.SQLAlchemy.Model](https://github.com/pallets/flask-sqlalchemy/blob/master/src/flask_sqlalchemy/model.py)
 is a class within the
 [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)
 project. Flask-SQLAlchemy makes it easier to use SQLAlchemy within

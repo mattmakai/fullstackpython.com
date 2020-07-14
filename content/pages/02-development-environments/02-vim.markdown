@@ -142,11 +142,6 @@ to get started with these tutorials.
 * [Vim Adventures](http://vim-adventures.com/) is a cute, fun browser-based
   game that helps you learn Vim commands by playing through the adventure.
 
-* In [Vim: revisited](http://mislav.uniqpath.com/2011/12/vim-revisited/) the
-  author explains his on-again off-again relationship with using Vim. He then
-  shows how he configures and uses the editor so it sticks as his primary
-  code editing tool.
-
 * [Things About Vim I Wish I Knew Earlier](https://blog.petrzemek.net/2016/04/06/things-about-vim-i-wish-i-knew-earlier/)
   explores the lessons one developer learned while exclusively using Vim
   for several years. The author includes using relative instead of absolute
@@ -163,10 +158,6 @@ to get started with these tutorials.
 These are a few resources for learning how to structure a `.vimrc` file. I
 recommend adding configuration options one at a time to test them
 individually instead of going whole hog with a Vimrc you are unfamiliar with.
-
-* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
-  detailed overview and opinionated guide to configuring Vim. Highly
-  recommended for new and experienced Vim users.
 
 * [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
   and explains many Python-specific .vimrc options.

@@ -73,7 +73,7 @@ test runners, coverage reports and related libraries.
   provides examples for how to improve your testing environment such
   as using a new test harness and getting your test suite to run fast.
 
-* [Getting started with Pytest](https://jacobian.org/writing/getting-started-with-pytest/)
+* [Getting started with Pytest](https://jacobian.org/2016/nov/27/getting-started-with-pytest/)
   goes over some code challenges as examples for how to use Pytest in
   your own projects.
 

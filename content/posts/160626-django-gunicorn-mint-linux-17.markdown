@@ -32,7 +32,7 @@ their current versions as of June 2016 are:
 * [Python](/why-use-python.html) version 
   [3.5.1](https://www.python.org/downloads/release/python-351/)
 * [Django](/django.html) web framework version 
-  [1.9.7](https://docs.djangoproject.com/en/1.9/releases/1.9/)
+  1.9.7
 * [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) version 
   [19.6](http://docs.gunicorn.org/en/stable/news.html)
 

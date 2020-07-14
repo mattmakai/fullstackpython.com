@@ -35,10 +35,6 @@ as [Django](/django.html).
   [asycnio](https://docs.python.org/3/library/asyncio.html) if it were
   coded with Python 3.
 
-* [How to Install and Use Cassandra on Django](http://www.slothparadise.com/how-to-install-and-use-cassandra-on-django/)
-  instructs how to use Cassandra with Django 1.8 but it should still be
-  relevant for newer Django versions as well.
-
 * [Using Cassandra with Python and uWSGI](http://blog.turret.io/using-cassandra-with-python-and-uwsgi/)
   gives some short example code for connecting to a Cassandra cluster outside
   the HTTP request-response cycle to prevent timeouts and blocking issues with

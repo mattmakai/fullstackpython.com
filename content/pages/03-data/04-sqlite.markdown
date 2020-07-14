@@ -148,11 +148,6 @@ you are having with SQLite rather than going through a general tutorial.
   [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
   to implement virtual tables and aggregates on top of SQLite.
 
-* [Use SQLite with Django On AWS Lambda with Zappa](https://blog.zappa.io/posts/use-sqlite-with-django-on-aws-lambda-with-zappa)
-  provides an example `dev_settings.py` file for 
-  locally testing a [Django](/django.html) application intended for 
-  [AWS Lambda](/aws-lambda.html).
-
 * [SQLite Database Authorization and Access Control with Python](http://charlesleifer.com/blog/sqlite-database-authorization-and-access-control-with-python/)
   covers how to control access to the SQLite database connection and
   file even though SQLite normally allows unauthorized access by design.

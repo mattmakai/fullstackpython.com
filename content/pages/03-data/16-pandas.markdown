@@ -75,10 +75,6 @@ is a data structures and analysis library.
   [Tabula](https://tabula.technology/) library that makes it easier to
   extract table data from PDF files.
 
-* [Analyzing Browser History Using Python and Pandas](https://applecrazy.github.io/blog/2017-11-12/analyzing-browser-hist-using-python)
-  shows how to take data from Google Chrome and start to visualize it
-  with pandas and [matplotlib](/matplotlib.html).
-
 * [Time Series Forecast Case Study with Python: Monthly Armed Robberies in Boston](https://machinelearningmastery.com/time-series-forecast-case-study-python-monthly-armed-robberies-boston/)
   walks through the data wrangling, analysis and visualization steps
   with a public data set of murders in Boston from 1966 to 1975. This

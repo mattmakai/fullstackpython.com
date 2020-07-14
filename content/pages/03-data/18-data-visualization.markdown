@@ -107,10 +107,6 @@ visualization and gave me ideas for what to build.
   and dark sides, the main characters, various bits about the Force
   and other data extracted from the movies.
 
-* [Big League Graphs](https://bigleaguegraphs.com/) presents a bunch of
-  creative ways to view data for sports such as basketball, baseball and
-  hockey.
-
 * [What do numbers look like?](https://johnhw.github.io/umap_primes/index.md.html)
   is a Python 3 dimensional visualization of millions of integers, colored
   by special factors such as prime and Fibonacci numbers.

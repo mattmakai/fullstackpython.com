@@ -64,7 +64,3 @@ client web browser.
   cover the high-level information on the latest approved version of
   Transport Security Layer (TLS) 1.3.
 
-* [How https works](https://www.sudhakar.online/programming/2015/08/09/https.html)
-  is a fun cartoon illustration that demonstrates the basic concepts of
-  a secure HTTP connection.
-

@@ -456,9 +456,9 @@ tactics.
 </div><div class="c6"><p>
 Conferences split into a couple of categories: community-run and
 vendor-run. For example, 
-<a href="https://developer.apple.com/wwdc19/">WWDC</a> is Apple's vendor-run
+<a href="https://developer.apple.com/wwdc20/">WWDC</a> is Apple's vendor-run
 developer conference. They run the show and control the messaging.
-<a href="https://us.pycon.org/2019/">PyCon US</a> is the community-run 
+<a href="https://us.pycon.org/2020/">PyCon US</a> is the community-run 
 Python developer conference. There are a ton of vendors there as sponsors
 but no one company controls what happens at the conference.
 </p><p>

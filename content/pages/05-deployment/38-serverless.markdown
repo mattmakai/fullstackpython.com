@@ -83,7 +83,7 @@ include:
   which is a useful but generically-named library that focuses on deployment 
   and operations for serverless applications.
 
-* [Zappa](https://www.zappa.io/) 
+* Zappa
   ([source code](https://github.com/Miserlou/Zappa)) 
   provides code and tools to make it much easier to build on AWS Lambda
   and AWS API Gateway than rolling your own on the bare services.
@@ -91,8 +91,6 @@ include:
 * [Chalice](https://chalice.readthedocs.io/en/latest/) 
   ([source code](https://github.com/aws/chalice)) is built by the AWS team
   specifically for Python applications.
-
-* [Apex](http://apex.run/) ([source code](https://github.com/apex/apex))
 
 
 ### General serverless resources

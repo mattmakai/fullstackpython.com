@@ -29,7 +29,7 @@ Bottle is awesome for a few web development situations:
 Prototyping simple ideas is often easier with Bottle than a more
 opinionated web framework like [Django](/django.html) because Django
 projects start with a significant amount of boilerplate code. The
-[Model-View-Template](https://docs.djangoproject.com/en/1.9/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)
+[Model-View-Template](https://docs.djangoproject.com/en/3.0/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names)
 structure for Django apps within projects makes maintaining projects
 easier, but it can be cumbersome on starter projects where you're
 just playing with random ideas so you aren't worried about your 

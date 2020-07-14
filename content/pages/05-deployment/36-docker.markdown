@@ -49,7 +49,7 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   of Docker to better understand what it's doing under the hood.
 
 * [Andrew Baker](https://github.com/atbaker) presented a fantastic tutorial 
-  at [PyOhio](http://andrewtorkbaker.com/pyohio-docker-101-tutorial) on 
+  at PyOhio on 
   [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial).
   Andrew also wrote the article 
   [what containers can do for you](http://radar.oreilly.com/2015/01/what-containers-can-do-for-you.html).

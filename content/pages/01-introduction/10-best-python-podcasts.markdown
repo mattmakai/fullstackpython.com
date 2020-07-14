@@ -47,10 +47,6 @@ listen and learn.
   problem solving, handling failure, frustration, and success with
   teaching Python programming.
 
-* Professor Philip Guo has a video podcast called 
-  [PG Podcast](https://podcasts.apple.com/us/podcast/philip-guo-podcasts-pgbovine-net/id1276072242),
-  which typically covers Python subjects. 
-
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/) is a weekly podcast with interviews, coding tips, and conversation with guests from the Python community.
 
 ## Favorite podcast episodes
@@ -163,7 +159,7 @@ data science broadly and often get specific into Python ecosystem tools.
   science podcast that often covers Python libraries and other areas of
   interest to people using Python to analyze [data](/data.html).
 
-* [Data Skeptic](https://www.dataskeptic.com/) covers data science, 
+* [Data Skeptic](https://dataskeptic.com/) covers data science, 
   statistics, machine learning, artificial intelligence and "scientific 
   skepticism".
 

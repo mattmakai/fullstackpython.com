@@ -82,7 +82,7 @@ teams, culture, processes and tools into software development organizations.
   your pager goes off, ownership and how startups can be different from
   large companies with their incident responses.
 
-* [Bing: Continuous Delivery](http://stories.visualstudio.com/bing-continuous-delivery/)
+* [Bing: Continuous Delivery](http://engineering.microsoft.com/bing-continuous-delivery/)
   is an impressive visual story that explains the practices for how their
   team delivers updates to the search engine.
 

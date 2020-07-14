@@ -1243,7 +1243,7 @@ The code for django-taggit is
 and maintained by the collaborative developer community group
 [Jazzband](https://jazzband.co/).
 
-[**django-taggit / taggit / views.py**](https://github.com/jazzband/django-taggit/blob/master/taggit/./views.py)
+[**django-taggit / taggit / views.py**](https://github.com/jazzband/django-taggit/blob/master/taggit/views.py)
 
 ```python
 # views.py

@@ -163,7 +163,7 @@ world.
   [images](/static-content.html) and any
   other data and files to produce a webpage as output.
 
-* [How to understand performance tests](https://fly.io/articles/how-to-understand-performance-tests/)
+* How to understand performance tests
   is an important topic because many websites are slow and bloated.
   Learning about improving the performance of your site is one of
   the best ways to become a better web developer. Another great article on

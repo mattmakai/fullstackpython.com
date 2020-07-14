@@ -51,7 +51,7 @@ guide as they are considered advanced deployment techniques.
 * [teletraan](https://github.com/pinterest/teletraan) is the deploy system
   used by the development teams at Pinterest, a huge Python shop!
 
-* [pants](https://www.pantsbuild.org/index.html) is a build system originally
+* [pants](https://www.pantsbuild.org/docs) is a build system originally
   created at Twitter and now split out as its own sustainable open source
   project.
 
@@ -132,7 +132,7 @@ guide as they are considered advanced deployment techniques.
   is an awesome in-depth read covering topics ranging from git branching
   to database migrations.
 
-* In [this free video by Neal Ford](http://player.oreilly.com/videos/9781491908181?toc_id=210188),
+* In [this free video by Neal Ford](https://www.youtube.com/watch?v=RyTqRi4rJbw),
   he talks about engineering practices for continuous delivery. He explains
   the difference between 
   [continuous integration](/continuous-integration.html),

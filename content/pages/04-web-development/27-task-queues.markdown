@@ -128,10 +128,6 @@ when scaling out a large deployment of distributed task queues.
   is a detailed comparison of Amazon SQS, MongoDB, RabbitMQ, HornetQ and
   Kafka's designs and performance.
 
-* [Queues.io](http://queues.io/) is a collection of task queue systems with
-  short summaries for each one. The task queues are not all compatible with
-  Python but ones that work with it are tagged with the "Python" keyword.
-
 * [Why Task Queues](http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619)
   is a presentation for what task queues are and why they are needed.
 

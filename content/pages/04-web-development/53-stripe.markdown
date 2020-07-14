@@ -23,9 +23,6 @@ for processing payments.
   the subscription data in the [Django ORM](/django-orm.html) and create
   a pricing page.
 
-* [Switching from Braintree to Stripe](https://www.deekit.com/braintree-to-stripe/)
-  covers one development team's experience with moving payment providers.
-
 * [Dirt Cheap Recurring Payments with Stripe and AWS Lambda](http://normal-extensions.com/2017/05/05/simple-recurring/)
   explains how to use the Stripe API with [AWS Lambda](/aws-lambda.html)
   to handle recurring payments instead of using a more expensive service 

@@ -26,7 +26,7 @@ browser) and server (usually a [web server](/web-servers.html)).
   dependencies. It allows 2 web browsers to exchange audio and video streams by
   using the `aiohttp` and `python-socketio` modules.
 
-* [A real world guide to WebRTC](https://deepstreamhub.com/tutorials/protocols/webrtc-intro/)
+* [A real world guide to WebRTC](https://deepstream.io/tutorials/webrtc/webrtc-intro/)
   goes through WebRTC fundamentals such as data channels, audio and video,
   screen sharing and file transfers with the JavaScript code provided
   for each concept.

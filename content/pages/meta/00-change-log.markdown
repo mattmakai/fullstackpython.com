@@ -595,7 +595,7 @@ on GitHub.
   [monitor Flask applications](/blog/hosted-monitoring-flask-web-apps.html).
 * Fixed a typo in the 
   [Make Phone Calls in Python](/blog/make-phone-calls-python.html) 
-  blog post thanks to my [colleague Greg Baugues'](http://baugues.com/) 
+  blog post thanks to my colleague Greg Baugues'
   sharp eyes. 
 
 ### June

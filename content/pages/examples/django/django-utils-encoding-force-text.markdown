@@ -740,7 +740,7 @@ is a code library for handling and compressing
 [Django](/django.html) web applications.
 
 The django-pipeline project is open sourced under the
-[MIT License](https://github.com/jazzband/django-pipeline/blob/master/LICENSE.txt)
+[MIT License](https://github.com/jazzband/django-pipeline/blob/master/LICENSE)
 and it is maintained by the developer community group
 [Jazzband](https://jazzband.co/).
 

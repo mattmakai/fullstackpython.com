@@ -260,5 +260,5 @@ or [@mattmakai](https://twitter.com/mattmakai). I am also on GitHub with
 the username [mattmakai](https://github.com/mattmakai).
 
 If you see an issue or error in this tutorial, please
-[fork the source repository on GitHub](https://github.com/mattmakai/fullstackpython/blob/master/content/posts/200630-report-errors-flask-web-apps-sentry.markdown)
+[fork the source repository on GitHub](https://github.com/mattmakai/fullstackpython.com/blob/master/content/posts/200630-report-errors-flask-web-apps-sentry.markdown)
 and submit a pull request with the fix.

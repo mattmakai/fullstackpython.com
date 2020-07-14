@@ -157,11 +157,11 @@ Static site generators can be implemented in any programming language. The
 following resources either are general to any programming ecosystem or
 provide a unique angle on how to use a static site generator.
 
-* [Static vs Dynamic Websites](https://about.gitlab.com/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/)
+* [Static vs Dynamic Websites](https://about.gitlab.com/blog/2016/06/03/ssg-overview-gitlab-pages-part-1-dynamic-x-static/)
   does an excellent job of showing the differences between a dynamic website
   that uses a database backend to produce content in response to a request
   compared with static sites that are pregenerated. There is also a 
-  [second part in the series](https://about.gitlab.com/2016/06/10/ssg-overview-gitlab-pages-part-2/) 
+  [second part in the series](https://about.gitlab.com/blog/2016/06/10/ssg-overview-gitlab-pages-part-2/) 
   where generic static site generator concepts are explained.
 
 * [Staticgen](https://www.staticgen.com/) lists static website generators
@@ -220,11 +220,6 @@ deployment.
 * [scar](https://github.com/cloudkj/scar) is an open source tool for
   making static site deployments and redeployments to Amazon Web Services 
   easier.
-
-* [Deploying a Static Blog with Continuous Integration](https://www.loxodrome.io/post/hugo-on-ci/)
-  uses a Hugo (a Golang-based static site generator) generated site
-  as an example but the instructions can easily be used to deploy
-  a Python-based static site generator output as well.
 
 * [How to Make an AWS S3 Static Website With SSL](https://www.josephecombs.com/2018/03/05/how-to-make-an-AWS-S3-static-website-with-ssl)
   explains the configuration required to use SSL for HTTPS on an

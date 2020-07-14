@@ -62,7 +62,7 @@ rich apps that run in web browsers.
   to do so with minimal steps, depending on the complexity of your applicationi
   code, of course!
 
-* [Why we chose Vue.js](https://about.gitlab.com/2016/10/20/why-we-chose-vue/)
+* [Why we chose Vue.js](https://about.gitlab.com/blog/2016/10/20/why-we-chose-vue/)
   covers GitLab's reasons for using this JavaScript framework over other
   options.
 

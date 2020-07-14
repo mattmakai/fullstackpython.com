@@ -32,7 +32,7 @@ a broad range of devices that people use to read this site.
   contains a bunch of great examples for how to use media queries to
   achieve a responsive design.
 
-* [Making Tables Responsive With Minimal CSS](https://uglyduck.ca/responsive-tables/)
+* [Making Tables Responsive With Minimal CSS](https://uglyduck.ca/making-tables-responsive-with-minimal-css/)
   steps through a couple of ways to responsively handle tables.
 
 * Smashing Magazine's article from 2011 on
