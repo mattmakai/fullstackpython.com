@@ -12,31 +12,7 @@ run:
 
 prod: run
 	rm -rf generated/updated_site/pages/
-	sed -i '' 's/<span class="k">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="n">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="o">\(.[a-zA-Z0-9 ()_.~*=&;/-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="p">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="mi">\(.[0-9]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="sa">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="vm">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="ow">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="nb">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="nd">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="ne">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="nn">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="kn">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="bp">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="nc">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="nf">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="fm">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="nt">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="s1">\(.[][a-zA-Z0-9 /()_,.&^\\\;:+#{}~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="si">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="sd">\(.[][a-zA-Z0-9 /()_,.&^\\\;:+#{}~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="s2">\(.[][a-zA-Z0-9 /\\\()_,.&$^;:+#{}|=~*@`!?%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="c1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*@`!%-]*\)<\/span>/\1/g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="o"><\/span>//g' generated/updated_site/*.html generated/updated_site/blog/*.html
-	sed -i '' 's/<span class="s2"><\/span>//g' generated/updated_site/*.html generated/updated_site/blog/*.html
+	sed -i '' 's/<span class="k">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g; s/<span class="n">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g; s/<span class="o">\(.[a-zA-Z0-9 ()_.~*=&;/-]*\)<\/span>/\1/g; s/<span class="p">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g; s/<span class="mi">\(.[0-9]*\)<\/span>/\1/g; s/<span class="sa">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g; s/<span class="vm">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g; s/<span class="ow">\(.[a-zA-Z0-9()_]*\)<\/span>/\1/g; s/<span class="nb">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g; s/<span class="nd">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g; s/<span class="ne">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g; s/<span class="nn">\(.[a-zA-Z0-9 ()_.]*\)<\/span>/\1/g; s/<span class="kn">\(.[a-zA-Z0-9 ()_]*\)<\/span>/\1/g; s/<span class="bp">\(.[][a-zA-Z0-9 ()_,&;:#{}]*\)<\/span>/\1/g; s/<span class="nc">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g; s/<span class="nf">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g; s/<span class="fm">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g; s/<span class="nt">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g; s/<span class="s1">\(.[][a-zA-Z0-9 /()_,.&^\\\;:+#{}~*@`!?%-]*\)<\/span>/\1/g; s/<span class="si">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*!%-]*\)<\/span>/\1/g; s/<span class="sd">\(.[][a-zA-Z0-9 /()_,.&^\\\;:+#{}~*@`!?%-]*\)<\/span>/\1/g; s/<span class="s2">\(.[][a-zA-Z0-9 /\\\()_,.&$^;:+#{}|=~*@`!?%-]*\)<\/span>/\1/g; s/<span class="c1">\(.[][a-zA-Z0-9 /()_,.&^;:+#{}*@`!%-]*\)<\/span>/\1/g; s/<span class="o"><\/span>//g; s/<span class="s2"><\/span>//g' generated/updated_site/*.html generated/updated_site/blog/*.html
 
 
 bookbuild:                                                                   
