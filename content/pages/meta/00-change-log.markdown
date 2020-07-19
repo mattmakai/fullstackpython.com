@@ -17,7 +17,7 @@ on GitHub.
 ### July
 * New blog posts:
     * [Tracking Daily User Data in Django with django-user-visit](/blog/track-daily-user-data-django-user-visit.html)
-    * [Quickly Use Bootstrap 4 in a Django Template with a CDN](/blog/bootstrap-4-django-template.html).
+    * [Quickly Use Bootstrap 4 in a Django Template with a CDN](/blog/bootstrap-4-django-template.html)
     * [How to report errors in Flask web apps with Sentry](/blog/report-errors-flask-web-apps-sentry.html)
 
 ### June
