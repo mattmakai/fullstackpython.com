@@ -15,10 +15,10 @@ on GitHub.
 
 ## 2020
 ### July
-* New blog post on how to
-  [Quickly Use Bootstrap 4 in a Django Template with a CDN](http://localhost:8002/blog/bootstrap-4-django-template.html).
-* New blog post on
-  [How to report errors in Flask web apps with Sentry](/blog/report-errors-flask-web-apps-sentry.html).
+* New blog posts:
+    * [Tracking Daily User Data in Django with django-user-visit](/blog/track-daily-user-data-django-user-visit.html)
+    * [Quickly Use Bootstrap 4 in a Django Template with a CDN](/blog/bootstrap-4-django-template.html).
+    * [How to report errors in Flask web apps with Sentry](/blog/report-errors-flask-web-apps-sentry.html)
 
 ### June
 * Added new example code for [Django](/django.html) modules:
