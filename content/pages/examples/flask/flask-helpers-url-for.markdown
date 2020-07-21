@@ -233,7 +233,38 @@ class CustomSelectField(Field):
 ```
 
 
-## Example 4 from Flask-Bootstrap
+## Example 4 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / utils.py**](https://github.com/cburmeister/flask-bones/blob/master/app/./utils.py)
+
+```python
+# utils.py
+~~from flask import request, url_for
+
+
+def url_for_other_page(**kwargs):
+    url_for_args = request.args.copy()
+    if 'pjax' in url_for_args:
+        url_for_args.pop('_pjax')
+    for key, value in kwargs.items():
+        url_for_args[key] = value
+~~    return url_for(request.endpoint, **url_for_args)
+
+
+
+## ... source file continues with no further url_for examples...
+
+```
+
+
+## Example 5 from Flask-Bootstrap
 [flask-bootstrap](https://github.com/mbr/flask-bootstrap)
 ([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
 makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
@@ -323,7 +354,7 @@ class ConditionalCDN(object):
 ```
 
 
-## Example 5 from flask-debugtoolbar
+## Example 6 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -390,7 +421,7 @@ class DebugToolbar(object):
 ```
 
 
-## Example 6 from flask-login
+## Example 7 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -490,7 +521,7 @@ def login_user(user, remember=False, duration=None, force=False, fresh=True):
 ```
 
 
-## Example 7 from flask-restx
+## Example 8 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -545,7 +576,7 @@ def ui_for(api):
 ```
 
 
-## Example 8 from flaskSaaS
+## Example 9 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -686,7 +717,7 @@ def reset(token):
 ```
 
 
-## Example 9 from Flask-Security-Too
+## Example 10 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -806,7 +837,7 @@ def get_post_action_redirect(config_key, declared=None):
 ```
 
 
-## Example 10 from Flask-User
+## Example 11 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -955,7 +986,7 @@ class EmailManager(object):
 ```
 
 
-## Example 11 from Flasky
+## Example 12 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1155,7 +1186,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 12 from Datadog Flask Example App
+## Example 13 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).

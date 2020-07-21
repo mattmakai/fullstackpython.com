@@ -18,7 +18,7 @@ from [requests](/flask-globals-request-examples.html) and responses for
 Flask web applications.
 
 
-These topics are also useful while reading the `Headers` examples:
+You should read up on these subjects along with these `Headers` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

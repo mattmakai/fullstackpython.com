@@ -16,7 +16,7 @@ at runtime when an
 that accepts POSTs.
 
 
-These topics are also useful while reading the `BadRequest` examples:
+These subjects go along with the `BadRequest` code examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

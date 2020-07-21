@@ -219,7 +219,88 @@ from .views import (
 ```
 
 
-## Example 2 from flask-bookshelf
+## Example 2 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / __init__.py**](https://github.com/cburmeister/flask-bones/blob/master/app/./__init__.py)
+
+```python
+# __init__.py
+import time
+
+~~from flask import Flask, g, render_template, request
+import arrow
+import requests
+
+from app import config
+from app.assets import assets
+from app.auth import auth
+from app.commands import create_db, drop_db, populate_db, recreate_db
+from app.database import db
+from app.extensions import lm, travis, mail, migrate, bcrypt, babel, rq, limiter
+from app.user import user
+from app.utils import url_for_other_page
+
+
+def create_app(config=config.base_config):
+    app = Flask(__name__)
+    app.config.from_object(config)
+
+    register_extensions(app)
+    register_blueprints(app)
+    register_errorhandlers(app)
+    register_jinja_env(app)
+    register_commands(app)
+
+    def get_locale():
+        return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
+
+    if babel.locale_selector_func is None:
+        babel.locale_selector_func = get_locale
+
+    @app.before_request
+    def before_request():
+~~        g.request_start_time = time.time()
+~~        g.request_time = lambda: '%.5fs' % (time.time() - g.request_start_time)
+~~        g.pjax = 'X-PJAX' in request.headers
+
+    @app.route('/', methods=['GET'])
+    def index():
+        return render_template('index.html')
+
+    return app
+
+
+def register_commands(app):
+    for command in [create_db, drop_db, populate_db, recreate_db]:
+        app.cli.command()(command)
+
+
+def register_extensions(app):
+    travis.init_app(app)
+    db.init_app(app)
+    lm.init_app(app)
+    mail.init_app(app)
+    bcrypt.init_app(app)
+    assets.init_app(app)
+    babel.init_app(app)
+    rq.init_app(app)
+    migrate.init_app(app, db)
+    limiter.init_app(app)
+
+
+## ... source file continues with no further g examples...
+
+```
+
+
+## Example 3 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -329,7 +410,7 @@ app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
 ```
 
 
-## Example 3 from flask-debugtoolbar
+## Example 4 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -435,7 +516,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 4 from Flask-HTTPAuth
+## Example 5 from Flask-HTTPAuth
 [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
 ([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
 and
@@ -591,7 +672,7 @@ class HTTPBasicAuth(HTTPAuth):
 ```
 
 
-## Example 5 from Flask-WTF
+## Example 6 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -792,7 +873,7 @@ class CSRFProtect(object):
 ```
 
 
-## Example 6 from Flask-Security-Too
+## Example 7 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -912,7 +993,7 @@ def check_and_update_authn_fresh(within, grace, method=None):
 ```
 
 
-## Example 7 from Flask-User
+## Example 8 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1009,7 +1090,7 @@ def allow_unconfirmed_email(view_function):
 ```
 
 
-## Example 8 from indico
+## Example 9 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1118,7 +1199,7 @@ config = IndicoConfig()
 ```
 
 
-## Example 9 from tedivms-flask
+## Example 10 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

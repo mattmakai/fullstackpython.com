@@ -50,6 +50,16 @@ FlaskBB is provided as open source
 [under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
 
 
+### flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the 
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+
 ### Flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example 
 [Flask](/flask.html) web application intended as a base to build your

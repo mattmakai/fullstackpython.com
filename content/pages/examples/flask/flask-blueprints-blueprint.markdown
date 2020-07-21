@@ -272,7 +272,33 @@ def about():
 ```
 
 
-## Example 4 from flask-bookshelf
+## Example 4 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / auth / __init__.py**](https://github.com/cburmeister/flask-bones/blob/master/app/auth/__init__.py)
+
+```python
+# __init__.py
+~~from flask import Blueprint
+
+~~auth = Blueprint('auth', __name__, template_folder='templates')
+
+from . import views
+
+
+
+## ... source file continues with no further Blueprint examples...
+
+```
+
+
+## Example 5 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -323,7 +349,7 @@ def create_author():
 ```
 
 
-## Example 5 from Flask-Bootstrap
+## Example 6 from Flask-Bootstrap
 [flask-bootstrap](https://github.com/mbr/flask-bootstrap)
 ([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
 makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
@@ -427,7 +453,7 @@ class Bootstrap(object):
 ```
 
 
-## Example 6 from flask-debugtoolbar
+## Example 7 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -497,7 +523,7 @@ class DebugToolbarExtension(object):
 ```
 
 
-## Example 7 from flask-restx
+## Example 8 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -549,7 +575,7 @@ def swagger_static(filename):
 ```
 
 
-## Example 8 from Flask-WTF
+## Example 9 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -657,7 +683,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 9 from Flask-User
+## Example 10 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -764,7 +790,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 10 from Flask-VueJs-Template
+## Example 11 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -796,7 +822,7 @@ import os
 ```
 
 
-## Example 11 from Datadog Flask Example App
+## Example 12 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -843,7 +869,7 @@ def bp_after_request(response):
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 13 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

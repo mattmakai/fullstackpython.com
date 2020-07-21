@@ -19,7 +19,7 @@ imported, but there are less characters to type when you leave off
 the `.templating` part.
 
 
-These topics are also useful while reading the `render_template` examples:
+These subjects go along with the `render_template` code examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -243,7 +243,114 @@ def send_email(recipient, subject, template, **kwargs):
 ```
 
 
-## Example 4 from flask-bookshelf
+## Example 4 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / __init__.py**](https://github.com/cburmeister/flask-bones/blob/master/app/./__init__.py)
+
+```python
+# __init__.py
+import time
+
+~~from flask import Flask, g, render_template, request
+import arrow
+import requests
+
+from app import config
+from app.assets import assets
+from app.auth import auth
+from app.commands import create_db, drop_db, populate_db, recreate_db
+from app.database import db
+from app.extensions import lm, travis, mail, migrate, bcrypt, babel, rq, limiter
+from app.user import user
+from app.utils import url_for_other_page
+
+
+def create_app(config=config.base_config):
+    app = Flask(__name__)
+    app.config.from_object(config)
+
+    register_extensions(app)
+    register_blueprints(app)
+    register_errorhandlers(app)
+    register_jinja_env(app)
+    register_commands(app)
+
+    def get_locale():
+        return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
+
+    if babel.locale_selector_func is None:
+        babel.locale_selector_func = get_locale
+
+    @app.before_request
+    def before_request():
+        g.request_start_time = time.time()
+        g.request_time = lambda: '%.5fs' % (time.time() - g.request_start_time)
+        g.pjax = 'X-PJAX' in request.headers
+
+    @app.route('/', methods=['GET'])
+    def index():
+~~        return render_template('index.html')
+
+    return app
+
+
+def register_commands(app):
+    for command in [create_db, drop_db, populate_db, recreate_db]:
+        app.cli.command()(command)
+
+
+def register_extensions(app):
+    travis.init_app(app)
+    db.init_app(app)
+    lm.init_app(app)
+    mail.init_app(app)
+    bcrypt.init_app(app)
+    assets.init_app(app)
+    babel.init_app(app)
+    rq.init_app(app)
+    migrate.init_app(app, db)
+    limiter.init_app(app)
+
+
+def register_blueprints(app):
+    app.register_blueprint(user, url_prefix='/user')
+    app.register_blueprint(auth)
+
+
+def register_errorhandlers(app):
+
+    def render_error(e):
+~~        return render_template('errors/%s.html' % e.code), e.code
+
+    for e in [
+        requests.codes.INTERNAL_SERVER_ERROR,
+        requests.codes.NOT_FOUND,
+        requests.codes.UNAUTHORIZED,
+    ]:
+        app.errorhandler(e)(render_error)
+
+
+def register_jinja_env(app):
+    app.jinja_env.globals.update({
+        'timeago': lambda x: arrow.get(x).humanize(),
+        'url_for_other_page': url_for_other_page,
+    })
+
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 5 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -347,7 +454,7 @@ app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
 ```
 
 
-## Example 5 from flaskex
+## Example 6 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -442,7 +549,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 6 from flask_jsondash
+## Example 7 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -585,7 +692,7 @@ def update(c_id):
 ```
 
 
-## Example 7 from flask-phone-input
+## Example 8 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -643,7 +750,7 @@ def show_phone():
 ```
 
 
-## Example 8 from flask-restx
+## Example 9 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -698,7 +805,7 @@ def ui_for(api):
 ```
 
 
-## Example 9 from flaskSaaS
+## Example 10 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -901,7 +1008,7 @@ def paySuccess():
 ```
 
 
-## Example 10 from Flask-Security-Too
+## Example 11 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -1011,7 +1118,7 @@ from .forms import (
 ```
 
 
-## Example 11 from Flask-SocketIO
+## Example 12 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -1087,7 +1194,7 @@ def get_session():
 ```
 
 
-## Example 12 from Flask-User
+## Example 13 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1179,7 +1286,7 @@ class EmailManager(object):
 ```
 
 
-## Example 13 from Flasky
+## Example 14 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1219,7 +1326,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 14 from Datadog Flask Example App
+## Example 15 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1321,7 +1428,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 15 from indico
+## Example 16 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1351,7 +1458,7 @@ class MathjaxMixin(object):
 ```
 
 
-## Example 16 from keras-flask-deploy-webapp
+## Example 17 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1442,7 +1549,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 17 from newspie
+## Example 18 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1597,7 +1704,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 18 from Science Flask
+## Example 19 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -1885,7 +1992,7 @@ def static_from_root():
 ```
 
 
-## Example 19 from tedivms-flask
+## Example 20 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1988,7 +2095,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 20 from trape
+## Example 21 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

@@ -215,7 +215,107 @@ class Role(db.Model):
 ```
 
 
-## Example 3 from Flask-Security-Too
+## Example 3 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / auth / views.py**](https://github.com/cburmeister/flask-bones/blob/master/app/auth/views.py)
+
+```python
+# views.py
+from flask import (
+    current_app, request, redirect, url_for, render_template, flash, abort,
+)
+from flask_babel import gettext
+from flask_login import login_user, login_required, logout_user
+~~from itsdangerous import URLSafeSerializer, BadSignature
+from app.extensions import lm
+from app.jobs import send_registration_email
+from app.user.models import User
+from app.user.forms import RegisterUserForm
+from .forms import LoginForm
+from ..auth import auth
+
+
+@lm.user_loader
+def load_user(id):
+    return User.get_by_id(int(id))
+
+
+@auth.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        login_user(form.user)
+        flash(
+            gettext(
+                'You were logged in as {username}'.format(
+                    username=form.user.username
+                ),
+            ),
+
+
+## ... source file abbreviated to get to BadSignature examples ...
+
+
+            remote_addr=request.remote_addr,
+        )
+
+        s = URLSafeSerializer(current_app.secret_key)
+        token = s.dumps(user.id)
+
+        send_registration_email.queue(user.id, token)
+
+        flash(
+            gettext(
+                'Sent verification email to {email}'.format(
+                    email=user.email
+                )
+            ),
+            'success'
+        )
+        return redirect(url_for('index'))
+    return render_template('register.html', form=form)
+
+
+@auth.route('/verify/<token>', methods=['GET'])
+def verify(token):
+    s = URLSafeSerializer(current_app.secret_key)
+    try:
+        id = s.loads(token)
+~~    except BadSignature:
+        abort(404)
+
+    user = User.query.filter_by(id=id).first_or_404()
+    if user.active:
+        abort(404)
+    else:
+        user.active = True
+        user.update()
+
+        flash(
+            gettext(
+                'Registered user {username}. Please login to continue.'.format(
+                    username=user.username
+                ),
+            ),
+            'success'
+        )
+        return redirect(url_for('auth.login'))
+
+
+
+## ... source file continues with no further BadSignature examples...
+
+```
+
+
+## Example 4 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))

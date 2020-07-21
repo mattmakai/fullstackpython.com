@@ -812,7 +812,88 @@ class DeleteReport(MethodView):
 ```
 
 
-## Example 4 from flask-bookshelf
+## Example 4 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / __init__.py**](https://github.com/cburmeister/flask-bones/blob/master/app/./__init__.py)
+
+```python
+# __init__.py
+import time
+
+~~from flask import Flask, g, render_template, request
+import arrow
+import requests
+
+from app import config
+from app.assets import assets
+from app.auth import auth
+from app.commands import create_db, drop_db, populate_db, recreate_db
+from app.database import db
+from app.extensions import lm, travis, mail, migrate, bcrypt, babel, rq, limiter
+from app.user import user
+from app.utils import url_for_other_page
+
+
+def create_app(config=config.base_config):
+    app = Flask(__name__)
+    app.config.from_object(config)
+
+    register_extensions(app)
+    register_blueprints(app)
+    register_errorhandlers(app)
+    register_jinja_env(app)
+    register_commands(app)
+
+    def get_locale():
+~~        return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
+
+    if babel.locale_selector_func is None:
+        babel.locale_selector_func = get_locale
+
+    @app.before_request
+    def before_request():
+        g.request_start_time = time.time()
+        g.request_time = lambda: '%.5fs' % (time.time() - g.request_start_time)
+~~        g.pjax = 'X-PJAX' in request.headers
+
+    @app.route('/', methods=['GET'])
+    def index():
+        return render_template('index.html')
+
+    return app
+
+
+def register_commands(app):
+    for command in [create_db, drop_db, populate_db, recreate_db]:
+        app.cli.command()(command)
+
+
+def register_extensions(app):
+    travis.init_app(app)
+    db.init_app(app)
+    lm.init_app(app)
+    mail.init_app(app)
+    bcrypt.init_app(app)
+    assets.init_app(app)
+    babel.init_app(app)
+    rq.init_app(app)
+    migrate.init_app(app, db)
+    limiter.init_app(app)
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 5 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -871,7 +952,7 @@ def create_author():
 ```
 
 
-## Example 5 from flask-debugtoolbar
+## Example 6 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -1018,7 +1099,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 6 from flaskex
+## Example 7 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -1113,7 +1194,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 7 from Flask-HTTPAuth
+## Example 8 from Flask-HTTPAuth
 [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
 ([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
 and
@@ -1434,7 +1515,7 @@ class MultiAuth(object):
 ```
 
 
-## Example 8 from flask-login
+## Example 9 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1671,7 +1752,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 9 from flask-restx
+## Example 10 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1779,7 +1860,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 10 from Flask-WTF
+## Example 11 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1937,7 +2018,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 11 from flaskSaaS
+## Example 12 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1988,7 +2069,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 12 from Flask-Security-Too
+## Example 13 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -2208,7 +2289,7 @@ class ChangePasswordForm(Form, PasswordFormMixin):
 ```
 
 
-## Example 13 from Flask-SocketIO
+## Example 14 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -2432,7 +2513,7 @@ class TestSocketIO(unittest.TestCase):
 ```
 
 
-## Example 14 from Flask-User
+## Example 15 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2496,7 +2577,7 @@ def init_translations(babel):
 ```
 
 
-## Example 15 from Flask-VueJs-Template
+## Example 16 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2531,7 +2612,7 @@ def require_auth(func):
 ```
 
 
-## Example 16 from indico
+## Example 17 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -2620,7 +2701,7 @@ multipass = IndicoMultipass()
 ```
 
 
-## Example 17 from keras-flask-deploy-webapp
+## Example 18 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -2713,7 +2794,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 18 from newspie
+## Example 19 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2894,7 +2975,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 19 from sandman2
+## Example 20 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -3095,7 +3176,7 @@ class Service(MethodView):
 ```
 
 
-## Example 20 from Science Flask
+## Example 21 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -3202,7 +3283,7 @@ def security_context_processor():
 ```
 
 
-## Example 21 from tedivms-flask
+## Example 22 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -3260,7 +3341,7 @@ def roles_accepted_api(*role_names):
 ```
 
 
-## Example 22 from trape
+## Example 23 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

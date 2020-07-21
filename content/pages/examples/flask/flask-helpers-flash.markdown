@@ -385,7 +385,83 @@ def flaskbb_registration_post_processor(user):
 ```
 
 
-## Example 4 from flask-bookshelf
+## Example 4 from flask-bones
+[flask-bones](https://github.com/cburmeister/flask-bones)
+([demo](http://flask-bones.herokuapp.com/))
+is large scale [Flask](/flask.html) example application built
+with [Blueprints](https://flask.palletsprojects.com/en/1.1.x/blueprints/)
+([example Blueprint code](/flask-blueprints-blueprint-examples.html)).
+This project is provided as open source under the
+[MIT license](https://github.com/cburmeister/flask-bones/blob/master/LICENSE).
+
+[**flask-bones / app / user / views.py**](https://github.com/cburmeister/flask-bones/blob/master/app/user/views.py)
+
+```python
+# views.py
+~~from flask import request, redirect, url_for, render_template, flash, g
+from flask_babel import gettext
+from flask_login import login_required
+from app.user.models import User
+from .forms import EditUserForm
+
+from ..user import user
+
+
+@user.route('/list', methods=['GET', 'POST'])
+@login_required
+def list():
+
+    from app.database import DataTable
+    datatable = DataTable(
+        model=User,
+        columns=[User.remote_addr],
+        sortable=[User.username, User.email, User.created_ts],
+        searchable=[User.username, User.email],
+        filterable=[User.active],
+        limits=[25, 50, 100],
+        request=request
+    )
+
+    if g.pjax:
+        return render_template('users.html', datatable=datatable)
+
+    return render_template('list.html', datatable=datatable)
+
+
+@user.route('/edit/<int:id>', methods=['GET', 'POST'])
+@login_required
+def edit(id):
+    user = User.query.filter_by(id=id).first_or_404()
+    form = EditUserForm(obj=user)
+    if form.validate_on_submit():
+        form.populate_obj(user)
+        user.update()
+~~        flash(
+            gettext('User {username} edited'.format(username=user.username)),
+            'success'
+        )
+    return render_template('edit.html', form=form, user=user)
+
+
+@user.route('/delete/<int:id>', methods=['GET'])
+@login_required
+def delete(id):
+    user = User.query.filter_by(id=id).first_or_404()
+    user.delete()
+~~    flash(
+        gettext('User {username} deleted').format(username=user.username),
+        'success'
+    )
+    return redirect(url_for('.list'))
+
+
+
+## ... source file continues with no further flash examples...
+
+```
+
+
+## Example 5 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -444,7 +520,7 @@ def create_author():
 ```
 
 
-## Example 5 from flask_jsondash
+## Example 6 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -675,7 +751,7 @@ def clone(c_id):
 ```
 
 
-## Example 6 from flask-login
+## Example 7 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -836,7 +912,7 @@ class LoginManager(object):
 ```
 
 
-## Example 7 from Flask-Security-Too
+## Example 8 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -956,7 +1032,7 @@ def transform_url(url, qparams=None, **kwargs):
 ```
 
 
-## Example 8 from Flask-User
+## Example 9 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1429,7 +1505,7 @@ class UserManager__Views(object):
 ```
 
 
-## Example 9 from indico
+## Example 10 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1515,7 +1591,7 @@ class ImportRoleMembersMixin(object):
 ```
 
 
-## Example 10 from tedivms-flask
+## Example 11 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

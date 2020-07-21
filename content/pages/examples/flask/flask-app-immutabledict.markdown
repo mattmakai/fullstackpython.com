@@ -16,7 +16,7 @@ The `ImmutableDict` class wraps a
 so that values cannot be modified after initially being set.
 
 
-These subjects go along with the `ImmutableDict` code examples:
+You should read up on these subjects along with these `ImmutableDict` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

@@ -15,7 +15,7 @@ which is useful for checking if an HTTP method is valid by comparing it
 against the items in this set.
 
 
-These topics are also useful while reading the `http_method_funcs` examples:
+These subjects go along with the `http_method_funcs` code examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)

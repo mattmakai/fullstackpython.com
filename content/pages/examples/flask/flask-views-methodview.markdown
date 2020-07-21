@@ -15,7 +15,7 @@ that determines the methods, such as GET, POST, PUT, etc, that
 a view defines.
 
 
-These topics are also useful while reading the `MethodView` examples:
+You should read up on these subjects along with these `MethodView` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)
