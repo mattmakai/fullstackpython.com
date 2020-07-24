@@ -15,6 +15,7 @@ on GitHub.
 
 ## 2020
 ### July
+* Updated [webhooks](/webhooks.html) page with additional resources.
 * New blog posts:
     * [Tracking Daily User Data in Django with django-user-visit](/blog/track-daily-user-data-django-user-visit.html)
     * [Quickly Use Bootstrap 4 in a Django Template with a CDN](/blog/bootstrap-4-django-template.html)

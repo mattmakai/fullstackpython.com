@@ -23,6 +23,15 @@ otherwise independent web applications.
 
 
 ### Webhook resources
+* [What's a webhook?](https://sendgrid.com/blog/whats-webhook/) is a high-level
+  explanation of this concept that also contains some basic security 
+  considerations when using them.
+
+* [How to Listen for Webhooks with Python](https://blog.bearer.sh/consume-webhooks-with-python/)
+  has code examples in both [Flask](/flask.html) and [Django](/django.html)
+  for how to receive an HTTP POST webhook request, as well as how to test
+  it locally with Ngrok.
+
 * [Should you build a webhooks API?](https://brandur.org/webhooks)
 
 * [Webhooks do’s and dont’s: what we learned after integrating +100 APIs](https://restful.io/webhooks-dos-and-dont-s-what-we-learned-after-integrating-100-apis-d567405a3671)
