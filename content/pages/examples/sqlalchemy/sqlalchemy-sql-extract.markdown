@@ -1,7 +1,7 @@
 title: sqlalchemy.sql extract Example Code
 category: page
 slug: sqlalchemy-sql-extract-examples
-sortorder: 500031101
+sortorder: 500031102
 toc: False
 sidebartitle: sqlalchemy.sql extract
 meta: Python example code that shows how to use the extract callable from the sqlalchemy.sql module of the SQLAlchemy project.

@@ -10,7 +10,120 @@ meta: Example code for understanding how to use the Engine class from the sqlalc
 Engine is a class within the sqlalchemy.engine module of the SQLAlchemy project.
 
 
-## Example 1 from GINO
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [SQLAlchemy](/sqlalchemy.html) and [Flask](/flask.html).
+The application can be used as-is to run CTF events, or the code can be
+modified for custom rules on hacking scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / CTFd / __init__.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/__init__.py)
+
+```python
+# __init__.py
+import datetime
+import os
+import sys
+import weakref
+from distutils.version import StrictVersion
+
+import jinja2
+from flask import Flask, Request
+from flask_migrate import upgrade
+from jinja2 import FileSystemLoader
+from jinja2.sandbox import SandboxedEnvironment
+from werkzeug.middleware.proxy_fix import ProxyFix
+from werkzeug.utils import cached_property
+
+from CTFd import utils
+from CTFd.plugins import init_plugins
+from CTFd.utils.crypto import sha256
+from CTFd.utils.initialization import (
+    init_events,
+    init_logs,
+    init_request_processors,
+    init_template_filters,
+    init_template_globals,
+)
+from CTFd.utils.migrations import create_database, migrations, stamp_latest_revision
+from CTFd.utils.sessions import CachingSessionInterface
+from CTFd.utils.updates import update_check
+
+__version__ = "3.0.0b2"
+
+
+class CTFdRequest(Request):
+    @cached_property
+    def path(self):
+        return self.script_root + super(CTFdRequest, self).path
+
+
+## ... source file abbreviated to get to Engine examples ...
+
+
+            }
+        )
+        app.jinja_loader = jinja2.ChoiceLoader([app.theme_loader, app.plugin_loader])
+
+        from CTFd.models import (  # noqa: F401
+            db,
+            Teams,
+            Solves,
+            Challenges,
+            Fails,
+            Flags,
+            Tags,
+            Files,
+            Tracking,
+        )
+
+        url = create_database()
+
+        app.config["SQLALCHEMY_DATABASE_URI"] = str(url)
+
+        db.init_app(app)
+
+        migrations.init_app(app, db)
+
+        if url.drivername.startswith("sqlite"):
+~~            from sqlalchemy.engine import Engine
+            from sqlalchemy import event
+
+~~            @event.listens_for(Engine, "connect")
+            def set_sqlite_pragma(dbapi_connection, connection_record):
+                cursor = dbapi_connection.cursor()
+                cursor.execute("PRAGMA foreign_keys=ON")
+                cursor.close()
+
+            db.create_all()
+            stamp_latest_revision()
+        else:
+            upgrade()
+
+        from CTFd.models import ma
+
+        ma.init_app(app)
+
+        app.db = db
+        app.VERSION = __version__
+
+        from CTFd.cache import cache
+
+        cache.init_app(app)
+        app.cache = cache
+
+        reverse_proxy = app.config.get("REVERSE_PROXY")
+        if reverse_proxy:
+
+
+## ... source file continues with no further Engine examples...
+
+```
+
+
+## Example 2 from GINO
 [GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
 and

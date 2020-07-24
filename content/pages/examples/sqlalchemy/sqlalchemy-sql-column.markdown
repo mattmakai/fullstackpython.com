@@ -1,7 +1,7 @@
 title: sqlalchemy.sql column Example Code
 category: page
 slug: sqlalchemy-sql-column-examples
-sortorder: 500031099
+sortorder: 500031100
 toc: False
 sidebartitle: sqlalchemy.sql column
 meta: Python example code that shows how to use the column callable from the sqlalchemy.sql module of the SQLAlchemy project.

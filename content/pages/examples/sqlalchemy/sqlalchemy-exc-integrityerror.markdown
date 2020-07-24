@@ -10,7 +10,119 @@ meta: Example code for understanding how to use the IntegrityError class from th
 IntegrityError is a class within the sqlalchemy.exc module of the SQLAlchemy project.
 
 
-## Example 1 from flask-base
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [SQLAlchemy](/sqlalchemy.html) and [Flask](/flask.html).
+The application can be used as-is to run CTF events, or the code can be
+modified for custom rules on hacking scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / CTFd / views.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/views.py)
+
+```python
+# views.py
+import os
+
+from flask import Blueprint, abort
+from flask import current_app as app
+from flask import redirect, render_template, request, send_file, session, url_for
+from flask.helpers import safe_join
+~~from sqlalchemy.exc import IntegrityError
+
+from CTFd.cache import cache
+from CTFd.constants.config import (
+    AccountVisibilityTypes,
+    ChallengeVisibilityTypes,
+    ConfigTypes,
+    RegistrationVisibilityTypes,
+    ScoreVisibilityTypes,
+)
+from CTFd.models import (
+    Admins,
+    Files,
+    Notifications,
+    Pages,
+    Teams,
+    Users,
+    UserTokens,
+    db,
+)
+from CTFd.utils import config, get_config, set_config
+from CTFd.utils import user as current_user
+from CTFd.utils import validators
+from CTFd.utils.config import is_setup
+from CTFd.utils.config.pages import get_page
+
+
+## ... source file abbreviated to get to IntegrityError examples ...
+
+
+            set_config(
+                "user_creation_email_subject", DEFAULT_USER_CREATION_EMAIL_SUBJECT
+            )
+            set_config("user_creation_email_body", DEFAULT_USER_CREATION_EMAIL_BODY)
+
+            set_config("password_reset_subject", DEFAULT_PASSWORD_RESET_SUBJECT)
+            set_config("password_reset_body", DEFAULT_PASSWORD_RESET_BODY)
+
+            set_config(
+                "password_change_alert_subject",
+                "Password Change Confirmation for {ctf_name}",
+            )
+            set_config(
+                "password_change_alert_body",
+                (
+                    "Your password for {ctf_name} has been changed.\n\n"
+                    "If you didn't request a password change you can reset your password here: {url}"
+                ),
+            )
+
+            set_config("setup", True)
+
+            try:
+                db.session.add(admin)
+                db.session.commit()
+~~            except IntegrityError:
+                db.session.rollback()
+
+            try:
+                db.session.add(page)
+                db.session.commit()
+~~            except IntegrityError:
+                db.session.rollback()
+
+            login_user(admin)
+
+            db.session.close()
+            with app.app_context():
+                cache.clear()
+
+            return redirect(url_for("views.static_html"))
+        return render_template("setup.html", state=serialize(generate_nonce()))
+    return redirect(url_for("views.static_html"))
+
+
+@views.route("/setup/integrations", methods=["GET", "POST"])
+def integrations():
+    if is_admin() or is_setup() is False:
+        name = request.values.get("name")
+        state = request.values.get("state")
+
+        try:
+            state = unserialize(state, max_age=3600)
+        except (BadSignature, BadTimeSignature):
+            state = False
+        except Exception:
+
+
+## ... source file continues with no further IntegrityError examples...
+
+```
+
+
+## Example 2 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -144,7 +256,7 @@ def load_user(user_id):
 ```
 
 
-## Example 2 from sqlalchemy-utils
+## Example 3 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)
 ([project documentation](https://sqlalchemy-utils.readthedocs.io/en/latest/)
 and

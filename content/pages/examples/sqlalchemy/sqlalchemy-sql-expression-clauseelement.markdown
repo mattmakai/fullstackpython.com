@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression ClauseElement Example Code
 category: page
 slug: sqlalchemy-sql-expression-clauseelement-examples
-sortorder: 500031110
+sortorder: 500031111
 toc: False
 sidebartitle: sqlalchemy.sql.expression ClauseElement
 meta: Example code for understanding how to use the ClauseElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

@@ -191,3 +191,16 @@ The wide array of
 includes [ranged values](https://sqlalchemy-utils.readthedocs.io/en/latest/range_data_types.html)
 and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/aggregates.html).
 
+
+### wtforms-alchemy
+[wtforms-alchemy](git@github.com:kvesteri/wtforms-alchemy.git)
+([documentation](https://wtforms-alchemy.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/WTForms-Alchemy/))
+is a [WTForms](https://wtforms.readthedocs.io/en/2.2.1/) extension toolkit 
+for easier creation of [SQLAlchemy](/sqlalchemy.html) model based forms.
+While this project primarily focuses on proper form handling, it also
+has many good examples of how to use various parts of SQLAlchemy in
+its code base. The project is provided as open source under the
+[MIT license](https://github.com/kvesteri/wtforms-alchemy/blob/master/LICENSE).
+

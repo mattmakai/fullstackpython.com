@@ -10,7 +10,117 @@ meta: Python example code that shows how to use the make_url callable from the s
 make_url is a callable within the sqlalchemy.engine.url module of the SQLAlchemy project.
 
 
-## Example 1 from flask-sqlalchemy
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [SQLAlchemy](/sqlalchemy.html) and [Flask](/flask.html).
+The application can be used as-is to run CTF events, or the code can be
+modified for custom rules on hacking scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / tests / helpers.py**](https://github.com/CTFd/CTFd/blob/master/./tests/helpers.py)
+
+```python
+# helpers.py
+import datetime
+import gc
+import random
+import string
+import uuid
+from collections import namedtuple
+from unittest.mock import Mock, patch
+
+import requests
+from flask.testing import FlaskClient
+~~from sqlalchemy.engine.url import make_url
+from sqlalchemy_utils import drop_database
+from werkzeug.datastructures import Headers
+
+from CTFd import create_app
+from CTFd.cache import cache, clear_standings
+from CTFd.config import TestingConfig
+from CTFd.models import (
+    Awards,
+    ChallengeFiles,
+    Challenges,
+    Fails,
+    Files,
+    Flags,
+    Hints,
+    Notifications,
+    PageFiles,
+    Pages,
+    Solves,
+    Tags,
+    Teams,
+    Tokens,
+    Tracking,
+    Unlocks,
+    Users,
+
+
+## ... source file abbreviated to get to make_url examples ...
+
+
+                if isinstance(headers, dict):
+                    headers = Headers(headers)
+                headers.extend(api_key_headers)
+                kwargs["headers"] = headers
+        return super(CTFdTestClient, self).open(*args, **kwargs)
+
+
+def create_ctfd(
+    ctf_name="CTFd",
+    ctf_description="CTF description",
+    name="admin",
+    email="admin@ctfd.io",
+    password="password",
+    user_mode="users",
+    setup=True,
+    enable_plugins=False,
+    application_root="/",
+    config=TestingConfig,
+):
+    if enable_plugins:
+        config.SAFE_MODE = False
+    else:
+        config.SAFE_MODE = True
+
+    config.APPLICATION_ROOT = application_root
+~~    url = make_url(config.SQLALCHEMY_DATABASE_URI)
+    if url.database:
+        url.database = str(uuid.uuid4())
+    config.SQLALCHEMY_DATABASE_URI = str(url)
+
+    app = create_app(config)
+    app.test_client_class = CTFdTestClient
+
+    if setup:
+        app = setup_ctfd(
+            app,
+            ctf_name=ctf_name,
+            ctf_description=ctf_description,
+            name=name,
+            email=email,
+            password=password,
+            user_mode=user_mode,
+        )
+    return app
+
+
+def setup_ctfd(
+    app,
+    ctf_name="CTFd",
+    ctf_description="CTF description",
+
+
+## ... source file continues with no further make_url examples...
+
+```
+
+
+## Example 2 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -133,7 +243,7 @@ class _EngineConnector:
 ```
 
 
-## Example 2 from GINO
+## Example 3 from GINO
 [GINO](https://github.com/fantix/gino)
 ([project documentation](https://python-gino.readthedocs.io/en/latest/)
 and

@@ -1,7 +1,7 @@
 title: sqlalchemy.sql functions Example Code
 category: page
 slug: sqlalchemy-sql-functions-examples
-sortorder: 500031102
+sortorder: 500031103
 toc: False
 sidebartitle: sqlalchemy.sql functions
 meta: Python example code that shows how to use the functions callable from the sqlalchemy.sql module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
 title: sqlalchemy.types String Example Code
 category: page
 slug: sqlalchemy-types-string-examples
-sortorder: 500031128
+sortorder: 500031129
 toc: False
 sidebartitle: sqlalchemy.types String
 meta: Example code for understanding how to use the String class from the sqlalchemy.types module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
 title: sqlalchemy.sql schema Example Code
 category: page
 slug: sqlalchemy-sql-schema-examples
-sortorder: 500031104
+sortorder: 500031105
 toc: False
 sidebartitle: sqlalchemy.sql schema
 meta: Python example code that shows how to use the schema callable from the sqlalchemy.sql module of the SQLAlchemy project.

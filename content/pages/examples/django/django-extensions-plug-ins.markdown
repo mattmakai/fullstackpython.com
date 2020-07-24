@@ -80,14 +80,14 @@ Code from django-angular is shown on:
 [django-axes](https://github.com/jazzband/django-axes/)
 ([project documentation](https://django-axes.readthedocs.io/en/latest/)
 and 
-[PyPI package information](https://pypi.org/project/django-axes/)
+[PyPI package information](https://pypi.org/project/django-axes/))
 is a code library for [Django](/django.html) projects to track failed
 login attempts against a web application. The goal of the project is
 to make it easier for you to stop people and scripts from hacking your
 Django-powered website.
 
 The code for django-axes is
-[open source under the MIT liense](https://github.com/jazzband/django-axes/blob/master/LICENSE)
+[open source under the MIT license](https://github.com/jazzband/django-axes/blob/master/LICENSE)
 and maintained by the group of developers known as
 [Jazzband](https://jazzband.co/).
 

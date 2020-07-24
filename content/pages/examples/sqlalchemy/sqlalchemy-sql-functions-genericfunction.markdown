@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.functions GenericFunction Example Code
 category: page
 slug: sqlalchemy-sql-functions-genericfunction-examples
-sortorder: 500031117
+sortorder: 500031118
 toc: False
 sidebartitle: sqlalchemy.sql.functions GenericFunction
 meta: Example code for understanding how to use the GenericFunction class from the sqlalchemy.sql.functions module of the SQLAlchemy project.

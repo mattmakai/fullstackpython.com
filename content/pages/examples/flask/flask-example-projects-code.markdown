@@ -22,6 +22,16 @@ The code is open sourced under the
 [MIT license](https://github.com/braintree/braintree_flask_example/blob/master/LICENSE).
 
 
+### CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a 
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+
 ### Datadog Flask example
 The [Datadog Flask app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions

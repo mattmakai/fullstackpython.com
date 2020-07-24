@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression ColumnClause Example Code
 category: page
 slug: sqlalchemy-sql-expression-columnclause-examples
-sortorder: 500031111
+sortorder: 500031112
 toc: False
 sidebartitle: sqlalchemy.sql.expression ColumnClause
 meta: Example code for understanding how to use the ColumnClause class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

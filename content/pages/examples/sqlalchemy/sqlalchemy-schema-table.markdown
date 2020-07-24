@@ -1,7 +1,7 @@
 title: sqlalchemy.schema Table Example Code
 category: page
 slug: sqlalchemy-schema-table-examples
-sortorder: 500031097
+sortorder: 500031098
 toc: False
 sidebartitle: sqlalchemy.schema Table
 meta: Example code for understanding how to use the Table class from the sqlalchemy.schema module of the SQLAlchemy project.

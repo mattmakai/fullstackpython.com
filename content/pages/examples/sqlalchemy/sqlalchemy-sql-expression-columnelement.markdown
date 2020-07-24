@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression ColumnElement Example Code
 category: page
 slug: sqlalchemy-sql-expression-columnelement-examples
-sortorder: 500031112
+sortorder: 500031113
 toc: False
 sidebartitle: sqlalchemy.sql.expression ColumnElement
 meta: Example code for understanding how to use the ColumnElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

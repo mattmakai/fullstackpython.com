@@ -1,7 +1,7 @@
 title: sqlalchemy.schema ForeignKey Example Code
 category: page
 slug: sqlalchemy-schema-foreignkey-examples
-sortorder: 500031094
+sortorder: 500031095
 toc: False
 sidebartitle: sqlalchemy.schema ForeignKey
 meta: Example code for understanding how to use the ForeignKey class from the sqlalchemy.schema module of the SQLAlchemy project.

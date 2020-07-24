@@ -184,3 +184,55 @@ class AttrPath(object):
 
 ```
 
+
+## Example 3 from WTForms-Alchemy
+[wtforms-alchemy](git@github.com:kvesteri/wtforms-alchemy.git)
+([documentation](https://wtforms-alchemy.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/WTForms-Alchemy/))
+is a [WTForms](https://wtforms.readthedocs.io/en/2.2.1/) extension toolkit
+for easier creation of [SQLAlchemy](/sqlalchemy.html) model based forms.
+While this project primarily focuses on proper form handling, it also
+has many good examples of how to use various parts of SQLAlchemy in
+its code base. The project is provided as open source under the
+[MIT license](https://github.com/kvesteri/wtforms-alchemy/blob/master/LICENSE).
+
+[**WTForms-Alchemy / wtforms_alchemy / validators.py**](https://github.com/kvesteri/wtforms-alchemy/blob/master/wtforms_alchemy/./validators.py)
+
+```python
+# validators.py
+from collections.abc import Iterable, Mapping
+
+import six
+from sqlalchemy import Column
+~~from sqlalchemy.orm.attributes import InstrumentedAttribute
+from wtforms import ValidationError
+
+
+class Unique(object):
+    field_flags = ('unique', )
+
+    def __init__(self, column, get_session=None, message=None):
+        self.column = column
+        self.message = message
+        self.get_session = get_session
+
+    @property
+    def query(self):
+        self._check_for_session(self.model)
+        if self.get_session:
+            return self.get_session().query(self.model)
+        elif hasattr(self.model, 'query'):
+            return getattr(self.model, 'query')
+        else:
+            raise Exception(
+                'Validator requires either get_session or Flask-SQLAlchemy'
+                ' styled query parameter'
+            )
+
+
+
+## ... source file continues with no further InstrumentedAttribute examples...
+
+```
+

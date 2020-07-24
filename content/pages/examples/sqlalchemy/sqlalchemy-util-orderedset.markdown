@@ -1,7 +1,7 @@
 title: sqlalchemy.util OrderedSet Example Code
 category: page
 slug: sqlalchemy-util-orderedset-examples
-sortorder: 500031133
+sortorder: 500031134
 toc: False
 sidebartitle: sqlalchemy.util OrderedSet
 meta: Example code for understanding how to use the OrderedSet class from the sqlalchemy.util module of the SQLAlchemy project.

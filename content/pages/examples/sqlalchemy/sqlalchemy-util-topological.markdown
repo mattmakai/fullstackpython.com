@@ -1,7 +1,7 @@
 title: sqlalchemy.util topological Example Code
 category: page
 slug: sqlalchemy-util-topological-examples
-sortorder: 500031135
+sortorder: 500031136
 toc: False
 sidebartitle: sqlalchemy.util topological
 meta: Python example code that shows how to use the topological callable from the sqlalchemy.util module of the SQLAlchemy project.

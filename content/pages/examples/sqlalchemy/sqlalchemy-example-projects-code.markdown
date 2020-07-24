@@ -27,6 +27,16 @@ The project is open sourced under the
 [BSD 3-Clause "New" or "Revised" License](https://github.com/encode/databases/blob/master/LICENSE.md).
 
 
+# CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [SQLAlchemy](/sqlalchemy.html) and [Flask](/flask.html).
+The application can be used as-is to run CTF events, or the code can be
+modified for custom rules on hacking scenarios. CTFd is open sourced under the                                                      
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+
 ### indico
 [indico](https://github.com/indico/indico) 
 ([project website](https://getindico.io/),

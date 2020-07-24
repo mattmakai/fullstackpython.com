@@ -228,3 +228,168 @@ def get_all_descriptors(expr):
 
 ```
 
+
+## Example 2 from WTForms-Alchemy
+[wtforms-alchemy](git@github.com:kvesteri/wtforms-alchemy.git)
+([documentation](https://wtforms-alchemy.readthedocs.io/en/latest/)
+and
+[PyPI package information](https://pypi.org/project/WTForms-Alchemy/))
+is a [WTForms](https://wtforms.readthedocs.io/en/2.2.1/) extension toolkit
+for easier creation of [SQLAlchemy](/sqlalchemy.html) model based forms.
+While this project primarily focuses on proper form handling, it also
+has many good examples of how to use various parts of SQLAlchemy in
+its code base. The project is provided as open source under the
+[MIT license](https://github.com/kvesteri/wtforms-alchemy/blob/master/LICENSE).
+
+[**WTForms-Alchemy / wtforms_alchemy / generator.py**](https://github.com/kvesteri/wtforms-alchemy/blob/master/wtforms_alchemy/./generator.py)
+
+```python
+# generator.py
+import inspect
+from collections import OrderedDict
+from decimal import Decimal
+from enum import Enum
+
+import six
+import sqlalchemy as sa
+~~from sqlalchemy.orm.properties import ColumnProperty
+from sqlalchemy_utils import types
+from wtforms import (
+    BooleanField,
+    Field,
+    FloatField,
+    PasswordField,
+    TextAreaField
+)
+from wtforms.widgets import CheckboxInput, TextArea
+from wtforms_components import (
+    ColorField,
+    DateField,
+    DateIntervalField,
+    DateTimeField,
+    DateTimeIntervalField,
+    DateTimeLocalField,
+    DecimalField,
+    DecimalIntervalField,
+    EmailField,
+    IntegerField,
+    IntIntervalField,
+    SelectField,
+    StringField,
+    TimeField
+
+
+## ... source file abbreviated to get to ColumnProperty examples ...
+
+
+
+    WIDGET_MAP = OrderedDict((
+        (BooleanField, CheckboxInput),
+        (ColorField, ColorInput),
+        (DateField, DateInput),
+        (DateTimeField, DateTimeInput),
+        (DateTimeLocalField, DateTimeLocalInput),
+        (DecimalField, NumberInput),
+        (EmailField, EmailInput),
+        (FloatField, NumberInput),
+        (IntegerField, NumberInput),
+        (TextAreaField, TextArea),
+        (TimeField, TimeInput),
+        (StringField, TextInput)
+    ))
+
+    def __init__(self, form_class):
+        self.form_class = form_class
+        self.model_class = self.form_class.Meta.model
+        self.meta = self.form_class.Meta
+        self.TYPE_MAP.update(self.form_class.Meta.type_map)
+
+    def create_form(self, form):
+        attrs = OrderedDict()
+        for key, property_ in sa.inspect(self.model_class).attrs.items():
+~~            if not isinstance(property_, ColumnProperty):
+                continue
+            if self.skip_column_property(property_):
+                continue
+            attrs[key] = property_
+
+        for attr in translated_attributes(self.model_class):
+            attrs[attr.key] = attr.property
+
+        return self.create_fields(form, self.filter_attributes(attrs))
+
+    def filter_attributes(self, attrs):
+        if self.meta.only:
+            attrs = OrderedDict([
+                (key, prop)
+                for key, prop in map(self.validate_attribute, self.meta.only)
+                if key
+            ])
+        else:
+            if self.meta.include:
+                attrs.update([
+                    (key, prop)
+                    for key, prop
+                    in map(self.validate_attribute, self.meta.include)
+                    if key
+
+
+## ... source file abbreviated to get to ColumnProperty examples ...
+
+
+
+            if self.meta.exclude:
+                for key in self.meta.exclude:
+                    try:
+                        del attrs[key]
+                    except KeyError:
+                        if self.meta.attr_errors:
+                            raise InvalidAttributeException(key)
+        return attrs
+
+    def validate_attribute(self, attr_name):
+        try:
+            attr = getattr(self.model_class, attr_name)
+        except AttributeError:
+            try:
+                translation_class = (
+                    self.model_class.__translatable__['class']
+                )
+                attr = getattr(translation_class, attr_name)
+            except AttributeError:
+                if self.meta.attr_errors:
+                    raise InvalidAttributeException(attr_name)
+                else:
+                    return None, None
+        try:
+~~            if not isinstance(attr.property, ColumnProperty):
+                if self.meta.attr_errors:
+                    raise InvalidAttributeException(attr_name)
+                else:
+                    return None, None
+        except AttributeError:
+            raise AttributeTypeException(attr_name)
+        return attr_name, attr.property
+
+    def create_fields(self, form, properties):
+        for key, prop in properties.items():
+            column = prop.columns[0]
+            try:
+                field = self.create_field(prop, column)
+            except UnknownTypeException:
+                if not self.meta.skip_unknown_types:
+                    raise
+                else:
+                    continue
+
+            if not hasattr(form, key):
+                setattr(form, key, field)
+
+    def skip_column_property(self, column_property):
+        if column_property._is_polymorphic_discriminator:
+
+
+## ... source file continues with no further ColumnProperty examples...
+
+```
+

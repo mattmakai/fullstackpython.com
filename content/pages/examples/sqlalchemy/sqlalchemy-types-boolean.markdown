@@ -1,7 +1,7 @@
 title: sqlalchemy.types Boolean Example Code
 category: page
 slug: sqlalchemy-types-boolean-examples
-sortorder: 500031124
+sortorder: 500031125
 toc: False
 sidebartitle: sqlalchemy.types Boolean
 meta: Example code for understanding how to use the Boolean class from the sqlalchemy.types module of the SQLAlchemy project.
