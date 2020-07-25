@@ -1,7 +1,7 @@
 title: flask.helpers url_for Example Code
 category: page
 slug: flask-helpers-url-for-examples
-sortorder: 500021022
+sortorder: 500021023
 toc: False
 sidebartitle: flask.helpers url_for
 meta: Python example code that shows how to use the url_for callable from the flask.helpers module of the Flask project.
@@ -17,8 +17,186 @@ from `flask.helpers`, even though it is defined within the `helpers` module.
 It is the same function that is imported, but it's less characters to type
 when you leave off the `.helpers` part.
 
+<a href="/flask-helpers-flash-examples.html">flash</a>,
+<a href="/flask-helpers-get-root-path-examples.html">get_root_path</a>,
+<a href="/flask-helpers-make-response-examples.html">make_response</a>,
+<a href="/flask-helpers-safe-join-examples.html">safe_join</a>,
+and <a href="/flask-helpers-send-file-examples.html">send_file</a>
+are several other callables with code examples from the same `flask.helpers` package.
 
-## Example 1 from Flask AppBuilder
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / tests / test_views.py**](https://github.com/CTFd/CTFd/blob/master/./tests/test_views.py)
+
+```python
+# test_views.py
+
+import os
+
+~~from flask import url_for
+from freezegun import freeze_time
+
+from CTFd.cache import clear_pages
+from CTFd.utils import set_config
+from CTFd.utils.config.pages import get_pages
+from CTFd.utils.encoding import hexencode
+from tests.helpers import (
+    create_ctfd,
+    destroy_ctfd,
+    gen_challenge,
+    gen_file,
+    gen_page,
+    login_as_user,
+    register_user,
+)
+
+
+def test_index():
+    app = create_ctfd()
+    with app.app_context():
+        with app.test_client() as client:
+            r = client.get("/")
+            assert r.status_code == 200
+    destroy_ctfd(app)
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+        register_user(app)
+        client = login_as_user(app)
+        r = client.get("/profile")
+        assert r.status_code == 200
+    destroy_ctfd(app)
+
+
+def test_user_can_access_files():
+    app = create_ctfd()
+    with app.app_context():
+        from CTFd.utils.uploads import rmdir
+
+        chal = gen_challenge(app.db)
+        chal_id = chal.id
+        path = app.config.get("UPLOAD_FOLDER")
+
+        location = os.path.join(path, "test_file_path", "test.txt")
+        directory = os.path.dirname(location)
+        model_path = os.path.join("test_file_path", "test.txt")
+
+        try:
+            os.makedirs(directory)
+            with open(location, "wb") as obj:
+                obj.write("testing file load".encode())
+            gen_file(app.db, location=model_path, challenge_id=chal_id)
+~~            url = url_for("views.files", path=model_path)
+
+            set_config("challenge_visibility", "public")
+            with app.test_client() as client:
+                r = client.get(url)
+
+                assert r.status_code == 200
+                assert r.get_data(as_text=True) == "testing file load"
+
+            set_config("challenge_visibility", "private")
+            with app.test_client() as client:
+                r = client.get(url)
+
+                assert r.status_code == 403
+                assert r.get_data(as_text=True) != "testing file load"
+
+            register_user(app)
+            client = login_as_user(app)
+            r = client.get(url)
+            assert r.status_code == 200
+            assert r.get_data(as_text=True) == "testing file load"
+
+            with freeze_time("2017-10-5"):
+                set_config("start", "1507262400")
+                for v in ("public", "private"):
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+        finally:
+            rmdir(directory)
+    destroy_ctfd(app)
+
+
+def test_user_can_access_files_with_auth_token():
+    app = create_ctfd()
+    with app.app_context():
+        from CTFd.utils.uploads import rmdir
+
+        chal = gen_challenge(app.db)
+        chal_id = chal.id
+        path = app.config.get("UPLOAD_FOLDER")
+
+        md5hash = hexencode(os.urandom(16))
+
+        location = os.path.join(path, md5hash, "test.txt")
+        directory = os.path.dirname(location)
+        model_path = os.path.join(md5hash, "test.txt")
+
+        try:
+            os.makedirs(directory)
+            with open(location, "wb") as obj:
+                obj.write("testing file load".encode())
+            gen_file(app.db, location=model_path, challenge_id=chal_id)
+~~            url = url_for("views.files", path=model_path)
+
+            register_user(app)
+            with login_as_user(app) as client:
+                req = client.get("/api/v1/challenges/1")
+                data = req.get_json()
+                file_url = data["data"]["files"][0]
+
+            with app.test_client() as client:
+                r = client.get(url)
+                assert r.status_code == 403
+                assert r.get_data(as_text=True) != "testing file load"
+
+                r = client.get(
+~~                    url_for(
+                        "views.files",
+                        path=model_path,
+                        token="random_token_that_shouldnt_work",
+                    )
+                )
+                assert r.status_code == 403
+                assert r.get_data(as_text=True) != "testing file load"
+
+                r = client.get(file_url)
+                assert r.status_code == 200
+                assert r.get_data(as_text=True) == "testing file load"
+
+                set_config("challenge_visibility", "admins")
+                r = client.get(file_url)
+                assert r.status_code == 403
+                assert r.get_data(as_text=True) != "testing file load"
+                set_config("challenge_visibility", "private")
+
+                with freeze_time("2017-10-5"):
+                    set_config("start", "1507262400")
+
+                    r = client.get(file_url)
+                    assert r.status_code == 403
+                    assert r.get_data(as_text=True) != "testing file load"
+
+
+## ... source file continues with no further url_for examples...
+
+```
+
+
+## Example 2 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -94,7 +272,7 @@ class Menu(object):
 ```
 
 
-## Example 2 from FlaskBB
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -162,7 +340,7 @@ class FlaskBBRenderer(mistune.Renderer):
 ```
 
 
-## Example 3 from flask-base
+## Example 4 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -233,7 +411,7 @@ class CustomSelectField(Field):
 ```
 
 
-## Example 4 from flask-bones
+## Example 5 from flask-bones
 [flask-bones](https://github.com/cburmeister/flask-bones)
 ([demo](http://flask-bones.herokuapp.com/))
 is large scale [Flask](/flask.html) example application built
@@ -264,7 +442,7 @@ def url_for_other_page(**kwargs):
 ```
 
 
-## Example 5 from Flask-Bootstrap
+## Example 6 from Flask-Bootstrap
 [flask-bootstrap](https://github.com/mbr/flask-bootstrap)
 ([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
 makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
@@ -354,7 +532,7 @@ class ConditionalCDN(object):
 ```
 
 
-## Example 6 from flask-debugtoolbar
+## Example 7 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -421,7 +599,7 @@ class DebugToolbar(object):
 ```
 
 
-## Example 7 from flask-login
+## Example 8 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -521,7 +699,7 @@ def login_user(user, remember=False, duration=None, force=False, fresh=True):
 ```
 
 
-## Example 8 from flask-restx
+## Example 9 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -576,7 +754,7 @@ def ui_for(api):
 ```
 
 
-## Example 9 from flaskSaaS
+## Example 10 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -717,7 +895,7 @@ def reset(token):
 ```
 
 
-## Example 10 from Flask-Security-Too
+## Example 11 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -837,7 +1015,7 @@ def get_post_action_redirect(config_key, declared=None):
 ```
 
 
-## Example 11 from Flask-User
+## Example 12 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -986,7 +1164,7 @@ class EmailManager(object):
 ```
 
 
-## Example 12 from Flasky
+## Example 13 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1186,7 +1364,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 13 from Datadog Flask Example App
+## Example 14 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).

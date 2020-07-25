@@ -14,6 +14,10 @@ but for the
 [application context](https://flask.palletsprojects.com/en/1.1.x/appcontext/)
 rather than the request.
 
+<a href="/flask-ctx-after-this-request-examples.html">after_this_request</a>
+and
+<a href="/flask-ctx-has-request-context-examples.html">has_request_context</a>
+are a couple of other callables within the `flask.ctx` package that also have code examples.
 
 ## Example 1 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an

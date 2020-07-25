@@ -1,7 +1,7 @@
 title: flask.sessions SessionInterface Example Code
 category: page
 slug: flask-sessions-sessioninterface-examples
-sortorder: 500021026
+sortorder: 500021027
 toc: False
 sidebartitle: flask.sessions SessionInterface
 meta: Example code for understanding how to use the SessionInterface class from the flask.sessions module of the Flask project.
@@ -12,6 +12,10 @@ is a class used with [Flask](/flask.html) projects that is defined in
 the `flask.sessions` module. `SessionInterface` is the basic interface
 that must be implemented to replace the default session interface.
 
+<a href="/flask-sessions-badsignature-examples.html">BadSignature</a>
+and
+<a href="/flask-sessions-sessionmixin-examples.html">SessionMixin</a>
+are a couple of other callables within the `flask.sessions` package that also have code examples.
 
 ## Example 1 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a

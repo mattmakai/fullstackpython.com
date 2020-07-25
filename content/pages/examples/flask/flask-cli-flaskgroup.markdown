@@ -13,6 +13,12 @@ FlaskGroup is a subclass of [AppGroup](/flask-cli-appgroup-examples.html)
 that provides for loading more commands from a configured Flask app.
 Generally, only advanced use cases will need to use this class.
 
+<a href="/flask-cli-appgroup-examples.html">AppGroup</a>,
+<a href="/flask-cli-dispatchingapp-examples.html">DispatchingApp</a>,
+<a href="/flask-cli-scriptinfo-examples.html">ScriptInfo</a>,
+<a href="/flask-cli-pass-script-info-examples.html">pass_script_info</a>,
+and <a href="/flask-cli-with-appcontext-examples.html">with_appcontext</a>
+are several other callables with code examples from the same `flask.cli` package.
 
 ## Example 1 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)

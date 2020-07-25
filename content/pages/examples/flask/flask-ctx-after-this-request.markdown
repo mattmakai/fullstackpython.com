@@ -14,6 +14,10 @@ descriptive of what it does and it particularly useful for modifying
 response objects, especially when you want a function other than the
 view function to modify a response.
 
+<a href="/flask-ctx-has-app-context-examples.html">has_app_context</a>
+and
+<a href="/flask-ctx-has-request-context-examples.html">has_request_context</a>
+are a couple of other callables within the `flask.ctx` package that also have code examples.
 
 ## Example 1 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)

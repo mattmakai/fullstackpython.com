@@ -12,6 +12,12 @@ is a function within the `flask.helpers` module of the [Flask](/flask.html)
 framework. `get_root_path` returns the filesystem path to a package
 or the current working directly if the path cannot be found.
 
+<a href="/flask-helpers-flash-examples.html">flash</a>,
+<a href="/flask-helpers-make-response-examples.html">make_response</a>,
+<a href="/flask-helpers-safe-join-examples.html">safe_join</a>,
+<a href="/flask-helpers-send-file-examples.html">send_file</a>,
+and <a href="/flask-helpers-url-for-examples.html">url_for</a>
+are several other callables with code examples from the same `flask.helpers` package.
 
 ## Example 1 from indico
 [indico](https://github.com/indico/indico)

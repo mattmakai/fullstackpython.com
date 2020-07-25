@@ -15,8 +15,12 @@ The `ImmutableDict` class wraps a
 [standard Python dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
 so that values cannot be modified after initially being set.
 
+<a href="/flask-app-badrequest-examples.html">BadRequest</a>,
+<a href="/flask-app-flask-examples.html">Flask</a>,
+and <a href="/flask-app-headers-examples.html">Headers</a>
+are several other callables with code examples from the same `flask.app` package.
 
-You should read up on these subjects along with these `ImmutableDict` examples:
+These topics are also useful while reading the `ImmutableDict` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

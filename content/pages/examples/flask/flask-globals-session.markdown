@@ -20,8 +20,117 @@ from `flask.globals`, even though it is defined within the `globals` module.
 It's the same function that is imported, but it's less characters to type
 when you leave off the `.globals` part.
 
+<a href="/flask-globals-current-app-examples.html">current_app</a>,
+<a href="/flask-globals-g-examples.html">g</a>,
+and <a href="/flask-globals-request-examples.html">request</a>
+are several other callables with code examples from the same `flask.globals` package.
 
-## Example 1 from Flask AppBuilder
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / CTFd / auth.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/auth.py)
+
+```python
+# auth.py
+import base64
+
+import requests
+from flask import Blueprint
+from flask import current_app as app
+~~from flask import redirect, render_template, request, session, url_for
+from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
+
+from CTFd.cache import clear_team_session, clear_user_session
+from CTFd.models import Teams, Users, db
+from CTFd.utils import config, email, get_app_config, get_config
+from CTFd.utils import user as current_user
+from CTFd.utils import validators
+from CTFd.utils.config import is_teams_mode
+from CTFd.utils.config.integrations import mlc_registration
+from CTFd.utils.config.visibility import registration_visible
+from CTFd.utils.crypto import verify_password
+from CTFd.utils.decorators import ratelimit
+from CTFd.utils.decorators.visibility import check_registration_visibility
+from CTFd.utils.helpers import error_for, get_errors, markup
+from CTFd.utils.logging import log
+from CTFd.utils.modes import TEAMS_MODE
+from CTFd.utils.security.auth import login_user, logout_user
+from CTFd.utils.security.signing import unserialize
+from CTFd.utils.validators import ValidationError
+
+auth = Blueprint("auth", __name__)
+
+
+@auth.route("/confirm", methods=["POST", "GET"])
+
+
+## ... source file abbreviated to get to session examples ...
+
+
+        log("registrations", "[{date}] {ip} - {name} registered with {email}")
+        db.session.close()
+
+        if is_teams_mode():
+            return redirect(url_for("teams.private"))
+
+        return redirect(url_for("challenges.listing"))
+    else:
+        return render_template("register.html", errors=errors)
+
+
+@auth.route("/login", methods=["POST", "GET"])
+@ratelimit(method="POST", limit=10, interval=5)
+def login():
+    errors = get_errors()
+    if request.method == "POST":
+        name = request.form["name"]
+
+        if validators.validate_email(name) is True:
+            user = Users.query.filter_by(email=name).first()
+        else:
+            user = Users.query.filter_by(name=name).first()
+
+        if user:
+            if user and verify_password(request.form["password"], user.password):
+~~                session.regenerate()
+
+                login_user(user)
+                log("logins", "[{date}] {ip} - {name} logged in")
+
+                db.session.close()
+                if request.args.get("next") and validators.is_safe_url(
+                    request.args.get("next")
+                ):
+                    return redirect(request.args.get("next"))
+                return redirect(url_for("challenges.listing"))
+
+            else:
+                log("logins", "[{date}] {ip} - submitted invalid password for {name}")
+                errors.append("Your username or password is incorrect")
+                db.session.close()
+                return render_template("login.html", errors=errors)
+        else:
+            log("logins", "[{date}] {ip} - submitted invalid account information")
+            errors.append("Your username or password is incorrect")
+            db.session.close()
+            return render_template("login.html", errors=errors)
+    else:
+        db.session.close()
+        return render_template("login.html", errors=errors)
+
+
+## ... source file continues with no further session examples...
+
+```
+
+
+## Example 2 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -129,7 +238,7 @@ class RegisterUserOIDView(BaseRegisterUser):
 ```
 
 
-## Example 2 from FlaskBB
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -237,7 +346,7 @@ def do_topic_action(topics, user, action, reverse):  # noqa: C901
 ```
 
 
-## Example 3 from flaskex
+## Example 4 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -332,7 +441,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 4 from Flask-HTTPAuth
+## Example 5 from Flask-HTTPAuth
 [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
 ([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
 and
@@ -450,7 +559,7 @@ class HTTPDigestAuth(HTTPAuth):
 ```
 
 
-## Example 5 from flask-login
+## Example 6 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -607,7 +716,7 @@ def login_required(func):
 ```
 
 
-## Example 6 from Flask-WTF
+## Example 7 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -718,7 +827,7 @@ def _get_config(
 ```
 
 
-## Example 7 from flaskSaaS
+## Example 8 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -790,7 +899,7 @@ logger = wrap_logger(
 ```
 
 
-## Example 8 from Flask-Security-Too
+## Example 9 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -876,7 +985,7 @@ def tf_send_security_token(user, method, totp_secret, phone_number):
 ```
 
 
-## Example 9 from Flask-SocketIO
+## Example 10 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -972,7 +1081,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 10 from Flask-User
+## Example 11 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1080,7 +1189,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 11 from indico
+## Example 12 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1198,7 +1307,7 @@ def sentry_log_exception():
 ```
 
 
-## Example 12 from tedivms-flask
+## Example 13 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1315,7 +1424,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 13 from trape
+## Example 14 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

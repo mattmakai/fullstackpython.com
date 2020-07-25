@@ -19,6 +19,12 @@ problem.
 instead of `flask.helpers` so you will typically see that shortcut
 in example code.
 
+<a href="/flask-helpers-flash-examples.html">flash</a>,
+<a href="/flask-helpers-get-root-path-examples.html">get_root_path</a>,
+<a href="/flask-helpers-safe-join-examples.html">safe_join</a>,
+<a href="/flask-helpers-send-file-examples.html">send_file</a>,
+and <a href="/flask-helpers-url-for-examples.html">url_for</a>
+are several other callables with code examples from the same `flask.helpers` package.
 
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)

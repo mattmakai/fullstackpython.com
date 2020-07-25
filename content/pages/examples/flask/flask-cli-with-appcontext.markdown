@@ -13,6 +13,12 @@ wraps a callback to guarantee it will be called with a script's
 application context. Any callbacks registered with `app.cli` are
 wrapped with this function by default.
 
+<a href="/flask-cli-appgroup-examples.html">AppGroup</a>,
+<a href="/flask-cli-dispatchingapp-examples.html">DispatchingApp</a>,
+<a href="/flask-cli-flaskgroup-examples.html">FlaskGroup</a>,
+<a href="/flask-cli-scriptinfo-examples.html">ScriptInfo</a>,
+and <a href="/flask-cli-pass-script-info-examples.html">pass_script_info</a>
+are several other callables with code examples from the same `flask.cli` package.
 
 ## Example 1 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)

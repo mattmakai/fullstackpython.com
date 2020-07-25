@@ -17,6 +17,10 @@ function as well that works for the
 [application context](https://flask.palletsprojects.com/en/1.1.x/appcontext/).
 
 
+<a href="/flask-ctx-after-this-request-examples.html">after_this_request</a>
+and
+<a href="/flask-ctx-has-app-context-examples.html">has_app_context</a>
+are a couple of other callables within the `flask.ctx` package that also have code examples.
 
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)

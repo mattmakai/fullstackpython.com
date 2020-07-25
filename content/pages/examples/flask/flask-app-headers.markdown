@@ -17,6 +17,10 @@ Headers handles the
 from [requests](/flask-globals-request-examples.html) and responses for
 Flask web applications.
 
+<a href="/flask-app-badrequest-examples.html">BadRequest</a>,
+<a href="/flask-app-flask-examples.html">Flask</a>,
+and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
+are several other callables with code examples from the same `flask.app` package.
 
 You should read up on these subjects along with these `Headers` examples:
 
@@ -24,7 +28,103 @@ You should read up on these subjects along with these `Headers` examples:
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
 
 
-## Example 1 from flask-restx
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / tests / helpers.py**](https://github.com/CTFd/CTFd/blob/master/./tests/helpers.py)
+
+```python
+# helpers.py
+import datetime
+import gc
+import random
+import string
+import uuid
+from collections import namedtuple
+from unittest.mock import Mock, patch
+
+import requests
+from flask.testing import FlaskClient
+from sqlalchemy.engine.url import make_url
+from sqlalchemy_utils import drop_database
+~~from werkzeug.datastructures import Headers
+
+from CTFd import create_app
+from CTFd.cache import cache, clear_standings
+from CTFd.config import TestingConfig
+from CTFd.models import (
+    Awards,
+    ChallengeFiles,
+    Challenges,
+    Fails,
+    Files,
+    Flags,
+    Hints,
+    Notifications,
+    PageFiles,
+    Pages,
+    Solves,
+    Tags,
+    Teams,
+    Tokens,
+    Tracking,
+    Unlocks,
+    Users,
+)
+
+text_type = str
+binary_type = bytes
+
+
+FakeRequest = namedtuple("FakeRequest", ["form"])
+
+
+class CTFdTestClient(FlaskClient):
+    def open(self, *args, **kwargs):
+        if kwargs.get("json") is not None:
+            with self.session_transaction() as sess:
+~~                api_key_headers = Headers({"CSRF-Token": sess.get("nonce")})
+~~                headers = kwargs.pop("headers", Headers())
+                if isinstance(headers, dict):
+~~                    headers = Headers(headers)
+                headers.extend(api_key_headers)
+                kwargs["headers"] = headers
+        return super(CTFdTestClient, self).open(*args, **kwargs)
+
+
+def create_ctfd(
+    ctf_name="CTFd",
+    ctf_description="CTF description",
+    name="admin",
+    email="admin@ctfd.io",
+    password="password",
+    user_mode="users",
+    setup=True,
+    enable_plugins=False,
+    application_root="/",
+    config=TestingConfig,
+):
+    if enable_plugins:
+        config.SAFE_MODE = False
+    else:
+        config.SAFE_MODE = True
+
+    config.APPLICATION_ROOT = application_root
+    url = make_url(config.SQLALCHEMY_DATABASE_URI)
+
+
+## ... source file continues with no further Headers examples...
+
+```
+
+
+## Example 2 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into

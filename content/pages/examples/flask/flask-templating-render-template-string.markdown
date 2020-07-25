@@ -1,7 +1,7 @@
 title: flask.templating render_template_string Example Code
 category: page
 slug: flask-templating-render-template-string-examples
-sortorder: 500021031
+sortorder: 500021032
 toc: False
 sidebartitle: flask.templating render_template_string
 meta: Python example code that shows how to use the render_template_string callable from the flask.templating module of the Flask project.
@@ -17,6 +17,8 @@ package instead of from `flask.templating`. It is the same function that is
 imported, but there are less characters to type when you leave off
 the `.templating` part.
 
+<a href="/flask-templating-render-template-examples.html">render_template</a>
+is another callable from the `flask.templating` package with code examples.
 
 These topics are also useful while reading the `render_template_string` examples:
 

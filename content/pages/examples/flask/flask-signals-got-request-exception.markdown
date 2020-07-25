@@ -1,7 +1,7 @@
 title: flask.signals got_request_exception Example Code
 category: page
 slug: flask-signals-got-request-exception-examples
-sortorder: 500021029
+sortorder: 500021030
 toc: False
 sidebartitle: flask.signals got_request_exception
 meta: Python example code that shows how to use the got_request_exception callable from the flask.signals module of the Flask project.
@@ -13,6 +13,8 @@ is a signal defined in the [Flask](/flask.html) project's
 issue with the HTTP request. It can also be thrown by your own
 view functions if there is an error and you want to raise it via a signal.
 
+<a href="/flask-signals-namespace-examples.html">Namespace</a>
+is another callable from the `flask.signals` package with code examples.
 
 ## Example 1 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an

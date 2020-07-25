@@ -1,7 +1,7 @@
 title: flask.json JSONEncoder Example Code
 category: page
 slug: flask-json-jsonencoder-examples
-sortorder: 500021023
+sortorder: 500021024
 toc: False
 sidebartitle: flask.json JSONEncoder
 meta: Example code for understanding how to use the JSONEncoder class from the flask.json module of the Flask project.
@@ -14,6 +14,8 @@ encoder for Flask and was designed to handle more types than Python's
 standard library [json](https://docs.python.org/3/library/json.html) module.
 
 
+<a href="/flask-json-jsonify-examples.html">jsonify</a>
+is another callable from the `flask.json` package with code examples.
 
 ## Example 1 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)

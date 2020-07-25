@@ -12,6 +12,12 @@ is a class within the `flask.cli` module of the [Flask](/flask.html) project.
 DispatchingApp is a special application that dispatches to a Flask app
 if it is imported by name in a background thread.
 
+<a href="/flask-cli-appgroup-examples.html">AppGroup</a>,
+<a href="/flask-cli-flaskgroup-examples.html">FlaskGroup</a>,
+<a href="/flask-cli-scriptinfo-examples.html">ScriptInfo</a>,
+<a href="/flask-cli-pass-script-info-examples.html">pass_script_info</a>,
+and <a href="/flask-cli-with-appcontext-examples.html">with_appcontext</a>
+are several other callables with code examples from the same `flask.cli` package.
 
 ## Example 1 from indico
 [indico](https://github.com/indico/indico)

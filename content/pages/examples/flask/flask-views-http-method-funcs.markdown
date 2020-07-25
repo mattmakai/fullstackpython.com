@@ -1,7 +1,7 @@
 title: flask.views http_method_funcs Example Code
 category: page
 slug: flask-views-http-method-funcs-examples
-sortorder: 500021034
+sortorder: 500021035
 toc: False
 sidebartitle: flask.views http_method_funcs
 meta: Python example code that shows how to use the http_method_funcs callable from the flask.views module of the Flask project.
@@ -14,8 +14,12 @@ of the [Flask](/flask.html) project. It contains strings of the HTTP methods
 which is useful for checking if an HTTP method is valid by comparing it
 against the items in this set.
 
+<a href="/flask-views-methodview-examples.html">MethodView</a>
+and
+<a href="/flask-views-view-examples.html">View</a>
+are a couple of other callables within the `flask.views` package that also have code examples.
 
-These subjects go along with the `http_method_funcs` code examples:
+You should read up on these subjects along with these `http_method_funcs` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)

@@ -15,8 +15,12 @@ at runtime when an
 [invalid POST request is sent to a URL route](https://stackoverflow.com/questions/14105452/what-is-the-cause-of-the-bad-request-error-when-submitting-form-in-flask-applica)
 that accepts POSTs.
 
+<a href="/flask-app-flask-examples.html">Flask</a>,
+<a href="/flask-app-headers-examples.html">Headers</a>,
+and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
+are several other callables with code examples from the same `flask.app` package.
 
-These subjects go along with the `BadRequest` code examples:
+These topics are also useful while reading the `BadRequest` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

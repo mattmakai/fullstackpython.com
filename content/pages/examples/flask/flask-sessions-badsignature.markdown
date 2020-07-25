@@ -1,7 +1,7 @@
 title: flask.sessions BadSignature Example Code
 category: page
 slug: flask-sessions-badsignature-examples
-sortorder: 500021025
+sortorder: 500021026
 toc: False
 sidebartitle: flask.sessions BadSignature
 meta: Example code for understanding how to use the BadSignature class from the flask.sessions module of the Flask project.
@@ -13,6 +13,10 @@ the `flask.sessions` module. `BadSignature` is actually defined in the
 [itsdangerous](https://github.com/pallets/itsdangerous) project and
 imported into Flask sessions for applications to use.
 
+<a href="/flask-sessions-sessioninterface-examples.html">SessionInterface</a>
+and
+<a href="/flask-sessions-sessionmixin-examples.html">SessionMixin</a>
+are a couple of other callables within the `flask.sessions` package that also have code examples.
 
 ## Example 1 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)

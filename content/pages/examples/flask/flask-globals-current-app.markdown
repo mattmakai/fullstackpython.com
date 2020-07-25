@@ -19,8 +19,78 @@ You will often see `current_app` imported directly from `flask` instead
 of `flask.globals`. These imports are equivalent because `flask` is simply
 importing `current_app` from `flask.globals`.
 
+<a href="/flask-globals-g-examples.html">g</a>,
+<a href="/flask-globals-request-examples.html">request</a>,
+and <a href="/flask-globals-session-examples.html">session</a>
+are several other callables with code examples from the same `flask.globals` package.
 
-## Example 1 from Flask AppBuilder
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / migrations / env.py**](https://github.com/CTFd/CTFd/blob/master/./migrations/env.py)
+
+```python
+# env.py
+from __future__ import with_statement
+
+import logging
+from logging.config import fileConfig
+
+from sqlalchemy import engine_from_config
+from sqlalchemy import pool
+
+from alembic import context
+
+config = context.config
+
+fileConfig(config.config_file_name, disable_existing_loggers=False)
+logger = logging.getLogger("alembic.env")
+
+~~from flask import current_app
+
+config.set_main_option(
+    "sqlalchemy.url",
+    str(current_app.extensions["migrate"].db.engine.url).replace("%", "%%"),
+)
+~~target_metadata = current_app.extensions["migrate"].db.metadata
+
+
+
+def run_migrations_offline():
+    url = config.get_main_option("sqlalchemy.url")
+    context.configure(url=url, target_metadata=target_metadata, literal_binds=True)
+
+    with context.begin_transaction():
+        context.run_migrations()
+
+
+def run_migrations_online():
+
+    def process_revision_directives(context, revision, directives):
+        if getattr(config.cmd_opts, "autogenerate", False):
+            script = directives[0]
+            if script.upgrade_ops.is_empty():
+                directives[:] = []
+                logger.info("No changes in schema detected.")
+
+    connectable = engine_from_config(
+        config.get_section(config.config_ini_section),
+        prefix="sqlalchemy.",
+        poolclass=pool.NullPool,
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 2 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -164,7 +234,7 @@ class MenuApiManager(BaseManager):
 ```
 
 
-## Example 2 from FlaskBB
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -307,7 +377,7 @@ class ForgotPassword(MethodView):
 ```
 
 
-## Example 3 from flask-base
+## Example 4 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -414,7 +484,7 @@ class User(UserMixin, db.Model):
 ```
 
 
-## Example 4 from flask-bookshelf
+## Example 5 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -519,7 +589,7 @@ app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
 ```
 
 
-## Example 5 from Flask-Bootstrap
+## Example 6 from Flask-Bootstrap
 [flask-bootstrap](https://github.com/mbr/flask-bootstrap)
 ([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
 makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
@@ -643,7 +713,7 @@ class Bootstrap(object):
 ```
 
 
-## Example 6 from flask-debugtoolbar
+## Example 7 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -791,7 +861,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 7 from flask_jsondash
+## Example 8 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -884,7 +954,7 @@ def local_static(chart_config, static_config):
 ```
 
 
-## Example 8 from flask-login
+## Example 9 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1131,7 +1201,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 9 from flask-restx
+## Example 10 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1388,7 +1458,7 @@ def _clean_header(header):
 ```
 
 
-## Example 10 from flask-sqlalchemy
+## Example 11 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -1505,7 +1575,7 @@ def _make_table(db):
 ```
 
 
-## Example 11 from Flask-WTF
+## Example 12 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1762,7 +1832,7 @@ def same_origin(current_uri, compare_uri):
 ```
 
 
-## Example 12 from Flask-Security-Too
+## Example 13 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -2023,7 +2093,7 @@ _default_config = {
 ```
 
 
-## Example 13 from Flask-User
+## Example 14 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2130,7 +2200,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 14 from Flask-VueJs-Template
+## Example 15 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2171,7 +2241,7 @@ def index_client():
 ```
 
 
-## Example 15 from Flasky
+## Example 16 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -2226,7 +2296,7 @@ def run_migrations_online():
 ```
 
 
-## Example 16 from indico
+## Example 17 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -2287,7 +2357,7 @@ def run_migrations_offline():
 ```
 
 
-## Example 17 from sandman2
+## Example 18 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2412,7 +2482,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 18 from tedivms-flask
+## Example 19 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

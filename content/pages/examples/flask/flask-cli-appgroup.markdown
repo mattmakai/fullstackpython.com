@@ -14,6 +14,12 @@ works like the
 class and automatically wraps the functions using
 [with_appcontext](/flask-cli-with-appcontext-examples.html).
 
+<a href="/flask-cli-dispatchingapp-examples.html">DispatchingApp</a>,
+<a href="/flask-cli-flaskgroup-examples.html">FlaskGroup</a>,
+<a href="/flask-cli-scriptinfo-examples.html">ScriptInfo</a>,
+<a href="/flask-cli-pass-script-info-examples.html">pass_script_info</a>,
+and <a href="/flask-cli-with-appcontext-examples.html">with_appcontext</a>
+are several other callables with code examples from the same `flask.cli` package.
 
 ## Example 1 from indico
 [indico](https://github.com/indico/indico)

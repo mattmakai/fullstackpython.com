@@ -1,7 +1,7 @@
 title: flask.signals Namespace Example Code
 category: page
 slug: flask-signals-namespace-examples
-sortorder: 500021028
+sortorder: 500021029
 toc: False
 sidebartitle: flask.signals Namespace
 meta: Example code for understanding how to use the Namespace class from the flask.signals module of the Flask project.
@@ -18,6 +18,8 @@ implementing its own event subscription signaling model.
 as a mapping of signal names to signals, and it serves the
 same purpose in the Flask project.
 
+<a href="/flask-signals-got-request-exception-examples.html">got_request_exception</a>
+is another callable from the `flask.signals` package with code examples.
 
 ## Example 1 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)

@@ -1,7 +1,7 @@
 title: flask.templating render_template Example Code
 category: page
 slug: flask-templating-render-template-examples
-sortorder: 500021030
+sortorder: 500021031
 toc: False
 sidebartitle: flask.templating render_template
 meta: Python example code that shows how to use the render_template callable from the flask.templating module of the Flask project.
@@ -18,8 +18,10 @@ package instead of from `flask.templating`. It is the same function that is
 imported, but there are less characters to type when you leave off
 the `.templating` part.
 
+<a href="/flask-templating-render-template-string-examples.html">render_template_string</a>
+is another callable from the `flask.templating` package with code examples.
 
-These subjects go along with the `render_template` code examples:
+You should read up on these subjects along with these `render_template` examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -117,7 +119,370 @@ if __name__ == '__main__':
 ```
 
 
-## Example 2 from FlaskBB
+## Example 2 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / CTFd / auth.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/auth.py)
+
+```python
+# auth.py
+import base64
+
+import requests
+from flask import Blueprint
+from flask import current_app as app
+~~from flask import redirect, render_template, request, session, url_for
+from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
+
+from CTFd.cache import clear_team_session, clear_user_session
+from CTFd.models import Teams, Users, db
+from CTFd.utils import config, email, get_app_config, get_config
+from CTFd.utils import user as current_user
+from CTFd.utils import validators
+from CTFd.utils.config import is_teams_mode
+from CTFd.utils.config.integrations import mlc_registration
+from CTFd.utils.config.visibility import registration_visible
+from CTFd.utils.crypto import verify_password
+from CTFd.utils.decorators import ratelimit
+from CTFd.utils.decorators.visibility import check_registration_visibility
+from CTFd.utils.helpers import error_for, get_errors, markup
+from CTFd.utils.logging import log
+from CTFd.utils.modes import TEAMS_MODE
+from CTFd.utils.security.auth import login_user, logout_user
+from CTFd.utils.security.signing import unserialize
+from CTFd.utils.validators import ValidationError
+
+auth = Blueprint("auth", __name__)
+
+
+@auth.route("/confirm", methods=["POST", "GET"])
+@auth.route("/confirm/<data>", methods=["POST", "GET"])
+@ratelimit(method="POST", limit=10, interval=60)
+def confirm(data=None):
+    if not get_config("verify_emails"):
+        return redirect(url_for("challenges.listing"))
+
+    if data and request.method == "GET":
+        try:
+            user_email = unserialize(data, max_age=1800)
+        except (BadTimeSignature, SignatureExpired):
+~~            return render_template(
+                "confirm.html", errors=["Your confirmation link has expired"]
+            )
+        except (BadSignature, TypeError, base64.binascii.Error):
+~~            return render_template(
+                "confirm.html", errors=["Your confirmation token is invalid"]
+            )
+
+        user = Users.query.filter_by(email=user_email).first_or_404()
+        if user.verified:
+            return redirect(url_for("views.settings"))
+
+        user.verified = True
+        log(
+            "registrations",
+            format="[{date}] {ip} - successful confirmation for {name}",
+            name=user.name,
+        )
+        db.session.commit()
+        clear_user_session(user_id=user.id)
+        email.successful_registration_notification(user.email)
+        db.session.close()
+        if current_user.authed():
+            return redirect(url_for("challenges.listing"))
+        return redirect(url_for("auth.login"))
+
+    if current_user.authed() is False:
+        return redirect(url_for("auth.login"))
+
+    user = Users.query.filter_by(id=session["id"]).first_or_404()
+    if user.verified:
+        return redirect(url_for("views.settings"))
+
+    if data is None:
+        if request.method == "POST":
+            email.verify_email_address(user.email)
+            log(
+                "registrations",
+                format="[{date}] {ip} - {name} initiated a confirmation email resend",
+            )
+~~            return render_template(
+                "confirm.html", infos=[f"Confirmation email sent to {user.email}!"]
+            )
+        elif request.method == "GET":
+~~            return render_template("confirm.html")
+
+
+@auth.route("/reset_password", methods=["POST", "GET"])
+@auth.route("/reset_password/<data>", methods=["POST", "GET"])
+@ratelimit(method="POST", limit=10, interval=60)
+def reset_password(data=None):
+    if config.can_send_mail() is False:
+~~        return render_template(
+            "reset_password.html",
+            errors=[
+                markup(
+                    "This CTF is not configured to send email.<br> Please contact an organizer to have your password reset."
+                )
+            ],
+        )
+
+    if data is not None:
+        try:
+            email_address = unserialize(data, max_age=1800)
+        except (BadTimeSignature, SignatureExpired):
+~~            return render_template(
+                "reset_password.html", errors=["Your link has expired"]
+            )
+        except (BadSignature, TypeError, base64.binascii.Error):
+~~            return render_template(
+                "reset_password.html", errors=["Your reset token is invalid"]
+            )
+
+        if request.method == "GET":
+~~            return render_template("reset_password.html", mode="set")
+        if request.method == "POST":
+            password = request.form.get("password", "").strip()
+            user = Users.query.filter_by(email=email_address).first_or_404()
+            if user.oauth_id:
+~~                return render_template(
+                    "reset_password.html",
+                    infos=[
+                        "Your account was registered via an authentication provider and does not have an associated password. Please login via your authentication provider."
+                    ],
+                )
+
+            pass_short = len(password) == 0
+            if pass_short:
+~~                return render_template(
+                    "reset_password.html", errors=["Please pick a longer password"]
+                )
+
+            user.password = password
+            db.session.commit()
+            clear_user_session(user_id=user.id)
+            log(
+                "logins",
+                format="[{date}] {ip} -  successful password reset for {name}",
+                name=user.name,
+            )
+            db.session.close()
+            email.password_change_alert(user.email)
+            return redirect(url_for("auth.login"))
+
+    if request.method == "POST":
+        email_address = request.form["email"].strip()
+        user = Users.query.filter_by(email=email_address).first()
+
+        get_errors()
+
+        if not user:
+~~            return render_template(
+                "reset_password.html",
+                infos=[
+                    "If that account exists you will receive an email, please check your inbox"
+                ],
+            )
+
+        if user.oauth_id:
+~~            return render_template(
+                "reset_password.html",
+                infos=[
+                    "The email address associated with this account was registered via an authentication provider and does not have an associated password. Please login via your authentication provider."
+                ],
+            )
+
+        email.forgot_password(email_address)
+
+~~        return render_template(
+            "reset_password.html",
+            infos=[
+                "If that account exists you will receive an email, please check your inbox"
+            ],
+        )
+~~    return render_template("reset_password.html")
+
+
+@auth.route("/register", methods=["POST", "GET"])
+@check_registration_visibility
+@ratelimit(method="POST", limit=10, interval=5)
+def register():
+    errors = get_errors()
+    if request.method == "POST":
+        name = request.form.get("name", "").strip()
+        email_address = request.form.get("email", "").strip().lower()
+        password = request.form.get("password", "").strip()
+
+        website = request.form.get("website")
+        affiliation = request.form.get("affiliation")
+        country = request.form.get("country")
+
+        name_len = len(name) == 0
+        names = Users.query.add_columns("name", "id").filter_by(name=name).first()
+        emails = (
+            Users.query.add_columns("email", "id")
+            .filter_by(email=email_address)
+            .first()
+        )
+        pass_short = len(password) == 0
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+            errors.append(
+                "Only email addresses under {domains} may register".format(
+                    domains=get_config("domain_whitelist")
+                )
+            )
+        if names:
+            errors.append("That user name is already taken")
+        if team_name_email_check is True:
+            errors.append("Your user name cannot be an email address")
+        if emails:
+            errors.append("That email has already been used")
+        if pass_short:
+            errors.append("Pick a longer password")
+        if pass_long:
+            errors.append("Pick a shorter password")
+        if name_len:
+            errors.append("Pick a longer user name")
+        if valid_website is False:
+            errors.append("Websites must be a proper URL starting with http or https")
+        if valid_country is False:
+            errors.append("Invalid country")
+        if valid_affiliation is False:
+            errors.append("Please provide a shorter affiliation")
+
+        if len(errors) > 0:
+~~            return render_template(
+                "register.html",
+                errors=errors,
+                name=request.form["name"],
+                email=request.form["email"],
+                password=request.form["password"],
+            )
+        else:
+            with app.app_context():
+                user = Users(name=name, email=email_address, password=password)
+
+                if website:
+                    user.website = website
+                if affiliation:
+                    user.affiliation = affiliation
+                if country:
+                    user.country = country
+
+                db.session.add(user)
+                db.session.commit()
+                db.session.flush()
+
+                login_user(user)
+
+                if config.can_send_mail() and get_config(
+                    "verify_emails"
+                ):  # Confirming users is enabled and we can send email.
+                    log(
+                        "registrations",
+                        format="[{date}] {ip} - {name} registered (UNCONFIRMED) with {email}",
+                    )
+                    email.verify_email_address(user.email)
+                    db.session.close()
+                    return redirect(url_for("auth.confirm"))
+                else:  # Don't care about confirming users
+                    if (
+                        config.can_send_mail()
+                    ):  # We want to notify the user that they have registered.
+                        email.successful_registration_notification(user.email)
+
+        log("registrations", "[{date}] {ip} - {name} registered with {email}")
+        db.session.close()
+
+        if is_teams_mode():
+            return redirect(url_for("teams.private"))
+
+        return redirect(url_for("challenges.listing"))
+    else:
+~~        return render_template("register.html", errors=errors)
+
+
+@auth.route("/login", methods=["POST", "GET"])
+@ratelimit(method="POST", limit=10, interval=5)
+def login():
+    errors = get_errors()
+    if request.method == "POST":
+        name = request.form["name"]
+
+        if validators.validate_email(name) is True:
+            user = Users.query.filter_by(email=name).first()
+        else:
+            user = Users.query.filter_by(name=name).first()
+
+        if user:
+            if user and verify_password(request.form["password"], user.password):
+                session.regenerate()
+
+                login_user(user)
+                log("logins", "[{date}] {ip} - {name} logged in")
+
+                db.session.close()
+                if request.args.get("next") and validators.is_safe_url(
+                    request.args.get("next")
+                ):
+                    return redirect(request.args.get("next"))
+                return redirect(url_for("challenges.listing"))
+
+            else:
+                log("logins", "[{date}] {ip} - submitted invalid password for {name}")
+                errors.append("Your username or password is incorrect")
+                db.session.close()
+~~                return render_template("login.html", errors=errors)
+        else:
+            log("logins", "[{date}] {ip} - submitted invalid account information")
+            errors.append("Your username or password is incorrect")
+            db.session.close()
+~~            return render_template("login.html", errors=errors)
+    else:
+        db.session.close()
+~~        return render_template("login.html", errors=errors)
+
+
+@auth.route("/oauth")
+def oauth_login():
+    endpoint = (
+        get_app_config("OAUTH_AUTHORIZATION_ENDPOINT")
+        or get_config("oauth_authorization_endpoint")
+        or "https://auth.majorleaguecyber.org/oauth/authorize"
+    )
+
+    if get_config("user_mode") == "teams":
+        scope = "profile team"
+    else:
+        scope = "profile"
+
+    client_id = get_app_config("OAUTH_CLIENT_ID") or get_config("oauth_client_id")
+
+    if client_id is None:
+        error_for(
+            endpoint="auth.login",
+            message="OAuth Settings not configured. "
+            "Ask your CTF administrator to configure MajorLeagueCyber integration.",
+        )
+        return redirect(url_for("auth.login"))
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 3 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -196,7 +561,7 @@ def send_email(subject, recipients, text_body, html_body, sender=None):
 ```
 
 
-## Example 3 from flask-base
+## Example 4 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -243,7 +608,7 @@ def send_email(recipient, subject, template, **kwargs):
 ```
 
 
-## Example 4 from flask-bones
+## Example 5 from flask-bones
 [flask-bones](https://github.com/cburmeister/flask-bones)
 ([demo](http://flask-bones.herokuapp.com/))
 is large scale [Flask](/flask.html) example application built
@@ -350,7 +715,7 @@ def register_jinja_env(app):
 ```
 
 
-## Example 5 from flask-bookshelf
+## Example 6 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -454,7 +819,7 @@ app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
 ```
 
 
-## Example 6 from flaskex
+## Example 7 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -549,7 +914,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 7 from flask_jsondash
+## Example 8 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -692,7 +1057,7 @@ def update(c_id):
 ```
 
 
-## Example 8 from flask-phone-input
+## Example 9 from flask-phone-input
 [flask-phone-input](https://github.com/miguelgrinberg/flask-phone-input)
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
@@ -750,7 +1115,7 @@ def show_phone():
 ```
 
 
-## Example 9 from flask-restx
+## Example 10 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -805,7 +1170,7 @@ def ui_for(api):
 ```
 
 
-## Example 10 from flaskSaaS
+## Example 11 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1008,7 +1373,7 @@ def paySuccess():
 ```
 
 
-## Example 11 from Flask-Security-Too
+## Example 12 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -1118,7 +1483,7 @@ from .forms import (
 ```
 
 
-## Example 12 from Flask-SocketIO
+## Example 13 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -1194,7 +1559,7 @@ def get_session():
 ```
 
 
-## Example 13 from Flask-User
+## Example 14 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1286,7 +1651,7 @@ class EmailManager(object):
 ```
 
 
-## Example 14 from Flasky
+## Example 15 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1326,7 +1691,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 15 from Datadog Flask Example App
+## Example 16 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1428,7 +1793,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 16 from indico
+## Example 17 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1458,7 +1823,7 @@ class MathjaxMixin(object):
 ```
 
 
-## Example 17 from keras-flask-deploy-webapp
+## Example 18 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1549,7 +1914,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 18 from newspie
+## Example 19 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1704,7 +2069,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 19 from Science Flask
+## Example 20 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -1992,7 +2357,7 @@ def static_from_root():
 ```
 
 
-## Example 20 from tedivms-flask
+## Example 21 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -2095,7 +2460,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 21 from trape
+## Example 22 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

@@ -13,6 +13,12 @@ framework. It is a helper object for Flask application and not usually
 dealt with directly by developers, instead it is created automatically
 by the [FlaskGroup](/flask-cli-flaskgroup-examples.html) object.
 
+<a href="/flask-cli-appgroup-examples.html">AppGroup</a>,
+<a href="/flask-cli-dispatchingapp-examples.html">DispatchingApp</a>,
+<a href="/flask-cli-flaskgroup-examples.html">FlaskGroup</a>,
+<a href="/flask-cli-pass-script-info-examples.html">pass_script_info</a>,
+and <a href="/flask-cli-with-appcontext-examples.html">with_appcontext</a>
+are several other callables with code examples from the same `flask.cli` package.
 
 ## Example 1 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)

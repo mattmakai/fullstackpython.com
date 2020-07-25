@@ -1,7 +1,7 @@
 title: flask.json jsonify Example Code
 category: page
 slug: flask-json-jsonify-examples
-sortorder: 500021024
+sortorder: 500021025
 toc: False
 sidebartitle: flask.json jsonify
 meta: Python example code that shows how to use the jsonify callable from the flask.json module of the Flask project.
@@ -19,6 +19,8 @@ Note that `jsonify` is sometimes imported directly from the `flask` module
 instead of from `flask.json`. It is the same function that is imported, but
 there are less characters to type when you leave off the `.json` part.
 
+<a href="/flask-json-jsonencoder-examples.html">JSONEncoder</a>
+is another callable from the `flask.json` package with code examples.
 
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)

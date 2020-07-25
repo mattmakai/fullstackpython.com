@@ -20,6 +20,10 @@ from `flask.globals`, even though it is defined within the `globals` module.
 It's the same import, just less characters to type when you import it
 from `flask`.
 
+<a href="/flask-globals-current-app-examples.html">current_app</a>,
+<a href="/flask-globals-g-examples.html">g</a>,
+and <a href="/flask-globals-session-examples.html">session</a>
+are several other callables with code examples from the same `flask.globals` package.
 
 ## Example 1 from Braintree Flask app
 [Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)
@@ -111,7 +115,100 @@ if __name__ == '__main__':
 ```
 
 
-## Example 2 from Flask AppBuilder
+## Example 2 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / tests / test_themes.py**](https://github.com/CTFd/CTFd/blob/master/./tests/test_themes.py)
+
+```python
+# test_themes.py
+
+~~from flask import request
+from jinja2.sandbox import SecurityError
+from werkzeug.test import Client
+
+from CTFd.utils import get_config
+from tests.helpers import create_ctfd, destroy_ctfd, gen_user, login_as_user
+
+
+def test_themes_run_in_sandbox():
+    app = create_ctfd()
+    with app.app_context():
+        try:
+            app.jinja_env.from_string(
+                "{{ ().__class__.__bases__[0].__subclasses__()[40]('./test_utils.py').read() }}"
+            ).render()
+        except SecurityError:
+            pass
+        except Exception as e:
+            raise e
+    destroy_ctfd(app)
+
+
+def test_themes_cant_access_configpy_attributes():
+    app = create_ctfd()
+    with app.app_context():
+
+
+## ... source file abbreviated to get to request examples ...
+
+
+            r = client.post("/setup", data=data)
+            assert r.status_code == 302
+            assert r.location == "http://localhost/ctf/"
+
+            c = Client(app)
+            app_iter, status, headers = c.get("/")
+            headers = dict(headers)
+            assert status == "302 FOUND"
+            assert headers["Location"] == "http://localhost/ctf/"
+
+            r = client.get("/challenges")
+            assert r.status_code == 200
+            assert "Challenges" in r.get_data(as_text=True)
+
+            r = client.get("/scoreboard")
+            assert r.status_code == 200
+            assert "Scoreboard" in r.get_data(as_text=True)
+    destroy_ctfd(app)
+
+
+def test_that_request_path_hijacking_works_properly():
+    app = create_ctfd(setup=False, application_root="/ctf")
+    assert app.request_class.__name__ == "CTFdRequest"
+    with app.app_context():
+        with app.test_request_context("/challenges"):
+~~            assert request.path == "/ctf/challenges"
+    destroy_ctfd(app)
+
+    app = create_ctfd()
+    assert app.request_class.__name__ == "CTFdRequest"
+    with app.app_context():
+        with app.test_request_context("/challenges"):
+~~            assert request.path == "/challenges"
+
+        from flask import Flask
+
+        test_app = Flask("test")
+        assert test_app.request_class.__name__ == "Request"
+        with test_app.test_request_context("/challenges"):
+~~            assert request.path == "/challenges"
+    destroy_ctfd(app)
+
+
+
+## ... source file continues with no further request examples...
+
+```
+
+
+## Example 3 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)
 ([documentation](https://flask-appbuilder.readthedocs.io/en/latest/)
 and
@@ -209,7 +306,7 @@ def get_filter_args(filters):
 ```
 
 
-## Example 3 from FlaskBB
+## Example 4 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -812,7 +909,7 @@ class DeleteReport(MethodView):
 ```
 
 
-## Example 4 from flask-bones
+## Example 5 from flask-bones
 [flask-bones](https://github.com/cburmeister/flask-bones)
 ([demo](http://flask-bones.herokuapp.com/))
 is large scale [Flask](/flask.html) example application built
@@ -893,7 +990,7 @@ def register_extensions(app):
 ```
 
 
-## Example 5 from flask-bookshelf
+## Example 6 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -952,7 +1049,7 @@ def create_author():
 ```
 
 
-## Example 6 from flask-debugtoolbar
+## Example 7 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -1099,7 +1196,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 7 from flaskex
+## Example 8 from flaskex
 [Flaskex](https://github.com/anfederico/Flaskex) is a working example
 [Flask](/flask.html) web application intended as a base to build your
 own applications upon. The application comes with pre-built sign up, log in
@@ -1194,7 +1291,7 @@ if __name__ == "__main__":
 ```
 
 
-## Example 8 from Flask-HTTPAuth
+## Example 9 from Flask-HTTPAuth
 [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth)
 ([documentation](https://flask-httpauth.readthedocs.io/en/latest/)
 and
@@ -1515,7 +1612,7 @@ class MultiAuth(object):
 ```
 
 
-## Example 9 from flask-login
+## Example 10 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1752,7 +1849,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 10 from flask-restx
+## Example 11 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1860,7 +1957,7 @@ class marshal_with_field(object):
 ```
 
 
-## Example 11 from Flask-WTF
+## Example 12 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -2018,7 +2115,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ```
 
 
-## Example 12 from flaskSaaS
+## Example 13 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -2069,7 +2166,7 @@ admin.add_view(FileAdmin(path, '/static/', name='Static'))
 ```
 
 
-## Example 13 from Flask-Security-Too
+## Example 14 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -2289,7 +2386,7 @@ class ChangePasswordForm(Form, PasswordFormMixin):
 ```
 
 
-## Example 14 from Flask-SocketIO
+## Example 15 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -2513,7 +2610,7 @@ class TestSocketIO(unittest.TestCase):
 ```
 
 
-## Example 15 from Flask-User
+## Example 16 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2577,7 +2674,7 @@ def init_translations(babel):
 ```
 
 
-## Example 16 from Flask-VueJs-Template
+## Example 17 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2612,7 +2709,7 @@ def require_auth(func):
 ```
 
 
-## Example 17 from indico
+## Example 18 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -2701,7 +2798,7 @@ multipass = IndicoMultipass()
 ```
 
 
-## Example 18 from keras-flask-deploy-webapp
+## Example 19 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -2794,7 +2891,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 19 from newspie
+## Example 20 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2975,7 +3072,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 20 from sandman2
+## Example 21 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -3176,7 +3273,7 @@ class Service(MethodView):
 ```
 
 
-## Example 21 from Science Flask
+## Example 22 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -3283,7 +3380,7 @@ def security_context_processor():
 ```
 
 
-## Example 22 from tedivms-flask
+## Example 23 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -3341,7 +3438,7 @@ def roles_accepted_api(*role_names):
 ```
 
 
-## Example 23 from trape
+## Example 24 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

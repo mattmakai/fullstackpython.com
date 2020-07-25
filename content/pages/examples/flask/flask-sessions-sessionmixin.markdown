@@ -1,7 +1,7 @@
 title: flask.sessions SessionMixin Example Code
 category: page
 slug: flask-sessions-sessionmixin-examples
-sortorder: 500021027
+sortorder: 500021028
 toc: False
 sidebartitle: flask.sessions SessionMixin
 meta: Example code for understanding how to use the SessionMixin class from the flask.sessions module of the Flask project.
@@ -14,6 +14,10 @@ the `flask.sessions` module. `SessionMixin` expands a standard
 with [session](https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions)
 attributes.
 
+<a href="/flask-sessions-badsignature-examples.html">BadSignature</a>
+and
+<a href="/flask-sessions-sessioninterface-examples.html">SessionInterface</a>
+are a couple of other callables within the `flask.sessions` package that also have code examples.
 
 ## Example 1 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)

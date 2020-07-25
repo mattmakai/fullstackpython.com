@@ -15,6 +15,10 @@ of a running [Flask](/flask.html) web app.
 `g` can also be imported directly from the `flask` module instead
 of `flask.globals`, so you will often see that shortcut in example code.
 
+<a href="/flask-globals-current-app-examples.html">current_app</a>,
+<a href="/flask-globals-request-examples.html">request</a>,
+and <a href="/flask-globals-session-examples.html">session</a>
+are several other callables with code examples from the same `flask.globals` package.
 
 ## Example 1 from Flask AppBuilder
 [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder)

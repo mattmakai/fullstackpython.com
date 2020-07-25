@@ -16,6 +16,12 @@ following request can access it in a template by using the
 `flash` can also be imported directly from the `flask` module instead
 of `flask.helpers` so you will often see that shortcut in example code.
 
+<a href="/flask-helpers-get-root-path-examples.html">get_root_path</a>,
+<a href="/flask-helpers-make-response-examples.html">make_response</a>,
+<a href="/flask-helpers-safe-join-examples.html">safe_join</a>,
+<a href="/flask-helpers-send-file-examples.html">send_file</a>,
+and <a href="/flask-helpers-url-for-examples.html">url_for</a>
+are several other callables with code examples from the same `flask.helpers` package.
 
 ## Example 1 from Braintree Flask app
 [Braintree's Flask example payments app](https://github.com/braintree/braintree_flask_example)

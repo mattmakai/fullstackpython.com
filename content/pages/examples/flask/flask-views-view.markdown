@@ -1,7 +1,7 @@
 title: flask.views View Example Code
 category: page
 slug: flask-views-view-examples
-sortorder: 500021033
+sortorder: 500021034
 toc: False
 sidebartitle: flask.views View
 meta: Example code for understanding how to use the View class from the flask.views module of the Flask project.
@@ -15,6 +15,10 @@ for the routing system. This is typically only used in more advanced
 situations such as extending the Flask source code, rather than
 a standard way of interacting with the framework.
 
+<a href="/flask-views-methodview-examples.html">MethodView</a>
+and
+<a href="/flask-views-http-method-funcs-examples.html">http_method_funcs</a>
+are a couple of other callables within the `flask.views` package that also have code examples.
 
 You should read up on these subjects along with these `View` examples:
 

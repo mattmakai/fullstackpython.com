@@ -11,6 +11,12 @@ meta: Python example code that shows how to use the pass_script_info callable fr
 is simply a decorator around the [ScriptInfo](/flask-cli-scriptinfo-examples.html)
 class within this same `flask.cli` module.
 
+<a href="/flask-cli-appgroup-examples.html">AppGroup</a>,
+<a href="/flask-cli-dispatchingapp-examples.html">DispatchingApp</a>,
+<a href="/flask-cli-flaskgroup-examples.html">FlaskGroup</a>,
+<a href="/flask-cli-scriptinfo-examples.html">ScriptInfo</a>,
+and <a href="/flask-cli-with-appcontext-examples.html">with_appcontext</a>
+are several other callables with code examples from the same `flask.cli` package.
 
 ## Example 1 from indico
 [indico](https://github.com/indico/indico)
