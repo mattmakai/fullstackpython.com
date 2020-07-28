@@ -100,7 +100,7 @@ links = {
          "(/pony-orm.html)":
          "(#pony-orm)",
          "(/no-sql-datastore.html)":
-         "(#nosql-data-store)",
+         "(#no-sql-datastore)",
          "(/redis.html)":
          "(#redis)",
          "(/mongodb.html)":
@@ -114,13 +114,13 @@ links = {
          "(/pandas.html)":
          "(#pandas)",
          "(/scipy-numpy.html)":
-         "(#scipy-and-numpy)",
+         "(#scipy-numpy)",
          "(/data-visualization.html)":
          "(#data-visualization)",
          "(/bokeh.html)":
          "(#bokeh)",
          "(/d3-js.html)":
-         "(#data-driven-documents-d3js)",
+         "(#d3-js)",
          "(/matplotlib.html)":
          "(#matplotlib)",
          "(/markup-languages.html)":
@@ -166,7 +166,7 @@ links = {
          "(/hypertext-markup-language-html.html)":
          "(#hypertext-markup-language-html)",
          "(/cascading-style-sheets.html)":
-         "(#cascading-style-sheets-css)",
+         "(#cascading-style-sheets)",
          "(/responsive-design.html)":
          "(#responsive-design)",
          "(/minification.html)":
@@ -174,9 +174,9 @@ links = {
          "(/css-frameworks.html)":
          "(#css-frameworks)",
          "(/bootstrap-css.html)":
-         "(#bootstrap)",
+         "(#bootstrap-css)",
          "(/foundation-css.html)":
-         "(#foundation)",
+         "(#foundation-css)",
          "(/javascript.html)":
          "(#javascript)",
          "(/react.html)":
@@ -232,7 +232,7 @@ links = {
          "(/api-frameworks.html)":
          "(#api-frameworks)",
          "(/django-rest-framework-drf.html)":
-         "(#django-rest-framework)",
+         "(#django-rest-framework-drf)",
          "(/api-integration.html)":
          "(#api-integration)",
          "(/twilio.html)":
@@ -283,10 +283,10 @@ links = {
          "(#ubuntu)",
          "(/macos.html)":
          "(#macos)",
+         "(/microsoft-windows.html)":
+         "(#microsoft-windows)",
          "(/freebsd.html)":
          "(#freebsd)",
-         "(/windows.html)":
-         "(#windows)",
          "(/web-servers.html)":
          "(#web-servers)",
          "(/apache-http-server.html)":
@@ -356,11 +356,15 @@ links = {
          "(/what-full-stack-means.html)":
          "(#what-full-stack-means)",
          "(/about-author.html)":
-         "(#about-the-author)",
+         "(#about-author)",
          "(/change-log.html)":
          "(" + BASE_FSP + "change-log.html)",
          "(/future-directions.html)":
          "(" + BASE_FSP + "future-directions.html)",
+
+         # code examples
+         "(/django-code-examples.html)":
+         "(" + BASE_FSP + "django-code-examples.html)",
 
          "(/email.html)":
          "(" + BASE_FSP + "email.html)",

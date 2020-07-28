@@ -19,7 +19,7 @@
 
  <li>2. <a href="#development-environments">Development Environments</a></li>
  <ul class="toc2">
-  <li>2.1 <a href="#text-editors-and-ides">Text Editors and IDEs</a></li>
+  <li>2.1 <a href="#text-editors-ides">Text Editors and IDEs</a></li>
   <ul class="toc3">
    <li><a href="#vim">Vim</a></li>
    <li><a href="#emacs">Emacs</a></li>
@@ -30,7 +30,7 @@
   <li>2.2 <a href="#shells">Shells</a></li>
   <ul class="toc3">
    <li><a href="#bourne-again-shell-bash">Bourne-again shell (Bash)</a></li>
-   <li><a href="#zsh">Zsh</a></li>
+   <li><a href="#zsh-shell">Zsh</a></li>
    <li><a href="#powershell">PowerShell</a></li>
   </ul>
   <li>2.3 <a href="#terminal-multiplexers">Terminal multiplexers</a></li>
@@ -41,7 +41,7 @@
   <li>2.4 <a href="#environment-configuration">Environment configuration</a></li>
   <ul class="toc3">
    <li><a href="#application-dependencies">Application dependencies</a></li>
-   <li><a href="#virtual-environments-virtualenvs">virtual environments (virtualenvs)</a></li>
+   <li><a href="#virtual-environments-virtualenvs-venvs">virtual environments (virtualenvs)</a></li>
    <li><a href="#localhost-tunnels">Localhost tunnels</a></li>
   </ul>
   <li>2.5 <a href="#source-control">Source Control</a></li>
@@ -63,10 +63,10 @@
   <ul class="toc3">
    <li><a href="#sqlalchemy">SQLAlchemy</a></li>
    <li><a href="#peewee">Peewee</a></li>
-   <li><a href="#django-object-relational-mapper">Django ORM</a></li>
+   <li><a href="#django-orm">Django ORM</a></li>
    <li><a href="#pony-orm">Pony ORM</a></li>
   </ul>
-  <li>3.3 <a href="#nosql-data-stores">NoSQL</a></li>
+  <li>3.3 <a href="#no-sql-datastore">NoSQL</a></li>
   <ul class="toc3">
    <li><a href="#redis">Redis</a></li>
    <li><a href="#mongodb">MongoDB</a></li>
@@ -76,12 +76,12 @@
   <li>3.4 <a href="#data-analysis">Data analysis</a></li>
   <ul class="toc3">
    <li><a href="#pandas">pandas</a></li>
-   <li><a href="#scipy-and-numpy">SciPy & NumPy</a></li>
+   <li><a href="#scipy-numpy">SciPy & NumPy</a></li>
   </ul>
   <li>3.5 <a href="#data-visualization">Data visualization</a></li>
   <ul class="toc3">
    <li><a href="#bokeh">Bokeh</a></li>
-   <li><a href="#data-driven-documents-d3js">d3.js</a></li>
+   <li><a href="#d3-js">d3.js</a></li>
    <li><a href="#matplotlib">Matplotlib</a></li>
   </ul>
   <li>3.6 <a href="#markup-languages">Markup Languages</a></li>
@@ -113,14 +113,14 @@
   <li>4.3 <a href="#web-design">Web design</a></li>
   <ul class="toc3">
    <li><a href="#hypertext-markup-language-html">HTML</a></li>
-   <li><a href="#cascading-style-sheets-css">CSS</a></li>
+   <li><a href="#cascading-style-sheets">CSS</a></li>
    <li><a href="#responsive-design">Responsive Design</a></li>
    <li><a href="#minification">Minification</a></li>
   </ul>
   <li>4.4 <a href="#css-frameworks">CSS Frameworks</a></li>
   <ul class="toc3">
-   <li><a href="#bootstrap">Bootstrap</a></li>
-   <li><a href="#foundation">Foundation</a></li>
+   <li><a href="#bootstrap-css">Bootstrap</a></li>
+   <li><a href="#foundation-css">Foundation</a></li>
   </ul>
   <li>4.5 <a href="#javascript">JavaScript</a></li>
   <ul class="toc3">
@@ -162,7 +162,7 @@
   <li>4.11 <a href="#api-creation">API creation</a></li>
   <ul class="toc3 toc3-more">
    <li><a href="#api-frameworks">API Frameworks</a></li>
-   <li><a href="#django-rest-framework">Django REST Framework</a></li>
+   <li><a href="#django-rest-framework-drf">Django REST Framework</a></li>
   </ul>
   <li>4.12 <a href="#api-integration">API integration</a></li>
   <ul class="toc3 toc3-more">
@@ -202,8 +202,8 @@
   <ul class="toc3">
    <li><a href="#ubuntu">Ubuntu Linux</a></li>
    <li><a href="#macos">macOS</a></li>
-   <li>FreeBSD</li>
-   <li><a href="#windows">Windows</a></li>
+   <li><a href="#freebsd">FreeBSD</a></li>
+   <li><a href="#microsoft-windows">Windows</a></li>
   </ul>
   <li>5.5 <a href="#web-servers">Web servers</a></li>
   <ul class="toc3">
@@ -215,17 +215,17 @@
   <ul class="toc3">
    <li><a href="#green-unicorn-gunicorn">Green Unicorn</a></li>
    <li><a href="#uwsgi">uWSGI</a></li>
-   <li>mod_wsgi</li>
+   <li><a href="#mod-wsgi">mod_wsgi</a></li>
   </ul>
   <li>5.7 <a href="#continuous-integration">Continuous integration</a></li>
   <ul class="toc3">
    <li><a href="#jenkins">Jenkins</a></li>
-   <li>GoCD</li>
+   <li><a href="#gocd-continuous-integration">GoCD</a></li>
   </ul>
   <li>5.8 <a href="#configuration-management">Configuration management</a></li>
   <ul class="toc3">
    <li><a href="#ansible">Ansible</a></li>
-   <li>Salt</li>
+   <li><a href="#salt">Salt</a></li>
   </ul>
   <li>5.9 <a href="#containers">Containers</a></li>
   <ul class="toc3">
@@ -244,10 +244,10 @@
  <ul class="toc2">
   <li>6.1 <a href="#monitoring">Monitoring</a></li>
   <ul class="toc3">
+   <li><a href="#datadog">Datadog</a></li>
    <li><a href="#prometheus">Prometheus</a></li>
    <li><a href="#rollbar">Rollbar</a></li>
-   <li>Sentry</li>
-   <li>Scout</li>
+   <li><a href="#sentry">Sentry</a></li>
   </ul>
   <li>6.2 <a href="#web-app-performance">Web App Performance</a></li>
   <ul class="toc3">
@@ -259,7 +259,7 @@
 
  <li>7. Meta</li>
  <ul class="toc2">
-  <li><a href="#about-the-author">About the author</a></li>
+  <li><a href="#about-author">About the author</a></li>
   <li><a href="#what-full-stack-means">What "full stack" means</a></li>
  </ul>
 </ol>

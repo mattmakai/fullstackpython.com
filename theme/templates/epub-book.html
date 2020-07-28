@@ -39,6 +39,7 @@
    </div>
   {% endif %}
   {% if page.slug != "change-log" and page.slug != "page-statuses" and page.slug != "future-directions" %}
+   <h2 id="{{ page.slug }}">{{ page.title }}</h2>
    {{ page.content }}
   {% endif %}
  {% endfor %}

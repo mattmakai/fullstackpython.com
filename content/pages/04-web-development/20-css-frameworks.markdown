@@ -12,7 +12,7 @@ a code library that abstracts common web designs and makes the designs
 easier for a developer to implement in their web apps.
 
 
-### CSS frameworks
+### CSS framework implementations
 * [Bootstrap](/bootstrap-css.html)
 
 * [Foundation](/foundation-css.html)

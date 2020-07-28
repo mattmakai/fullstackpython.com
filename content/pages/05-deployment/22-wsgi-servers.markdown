@@ -146,7 +146,7 @@ configuration. For real SSL and non-SSL templates, take a look at the
 [Underwear web server templates](https://github.com/mattmakai/underwear/tree/master/underwear/roles/web/templates) on GitHub.
 
 
-## WSGI servers
+## WSGI server implementations
 There is a comprehensive list of WSGI servers on the 
 [WSGI Read the Docs](http://wsgi.readthedocs.org/en/latest/servers.html) page.
 The following are WSGI servers based on community recommendations.
