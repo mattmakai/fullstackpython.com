@@ -38,7 +38,7 @@ links = {
          "(/development-environments.html)":
          "(#development-environments)",
          "(/text-editors-ides.html)":
-         "(#text-editors-and-ides)",
+         "(#text-editors-ides)",
          "(/vim.html)":
          "(#vim)",
          "(/emacs.html)":
@@ -54,7 +54,7 @@ links = {
          "(/bourne-again-shell-bash.html)":
          "(#bourne-again-shell-bash)",
          "(/zsh-shell.html)":
-         "(#zsh)",
+         "(#zsh-shell)",
          "(/powershell.html)":
          "(#powershell)",
          "(/terminal-multiplexers.html)":
@@ -68,7 +68,7 @@ links = {
          "(/application-dependencies.html)":
          "(#application-dependencies)",
          "(/virtual-environments-virtualenvs-venvs.html)":
-         "(#virtual-environments-virtualenvs)",
+         "(#virtual-environments-virtualenvs-venvs)",
          "(/localhost-tunnels.html)":
          "(#localhost-tunnels)",
          "(/source-control.html)":
@@ -96,11 +96,11 @@ links = {
          "(/peewee.html)":
          "(#peewee)",
          "(/django-orm.html)":
-         "(#django-object-relational-mapper)",
+         "(#django-orm)",
          "(/pony-orm.html)":
          "(#pony-orm)",
          "(/no-sql-datastore.html)":
-         "(#nosql-data-stores)",
+         "(#nosql-data-store)",
          "(/redis.html)":
          "(#redis)",
          "(/mongodb.html)":
