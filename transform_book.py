@@ -365,6 +365,8 @@ links = {
          # code examples
          "(/django-code-examples.html)":
          "(" + BASE_FSP + "django-code-examples.html)",
+         "(/sqlalchemy-extensions-plug-ins-related-libraries.html)":
+         "(" + BASE_FSP + "sqlalchemy-extensions-plug-ins-related-libraries.html)",
 
          "(/email.html)":
          "(" + BASE_FSP + "email.html)",
