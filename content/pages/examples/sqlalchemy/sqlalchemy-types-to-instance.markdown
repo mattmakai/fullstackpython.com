@@ -1,14 +1,25 @@
 title: sqlalchemy.types to_instance Example Code
 category: page
 slug: sqlalchemy-types-to-instance-examples
-sortorder: 500031132
+sortorder: 500031136
 toc: False
 sidebartitle: sqlalchemy.types to_instance
 meta: Python example code that shows how to use the to_instance callable from the sqlalchemy.types module of the SQLAlchemy project.
 
 
-to_instance is a callable within the sqlalchemy.types module of the SQLAlchemy project.
+`to_instance` is a callable within the `sqlalchemy.types` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-types-boolean-examples.html">BOOLEAN</a>,
+<a href="/sqlalchemy-types-boolean-examples.html">Boolean</a>,
+<a href="/sqlalchemy-types-enum-examples.html">Enum</a>,
+<a href="/sqlalchemy-types-integer-examples.html">INTEGER</a>,
+<a href="/sqlalchemy-types-integer-examples.html">Integer</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NULLTYPE</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NullType</a>,
+<a href="/sqlalchemy-types-string-examples.html">String</a>,
+<a href="/sqlalchemy-types-typeengine-examples.html">TypeEngine</a>,
+and <a href="/sqlalchemy-types-userdefinedtype-examples.html">UserDefinedType</a>
+are several other callables with code examples from the same `sqlalchemy.types` package.
 
 ## Example 1 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)

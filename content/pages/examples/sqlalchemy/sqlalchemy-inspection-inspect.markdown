@@ -1,13 +1,14 @@
 title: sqlalchemy.inspection inspect Example Code
 category: page
 slug: sqlalchemy-inspection-inspect-examples
-sortorder: 500031049
+sortorder: 500031051
 toc: False
 sidebartitle: sqlalchemy.inspection inspect
 meta: Python example code that shows how to use the inspect callable from the sqlalchemy.inspection module of the SQLAlchemy project.
 
 
-inspect is a callable within the sqlalchemy.inspection module of the SQLAlchemy project.
+`inspect` is a callable within the `sqlalchemy.inspection` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from graphene-sqlalchemy

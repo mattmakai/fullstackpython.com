@@ -1,14 +1,19 @@
 title: sqlalchemy.dialects mysql Example Code
 category: page
 slug: sqlalchemy-dialects-mysql-examples
-sortorder: 500031001
+sortorder: 500031002
 toc: False
 sidebartitle: sqlalchemy.dialects mysql
 meta: Python example code that shows how to use the mysql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-mysql is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
+`mysql` is a callable within the `sqlalchemy.dialects` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-mssql-examples.html">mssql</a>,
+<a href="/sqlalchemy-dialects-oracle-examples.html">oracle</a>,
+<a href="/sqlalchemy-dialects-postgresql-examples.html">postgresql</a>,
+and <a href="/sqlalchemy-dialects-sqlite-examples.html">sqlite</a>
+are several other callables with code examples from the same `sqlalchemy.dialects` package.
 
 ## Example 1 from marshmallow-sqlalchemy
 [marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)

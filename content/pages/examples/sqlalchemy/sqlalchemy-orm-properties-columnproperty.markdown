@@ -1,14 +1,16 @@
 title: sqlalchemy.orm.properties ColumnProperty Example Code
 category: page
 slug: sqlalchemy-orm-properties-columnproperty-examples
-sortorder: 500031079
+sortorder: 500031081
 toc: False
 sidebartitle: sqlalchemy.orm.properties ColumnProperty
 meta: Example code for understanding how to use the ColumnProperty class from the sqlalchemy.orm.properties module of the SQLAlchemy project.
 
 
-ColumnProperty is a class within the sqlalchemy.orm.properties module of the SQLAlchemy project.
+`ColumnProperty` is a class within the `sqlalchemy.orm.properties` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-properties-relationshipproperty-examples.html">RelationshipProperty</a>
+is another callable from the `sqlalchemy.orm.properties` package with code examples.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

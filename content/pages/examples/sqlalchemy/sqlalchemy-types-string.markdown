@@ -1,16 +1,85 @@
 title: sqlalchemy.types String Example Code
 category: page
 slug: sqlalchemy-types-string-examples
-sortorder: 500031129
+sortorder: 500031133
 toc: False
 sidebartitle: sqlalchemy.types String
 meta: Example code for understanding how to use the String class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
-String is a class within the sqlalchemy.types module of the SQLAlchemy project.
+`String` is a class within the `sqlalchemy.types` module of the SQLAlchemy project.
+
+<a href="/sqlalchemy-types-boolean-examples.html">BOOLEAN</a>,
+<a href="/sqlalchemy-types-boolean-examples.html">Boolean</a>,
+<a href="/sqlalchemy-types-enum-examples.html">Enum</a>,
+<a href="/sqlalchemy-types-integer-examples.html">INTEGER</a>,
+<a href="/sqlalchemy-types-integer-examples.html">Integer</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NULLTYPE</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NullType</a>,
+<a href="/sqlalchemy-types-typeengine-examples.html">TypeEngine</a>,
+<a href="/sqlalchemy-types-userdefinedtype-examples.html">UserDefinedType</a>,
+and <a href="/sqlalchemy-types-to-instance-examples.html">to_instance</a>
+are several other callables with code examples from the same `sqlalchemy.types` package.
+
+## Example 1 from PyHive
+[PyHive](https://github.com/dropbox/PyHive)
+([PyPI package information](https://pypi.org/project/PyHive/))
+is a set of [DB-API](https://www.python.org/dev/peps/pep-0249/)
+and
+[SQLAlchemy](/sqlalchemy.html)
+interfaces that make it easier to use [Presto](https://prestodb.io/)
+and [Apache Hive](http://hive.apache.org/) with Python.
+[Dropbox's engineering team](https://www.dropbox.com/jobs/teams/engineering)
+created this code library, open sourced it and put it out under
+the [Apache 2.0 license](https://github.com/dropbox/PyHive/blob/master/LICENSE).
+
+[**PyHive / pyhive / tests / test_sqlalchemy_presto.py**](https://github.com/dropbox/PyHive/blob/master/pyhive/tests/test_sqlalchemy_presto.py)
+
+```python
+# test_sqlalchemy_presto.py
+from __future__ import absolute_import
+from __future__ import unicode_literals
+from builtins import str
+from pyhive.tests.sqlalchemy_test_case import SqlAlchemyTestCase
+from pyhive.tests.sqlalchemy_test_case import with_engine_connection
+from sqlalchemy import types
+from sqlalchemy.engine import create_engine
+from sqlalchemy.schema import Column
+from sqlalchemy.schema import MetaData
+from sqlalchemy.schema import Table
+~~from sqlalchemy.types import String
+
+import contextlib
+import unittest
 
 
-## Example 1 from sqlacodegen
+class TestSqlAlchemyPresto(unittest.TestCase, SqlAlchemyTestCase):
+    def create_engine(self):
+        return create_engine('presto://localhost:8080/hive/default?source={}'.format(self.id()))
+
+    def test_bad_format(self):
+        self.assertRaises(
+            ValueError,
+            lambda: create_engine('presto://localhost:8080/hive/default/what'),
+        )
+
+    @with_engine_connection
+    def test_reflect_select(self, engine, connection):
+        one_row_complex = Table('one_row_complex', MetaData(bind=engine), autoload=True)
+        self.assertEqual(len(one_row_complex.c), 15 - 1)
+        self.assertIsInstance(one_row_complex.c.string, Column)
+        rows = one_row_complex.select().execute().fetchall()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(list(rows[0]), [
+            True,
+
+
+## ... source file continues with no further String examples...
+
+```
+
+
+## Example 2 from sqlacodegen
 [sqlacodegen](https://github.com/agronholm/sqlacodegen)
 ([PyPI package information](https://pypi.org/project/sqlacodegen/))
 is a tool for

@@ -1,14 +1,16 @@
 title: sqlalchemy.orm.interfaces MapperProperty Example Code
 category: page
 slug: sqlalchemy-orm-interfaces-mapperproperty-examples
-sortorder: 500031077
+sortorder: 500031079
 toc: False
 sidebartitle: sqlalchemy.orm.interfaces MapperProperty
 meta: Example code for understanding how to use the MapperProperty class from the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
 
 
-MapperProperty is a class within the sqlalchemy.orm.interfaces module of the SQLAlchemy project.
+`MapperProperty` is a class within the `sqlalchemy.orm.interfaces` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-interfaces-propcomparator-examples.html">PropComparator</a>
+is another callable from the `sqlalchemy.orm.interfaces` package with code examples.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

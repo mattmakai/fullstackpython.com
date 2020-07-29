@@ -1,14 +1,19 @@
 title: sqlalchemy.engine url Example Code
 category: page
 slug: sqlalchemy-engine-url-examples
-sortorder: 500031024
+sortorder: 500031025
 toc: False
 sidebartitle: sqlalchemy.engine url
 meta: Python example code that shows how to use the url callable from the sqlalchemy.engine module of the SQLAlchemy project.
 
 
-url is a callable within the sqlalchemy.engine module of the SQLAlchemy project.
+`url` is a callable within the `sqlalchemy.engine` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-engine-connection-examples.html">Connection</a>,
+<a href="/sqlalchemy-engine-engine-examples.html">Engine</a>,
+<a href="/sqlalchemy-engine-create-engine-examples.html">create_engine</a>,
+and <a href="/sqlalchemy-engine-default-examples.html">default</a>
+are several other callables with code examples from the same `sqlalchemy.engine` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

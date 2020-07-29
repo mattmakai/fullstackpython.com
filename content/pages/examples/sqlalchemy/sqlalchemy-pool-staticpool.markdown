@@ -1,14 +1,16 @@
 title: sqlalchemy.pool StaticPool Example Code
 category: page
 slug: sqlalchemy-pool-staticpool-examples
-sortorder: 500031089
+sortorder: 500031091
 toc: False
 sidebartitle: sqlalchemy.pool StaticPool
 meta: Example code for understanding how to use the StaticPool class from the sqlalchemy.pool module of the SQLAlchemy project.
 
 
-StaticPool is a class within the sqlalchemy.pool module of the SQLAlchemy project.
+`StaticPool` is a class within the `sqlalchemy.pool` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-pool-nullpool-examples.html">NullPool</a>
+is another callable from the `sqlalchemy.pool` package with code examples.
 
 ## Example 1 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)

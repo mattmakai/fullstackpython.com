@@ -1,14 +1,18 @@
 title: sqlalchemy.ext.hybrid hybrid_method Example Code
 category: page
 slug: sqlalchemy-ext-hybrid-hybrid-method-examples
-sortorder: 500031046
+sortorder: 500031048
 toc: False
 sidebartitle: sqlalchemy.ext.hybrid hybrid_method
 meta: Python example code that shows how to use the hybrid_method callable from the sqlalchemy.ext.hybrid module of the SQLAlchemy project.
 
 
-hybrid_method is a callable within the sqlalchemy.ext.hybrid module of the SQLAlchemy project.
+`hybrid_method` is a callable within the `sqlalchemy.ext.hybrid` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-ext-hybrid-hybrid-property-examples.html">HYBRID_PROPERTY</a>,
+<a href="/sqlalchemy-ext-hybrid-hybrid-method-examples.html">hybrid_method</a>,
+and <a href="/sqlalchemy-ext-hybrid-hybrid-property-examples.html">hybrid_property</a>
+are several other callables with code examples from the same `sqlalchemy.ext.hybrid` package.
 
 ## Example 1 from SQLAlchemy Mixins
 [SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)

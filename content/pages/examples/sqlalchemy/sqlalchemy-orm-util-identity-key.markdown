@@ -1,14 +1,18 @@
 title: sqlalchemy.orm.util identity_key Example Code
 category: page
 slug: sqlalchemy-orm-util-identity-key-examples
-sortorder: 500031087
+sortorder: 500031089
 toc: False
 sidebartitle: sqlalchemy.orm.util identity_key
 meta: Python example code that shows how to use the identity_key callable from the sqlalchemy.orm.util module of the SQLAlchemy project.
 
 
-identity_key is a callable within the sqlalchemy.orm.util module of the SQLAlchemy project.
+`identity_key` is a callable within the `sqlalchemy.orm.util` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-util-aliasedclass-examples.html">AliasedClass</a>
+and
+<a href="/sqlalchemy-orm-util-aliasedinsp-examples.html">AliasedInsp</a>
+are a couple of other callables within the `sqlalchemy.orm.util` package that also have code examples.
 
 ## Example 1 from WTForms-Alchemy
 [wtforms-alchemy](git@github.com:kvesteri/wtforms-alchemy.git)

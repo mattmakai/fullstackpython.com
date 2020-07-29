@@ -1,13 +1,14 @@
 title: sqlalchemy.engine.url make_url Example Code
 category: page
 slug: sqlalchemy-engine-url-make-url-examples
-sortorder: 500031031
+sortorder: 500031032
 toc: False
 sidebartitle: sqlalchemy.engine.url make_url
 meta: Python example code that shows how to use the make_url callable from the sqlalchemy.engine.url module of the SQLAlchemy project.
 
 
-make_url is a callable within the sqlalchemy.engine.url module of the SQLAlchemy project.
+`make_url` is a callable within the `sqlalchemy.engine.url` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from CTFd

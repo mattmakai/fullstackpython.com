@@ -1,13 +1,14 @@
 title: sqlalchemy.events SchemaEventTarget Example Code
 category: page
 slug: sqlalchemy-events-schemaeventtarget-examples
-sortorder: 500031032
+sortorder: 500031033
 toc: False
 sidebartitle: sqlalchemy.events SchemaEventTarget
 meta: Example code for understanding how to use the SchemaEventTarget class from the sqlalchemy.events module of the SQLAlchemy project.
 
 
-SchemaEventTarget is a class within the sqlalchemy.events module of the SQLAlchemy project.
+`SchemaEventTarget` is a class within the `sqlalchemy.events` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from alembic

@@ -1,14 +1,16 @@
 title: sqlalchemy.engine.result ResultMetaData Example Code
 category: page
 slug: sqlalchemy-engine-result-resultmetadata-examples
-sortorder: 500031027
+sortorder: 500031028
 toc: False
 sidebartitle: sqlalchemy.engine.result ResultMetaData
 meta: Example code for understanding how to use the ResultMetaData class from the sqlalchemy.engine.result module of the SQLAlchemy project.
 
 
-ResultMetaData is a class within the sqlalchemy.engine.result module of the SQLAlchemy project.
+`ResultMetaData` is a class within the `sqlalchemy.engine.result` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-engine-result-rowproxy-examples.html">RowProxy</a>
+is another callable from the `sqlalchemy.engine.result` package with code examples.
 
 ## Example 1 from databases
 [databases](https://github.com/encode/databases)

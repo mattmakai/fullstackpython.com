@@ -1,14 +1,25 @@
 title: sqlalchemy.sql table Example Code
 category: page
 slug: sqlalchemy-sql-table-examples
-sortorder: 500031108
+sortorder: 500031111
 toc: False
 sidebartitle: sqlalchemy.sql table
 meta: Python example code that shows how to use the table callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-table is a callable within the sqlalchemy.sql module of the SQLAlchemy project.
+`table` is a callable within the `sqlalchemy.sql` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-clauseelement-examples.html">ClauseElement</a>,
+<a href="/sqlalchemy-sql-select-examples.html">Select</a>,
+<a href="/sqlalchemy-sql-column-examples.html">column</a>,
+<a href="/sqlalchemy-sql-expression-examples.html">expression</a>,
+<a href="/sqlalchemy-sql-extract-examples.html">extract</a>,
+<a href="/sqlalchemy-sql-functions-examples.html">functions</a>,
+<a href="/sqlalchemy-sql-operators-examples.html">operators</a>,
+<a href="/sqlalchemy-sql-schema-examples.html">schema</a>,
+<a href="/sqlalchemy-sql-select-examples.html">select</a>,
+and <a href="/sqlalchemy-sql-sqltypes-examples.html">sqltypes</a>
+are several other callables with code examples from the same `sqlalchemy.sql` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

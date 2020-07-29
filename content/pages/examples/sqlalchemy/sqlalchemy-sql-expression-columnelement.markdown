@@ -1,14 +1,20 @@
 title: sqlalchemy.sql.expression ColumnElement Example Code
 category: page
 slug: sqlalchemy-sql-expression-columnelement-examples
-sortorder: 500031113
+sortorder: 500031117
 toc: False
 sidebartitle: sqlalchemy.sql.expression ColumnElement
 meta: Example code for understanding how to use the ColumnElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
 
 
-ColumnElement is a class within the sqlalchemy.sql.expression module of the SQLAlchemy project.
+`ColumnElement` is a class within the `sqlalchemy.sql.expression` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-expression-clauseelement-examples.html">ClauseElement</a>,
+<a href="/sqlalchemy-sql-expression-columnclause-examples.html">ColumnClause</a>,
+<a href="/sqlalchemy-sql-expression-executable-examples.html">Executable</a>,
+<a href="/sqlalchemy-sql-expression-functionelement-examples.html">FunctionElement</a>,
+and <a href="/sqlalchemy-sql-expression-unaryexpression-examples.html">UnaryExpression</a>
+are several other callables with code examples from the same `sqlalchemy.sql.expression` package.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

@@ -1,13 +1,14 @@
 title: sqlalchemy.dialects.mysql pymysql Example Code
 category: page
 slug: sqlalchemy-dialects-mysql-pymysql-examples
-sortorder: 500031005
+sortorder: 500031006
 toc: False
 sidebartitle: sqlalchemy.dialects.mysql pymysql
 meta: Python example code that shows how to use the pymysql callable from the sqlalchemy.dialects.mysql module of the SQLAlchemy project.
 
 
-pymysql is a callable within the sqlalchemy.dialects.mysql module of the SQLAlchemy project.
+`pymysql` is a callable within the `sqlalchemy.dialects.mysql` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from databases

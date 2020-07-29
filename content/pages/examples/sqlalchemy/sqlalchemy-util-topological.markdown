@@ -1,14 +1,18 @@
 title: sqlalchemy.util topological Example Code
 category: page
 slug: sqlalchemy-util-topological-examples
-sortorder: 500031136
+sortorder: 500031140
 toc: False
 sidebartitle: sqlalchemy.util topological
 meta: Python example code that shows how to use the topological callable from the sqlalchemy.util module of the SQLAlchemy project.
 
 
-topological is a callable within the sqlalchemy.util module of the SQLAlchemy project.
+`topological` is a callable within the `sqlalchemy.util` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-util-ordereddict-examples.html">OrderedDict</a>,
+<a href="/sqlalchemy-util-orderedset-examples.html">OrderedSet</a>,
+and <a href="/sqlalchemy-util-set-creation-order-examples.html">set_creation_order</a>
+are several other callables with code examples from the same `sqlalchemy.util` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

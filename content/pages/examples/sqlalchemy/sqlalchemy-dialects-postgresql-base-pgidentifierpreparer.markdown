@@ -1,14 +1,18 @@
 title: sqlalchemy.dialects.postgresql.base PGIdentifierPreparer Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-base-pgidentifierpreparer-examples
-sortorder: 500031016
+sortorder: 500031017
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.base PGIdentifierPreparer
 meta: Example code for understanding how to use the PGIdentifierPreparer class from the sqlalchemy.dialects.postgresql.base module of the SQLAlchemy project.
 
 
-PGIdentifierPreparer is a class within the sqlalchemy.dialects.postgresql.base module of the SQLAlchemy project.
+`PGIdentifierPreparer` is a class within the `sqlalchemy.dialects.postgresql.base` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-postgresql-base-pgcompiler-examples.html">PGCompiler</a>
+and
+<a href="/sqlalchemy-dialects-postgresql-base-pgtypecompiler-examples.html">PGTypeCompiler</a>
+are a couple of other callables within the `sqlalchemy.dialects.postgresql.base` package that also have code examples.
 
 ## Example 1 from sqlalchemy-clickhouse
 [sqlalchemy-clickhouse](https://github.com/cloudflare/sqlalchemy-clickhouse)

@@ -1,14 +1,18 @@
 title: sqlalchemy.orm.util AliasedInsp Example Code
 category: page
 slug: sqlalchemy-orm-util-aliasedinsp-examples
-sortorder: 500031086
+sortorder: 500031088
 toc: False
 sidebartitle: sqlalchemy.orm.util AliasedInsp
 meta: Example code for understanding how to use the AliasedInsp class from the sqlalchemy.orm.util module of the SQLAlchemy project.
 
 
-AliasedInsp is a class within the sqlalchemy.orm.util module of the SQLAlchemy project.
+`AliasedInsp` is a class within the `sqlalchemy.orm.util` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-util-aliasedclass-examples.html">AliasedClass</a>
+and
+<a href="/sqlalchemy-orm-util-identity-key-examples.html">identity_key</a>
+are a couple of other callables within the `sqlalchemy.orm.util` package that also have code examples.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

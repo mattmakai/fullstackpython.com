@@ -1,14 +1,24 @@
 title: sqlalchemy.schema PrimaryKeyConstraint Example Code
 category: page
 slug: sqlalchemy-schema-primarykeyconstraint-examples
-sortorder: 500031097
+sortorder: 500031100
 toc: False
 sidebartitle: sqlalchemy.schema PrimaryKeyConstraint
 meta: Example code for understanding how to use the PrimaryKeyConstraint class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
-PrimaryKeyConstraint is a class within the sqlalchemy.schema module of the SQLAlchemy project.
+`PrimaryKeyConstraint` is a class within the `sqlalchemy.schema` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-schema-checkconstraint-examples.html">CheckConstraint</a>,
+<a href="/sqlalchemy-schema-column-examples.html">Column</a>,
+<a href="/sqlalchemy-schema-createindex-examples.html">CreateIndex</a>,
+<a href="/sqlalchemy-schema-createtable-examples.html">CreateTable</a>,
+<a href="/sqlalchemy-schema-ddlelement-examples.html">DDLElement</a>,
+<a href="/sqlalchemy-schema-foreignkey-examples.html">ForeignKey</a>,
+<a href="/sqlalchemy-schema-foreignkeyconstraint-examples.html">ForeignKeyConstraint</a>,
+<a href="/sqlalchemy-schema-index-examples.html">Index</a>,
+and <a href="/sqlalchemy-schema-table-examples.html">Table</a>
+are several other callables with code examples from the same `sqlalchemy.schema` package.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

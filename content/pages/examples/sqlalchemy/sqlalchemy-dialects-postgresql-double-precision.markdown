@@ -1,14 +1,25 @@
 title: sqlalchemy.dialects.postgresql DOUBLE_PRECISION Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-double-precision-examples
-sortorder: 500031009
+sortorder: 500031010
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql DOUBLE_PRECISION
 meta: Python example code that shows how to use the DOUBLE_PRECISION constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-DOUBLE_PRECISION is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+`DOUBLE_PRECISION` is a constant within the `sqlalchemy.dialects.postgresql` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-postgresql-array-examples.html">ARRAY</a>,
+<a href="/sqlalchemy-dialects-postgresql-bigint-examples.html">BIGINT</a>,
+<a href="/sqlalchemy-dialects-postgresql-bit-examples.html">BIT</a>,
+<a href="/sqlalchemy-dialects-postgresql-excludeconstraint-examples.html">ExcludeConstraint</a>,
+<a href="/sqlalchemy-dialects-postgresql-integer-examples.html">INTEGER</a>,
+<a href="/sqlalchemy-dialects-postgresql-json-examples.html">JSON</a>,
+<a href="/sqlalchemy-dialects-postgresql-tsvector-examples.html">TSVECTOR</a>,
+<a href="/sqlalchemy-dialects-postgresql-array-examples.html">array</a>,
+<a href="/sqlalchemy-dialects-postgresql-json-examples.html">json</a>,
+and <a href="/sqlalchemy-dialects-postgresql-pypostgresql-examples.html">pypostgresql</a>
+are several other callables with code examples from the same `sqlalchemy.dialects.postgresql` package.
 
 ## Example 1 from Amazon Redshift SQLAlchemy Dialect
 [Amazon Redshift SQLAlchemy Dialect](https://github.com/sqlalchemy-redshift/sqlalchemy-redshift)

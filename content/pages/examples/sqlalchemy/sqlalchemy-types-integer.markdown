@@ -1,14 +1,25 @@
 title: sqlalchemy.types Integer Example Code
 category: page
 slug: sqlalchemy-types-integer-examples
-sortorder: 500031127
+sortorder: 500031131
 toc: False
 sidebartitle: sqlalchemy.types Integer
 meta: Example code for understanding how to use the Integer class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
-Integer is a class within the sqlalchemy.types module of the SQLAlchemy project.
+`Integer` is a class within the `sqlalchemy.types` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-types-boolean-examples.html">BOOLEAN</a>,
+<a href="/sqlalchemy-types-boolean-examples.html">Boolean</a>,
+<a href="/sqlalchemy-types-enum-examples.html">Enum</a>,
+<a href="/sqlalchemy-types-integer-examples.html">Integer</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NULLTYPE</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NullType</a>,
+<a href="/sqlalchemy-types-string-examples.html">String</a>,
+<a href="/sqlalchemy-types-typeengine-examples.html">TypeEngine</a>,
+<a href="/sqlalchemy-types-userdefinedtype-examples.html">UserDefinedType</a>,
+and <a href="/sqlalchemy-types-to-instance-examples.html">to_instance</a>
+are several other callables with code examples from the same `sqlalchemy.types` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

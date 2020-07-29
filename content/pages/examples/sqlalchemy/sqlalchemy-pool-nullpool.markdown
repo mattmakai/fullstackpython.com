@@ -1,14 +1,16 @@
 title: sqlalchemy.pool NullPool Example Code
 category: page
 slug: sqlalchemy-pool-nullpool-examples
-sortorder: 500031088
+sortorder: 500031090
 toc: False
 sidebartitle: sqlalchemy.pool NullPool
 meta: Example code for understanding how to use the NullPool class from the sqlalchemy.pool module of the SQLAlchemy project.
 
 
-NullPool is a class within the sqlalchemy.pool module of the SQLAlchemy project.
+`NullPool` is a class within the `sqlalchemy.pool` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-pool-staticpool-examples.html">StaticPool</a>
+is another callable from the `sqlalchemy.pool` package with code examples.
 
 ## Example 1 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)

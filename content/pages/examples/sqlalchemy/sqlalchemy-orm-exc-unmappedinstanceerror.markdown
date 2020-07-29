@@ -1,14 +1,18 @@
 title: sqlalchemy.orm.exc UnmappedInstanceError Example Code
 category: page
 slug: sqlalchemy-orm-exc-unmappedinstanceerror-examples
-sortorder: 500031076
+sortorder: 500031078
 toc: False
 sidebartitle: sqlalchemy.orm.exc UnmappedInstanceError
 meta: Example code for understanding how to use the UnmappedInstanceError class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
 
 
-UnmappedInstanceError is a class within the sqlalchemy.orm.exc module of the SQLAlchemy project.
+`UnmappedInstanceError` is a class within the `sqlalchemy.orm.exc` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-exc-noresultfound-examples.html">NoResultFound</a>
+and
+<a href="/sqlalchemy-orm-exc-unmappedclasserror-examples.html">UnmappedClassError</a>
+are a couple of other callables within the `sqlalchemy.orm.exc` package that also have code examples.
 
 ## Example 1 from graphene-sqlalchemy
 [graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy)

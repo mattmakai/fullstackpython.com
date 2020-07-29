@@ -1,14 +1,18 @@
 title: sqlalchemy.orm.exc NoResultFound Example Code
 category: page
 slug: sqlalchemy-orm-exc-noresultfound-examples
-sortorder: 500031074
+sortorder: 500031076
 toc: False
 sidebartitle: sqlalchemy.orm.exc NoResultFound
 meta: Example code for understanding how to use the NoResultFound class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
 
 
-NoResultFound is a class within the sqlalchemy.orm.exc module of the SQLAlchemy project.
+`NoResultFound` is a class within the `sqlalchemy.orm.exc` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-exc-unmappedclasserror-examples.html">UnmappedClassError</a>
+and
+<a href="/sqlalchemy-orm-exc-unmappedinstanceerror-examples.html">UnmappedInstanceError</a>
+are a couple of other callables within the `sqlalchemy.orm.exc` package that also have code examples.
 
 ## Example 1 from graphene-sqlalchemy
 [graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy)

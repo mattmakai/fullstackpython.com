@@ -1,14 +1,25 @@
 title: sqlalchemy.sql extract Example Code
 category: page
 slug: sqlalchemy-sql-extract-examples
-sortorder: 500031102
+sortorder: 500031105
 toc: False
 sidebartitle: sqlalchemy.sql extract
 meta: Python example code that shows how to use the extract callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-extract is a callable within the sqlalchemy.sql module of the SQLAlchemy project.
+`extract` is a callable within the `sqlalchemy.sql` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-clauseelement-examples.html">ClauseElement</a>,
+<a href="/sqlalchemy-sql-select-examples.html">Select</a>,
+<a href="/sqlalchemy-sql-column-examples.html">column</a>,
+<a href="/sqlalchemy-sql-expression-examples.html">expression</a>,
+<a href="/sqlalchemy-sql-functions-examples.html">functions</a>,
+<a href="/sqlalchemy-sql-operators-examples.html">operators</a>,
+<a href="/sqlalchemy-sql-schema-examples.html">schema</a>,
+<a href="/sqlalchemy-sql-select-examples.html">select</a>,
+<a href="/sqlalchemy-sql-sqltypes-examples.html">sqltypes</a>,
+and <a href="/sqlalchemy-sql-table-examples.html">table</a>
+are several other callables with code examples from the same `sqlalchemy.sql` package.
 
 ## Example 1 from SQLAlchemy Mixins
 [SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)

@@ -1,14 +1,19 @@
 title: sqlalchemy.dialects mssql Example Code
 category: page
 slug: sqlalchemy-dialects-mssql-examples
-sortorder: 500031000
+sortorder: 500031001
 toc: False
 sidebartitle: sqlalchemy.dialects mssql
 meta: Python example code that shows how to use the mssql callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-mssql is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
+`mssql` is a callable within the `sqlalchemy.dialects` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-mysql-examples.html">mysql</a>,
+<a href="/sqlalchemy-dialects-oracle-examples.html">oracle</a>,
+<a href="/sqlalchemy-dialects-postgresql-examples.html">postgresql</a>,
+and <a href="/sqlalchemy-dialects-sqlite-examples.html">sqlite</a>
+are several other callables with code examples from the same `sqlalchemy.dialects` package.
 
 ## Example 1 from marshmallow-sqlalchemy
 [marshmallow-sqlalchemy](https://github.com/marshmallow-code/marshmallow-sqlalchemy)

@@ -1,14 +1,16 @@
 title: sqlalchemy.engine.strategies EngineStrategy Example Code
 category: page
 slug: sqlalchemy-engine-strategies-enginestrategy-examples
-sortorder: 500031029
+sortorder: 500031030
 toc: False
 sidebartitle: sqlalchemy.engine.strategies EngineStrategy
 meta: Example code for understanding how to use the EngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.
 
 
-EngineStrategy is a class within the sqlalchemy.engine.strategies module of the SQLAlchemy project.
+`EngineStrategy` is a class within the `sqlalchemy.engine.strategies` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-engine-strategies-mockenginestrategy-examples.html">MockEngineStrategy</a>
+is another callable from the `sqlalchemy.engine.strategies` package with code examples.
 
 ## Example 1 from GINO
 [GINO](https://github.com/fantix/gino)

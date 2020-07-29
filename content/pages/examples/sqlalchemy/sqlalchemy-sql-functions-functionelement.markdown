@@ -1,14 +1,16 @@
 title: sqlalchemy.sql.functions FunctionElement Example Code
 category: page
 slug: sqlalchemy-sql-functions-functionelement-examples
-sortorder: 500031117
+sortorder: 500031121
 toc: False
 sidebartitle: sqlalchemy.sql.functions FunctionElement
 meta: Example code for understanding how to use the FunctionElement class from the sqlalchemy.sql.functions module of the SQLAlchemy project.
 
 
-FunctionElement is a class within the sqlalchemy.sql.functions module of the SQLAlchemy project.
+`FunctionElement` is a class within the `sqlalchemy.sql.functions` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-functions-genericfunction-examples.html">GenericFunction</a>
+is another callable from the `sqlalchemy.sql.functions` package with code examples.
 
 ## Example 1 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)

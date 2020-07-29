@@ -1,14 +1,20 @@
 title: sqlalchemy.sql.expression Executable Example Code
 category: page
 slug: sqlalchemy-sql-expression-executable-examples
-sortorder: 500031114
+sortorder: 500031118
 toc: False
 sidebartitle: sqlalchemy.sql.expression Executable
 meta: Example code for understanding how to use the Executable class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
 
 
-Executable is a class within the sqlalchemy.sql.expression module of the SQLAlchemy project.
+`Executable` is a class within the `sqlalchemy.sql.expression` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-expression-clauseelement-examples.html">ClauseElement</a>,
+<a href="/sqlalchemy-sql-expression-columnclause-examples.html">ColumnClause</a>,
+<a href="/sqlalchemy-sql-expression-columnelement-examples.html">ColumnElement</a>,
+<a href="/sqlalchemy-sql-expression-functionelement-examples.html">FunctionElement</a>,
+and <a href="/sqlalchemy-sql-expression-unaryexpression-examples.html">UnaryExpression</a>
+are several other callables with code examples from the same `sqlalchemy.sql.expression` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

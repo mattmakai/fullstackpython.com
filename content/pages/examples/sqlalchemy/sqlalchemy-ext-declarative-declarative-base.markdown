@@ -1,14 +1,16 @@
 title: sqlalchemy.ext.declarative declarative_base Example Code
 category: page
 slug: sqlalchemy-ext-declarative-declarative-base-examples
-sortorder: 500031045
+sortorder: 500031047
 toc: False
 sidebartitle: sqlalchemy.ext.declarative declarative_base
 meta: Python example code that shows how to use the declarative_base callable from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
 
 
-declarative_base is a callable within the sqlalchemy.ext.declarative module of the SQLAlchemy project.
+`declarative_base` is a callable within the `sqlalchemy.ext.declarative` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-ext-declarative-declarativemeta-examples.html">DeclarativeMeta</a>
+is another callable from the `sqlalchemy.ext.declarative` package with code examples.
 
 ## Example 1 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)

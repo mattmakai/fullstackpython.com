@@ -1,14 +1,16 @@
 title: sqlalchemy.sql.functions GenericFunction Example Code
 category: page
 slug: sqlalchemy-sql-functions-genericfunction-examples
-sortorder: 500031118
+sortorder: 500031122
 toc: False
 sidebartitle: sqlalchemy.sql.functions GenericFunction
 meta: Example code for understanding how to use the GenericFunction class from the sqlalchemy.sql.functions module of the SQLAlchemy project.
 
 
-GenericFunction is a class within the sqlalchemy.sql.functions module of the SQLAlchemy project.
+`GenericFunction` is a class within the `sqlalchemy.sql.functions` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-functions-functionelement-examples.html">FunctionElement</a>
+is another callable from the `sqlalchemy.sql.functions` package with code examples.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

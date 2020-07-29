@@ -1,14 +1,16 @@
 title: sqlalchemy.sql.sqltypes NullType Example Code
 category: page
 slug: sqlalchemy-sql-sqltypes-nulltype-examples
-sortorder: 500031122
+sortorder: 500031126
 toc: False
 sidebartitle: sqlalchemy.sql.sqltypes NullType
 meta: Example code for understanding how to use the NullType class from the sqlalchemy.sql.sqltypes module of the SQLAlchemy project.
 
 
-NullType is a class within the sqlalchemy.sql.sqltypes module of the SQLAlchemy project.
+`NullType` is a class within the `sqlalchemy.sql.sqltypes` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-sqltypes-nulltype-examples.html">NullType</a>
+is another callable from the `sqlalchemy.sql.sqltypes` package with code examples.
 
 ## Example 1 from sqlacodegen
 [sqlacodegen](https://github.com/agronholm/sqlacodegen)

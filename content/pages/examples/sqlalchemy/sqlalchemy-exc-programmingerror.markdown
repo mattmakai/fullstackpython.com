@@ -1,14 +1,23 @@
 title: sqlalchemy.exc ProgrammingError Example Code
 category: page
 slug: sqlalchemy-exc-programmingerror-examples
-sortorder: 500031040
+sortorder: 500031042
 toc: False
 sidebartitle: sqlalchemy.exc ProgrammingError
 meta: Example code for understanding how to use the ProgrammingError class from the sqlalchemy.exc module of the SQLAlchemy project.
 
 
-ProgrammingError is a class within the sqlalchemy.exc module of the SQLAlchemy project.
+`ProgrammingError` is a class within the `sqlalchemy.exc` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-exc-argumenterror-examples.html">ArgumentError</a>,
+<a href="/sqlalchemy-exc-dataerror-examples.html">DataError</a>,
+<a href="/sqlalchemy-exc-databaseerror-examples.html">DatabaseError</a>,
+<a href="/sqlalchemy-exc-integrityerror-examples.html">IntegrityError</a>,
+<a href="/sqlalchemy-exc-invalidrequesterror-examples.html">InvalidRequestError</a>,
+<a href="/sqlalchemy-exc-noinspectionavailable-examples.html">NoInspectionAvailable</a>,
+<a href="/sqlalchemy-exc-nosuchtableerror-examples.html">NoSuchTableError</a>,
+and <a href="/sqlalchemy-exc-operationalerror-examples.html">OperationalError</a>
+are several other callables with code examples from the same `sqlalchemy.exc` package.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

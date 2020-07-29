@@ -1,14 +1,16 @@
 title: sqlalchemy.sql.elements ColumnElement Example Code
 category: page
 slug: sqlalchemy-sql-elements-columnelement-examples
-sortorder: 500031109
+sortorder: 500031113
 toc: False
 sidebartitle: sqlalchemy.sql.elements ColumnElement
 meta: Example code for understanding how to use the ColumnElement class from the sqlalchemy.sql.elements module of the SQLAlchemy project.
 
 
-ColumnElement is a class within the sqlalchemy.sql.elements module of the SQLAlchemy project.
+`ColumnElement` is a class within the `sqlalchemy.sql.elements` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-elements-label-examples.html">Label</a>
+is another callable from the `sqlalchemy.sql.elements` package with code examples.
 
 ## Example 1 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)

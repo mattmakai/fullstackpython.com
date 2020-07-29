@@ -1,14 +1,25 @@
 title: sqlalchemy.types UserDefinedType Example Code
 category: page
 slug: sqlalchemy-types-userdefinedtype-examples
-sortorder: 500031131
+sortorder: 500031135
 toc: False
 sidebartitle: sqlalchemy.types UserDefinedType
 meta: Example code for understanding how to use the UserDefinedType class from the sqlalchemy.types module of the SQLAlchemy project.
 
 
-UserDefinedType is a class within the sqlalchemy.types module of the SQLAlchemy project.
+`UserDefinedType` is a class within the `sqlalchemy.types` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-types-boolean-examples.html">BOOLEAN</a>,
+<a href="/sqlalchemy-types-boolean-examples.html">Boolean</a>,
+<a href="/sqlalchemy-types-enum-examples.html">Enum</a>,
+<a href="/sqlalchemy-types-integer-examples.html">INTEGER</a>,
+<a href="/sqlalchemy-types-integer-examples.html">Integer</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NULLTYPE</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NullType</a>,
+<a href="/sqlalchemy-types-string-examples.html">String</a>,
+<a href="/sqlalchemy-types-typeengine-examples.html">TypeEngine</a>,
+and <a href="/sqlalchemy-types-to-instance-examples.html">to_instance</a>
+are several other callables with code examples from the same `sqlalchemy.types` package.
 
 ## Example 1 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)

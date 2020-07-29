@@ -1,13 +1,14 @@
 title: sqlalchemy.ext.compiler compiles Example Code
 category: page
 slug: sqlalchemy-ext-compiler-compiles-examples
-sortorder: 500031043
+sortorder: 500031045
 toc: False
 sidebartitle: sqlalchemy.ext.compiler compiles
 meta: Python example code that shows how to use the compiles callable from the sqlalchemy.ext.compiler module of the SQLAlchemy project.
 
 
-compiles is a callable within the sqlalchemy.ext.compiler module of the SQLAlchemy project.
+`compiles` is a callable within the `sqlalchemy.ext.compiler` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from alembic

@@ -1,14 +1,25 @@
 title: sqlalchemy.sql select Example Code
 category: page
 slug: sqlalchemy-sql-select-examples
-sortorder: 500031106
+sortorder: 500031109
 toc: False
 sidebartitle: sqlalchemy.sql select
 meta: Python example code that shows how to use the select callable from the sqlalchemy.sql module of the SQLAlchemy project.
 
 
-select is a callable within the sqlalchemy.sql module of the SQLAlchemy project.
+`select` is a callable within the `sqlalchemy.sql` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-clauseelement-examples.html">ClauseElement</a>,
+<a href="/sqlalchemy-sql-column-examples.html">column</a>,
+<a href="/sqlalchemy-sql-expression-examples.html">expression</a>,
+<a href="/sqlalchemy-sql-extract-examples.html">extract</a>,
+<a href="/sqlalchemy-sql-functions-examples.html">functions</a>,
+<a href="/sqlalchemy-sql-operators-examples.html">operators</a>,
+<a href="/sqlalchemy-sql-schema-examples.html">schema</a>,
+<a href="/sqlalchemy-sql-select-examples.html">select</a>,
+<a href="/sqlalchemy-sql-sqltypes-examples.html">sqltypes</a>,
+and <a href="/sqlalchemy-sql-table-examples.html">table</a>
+are several other callables with code examples from the same `sqlalchemy.sql` package.
 
 ## Example 1 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)

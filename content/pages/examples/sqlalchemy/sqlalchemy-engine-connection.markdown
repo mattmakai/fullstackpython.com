@@ -1,14 +1,19 @@
 title: sqlalchemy.engine Connection Example Code
 category: page
 slug: sqlalchemy-engine-connection-examples
-sortorder: 500031020
+sortorder: 500031021
 toc: False
 sidebartitle: sqlalchemy.engine Connection
 meta: Example code for understanding how to use the Connection class from the sqlalchemy.engine module of the SQLAlchemy project.
 
 
-Connection is a class within the sqlalchemy.engine module of the SQLAlchemy project.
+`Connection` is a class within the `sqlalchemy.engine` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-engine-engine-examples.html">Engine</a>,
+<a href="/sqlalchemy-engine-create-engine-examples.html">create_engine</a>,
+<a href="/sqlalchemy-engine-default-examples.html">default</a>,
+and <a href="/sqlalchemy-engine-url-examples.html">url</a>
+are several other callables with code examples from the same `sqlalchemy.engine` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

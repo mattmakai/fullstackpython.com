@@ -1,13 +1,14 @@
 title: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2 Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-psycopg2-pgdialect-psycopg2-examples
-sortorder: 500031018
+sortorder: 500031019
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.psycopg2 PGDialect_psycopg2
 meta: Example code for understanding how to use the PGDialect_psycopg2 class from the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
 
 
-PGDialect_psycopg2 is a class within the sqlalchemy.dialects.postgresql.psycopg2 module of the SQLAlchemy project.
+`PGDialect_psycopg2` is a class within the `sqlalchemy.dialects.postgresql.psycopg2` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from Amazon Redshift SQLAlchemy Dialect

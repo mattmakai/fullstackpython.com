@@ -1,13 +1,14 @@
 title: sqlalchemy.ext.automap automap_base Example Code
 category: page
 slug: sqlalchemy-ext-automap-automap-base-examples
-sortorder: 500031042
+sortorder: 500031044
 toc: False
 sidebartitle: sqlalchemy.ext.automap automap_base
 meta: Python example code that shows how to use the automap_base callable from the sqlalchemy.ext.automap module of the SQLAlchemy project.
 
 
-automap_base is a callable within the sqlalchemy.ext.automap module of the SQLAlchemy project.
+`automap_base` is a callable within the `sqlalchemy.ext.automap` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from sandman2

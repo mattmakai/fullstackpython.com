@@ -1,14 +1,16 @@
 title: sqlalchemy.orm.attributes flag_modified Example Code
 category: page
 slug: sqlalchemy-orm-attributes-flag-modified-examples
-sortorder: 500031072
+sortorder: 500031074
 toc: False
 sidebartitle: sqlalchemy.orm.attributes flag_modified
 meta: Python example code that shows how to use the flag_modified callable from the sqlalchemy.orm.attributes module of the SQLAlchemy project.
 
 
-flag_modified is a callable within the sqlalchemy.orm.attributes module of the SQLAlchemy project.
+`flag_modified` is a callable within the `sqlalchemy.orm.attributes` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-attributes-instrumentedattribute-examples.html">InstrumentedAttribute</a>
+is another callable from the `sqlalchemy.orm.attributes` package with code examples.
 
 ## Example 1 from indico
 [indico](https://github.com/indico/indico)

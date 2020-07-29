@@ -1,13 +1,14 @@
 title: sqlalchemy.ext compiler Example Code
 category: page
 slug: sqlalchemy-ext-compiler-examples
-sortorder: 500031041
+sortorder: 500031043
 toc: False
 sidebartitle: sqlalchemy.ext compiler
 meta: Python example code that shows how to use the compiler callable from the sqlalchemy.ext module of the SQLAlchemy project.
 
 
-compiler is a callable within the sqlalchemy.ext module of the SQLAlchemy project.
+`compiler` is a callable within the `sqlalchemy.ext` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from Amazon Redshift SQLAlchemy Dialect

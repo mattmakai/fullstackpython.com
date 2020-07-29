@@ -1,14 +1,24 @@
 title: sqlalchemy.schema ForeignKey Example Code
 category: page
 slug: sqlalchemy-schema-foreignkey-examples
-sortorder: 500031095
+sortorder: 500031097
 toc: False
 sidebartitle: sqlalchemy.schema ForeignKey
 meta: Example code for understanding how to use the ForeignKey class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
-ForeignKey is a class within the sqlalchemy.schema module of the SQLAlchemy project.
+`ForeignKey` is a class within the `sqlalchemy.schema` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-schema-checkconstraint-examples.html">CheckConstraint</a>,
+<a href="/sqlalchemy-schema-column-examples.html">Column</a>,
+<a href="/sqlalchemy-schema-createindex-examples.html">CreateIndex</a>,
+<a href="/sqlalchemy-schema-createtable-examples.html">CreateTable</a>,
+<a href="/sqlalchemy-schema-ddlelement-examples.html">DDLElement</a>,
+<a href="/sqlalchemy-schema-foreignkeyconstraint-examples.html">ForeignKeyConstraint</a>,
+<a href="/sqlalchemy-schema-index-examples.html">Index</a>,
+<a href="/sqlalchemy-schema-primarykeyconstraint-examples.html">PrimaryKeyConstraint</a>,
+and <a href="/sqlalchemy-schema-table-examples.html">Table</a>
+are several other callables with code examples from the same `sqlalchemy.schema` package.
 
 ## Example 1 from sqlacodegen
 [sqlacodegen](https://github.com/agronholm/sqlacodegen)

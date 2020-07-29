@@ -1,14 +1,16 @@
 title: sqlalchemy.orm.session Session Example Code
 category: page
 slug: sqlalchemy-orm-session-session-examples
-sortorder: 500031083
+sortorder: 500031085
 toc: False
 sidebartitle: sqlalchemy.orm.session Session
 meta: Example code for understanding how to use the Session class from the sqlalchemy.orm.session module of the SQLAlchemy project.
 
 
-Session is a class within the sqlalchemy.orm.session module of the SQLAlchemy project.
+`Session` is a class within the `sqlalchemy.orm.session` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-session-object-session-examples.html">object_session</a>
+is another callable from the `sqlalchemy.orm.session` package with code examples.
 
 ## Example 1 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)

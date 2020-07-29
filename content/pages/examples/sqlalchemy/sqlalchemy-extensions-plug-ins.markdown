@@ -125,6 +125,19 @@ The marshmallow-sqlalchemy project is provided as open source under the
 [MIT license](https://github.com/marshmallow-code/marshmallow-sqlalchemy/blob/dev/LICENSE).
 
 
+### PyHive
+[PyHive](https://github.com/dropbox/PyHive)
+([PyPI package information](https://pypi.org/project/PyHive/))
+is a set of [DB-API](https://www.python.org/dev/peps/pep-0249/)
+and
+[SQLAlchemy](/sqlalchemy.html)
+interfaces that make it easier to use [Presto](https://prestodb.io/)
+and [Apache Hive](http://hive.apache.org/) with Python. 
+[Dropbox's engineering team](https://www.dropbox.com/jobs/teams/engineering)
+created this code library, open sourced it and put it out under
+the [Apache 2.0 license](https://github.com/dropbox/PyHive/blob/master/LICENSE).
+
+
 ### sqlacodegen
 [sqlacodegen](https://github.com/agronholm/sqlacodegen) 
 ([PyPI package information](https://pypi.org/project/sqlacodegen/))

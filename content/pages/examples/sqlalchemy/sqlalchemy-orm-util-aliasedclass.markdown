@@ -1,14 +1,18 @@
 title: sqlalchemy.orm.util AliasedClass Example Code
 category: page
 slug: sqlalchemy-orm-util-aliasedclass-examples
-sortorder: 500031085
+sortorder: 500031087
 toc: False
 sidebartitle: sqlalchemy.orm.util AliasedClass
 meta: Example code for understanding how to use the AliasedClass class from the sqlalchemy.orm.util module of the SQLAlchemy project.
 
 
-AliasedClass is a class within the sqlalchemy.orm.util module of the SQLAlchemy project.
+`AliasedClass` is a class within the `sqlalchemy.orm.util` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-util-aliasedinsp-examples.html">AliasedInsp</a>
+and
+<a href="/sqlalchemy-orm-util-identity-key-examples.html">identity_key</a>
+are a couple of other callables within the `sqlalchemy.orm.util` package that also have code examples.
 
 ## Example 1 from SQLAlchemy Mixins
 [SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)

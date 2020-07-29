@@ -1,13 +1,14 @@
 title: sqlalchemy.orm.collections InstrumentedList Example Code
 category: page
 slug: sqlalchemy-orm-collections-instrumentedlist-examples
-sortorder: 500031073
+sortorder: 500031075
 toc: False
 sidebartitle: sqlalchemy.orm.collections InstrumentedList
 meta: Example code for understanding how to use the InstrumentedList class from the sqlalchemy.orm.collections module of the SQLAlchemy project.
 
 
-InstrumentedList is a class within the sqlalchemy.orm.collections module of the SQLAlchemy project.
+`InstrumentedList` is a class within the `sqlalchemy.orm.collections` module of the SQLAlchemy project.
+
 
 
 ## Example 1 from sqlalchemy-utils

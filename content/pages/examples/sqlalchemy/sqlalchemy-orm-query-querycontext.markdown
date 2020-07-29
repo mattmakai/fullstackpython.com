@@ -1,14 +1,16 @@
 title: sqlalchemy.orm.query QueryContext Example Code
 category: page
 slug: sqlalchemy-orm-query-querycontext-examples
-sortorder: 500031082
+sortorder: 500031084
 toc: False
 sidebartitle: sqlalchemy.orm.query QueryContext
 meta: Example code for understanding how to use the QueryContext class from the sqlalchemy.orm.query module of the SQLAlchemy project.
 
 
-QueryContext is a class within the sqlalchemy.orm.query module of the SQLAlchemy project.
+`QueryContext` is a class within the `sqlalchemy.orm.query` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-query-query-examples.html">Query</a>
+is another callable from the `sqlalchemy.orm.query` package with code examples.
 
 ## Example 1 from graphene-sqlalchemy
 [graphene-sqlalchemy](https://github.com/graphql-python/graphene-sqlalchemy)

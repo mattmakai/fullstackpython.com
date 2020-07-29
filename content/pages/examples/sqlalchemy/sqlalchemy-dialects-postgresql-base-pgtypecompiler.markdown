@@ -1,14 +1,18 @@
 title: sqlalchemy.dialects.postgresql.base PGTypeCompiler Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-base-pgtypecompiler-examples
-sortorder: 500031017
+sortorder: 500031018
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql.base PGTypeCompiler
 meta: Example code for understanding how to use the PGTypeCompiler class from the sqlalchemy.dialects.postgresql.base module of the SQLAlchemy project.
 
 
-PGTypeCompiler is a class within the sqlalchemy.dialects.postgresql.base module of the SQLAlchemy project.
+`PGTypeCompiler` is a class within the `sqlalchemy.dialects.postgresql.base` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-postgresql-base-pgcompiler-examples.html">PGCompiler</a>
+and
+<a href="/sqlalchemy-dialects-postgresql-base-pgidentifierpreparer-examples.html">PGIdentifierPreparer</a>
+are a couple of other callables within the `sqlalchemy.dialects.postgresql.base` package that also have code examples.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

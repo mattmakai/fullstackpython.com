@@ -1,14 +1,24 @@
 title: sqlalchemy.schema Column Example Code
 category: page
 slug: sqlalchemy-schema-column-examples
-sortorder: 500031091
+sortorder: 500031093
 toc: False
 sidebartitle: sqlalchemy.schema Column
 meta: Example code for understanding how to use the Column class from the sqlalchemy.schema module of the SQLAlchemy project.
 
 
-Column is a class within the sqlalchemy.schema module of the SQLAlchemy project.
+`Column` is a class within the `sqlalchemy.schema` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-schema-checkconstraint-examples.html">CheckConstraint</a>,
+<a href="/sqlalchemy-schema-createindex-examples.html">CreateIndex</a>,
+<a href="/sqlalchemy-schema-createtable-examples.html">CreateTable</a>,
+<a href="/sqlalchemy-schema-ddlelement-examples.html">DDLElement</a>,
+<a href="/sqlalchemy-schema-foreignkey-examples.html">ForeignKey</a>,
+<a href="/sqlalchemy-schema-foreignkeyconstraint-examples.html">ForeignKeyConstraint</a>,
+<a href="/sqlalchemy-schema-index-examples.html">Index</a>,
+<a href="/sqlalchemy-schema-primarykeyconstraint-examples.html">PrimaryKeyConstraint</a>,
+and <a href="/sqlalchemy-schema-table-examples.html">Table</a>
+are several other callables with code examples from the same `sqlalchemy.schema` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)
@@ -221,6 +231,119 @@ class ModelLoader(Loader):
         self.on_clause = None
 
     def _do_load(self, row):
+
+
+## ... source file continues with no further Column examples...
+
+```
+
+
+## Example 3 from PyHive
+[PyHive](https://github.com/dropbox/PyHive)
+([PyPI package information](https://pypi.org/project/PyHive/))
+is a set of [DB-API](https://www.python.org/dev/peps/pep-0249/)
+and
+[SQLAlchemy](/sqlalchemy.html)
+interfaces that make it easier to use [Presto](https://prestodb.io/)
+and [Apache Hive](http://hive.apache.org/) with Python.
+[Dropbox's engineering team](https://www.dropbox.com/jobs/teams/engineering)
+created this code library, open sourced it and put it out under
+the [Apache 2.0 license](https://github.com/dropbox/PyHive/blob/master/LICENSE).
+
+[**PyHive / pyhive / tests / test_sqlalchemy_hive.py**](https://github.com/dropbox/PyHive/blob/master/pyhive/tests/test_sqlalchemy_hive.py)
+
+```python
+# test_sqlalchemy_hive.py
+from __future__ import absolute_import
+from __future__ import unicode_literals
+from builtins import str
+from pyhive.sqlalchemy_hive import HiveDate
+from pyhive.sqlalchemy_hive import HiveDecimal
+from pyhive.sqlalchemy_hive import HiveTimestamp
+from pyhive.tests.sqlalchemy_test_case import SqlAlchemyTestCase
+from pyhive.tests.sqlalchemy_test_case import with_engine_connection
+from sqlalchemy import types
+from sqlalchemy.engine import create_engine
+~~from sqlalchemy.schema import Column
+from sqlalchemy.schema import MetaData
+from sqlalchemy.schema import Table
+import contextlib
+import datetime
+import decimal
+import sqlalchemy.types
+import unittest
+
+_ONE_ROW_COMPLEX_CONTENTS = [
+    True,
+    127,
+    32767,
+    2147483647,
+    9223372036854775807,
+    0.5,
+    0.25,
+    'a string',
+    datetime.datetime(1970, 1, 1),
+    b'123',
+    '[1,2]',
+    '{1:2,3:4}',
+    '{"a":1,"b":2}',
+    '{0:1}',
+    decimal.Decimal('0.1'),
+
+
+## ... source file abbreviated to get to Column examples ...
+
+
+        self.assertEqual(list(row), _ONE_ROW_COMPLEX_CONTENTS)
+
+        self.assertIsInstance(one_row_complex.c.boolean.type, types.Boolean)
+        self.assertIsInstance(one_row_complex.c.tinyint.type, types.Integer)
+        self.assertIsInstance(one_row_complex.c.smallint.type, types.Integer)
+        self.assertIsInstance(one_row_complex.c.int.type, types.Integer)
+        self.assertIsInstance(one_row_complex.c.bigint.type, types.BigInteger)
+        self.assertIsInstance(one_row_complex.c.float.type, types.Float)
+        self.assertIsInstance(one_row_complex.c.double.type, types.Float)
+        self.assertIsInstance(one_row_complex.c.string.type, types.String)
+        self.assertIsInstance(one_row_complex.c.timestamp.type, HiveTimestamp)
+        self.assertIsInstance(one_row_complex.c.binary.type, types.String)
+        self.assertIsInstance(one_row_complex.c.array.type, types.String)
+        self.assertIsInstance(one_row_complex.c.map.type, types.String)
+        self.assertIsInstance(one_row_complex.c.struct.type, types.String)
+        self.assertIsInstance(one_row_complex.c.union.type, types.String)
+        self.assertIsInstance(one_row_complex.c.decimal.type, HiveDecimal)
+
+    @with_engine_connection
+    def test_type_map(self, engine, connection):
+        row = connection.execute('SELECT * FROM one_row_complex').fetchone()
+        self.assertListEqual(list(row), _ONE_ROW_COMPLEX_CONTENTS)
+
+    @with_engine_connection
+    def test_reserved_words(self, engine, connection):
+~~        fake_table = Table('select', MetaData(bind=engine), Column('map', sqlalchemy.types.String))
+        query = str(fake_table.select(fake_table.c.map == 'a'))
+        self.assertIn('`select`', query)
+        self.assertIn('`map`', query)
+        self.assertNotIn('"select"', query)
+        self.assertNotIn('"map"', query)
+
+    def test_switch_database(self):
+        engine = create_engine('hive://localhost:10000/pyhive_test_database')
+        try:
+            with contextlib.closing(engine.connect()) as connection:
+                self.assertIn(
+                    ('dummy_table',),
+                    connection.execute('SHOW TABLES').fetchall()
+                )
+                connection.execute('USE default')
+                self.assertIn(
+                    ('one_row',),
+                    connection.execute('SHOW TABLES').fetchall()
+                )
+        finally:
+            engine.dispose()
+
+    @with_engine_connection
+    def test_lots_of_types(self, engine, connection):
 
 
 ## ... source file continues with no further Column examples...

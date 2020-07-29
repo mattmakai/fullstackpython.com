@@ -1,14 +1,16 @@
 title: sqlalchemy.sql.schema SchemaItem Example Code
 category: page
 slug: sqlalchemy-sql-schema-schemaitem-examples
-sortorder: 500031121
+sortorder: 500031125
 toc: False
 sidebartitle: sqlalchemy.sql.schema SchemaItem
 meta: Example code for understanding how to use the SchemaItem class from the sqlalchemy.sql.schema module of the SQLAlchemy project.
 
 
-SchemaItem is a class within the sqlalchemy.sql.schema module of the SQLAlchemy project.
+`SchemaItem` is a class within the `sqlalchemy.sql.schema` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-schema-column-examples.html">Column</a>
+is another callable from the `sqlalchemy.sql.schema` package with code examples.
 
 ## Example 1 from GINO
 [GINO](https://github.com/fantix/gino)

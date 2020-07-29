@@ -1,14 +1,16 @@
 title: sqlalchemy.engine.strategies MockEngineStrategy Example Code
 category: page
 slug: sqlalchemy-engine-strategies-mockenginestrategy-examples
-sortorder: 500031030
+sortorder: 500031031
 toc: False
 sidebartitle: sqlalchemy.engine.strategies MockEngineStrategy
 meta: Example code for understanding how to use the MockEngineStrategy class from the sqlalchemy.engine.strategies module of the SQLAlchemy project.
 
 
-MockEngineStrategy is a class within the sqlalchemy.engine.strategies module of the SQLAlchemy project.
+`MockEngineStrategy` is a class within the `sqlalchemy.engine.strategies` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-engine-strategies-enginestrategy-examples.html">EngineStrategy</a>
+is another callable from the `sqlalchemy.engine.strategies` package with code examples.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

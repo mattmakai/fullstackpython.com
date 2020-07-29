@@ -1,14 +1,18 @@
 title: sqlalchemy.orm.exc UnmappedClassError Example Code
 category: page
 slug: sqlalchemy-orm-exc-unmappedclasserror-examples
-sortorder: 500031075
+sortorder: 500031077
 toc: False
 sidebartitle: sqlalchemy.orm.exc UnmappedClassError
 meta: Example code for understanding how to use the UnmappedClassError class from the sqlalchemy.orm.exc module of the SQLAlchemy project.
 
 
-UnmappedClassError is a class within the sqlalchemy.orm.exc module of the SQLAlchemy project.
+`UnmappedClassError` is a class within the `sqlalchemy.orm.exc` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-exc-noresultfound-examples.html">NoResultFound</a>
+and
+<a href="/sqlalchemy-orm-exc-unmappedinstanceerror-examples.html">UnmappedInstanceError</a>
+are a couple of other callables within the `sqlalchemy.orm.exc` package that also have code examples.
 
 ## Example 1 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)

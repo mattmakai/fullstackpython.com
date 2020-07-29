@@ -1,14 +1,19 @@
 title: sqlalchemy.dialects sqlite Example Code
 category: page
 slug: sqlalchemy-dialects-sqlite-examples
-sortorder: 500031004
+sortorder: 500031005
 toc: False
 sidebartitle: sqlalchemy.dialects sqlite
 meta: Python example code that shows how to use the sqlite callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-sqlite is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
+`sqlite` is a callable within the `sqlalchemy.dialects` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-mssql-examples.html">mssql</a>,
+<a href="/sqlalchemy-dialects-mysql-examples.html">mysql</a>,
+<a href="/sqlalchemy-dialects-oracle-examples.html">oracle</a>,
+and <a href="/sqlalchemy-dialects-postgresql-examples.html">postgresql</a>
+are several other callables with code examples from the same `sqlalchemy.dialects` package.
 
 ## Example 1 from sqlalchemy-datatables
 [sqlalchemy-datatables](https://github.com/Pegase745/sqlalchemy-datatables)

@@ -1,14 +1,20 @@
 title: sqlalchemy.sql.expression FunctionElement Example Code
 category: page
 slug: sqlalchemy-sql-expression-functionelement-examples
-sortorder: 500031115
+sortorder: 500031119
 toc: False
 sidebartitle: sqlalchemy.sql.expression FunctionElement
 meta: Example code for understanding how to use the FunctionElement class from the sqlalchemy.sql.expression module of the SQLAlchemy project.
 
 
-FunctionElement is a class within the sqlalchemy.sql.expression module of the SQLAlchemy project.
+`FunctionElement` is a class within the `sqlalchemy.sql.expression` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-expression-clauseelement-examples.html">ClauseElement</a>,
+<a href="/sqlalchemy-sql-expression-columnclause-examples.html">ColumnClause</a>,
+<a href="/sqlalchemy-sql-expression-columnelement-examples.html">ColumnElement</a>,
+<a href="/sqlalchemy-sql-expression-executable-examples.html">Executable</a>,
+and <a href="/sqlalchemy-sql-expression-unaryexpression-examples.html">UnaryExpression</a>
+are several other callables with code examples from the same `sqlalchemy.sql.expression` package.
 
 ## Example 1 from GeoAlchemy2
 [GeoAlchemy2](https://github.com/geoalchemy/geoalchemy2)

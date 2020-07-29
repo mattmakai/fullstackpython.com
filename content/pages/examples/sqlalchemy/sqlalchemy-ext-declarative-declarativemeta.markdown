@@ -1,14 +1,16 @@
 title: sqlalchemy.ext.declarative DeclarativeMeta Example Code
 category: page
 slug: sqlalchemy-ext-declarative-declarativemeta-examples
-sortorder: 500031044
+sortorder: 500031046
 toc: False
 sidebartitle: sqlalchemy.ext.declarative DeclarativeMeta
 meta: Example code for understanding how to use the DeclarativeMeta class from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
 
 
-DeclarativeMeta is a class within the sqlalchemy.ext.declarative module of the SQLAlchemy project.
+`DeclarativeMeta` is a class within the `sqlalchemy.ext.declarative` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-ext-declarative-declarative-base-examples.html">declarative_base</a>
+is another callable from the `sqlalchemy.ext.declarative` package with code examples.
 
 ## Example 1 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)

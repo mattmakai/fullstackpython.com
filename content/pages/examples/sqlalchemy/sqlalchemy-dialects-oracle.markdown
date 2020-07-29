@@ -1,14 +1,19 @@
 title: sqlalchemy.dialects oracle Example Code
 category: page
 slug: sqlalchemy-dialects-oracle-examples
-sortorder: 500031002
+sortorder: 500031003
 toc: False
 sidebartitle: sqlalchemy.dialects oracle
 meta: Python example code that shows how to use the oracle callable from the sqlalchemy.dialects module of the SQLAlchemy project.
 
 
-oracle is a callable within the sqlalchemy.dialects module of the SQLAlchemy project.
+`oracle` is a callable within the `sqlalchemy.dialects` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-mssql-examples.html">mssql</a>,
+<a href="/sqlalchemy-dialects-mysql-examples.html">mysql</a>,
+<a href="/sqlalchemy-dialects-postgresql-examples.html">postgresql</a>,
+and <a href="/sqlalchemy-dialects-sqlite-examples.html">sqlite</a>
+are several other callables with code examples from the same `sqlalchemy.dialects` package.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

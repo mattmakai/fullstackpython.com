@@ -1,14 +1,16 @@
 title: sqlalchemy.sql.elements Label Example Code
 category: page
 slug: sqlalchemy-sql-elements-label-examples
-sortorder: 500031110
+sortorder: 500031114
 toc: False
 sidebartitle: sqlalchemy.sql.elements Label
 meta: Example code for understanding how to use the Label class from the sqlalchemy.sql.elements module of the SQLAlchemy project.
 
 
-Label is a class within the sqlalchemy.sql.elements module of the SQLAlchemy project.
+`Label` is a class within the `sqlalchemy.sql.elements` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-sql-elements-columnelement-examples.html">ColumnElement</a>
+is another callable from the `sqlalchemy.sql.elements` package with code examples.
 
 ## Example 1 from GINO
 [GINO](https://github.com/fantix/gino)

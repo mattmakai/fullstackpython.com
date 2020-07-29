@@ -1,14 +1,25 @@
 title: sqlalchemy.dialects.postgresql BIT Example Code
 category: page
 slug: sqlalchemy-dialects-postgresql-bit-examples
-sortorder: 500031008
+sortorder: 500031009
 toc: False
 sidebartitle: sqlalchemy.dialects.postgresql BIT
 meta: Python example code that shows how to use the BIT constant from the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
 
 
-BIT is a constant within the sqlalchemy.dialects.postgresql module of the SQLAlchemy project.
+`BIT` is a constant within the `sqlalchemy.dialects.postgresql` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-dialects-postgresql-array-examples.html">ARRAY</a>,
+<a href="/sqlalchemy-dialects-postgresql-bigint-examples.html">BIGINT</a>,
+<a href="/sqlalchemy-dialects-postgresql-double-precision-examples.html">DOUBLE_PRECISION</a>,
+<a href="/sqlalchemy-dialects-postgresql-excludeconstraint-examples.html">ExcludeConstraint</a>,
+<a href="/sqlalchemy-dialects-postgresql-integer-examples.html">INTEGER</a>,
+<a href="/sqlalchemy-dialects-postgresql-json-examples.html">JSON</a>,
+<a href="/sqlalchemy-dialects-postgresql-tsvector-examples.html">TSVECTOR</a>,
+<a href="/sqlalchemy-dialects-postgresql-array-examples.html">array</a>,
+<a href="/sqlalchemy-dialects-postgresql-json-examples.html">json</a>,
+and <a href="/sqlalchemy-dialects-postgresql-pypostgresql-examples.html">pypostgresql</a>
+are several other callables with code examples from the same `sqlalchemy.dialects.postgresql` package.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

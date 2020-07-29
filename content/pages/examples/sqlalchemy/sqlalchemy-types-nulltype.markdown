@@ -1,14 +1,25 @@
 title: sqlalchemy.types NULLTYPE Example Code
 category: page
 slug: sqlalchemy-types-nulltype-examples
-sortorder: 500031128
+sortorder: 500031132
 toc: False
 sidebartitle: sqlalchemy.types NULLTYPE
 meta: Python example code that shows how to use the NULLTYPE constant from the sqlalchemy.types module of the SQLAlchemy project.
 
 
-NULLTYPE is a constant within the sqlalchemy.types module of the SQLAlchemy project.
+`NULLTYPE` is a constant within the `sqlalchemy.types` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-types-boolean-examples.html">BOOLEAN</a>,
+<a href="/sqlalchemy-types-boolean-examples.html">Boolean</a>,
+<a href="/sqlalchemy-types-enum-examples.html">Enum</a>,
+<a href="/sqlalchemy-types-integer-examples.html">INTEGER</a>,
+<a href="/sqlalchemy-types-integer-examples.html">Integer</a>,
+<a href="/sqlalchemy-types-nulltype-examples.html">NullType</a>,
+<a href="/sqlalchemy-types-string-examples.html">String</a>,
+<a href="/sqlalchemy-types-typeengine-examples.html">TypeEngine</a>,
+<a href="/sqlalchemy-types-userdefinedtype-examples.html">UserDefinedType</a>,
+and <a href="/sqlalchemy-types-to-instance-examples.html">to_instance</a>
+are several other callables with code examples from the same `sqlalchemy.types` package.
 
 ## Example 1 from alembic
 [Alembic](https://github.com/sqlalchemy/alembic)

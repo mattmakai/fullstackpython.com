@@ -1,14 +1,16 @@
 title: sqlalchemy.engine.result RowProxy Example Code
 category: page
 slug: sqlalchemy-engine-result-rowproxy-examples
-sortorder: 500031028
+sortorder: 500031029
 toc: False
 sidebartitle: sqlalchemy.engine.result RowProxy
 meta: Example code for understanding how to use the RowProxy class from the sqlalchemy.engine.result module of the SQLAlchemy project.
 
 
-RowProxy is a class within the sqlalchemy.engine.result module of the SQLAlchemy project.
+`RowProxy` is a class within the `sqlalchemy.engine.result` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-engine-result-resultmetadata-examples.html">ResultMetaData</a>
+is another callable from the `sqlalchemy.engine.result` package with code examples.
 
 ## Example 1 from databases
 [databases](https://github.com/encode/databases)
