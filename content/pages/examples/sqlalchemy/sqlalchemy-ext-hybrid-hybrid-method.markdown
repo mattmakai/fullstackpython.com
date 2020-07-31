@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.hybrid hybrid_method Example Code
 category: page
 slug: sqlalchemy-ext-hybrid-hybrid-method-examples
-sortorder: 500031048
+sortorder: 500031050
 toc: False
 sidebartitle: sqlalchemy.ext.hybrid hybrid_method
 meta: Python example code that shows how to use the hybrid_method callable from the sqlalchemy.ext.hybrid module of the SQLAlchemy project.

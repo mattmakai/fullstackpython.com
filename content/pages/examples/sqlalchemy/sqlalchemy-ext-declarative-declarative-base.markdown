@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.declarative declarative_base Example Code
 category: page
 slug: sqlalchemy-ext-declarative-declarative-base-examples
-sortorder: 500031047
+sortorder: 500031049
 toc: False
 sidebartitle: sqlalchemy.ext.declarative declarative_base
 meta: Python example code that shows how to use the declarative_base callable from the sqlalchemy.ext.declarative module of the SQLAlchemy project.
@@ -315,7 +315,63 @@ class InspectionMixin(Base):
 ```
 
 
-## Example 5 from sandman2
+## Example 5 from SQLAthanor
+[SQLAthanor](https://github.com/insightindustry/sqlathanor)
+([PyPI package information](https://pypi.org/project/sqlathanor/)
+and
+[project documentation](https://sqlathanor.readthedocs.io/en/latest/index.html))
+is a [SQLAlchemy](/sqlalchemy.html) extension that provides serialization and
+deserialization support for JSON, CSV, YAML and Python dictionaries.
+This project is similar to [Marshmallow](https://marshmallow.readthedocs.io/en/stable/)
+with one major difference: SQLAthanor works through SQLAlchemy models
+while Marshmallow is less coupled to SQLAlchemy because it requires
+separate representations of the serialization objects. Both libraries
+have their uses depending on whether the project plans to use SQLAlchemy
+for object representations or would prefer to avoid that couping.
+SQLAthanor is open sourced under the
+[MIT license](https://github.com/insightindustry/sqlathanor/blob/master/LICENSE).
+
+[**SQLAthanor / sqlathanor / declarative / declarative_base.py**](https://github.com/insightindustry/sqlathanor/blob/master/sqlathanor/declarative/declarative_base.py)
+
+```python
+# declarative_base.py
+
+
+~~from sqlalchemy.ext.declarative import declarative_base as SA_declarative_base
+from validator_collection import checkers
+
+from sqlathanor.declarative.base_model import BaseModel
+
+
+~~def declarative_base(cls = BaseModel, **kwargs):
+    if isinstance(cls, tuple):
+        class_list = [x for x in cls]
+        class_list.insert(0, BaseModel)
+        cls = (x for x in class_list)
+    elif checkers.is_iterable(cls):
+        class_list = [BaseModel]
+        class_list.extend(cls)
+        cls = (x for x in class_list)
+
+    return SA_declarative_base(cls = cls, **kwargs)
+
+
+def as_declarative(**kw):
+    def decorate(cls):
+        kw['cls'] = cls
+        kw['name'] = cls.__name__
+~~        return declarative_base(**kw)
+
+    return decorate
+
+
+
+## ... source file continues with no further declarative_base examples...
+
+```
+
+
+## Example 6 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and

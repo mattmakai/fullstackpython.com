@@ -1,7 +1,7 @@
 title: sqlalchemy.types String Example Code
 category: page
 slug: sqlalchemy-types-string-examples
-sortorder: 500031133
+sortorder: 500031143
 toc: False
 sidebartitle: sqlalchemy.types String
 meta: Example code for understanding how to use the String class from the sqlalchemy.types module of the SQLAlchemy project.
@@ -11,11 +11,22 @@ meta: Example code for understanding how to use the String class from the sqlalc
 
 <a href="/sqlalchemy-types-boolean-examples.html">BOOLEAN</a>,
 <a href="/sqlalchemy-types-boolean-examples.html">Boolean</a>,
+<a href="/sqlalchemy-types-date-examples.html">DATE</a>,
+<a href="/sqlalchemy-types-datetime-examples.html">DATETIME</a>,
+<a href="/sqlalchemy-types-date-examples.html">Date</a>,
+<a href="/sqlalchemy-types-datetime-examples.html">DateTime</a>,
 <a href="/sqlalchemy-types-enum-examples.html">Enum</a>,
+<a href="/sqlalchemy-types-float-examples.html">FLOAT</a>,
+<a href="/sqlalchemy-types-float-examples.html">Float</a>,
 <a href="/sqlalchemy-types-integer-examples.html">INTEGER</a>,
 <a href="/sqlalchemy-types-integer-examples.html">Integer</a>,
+<a href="/sqlalchemy-types-interval-examples.html">Interval</a>,
 <a href="/sqlalchemy-types-nulltype-examples.html">NULLTYPE</a>,
 <a href="/sqlalchemy-types-nulltype-examples.html">NullType</a>,
+<a href="/sqlalchemy-types-text-examples.html">TEXT</a>,
+<a href="/sqlalchemy-types-time-examples.html">TIME</a>,
+<a href="/sqlalchemy-types-text-examples.html">Text</a>,
+<a href="/sqlalchemy-types-time-examples.html">Time</a>,
 <a href="/sqlalchemy-types-typeengine-examples.html">TypeEngine</a>,
 <a href="/sqlalchemy-types-userdefinedtype-examples.html">UserDefinedType</a>,
 and <a href="/sqlalchemy-types-to-instance-examples.html">to_instance</a>

@@ -1,7 +1,7 @@
 title: sqlalchemy.util OrderedSet Example Code
 category: page
 slug: sqlalchemy-util-orderedset-examples
-sortorder: 500031138
+sortorder: 500031150
 toc: False
 sidebartitle: sqlalchemy.util OrderedSet
 meta: Example code for understanding how to use the OrderedSet class from the sqlalchemy.util module of the SQLAlchemy project.
@@ -11,6 +11,7 @@ meta: Example code for understanding how to use the OrderedSet class from the sq
 
 <a href="/sqlalchemy-util-ordereddict-examples.html">OrderedDict</a>,
 <a href="/sqlalchemy-util-set-creation-order-examples.html">set_creation_order</a>,
+<a href="/sqlalchemy-util-symbol-examples.html">symbol</a>,
 and <a href="/sqlalchemy-util-topological-examples.html">topological</a>
 are several other callables with code examples from the same `sqlalchemy.util` package.
 

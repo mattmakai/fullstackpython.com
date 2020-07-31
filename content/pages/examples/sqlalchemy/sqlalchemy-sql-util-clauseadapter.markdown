@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.util ClauseAdapter Example Code
 category: page
 slug: sqlalchemy-sql-util-clauseadapter-examples
-sortorder: 500031127
+sortorder: 500031133
 toc: False
 sidebartitle: sqlalchemy.sql.util ClauseAdapter
 meta: Example code for understanding how to use the ClauseAdapter class from the sqlalchemy.sql.util module of the SQLAlchemy project.

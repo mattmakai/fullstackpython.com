@@ -1,7 +1,7 @@
 title: sqlalchemy.orm ColumnProperty Example Code
 category: page
 slug: sqlalchemy-orm-columnproperty-examples
-sortorder: 500031052
+sortorder: 500031054
 toc: False
 sidebartitle: sqlalchemy.orm ColumnProperty
 meta: Example code for understanding how to use the ColumnProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
@@ -10,6 +10,7 @@ meta: Example code for understanding how to use the ColumnProperty class from th
 `ColumnProperty` is a class within the `sqlalchemy.orm` module of the SQLAlchemy project.
 
 <a href="/sqlalchemy-orm-compositeproperty-examples.html">CompositeProperty</a>,
+<a href="/sqlalchemy-orm-load-examples.html">Load</a>,
 <a href="/sqlalchemy-orm-mapper-examples.html">Mapper</a>,
 <a href="/sqlalchemy-orm-query-examples.html">Query</a>,
 <a href="/sqlalchemy-orm-relationshipproperty-examples.html">RelationshipProperty</a>,

@@ -1,7 +1,7 @@
 title: sqlalchemy.schema CreateTable Example Code
 category: page
 slug: sqlalchemy-schema-createtable-examples
-sortorder: 500031095
+sortorder: 500031101
 toc: False
 sidebartitle: sqlalchemy.schema CreateTable
 meta: Example code for understanding how to use the CreateTable class from the sqlalchemy.schema module of the SQLAlchemy project.

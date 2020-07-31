@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.exc NoResultFound Example Code
 category: page
 slug: sqlalchemy-orm-exc-noresultfound-examples
-sortorder: 500031076
+sortorder: 500031080
 toc: False
 sidebartitle: sqlalchemy.orm.exc NoResultFound
 meta: Example code for understanding how to use the NoResultFound class from the sqlalchemy.orm.exc module of the SQLAlchemy project.

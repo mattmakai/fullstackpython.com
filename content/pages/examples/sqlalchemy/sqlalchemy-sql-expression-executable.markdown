@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.expression Executable Example Code
 category: page
 slug: sqlalchemy-sql-expression-executable-examples
-sortorder: 500031118
+sortorder: 500031124
 toc: False
 sidebartitle: sqlalchemy.sql.expression Executable
 meta: Example code for understanding how to use the Executable class from the sqlalchemy.sql.expression module of the SQLAlchemy project.

@@ -1,7 +1,7 @@
 title: sqlalchemy.schema Index Example Code
 category: page
 slug: sqlalchemy-schema-index-examples
-sortorder: 500031099
+sortorder: 500031105
 toc: False
 sidebartitle: sqlalchemy.schema Index
 meta: Example code for understanding how to use the Index class from the sqlalchemy.schema module of the SQLAlchemy project.

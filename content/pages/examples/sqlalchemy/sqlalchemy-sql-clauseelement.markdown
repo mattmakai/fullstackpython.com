@@ -1,7 +1,7 @@
 title: sqlalchemy.sql ClauseElement Example Code
 category: page
 slug: sqlalchemy-sql-clauseelement-examples
-sortorder: 500031102
+sortorder: 500031108
 toc: False
 sidebartitle: sqlalchemy.sql ClauseElement
 meta: Example code for understanding how to use the ClauseElement class from the sqlalchemy.sql module of the SQLAlchemy project.

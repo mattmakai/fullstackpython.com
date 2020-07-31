@@ -16,7 +16,8 @@ meta: Example code for understanding how to use the DataError class from the sql
 <a href="/sqlalchemy-exc-noinspectionavailable-examples.html">NoInspectionAvailable</a>,
 <a href="/sqlalchemy-exc-nosuchtableerror-examples.html">NoSuchTableError</a>,
 <a href="/sqlalchemy-exc-operationalerror-examples.html">OperationalError</a>,
-and <a href="/sqlalchemy-exc-programmingerror-examples.html">ProgrammingError</a>
+<a href="/sqlalchemy-exc-programmingerror-examples.html">ProgrammingError</a>,
+and <a href="/sqlalchemy-exc-unsupportedcompilationerror-examples.html">UnsupportedCompilationError</a>
 are several other callables with code examples from the same `sqlalchemy.exc` package.
 
 ## Example 1 from sqlalchemy-utils

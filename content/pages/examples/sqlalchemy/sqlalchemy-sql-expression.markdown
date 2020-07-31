@@ -1,7 +1,7 @@
 title: sqlalchemy.sql expression Example Code
 category: page
 slug: sqlalchemy-sql-expression-examples
-sortorder: 500031104
+sortorder: 500031110
 toc: False
 sidebartitle: sqlalchemy.sql expression
 meta: Python example code that shows how to use the expression callable from the sqlalchemy.sql module of the SQLAlchemy project.

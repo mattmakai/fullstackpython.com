@@ -1,7 +1,7 @@
 title: sqlalchemy.sql select Example Code
 category: page
 slug: sqlalchemy-sql-select-examples
-sortorder: 500031109
+sortorder: 500031115
 toc: False
 sidebartitle: sqlalchemy.sql select
 meta: Python example code that shows how to use the select callable from the sqlalchemy.sql module of the SQLAlchemy project.

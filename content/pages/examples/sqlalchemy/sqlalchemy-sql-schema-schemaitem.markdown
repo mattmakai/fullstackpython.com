@@ -1,7 +1,7 @@
 title: sqlalchemy.sql.schema SchemaItem Example Code
 category: page
 slug: sqlalchemy-sql-schema-schemaitem-examples
-sortorder: 500031125
+sortorder: 500031131
 toc: False
 sidebartitle: sqlalchemy.sql.schema SchemaItem
 meta: Example code for understanding how to use the SchemaItem class from the sqlalchemy.sql.schema module of the SQLAlchemy project.

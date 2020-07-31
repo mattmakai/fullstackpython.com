@@ -1,7 +1,7 @@
 title: sqlalchemy.ext.declarative DeclarativeMeta Example Code
 category: page
 slug: sqlalchemy-ext-declarative-declarativemeta-examples
-sortorder: 500031046
+sortorder: 500031048
 toc: False
 sidebartitle: sqlalchemy.ext.declarative DeclarativeMeta
 meta: Example code for understanding how to use the DeclarativeMeta class from the sqlalchemy.ext.declarative module of the SQLAlchemy project.

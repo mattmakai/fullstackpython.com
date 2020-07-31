@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.collections InstrumentedList Example Code
 category: page
 slug: sqlalchemy-orm-collections-instrumentedlist-examples
-sortorder: 500031075
+sortorder: 500031079
 toc: False
 sidebartitle: sqlalchemy.orm.collections InstrumentedList
 meta: Example code for understanding how to use the InstrumentedList class from the sqlalchemy.orm.collections module of the SQLAlchemy project.
@@ -89,6 +89,65 @@ def instrumented_list(f):
 ~~        return InstrumentedList([item for item in f(*args, **kwargs)])
     return wrapper
 
+
+
+## ... source file continues with no further InstrumentedList examples...
+
+```
+
+
+## Example 2 from SQLAthanor
+[SQLAthanor](https://github.com/insightindustry/sqlathanor)
+([PyPI package information](https://pypi.org/project/sqlathanor/)
+and
+[project documentation](https://sqlathanor.readthedocs.io/en/latest/index.html))
+is a [SQLAlchemy](/sqlalchemy.html) extension that provides serialization and
+deserialization support for JSON, CSV, YAML and Python dictionaries.
+This project is similar to [Marshmallow](https://marshmallow.readthedocs.io/en/stable/)
+with one major difference: SQLAthanor works through SQLAlchemy models
+while Marshmallow is less coupled to SQLAlchemy because it requires
+separate representations of the serialization objects. Both libraries
+have their uses depending on whether the project plans to use SQLAlchemy
+for object representations or would prefer to avoid that couping.
+SQLAthanor is open sourced under the
+[MIT license](https://github.com/insightindustry/sqlathanor/blob/master/LICENSE).
+
+[**SQLAthanor / sqlathanor / utilities.py**](https://github.com/insightindustry/sqlathanor/blob/master/sqlathanor/./utilities.py)
+
+```python
+# utilities.py
+
+import csv
+import linecache
+import warnings
+import yaml
+from collections import OrderedDict
+
+~~from sqlalchemy.orm.collections import InstrumentedList
+from sqlalchemy.exc import InvalidRequestError as SA_InvalidRequestError
+from sqlalchemy.exc import UnsupportedCompilationError as SA_UnsupportedCompilationError
+
+from validator_collection import validators, checkers
+from validator_collection.errors import NotAnIterableError
+
+from sqlathanor._compat import json, is_py2, is_py36, is_py35, dict as dict_
+from sqlathanor.errors import InvalidFormatError, UnsupportedSerializationError, \
+    UnsupportedDeserializationError, MaximumNestingExceededError, \
+    MaximumNestingExceededWarning, DeserializationError, CSVStructureError
+
+UTILITY_COLUMNS = [
+    'metadata',
+    'primary_key_value',
+    '_decl_class_registry',
+    '_sa_instance_state',
+    '_sa_class_manager'
+]
+
+def bool_to_tuple(input):
+
+    if input is True:
+        input = (True, True)
+    elif not input:
 
 
 ## ... source file continues with no further InstrumentedList examples...

@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.attributes InstrumentedAttribute Example Code
 category: page
 slug: sqlalchemy-orm-attributes-instrumentedattribute-examples
-sortorder: 500031073
+sortorder: 500031076
 toc: False
 sidebartitle: sqlalchemy.orm.attributes InstrumentedAttribute
 meta: Example code for understanding how to use the InstrumentedAttribute class from the sqlalchemy.orm.attributes module of the SQLAlchemy project.
@@ -9,8 +9,10 @@ meta: Example code for understanding how to use the InstrumentedAttribute class 
 
 `InstrumentedAttribute` is a class within the `sqlalchemy.orm.attributes` module of the SQLAlchemy project.
 
+<a href="/sqlalchemy-orm-attributes-queryableattribute-examples.html">QueryableAttribute</a>
+and
 <a href="/sqlalchemy-orm-attributes-flag-modified-examples.html">flag_modified</a>
-is another callable from the `sqlalchemy.orm.attributes` package with code examples.
+are a couple of other callables within the `sqlalchemy.orm.attributes` package that also have code examples.
 
 ## Example 1 from SQLAlchemy Mixins
 [SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)

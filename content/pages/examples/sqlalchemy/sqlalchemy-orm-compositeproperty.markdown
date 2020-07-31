@@ -1,7 +1,7 @@
 title: sqlalchemy.orm CompositeProperty Example Code
 category: page
 slug: sqlalchemy-orm-compositeproperty-examples
-sortorder: 500031053
+sortorder: 500031055
 toc: False
 sidebartitle: sqlalchemy.orm CompositeProperty
 meta: Example code for understanding how to use the CompositeProperty class from the sqlalchemy.orm module of the SQLAlchemy project.
@@ -10,6 +10,7 @@ meta: Example code for understanding how to use the CompositeProperty class from
 `CompositeProperty` is a class within the `sqlalchemy.orm` module of the SQLAlchemy project.
 
 <a href="/sqlalchemy-orm-columnproperty-examples.html">ColumnProperty</a>,
+<a href="/sqlalchemy-orm-load-examples.html">Load</a>,
 <a href="/sqlalchemy-orm-mapper-examples.html">Mapper</a>,
 <a href="/sqlalchemy-orm-query-examples.html">Query</a>,
 <a href="/sqlalchemy-orm-relationshipproperty-examples.html">RelationshipProperty</a>,

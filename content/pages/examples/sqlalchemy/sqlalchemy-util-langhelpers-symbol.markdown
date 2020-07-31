@@ -1,7 +1,7 @@
 title: sqlalchemy.util.langhelpers symbol Example Code
 category: page
 slug: sqlalchemy-util-langhelpers-symbol-examples
-sortorder: 500031141
+sortorder: 500031155
 toc: False
 sidebartitle: sqlalchemy.util.langhelpers symbol
 meta: Python example code that shows how to use the symbol callable from the sqlalchemy.util.langhelpers module of the SQLAlchemy project.
@@ -9,7 +9,8 @@ meta: Python example code that shows how to use the symbol callable from the sql
 
 `symbol` is a callable within the `sqlalchemy.util.langhelpers` module of the SQLAlchemy project.
 
-
+<a href="/sqlalchemy-util-langhelpers-public-factory-examples.html">public_factory</a>
+is another callable from the `sqlalchemy.util.langhelpers` package with code examples.
 
 ## Example 1 from sqlalchemy-utils
 [sqlalchemy-utils](https://github.com/kvesteri/sqlalchemy-utils)

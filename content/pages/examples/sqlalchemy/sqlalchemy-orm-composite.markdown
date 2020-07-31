@@ -1,7 +1,7 @@
 title: sqlalchemy.orm composite Example Code
 category: page
 slug: sqlalchemy-orm-composite-examples
-sortorder: 500031063
+sortorder: 500031066
 toc: False
 sidebartitle: sqlalchemy.orm composite
 meta: Python example code that shows how to use the composite callable from the sqlalchemy.orm module of the SQLAlchemy project.
@@ -11,6 +11,7 @@ meta: Python example code that shows how to use the composite callable from the 
 
 <a href="/sqlalchemy-orm-columnproperty-examples.html">ColumnProperty</a>,
 <a href="/sqlalchemy-orm-compositeproperty-examples.html">CompositeProperty</a>,
+<a href="/sqlalchemy-orm-load-examples.html">Load</a>,
 <a href="/sqlalchemy-orm-mapper-examples.html">Mapper</a>,
 <a href="/sqlalchemy-orm-query-examples.html">Query</a>,
 <a href="/sqlalchemy-orm-relationshipproperty-examples.html">RelationshipProperty</a>,

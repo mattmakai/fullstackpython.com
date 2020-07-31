@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.properties RelationshipProperty Example Code
 category: page
 slug: sqlalchemy-orm-properties-relationshipproperty-examples
-sortorder: 500031082
+sortorder: 500031087
 toc: False
 sidebartitle: sqlalchemy.orm.properties RelationshipProperty
 meta: Example code for understanding how to use the RelationshipProperty class from the sqlalchemy.orm.properties module of the SQLAlchemy project.

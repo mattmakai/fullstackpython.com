@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.exc UnmappedInstanceError Example Code
 category: page
 slug: sqlalchemy-orm-exc-unmappedinstanceerror-examples
-sortorder: 500031078
+sortorder: 500031082
 toc: False
 sidebartitle: sqlalchemy.orm.exc UnmappedInstanceError
 meta: Example code for understanding how to use the UnmappedInstanceError class from the sqlalchemy.orm.exc module of the SQLAlchemy project.

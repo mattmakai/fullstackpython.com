@@ -1,7 +1,7 @@
 title: sqlalchemy.orm.util AliasedClass Example Code
 category: page
 slug: sqlalchemy-orm-util-aliasedclass-examples
-sortorder: 500031087
+sortorder: 500031093
 toc: False
 sidebartitle: sqlalchemy.orm.util AliasedClass
 meta: Example code for understanding how to use the AliasedClass class from the sqlalchemy.orm.util module of the SQLAlchemy project.

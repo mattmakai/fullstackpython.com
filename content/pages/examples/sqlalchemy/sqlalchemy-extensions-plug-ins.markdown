@@ -179,6 +179,15 @@ sourced under the
 [MIT license](https://github.com/Pegase745/sqlalchemy-datatables/blob/master/LICENSE).
 
 
+### SQLAlchemy filters
+[SQLAlchemy filters](https://github.com/juliotrigo/sqlalchemy-filters)
+provides filtering, sorting and pagination for [SQLAlchemy](/sqlalchemy.html) 
+query objects, which is particularly useful when building
+[web APIs](/application-programming-interfaces.html). SQLAlchemy filters
+is open sourced under the 
+[Apache License version 2.0](https://github.com/juliotrigo/sqlalchemy-filters/blob/master/LICENSE).
+
+
 ### SQLAlchemy Mixins
 [SQLAlchemy Mixins](https://github.com/absent1706/sqlalchemy-mixins)
 ([PyPI package information](https://pypi.org/project/sqlalchemy-mixins/))
@@ -203,6 +212,23 @@ The wide array of
 [data types](https://sqlalchemy-utils.readthedocs.io/en/latest/data_types.html)
 includes [ranged values](https://sqlalchemy-utils.readthedocs.io/en/latest/range_data_types.html)
 and [aggregated attributes](https://sqlalchemy-utils.readthedocs.io/en/latest/aggregates.html).
+
+
+### SQLAthanor
+[SQLAthanor](https://github.com/insightindustry/sqlathanor)
+([PyPI package information](https://pypi.org/project/sqlathanor/)
+and
+[project documentation](https://sqlathanor.readthedocs.io/en/latest/index.html))
+is a [SQLAlchemy](/sqlalchemy.html) extension that provides serialization and 
+deserialization support for JSON, CSV, YAML and Python dictionaries.
+This project is similar to [Marshmallow](https://marshmallow.readthedocs.io/en/stable/) 
+with one major difference: SQLAthanor works through SQLAlchemy models
+while Marshmallow is less coupled to SQLAlchemy because it requires 
+separate representations of the serialization objects. Both libraries
+have their uses depending on whether the project plans to use SQLAlchemy
+for object representations or would prefer to avoid that couping.
+SQLAthanor is open sourced under the
+[MIT license](https://github.com/insightindustry/sqlathanor/blob/master/LICENSE).
 
 
 ### wtforms-alchemy
