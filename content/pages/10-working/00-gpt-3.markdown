@@ -1,0 +1,10 @@
+title: GPT-3
+category: page
+slug: gpt-3
+sortorder: 1001
+toc: False
+sidebartitle: GPT-3
+meta: GPT-3 is a trained neural network with 175 billion parameters that allows it to be significantly better at text generation than previous models.
+
+
+GPT-3 is a trained neural network with 175 billion parameters that allows it to be significantly better at text generation than previous models.
