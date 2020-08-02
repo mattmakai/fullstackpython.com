@@ -7,14 +7,24 @@ sidebartitle: GPT-3
 meta: GPT-3 is a trained neural network with 175 billion parameters that allows it to be significantly better at text generation than previous models.
 
 
-[GPT-3](https://arxiv.org/abs/2005.14165) is a neural network that was 
-trained by the [OpenAI](https://openai.com/) organization with 175 billion
-parameters, which allows the model to be significantly better at natural 
+[GPT-3](https://arxiv.org/abs/2005.14165) is a neural network
+trained by the [OpenAI](https://openai.com/) organization with 
+significantly more parameters than previous generation models. 
+
+There are several variations of GPT-3, which range from 125 to 175 billion
+parameters. The different variations allow the model to better respond to 
+different types of input, such as a question & answer format, long-form 
+writing, human language translations (e.g. English to French). The large
+numbers of parameters make GPT-3 significantly better at natural 
 language processing and text generation than the prior model, 
 [GPT-2](https://openai.com/blog/gpt-2-1-5b-release/), which only had 
 1.5 billion parameters.
 
 <img src="/img/logos/openai.jpg" width="100%" alt="OpenAI logo." class="shot rnd">
+
+GPT-3 can only currently be access by an 
+[API provided by OpenAI](https://openai.com/blog/openai-api/), which is
+in private beta.
 
 
 ## What's so special about GPT-3?
@@ -90,5 +100,18 @@ in practice they require massive amounts of computation. Training
 although some other estimates calculated it could take up
 to $12 million depending on how the hardware was provisioned.
 
+
+## GPT-3 resources
+These resources range from broad philosophy of what GPT-3 means
+for machine learning to specific technical details for how the model
+is trained.
+
+* [OpenAI's GPT-3 Language Model: A Technical Overview](https://lambdalabs.com/blog/demystifying-gpt-3/)
+  and
+  [GPT-3: A Hitchhiker's Guide](https://lambdalabs.com/blog/gpt-3/)
+  are two long-format guides that analyze how GPT-3's technical 
+  specifications fit in the larger machine learning ecosystem, quotes by
+  researchers on its usage, and some initial resources to get a
+  better understanding of what this model is capable of performing.
 
 
