@@ -67,7 +67,8 @@ generating code for
 [the layout of the Google homepage](https://twitter.com/sharifshameem/status/1283322990625607681),
 [JSX output](https://twitter.com/sharifshameem/status/1282676454690451457),
 and [other technical demos](https://twitter.com/__MLT__/status/1287357881675853825),
-the model will otherwise not (yet) put any developers out of a job
+the 
+[model will otherwise not (yet) put any developers out of a job](https://www.youtube.com/watch?v=Yg3C38P5EkA)
 who are coding real-world applications.
 
 
@@ -114,4 +115,12 @@ is trained.
   researchers on its usage, and some initial resources to get a
   better understanding of what this model is capable of performing.
 
+* [GPT 3 Demo and Explanation](https://www.youtube.com/watch?v=8psgEDhT1MM)
+  is a video that gives a brief overview of GPT-3 and shows a bunch
+  of live demos for what has so far been created with this technology.
+
+* [How GPT3 Works - Visualizations and Animations](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
+  contains some wonderful animated visuals to show how the model is
+  trained and what happens in various scenarios such as text output
+  and code generation.
 
