@@ -12,7 +12,7 @@ pronounced "Poss-gres", is an open source
 [relational database](/databases.html) implementation frequently used by 
 Python applications as a backend for data storage and retrieval.
 
-<img src="/img/logos/postgresql.jpg" width="100%" alt="PostgreSQL logo." class="technical-diagram" />
+<img src="/img/logos/postgresql.jpg" width="100%" alt="PostgreSQL logo." class="shot">
 
 
 ## How does PostgreSQL fit within the Python stack?

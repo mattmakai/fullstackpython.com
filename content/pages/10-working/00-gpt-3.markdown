@@ -7,4 +7,88 @@ sidebartitle: GPT-3
 meta: GPT-3 is a trained neural network with 175 billion parameters that allows it to be significantly better at text generation than previous models.
 
 
-GPT-3 is a trained neural network with 175 billion parameters that allows it to be significantly better at text generation than previous models.
+[GPT-3](https://arxiv.org/abs/2005.14165) is a neural network that was 
+trained by the [OpenAI](https://openai.com/) organization with 175 billion
+parameters, which allows the model to be significantly better at natural 
+language processing and text generation than the prior model, 
+[GPT-2](https://openai.com/blog/gpt-2-1-5b-release/), which only had 
+1.5 billion parameters.
+
+<img src="/img/logos/openai.jpg" width="100%" alt="OpenAI logo." class="shot rnd">
+
+
+## What's so special about GPT-3?
+The GPT-3 model can generate texts of up to 50,000 characters, with no 
+supervision. It can even generate creative Shakespearean-style fiction
+stories in addition to fact-based writing. This is the first time that a
+neural network model has been able to generate texts at an acceptable 
+quality that makes it difficult, if not impossible, for a typical
+person to whether the output was written by a human or GPT-3.
+
+
+## How does GPT-3 work?
+To generate output, GPT-3 has a very large vocabulary, consisting of 2,500 
+words, which it can combine to generate sentences. These words are sorted 
+into different categories (nouns, verbs, adjectives, etc.), and for each 
+category, there is a “production rule”, which can be used to generate a 
+sentence. The production rules can be modified with different parameters.
+
+A few examples:
+
+* noun + verb = subject + verb
+* noun + verb + adjective = subject + verb + adjective
+* verb + noun = subject + verb
+* noun + verb + noun = subject + verb + noun
+* noun + noun = subject + noun
+* noun + verb + noun + noun = subject + verb + noun + noun
+
+In addition, GPT-3 is able to understand negations, as well as the use 
+of tenses, which allows the model to generate sentences in the past, 
+present and future.
+
+
+## Does GPT-3 matter to Python developers?
+GPT-3 is not that useful right now for programmers other than as an
+experiment. If you get access to [OpenAI's API](https://openai.com/blog/openai-api/) 
+then Python is an easy language to use for interacting with it and
+you could use its text generation as inputs into your applications.
+Although there have been some initial impressive experiments in 
+generating code for
+[the layout of the Google homepage](https://twitter.com/sharifshameem/status/1283322990625607681),
+[JSX output](https://twitter.com/sharifshameem/status/1282676454690451457),
+and [other technical demos](https://twitter.com/__MLT__/status/1287357881675853825),
+the model will otherwise not (yet) put any developers out of a job
+who are coding real-world applications.
+
+
+## How was GPT-3 trained?
+At a high level, training the GPT-3 neural network consists of two steps.
+
+The first step requires creating the vocabulary, the different 
+categories and the production rules. This is done by feeding 
+GPT-3 with books. For each word, the model must predict the category 
+to which the word belongs, and then, a production rule must be created.
+
+The second step consists of creating a vocabulary and production rules 
+for each category. This is done by feeding the model with sentences. 
+For each sentence, the model must predict the category to which each 
+word belongs, and then, a production rule must be created.
+
+The result of the training is a vocabulary, and production rules for each 
+category.
+
+The model also has a few tricks that allow it to improve its ability to 
+generate texts. For example, it is able to guess the beginning of a word
+by observing the context of the word. It can also predict the next word 
+by looking at the last word of a sentence. It is also able to predict the
+length of a sentence.
+
+While those two steps and the related tricks may sound simple in theory,
+in practice they require massive amounts of computation. Training
+175 billion parameters in mid-2020 cost in the ballpark of 
+[$4.6 million dollars](https://lambdalabs.com/blog/demystifying-gpt-3/#:~:text=But%20to%20put%20things%20into,for%20a%20single%20training%20run.),
+although some other estimates calculated it could take up
+to $12 million depending on how the hardware was provisioned.
+
+
+
