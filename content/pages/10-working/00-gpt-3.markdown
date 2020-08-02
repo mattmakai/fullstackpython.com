@@ -124,3 +124,15 @@ is trained.
   trained and what happens in various scenarios such as text output
   and code generation.
 
+* [Tempering expectations for GPT-3](https://minimaxir.com/2020/07/gpt3-expectations/)
+  points out that many of the good examples on social media have been
+  cherry picked to impress readers.
+
+* [gpt-3-experiments](https://github.com/minimaxir/gpt-3-experiments)
+  contains Python code open sourced under the MIT license that
+  shows how to interact with the API.
+
+* [Why GPT-3 matters](https://leogao.dev/2020/05/29/GPT-3-A-Brief-Summary/)
+  compares and contrasts this model with similar models that have been
+  developed and tries to give an overview of where each one stands
+  with its strengths and weaknesses.
