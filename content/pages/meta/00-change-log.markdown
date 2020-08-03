@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### August
+* Added new [GPT-3 page](/gpt-3.html).
+* Updated [debugging](/debugging.html) page with some additional descriptions.
+
 ### July
 * Updated [webhooks](/webhooks.html) page with additional resources.
 * New blog posts:
