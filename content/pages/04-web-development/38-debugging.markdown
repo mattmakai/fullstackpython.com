@@ -19,6 +19,31 @@ There are bugs in every modest sized or larger application. Every
 developer has to learn how to debug code in order to write programs that
 work as correctly as time and budget allow.
 
+In addition to fixing bugs, debugging is an important skill for improving
+the efficiency of an application by optimizing performance and improving
+the logic. Debugging is a complex skill that takes time and practice
+for a developer to gain as a capability.
+
+
+## What are some common debugging techniques?
+Some common debugging techniques include:
+
+* Printing out or displaying values of variables and state 
+  at certain times during the execution of an application
+
+* Changing the state of a program to make it do different 
+  things. This is called altering the "path" of the program
+
+* Stepping through the execution of a program line by line
+
+* Breakpoints
+
+* Trace Points
+
+* Stopping the program at certain events
+
+* Viewing the output of a program in a debugger window
+
 
 ### Debugging tools
 There are many debugging tools, some of which are built into 
