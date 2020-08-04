@@ -37,8 +37,8 @@ person to whether the output was written by a human or GPT-3.
 
 
 ## How does GPT-3 work?
-To generate output, GPT-3 has a very large vocabulary, consisting of 2,500 
-words, which it can combine to generate sentences. These words are sorted 
+To generate output, GPT-3 has a very large vocabulary, which it can 
+combine to generate sentences. These words are sorted 
 into different categories (nouns, verbs, adjectives, etc.), and for each 
 category, there is a “production rule”, which can be used to generate a 
 sentence. The production rules can be modified with different parameters.
