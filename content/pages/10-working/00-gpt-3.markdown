@@ -115,14 +115,18 @@ is trained.
   researchers on its usage, and some initial resources to get a
   better understanding of what this model is capable of performing.
 
-* [GPT 3 Demo and Explanation](https://www.youtube.com/watch?v=8psgEDhT1MM)
-  is a video that gives a brief overview of GPT-3 and shows a bunch
-  of live demos for what has so far been created with this technology.
-
 * [How GPT3 Works - Visualizations and Animations](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
   contains some wonderful animated visuals to show how the model is
   trained and what happens in various scenarios such as text output
   and code generation.
+
+* [Building a Chatbot with OpenAI's GPT-3 engine, Twilio SMS and Python](https://www.twilio.com/blog/openai-gpt-3-chatbot-python-twilio-sms)
+  is a step-by-step tutorial for using GPT-3 as a smart backend
+  for an SMS-based chatbot powered by the [Twilio API](/twilio.html).
+
+* [GPT 3 Demo and Explanation](https://www.youtube.com/watch?v=8psgEDhT1MM)
+  is a video that gives a brief overview of GPT-3 and shows a bunch
+  of live demos for what has so far been created with this technology.
 
 * [Tempering expectations for GPT-3](https://minimaxir.com/2020/07/gpt3-expectations/)
   points out that many of the good examples on social media have been
