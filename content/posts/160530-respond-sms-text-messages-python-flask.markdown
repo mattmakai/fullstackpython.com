@@ -3,7 +3,7 @@ slug: respond-sms-text-messages-python-flask
 meta: A quick tutorial on receiving and responding to SMS text messages in a Flask application built with Python.
 category: post
 date: 2016-05-30
-modified: 2017-05-11
+modified: 2020-08-05
 newsletter: False
 headerimage: /img/160530-respond-sms-python-flask/header.jpg
 headeralt: Twilio, Python and Flask logos. Copyright their respective owners.
@@ -26,7 +26,7 @@ those two versions installed on your system.
   [virtualenv](https://virtualenv.pypa.io/en/latest/) to handle
   [application dependencies](/application-dependencies.html)
 * The [Flask](/flask.html) micro web framework
-* A free [Twilio account](https://www.twilio.com/try-twilio) to use their 
+* A free [Twilio account](www.twilio.com/referral/w9pugq) to use their 
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
   [Twilio Python helper library](https://pypi.org/project/twilio)
@@ -158,7 +158,7 @@ to respond to text messages.
 ## Obtaining Our Phone Number
 We can use our Flask application's route to respond to incoming web API 
 requests based on incoming SMS messages to a Twilio phone number. Go to the
-[Twilio website and sign up for a free trial account](https://www.twilio.com/try-twilio)
+[Twilio website and sign up for a free trial account](www.twilio.com/referral/w9pugq)
 to use their API. If you already have a Twilio account then sign into your 
 existing account.
 

@@ -3,7 +3,7 @@ slug: send-sms-text-messages-python
 meta: A how-to guide for sending SMS (text messages) using the Python programming language.
 category: post
 date: 2016-05-11
-modified: 2017-04-28
+modified: 2020-08-05
 newsletter: False
 headerimage: /img/160511-send-sms-python/header.jpg
 headeralt: Twilio and Python logos. Copyright their respective owners.
@@ -25,7 +25,7 @@ those two versions installed.
 * [pip](https://pip.pypa.io/en/stable/) and 
   [virtualenv](https://virtualenv.pypa.io/en/latest/) to handle
   [application dependencies](/application-dependencies.html)
-* A free [Twilio account](https://www.twilio.com/try-twilio) to use their 
+* A free [Twilio account](www.twilio.com/referral/w9pugq) to use their 
   [SMS web API](https://www.twilio.com/docs/api/rest/sending-messages)
 * Open source 
   [Twilio Python helper library](https://pypi.org/project/twilio),
@@ -41,7 +41,7 @@ guide that'll show how to install system packages for those tools.
 ## Using a Web API
 We're going to use a web API to make sending SMS easier and more reliable.
 Head to the 
-[Twilio website and sign up for a free trial account](https://www.twilio.com/try-twilio). If you already have a Twilio account (and you should - it's 
+[Twilio website and sign up for a free trial account](www.twilio.com/referral/w9pugq)
 awesome for more than just sending text messages!) then sign into your 
 existing account.
 
