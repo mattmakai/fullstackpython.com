@@ -117,7 +117,7 @@ With our base application working, we can now add error reporting for
 the situations that do not work as expected.
 
 
-## Adding Sentry to our app
+## Adding Sentry to the Flask app
 It's time to add Sentry with the Flask integration into the mix, so that we 
 can easily see when the route errors out due to bad input.
 
