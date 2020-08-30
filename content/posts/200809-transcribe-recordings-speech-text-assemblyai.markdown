@@ -3,7 +3,7 @@ slug: transcribe-recordings-speech-text-assemblyai
 meta: Learn to transcribe speech in recordings like MP3s into text with Python and AssemblyAI's API.
 category: post
 date: 2020-08-09
-modified: 2020-08-09
+modified: 2020-08-30
 newsletter: False
 headerimage: /img/headers/python-assemblyai.jpg
 headeralt: Logos for the implementations used in this blog post. Copyright their respective owners.
@@ -38,7 +38,7 @@ comfortable with to work with a database instead of writing SQL...
 ## Tutorial requirements
 Throughout this tutorial we are going to use the following dependencies,
 which we will install in just a moment. Make sure you also have Python 3,
-[preferrably 3.6 or newer installed](https://www.python.org/downloads/),
+[preferably 3.6 or newer installed](https://www.python.org/downloads/),
 in your environment:
 
 We will use the following dependencies to complete this

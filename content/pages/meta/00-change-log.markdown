@@ -15,8 +15,10 @@ on GitHub.
 
 ## 2020
 ### August
-* New blog post that shows 
-  [How to Transcribe Speech Recordings into Text with Python](/blog/transcribe-recordings-speech-text-assemblyai.html).
+* New blog posts on
+  [How to Transcribe Speech Recordings into Text with Python](/blog/transcribe-recordings-speech-text-assemblyai.html)
+  and
+  [Using Sentry to Handle Python Exceptions in Django Projects](/blog/sentry-handle-exceptions-django-projects.html).
 * Added new [GPT-3 page](/gpt-3.html).
 * Updated [debugging](/debugging.html) page with some additional descriptions.
 
