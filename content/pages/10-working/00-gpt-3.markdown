@@ -107,6 +107,11 @@ These resources range from broad philosophy of what GPT-3 means
 for machine learning to specific technical details for how the model
 is trained.
 
+* [The Ultimate Guide to OpenAI's GPT-3 Language Model](https://www.twilio.com/blog/ultimate-guide-openai-gpt-3-language-model)
+  is a detailed tutorial on how to use OpenAI's playground user interface,
+  what the parameters do, and how to convert what you have done in
+  the playground into a Python script that calls their API.
+
 * [OpenAI's GPT-3 Language Model: A Technical Overview](https://lambdalabs.com/blog/demystifying-gpt-3/)
   and
   [GPT-3: A Hitchhiker's Guide](https://lambdalabs.com/blog/gpt-3/)
