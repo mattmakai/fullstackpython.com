@@ -84,8 +84,8 @@ should skip down to the next section for "experienced developers".
 
 * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python) is
   a Python study guide for newcomers and professionals alike. It comes with
-  standalone modules that can be run in the IDE, browser or terminal - making
-  the learning experience enjoyable.
+  standalone modules that can be run in any IDE, browser or terminal - making
+  the learning experience enjoyable and seamless.
 
 
 ## Python for specific occupations
