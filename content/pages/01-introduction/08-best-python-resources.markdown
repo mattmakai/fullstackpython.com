@@ -82,6 +82,11 @@ should skip down to the next section for "experienced developers".
   constructs. The book also contains a short guide at the end to get
   programmers to write their first Flask web application.
 
+* [Ultimate Python study guide](https://github.com/huangsam/ultimate-python) is
+  a Python study guide for newcomers and professionals alike. It comes with
+  standalone modules that can be run in the IDE, browser or terminal - making
+  the learning experience enjoyable.
+
 
 ## Python for specific occupations
 Python is powerful for many professions. If you're seeking to use Python in a
