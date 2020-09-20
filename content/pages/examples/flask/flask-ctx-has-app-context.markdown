@@ -158,6 +158,7 @@ from flask_pluginengine import current_plugin
 from speaklater import is_lazy_string, make_lazy_string
 from werkzeug.utils import cached_property
 
+from indico.core.config import config
 from indico.util.caching import memoize_request
 
 

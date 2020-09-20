@@ -77,8 +77,8 @@ DEFAULTS = {
     'CUSTOMIZATION_DEBUG': False,
     'CUSTOMIZATION_DIR': None,
     'CUSTOM_COUNTRIES': {},
+    'CUSTOM_LANGUAGES': {},
     'DB_LOG': False,
-    'DEBUG': False,
 
 
 ## ... source file abbreviated to get to ImmutableDict examples ...

@@ -47,7 +47,7 @@ from flask import current_app as app
 from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
 
 from CTFd.cache import clear_team_session, clear_user_session
-from CTFd.models import Teams, Users, db
+from CTFd.models import Teams, UserFieldEntries, UserFields, Users, db
 from CTFd.utils import config, email, get_app_config, get_config
 from CTFd.utils import user as current_user
 from CTFd.utils import validators
@@ -735,6 +735,7 @@ import hashlib
 import logging
 import os
 import warnings
+from urllib.parse import urlparse
 from functools import wraps
 
 ~~from flask import Blueprint, current_app, g, request, session
@@ -744,7 +745,7 @@ from werkzeug.security import safe_str_cmp
 from wtforms import ValidationError
 from wtforms.csrf.core import CSRF
 
-from ._compat import FlaskWTFDeprecationWarning, string_types, urlparse
+from ._compat import FlaskWTFDeprecationWarning
 
 __all__ = ('generate_csrf', 'validate_csrf', 'CSRFProtect')
 logger = logging.getLogger(__name__)
@@ -1241,6 +1242,33 @@ class AddRequestIDFilter(object):
         return True
 
 
+class AddUserIDFilter(object):
+    def filter(self, record):
+~~        record.user_id = unicode(session.user.id) if has_request_context() and session and session.user else '-'
+        return True
+
+
+class RequestInfoFormatter(logging.Formatter):
+    def format(self, record):
+        rv = super(RequestInfoFormatter, self).format(record)
+        info = get_request_info()
+        if info:
+            rv += '\n\n' + pformat(info)
+        return rv
+
+
+class FormattedSubjectSMTPHandler(logging.handlers.SMTPHandler):
+    def getSubject(self, record):
+        return self.subject % record.__dict__
+
+    def emit(self, record):
+        try:
+            port = self.mailport
+            if not port:
+                port = smtplib.SMTP_PORT
+            smtp = smtplib.SMTP(self.mailhost, port, timeout=self._timeout)
+            msg = MIMEText(self.format(record), 'plain', 'utf-8')
+            msg['From'] = self.fromaddr
 
 
 ## ... source file abbreviated to get to session examples ...

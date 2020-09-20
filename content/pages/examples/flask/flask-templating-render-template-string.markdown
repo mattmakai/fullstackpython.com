@@ -20,7 +20,7 @@ the `.templating` part.
 <a href="/flask-templating-render-template-examples.html">render_template</a>
 is another callable from the `flask.templating` package with code examples.
 
-These topics are also useful while reading the `render_template_string` examples:
+You should read up on these subjects along with these `render_template_string` examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)

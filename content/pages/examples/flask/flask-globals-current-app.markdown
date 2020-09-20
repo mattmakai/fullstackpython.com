@@ -739,7 +739,7 @@ from werkzeug.urls import url_quote_plus
 
 from flask_debugtoolbar.compat import iteritems
 from flask_debugtoolbar.toolbar import DebugToolbar
-from flask_debugtoolbar.utils import decode_text
+from flask_debugtoolbar.utils import decode_text, gzip_compress, gzip_decompress
 
 try:
     from importlib.metadata import version
@@ -848,12 +848,12 @@ def replace_insensitive(string, target, replacement):
                 response.headers['content-type'].startswith('text/html')):
             return response
 
-        response_html = response.data.decode(response.charset)
+        if 'gzip' in response.headers.get('Content-Encoding', ''):
+            response_html = gzip_decompress(response.data).decode(response.charset)
+        else:
+            response_html = response.data.decode(response.charset)
 
         no_case = response_html.lower()
-        body_end = no_case.rfind('</body>')
-
-        if body_end >= 0:
 
 
 ## ... source file continues with no further current_app examples...
@@ -1594,6 +1594,7 @@ import hashlib
 import logging
 import os
 import warnings
+from urllib.parse import urlparse
 from functools import wraps
 
 ~~from flask import Blueprint, current_app, g, request, session
@@ -1603,7 +1604,7 @@ from werkzeug.security import safe_str_cmp
 from wtforms import ValidationError
 from wtforms.csrf.core import CSRF
 
-from ._compat import FlaskWTFDeprecationWarning, string_types, urlparse
+from ._compat import FlaskWTFDeprecationWarning
 
 __all__ = ('generate_csrf', 'validate_csrf', 'CSRFProtect')
 logger = logging.getLogger(__name__)
@@ -1687,7 +1688,7 @@ def _get_config(
 class _FlaskFormCSRF(CSRF):
     def setup_form(self, form):
         self.meta = form.meta
-        return super(_FlaskFormCSRF, self).setup_form(form)
+        return super().setup_form(form)
 
     def generate_csrf_token(self, csrf_token_field):
         return generate_csrf(
@@ -1723,7 +1724,7 @@ class _FlaskFormCSRF(CSRF):
                 return
 
             view = app.view_functions.get(request.endpoint)
-            dest = '{0}.{1}'.format(view.__module__, view.__name__)
+            dest = f'{view.__module__}.{view.__name__}'
 
             if dest in self._exempt_views:
                 return
@@ -1766,7 +1767,7 @@ class _FlaskFormCSRF(CSRF):
             if not request.referrer:
                 self._error_response('The referrer header is missing.')
 
-            good_referrer = 'https://{0}/'.format(request.host)
+            good_referrer = f'https://{request.host}/'
 
             if not same_origin(request.referrer, good_referrer):
                 self._error_response('The referrer does not match the host.')
@@ -1779,7 +1780,7 @@ class _FlaskFormCSRF(CSRF):
             self._exempt_blueprints.add(view.name)
             return view
 
-        if isinstance(view, string_types):
+        if isinstance(view, str):
             view_location = view
         else:
             view_location = '.'.join((view.__module__, view.__name__))
@@ -1814,7 +1815,7 @@ class CsrfProtect(CSRFProtect):
             '"flask_wtf.CsrfProtect" has been renamed to "CSRFProtect" '
             'and will be removed in 1.0.'
         ), stacklevel=2)
-        super(CsrfProtect, self).__init__(app=app)
+        super().__init__(app=app)
 
 
 class CSRFError(BadRequest):
@@ -1857,7 +1858,6 @@ import warnings
 
 import pkg_resources
 ~~from flask import _request_ctx_stack, current_app, render_template
-from flask_babelex import Domain
 from flask_login import AnonymousUserMixin, LoginManager
 from flask_login import UserMixin as BaseUserMixin
 from flask_login import current_user
@@ -1867,6 +1867,7 @@ from passlib.context import CryptContext
 from werkzeug.datastructures import ImmutableList
 from werkzeug.local import LocalProxy
 
+from .babel import get_i18n_domain, have_babel
 from .decorators import (
     default_reauthn_handler,
     default_unauthn_handler,
@@ -2063,6 +2064,13 @@ _default_config = {
 ~~                current_app.after_request(csrf_cookie_handler)
 ~~                current_app.config["WTF_CSRF_HEADERS"].append(cv("CSRF_HEADER"))
 
+        @app.before_first_request
+        def check_babel():
+            if have_babel() and "babel" not in app.extensions:
+                raise ValueError(
+                    "Flask-Babel or Flask-BabelEx is installed but not initialized"
+                )
+
         state._phone_util = state.phone_util_cls(app)
         state._mail_util = state.mail_util_cls(app)
 
@@ -2079,13 +2087,6 @@ _default_config = {
         for newc, oldc in [
             ("SECURITY_SMS_SERVICE", "SECURITY_TWO_FACTOR_SMS_SERVICE"),
             ("SECURITY_SMS_SERVICE_CONFIG", "SECURITY_TWO_FACTOR_SMS_SERVICE_CONFIG"),
-            ("SECURITY_TOTP_SECRETS", "SECURITY_TWO_FACTOR_SECRET"),
-            ("SECURITY_TOTP_ISSUER", "SECURITY_TWO_FACTOR_URI_SERVICE_NAME"),
-        ]:
-            if not app.config.get(newc, None):
-                app.config[newc] = app.config.get(oldc, None)
-
-        for uia in cv("USER_IDENTITY_ATTRIBUTES", app=app):  # pragma: no cover
 
 
 ## ... source file continues with no further current_app examples...

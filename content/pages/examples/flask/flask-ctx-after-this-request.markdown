@@ -218,6 +218,7 @@ def us_signin_send_code():
 
 
 @auth_required(
+    lambda: config_value("API_ENABLED_METHODS"),
     within=lambda: config_value("FRESHNESS"),
     grace=lambda: config_value("FRESHNESS_GRACE_PERIOD"),
 )
@@ -231,7 +232,6 @@ def us_setup():
             form = form_class(formdata=None, meta=suppress_form_csrf())
     else:
         form = form_class(meta=suppress_form_csrf())
-
 
 
 ## ... source file abbreviated to get to after_this_request examples ...

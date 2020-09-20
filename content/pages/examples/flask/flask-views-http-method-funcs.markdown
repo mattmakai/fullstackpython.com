@@ -19,7 +19,7 @@ and
 <a href="/flask-views-view-examples.html">View</a>
 are a couple of other callables within the `flask.views` package that also have code examples.
 
-You should read up on these subjects along with these `http_method_funcs` examples:
+These subjects go along with the `http_method_funcs` code examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)
@@ -45,7 +45,7 @@ from __future__ import unicode_literals
 import inspect
 import warnings
 import logging
-from collections import namedtuple
+from collections import namedtuple, OrderedDict
 
 import six
 from flask import request

@@ -38,7 +38,7 @@ from flask import redirect, render_template, request, session, url_for
 from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
 
 from CTFd.cache import clear_team_session, clear_user_session
-from CTFd.models import Teams, Users, db
+from CTFd.models import Teams, UserFieldEntries, UserFields, Users, db
 from CTFd.utils import config, email, get_app_config, get_config
 from CTFd.utils import user as current_user
 from CTFd.utils import validators
@@ -551,7 +551,7 @@ from werkzeug.urls import url_quote_plus
 
 from flask_debugtoolbar.compat import iteritems
 from flask_debugtoolbar.toolbar import DebugToolbar
-from flask_debugtoolbar.utils import decode_text
+from flask_debugtoolbar.utils import decode_text, gzip_compress, gzip_decompress
 
 try:
     from importlib.metadata import version
@@ -666,6 +666,7 @@ import hashlib
 import logging
 import os
 import warnings
+from urllib.parse import urlparse
 from functools import wraps
 
 ~~from flask import Blueprint, current_app, g, request, session
@@ -675,7 +676,7 @@ from werkzeug.security import safe_str_cmp
 from wtforms import ValidationError
 from wtforms.csrf.core import CSRF
 
-from ._compat import FlaskWTFDeprecationWarning, string_types, urlparse
+from ._compat import FlaskWTFDeprecationWarning
 
 __all__ = ('generate_csrf', 'validate_csrf', 'CSRFProtect')
 logger = logging.getLogger(__name__)
@@ -714,7 +715,7 @@ def generate_csrf(secret_key=None, token_key=None):
             if not request.referrer:
                 self._error_response('The referrer header is missing.')
 
-            good_referrer = 'https://{0}/'.format(request.host)
+            good_referrer = f'https://{request.host}/'
 
             if not same_origin(request.referrer, good_referrer):
                 self._error_response('The referrer does not match the host.')
@@ -727,7 +728,7 @@ def generate_csrf(secret_key=None, token_key=None):
             self._exempt_blueprints.add(view.name)
             return view
 
-        if isinstance(view, string_types):
+        if isinstance(view, str):
             view_location = view
         else:
             view_location = '.'.join((view.__module__, view.__name__))

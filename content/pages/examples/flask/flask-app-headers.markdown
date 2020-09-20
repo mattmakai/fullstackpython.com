@@ -22,7 +22,7 @@ Flask web applications.
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-You should read up on these subjects along with these `Headers` examples:
+These topics are also useful while reading the `Headers` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -60,21 +60,27 @@ from CTFd.cache import cache, clear_standings
 from CTFd.config import TestingConfig
 from CTFd.models import (
     Awards,
+    ChallengeComments,
     ChallengeFiles,
     Challenges,
+    Comments,
     Fails,
+    Fields,
     Files,
     Flags,
     Hints,
     Notifications,
+    PageComments,
     PageFiles,
     Pages,
     Solves,
     Tags,
+    TeamComments,
     Teams,
     Tokens,
     Tracking,
     Unlocks,
+    UserComments,
     Users,
 )
 
@@ -149,6 +155,7 @@ import operator
 import re
 import six
 import sys
+import warnings
 
 from collections import OrderedDict
 from functools import wraps, partial

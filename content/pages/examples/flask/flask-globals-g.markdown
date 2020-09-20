@@ -440,7 +440,7 @@ from werkzeug.urls import url_quote_plus
 
 from flask_debugtoolbar.compat import iteritems
 from flask_debugtoolbar.toolbar import DebugToolbar
-from flask_debugtoolbar.utils import decode_text
+from flask_debugtoolbar.utils import decode_text, gzip_compress, gzip_decompress
 
 try:
     from importlib.metadata import version
@@ -695,6 +695,7 @@ import hashlib
 import logging
 import os
 import warnings
+from urllib.parse import urlparse
 from functools import wraps
 
 ~~from flask import Blueprint, current_app, g, request, session
@@ -704,7 +705,7 @@ from werkzeug.security import safe_str_cmp
 from wtforms import ValidationError
 from wtforms.csrf.core import CSRF
 
-from ._compat import FlaskWTFDeprecationWarning, string_types, urlparse
+from ._compat import FlaskWTFDeprecationWarning
 
 __all__ = ('generate_csrf', 'validate_csrf', 'CSRFProtect')
 logger = logging.getLogger(__name__)
@@ -781,7 +782,7 @@ def validate_csrf(data, secret_key=None, time_limit=None, token_key=None):
 class _FlaskFormCSRF(CSRF):
     def setup_form(self, form):
         self.meta = form.meta
-        return super(_FlaskFormCSRF, self).setup_form(form)
+        return super().setup_form(form)
 
     def generate_csrf_token(self, csrf_token_field):
         return generate_csrf(
@@ -805,7 +806,7 @@ class _FlaskFormCSRF(CSRF):
             raise
 
 
-class CSRFProtect(object):
+class CSRFProtect:
 
     def __init__(self, app=None):
         self._exempt_views = set()
@@ -840,7 +841,7 @@ class CSRFProtect(object):
             if not request.referrer:
                 self._error_response('The referrer header is missing.')
 
-            good_referrer = 'https://{0}/'.format(request.host)
+            good_referrer = f'https://{request.host}/'
 
             if not same_origin(request.referrer, good_referrer):
                 self._error_response('The referrer does not match the host.')
@@ -853,7 +854,7 @@ class CSRFProtect(object):
             self._exempt_blueprints.add(view.name)
             return view
 
-        if isinstance(view, string_types):
+        if isinstance(view, str):
             view_location = view
         else:
             view_location = '.'.join((view.__module__, view.__name__))
@@ -920,9 +921,9 @@ from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
 from wtforms import validators, ValidationError
 from itsdangerous import BadSignature, SignatureExpired
-from speaklater import is_lazy_string
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
+
 from .quart_compat import best
 from .signals import user_authenticated
 

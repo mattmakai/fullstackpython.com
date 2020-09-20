@@ -938,9 +938,9 @@ from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
 from wtforms import validators, ValidationError
 from itsdangerous import BadSignature, SignatureExpired
-from speaklater import is_lazy_string
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
+
 from .quart_compat import best
 from .signals import user_authenticated
 
@@ -992,22 +992,22 @@ def validate_redirect_url(url):
     url_next = urlsplit(url)
     url_base = urlsplit(request.host_url)
     if (url_next.netloc or url_next.scheme) and url_next.netloc != url_base.netloc:
-        return False
+        base_domain = current_app.config.get("SERVER_NAME")
+        if (
+            config_value("REDIRECT_ALLOW_SUBDOMAINS")
+            and base_domain
+            and (
+                url_next.netloc == base_domain
+                or url_next.netloc.endswith(f".{base_domain}")
+            )
+        ):
+            return True
+        else:
+            return False
     return True
 
 
 def get_post_action_redirect(config_key, declared=None):
-    urls = [
-        get_url(request.args.get("next", None)),
-        get_url(request.form.get("next", None)),
-        find_redirect(config_key),
-    ]
-    if declared:
-        urls.insert(0, declared)
-    for url in urls:
-        if validate_redirect_url(url):
-            return url
-
 
 
 ## ... source file continues with no further url_for examples...

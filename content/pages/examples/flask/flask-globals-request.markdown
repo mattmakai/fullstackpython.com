@@ -1075,7 +1075,7 @@ from werkzeug.urls import url_quote_plus
 
 from flask_debugtoolbar.compat import iteritems
 from flask_debugtoolbar.toolbar import DebugToolbar
-from flask_debugtoolbar.utils import decode_text
+from flask_debugtoolbar.utils import decode_text, gzip_compress, gzip_decompress
 
 try:
     from importlib.metadata import version
@@ -1187,8 +1187,8 @@ def replace_insensitive(string, target, replacement):
                 response.headers['content-type'].startswith('text/html')):
             return response
 
-        response_html = response.data.decode(response.charset)
-
+        if 'gzip' in response.headers.get('Content-Encoding', ''):
+            response_html = gzip_decompress(response.data).decode(response.charset)
 
 
 ## ... source file continues with no further request examples...
@@ -1976,6 +1976,7 @@ import hashlib
 import logging
 import os
 import warnings
+from urllib.parse import urlparse
 from functools import wraps
 
 ~~from flask import Blueprint, current_app, g, request, session
@@ -1985,7 +1986,7 @@ from werkzeug.security import safe_str_cmp
 from wtforms import ValidationError
 from wtforms.csrf.core import CSRF
 
-from ._compat import FlaskWTFDeprecationWarning, string_types, urlparse
+from ._compat import FlaskWTFDeprecationWarning
 
 __all__ = ('generate_csrf', 'validate_csrf', 'CSRFProtect')
 logger = logging.getLogger(__name__)
@@ -2043,7 +2044,7 @@ def generate_csrf(secret_key=None, token_key=None):
                 return
 
             view = app.view_functions.get(request.endpoint)
-            dest = '{0}.{1}'.format(view.__module__, view.__name__)
+            dest = f'{view.__module__}.{view.__name__}'
 
             if dest in self._exempt_views:
                 return
@@ -2086,7 +2087,7 @@ def generate_csrf(secret_key=None, token_key=None):
 ~~            if not request.referrer:
                 self._error_response('The referrer header is missing.')
 
-            good_referrer = 'https://{0}/'.format(request.host)
+            good_referrer = f'https://{request.host}/'
 
             if not same_origin(request.referrer, good_referrer):
                 self._error_response('The referrer does not match the host.')
@@ -2099,7 +2100,7 @@ def generate_csrf(secret_key=None, token_key=None):
             self._exempt_blueprints.add(view.name)
             return view
 
-        if isinstance(view, string_types):
+        if isinstance(view, str):
             view_location = view
         else:
             view_location = '.'.join((view.__module__, view.__name__))
@@ -2191,7 +2192,6 @@ import inspect
 ~~from flask import Markup, current_app, request
 from flask_login import current_user
 from flask_wtf import FlaskForm as BaseForm
-from speaklater import is_lazy_string, make_lazy_string
 from werkzeug.local import LocalProxy
 from wtforms import (
     BooleanField,
@@ -2205,6 +2205,7 @@ from wtforms import (
     validators,
 )
 
+from .babel import is_lazy_string, make_lazy_string
 from .confirmable import requires_confirmation
 from .utils import (
     _,
@@ -2731,12 +2732,6 @@ from flask_multipass import InvalidCredentials, Multipass, NoSuchUser
 from indico.core.logger import Logger
 
 
-try:
-    from flask_multipass.providers.oauth import OAuthInvalidSessionState
-except ImportError:
-    OAuthInvalidSessionState = None
-
-
 logger = Logger.get('auth')
 
 
@@ -2750,6 +2745,12 @@ class IndicoMultipass(Multipass):
     def sync_provider(self):
         return next((p for p in self.identity_providers.itervalues() if p.settings.get('synced_fields')), None)
 
+    @property
+    def synced_fields(self):
+        provider = self.sync_provider
+        if provider is None:
+            return set()
+        synced_fields = set(provider.settings.get('synced_fields'))
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2782,10 +2783,12 @@ class IndicoMultipass(Multipass):
             logger.warning('Invalid credentials (ip=%s, provider=%s): %s',
 ~~                           request.remote_addr, exc.provider.name if exc.provider else None, exc)
         else:
+            exc_str = str(exc)
             fn = logger.error
-            if OAuthInvalidSessionState is not None and isinstance(exc, OAuthInvalidSessionState):
+            if exc_str.startswith('mismatching_state:'):
                 fn = logger.debug
-            fn('Authentication via %s failed: %s (%r)', exc.provider.name if exc.provider else None, exc, exc.details)
+            fn('Authentication via %s failed: %s (%r)', exc.provider.name if exc.provider else None, exc_str,
+               exc.details)
         return super(IndicoMultipass, self).handle_auth_error(exc, redirect_to_login=redirect_to_login)
 
 
@@ -2833,7 +2836,8 @@ from util import base64_to_pil
 app = Flask(__name__)
 
 
-from keras.applications.mobilenet_v2 import MobileNetV2
+
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
 model = MobileNetV2(weights='imagenet')
 
 print('Model loaded. Check http://127.0.0.1:5000/')

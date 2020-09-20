@@ -21,7 +21,7 @@ the `.templating` part.
 <a href="/flask-templating-render-template-string-examples.html">render_template_string</a>
 is another callable from the `flask.templating` package with code examples.
 
-You should read up on these subjects along with these `render_template` examples:
+These topics are also useful while reading the `render_template` examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -141,7 +141,7 @@ from flask import current_app as app
 from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
 
 from CTFd.cache import clear_team_session, clear_user_session
-from CTFd.models import Teams, Users, db
+from CTFd.models import Teams, UserFieldEntries, UserFields, Users, db
 from CTFd.utils import config, email, get_app_config, get_config
 from CTFd.utils import user as current_user
 from CTFd.utils import validators
@@ -383,7 +383,14 @@ def register():
                 db.session.commit()
                 db.session.flush()
 
-                login_user(user)
+                for field_id, value in entries.items():
+                    entry = UserFieldEntries(
+                        field_id=field_id, value=value, user_id=user.id
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
 
                 if config.can_send_mail() and get_config(
                     "verify_emails"
@@ -1398,7 +1405,6 @@ import warnings
 
 import pkg_resources
 ~~from flask import _request_ctx_stack, current_app, render_template
-from flask_babelex import Domain
 from flask_login import AnonymousUserMixin, LoginManager
 from flask_login import UserMixin as BaseUserMixin
 from flask_login import current_user
@@ -1408,6 +1414,7 @@ from passlib.context import CryptContext
 from werkzeug.datastructures import ImmutableList
 from werkzeug.local import LocalProxy
 
+from .babel import get_i18n_domain, have_babel
 from .decorators import (
     default_reauthn_handler,
     default_unauthn_handler,
@@ -1858,7 +1865,8 @@ from util import base64_to_pil
 app = Flask(__name__)
 
 
-from keras.applications.mobilenet_v2 import MobileNetV2
+
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
 model = MobileNetV2(weights='imagenet')
 
 print('Model loaded. Check http://127.0.0.1:5000/')

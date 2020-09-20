@@ -41,6 +41,7 @@ import operator
 import re
 import six
 import sys
+import warnings
 
 from collections import OrderedDict
 from functools import wraps, partial

@@ -179,7 +179,128 @@ def _get_item(model, view_arg, name):
 ```
 
 
-## Example 3 from indico
+## Example 3 from Flask-SocketIO
+[Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
+([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
+[official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+and
+[project documentation](https://flask-socketio.readthedocs.io/en/latest/))
+is a code library by [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+that provides Socket.IO integration for [Flask](/flask.html) applications.
+This extension makes it easier to add bi-directional communications on the
+web via the [WebSockets](/websockets.html) protocol.
+
+The Flask-SocketIO project is open source under the
+[MIT license](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/LICENSE).
+
+[**Flask-SocketIO / flask_socketio / __init__.py**](https://github.com/miguelgrinberg/Flask-SocketIO/blob/master/./flask_socketio/__init__.py)
+
+```python
+# __init__.py
+from functools import wraps
+import os
+import sys
+
+gevent_socketio_found = True
+try:
+    from socketio import socketio_manage
+except ImportError:
+    gevent_socketio_found = False
+if gevent_socketio_found:
+    print('The gevent-socketio package is incompatible with this version of '
+          'the Flask-SocketIO extension. Please uninstall it, and then '
+          'install the latest version of python-socketio in its place.')
+    sys.exit(1)
+
+import flask
+~~from flask import _request_ctx_stack, has_request_context, json as flask_json
+from flask.sessions import SessionMixin
+import socketio
+from socketio.exceptions import ConnectionRefusedError
+from werkzeug.debug import DebuggedApplication
+from werkzeug.serving import run_with_reloader
+
+from .namespace import Namespace
+from .test_client import SocketIOTestClient
+
+__version__ = '4.3.2dev'
+
+
+class _SocketIOMiddleware(socketio.WSGIApp):
+    def __init__(self, socketio_app, flask_app, socketio_path='socket.io'):
+        self.flask_app = flask_app
+        super(_SocketIOMiddleware, self).__init__(socketio_app,
+                                                  flask_app.wsgi_app,
+                                                  socketio_path=socketio_path)
+
+    def __call__(self, environ, start_response):
+        environ = environ.copy()
+        environ['flask.app'] = self.flask_app
+        return super(_SocketIOMiddleware, self).__call__(environ,
+                                                         start_response)
+
+
+## ... source file abbreviated to get to has_request_context examples ...
+
+
+        self.default_exception_handler = exception_handler
+        return exception_handler
+
+    def on_event(self, message, handler, namespace=None):
+        self.on(message, namespace=namespace)(handler)
+
+    def on_namespace(self, namespace_handler):
+        if not isinstance(namespace_handler, Namespace):
+            raise ValueError('Not a namespace instance.')
+        namespace_handler._set_socketio(self)
+        if self.server:
+            self.server.register_namespace(namespace_handler)
+        else:
+            self.namespace_handlers.append(namespace_handler)
+
+    def emit(self, event, *args, **kwargs):
+        namespace = kwargs.pop('namespace', '/')
+        room = kwargs.pop('room', None)
+        include_self = kwargs.pop('include_self', True)
+        skip_sid = kwargs.pop('skip_sid', None)
+        if not include_self and not skip_sid:
+            skip_sid = flask.request.sid
+        callback = kwargs.pop('callback', None)
+        if callback:
+            sid = None
+~~            if has_request_context():
+                sid = getattr(flask.request, 'sid', None)
+            original_callback = callback
+
+            def _callback_wrapper(*args):
+                return self._handle_event(original_callback, None, namespace,
+                                          sid, *args)
+
+            if sid:
+                callback = _callback_wrapper
+        self.server.emit(event, *args, namespace=namespace, room=room,
+                         skip_sid=skip_sid, callback=callback, **kwargs)
+
+    def send(self, data, json=False, namespace=None, room=None,
+             callback=None, include_self=True, skip_sid=None, **kwargs):
+        skip_sid = flask.request.sid if not include_self else skip_sid
+        if json:
+            self.emit('json', data, namespace=namespace, room=room,
+                      skip_sid=skip_sid, callback=callback, **kwargs)
+        else:
+            self.emit('message', data, namespace=namespace, room=room,
+                      skip_sid=skip_sid, callback=callback, **kwargs)
+
+    def close_room(self, room, namespace=None):
+        self.server.close_room(room, namespace)
+
+
+## ... source file continues with no further has_request_context examples...
+
+```
+
+
+## Example 4 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -228,6 +349,12 @@ else:
 class AddRequestIDFilter(object):
     def filter(self, record):
 ~~        record.request_id = request.id if has_request_context() else '0' * 16
+        return True
+
+
+class AddUserIDFilter(object):
+    def filter(self, record):
+~~        record.user_id = unicode(session.user.id) if has_request_context() and session and session.user else '-'
         return True
 
 

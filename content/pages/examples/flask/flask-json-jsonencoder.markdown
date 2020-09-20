@@ -60,9 +60,9 @@ from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
 from wtforms import validators, ValidationError
 from itsdangerous import BadSignature, SignatureExpired
-from speaklater import is_lazy_string
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
+
 from .quart_compat import best
 from .signals import user_authenticated
 
@@ -81,8 +81,6 @@ localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
 ## ... source file abbreviated to get to JSONEncoder examples ...
 
 
-    accept_mimetypes = req.accept_mimetypes
-    if not hasattr(req.accept_mimetypes, "best"):  # pragma: no cover
         accept_mimetypes.best = best
     if accept_mimetypes.best == "application/json":
         return True
@@ -103,6 +101,8 @@ def json_error_response(errors):
 ~~class FsJsonEncoder(JSONEncoder):
 
     def default(self, obj):
+        from .babel import is_lazy_string
+
         if is_lazy_string(obj):
             return str(obj)
         else:
@@ -137,6 +137,8 @@ class SmsSenderFactory:
 def default_want_json(req):
     if req.is_json:
         return True
+    accept_mimetypes = req.accept_mimetypes
+    if not hasattr(req.accept_mimetypes, "best"):  # pragma: no cover
 
 
 ## ... source file continues with no further JSONEncoder examples...

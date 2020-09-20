@@ -421,7 +421,7 @@ def login():
             )
             return _security._render_json(payload, 400, None, None)
         else:
-            return redirect(get_post_login_redirect())
+            return redirect(get_url(_security.post_login_view))
 
     form_class = _security.login_form
 

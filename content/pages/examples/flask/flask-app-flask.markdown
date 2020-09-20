@@ -1084,7 +1084,8 @@ from util import base64_to_pil
 ~~app = Flask(__name__)
 
 
-from keras.applications.mobilenet_v2 import MobileNetV2
+
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
 model = MobileNetV2(weights='imagenet')
 
 print('Model loaded. Check http://127.0.0.1:5000/')
@@ -1104,7 +1105,6 @@ def model_predict(img, model):
 
     preds = model.predict(x)
     return preds
-
 
 
 
