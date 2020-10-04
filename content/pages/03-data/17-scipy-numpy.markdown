@@ -67,12 +67,19 @@ following resources are broader walkthroughs for the SciPy ecosystem:
   computation and how to perform operations that get the results you need
   for your data analysis.
 
+* [Scientific Computing in Python: Introduction to NumPy and Matplotlib](https://sebastianraschka.com/blog/2020/numpy-intro.html)
+  is a detailed tutorial that goes through the basics for NumPy and
+  then connects it to [Matplotlib](/matplotlib.html).
+
 * [Math to Code](https://mathtocode.com/) provides an interactive
   tutorial to learn how to implement math in NumPy.
 
 * [101 NumPy Exercises for Data Analysis](https://www.machinelearningplus.com/python/101-numpy-exercises-python/)
+  has a bunch of questions and answers to common ways to work with NumPy
+  and is useful to understand what you can do with this library.
 
 * [NumPy: creating and manipulating numerical data](http://www.scipy-lectures.org/intro/numpy/index.html)
+  contains many code examples for common operations.
 
 * [Python NumPy Array Tutorial](https://www.datacamp.com/community/tutorials/python-numpy-tutorial)
   is a starter tutorial specifically focused on using and working
