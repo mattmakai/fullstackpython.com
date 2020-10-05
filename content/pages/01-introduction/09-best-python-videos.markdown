@@ -163,6 +163,7 @@ like [PyCon US](https://us.pycon.org/) and
   Python language.
 
 * PyCon US videos from 
+  [2020](https://www.youtube.com/c/PyCon2020/videos),
   [2019](https://www.youtube.com/channel/UCxs2IIVXaEHHA4BtTiWZ2mQ/videos),
   [2018](https://www.youtube.com/channel/UCsX05-2sVSH7Nx3zuk3NYuQ/videos),
   [2017](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg/videos),
@@ -172,6 +173,7 @@ like [PyCon US](https://us.pycon.org/) and
   are all available online for free.
 
 * All of the talk videos are available on YouTube for 
+  [EuroPython 2020](https://www.youtube.com/playlist?list=PL8uoeex94UhHgMD9GOCbEHWku7pEPx9fW0),
   [EuroPython 2019](https://www.youtube.com/playlist?list=PL8uoeex94UhHFRew8gzfFJHIpRFWyY4YW),
   [EuroPython 2018](https://www.youtube.com/watch?v=LoRq9yGeBWY&list=PL8uoeex94UhFrNUV2m5MigREebUms39U5),
   [EuroPython 2017](https://www.youtube.com/watch?v=OCHrzW-R3QI&list=PL8uoeex94UhG9QAoRICebFpeKK2M0Herh),

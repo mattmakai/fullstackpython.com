@@ -14,6 +14,12 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### October
+* New [NumPy](/scipy-numpy.html) resources.
+
+### September
+* Tweaks across [Flask code examples](/flask-code-examples.html).
+
 ### August
 * New blog posts on
   [How to Transcribe Speech Recordings into Text with Python](/blog/transcribe-recordings-speech-text-assemblyai.html)
