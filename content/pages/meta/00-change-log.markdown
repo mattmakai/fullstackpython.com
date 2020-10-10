@@ -15,6 +15,8 @@ on GitHub.
 
 ## 2020
 ### October
+* Added new blog on
+  [Higher Accuracy Twilio Voice Transcriptions with Python and Flask](/blog/accurate-twilio-voice-call-recording-transcriptions-assemblyai.html).
 * New [NumPy](/scipy-numpy.html) resources.
 
 ### September
