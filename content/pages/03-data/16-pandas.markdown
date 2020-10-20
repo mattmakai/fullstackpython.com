@@ -129,3 +129,15 @@ is a data structures and analysis library.
 
 * [How to convert JSON to Excel with Python and pandas](https://www.marsja.se/how-to-convert-json-to-excel-python-pandas/)
   provides instructions for creating a spreadsheet out of JSON file.
+
+* [Loading large datasets in Pandas](https://towardsdatascience.com/loading-large-datasets-in-pandas-11bdddd36f7b)
+  explains how to get around the `MemoryError` issue that occurs
+  when using `read_csv` because the data set is larger than the
+  available memory on a machine. You can use chunking with
+  the `read_csv` function to divide the data set into smaller parts that
+  each can be loaded into memory. Alternatively, you can use a 
+  [SQLite database](/sqlite.html) to create a [relational database](/databases.html)
+  with the data then use SQL queries or an 
+  [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
+  to load the data and perform analysis in pandas.
+
