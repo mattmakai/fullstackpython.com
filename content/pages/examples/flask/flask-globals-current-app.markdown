@@ -1612,7 +1612,7 @@ logger = logging.getLogger(__name__)
 
 def generate_csrf(secret_key=None, token_key=None):
 
-    secret_key = _get_config(
+~~    secret_key = _get_config(
 ~~        secret_key, 'WTF_CSRF_SECRET_KEY', current_app.secret_key,
         message='A secret key is required to use CSRF.'
     )
@@ -1640,7 +1640,7 @@ def generate_csrf(secret_key=None, token_key=None):
 
 def validate_csrf(data, secret_key=None, time_limit=None, token_key=None):
 
-    secret_key = _get_config(
+~~    secret_key = _get_config(
 ~~        secret_key, 'WTF_CSRF_SECRET_KEY', current_app.secret_key,
         message='A secret key is required to use CSRF.'
     )
@@ -1887,6 +1887,7 @@ from .forms import (
 ## ... source file abbreviated to get to current_app examples ...
 
 
+    UnifiedSigninSetupForm,
     UnifiedSigninSetupValidateForm,
     UnifiedVerifyForm,
     us_send_security_token,
@@ -1899,7 +1900,6 @@ from .utils import (
     FsPermNeed,
     csrf_cookie_handler,
     default_want_json,
-    default_password_validator,
     get_config,
     get_identity_attribute,
     get_identity_attributes,
@@ -1927,6 +1927,7 @@ _default_config = {
     "FLASH_MESSAGES": True,
     "I18N_DOMAIN": "flask_security",
     "I18N_DIRNAME": pkg_resources.resource_filename("flask_security", "translations"),
+    "EMAIL_VALIDATOR_ARGS": None,
     "PASSWORD_HASH": "bcrypt",
     "PASSWORD_SALT": None,
     "PASSWORD_SINGLE_HASH": {
@@ -1936,20 +1937,11 @@ _default_config = {
         "django_pbkdf2_sha1",
         "django_bcrypt",
         "django_salted_md5",
-        "django_salted_sha1",
 
 
 ## ... source file abbreviated to get to current_app examples ...
 
 
-    "SEND_CONFIRMATION_TEMPLATE": "security/send_confirmation.html",
-    "SEND_LOGIN_TEMPLATE": "security/send_login.html",
-    "VERIFY_TEMPLATE": "security/verify.html",
-    "TWO_FACTOR_VERIFY_CODE_TEMPLATE": "security/two_factor_verify_code.html",
-    "TWO_FACTOR_SETUP_TEMPLATE": "security/two_factor_setup.html",
-    "CONFIRMABLE": False,
-    "REGISTERABLE": False,
-    "RECOVERABLE": False,
     "TRACKABLE": False,
     "PASSWORDLESS": False,
     "CHANGEABLE": False,
@@ -1962,6 +1954,14 @@ _default_config = {
     "TWO_FACTOR_AUTHENTICATOR_VALIDITY": 120,
     "TWO_FACTOR_MAIL_VALIDITY": 300,
     "TWO_FACTOR_SMS_VALIDITY": 120,
+    "TWO_FACTOR_ALWAYS_VALIDATE": True,
+    "TWO_FACTOR_LOGIN_VALIDITY": "30 days",
+    "TWO_FACTOR_VALIDITY_SALT": "tf-validity-salt",
+    "TWO_FACTOR_VALIDITY_COOKIE": {
+        "httponly": True,
+        "secure": False,
+        "samesite": None,
+    },
     "CONFIRM_EMAIL_WITHIN": "5 days",
     "RESET_PASSWORD_WITHIN": "5 days",
     "LOGIN_WITHOUT_CONFIRMATION": False,
@@ -2073,6 +2073,7 @@ _default_config = {
 
         state._phone_util = state.phone_util_cls(app)
         state._mail_util = state.mail_util_cls(app)
+        state._password_util = state.password_util_cls(app)
 
         app.extensions["security"] = state
 
@@ -2086,7 +2087,6 @@ _default_config = {
 
         for newc, oldc in [
             ("SECURITY_SMS_SERVICE", "SECURITY_TWO_FACTOR_SMS_SERVICE"),
-            ("SECURITY_SMS_SERVICE_CONFIG", "SECURITY_TWO_FACTOR_SMS_SERVICE_CONFIG"),
 
 
 ## ... source file continues with no further current_app examples...
@@ -2144,6 +2144,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ## ... source file abbreviated to get to current_app examples ...
 
 
+            @app.before_request
             def advance_session_timeout():
                 session.permanent = True    # Timeout after app.permanent_session_lifetime period
                 session.modified = True     # Advance session timeout each time a user visits a page
@@ -2168,7 +2169,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
             def call_or_get(function_or_property):
                 return function_or_property() if callable(function_or_property) else function_or_property
 
-            return dict(
+~~            return dict(
 ~~                user_manager=current_app.user_manager,
                 call_or_get=call_or_get,
             )

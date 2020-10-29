@@ -58,7 +58,7 @@ from flask_login import current_user
 from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
 from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
-from wtforms import validators, ValidationError
+from wtforms import ValidationError
 from itsdangerous import BadSignature, SignatureExpired
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict

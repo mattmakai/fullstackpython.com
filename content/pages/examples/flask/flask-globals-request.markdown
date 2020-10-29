@@ -2204,6 +2204,7 @@ from wtforms import (
     ValidationError,
     validators,
 )
+from wtforms.validators import StopValidation
 
 from .babel import is_lazy_string, make_lazy_string
 from .confirmable import requires_confirmation
@@ -2213,7 +2214,6 @@ from .utils import (
     config_value,
     do_flash,
     find_user,
-    get_identity_attribute,
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2260,16 +2260,16 @@ class ForgotPasswordForm(Form, UserEmailFormMixin):
 
     submit = SubmitField(get_form_field_label("recover_password"))
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.requires_confirmation = False
+
     def validate(self):
         if not super().validate():
             return False
         if not self.user.is_active:
             self.email.errors.append(get_message("DISABLED_ACCOUNT")[0])
             return False
-        if requires_confirmation(self.user):
-            self.email.errors.append(get_message("CONFIRMATION_REQUIRED")[0])
-            return False
-        return True
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2313,6 +2313,7 @@ class LoginForm(Form, NextFormMixin):
                 )
             )
             self.password.description = html
+        self.requires_confirmation = False
 
     def validate(self):
         if not super().validate():
@@ -2324,7 +2325,6 @@ class LoginForm(Form, NextFormMixin):
             self.email.errors.append(get_message("USER_DOES_NOT_EXIST")[0])
             hash_password(self.password.data)
             return False
-        if not self.user.password:
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2366,7 +2366,7 @@ class ResetPasswordForm(Form, NewPasswordFormMixin, PasswordConfirmFormMixin):
         if not super().validate():
             return False
 
-        pbad = _security._password_validator(
+        pbad, self.password.data = _security._password_util.validate(
             self.password.data, False, user=current_user
         )
         if pbad:

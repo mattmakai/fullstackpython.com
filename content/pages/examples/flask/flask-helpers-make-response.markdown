@@ -323,6 +323,7 @@ The Flask-Security-Too project is provided as open source under the
 ```python
 # views.py
 
+from functools import partial
 import time
 
 from flask import (
@@ -356,7 +357,6 @@ from .unified_signin import (
     us_verify,
     us_verify_link,
     us_verify_send_code,
-)
 
 
 ## ... source file abbreviated to get to make_response examples ...

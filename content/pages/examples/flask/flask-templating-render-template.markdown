@@ -1477,9 +1477,6 @@ from .forms import (
     def reauthn_handler(self, cb):
         self._state._reauthn_handler = cb
 
-    def password_validator(self, cb):
-        self._state._password_validator = cb
-
     def __getattr__(self, name):
         return getattr(self._state, name, None)
 

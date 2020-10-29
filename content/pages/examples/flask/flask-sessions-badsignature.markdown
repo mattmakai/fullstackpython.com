@@ -360,7 +360,7 @@ from flask_login import current_user
 from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
 from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
-from wtforms import validators, ValidationError
+from wtforms import ValidationError
 ~~from itsdangerous import BadSignature, SignatureExpired
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
@@ -391,10 +391,10 @@ def _(translate):
 ## ... source file abbreviated to get to BadSignature examples ...
 
 
-    if config_value("EMAIL_PLAINTEXT"):
-        body = _security.render_template("%s/%s.txt" % ctx, **context)
     if config_value("EMAIL_HTML"):
         html = _security.render_template("%s/%s.html" % ctx, **context)
+
+    subject = localize_callback(subject)
 
     sender = _security.email_sender
     if isinstance(sender, LocalProxy):

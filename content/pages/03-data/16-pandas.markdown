@@ -141,3 +141,9 @@ is a data structures and analysis library.
   [object-relational mapper (ORM)](/object-relational-mappers-orms.html)
   to load the data and perform analysis in pandas.
 
+* Real-world Excel spreadsheets are often a mess of unstructured data, so
+  this tutorial on 
+  [Reading Poorly Structured Excel Files with Pandas](https://pbpython.com/pandas-excel-range.html)
+  gives example code for extracting only part of a file as well
+  as reading ranges and tables.
+

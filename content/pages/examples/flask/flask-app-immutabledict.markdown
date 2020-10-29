@@ -20,7 +20,7 @@ so that values cannot be modified after initially being set.
 and <a href="/flask-app-headers-examples.html">Headers</a>
 are several other callables with code examples from the same `flask.app` package.
 
-These topics are also useful while reading the `ImmutableDict` examples:
+You should read up on these subjects along with these `ImmutableDict` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

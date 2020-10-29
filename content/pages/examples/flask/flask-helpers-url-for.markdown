@@ -936,7 +936,7 @@ from flask_login import current_user
 from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
 from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
-from wtforms import validators, ValidationError
+from wtforms import ValidationError
 from itsdangerous import BadSignature, SignatureExpired
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
@@ -1238,9 +1238,9 @@ class Role(db.Model):
     def to_json(self):
         json_user = {
 ~~            'url': url_for('api.get_user', id=self.id),
-            'username': self.username,
-            'member_since': self.member_since,
-            'last_seen': self.last_seen,
+~~            'username': self.username,
+~~            'member_since': self.member_since,
+~~            'last_seen': self.last_seen,
 ~~            'posts_url': url_for('api.get_user_posts', id=self.id),
 ~~            'followed_posts_url': url_for('api.get_user_followed_posts',
                                           id=self.id),
@@ -1298,9 +1298,9 @@ class Post(db.Model):
     def to_json(self):
         json_post = {
 ~~            'url': url_for('api.get_post', id=self.id),
-            'body': self.body,
-            'body_html': self.body_html,
-            'timestamp': self.timestamp,
+~~            'body': self.body,
+~~            'body_html': self.body_html,
+~~            'timestamp': self.timestamp,
 ~~            'author_url': url_for('api.get_user', id=self.author_id),
 ~~            'comments_url': url_for('api.get_post_comments', id=self.id),
             'comment_count': self.comments.count()
@@ -1340,9 +1340,9 @@ class Comment(db.Model):
         json_comment = {
 ~~            'url': url_for('api.get_comment', id=self.id),
 ~~            'post_url': url_for('api.get_post', id=self.post_id),
-            'body': self.body,
-            'body_html': self.body_html,
-            'timestamp': self.timestamp,
+~~            'body': self.body,
+~~            'body_html': self.body_html,
+~~            'timestamp': self.timestamp,
 ~~            'author_url': url_for('api.get_user', id=self.author_id),
         }
         return json_comment

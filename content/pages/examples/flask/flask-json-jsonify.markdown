@@ -72,6 +72,7 @@ def protect(allow_browser_login=False):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+    return functools.update_wrapper(wraps, f)
 
 
 def has_access_api(f):
@@ -96,7 +97,7 @@ def has_access_api(f):
                     permission_str, self.__class__.__name__
                 )
             )
-            response = make_response(
+~~            response = make_response(
 ~~                jsonify(
                     {"message": str(FLAMSG_ERR_SEC_ACCESS_DENIED), "severity": "danger"}
                 ),
