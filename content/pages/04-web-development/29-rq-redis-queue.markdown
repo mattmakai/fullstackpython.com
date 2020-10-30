@@ -30,6 +30,10 @@ track of tasks in the queue that need to be executed.
 * The [RQ intro post](http://nvie.com/posts/introducing-rq/) contains
   information on design decisions and how to use RQ in your projects.
 
+* [Build a Ghostwriting App for Scary Halloween Stories with OpenAI's GPT-3 Engine and Task Queues in Python](https://www.twilio.com/blog/ghost-writer-spooky-task-queues-python-openai-gpt3)
+  is a fun tutorial that uses RQ with OpenAI's [GPT-3](/gpt-3.html) API 
+  randomly write original stories inspired by creepy Halloween tales.
+
 * [International Space Station notifications with Python and Redis Queue (RQ)](https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html)
   shows how to combine the RQ task queue library with Flask to send
   text message notifications every time a condition is met - in this blog
