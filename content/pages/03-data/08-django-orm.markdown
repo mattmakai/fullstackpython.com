@@ -192,3 +192,6 @@ following resources should get you past the initial hurdles.
   fields with a checking constraint and a web form that ensures
   all of the fields sum up to a precise amount, such as 100%.
 
+* [Learn Django ORM - Query and Filters](https://www.youtube.com/playlist?list=PLOLrQ9Pn6cazjoDEnwzcdWWf4SNS0QZml)
+  is a video tutorials series that gives an overview of the ORM's
+  querying and filtering capabilities.
