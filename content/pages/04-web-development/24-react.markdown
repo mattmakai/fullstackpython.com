@@ -35,6 +35,27 @@ tack on React to build your client-side user interfaces.
   quickly fall out of date while this one tends to stick to the basics
   that are relevant to beginners.
 
+* [9 things every React.js beginner should know](https://camjackson.net/post/9-things-every-reactjs-beginner-should-know)
+  is not a tutorial but instead the author gives some strong opinions for
+  what beginners should know as they start learning React.
+
+* [React Bootstrap](https://react-bootstrap.github.io/) 
+  ([source code](https://github.com/react-bootstrap/react-bootstrap) replaces
+  the existing Bootstrap JavaScript with React components that do not
+  rely on jQuery.
+
+
+## Python+React tutorials
+* [How to set up Django with React](https://mattsegal.dev/django-react.html)
+  presents one developer's opinionated way of combining a 
+  [Django](/django.html)-powered back end with React on the front end,
+  including how to serve up static assets.
+
+* [Django REST with React (Django 2.0 and a sprinkle of testing)](https://www.valentinog.com/blog/tutorial-api-django-rest-react/)
+  combines a [Django](/django.html) plus 
+  [Django REST Framework (DRF)](/django-rest-framework-drf.html) backend 
+  with React on the front end and shows how to stich it all together.
+
 * This Modern Django 4-part tutorial series is well-done, has 
   [freely available source code](https://github.com/v1k45/ponynote) 
   and includes:
@@ -44,10 +65,6 @@ tack on React to build your client-side user interfaces.
     3. [Creating an API and integrating with React](http://v1k45.com/blog/modern-django-part-3-creating-an-api-and-integrating-with-react/)
     4. [Adding authentication to React SPA using DRF](http://v1k45.com/blog/modern-django-part-4-adding-authentication-to-react-spa-using-drf/)
 
-* [Django REST with React (Django 2.0 and a sprinkle of testing)](https://www.valentinog.com/blog/tutorial-api-django-rest-react/)
-  combines a [Django](/django.html) plus 
-  [Django REST Framework (DRF)](/django-rest-framework-drf.html) backend 
-  with React on the front end and shows how to stich it all together.
 
 * [Build a Simple CRUD App with Python, Flask, and React](https://developer.okta.com/blog/2018/12/20/crud-app-with-python-flask-react)
   shows how to combine a [Flask](/flask.html) backend with React.
@@ -55,15 +72,6 @@ tack on React to build your client-side user interfaces.
 * [Learn React app](https://github.com/tyroprogrammer/learn-react-app)
   is a Git repository with a code tutorial and instructions for how to
   follow along, as well as exercises to ensure you are tested as you go.
-
-* [9 things every React.js beginner should know](https://camjackson.net/post/9-things-every-reactjs-beginner-should-know)
-  is not a tutorial but instead the author gives some strong opinions for
-  what beginners should know as they start learning React.
-
-* [React Bootstrap](https://react-bootstrap.github.io/) 
-  ([source code](https://github.com/react-bootstrap/react-bootstrap) replaces
-  the existing Bootstrap JavaScript with React components that do not
-  rely on jQuery.
 
 
 ### Other React resources
