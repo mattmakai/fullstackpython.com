@@ -14,6 +14,9 @@ view commit-level changes via the
 on GitHub.
 
 ## 2020
+### November
+* New resources for [DevOps](/devops.html) and [containers](/containers.html).
+
 ### October
 * Added new blog on
   [Higher Accuracy Twilio Voice Transcriptions with Python and Flask](/blog/accurate-twilio-voice-call-recording-transcriptions-assemblyai.html).

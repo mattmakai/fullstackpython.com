@@ -70,6 +70,12 @@ useful.
   explains how Linux features such as `cgroups`, `chroot` and namespaces
   are used by container implementations.
 
+* [Container networking is simple](https://iximiuz.com/en/posts/container-networking-is-simple/)
+  shows that container networking is nothing more than a simple combination
+  of the well-known Linux facilities such as network namespaces, virtual 
+  Ethernet devices (veth), virtual network switches (bridge) and
+  IP routing and network address translation (NAT).
+
 * [Running containers without Docker](https://jvns.ca/blog/2016/10/26/running-container-without-docker/)
   reviews a migration path for an organization that already has a bunch of
   infrastructure but sees advantages in using containers. However, the 
@@ -114,6 +120,13 @@ configurations and dig deeper into how containers work.
 Container security is a hot topic because there are so many ways of screwing
 it up, just like any infrastructure that runs your applications. These
 resources explain security considerations specific to containers.
+
+* [A Practical Introduction to Container Security](https://cloudberry.engineering/article/practical-introduction-container-security/)
+  examines security at build time for projects and how to
+  minimize the risk of supply chain attack. It then goes into
+  infrastructure and runtime security where you need to understand
+  different attack vectors and minimize malicious attempts against
+  your containers during these phases..
 
 * [Building Container Images Securely on Kubernetes](https://blog.jessfraz.com/post/building-container-images-securely-on-kubernetes/)
   discusses some of the issues with building containers and why the

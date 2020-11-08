@@ -58,6 +58,12 @@ teams, culture, processes and tools into software development organizations.
   their services running and putting them out for other developers to consume.
   Highly recommended.
 
+* [Introduction to DevOps and Software Delivery Performance](https://www.stridenyc.com/blog/introduction-to-devops-and-software-delivery-performance)
+  explains the four key delivery metrics of Delivery Lead Time,
+  Deployment Frequency, Time to Restore Service, and Change Fail Rate,
+  and then gives a high-level overview of technical, process and
+  cultural capabilities that impact these metrics.
+
 * [Operations for software developers for beginners](https://jvns.ca/blog/2016/10/15/operations-for-software-developers-for-beginners/)
   gives advice to developers who have never done operations work and
   been on call for outages before in their career. The advantage of DevOps
