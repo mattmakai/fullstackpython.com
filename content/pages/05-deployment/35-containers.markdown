@@ -83,6 +83,11 @@ useful.
   eventually plan to use Docker, Kubernetes or other container tools and
   orchestration layer.
 
+* [Datadog's 2020 Container Report](https://www.datadoghq.com/container-report/)
+  contains some interesting statistics about container usage across
+  their customer base, such as [Kubernetes](/kubernetes.html) adoption
+  and container deployments by cloud platform.
+
 * [mocker](https://github.com/tonybaloney/mocker) is a Docker imitation
   open source project written in all Python which is intended for learning
   purposes.

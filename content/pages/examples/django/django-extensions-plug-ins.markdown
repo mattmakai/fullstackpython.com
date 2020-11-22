@@ -75,6 +75,18 @@ Code from django-angular is shown on:
 * [django.utils.html format_html](/django-utils-html-format-html-examples.html)
 * [django.urls.exceptions NoReverseMatch](/django-urls-exceptions-noreversematch-examples.html)
 
+### django-appmail
+[Django-Appmail](https://github.com/yunojuno/django-appmail) 
+([PyPI package information](https://pypi.org/project/django-appmail/))
+is a [Django](/django.html) app for handling transactional email templates.
+While the project began development as a way to work with the Mandrill
+transactional [API](/application-programming-interfaces.html), it is
+not exclusive to that API. The project simply provides a way to store
+and render email content. The library does not send or receive emails.
+
+Django-Appmail is open sourced under the 
+[MIT license](https://github.com/yunojuno/django-appmail/blob/master/LICENSE).
+
 
 ### django-axes
 [django-axes](https://github.com/jazzband/django-axes/)
