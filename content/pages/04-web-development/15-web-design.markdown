@@ -83,6 +83,11 @@ this short list as my absolute favorites that help developers become
   design principles for building user experiences. Highly recommended even
   if just to see how the information is presented.
 
+* [Building your color palette](https://refactoringui.com/previews/building-your-color-palette/)
+  explains why color pickers are not useful for most user interfaces
+  and how you should actually go about selecting your color palette
+  for a real world application.
+
 * [How I Work with Color](https://medium.com/@JustinMezzell/how-i-work-with-color-8439c98ae5ed)
   is a fantastic article from a professional designer on how he thinks
   about color and uses it for certain effects in his designs.
