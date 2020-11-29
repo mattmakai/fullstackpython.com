@@ -223,6 +223,11 @@ workflow. These resources will come in handy for specific Git subjects.
   system. This is an awesome read to get a view on how Git works under the
   commands you're using to manipulate these objects.
 
+* [How to Undo Mistakes With Git Using the Command Line](https://www.youtube.com/watch?v=lX9hsdsAeTk)
+  is a video that covers topics like resetting a file to an old revision,
+  recovering deleted commits, squashing multiple commits into one with 
+  interactive rebase and recovering deleted branches.
+
 
 ## Git Workflows
 Teams of developers can use Git in varying workflows because of Git's 

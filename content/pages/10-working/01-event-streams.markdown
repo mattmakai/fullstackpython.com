@@ -19,15 +19,18 @@ streams. Amazon Web Services' Kinesis and
 are proprietary hosted implementations.
 
 
-## How are event streams stored?
+## How are event streams typically stored?
 Some applications, such as aggregating millions of sensors, or thousands
-of constantly streaming cameras, throw off large amounts of data. It's
-difficult to process those large volumes of data in traditional data stores,
-so event streams are built off of a simpler data structure: logs. 
+of streaming cameras, constantly output large amounts of data with no breaks. 
+It is difficult to process such large volumes of data in traditional data 
+stores, so event streams are built off of a simpler data structure: logs. 
 
-Logs are ordered sequences of events and they typically have less constraints 
-than a database. Logs can handle the high throughput writes needed to keep 
-up with the constant flood of data from the source of an event stream.
+Logs are ordered sequences of events and they typically have less constraints
+than a database. In event streams, logs are also immutable. They do not change
+once they are written. Instead, newer events are written in the sequence as
+state changes. The reduced constraints compared to a database and the
+immutability mean that logs can handle the high throughput writes needed to
+keep up with the constant flood of data from the source of an event stream.
 
 
 ## Event stream resources
@@ -36,4 +39,5 @@ up with the constant flood of data from the source of an event stream.
   concepts behind event streams and how they fit into 
   [microservices](/microservices.html) architectures.
 
-
+* Quora has a solid answer to the question of 
+  [what is an event stream?](https://www.quora.com/What-is-an-event-stream).
