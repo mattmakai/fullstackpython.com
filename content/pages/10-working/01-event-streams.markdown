@@ -9,14 +9,22 @@ meta: An event stream is a log of one or more events.
 
 Event streams are a log of one or more "things that happen", which are
 usually referred to as events. Event streams are 
-conceptually focused around things that happen rather than objects, 
-which are the typical storage unit for 
-[relational databases](/databases.html).
+conceptually focused around events than "things" or objects, which are 
+the typical storage unit of [relational databases](/databases.html).
 
 Apache Kafka and Gazette are a popular open source implementations of event 
 streams. Amazon Web Services' Kinesis and 
 [Azure Event-Hubs](https://azure.microsoft.com/en-us/services/event-hubs/)
 are proprietary hosted implementations.
+
+
+## Why do event streams matter to developers?
+The way that data is stored affects how you can work with it. Constraints
+and guarantees like consistency make it easier to code certain applications
+but harder to build other types of applications that need performance in
+different ways. Event streams make it easier to build applications that
+analyze large amounts of constantly-updated data because the events are
+not stored relationally.
 
 
 ## How are event streams typically stored?

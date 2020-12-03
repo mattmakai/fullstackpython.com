@@ -67,6 +67,12 @@ command line and query language.
   [Google Cloud Function](/google-cloud-functions.html) 
   to store persistent data while running on a serverless platform.
 
+* [Everything You Know About MongoDB is Wrong!](https://developer.mongodb.com/article/everything-you-know-is-wrong)
+  lists many of the common thoughts developers have about MongoDB and
+  why some of them are misconceptions. This is a good read for
+  developers who used MongoDB several years ago and want to know what
+  major improvements have been made since then.
+
 
 ### MongoDB security
 NoSQL databases can be a weak spot in a production deployment environment,
