@@ -20,6 +20,42 @@ during Python software development as part of a programmer's
 <div class="well see-also">Bash is an implementation of the <a href="/shells.html">shells</a> concept. Learn more in the <a href="/development-environments.html">development environments</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div> 
 
 
+### How do Python developers use Bash?
+If you are programming in the terminal on [macOS](/macos.html)
+or [Linux](/ubuntu.html), or using the 
+[Windows Subsystem for Linux on Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10),
+you can easily gain access to Bash if it is not already
+your default shell.
+
+You can show what shell you are currently using by echoing the
+`SHELL` environment variable, like so:
+
+```
+$ echo "$SHELL"
+```
+
+Which will then print the shell you are currently using. For example,
+on macOS I am using Bash by default so the echo command prints:
+
+```
+/bin/bash
+```
+
+How much you use Bash or any shell will likely depend on your
+[development environment](/development-environments.html), especially
+if you are using an editor like [Vim](/vim.html) instead of an
+IDE like [PyCharm](/pycharm.html), because it is often easier to do
+certain tasks in the shell. For example, most developers I know who
+use PyCharm will search for some instance of source code right in
+their IDE, whereas I use a combination of Vim and [tmux](/tmux.html)
+so I frequently flip between panes to use commands like `grep` to
+do my source code searches. 
+
+There is no right way to perform a task like source code searching, it's 
+really just what works for your brain as a developer that will guide
+how often you interact with the Bash shell.
+
+
 ### Bash resources
 * [Bash Guide for beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
   is an entire book for those new to working with commandlines. It covers
@@ -102,6 +138,13 @@ during Python software development as part of a programmer's
   presents a list of commands *you should never run*, but can learn about
   their destructive abilities by reading through the descriptions provided
   by the author.
+
+* [Faster bash startup](https://danpker.com/posts/2020/faster-bash-startup/)
+  and
+  [Even faster bash startup](https://work.lisk.in/2020/11/20/even-faster-bash-startup.html)
+  are two great tutorials that will save you a bunch of time if you frequently
+  open new Bash shells. On many systems you can easily cut down the startup
+  time for the shell which can be unnecessarily sluggish.
 
 * [Bash Quick References](https://shellmagic.xyz/) is a cheat sheet for
   common operators and signals that come up when working with scripts.
