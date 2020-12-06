@@ -49,3 +49,9 @@ keep up with the constant flood of data from the source of an event stream.
 
 * Quora has a solid answer to the question of 
   [what is an event stream?](https://www.quora.com/What-is-an-event-stream).
+
+* [Summary of the Amazon Kinesis Event in the Northern Virginia (US-EAST-1) Region](https://aws.amazon.com/message/11201/)
+  is specific to AWS Kinesis but it explains how Amazon uses event
+  streams at scale to run and coordinate a significant number of their 
+  services. When their event streams service went down... it took a
+  whole lot of other stuff down at the same time.
