@@ -56,12 +56,59 @@ really just what works for your brain as a developer that will guide
 how often you interact with the Bash shell.
 
 
-### Bash resources
+### Getting started with Bash
+Working with a shell, Bash or otherwise, is intimidating the first time
+you try to get started. You are staring at the `$` prompt without a
+whole lot of direction.
+
+When you are completely new to using Bash, it is a good idea to at least
+scan, if not take some additional time for in-depth reading of the
+documentation for commands that every developer uses. The following 
+commands are used so frequently in Bash that an experienced developer
+probably does not even think about them anymore, they become just a
+natural part of your workflow:
+
+* `echo`: [print text to the command line](https://man7.org/linux/man-pages/man1/echo.1.html)
+* `ls`: [list the contents of a directory](https://man7.org/linux/man-pages/man1/ls.1.html)
+* `cd`: [change the working directory](https://man7.org/linux/man-pages/man1/cd.1p.html)
+* `cp`: [copy a file or directory](https://man7.org/linux/man-pages/man1/cp.1.html)
+* `mv`: [move one or more files](https://man7.org/linux/man-pages/man1/mv.1.html)
+* `rm`: [delete one or more files or directories](https://man7.org/linux/man-pages/man1/rm.1.html)
+
+If you know how to use the above commands then you will at least be able
+to move around the file system, create, move and update files and know
+what is on your storage device(s).
+
+The following commands are somewhat more advanced but also frequently
+used by developers:
+
+* `su`: [run comamnds as different users or groups](https://man7.org/linux/man-pages/man1/su.1.html)
+* `whoami`: [print which user you are currently logged in as](https://man7.org/linux/man-pages/man1/whoami.1.html)
+* `grep`: [searches for patterns in files](https://man7.org/linux/man-pages/man1/grep.1.html)
+
+The above lists are not even close to exhaustive for what commands
+you need to know when working with Bash. Read some of the following
+introductory tutorials to gain a better understanding of working
+with this shell:
+
+* [The Linux command line for beginner](https://ubuntu.com/tutorials/command-line-for-beginners)
+  by [Ubuntu](/ubuntu.html) will provide you with context for how to
+  use the command line, working with files and directories, and handling
+  superuser commands.
+
 * [Bash Guide for beginners](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
-  is an entire book for those new to working with commandlines. It covers
+  is an entire book for those new to working with command lines. It covers
   commands, paths, Bash shell scripting, variables and many other critical
   topics that are necessary to move from beginner to advanced Bash user. 
 
+* [101 Bash Commands and Tips for Beginners to Experts](https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je)
+  gives a well-done laundry list of tricks to explore.
+
+* [Bash Quick References](https://shellmagic.xyz/) is a cheat sheet for
+  common operators and signals that come up when working with scripts.
+
+
+### Additional Bash resources
 * [Advancing in the Bash shell](http://samrowe.com/wordpress/advancing-in-the-bash-shell/)
   covers important concepts such as bang syntax, movement commands, 
   tab completion and aliases.
@@ -87,9 +134,6 @@ how often you interact with the Bash shell.
   particularly important if you have ever tried to debug a hacky shell 
   script that was never meant to be used by anyone other than the original
   author.
-
-* [101 Bash Commands and Tips for Beginners to Experts](https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je)
-  is a well-done laundry list of tricks to explore.
 
 * [Bash scripting quirks & safety tips](https://jvns.ca/blog/2017/03/26/bash-quirks/)
   explains Bash basic programming constructs like `for` loops and variable 
@@ -145,9 +189,6 @@ how often you interact with the Bash shell.
   are two great tutorials that will save you a bunch of time if you frequently
   open new Bash shells. On many systems you can easily cut down the startup
   time for the shell which can be unnecessarily sluggish.
-
-* [Bash Quick References](https://shellmagic.xyz/) is a cheat sheet for
-  common operators and signals that come up when working with scripts.
 
 * [Anybody can write good bash (with a little effort)](https://blog.yossarian.net/2020/01/23/Anybody-can-write-good-bash-with-a-little-effort)
   covers the basics of shell scripting and provides some recommendations

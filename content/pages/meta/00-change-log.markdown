@@ -15,7 +15,8 @@ on GitHub.
 
 ## 2020
 ### December
-* New [Bash](/bourne-again-shell-bash.html) resources and explanations.
+* New [Bash](/bourne-again-shell-bash.html) and [Vim](/vim.html) resources 
+  and explanations.
 
 ### November
 * New resources for [DevOps](/devops.html) and [containers](/containers.html).

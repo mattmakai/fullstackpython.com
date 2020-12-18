@@ -91,6 +91,35 @@ If a Vimrc file does not already exist, just create it within the user's
 home directory and it will be picked up by Vim the next time you open the
 editor.
 
+The following are a few resources for learning what to put in, and how to 
+structure a `.vimrc` file. I recommend adding configuration options one 
+at a time to test them individually instead of going whole hog with a Vimrc 
+you are unfamiliar with.
+
+* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
+  detailed overview and opinionated guide to configuring Vim. Highly
+  recommended for new and experienced Vim users.
+
+* [5 lines for a blank .vimrc](https://swordandsignals.com/2020/12/13/5-lines-in-vimrc.html)
+  shows settings for case insensitive search, highlighting as you search,
+  disabling swap, and a couple more "must have" enhancements to the
+  default configuration.
+
+* [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
+  and explains many Python-specific .vimrc options.
+
+* [Vim as a Python IDE](http://liuchengxu.org/posts/use-vim-as-a-python-ide/)
+  shows a slew of plugins and configuration options for coding with Python
+  in Vim.
+
+* This
+  [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
+  has example configurations that are well commented and easy to learn from.
+
+* For people who are having trouble getting started with Vim, check out this
+  blog post on the
+  [two simple steps that helped this author learn Vim](http://adamdelong.com/two-simple-steps-helped-me-learn-vim/).
+
 
 ### Vim tutorials
 Vim has a reputation for a difficult learning curve, but it's much easier
@@ -157,31 +186,6 @@ to get started with these tutorials.
 * [Seven habits of effective text editing](http://moolenaar.net/habits.html)
   explains moving around efficiently, fixing errors quickly and forming good
   habits.
-
-
-### Vimrc resources
-These are a few resources for learning how to structure a `.vimrc` file. I
-recommend adding configuration options one at a time to test them
-individually instead of going whole hog with a Vimrc you are unfamiliar with.
-
-* [A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html) is a fantastic,
-  detailed overview and opinionated guide to configuring Vim. Highly
-  recommended for new and experienced Vim users.
-
-* [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
-  and explains many Python-specific .vimrc options.
-
-* [Vim as a Python IDE](http://liuchengxu.org/posts/use-vim-as-a-python-ide/)
-  shows a slew of plugins and configuration options for coding with Python
-  in Vim.
-
-* This
-  [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
-  has example configurations that are well commented and easy to learn from.
-
-* For people who are having trouble getting started with Vim, check out this
-  blog post on the
-  [two simple steps that helped this author learn Vim](http://adamdelong.com/two-simple-steps-helped-me-learn-vim/).
 
 
 ### Vim installation guides
