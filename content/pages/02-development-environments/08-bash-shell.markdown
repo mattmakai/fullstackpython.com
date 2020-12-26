@@ -108,7 +108,62 @@ with this shell:
   common operators and signals that come up when working with scripts.
 
 
+### Bash scripting
+Bash is used not only as an interactive prompt but also for scripting, which
+makes it possible to execute one or more Bash commands stored within a file.
+These scripts can be short, with only a single command, or very complicated
+with control-flow logic, for loops, and almost anything you want to automate
+or compute because 
+[Bash is a Turing-complete programming language](https://www.quora.com/Is-Bash-Turing-complete).
+
+Complex Bash scripts sometimes get a negative reputation because they can be
+difficult to read and understand if you are not the original author (or you
+are reading your own script after a significant period of time has elapsed). 
+There are many ways to accomplish the same tasks with Bash so the files are
+often confusing to read unless the author of a script included clear 
+documentation. This readability problem is typically less of an issue with
+Python scripts because spacing is enforced and the standard library 
+encapsulates common tasks.
+
+It's a good idea to think about how you want to structure your Bash scripts
+as they grow larger. The following resources provide insight into what you
+should consider while coding Bash scripts.
+
+* This [minimal safe Bash template](https://betterdev.blog/minimal-safe-bash-script-template/)
+  contains an 86-line Bash script that the author claims once you 
+  understand and use it as a base then it will make your scripts
+  easier to maintain over time.
+
+* [Creating a bash completion script](https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html)
+  is a great tutorial that walks you through a reasonably complex Bash
+  script for completing syntax in other Bash shell scripts.
+
+* [Anybody can write good bash (with a little effort)](https://blog.yossarian.net/2020/01/23/Anybody-can-write-good-bash-with-a-little-effort)
+  covers the basics of shell scripting and provides some recommendations
+  for creating more maintainable scripts such as using linters and
+  formatters.
+
+* Google's [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+  covers how to write consistent, maintainable shell scripts, which is 
+  particularly important if you have ever tried to debug a hacky shell 
+  script that was never meant to be used by anyone other than the original
+  author.
+
+* [Bash scripting quirks & safety tips](https://jvns.ca/blog/2017/03/26/bash-quirks/)
+  explains Bash basic programming constructs like `for` loops and variable 
+  assignment then goes into ways to avoid weird issues in your code.
+
+* If all else fails when you're trying to use Bash scripts, this article
+  on [replacing Bash scripts with Python](https://github.com/ninjaaron/replacing-bash-scripting-with-python)
+  is a guide on swapping in Python for administrative scripting, including
+  what to do about replacing invaluable command line tools such as `awk`, 
+  `sed` and `grep`.
+
+
 ### Additional Bash resources
+The following resources cover more advanced Bash use cases and what pitfalls
+to try to avoid as you work with the shell or write scripts.
+
 * [Advancing in the Bash shell](http://samrowe.com/wordpress/advancing-in-the-bash-shell/)
   covers important concepts such as bang syntax, movement commands, 
   tab completion and aliases.
@@ -129,16 +184,6 @@ with this shell:
   `PROMPT_COMMAND`, `CDPATH` and `REPLY` which can simplify your
   scripts by using values that Bash already has stored for you.
 
-* Google's [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
-  covers how to write consistent, maintainable shell scripts, which is 
-  particularly important if you have ever tried to debug a hacky shell 
-  script that was never meant to be used by anyone other than the original
-  author.
-
-* [Bash scripting quirks & safety tips](https://jvns.ca/blog/2017/03/26/bash-quirks/)
-  explains Bash basic programming constructs like `for` loops and variable 
-  assignment then goes into ways to avoid weird issues in your code.
-
 * [Safe ways to do things in bash](https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md)
   shows you how to not shoot yourself in the foot by using safe coding
   practices with your shell scripts.
@@ -156,18 +201,9 @@ with this shell:
   application that generates a hostable, customizable status page for your 
   services.
 
-* [Replacing Bash scripts with Python](https://github.com/ninjaaron/replacing-bash-scripting-with-python)
-  is a guide on using using Python for administrative scripting, including
-  what to do about replacing invaluable command line tools such as `awk`, 
-  `sed` and `grep`.
-
 * [Using Aliases to Speed Up Your Git Workflow](https://dev.to/robertcoopercode/using-aliases-to-speed-up-your-git-workflow-2f5a)
   has a bunch of shell aliases that make it easier for you to execute
   complicated or uncommon [Git](/git.html) commands.
-
-* [Creating a bash completion script](https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html)
-  is a great tutorial that walks you through a reasonably complex Bash
-  script for completing syntax in other Bash shell scripts.
 
 * [6 Tips Before You Write Your Next Bash Cronjob](https://yasoob.me/posts/6-tips-before-you-write-your-next-bash-cronjob/)
   covers starting your scripts with shebang, redirecting output, timeouts
@@ -190,7 +226,3 @@ with this shell:
   open new Bash shells. On many systems you can easily cut down the startup
   time for the shell which can be unnecessarily sluggish.
 
-* [Anybody can write good bash (with a little effort)](https://blog.yossarian.net/2020/01/23/Anybody-can-write-good-bash-with-a-little-effort)
-  covers the basics of shell scripting and provides some recommendations
-  for creating more maintainable scripts such as using linters and
-  formatters.
