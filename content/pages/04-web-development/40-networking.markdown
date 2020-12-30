@@ -13,6 +13,19 @@ web applications.
 
 
 ### Resources about networking
+The "Let's code a TCP/IP stack" series along with its 
+[open source code](https://github.com/saminiir/level-ip) gives a ton of 
+context on how TCP/IP works while providing the code for implementing the 
+foundational pieces. You will likely need to pair this with a more theoretical
+reference tutorial such as [RFC 1180](https://tools.ietf.org/html/rfc1180)
+to have a more complete understanding of the protocol:
+
+1. [Ethernet & ARP](http://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp/)
+1. [IPv4 & ICMPv4](http://www.saminiir.com/lets-code-tcp-ip-stack-2-ipv4-icmpv4/)
+1. [TCP Basics & Handshake](http://www.saminiir.com/lets-code-tcp-ip-stack-3-tcp-handshake/)
+1. [TCP Data Flow & Socket API](http://www.saminiir.com/lets-code-tcp-ip-stack-4-tcp-data-flow-socket-api/)
+1. [TCP Retransmission](http://www.saminiir.com/lets-code-tcp-ip-stack-5-tcp-retransmission/)
+
 * [Monitoring and Tuning the Linux Networking Stack: Receiving Data](https://blog.packagecloud.io/eng/2016/06/22/monitoring-tuning-linux-networking-stack-receiving-data/)
   along with 
   [Monitoring and Tuning the Linux Networking Stack: Sending Data](https://blog.packagecloud.io/eng/2017/02/06/monitoring-tuning-linux-networking-stack-sending-data/)

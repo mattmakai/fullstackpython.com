@@ -43,6 +43,11 @@ for processing payments.
 
 
 ### Resources about Stripe
+* [Stripe’s payments APIs: the first ten years](https://stripe.com/blog/payment-api-design)
+  has a ton of great context about how Stripe's payments API has evolved,
+  its architecture, how they expanded it over time, and generally a bunch
+  of solid storytelling behind how it has been built.
+
 * [How Stripe Designs Beautiful Websites](https://leerob.io/blog/how-stripe-designs-beautiful-websites)
   explains the process for how Stripe creates their gorgeous design that
   makes people want to use the service and explore what else they can
