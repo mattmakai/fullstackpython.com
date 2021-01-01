@@ -14,9 +14,11 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### January
 * Updated 
   [Flask extension projects and example code](/flask-extensions-plug-ins-related-libraries.html).
 * Happy New Year!
+
 
 ## 2020
 ### December
