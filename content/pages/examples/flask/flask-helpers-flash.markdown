@@ -126,8 +126,6 @@ import logging
 
 ~~from flask import flash, redirect, request, session, url_for
 from flask_babel import lazy_gettext
-from flask_openid import OpenIDResponse, SessionWrapper
-from openid.consumer.consumer import CANCEL, Consumer, SUCCESS
 
 from .forms import LoginForm_oid, RegisterUserDBForm, RegisterUserOIDForm
 from .. import const as c
@@ -149,6 +147,8 @@ def get_first_last_name(fullname):
 class BaseRegisterUser(PublicFormView):
 
     route_base = "/register"
+    email_template = "appbuilder/general/security/register_mail.html"
+    email_subject = lazy_gettext("Account activation")
 
 
 ## ... source file abbreviated to get to flash examples ...
@@ -262,6 +262,9 @@ class RegisterUserDBView(BaseRegisterUser):
             return redirect(self.get_redirect())
 
     def oid_login_handler(self, f, oid):
+        from flask_openid import OpenIDResponse, SessionWrapper
+        from openid.consumer.consumer import CANCEL, Consumer, SUCCESS
+
         if request.args.get("openid_complete") != u"yes":
             return f(False)
         consumer = Consumer(SessionWrapper(self), oid.store_factory())
@@ -280,9 +283,6 @@ class RegisterUserDBView(BaseRegisterUser):
         session["oid_resp"] = resp
 
     def form_get(self, form):
-        self.add_form_unique_validations(form)
-
-    def form_post(self, form):
 
 
 ## ... source file continues with no further flash examples...
@@ -1525,8 +1525,6 @@ The code is open sourced under the
 ```python
 # roles.py
 
-from __future__ import unicode_literals
-
 import csv
 
 ~~from flask import flash, session
@@ -1535,25 +1533,30 @@ from indico.core.errors import UserValueError
 from indico.modules.events.roles.forms import ImportMembersCSVForm
 from indico.modules.users import User
 from indico.util.i18n import _, ngettext
-from indico.util.string import to_unicode, validate_email
+from indico.util.spreadsheets import csv_text_io_wrapper
+from indico.util.string import validate_email
 from indico.web.flask.templating import get_template_module
 from indico.web.util import jsonify_data, jsonify_template
 
 
-class ImportRoleMembersMixin(object):
+class ImportRoleMembersMixin:
 
     logger = None
 
     def import_members_from_csv(self, f):
-        reader = csv.reader(f.read().splitlines())
-        emails = set()
+        with csv_text_io_wrapper(f) as ftxt:
+            reader = csv.reader(ftxt.read().splitlines())
 
+        emails = set()
         for num_row, row in enumerate(reader, 1):
             if len(row) != 1:
                 raise UserValueError(_('Row {}: malformed CSV data').format(num_row))
-            email = to_unicode(row[0]).strip().lower()
+            email = row[0].strip().lower()
 
-            if email and not validate_email(email):
+
+## ... source file abbreviated to get to flash examples ...
+
+
                 raise UserValueError(_('Row {row}: invalid email address: {email}').format(row=num_row, email=email))
             if email in emails:
                 raise UserValueError(_('Row {}: email address is not unique').format(num_row))
@@ -1573,12 +1576,12 @@ class ImportRoleMembersMixin(object):
             if form.remove_existing.data:
                 deleted_members = self.role.members - users
                 for member in deleted_members:
-                    self.logger.info('User {} removed from role {} by {}'.format(member, self.role, session.user))
+                    self.logger.info(f'User {member} removed from role {self.role} by {session.user}')
                 self.role.members = users
             else:
                 self.role.members |= users
             for user in new_members:
-                self.logger.info('User {} added to role {} by {}'.format(user, self.role, session.user))
+                self.logger.info(f'User {user} added to role {self.role} by {session.user}')
 ~~            flash(ngettext("{} member has been imported.",
                            "{} members have been imported.",
                            len(users)).format(len(users)), 'success')

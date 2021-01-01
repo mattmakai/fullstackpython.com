@@ -24,3 +24,8 @@ can affect both [relational databases](/databases.html) and
 * [Securing your site like it's 1999](https://24ways.org/2018/securing-your-site-like-its-1999/)
   covers a bunch of common web application vulnerabilities including
   SQL injection.
+
+* [Automating Blind Sql Injection](https://bad-jubies.github.io/Blind-SQLi-1/)
+  shows how to use Python to execute SQL injection on the example
+  [Damn Vulnerable Web Application](https://github.com/digininja/DVWA)
+  project.

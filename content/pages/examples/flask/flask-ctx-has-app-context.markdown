@@ -143,15 +143,12 @@ The code is open sourced under the
 
 import ast
 import re
-import textwrap
-import traceback
-import warnings
 from contextlib import contextmanager
 
 from babel import negotiate_locale
 from babel.core import LOCALE_ALIASES, Locale
 from babel.messages.pofile import read_po
-from babel.support import NullTranslations, Translations
+from babel.support import NullTranslations
 ~~from flask import current_app, g, has_app_context, has_request_context, request, session
 from flask_babelex import Babel, Domain, get_domain
 from flask_pluginengine import current_plugin
@@ -183,22 +180,22 @@ def get_translation_domain(plugin_name=_use_context):
             return get_domain()
 
 
-def gettext_unicode(*args, **kwargs):
-    from indico.util.string import inject_unicode_debug
-    func_name = kwargs.pop('func_name', 'ugettext')
+def _indico_gettext(*args, **kwargs):
+    func_name = kwargs.pop('func_name', 'gettext')
     plugin_name = kwargs.pop('plugin_name', None)
-    force_unicode = kwargs.pop('force_unicode', False)
-
-    if not isinstance(args[0], unicode):
-        args = [(text.decode('utf-8') if isinstance(text, str) else text) for text in args]
-        using_unicode = force_unicode
-    else:
-        using_unicode = True
 
     translations = get_translation_domain(plugin_name).get_translations()
-    res = getattr(translations, func_name)(*args, **kwargs)
-    res = inject_unicode_debug(res)
-    if not using_unicode:
+    return getattr(translations, func_name)(*args, **kwargs)
+
+
+def lazy_gettext(string, plugin_name=None):
+    if is_lazy_string(string):
+        return string
+    return make_lazy_string(_indico_gettext, string, plugin_name=plugin_name)
+
+
+def orig_string(lazy_string):
+    return lazy_string._args[0] if is_lazy_string(lazy_string) else lazy_string
 
 
 ## ... source file continues with no further has_app_context examples...

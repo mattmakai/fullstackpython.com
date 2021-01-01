@@ -32,6 +32,10 @@ otherwise independent web applications.
   for how to receive an HTTP POST webhook request, as well as how to test
   it locally with Ngrok.
 
+* [Webhooks for Beginners - Full Course](https://www.youtube.com/watch?v=41NOoEz3Tzc)
+  is an entire free video course that shows both how to use and implement
+  webhooks into applications.
+
 * [Should you build a webhooks API?](https://brandur.org/webhooks)
 
 * [Webhooks do’s and dont’s: what we learned after integrating +100 APIs](https://restful.io/webhooks-dos-and-dont-s-what-we-learned-after-integrating-100-apis-d567405a3671)

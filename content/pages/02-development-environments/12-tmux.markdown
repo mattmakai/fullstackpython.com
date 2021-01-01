@@ -28,6 +28,10 @@ easier to use many shells at once and attaching to both local and remote
   tmux+Vim user myself, I can attest to how great these two tools complement
   each other.
 
+* [Writing & Coding Workflow](http://jacobzelko.com/workflow/) shows one 
+  developer's configuration that combines [Vim](/vim.html) and several plugins
+  with tmux for a productive setup.
+
 * [Making tmux Pretty and Usable - A Guide to Customizing your tmux.conf](http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/)
 
 * [Tmux Pairing Anywhere: On Your Box](http://iamvery.com/2013/11/16/tmux-pairing-anywhere-on-your-box.html)

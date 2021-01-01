@@ -33,14 +33,13 @@ The code is open sourced under the
 ```python
 # setup.py
 
-from __future__ import unicode_literals
-
 import os
 import re
 import shutil
 import socket
 import sys
 from operator import attrgetter
+from pathlib import Path
 from smtplib import SMTP
 
 import click
@@ -48,10 +47,8 @@ from click import wrap_text
 ~~from flask.helpers import get_root_path
 from pkg_resources import iter_entry_points
 from prompt_toolkit import prompt
-from prompt_toolkit.contrib.completers import PathCompleter, WordCompleter
-from prompt_toolkit.layout.lexers import SimpleLexer
-from prompt_toolkit.styles import style_from_dict
-from prompt_toolkit.token import Token
+from prompt_toolkit.completion import PathCompleter, WordCompleter
+from prompt_toolkit.styles import Style
 from pytz import all_timezones, common_timezones
 from redis import RedisError, StrictRedis
 from sqlalchemy import create_engine
@@ -70,6 +67,8 @@ click.disable_unicode_literals_warning = True
 
 def _echo(msg=''):
     click.echo(msg, err=True)
+
+
 
 
 ## ... source file abbreviated to get to get_root_path examples ...
@@ -103,25 +102,25 @@ def _get_dirs(target_dir):
 ~~    return get_root_path('indico'), os.path.abspath(target_dir)
 
 
-PROMPT_TOOLKIT_STYLE = style_from_dict({
-    Token.HELP: '#aaaaaa',
-    Token.PROMPT: '#5f87ff',
-    Token.DEFAULT: '#dfafff',
-    Token.BRACKET: '#ffffff',
-    Token.COLON: '#ffffff',
-    Token.INPUT: '#aaffaa',
+PROMPT_TOOLKIT_STYLE = Style.from_dict({
+    'help': '#aaaaaa',
+    'prompt': '#5f87ff',
+    'default': '#dfafff',
+    'bracket': '#ffffff',
+    'colon': '#ffffff',
+    '': '#aaffaa',  # user input
 })
 
 
 def _prompt(message, default='', path=False, list_=None, required=True, validate=None, allow_invalid=False,
             password=False, help=None):
-    def _get_prompt_tokens(cli):
+    def _get_prompt_tokens():
         rv = [
-            (Token.PROMPT, message),
-            (Token.COLON, ': '),
+            ('class:prompt', message),
+            ('class:colon', ': '),
         ]
         if first and help:
-            rv.insert(0, (Token.HELP, wrap_text(help) + '\n'))
+            rv.insert(0, ('class:help', wrap_text(help) + '\n'))
         return rv
 
     completer = None
@@ -133,14 +132,14 @@ def _prompt(message, default='', path=False, list_=None, required=True, validate
 
         if dev:
             config_data += [
-                b'',
-                b'# Development options',
-                b'DB_LOG = True',
-                b'DEBUG = True',
-                b'SMTP_USE_CELERY = False'
+                '',
+                '# Development options',
+                'DB_LOG = True',
+                'DEBUG = True',
+                'SMTP_USE_CELERY = False'
             ]
 
-        config = b'\n'.join(x for x in config_data if x is not None)
+        config = '\n'.join(x for x in config_data if x is not None)
 
         if dev:
             if not os.path.exists(self.data_root_path):
@@ -152,8 +151,8 @@ def _prompt(message, default='', path=False, list_=None, required=True, validate
             os.mkdir(path)
 
         _echo(cformat('%{magenta}Creating %{magenta!}{}%{reset}%{magenta}').format(self.config_path))
-        with open(self.config_path, 'wb') as f:
-            f.write(config + b'\n')
+        with open(self.config_path, 'w') as f:
+            f.write(config + '\n')
 
 ~~        package_root = get_root_path('indico')
         _copy(os.path.normpath(os.path.join(package_root, 'logging.yaml.sample')),

@@ -33,8 +33,6 @@ The code is open sourced under the
 ```python
 # devserver.py
 
-from __future__ import print_function, unicode_literals
-
 import os
 
 ~~from flask.cli import DispatchingApp
@@ -115,7 +113,7 @@ class DebuggedIndico(DebuggedApplication):
     def __init__(self, *args, **kwargs):
         self._evalex_whitelist = None
         self._request_ip = None
-        super(DebuggedIndico, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 
 

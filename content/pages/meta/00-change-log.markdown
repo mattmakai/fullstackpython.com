@@ -13,10 +13,15 @@ view commit-level changes via the
 [source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/) 
 on GitHub.
 
+## 2021
+* Updated 
+  [Flask extension projects and example code](/flask-extensions-plug-ins-related-libraries.html).
+* Happy New Year!
+
 ## 2020
 ### December
-* New [Bash](/bourne-again-shell-bash.html) and [Vim](/vim.html) resources 
-  and explanations.
+* New [Bash](/bourne-again-shell-bash.html), [tmux](/tmux.html) and 
+  [Vim](/vim.html) resources and explanations.
 
 ### November
 * New resources for [DevOps](/devops.html) and [containers](/containers.html).

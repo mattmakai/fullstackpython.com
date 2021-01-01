@@ -32,8 +32,6 @@ The code is open sourced under the
 ```python
 # core.py
 
-from __future__ import unicode_literals
-
 import click
 ~~from flask.cli import AppGroup, pass_script_info
 
@@ -54,7 +52,7 @@ def _get_indico_version(ctx, param, value):
     if not value or ctx.resilient_parsing:
         return
     import indico
-    message = 'Indico v{}'.format(indico.__version__)
+    message = f'Indico v{indico.__version__}'
     click.echo(message, ctx.color)
     ctx.exit()
 

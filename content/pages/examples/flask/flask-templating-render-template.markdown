@@ -21,7 +21,7 @@ the `.templating` part.
 <a href="/flask-templating-render-template-string-examples.html">render_template_string</a>
 is another callable from the `flask.templating` package with code examples.
 
-These topics are also useful while reading the `render_template` examples:
+You should read up on these subjects along with these `render_template` examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -314,6 +314,9 @@ def reset_password(data=None):
 @ratelimit(method="POST", limit=10, interval=5)
 def register():
     errors = get_errors()
+    if current_user.authed():
+        return redirect(url_for("challenges.listing"))
+
     if request.method == "POST":
         name = request.form.get("name", "").strip()
         email_address = request.form.get("email", "").strip().lower()
@@ -328,9 +331,6 @@ def register():
         emails = (
             Users.query.add_columns("email", "id")
             .filter_by(email=email_address)
-            .first()
-        )
-        pass_short = len(password) == 0
 
 
 ## ... source file abbreviated to get to render_template examples ...
@@ -1122,7 +1122,111 @@ def show_phone():
 ```
 
 
-## Example 10 from flask-restx
+## Example 10 from Flask-Meld
+[Flask-Meld](https://github.com/mikeabrahamsen/Flask-Meld)
+([PyPI package information](https://pypi.org/project/Flask-Meld/))
+allows you to write your front end web code in your back end
+Python code. It does this by adding a `{% meld_scripts %}` tag to
+the Flask template engine and then inserting components written
+in Python scripts created by a developer.
+
+[**Flask-Meld / flask_meld / component.py**](https://github.com/mikeabrahamsen/Flask-Meld/blob/main/flask_meld/./component.py)
+
+```python
+# component.py
+import uuid
+import os
+from importlib.util import module_from_spec, spec_from_file_location
+
+import orjson
+~~from flask import render_template, current_app, url_for
+from bs4 import BeautifulSoup
+from bs4.formatter import HTMLFormatter
+
+
+def convert_to_snake_case(s):
+    s.replace("-", "_")
+    return s
+
+
+def convert_to_camel_case(s):
+    s = convert_to_snake_case(s)
+    return "".join(word.title() for word in s.split("_"))
+
+
+def get_component_class(component_name):
+    module_name = convert_to_snake_case(component_name)
+    class_name = convert_to_camel_case(module_name)
+    module = get_component_module(module_name)
+    component_class = getattr(module, class_name)
+
+    return component_class
+
+
+def get_component_module(module_name):
+
+
+## ... source file abbreviated to get to render_template examples ...
+
+
+    def __context__(self):
+        return {
+            "attributes": self._attributes(),
+            "methods": self._functions(),
+        }
+
+    def updated(self, name):
+        pass
+
+    def render(self, component_name):
+        return self._view(component_name, self._attributes())
+
+    def _view(self, component_name, data):
+        context = self.__context__()
+        context_variables = {}
+        context_variables.update(context["attributes"])
+        context_variables.update(context["methods"])
+        context_variables.update(data)
+        context_variables.update({"form": self._form})
+
+        frontend_context_variables = {}
+        frontend_context_variables.update(context["attributes"])
+        frontend_context_variables = orjson.dumps(frontend_context_variables).decode(
+            "utf-8"
+        )
+~~        rendered_template = render_template(
+            f"meld/{component_name}.html", **context_variables
+        )
+
+        soup = BeautifulSoup(rendered_template, features="html.parser")
+        root_element = Component._get_root_element(soup)
+        root_element["meld:id"] = str(self.id)
+        root_element["meld:data"] = frontend_context_variables
+        self._set_values(root_element, context_variables)
+
+        script = soup.new_tag("script", type="module")
+        init = {"id": str(self.id), "name": component_name, "data": data}
+        init = orjson.dumps(init).decode("utf-8")
+
+        meld_url = url_for("static", filename="meld/meld.js")
+        meld_import = f'import {{Meld}} from ".{meld_url}";'
+        script.string = f"{meld_import} Meld.componentInit({init});"
+        root_element.append(script)
+
+        rendered_template = Component._desoupify(soup)
+
+        return rendered_template
+
+    def _set_values(self, soup, context_variables):
+        for element in soup.find_all(attrs={'meld:model': True}):
+
+
+## ... source file continues with no further render_template examples...
+
+```
+
+
+## Example 11 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1177,7 +1281,7 @@ def ui_for(api):
 ```
 
 
-## Example 11 from flaskSaaS
+## Example 12 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -1380,7 +1484,7 @@ def paySuccess():
 ```
 
 
-## Example 12 from Flask-Security-Too
+## Example 13 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -1487,7 +1591,7 @@ from .forms import (
 ```
 
 
-## Example 13 from Flask-SocketIO
+## Example 14 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -1563,7 +1667,7 @@ def get_session():
 ```
 
 
-## Example 14 from Flask-User
+## Example 15 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1655,7 +1759,7 @@ class EmailManager(object):
 ```
 
 
-## Example 15 from Flasky
+## Example 16 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1695,7 +1799,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 16 from Datadog Flask Example App
+## Example 17 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1797,7 +1901,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 17 from indico
+## Example 18 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1811,14 +1915,12 @@ The code is open sourced under the
 ```python
 # mathjax.py
 
-from __future__ import absolute_import
-
 ~~from flask import current_app, render_template
 
 
-class MathjaxMixin(object):
+class MathjaxMixin:
     def _get_head_content(self):
-~~        return render_template('mathjax_config.html') + unicode(current_app.manifest['mathjax.js'])
+~~        return render_template('mathjax_config.html') + str(current_app.manifest['mathjax.js'])
 
 
 
@@ -1827,7 +1929,7 @@ class MathjaxMixin(object):
 ```
 
 
-## Example 18 from keras-flask-deploy-webapp
+## Example 19 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1919,7 +2021,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 19 from newspie
+## Example 20 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -2074,7 +2176,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 20 from Science Flask
+## Example 21 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -2362,7 +2464,7 @@ def static_from_root():
 ```
 
 
-## Example 21 from tedivms-flask
+## Example 22 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -2465,7 +2567,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 22 from trape
+## Example 23 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data

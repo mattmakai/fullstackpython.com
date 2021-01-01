@@ -153,8 +153,6 @@ import logging
 
 ~~from flask import flash, redirect, request, session, url_for
 from flask_babel import lazy_gettext
-from flask_openid import OpenIDResponse, SessionWrapper
-from openid.consumer.consumer import CANCEL, Consumer, SUCCESS
 
 from .forms import LoginForm_oid, RegisterUserDBForm, RegisterUserOIDForm
 from .. import const as c
@@ -176,6 +174,8 @@ def get_first_last_name(fullname):
 class BaseRegisterUser(PublicFormView):
 
     route_base = "/register"
+    email_template = "appbuilder/general/security/register_mail.html"
+    email_subject = lazy_gettext("Account activation")
 
 
 ## ... source file abbreviated to get to session examples ...
@@ -229,8 +229,8 @@ class RegisterUserOIDView(BaseRegisterUser):
             return redirect(self.get_redirect())
 
     def oid_login_handler(self, f, oid):
-        if request.args.get("openid_complete") != u"yes":
-            return f(False)
+        from flask_openid import OpenIDResponse, SessionWrapper
+        from openid.consumer.consumer import CANCEL, Consumer, SUCCESS
 
 
 ## ... source file continues with no further session examples...
@@ -271,7 +271,7 @@ from babel.core import get_locale_identifier
 from babel.dates import format_date as babel_format_date
 from babel.dates import format_datetime as babel_format_datetime
 from babel.dates import format_timedelta as babel_format_timedelta
-~~from flask import flash, g, redirect, request, session, url_for
+~~from flask import current_app, flash, g, redirect, request, session, url_for
 from flask_allows import Permission
 from flask_babelplus import lazy_gettext as _
 from flask_login import current_user
@@ -282,32 +282,44 @@ from pytz import UTC
 from werkzeug.local import LocalProxy
 from werkzeug.utils import ImportStringError, import_string
 
-from flaskbb._compat import (iteritems, range_method, string_types, text_type,
-                             to_bytes, to_unicode)
 from flaskbb.extensions import babel, redis_store
+from flaskbb.utils.http import is_safe_url
 from flaskbb.utils.settings import flaskbb_config
 
-try:  # compat
-    FileNotFoundError
-except NameError:
-    FileNotFoundError = IOError
 
 logger = logging.getLogger(__name__)
 
 _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>?@\[\\\]^_`{|},.]+')
 
 
-def slugify(text, delim=u"-"):
-    text = unidecode.unidecode(text)
-    result = []
-    for word in _punct_re.split(text.lower()):
-        if word:
+def to_bytes(text, encoding="utf-8"):
+    if isinstance(text, str):
+        text = text.encode(encoding)
+    return text
+
+
+## ... source file abbreviated to get to session examples ...
+
+
             result.append(word)
-    return text_type(delim.join(result))
+    return str(delim.join(result))
 
 
-def redirect_or_next(endpoint, **kwargs):
-    return redirect(request.args.get("next") or endpoint, **kwargs)
+def redirect_url(endpoint, use_referrer=True):
+    targets = [endpoint]
+    allowed_hosts = current_app.config["ALLOWED_HOSTS"]
+    if use_referrer:
+        targets.insert(0, request.referrer)
+    for target in targets:
+        if target and is_safe_url(target, allowed_hosts):
+            return target
+
+
+def redirect_or_next(endpoint, use_referrer=True):
+    return redirect(
+        redirect_url(request.args.get("next"), use_referrer)
+        or redirect_url(endpoint, use_referrer)
+    )
 
 
 def render_template(template, **context):  # pragma: no cover
@@ -462,11 +474,11 @@ from base64 import b64decode
 from functools import wraps
 from hashlib import md5
 from random import Random, SystemRandom
-~~from flask import request, make_response, session, g
+~~from flask import request, make_response, session, g, Response
 from werkzeug.datastructures import Authorization
 from werkzeug.security import safe_str_cmp
 
-__version__ = '4.1.1dev'
+__version__ = '4.2.1dev'
 
 
 class HTTPAuth(object):
@@ -1206,16 +1218,11 @@ The code is open sourced under the
 ```python
 # logger.py
 
-from __future__ import unicode_literals
-
 import logging
 import logging.config
 import logging.handlers
 import os
-import smtplib
 import warnings
-from email.mime.text import MIMEText
-from email.utils import formatdate
 from pprint import pformat
 
 import yaml
@@ -1238,21 +1245,21 @@ else:
     has_sentry = True
 
 
-class AddRequestIDFilter(object):
+class AddRequestIDFilter:
     def filter(self, record):
         record.request_id = request.id if has_request_context() else '0' * 16
         return True
 
 
-class AddUserIDFilter(object):
+class AddUserIDFilter:
     def filter(self, record):
-~~        record.user_id = unicode(session.user.id) if has_request_context() and session and session.user else '-'
+~~        record.user_id = str(session.user.id) if has_request_context() and session and session.user else '-'
         return True
 
 
 class RequestInfoFormatter(logging.Formatter):
     def format(self, record):
-        rv = super(RequestInfoFormatter, self).format(record)
+        rv = super().format(record)
         info = get_request_info()
         if info:
             rv += '\n\n' + pformat(info)
@@ -1263,14 +1270,14 @@ class FormattedSubjectSMTPHandler(logging.handlers.SMTPHandler):
     def getSubject(self, record):
         return self.subject % record.__dict__
 
-    def emit(self, record):
-        try:
-            port = self.mailport
-            if not port:
-                port = smtplib.SMTP_PORT
-            smtp = smtplib.SMTP(self.mailhost, port, timeout=self._timeout)
-            msg = MIMEText(self.format(record), 'plain', 'utf-8')
-            msg['From'] = self.fromaddr
+
+class BlacklistFilter(logging.Filter):
+    def __init__(self, names):
+        self.filters = [logging.Filter(name) for name in names]
+
+    def filter(self, record):
+        return not any(x.filter(record) for x in self.filters)
+
 
 
 ## ... source file abbreviated to get to session examples ...
@@ -1308,7 +1315,7 @@ class IndicoSentry(Sentry):
 ~~                'name': session.user.full_name}
 
     def before_request(self, *args, **kwargs):
-        super(IndicoSentry, self).before_request()
+        super().before_request()
         if not has_request_context():
             return
         self.client.extra_context({'Endpoint': str(request.url_rule.endpoint) if request.url_rule else None,

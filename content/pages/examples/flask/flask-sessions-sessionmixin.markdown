@@ -43,7 +43,7 @@ import sys
 
 gevent_socketio_found = True
 try:
-    from socketio import socketio_manage
+    from socketio import socketio_manage  # noqa: F401
 except ImportError:
     gevent_socketio_found = False
 if gevent_socketio_found:
@@ -56,14 +56,14 @@ import flask
 from flask import _request_ctx_stack, has_request_context, json as flask_json
 ~~from flask.sessions import SessionMixin
 import socketio
-from socketio.exceptions import ConnectionRefusedError
+from socketio.exceptions import ConnectionRefusedError  # noqa: F401
 from werkzeug.debug import DebuggedApplication
 from werkzeug.serving import run_with_reloader
 
 from .namespace import Namespace
 from .test_client import SocketIOTestClient
 
-__version__ = '4.3.2dev'
+__version__ = '5.0.2dev'
 
 
 class _SocketIOMiddleware(socketio.WSGIApp):

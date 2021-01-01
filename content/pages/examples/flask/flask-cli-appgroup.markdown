@@ -35,8 +35,6 @@ The code is open sourced under the
 ```python
 # util.py
 
-from __future__ import unicode_literals
-
 import traceback
 from importlib import import_module
 
@@ -56,8 +54,8 @@ def _create_app(info):
 class IndicoFlaskGroup(FlaskGroup):
 
     def __init__(self, **extra):
-        super(IndicoFlaskGroup, self).__init__(create_app=_create_app, add_default_commands=False,
-                                               add_version_option=False, set_debug_flag=False, **extra)
+        super().__init__(create_app=_create_app, add_default_commands=False, add_version_option=False,
+                         set_debug_flag=False, **extra)
         self._indico_plugin_commands = None
 
     def _load_plugin_commands(self):
@@ -65,7 +63,7 @@ class IndicoFlaskGroup(FlaskGroup):
 
     def _wrap_in_plugin_context(self, plugin, cmd):
         cmd.callback = wrap_in_plugin_context(plugin, cmd.callback)
-        for subcmd in getattr(cmd, 'commands', {}).viewvalues():
+        for subcmd in getattr(cmd, 'commands', {}).values():
             self._wrap_in_plugin_context(plugin, subcmd)
 
     def _get_indico_plugin_commands(self, ctx):
@@ -77,12 +75,12 @@ class IndicoFlaskGroup(FlaskGroup):
             ctx.ensure_object(ScriptInfo).load_app()
             cmds = named_objects_from_signal(signals.plugin.cli.send(), plugin_attr='_indico_plugin')
             rv = {}
-            for name, cmd in cmds.viewitems():
+            for name, cmd in cmds.items():
                 if cmd._indico_plugin:
                     self._wrap_in_plugin_context(cmd._indico_plugin, cmd)
                 rv[name] = cmd
         except Exception as exc:
-            if 'No indico config found' not in unicode(exc):
+            if 'No indico config found' not in str(exc):
                 click.echo(click.style('Loading plugin commands failed:', fg='red', bold=True))
                 click.echo(click.style(traceback.format_exc(), fg='red'))
             rv = {}
@@ -105,7 +103,7 @@ class LazyGroup(click.Group):
 
     def __init__(self, import_name, **kwargs):
         self._import_name = import_name
-        super(LazyGroup, self).__init__(**kwargs)
+        super().__init__(**kwargs)
 
     @cached_property
     def _impl(self):

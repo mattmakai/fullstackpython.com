@@ -44,7 +44,6 @@ from datetime import datetime
 
 import click
 import click_log
-from celery.bin.celery import CeleryCommand
 from flask import current_app
 ~~from flask.cli import FlaskGroup, ScriptInfo, with_appcontext
 from flask_alembic import alembic_click
@@ -158,9 +157,7 @@ def install(welcome, force, username, email, password, no_plugins):
 @click.pass_context
 ~~@with_appcontext
 def start_celery(ctx):
-    CeleryCommand(celery).execute_from_commandline(
-        ["flaskbb celery"] + ctx.args
-    )
+    celery.start(ctx.args)
 
 
 @flaskbb.command("shell", short_help="Runs a shell in the app context.")
@@ -183,7 +180,11 @@ def shell_command():
 
     try:
         import IPython
-        IPython.embed(banner1=banner, user_ns=ctx)
+        from traitlets.config import get_config
+
+        c = get_config()
+        c.InteractiveShellEmbed.colors = "Linux"
+        IPython.embed(config=c, banner1=banner, user_ns=ctx)
     except ImportError:
         code.interact(banner=banner, local=ctx)
 

@@ -165,8 +165,8 @@ from flaskbb.plugins.utils import validate_plugin
 from flaskbb.user.models import Group, Guest, User
 from flaskbb.utils.forms import populate_settings_dict, populate_settings_form
 from flaskbb.utils.helpers import (get_online_users, register_view,
-                                   render_template, time_diff, time_utcnow,
-                                   FlashAndRedirect)
+                                   render_template, redirect_or_next,
+                                   time_diff, time_utcnow, FlashAndRedirect)
 from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
                                         IsAtleastModerator,
 
@@ -174,15 +174,36 @@ from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+
+            flash(_('User updated.'), 'success')
+            return redirect(url_for('management.edit_user', user_id=user.id))
+
+        return render_template(
+            'management/user_form.html', form=form, title=_('Edit User')
+        )
+
+
+class DeleteUser(MethodView):
+    decorators = [
+        allows.requires(
+            IsAdmin,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
                 endpoint="management.overview"
             )
         )
     ]
 
     def post(self, user_id=None):
-        if request.is_xhr:
-            ids = request.get_json()["ids"]
-
+        if request.get_json() is not None:
+            ids = request.get_json().get("ids")
+            if not ids:
+~~                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
             data = []
             for user in User.query.filter(User.id.in_(ids)).all():
                 if current_user.id == user.id:
@@ -200,7 +221,7 @@ from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
                     )
 
 ~~            return jsonify(
-                message="{} users deleted.".format(len(data)),
+                message=f"{len(data)} users deleted.",
                 category="success",
                 data=data,
                 status=200
@@ -230,6 +251,36 @@ class AddUser(MethodView):
 
 
 
+
+class BanUser(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
+        )
+    ]
+
+    def post(self, user_id=None):
+        if not Permission(CanBanUser, identity=current_user):
+            flash(
+                _("You do not have the permissions to ban this user."),
+                "danger"
+            )
+            return redirect(url_for("management.overview"))
+
+        if request.get_json() is not None:
+            ids = request.get_json().get("ids")
+            if not ids:
+~~                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
+
             data = []
             users = User.query.filter(User.id.in_(ids)).all()
             for user in users:
@@ -239,20 +290,13 @@ class AddUser(MethodView):
                     continue
 
                 elif user.ban():
-                    data.append(
-                        {
-                            "id":
-                            user.id,
-                            "type":
-                            "ban",
-                            "reverse":
-                            "unban",
-                            "reverse_name":
-                            _("Unban"),
-                            "reverse_url":
-                            url_for("management.unban_user", user_id=user.id)
-                        }
-                    )
+                    data.append({
+                        "id": user.id,
+                        "type": "ban",
+                        "reverse": "unban",
+                        "reverse_name": _("Unban"),
+                        "reverse_url": url_for("management.unban_user", user_id=user.id)
+                    })
 
 ~~            return jsonify(
                 message="{} users banned.".format(len(data)),
@@ -271,7 +315,8 @@ class AddUser(MethodView):
             flash(_("User is now banned."), "success")
         else:
             flash(_("Could not ban user."), "danger")
-        return redirect(url_for("management.banned_users"))
+
+        return redirect_or_next(url_for("management.banned_users"))
 
 
 class UnbanUser(MethodView):
@@ -279,11 +324,15 @@ class UnbanUser(MethodView):
         allows.requires(
             IsAtleastModerator,
             on_fail=FlashAndRedirect(
+                message=_("You are not allowed to manage users"),
+                level="danger",
+                endpoint="management.overview"
+            )
 
+        )
+    ]
 
-## ... source file abbreviated to get to jsonify examples ...
-
-
+    def post(self, user_id=None):
 
         if not Permission(CanBanUser, identity=current_user):
             flash(
@@ -292,8 +341,14 @@ class UnbanUser(MethodView):
             )
             return redirect(url_for("management.overview"))
 
-        if request.is_xhr:
-            ids = request.get_json()["ids"]
+        if request.get_json() is not None:
+            ids = request.get_json().get("ids")
+            if not ids:
+~~                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
 
             data = []
             for user in User.query.filter(User.id.in_(ids)).all():
@@ -310,7 +365,7 @@ class UnbanUser(MethodView):
                     )
 
 ~~            return jsonify(
-                message="{} users unbanned.".format(len(data)),
+                message=f"{len(data)} users unbanned.",
                 category="success",
                 data=data,
                 status=200
@@ -323,7 +378,7 @@ class UnbanUser(MethodView):
         else:
             flash(_("Could not unban user."), "danger")
 
-        return redirect(url_for("management.banned_users"))
+        return redirect_or_next(url_for("management.users"))
 
 
 class Groups(MethodView):
@@ -339,6 +394,19 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+
+            flash(_('Group updated.'), 'success')
+            return redirect(url_for('management.groups', group_id=group.id))
+
+        return render_template(
+            'management/group_form.html', form=form, title=_('Edit Group')
+        )
+
+
+class DeleteGroup(MethodView):
+    decorators = [
+        allows.requires(
+            IsAdmin,
             on_fail=FlashAndRedirect(
                 message=_("You are not allowed to modify groups."),
                 level="danger",
@@ -348,8 +416,15 @@ class Groups(MethodView):
     ]
 
     def post(self, group_id=None):
-        if request.is_xhr:
-            ids = request.get_json()["ids"]
+        if request.get_json() is not None:
+            ids = request.get_json().get("ids")
+            if not ids:
+~~                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
+
             if not (set(ids) & set(["1", "2", "3", "4", "5", "6"])):
                 data = []
                 for group in Group.query.filter(Group.id.in_(ids)).all():
@@ -400,6 +475,21 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+        reports = Report.query.\
+            filter(Report.zapped == None).\
+            order_by(Report.id.desc()).\
+            paginate(page, flaskbb_config['USERS_PER_PAGE'], False)
+
+        return render_template("management/reports.html", reports=reports)
+
+
+class MarkReportRead(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
+                message=_("You are not allowed to view reports."),
+                level="danger",
                 endpoint="management.overview"
             )
         )
@@ -407,8 +497,14 @@ class Groups(MethodView):
 
     def post(self, report_id=None):
 
-        if request.is_xhr:
-            ids = request.get_json()["ids"]
+        if request.get_json() is not None:
+            ids = request.get_json().get("ids")
+            if not ids:
+~~                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
             data = []
 
             for report in Report.query.filter(Report.id.in_(ids)).all():
@@ -439,13 +535,13 @@ class Groups(MethodView):
                     _("Report %(id)s is already marked as read.", id=report.id),
                     "success"
                 )
-                return redirect(url_for("management.reports"))
+                return redirect_or_next(url_for("management.reports"))
 
             report.zapped_by = current_user.id
             report.zapped = time_utcnow()
             report.save()
             flash(_("Report %(id)s marked as read.", id=report.id), "success")
-            return redirect(url_for("management.reports"))
+            return redirect_or_next(url_for("management.reports"))
 
         reports = Report.query.filter(Report.zapped == None).all()
         report_list = []
@@ -455,6 +551,20 @@ class Groups(MethodView):
 ## ... source file abbreviated to get to jsonify examples ...
 
 
+            report_list.append(report)
+
+        db.session.add_all(report_list)
+        db.session.commit()
+
+        flash(_("All reports were marked as read."), "success")
+        return redirect_or_next(url_for("management.reports"))
+
+
+class DeleteReport(MethodView):
+    decorators = [
+        allows.requires(
+            IsAtleastModerator,
+            on_fail=FlashAndRedirect(
                 message=_("You are not allowed to view reports."),
                 level="danger",
                 endpoint="management.overview"
@@ -463,11 +573,16 @@ class Groups(MethodView):
     ]
 
     def post(self, report_id=None):
+        if request.get_json() is not None:
+            ids = request.get_json().get("ids")
+            if not ids:
+~~                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
 
-        if request.is_xhr:
-            ids = request.get_json()["ids"]
             data = []
-
             for report in Report.query.filter(Report.id.in_(ids)).all():
                 if report.delete():
                     data.append(
@@ -490,7 +605,7 @@ class Groups(MethodView):
         report = Report.query.filter_by(id=report_id).first_or_404()
         report.delete()
         flash(_("Report deleted."), "success")
-        return redirect(url_for("management.reports"))
+        return redirect_or_next(url_for("management.reports"))
 
 
 class CeleryStatus(MethodView):
@@ -792,8 +907,6 @@ The code is open sourced under the
 ```python
 # util.py
 
-from __future__ import absolute_import, unicode_literals
-
 from datetime import datetime
 
 ~~from flask import g, has_request_context, jsonify, render_template, request, session
@@ -854,15 +967,15 @@ def jsonify_data(flash=True, **json_data):
 
 class ExpectedError(ImATeapot):
     def __init__(self, message, **data):
-        super(ExpectedError, self).__init__(message or 'Something went wrong')
+        super().__init__(message or 'Something went wrong')
         self.data = dict(data, message=message)
 
 
 def _format_request_data(data, hide_passwords=False):
-    if not hasattr(data, 'iterlists'):
-        data = ((k, [v]) for k, v in data.iteritems())
+    if not hasattr(data, 'lists'):
+        data = ((k, [v]) for k, v in data.items())
     else:
-        data = data.iterlists()
+        data = data.lists()
     rv = {}
     for key, values in data:
         if hide_passwords and 'password' in key:

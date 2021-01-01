@@ -114,6 +114,15 @@ open sourced under the
 [MIT license](https://github.com/maxcountryman/flask-login/blob/master/LICENSE).
 
 
+### Flask-Meld
+[Flask-Meld](https://github.com/mikeabrahamsen/Flask-Meld)
+([PyPI package information](https://pypi.org/project/Flask-Meld/))
+allows you to write your front end web code in your back end 
+Python code. It does this by adding a `{% meld_scripts %}` tag to
+the Flask template engine and then inserting components written
+in Python scripts created by a developer.
+
+
 ### flask-praetorian
 [flask-praetorian](https://github.com/dusktreader/flask-praetorian)
 ([project documentation](https://flask-praetorian.readthedocs.io/en/latest/)

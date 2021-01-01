@@ -203,7 +203,7 @@ import sys
 
 gevent_socketio_found = True
 try:
-    from socketio import socketio_manage
+    from socketio import socketio_manage  # noqa: F401
 except ImportError:
     gevent_socketio_found = False
 if gevent_socketio_found:
@@ -216,14 +216,14 @@ import flask
 ~~from flask import _request_ctx_stack, has_request_context, json as flask_json
 from flask.sessions import SessionMixin
 import socketio
-from socketio.exceptions import ConnectionRefusedError
+from socketio.exceptions import ConnectionRefusedError  # noqa: F401
 from werkzeug.debug import DebuggedApplication
 from werkzeug.serving import run_with_reloader
 
 from .namespace import Namespace
 from .test_client import SocketIOTestClient
 
-__version__ = '4.3.2dev'
+__version__ = '5.0.2dev'
 
 
 class _SocketIOMiddleware(socketio.WSGIApp):
@@ -243,11 +243,11 @@ class _SocketIOMiddleware(socketio.WSGIApp):
 ## ... source file abbreviated to get to has_request_context examples ...
 
 
-        self.default_exception_handler = exception_handler
-        return exception_handler
+        else:
+            def set_handler(handler):
+                return self.on(handler.__name__, *args, **kwargs)(handler)
 
-    def on_event(self, message, handler, namespace=None):
-        self.on(message, namespace=namespace)(handler)
+            return set_handler
 
     def on_namespace(self, namespace_handler):
         if not isinstance(namespace_handler, Namespace):
@@ -260,7 +260,7 @@ class _SocketIOMiddleware(socketio.WSGIApp):
 
     def emit(self, event, *args, **kwargs):
         namespace = kwargs.pop('namespace', '/')
-        room = kwargs.pop('room', None)
+        to = kwargs.pop('to', kwargs.pop('room', None))
         include_self = kwargs.pop('include_self', True)
         skip_sid = kwargs.pop('skip_sid', None)
         if not include_self and not skip_sid:
@@ -278,17 +278,17 @@ class _SocketIOMiddleware(socketio.WSGIApp):
 
             if sid:
                 callback = _callback_wrapper
-        self.server.emit(event, *args, namespace=namespace, room=room,
+        self.server.emit(event, *args, namespace=namespace, to=to,
                          skip_sid=skip_sid, callback=callback, **kwargs)
 
-    def send(self, data, json=False, namespace=None, room=None,
+    def send(self, data, json=False, namespace=None, to=None,
              callback=None, include_self=True, skip_sid=None, **kwargs):
         skip_sid = flask.request.sid if not include_self else skip_sid
         if json:
-            self.emit('json', data, namespace=namespace, room=room,
+            self.emit('json', data, namespace=namespace, to=to,
                       skip_sid=skip_sid, callback=callback, **kwargs)
         else:
-            self.emit('message', data, namespace=namespace, room=room,
+            self.emit('message', data, namespace=namespace, to=to,
                       skip_sid=skip_sid, callback=callback, **kwargs)
 
     def close_room(self, room, namespace=None):
@@ -314,16 +314,11 @@ The code is open sourced under the
 ```python
 # logger.py
 
-from __future__ import unicode_literals
-
 import logging
 import logging.config
 import logging.handlers
 import os
-import smtplib
 import warnings
-from email.mime.text import MIMEText
-from email.utils import formatdate
 from pprint import pformat
 
 import yaml
@@ -346,21 +341,21 @@ else:
     has_sentry = True
 
 
-class AddRequestIDFilter(object):
+class AddRequestIDFilter:
     def filter(self, record):
 ~~        record.request_id = request.id if has_request_context() else '0' * 16
         return True
 
 
-class AddUserIDFilter(object):
+class AddUserIDFilter:
     def filter(self, record):
-~~        record.user_id = unicode(session.user.id) if has_request_context() and session and session.user else '-'
+~~        record.user_id = str(session.user.id) if has_request_context() and session and session.user else '-'
         return True
 
 
 class RequestInfoFormatter(logging.Formatter):
     def format(self, record):
-        rv = super(RequestInfoFormatter, self).format(record)
+        rv = super().format(record)
         info = get_request_info()
         if info:
             rv += '\n\n' + pformat(info)
@@ -371,14 +366,14 @@ class FormattedSubjectSMTPHandler(logging.handlers.SMTPHandler):
     def getSubject(self, record):
         return self.subject % record.__dict__
 
-    def emit(self, record):
-        try:
-            port = self.mailport
-            if not port:
-                port = smtplib.SMTP_PORT
-            smtp = smtplib.SMTP(self.mailhost, port, timeout=self._timeout)
-            msg = MIMEText(self.format(record), 'plain', 'utf-8')
-            msg['From'] = self.fromaddr
+
+class BlacklistFilter(logging.Filter):
+    def __init__(self, names):
+        self.filters = [logging.Filter(name) for name in names]
+
+    def filter(self, record):
+        return not any(x.filter(record) for x in self.filters)
+
 
 
 ## ... source file abbreviated to get to has_request_context examples ...
@@ -416,7 +411,7 @@ class IndicoSentry(Sentry):
                 'name': session.user.full_name}
 
     def before_request(self, *args, **kwargs):
-        super(IndicoSentry, self).before_request()
+        super().before_request()
 ~~        if not has_request_context():
             return
         self.client.extra_context({'Endpoint': str(request.url_rule.endpoint) if request.url_rule else None,

@@ -346,8 +346,8 @@ from flaskbb.plugins.utils import validate_plugin
 from flaskbb.user.models import Group, Guest, User
 from flaskbb.utils.forms import populate_settings_dict, populate_settings_form
 from flaskbb.utils.helpers import (get_online_users, register_view,
-                                   render_template, time_diff, time_utcnow,
-                                   FlashAndRedirect)
+                                   render_template, redirect_or_next,
+                                   time_diff, time_utcnow, FlashAndRedirect)
 from flaskbb.utils.requirements import (CanBanUser, CanEditUser, IsAdmin,
                                         IsAtleastModerator,
 
@@ -447,9 +447,14 @@ class DeleteUser(MethodView):
     ]
 
     def post(self, user_id=None):
-~~        if request.is_xhr:
-~~            ids = request.get_json()["ids"]
-
+~~        if request.get_json() is not None:
+~~            ids = request.get_json().get("ids")
+            if not ids:
+                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
             data = []
             for user in User.query.filter(User.id.in_(ids)).all():
                 if current_user.id == user.id:
@@ -467,12 +472,7 @@ class DeleteUser(MethodView):
                     )
 
             return jsonify(
-                message="{} users deleted.".format(len(data)),
-                category="success",
-                data=data,
-                status=200
-            )
-
+                message=f"{len(data)} users deleted.",
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -561,8 +561,14 @@ class BanUser(MethodView):
             )
             return redirect(url_for("management.overview"))
 
-~~        if request.is_xhr:
-~~            ids = request.get_json()["ids"]
+~~        if request.get_json() is not None:
+~~            ids = request.get_json().get("ids")
+            if not ids:
+                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
 
             data = []
             users = User.query.filter(User.id.in_(ids)).all()
@@ -573,26 +579,20 @@ class BanUser(MethodView):
                     continue
 
                 elif user.ban():
-                    data.append(
-                        {
-                            "id":
-                            user.id,
-                            "type":
-                            "ban",
-                            "reverse":
-                            "unban",
-                            "reverse_name":
-                            _("Unban"),
-                            "reverse_url":
-                            url_for("management.unban_user", user_id=user.id)
-                        }
-                    )
+                    data.append({
+                        "id": user.id,
+                        "type": "ban",
+                        "reverse": "unban",
+                        "reverse_name": _("Unban"),
+                        "reverse_url": url_for("management.unban_user", user_id=user.id)
+                    })
+
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
-        return redirect(url_for("management.banned_users"))
+        return redirect_or_next(url_for("management.banned_users"))
 
 
 class UnbanUser(MethodView):
@@ -617,8 +617,14 @@ class UnbanUser(MethodView):
             )
             return redirect(url_for("management.overview"))
 
-~~        if request.is_xhr:
-~~            ids = request.get_json()["ids"]
+~~        if request.get_json() is not None:
+~~            ids = request.get_json().get("ids")
+            if not ids:
+                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
 
             data = []
             for user in User.query.filter(User.id.in_(ids)).all():
@@ -635,11 +641,13 @@ class UnbanUser(MethodView):
                     )
 
             return jsonify(
-                message="{} users unbanned.".format(len(data)),
+                message=f"{len(data)} users unbanned.",
                 category="success",
-                data=data,
-                status=200
-            )
+
+
+## ... source file abbreviated to get to request examples ...
+
+
 
         user = User.query.filter_by(id=user_id).first_or_404()
 
@@ -648,7 +656,7 @@ class UnbanUser(MethodView):
         else:
             flash(_("Could not unban user."), "danger")
 
-        return redirect(url_for("management.banned_users"))
+        return redirect_or_next(url_for("management.users"))
 
 
 class Groups(MethodView):
@@ -720,8 +728,15 @@ class DeleteGroup(MethodView):
     ]
 
     def post(self, group_id=None):
-~~        if request.is_xhr:
-~~            ids = request.get_json()["ids"]
+~~        if request.get_json() is not None:
+~~            ids = request.get_json().get("ids")
+            if not ids:
+                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
+
             if not (set(ids) & set(["1", "2", "3", "4", "5", "6"])):
                 data = []
                 for group in Group.query.filter(Group.id.in_(ids)).all():
@@ -739,13 +754,6 @@ class DeleteGroup(MethodView):
                 return jsonify(
                     message="{} groups deleted.".format(len(data)),
                     category="success",
-                    data=data,
-                    status=200
-                )
-            return jsonify(
-                message=_("You cannot delete one of the standard groups."),
-                category="danger",
-                data=None,
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -820,8 +828,14 @@ class MarkReportRead(MethodView):
 
     def post(self, report_id=None):
 
-~~        if request.is_xhr:
-~~            ids = request.get_json()["ids"]
+~~        if request.get_json() is not None:
+~~            ids = request.get_json().get("ids")
+            if not ids:
+                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
             data = []
 
             for report in Report.query.filter(Report.id.in_(ids)).all():
@@ -840,17 +854,12 @@ class MarkReportRead(MethodView):
 
             return jsonify(
                 message="{} reports marked as read.".format(len(data)),
-                category="success",
-                data=data,
-                status=200
-            )
-
-        if report_id:
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
+        for report in reports:
             report.zapped_by = current_user.id
             report.zapped = time_utcnow()
             report_list.append(report)
@@ -859,7 +868,7 @@ class MarkReportRead(MethodView):
         db.session.commit()
 
         flash(_("All reports were marked as read."), "success")
-        return redirect(url_for("management.reports"))
+        return redirect_or_next(url_for("management.reports"))
 
 
 class DeleteReport(MethodView):
@@ -875,11 +884,16 @@ class DeleteReport(MethodView):
     ]
 
     def post(self, report_id=None):
+~~        if request.get_json() is not None:
+~~            ids = request.get_json().get("ids")
+            if not ids:
+                return jsonify(
+                    message="No ids provided.",
+                    category="error",
+                    status=404
+                )
 
-~~        if request.is_xhr:
-~~            ids = request.get_json()["ids"]
             data = []
-
             for report in Report.query.filter(Report.id.in_(ids)).all():
                 if report.delete():
                     data.append(
@@ -896,12 +910,6 @@ class DeleteReport(MethodView):
                 message="{} reports deleted.".format(len(data)),
                 category="success",
                 data=data,
-                status=200
-            )
-
-        report = Report.query.filter_by(id=report_id).first_or_404()
-        report.delete()
-        flash(_("Report deleted."), "success")
 
 
 ## ... source file continues with no further request examples...
@@ -1312,11 +1320,11 @@ from base64 import b64decode
 from functools import wraps
 from hashlib import md5
 from random import Random, SystemRandom
-~~from flask import request, make_response, session, g
+~~from flask import request, make_response, session, g, Response
 from werkzeug.datastructures import Authorization
 from werkzeug.security import safe_str_cmp
 
-__version__ = '4.1.1dev'
+__version__ = '4.2.1dev'
 
 
 class HTTPAuth(object):
@@ -1342,7 +1350,6 @@ class HTTPAuth(object):
 ## ... source file abbreviated to get to request examples ...
 
 
-        return f
 
     def get_user_roles(self, f):
         self.get_user_roles_callback = f
@@ -1352,8 +1359,9 @@ class HTTPAuth(object):
         @wraps(f)
         def decorated(*args, **kwargs):
             res = f(*args, **kwargs)
+            check_status_code = not isinstance(res, (tuple, Response))
             res = make_response(res)
-            if res.status_code == 200:
+            if check_status_code and res.status_code == 200:
                 res.status_code = 401
             if 'WWW-Authenticate' not in res.headers.keys():
                 res.headers['WWW-Authenticate'] = self.authenticate_header()
@@ -1572,9 +1580,11 @@ class MultiAuth(object):
         self.main_auth = main_auth
         self.additional_auth = args
 
-    def login_required(self, f=None, role=None):
-        if f is not None and role is not None:  # pragma: no cover
-            raise ValueError('role is the only supported argument')
+    def login_required(self, f=None, role=None, optional=None):
+        if f is not None and \
+                (role is not None or optional is not None):  # pragma: no cover
+            raise ValueError(
+                'role and optional are the only supported arguments')
 
         def login_required_internal(f):
             @wraps(f)
@@ -1593,8 +1603,9 @@ class MultiAuth(object):
                                 break
                 if selected_auth is None:
                     selected_auth = self.main_auth
-                return selected_auth.login_required(role=role)(f)(
-                    *args, **kwargs)
+                return selected_auth.login_required(role=role,
+                                                    optional=optional
+                                                    )(f)(*args, **kwargs)
             return decorated
 
         if f:
@@ -2204,6 +2215,7 @@ from wtforms import (
     ValidationError,
     validators,
 )
+from wtforms.fields.html5 import EmailField
 from wtforms.validators import StopValidation
 
 from .babel import is_lazy_string, make_lazy_string
@@ -2213,7 +2225,6 @@ from .utils import (
     _datastore,
     config_value,
     do_flash,
-    find_user,
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2290,7 +2301,7 @@ class ForgotPasswordForm(Form, UserEmailFormMixin):
 
 class LoginForm(Form, NextFormMixin):
 
-    email = StringField(get_form_field_label("email"), validators=[email_required])
+    email = EmailField(get_form_field_label("email"), validators=[email_required])
     password = PasswordField(
         get_form_field_label("password"), validators=[password_required]
     )
@@ -2438,8 +2449,8 @@ def on_disconnect():
     disconnected = '/'
 
 
-@socketio.on('connect', namespace='/test')
-def on_connect_test():
+@socketio.event(namespace='/test')
+def connect():
     send('connected-test')
     send(json.dumps(request.args.to_dict(flat=False)))
 ~~    send(json.dumps({h: request.headers[h] for h in request.headers.keys()
@@ -2452,8 +2463,8 @@ def on_disconnect_test():
     disconnected = '/test'
 
 
-@socketio.on('message')
-def on_message(message):
+@socketio.event
+def message(message):
     send(message)
     if message == 'test session':
         session['a'] = 'b'
@@ -2498,6 +2509,7 @@ def get_request_event2(data):
 ~~    request_event_data = request.event
     emit('my custom response', data)
 
+
 socketio.on_event('yet another custom event', get_request_event2)
 
 
@@ -2509,6 +2521,7 @@ def on_custom_event_test(data):
 def on_custom_event_test2(data):
     emit('my custom namespace response', data, namespace='/test')
 
+
 socketio.on_event('yet another custom namespace event', on_custom_event_test2,
                   namespace='/test')
 
@@ -2518,8 +2531,6 @@ def on_custom_event_broadcast(data):
     emit('my custom response', data, broadcast=True)
 
 
-@socketio.on('my custom broadcast namespace event', namespace='/test')
-def on_custom_event_broadcast_test(data):
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2537,7 +2548,7 @@ def error_handler_default(value):
         error_testing_default = True
     else:
         raise value
-    return value
+    return 'error/default'
 
 
 @socketio.on("error testing", namespace='/unused_namespace')
@@ -2724,8 +2735,6 @@ The code is open sourced under the
 ```python
 # auth.py
 
-from __future__ import unicode_literals
-
 ~~from flask import current_app, request
 from flask_multipass import InvalidCredentials, Multipass, NoSuchUser
 
@@ -2738,12 +2747,12 @@ logger = Logger.get('auth')
 class IndicoMultipass(Multipass):
     @property
     def default_local_auth_provider(self):
-        return next((p for p in self.auth_providers.itervalues() if not p.is_external and p.settings.get('default')),
+        return next((p for p in self.auth_providers.values() if not p.is_external and p.settings.get('default')),
                     None)
 
     @property
     def sync_provider(self):
-        return next((p for p in self.identity_providers.itervalues() if p.settings.get('synced_fields')), None)
+        return next((p for p in self.identity_providers.values() if p.settings.get('synced_fields')), None)
 
     @property
     def synced_fields(self):
@@ -2759,10 +2768,10 @@ class IndicoMultipass(Multipass):
             self._check_default_provider()
 
     def _check_default_provider(self):
-        sync_providers = [p for p in self.identity_providers.itervalues() if p.settings.get('synced_fields')]
+        sync_providers = [p for p in self.identity_providers.values() if p.settings.get('synced_fields')]
         if len(sync_providers) > 1:
             raise ValueError('There can only be one sync provider.')
-        auth_providers = self.auth_providers.values()
+        auth_providers = list(self.auth_providers.values())
         external_providers = [p for p in auth_providers if p.is_external]
         local_providers = [p for p in auth_providers if not p.is_external]
         if any(p.settings.get('default') for p in external_providers):
@@ -2789,7 +2798,7 @@ class IndicoMultipass(Multipass):
                 fn = logger.debug
             fn('Authentication via %s failed: %s (%r)', exc.provider.name if exc.provider else None, exc_str,
                exc.details)
-        return super(IndicoMultipass, self).handle_auth_error(exc, redirect_to_login=redirect_to_login)
+        return super().handle_auth_error(exc, redirect_to_login=redirect_to_login)
 
 
 multipass = IndicoMultipass()

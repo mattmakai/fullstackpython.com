@@ -1201,7 +1201,81 @@ def _secret_key(key=None):
 ```
 
 
-## Example 10 from flask-restx
+## Example 10 from Flask-Meld
+[Flask-Meld](https://github.com/mikeabrahamsen/Flask-Meld)
+([PyPI package information](https://pypi.org/project/Flask-Meld/))
+allows you to write your front end web code in your back end
+Python code. It does this by adding a `{% meld_scripts %}` tag to
+the Flask template engine and then inserting components written
+in Python scripts created by a developer.
+
+[**Flask-Meld / flask_meld / component.py**](https://github.com/mikeabrahamsen/Flask-Meld/blob/main/flask_meld/./component.py)
+
+```python
+# component.py
+import uuid
+import os
+from importlib.util import module_from_spec, spec_from_file_location
+
+import orjson
+~~from flask import render_template, current_app, url_for
+from bs4 import BeautifulSoup
+from bs4.formatter import HTMLFormatter
+
+
+def convert_to_snake_case(s):
+    s.replace("-", "_")
+    return s
+
+
+def convert_to_camel_case(s):
+    s = convert_to_snake_case(s)
+    return "".join(word.title() for word in s.split("_"))
+
+
+def get_component_class(component_name):
+    module_name = convert_to_snake_case(component_name)
+    class_name = convert_to_camel_case(module_name)
+    module = get_component_module(module_name)
+    component_class = getattr(module, class_name)
+
+    return component_class
+
+
+def get_component_module(module_name):
+~~    user_specified_dir = current_app.config.get("MELD_COMPONENT_DIR", None)
+
+    if not user_specified_dir:
+        try:
+            name = getattr(current_app, "name", None)
+            full_path = os.path.join(name, "meld", "components", module_name + ".py")
+            module = load_module_from_path(full_path, module_name)
+        except FileNotFoundError:
+            full_path = os.path.join("meld", "components", module_name + ".py")
+            module = load_module_from_path(full_path, module_name)
+        return module
+    else:
+        try:
+            full_path = os.path.join(user_specified_dir, module_name + ".py")
+            module = load_module_from_path(full_path, module_name)
+        except FileNotFoundError:
+            full_path = os.path.join(
+                user_specified_dir, "components", module_name + ".py"
+            )
+            module = load_module_from_path(full_path, module_name)
+        return module
+
+
+def load_module_from_path(full_path, module_name):
+    spec = spec_from_file_location(module_name, full_path)
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 11 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1458,7 +1532,7 @@ def _clean_header(header):
 ```
 
 
-## Example 11 from flask-sqlalchemy
+## Example 12 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -1575,7 +1649,7 @@ def _make_table(db):
 ```
 
 
-## Example 12 from Flask-WTF
+## Example 13 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1833,7 +1907,7 @@ def same_origin(current_uri, compare_uri):
 ```
 
 
-## Example 13 from Flask-Security-Too
+## Example 14 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -2094,7 +2168,7 @@ _default_config = {
 ```
 
 
-## Example 14 from Flask-User
+## Example 15 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2202,7 +2276,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 15 from Flask-VueJs-Template
+## Example 16 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2243,7 +2317,7 @@ def index_client():
 ```
 
 
-## Example 16 from Flasky
+## Example 17 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -2298,7 +2372,7 @@ def run_migrations_online():
 ```
 
 
-## Example 17 from indico
+## Example 18 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -2359,7 +2433,7 @@ def run_migrations_offline():
 ```
 
 
-## Example 18 from sandman2
+## Example 19 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2484,7 +2558,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 19 from tedivms-flask
+## Example 20 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

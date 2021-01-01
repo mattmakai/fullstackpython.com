@@ -40,8 +40,6 @@ The code is open sourced under the
 ```python
 # config.py
 
-from __future__ import absolute_import, unicode_literals
-
 import ast
 import codecs
 import os
@@ -86,8 +84,8 @@ DEFAULTS = {
 
         allowed |= set(INTERNAL_DEFAULTS)
     for key in set(data) - allowed:
-        warnings.warn('Ignoring unknown config key {}'.format(key))
-    return {k: v for k, v in data.iteritems() if k in allowed}
+        warnings.warn(f'Ignoring unknown config key {key}')
+    return {k: v for k, v in data.items() if k in allowed}
 
 
 def load_config(only_defaults=False, override=None):
@@ -112,7 +110,7 @@ def load_config(only_defaults=False, override=None):
 ~~    return ImmutableDict(data)
 
 
-class IndicoConfig(object):
+class IndicoConfig:
 
     __slots__ = ('_config', '_exc')
 

@@ -44,7 +44,6 @@ from datetime import datetime
 
 import click
 import click_log
-from celery.bin.celery import CeleryCommand
 from flask import current_app
 ~~from flask.cli import FlaskGroup, ScriptInfo, with_appcontext
 from flask_alembic import alembic_click
@@ -115,8 +114,6 @@ The code is open sourced under the
 ```python
 # util.py
 
-from __future__ import unicode_literals
-
 import traceback
 from importlib import import_module
 
@@ -136,8 +133,8 @@ def _create_app(info):
 ~~class IndicoFlaskGroup(FlaskGroup):
 
     def __init__(self, **extra):
-        super(IndicoFlaskGroup, self).__init__(create_app=_create_app, add_default_commands=False,
-                                               add_version_option=False, set_debug_flag=False, **extra)
+        super().__init__(create_app=_create_app, add_default_commands=False, add_version_option=False,
+                         set_debug_flag=False, **extra)
         self._indico_plugin_commands = None
 
     def _load_plugin_commands(self):
@@ -145,7 +142,7 @@ def _create_app(info):
 
     def _wrap_in_plugin_context(self, plugin, cmd):
         cmd.callback = wrap_in_plugin_context(plugin, cmd.callback)
-        for subcmd in getattr(cmd, 'commands', {}).viewvalues():
+        for subcmd in getattr(cmd, 'commands', {}).values():
             self._wrap_in_plugin_context(plugin, subcmd)
 
     def _get_indico_plugin_commands(self, ctx):
@@ -157,7 +154,7 @@ def _create_app(info):
             ctx.ensure_object(ScriptInfo).load_app()
             cmds = named_objects_from_signal(signals.plugin.cli.send(), plugin_attr='_indico_plugin')
             rv = {}
-            for name, cmd in cmds.viewitems():
+            for name, cmd in cmds.items():
 
 
 ## ... source file continues with no further FlaskGroup examples...

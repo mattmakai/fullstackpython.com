@@ -226,3 +226,8 @@ to try to avoid as you work with the shell or write scripts.
   open new Bash shells. On many systems you can easily cut down the startup
   time for the shell which can be unnecessarily sluggish.
 
+* [Bash HTTP monitoring dashboard](https://raymii.org/s/software/Bash_HTTP_Monitoring_Dashboard.html)
+  ([source code](https://github.com/RaymiiOrg/bash-http-monitoring))
+  is a useful application fully written in Bash shell scripts that
+  monitors the health of one or more websites to make sure they are
+  up and running.

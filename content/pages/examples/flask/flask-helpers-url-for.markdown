@@ -699,7 +699,111 @@ def login_user(user, remember=False, duration=None, force=False, fresh=True):
 ```
 
 
-## Example 9 from flask-restx
+## Example 9 from Flask-Meld
+[Flask-Meld](https://github.com/mikeabrahamsen/Flask-Meld)
+([PyPI package information](https://pypi.org/project/Flask-Meld/))
+allows you to write your front end web code in your back end
+Python code. It does this by adding a `{% meld_scripts %}` tag to
+the Flask template engine and then inserting components written
+in Python scripts created by a developer.
+
+[**Flask-Meld / flask_meld / component.py**](https://github.com/mikeabrahamsen/Flask-Meld/blob/main/flask_meld/./component.py)
+
+```python
+# component.py
+import uuid
+import os
+from importlib.util import module_from_spec, spec_from_file_location
+
+import orjson
+~~from flask import render_template, current_app, url_for
+from bs4 import BeautifulSoup
+from bs4.formatter import HTMLFormatter
+
+
+def convert_to_snake_case(s):
+    s.replace("-", "_")
+    return s
+
+
+def convert_to_camel_case(s):
+    s = convert_to_snake_case(s)
+    return "".join(word.title() for word in s.split("_"))
+
+
+def get_component_class(component_name):
+    module_name = convert_to_snake_case(component_name)
+    class_name = convert_to_camel_case(module_name)
+    module = get_component_module(module_name)
+    component_class = getattr(module, class_name)
+
+    return component_class
+
+
+def get_component_module(module_name):
+
+
+## ... source file abbreviated to get to url_for examples ...
+
+
+        context_variables = {}
+        context_variables.update(context["attributes"])
+        context_variables.update(context["methods"])
+        context_variables.update(data)
+        context_variables.update({"form": self._form})
+
+        frontend_context_variables = {}
+        frontend_context_variables.update(context["attributes"])
+        frontend_context_variables = orjson.dumps(frontend_context_variables).decode(
+            "utf-8"
+        )
+        rendered_template = render_template(
+            f"meld/{component_name}.html", **context_variables
+        )
+
+        soup = BeautifulSoup(rendered_template, features="html.parser")
+        root_element = Component._get_root_element(soup)
+        root_element["meld:id"] = str(self.id)
+        root_element["meld:data"] = frontend_context_variables
+        self._set_values(root_element, context_variables)
+
+        script = soup.new_tag("script", type="module")
+        init = {"id": str(self.id), "name": component_name, "data": data}
+        init = orjson.dumps(init).decode("utf-8")
+
+~~        meld_url = url_for("static", filename="meld/meld.js")
+        meld_import = f'import {{Meld}} from ".{meld_url}";'
+        script.string = f"{meld_import} Meld.componentInit({init});"
+        root_element.append(script)
+
+        rendered_template = Component._desoupify(soup)
+
+        return rendered_template
+
+    def _set_values(self, soup, context_variables):
+        for element in soup.find_all(attrs={'meld:model': True}):
+            element.attrs["value"] = context_variables[
+                element.attrs["meld:model"]
+            ]
+
+    @staticmethod
+    def _get_root_element(soup):
+        for element in soup.contents:
+            if element.name:
+                return element
+
+        raise Exception("No root element found")
+
+    @staticmethod
+    def _desoupify(soup):
+
+
+## ... source file continues with no further url_for examples...
+
+```
+
+
+## Example 10 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -754,7 +858,7 @@ def ui_for(api):
 ```
 
 
-## Example 10 from flaskSaaS
+## Example 11 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -895,7 +999,7 @@ def reset(token):
 ```
 
 
-## Example 11 from Flask-Security-Too
+## Example 12 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -1015,7 +1119,7 @@ def get_post_action_redirect(config_key, declared=None):
 ```
 
 
-## Example 12 from Flask-User
+## Example 13 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1164,7 +1268,7 @@ class EmailManager(object):
 ```
 
 
-## Example 13 from Flasky
+## Example 14 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1364,7 +1468,7 @@ db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 ```
 
 
-## Example 14 from Datadog Flask Example App
+## Example 15 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).

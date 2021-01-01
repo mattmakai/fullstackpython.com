@@ -49,7 +49,6 @@ from flask_babel import lazy_gettext as _
 from flask_jwt_extended import current_user as current_user_jwt
 from flask_jwt_extended import JWTManager
 from flask_login import current_user, LoginManager
-from flask_openid import OpenID
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from .api import SecurityApi
@@ -69,6 +68,7 @@ from .views import (
     RegisterUserModelView,
     ResetMyPasswordView,
     ResetPasswordView,
+    RoleModelView,
 
 
 ## ... source file abbreviated to get to g examples ...
@@ -541,11 +541,11 @@ from base64 import b64decode
 from functools import wraps
 from hashlib import md5
 from random import Random, SystemRandom
-~~from flask import request, make_response, session, g
+~~from flask import request, make_response, session, g, Response
 from werkzeug.datastructures import Authorization
 from werkzeug.security import safe_str_cmp
 
-__version__ = '4.1.1dev'
+__version__ = '4.2.1dev'
 
 
 class HTTPAuth(object):
@@ -642,7 +642,6 @@ class HTTPBasicAuth(HTTPAuth):
 ## ... source file abbreviated to get to g examples ...
 
 
-            def decorated(*args, **kwargs):
                 selected_auth = None
                 if 'Authorization' in request.headers:
                     try:
@@ -657,8 +656,9 @@ class HTTPBasicAuth(HTTPAuth):
                                 break
                 if selected_auth is None:
                     selected_auth = self.main_auth
-                return selected_auth.login_required(role=role)(f)(
-                    *args, **kwargs)
+                return selected_auth.login_required(role=role,
+                                                    optional=optional
+                                                    )(f)(*args, **kwargs)
             return decorated
 
         if f:
@@ -1109,8 +1109,6 @@ The code is open sourced under the
 ```python
 # config.py
 
-from __future__ import absolute_import, unicode_literals
-
 import ast
 import codecs
 import os
@@ -1151,7 +1149,7 @@ DEFAULTS = {
 ## ... source file abbreviated to get to g examples ...
 
 
-class IndicoConfig(object):
+class IndicoConfig:
 
     __slots__ = ('_config', '_exc')
 
@@ -1176,7 +1174,7 @@ class IndicoConfig(object):
 
     @property
     def IMAGES_BASE_URL(self):
-~~        return 'static/images' if g.get('static_site') else url_parse('{}/images'.format(self.BASE_URL)).path
+~~        return 'static/images' if g.get('static_site') else url_parse(f'{self.BASE_URL}/images').path
 
     @property
     def LATEX_ENABLED(self):

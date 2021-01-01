@@ -19,7 +19,7 @@ and
 <a href="/flask-views-http-method-funcs-examples.html">http_method_funcs</a>
 are a couple of other callables within the `flask.views` package that also have code examples.
 
-You should read up on these subjects along with these `MethodView` examples:
+These topics are also useful while reading the `MethodView` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)
@@ -130,7 +130,7 @@ logger = logging.getLogger(__name__)
                     identifier=form.login.data, secret=form.password.data
                 )
                 login_user(user, remember=form.remember_me.data)
-                return redirect_or_next(url_for("forum.index"))
+                return redirect_or_next(url_for("forum.index"), False)
             except StopAuthentication as e:
                 flash(e.reason, "danger")
             except Exception:

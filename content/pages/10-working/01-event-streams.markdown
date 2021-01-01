@@ -54,4 +54,5 @@ keep up with the constant flood of data from the source of an event stream.
   is specific to AWS Kinesis but it explains how Amazon uses event
   streams at scale to run and coordinate a significant number of their 
   services. When their event streams service went down... it took a
-  whole lot of other stuff down at the same time.
+  whole lot of other stuff down at the same time. There is also some 
+  [additional analysis in this post by an independent developer](https://ryanfrantz.com/posts/aws-kinesis-outage-analysis.html).

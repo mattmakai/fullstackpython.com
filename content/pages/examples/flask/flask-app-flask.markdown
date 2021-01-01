@@ -19,7 +19,7 @@ application's functionality, including URL rounting,
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-You should read up on these subjects along with these `Flask` examples:
+These subjects go along with the `Flask` code examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -88,34 +88,82 @@ as-is to run CTF events, or modified for custom rules for related
 scenarios. CTFd is open sourced under the
 [Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
 
-[**CTFd / manage.py**](https://github.com/CTFd/CTFd/blob/master/././manage.py)
+[**CTFd / tests / test_themes.py**](https://github.com/CTFd/CTFd/blob/master/./tests/test_themes.py)
 
 ```python
-# manage.py
-~~from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_script import Manager
-from flask_migrate import Migrate, MigrateCommand
-from CTFd import create_app
-from CTFd.utils import get_config as get_config_util, set_config as set_config_util
-from CTFd.models import *
+# test_themes.py
 
-app = create_app()
+from flask import request
+from jinja2.sandbox import SecurityError
+from werkzeug.test import Client
 
-manager = Manager(app)
-manager.add_command("db", MigrateCommand)
+from CTFd.utils import get_config
+from tests.helpers import create_ctfd, destroy_ctfd, gen_user, login_as_user
 
 
-def jsenums():
-    from CTFd.constants import JS_ENUMS
-    import json
-    import os
+def test_themes_run_in_sandbox():
+    app = create_ctfd()
+    with app.app_context():
+        try:
+            app.jinja_env.from_string(
+                "{{ ().__class__.__bases__[0].__subclasses__()[40]('./test_utils.py').read() }}"
+            ).render()
+        except SecurityError:
+            pass
+        except Exception as e:
+            raise e
+    destroy_ctfd(app)
 
-    path = os.path.join(app.root_path, "themes/core/assets/js/constants.js")
 
-    with open(path, "w+") as f:
-        for k, v in JS_ENUMS.items():
-            f.write("const {} = Object.freeze({});".format(k, json.dumps(v)))
+def test_themes_cant_access_configpy_attributes():
+    app = create_ctfd()
+    with app.app_context():
+        assert app.config["SECRET_KEY"] == "AAAAAAAAAAAAAAAAAAAA"
+        assert (
+            app.jinja_env.from_string("{{ get_config('SECRET_KEY') }}").render()
+            != app.config["SECRET_KEY"]
+        )
+    destroy_ctfd(app)
+
+
+def test_themes_escape_html():
+
+
+## ... source file abbreviated to get to Flask examples ...
+
+
+
+            r = client.get("/challenges")
+            assert r.status_code == 200
+            assert "Challenges" in r.get_data(as_text=True)
+
+            r = client.get("/scoreboard")
+            assert r.status_code == 200
+            assert "Scoreboard" in r.get_data(as_text=True)
+    destroy_ctfd(app)
+
+
+def test_that_request_path_hijacking_works_properly():
+    app = create_ctfd(setup=False, application_root="/ctf")
+    assert app.request_class.__name__ == "CTFdRequest"
+    with app.app_context():
+        with app.test_request_context("/challenges"):
+            assert request.path == "/ctf/challenges"
+    destroy_ctfd(app)
+
+    app = create_ctfd()
+    assert app.request_class.__name__ == "CTFdRequest"
+    with app.app_context():
+        with app.test_request_context("/challenges"):
+            assert request.path == "/challenges"
+
+~~        from flask import Flask
+
+~~        test_app = Flask("test")
+        assert test_app.request_class.__name__ == "Request"
+        with test_app.test_request_context("/challenges"):
+            assert request.path == "/challenges"
+    destroy_ctfd(app)
 
 
 
@@ -215,7 +263,6 @@ from sqlalchemy import event
 from sqlalchemy.engine import Engine
 from sqlalchemy.exc import OperationalError, ProgrammingError
 
-from flaskbb._compat import iteritems, string_types
 from flaskbb.extensions import (alembic, allows, babel, cache, celery, csrf,
                                 db, debugtoolbar, limiter, login_manager, mail,
                                 redis_store, themes, whooshee)
@@ -248,6 +295,7 @@ from .display.navigation import NavigationContentType
 from .forum import views as forum_views  # noqa
 from .management import views as management_views  # noqa
 from .user import views as user_views  # noqa
+
 
 logger = logging.getLogger(__name__)
 
@@ -740,8 +788,8 @@ def on_disconnect():
     disconnected = '/'
 
 
-@socketio.on('connect', namespace='/test')
-def on_connect_test():
+@socketio.event(namespace='/test')
+def connect():
     send('connected-test')
 
 
@@ -789,10 +837,15 @@ def on_connect_test():
         self.assertEqual(len(received), 1)
         self.assertEqual(received[0]['args'], {'connected': 'foo'})
 
-
-if __name__ == '__main__':
-    unittest.main()
-
+    def test_encode_decode(self):
+        client = socketio.test_client(app)
+        client.get_received()
+        data = {'foo': 'bar', 'invalid': socketio}
+        self.assertRaises(TypeError, client.emit, 'my custom event', data,
+                          callback=True)
+        data = {'foo': 'bar'}
+        ack = client.emit('my custom event', data, callback=True)
+        data['foo'] = 'baz'
 
 
 ## ... source file continues with no further Flask examples...
