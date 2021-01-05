@@ -482,6 +482,18 @@ The project is open sourced under the
 [Encode OSS Ltd. license](https://github.com/encode/django-rest-framework/blob/master/LICENSE.md).
 
 
+### Django Request Token
+[Django Request Token](https://github.com/yunojuno/django-request-token)
+([PyPI package information](https://pypi.org/project/django-request-token/0.13/))
+encapsulates the logic for issuing expiring and one-time tokens
+with a [Django](/django.html) web application to use with protected URLs. 
+Note that [PostgreSQL](/postgresql.html) as your backend
+[database](/databases.html) is a dependency for using this project.
+
+The Django Request Token project is open sourced under the
+[MIT license](https://github.com/yunojuno/django-request-token/blob/master/LICENSE).
+
+
 ### django-rq
 [django-rq](https://github.com/rq/django-rq)
 ([PyPI package information](https://pypi.org/project/django-rq/))

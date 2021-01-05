@@ -15,6 +15,8 @@ on GitHub.
 
 ## 2021
 ### January
+* Published a new blog post on
+  [Using Django & AssemblyAI for More Accurate Twilio Call Transcriptions](/blog/django-accurate-twilio-voice-transcriptions.html).
 * Updated 
   [Flask extension projects and example code](/flask-extensions-plug-ins-related-libraries.html).
 * Happy New Year!
