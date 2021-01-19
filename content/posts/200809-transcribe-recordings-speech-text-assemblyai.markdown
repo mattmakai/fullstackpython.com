@@ -3,7 +3,7 @@ slug: transcribe-recordings-speech-text-assemblyai
 meta: Learn to transcribe speech in recordings like MP3s into text with Python and AssemblyAI's API.
 category: post
 date: 2020-08-09
-modified: 2020-08-30
+modified: 2021-01-18
 newsletter: False
 headerimage: /img/headers/python-assemblyai.jpg
 headeralt: Logos for the implementations used in this blog post. Copyright their respective owners.
@@ -137,7 +137,7 @@ Create a new directory named `pytranscribe` to store these files as
 we write them. Then change into the new project directory.
 
 ```
-mkdir pytranscibe
+mkdir pytranscribe
 cd pytranscribe
 ```
 
