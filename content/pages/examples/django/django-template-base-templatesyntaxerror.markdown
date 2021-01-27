@@ -1,14 +1,27 @@
 title: django.template.base TemplateSyntaxError Example Code
 category: page
 slug: django-template-base-templatesyntaxerror-examples
-sortorder: 500011369
+sortorder: 500011375
 toc: False
 sidebartitle: django.template.base TemplateSyntaxError
-meta: Python example code for the TemplateSyntaxError class from the django.template.base module of the Django project.
+meta: Example code for understanding how to use the TemplateSyntaxError class from the django.template.base module of the Django project.
 
 
-TemplateSyntaxError is a class within the django.template.base module of the Django project.
+`TemplateSyntaxError` is a class within the `django.template.base` module of the Django project.
 
+<a href="/django-template-base-context-examples.html">Context</a>,
+<a href="/django-template-base-filterexpression-examples.html">FilterExpression</a>,
+<a href="/django-template-base-node-examples.html">Node</a>,
+<a href="/django-template-base-nodelist-examples.html">NodeList</a>,
+<a href="/django-template-base-parser-examples.html">Parser</a>,
+<a href="/django-template-base-template-examples.html">Template</a>,
+<a href="/django-template-base-textnode-examples.html">TextNode</a>,
+<a href="/django-template-base-token-examples.html">Token</a>,
+<a href="/django-template-base-tokentype-examples.html">TokenType</a>,
+<a href="/django-template-base-variabledoesnotexist-examples.html">VariableDoesNotExist</a>,
+<a href="/django-template-base-variablenode-examples.html">VariableNode</a>,
+and <a href="/django-template-base-token-kwargs-examples.html">token_kwargs</a>
+are several other callables with code examples from the same `django.template.base` package.
 
 ## Example 1 from django-sitetree
 [django-sitetree](https://github.com/idlesign/django-sitetree)

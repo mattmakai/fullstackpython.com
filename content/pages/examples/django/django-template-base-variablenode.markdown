@@ -1,14 +1,27 @@
 title: django.template.base VariableNode Example Code
 category: page
 slug: django-template-base-variablenode-examples
-sortorder: 500011374
+sortorder: 500011380
 toc: False
 sidebartitle: django.template.base VariableNode
-meta: Python example code for the VariableNode class from the django.template.base module of the Django project.
+meta: Example code for understanding how to use the VariableNode class from the django.template.base module of the Django project.
 
 
-VariableNode is a class within the django.template.base module of the Django project.
+`VariableNode` is a class within the `django.template.base` module of the Django project.
 
+<a href="/django-template-base-context-examples.html">Context</a>,
+<a href="/django-template-base-filterexpression-examples.html">FilterExpression</a>,
+<a href="/django-template-base-node-examples.html">Node</a>,
+<a href="/django-template-base-nodelist-examples.html">NodeList</a>,
+<a href="/django-template-base-parser-examples.html">Parser</a>,
+<a href="/django-template-base-template-examples.html">Template</a>,
+<a href="/django-template-base-templatesyntaxerror-examples.html">TemplateSyntaxError</a>,
+<a href="/django-template-base-textnode-examples.html">TextNode</a>,
+<a href="/django-template-base-token-examples.html">Token</a>,
+<a href="/django-template-base-tokentype-examples.html">TokenType</a>,
+<a href="/django-template-base-variabledoesnotexist-examples.html">VariableDoesNotExist</a>,
+and <a href="/django-template-base-token-kwargs-examples.html">token_kwargs</a>
+are several other callables with code examples from the same `django.template.base` package.
 
 ## Example 1 from django-angular
 [django-angular](https://github.com/jrief/django-angular)
@@ -126,8 +139,6 @@ from django.template import TemplateSyntaxError, NodeList, Variable, Context, Te
 from django.template.loader import get_template
 from django.template.loader_tags import BlockNode, ExtendsNode, IncludeNode
 
-from six import string_types
-
 from sekizai.helpers import get_varname
 
 from cms.exceptions import DuplicatePlaceholderWarning
@@ -147,6 +158,8 @@ def get_context():
         context.template = Template('')
         return context
     else:
+        return {}
+
 
 
 ## ... source file continues with no further VariableNode examples...
