@@ -189,10 +189,6 @@ representing a person could have a property of "female" or "male".
 * [CAP Theorem overview](http://natishalom.typepad.com/nati_shaloms_blog/2010/10/nocap.html)
   presents the basic constraints all databases must trade off in operation.
 
-* This post on [What is a NoSQL database? Learn By Writing One in Python](http://jeffknupp.com/blog/2014/09/01/what-is-a-nosql-database-learn-by-writing-one-in-python/)
-  is a detailed article that breaks the mystique behind what some forms
-  of NoSQL databases are doing under the covers.
-
 * The [CAP Theorem series](http://blog.thislongrun.com/2015/03/the-cap-theorem-series.html)
   explains concepts related to NoSQL such as what is ACID compared to CAP, CP
   versus CA and high availability in large scale deployments.

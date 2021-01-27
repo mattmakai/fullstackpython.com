@@ -592,6 +592,22 @@ under the
 [MIT license](https://github.com/yunojuno/django-user-visit/blob/master/LICENSE).
 
 
+### django-version-checks
+[django-version-checks](https://github.com/adamchainz/django-version-checks)
+([PyPI package](https://pypi.org/project/django-version-checks/))
+is a code library to ensure external system dependencies match
+desired versions. For example, a specific version of 
+[PostgreSQL](/postgresql.html) or [MySQL](/mysql.html) as your database
+backend. This is different from using `pip` and a `requirements.txt` file,
+because those are Python dependencies, rather than system-wide software.
+The 
+[introductory blog post](https://adamj.eu/tech/2020/12/14/introducing-django-version-checks/)
+for the project has some good reasons why these external dependencies
+can cause problems if they vary from the expected versions.
+
+django-version-checks is provided as open source under the
+[MIT license](https://github.com/adamchainz/django-version-checks/blob/master/LICENSE).
+
 ### django-webshell
 [django-webshell](https://github.com/onrik/django-webshell) is an extension
 for executing arbitrary code in the 

@@ -205,9 +205,6 @@ combined with the example real-world projects listed in the next section.
   is a killer Flask tutorial with all the code needed to create a
   web app that can dial phones and receive inbound calls.
 
-* Jeff Knupp provides some solid advice on how to 
-  [productionize a Flask app](http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/).
-
 * If you're looking for a fun tutorial with Flask and WebSockets, check out
   my blog post on creating 
   [Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html).

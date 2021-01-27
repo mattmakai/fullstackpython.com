@@ -108,9 +108,6 @@ Dictionary comprehension:
 * Armin Roacher presented [things you didn't know about Python](https://speakerdeck.com/mitsuhiko/didntknow)
   at PyCon South Africa in 2012.
 
-* [Writing idiomatic Python](http://www.jeffknupp.com/blog/2012/10/04/writing-idiomatic-python/)
-  is a guide for writing Pythonic code.
-
 
 ### Python ecosystem resources
 There's an entire page on [best Python resources](/best-python-resources.html)

@@ -70,10 +70,6 @@ Python-specific applications.
   is a detailed tutorial for using the nose test runner for ensuring a
   Flask application is working properly.
 
-* [Understanding unit testing](https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/)
-  explains why testing is important and shows how to do it effectively in
-  your applications.
-
 * [Unit testing with Python](http://www.drdobbs.com/testing/unit-testing-with-python/240165163)
   provides a high-level overview of testing and has diagrams to demonstrate
   what's going on in the testing cycle.

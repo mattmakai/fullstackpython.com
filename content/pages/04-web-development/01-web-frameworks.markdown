@@ -150,10 +150,6 @@ frameworks, templating engines and
   I agree although I've found sessions and database ORMs to be a helpful
   part of a framework when done well.
 
-* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
-  is an in-depth explanation of what web frameworks are and their relation
-  to web servers.
-
 * [Django vs Flask vs Pyramid: Choosing a Python Web Framework](https://www.airpair.com/python/posts/django-flask-pyramid)
   contains background information and code comparisons for similar
   web applications built in these three big Python frameworks.
