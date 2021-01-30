@@ -333,6 +333,18 @@ The django-jsonfield project is open source under the
 [MIT license](https://github.com/dmkoch/django-jsonfield/blob/master/LICENSE).
 
 
+### django-linear-migrations
+[django-linear-migrations](https://github.com/adamchainz/django-linear-migrations)
+([PyPI package information](https://pypi.org/project/django-linear-migrations/))
+is a [Django](/django.html) code library to mitigate conflicting database
+migrations, which can cause non-deterministic behavior in different
+environments. The 
+[introductory blog post by the package author](https://adamj.eu/tech/2020/12/10/introducing-django-linear-migrations/)
+does a good job of explaining the problem and how this library prevents
+the issue. This library is open sourced under the
+[MIT license](https://github.com/adamchainz/django-linear-migrations/blob/master/LICENSE).
+
+
 ### django-loginas
 [django-loginas](https://github.com/skorokithakis/django-loginas)
 ([PyPI package information](https://pypi.org/project/django-loginas/))
@@ -607,6 +619,7 @@ can cause problems if they vary from the expected versions.
 
 django-version-checks is provided as open source under the
 [MIT license](https://github.com/adamchainz/django-version-checks/blob/master/LICENSE).
+
 
 ### django-webshell
 [django-webshell](https://github.com/onrik/django-webshell) is an extension
