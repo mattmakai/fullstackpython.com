@@ -90,14 +90,14 @@ but it'll make most developers' lives easier in many cases.
 
 
 ### Comparing web frameworks
+[Talk Python to Me had a podcast episode](https://talkpython.fm/episodes/show/149/4-python-web-frameworks-compared) 
+with a detailed comparison of the [Django](/django.html), 
+[Flask](/flask.html), Tornado and [Pyramid](/pyramid.html) frameworks.
+
 Are you curious about how the code in a Django project is structured compared 
 with Flask? Check out 
 [this Django web application tutorial](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-python-django)
 and then view [the same application built with Flask](https://www.twilio.com/docs/sms/tutorials/appointment-reminders-python-flask).
-
-[Talk Python to Me had a podcast episode](https://talkpython.fm/episodes/show/149/4-python-web-frameworks-compared) 
-with a detailed comparison of the [Django](/django.html), 
-[Flask](/flask.html), Tornado and [Pyramid](/pyramid.html) frameworks.
 
 There is also a repository called
 [compare-python-web-frameworks](https://github.com/mattmakai/compare-python-web-frameworks)
@@ -111,6 +111,18 @@ frameworks, templating engines and
   is an awesome way to learn how the [WSGI](/wsgi-servers.html) works
   and the many other pieces that combine to make web frameworks useful
   to web developers.
+
+* [12 requests per second](https://suade.org/dev/12-requests-per-second-with-python/)
+  examines how the traditionally synchronous web framework
+  [Flask](/flask.html) compares to an async framework like 
+  [Sanic](/sanic.html) in an artificial, simple benchmark. The
+  results make it look like Sanic is far faster than Flask, but
+  once you add even a basic amount of functionality to a
+  project, including [databasel](/databases.html) queries
+  and templating, the results even out. Miguel Grinberg
+  also has a great read with broader results in this
+  article asking readers to 
+  [Ignore All Web Performance Benchmarks, Including This One](https://blog.miguelgrinberg.com/post/ignore-all-web-performance-benchmarks-including-this-one).
 
 * When you are learning how to use one or more web frameworks it's helpful
   to have an idea of what the code under the covers is doing. This post on
