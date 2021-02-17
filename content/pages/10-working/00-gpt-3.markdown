@@ -139,10 +139,20 @@ is trained.
   with its strengths and weaknesses.
 
 
+
 ## GPT-3 tutorials
 * [Building a Chatbot with OpenAI's GPT-3 engine, Twilio SMS and Python](https://www.twilio.com/blog/openai-gpt-3-chatbot-python-twilio-sms)
   is a step-by-step tutorial for using GPT-3 as a smart backend
   for an SMS-based chatbot powered by the [Twilio API](/twilio.html).
+
+* [Automating my job by using GPT-3 to generate database-ready SQL to answer business questions](https://blog.seekwell.io/gpt3)
+  walks through how the author created a bridge to translate between 
+  plain English-language questions and 
+  [relational database](/databases.html) SQL. The post provides both 
+  a story for why someone would want to use GPT-3 for this purpose and
+  incremental steps for how the author started and figured out how
+  to make it better. In the end it does not quite work in all scenarios
+  but the proof of concept is impressive and the story is a fun read.
 
 * [gpt-3-experiments](https://github.com/minimaxir/gpt-3-experiments)
   contains Python code open sourced under the MIT license that

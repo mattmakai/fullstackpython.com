@@ -14,6 +14,9 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### February
+* New [GPT-3](/gpt-3.html) resources.
+
 ### January
 * Published a new blog post on
   [Using Django & AssemblyAI for More Accurate Twilio Call Transcriptions](/blog/django-accurate-twilio-voice-transcriptions.html).
