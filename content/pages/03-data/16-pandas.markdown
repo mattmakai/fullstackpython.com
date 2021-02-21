@@ -70,6 +70,13 @@ is a data structures and analysis library.
   and charts that show the pay off period broken down by interest and
   principal.
 
+* [Efficiently cleaning text with pandas](https://pbpython.com/text-cleaning.html)
+  provides a really great practical tutorial on different approaches
+  for cleaning a large data set so that you can begin to do your analysis.
+  The tutorial also shows how to use the 
+  [sidetable](https://github.com/chris1610/sidetable) library, which
+  creates summary tables of a DataFrame.
+
 * [tabula-py: Extract table from PDF into Python DataFrame](https://blog.chezo.uno/tabula-py-extract-table-from-pdf-into-python-dataframe-6c7acfa5f302)
   presents how to use the Python wrapper for the 
   [Tabula](https://tabula.technology/) library that makes it easier to

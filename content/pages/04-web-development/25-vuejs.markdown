@@ -34,6 +34,11 @@ rich apps that run in web browsers.
 
 
 ### Vue.js resources
+* [Building web apps with Vue and Django](https://dafoster.net/articles/2021/02/16/building-web-apps-with-vue-and-django-the-ultimate-guide/)
+  covers architectural decisions such as whether to use one or
+  two servers and then explains how to go down the one server
+  route with a [Django](/django.html) back end.
+
 * [A friendly introduction to Vue.js](https://appendto.com/2016/11/a-friendly-introduction-to-vue-js/)
   contains the code and brief explanations of what it's doing so you can
   learn to create your first Vue app.
