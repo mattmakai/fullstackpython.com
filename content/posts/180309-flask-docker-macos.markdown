@@ -106,8 +106,15 @@ EXPOSE 80
 CMD ["python", "app.py"]
 ```
 
-Save the Dockerfile so that we can run our next command with the completed
-contents of the file. On the commandline run:
+We will need to create one more file before we can create our image, 
+this is the `requirements.txt`. Create this file within the same directory as
+our Dockerfile:
+
+```
+flask==1.0.2
+```
+Save the Dockerfile and requirements.txt so that we can run our next command with the completed
+contents of the files. On the commandline run:
 
 ```
 docker build -t flaskdock .
@@ -161,15 +168,10 @@ The above 7 lines of code (not counting blank PEP8-compliant lines) in
 allow our application to return a simple message when run with the 
 Flask development server.
 
-We need just one more file to specify our `Flask` dependency. Create 
-a `requirements.txt` file within the same directory as `app.py`:
 
-```
-flask==1.0.2
-```
-
-Make sure both the `app.py` and `requirements.txt` file are saved then
-we can give the code a try.
+Make sure the `app.py` and `requirements.txt` file are saved then
+we can give the code a try. If the requirements have not been set when creating your image,
+you may need to run our docker build command again so that flask is available. 
 
 
 ## Running the Container
@@ -184,7 +186,7 @@ docker run -p 5000:80 --volume=/Users/matt/devel/py/flaskdocker:/app flaskdock
 
 If you receive the error 
 `python: can't open file 'app.py': [Errno 2] No such file or directory` then
-you likely forgot to chance `/Users/matt/devel/py/flaskdocker` to the 
+you likely forgot to change `/Users/matt/devel/py/flaskdocker` to the 
 directory where your project files, especially `app.py`, are located.
 
 
