@@ -14,6 +14,9 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### March
+* New [webhook](/webhooks.html) resource.
+
 ### February
 * New [GPT-3](/gpt-3.html) resources.
 

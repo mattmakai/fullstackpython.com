@@ -23,6 +23,12 @@ otherwise independent web applications.
 
 
 ### Webhook resources
+* [Building Webhooks Into Your Application: Guidelines and Best Practices](https://workos.com/blog/building-webhooks-into-your-application-guidelines-and-best-practices)
+  is an extensive high-level guide that defines what webhooks are, why you
+  will want to build them if you need to proactively notify other applications
+  of events, and what security considerations you need to have when
+  creating them.
+
 * [What's a webhook?](https://sendgrid.com/blog/whats-webhook/) is a high-level
   explanation of this concept that also contains some basic security 
   considerations when using them.
