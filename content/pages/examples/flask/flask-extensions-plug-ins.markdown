@@ -54,6 +54,17 @@ is provided as open source under the
 [Apache 2.0 license](https://github.com/johnwheeler/flask-ask/blob/master/LICENSE.txt).
 
 
+### Flask-Authorize
+[Flask-Authorize](https://github.com/bprinty/Flask-Authorize) 
+([documentation](https://flask-authorize.readthedocs.io/en/latest/)
+and
+[PyPI package](https://pypi.org/project/Flask-Authorize/))
+is a [Flask](/flask.html) extension to make it easier to implement
+Access Control Lists (ACLs) and Role-Based Access Control (RBAC) into 
+web applications. The project is open sourced under the
+[MIT license](https://github.com/bprinty/Flask-Authorize/blob/master/LICENSE).
+
+
 ### flask-base
 [flask-base](https://github.com/hack4impact/flask-base) 
 ([project documentation](http://hack4impact.github.io/flask-base/))
