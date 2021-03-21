@@ -20,14 +20,117 @@ the `.templating` part.
 <a href="/flask-templating-render-template-examples.html">render_template</a>
 is another callable from the `flask.templating` package with code examples.
 
-You should read up on these subjects along with these `render_template_string` examples:
+These topics are also useful while reading the `render_template_string` examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
 * [Cascading Style Sheets (CSS)](/cascading-style-sheets.html) and [web design](/web-design.html)
 
 
-## Example 1 from Flask-User
+## Example 1 from CTFd
+[CTFd](https://github.com/CTFd/CTFd)
+([homepage](https://ctfd.io/)) is a
+[capture the flag (CTF) hacking web app](https://cybersecurity.att.com/blogs/security-essentials/capture-the-flag-ctf-what-is-it-for-a-newbie)
+built with [Flask](/flask.html). The application can be used
+as-is to run CTF events, or modified for custom rules for related
+scenarios. CTFd is open sourced under the
+[Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
+
+[**CTFd / tests / test_themes.py**](https://github.com/CTFd/CTFd/blob/master/./tests/test_themes.py)
+
+```python
+# test_themes.py
+
+import os
+import shutil
+
+import pytest
+~~from flask import render_template, render_template_string, request
+from jinja2.exceptions import TemplateNotFound
+from jinja2.sandbox import SecurityError
+from werkzeug.test import Client
+
+from CTFd.config import TestingConfig
+from CTFd.utils import get_config, set_config
+from tests.helpers import create_ctfd, destroy_ctfd, gen_user, login_as_user
+
+
+def test_themes_run_in_sandbox():
+    app = create_ctfd()
+    with app.app_context():
+        try:
+            app.jinja_env.from_string(
+                "{{ ().__class__.__bases__[0].__subclasses__()[40]('./test_utils.py').read() }}"
+            ).render()
+        except SecurityError:
+            pass
+        except Exception as e:
+            raise e
+    destroy_ctfd(app)
+
+
+def test_themes_cant_access_configpy_attributes():
+
+
+## ... source file abbreviated to get to render_template_string examples ...
+
+
+                r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            except TemplateNotFound:
+                pass
+    destroy_ctfd(app)
+
+    class ThemeFallbackConfig(TestingConfig):
+        THEME_FALLBACK = True
+
+    app = create_ctfd(config=ThemeFallbackConfig)
+    with app.app_context():
+        set_config("ctf_theme", "foo")
+        assert app.config["THEME_FALLBACK"] == True
+        with app.test_client() as client:
+            r = client.get("/")
+            assert r.status_code == 200
+            r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            assert r.status_code == 200
+    destroy_ctfd(app)
+
+    os.rmdir(os.path.join(app.root_path, "themes", "foo"))
+
+
+def test_theme_template_loading_by_prefix():
+    app = create_ctfd()
+    with app.test_request_context():
+~~        tpl1 = render_template_string("{% extends 'core/page.html' %}", content="test")
+        tpl2 = render_template("page.html", content="test")
+        assert tpl1 == tpl2
+
+
+def test_theme_template_disallow_loading_admin_templates():
+    app = create_ctfd()
+    with app.app_context():
+        try:
+            filename = os.path.join(
+                app.root_path, "themes", "foo", "admin", "malicious.html"
+            )
+            os.makedirs(os.path.dirname(filename), exist_ok=True)
+            with open(filename, "w") as f:
+                f.write("malicious")
+
+            with pytest.raises(TemplateNotFound):
+~~                render_template_string("{% include 'admin/malicious.html' %}")
+        finally:
+            shutil.rmtree(
+                os.path.join(app.root_path, "themes", "foo"), ignore_errors=True
+            )
+
+
+
+## ... source file continues with no further render_template_string examples...
+
+```
+
+
+## Example 2 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -130,7 +233,7 @@ class ConfigClass(object):
 ```
 
 
-## Example 2 from Datadog Flask Example App
+## Example 3 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).

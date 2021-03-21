@@ -129,11 +129,17 @@ scenarios. CTFd is open sourced under the
 ```python
 # test_themes.py
 
-~~from flask import request
+import os
+import shutil
+
+import pytest
+~~from flask import render_template, render_template_string, request
+from jinja2.exceptions import TemplateNotFound
 from jinja2.sandbox import SecurityError
 from werkzeug.test import Client
 
-from CTFd.utils import get_config
+from CTFd.config import TestingConfig
+from CTFd.utils import get_config, set_config
 from tests.helpers import create_ctfd, destroy_ctfd, gen_user, login_as_user
 
 
@@ -152,8 +158,6 @@ def test_themes_run_in_sandbox():
 
 
 def test_themes_cant_access_configpy_attributes():
-    app = create_ctfd()
-    with app.app_context():
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -199,6 +203,28 @@ def test_that_request_path_hijacking_works_properly():
         assert test_app.request_class.__name__ == "Request"
         with test_app.test_request_context("/challenges"):
 ~~            assert request.path == "/challenges"
+    destroy_ctfd(app)
+
+
+def test_theme_fallback_config():
+    app = create_ctfd()
+    try:
+        os.mkdir(os.path.join(app.root_path, "themes", "foo"))
+    except OSError:
+        pass
+
+    with app.app_context():
+        set_config("ctf_theme", "foo")
+        assert app.config["THEME_FALLBACK"] == False
+        with app.test_client() as client:
+            try:
+                r = client.get("/")
+            except TemplateNotFound:
+                pass
+            try:
+                r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            except TemplateNotFound:
+                pass
     destroy_ctfd(app)
 
 
@@ -1466,9 +1492,10 @@ class HTTPAuth(object):
         return login_required_internal
 
     def username(self):
-~~        if not request.authorization:
+        auth = self.get_auth()
+        if not auth:
             return ""
-~~        return request.authorization.username
+        return auth.username
 
     def current_user(self):
         if hasattr(g, 'flask_httpauth_user'):
@@ -1500,9 +1527,14 @@ class HTTPBasicAuth(HTTPAuth):
             username, password = b64decode(credentials).split(b':', 1)
         except (ValueError, TypeError):
             return None
+        try:
+            username = username.decode('utf-8')
+            password = password.decode('utf-8')
+        except UnicodeDecodeError:
+            username = None
+            password = None
         return Authorization(
-            scheme, {'username': username.decode('utf-8'),
-                     'password': password.decode('utf-8')})
+            scheme, {'username': username, 'password': password})
 
     def authenticate(self, auth, stored_password):
         if auth:
@@ -1514,11 +1546,6 @@ class HTTPBasicAuth(HTTPAuth):
         if self.verify_password_callback:
             return self.verify_password_callback(username, client_password)
         if not auth:
-            return
-        if self.hash_password_callback:
-            try:
-                client_password = self.hash_password_callback(client_password)
-            except TypeError:
 
 
 ## ... source file abbreviated to get to request examples ...
@@ -2735,13 +2762,19 @@ The code is open sourced under the
 ```python
 # auth.py
 
+import functools
+
 ~~from flask import current_app, request
 from flask_multipass import InvalidCredentials, Multipass, NoSuchUser
+from werkzeug.local import LocalProxy
 
+from indico.core.config import config
+from indico.core.limiter import make_rate_limiter
 from indico.core.logger import Logger
 
 
 logger = Logger.get('auth')
+login_rate_limiter = LocalProxy(functools.cache(lambda: make_rate_limiter('login', config.FAILED_LOGIN_RATE_LIMIT)))
 
 
 class IndicoMultipass(Multipass):
@@ -2756,16 +2789,11 @@ class IndicoMultipass(Multipass):
 
     @property
     def synced_fields(self):
-        provider = self.sync_provider
-        if provider is None:
-            return set()
-        synced_fields = set(provider.settings.get('synced_fields'))
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
-            self._check_default_provider()
 
     def _check_default_provider(self):
         sync_providers = [p for p in self.identity_providers.values() if p.settings.get('synced_fields')]
@@ -2789,6 +2817,7 @@ class IndicoMultipass(Multipass):
 
     def handle_auth_error(self, exc, redirect_to_login=False):
         if isinstance(exc, (NoSuchUser, InvalidCredentials)):
+            login_rate_limiter.hit()
             logger.warning('Invalid credentials (ip=%s, provider=%s): %s',
 ~~                           request.remote_addr, exc.provider.name if exc.provider else None, exc)
         else:

@@ -918,127 +918,7 @@ class LoginManager(object):
 ```
 
 
-## Example 8 from Flask-Security-Too
-[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
-([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
-[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
-is a maintained fork of the original
-[Flask-Security](https://github.com/mattupstate/flask-security) project that
-makes it easier to add common security features to [Flask](/flask.html)
-web applications. A few of the critical goals of the Flask-Security-Too
-project are ensuring JavaScript client-based single-page applications (SPAs)
-can work securely with Flask-based backends and that guidance by the
-[OWASP](https://owasp.org/) organization is followed by default.
-
-The Flask-Security-Too project is provided as open source under the
-[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
-
-[**Flask-Security-Too / flask_security / utils.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./utils.py)
-
-```python
-# utils.py
-import abc
-import base64
-import datetime
-from functools import partial
-import hashlib
-import hmac
-import time
-from typing import Dict, List
-import warnings
-from datetime import timedelta
-from urllib.parse import parse_qsl, parse_qs, urlsplit, urlunsplit, urlencode
-import urllib.request
-import urllib.error
-
-~~from flask import _request_ctx_stack, current_app, flash, g, request, session, url_for
-from flask.json import JSONEncoder
-from flask_login import login_user as _login_user
-from flask_login import logout_user as _logout_user
-from flask_login import current_user
-from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
-from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
-from flask_wtf import csrf
-from wtforms import ValidationError
-from itsdangerous import BadSignature, SignatureExpired
-from werkzeug.local import LocalProxy
-from werkzeug.datastructures import MultiDict
-
-from .quart_compat import best
-from .signals import user_authenticated
-
-_security = LocalProxy(lambda: current_app.extensions["security"])
-
-_datastore = LocalProxy(lambda: _security.datastore)
-
-_pwd_context = LocalProxy(lambda: _security.pwd_context)
-
-_hashing_context = LocalProxy(lambda: _security.hashing_context)
-
-localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
-
-
-## ... source file abbreviated to get to flash examples ...
-
-
-        string = string.encode("utf-8")
-    return string
-
-
-def hash_data(data):
-    return _hashing_context.hash(encode_string(data))
-
-
-def verify_hash(hashed_data, compare_data):
-    return _hashing_context.verify(encode_string(compare_data), hashed_data)
-
-
-def suppress_form_csrf():
-    if get_request_attr("fs_ignore_csrf"):
-        return {"csrf": False}
-    if (
-        config_value("CSRF_IGNORE_UNAUTH_ENDPOINTS")
-        and not current_user.is_authenticated
-    ):
-        return {"csrf": False}
-    return {}
-
-
-def do_flash(message, category=None):
-    if config_value("FLASH_MESSAGES"):
-~~        flash(message, category)
-
-
-def get_url(endpoint_or_url, qparams=None):
-    try:
-        return transform_url(url_for(endpoint_or_url), qparams)
-    except Exception:
-        if _security.redirect_host:
-            url = transform_url(
-                endpoint_or_url, qparams, netloc=_security.redirect_host
-            )
-        else:
-            url = transform_url(endpoint_or_url, qparams)
-
-        return url
-
-
-def slash_url_suffix(url, suffix):
-
-    return url.endswith("/") and ("%s/" % suffix) or ("/%s" % suffix)
-
-
-def transform_url(url, qparams=None, **kwargs):
-    if not url:
-        return url
-
-
-## ... source file continues with no further flash examples...
-
-```
-
-
-## Example 9 from Flask-User
+## Example 8 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1511,7 +1391,7 @@ class UserManager__Views(object):
 ```
 
 
-## Example 10 from indico
+## Example 9 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1600,7 +1480,7 @@ class ImportRoleMembersMixin:
 ```
 
 
-## Example 11 from tedivms-flask
+## Example 10 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

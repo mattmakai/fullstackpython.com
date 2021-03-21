@@ -55,6 +55,7 @@ from CTFd.constants.config import (
     RegistrationVisibilityTypes,
     ScoreVisibilityTypes,
 )
+from CTFd.constants.themes import DEFAULT_THEME
 from CTFd.models import (
     Admins,
     Files,
@@ -67,15 +68,11 @@ from CTFd.models import (
 )
 from CTFd.utils import config, get_config, set_config
 from CTFd.utils import user as current_user
-from CTFd.utils import validators
 
 
 ## ... source file abbreviated to get to send_file examples ...
 
 
-                    abort(403)
-
-                if team:
                     if team.banned:
                         abort(403)
                 else:
@@ -96,11 +93,13 @@ from CTFd.utils import validators
 
 @views.route("/themes/<theme>/static/<path:path>")
 def themes(theme, path):
-    filename = safe_join(app.root_path, "themes", theme, "static", path)
-    if os.path.isfile(filename):
-~~        return send_file(filename)
-    else:
-        abort(404)
+    for cand_path in (
+        safe_join(app.root_path, "themes", cand_theme, "static", path)
+        for cand_theme in (theme, *config.ctf_theme_candidates())
+    ):
+        if os.path.isfile(cand_path):
+~~            return send_file(cand_path)
+    abort(404)
 
 
 

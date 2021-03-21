@@ -42,7 +42,7 @@ The Flask-Security-Too project is provided as open source under the
 import time
 
 from flask import current_app as app
-~~from flask import abort, after_this_request, request, session
+~~from flask import after_this_request, request, session
 from flask_login import current_user
 from werkzeug.datastructures import MultiDict
 from werkzeug.local import LocalProxy
@@ -97,7 +97,7 @@ def _send_code_helper(form):
     method = form.chosen_method.data
     totp_secrets = _datastore.us_get_totp_secrets(user)
     if method == "email" and method not in totp_secrets:
-~~        after_this_request(_commit)
+~~        after_this_request(view_commit)
         totp_secrets[method] = _security._totp_factory.generate_totp_secret()
         _datastore.us_put_totp_secrets(user, totp_secrets)
 
@@ -152,7 +152,7 @@ def us_signin_send_code():
                         primary_authn_via=form.authn_via,
                     )
 
-~~        after_this_request(_commit)
+~~        after_this_request(view_commit)
         login_user(form.user, remember=remember_me, authn_via=[form.authn_via])
 
         if _security._want_json(request):
@@ -207,7 +207,7 @@ def us_signin_send_code():
         return tf_login(user, primary_authn_via="email")
 
     login_user(user, authn_via=["email"])
-~~    after_this_request(_commit)
+~~    after_this_request(view_commit)
     if _security.redirect_behavior == "spa":
         return redirect(
             get_url(_security.post_login_view, qparams=user.get_redirect_qparams())
@@ -262,7 +262,7 @@ def us_setup():
     form.user = current_user
 
     if form.validate_on_submit():
-~~        after_this_request(_commit)
+~~        after_this_request(view_commit)
         method = state["chosen_method"]
         phone = state["phone_number"] if method == "sms" else None
         _datastore.us_set(current_user, method, state["totp_secret"], phone)

@@ -65,7 +65,6 @@ DEFAULTS = {
     'ATTACHMENT_STORAGE': 'default',
     'AUTH_PROVIDERS': {},
     'BASE_URL': None,
-    'CACHE_BACKEND': 'files',
     'CACHE_DIR': '/opt/indico/cache',
     'CATEGORY_CLEANUP': {},
     'CELERY_BROKER': None,
@@ -77,6 +76,7 @@ DEFAULTS = {
     'CUSTOM_COUNTRIES': {},
     'CUSTOM_LANGUAGES': {},
     'DB_LOG': False,
+    'DEBUG': False,
 
 
 ## ... source file abbreviated to get to ImmutableDict examples ...

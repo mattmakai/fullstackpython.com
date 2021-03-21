@@ -659,7 +659,113 @@ class ManagementOverview(MethodView):
 ```
 
 
-## Example 3 from flaskSaaS
+## Example 3 from Flask-Meld
+[Flask-Meld](https://github.com/mikeabrahamsen/Flask-Meld)
+([PyPI package information](https://pypi.org/project/Flask-Meld/))
+allows you to write your front end web code in your back end
+Python code. It does this by adding a `{% meld_scripts %}` tag to
+the Flask template engine and then inserting components written
+in Python scripts created by a developer.
+
+[**Flask-Meld / flask_meld / component.py**](https://github.com/mikeabrahamsen/Flask-Meld/blob/main/flask_meld/./component.py)
+
+```python
+# component.py
+import os
+import uuid
+from importlib.util import module_from_spec, spec_from_file_location
+
+import orjson
+from bs4 import BeautifulSoup
+from bs4.formatter import HTMLFormatter
+~~from flask import render_template, current_app, jsonify
+
+
+def convert_to_snake_case(s):
+    s.replace("-", "_")
+    return s
+
+
+def convert_to_camel_case(s):
+    s = convert_to_snake_case(s)
+    return "".join(word.title() for word in s.split("_"))
+
+
+def get_component_class(component_name):
+    module_name = convert_to_snake_case(component_name)
+    class_name = convert_to_camel_case(module_name)
+    module = get_component_module(module_name)
+    component_class = getattr(module, class_name)
+
+    return component_class
+
+
+def get_component_module(module_name):
+    user_specified_dir = current_app.config.get("MELD_COMPONENT_DIR", None)
+
+
+
+## ... source file abbreviated to get to jsonify examples ...
+
+
+
+    def render(self, component_name: str):
+        return self._view(component_name)
+
+    def _render_template(self, template_name: str, context_variables: dict):
+        return render_template(template_name, **context_variables)
+
+    def _view(self, component_name: str):
+        data = self._attributes()
+        context = self.__context__()
+        context_variables = {}
+        context_variables.update(context["attributes"])
+        context_variables.update(context["methods"])
+        context_variables.update({"form": self._form})
+
+        rendered_template = self._render_template(
+            f"meld/{component_name}.html", context_variables
+        )
+
+        soup = BeautifulSoup(rendered_template, features="html.parser")
+        root_element = Component._get_root_element(soup)
+        root_element["meld:id"] = str(self.id)
+        self._set_values(root_element, context_variables)
+
+        script = soup.new_tag("script", type="module")
+~~        init = {"id": str(self.id), "name": component_name, "data": jsonify(data).json}
+        init_json = orjson.dumps(init).decode("utf-8")
+
+        meld_import = 'import {Meld} from "/meld_js_src/meld.js";'
+        script.string = f"{meld_import} Meld.componentInit({init_json});"
+        root_element.append(script)
+
+        rendered_template = Component._desoupify(soup)
+
+        return rendered_template
+
+    def _set_values(self, soup, context_variables):
+        for element in soup.select("input,select,textarea"):
+            model_attrs = [
+                attr for attr in element.attrs.keys() if attr.startswith("meld:model")
+            ]
+            if len(model_attrs) > 1:
+                raise Exception(
+                    "Multiple 'meld:model' attributes not allowed on one tag."
+                )
+
+            for model_attr in model_attrs:
+                element.attrs["value"] = context_variables[element.attrs[model_attr]]
+
+    @staticmethod
+
+
+## ... source file continues with no further jsonify examples...
+
+```
+
+
+## Example 4 from flaskSaaS
 [flaskSaas](https://github.com/alectrocute/flaskSaaS) is a boilerplate
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
@@ -709,7 +815,7 @@ def contact():
 ```
 
 
-## Example 4 from Flask-SocketIO
+## Example 5 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -791,7 +897,7 @@ def get_session():
 ```
 
 
-## Example 5 from Datadog Flask Example App
+## Example 6 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -893,7 +999,7 @@ def stream():
 ```
 
 
-## Example 6 from indico
+## Example 7 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -907,14 +1013,18 @@ The code is open sourced under the
 ```python
 # util.py
 
+import hashlib
+import sys
 from datetime import datetime
 
-~~from flask import g, has_request_context, jsonify, render_template, request, session
+from authlib.oauth2 import OAuth2Error
+~~from flask import flash, g, has_request_context, jsonify, render_template, request, session
 from itsdangerous import Signer
 from markupsafe import Markup
-from werkzeug.exceptions import ImATeapot
+from werkzeug.exceptions import BadRequest, Forbidden, ImATeapot
 from werkzeug.urls import url_decode, url_encode, url_parse, url_unparse
 
+from indico.util.caching import memoize_request
 from indico.util.i18n import _
 from indico.web.flask.templating import get_template_module
 
@@ -994,7 +1104,7 @@ def get_request_info(hide_passwords=True):
 ```
 
 
-## Example 7 from keras-flask-deploy-webapp
+## Example 8 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1083,7 +1193,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 8 from sandman2
+## Example 9 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1251,7 +1361,7 @@ class Service(MethodView):
 ```
 
 
-## Example 9 from tedivms-flask
+## Example 10 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

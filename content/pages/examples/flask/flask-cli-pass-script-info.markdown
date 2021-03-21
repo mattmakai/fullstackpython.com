@@ -38,7 +38,6 @@ import click
 from indico.cli.util import IndicoFlaskGroup, LazyGroup
 
 
-click.disable_unicode_literals_warning = True
 __all__ = ('cli_command', 'cli_group')
 
 
@@ -58,6 +57,7 @@ def _get_indico_version(ctx, param, value):
 
 
 @click.group(cls=IndicoFlaskGroup)
+@click.option('--version', '-v', expose_value=False, callback=_get_indico_version, is_flag=True, is_eager=True,
 
 
 ## ... source file abbreviated to get to pass_script_info examples ...

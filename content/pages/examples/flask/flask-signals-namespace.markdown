@@ -108,41 +108,51 @@ from sqlalchemy import event
 from sqlalchemy import inspect
 from sqlalchemy import orm
 from sqlalchemy.engine.url import make_url
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.ext.declarative import DeclarativeMeta
 from sqlalchemy.orm.exc import UnmappedClassError
 from sqlalchemy.orm.session import Session as SessionBase
 
 from .model import DefaultMeta
 from .model import Model
 
-__version__ = "3.0.0.dev"
+try:
+    from sqlalchemy.orm import declarative_base
+    from sqlalchemy.orm import DeclarativeMeta
+except ImportError:
+    from sqlalchemy.ext.declarative import declarative_base
+    from sqlalchemy.ext.declarative import DeclarativeMeta
+
+try:
+    from greenlet import getcurrent as _ident_func
+except ImportError:
+    from threading import get_ident as _ident_func
+
+__version__ = "3.0.0.dev0"
 
 ~~_signals = Namespace()
 models_committed = _signals.signal("models-committed")
 before_models_committed = _signals.signal("before-models-committed")
 
 
+def _sa_url_set(url, **kwargs):
+    try:
+        url = url.set(**kwargs)
+    except AttributeError:
+        for key, value in kwargs.items():
+            setattr(url, key, value)
+
+    return url
+
+
+def _sa_url_query_setdefault(url, **kwargs):
+    query = dict(url.query)
+
+    for key, value in kwargs.items():
+        query.setdefault(key, value)
+
+    return _sa_url_set(url, query=query)
+
+
 def _make_table(db):
-    def _make_table(*args, **kwargs):
-        if len(args) > 1 and isinstance(args[1], db.Column):
-            args = (args[0], db.metadata) + args[1:]
-        info = kwargs.pop("info", None) or {}
-        info.setdefault("bind_key", None)
-        kwargs["info"] = info
-        return sqlalchemy.Table(*args, **kwargs)
-
-    return _make_table
-
-
-def _set_default_query_class(d, cls):
-    if "query_class" not in d:
-        d["query_class"] = cls
-
-
-def _wrap_with_default_query_class(fn, cls):
-    @functools.wraps(fn)
-    def newfn(*args, **kwargs):
 
 
 ## ... source file continues with no further Namespace examples...

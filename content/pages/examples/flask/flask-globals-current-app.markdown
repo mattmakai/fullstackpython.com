@@ -234,7 +234,250 @@ class MenuApiManager(BaseManager):
 ```
 
 
-## Example 3 from FlaskBB
+## Example 3 from Flask-Authorize
+[Flask-Authorize](https://github.com/bprinty/Flask-Authorize)
+([documentation](https://flask-authorize.readthedocs.io/en/latest/)
+and
+[PyPI package](https://pypi.org/project/Flask-Authorize/))
+is a [Flask](/flask.html) extension to make it easier to implement
+Access Control Lists (ACLs) and Role-Based Access Control (RBAC) into
+web applications. The project is open sourced under the
+[MIT license](https://github.com/bprinty/Flask-Authorize/blob/master/LICENSE).
+
+[**Flask-Authorize / flask_authorize / mixins.py**](https://github.com/bprinty/Flask-Authorize/blob/master/flask_authorize/./mixins.py)
+
+```python
+# mixins.py
+
+
+import six
+import re
+import json
+~~from flask import current_app
+from werkzeug.exceptions import Unauthorized
+from sqlalchemy import Column, ForeignKey
+from sqlalchemy.types import Integer, Text
+from sqlalchemy.orm import relationship
+from sqlalchemy.sql import operators
+from sqlalchemy.ext.declarative import declared_attr
+from sqlalchemy import TypeDecorator, inspect, and_, or_
+
+
+class JSON(TypeDecorator):
+    impl = Text
+
+    @property
+    def python_type(self):
+        return object
+
+    def process_bind_param(self, value, dialect):
+        return json.dumps(value)
+
+    def process_result_value(self, value, dialect):
+        try:
+            return json.loads(value)
+        except (ValueError, TypeError):
+            return None
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+                  operators.contains_op):
+            return Text()
+        else:
+            return self
+
+    def process_bind_param(self, value, dialect):
+        if not value:
+            return None
+        return '|'.join(value)
+
+    def process_result_value(self, value, dialect):
+        try:
+            if not value:
+                return []
+            return value.split('|')
+        except (ValueError, TypeError):
+            return None
+
+
+MODELS = dict()
+
+
+def gather_models():
+    global MODELS
+
+~~    from flask import current_app
+~~    if 'sqlalchemy' not in current_app.extensions:
+        return
+~~    check = current_app.config['AUTHORIZE_IGNORE_PROPERTY']
+
+~~    db = current_app.extensions['sqlalchemy'].db
+    for cls in db.Model._decl_class_registry.values():
+        if isinstance(cls, type) and issubclass(cls, db.Model):
+            if hasattr(cls, check) and not getattr(cls, check):
+                continue
+            MODELS[table_key(cls)] = cls
+    return
+
+
+def table_key(cls):
+~~    if current_app.config['AUTHORIZE_MODEL_PARSER'] == 'class':
+        return cls.__name__
+
+~~    elif current_app.config['AUTHORIZE_MODEL_PARSER'] == 'lower':
+        return cls.__name__.lower()
+
+~~    elif current_app.config['AUTHORIZE_MODEL_PARSER'] == 'snake':
+        words = re.findall(r'([A-Z][0-9a-z]+)', cls.__name__)
+        if len(words) > 1:
+            return '_'.join(map(lambda x: x.lower(), words))
+
+~~    elif current_app.config['AUTHORIZE_MODEL_PARSER'] == 'table':
+        mapper = inspect(cls)
+        return mapper.tables[0].name
+
+
+def default_permissions_factory(name):
+    def _(cls=None):
+        perms = default_permissions(cls)
+        return perms.get(name, [])
+    return _
+
+
+def default_permissions(cls=None):
+    if cls is None or cls.__permissions__ is None:
+~~        return current_app.config['AUTHORIZE_DEFAULT_PERMISSIONS']
+    elif isinstance(cls.__permissions__, int):
+        return parse_permission_set(cls.__permissions__)
+    elif isinstance(cls.__permissions__, dict):
+        return cls.__permissions__
+
+
+def default_allowances(cls=None):
+    global MODELS
+    if not MODELS:
+        gather_models()
+
+    default = {
+~~        key: current_app.config['AUTHORIZE_DEFAULT_ALLOWANCES']
+        for key in MODELS
+    }
+
+    if cls is None:
+        return default
+
+    if isinstance(cls.__allowances__, dict):
+        return cls.__allowances__
+
+    return default
+
+
+def default_restrictions(cls=None):
+    global MODELS
+    if not MODELS:
+        gather_models()
+
+    default = {
+~~        key: current_app.config['AUTHORIZE_DEFAULT_RESTRICTIONS']
+        for key in MODELS
+    }
+
+    if cls is None:
+        return default
+
+    if cls.__restrictions__ == '*' or cls.__restrictions__ is True:
+        return {
+~~            key: current_app.config['AUTHORIZE_DEFAULT_ACTIONS']
+            for key in MODELS
+        }
+
+    if isinstance(cls.__restrictions__, dict):
+        default.update(cls.__restrictions__)
+    return default
+
+
+def permission_list(number):
+    if isinstance(number, six.string_types) and len(number) == 1:
+        number = int(number)
+    if not isinstance(number, int):
+        return number
+
+    ret = []
+    for mask, name in zip([1, 2, 4], ['delete', 'read', 'update']):
+        if number & mask:
+            ret.append(name)
+    return ret
+
+
+def parse_permission_set(number):
+    if isinstance(number, six.string_types) and len(number) == 3:
+        number = int(number)
+
+
+## ... source file abbreviated to get to current_app examples ...
+
+
+                    cls.group_id.in_([x.id for x in current_user.groups]),
+                    cls.group_permissions.contains(check)
+                ))
+        return or_(*clauses)
+
+    @property
+    def permissions(self):
+        result = {}
+        for name in ['owner', 'group', 'other']:
+            prop = name + '_permissions'
+            if hasattr(self, prop):
+                result[name] = getattr(self, prop)
+        return result
+
+    @permissions.setter
+    def permissions(self, value):
+        for name in ['owner', 'group', 'other']:
+            if name not in value:
+                continue
+            prop = name + '_permissions'
+            if hasattr(self, prop):
+                setattr(self, prop, value[name])
+        return
+
+    def set_permissions(self, *args, **kwargs):
+~~        if 'authorize' in current_app.extensions:
+~~            authorize = current_app.extensions['authorize']
+            if not authorize.update(self):
+                raise Unauthorized
+
+        if len(args):
+            perms = parse_permission_set(args[0])
+            kwargs.update(perms)
+
+        permissions = self.permissions.copy()
+        permissions.update(kwargs)
+        self.permissions = permissions
+        return self
+
+
+class OwnerMixin(object):
+    __user_model__ = 'User'
+
+    @classmethod
+    def get_user_default(cls):
+        from .plugin import CURRENT_USER
+        return CURRENT_USER().id
+
+    @classmethod
+    def get_user_tablename(cls):
+        if isinstance(cls.__user_model__, str):
+
+
+## ... source file continues with no further current_app examples...
+
+```
+
+
+## Example 4 from FlaskBB
 [FlaskBB](https://github.com/flaskbb/flaskbb)
 ([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
 forum web application. The web app allows users to chat in an open
@@ -377,7 +620,7 @@ class ForgotPassword(MethodView):
 ```
 
 
-## Example 4 from flask-base
+## Example 5 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -484,7 +727,7 @@ class User(UserMixin, db.Model):
 ```
 
 
-## Example 5 from flask-bookshelf
+## Example 6 from flask-bookshelf
 [flask-bookshelf](https://github.com/damyanbogoev/flask-bookshelf) is the
 example [Flask](/flask.html) application that developers create when
 going through
@@ -589,7 +832,7 @@ app.register_blueprint(admin, url_prefix="/<lang_code>/admin")
 ```
 
 
-## Example 6 from Flask-Bootstrap
+## Example 7 from Flask-Bootstrap
 [flask-bootstrap](https://github.com/mbr/flask-bootstrap)
 ([PyPI package information](https://pypi.org/project/Flask-Bootstrap/))
 makes it easier to use the [Bootstrap CSS framework](/bootstrap-css.html)
@@ -713,7 +956,7 @@ class Bootstrap(object):
 ```
 
 
-## Example 7 from flask-debugtoolbar
+## Example 8 from flask-debugtoolbar
 [Flask Debug-toolbar](https://github.com/flask-debugtoolbar/flask-debugtoolbar)
 ([documentation](https://flask-debugtoolbar.readthedocs.io/en/latest/)
 and
@@ -861,7 +1104,7 @@ def replace_insensitive(string, target, replacement):
 ```
 
 
-## Example 8 from flask_jsondash
+## Example 9 from flask_jsondash
 [Flask JSONDash](https://github.com/christabor/flask_jsondash) is a
 configurable web application built in Flask that creates charts and
 dashboards from arbitrary API endpoints. Everything for the web app
@@ -954,7 +1197,7 @@ def local_static(chart_config, static_config):
 ```
 
 
-## Example 9 from flask-login
+## Example 10 from flask-login
 [Flask-Login](https://github.com/maxcountryman/flask-login)
 ([project documentation](https://flask-login.readthedocs.io/en/latest/)
 and [PyPI package](https://pypi.org/project/Flask-Login/))
@@ -1201,7 +1444,7 @@ def _secret_key(key=None):
 ```
 
 
-## Example 10 from Flask-Meld
+## Example 11 from Flask-Meld
 [Flask-Meld](https://github.com/mikeabrahamsen/Flask-Meld)
 ([PyPI package information](https://pypi.org/project/Flask-Meld/))
 allows you to write your front end web code in your back end
@@ -1213,14 +1456,14 @@ in Python scripts created by a developer.
 
 ```python
 # component.py
-import uuid
 import os
+import uuid
 from importlib.util import module_from_spec, spec_from_file_location
 
 import orjson
-~~from flask import render_template, current_app, url_for
 from bs4 import BeautifulSoup
 from bs4.formatter import HTMLFormatter
+~~from flask import render_template, current_app, jsonify
 
 
 def convert_to_snake_case(s):
@@ -1275,7 +1518,7 @@ def load_module_from_path(full_path, module_name):
 ```
 
 
-## Example 11 from flask-restx
+## Example 12 from flask-restx
 [Flask RESTX](https://github.com/python-restx/flask-restx) is an
 extension that makes it easier to build
 [RESTful APIs](/application-programming-interfaces.html) into
@@ -1308,7 +1551,7 @@ from six import string_types, itervalues, iteritems, iterkeys
 from werkzeug.routing import parse_rule
 
 from . import fields
-from .model import Model, ModelBase
+from .model import Model, ModelBase, OrderedModel
 from .reqparse import RequestParser
 from .utils import merge, not_none, not_none_sorted
 from ._http import HTTPStatus
@@ -1532,7 +1775,7 @@ def _clean_header(header):
 ```
 
 
-## Example 12 from flask-sqlalchemy
+## Example 13 from flask-sqlalchemy
 [flask-sqlalchemy](https://github.com/pallets/flask-sqlalchemy)
 ([project documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 and
@@ -1569,24 +1812,24 @@ from sqlalchemy import event
 from sqlalchemy import inspect
 from sqlalchemy import orm
 from sqlalchemy.engine.url import make_url
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.ext.declarative import DeclarativeMeta
 from sqlalchemy.orm.exc import UnmappedClassError
 from sqlalchemy.orm.session import Session as SessionBase
 
 from .model import DefaultMeta
 from .model import Model
 
-__version__ = "3.0.0.dev"
+try:
+    from sqlalchemy.orm import declarative_base
+    from sqlalchemy.orm import DeclarativeMeta
+except ImportError:
+    from sqlalchemy.ext.declarative import declarative_base
+    from sqlalchemy.ext.declarative import DeclarativeMeta
 
-_signals = Namespace()
-models_committed = _signals.signal("models-committed")
-before_models_committed = _signals.signal("before-models-committed")
+try:
+    from greenlet import getcurrent as _ident_func
+except ImportError:
+    from threading import get_ident as _ident_func
 
-
-def _make_table(db):
-    def _make_table(*args, **kwargs):
-        if len(args) > 1 and isinstance(args[1], db.Column):
 
 
 ## ... source file abbreviated to get to current_app examples ...
@@ -1625,7 +1868,7 @@ def _make_table(db):
         raise RuntimeError(
             "No application found. Either work inside a view function or push"
             " an application context. See"
-            " http://flask-sqlalchemy.pocoo.org/contexts/."
+            " https://flask-sqlalchemy.palletsprojects.com/contexts/."
         )
 
     def get_tables_for_bind(self, bind=None):
@@ -1649,7 +1892,7 @@ def _make_table(db):
 ```
 
 
-## Example 13 from Flask-WTF
+## Example 14 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
 ([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
 and
@@ -1907,7 +2150,7 @@ def same_origin(current_uri, compare_uri):
 ```
 
 
-## Example 14 from Flask-Security-Too
+## Example 15 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -2168,7 +2411,7 @@ _default_config = {
 ```
 
 
-## Example 15 from Flask-User
+## Example 16 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -2276,7 +2519,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 16 from Flask-VueJs-Template
+## Example 17 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -2317,7 +2560,7 @@ def index_client():
 ```
 
 
-## Example 17 from Flasky
+## Example 18 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -2372,7 +2615,7 @@ def run_migrations_online():
 ```
 
 
-## Example 18 from indico
+## Example 19 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -2404,10 +2647,12 @@ logging.config.fileConfig(config.config_file_name)
 ~~target_metadata = current_app.extensions['migrate'].db.metadata
 
 
-def _include_symbol(tablename, schema):
-    if schema and schema.startswith('plugin_'):
+def _include_object(object_, name, type_, reflected, compare_to):
+    if type_ != 'table':
+        return True
+    if object_.schema and object_.schema.startswith('plugin_'):
         return False
-    return tablename != 'alembic_version' and not tablename.startswith('alembic_version_')
+    return name != 'alembic_version' and not name.startswith('alembic_version_')
 
 
 def _render_item(type_, obj, autogen_context):
@@ -2422,10 +2667,8 @@ def _render_item(type_, obj, autogen_context):
 def run_migrations_offline():
     url = config.get_main_option('sqlalchemy.url')
     context.configure(url=url, target_metadata=target_metadata, include_schemas=True,
-                      version_table_schema='public', include_symbol=_include_symbol, render_item=_render_item,
+                      version_table_schema='public', include_object=_include_object, render_item=_render_item,
                       template_args={'toplevel_code': set()})
-
-    with context.begin_transaction():
 
 
 ## ... source file continues with no further current_app examples...
@@ -2433,7 +2676,7 @@ def run_migrations_offline():
 ```
 
 
-## Example 19 from sandman2
+## Example 20 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -2558,7 +2801,7 @@ def register_model(cls, admin=None):
 ```
 
 
-## Example 20 from tedivms-flask
+## Example 21 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own

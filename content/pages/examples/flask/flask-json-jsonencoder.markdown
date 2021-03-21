@@ -50,7 +50,16 @@ from urllib.parse import parse_qsl, parse_qs, urlsplit, urlunsplit, urlencode
 import urllib.request
 import urllib.error
 
-from flask import _request_ctx_stack, current_app, flash, g, request, session, url_for
+from flask import (
+    _request_ctx_stack,
+    after_this_request,
+    current_app,
+    flash,
+    g,
+    request,
+    session,
+    url_for,
+)
 ~~from flask.json import JSONEncoder
 from flask_login import login_user as _login_user
 from flask_login import logout_user as _logout_user
@@ -63,7 +72,7 @@ from itsdangerous import BadSignature, SignatureExpired
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
 
-from .quart_compat import best
+from .quart_compat import best, get_quart_status
 from .signals import user_authenticated
 
 _security = LocalProxy(lambda: current_app.extensions["security"])

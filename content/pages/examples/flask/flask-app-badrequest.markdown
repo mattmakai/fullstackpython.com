@@ -20,7 +20,7 @@ that accepts POSTs.
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-These subjects go along with the `BadRequest` code examples:
+You should read up on these subjects along with these `BadRequest` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

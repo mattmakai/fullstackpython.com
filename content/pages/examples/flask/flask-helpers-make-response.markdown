@@ -329,7 +329,6 @@ import time
 
 from flask import (
     Blueprint,
-    abort,
     after_this_request,
     current_app,
     jsonify,
@@ -352,17 +351,23 @@ from .quart_compat import get_quart_status
 from .unified_signin import (
     us_signin,
     us_signin_send_code,
-    us_qrcode,
     us_setup,
     us_setup_validate,
     us_verify,
     us_verify_link,
     us_verify_send_code,
+)
+from .recoverable import (
 
 
 ## ... source file abbreviated to get to make_response examples ...
 
 
+from .utils import (
+    base_render_json,
+    check_and_update_authn_fresh,
+    config_value,
+    do_flash,
     get_message,
     get_post_login_redirect,
     get_post_logout_redirect,
@@ -377,22 +382,13 @@ from .unified_signin import (
     slash_url_suffix,
     suppress_form_csrf,
     url_for_security,
+    view_commit,
 )
 
 if get_quart_status():  # pragma: no cover
     from quart import make_response, redirect
-
-    async def _commit(response=None):
-        _datastore.commit()
-        return response
-
-
 else:
 ~~    from flask import make_response, redirect
-
-    def _commit(response=None):
-        _datastore.commit()
-        return response
 
 
 _security = LocalProxy(lambda: current_app.extensions["security"])

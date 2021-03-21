@@ -128,360 +128,92 @@ as-is to run CTF events, or modified for custom rules for related
 scenarios. CTFd is open sourced under the
 [Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
 
-[**CTFd / CTFd / auth.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/auth.py)
+[**CTFd / tests / test_themes.py**](https://github.com/CTFd/CTFd/blob/master/./tests/test_themes.py)
 
 ```python
-# auth.py
-import base64
+# test_themes.py
 
-import requests
-from flask import Blueprint
-from flask import current_app as app
-~~from flask import redirect, render_template, request, session, url_for
-from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
+import os
+import shutil
 
-from CTFd.cache import clear_team_session, clear_user_session
-from CTFd.models import Teams, UserFieldEntries, UserFields, Users, db
-from CTFd.utils import config, email, get_app_config, get_config
-from CTFd.utils import user as current_user
-from CTFd.utils import validators
-from CTFd.utils.config import is_teams_mode
-from CTFd.utils.config.integrations import mlc_registration
-from CTFd.utils.config.visibility import registration_visible
-from CTFd.utils.crypto import verify_password
-from CTFd.utils.decorators import ratelimit
-from CTFd.utils.decorators.visibility import check_registration_visibility
-from CTFd.utils.helpers import error_for, get_errors, markup
-from CTFd.utils.logging import log
-from CTFd.utils.modes import TEAMS_MODE
-from CTFd.utils.security.auth import login_user, logout_user
-from CTFd.utils.security.signing import unserialize
-from CTFd.utils.validators import ValidationError
+import pytest
+~~from flask import render_template, render_template_string, request
+from jinja2.exceptions import TemplateNotFound
+from jinja2.sandbox import SecurityError
+from werkzeug.test import Client
 
-auth = Blueprint("auth", __name__)
+from CTFd.config import TestingConfig
+from CTFd.utils import get_config, set_config
+from tests.helpers import create_ctfd, destroy_ctfd, gen_user, login_as_user
 
 
-@auth.route("/confirm", methods=["POST", "GET"])
-@auth.route("/confirm/<data>", methods=["POST", "GET"])
-@ratelimit(method="POST", limit=10, interval=60)
-def confirm(data=None):
-    if not get_config("verify_emails"):
-        return redirect(url_for("challenges.listing"))
-
-    if data and request.method == "GET":
+def test_themes_run_in_sandbox():
+    app = create_ctfd()
+    with app.app_context():
         try:
-            user_email = unserialize(data, max_age=1800)
-        except (BadTimeSignature, SignatureExpired):
-~~            return render_template(
-                "confirm.html", errors=["Your confirmation link has expired"]
-            )
-        except (BadSignature, TypeError, base64.binascii.Error):
-~~            return render_template(
-                "confirm.html", errors=["Your confirmation token is invalid"]
-            )
-
-        user = Users.query.filter_by(email=user_email).first_or_404()
-        if user.verified:
-            return redirect(url_for("views.settings"))
-
-        user.verified = True
-        log(
-            "registrations",
-            format="[{date}] {ip} - successful confirmation for {name}",
-            name=user.name,
-        )
-        db.session.commit()
-        clear_user_session(user_id=user.id)
-        email.successful_registration_notification(user.email)
-        db.session.close()
-        if current_user.authed():
-            return redirect(url_for("challenges.listing"))
-        return redirect(url_for("auth.login"))
-
-    if current_user.authed() is False:
-        return redirect(url_for("auth.login"))
-
-    user = Users.query.filter_by(id=session["id"]).first_or_404()
-    if user.verified:
-        return redirect(url_for("views.settings"))
-
-    if data is None:
-        if request.method == "POST":
-            email.verify_email_address(user.email)
-            log(
-                "registrations",
-                format="[{date}] {ip} - {name} initiated a confirmation email resend",
-            )
-~~            return render_template(
-                "confirm.html", infos=[f"Confirmation email sent to {user.email}!"]
-            )
-        elif request.method == "GET":
-~~            return render_template("confirm.html")
+            app.jinja_env.from_string(
+                "{{ ().__class__.__bases__[0].__subclasses__()[40]('./test_utils.py').read() }}"
+            ).render()
+        except SecurityError:
+            pass
+        except Exception as e:
+            raise e
+    destroy_ctfd(app)
 
 
-@auth.route("/reset_password", methods=["POST", "GET"])
-@auth.route("/reset_password/<data>", methods=["POST", "GET"])
-@ratelimit(method="POST", limit=10, interval=60)
-def reset_password(data=None):
-    if config.can_send_mail() is False:
-~~        return render_template(
-            "reset_password.html",
-            errors=[
-                markup(
-                    "This CTF is not configured to send email.<br> Please contact an organizer to have your password reset."
-                )
-            ],
-        )
-
-    if data is not None:
-        try:
-            email_address = unserialize(data, max_age=1800)
-        except (BadTimeSignature, SignatureExpired):
-~~            return render_template(
-                "reset_password.html", errors=["Your link has expired"]
-            )
-        except (BadSignature, TypeError, base64.binascii.Error):
-~~            return render_template(
-                "reset_password.html", errors=["Your reset token is invalid"]
-            )
-
-        if request.method == "GET":
-~~            return render_template("reset_password.html", mode="set")
-        if request.method == "POST":
-            password = request.form.get("password", "").strip()
-            user = Users.query.filter_by(email=email_address).first_or_404()
-            if user.oauth_id:
-~~                return render_template(
-                    "reset_password.html",
-                    infos=[
-                        "Your account was registered via an authentication provider and does not have an associated password. Please login via your authentication provider."
-                    ],
-                )
-
-            pass_short = len(password) == 0
-            if pass_short:
-~~                return render_template(
-                    "reset_password.html", errors=["Please pick a longer password"]
-                )
-
-            user.password = password
-            db.session.commit()
-            clear_user_session(user_id=user.id)
-            log(
-                "logins",
-                format="[{date}] {ip} -  successful password reset for {name}",
-                name=user.name,
-            )
-            db.session.close()
-            email.password_change_alert(user.email)
-            return redirect(url_for("auth.login"))
-
-    if request.method == "POST":
-        email_address = request.form["email"].strip()
-        user = Users.query.filter_by(email=email_address).first()
-
-        get_errors()
-
-        if not user:
-~~            return render_template(
-                "reset_password.html",
-                infos=[
-                    "If that account exists you will receive an email, please check your inbox"
-                ],
-            )
-
-        if user.oauth_id:
-~~            return render_template(
-                "reset_password.html",
-                infos=[
-                    "The email address associated with this account was registered via an authentication provider and does not have an associated password. Please login via your authentication provider."
-                ],
-            )
-
-        email.forgot_password(email_address)
-
-~~        return render_template(
-            "reset_password.html",
-            infos=[
-                "If that account exists you will receive an email, please check your inbox"
-            ],
-        )
-~~    return render_template("reset_password.html")
-
-
-@auth.route("/register", methods=["POST", "GET"])
-@check_registration_visibility
-@ratelimit(method="POST", limit=10, interval=5)
-def register():
-    errors = get_errors()
-    if current_user.authed():
-        return redirect(url_for("challenges.listing"))
-
-    if request.method == "POST":
-        name = request.form.get("name", "").strip()
-        email_address = request.form.get("email", "").strip().lower()
-        password = request.form.get("password", "").strip()
-
-        website = request.form.get("website")
-        affiliation = request.form.get("affiliation")
-        country = request.form.get("country")
-
-        name_len = len(name) == 0
-        names = Users.query.add_columns("name", "id").filter_by(name=name).first()
-        emails = (
-            Users.query.add_columns("email", "id")
-            .filter_by(email=email_address)
+def test_themes_cant_access_configpy_attributes():
 
 
 ## ... source file abbreviated to get to render_template examples ...
 
 
-            errors.append(
-                "Only email addresses under {domains} may register".format(
-                    domains=get_config("domain_whitelist")
-                )
+            except TemplateNotFound:
+                pass
+    destroy_ctfd(app)
+
+    class ThemeFallbackConfig(TestingConfig):
+        THEME_FALLBACK = True
+
+    app = create_ctfd(config=ThemeFallbackConfig)
+    with app.app_context():
+        set_config("ctf_theme", "foo")
+        assert app.config["THEME_FALLBACK"] == True
+        with app.test_client() as client:
+            r = client.get("/")
+            assert r.status_code == 200
+            r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            assert r.status_code == 200
+    destroy_ctfd(app)
+
+    os.rmdir(os.path.join(app.root_path, "themes", "foo"))
+
+
+def test_theme_template_loading_by_prefix():
+    app = create_ctfd()
+    with app.test_request_context():
+        tpl1 = render_template_string("{% extends 'core/page.html' %}", content="test")
+~~        tpl2 = render_template("page.html", content="test")
+        assert tpl1 == tpl2
+
+
+def test_theme_template_disallow_loading_admin_templates():
+    app = create_ctfd()
+    with app.app_context():
+        try:
+            filename = os.path.join(
+                app.root_path, "themes", "foo", "admin", "malicious.html"
             )
-        if names:
-            errors.append("That user name is already taken")
-        if team_name_email_check is True:
-            errors.append("Your user name cannot be an email address")
-        if emails:
-            errors.append("That email has already been used")
-        if pass_short:
-            errors.append("Pick a longer password")
-        if pass_long:
-            errors.append("Pick a shorter password")
-        if name_len:
-            errors.append("Pick a longer user name")
-        if valid_website is False:
-            errors.append("Websites must be a proper URL starting with http or https")
-        if valid_country is False:
-            errors.append("Invalid country")
-        if valid_affiliation is False:
-            errors.append("Please provide a shorter affiliation")
+            os.makedirs(os.path.dirname(filename), exist_ok=True)
+            with open(filename, "w") as f:
+                f.write("malicious")
 
-        if len(errors) > 0:
-~~            return render_template(
-                "register.html",
-                errors=errors,
-                name=request.form["name"],
-                email=request.form["email"],
-                password=request.form["password"],
+            with pytest.raises(TemplateNotFound):
+                render_template_string("{% include 'admin/malicious.html' %}")
+        finally:
+            shutil.rmtree(
+                os.path.join(app.root_path, "themes", "foo"), ignore_errors=True
             )
-        else:
-            with app.app_context():
-                user = Users(name=name, email=email_address, password=password)
 
-                if website:
-                    user.website = website
-                if affiliation:
-                    user.affiliation = affiliation
-                if country:
-                    user.country = country
-
-                db.session.add(user)
-                db.session.commit()
-                db.session.flush()
-
-                for field_id, value in entries.items():
-                    entry = UserFieldEntries(
-                        field_id=field_id, value=value, user_id=user.id
-
-
-## ... source file abbreviated to get to render_template examples ...
-
-
-
-                if config.can_send_mail() and get_config(
-                    "verify_emails"
-                ):  # Confirming users is enabled and we can send email.
-                    log(
-                        "registrations",
-                        format="[{date}] {ip} - {name} registered (UNCONFIRMED) with {email}",
-                    )
-                    email.verify_email_address(user.email)
-                    db.session.close()
-                    return redirect(url_for("auth.confirm"))
-                else:  # Don't care about confirming users
-                    if (
-                        config.can_send_mail()
-                    ):  # We want to notify the user that they have registered.
-                        email.successful_registration_notification(user.email)
-
-        log("registrations", "[{date}] {ip} - {name} registered with {email}")
-        db.session.close()
-
-        if is_teams_mode():
-            return redirect(url_for("teams.private"))
-
-        return redirect(url_for("challenges.listing"))
-    else:
-~~        return render_template("register.html", errors=errors)
-
-
-@auth.route("/login", methods=["POST", "GET"])
-@ratelimit(method="POST", limit=10, interval=5)
-def login():
-    errors = get_errors()
-    if request.method == "POST":
-        name = request.form["name"]
-
-        if validators.validate_email(name) is True:
-            user = Users.query.filter_by(email=name).first()
-        else:
-            user = Users.query.filter_by(name=name).first()
-
-        if user:
-            if user and verify_password(request.form["password"], user.password):
-                session.regenerate()
-
-                login_user(user)
-                log("logins", "[{date}] {ip} - {name} logged in")
-
-                db.session.close()
-                if request.args.get("next") and validators.is_safe_url(
-                    request.args.get("next")
-                ):
-                    return redirect(request.args.get("next"))
-                return redirect(url_for("challenges.listing"))
-
-            else:
-                log("logins", "[{date}] {ip} - submitted invalid password for {name}")
-                errors.append("Your username or password is incorrect")
-                db.session.close()
-~~                return render_template("login.html", errors=errors)
-        else:
-            log("logins", "[{date}] {ip} - submitted invalid account information")
-            errors.append("Your username or password is incorrect")
-            db.session.close()
-~~            return render_template("login.html", errors=errors)
-    else:
-        db.session.close()
-~~        return render_template("login.html", errors=errors)
-
-
-@auth.route("/oauth")
-def oauth_login():
-    endpoint = (
-        get_app_config("OAUTH_AUTHORIZATION_ENDPOINT")
-        or get_config("oauth_authorization_endpoint")
-        or "https://auth.majorleaguecyber.org/oauth/authorize"
-    )
-
-    if get_config("user_mode") == "teams":
-        scope = "profile team"
-    else:
-        scope = "profile"
-
-    client_id = get_app_config("OAUTH_CLIENT_ID") or get_config("oauth_client_id")
-
-    if client_id is None:
-        error_for(
-            endpoint="auth.login",
-            message="OAuth Settings not configured. "
-            "Ask your CTF administrator to configure MajorLeagueCyber integration.",
-        )
-        return redirect(url_for("auth.login"))
 
 
 ## ... source file continues with no further render_template examples...
@@ -1134,14 +866,14 @@ in Python scripts created by a developer.
 
 ```python
 # component.py
-import uuid
 import os
+import uuid
 from importlib.util import module_from_spec, spec_from_file_location
 
 import orjson
-~~from flask import render_template, current_app, url_for
 from bs4 import BeautifulSoup
 from bs4.formatter import HTMLFormatter
+~~from flask import render_template, current_app, jsonify
 
 
 def convert_to_snake_case(s):
@@ -1164,10 +896,24 @@ def get_component_class(component_name):
 
 
 def get_component_module(module_name):
+    user_specified_dir = current_app.config.get("MELD_COMPONENT_DIR", None)
+
 
 
 ## ... source file abbreviated to get to render_template examples ...
 
+
+            func
+            for func in dir(self)
+            if callable(getattr(self, func))
+            and not func.startswith("_")
+            and func not in self._meld_attrs
+        ]
+
+        for func in function_list:
+            functions[func] = getattr(self, func)
+
+        return functions
 
     def __context__(self):
         return {
@@ -1178,47 +924,35 @@ def get_component_module(module_name):
     def updated(self, name):
         pass
 
-    def render(self, component_name):
-        return self._view(component_name, self._attributes())
+    def render(self, component_name: str):
+        return self._view(component_name)
 
-    def _view(self, component_name, data):
+    def _render_template(self, template_name: str, context_variables: dict):
+~~        return render_template(template_name, **context_variables)
+
+    def _view(self, component_name: str):
+        data = self._attributes()
         context = self.__context__()
         context_variables = {}
         context_variables.update(context["attributes"])
         context_variables.update(context["methods"])
-        context_variables.update(data)
         context_variables.update({"form": self._form})
 
-        frontend_context_variables = {}
-        frontend_context_variables.update(context["attributes"])
-        frontend_context_variables = orjson.dumps(frontend_context_variables).decode(
-            "utf-8"
-        )
-~~        rendered_template = render_template(
-            f"meld/{component_name}.html", **context_variables
+        rendered_template = self._render_template(
+            f"meld/{component_name}.html", context_variables
         )
 
         soup = BeautifulSoup(rendered_template, features="html.parser")
         root_element = Component._get_root_element(soup)
         root_element["meld:id"] = str(self.id)
-        root_element["meld:data"] = frontend_context_variables
         self._set_values(root_element, context_variables)
 
         script = soup.new_tag("script", type="module")
-        init = {"id": str(self.id), "name": component_name, "data": data}
-        init = orjson.dumps(init).decode("utf-8")
+        init = {"id": str(self.id), "name": component_name, "data": jsonify(data).json}
+        init_json = orjson.dumps(init).decode("utf-8")
 
-        meld_url = url_for("static", filename="meld/meld.js")
-        meld_import = f'import {{Meld}} from ".{meld_url}";'
-        script.string = f"{meld_import} Meld.componentInit({init});"
-        root_element.append(script)
-
-        rendered_template = Component._desoupify(soup)
-
-        return rendered_template
-
-    def _set_values(self, soup, context_variables):
-        for element in soup.find_all(attrs={'meld:model': True}):
+        meld_import = 'import {Meld} from "/meld_js_src/meld.js";'
+        script.string = f"{meld_import} Meld.componentInit({init_json});"
 
 
 ## ... source file continues with no further render_template examples...
@@ -2487,7 +2221,8 @@ import os
 import requests
 import yaml
 
-~~from flask import Flask, session, render_template
+~~from flask import Flask, render_template
+from flask import session as current_session
 from flask_mail import Mail
 from flask_migrate import Migrate, MigrateCommand
 from flask.sessions import SessionInterface
@@ -2511,7 +2246,6 @@ def get_config():
     app.config.from_object('app.settings')
     if 'APPLICATION_SETTINGS' in os.environ:
         app.config.from_envvar(os.environ['APPLICATION_SETTINGS'])
-    if 'AWS_SECRETS_MANAGER_CONFIG' in os.environ:
 
 
 ## ... source file abbreviated to get to render_template examples ...
@@ -2532,7 +2266,7 @@ def get_config():
 
     @user_logged_out.connect_via(app)
     def clear_session(sender, user, **extra):
-        session.clear()
+        current_session.clear()
 
 
 def init_celery_service(app):

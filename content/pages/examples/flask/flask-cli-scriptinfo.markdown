@@ -170,7 +170,7 @@ from werkzeug.utils import cached_property
 
 def _create_app(info):
     from indico.web.flask.app import make_app
-    return make_app(set_path=True)
+    return make_app()
 
 
 class IndicoFlaskGroup(FlaskGroup):

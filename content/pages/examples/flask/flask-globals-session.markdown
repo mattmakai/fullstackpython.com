@@ -73,7 +73,7 @@ auth = Blueprint("auth", __name__)
 ## ... source file abbreviated to get to session examples ...
 
 
-        log("registrations", "[{date}] {ip} - {name} registered with {email}")
+        )
         db.session.close()
 
         if is_teams_mode():
@@ -101,7 +101,7 @@ def login():
 ~~                session.regenerate()
 
                 login_user(user)
-                log("logins", "[{date}] {ip} - {name} logged in")
+                log("logins", "[{date}] {ip} - {name} logged in", name=user.name)
 
                 db.session.close()
                 if request.args.get("next") and validators.is_safe_url(
@@ -111,7 +111,11 @@ def login():
                 return redirect(url_for("challenges.listing"))
 
             else:
-                log("logins", "[{date}] {ip} - submitted invalid password for {name}")
+                log(
+                    "logins",
+                    "[{date}] {ip} - submitted invalid password for {name}",
+                    name=user.name,
+                )
                 errors.append("Your username or password is incorrect")
                 db.session.close()
                 return render_template("login.html", errors=errors)
@@ -119,10 +123,6 @@ def login():
             log("logins", "[{date}] {ip} - submitted invalid account information")
             errors.append("Your username or password is incorrect")
             db.session.close()
-            return render_template("login.html", errors=errors)
-    else:
-        db.session.close()
-        return render_template("login.html", errors=errors)
 
 
 ## ... source file continues with no further session examples...
@@ -1367,7 +1367,8 @@ import os
 import requests
 import yaml
 
-~~from flask import Flask, session, render_template
+from flask import Flask, render_template
+~~from flask import session as current_session
 from flask_mail import Mail
 from flask_migrate import Migrate, MigrateCommand
 from flask.sessions import SessionInterface
@@ -1429,7 +1430,7 @@ def get_config():
 
     @user_logged_out.connect_via(app)
     def clear_session(sender, user, **extra):
-~~        session.clear()
+        current_session.clear()
 
 
 def init_celery_service(app):
@@ -1447,13 +1448,6 @@ def init_error_handlers(app):
 
     @app.errorhandler(403)
     def error_forbidden(e):
-        return show_error(403, 'Forbidden')
-
-    @app.errorhandler(404)
-    def error_pagenotfound(e):
-        return show_error(404, 'Page not found.')
-
-    @app.errorhandler(500)
 
 
 ## ... source file continues with no further session examples...

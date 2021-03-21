@@ -25,76 +25,98 @@ as-is to run CTF events, or modified for custom rules for related
 scenarios. CTFd is open sourced under the
 [Apache License 2.0](https://github.com/CTFd/CTFd/blob/master/LICENSE).
 
-[**CTFd / CTFd / views.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/views.py)
+[**CTFd / CTFd / __init__.py**](https://github.com/CTFd/CTFd/blob/master/./CTFd/__init__.py)
 
 ```python
-# views.py
+# __init__.py
+import datetime
 import os
+import sys
+import weakref
+from distutils.version import StrictVersion
 
-from flask import Blueprint, abort
-from flask import current_app as app
-from flask import redirect, render_template, request, send_file, session, url_for
+import jinja2
+from flask import Flask, Request
 ~~from flask.helpers import safe_join
-from sqlalchemy.exc import IntegrityError
+from flask_migrate import upgrade
+from jinja2 import FileSystemLoader
+from jinja2.sandbox import SandboxedEnvironment
+from werkzeug.middleware.proxy_fix import ProxyFix
+from werkzeug.utils import cached_property
 
-from CTFd.cache import cache
-from CTFd.constants.config import (
-    AccountVisibilityTypes,
-    ChallengeVisibilityTypes,
-    ConfigTypes,
-    RegistrationVisibilityTypes,
-    ScoreVisibilityTypes,
+import CTFd.utils.config
+from CTFd import utils
+from CTFd.constants.themes import ADMIN_THEME, DEFAULT_THEME
+from CTFd.plugins import init_plugins
+from CTFd.utils.crypto import sha256
+from CTFd.utils.initialization import (
+    init_events,
+    init_logs,
+    init_request_processors,
+    init_template_filters,
+    init_template_globals,
 )
-from CTFd.models import (
-    Admins,
-    Files,
-    Notifications,
-    Pages,
-    Teams,
-    Users,
-    UserTokens,
-    db,
-)
-from CTFd.utils import config, get_config, set_config
-from CTFd.utils import user as current_user
-from CTFd.utils import validators
-from CTFd.utils.config import is_setup
+from CTFd.utils.migrations import create_database, migrations, stamp_latest_revision
+from CTFd.utils.sessions import CachingSessionInterface
+from CTFd.utils.updates import update_check
+
+__version__ = "3.3.0"
+__channel__ = "oss"
 
 
 ## ... source file abbreviated to get to safe_join examples ...
 
 
-                        abort(403)
-                else:
-                    abort(403)
-
-                if team:
-                    if team.banned:
-                        abort(403)
-                else:
-                    pass
-
-                if file_id != f.id:
-                    abort(403)
-
-            except (BadTimeSignature, SignatureExpired, BadSignature):
-                abort(403)
-
-    uploader = get_uploader()
-    try:
-        return uploader.download(f.location)
-    except IOError:
-        abort(404)
+            self.cache[cache_key] = template
+        return template
 
 
-@views.route("/themes/<theme>/static/<path:path>")
-def themes(theme, path):
-~~    filename = safe_join(app.root_path, "themes", theme, "static", path)
-    if os.path.isfile(filename):
-        return send_file(filename)
+class ThemeLoader(FileSystemLoader):
+
+    DEFAULT_THEMES_PATH = os.path.join(os.path.dirname(__file__), "themes")
+    _ADMIN_THEME_PREFIX = ADMIN_THEME + "/"
+
+    def __init__(
+        self,
+        searchpath=DEFAULT_THEMES_PATH,
+        theme_name=None,
+        encoding="utf-8",
+        followlinks=False,
+    ):
+        super(ThemeLoader, self).__init__(searchpath, encoding, followlinks)
+        self.theme_name = theme_name
+
+    def get_source(self, environment, template):
+        if template.startswith(self._ADMIN_THEME_PREFIX):
+            if self.theme_name != ADMIN_THEME:
+                raise jinja2.TemplateNotFound(template)
+            template = template[len(self._ADMIN_THEME_PREFIX) :]
+        theme_name = self.theme_name or str(utils.get_config("ctf_theme"))
+~~        template = safe_join(theme_name, "templates", template)
+        return super(ThemeLoader, self).get_source(environment, template)
+
+
+def confirm_upgrade():
+    if sys.stdin.isatty():
+        print("/*\\ CTFd has updated and must update the database! /*\\")
+        print("/*\\ Please backup your database before proceeding! /*\\")
+        print("/*\\ CTFd maintainers are not responsible for any data loss! /*\\")
+        if input("Run database migrations (Y/N)").lower().strip() == "y":  # nosec B322
+            return True
+        else:
+            print("/*\\ Ignored database migrations... /*\\")
+            return False
     else:
-        abort(404)
+        return True
 
+
+def run_upgrade():
+    upgrade()
+    utils.set_config("ctf_version", __version__)
+
+
+def create_app(config="CTFd.config.Config"):
+    app = CTFdFlask(__name__)
 
 
 ## ... source file continues with no further safe_join examples...

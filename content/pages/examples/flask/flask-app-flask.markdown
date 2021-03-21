@@ -93,11 +93,17 @@ scenarios. CTFd is open sourced under the
 ```python
 # test_themes.py
 
-from flask import request
+import os
+import shutil
+
+import pytest
+from flask import render_template, render_template_string, request
+from jinja2.exceptions import TemplateNotFound
 from jinja2.sandbox import SecurityError
 from werkzeug.test import Client
 
-from CTFd.utils import get_config
+from CTFd.config import TestingConfig
+from CTFd.utils import get_config, set_config
 from tests.helpers import create_ctfd, destroy_ctfd, gen_user, login_as_user
 
 
@@ -121,12 +127,6 @@ def test_themes_cant_access_configpy_attributes():
         assert app.config["SECRET_KEY"] == "AAAAAAAAAAAAAAAAAAAA"
         assert (
             app.jinja_env.from_string("{{ get_config('SECRET_KEY') }}").render()
-            != app.config["SECRET_KEY"]
-        )
-    destroy_ctfd(app)
-
-
-def test_themes_escape_html():
 
 
 ## ... source file abbreviated to get to Flask examples ...
@@ -166,6 +166,25 @@ def test_that_request_path_hijacking_works_properly():
     destroy_ctfd(app)
 
 
+def test_theme_fallback_config():
+    app = create_ctfd()
+    try:
+        os.mkdir(os.path.join(app.root_path, "themes", "foo"))
+    except OSError:
+        pass
+
+    with app.app_context():
+        set_config("ctf_theme", "foo")
+        assert app.config["THEME_FALLBACK"] == False
+        with app.test_client() as client:
+            try:
+                r = client.get("/")
+            except TemplateNotFound:
+                pass
+            try:
+                r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            except TemplateNotFound:
+
 
 ## ... source file continues with no further Flask examples...
 
@@ -185,49 +204,66 @@ forms, and internationalization support.
 Flask App Builder is provided under the
 [BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
 
-[**Flask AppBuilder / flask_appbuilder / tests / _test_oauth_registration_role.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/tests/_test_oauth_registration_role.py)
+[**Flask AppBuilder / flask_appbuilder / tests / test_mongoengine.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/tests/test_mongoengine.py)
 
 ```python
-# _test_oauth_registration_role.py
-import logging
-import unittest
+# test_mongoengine.py
+from flask_appbuilder.views import CompactCRUDMixin, MasterDetailView
+from flask_mongoengine import MongoEngine
+import jinja2
+from nose.tools import eq_, ok_
 
-~~from flask import Flask
-from flask_appbuilder import AppBuilder, SQLA
-
+from .base import FABTestCase
+from .mongoengine.models import Model1, Model2
 
 logging.basicConfig(format="%(asctime)s:%(levelname)s:%(name)s:%(message)s")
 logging.getLogger().setLevel(logging.DEBUG)
+
+
+DEFAULT_INDEX_STRING = "Welcome"
+INVALID_LOGIN_STRING = "Invalid login"
+ACCESS_IS_DENIED = "Access is Denied"
+UNIQUE_VALIDATION_STRING = "Already exists"
+NOTNULL_VALIDATION_STRING = "This field is required"
+DEFAULT_ADMIN_USER = "admin"
+DEFAULT_ADMIN_PASSWORD = "general"
+
 log = logging.getLogger(__name__)
 
 
-class OAuthRegistrationRoleTestCase(unittest.TestCase):
+class FlaskTestCase(FABTestCase):
     def setUp(self):
+~~        from flask import Flask
+        from flask_appbuilder import AppBuilder
+        from flask_appbuilder.models.mongoengine.interface import MongoEngineInterface
+        from flask_appbuilder import ModelView
+        from flask_appbuilder.security.mongoengine.manager import SecurityManager
+
 ~~        self.app = Flask(__name__)
-        self.app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-        self.db = SQLA(self.app)
+        self.app.jinja_env.undefined = jinja2.StrictUndefined
+        self.basedir = os.path.abspath(os.path.dirname(__file__))
+        self.app.config["MONGODB_SETTINGS"] = {"DB": "test"}
+        self.app.config["CSRF_ENABLED"] = False
+        self.app.config["SECRET_KEY"] = "thisismyscretkey"
+        self.app.config["WTF_CSRF_ENABLED"] = False
 
-    def tearDown(self):
-        self.appbuilder = None
-        self.app = None
-        self.db = None
+        self.db = MongoEngine(self.app)
+        self.appbuilder = AppBuilder(self.app, security_manager_class=SecurityManager)
 
-    def test_self_registration_not_enabled(self):
-        self.app.config["AUTH_USER_REGISTRATION"] = False
-        self.appbuilder = AppBuilder(self.app, self.db.session)
-
-        result = self.appbuilder.sm.auth_user_oauth(userinfo={"username": "testuser"})
-
-        self.assertIsNone(result)
-        self.assertEqual(len(self.appbuilder.sm.get_all_users()), 0)
-
-    def test_register_and_attach_static_role(self):
-        self.app.config["AUTH_USER_REGISTRATION"] = True
-        self.app.config["AUTH_USER_REGISTRATION_ROLE"] = "Public"
-        self.appbuilder = AppBuilder(self.app, self.db.session)
-
-        user = self.appbuilder.sm.auth_user_oauth(userinfo={"username": "testuser"})
-
+        class Model2View(ModelView):
+            datamodel = MongoEngineInterface(Model2)
+            list_columns = [
+                "field_integer",
+                "field_float",
+                "field_string",
+                "field_method",
+                "group.field_string",
+            ]
+            edit_form_query_rel_fields = {
+                "group": [["field_string", FilterEqual, "G2"]]
+            }
+            add_form_query_rel_fields = {"group": [["field_string", FilterEqual, "G1"]]}
+            add_exclude_columns = ["excluded_string"]
 
 
 ## ... source file continues with no further Flask examples...
@@ -1316,7 +1352,80 @@ def create_celery_app():
 ```
 
 
-## Example 20 from tedivms-flask
+## Example 20 from ShortMe
+[ShortMe](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener)
+is a [Flask](/flask.html) app that creates a shortened URL
+that redirects to another, typically much longer, URL. The
+project is provided as open source under the
+[MIT license](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener/blob/main/LICENSE).
+
+[**ShortMe / app / setup.py**](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener/blob/main/app/./setup.py)
+
+```python
+# setup.py
+import os
+
+~~from flask import Flask
+from flask_restful import Api
+from dotenv import load_dotenv
+
+from app.db.extensions import db
+from app.db.models import AuthToken
+from app.views.index.index import index_blueprint
+from app.views.internal.redirect_to_url import redirect_to_url_blueprint
+from app.views.internal.favicon import app_blueprint
+from app.views.internal.send_verification_code import send_otp_blueprint
+from app.views.internal.shorten_url import shorten_url_blueprint
+from app.views.your_short_url.your_short_url import your_short_url_blueprint
+from app.views.total_clicks.total_clicks import total_clicks_blueprint
+from app.views.error.error import error_blueprint
+from app.views.page_not_found.page_not_found import page_not_found_blueprint
+from app.views.api_doc.api_doc import api_doc_blueprint
+from app.views.get_token.get_token import get_token_blueprint
+from app.views.your_api_token.your_api_token import your_api_token_blueprint
+from app.views.verify_code.verify_code import verify_code_blueprint
+
+from app.api.api import Shorten, TotalClicks, GetToken
+
+
+def create_app(config_file):
+    app_path = os.path.dirname(os.path.abspath(__file__))
+    project_folder = os.path.expanduser(app_path)
+    load_dotenv(os.path.join(project_folder, '.env'))
+
+~~    app = Flask(__name__)
+    api = Api(app)
+    app.config.from_pyfile(config_file)
+
+    db.init_app(app)
+
+    with app.app_context():
+        db.drop_all()
+        db.create_all()
+
+        app_auth_token = app.secret_key
+        auth_token = AuthToken(auth_token=app_auth_token)
+        db.session.add(auth_token)
+        db.session.commit()
+
+        api.add_resource(Shorten, '/api/shorten')
+        api.add_resource(GetToken, '/api/get_token')
+        api.add_resource(TotalClicks, '/api/total_clicks')
+
+        app.register_blueprint(index_blueprint)
+        app.register_blueprint(page_not_found_blueprint)
+        app.register_blueprint(redirect_to_url_blueprint)
+        app.register_blueprint(your_short_url_blueprint)
+        app.register_blueprint(total_clicks_blueprint)
+        app.register_blueprint(error_blueprint)
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 21 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1339,7 +1448,8 @@ import os
 import requests
 import yaml
 
-~~from flask import Flask, session, render_template
+~~from flask import Flask, render_template
+from flask import session as current_session
 from flask_mail import Mail
 from flask_migrate import Migrate, MigrateCommand
 from flask.sessions import SessionInterface
@@ -1445,7 +1555,7 @@ def create_app(extra_config_settings={}):
 ```
 
 
-## Example 21 from trape
+## Example 22 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data
