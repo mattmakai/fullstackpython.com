@@ -158,6 +158,14 @@ source under the
 [GNU General Public License](https://github.com/danielhomola/science_flask/blob/master/LICENSE).
 
 
+### ShortMe-URL-Shortener
+[ShortMe](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener)
+is a [Flask](/flask.html) app that creates a shortened URL
+that redirects to another, typically much longer, URL. The
+project is provided as open source under the 
+[MIT license](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener/blob/main/LICENSE).
+
+
 ### tedivm's flask starter app
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a 
 base of [Flask](/flask.html) code and related projects such as 
