@@ -214,13 +214,9 @@ developers.
   bundling and running Python code.
 
 * [Python Application Dependency Management in 2018](https://hynek.me/articles/python-app-deps-2018/)
-  presents some critical analysis and critique oof the existing Python
+  presents some critical analysis and critique of the existing Python
   dependency management tools including newer ones such as pipenv and
   Poetry.
-
-* Occasionally arguments about using Python's dependency manager versus
-  one of Linux's dependency managers comes up. This provides
-  [one perspective on that debate](http://notes.pault.ag/debian-python/).
 
 * [Open source trust scaling](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/)
   is a good piece for the [Python community](/python-community.html) 
