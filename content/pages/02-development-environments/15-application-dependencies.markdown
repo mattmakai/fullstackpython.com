@@ -169,12 +169,6 @@ so far to get up to speed on building and releasing your own packages.
   is for developers who have created a code library they would like to
   share and make installable for other developers.
 
-* [How to Submit a Package to PyPI](https://blog.easyaspy.org/post/14/2019-05-05-how-to-submit-a-package-to-pypi)
-  presents the basic steps like signing up for a PyPI account and other
-  accounts that go along with the tutorial. It then walks through the
-  configuration code for setting up continuous integration and deploying
-  your package.
-
 
 ### Application dependency resources
 The following links provide advice on how to use Python packages as well
