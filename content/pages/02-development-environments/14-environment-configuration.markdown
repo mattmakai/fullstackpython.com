@@ -34,6 +34,7 @@ Either one can be used in your applications but there are slight differences
 that can make one better than the other in various situations.
  
 Other useful environment variables resources:
+
 * [How to Set Environment Variables in Linux and Mac: The Missing Manual](https://doppler.com/blog/how-to-set-environment-variables-in-linux-and-mac)
   is a wonderfully detailed guide with many tips and tricks throughout
   the walkthrough such as quickly setting environment variables for a 
