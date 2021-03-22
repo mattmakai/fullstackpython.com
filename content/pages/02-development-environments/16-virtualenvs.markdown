@@ -39,5 +39,5 @@ projects at once but that is not consider to be a good practice.
 
 * [venv — Create Virtual Environments](https://pymotw.com/3/venv/)
 
-* [Python development environment, 2018 edition](https://jacobian.org/writing/python-environment-2018/)
+* [Python development environment, 2020 edition](https://jacobian.org/2019/nov/11/python-environment-2020/)
 
