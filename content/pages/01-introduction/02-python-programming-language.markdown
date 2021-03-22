@@ -175,7 +175,7 @@ the very beginner topics.
   is the best all-around introduction to how to use generators and
   provides numerous code examples to learn from.
 
-* [Python 201: An Intro to Generators](http://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
+* [Python 201: An Intro to Generators](https://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
   is another short but informative read with example generators code.
 
 * [Iterators & Generators](http://anandology.com/python-practice-book/iterators.html)
