@@ -82,7 +82,7 @@ Dictionary comprehension:
 * The [online Python tutor](http://www.pythontutor.com/) visually walks
   through code and shows how it executes on the Python interpreter.
 
-* [Python Module of the Week](http://pymotw.com/2/index.html) is a tour
+* [Python Module of the Week](https://pymotw.com/3/) is a tour
   through the Python standard library.
 
 * [A Python interpreter written in Python](http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html)
