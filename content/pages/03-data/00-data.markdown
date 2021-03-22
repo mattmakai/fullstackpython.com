@@ -12,7 +12,7 @@ subsections, including (in no particular order):
 
 * data processing / wrangling
 * machine learning
-* data analysis
+* [data analysis](/data-analysis.html)
 * [visualization](/data-visualization.html)
 * geospatial mapping
 * persistence via [relational databases](/databases.html) and 
