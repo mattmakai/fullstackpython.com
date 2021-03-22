@@ -68,7 +68,7 @@ tailored to large development teams and specific project workflows. However,
 open source systems are now used for version control on the largest and most
 complicated software projects in existence. There's no reason why your project
 should use anything other than an open source version control system in
-today's Python development world. The two primary choices are:
+today's Python development world. The three primary choices are:
 
 * [Git](/git.html) is a free and open source distributed version
   control system.
