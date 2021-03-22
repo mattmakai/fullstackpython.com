@@ -100,10 +100,10 @@ control services are:
   [$7 per month](https://github.com/pricing).
 
 * [BitBucket](https://bitbucket.org/) is 
-  [Atlassian](https://www.atlassian.com/)'s software-as-a-service tool that 
+  [Atlassian](https://www.atlassian.com/)'s software-as-a-service tool 
   with a user interface, comparison tools and backup for Git projects. There 
   are many features in BitBucket focused on making it easier for groups of 
-  developers to work on projects together. BitBucket also has private 
+  developers to work on projects together. BitBucket also has free private 
   repositories for up to five users. Users pay for hosting private 
   repositories with more than five users.
 
