@@ -35,7 +35,7 @@ environment named `fullstackpython` within the macOS Terminal application.
   at how a small difference of tens of milliseconds causes some shells and 
   editors to feel slow while others are snappy.
 
-* [Why Create a New Unix Shell?](http://www.oilshell.org/blog/2018/01/28.html)
+* [Why Create a New Unix Shell?](http://www.oilshell.org/blog/2021/01/why-a-new-shell.html)
   is a post by the creator of [Oil shell](http://www.oilshell.org/) that
   goes into the rationale for building a new shell even though so many others
   such as Bash, zsh, PowerShell and KornShell already exist.
