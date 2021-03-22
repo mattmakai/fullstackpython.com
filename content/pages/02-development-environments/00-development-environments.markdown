@@ -64,7 +64,7 @@ publicly document.
   [PyCharm](/pycharm.html) and the author's workflow for how to use
   the different editors for different purposes.
 
-* [My Python Development Environment, 2018 Edition](https://jacobian.org/writing/python-environment-2018/)
+* [My Python Development Environment, 2020 Edition](https://jacobian.org/2019/nov/11/python-environment-2020/)
   explains Jacob Kaplan-Moss' (one of the original creators of the
   [Django](/django.html) web framework) local setup.
 
