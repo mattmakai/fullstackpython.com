@@ -65,7 +65,7 @@ ton of free content for studying intermediate and advanced topics.
 
 
 ### Should I learn Python first?
-Python is good choice in the project-based approach because of the extensive 
+Python is a good choice in the project-based approach because of the extensive 
 availability of 
 [free and low cost introductory resources](/best-python-resources.html),
 many of which provide example projects to build upon.
@@ -125,7 +125,7 @@ repositories and sites with practice problems and solutions:
 * [TeachCraft](https://teachcraft.net/) combines Minecraft with Python to
   learn coding.
 
-* [500 Data Structures and Algorithms practice problems and their solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
+* [500 Data Structures and Algorithms practice problems and their solutions](https://www.quora.com/q/techiedelight/500-Data-Structures-and-Algorithms-interview-questions-and-their-solutions)
   covers a large swath of the computer science space. It is not important
   to know all of these algorithms and data structures but experience with
   many of them will be greatly beneficial in becoming a better developer.
@@ -151,7 +151,7 @@ give example paths you can think about taking as a beginner:
   with in the past became great software developers.
 
 * [This Picture Will Change the Way You Learn to Code](https://dev.to/nextdotxyz/this-picture-will-change-the-way-you-learn-tocode-4kmh)
-  covers a well done graphics of many up-to-date concepts and tools that
+  covers a well done graphic of many up-to-date concepts and tools that
   developers use. The post reminds you that you will not and should not learn
   everything but that you should pick tools you want to gain experience in
   while generally knowing what else is out there.
