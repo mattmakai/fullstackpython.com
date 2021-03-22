@@ -221,7 +221,7 @@ developers.
 * [Open source trust scaling](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/)
   is a good piece for the [Python community](/python-community.html) 
   (and other programming communities) that is based on the 
-  [left-pad NPM situation](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)
+  [left-pad NPM situation](https://kodfabrik.com/journal/i-ve-just-liberated-my-modules)
   that broke many dependent packages in the Node.js community.
 
 * Major speed improvements were made in pip 7 over previous versions. Read 
