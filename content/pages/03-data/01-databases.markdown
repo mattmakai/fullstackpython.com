@@ -100,7 +100,7 @@ Find out about Python applications with a MySQL backed on the dedicated
 To work with a relational database using Python, you need to use a code 
 library. The most common libraries for relational databases are:
 
-* [psycopg2](http://initd.org/psycopg/) 
+* [psycopg2](https://www.psycopg.org/) 
   ([source code](https://github.com/psycopg/psycopg2))
   for PostgreSQL.
 
@@ -144,9 +144,6 @@ provider.
   with managed, backed up, replicated, and auto-patched MySQL instances. Cloud
   SQL integrates with Google App Engine but can be used independently as well.
 
-* [BitCan](http://www.gobitcan.com/) provides both MySQL and MongoDB hosted
-  databases with extensive backup services.
-
 * [ElephantSQL](https://www.elephantsql.com/) is a software-as-a-service company
   that hosts PostgreSQL databases and handles the server configuration, backups
   and data connections on top of Amazon Web Services instances.
@@ -173,17 +170,11 @@ speed on SQL if you have never previously used it.
 * [SQL Tutorial](https://sqlzoo.net/) teaches the SQL basics that can be 
   used in all major relational database implementations.
 
-* [Life of a SQL query](https://numeracy.co/blog/life-of-a-sql-query)
-  explains what happens both conceptually and technically within a
-  database when a SQL query is run. The author uses 
-  [PostgreSQL](/postgresql.html) as the example database and SQL syntax
-  throughout the post.
-
 * [A Probably Incomplete, Comprehensive Guide to the Many Different Ways to JOIN Tables in SQL](https://blog.jooq.org/2017/01/12/a-probably-incomplete-comprehensive-guide-to-the-many-different-ways-to-join-tables-in-sql/)
   elaborates on one of the trickiest parts of writing SQL statements
   that bridge one or more tables: the `JOIN`.
 
-* [Writing better SQL](http://www.craigkerstiens.com/2016/01/08/writing-better-sql/)
+* [Writing better SQL](https://web.archive.org/web/20201108124253/http://www.craigkerstiens.com/2016/01/08/writing-better-sql/)
   is a short code styling guide to make your queries easier to read.
 
 * [SQL Intermediate](https://www.dataquest.io/blog/sql-intermediate/) is a
@@ -219,7 +210,7 @@ speed on SQL if you have never previously used it.
 * [Online migrations at scale](https://stripe.com/blog/online-migrations)
   is a great read on breaking down the complexity of a database schema
   migration for an operational database. The approach the author's team
-  used was a 4-step dual writing pattern to carefully evolved the way
+  used was a 4-step dual writing pattern that carefully evolved the way
   data for subscriptions were stored so they could move to a new, more
   efficient storage model.
 
@@ -256,7 +247,7 @@ speed on SQL if you have never previously used it.
   asychronous event models. Definitely worth a read if you are using
   [WebSockets](/websockets.html) via Tornado or gevent.
 
-* [PostgreSQL vs. MS SQL Server](http://www.pg-versus-ms.com/) is one
+* [PostgreSQL vs. MS SQL Server](https://web.archive.org/web/20191222230242/https://www.pg-versus-ms.com/) is one
   perspective on the differences between the two database servers from a
   data analyst.
 
@@ -265,7 +256,7 @@ speed on SQL if you have never previously used it.
 1. Install PostgreSQL on your server. Assuming you went with Ubuntu run 
    ``sudo apt-get install postgresql``.
 
-1. Make sure the [psycopg2](http://initd.org/psycopg/) library is in your
+1. Make sure the [psycopg2](https://www.psycopg.org/) library is in your
    application's dependencies.
 
 1. Configure your web application to connect to the PostgreSQL instance.
