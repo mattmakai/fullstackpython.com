@@ -39,12 +39,14 @@ frameworks when otherwise they should not make technical design decisions.
 
 ## Why are there misconceptions about Python in enterprise environments?
 Traditionally large organizations building enterprise software have used 
-statically typed languages such as C++, .NET and Java. Throughout the 1980s 
-and 1990s large companies such as Microsoft, Sun Microsystems and Oracle 
-marketed these languages as "enterprise grade". The inherent snub to other
-languages was that they were not appropriate for CIOs' difficult technical 
-environments. Languages other than Java, C++ and .NET were seen as risky and
-therefore not worthy of investment.
+statically typed languages and platforms such as C++, C# and Java. 
+Throughout the 1990s and early 2000s, large companies such as 
+Microsoft, Sun Microsystems and Oracle marketed these languages as 
+"enterprise grade". The inherent message about other programming
+ecosystem was that they were not appropriate for CIOs' difficult 
+technical environments. Languages other than Java, C++ and C# (along
+with its broader .NET platform) were seen as risky and therefore not 
+worthy of investment.
 
 In addition, "scripting languages" such as Python, Perl and Ruby were not
 yet robust enough in the 1990s because their core standard libraries were
