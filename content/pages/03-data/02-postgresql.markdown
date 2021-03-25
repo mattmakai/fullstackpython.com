@@ -7,7 +7,7 @@ sidebartitle: PostgreSQL
 meta: PostgreSQL is an open source relational database commonly used with Python applications.
 
 
-[PostgreSQL](http://www.postgresql.org/), often written as "Postgres" and 
+[PostgreSQL](https://www.postgresql.org/), often written as "Postgres" and 
 pronounced "Poss-gres", is an open source
 [relational database](/databases.html) implementation frequently used by 
 Python applications as a backend for data storage and retrieval.
@@ -45,8 +45,8 @@ how the two projects handle defect resolution.
 
 The PostgreSQL core team also releases frequent updates that greatly enhance 
 the database's capabilities. For example, in the 
-[PostgreSQL 9.4 release](http://www.postgresql.org/docs/9.4/static/release-9-4.html)
-the [jsonb type](http://www.postgresql.org/docs/9.4/static/datatype-json.html)
+[PostgreSQL 9.4 release](https://www.postgresql.org/docs/9.4/static/release-9-4.html)
+the [jsonb type](https://www.postgresql.org/docs/9.4/static/datatype-json.html)
 was added to enhance JavaScript Object Notation ([JSON](http://www.json.org/))
 storage capabilities so that in many cases a separate 
 [NoSQL database](/no-sql-datastore.html) is not required in an application's
@@ -57,18 +57,18 @@ architecture.
 To work with relational databases in Python you need to use a database 
 driver, which is also referred to as a database connector. The most common 
 driver library for working with PostgreSQL is 
-[psycopg2](http://initd.org/psycopg/). There is 
+[psycopg2](https://www.psycopg.org/). There is 
 [a list of all drivers on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Python),
 including several libraries that are no longer maintained. If you're
 working with the 
-[asyncio Python stdlib module](https://docs.python.org/3.4/library/asyncio.html) 
+[asyncio Python stdlib module](https://docs.python.org/3/library/asyncio.html) 
 you should also take a look at the 
 [aiopg](https://github.com/aio-libs/aiopg) library which
 wraps psycopg2's asychronouos features together.
 
 To abstract the connection between tables and objects, many Python 
 developers use an 
-[object-relational mapper (ORM)](/object-relational-mappers-orms.html) with 
+[object-relational mapper (ORM)](/object-relational-mappers-orms.html) 
 to turn relational data from PostgreSQL into objects that can be used in
 their Python application. For example, while PostgreSQL provides a 
 relational database and psycopg is the common database connector, there
@@ -87,15 +87,15 @@ However, once the database is installed and running your responsibility is just 
 Before you go live with a production application, make sure to:
 
 1. Lock down access with 
-   [a whitelist](http://www.postgresql.org/docs/9.3/static/auth-pg-hba-conf.html) 
+   [a whitelist](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) 
    in the `pg_hba.conf` file 
 1. Enable [replication](https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-on-postgresql-on-an-ubuntu-12-04-vps)
    to another database that's preferrably on different infrastructure in 
    a separate location
 1. Perform regular 
-   [backups and test the restoration process](http://www.postgresql.org/docs/current/static/backup.html)
+   [backups and test the restoration process](https://www.postgresql.org/docs/current/backup.html)
 1. Ensure your application prevents 
-   [SQL injection attacks](https://www.owasp.org/index.php/SQL_Injection)
+   [SQL injection attacks](https://owasp.org/www-community/attacks/SQL_Injection)
 
 When possible have someone qualified do a 
 [PostgreSQL security audit](http://security.stackexchange.com/questions/2517/postgresql-security-audit)
