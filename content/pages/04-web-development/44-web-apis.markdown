@@ -40,7 +40,7 @@ system condition is met. The call alerts the second system via a POST or GET
 request and often passes data as well.
 
 Webhooks are important because they enable two-way communication initiation 
-for APIs. Webhook flexibility comes in from their definition by the API user
+for APIs. Webhook flexibility comes from their definition by the API user
 instead of the API itself.
 
 For example, in the [Twilio API](https://www.twilio.com/api) when a text 
@@ -61,7 +61,7 @@ on the number's page on Twilio as shown below.
   [APIs 101](https://zapier.com/blog/apis-101/) free guide for what APIs 
   are, why they are valuable and how to use them properly. 
 
-* [What is REST?](http://mickadoo.github.io/rest/2016/09/26/what-is-rest.html)
+* [What is REST?](https://mickadoo.github.io/rest/2016/09/26/what-is-rest.html)
   is a well-written overview of the REpresentational State Transfer (REST)
   architecture proposed by Roy Fielding in his dissertation.
 
@@ -90,11 +90,6 @@ on the number's page on Twilio as shown below.
 * [Simplicity and Utility, or, Why SOAP Lost](http://keithba.net/simplicity-and-utility-or-why-soap-lost)
   provides context for why JSON-based web services are more common today than
   SOAP which was popular in the early 2000s.
-
-* [API tools for every occasion](https://medium.com/@orliesaurus/api-tools-for-every-occasion-10-api-tools-released-in-2015-i-can-t-live-without-d5947d9ca9c3)
-  provides a list of 10 tools that are really helpful when working with APIs
-  that are new in 2015.
-
 
 
 ## APIs learning checklist
