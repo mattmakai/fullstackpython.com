@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### April
+* Published new post on [How to Monitor Python Functions on AWS Lambda with Sentry](/blog/monitor-python-functions-aws-lambda-sentry.html).
+* New [SQLite](/sqlite.html) resource.
+
 ### March
 * New [webhook](/webhooks.html) resource.
 

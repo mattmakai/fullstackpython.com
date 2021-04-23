@@ -86,6 +86,10 @@ tutorials will help you get started.
   It's a great short read which shows that the code is well-tested and 
   maintained.
 
+* [SQLite is not a toy database](https://antonz.org/sqlite-is-not-a-toy-database/)
+  is a whirlwind overview of some of the best aspects of SQLite and why
+  you should use it.
+
 * [Data Analysis of 8.2 Million Rows with Python and SQLite](https://plot.ly/ipython-notebooks/big-data-analytics-with-pandas-and-sqlite/)
   explains how you can load a large dataset in to SQLite and visualize it
   using the Plotly service.
@@ -138,6 +142,9 @@ you are having with SQLite rather than going through a general tutorial.
 * [SQLite with a fine-toothed comb](http://blog.regehr.org/archives/1292)
   digs into the internals of SQLite and shows some bugs found (and 
   since fixed) while the author was researching the SQLite source code.
+
+* [How to Store Multimedia Files in a SQLite3 Database with Python](https://www.twilio.com/blog/intro-multimedia-file-upload-python-sqlite3-database)
+  goes through the Python code for storing and accessing BLOB-type objects.
 
 * [Going Fast with SQLite and Python](http://charlesleifer.com/blog/going-fast-with-sqlite-and-python/)
   shares essential knowledge for working effectively with SQLite in Python,

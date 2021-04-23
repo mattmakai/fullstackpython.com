@@ -9,7 +9,7 @@ meta: An event stream is a log of one or more events.
 
 Event streams are a log of one or more "things that happen", which are
 usually referred to as events. Event streams are 
-conceptually focused around events than "things" or objects, which are 
+conceptually focused around events than objects or tables, which are 
 the typical storage unit of [relational databases](/databases.html).
 
 Apache Kafka and Gazette are a popular open source implementations of event 

@@ -3,7 +3,7 @@ slug: aws-lambda-python-2-7
 meta: Learn how to create and deploy your first Amazon Web Services (AWS) Lambda function with Python 2.7.
 category: post
 date: 2017-04-28
-modified: 2017-04-29
+modified: 2021-03-30
 newsletter: False
 headerimage: /img/170428-aws-lambda-python-2-7/header.jpg
 headeralt: AWS, AWS Lambda and Python logos, copyright their respective owners.
@@ -21,6 +21,11 @@ In this tutorial we'll learn how to quickly write and run a Lambda
 function that executes some simple Python 2.7 code and handles environment
 variables. The code can then be modified to build far more complicated 
 Python applications.
+
+*Note*: AWS 
+[ended support for Python 2.7 Lambda functions in 2021](https://aws.amazon.com/blogs/compute/announcing-end-of-support-for-python-2-7-in-aws-lambda/)
+and Python 2.7 no longer receives support so you should really be using
+[Python 3.8 or above](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-lambda-now-supports-python-3-8/).
 
 
 ## Tools We Need
