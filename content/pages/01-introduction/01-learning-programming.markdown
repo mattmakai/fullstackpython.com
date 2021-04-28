@@ -125,7 +125,7 @@ repositories and sites with practice problems and solutions:
 * [TeachCraft](https://teachcraft.net/) combines Minecraft with Python to
   learn coding.
 
-* [500 Data Structures and Algorithms practice problems and their solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
+* [500 Data Structures and Algorithms practice problems and their solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-interview-questions-and-their-solutions)
   covers a large swath of the computer science space. It is not important
   to know all of these algorithms and data structures but experience with
   many of them will be greatly beneficial in becoming a better developer.
