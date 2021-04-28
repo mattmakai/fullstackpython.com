@@ -12,7 +12,7 @@ subsections, including (in no particular order):
 
 * data processing / wrangling
 * machine learning
-* data analysis
+* [data analysis](/data-analysis.html)
 * [visualization](/data-visualization.html)
 * geospatial mapping
 * persistence via [relational databases](/databases.html) and 
@@ -80,7 +80,7 @@ and [data visualization](/data-visualization.html) pages.
   of personal data is now held by a few dozen large corporations worldwide
   such as Google, Amazon and Facebook. The article covers some of the
   implications of data as a valuable asset and in general is a great read
-  as a high-level overview of on this topic.
+  as a high-level overview on this topic.
 
 * [Metadata Investigation : Inside Hacking Team](https://labs.rs/en/metadata/)
   presents what metadata is and how it can be used to track people even though
@@ -100,7 +100,7 @@ and [data visualization](/data-visualization.html) pages.
   for business analysis. This post is part of a larger series on 
   [how to get your first job as a data scientist](https://www.dataquest.io/blog/how-to-get-your-first-data-science-job/)
   which is all worth your time reading to understand the intersection of
-  working with data to figure out its value to companies sand organizations.
+  working with data to figure out its value to companies and organizations.
 
 
 ### Example data sets
@@ -117,7 +117,7 @@ sets.
   are scraped JSON and CSV structured monthly data from Kickstarter 
   projects.
 
-* [Data is Plural](https://tinyletter.com/data-is-plural) is a weekly
+* [Data is Plural](https://www.data-is-plural.com/) is a weekly
   newsletter that highlights open data that you can use for your projects.
   I have been a subscriber to the newsletter for a couple of years now and
   love seeing the wide variety of data sources that are freely available.
@@ -154,7 +154,7 @@ sets.
   have evolved over the past 20ish years based on his first-hand experience
   as a leader and member in that community.
 
-* The [Open Source Data Science Masters](http://datasciencemasters.org/)
+* The [Open Source Data Science Masters](https://datasciencemasters.org/)
   is a well-crafted free curriculum and set of resources for students who
   want to learn both the theory and technologies for working with data.
 
