@@ -82,7 +82,7 @@ Dictionary comprehension:
 * The [online Python tutor](http://www.pythontutor.com/) visually walks
   through code and shows how it executes on the Python interpreter.
 
-* [Python Module of the Week](http://pymotw.com/2/index.html) is a tour
+* [Python Module of the Week](https://pymotw.com/3/) is a tour
   through the Python standard library.
 
 * [A Python interpreter written in Python](http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html)
@@ -164,10 +164,6 @@ the very beginner topics.
   covers what the code for list comprehensions looks like and gives some
   example code to show how they work.
 
-* [An Introduction to Python Lists](http://effbot.org/zone/python-list.htm)
-  is a solid overview of Python lists in general and tangentially covers 
-  list comprehensions.
-
 
 ### Python generator resources
 * This blog post entitled 
@@ -179,7 +175,7 @@ the very beginner topics.
   is the best all-around introduction to how to use generators and
   provides numerous code examples to learn from.
 
-* [Python 201: An Intro to Generators](http://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
+* [Python 201: An Intro to Generators](https://www.blog.pythonlibrary.org/2014/01/27/python-201-an-intro-to-generators/)
   is another short but informative read with example generators code.
 
 * [Iterators & Generators](http://anandology.com/python-practice-book/iterators.html)
