@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### May
+* New resources on [GPT-3](/gpt-3.html), [Jupyter Notebook](/jupyter-notebook.html)
+  and [serverless](/serverless.html) pages.
+
 ### April
 * Published new post on [How to Monitor Python Functions on AWS Lambda with Sentry](/blog/monitor-python-functions-aws-lambda-sentry.html).
 * New [SQLite](/sqlite.html) resource.

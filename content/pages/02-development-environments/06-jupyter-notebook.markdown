@@ -146,6 +146,13 @@ like advanced interactive visualizations.
   code that is suitable for [deployment](/deployment.html) to a production 
   environment.
 
+* [How to use ipywidgets to make your Jupyter notebook interactive](https://www.wrighters.io/use-ipywidgets-with-jupyter-notebooks/)
+  is a tutorial on how to use the
+  [ipywidgets](https://ipywidgets.readthedocs.io/en/latest/) library
+  to make Jupyter Notebooks respond to users' input and go beyond
+  simply presenting data into having users be able to do some additional
+  analysis themselves.
+
 * [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
   explains many of the lesser-known keyboard shortcuts and mechanisms
   to output settings.

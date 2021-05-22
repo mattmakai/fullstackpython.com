@@ -120,6 +120,10 @@ is trained.
   researchers on its usage, and some initial resources to get a
   better understanding of what this model is capable of performing.
 
+* [What Is GPT-3: How It Works and Why You Should Care](https://www.twilio.com/blog/what-is-gpt-3)
+  presents a high-level accessible overview of GPT-3, how it compares
+  to other language models, and resources to learn more.
+
 * [How GPT3 Works - Visualizations and Animations](https://jalammar.github.io/how-gpt3-works-visualizations-animations/)
   contains some wonderful animated visuals to show how the model is
   trained and what happens in various scenarios such as text output
@@ -137,7 +141,6 @@ is trained.
   compares and contrasts this model with similar models that have been
   developed and tries to give an overview of where each one stands
   with its strengths and weaknesses.
-
 
 
 ## GPT-3 tutorials
@@ -164,3 +167,5 @@ is trained.
     * [Control a Spooky Ghost Writer for Halloween with OpenAI's GPT-3 Engine, Python, and Twilio WhatsApp API](https://www.twilio.com/blog/ghost-writer-spooky-openai-gpt3-python-whatsapp)
     * [Generating Lyrics in the Style of your Favorite Artist with Python, OpenAI's GPT-3 and Twilio SMS](https://www.twilio.com/blog/generating-lyrics-in-the-style-of-your-favorite-artist-with-python-openai-s-gpt-3-and-twilio-sms)
     * [Automated Yugioh Deckbuilding in Python with OpenAI's GPT-3 and Twilio SMS](https://www.twilio.com/blog/building-computer-generated-yugioh-decks-in-python-with-openai-s-gpt-3-and-twilio-sms)
+    * [Build a Telephone Chatbot with GPT-3 and Twilio Autopilot](https://www.twilio.com/blog/build-telephone-chatbot-gpt3-twilio-autopilot)
+

@@ -101,6 +101,12 @@ iterations so there are many ideas and good practices yet to be
 discovered. These resources are the first attempts at figuring
 out how to structure and operate serverless applications.
 
+* [What's Serverless?](https://technically.substack.com/p/whats-serverless)
+  is an accessible "first read" for both developers and non-technical
+  audiences alike. It breaks down the differences between what most
+  developers consider serverless and infrastructure-as-a-service (IaaS)
+  offerings.
+
 * [Serverless software](https://talkpython.fm/episodes/show/118/serverless-software)
   covers a range of topics under serverless and how deployments have
   changed as new options such as [PaaS](/platform-as-a-service.html) 
