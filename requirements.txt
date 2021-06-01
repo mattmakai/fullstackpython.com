@@ -3,4 +3,4 @@ bs4==0.0.1
 Markdown==2.6.10
 Pelican==3.6.3
 requests==2.22.0
-urllib3==1.25.3
+urllib3==1.26.5
