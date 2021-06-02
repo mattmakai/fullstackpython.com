@@ -164,10 +164,6 @@ the very beginner topics.
   covers what the code for list comprehensions looks like and gives some
   example code to show how they work.
 
-* [An Introduction to Python Lists](http://effbot.org/zone/python-list.htm)
-  is a solid overview of Python lists in general and tangentially covers 
-  list comprehensions.
-
 
 ### Python generator resources
 * This blog post entitled 
