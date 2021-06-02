@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### June
+* Fix broken links across the site. It's a real shame people and companies don't use
+  301 redirects more often rather than just breaking their URL structures.
+
 ### May
 * New resources on [GPT-3](/gpt-3.html), [Jupyter Notebook](/jupyter-notebook.html)
   and [serverless](/serverless.html) pages.
