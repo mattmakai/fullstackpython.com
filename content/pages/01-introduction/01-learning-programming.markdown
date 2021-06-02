@@ -125,11 +125,6 @@ repositories and sites with practice problems and solutions:
 * [TeachCraft](https://teachcraft.net/) combines Minecraft with Python to
   learn coding.
 
-* [500 Data Structures and Algorithms practice problems and their solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
-  covers a large swath of the computer science space. It is not important
-  to know all of these algorithms and data structures but experience with
-  many of them will be greatly beneficial in becoming a better developer.
-
 
 ### First-hand advice
 These articles are written by programmers who explain how they learned to
@@ -169,10 +164,6 @@ your teaching experience:
 * [Teach tech with cartoons](https://jvns.ca/teach-tech-with-cartoons/)
   is an awesome resource that explains how you can use simple but fun
   drawings to teach otherwise difficult technical concepts to students.
-
-* [Teaching programming to working professionals](http://pgbovine.net/PG-Podcast-21-Trey-Hunner.htm)
-  is a video podcast with [Trey Hunter](https://twitter.com/treyhunner)
-  about his experience teaching Python to experienced professionals.
 
 * [Teach Yourself Computer Science](https://teachyourselfcs.com/) is
   intended as a self-teaching tool with many resources that are classic

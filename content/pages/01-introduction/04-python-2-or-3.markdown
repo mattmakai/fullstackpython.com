@@ -78,7 +78,7 @@ gone through the process and have advice for making it less painful.
   implementations. There is also a 
   [quick reference for writting code with Python 2 and 3 compatibility](https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef).
 
-* [Upgrading to Python 3 with Zero Downtime](https://tech.yplanapp.com/2016/08/24/upgrading-to-python-3-with-zero-downtime/)
+* [Upgrading to Python 3 with Zero Downtime](https://adamj.eu/tech/2016/08/24/upgrading-yplan-to-python-3-with-zero-downtime/)
   supplies advice on transitioning a large existing Python 2 web application 
   to Python 3. Their process involved upgrading dependencies, testing and
   deploying the new version before going back to clean up unnecessary code
