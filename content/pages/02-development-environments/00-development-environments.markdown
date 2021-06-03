@@ -121,12 +121,6 @@ configuration as a starting point and customize it from there.
   [which version of Python to use](/python-2-or-3.html) and adding
   [code metrics](/code-metrics.html) libraries for checking syntax.
 
-* [Three Ways to Install Python on your Windows Computer](http://blog.yhat.com/posts/installing-python-on-windows.html)
-  provides multiple avenues for Windows users to get Python on their machine
-  before setting up the rest of their development environment. Unlike
-  macOS and Linux, the Windows [operating system](/operating-systems.html) 
-  does not include Python with its default installation.
-
 * [PyCharm: The Good Parts](http://nafiulis.me/pycharm-the-good-parts-i.html)
   shows you how to be more efficient and productive with that IDE if it's
   your choice for writing Python code.

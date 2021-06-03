@@ -165,12 +165,6 @@ so far to get up to speed on building and releasing your own packages.
   is an amazing post that takes the reader from simple Python script
   into a complete Python package.
 
-* [Perils of packaging](https://malramsay.com/post/perils_of_packaging/)
-  covers several edge cases that come up when trying to put together
-  pieces like Travis CI, PyPI and conda. The post walks through the errors 
-  and how to get around them until they are smoothed out by updates to the 
-  tools.
-
 * [How to Publish Your Package on PyPI](https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/)
   is for developers who have created a code library they would like to
   share and make installable for other developers.

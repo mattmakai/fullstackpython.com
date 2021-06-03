@@ -29,10 +29,6 @@ Python code.
   is a solid discussion thread with different developers' perspectives
   on using PyCharm for coding their applications.
 
-* [How to Get Started with PyCharm and Have a Productive Python IDE](https://pedrokroger.net/getting-started-pycharm-python-ide/)
-  covers the basics of configuring PyCharm for running code within 
-  virtualenvs, macros, using the console and code completion.
-
 * [Using PyCharm with Pyramid](https://docs.pylonsproject.org/projects/pyramid-cookbook/en/latest/development_tools/pycharm.html)
   is specific to developing and debugging 
   [with the Pyramid web framework](/pyramid.html).

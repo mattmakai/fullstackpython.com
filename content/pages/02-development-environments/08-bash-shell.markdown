@@ -219,7 +219,7 @@ to try to avoid as you work with the shell or write scripts.
   their destructive abilities by reading through the descriptions provided
   by the author.
 
-* [Faster bash startup](https://danpker.com/posts/2020/faster-bash-startup/)
+* [Faster bash startup](https://danpker.com/posts/faster-bash-startup/)
   and
   [Even faster bash startup](https://work.lisk.in/2020/11/20/even-faster-bash-startup.html)
   are two great tutorials that will save you a bunch of time if you frequently

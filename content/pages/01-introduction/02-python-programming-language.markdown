@@ -79,9 +79,6 @@ Dictionary comprehension:
 
 
 ### General Python language resources
-* The [online Python tutor](http://www.pythontutor.com/) visually walks
-  through code and shows how it executes on the Python interpreter.
-
 * [Python Module of the Week](http://pymotw.com/2/index.html) is a tour
   through the Python standard library.
 

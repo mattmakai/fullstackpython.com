@@ -42,16 +42,16 @@ listen and learn.
   [web application development](/web-development.html) in Python using the 
   [Django web framework](/django.html).
 
+* [The Real Python Podcast](https://realpython.com/podcasts/rpp/) is a weekly
+  podcast with interviews, coding tips, and conversation with guests from the
+  Python community.
+
 * [Teaching Python](https://www.teachingpython.fm/) is a podcast by two
   teachers about their adventures teaching middle school computer science, 
   problem solving, handling failure, frustration, and success with
   teaching Python programming.
 
-* Professor Philip Guo has a video podcast called 
-  [PG Podcast](https://podcasts.apple.com/us/podcast/philip-guo-podcasts-pgbovine-net/id1276072242),
-  which typically covers Python subjects. 
 
-* [The Real Python Podcast](https://realpython.com/podcasts/rpp/) is a weekly podcast with interviews, coding tips, and conversation with guests from the Python community.
 
 ## Favorite podcast episodes
 Here are a list of my favorite episodes from various Python podcasts before 

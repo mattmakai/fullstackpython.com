@@ -38,8 +38,6 @@ easier to use many shells at once and attaching to both local and remote
 
 * [Using tmux Properly](http://danielallendeutsch.com/blog/16-using-tmux-properly.html)
 
-* [Differences between tmux vs screen](https://wtanaka.com/node/8136)
-
 * [The Power Of tmux Hooks](https://devel.tech/tips/n/tMuXz2lj/the-power-of-tmux-hooks/)
 
 * There are a slew of "cheat sheets" for tmux out there, here are a few 
