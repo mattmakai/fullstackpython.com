@@ -44,8 +44,6 @@ otherwise independent web applications.
 
 * [Should you build a webhooks API?](https://brandur.org/webhooks)
 
-* [Webhooks do’s and dont’s: what we learned after integrating +100 APIs](https://restful.io/webhooks-dos-and-dont-s-what-we-learned-after-integrating-100-apis-d567405a3671)
-
 * [Why Are Webhooks Better Than Serverless Extensibility?](https://developer.okta.com/blog/2017/10/11/why-are-webhooks-better-than-serverless-extensibility)
 
 * [Webhooks Provide an Efficient Alternative to API Polling](https://thenewstack.io/wonderful-world-webhooks/)

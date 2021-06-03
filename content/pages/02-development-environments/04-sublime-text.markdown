@@ -68,10 +68,6 @@ links should get your editor customized with linters,
   is a spectacular tutorial that covers installing Sublime Text and 
   configuring a multitude of helpful Python programming plugins.
 
-* [Sublime Text 3 Heaven](https://www.kennethreitz.org/essays/sublime-text-3-heaven)
-  is a quick overview of the extensions, packages and bonus toys that
-  one developer uses for his own Sublime Text development setup.
-
 * [Sublime Tutor](https://sublimetutor.com/) is an interactive in-editor 
   keyboard shortcuts tutorial that plugs into Sublime so you can learn and
   become more productive as you use the editor.

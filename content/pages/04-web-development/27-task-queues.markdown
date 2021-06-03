@@ -100,13 +100,6 @@ when scaling out a large deployment of distributed task queues.
 
 
 ## Open source examples that use task queues
-* Take a look at the code in this open source
-  [Flask application](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/flask)
-  and
-  [this Django application](https://www.twilio.com/docs/howto/walkthrough/appointment-reminders/python/django)
-  for examples of how to use and deploy Celery with a Redis broker to
-  send text messages with these frameworks.
-
 * [flask-celery-example](https://github.com/thrisp/flask-celery-example) is
   a simple Flask application with Celery as a task queue and Redis as
   the broker.

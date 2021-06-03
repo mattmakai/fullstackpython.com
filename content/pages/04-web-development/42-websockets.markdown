@@ -175,9 +175,7 @@ own project.
 
 * The [realtime codenames game](https://github.com/joshporter1/codenames) 
   source code is a full-featured example for using WebSockets via 
-  Flask-SocketIO. There is also a 
-  [multi-part tutorial](https://secdevops.ai/weekend-project-part-1-creating-a-real-time-web-based-application-using-flask-vue-and-socket-b71c73f37df7)
-  that walks through the code.
+  Flask-SocketIO.
 
 * The 
   [python-websockets-example](https://github.com/mattmakai/python-websockets-example)
@@ -191,13 +189,6 @@ own project.
   talk I gave at San Francisco Python in January 2015 is a live-coded example
   Flask web app implementation that allows the audience to interact with
   WebSockets as I built out the application.
-
-* [Creating a Real-time Web-based Application using Flask, Vue, and Socket.io: part 1](https://secdevops.ai/weekend-project-part-1-creating-a-real-time-web-based-application-using-flask-vue-and-socket-b71c73f37df7),
-  [part 2](https://secdevops.ai/weekend-project-part-2-turning-flask-into-a-real-time-websocket-server-using-flask-socketio-ab6b45f1d896)
-  and
-  [part 3](https://secdevops.ai/weekend-project-part-3-centralizing-state-management-with-vuex-5f4387ebc144)
-  are a complete front-to-backend WebSockets, Python and JavaScript front
-  end framework example with open source code.
 
 * [Real-time in Python](http://mrjoes.github.io/2013/06/21/python-realtime.html)
   provides Python-specific context for how the server push updates were 

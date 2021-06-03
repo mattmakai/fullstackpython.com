@@ -338,11 +338,6 @@ out how to build your own projects. This is a short list of some
 real-world example applications, and many more can be found on the
 [Django example projects and code](/django-code-examples.html) page.
 
-* [Browser calls with Django and Twilio](https://www.twilio.com/docs/howto/walkthrough/browser-calls/python/django)
-  shows how to build a web app with Django and 
-  [Twilio Client](https://www.twilio.com/client) to turn a user's web 
-  browser into a full-fledged phone. Pretty awesome!
-
 * [Openduty](https://github.com/ustream/openduty) is a website status checking
   and alert system similar to PagerDuty.
 

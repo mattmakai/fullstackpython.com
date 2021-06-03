@@ -88,10 +88,6 @@ teams, culture, processes and tools into software development organizations.
   your pager goes off, ownership and how startups can be different from
   large companies with their incident responses.
 
-* [Bing: Continuous Delivery](http://stories.visualstudio.com/bing-continuous-delivery/)
-  is an impressive visual story that explains the practices for how their
-  team delivers updates to the search engine.
-
 * [Why are we racing to DevOps?](http://www.cio.com/article/3015237/application-development/why-are-we-racing-to-devops.html)
   is a very high level summary of the benefits of DevOps to IT organizations.
   It's not specific to Python and doesn't dive into the details, but it's 

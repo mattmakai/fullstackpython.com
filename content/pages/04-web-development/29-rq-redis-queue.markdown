@@ -19,7 +19,7 @@ track of tasks in the queue that need to be executed.
 ### RQ resources
 * [Asynchronous Tasks in Python with Redis Queue](https://www.twilio.com/blog/asynchronous-tasks-in-python-with-redis-queue)
   is a quickstart-style tutorial that shows how to use RQ to fetch data 
-  from the 
+  from the
   [Mars Rover web API](https://data.nasa.gov/Space-Science/Mars-Rover-Photos-API/929k-jizu)
   and process URLs for each of the photos taken by NASA's Mars rover.
   There is also a follow-up post on

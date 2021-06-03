@@ -14,8 +14,6 @@ request forgery and usage of public-private keypairs.
 
 
 ### Security tools
-* [Bro](http://www.bro.org/) is a network security and traffic monitor.
-
 * [lynis](https://cisofy.com/lynis/) 
   ([source code](https://github.com/CISOfy/lynis)) is a security 
   audit tool that can run as a shell script on a Linux system to find out
@@ -131,11 +129,6 @@ resources can also give you a good overview of how HTTPS works.
 
 * The [/r/netsec](http://www.reddit.com/r/netsec/) subreddit is one place to
   go to learn more about network and application security.
-
-* [Hacking Tools Repository](http://gexos.github.io/Hacking-Tools-Repository/)
-  is a great list of password cracking, scanning, sniffing and other security
-  penetration testing tools.
-
 
 * The EFF has a well written overview on 
   [what makes a good security audit](https://www.eff.org/deeplinks/2014/11/what-makes-good-security-audit). It's broad but contains some of their behind the
