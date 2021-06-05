@@ -61,12 +61,6 @@ basic syntax will change as the library's API is not yet stable.
   an appropriate format then explains the code that uses Bokeh to visualize
   it.
 
-* [Data is beautiful: Visualizing Roman imperial dynasties](http://machineloveus.com/data-is-beautiful-visualizing-roman-imperial-dynasties/)
-  provides a walkthrough for creating a gorgeous visualization based on
-  historical Roman data. The post is about more than just the visual, it also
-  goes into the ideation, data wrangling and analysis phases that came
-  before using Bokeh to show the results.
-
 * [Visualizing with Bokeh](https://programminghistorian.org/en/lessons/visualizing-with-bokeh)
   gives a detailed explanation with the code for number Bokeh visuals
   you can output while working with a [pandas](/pandas.html) data set.

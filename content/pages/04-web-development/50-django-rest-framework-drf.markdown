@@ -60,10 +60,6 @@ typically abbreviated "DRF", is a Python library for building web
 
 * [Optimizing slow Django REST Framework performance](https://ses4j.github.io/2015/11/23/optimizing-slow-django-rest-framework-performance/)
 
-* [TLT: Serializing Authenticated User Data With Django REST Framework](http://gregblogs.com/tlt-serializing-authenticated-user-data-with-django-rest-framework/)
-
-* [Building an API with Django REST Framework and Class-Based Views](https://codeburst.io/building-an-api-with-django-rest-framework-and-class-based-views-75b369b30396)
-
 * [Simple Nested API Using Django REST Framework](https://blog.apptension.com/2017/09/13/rest-api-using-django-rest-framework/)
 
 * [Building APIs with Django and Django Rest Framework](https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/)

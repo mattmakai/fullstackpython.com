@@ -8,17 +8,17 @@ meta: Jinja2 is a template engine written in Python for outputting formats such 
 
 
 Jinja, also commonly referred to as 
-"[Jinja2](http://jinja.pocoo.org/docs/dev/)" to specify the newest 
+"[Jinja2](https://jinja.palletsprojects.com/en/3.0.x/templates/)" to specify the newest 
 release version, is a Python [template engine](/template-engines.html) 
 used to create HTML, XML or other markup formats that are returned to the 
 user via an HTTP response.
 
-<a href="http://jinja.pocoo.org/docs/dev/"  style="border: none;"><img src="/img/logos/jinja.png" width="100%" alt="Logo for the Jinja template engine project." style="border-radius: 5px;" width="100%" class="technical-diagram"></a>
+<a href="https://jinja.palletsprojects.com/en/3.0.x/templates/"  style="border: none;"><img src="/img/logos/jinja.png" width="100%" alt="Logo for the Jinja template engine project." style="border-radius: 5px;" width="100%" class="technical-diagram"></a>
 
 ## Why is Jinja2 useful?
 Jinja2 is useful because it has consistent template tag syntax and the
 project is cleanly extracted as 
-[an independent open source project](https://github.com/mitsuhiko/jinja2) so
+[an independent open source project](https://github.com/pallets/jinja) so
 it can be used as a dependency by other code libraries.
 
 <div class="well see-also">Jinja2 is an implementation of the <a href="/template-engines.html">template engines</a> concept. Learn more in the <a href="/web-development.html">web development</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
@@ -31,9 +31,8 @@ end a developer can code whatever she wants.
 
 ## Jinja2 origin and development
 The first recorded public released of Jinja2 was in 
-[2008 with 2.0rc1](http://jinja.pocoo.org/docs/dev/changelog/#version-2-0rc1).
-Since then the engine has seen numerous updates and remains in active
-development.
+2008 with 2.0rc1. Since then the engine has seen numerous updates and 
+remains under active development.
 
 Jinja2 engine certainly wasn't the first template engine. In fact, Jinja2's 
 syntax is inspired by Django's built-in template engine, which was released 

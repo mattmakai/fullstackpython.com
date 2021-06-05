@@ -186,10 +186,6 @@ web application's design.
   talk about tables, because that was the only way to position anything
   back in the day.
 
-* [30 seconds of CSS](https://30-seconds.github.io/30-seconds-of-css/)
-  provides short useful code snippets for you to learn from and use for
-  building your own web applications.
-
 * [CSS: The bad bits](https://www.joeforshaw.com/blog/css-the-bad-bits-and-how-to-avoid-them)
   examines global scope, implicit percentage styling rules and the z-index
   which can be difficult to use and require some restraint to ensure they
