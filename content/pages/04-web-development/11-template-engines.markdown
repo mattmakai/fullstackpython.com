@@ -161,6 +161,10 @@ know how they work to aid your debugging. The following resources examine
 existing template engine design as well as how to build your own engine
 when that's necessary for your projects.
 
+* [Writing a Jinja-inspired template library in Python](https://notes.eatonphil.com/writing-a-template-library-in-python.html)
+  walks through how to create your own a simplified version of the 
+  [Jinja](/jinja2.html) template engine as a learning exercise.
+
 * [How a template engine works](https://fengsp.github.io/blog/2016/8/how-a-template-engine-works/)
   uses the template module in Tornado as an example to step through how
   a template engine produces output, from parsing the incoming string to

@@ -154,6 +154,11 @@ sets.
   have evolved over the past 20ish years based on his first-hand experience
   as a leader and member in that community.
 
+* [Automated Data Wrangling](https://catalyst.coop/2021/05/23/automated-data-wrangling/)
+  covers cleaning, labeling, and automating the bunch of activities
+  that are typically necessary before analysis and data usage can
+  begin for a project.
+
 * The [Open Source Data Science Masters](http://datasciencemasters.org/)
   is a well-crafted free curriculum and set of resources for students who
   want to learn both the theory and technologies for working with data.

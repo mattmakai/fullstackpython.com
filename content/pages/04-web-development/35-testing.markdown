@@ -176,10 +176,10 @@ use mocks in your test cases.
   provides a whole code example based on a blog project that shows
   how to use `mock` when testing.
 
-* [Python Mocking 101: Fake It Before You Make It](https://blog.fugue.co/2016-02-11-python-mocking-101.html)
+* [Python Mocking 101: Fake It Before You Make It](https://www.fugue.co/blog/2016-02-11-python-mocking-101)
   explains what mocking is and is not, and shows how to use the `patch`
   function to accomplish it in your project. 
-  [Revisiting Unit Testing and Mocking in Python](https://blog.fugue.co/2017-07-18-revisiting-unit-testing-and-mocking-in-python.html)
+  [Revisiting Unit Testing and Mocking in Python](https://www.fugue.co/blog/2017-07-18-revisiting-unit-testing-and-mocking-in-python.html)
   is a follow-up post that expands upon using the `patch` function
   along with dependency injection.
 
@@ -190,12 +190,6 @@ use mocks in your test cases.
 * [Mock yourself, not your tests](http://hernantz.github.io/mock-yourself-not-your-tests.html)
   examines when mocks are necessary and when they are not as useful
   so you can avoid them in your test cases.
-
-* [Mocking Redis & Expiration in Python](http://malexandre.fr/2017/10/08/mocking-redis--expiration-in-python/)
-  is a specific scenario where you would want to test your
-  [Redis](/redis.html)-dependent code but prefer to mock it rather than
-  ensure an installation and connection are present whenever you run
-  your tests.
 
 * [Better tests for Redis integrations with redislite](https://www.obeythetestinggoat.com/better-tests-for-redis-integrations-with-redislite.html)
   is a great example of how using the right mocking library can clean

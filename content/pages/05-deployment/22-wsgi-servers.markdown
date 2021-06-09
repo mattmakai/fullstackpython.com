@@ -177,9 +177,9 @@ The following are WSGI servers based on community recommendations.
   is a good read to understand basic information about various WSGI server
   implementations.
 
-* A thorough and informative post for LAMP-stack hosting choices is 
-  presented in the 
-  "[complete single server Django stack tutorial](http://www.apreche.net/complete-single-server-django-stack-tutorial/)." 
+* [What is WSGI and Why Do You Need Gunicorn and Nginx in Django](https://apirobot.me/posts/what-is-wsgi-and-why-do-you-need-gunicorn-and-nginx-in-django)
+  explains the breakdown between a [web server](/web-servers.html)
+  and a WSGI server in an application deployment environment.
 
 * The Python community made a long effort to 
   [transition from mod\_python](http://blog.dscpl.com.au/2010/05/modpython-project-soon-to-be-officially.html) 

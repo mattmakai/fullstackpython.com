@@ -36,9 +36,6 @@ during development so they can be addressed immediately.
   gives an example of a system that needs integration tests and shows how
   context managers can be used to address the problem.
 
-* Pytest has a page on [integration good practices](http://doc.pytest.org/en/latest/goodpractices.html)
-  that you'll likely want to follow when testing your application.
-
 * [Integration testing, or how to sleep well at night](http://enterprisecraftsmanship.com/2015/07/13/integration-testing-or-how-to-sleep-well-at-nights/)
   explains what integration tests are and gives an example. The example is 
   coded in Java but still relevant when you're learning about integration

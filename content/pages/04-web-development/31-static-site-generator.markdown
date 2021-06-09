@@ -206,12 +206,6 @@ point a domain name to your site as well as provide HTTPS support.
 These guides walk through various ways of handling the static site 
 deployment.
 
-* [Static site hosting with S3 and Cloudflare](https://wsvincent.com/static-site-hosting-with-s3-and-cloudflare/)
-  shows how to set up an S3 bucket with Cloudflare in front as a CDN that
-  serves the content with HTTPS. You should be able to accomplish roughly 
-  the same situation with Amazon Cloudfront, but as a Cloudflare user I
-  like their service for these static site configurations.
-
 * Google Cloud provides a tutorial on how to use them to 
   [host your static site](https://cloud.google.com/storage/docs/hosting-static-website).
   Note that you cannot currently use HTTPS on Google Storage servers, which is a 
@@ -221,7 +215,7 @@ deployment.
   making static site deployments and redeployments to Amazon Web Services 
   easier.
 
-* [Deploying a Static Blog with Continuous Integration](https://www.loxodrome.io/post/hugo-on-ci/)
+* [Deploying a Static Blog with Continuous Integration](https://www.jameslmilner.com/post/hugo-on-ci/)
   uses a Hugo (a Golang-based static site generator) generated site
   as an example but the instructions can easily be used to deploy
   a Python-based static site generator output as well.

@@ -120,6 +120,10 @@ perform the request handling. Each worker is independent of the controller.
   documentation each contain instructions for deploying the respective
   frameworks with Gunicorn.
 
+* [Dockerizing Django with Postgres, Gunicorn, and Traefik](https://testdriven.io/blog/django-docker-traefik/)
+  is a more advanced tutorial with a complete project deployment
+  that uses Gunicorn within [Docker](/docker.html).
+
 * [Set up Django, Nginx and Gunicorn in a Virtualenv controled by Supervisor](https://gist.github.com/Atem18/4696071)
   is a GitHub Gist with some great explanations for why we're setting up
   virtualenv and what to watch out for while you're doing the deployment.
