@@ -91,11 +91,6 @@ Sometimes you need inspiration from other sources to figure out what
 you want to build. The following links have made me excited about data
 visualization and gave me ideas for what to build.
 
-* [Roads to Rome](http://roadstorome.moovellab.com/) is a beautiful
-  visualization showing the data behind the expression "all roads lead 
-  to Rome" and whether or not there is a "Rome" central city in every 
-  country.
-
 * [Monarchs](https://thebackend.dev/monarchs/) is a wonderful 1,000 year
   history visual of European rulers. The developer also wrote an in-depth
   article on 
