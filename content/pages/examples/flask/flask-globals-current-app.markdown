@@ -630,7 +630,7 @@ libraries that are commonly used in Flask projects, such as
 [SendGrid](https://www.twilio.com/sendgrid) for transactional email,
 [SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
 [relational database](/databases.html) backend,
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+[Flask-WTF](https://flask-wtf.readthedocs.io/) for form
 handling and many others.
 
 flask-base is provided as open source under the
@@ -1894,7 +1894,7 @@ except ImportError:
 
 ## Example 14 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
-([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
+([project documentation](https://flask-wtf.readthedocs.io/)
 and
 [PyPI page](https://pypi.org/project/Flask-WTF/))
 provides a bridge between [Flask](/flask.html) and the the

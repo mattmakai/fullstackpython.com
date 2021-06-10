@@ -770,7 +770,7 @@ def get_component_module(module_name):
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
 boilerplate relies on many common Flask extensions such as
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
+[Flask-WTF](https://flask-wtf.readthedocs.io/),
 [Flask-Login](https://flask-login.readthedocs.io/en/latest/),
 [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
 many others. The project is provided as open source under the

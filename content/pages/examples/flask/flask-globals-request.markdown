@@ -1997,7 +1997,7 @@ class marshal_with_field(object):
 
 ## Example 12 from Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
-([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
+([project documentation](https://flask-wtf.readthedocs.io/)
 and
 [PyPI page](https://pypi.org/project/Flask-WTF/))
 provides a bridge between [Flask](/flask.html) and the the
@@ -2159,7 +2159,7 @@ def generate_csrf(secret_key=None, token_key=None):
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
 boilerplate relies on many common Flask extensions such as
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
+[Flask-WTF](https://flask-wtf.readthedocs.io/),
 [Flask-Login](https://flask-login.readthedocs.io/en/latest/),
 [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
 many others. The project is provided as open source under the

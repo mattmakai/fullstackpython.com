@@ -22,7 +22,7 @@ Flask web applications.
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-These topics are also useful while reading the `Headers` examples:
+These subjects go along with the `Headers` code examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts

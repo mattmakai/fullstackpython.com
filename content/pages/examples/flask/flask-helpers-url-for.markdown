@@ -350,7 +350,7 @@ libraries that are commonly used in Flask projects, such as
 [SendGrid](https://www.twilio.com/sendgrid) for transactional email,
 [SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
 [relational database](/databases.html) backend,
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+[Flask-WTF](https://flask-wtf.readthedocs.io/) for form
 handling and many others.
 
 flask-base is provided as open source under the
@@ -759,7 +759,7 @@ def ui_for(api):
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
 boilerplate relies on many common Flask extensions such as
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
+[Flask-WTF](https://flask-wtf.readthedocs.io/),
 [Flask-Login](https://flask-login.readthedocs.io/en/latest/),
 [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
 many others. The project is provided as open source under the

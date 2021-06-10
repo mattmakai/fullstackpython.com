@@ -20,7 +20,7 @@ and
 <a href="/flask-views-http-method-funcs-examples.html">http_method_funcs</a>
 are a couple of other callables within the `flask.views` package that also have code examples.
 
-These topics are also useful while reading the `View` examples:
+You should read up on these subjects along with these `View` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)

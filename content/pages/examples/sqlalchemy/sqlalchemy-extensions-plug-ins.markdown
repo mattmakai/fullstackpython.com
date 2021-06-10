@@ -49,7 +49,7 @@ libraries that are commonly used in Flask projects, such as
 [SendGrid](https://www.twilio.com/sendgrid) for transactional email,
 [SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
 [relational database](/databases.html) back end,
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+[Flask-WTF](https://flask-wtf.readthedocs.io/) for form
 handling, and many others.
 
 flask-base is provided as open source under the 

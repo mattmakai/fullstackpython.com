@@ -21,7 +21,7 @@ the `.templating` part.
 <a href="/flask-templating-render-template-string-examples.html">render_template_string</a>
 is another callable from the `flask.templating` package with code examples.
 
-You should read up on these subjects along with these `render_template` examples:
+These subjects go along with the `render_template` code examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -310,7 +310,7 @@ libraries that are commonly used in Flask projects, such as
 [SendGrid](https://www.twilio.com/sendgrid) for transactional email,
 [SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
 [relational database](/databases.html) backend,
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+[Flask-WTF](https://flask-wtf.readthedocs.io/) for form
 handling and many others.
 
 flask-base is provided as open source under the
@@ -801,7 +801,7 @@ def update(c_id):
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
 JavaScript plugin with the
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) form-handling
+[Flask-WTF](https://flask-wtf.readthedocs.io/) form-handling
 library. flask-phone-input is provided as open source under the
 [MIT license](https://github.com/miguelgrinberg/flask-phone-input/blob/1a1c227c044474ce0fe133493d7f8b0fb8312409/LICENSE).
 
@@ -1020,7 +1020,7 @@ def ui_for(api):
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
 boilerplate relies on many common Flask extensions such as
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
+[Flask-WTF](https://flask-wtf.readthedocs.io/),
 [Flask-Login](https://flask-login.readthedocs.io/en/latest/),
 [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
 many others. The project is provided as open source under the

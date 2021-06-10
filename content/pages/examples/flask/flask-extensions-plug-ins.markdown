@@ -219,7 +219,7 @@ building on, and the source code is open source under the
 
 ### Flask-WTF
 [Flask-WTF](https://github.com/lepture/flask-wtf)
-([project documentation](https://flask-wtf.readthedocs.io/en/stable/)
+([project documentation](https://flask-wtf.readthedocs.io/)
 and
 [PyPI page](https://pypi.org/project/Flask-WTF/))
 provides a bridge between [Flask](/flask.html) and the the 

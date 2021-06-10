@@ -19,7 +19,7 @@ application's functionality, including URL rounting,
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-These subjects go along with the `Flask` code examples:
+These topics are also useful while reading the `Flask` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -380,7 +380,7 @@ libraries that are commonly used in Flask projects, such as
 [SendGrid](https://www.twilio.com/sendgrid) for transactional email,
 [SQLAlchemy](/sqlalchemy.html) for persistent data storage through a
 [relational database](/databases.html) backend,
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) for form
+[Flask-WTF](https://flask-wtf.readthedocs.io/) for form
 handling and many others.
 
 flask-base is provided as open source under the
@@ -677,7 +677,7 @@ class HTTPAuthTestCase(unittest.TestCase):
 is an example application that ties together the
 [intTellInput.js](https://github.com/jackocnr/intl-tel-input)
 JavaScript plugin with the
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) form-handling
+[Flask-WTF](https://flask-wtf.readthedocs.io/) form-handling
 library. flask-phone-input is provided as open source under the
 [MIT license](https://github.com/miguelgrinberg/flask-phone-input/blob/1a1c227c044474ce0fe133493d7f8b0fb8312409/LICENSE).
 
@@ -729,7 +729,7 @@ def index():
 starter project to build a software-as-a-service (SaaS) web application
 in [Flask](/flask.html), with [Stripe](/stripe.html) for billing. The
 boilerplate relies on many common Flask extensions such as
-[Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/),
+[Flask-WTF](https://flask-wtf.readthedocs.io/),
 [Flask-Login](https://flask-login.readthedocs.io/en/latest/),
 [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/), and
 many others. The project is provided as open source under the
