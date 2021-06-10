@@ -149,10 +149,6 @@ web application's design.
 * [Google's Web Fundamentals class](https://developers.google.com/web/fundamentals/)
   shows how to create responsive designs and performant websites.
 
-* [Tailoring CSS for performance](http://programming.oreilly.com/2014/04/tailoring-css-for-performance.html)
-  is an interesting read since many developers do not consider the 
-  implications of CSS complexity in browser rendering time.
-
 * [Can I Use...](http://caniuse.com/) is a compatibility table that shows
   which versions of browsers implement specific CSS features.
 

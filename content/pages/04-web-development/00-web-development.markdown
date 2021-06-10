@@ -100,11 +100,6 @@ world.
   something obvious you can handle in a few minutes that will improve
   your site's security, performance or usability.
 
-* [Web application development is different and better](http://radar.oreilly.com/2014/01/web-application-development-is-different-and-better.html)
-  provides some context for how web development has evolved from writing
-  static HTML files into the complex JavaScript client-side applications
-  produced today.
-
 * [The Browser Hacker's Guide to Instantly Loading Everything](https://www.youtube.com/watch?v=7vUs5yOuv-o)
   is a spectacular technical talk given by Addy Osmani at JSConf EU 2017
   that has great bits of developer knowledge for both beginner and 

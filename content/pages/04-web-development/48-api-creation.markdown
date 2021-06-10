@@ -26,9 +26,6 @@ applications through machine-to-machine communication.
   [own GitHub organization](https://github.com/flask-restful/flask-restful)
   so engineers from outside the company could be core contributors.
 
-* [Flask API](http://www.flaskapi.org/) is another common library for 
-  exposing APIs from Flask web applications.
-
 * [Sandman](http://www.github.com/jeffknupp/sandman) is a widely used tool to
   automatically generate a RESTful API service from a legacy database without
   writing a line of code (though it's easily extensible through code).
@@ -153,10 +150,6 @@ equivalent of browser testing in the web application world.
   is a guide that covers good practices for thinking like a developer who
   will use your API, as well as what the documentation for endpoints
   and other important pieces should look like.
-
-* [1-to-1 Relationships and Subresources in REST APIs](http://developers.lyst.com/2015/02/20/1-to-1-relationships-and-subresources-in-rest-apis/)
-  tells the story of design decisions that were made during an API's creation
-  and why those choices were made.
 
 * [How many status codes does your API need?](https://blogs.dropbox.com/developers/2015/04/how-many-http-status-codes-should-your-api-use/)
   gives an answer from a Dropbox API developer as to their decision making

@@ -76,10 +76,6 @@ to hosting services such as Amazon S3 and GitHub Pages.
   take in new input markup formats, modify the generator process and
   add handy features such as a custom table of contents.
 
-* [Pelican Sitemap and Pagination](http://www.vcheng.org/2014/02/22/pelican-sitemap-pagination/)
-  explains how to generate a `sitemap.xml` file for your static site that 
-  includes all pages instead of just auto-included top-level pages.
-
 * [Getting started with Pelican and GitHub pages](http://www.mattmakai.com/introduction-to-pelican.html)
   is a tutorial I wrote to use the Full Stack Python source code to create
   and deploy your first static site.
