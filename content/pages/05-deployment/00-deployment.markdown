@@ -51,7 +51,7 @@ guide as they are considered advanced deployment techniques.
 * [teletraan](https://github.com/pinterest/teletraan) is the deploy system
   used by the development teams at Pinterest, a huge Python shop!
 
-* [pants](https://www.pantsbuild.org/index.html) is a build system originally
+* [pants](https://www.pantsbuild.org/) is a build system originally
   created at Twitter and now split out as its own sustainable open source
   project.
 

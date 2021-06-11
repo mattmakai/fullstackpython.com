@@ -83,8 +83,7 @@ include:
   which is a useful but generically-named library that focuses on deployment 
   and operations for serverless applications.
 
-* [Zappa](https://www.zappa.io/) 
-  ([source code](https://github.com/Miserlou/Zappa)) 
+* [Zappa](https://github.com/Miserlou/Zappa)
   provides code and tools to make it much easier to build on AWS Lambda
   and AWS API Gateway than rolling your own on the bare services.
 

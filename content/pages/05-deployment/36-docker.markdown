@@ -48,19 +48,9 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   repository and tutorial that shows you how to recreate a simplified version
   of Docker to better understand what it's doing under the hood.
 
-* [Andrew Baker](https://github.com/atbaker) presented a fantastic tutorial 
-  at [PyOhio](http://andrewtorkbaker.com/pyohio-docker-101-tutorial) on 
-  [beginner and advanced Docker usage](https://github.com/atbaker/docker-tutorial).
-  Andrew also wrote the article 
-  [what containers can do for you](http://radar.oreilly.com/2015/01/what-containers-can-do-for-you.html).
-
 * [Docker curriculum](http://prakhar.me/docker-curriculum/) is a detailed
   tutorial created by a developer to show the exact steps for deploying an 
   application that relies on [Elasticsearch](https://www.elastic.co/). 
-
-* [How To Install and Use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
-  provides a walkthrough for Ubuntu 16.04 for installing and beginning to
-  use Docker for development.
 
 * [It Really is the Future](http://blog.circleci.com/it-really-is-the-future/)
   discusses Docker and containers in the context of whether it's all just a

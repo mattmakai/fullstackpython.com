@@ -38,8 +38,7 @@ has support for both Python 2.7, 3.6 and 3.7.
 * [Zappa](https://github.com/Miserlou/Zappa) is a serverless framework
   for deploying Python web applications. It's a really slick project
   and used even by internal AWS developers for their own application 
-  deployments. Be sure to [read the Zappa blog](https://blog.zappa.io/)
-  as well for walkthroughs and new feature announcements.
+  deployments.
 
 * [How to Setup a Serverless URL Shortener With API Gateway Lambda and DynamoDB on AWS](https://blog.ruanbekker.com/blog/2018/11/30/how-to-setup-a-serverless-url-shortener-with-api-gateway-lambda-and-dynamodb-on-aws/)
   builds a non-trivial URL shortener application as an example Python 

@@ -30,11 +30,11 @@ applications.
 
 * [Kompose](http://kompose.io/index) 
   ([source code](https://github.com/kubernetes/kompose))
-  translate Docker Compose files into Kubernetes configuration resources.
+  translates Docker Compose files into Kubernetes configuration resources.
 
-* [skaffold](https://skaffold.dev/). [Using Kubernetes for local development](https://nemethgergely.com/using-kubernetes-for-local-development/index.html)
-  is a good starting place for more information on getting started with
-  Skaffold.
+* [skaffold](https://skaffold.dev/) 
+  ([source code](https://github.com/GoogleContainerTools/skaffold)) makes
+  it easier to develop locally with Kubernetes.
 
 * [kubethanos](https://github.com/berkay-dincer/kubethanos) is a tool to kill 
   half of your Kubernetes pods at random, to test the resilience of your

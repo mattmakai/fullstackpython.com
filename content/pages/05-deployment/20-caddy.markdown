@@ -15,7 +15,8 @@ and design emphasize HTTPS-everywhere along with the HTTP/2 protocol.
 ## How can Caddy be used with Python deployments?
 Caddy can be used both for testing during local development or as part
 of a production deployment as an HTTP server and a reverse proxy with
-the [proxy directive](https://caddyserver.com/docs/proxy).
+the 
+[reverse_proxy directive](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy).
 
 <div class="well see-also">Caddy is an implementation of the <a href="/web-servers.html">web server</a> concept. Learn how these pieces fit together in the <a href="/deployment.html">deployment</a> chapter or view the <a href="/table-of-contents.html">table of contents</a> for all topics.</div>
 
