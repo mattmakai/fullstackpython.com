@@ -42,7 +42,3 @@ implementation that is typically used to run Python web applications.
   is awesome because it shows you how to code a quick WSGI application without
   using a framework then builds up an example with deploying a traditional 
   Django web app.
-
-* [Deployment Notes for Pylons, Nginx, and uWSGI](http://tonylandis.com/python/deployment-howt-pylons-nginx-and-uwsgi/)
-  gives the code and instructions for setting up a Pylons application 
-  with uWSGI.

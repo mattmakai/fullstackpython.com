@@ -69,14 +69,6 @@ has support for both Python 2.7, 3.6 and 3.7.
 * [Code Evaluation With AWS Lambda and API Gateway](https://realpython.com/blog/python/code-evaluation-with-aws-lambda-and-api-gateway/) 
   shows how to develop a code evaluation API, to execute arbitrary code, with AWS Lambda and API Gateway.
 
-* [Crawling thousands of products using AWS Lambda](https://engineering.21buttons.com/crawling-thousands-of-products-using-aws-lambda-80332e259de1)
-  gives a real-world example of where using Python, Selenium and 
-  [headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)
-  on AWS Lambda could crawl thousands of pages to collect data
-  with each crawler running within its own Lambda Function.
-
-* [Going Serverless with AWS Lambda and API Gateway](http://blog.ryankelly.us/2016/08/07/going-serverless-with-aws-lambda-and-api-gateway.html)
-
 
 ### General AWS Lambda resources
 * [Getting started with serverless on AWS](https://emshea.com/post/serverless-getting-started)

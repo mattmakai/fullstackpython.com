@@ -132,14 +132,6 @@ guide as they are considered advanced deployment techniques.
   is an awesome in-depth read covering topics ranging from git branching
   to database migrations.
 
-* In [this free video by Neal Ford](http://player.oreilly.com/videos/9781491908181?toc_id=210188),
-  he talks about engineering practices for continuous delivery. He explains
-  the difference between 
-  [continuous integration](/continuous-integration.html),
-  continuous deployment and continuous delivery. Highly recommended for an
-  overview of deployment concepts and as an introduction to the other videos
-  on those subjects in that series.
-
 * [TestDriven.io](https://testdriven.io/) shows how to deploy a
   [microservices](/microservices.html) architecture that uses 
   [Docker](/docker.html), [Flask](/flask.html), and React with 

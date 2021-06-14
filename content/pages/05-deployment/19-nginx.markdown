@@ -74,9 +74,7 @@ HTTP(S) configurations.
 
 * [Strong SSL Security on Nginx](https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html)
   shows how to mitigate high profile SSL attacks like 
-  [Logjam](https://weakdh.org/),
-  [Heartbleed](http://heartbleed.com/)
-  and [FREAK](https://freakattack.com/).
+  [Logjam](https://weakdh.org/) and [Heartbleed](http://heartbleed.com/).
 
 
 ## Specific Nginx resources

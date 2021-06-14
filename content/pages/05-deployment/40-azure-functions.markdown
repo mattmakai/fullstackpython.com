@@ -44,6 +44,3 @@ in other Azure services.
   what is confusing to newcomers that hopefully will be addressed
   as Microsoft continues to work on their Azure platform.
 
-* [Azure in Plain English](https://www.expeditedssl.com/azure-in-plain-english)
-  covers all of the Azure services and explains them because their
-  default names are often too vague to understand their purpose.
