@@ -137,10 +137,6 @@ give solid programming language-agnostic debugging advice.
 * [The art of debugging](https://remysharp.com/2015/10/14/the-art-of-debugging)
   provides a whirlwind overview for how to fix issues in your code.
 
-* [How to debug JavaScript errors](https://rollbar.com/guides/how-to-debug-javascript/)
-  introduces some key debugging tools such as source maps that make
-  identifying errors on the client side much easier during development.
-
 * [Linux debugging tools you'll love](https://jvns.ca/debugging-zine.pdf)
   is an awesome comic that covers the Linux ecosystem for debugging.
   

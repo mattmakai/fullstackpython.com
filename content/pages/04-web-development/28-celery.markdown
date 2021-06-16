@@ -163,10 +163,6 @@ web framework of your choice.
   is a detailed walkthrough for setting up Celery with Django (although
   Celery can also be used without a problem with other frameworks).
 
-* [Introducing Celery for Python+Django](http://www.linuxforu.com/2013/12/introducing-celery-pythondjango/) 
-  provides an introduction to the Celery task queue with Django as the
-  intended framework for building a web application.
-
 * [Asynchronous Tasks with Falcon and Celery](https://testdriven.io/asynchronous-tasks-with-falcon-and-celery)
   configures Celery with the [Falcon](/falcon.html) framework, which is 
   less commonly-used in web tutorials.
@@ -186,18 +182,10 @@ adds some additional complexity to your [deployments](/deployment.html). The
 following resources walk you through how to handle deployments and get the
 right configuration settings in place.
 
-* The "Django in Production" series by 
-  [Rob Golding](https://twitter.com/robgolding63) contains a post 
-  specifically on [Background Tasks](http://www.robgolding.com/blog/2011/11/27/django-in-production-part-2---background-tasks/).
-
 * [How to run celery as a daemon?](https://pythad.github.io/articles/2016-12/how-to-run-celery-as-a-daemon-in-production)
   is a short post with the minimal code for running the Celery daemon and
   Celerybeat as system services on Linux.
 
-* [Celery in Production](http://www.caktusgroup.com/blog/2014/09/29/celery-production/)
-  on the Caktus Group blog contains good practices from their experience 
-  using Celery with RabbitMQ, monitoring tools and other aspects not often
-  discussed in existing documentation.
 
 * [Three quick tips from two years with Celery](https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb)
   provides some solid advice on retry delays, the `-Ofair` flag and global
