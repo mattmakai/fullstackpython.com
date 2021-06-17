@@ -59,17 +59,6 @@ management and application deployment tool built in Python.
   is a fantastically detailed introduction on using Ansible to set up
   servers.
 
-* [Ansible Text Message Notifications with Twilio SMS](https://www.twilio.com/blog/2014/05/ansible-text-messages-notifications-with-twilio-sms.html)
-  is my blog post with a detailed example for using the Twilio module in
-  core Ansible 1.6+.
-
-* [Python for Configuration Management with Ansible slides](http://www.insom.me.uk/post/pycon-talk.html) 
-from PyCon UK 2013
-
-* [First Steps with Ansible](http://labs.qandidate.com/blog/2013/11/15/first-steps-with-ansible/)
-
-* [Red Badger on Ansible](http://red-badger.com/blog/2013/06/29/ansible/)
-
 * [Getting Started with Ansible](http://lowendbox.com/blog/getting-started-with-ansible/)
 
 * [An introduction to Ansible](https://davidwinter.me/introduction-to-ansible/)

@@ -188,21 +188,10 @@ have varying degrees of support for Python. AWS Lambda has
 production-ready support for Python 2 and 3.7, while Azure and Google Cloud
 have "beta" support with unclear production-worthiness. The following
 resources are some comparison articles to help you in your decision-making
-process for which platform to learn.
-
-* [Serverless at scale](https://blog.binaris.com/serverless-at-scale/)
-  compares the "Big 3" AWS, Azure and Google Cloud in serverless performance.
-  The author provides some nice data around average response times and 
-  outliers.
-
-* [Serverless hosting comparison](https://headmelted.com/serverless-showdown-4a771ca561d2)
-  is a broad overview of documentation, community, pricing and other
-  notes for the major platforms as well as IBM OpenWhisk and 
-  the [Fission.io](https://fission.io/) project.
-
-* [Microsoft Azure Functions vs. Google Cloud Functions vs. AWS Lambda](https://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/)
-  presents an overview of Azure Functions and how they compare to
-  Google Cloud Functions and AWS Lambda.
+process for which platform to learn. 
+[Microsoft Azure Functions vs. Google Cloud Functions vs. AWS Lambda](https://cloudacademy.com/blog/microsoft-azure-functions-vs-google-cloud-functions-fight-for-serverless-cloud-domination-continues/)
+presents an overview of Azure Functions and how they compare to
+Google Cloud Functions and AWS Lambda.
 
 
 ### Serverless vendor lock-in?

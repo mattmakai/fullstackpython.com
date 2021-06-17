@@ -77,7 +77,3 @@ used to automate building, [testing](/testing.html) and
 * [Automated API testing with Jenkins](https://assertible.com/blog/automated-api-testing-with-jenkins)
   walks through how to use Jenkins to tests your 
   [API](/application-programming-interfaces.html) upon each deployment.
-
-* [Continuous Delivery with Jenkins and Rollbar](https://rollbar.com/blog/continuous-delivery-with-jenkins/)
-  is a tutorial on using Jenkins for continuous integration paired with
-  [Rollbar](/rollbar.html) for tracking deployments and errors.

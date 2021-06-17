@@ -127,11 +127,6 @@ programming language agnostic. Learn more via the following resources or on
   uses well done drawings to show how continuous integration and delivery 
   works for testing and managing data.
 
-* [The real difference between CI and CD](https://fire.ci/blog/the-difference-between-ci-and-cd/)
-  explains what advantages CI provides, what constraints it operates under
-  (such as total build time) to work well, and how that is different from
-  the related but distinct concept of continuous delivery.
-
 * [6 top continuous integration tools](https://opensource.com/business/15/7/six-continuous-integration-tools)
   gives a high level overview of six CI tools from a programming language
   agnostic perspective.

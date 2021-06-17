@@ -156,11 +156,6 @@ running to someone else.
   on Google Cloud and posits what they may be paying to run their
   service.
 
-* [PaaS (false) economics](https://blog.drie.co/paas-false-economics-13f72d87b485)
-  gives some quick back-of-the-envelope calculations on why running your
-  applications on a PaaS is obviously going to appear more expensive if you 
-  do not take the cost of your own software engineers into the equation.
-
 * Two blog posts on using AWS Autoscaling in [Automatic replacement of Autoscaling nodes with equivalent spot instances](https://mcristi.wordpress.com/2016/04/21/my-approach-at-making-aws-ec2-affordable-automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances/)
   and
   [Autoscaling nodes: seeing it in action](https://mcristi.wordpress.com/2016/04/27/automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances-seeing-it-in-action/)

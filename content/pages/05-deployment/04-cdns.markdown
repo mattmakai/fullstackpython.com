@@ -29,10 +29,6 @@ servers to improve web app loading speed.
   [django-storages](https://django-storages.readthedocs.io/en/latest/) library
   to deploy static assets for a [Django](/django.html) application to a CDN.
 
-* [Building your own CDN for Fun and Profit](https://pasztor.at/blog/building-your-own-cdn)
-  is a great high-level overview of how CDNs work and shows you how to
-  create your own, albeit simplified CDN.
-
 * [Do not let your CDN betray you: Use Subresource Integrity](https://hacks.mozilla.org/2015/09/subresource-integrity-in-firefox-43/)
   describes the security implications for CDNs with unexpectedly modified
   content and how Subresource Integrity in modern web browsers can mitigate
