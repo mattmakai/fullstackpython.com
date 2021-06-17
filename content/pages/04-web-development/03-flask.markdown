@@ -295,7 +295,7 @@ about how to working on your codebase.
 * [Bean Counter](https://github.com/BouncyNudibranch/bean-counter) is an
   open source Flask app for tracking coffee.
 
-* [FlaskBB](http://flaskbb.org/) is a Flask app for a discussion forum.
+* [FlaskBB](https://flaskbb.org/) is a Flask app for a discussion forum.
 
 * [psdash](https://github.com/Jahaja/psdash) is an app built with Flask and
   psutils to display information about the computer it is running on.

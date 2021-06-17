@@ -40,22 +40,6 @@ ease further development and deployment. This approach is called the
   article is one of the best in-depth explanations for what microservices are
   and why to consider them as an architectural pattern.
 
-* [Why microservices?](http://dev.otto.de/2016/03/20/why-microservices/)
-  presents some of the advantages, such as the dramatically increased number 
-  of deployments per day, that a well-done microservices architecture can
-  provide in the right situation. Many organizational environments won't 
-  allow this level of flexibility but if yours is one that will, it's worth
-  considering these points.
-
-* [On monoliths and microservices](http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/)
-  provides some advice on using microservices in a fairly early stage of
-  a software project's lifecycle.
-
-* [Why Microservices?](https://dev.otto.de/2016/03/20/why-microservices/)
-  presents advantages microservices can bring to an existing monolithic
-  application where it is clear what needs to be broken down into smaller
-  components to make it easier to iterate and maintain.
-
 * [Developing a RESTful microservice in Python](http://www.skybert.net/python/developing-a-restful-micro-service-in-python/)
   is a good story of how an aging Java project was replaced with a
   microservice built with Python and Flask.

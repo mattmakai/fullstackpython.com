@@ -71,7 +71,7 @@ open source project author from having to reinvent a new templating style.
   the template engine.
 
 * The official 
-  [Jinja2 template designer documentation](http://jinja.pocoo.org/docs/dev/templates/)
+  [Jinja2 templates documentation](https://flask.palletsprojects.com/en/2.0.x/tutorial/templates/)
   is exceptionally useful both as a reference as well as a full read-through
   to understand how to properly work with template tags.
 

@@ -582,7 +582,6 @@ __author__ = "Bas van Oostveen <v.oostveen@gmail.com>",
 __contributors__ = [
     "Antonio Cavedoni <http://cavedoni.com/>"
     "Stefano J. Attardi <http://attardi.org/>",
-    "limodou <http://www.donews.net/limodou/>",
     "Carlo C8E Miron",
     "Andre Campos <cahenan@gmail.com>",
     "Justin Findlay <jfindlay@gmail.com>",

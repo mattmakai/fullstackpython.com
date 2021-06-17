@@ -43,7 +43,7 @@ Webhooks are important because they enable two-way communication initiation
 for APIs. Webhook flexibility comes in from their definition by the API user
 instead of the API itself.
 
-For example, in the [Twilio API](https://www.twilio.com/api) when a text 
+For example, in the [Twilio API](https://www.twilio.com/docs/api) when a text 
 message is sent to a Twilio phone number Twilio sends an HTTP POST request 
 webhook to the URL specified by the user. The URL is defined in a text box
 on the number's page on Twilio as shown below.
