@@ -194,9 +194,9 @@ implementation.
   free online version of the O'Reilly 
   [Version Control with Subversion](https://www.amazon.com/dp/B002SR2QIW/) book.
 
-* [How to use Subversion (SVN)](https://deveo.com/svn-tutorial/) lays out
-  the basic concepts and provides the first few steps for getting started
-  tracking files.
+* [How to Host SVN Repositories](https://www.perforce.com/blog/vcs/how-host-subversion-svn) 
+  lays out the basic concepts and provides the first few steps for getting 
+  started tracking files.
 
 * [10 Most Used SVN Commands with Examples](http://www.thegeekstuff.com/2011/04/svn-command-examples/)
   is a good refresher list if you've used SVN in the past but it has been 

@@ -39,9 +39,6 @@ all yourself. A few of the best collections of Python libraries are
   shows the open source Python projects trending today, this week, and this 
   month.
 
-* This list of [20 Python libraries you can’t live without](http://freepythontips.wordpress.com/2013/07/30/20-python-libraries-you-cant-live-without/)
-  is a wide-ranging collection from data analysis to testing tools.
-
 * Wikipedia actually has an extensive 
   [page dedicated to Python libraries](http://en.wikipedia.org/wiki/List_of_Python_software) 
   grouped by categories.
@@ -223,10 +220,6 @@ developers.
   presents some critical analysis and critique oof the existing Python
   dependency management tools including newer ones such as pipenv and
   Poetry.
-
-* Occasionally arguments about using Python's dependency manager versus
-  one of Linux's dependency managers comes up. This provides
-  [one perspective on that debate](http://notes.pault.ag/debian-python/).
 
 * [Open source trust scaling](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/)
   is a good piece for the [Python community](/python-community.html) 

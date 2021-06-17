@@ -77,7 +77,7 @@ resources provide perspective on offline events like
   and 
   [PyCon US 2016](http://www.dreisbach.us/blog/pycon-2016/). There are
   many other retrospectives for other 
-  [community-led conferences such as EuroPython](http://www.artima.com/weblogs/viewpost.jsp?thread=261930).
+  [community-led conferences such as EuroPython](https://www.artima.com/weblogs/viewpost.jsp?thread=261930).
   These summaries can be a great way to get a slice of the experience
   before purchasing a ticket and booking a trip.
 
@@ -112,16 +112,11 @@ the community.
   provides a starter page with links to community-run newsletters, resources
   and conferences.
 
-* There are many large active online communities on 
-  [Reddit](https://www.reddit.com/r/python) and
-  [IRC channels](https://freenode.net/) such as #python, #python-dev
-  and #distutils.
-
 * The Python community has a concept known as "Benevolent Dictator For Life" 
   that may appear odd to newcomers. Essentially, Guido Van Rossum created
   the language and still has the ability to decide community arguments one
   way or the other. This post on the 
-  [origin of BDFL](http://www.artima.com/weblogs/viewpost.jsp?thread=235725)
+  [origin of BDFL](https://www.artima.com/weblogs/viewpost.jsp?thread=235725)
   has more context about Guido's role.
 
 * [Python Community and Python at Dropbox](https://talkpython.fm/episodes/show/30/python-community-and-python-at-dropbox)

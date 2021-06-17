@@ -70,7 +70,7 @@ best maintained and fully featured pieces of code for any language.
 
 Meanwhile, some of the traditional enterprise software development languages 
 such as Java have languished due to underinvestment by their major corporate 
-backers. When [Oracle purchased Sun Microsystems in 2009](http://www.oracle.com/us/corporate/press/018363)
+backers. When [Oracle purchased Sun Microsystems in 2009](https://www.oracle.com/corporate/pressrelease/oracle-buys-sun-042009.html)
 there was a long lag time before Java was enhanced with new language features
 in Java 7.  Oracle also 
 [bundles unwanted adware with the Java installation](http://www.engadget.com/2015/03/06/java-adware-mac/),

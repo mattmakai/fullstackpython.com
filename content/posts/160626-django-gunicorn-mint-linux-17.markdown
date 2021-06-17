@@ -3,7 +3,7 @@ slug: python-3-django-gunicorn-linux-mint-17
 meta: A step-by-step walkthrough on configuring Linux Mint 17.3 with Python 3, Django and Green Unicorn (Gunicorn).
 category: post
 date: 2016-06-26
-modified: 2016-07-22
+modified: 2021-06-17
 newsletter: False
 headerimage: /img/160626-mint-django-gunicorn/header.jpg
 headeralt: Django, Green Unicorn and Linux Mint logos. Copyright their respective owners.
@@ -32,7 +32,7 @@ their current versions as of June 2016 are:
 * [Python](/why-use-python.html) version 
   [3.5.1](https://www.python.org/downloads/release/python-351/)
 * [Django](/django.html) web framework version 
-  [1.9.7](https://docs.djangoproject.com/en/1.9/releases/1.9/)
+  [1.9.x](https://pypi.org/project/Django/1.9.13/)
 * [Green Unicorn (Gunicorn)](/green-unicorn-gunicorn.html) version 
   [19.6](http://docs.gunicorn.org/en/stable/news.html)
 
