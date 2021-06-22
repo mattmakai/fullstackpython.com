@@ -153,10 +153,6 @@ resources can also give you a good overview of how HTTPS works.
   important technique to use to keep your database passwords and other
   secrets more secure if the hashed strings are leaked.
 
-* [An in-depth analysis of SSH attacks on Amazon EC2](http://getprismatic.com/story/1409447605839)
-  shows how important it is to secure your web servers, especially when they are
-  hosted in IP address ranges that are commonly scanned by malicious actors.
-
 * [Cloud Security Auditing: Challenges and Emerging Approaches](http://www.infoq.com/articles/cloud-security-auditing-challenges-and-emerging-approaches)
   is a high-level overview of some of security auditing problems that come
   with cloud deployments.
