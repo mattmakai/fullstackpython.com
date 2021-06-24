@@ -173,10 +173,6 @@ own project.
   that demos sending server generated events as well as input from users
   via a text box input on a form.
 
-* The [realtime codenames game](https://github.com/joshporter1/codenames) 
-  source code is a full-featured example for using WebSockets via 
-  Flask-SocketIO.
-
 * The 
   [python-websockets-example](https://github.com/mattmakai/python-websockets-example)
   contains code to create a simple web application that provides WebSockets

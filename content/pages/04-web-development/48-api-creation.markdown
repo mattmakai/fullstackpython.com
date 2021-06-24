@@ -130,12 +130,8 @@ equivalent of browser testing in the web application world.
   compatibility and a whole slew of other great advice for developers
   and API designers.
 
-* [Self-descriptive, isn't. Don't assume anything.](http://www.bizcoder.com/self-descriptive-isn-t-don-t-assume-anything)
-  is an appeal that metadata makes a difference in whether APIs are descriptive
-  or not.
-
 * [Designing the Artsy API](http://artsy.github.io/blog/2014/09/12/designing-the-public-artsy-api/)
-  has their recommendations list for building an API based on their recent
+  has their recommendations list for building an API based on their 
   experiences.
 
 * Hacker News had a discussion on 
@@ -211,10 +207,6 @@ equivalent of browser testing in the web application world.
   framework was lacking so they created 
   [Serpy](https://github.com/clarkduvall/serpy) and 
   [wrote a blog post with the results of its performance](https://engineering.betterworks.com/2015/09/04/ditching-django-rest-framework-serializers-for-serpy/).
-
-* [Designing a Web API](http://restlet.com/company/blog/2015/03/16/api-design-designing-a-web-api/)
-  gives a detailed walkthrough of concepts and design decisions you need
-  to make when building an API.
 
 * Microsoft's 
   [REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md)

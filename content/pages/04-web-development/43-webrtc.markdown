@@ -33,10 +33,6 @@ browser) and server (usually a [web server](/web-servers.html)).
   at points but overall has a ton of good information that gives a solid
   overview of the technology.
 
-* [Building a Snapchat-like app with WebRTC in the browser](https://tokbox.com/blog/building-a-snapchat-like-app-with-webrtc-in-the-browser/)
-  walks through the front end JavaScript for building a photo filter
-  application using the WebRTC browser APIs.
-
 * [WebRTC issues and how to debug them](https://blog.codeship.com/webrtc-issues-and-how-to-debug-them/)
   explains the various ways that implementations can go wrong and where
   to start looking when you run into errors.

@@ -63,7 +63,7 @@ to make sure you are avoiding the most common security errors that plague
 HTTP(S) configurations.
 
 * [HTTPS with Let's Encrypt and nginx](https://botleg.com/stories/https-with-lets-encrypt-and-nginx/)
-  walks throough installing a free SSL certificate from Let's Encrypt
+  walks through installing a free SSL certificate from Let's Encrypt
   to secure HTTP connects to your nginx server via HTTPS.
 
 * The [Nginx Config](https://nginxconfig.io/) tool can generate strong 
@@ -101,7 +101,7 @@ several years.
 
 * [Test-driving web server configuration](https://gdstechnology.blog.gov.uk/2015/03/25/test-driving-web-server-configuration/)
   tells a good story for how to iteratively apply configuration changes, such
-  as routing traffic to [Piwik](http://piwik.org/) for 
+  as routing traffic to [Matoma](https://matomo.org/) for 
   [web analytics](/web-analytics.html), reverse proxying to backend
   application servers and terminately TLS connections appropriately.
   It is impressive to read a well-written softare development article like

@@ -110,7 +110,7 @@ resources can also give you a good overview of how HTTPS works.
   learn about web browser internals, session attacks, fingerprinting, HTTPS
   and many other fundamental topics.
 
-* [The SaaS CTO Security Checklist](https://cto-security-checklist.sqreen.io/)
+* [The SaaS CTO Security Checklist Redux](https://www.goldfiglabs.com/guide/saas-cto-security-checklist/)
   is an awesome list of steps for securing your infrastructure and employees
   as well as what stage and size company it is recommended that you put those
   procedures in place.

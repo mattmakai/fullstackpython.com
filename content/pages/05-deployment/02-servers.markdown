@@ -128,8 +128,8 @@ provides a unified API for many cloud service providers.
 
 * [Amazon Web Services has official documentation](http://aws.amazon.com/python/) for running Python web applications.
 
-* [boto](https://github.com/boto/boto) is an extensive and well-tested 
-Python library for working with Amazon Web Services.
+* [boto3](https://github.com/boto/boto3) is an extensive and well-tested 
+  Python library for working with Amazon Web Services.
 
 * [Poseidon](https://github.com/changhiskhan/poseidon) is a Python commandline
   interface for managing Digital Ocean droplets (servers).

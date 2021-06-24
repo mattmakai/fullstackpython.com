@@ -38,9 +38,10 @@ application before taking some action, such as purchasing your service.
 
 
 ## Open source web analytics projects
-* [Piwik](http://piwik.org/) is a web analytics platform you can host yourself.
-  Piwik is a solid choice if you cannot use Google Analytics or want to 
-  customize your own web analytics platform.
+* [Matoma](https://matomo.org/) (formerly Piwik), is a web analytics 
+  platform that you can host yourself. Matoma is a solid choice if you 
+  cannot use Google Analytics or want to customize your own web analytics
+  software.
 
 * [Shynet](https://github.com/milesmcc/shynet) is a lightweight, privacy-friendly 
   cookie-free web analytics application written in Python.
@@ -142,8 +143,8 @@ application before taking some action, such as purchasing your service.
 
 
 ## Web analytics learning checklist
-1. Add Google Analytics or Piwik to your application. Both are free and while 
-   Piwik is not as powerful as Google Analytics you can self-host the 
+1. Add Google Analytics or Matoma to your application. Both are free and while 
+   Matoma is not as powerful as Google Analytics you can self-host the 
    application which is the only option in many environments.
 
 1. Think critically about the factors that will make your application 
