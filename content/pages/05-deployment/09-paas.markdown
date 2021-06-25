@@ -69,18 +69,12 @@ of controlling and modifying the project for your own applications,
 but prevents you from offloading the responsibility of keeping servers
 running to someone else.
 
-* [Kel](http://www.kelproject.com/) uses Kubernetes as a foundation
-  for a custom self-hosted PaaS. Note that it was created by Eldarion,
-  which had one of the first Python-specific PaaS offerings on the
-  market around the time that Heroku was launched.
-
 * [Dokku](http://dokku.viewdocs.io/dokku/) builds on Docker and has
   hooks for plugins to extend the small core of the project and customize 
   deployments for your applications.
 
 * [Convox Rack](https://github.com/convox/rack) is open source PaaS
   designed to run on top of AWS services.
-
 
 
 ## Platform-as-a-service resources

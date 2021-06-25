@@ -119,6 +119,14 @@ web application's design.
   provides advice on how to write simpler, easier-to-maintain CSS code
   to reduce your need to rely on CSS preprocessors and build pipelines.
 
+* [How to Detect Unused CSS or JavaScript](https://javascript.plainenglish.io/detect-unused-css-or-javascript-in-your-code-8d200ef07e50)
+  explains how to use [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+  to analyze a page's CSS and identify parts that are not used. Note that
+  even though a specific page does not use that CSS (or JS), there might
+  be another page that uses the same CSS files and *does* use that "unused"
+  code, so test your pages before and after making the changes to ensure
+  you did not inadvertently break something else!
+
 * [CSS refresher notes](https://github.com/vasanthk/css-refresher-notes) is
   incredibly helpful if you've learned CSS in bits and pieces along the way
   and you now want to fill in the gaps in your knowledge.
