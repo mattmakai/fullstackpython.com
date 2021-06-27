@@ -116,10 +116,6 @@ several years.
   as well as the Pagespeed module that Google released for both Nginx
   and the [Apache HTTP Server](/apache-http-server.html).
 
-* [Nginx for Developers: An Introduction](http://carrot.is/coding/nginx_introduction)
-  provides the first steps to getting an initial Nginx configuration up and
-  running. 
-
 * [A faster Web server: ripping out Apache for Nginx](http://arstechnica.com/business/2011/11/a-faster-web-server-ripping-out-apache-for-nginx/)
   explains how Nginx can be used instead of Apache in some cases for
   better performance.

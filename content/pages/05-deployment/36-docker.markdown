@@ -77,10 +77,6 @@ on Amazon Web Services, Google Compute Engine, Linode, Rackspace or elsewhere.
   is a short tutorial for creating a Docker container with a specific
   configuration.
 
-* [10 things to avoid in Docker containers](http://developerblog.redhat.com/2016/02/24/10-things-to-avoid-in-docker-containers/)
-  provides a lot of "don'ts" that you'll want to consider before bumping
-  up against the limitations of how containers should be used.
-
 * [Docker Internals](http://docker-saigon.github.io/post/Docker-Internals/) presents
   Linux containers and how Docker uses them as its base for how the project works.
   This article is a great way to bridge what you know about Docker with a more

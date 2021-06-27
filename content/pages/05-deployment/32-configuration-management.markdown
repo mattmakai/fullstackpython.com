@@ -78,8 +78,6 @@ management and application deployment tool built in Python.
 
 * [Idempotence, convergence, and other silly fancy words we often use](https://groups.google.com/forum/#!msg/Ansible-project/WpRblldA2PQ/lYDpFjBXDlsJ)
 
-* [Testing with Jenkins, Docker and Ansible](http://blog.mist.io/post/82383668190/move-fast-and-dont-break-things-testing-with)
-
 
 ## Application dependencies learning checklist
 1. Learn about configuration management in the context of deployment 
