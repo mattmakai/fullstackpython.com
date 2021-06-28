@@ -49,10 +49,6 @@ database queries, page size and many other factors.
   is a 20 minute code-first demo that shows how to get a realistic estimate
   for how many requests per second your web application will be able to handle.
 
-* [How to Interpret Site Performance Tests](https://fly.io/articles/how-to-understand-performance-tests/)
-  covers the difference between client, page and connection speed tests
-  as well as a bit on caching performance.
-
 * [Practical scaling techniques for websites](https://hackernoon.com/practical-scaling-techniques-for-web-sites-554a38dbd492)
   examines how to improve your website performance with asynchronous 
   [task queues](/task-queues.html), [database](/databases.html) optimization
