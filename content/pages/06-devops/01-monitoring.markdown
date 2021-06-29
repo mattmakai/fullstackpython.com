@@ -112,7 +112,7 @@ Application Performance Monitoring (APM)
 
 * [New Relic](http://newrelic.com/) provides application and database 
   monitoring as well as plug ins for capturing and analyzing data about 
-  other devleoper tools in your stack, such as [Twilio](/twilio.html).
+  other developer tools in your stack, such as [Twilio](/twilio.html).
 * [Opbeat](https://opbeat.com) Built for django. Opbeat combines performance 
   metrics, release tracking, and error logging into a single simple service.
 * [Scout](https://scoutapp.com/python-monitoring) monitors the performance of Django and Flask apps, auto-instrumenting views, SQL queries, templates, and more.
@@ -145,11 +145,6 @@ Incident Management
   infrastructure.
 
 * [The Virtues of Monitoring](http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html)
-
-* [Effortless Monitoring with collectd, Graphite, and Docker](http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/)
-
-* [Practical Guide to StatsD/Graphite Monitoring](http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/) 
-  is a detailed guide with code examples for monitoring infrastructure.
 
 * Bit.ly describes the 
   "[10 Things They Forgot to Monitor](http://word.bitly.com/post/74839060954/ten-things-to-monitor)"

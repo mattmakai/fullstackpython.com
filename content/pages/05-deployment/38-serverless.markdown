@@ -45,9 +45,8 @@ These implementations are under significant active development
 and not all of them have Python support.
 
 * [AWS Lambda](/aws-lambda.html) is the current leader among serverless
-  compute implementations. It has support for both 
-  [Python 2.7](/blog/aws-lambda-python-2-7.html) and 
-  [Python 3.6/3.7](/blog/aws-lambda-python-3-6.html).
+  compute implementations. It has support for 
+  [Python 3.x](/blog/aws-lambda-python-3-6.html).
   
 * Azure Functions has second-class citizen support for Python. It's
   supposed to be possible but 
@@ -62,11 +61,8 @@ and not all of them have Python support.
 * [Google Cloud Functions](/google-cloud-functions.html) currently
   only supports JavaScript code execution.
 
-* Webtask.io also only supports JavaScript but there is a cool
-  *prototype* project named [webtask-pytask](https://github.com/tehsis/webtask-pytask) 
-  to run Python code in the browser via webtask. This demo is definitely not 
-  for production code use but awesome to see what the programming community
-  can put together using existing code and services.
+* [Webtask.io](https://webtask.io/) started as a JavaScript service but
+  now also has a Python runtime as well.
 
 
 ### Serverless frameworks
@@ -90,8 +86,6 @@ include:
 * [Chalice](https://chalice.readthedocs.io/en/latest/) 
   ([source code](https://github.com/aws/chalice)) is built by the AWS team
   specifically for Python applications.
-
-* [Apex](http://apex.run/) ([source code](https://github.com/apex/apex))
 
 
 ### General serverless resources
@@ -198,16 +192,8 @@ Google Cloud Functions and AWS Lambda.
 There is some concern by organizations and developers about vendor lock-in
 on serverless platforms. It is unclear if portability is worse for
 serverless than other infrastructure-as-a-service pieces, but still worth
-thinking about ahead of time. These resources provide additional 
-perspectives on lock-in and using multiple cloud providers.
-
-* [On Serverless, Multi-Cloud, and Vendor Lock In](https://blog.symphonia.io/on-serverless-multi-cloud-and-vendor-lock-in-da930b3993f)
-  is an opinion piece that for *most* cases the additional work of
-  going multi-cloud is not worth the tradeoffs, therefore at this time
-  it's better to go for a single vendor such as AWS or Azure and optimize
-  on that platform.
-
-* [Why vendor lock-in with serverless isn’t what you think it is](https://medium.com/@PaulDJohnston/why-vendor-lock-in-with-serverless-isnt-what-you-think-it-is-d6be40fa9ca9)
-  recommends using a single vendor for now and stop worrying about 
-  hedging your bets because it typically makes your infrastructure 
-  significantly more complex.
+thinking about ahead of time. 
+[Why vendor lock-in with serverless isn’t what you think it is](https://medium.com/@PaulDJohnston/why-vendor-lock-in-with-serverless-isnt-what-you-think-it-is-d6be40fa9ca9)
+is a piece on this topic that recommends using a single vendor for 
+now and for organizations to stop worrying about hedging their bets 
+because it typically makes infrastructure significantly more complex.

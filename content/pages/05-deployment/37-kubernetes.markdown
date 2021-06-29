@@ -88,7 +88,7 @@ applications.
   cost-benefit analysis to make sure the tool's scability, reliability
   and related functionality will outweigh the downsides.
 
-* [How Zolando manages 140+ Kubernetes clusters](https://srcco.de/posts/how-zalando-manages-140-kubernetes-clusters.html)
+* [How Zalando manages 140+ Kubernetes clusters](https://srcco.de/posts/how-zalando-manages-140-kubernetes-clusters.html)
   covers the architecture, monitoring and workflow of a team that has 
   to run a decent number of clusters for their development teams.
 
