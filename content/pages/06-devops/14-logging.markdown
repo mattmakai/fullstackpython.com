@@ -55,8 +55,9 @@ certain threshold.
   There are libraries for most major languages, including python. Saves data 
   in Elasticache.
 
-* [Logstash](http://logstash.net/) Similar to Graylog2, logstash offers 
-  features to programmatically configure log data workflows.
+* [Logstash](https://www.elastic.co/guide/en/logstash/current/index.html).
+  Similar to Graylog2, logstash offers features to programmatically 
+  configure log data workflows.
 
 * [Scribe](https://github.com/facebook/scribe) A project written by Facebook 
   to aggregate logs. It's designed to run on multiple servers and scale with 
@@ -112,7 +113,7 @@ certain threshold.
 * [Good logging practice in Python](http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python)
   shows how to use the standard library to log data from your application.
   Definitely worth a read as most applications do not log nearly enough
-  output to help debuggin when things go wrong, or to determine if something
+  output to help debugging when things go wrong, or to determine if something
   is going wrong.
 
 * [Structured Logging: The Best Friend You’ll Want When Things Go Wrong](https://engineering.grab.com/structured-logging)
