@@ -58,8 +58,8 @@ and not all of them have Python support.
   [Apache OpenWhisk](https://github.com/openwhisk/openwhisk)
   open source project.
 
-* [Google Cloud Functions](/google-cloud-functions.html) currently
-  only supports JavaScript code execution.
+* [Google Cloud Functions](/google-cloud-functions.html) has
+  [native Python 3.x runtimes](https://cloud.google.com/functions/docs/concepts/python-runtime).
 
 * [Webtask.io](https://webtask.io/) started as a JavaScript service but
   now also has a Python runtime as well.

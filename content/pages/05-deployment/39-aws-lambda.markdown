@@ -52,10 +52,6 @@ has support for both Python 2.7, 3.6 and 3.7.
   provides a screen capture of one developer deploying their
   application to Lambda.
 
-* [Automated SQL Injection Testing of Serverless Functions On a Shoestring Budget (and Some Good Music)](https://www.puresec.io/blog/automated-sql-injection-testing-of-serverless-functions-on-a-shoestring-budget-and-some-good-music)
-  is an awesome operational security post that uses Python to test
-  for SQL injection vulnerabilities in serverless functions on AWS Lambda.
-
 * [Building Scikit-Learn For AWS Lambda](https://serverlesscode.com/post/scikitlearn-with-amazon-linux-container/)
   follows up on the 
   [Using Scikit-Learn In AWS Lambda](https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/)
@@ -75,11 +71,6 @@ has support for both Python 2.7, 3.6 and 3.7.
   is a wonderful tutorials, example projects and additional resources
   guide created by a developer who used all of these bits to learn
   AWS services herself.
-
-* [AWS Lambda Serverless Reference Architectures](http://www.allthingsdistributed.com/2016/06/aws-lambda-serverless-reference-architectures.html)
-  provides blueprints with diagrams of common architecture patterns that
-  developers use for their mobile backend, file processing, stream
-  processing and web application projects.
 
 * [Security Overview of AWS Lambda](https://d1.awsstatic.com/whitepapers/Overview-AWS-Lambda-Security.pdf)
   (PDF file) covers their "Shared Responsibility Model" for security and

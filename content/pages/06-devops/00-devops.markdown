@@ -35,8 +35,8 @@ tools and services for DevOps environments.
   which when used properly can enable continuous software delivery.
 
 * For an Atlassian-centric perspective on tooling, take a look at 
-  this post on how to
-  [choose the right DevOps tools](http://blogs.atlassian.com/2016/03/how-to-choose-devops-tools/)
+  this guide on how to
+  [choose the right DevOps tools](https://www.atlassian.com/devops/devops-tools)
   which is biased towards their tools but still has some good insight
   such as using automated testing to provide immediate awareness of 
   defects that require fixing.
@@ -47,10 +47,10 @@ The following resources give advice and approaches for building the right
 teams, culture, processes and tools into software development organizations.
 
 * [DevOps vs. Platform Engineering](https://alexgaynor.net/2015/mar/06/devops-vs-platform-engineering/)
-  considers DevOps an ad hoc approach to developing software while building
-  a platform is a strict contract. I see this as "DevOps is a process", 
-  while a "platform is code". Running code is better than any organizational 
-  process.
+  considers DevOps to be an ad hoc approach to developing software while 
+  building a platform is a strict contract. I see this as "DevOps is a 
+  process", while a "platform is code". Running code is better than any 
+  organizational process.
 
 * The open source 
   [PagerDuty Incident Response guide](https://response.pagerduty.com/) is the
@@ -58,7 +58,7 @@ teams, culture, processes and tools into software development organizations.
   their services running and putting them out for other developers to consume.
   Highly recommended.
 
-* [Introduction to DevOps and Software Delivery Performance](https://www.stridenyc.com/blog/introduction-to-devops-and-software-delivery-performance)
+* [Introduction to DevOps and Software Delivery Performance](https://www.stridenyc.com/blog/devops-and-software-delivery-performance)
   explains the four key delivery metrics of Delivery Lead Time,
   Deployment Frequency, Time to Restore Service, and Change Fail Rate,
   and then gives a high-level overview of technical, process and
