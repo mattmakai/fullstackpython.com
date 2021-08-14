@@ -64,6 +64,8 @@ should skip down to the next section for "experienced developers".
 * [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
   tutorial for the Python language. 
 
+* [Hyperskill](https://hi.hyperskill.org/) takes you through Python by building 5 different projects with increasing difficulty. You'll get to know the basic syntax of Python, some standard libraries and the Django framework that is used to build web applications.
+
 * Google put together a great compilation of materials and subjects you 
   should read and learn from if you want to be a 
   [professional programmer](https://www.google.com/about/careers/students/guide-to-technical-development.html).
