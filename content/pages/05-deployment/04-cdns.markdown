@@ -16,6 +16,10 @@ servers to improve web app loading speed.
   is a fantastic post that goes into great technical detail on how CDNs and 
   caching work.
 
+* [The 5 hour CDN](https://fly.io/blog/the-5-hour-content-delivery-network/)
+  explains the basics of what CDNs are and how they are a combination of
+  many standard web server components, but used globally and at scale.
+
 * [MaxCDN vs CloudFlare vs Amazon CloudFront vs Akamai Edge vs Fastly](https://www.codeinwp.com/blog/maxcdn-vs-cloudflare-vs-cloudfront-vs-akamai-edge-vs-fastly/)
   compares and contrasts the most popular CDN services based on features,
   performance and pricing. Note

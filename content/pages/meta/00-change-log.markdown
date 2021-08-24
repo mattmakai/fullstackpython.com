@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### August
+* New blog post on 
+  [Application Performance Monitoring AWS Lambda Functions with Sentry](/blog/application-performance-monitoring-aws-lambda-functions-sentry.html).
+
 ### June
 * Fix broken links across the site. It's a real shame people and companies don't use
   301 redirects more often rather than just breaking their URL structures.
