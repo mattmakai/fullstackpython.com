@@ -12,10 +12,6 @@ servers to improve web app loading speed.
 
 
 ### CDN resources
-* [Mastering HTTP Caching](https://blog.fortrabbit.com/mastering-http-caching)
-  is a fantastic post that goes into great technical detail on how CDNs and 
-  caching work.
-
 * [The 5 hour CDN](https://fly.io/blog/the-5-hour-content-delivery-network/)
   explains the basics of what CDNs are and how they are a combination of
   many standard web server components, but used globally and at scale.

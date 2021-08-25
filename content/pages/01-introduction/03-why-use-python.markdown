@@ -33,10 +33,7 @@ The IEEE ranked Python as the
 [#1 programming language in 2019](https://spectrum.ieee.org/computing/software/the-top-programming-languages-2019),
 which continued its hot streak
 after ranking it 
-[#1 in 2018](https://spectrum.ieee.org/at-work/innovation/the-2018-top-programming-languages),
-[#1 in 2017](https://spectrum.ieee.org/at-work/innovation/the-2017-top-programming-languages)
-and
-[#3 top programming language in 2016](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages).
+[#1 in 2018](https://spectrum.ieee.org/at-work/innovation/the-2018-top-programming-languages) and 2017.
 [RedMonk's June 2019 ranking](https://redmonk.com/sogrady/2019/07/18/language-rankings-6-19/)
 had Python at #3, which held consistent from previous years' rankings in 
 [2018](https://redmonk.com/sogrady/2018/08/10/language-rankings-6-18/) 

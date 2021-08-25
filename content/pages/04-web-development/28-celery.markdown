@@ -186,7 +186,3 @@ right configuration settings in place.
   is a short post with the minimal code for running the Celery daemon and
   Celerybeat as system services on Linux.
 
-
-* [Three quick tips from two years with Celery](https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb)
-  provides some solid advice on retry delays, the `-Ofair` flag and global
-  task timeouts for Celery.

@@ -54,10 +54,6 @@ A cache can be created for multiple layers of the stack.
   covers monitoring, tuning and scaling for the very high scale 
   [Reddit.com](https://www.reddit.com/) website.
 
-* [Mastering HTTP caching](https://blog.fortrabbit.com/mastering-http-caching)
-  provides more advanced advice on caching dynamic as well as static 
-  content via CDNs and other configurations.
-
 
 
 ## Caching learning checklist

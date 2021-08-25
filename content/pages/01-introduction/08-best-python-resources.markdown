@@ -47,22 +47,12 @@ should skip down to the next section for "experienced developers".
   and problems rather than jumping into a specific language that's recommended
   to you by a friend.
 
-* [A Python Crash Course](https://www.grahamwheeler.com/posts/python-crash-course.html)
-  gives an awesome overview of the history of Python, what drives the 
-  programming community and dives into example code. You will likely need
-  to read this in combination with other resources to really let the syntax
-  sink in, but it's a great article to read several times over as you 
-  continue to learn.
-
 * The [Python projects tag](https://www.twilio.com/blog/tag/python) on the 
   Twilio blog is constantly updated with fun tutorials you can build to
   learn Python, such as the
   [International Space Station Tracker with Flask and Redis-Queue](https://www.twilio.com/blog/2015/11/international-space-station-notifications-with-python-redis-queue-and-twilio-copilot.html), 
   [Choose Your Own Adventures Presentations using Flask and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
   and [Martianify Photos with OpenCV](https://www.twilio.com/blog/2015/11/getting-started-with-opencv-and-python-featuring-the-martian-2.html).
-
-* [A Byte of Python](http://www.swaroopch.com/notes/python/) is a beginner's
-  tutorial for the Python language. 
 
 * Google put together a great compilation of materials and subjects you 
   should read and learn from if you want to be a 

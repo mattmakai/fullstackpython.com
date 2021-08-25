@@ -3,7 +3,7 @@ slug: application-performance-monitoring-aws-lambda-functions-sentry
 meta: Learn how to use Sentry Application Performance Monitoring on AWS Lambda.
 category: post
 date: 2021-08-23
-modified: 2021-08-25
+modified: 2021-08-26
 newsletter: False
 headerimage: /img/headers/python-lambda-sentry.jpg
 headeralt: The Python, AWS Lambda and Sentry logos are copyright their respective owners.
@@ -194,10 +194,9 @@ and the value of the DSN string that you copied from the Sentry screen.
 
 <img src="/img/210406-python-sentry-aws-lambda/add-env-var.jpg" width="100%" class="shot rnd outl" alt="Add the environment variable in AWS Lambda.">
 
-Click the "Save" button and go back to your Lambda function code.
+Click the "Save" button and go back to your Lambda function's code editor.
 
-Update your Lambda function with the following highlighted new lines of code
-to send errors to Sentry.
+Replace the code in your Lambda function with the following code:
 
 ```python
 import json
