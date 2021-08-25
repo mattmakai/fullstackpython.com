@@ -45,11 +45,6 @@ A cache can be created for multiple layers of the stack.
   reading even though the author is describing his Microsoft code as the 
   impetus for writing the content.
 
-* While caching is a useful technique in many situations, it's important
-  to also note that there are 
-  [downsides to caching](https://msol.io/blog/tech/2015/09/05/youre-probably-wrong-about-caching/)
-  that many developers fail to take into consideration.
-
 * [Caching at Reddit](https://redditblog.com/2017/1/17/caching-at-reddit/)
   covers monitoring, tuning and scaling for the very high scale 
   [Reddit.com](https://www.reddit.com/) website.

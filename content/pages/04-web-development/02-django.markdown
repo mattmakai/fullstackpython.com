@@ -121,7 +121,7 @@ These books and tutorials assume that you know the basics of building
 Django and want to go further to become much more knowledgeable about
 the framework.
 
-* [2 Scoops of Django](https://www.twoscoopspress.com/collections/django/products/two-scoops-of-django-1-11)
+* [2 Scoops of Django](https://www.feldroy.com/books/two-scoops-of-django-3-x)
   by Daniel Greenfeld and Audrey Roy is well worth the price of admission if
   you're serious about learning how to correctly develop Django websites.
   

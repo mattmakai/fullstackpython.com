@@ -176,6 +176,7 @@ web framework of your choice.
   looks at how to configure Celery to handle long-running tasks in a
   Django app.
 
+
 ### Celery deployment resources
 Celery and its broker run separately from your web and WSGI servers so it 
 adds some additional complexity to your [deployments](/deployment.html). The 

@@ -470,7 +470,7 @@ transcribe recordings with speech into text output.
 Next, take a look at some of their more advanced documentation that goes
 beyond the basics in this tutorial:
 
-* [Supported file formats](https://docs.assemblyai.com/overview/supported-file-formats)
+* [Supported file formats](https://docs.assemblyai.com/faqs/supported-file-formats)
 * [Transcribing dual channel/stereo recordings](https://docs.assemblyai.com/guides/transcribing-dual-channel-stereo-recordings)
 * [Getting speaker labels (speaker diarization)](https://docs.assemblyai.com/guides/getting-speaker-labels-speaker-diarization)
 

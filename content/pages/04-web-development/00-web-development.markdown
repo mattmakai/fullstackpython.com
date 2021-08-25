@@ -92,14 +92,6 @@ world.
   the creation of the URL. This is a great read that provides historical
   context for why things are the way they are with the web.
 
-* [Web app checklist](http://dhilipsiva.com/webapp-checklist/) presents 
-  good practices that developers building and [deploying](/deployment.html) 
-  web applications should follow. Don't worry about having every single
-  one of these recommendations implemented before getting your site
-  live, but it is worthwhile to review the list to make sure there is not
-  something obvious you can handle in a few minutes that will improve
-  your site's security, performance or usability.
-
 * [The Browser Hacker's Guide to Instantly Loading Everything](https://www.youtube.com/watch?v=7vUs5yOuv-o)
   is a spectacular technical talk given by Addy Osmani at JSConf EU 2017
   that has great bits of developer knowledge for both beginner and 

@@ -190,12 +190,6 @@ web application's design.
   talk about tables, because that was the only way to position anything
   back in the day.
 
-* [CSS: The bad bits](https://www.joeforshaw.com/blog/css-the-bad-bits-and-how-to-avoid-them)
-  examines global scope, implicit percentage styling rules and the z-index
-  which can be difficult to use and require some restraint to ensure they
-  do not cause issues for the rest of your stylesheet rules as you create
-  and maintain your frontend.
-
 * [Improving Your CSS with Parker](https://csswizardry.com/2016/06/improving-your-css-with-parker/)
   shows how to use the static CSS analysis tool 
   [Parker](https://github.com/katiefenn/parker/) to improve your stylesheets.

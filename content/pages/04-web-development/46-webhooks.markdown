@@ -33,11 +33,6 @@ otherwise independent web applications.
   explanation of this concept that also contains some basic security 
   considerations when using them.
 
-* [How to Listen for Webhooks with Python](https://blog.bearer.sh/consume-webhooks-with-python/)
-  has code examples in both [Flask](/flask.html) and [Django](/django.html)
-  for how to receive an HTTP POST webhook request, as well as how to test
-  it locally with Ngrok.
-
 * [Webhooks for Beginners - Full Course](https://www.youtube.com/watch?v=41NOoEz3Tzc)
   is an entire free video course that shows both how to use and implement
   webhooks into applications.

@@ -14,7 +14,7 @@ is commonly used to initiate and receive phone calls, but the transcription
 accuracy for [recordings](https://www.twilio.com/docs/voice/api/recording) 
 often leaves a lot to be desired. In this tutorial, we'll see how to connect an
 outbound phone call powered by the Twilio Voice API with 
-[AssemblyAI's deep learning transcription API](https://docs.assemblyai.com/guides/transcribing-an-audio-file-recording)
+[AssemblyAI's deep learning transcription API](https://docs.assemblyai.com/overview/getting-started)
 to get significantly more accurate speech-to-text output.
 
 
@@ -546,7 +546,7 @@ that needs high quality text-to-speech transcription. If the results
 aren't quite good enough for you, check out this tutorial on
 [boosting accuracy for keywords or phrases](https://docs.assemblyai.com/guides/boosting-accuracy-for-keywords-or-phrases)
 as well as
-[selecting a model that better matches your data](https://docs.assemblyai.com/guides/transcribing-with-a-different-acoustic-or-custom-language-model).
+[better matching your data with topic detection](https://docs.assemblyai.com/guides/iab-categorization).
 
 
 ## What now?

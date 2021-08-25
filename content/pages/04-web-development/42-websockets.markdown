@@ -7,10 +7,10 @@ sidebartitle: WebSockets
 meta: WebSockets are a protocol for full-duplex web communications. Learn about WebSockets on Full Stack Python.
 
 
-A WebSocket is a [standard protocol](http://tools.ietf.org/html/rfc6455) for 
-two-way data transfer between a client and server. The WebSockets protocol 
-does not run over HTTP, instead it is a separate implementation on top of 
-[TCP](http://en.wikipedia.org/wiki/Transmission_Control_Protocol).
+A WebSocket is a [standard protocol](https://datatracker.ietf.org/doc/html/rfc6455)
+for two-way data transfer between a client and server. The WebSockets 
+protocol does not run over HTTP, instead it is a separate implementation 
+on top of [TCP](http://en.wikipedia.org/wiki/Transmission_Control_Protocol).
 
 
 ## Why use WebSockets?
@@ -193,9 +193,7 @@ own project.
 
 * [websockets](https://github.com/aaugustin/websockets) is a WebSockets 
   implementation for Python 3.3+ written with the 
-  [asyncio](https://docs.python.org/3.4/library/asyncio.html) module (or with 
-  [Tulip](https://code.google.com/p/tulip/) if you're working with 
-  Python 3.3).
+  [asyncio](https://docs.python.org/3.9/library/asyncio.html) module.
 
 * [Speeding up Websockets 60X](https://www.willmcgugan.com/blog/tech/post/speeding-up-websockets-60x/)
   is a cool experiment in coding loops different ways to eek out more 
@@ -203,10 +201,6 @@ own project.
   the results in the blog post are to other programs but it is a good example
   of how tweaking and tuning can produce outsized returns in some 
   applications.
-
-* The [Choose Your Own Adventure Presentations](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
-  tutorial uses WebSockets via gevent on the server and socketio.js for 
-  pushing vote count updates from the server to the client. 
 
 * [Adding Real Time to Django Applications](http://crossbar.io/docs/Adding-Real-Time-to-Django-Applications/)
   shows how to use Django and Crossbar.io to implement a publish/subscribe
