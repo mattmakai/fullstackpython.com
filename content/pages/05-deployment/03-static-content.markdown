@@ -21,8 +21,8 @@ Django framework calls these two categories *assets* and *media*.
 ## Content delivery networks
 A content delivery network (CDN) is a third party that stores and serves 
 static files. [Amazon CloudFront](http://aws.amazon.com/cloudfront/),
-[CloudFlare](https://www.cloudflare.com/), [Fastly](https://www.fastly.com/),
-and [Akamai](https://www.akamai.com/) are examples of CDNs. The purpose of 
+[CloudFlare](https://www.cloudflare.com/) and [Fastly](https://www.fastly.com/),
+are examples of CDN services. The purpose of 
 a CDN is to remove the load of static
 file requests from web servers that are handling dynamic web content. For
 example, if you have an nginx server that handles both static files and 

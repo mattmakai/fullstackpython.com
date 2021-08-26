@@ -129,11 +129,6 @@ walkthroughs I've read.
   for many use cases. If you're going down this route, read
   [this blog post that explains how one developer implemented PostgreSQL full text search with SQLAlchemy](http://blog.garage-coding.com/2015/12/18/postgres-fulltext-search.html).
 
-* [django-postgres-copy](http://django-postgres-copy.californiacivicdata.org/en/latest/)
-  is a tool for bulk loading data into a PostgreSQL database based on Django models.
-  [Say hello to our new open-source software for loading bulk data into PostgreSQL](http://www.californiacivicdata.org/2015/07/17/hello-django-postgres-copy/)
-  is an introduction to using the tool in your own projects.
-
 * [How to speed up tests in Django and PostgreSQL](http://nemesisdesign.net/blog/coding/how-to-speed-up-tests-django-postgresql/)
   explains some hacks for making your schema migration-backed run quicker.
 

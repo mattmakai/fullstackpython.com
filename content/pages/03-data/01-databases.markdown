@@ -112,8 +112,6 @@ library. The most common libraries for relational databases are:
 
 * [cx\_Oracle](https://oracle.github.io/python-cx_Oracle/index.html) for 
   Oracle Database ([source code](https://github.com/oracle/python-cx_Oracle)).
-  Oracle moved their
-  [open source driver code from SourceForge to GitHub in 2017](https://blogs.oracle.com/developers/oracle-database-python-driver-now-on-github).
 
 
 SQLite support is built into Python 2.7+ and therefore a separate library

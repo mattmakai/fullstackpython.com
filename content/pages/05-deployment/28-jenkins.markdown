@@ -35,11 +35,6 @@ used to automate building, [testing](/testing.html) and
   is another solid tutorial that also shows how to send email notifications 
   as part of the build process.
 
-* If you're running into difficulty adding an SSH key to your Jenkins system 
-  account so you can connect to another server or Git repository
-  [this blog post on connecting Jenkins with Git](http://dcycleproject.org/blog/51/connecting-jenkins-and-git)
-  to get the steps to solve that problem.
-
 * [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
   is a short tutorial showing how to use the official 
   [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
