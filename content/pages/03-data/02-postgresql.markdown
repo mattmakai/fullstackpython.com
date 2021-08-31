@@ -126,8 +126,7 @@ walkthroughs I've read.
 
 * This article explains how and why PostgreSQL can handle 
   [full text searching](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)
-  for many use cases. If you're going down this route, read
-  [this blog post that explains how one developer implemented PostgreSQL full text search with SQLAlchemy](http://blog.garage-coding.com/2015/12/18/postgres-fulltext-search.html).
+  for many use cases.
 
 * [How to speed up tests in Django and PostgreSQL](http://nemesisdesign.net/blog/coding/how-to-speed-up-tests-django-postgresql/)
   explains some hacks for making your schema migration-backed run quicker.
