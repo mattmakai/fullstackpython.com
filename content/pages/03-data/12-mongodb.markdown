@@ -99,22 +99,12 @@ security controls so make sure to lock down your instances.
   installing and using MongoDB on your own instance. The post covers 
   authentication, SSL and firewalls.
 
-* [Securing MongoDB using Let's Encrypt certificate](https://zohaib.me/securing-mongodb-using-lets-encrypt/)
-  gives a configuration that encrypts that traffic coming from and
-  going to your MongoDB instances using free 
-  [Let's Encrypt certificates](https://letsencrypt.org/).
-
 * This 4 post securing MongoDB series covers
   [Data Security Requirements for Regulatory Compliance](https://www.mongodb.com/blog/post/securing-mongodb-part-1-data-security-requirements-for-regulatory-compliance),
   [Database Access Control](https://www.mongodb.com/blog/post/securing-mongodb-part-2-database-access-control),
   [Database Auditing and Encryption](https://www.mongodb.com/blog/post/securing-mongodb-part-3-database-auditing-and-encryption)
   and 
   [Environmental Control & Database Management](https://www.mongodb.com/blog/post/securing-mongodb-part-4-environmental-control-and-database-management).
-
-* Lightweight Directory Access Protocol (LDAP) is common in many 
-  established company environments for security. This post on 
-  [How to Configure LDAP Authentication for MongoDB](https://www.mongodb.com/blog/post/how-to-configure-LDAP-authentication-for-mongodb)
-  goes over how to authenticate users via LDAP who are using MongoDB.
 
 
 ### Python with MongoDB resources

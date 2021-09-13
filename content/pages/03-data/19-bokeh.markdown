@@ -99,13 +99,6 @@ basic syntax will change as the library's API is not yet stable.
   project has the code to create a simple chart with Bokeh and 
   [Flask](/flask.html).
 
-* [Bokeh vs Dash — Which is the Best Dashboard Framework for Python?](https://blog.sicara.com/bokeh-dash-best-dashboard-framework-python-shiny-alternative-c5b576375f7f)
-  contains a single project that was written in both Dash and Bokeh. The
-  author gives his subjective view on the implementation difficulty 
-  although the web application only contained a single type of data 
-  visualization so it is hard to drawn any real conclusions from his
-  opinion.
-
 * [Realtime Flight Tracking with Pandas and Bokeh](https://www.geodose.com/2019/01/realtime-flight-tracking-pandas-bokeh-python.html)
   provides a great example of combining [pandas](/pandas.html) for structuring
   data with Bokeh for visualization.

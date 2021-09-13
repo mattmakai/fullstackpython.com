@@ -12,7 +12,7 @@ subsections, including (in no particular order):
 
 * data processing / wrangling
 * machine learning
-* data analysis
+* [data analysis](/data-analysis.html)
 * [visualization](/data-visualization.html)
 * geospatial mapping
 * persistence via [relational databases](/databases.html) and 
@@ -153,6 +153,12 @@ sets.
   give historical perspective on how the Python data tools
   have evolved over the past 20ish years based on his first-hand experience
   as a leader and member in that community.
+
+* The State of [Python Speech Recognition](https://www.assemblyai.com/blog/the-state-of-python-speech-recognition-in-2021)
+  in 2021 is a practical overview of a specific area in data: extracting text
+  from voice recording data. Looking at verticals like this one can make it 
+  easier to understand changes that are occurring in some parts of data and 
+  programming that could be applied to other areas.
 
 * [Automated Data Wrangling](https://catalyst.coop/2021/05/23/automated-data-wrangling/)
   covers cleaning, labeling, and automating the bunch of activities

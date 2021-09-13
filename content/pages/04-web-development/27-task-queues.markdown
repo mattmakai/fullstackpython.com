@@ -176,10 +176,6 @@ when scaling out a large deployment of distributed task queues.
   is a straightforward tutorial for setting up the Celery task queue for
   Django web applications using the Redis broker on the back end.
 
-* [Three quick tips from two years with Celery](https://library.launchkit.io/three-quick-tips-from-two-years-with-celery-c05ff9d7f9eb)
-  provides some solid advice on retry delays, the -Ofair flag and global
-  task timeouts for Celery.
-
 * [Asynchronous Tasks with Flask and Redis Queue](https://testdriven.io/asynchronous-tasks-with-flask-and-redis-queue)
   looks at how to configure Redis Queue to handle long-running tasks in a Flask app.
 

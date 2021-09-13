@@ -71,12 +71,6 @@ world.
   [data bases](/databases.html), [task queues](/task-queues.html),
   [caching](/caching.html) and several other critical concepts.
 
-* The [Evolution of the Web](http://www.evolutionoftheweb.com/) visualizes 
-  how web browsers and related technologies have changed over time as well as
-  the overall growth of the Internet in the amount of data transferred. Note 
-  that the visualization unfortunately stops around the beginning of 2013 but
-  it's a good way to explore what happened in the first 24 years.
-
 * [What happens when?](https://github.com/alex/what-happens-when) is an 
   incredibly detailed answer to the questions "What happens when you 
   type google.com into your browser's address box and press enter?" that

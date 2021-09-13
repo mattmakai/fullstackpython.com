@@ -181,7 +181,7 @@ speed on SQL if you have never previously used it.
   elaborates on one of the trickiest parts of writing SQL statements
   that bridge one or more tables: the `JOIN`.
 
-* [Writing better SQL](http://www.craigkerstiens.com/2016/01/08/writing-better-sql/)
+* [Writing more legible SQL](https://www.craigkerstiens.com/2016/01/08/writing-more-legible-sql/)
   is a short code styling guide to make your queries easier to read.
 
 * [SQL Intermediate](https://www.dataquest.io/blog/sql-intermediate/) is a

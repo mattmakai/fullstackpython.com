@@ -3,7 +3,7 @@ slug: django-accurate-twilio-voice-transcriptions
 meta: Use Python, Django and AssemblyAI's transcription API to improve recording accuracy for Twilio Programmable Voice phone calls.
 category: post
 date: 2021-01-05
-modified: 2021-01-05
+modified: 2021-09-13
 newsletter: False
 headerimage: /img/headers/django-assemblyai.jpg
 headeralt: Logos for the implementations used in this blog post. Copyright their respective owners.
@@ -692,9 +692,7 @@ The second part is just the plain text output from the transcription.
 
 You can take this now take this base code and add it to any application
 that needs high quality text-to-speech transcription. If the results
-aren't quite good enough for you, check out this tutorial on
-[selecting a model that better matches your data](https://docs.assemblyai.com/guides/transcribing-with-a-different-acoustic-or-custom-language-model)
-as well as
+aren't quite good enough for you yet, check out this tutorial on
 [boosting accuracy for keywords or phrases](https://docs.assemblyai.com/guides/boosting-accuracy-for-keywords-or-phrases).
 
 

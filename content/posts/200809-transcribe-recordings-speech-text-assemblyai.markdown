@@ -3,7 +3,7 @@ slug: transcribe-recordings-speech-text-assemblyai
 meta: Learn to transcribe speech in recordings like MP3s into text with Python and AssemblyAI's API.
 category: post
 date: 2020-08-09
-modified: 2021-01-18
+modified: 2021-09-13
 newsletter: False
 headerimage: /img/headers/python-assemblyai.jpg
 headeralt: Logos for the implementations used in this blog post. Copyright their respective owners.
@@ -457,9 +457,7 @@ That's it, we've got our transcription!
 You may be wondering what to do if the accuracy isn't where you need 
 it to be for your situation. That is where
 [boosting accuracy for keywords or phrases](https://docs.assemblyai.com/guides/boosting-accuracy-for-keywords-or-phrases)
-and
-[selecting a model that better matches your data](https://docs.assemblyai.com/guides/transcribing-with-a-different-acoustic-or-custom-language-model)
-come in. You can use either of those two methods to boost the accuracy
+comes in. You can use either of those two methods to boost the accuracy
 of your recordings to an acceptable level for your situation.
 
 

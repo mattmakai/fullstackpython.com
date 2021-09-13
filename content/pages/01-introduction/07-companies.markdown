@@ -37,7 +37,7 @@ below).
   at job descriptions on sites like 
   [Glassdoor with "Python Goldman Sachs" keywords](https://www.glassdoor.com/Jobs/Goldman-Sachs-python-Jobs-EI_IE2800.0,13_KO14,20.htm)
   and
-  [Indeed for JP Morgan Chase](https://www.indeed.com/salaries/Python-Developer-Salaries-at-JPMorgan-Chase).
+  [Indeed for JP Morgan Chase](https://www.indeed.com/cmp/JPMorgan-Chase/salaries/Python-Developer).
   Salaries and responsibilities vary widely based on the role and whether
   Python is used for data analysis, 
   [web application development](/web-development.html) or DevOps.

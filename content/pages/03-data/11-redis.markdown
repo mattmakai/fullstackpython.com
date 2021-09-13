@@ -84,10 +84,6 @@ Redis should be customized out of its default configuration to secure it
 against unauthorized and unauthenticated users. These resources provide
 some advice on Reids security and guarding against data breaches.
 
-* [Pentesting Redis servers](http://averagesecurityguy.info/2015/09/17/pentesting-redis-servers/)
-  shows that security is important not only on your application but also
-  the databases you're using as well.
-
 * Redis, just as with any relational or NoSQL database, needs to be secured
   based on [security guidelines](http://www.antirez.com/news/96). There is
   also a post where the main author of Redis
