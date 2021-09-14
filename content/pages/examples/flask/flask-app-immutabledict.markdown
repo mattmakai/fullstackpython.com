@@ -20,7 +20,7 @@ so that values cannot be modified after initially being set.
 and <a href="/flask-app-headers-examples.html">Headers</a>
 are several other callables with code examples from the same `flask.app` package.
 
-You should read up on these subjects along with these `ImmutableDict` examples:
+These topics are also useful while reading the `ImmutableDict` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -89,7 +89,7 @@ DEFAULTS = {
 
 
 def load_config(only_defaults=False, override=None):
-    data = dict(DEFAULTS, **INTERNAL_DEFAULTS)
+    data = DEFAULTS | INTERNAL_DEFAULTS
     if not only_defaults:
         path = get_config_path()
         config = _sanitize_data(_parse_config(path))

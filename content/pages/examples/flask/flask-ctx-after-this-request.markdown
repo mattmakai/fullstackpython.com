@@ -40,17 +40,18 @@ The Flask-Security-Too project is provided as open source under the
 # unified_signin.py
 
 import time
+import typing as t
 
 from flask import current_app as app
 ~~from flask import after_this_request, request, session
 from flask_login import current_user
 from werkzeug.datastructures import MultiDict
-from werkzeug.local import LocalProxy
 from wtforms import BooleanField, RadioField, StringField, SubmitField, validators
 
 from .confirmable import requires_confirmation
 from .decorators import anonymous_user_required, auth_required, unauth_csrf
 from .forms import Form, Required, get_form_field_label
+from .proxies import _security, _datastore
 from .quart_compat import get_quart_status
 from .signals import us_profile_changed, us_security_token_sent
 from .twofactor import (
@@ -63,7 +64,7 @@ from .utils import (
     SmsSenderFactory,
     base_render_json,
     check_and_get_token_status,
-    config_value,
+    config_value as cv,
     do_flash,
     find_user,
     get_identity_attributes,
@@ -84,7 +85,7 @@ from .utils import (
             token=self.passcode.data,
             totp_secret=self.totp_secret,
             user=self.user,
-            window=config_value("US_TOKEN_VALIDITY"),
+            window=cv("US_TOKEN_VALIDITY"),
         ):
             self.passcode.errors.append(get_message("INVALID_PASSWORD_CODE")[0])
             return False
@@ -127,24 +128,24 @@ def us_signin_send_code():
 ## ... source file abbreviated to get to after_this_request examples ...
 
 
+    form.submit.data = True
+
     if form.validate_on_submit():
 
         remember_me = form.remember.data if "remember" in form else None
-        if config_value("TWO_FACTOR") and form.authn_via in config_value(
-            "US_MFA_REQUIRED"
-        ):
+        if cv("TWO_FACTOR") and form.authn_via in cv("US_MFA_REQUIRED"):
             if request.is_json and request.content_length:
-                tf_validity_token = request.get_json().get("tf_validity_token", None)
+                tf_validity_token = request.get_json().get(  # type: ignore
+                    "tf_validity_token", None
+                )
             else:
                 tf_validity_token = request.cookies.get("tf_validity", default=None)
 
             tf_validity_token_is_valid = tf_verify_validility_token(
                 tf_validity_token, form.user.fs_uniquifier
             )
-            if config_value("TWO_FACTOR_REQUIRED") or is_tf_setup(form.user):
-                if config_value("TWO_FACTOR_ALWAYS_VALIDATE") or (
-                    not tf_validity_token_is_valid
-                ):
+            if cv("TWO_FACTOR_REQUIRED") or is_tf_setup(form.user):
+                if cv("TWO_FACTOR_ALWAYS_VALIDATE") or (not tf_validity_token_is_valid):
 
                     return tf_login(
                         form.user,
@@ -163,7 +164,7 @@ def us_signin_send_code():
     code_methods = _compute_code_methods()
     if _security._want_json(request):
         payload = {
-            "available_methods": config_value("US_ENABLED_METHODS"),
+            "available_methods": cv("US_ENABLED_METHODS"),
             "code_methods": code_methods,
             "identity_attributes": get_identity_attributes(),
         }
@@ -174,9 +175,9 @@ def us_signin_send_code():
 
     form.passcode.data = None
 
-    if form.requires_confirmation and _security.requires_confirmation_error_view:
+    if form.requires_confirmation and cv("REQUIRES_CONFIRMATION_ERROR_VIEW"):
         do_flash(*get_message("CONFIRMATION_REQUIRED"))
-        return redirect(get_url(_security.requires_confirmation_error_view))
+        return redirect(get_url(cv("REQUIRES_CONFIRMATION_ERROR_VIEW")))
 
 
 ## ... source file abbreviated to get to after_this_request examples ...
@@ -185,7 +186,7 @@ def us_signin_send_code():
         if _security.redirect_behavior == "spa":
             return redirect(
                 get_url(
-                    _security.login_error_view,
+                    cv("LOGIN_ERROR_VIEW"),
                     qparams=user.get_redirect_qparams({c: m}),
                 )
             )
@@ -193,14 +194,14 @@ def us_signin_send_code():
         return redirect(url_for_security("us_signin"))
 
     if (
-        config_value("TWO_FACTOR")
-        and "email" in config_value("US_MFA_REQUIRED")
-        and (config_value("TWO_FACTOR_REQUIRED") or is_tf_setup(user))
+        cv("TWO_FACTOR")
+        and "email" in cv("US_MFA_REQUIRED")
+        and (cv("TWO_FACTOR_REQUIRED") or is_tf_setup(user))
     ):
         if _security.redirect_behavior == "spa":
             return redirect(
                 get_url(
-                    _security.login_error_view,
+                    cv("LOGIN_ERROR_VIEW"),
                     qparams=user.get_redirect_qparams({"tf_required": 1}),
                 )
             )
@@ -210,7 +211,7 @@ def us_signin_send_code():
 ~~    after_this_request(view_commit)
     if _security.redirect_behavior == "spa":
         return redirect(
-            get_url(_security.post_login_view, qparams=user.get_redirect_qparams())
+            get_url(cv("POST_LOGIN_VIEW"), qparams=user.get_redirect_qparams())
         )
 
     do_flash(*get_message("PASSWORDLESS_LOGIN_SUCCESSFUL"))
@@ -218,11 +219,11 @@ def us_signin_send_code():
 
 
 @auth_required(
-    lambda: config_value("API_ENABLED_METHODS"),
-    within=lambda: config_value("FRESHNESS"),
-    grace=lambda: config_value("FRESHNESS_GRACE_PERIOD"),
+    lambda: cv("API_ENABLED_METHODS"),
+    within=lambda: cv("FRESHNESS"),
+    grace=lambda: cv("FRESHNESS_GRACE_PERIOD"),
 )
-def us_setup():
+def us_setup() -> "ResponseValue":
     form_class = _security.us_setup_form
 
     if request.is_json:
@@ -250,7 +251,7 @@ def us_setup():
     if invalid:
         m, c = get_message("API_ERROR")
     if expired:
-        m, c = get_message("US_SETUP_EXPIRED", within=config_value("US_SETUP_WITHIN"))
+        m, c = get_message("US_SETUP_EXPIRED", within=cv("US_SETUP_WITHIN"))
     if invalid or expired:
         if _security._want_json(request):
             payload = json_error_response(errors=m)
@@ -268,7 +269,7 @@ def us_setup():
         _datastore.us_set(current_user, method, state["totp_secret"], phone)
 
         us_profile_changed.send(
-            app._get_current_object(), user=current_user, method=method
+            app._get_current_object(), user=current_user, method=method  # type: ignore
         )
         if _security._want_json(request):
             return base_render_json(
@@ -281,12 +282,12 @@ def us_setup():
         else:
             do_flash(*get_message("US_SETUP_SUCCESSFUL"))
             return redirect(
-                get_url(_security.us_post_setup_view)
-                or get_url(_security.post_login_view)
+                get_url(cv("US_POST_SETUP_VIEW")) or get_url(cv("POST_LOGIN_VIEW"))
             )
 
     if _security._want_json(request):
         return base_render_json(form, include_user=False)
+    m, c = get_message("INVALID_PASSWORD_CODE")
 
 
 ## ... source file continues with no further after_this_request examples...

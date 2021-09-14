@@ -103,130 +103,84 @@ forms, and internationalization support.
 Flask App Builder is provided under the
 [BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
 
-[**Flask AppBuilder / flask_appbuilder / menu.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/./menu.py)
+[**Flask AppBuilder / flask_appbuilder / validators.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/./validators.py)
 
 ```python
-# menu.py
-from typing import List
+# validators.py
+import re
+from typing import Optional
 
-~~from flask import current_app, url_for
-from flask_babel import gettext as __
+~~from flask import current_app
+from flask_appbuilder.exceptions import PasswordComplexityValidationError
+from flask_appbuilder.models.base import BaseInterface
+from flask_babel import gettext
+from wtforms import Field, Form, ValidationError
 
-from .api import BaseApi, expose
-from .basemanager import BaseManager
-from .security.decorators import permission_name, protect
-
-
-class MenuItem(object):
-    def __init__(self, name, href="", icon="", label="", childs=None, baseview=None):
-        self.name = name
-        self.href = href
-        self.icon = icon
-        self.label = label
-        self.childs = childs or []
-        self.baseview = baseview
-
-    def get_url(self):
-        if not self.href:
-            if not self.baseview:
-                return ""
-            else:
-                return url_for(f"{self.baseview.endpoint}.{self.baseview.default_view}")
-        else:
-            try:
+password_complexity_regex = re.compile(
+    r"""(
+    ^(?=.*[A-Z].*[A-Z])                # at least two capital letters
+    (?=.*[^0-9a-zA-Z])                 # at least one of these special characters
+    (?=.*[0-9].*[0-9])                 # at least two numeric digits
+    (?=.*[a-z].*[a-z].*[a-z])          # at least three lower case letters
+    .{10,}                             # at least 10 total characters
+    $
+    )""",
+    re.VERBOSE,
+)
 
 
-## ... source file abbreviated to get to current_app examples ...
+class Unique:
 
+    field_flags = ("unique",)
 
-        self.menu = []
-        if reverse:
-            extra_classes = extra_classes + "navbar-inverse"
-        self.extra_classes = extra_classes
+    def __init__(
+        self, datamodel: BaseInterface, col_name: str, message: Optional[str] = None
+    ) -> None:
+        self.datamodel = datamodel
+        self.col_name = col_name
+        self.message = message
 
-    @property
-    def reverse(self):
-        return "navbar-inverse" in self.extra_classes
-
-    def get_list(self):
-        return self.menu
-
-    def get_flat_name_list(self, menu: "Menu" = None, result: List = None) -> List:
-        menu = menu or self.menu
-        result = result or []
-        for item in menu:
-            result.append(item.name)
-            if item.childs:
-                result.extend(self.get_flat_name_list(menu=item.childs, result=result))
-        return result
-
-    def get_data(self, menu=None):
-        menu = menu or self.menu
-        ret_list = []
-
-~~        allowed_menus = current_app.appbuilder.sm.get_user_menu_access(
-            self.get_flat_name_list()
+    def __call__(self, form: Form, field: Field) -> None:
+        filters = self.datamodel.get_filters().add_filter(
+            self.col_name, self.datamodel.FilterEqual, field.data
         )
-
-        for i, item in enumerate(menu):
-            if item.name == "-" and not i == len(menu) - 1:
-                ret_list.append("-")
-            elif item.name not in allowed_menus:
-                continue
-            elif item.childs:
-                ret_list.append(
-                    {
-                        "name": item.name,
-                        "icon": item.icon,
-                        "label": __(str(item.label)),
-                        "childs": self.get_data(menu=item.childs),
-                    }
-                )
-            else:
-                ret_list.append(
-                    {
-                        "name": item.name,
-                        "icon": item.icon,
-                        "label": __(str(item.label)),
-                        "url": item.get_url(),
+        count, obj = self.datamodel.query(filters)
+        if count > 0:
+            if not hasattr(form, "_id") or form._id != self.datamodel.get_keys(obj)[0]:
+                if self.message is None:
+                    self.message = field.gettext(u"Already exists.")
+                raise ValidationError(self.message)
 
 
-## ... source file abbreviated to get to current_app examples ...
+class PasswordComplexityValidator:
 
-
-                    category=category, icon=category_icon, label=category_label
-                )
-                new_menu_item = MenuItem(
-                    name=name, href=href, icon=icon, label=label, baseview=baseview
-                )
-                self.find(category).childs.append(new_menu_item)
-
-    def add_separator(self, category=""):
-        menu_item = self.find(category)
-        if menu_item:
-            menu_item.childs.append(MenuItem("-"))
-        else:
-            raise Exception(
-                "Menu separator does not have correct category {}".format(category)
+    def __call__(self, form: Form, field: Field) -> None:
+~~        if current_app.config.get("FAB_PASSWORD_COMPLEXITY_ENABLED", False):
+~~            password_complexity_validator = current_app.config.get(
+                "FAB_PASSWORD_COMPLEXITY_VALIDATOR", None
             )
+            if password_complexity_validator is not None:
+                try:
+                    password_complexity_validator(field.data)
+                except PasswordComplexityValidationError as exc:
+                    raise ValidationError(str(exc))
+            else:
+                try:
+                    default_password_complexity(field.data)
+                except PasswordComplexityValidationError as exc:
+                    raise ValidationError(str(exc))
 
 
-class MenuApi(BaseApi):
-    resource_name = "menu"
-    openapi_spec_tag = "Menu"
-
-    @expose("/", methods=["GET"])
-    @protect(allow_browser_login=True)
-    @permission_name("get")
-    def get_menu_data(self):
-~~        return self.response(200, result=current_app.appbuilder.menu.get_data())
-
-
-class MenuApiManager(BaseManager):
-    def register_views(self):
-        if self.appbuilder.app.config.get("FAB_ADD_MENU_API", True):
-            self.appbuilder.add_api(MenuApi)
-
+def default_password_complexity(password: str) -> None:
+    match = re.search(password_complexity_regex, password)
+    if not match:
+        raise PasswordComplexityValidationError(
+            gettext(
+                "Must have at least two capital letters,"
+                " one special character, two digits, three lower case letters and"
+                " a minimal length of 10."
+            )
+        )
 
 
 ## ... source file continues with no further current_app examples...
@@ -1452,65 +1406,72 @@ Python code. It does this by adding a `{% meld_scripts %}` tag to
 the Flask template engine and then inserting components written
 in Python scripts created by a developer.
 
-[**Flask-Meld / flask_meld / component.py**](https://github.com/mikeabrahamsen/Flask-Meld/blob/main/flask_meld/./component.py)
+[**Flask-Meld / flask_meld / message.py**](https://github.com/mikeabrahamsen/Flask-Meld/blob/main/flask_meld/./message.py)
 
 ```python
-# component.py
-import os
-import uuid
-from importlib.util import module_from_spec, spec_from_file_location
+# message.py
+import ast
+from werkzeug.wrappers.response import Response
+import functools
 
+from .component import get_component_class
+~~from flask import jsonify, current_app
 import orjson
-from bs4 import BeautifulSoup
-from bs4.formatter import HTMLFormatter
-~~from flask import render_template, current_app, jsonify
 
 
-def convert_to_snake_case(s):
-    s.replace("-", "_")
-    return s
+def process_message(message):
+    meld_id = message["id"]
+    component_name = message["componentName"]
+    action_queue = message["actionQueue"]
+
+    data = message["data"]
+    Component = get_component_class(component_name)
+    component = Component(meld_id, **data)
+    return_data = None
+
+    for action in action_queue:
+        payload = action.get("payload", None)
+        if "syncInput" in action["type"]:
+            if hasattr(component, payload["name"]):
+                setattr(component, payload["name"], payload["value"])
+                if component._form:
+                    field_name = payload.get("name")
+                    if field_name in component._form._fields:
+                        field = getattr(component._form, field_name)
+                        component._set_field_data(field_name, payload["value"])
+                        component.updated(field)
 
 
-def convert_to_camel_case(s):
-    s = convert_to_snake_case(s)
-    return "".join(word.title() for word in s.split("_"))
+## ... source file abbreviated to get to current_app examples ...
 
 
-def get_component_class(component_name):
-    module_name = convert_to_snake_case(component_name)
-    class_name = convert_to_camel_case(module_name)
-    module = get_component_module(module_name)
-    component_class = getattr(module, class_name)
 
-    return component_class
+    if "(" in call_method_name and call_method_name.endswith(")"):
+        param_idx = call_method_name.index("(")
+        params_str = call_method_name[param_idx:]
 
+        method_name = call_method_name.replace(params_str, "")
 
-def get_component_module(module_name):
-~~    user_specified_dir = current_app.config.get("MELD_COMPONENT_DIR", None)
+        params_str = params_str[1:-1]
+        if params_str != "":
+            try:
+                params = ast.literal_eval("[" + params_str + "]")
+            except (ValueError, SyntaxError):
+                params = list(map(str.strip, params_str.split(",")))
 
-    if not user_specified_dir:
-        try:
-            name = getattr(current_app, "name", None)
-            full_path = os.path.join(name, "meld", "components", module_name + ".py")
-            module = load_module_from_path(full_path, module_name)
-        except FileNotFoundError:
-            full_path = os.path.join("meld", "components", module_name + ".py")
-            module = load_module_from_path(full_path, module_name)
-        return module
-    else:
-        try:
-            full_path = os.path.join(user_specified_dir, module_name + ".py")
-            module = load_module_from_path(full_path, module_name)
-        except FileNotFoundError:
-            full_path = os.path.join(
-                user_specified_dir, "components", module_name + ".py"
-            )
-            module = load_module_from_path(full_path, module_name)
-        return module
+    return method_name, params
 
 
-def load_module_from_path(full_path, module_name):
-    spec = spec_from_file_location(module_name, full_path)
+def listen(*event_names: str):
+    def dec(func):
+        func._meld_event_names = event_names
+        return func
+    return dec
+
+
+def emit(event_name: str, **kwargs):
+~~    current_app.socketio.emit("meld-event", {"event": event_name, "message": kwargs})
+
 
 
 ## ... source file continues with no further current_app examples...
@@ -2171,20 +2132,24 @@ The Flask-Security-Too project is provided as open source under the
 # core.py
 
 from datetime import datetime, timedelta
+import re
+import typing as t
 import warnings
 
 import pkg_resources
-~~from flask import _request_ctx_stack, current_app, render_template
+~~from flask import _request_ctx_stack, current_app
+from flask.json import JSONEncoder
 from flask_login import AnonymousUserMixin, LoginManager
 from flask_login import UserMixin as BaseUserMixin
 from flask_login import current_user
 from flask_principal import Identity, Principal, RoleNeed, UserNeed, identity_loaded
+from flask_wtf import FlaskForm
 from itsdangerous import URLSafeTimedSerializer
 from passlib.context import CryptContext
 from werkzeug.datastructures import ImmutableList
 from werkzeug.local import LocalProxy
 
-from .babel import get_i18n_domain, have_babel
+from .babel import FsDomain
 from .decorators import (
     default_reauthn_handler,
     default_unauthn_handler,
@@ -2197,63 +2162,6 @@ from .forms import (
     LoginForm,
     PasswordlessLoginForm,
     RegisterForm,
-    ResetPasswordForm,
-    SendConfirmationForm,
-
-
-## ... source file abbreviated to get to current_app examples ...
-
-
-    UnifiedSigninSetupForm,
-    UnifiedSigninSetupValidateForm,
-    UnifiedVerifyForm,
-    us_send_security_token,
-)
-from .totp import Totp
-from .utils import _
-from .utils import config_value as cv
-from .utils import (
-    FsJsonEncoder,
-    FsPermNeed,
-    csrf_cookie_handler,
-    default_want_json,
-    get_config,
-    get_identity_attribute,
-    get_identity_attributes,
-    get_message,
-    localize_callback,
-    set_request_attr,
-    uia_email_mapper,
-    url_for_security,
-    verify_and_update_password,
-)
-from .views import create_blueprint, default_render_json
-
-~~_security = LocalProxy(lambda: current_app.extensions["security"])
-_datastore = LocalProxy(lambda: _security.datastore)
-
-AUTHN_MECHANISMS = ("basic", "session", "token")
-
-
-_default_config = {
-    "BLUEPRINT_NAME": "security",
-    "CLI_ROLES_NAME": "roles",
-    "CLI_USERS_NAME": "users",
-    "URL_PREFIX": None,
-    "SUBDOMAIN": None,
-    "FLASH_MESSAGES": True,
-    "I18N_DOMAIN": "flask_security",
-    "I18N_DIRNAME": pkg_resources.resource_filename("flask_security", "translations"),
-    "EMAIL_VALIDATOR_ARGS": None,
-    "PASSWORD_HASH": "bcrypt",
-    "PASSWORD_SALT": None,
-    "PASSWORD_SINGLE_HASH": {
-        "django_argon2",
-        "django_bcrypt_sha256",
-        "django_pbkdf2_sha256",
-        "django_pbkdf2_sha1",
-        "django_bcrypt",
-        "django_salted_md5",
 
 
 ## ... source file abbreviated to get to current_app examples ...
@@ -2277,7 +2185,7 @@ _default_config = {
     "TWO_FACTOR_VALIDITY_COOKIE": {
         "httponly": True,
         "secure": False,
-        "samesite": None,
+        "samesite": "Strict",
     },
     "CONFIRM_EMAIL_WITHIN": "5 days",
     "RESET_PASSWORD_WITHIN": "5 days",
@@ -2314,33 +2222,33 @@ _default_config = {
 ## ... source file abbreviated to get to current_app examples ...
 
 
-
-        for key, value in _default_config.items():
-            app.config.setdefault("SECURITY_" + key, value)
-
-        for key, value in _default_messages.items():
-            app.config.setdefault("SECURITY_MSG_" + key, value)
+        for key, value in get_config(app).items():
+            setattr(self, key.lower(), value)
 
         identity_loaded.connect_via(app)(_on_identity_loaded)
 
-        self._state = state = _get_state(app, datastore, **kwargs)
-        if hasattr(datastore, "user_model") and not hasattr(
-            datastore.user_model, "fs_uniquifier"
+        if hasattr(self.datastore, "user_model") and not hasattr(
+            self.datastore.user_model, "fs_uniquifier"
         ):  # pragma: no cover
             raise ValueError("User model must contain fs_uniquifier as of 4.0.0")
 
-        if register_blueprint:
-            bp = create_blueprint(
-                app, state, __name__, json_encoder=kwargs["json_encoder_cls"]
-            )
-            app.register_blueprint(bp)
-            app.context_processor(_context_processor)
+        for uia in cv("USER_IDENTITY_ATTRIBUTES", app=app):  # pragma: no cover
+            if not isinstance(uia, dict):
+                raise ValueError(
+                    "SECURITY_USER_IDENTITY_ATTRIBUTES changed semantics"
+                    " in 4.0 - please see release notes."
+                )
+            if len(list(uia.keys())) != 1:
+                raise ValueError(
+                    "Each element in SECURITY_USER_IDENTITY_ATTRIBUTES"
+                    " must have one and only one key."
+                )
 
         @app.before_first_request
         def _register_i18n():
             if "_" not in app.jinja_env.globals:
-~~                current_app.jinja_env.globals["_"] = state.i18n_domain.gettext
-~~            current_app.jinja_env.globals["_fsdomain"] = state.i18n_domain.gettext
+~~                current_app.jinja_env.globals["_"] = self.i18n_domain.gettext
+~~            current_app.jinja_env.globals["_fsdomain"] = self.i18n_domain.gettext
 
         @app.before_first_request
         def _csrf_init():
@@ -2370,40 +2278,42 @@ _default_config = {
                 )
 
             csrf_cookie = cv("CSRF_COOKIE")
-            if csrf_cookie and csrf_cookie["key"] and not csrf:
+            if csrf_cookie and csrf_cookie.get("key", None):
+~~                current_app.config["SECURITY_CSRF_COOKIE_NAME"] = csrf_cookie.pop("key")
+            if cv("CSRF_COOKIE_NAME") and not csrf:
                 raise ValueError(
                     "CSRF_COOKIE defined however CsrfProtect not part of application"
                 )
 
             if csrf:
                 csrf.exempt("flask_security.views.logout")
-            if csrf_cookie and csrf_cookie["key"]:
+            if cv("CSRF_COOKIE_NAME"):
 ~~                current_app.after_request(csrf_cookie_handler)
 ~~                current_app.config["WTF_CSRF_HEADERS"].append(cv("CSRF_HEADER"))
 
-        @app.before_first_request
-        def check_babel():
-            if have_babel() and "babel" not in app.extensions:
-                raise ValueError(
-                    "Flask-Babel or Flask-BabelEx is installed but not initialized"
-                )
+        self._phone_util = self.phone_util_cls(app)
+        self._mail_util = self.mail_util_cls(app)
+        self._password_util = self.password_util_cls(app)
+        self._username_util = self.username_util_cls(app)
+        rvre = cv("REDIRECT_VALIDATE_RE", app=app)
+        if rvre:
+            self._redirect_validate_re = re.compile(rvre)
 
-        state._phone_util = state.phone_util_cls(app)
-        state._mail_util = state.mail_util_cls(app)
-        state._password_util = state.password_util_cls(app)
+        if not hasattr(app, "login_manager") or not self.login_manager:
+            self.login_manager = _get_login_manager(app, self.anonymous_user)
 
-        app.extensions["security"] = state
+        self.remember_token_serializer = _get_serializer(app, "remember")
+        self.login_serializer = _get_serializer(app, "login")
+        self.reset_serializer = _get_serializer(app, "reset")
+        self.confirm_serializer = _get_serializer(app, "confirm")
+        self.us_setup_serializer = _get_serializer(app, "us_setup")
+        self.tf_validity_serializer = _get_serializer(app, "two_factor_validity")
+        self.principal = _get_principal(app)
+        self.pwd_context = _get_pwd_context(app)
+        self.hashing_context = _get_hashing_context(app)
+        self.i18n_domain = FsDomain(app)
 
-        if hasattr(app, "cli"):
-            from .cli import users, roles
-
-            if state.cli_users_name:
-                app.cli.add_command(users, state.cli_users_name)
-            if state.cli_roles_name:
-                app.cli.add_command(roles, state.cli_roles_name)
-
-        for newc, oldc in [
-            ("SECURITY_SMS_SERVICE", "SECURITY_TWO_FACTOR_SMS_SERVICE"),
+        if cv("USERNAME_ENABLE", app):
 
 
 ## ... source file continues with no further current_app examples...

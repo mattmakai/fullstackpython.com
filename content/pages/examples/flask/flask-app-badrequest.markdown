@@ -20,7 +20,7 @@ that accepts POSTs.
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-You should read up on these subjects along with these `BadRequest` examples:
+These subjects go along with the `BadRequest` code examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -90,7 +90,6 @@ from ..const import (
 ## ... source file abbreviated to get to BadRequest examples ...
 
 
-    API_SELECT_COLUMNS_RIS_KEY,
     API_SHOW_COLUMNS_RES_KEY,
     API_SHOW_COLUMNS_RIS_KEY,
     API_SHOW_TITLE_RES_KEY,
@@ -99,6 +98,7 @@ from ..const import (
     PERMISSION_PREFIX,
 )
 from ..exceptions import FABException, InvalidOrderByColumnFABException
+from ..hooks import get_before_request_hooks, wrap_route_handler_with_hooks
 from ..security.decorators import permission_name, protect
 
 log = logging.getLogger(__name__)
@@ -274,11 +274,11 @@ def get_error_description(exception):
     except AttributeError:
         return str(exception)
     if isinstance(exception, Forbidden) and description == Forbidden.description:
-        return _("You are not allowed to access this page.")
+        return _('You are not allowed to access this page.')
     elif isinstance(exception, NotFound) and description == NotFound.description:
         return _("The page you are looking for doesn't exist.")
 ~~    elif isinstance(exception, BadRequest) and description == BadRequest.description:
-        return _("The request was invalid or contained invalid arguments.")
+        return _('The request was invalid or contained invalid arguments.')
     else:
         return str(description)
 

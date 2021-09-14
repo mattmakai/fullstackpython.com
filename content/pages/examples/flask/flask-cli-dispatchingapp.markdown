@@ -90,7 +90,7 @@ def _make_wsgi_app(info, url, evalex_whitelist, proxy):
         return info.load_app()
 
     url_data = url_parse(url)
-~~    app = DispatchingApp(_load_app)
+~~    app = DispatchingApp(_load_app, use_eager_loading=False)
     app = DebuggedIndico(app, evalex_whitelist)
     app = _make_indico_dispatcher(app, url_data.path)
     if proxy:

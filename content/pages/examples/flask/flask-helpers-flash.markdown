@@ -1462,12 +1462,12 @@ class ImportRoleMembersMixin:
                 self.role.members |= users
             for user in new_members:
                 self.logger.info(f'User {user} added to role {self.role} by {session.user}')
-~~            flash(ngettext("{} member has been imported.",
-                           "{} members have been imported.",
+~~            flash(ngettext('{} member has been imported.',
+                           '{} members have been imported.',
                            len(users)).format(len(users)), 'success')
             if unknown_emails:
-~~                flash(ngettext("There is no user with this email address: {}",
-                               "There are no users with these email addresses: {}",
+~~                flash(ngettext('There is no user with this email address: {}',
+                               'There are no users with these email addresses: {}',
                                len(unknown_emails)).format(', '.join(unknown_emails)), 'warning')
             tpl = get_template_module('events/roles/_roles.html')
             return jsonify_data(html=tpl.render_role(self.role, collapsed=False, email_button=False))

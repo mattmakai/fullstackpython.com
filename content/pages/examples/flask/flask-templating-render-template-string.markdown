@@ -20,7 +20,7 @@ the `.templating` part.
 <a href="/flask-templating-render-template-examples.html">render_template</a>
 is another callable from the `flask.templating` package with code examples.
 
-You should read up on these subjects along with these `render_template_string` examples:
+These subjects go along with the `render_template_string` code examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -75,26 +75,26 @@ def test_themes_cant_access_configpy_attributes():
 ## ... source file abbreviated to get to render_template_string examples ...
 
 
-                r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            except TemplateNotFound:
+                pass
+            try:
+                r = client.get("/themes/foo_fallback/static/js/pages/main.dev.js")
             except TemplateNotFound:
                 pass
     destroy_ctfd(app)
 
-    class ThemeFallbackConfig(TestingConfig):
-        THEME_FALLBACK = True
-
-    app = create_ctfd(config=ThemeFallbackConfig)
+    app = create_ctfd()
     with app.app_context():
-        set_config("ctf_theme", "foo")
+        set_config("ctf_theme", "foo_fallback")
         assert app.config["THEME_FALLBACK"] == True
         with app.test_client() as client:
             r = client.get("/")
             assert r.status_code == 200
-            r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            r = client.get("/themes/foo_fallback/static/js/pages/main.dev.js")
             assert r.status_code == 200
     destroy_ctfd(app)
 
-    os.rmdir(os.path.join(app.root_path, "themes", "foo"))
+    os.rmdir(os.path.join(app.root_path, "themes", "foo_fallback"))
 
 
 def test_theme_template_loading_by_prefix():
@@ -110,9 +110,10 @@ def test_theme_template_disallow_loading_admin_templates():
     with app.app_context():
         try:
             filename = os.path.join(
-                app.root_path, "themes", "foo", "admin", "malicious.html"
+                app.root_path, "themes", "foo_disallow", "admin", "malicious.html"
             )
             os.makedirs(os.path.dirname(filename), exist_ok=True)
+            set_config("ctf_theme", "foo_disallow")
             with open(filename, "w") as f:
                 f.write("malicious")
 
@@ -120,7 +121,8 @@ def test_theme_template_disallow_loading_admin_templates():
 ~~                render_template_string("{% include 'admin/malicious.html' %}")
         finally:
             shutil.rmtree(
-                os.path.join(app.root_path, "themes", "foo"), ignore_errors=True
+                os.path.join(app.root_path, "themes", "foo_disallow"),
+                ignore_errors=True,
             )
 
 

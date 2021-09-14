@@ -224,13 +224,19 @@ from .security.decorators import permission_name, protect
 
 
 class MenuItem(object):
-    def __init__(self, name, href="", icon="", label="", childs=None, baseview=None):
+    def __init__(
+        self, name, href="", icon="", label="", childs=None, baseview=None, cond=None
+    ):
         self.name = name
         self.href = href
         self.icon = icon
         self.label = label
         self.childs = childs or []
         self.baseview = baseview
+        self.cond = cond
+
+    def should_render(self) -> bool:
+        return bool(self.cond()) if self.cond is not None else True
 
     def get_url(self):
         if not self.href:
@@ -291,7 +297,7 @@ import re
 
 import mistune
 ~~from flask import url_for
-from jinja2 import Markup
+from markupsafe import Markup
 from pluggy import HookimplMarker
 from pygments import highlight
 from pygments.formatters import HtmlFormatter

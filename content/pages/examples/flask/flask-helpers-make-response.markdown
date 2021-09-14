@@ -326,18 +326,17 @@ The Flask-Security-Too project is provided as open source under the
 
 from functools import partial
 import time
+import typing as t
 
 from flask import (
     Blueprint,
     after_this_request,
-    current_app,
     jsonify,
     request,
     session,
 )
 from flask_login import current_user
-from werkzeug.datastructures import MultiDict
-from werkzeug.local import LocalProxy
+from werkzeug.datastructures import ImmutableMultiDict, MultiDict
 
 from .changeable import change_user_password
 from .confirmable import (
@@ -347,6 +346,7 @@ from .confirmable import (
 )
 from .decorators import anonymous_user_required, auth_required, unauth_csrf
 from .passwordless import login_token_status, send_login_instructions
+from .proxies import _security, _datastore
 from .quart_compat import get_quart_status
 from .unified_signin import (
     us_signin,
@@ -366,7 +366,7 @@ from .recoverable import (
 from .utils import (
     base_render_json,
     check_and_update_authn_fresh,
-    config_value,
+    config_value as cv,
     do_flash,
     get_message,
     get_post_login_redirect,
@@ -390,9 +390,8 @@ if get_quart_status():  # pragma: no cover
 else:
 ~~    from flask import make_response, redirect
 
-
-_security = LocalProxy(lambda: current_app.extensions["security"])
-_datastore = LocalProxy(lambda: _security.datastore)
+if t.TYPE_CHECKING:  # pragma: no cover
+    from flask.typing import ResponseValue
 
 
 def default_render_json(payload, code, headers, user):
@@ -408,7 +407,7 @@ def _ctx(endpoint):
 
 
 @unauth_csrf(fall_through=True)
-def login():
+def login() -> "ResponseValue":
 
     if current_user.is_authenticated and request.method == "POST":
 
@@ -418,7 +417,7 @@ def login():
             )
             return _security._render_json(payload, 400, None, None)
         else:
-            return redirect(get_url(_security.post_login_view))
+            return redirect(get_url(cv("POST_LOGIN_VIEW")))
 
     form_class = _security.login_form
 
@@ -448,6 +447,7 @@ import configparser
 import json
 import logging
 import os
+from typing import Union
 
 import requests
 import requests_cache
@@ -473,20 +473,20 @@ requests_cache.install_cache(cache_name='news_cache',
                              expire_after=300)
 
 APP = Flask(__name__)
+SESSION = requests.Session()
+SESSION.headers.update({'Authorization': API_KEY})
 
 
-@APP.route('/', methods=['GET', 'POST'])
-def root():
 
 
 ## ... source file abbreviated to get to make_response examples ...
 
 
+        'pageSize': PAGE_SIZE
+    }
     if request.method == 'POST':
         return do_post(page, category='search', current_query=query)
-    response = requests.get(EVERYTHING,
-                            params=params,
-                            headers={'Authorization': API_KEY})
+    response = SESSION.get(EVERYTHING, params=params)
     pages = count_pages(response.json())
     if page > pages:
         page = pages
@@ -520,7 +520,7 @@ def do_post(page, category='general', current_query=None):
     return redirect(url_for('category', category=category, page=page))
 
 
-def parse_articles(response):
+def parse_articles(response: dict) -> list:
     parsed_articles = []
     if response.get('status') == 'ok':
         for article in response.get('articles'):

@@ -43,7 +43,6 @@ import traceback
 from datetime import datetime
 
 import click
-import click_log
 from flask import current_app
 ~~from flask.cli import FlaskGroup, ScriptInfo, with_appcontext
 from flask_alembic import alembic_click
@@ -52,20 +51,29 @@ from sqlalchemy_utils.functions import database_exists
 from werkzeug.utils import import_string
 
 from flaskbb import create_app
-from flaskbb.cli.utils import (EmailType, FlaskBBCLIError, get_version,
-                               prompt_config_path, prompt_save_user,
-                               write_config)
+from flaskbb.cli.utils import (
+    EmailType,
+    FlaskBBCLIError,
+    get_version,
+    prompt_config_path,
+    prompt_save_user,
+    write_config,
+)
 from flaskbb.extensions import alembic, celery, db, whooshee
-from flaskbb.utils.populate import (create_default_groups,
-                                    create_default_settings, create_latest_db,
-                                    create_test_data, create_welcome_forum,
-                                    insert_bulk_data, run_plugin_migrations,
-                                    update_settings_from_fixture)
+from flaskbb.utils.populate import (
+    create_default_groups,
+    create_default_settings,
+    create_latest_db,
+    create_test_data,
+    create_welcome_forum,
+    insert_bulk_data,
+    run_plugin_migrations,
+    update_settings_from_fixture,
+)
 from flaskbb.utils.translations import compile_translations
 
 
 logger = logging.getLogger(__name__)
-click_log.basic_config(logger)
 
 
 class FlaskBBGroup(FlaskGroup):
@@ -83,8 +91,7 @@ class FlaskBBGroup(FlaskGroup):
             self._loaded_flaskbb_plugins = True
         except Exception:
             logger.error(
-                "Error while loading CLI Plugins",
-                exc_info=traceback.format_exc()
+                "Error while loading CLI Plugins", exc_info=traceback.format_exc()
             )
         else:
             shell_context_processors = app.pluggy.hook.flaskbb_shell_context()
@@ -100,7 +107,12 @@ class FlaskBBGroup(FlaskGroup):
         return super(FlaskBBGroup, self).list_commands(ctx)
 
 
-def make_app(script_info):
+def make_app():
+    ctx = click.get_current_context(silent=True)
+    script_info = None
+    if ctx is not None:
+        script_info = ctx.obj
+
     config_file = getattr(script_info, "config_file", None)
     instance_path = getattr(script_info, "instance_path", None)
     return create_app(config_file, instance_path)
@@ -114,28 +126,28 @@ def set_instance(ctx, param, value):
 ~~    ctx.ensure_object(ScriptInfo).instance_path = value
 
 
-@click.group(cls=FlaskBBGroup, create_app=make_app, add_version_option=False,
-             invoke_without_command=True)
-@click.option("--config", expose_value=False, callback=set_config,
-              required=False, is_flag=False, is_eager=True, metavar="CONFIG",
-              help="Specify the config to use either in dotted module "
-                   "notation e.g. 'flaskbb.configs.default.DefaultConfig' "
-                   "or by using a path like '/path/to/flaskbb.cfg'")
-@click.option("--instance", expose_value=False, callback=set_instance,
-              required=False, is_flag=False, is_eager=True, metavar="PATH",
-              help="Specify the instance path to use. By default the folder "
-                   "'instance' next to the package or module is assumed to "
-                   "be the instance path.")
-@click.option("--version", expose_value=False, callback=get_version,
-              is_flag=True, is_eager=True, help="Show the FlaskBB version.")
-@click.pass_context
-@click_log.simple_verbosity_option(logger)
-def flaskbb(ctx):
-    if ctx.invoked_subcommand is None:
-        click.echo(ctx.get_help())
-
-
-flaskbb.add_command(alembic_click, "db")
+@click.group(
+    cls=FlaskBBGroup,
+    create_app=make_app,
+    add_version_option=False,
+    invoke_without_command=True,
+)
+@click.option(
+    "--config",
+    expose_value=False,
+    callback=set_config,
+    required=False,
+    is_flag=False,
+    is_eager=True,
+    metavar="CONFIG",
+    help="Specify the config to use either in dotted module "
+    "notation e.g. 'flaskbb.configs.default.DefaultConfig' "
+    "or by using a path like '/path/to/flaskbb.cfg'",
+)
+@click.option(
+    "--instance",
+    expose_value=False,
+    callback=set_instance,
 
 
 ## ... source file continues with no further ScriptInfo examples...

@@ -19,7 +19,7 @@ and
 <a href="/flask-views-http-method-funcs-examples.html">http_method_funcs</a>
 are a couple of other callables within the `flask.views` package that also have code examples.
 
-These topics are also useful while reading the `MethodView` examples:
+You should read up on these subjects along with these `MethodView` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [web framework concepts](/web-frameworks.html) and the [Flask framework](/flask.html)
@@ -430,7 +430,12 @@ from __future__ import unicode_literals
 
 from flask import request
 ~~from flask.views import MethodView
-from werkzeug.wrappers import BaseResponse
+from werkzeug import __version__ as werkzeug_version
+
+if werkzeug_version.split('.')[0] >= '2':
+    from werkzeug.wrappers import Response as BaseResponse
+else:
+    from werkzeug.wrappers import BaseResponse
 
 from .model import ModelBase
 

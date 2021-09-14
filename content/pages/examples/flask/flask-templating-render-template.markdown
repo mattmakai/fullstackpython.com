@@ -21,7 +21,7 @@ the `.templating` part.
 <a href="/flask-templating-render-template-string-examples.html">render_template_string</a>
 is another callable from the `flask.templating` package with code examples.
 
-These subjects go along with the `render_template` code examples:
+These topics are also useful while reading the `render_template` examples:
 
 * [template engines](/template-engines.html), specifically [Jinja2](/jinja2.html)
 * [Flask](/flask.html) and the concepts for [web frameworks](/web-frameworks.html)
@@ -167,25 +167,25 @@ def test_themes_cant_access_configpy_attributes():
 ## ... source file abbreviated to get to render_template examples ...
 
 
+                pass
+            try:
+                r = client.get("/themes/foo_fallback/static/js/pages/main.dev.js")
             except TemplateNotFound:
                 pass
     destroy_ctfd(app)
 
-    class ThemeFallbackConfig(TestingConfig):
-        THEME_FALLBACK = True
-
-    app = create_ctfd(config=ThemeFallbackConfig)
+    app = create_ctfd()
     with app.app_context():
-        set_config("ctf_theme", "foo")
+        set_config("ctf_theme", "foo_fallback")
         assert app.config["THEME_FALLBACK"] == True
         with app.test_client() as client:
             r = client.get("/")
             assert r.status_code == 200
-            r = client.get("/themes/foo/static/js/pages/main.dev.js")
+            r = client.get("/themes/foo_fallback/static/js/pages/main.dev.js")
             assert r.status_code == 200
     destroy_ctfd(app)
 
-    os.rmdir(os.path.join(app.root_path, "themes", "foo"))
+    os.rmdir(os.path.join(app.root_path, "themes", "foo_fallback"))
 
 
 def test_theme_template_loading_by_prefix():
@@ -201,9 +201,10 @@ def test_theme_template_disallow_loading_admin_templates():
     with app.app_context():
         try:
             filename = os.path.join(
-                app.root_path, "themes", "foo", "admin", "malicious.html"
+                app.root_path, "themes", "foo_disallow", "admin", "malicious.html"
             )
             os.makedirs(os.path.dirname(filename), exist_ok=True)
+            set_config("ctf_theme", "foo_disallow")
             with open(filename, "w") as f:
                 f.write("malicious")
 
@@ -211,7 +212,8 @@ def test_theme_template_disallow_loading_admin_templates():
                 render_template_string("{% include 'admin/malicious.html' %}")
         finally:
             shutil.rmtree(
-                os.path.join(app.root_path, "themes", "foo"), ignore_errors=True
+                os.path.join(app.root_path, "themes", "foo_disallow"),
+                ignore_errors=True,
             )
 
 
@@ -869,11 +871,15 @@ in Python scripts created by a developer.
 import os
 import uuid
 from importlib.util import module_from_spec, spec_from_file_location
+from itertools import groupby
+from operator import itemgetter
 
 import orjson
 from bs4 import BeautifulSoup
+from bs4.element import Tag
 from bs4.formatter import HTMLFormatter
-~~from flask import render_template, current_app, jsonify
+~~from flask import current_app, jsonify, render_template
+from jinja2.exceptions import TemplateNotFound
 
 
 def convert_to_snake_case(s):
@@ -899,11 +905,9 @@ def get_component_module(module_name):
     user_specified_dir = current_app.config.get("MELD_COMPONENT_DIR", None)
 
 
-
 ## ... source file abbreviated to get to render_template examples ...
 
 
-            func
             for func in dir(self)
             if callable(getattr(self, func))
             and not func.startswith("_")
@@ -928,7 +932,10 @@ def get_component_module(module_name):
         return self._view(component_name)
 
     def _render_template(self, template_name: str, context_variables: dict):
-~~        return render_template(template_name, **context_variables)
+        try:
+~~            return render_template(template_name, **context_variables)
+        except TemplateNotFound:
+~~            return render_template(f"meld/{template_name}", **context_variables)
 
     def _view(self, component_name: str):
         data = self._attributes()
@@ -939,7 +946,7 @@ def get_component_module(module_name):
         context_variables.update({"form": self._form})
 
         rendered_template = self._render_template(
-            f"meld/{component_name}.html", context_variables
+            f"{component_name}.html", context_variables
         )
 
         soup = BeautifulSoup(rendered_template, features="html.parser")
@@ -1218,114 +1225,7 @@ def paySuccess():
 ```
 
 
-## Example 13 from Flask-Security-Too
-[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
-([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
-[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
-is a maintained fork of the original
-[Flask-Security](https://github.com/mattupstate/flask-security) project that
-makes it easier to add common security features to [Flask](/flask.html)
-web applications. A few of the critical goals of the Flask-Security-Too
-project are ensuring JavaScript client-based single-page applications (SPAs)
-can work securely with Flask-based backends and that guidance by the
-[OWASP](https://owasp.org/) organization is followed by default.
-
-The Flask-Security-Too project is provided as open source under the
-[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
-
-[**Flask-Security-Too / flask_security / core.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./core.py)
-
-```python
-# core.py
-
-from datetime import datetime, timedelta
-import warnings
-
-import pkg_resources
-~~from flask import _request_ctx_stack, current_app, render_template
-from flask_login import AnonymousUserMixin, LoginManager
-from flask_login import UserMixin as BaseUserMixin
-from flask_login import current_user
-from flask_principal import Identity, Principal, RoleNeed, UserNeed, identity_loaded
-from itsdangerous import URLSafeTimedSerializer
-from passlib.context import CryptContext
-from werkzeug.datastructures import ImmutableList
-from werkzeug.local import LocalProxy
-
-from .babel import get_i18n_domain, have_babel
-from .decorators import (
-    default_reauthn_handler,
-    default_unauthn_handler,
-    default_unauthz_handler,
-)
-from .forms import (
-    ChangePasswordForm,
-    ConfirmRegisterForm,
-    ForgotPasswordForm,
-    LoginForm,
-    PasswordlessLoginForm,
-    RegisterForm,
-    ResetPasswordForm,
-    SendConfirmationForm,
-
-
-## ... source file abbreviated to get to render_template examples ...
-
-
-                sms_service = cv("SMS_SERVICE", app=app)
-                if sms_service == "Twilio":  # pragma: no cover
-                    self._check_modules("twilio", "SMS")
-                if state.phone_util_cls == PhoneUtil:
-                    self._check_modules("phonenumbers", "SMS")
-
-            secrets = cv("TOTP_SECRETS", app=app)
-            issuer = cv("TOTP_ISSUER", app=app)
-            if not secrets or not issuer:
-                raise ValueError("Both TOTP_SECRETS and TOTP_ISSUER must be set")
-            state.totp_factory(state.totp_cls(secrets, issuer))
-
-        if cv("PASSWORD_COMPLEXITY_CHECKER", app=app) == "zxcvbn":
-            self._check_modules("zxcvbn", "PASSWORD_COMPLEXITY_CHECKER")
-        return state
-
-    def _check_modules(self, module, config_name):  # pragma: no cover
-        from importlib.util import find_spec
-
-        module_exists = find_spec(module)
-        if not module_exists:
-            raise ValueError(f"{module} is required for {config_name}")
-
-        return module_exists
-
-~~    def render_template(self, *args, **kwargs):
-~~        return render_template(*args, **kwargs)
-
-    def render_json(self, cb):
-        self._state._render_json = cb
-
-    def want_json(self, fn):
-        self._state._want_json = fn
-
-    def unauthz_handler(self, cb):
-        self._state._unauthz_handler = cb
-
-    def unauthn_handler(self, cb):
-        self._state._unauthn_handler = cb
-
-    def reauthn_handler(self, cb):
-        self._state._reauthn_handler = cb
-
-    def __getattr__(self, name):
-        return getattr(self._state, name, None)
-
-
-
-## ... source file continues with no further render_template examples...
-
-```
-
-
-## Example 14 from Flask-SocketIO
+## Example 13 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -1401,7 +1301,7 @@ def get_session():
 ```
 
 
-## Example 15 from Flask-User
+## Example 14 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -1493,7 +1393,7 @@ class EmailManager(object):
 ```
 
 
-## Example 16 from Flasky
+## Example 15 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1533,7 +1433,7 @@ def send_email(to, subject, template, **kwargs):
 ```
 
 
-## Example 17 from Datadog Flask Example App
+## Example 16 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1635,7 +1535,7 @@ app.url_map.add(Rule('/custom-endpoint/<msg>', endpoint='custom-endpoint'))
 ```
 
 
-## Example 18 from indico
+## Example 17 from indico
 [indico](https://github.com/indico/indico)
 ([project website](https://getindico.io/),
 [documentation](https://docs.getindico.io/en/stable/installation/)
@@ -1663,7 +1563,7 @@ class MathjaxMixin:
 ```
 
 
-## Example 19 from keras-flask-deploy-webapp
+## Example 18 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1755,7 +1655,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 20 from newspie
+## Example 19 from newspie
 [NewsPie](https://github.com/skamieniarz/newspie) is a minimalistic news
 aggregator created with [Flask](/flask.html) and the
 [News API](https://newsapi.org/).
@@ -1771,6 +1671,7 @@ import configparser
 import json
 import logging
 import os
+from typing import Union
 
 import requests
 import requests_cache
@@ -1796,15 +1697,16 @@ requests_cache.install_cache(cache_name='news_cache',
                              expire_after=300)
 
 APP = Flask(__name__)
+SESSION = requests.Session()
+SESSION.headers.update({'Authorization': API_KEY})
 
 
-@APP.route('/', methods=['GET', 'POST'])
-def root():
 
 
 ## ... source file abbreviated to get to render_template examples ...
 
 
+    return redirect(url_for('category', category='general', page=1))
 
 
 @APP.route('/category/<string:category>', methods=['GET', 'POST'])
@@ -1819,14 +1721,13 @@ def category(category):
         country = get_cookie('country')
         if country is not None:
             params.update({'country': country})
-        response = requests.get(TOP_HEADLINES,
-                                params=params,
-                                headers={'Authorization': API_KEY})
+        response = SESSION.get(TOP_HEADLINES, params=params)
         if response.status_code == 200:
             pages = count_pages(response.json())
             if page > pages:
                 page = pages
-                return redirect(url_for('category', category=category, page=page))
+                return redirect(
+                    url_for('category', category=category, page=page))
             articles = parse_articles(response.json())
             return render(articles, page, pages, country, category)
         elif response.status_code == 401:
@@ -1835,7 +1736,7 @@ def category(category):
 
 
 @APP.route('/search/<string:query>', methods=['GET', 'POST'])
-def search(query):
+def search(query: str):
     page = request.args.get('page', default=1, type=int)
     if page < 1:
         return redirect(url_for('search', query=query, page=1))
@@ -1847,19 +1748,20 @@ def search(query):
     }
     if request.method == 'POST':
         return do_post(page, category='search', current_query=query)
-    response = requests.get(EVERYTHING,
-                            params=params,
-                            headers={'Authorization': API_KEY})
+    response = SESSION.get(EVERYTHING, params=params)
     pages = count_pages(response.json())
     if page > pages:
         page = pages
         return redirect(url_for('search', query=query, page=page))
     articles = parse_articles(response.json())
+    return render(articles,
+                  page,
 
 
 ## ... source file abbreviated to get to render_template examples ...
 
 
+    parsed_articles = []
     if response.get('status') == 'ok':
         for article in response.get('articles'):
             parsed_articles.append({
@@ -1876,11 +1778,10 @@ def search(query):
     return parsed_articles
 
 
-def count_pages(response):
-    pages = 0
+def count_pages(response: dict) -> int:
     if response.get('status') == 'ok':
-        pages = (-(-response.get('totalResults', 0) // PAGE_SIZE))
-    return pages
+        return (-(-response.get('totalResults', 0) // PAGE_SIZE))
+    return 0
 
 
 def render(articles, page, pages, country, category):
@@ -1895,9 +1796,8 @@ def render(articles, page, pages, country, category):
                            pages=pages)
 
 
-def get_cookie(key):
-    cookie_value = request.cookies.get(key)
-    return cookie_value
+def get_cookie(key: str) -> Union[str, None]:
+    return request.cookies.get(key)
 
 
 if __name__ == '__main__':
@@ -1910,7 +1810,7 @@ if __name__ == '__main__':
 ```
 
 
-## Example 21 from Science Flask
+## Example 20 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -2198,7 +2098,7 @@ def static_from_root():
 ```
 
 
-## Example 22 from tedivms-flask
+## Example 21 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -2301,7 +2201,7 @@ def init_error_handlers(app):
 ```
 
 
-## Example 23 from trape
+## Example 22 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data
@@ -2319,6 +2219,7 @@ import os
 ~~from flask import Flask, render_template, session, request, json, redirect, url_for, send_from_directory
 from flask_cors import CORS
 from trape import Trape
+import urllib
 from core.db import Database
 
 trape = Trape(1)
@@ -2340,7 +2241,6 @@ trape.header()
 @app.route("/" + trape.stats_path)
 def index():
     return trape.injectCSS_Paths(render_template("/login.html").replace('[LOGIN_SRC]', trape.JSFiles[2]['src']).replace('[LIBS_SRC]', trape.JSFiles[1]['src']))
-
 
 
 ## ... source file abbreviated to get to render_template examples ...

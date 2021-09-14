@@ -19,7 +19,7 @@ application's functionality, including URL rounting,
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-These topics are also useful while reading the `Flask` examples:
+You should read up on these subjects along with these `Flask` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -167,23 +167,23 @@ def test_that_request_path_hijacking_works_properly():
 
 
 def test_theme_fallback_config():
-    app = create_ctfd()
+
+    class ThemeFallbackConfig(TestingConfig):
+        THEME_FALLBACK = False
+
+    app = create_ctfd(config=ThemeFallbackConfig)
     try:
-        os.mkdir(os.path.join(app.root_path, "themes", "foo"))
+        os.mkdir(os.path.join(app.root_path, "themes", "foo_fallback"))
     except OSError:
         pass
 
     with app.app_context():
-        set_config("ctf_theme", "foo")
+        app.config["THEME_FALLBACK"] = False
+        set_config("ctf_theme", "foo_fallback")
         assert app.config["THEME_FALLBACK"] == False
         with app.test_client() as client:
             try:
                 r = client.get("/")
-            except TemplateNotFound:
-                pass
-            try:
-                r = client.get("/themes/foo/static/js/pages/main.dev.js")
-            except TemplateNotFound:
 
 
 ## ... source file continues with no further Flask examples...
@@ -204,66 +204,159 @@ forms, and internationalization support.
 Flask App Builder is provided under the
 [BSD 3-Clause "New" or "Revised" license](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/LICENSE).
 
-[**Flask AppBuilder / flask_appbuilder / tests / test_mongoengine.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/tests/test_mongoengine.py)
+[**Flask AppBuilder / flask_appbuilder / tests / test_fab_cli.py**](https://github.com/dpgaspar/Flask-AppBuilder/blob/master/flask_appbuilder/tests/test_fab_cli.py)
 
 ```python
-# test_mongoengine.py
-from flask_appbuilder.views import CompactCRUDMixin, MasterDetailView
-from flask_mongoengine import MongoEngine
-import jinja2
-from nose.tools import eq_, ok_
+# test_fab_cli.py
+import glob
+import json
+import logging
+import os
+import tempfile
+
+from click.testing import CliRunner
+~~from flask import Flask
+from flask_appbuilder import AppBuilder, SQLA
+from flask_appbuilder.cli import (
+    create_app,
+    create_permissions,
+    create_user,
+    export_roles,
+    import_roles,
+    list_users,
+    list_views,
+    reset_password,
+)
 
 from .base import FABTestCase
-from .mongoengine.models import Model1, Model2
 
 logging.basicConfig(format="%(asctime)s:%(levelname)s:%(name)s:%(message)s")
 logging.getLogger().setLevel(logging.DEBUG)
-
-
-DEFAULT_INDEX_STRING = "Welcome"
-INVALID_LOGIN_STRING = "Invalid login"
-ACCESS_IS_DENIED = "Access is Denied"
-UNIQUE_VALIDATION_STRING = "Already exists"
-NOTNULL_VALIDATION_STRING = "This field is required"
-DEFAULT_ADMIN_USER = "admin"
-DEFAULT_ADMIN_PASSWORD = "general"
-
 log = logging.getLogger(__name__)
+
+APP_DIR = "myapp"
 
 
 class FlaskTestCase(FABTestCase):
     def setUp(self):
-~~        from flask import Flask
-        from flask_appbuilder import AppBuilder
-        from flask_appbuilder.models.mongoengine.interface import MongoEngineInterface
-        from flask_appbuilder import ModelView
-        from flask_appbuilder.security.mongoengine.manager import SecurityManager
+        pass
 
-~~        self.app = Flask(__name__)
-        self.app.jinja_env.undefined = jinja2.StrictUndefined
-        self.basedir = os.path.abspath(os.path.dirname(__file__))
-        self.app.config["MONGODB_SETTINGS"] = {"DB": "test"}
-        self.app.config["CSRF_ENABLED"] = False
-        self.app.config["SECRET_KEY"] = "thisismyscretkey"
-        self.app.config["WTF_CSRF_ENABLED"] = False
 
-        self.db = MongoEngine(self.app)
-        self.appbuilder = AppBuilder(self.app, security_manager_class=SecurityManager)
+## ... source file abbreviated to get to Flask examples ...
 
-        class Model2View(ModelView):
-            datamodel = MongoEngineInterface(Model2)
-            list_columns = [
-                "field_integer",
-                "field_float",
-                "field_string",
-                "field_method",
-                "group.field_string",
-            ]
-            edit_form_query_rel_fields = {
-                "group": [["field_string", FilterEqual, "G2"]]
-            }
-            add_form_query_rel_fields = {"group": [["field_string", FilterEqual, "G1"]]}
-            add_exclude_columns = ["excluded_string"]
+
+            self.assertIn("User bob created.", result.output)
+
+            result = runner.invoke(list_users, [])
+            self.assertIn("bob", result.output)
+
+            runner.invoke(create_permissions, [])
+
+            runner.invoke(reset_password, ["--username=bob", "--password=bar"])
+
+    def test_list_views(self):
+        os.environ["FLASK_APP"] = "app:app"
+        runner = CliRunner()
+        with runner.isolated_filesystem():
+            result = runner.invoke(list_views, [])
+            self.assertIn("List of registered views", result.output)
+            self.assertIn(" Route:/api/v1/security", result.output)
+
+
+class SQLAlchemyImportExportTestCase(FABTestCase):
+    def setUp(self):
+        with open("flask_appbuilder/tests/data/roles.json", "r") as fd:
+            self.expected_roles = json.loads(fd.read())
+
+    def test_export_roles(self):
+        with tempfile.TemporaryDirectory() as tmp_dir:
+~~            app = Flask("src_app")
+            app.config.from_object("flask_appbuilder.tests.config_security")
+            app.config[
+                "SQLALCHEMY_DATABASE_URI"
+            ] = f"sqlite:///{os.path.join(tmp_dir, 'src.db')}"
+            db = SQLA(app)
+            app_builder = AppBuilder(app, db.session)  # noqa: F841
+            cli_runner = app.test_cli_runner()
+
+            path = os.path.join(tmp_dir, "roles.json")
+
+            export_result = cli_runner.invoke(export_roles, [f"--path={path}"])
+
+            self.assertEqual(export_result.exit_code, 0)
+            self.assertTrue(os.path.exists(path))
+
+            with open(path, "r") as fd:
+                resulting_roles = json.loads(fd.read())
+
+            for expected_role in self.expected_roles:
+                match = [
+                    r for r in resulting_roles if r["name"] == expected_role["name"]
+                ]
+                self.assertTrue(match)
+                resulting_role = match[0]
+                resulting_role_permission_view_menus = {
+                    (pvm["permission"]["name"], pvm["view_menu"]["name"])
+                    for pvm in resulting_role["permissions"]
+                }
+                expected_role_permission_view_menus = {
+                    (pvm["permission"]["name"], pvm["view_menu"]["name"])
+                    for pvm in expected_role["permissions"]
+                }
+                self.assertEqual(
+                    resulting_role_permission_view_menus,
+                    expected_role_permission_view_menus,
+                )
+
+    def test_export_roles_filename(self):
+        with tempfile.TemporaryDirectory() as tmp_dir:
+~~            app = Flask("src_app")
+            app.config.from_object("flask_appbuilder.tests.config_security")
+
+            app.config[
+                "SQLALCHEMY_DATABASE_URI"
+            ] = f"sqlite:///{os.path.join(tmp_dir, 'src.db')}"
+            db = SQLA(app)
+            app_builder = AppBuilder(app, db.session)  # noqa: F841
+
+            owd = os.getcwd()
+            os.chdir(tmp_dir)
+            cli_runner = app.test_cli_runner()
+            export_result = cli_runner.invoke(export_roles)
+            os.chdir(owd)
+
+            self.assertEqual(export_result.exit_code, 0)
+            self.assertGreater(
+                len(glob.glob(os.path.join(tmp_dir, "roles_export_*"))), 0
+            )
+
+    def test_import_roles(self):
+        with tempfile.TemporaryDirectory() as tmp_dir:
+~~            app = Flask("dst_app")
+            app.config[
+                "SQLALCHEMY_DATABASE_URI"
+            ] = f"sqlite:///{os.path.join(tmp_dir, 'dst.db')}"
+            db = SQLA(app)
+            app_builder = AppBuilder(app, db.session)
+            cli_runner = app.test_cli_runner()
+
+            path = os.path.join(tmp_dir, "roles.json")
+
+            with open(path, "w") as fd:
+                fd.write(json.dumps(self.expected_roles))
+
+            self.assertEqual(len(app_builder.sm.get_all_roles()), 2)
+
+            import_result = cli_runner.invoke(import_roles, [f"--path={path}"])
+            self.assertEqual(import_result.exit_code, 0)
+
+            resulting_roles = app_builder.sm.get_all_roles()
+
+            for expected_role in self.expected_roles:
+                match = [r for r in resulting_roles if r.name == expected_role["name"]]
+                self.assertTrue(match)
+                resulting_role = match[0]
+
 
 
 ## ... source file continues with no further Flask examples...
@@ -308,7 +401,7 @@ from flaskbb.plugins.models import PluginRegistry
 from flaskbb.plugins.utils import remove_zombie_plugins_from_db, template_hook
 from flaskbb.user.models import Guest, User
 from flaskbb.utils.helpers import (app_config_from_env, crop_title,
-                                   format_date, format_datetime,
+                                   format_date, format_time, format_datetime,
                                    forum_is_unread, get_alembic_locations,
                                    get_flaskbb_config, is_online, mark_online,
                                    render_template, time_since, time_utcnow,
@@ -773,7 +866,83 @@ from app.models import User
 ```
 
 
-## Example 12 from Flask-SocketIO
+## Example 12 from Flask-Security-Too
+[Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
+([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
+[project documentation](https://flask-security-too.readthedocs.io/en/stable/))
+is a maintained fork of the original
+[Flask-Security](https://github.com/mattupstate/flask-security) project that
+makes it easier to add common security features to [Flask](/flask.html)
+web applications. A few of the critical goals of the Flask-Security-Too
+project are ensuring JavaScript client-based single-page applications (SPAs)
+can work securely with Flask-based backends and that guidance by the
+[OWASP](https://owasp.org/) organization is followed by default.
+
+The Flask-Security-Too project is provided as open source under the
+[MIT license](https://github.com/Flask-Middleware/flask-security/blob/master/LICENSE).
+
+[**Flask-Security-Too / flask_security / utils.py**](https://github.com/Flask-Middleware/flask-security/blob/master/flask_security/./utils.py)
+
+```python
+# utils.py
+    flash,
+    g,
+    request,
+    render_template,
+    session,
+    url_for,
+)
+from flask.json import JSONEncoder
+from flask_login import login_user as _login_user
+from flask_login import logout_user as _logout_user
+from flask_login import current_user
+from flask_login import COOKIE_NAME as REMEMBER_COOKIE_NAME
+from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
+from flask_wtf import csrf
+from wtforms import ValidationError
+from itsdangerous import BadSignature, SignatureExpired
+from werkzeug import __version__ as werkzeug_version
+from werkzeug.local import LocalProxy
+from werkzeug.datastructures import MultiDict
+
+from .quart_compat import best, get_quart_status
+from .proxies import _security, _datastore, _pwd_context, _hashing_context
+from .signals import user_authenticated
+
+if t.TYPE_CHECKING:  # pragma: no cover
+~~    from flask import Flask, Response
+    from .datastore import User
+
+SB = t.Union[str, bytes]
+
+
+localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
+
+FsPermNeed = partial(Need, "fsperm")
+FsPermNeed.__doc__ = """A need with the method preset to `"fsperm"`."""
+
+
+def _(translate):
+    return translate
+
+
+def get_request_attr(name: str) -> t.Any:
+    return getattr(_request_ctx_stack.top, name, None)
+
+
+def set_request_attr(name, value):
+    return setattr(_request_ctx_stack.top, name, value)
+
+
+if get_quart_status():  # pragma: no cover
+
+
+## ... source file continues with no further Flask examples...
+
+```
+
+
+## Example 13 from Flask-SocketIO
 [Flask-SocketIO](https://github.com/miguelgrinberg/Flask-SocketIO)
 ([PyPI package information](https://pypi.org/project/Flask-SocketIO/),
 [official tutorial](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
@@ -889,7 +1058,7 @@ def connect():
 ```
 
 
-## Example 13 from Flask-User
+## Example 14 from Flask-User
 [Flask-User](https://github.com/lingthio/Flask-User)
 ([PyPI information](https://pypi.org/project/Flask-User/)
 and
@@ -972,7 +1141,7 @@ class UserManager(UserManager__Settings, UserManager__Utils, UserManager__Views)
 ```
 
 
-## Example 14 from Flask-VueJs-Template
+## Example 15 from Flask-VueJs-Template
 [Flask-VueJs-Template](https://github.com/gtalarico/flask-vuejs-template)
 ([demo site](https://flask-vuejs-template.herokuapp.com/))
 is a minimal [Flask](/flask.html) boilerplate starter project that
@@ -1013,7 +1182,7 @@ def index_client():
 ```
 
 
-## Example 15 from Flasky
+## Example 16 from Flasky
 [Flasky](https://github.com/miguelgrinberg/flasky) is a wonderful
 example application by
 [Miguel Grinberg](https://github.com/miguelgrinberg) that he builds
@@ -1077,7 +1246,7 @@ def create_app(config_name):
 ```
 
 
-## Example 16 from Datadog Flask Example App
+## Example 17 from Datadog Flask Example App
 The [Datadog Flask example app](https://github.com/DataDog/trace-examples/tree/master/python/flask)
 contains many examples of the [Flask](/flask.html) core functions
 available to a developer using the [web framework](/web-frameworks.html).
@@ -1138,7 +1307,7 @@ def before_request():
 ```
 
 
-## Example 17 from keras-flask-deploy-webapp
+## Example 18 from keras-flask-deploy-webapp
 The
 [keras-flask-deploy-webapp](https://github.com/mtobeiyf/keras-flask-deploy-webapp)
 project combines the [Flask](/flask.html) [web framework](/web-frameworks.html)
@@ -1202,7 +1371,7 @@ def model_predict(img, model):
 ```
 
 
-## Example 18 from sandman2
+## Example 19 from sandman2
 [sandman2](https://github.com/jeffknupp/sandman2)
 ([project documentation](https://sandman2.readthedocs.io/en/latest/)
 and
@@ -1283,7 +1452,7 @@ def get_app(
 ```
 
 
-## Example 19 from Science Flask
+## Example 20 from Science Flask
 [Science Flask](https://github.com/danielhomola/science_flask)
 is a [Flask](/flask.html)-powered web application for online
 scientific research tools. The project was built as a template
@@ -1352,14 +1521,14 @@ def create_celery_app():
 ```
 
 
-## Example 20 from ShortMe
+## Example 21 from ShortMe
 [ShortMe](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener)
 is a [Flask](/flask.html) app that creates a shortened URL
 that redirects to another, typically much longer, URL. The
 project is provided as open source under the
 [MIT license](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener/blob/main/LICENSE).
 
-[**ShortMe / app / setup.py**](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener/blob/main/app/./setup.py)
+[**ShortMe / app / setup / setup.py**](https://github.com/AcrobaticPanicc/ShortMe-URL-Shortener/blob/main/app/setup/setup.py)
 
 ```python
 # setup.py
@@ -1369,23 +1538,23 @@ import os
 from flask_restful import Api
 from dotenv import load_dotenv
 
-from app.db.extensions import db
-from app.db.models import AuthToken
-from app.views.index.index import index_blueprint
-from app.views.internal.redirect_to_url import redirect_to_url_blueprint
-from app.views.internal.favicon import app_blueprint
-from app.views.internal.send_verification_code import send_otp_blueprint
-from app.views.internal.shorten_url import shorten_url_blueprint
-from app.views.your_short_url.your_short_url import your_short_url_blueprint
-from app.views.total_clicks.total_clicks import total_clicks_blueprint
-from app.views.error.error import error_blueprint
-from app.views.page_not_found.page_not_found import page_not_found_blueprint
-from app.views.api_doc.api_doc import api_doc_blueprint
-from app.views.get_token.get_token import get_token_blueprint
-from app.views.your_api_token.your_api_token import your_api_token_blueprint
-from app.views.verify_code.verify_code import verify_code_blueprint
+from app.server.db.extensions import db
+from app.server.db.models import AuthToken
+from app.server.routes.index import index_blueprint
+from app.server.routes.internal.redirect_to_url import redirect_to_url_blueprint
+from app.server.routes.internal.favicon import app_blueprint
+from app.server.routes.internal.send_verification_code import send_otp_blueprint
+from app.server.routes.internal.shorten_url import shorten_url_blueprint
+from app.server.routes.your_short_url import your_short_url_blueprint
+from app.server.routes.total_clicks import total_clicks_blueprint
+from app.server.routes.error import error_blueprint
+from app.server.routes.page_not_found import page_not_found_blueprint
+from app.server.routes.api_doc import api_doc_blueprint
+from app.server.routes.get_token import get_token_blueprint
+from app.server.routes.your_api_token import your_api_token_blueprint
+from app.server.routes.verify_code import verify_code_blueprint
 
-from app.api.api import Shorten, TotalClicks, GetToken
+from app.server.api.api import Shorten, TotalClicks, GetToken
 
 
 def create_app(config_file):
@@ -1393,7 +1562,7 @@ def create_app(config_file):
     project_folder = os.path.expanduser(app_path)
     load_dotenv(os.path.join(project_folder, '.env'))
 
-~~    app = Flask(__name__)
+~~    app = Flask(__name__, template_folder='../client/templates', static_folder='../client/static')
     api = Api(app)
     app.config.from_pyfile(config_file)
 
@@ -1425,7 +1594,7 @@ def create_app(config_file):
 ```
 
 
-## Example 21 from tedivms-flask
+## Example 22 from tedivms-flask
 [tedivm's flask starter app](https://github.com/tedivm/tedivms-flask) is a
 base of [Flask](/flask.html) code and related projects such as
 [Celery](/celery.html) which provides a template to start your own
@@ -1555,7 +1724,7 @@ def create_app(extra_config_settings={}):
 ```
 
 
-## Example 22 from trape
+## Example 23 from trape
 [trape](https://github.com/jofpin/trape) is a research tool for tracking
 people's activities that are logged digitally. The tool uses
 [Flask](/flask.html) to create a web front end to view aggregated data
@@ -1577,6 +1746,8 @@ from core.db import Database
 import os
 import sys
 import platform
+import urllib
+import requests
 from multiprocessing import Process
 
 trape = core.stats.trape
@@ -1587,13 +1758,11 @@ db = Database()
 class victim_server(object):
     @app.route("/" + trape.victim_path)
     def homeVictim():
-        opener = urllib2.build_opener()
-        headers = victim_headers(request.user_agent)
-        opener.addheaders = headers
+        r = requests.get(trape.url_to_clone, headers=victim_headers2(request.user_agent))
         if (trape.type_lure == 'local'):
             html = assignScripts(victim_inject_code(render_template("/" + trape.url_to_clone), 'payload', '/', trape.gmaps, trape.ipinfo))
         else:
-            html = assignScripts(victim_inject_code(opener.open(trape.url_to_clone).read(), 'payload', trape.url_to_clone, trape.gmaps, trape.ipinfo))
+            html = assignScripts(victim_inject_code(r.content, 'payload', trape.url_to_clone, trape.gmaps, trape.ipinfo))
 
 
 ## ... source file continues with no further Flask examples...

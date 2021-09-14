@@ -40,10 +40,6 @@ used to automate building, [testing](/testing.html) and
   [Jenkins container](https://registry.hub.docker.com/_/jenkins/) on the
   Docker hub.
 
-* [Securing Jenkins](https://wiki.jenkins.io/display/JENKINS/Securing+Jenkins)
-  is the landing page for Jenkins security. If you're deploying your own
-  instance, you'll need to lock it down against unauthorized users.
-
 * [Updating the GOV.UK Continuous Integration environment](https://gdstechnology.blog.gov.uk/2017/02/10/updating-the-gov-uk-continuous-integration-environment/)
   describes the configuration improvements one infrastructure team made
   to Jenkins, where they enabled 

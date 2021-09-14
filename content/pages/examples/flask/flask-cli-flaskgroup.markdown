@@ -43,7 +43,6 @@ import traceback
 from datetime import datetime
 
 import click
-import click_log
 from flask import current_app
 ~~from flask.cli import FlaskGroup, ScriptInfo, with_appcontext
 from flask_alembic import alembic_click
@@ -52,20 +51,29 @@ from sqlalchemy_utils.functions import database_exists
 from werkzeug.utils import import_string
 
 from flaskbb import create_app
-from flaskbb.cli.utils import (EmailType, FlaskBBCLIError, get_version,
-                               prompt_config_path, prompt_save_user,
-                               write_config)
+from flaskbb.cli.utils import (
+    EmailType,
+    FlaskBBCLIError,
+    get_version,
+    prompt_config_path,
+    prompt_save_user,
+    write_config,
+)
 from flaskbb.extensions import alembic, celery, db, whooshee
-from flaskbb.utils.populate import (create_default_groups,
-                                    create_default_settings, create_latest_db,
-                                    create_test_data, create_welcome_forum,
-                                    insert_bulk_data, run_plugin_migrations,
-                                    update_settings_from_fixture)
+from flaskbb.utils.populate import (
+    create_default_groups,
+    create_default_settings,
+    create_latest_db,
+    create_test_data,
+    create_welcome_forum,
+    insert_bulk_data,
+    run_plugin_migrations,
+    update_settings_from_fixture,
+)
 from flaskbb.utils.translations import compile_translations
 
 
 logger = logging.getLogger(__name__)
-click_log.basic_config(logger)
 
 
 ~~class FlaskBBGroup(FlaskGroup):
@@ -83,8 +91,7 @@ click_log.basic_config(logger)
             self._loaded_flaskbb_plugins = True
         except Exception:
             logger.error(
-                "Error while loading CLI Plugins",
-                exc_info=traceback.format_exc()
+                "Error while loading CLI Plugins", exc_info=traceback.format_exc()
             )
         else:
             shell_context_processors = app.pluggy.hook.flaskbb_shell_context()
@@ -93,6 +100,7 @@ click_log.basic_config(logger)
 
     def get_command(self, ctx, name):
         self._load_flaskbb_plugins(ctx)
+        return super(FlaskBBGroup, self).get_command(ctx, name)
 
 
 ## ... source file continues with no further FlaskGroup examples...

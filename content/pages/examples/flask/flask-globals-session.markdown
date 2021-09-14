@@ -41,7 +41,7 @@ scenarios. CTFd is open sourced under the
 import base64
 
 import requests
-from flask import Blueprint
+from flask import Blueprint, abort
 from flask import current_app as app
 ~~from flask import redirect, render_template, request, session, url_for
 from itsdangerous.exc import BadSignature, BadTimeSignature, SignatureExpired
@@ -73,13 +73,6 @@ auth = Blueprint("auth", __name__)
 ## ... source file abbreviated to get to session examples ...
 
 
-        )
-        db.session.close()
-
-        if is_teams_mode():
-            return redirect(url_for("teams.private"))
-
-        return redirect(url_for("challenges.listing"))
     else:
         return render_template("register.html", errors=errors)
 
@@ -97,6 +90,13 @@ def login():
             user = Users.query.filter_by(name=name).first()
 
         if user:
+            if user.password is None:
+                errors.append(
+                    "Your account was registered with a 3rd party authentication provider. "
+                    "Please try logging in with a configured authentication provider."
+                )
+                return render_template("login.html", errors=errors)
+
             if user and verify_password(request.form["password"], user.password):
 ~~                session.regenerate()
 
@@ -271,6 +271,7 @@ from babel.core import get_locale_identifier
 from babel.dates import format_date as babel_format_date
 from babel.dates import format_datetime as babel_format_datetime
 from babel.dates import format_timedelta as babel_format_timedelta
+from babel.dates import format_time as babel_format_time
 ~~from flask import current_app, flash, g, redirect, request, session, url_for
 from flask_allows import Permission
 from flask_babelplus import lazy_gettext as _
@@ -932,10 +933,12 @@ The Flask-Security-Too project is provided as open source under the
 ```python
 # twofactor.py
 
+import typing as t
+
 ~~from flask import current_app as app, redirect, request, session
 from werkzeug.datastructures import MultiDict
-from werkzeug.local import LocalProxy
 
+from .proxies import _security, _datastore
 from .utils import (
     SmsSenderFactory,
     base_render_json,
@@ -955,8 +958,8 @@ from .signals import (
     tf_profile_changed,
 )
 
-_security = LocalProxy(lambda: app.extensions["security"])
-_datastore = LocalProxy(lambda: _security.datastore)
+if t.TYPE_CHECKING:  # pragma: no cover
+    from flask import Response
 
 
 def tf_clean_session():
@@ -1213,130 +1216,150 @@ is a [Flask](/flask.html)-based web app for event management.
 The code is open sourced under the
 [MIT license](https://github.com/indico/indico/blob/master/LICENSE).
 
-[**indico / indico / core / logger.py**](https://github.com/indico/indico/blob/master/indico/core/logger.py)
+[**indico / indico / util / i18n.py**](https://github.com/indico/indico/blob/master/indico/util/i18n.py)
 
 ```python
-# logger.py
+# i18n.py
 
-import logging
-import logging.config
-import logging.handlers
-import os
-import warnings
-from pprint import pformat
+import ast
+import re
+from collections import Counter
+from contextlib import contextmanager
 
-import yaml
-~~from flask import current_app, has_request_context, request, session
+from babel import negotiate_locale
+from babel.core import LOCALE_ALIASES, Locale
+from babel.messages.pofile import read_po
+from babel.support import NullTranslations
+~~from flask import current_app, g, has_app_context, has_request_context, request, session
+from flask_babel import Babel, Domain, get_domain
+from flask_pluginengine import current_plugin
+from speaklater import is_lazy_string, make_lazy_string
+from werkzeug.utils import cached_property
 
 from indico.core.config import config
-from indico.util.i18n import set_best_lang
-from indico.web.util import get_request_info
+from indico.util.caching import memoize_request
 
 
-try:
-    from raven import setup_logging
-    from raven.contrib.celery import register_logger_signal, register_signal
-    from raven.contrib.flask import Sentry
-    from raven.handlers.logging import SentryHandler
-except ImportError:
-    Sentry = object  # so we can subclass
-    has_sentry = False
-else:
-    has_sentry = True
+LOCALE_ALIASES = dict(LOCALE_ALIASES, en='en_GB')
+RE_TR_FUNCTION = re.compile(r'''_\("([^"]*)"\)|_\('([^']*)'\)''', re.DOTALL | re.MULTILINE)
+
+babel = Babel()
+_use_context = object()
 
 
-class AddRequestIDFilter:
-    def filter(self, record):
-        record.request_id = request.id if has_request_context() else '0' * 16
-        return True
-
-
-class AddUserIDFilter:
-    def filter(self, record):
-~~        record.user_id = str(session.user.id) if has_request_context() and session and session.user else '-'
-        return True
-
-
-class RequestInfoFormatter(logging.Formatter):
-    def format(self, record):
-        rv = super().format(record)
-        info = get_request_info()
-        if info:
-            rv += '\n\n' + pformat(info)
-        return rv
-
-
-class FormattedSubjectSMTPHandler(logging.handlers.SMTPHandler):
-    def getSubject(self, record):
-        return self.subject % record.__dict__
-
-
-class BlacklistFilter(logging.Filter):
-    def __init__(self, names):
-        self.filters = [logging.Filter(name) for name in names]
-
-    def filter(self, record):
-        return not any(x.filter(record) for x in self.filters)
-
+def get_translation_domain(plugin_name=_use_context):
+    if plugin_name is None:
+        return get_domain()
+    else:
+        plugin = None
+        if has_app_context():
+            from indico.core.plugins import plugin_engine
+            plugin = plugin_engine.get_plugin(plugin_name) if plugin_name is not _use_context else current_plugin
 
 
 ## ... source file abbreviated to get to session examples ...
 
 
-            if formatter.pop('append_request_info', False):
-                assert '()' not in formatter
-                formatter['()'] = RequestInfoFormatter
-        if config.DB_LOG:
-            data['loggers']['indico._db'] = {'level': 'DEBUG', 'propagate': False, 'handlers': ['_db']}
-            data['handlers']['_db'] = {'class': 'logging.handlers.SocketHandler', 'host': '127.0.0.1', 'port': 9020}
-        if config.CUSTOMIZATION_DEBUG and config.CUSTOMIZATION_DIR:
-            data['loggers'].setdefault('indico.customization', {})['level'] = 'DEBUG'
-        logging.config.dictConfig(data)
-        if config.SENTRY_DSN:
-            if not has_sentry:
-                raise Exception('`raven` must be installed to use sentry logging')
-            init_sentry(app)
 
-    @classmethod
-    def get(cls, name=None):
-        if name is None:
-            name = 'indico'
-        elif name != 'indico' and not name.startswith('indico.'):
-            name = 'indico.' + name
-        return logging.getLogger(name)
+    def weekday(self, daynum, short=True):
+        return self.days['format']['abbreviated' if short else 'wide'][daynum]
+
+    @cached_property
+    def time_formats(self):
+        formats = super().time_formats
+        for k, v in formats.items():
+            v.format = v.format.replace(':%(ss)s', '')
+        return formats
 
 
-class IndicoSentry(Sentry):
-    def get_user_info(self, request):
-~~        if not has_request_context() or not session.user:
-            return None
-~~        return {'id': session.user.id,
-~~                'email': session.user.email,
-~~                'name': session.user.full_name}
-
-    def before_request(self, *args, **kwargs):
-        super().before_request()
-        if not has_request_context():
-            return
-        self.client.extra_context({'Endpoint': str(request.url_rule.endpoint) if request.url_rule else None,
-                                   'Request ID': request.id})
-        self.client.tags_context({'locale': set_best_lang()})
+def _remove_locale_script(locale):
+    parts = locale.split('_')  # e.g. `en_GB` or `zh_Hans_CN`
+    return f'{parts[0]}_{parts[-1]}'
 
 
-def init_sentry(app):
-    sentry = IndicoSentry(wrap_wsgi=False, register_signal=True, logging=False)
-    sentry.init_app(app)
-    handler = SentryHandler(sentry.client, level=getattr(logging, config.SENTRY_LOGGING_LEVEL))
-    handler.addFilter(BlacklistFilter({'indico.flask', 'celery.redirected'}))
-    setup_logging(handler)
-    register_logger_signal(sentry.client)
-    register_signal(sentry.client)
+@babel.localeselector
+def set_best_lang(check_session=True):
+    from indico.core.config import config
 
+    if not has_request_context():
+        return 'en_GB' if current_app.config['TESTING'] else config.DEFAULT_LOCALE
+    elif 'lang' in g:
+        return g.lang
+~~    elif check_session and session.lang is not None:
+~~        return session.lang
 
-def sentry_log_exception():
+    all_locales = {_remove_locale_script(loc).lower(): loc for loc in get_all_locales()}
+
+    preferred = [x.replace('-', '_') for x in request.accept_languages.values()]
+    resolved_lang = negotiate_locale(preferred, list(all_locales), aliases=LOCALE_ALIASES)
+
+    if not resolved_lang:
+        if current_app.config['TESTING']:
+            return 'en_GB'
+
+        resolved_lang = config.DEFAULT_LOCALE
+
     try:
-        sentry = current_app.extensions['sentry']
+        resolved_lang = all_locales[resolved_lang.lower()]
     except KeyError:
+        return 'en_GB'
+
+    resolved_lang = re.sub(r'^([a-zA-Z]+)_([a-zA-Z]+)$',
+                           lambda m: f'{m.group(1).lower()}_{m.group(2).upper()}',
+                           resolved_lang)
+
+    g.lang = resolved_lang
+    return resolved_lang
+
+
+@memoize_request
+def get_current_locale():
+    return IndicoLocale.parse(set_best_lang())
+
+
+def get_all_locales():
+    if babel.app is None:
+        return {}
+    else:
+        missing = object()
+        languages = {str(t): config.CUSTOM_LANGUAGES.get(str(t), (t.language_name.title(), t.territory_name))
+                     for t in babel.list_translations()
+                     if config.CUSTOM_LANGUAGES.get(str(t), missing) is not None}
+        counts = Counter(x[0] for x in languages.values())
+        return {code: (name, territory, counts[name] > 1) for code, (name, territory) in languages.items()}
+
+
+def set_session_lang(lang):
+~~    session.lang = lang
+
+
+@contextmanager
+def session_language(lang):
+~~    old_lang = session.lang
+
+    set_session_lang(lang)
+    yield
+    set_session_lang(old_lang)
+
+
+def parse_locale(locale):
+    return IndicoLocale.parse(locale)
+
+
+def extract_node(node, keywords, commentTags, options, parents=[None]):
+    if isinstance(node, ast.Str) and isinstance(parents[-1], (ast.Assign, ast.Call)):
+        matches = RE_TR_FUNCTION.findall(node.s)
+        for m in matches:
+            line = m[0] or m[1]
+            yield (node.lineno, '', line.split('\n'), ['old style recursive strings'])
+    else:
+        for cnode in ast.iter_child_nodes(node):
+            yield from extract_node(cnode, keywords, commentTags, options, parents=(parents + [node]))
+
+
+def po_to_json(po_file, locale=None, domain=None):
+    with open(po_file, 'rb') as f:
+        po_data = read_po(f, locale=locale, domain=domain)
 
 
 ## ... source file continues with no further session examples...
@@ -1473,7 +1496,7 @@ from threading import Lock
 from flask_socketio import SocketIO, emit, join_room, rooms, disconnect
 import core.stats 
 import core.user
-from user_objects import attacks_hook_message
+from core.user_objects import attacks_hook_message
 from core.utils import utils
 from core.db import Database
 import sys

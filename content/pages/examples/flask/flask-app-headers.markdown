@@ -22,7 +22,7 @@ Flask web applications.
 and <a href="/flask-app-immutabledict-examples.html">ImmutableDict</a>
 are several other callables with code examples from the same `flask.app` package.
 
-These subjects go along with the `Headers` code examples:
+These topics are also useful while reading the `Headers` examples:
 
 * [web development](/web-development.html) and [web design](/web-design.html)
 * [Flask](/flask.html) and [web framework](/web-frameworks.html) concepts
@@ -47,10 +47,12 @@ import random
 import string
 import uuid
 from collections import namedtuple
+from contextlib import contextmanager
 from unittest.mock import Mock, patch
 
 import requests
 from flask.testing import FlaskClient
+from freezegun import freeze_time
 from sqlalchemy.engine.url import make_url
 from sqlalchemy_utils import drop_database
 ~~from werkzeug.datastructures import Headers
@@ -63,6 +65,7 @@ from CTFd.models import (
     ChallengeComments,
     ChallengeFiles,
     Challenges,
+    ChallengeTopics,
     Comments,
     Fails,
     Fields,
@@ -78,11 +81,14 @@ from CTFd.models import (
     TeamComments,
     Teams,
     Tokens,
+    Topics,
     Tracking,
     Unlocks,
     UserComments,
     Users,
 )
+from CTFd.utils import set_config
+from tests.constants.time import FreezeTimes
 
 text_type = str
 binary_type = bytes
@@ -104,25 +110,25 @@ class CTFdTestClient(FlaskClient):
         return super(CTFdTestClient, self).open(*args, **kwargs)
 
 
-def create_ctfd(
-    ctf_name="CTFd",
-    ctf_description="CTF description",
-    name="admin",
-    email="admin@examplectf.com",
-    password="password",
-    user_mode="users",
-    setup=True,
-    enable_plugins=False,
-    application_root="/",
-    config=TestingConfig,
-):
-    if enable_plugins:
-        config.SAFE_MODE = False
-    else:
-        config.SAFE_MODE = True
+class ctftime:
+    @contextmanager
+    def init():
+        try:
+            set_config("start", FreezeTimes.START)
+            set_config("end", FreezeTimes.END)
+            yield
+        finally:
+            set_config("start", None)
+            set_config("end", None)
 
-    config.APPLICATION_ROOT = application_root
-    url = make_url(config.SQLALCHEMY_DATABASE_URI)
+    @contextmanager
+    def not_started():
+        try:
+            freezer = freeze_time(FreezeTimes.NOT_STARTED)
+            frozen_time = freezer.start()
+            yield frozen_time
+        finally:
+            freezer.stop()
 
 
 ## ... source file continues with no further Headers examples...
@@ -145,8 +151,6 @@ Flask RESTX is provided as open source under the
 
 ```python
 # api.py
-from __future__ import unicode_literals
-
 import difflib
 import inspect
 from itertools import chain
@@ -163,7 +167,10 @@ from types import MethodType
 
 from flask import url_for, request, current_app
 from flask import make_response as original_flask_make_response
-from flask.helpers import _endpoint_from_view_func
+try:
+    from flask.helpers import _endpoint_from_view_func
+except ImportError:
+    from flask.scaffold import _endpoint_from_view_func
 from flask.signals import got_request_exception
 
 from jsonschema import RefResolver
@@ -177,7 +184,13 @@ from werkzeug.exceptions import (
     NotAcceptable,
     InternalServerError,
 )
-from werkzeug.wrappers import BaseResponse
+
+from werkzeug import __version__ as werkzeug_version
+
+if werkzeug_version.split('.')[0] >= '2':
+    from werkzeug.wrappers import Response as BaseResponse
+else:
+    from werkzeug.wrappers import BaseResponse
 
 from . import apidoc
 from .mask import ParseError, MaskError
@@ -189,28 +202,22 @@ from .utils import default_id, camel_to_dash, unpack
 from .representations import output_json
 from ._http import HTTPStatus
 
-RE_RULES = re.compile("(<.*>)")
-
-HEADERS_BLACKLIST = ("Content-Length",)
-
-DEFAULT_REPRESENTATIONS = [("application/json", output_json)]
-
 
 ## ... source file abbreviated to get to Headers examples ...
 
 
+        if self._has_fr_route():
+            try:
                 return self.handle_error(e)
             except Exception as f:
                 return original_handler(f)
         return original_handler(e)
 
     def handle_error(self, e):
-        got_request_exception.send(current_app._get_current_object(), exception=e)
-
         if (
             not isinstance(e, HTTPException)
             and current_app.propagate_exceptions
-            and not isinstance(e, tuple(self.error_handlers.keys()))
+            and not isinstance(e, tuple(self._own_and_child_error_handlers.keys()))
         ):
 
             exc_type, exc_value, tb = sys.exc_info()
@@ -234,6 +241,8 @@ DEFAULT_REPRESENTATIONS = [("application/json", output_json)]
                 )
                 break
         else:
+            got_request_exception.send(current_app._get_current_object(), exception=e)
+
             if isinstance(e, HTTPException):
                 code = HTTPStatus(e.code)
                 if include_message_in_response:
@@ -247,8 +256,6 @@ DEFAULT_REPRESENTATIONS = [("application/json", output_json)]
             else:
                 code = HTTPStatus.INTERNAL_SERVER_ERROR
                 if include_message_in_response:
-                    default_data = {
-                        "message": code.phrase,
 
 
 ## ... source file continues with no further Headers examples...

@@ -356,7 +356,7 @@ class UnbanUser(MethodView):
                     data.append(
                         {
                             "id": user.id,
-                            "type": "unban",
+                            "type": "ban",
                             "reverse": "ban",
                             "reverse_name": _("Ban"),
                             "reverse_url": url_for("management.ban_user",
@@ -674,11 +674,15 @@ in Python scripts created by a developer.
 import os
 import uuid
 from importlib.util import module_from_spec, spec_from_file_location
+from itertools import groupby
+from operator import itemgetter
 
 import orjson
 from bs4 import BeautifulSoup
+from bs4.element import Tag
 from bs4.formatter import HTMLFormatter
-~~from flask import render_template, current_app, jsonify
+~~from flask import current_app, jsonify, render_template
+from jinja2.exceptions import TemplateNotFound
 
 
 def convert_to_snake_case(s):
@@ -704,16 +708,15 @@ def get_component_module(module_name):
     user_specified_dir = current_app.config.get("MELD_COMPONENT_DIR", None)
 
 
-
 ## ... source file abbreviated to get to jsonify examples ...
 
 
 
-    def render(self, component_name: str):
-        return self._view(component_name)
-
     def _render_template(self, template_name: str, context_variables: dict):
-        return render_template(template_name, **context_variables)
+        try:
+            return render_template(template_name, **context_variables)
+        except TemplateNotFound:
+            return render_template(f"meld/{template_name}", **context_variables)
 
     def _view(self, component_name: str):
         data = self._attributes()
@@ -724,7 +727,7 @@ def get_component_module(module_name):
         context_variables.update({"form": self._form})
 
         rendered_template = self._render_template(
-            f"meld/{component_name}.html", context_variables
+            f"{component_name}.html", context_variables
         )
 
         soup = BeautifulSoup(rendered_template, features="html.parser")
@@ -755,9 +758,9 @@ def get_component_module(module_name):
                 )
 
             for model_attr in model_attrs:
-                element.attrs["value"] = context_variables[element.attrs[model_attr]]
-
-    @staticmethod
+                value = context_variables[element.attrs[model_attr]]
+                element.attrs["value"] = value
+                if element.name == "select":
 
 
 ## ... source file continues with no further jsonify examples...
@@ -1017,6 +1020,7 @@ import hashlib
 import sys
 from datetime import datetime
 
+import sentry_sdk
 from authlib.oauth2 import OAuth2Error
 ~~from flask import flash, g, has_request_context, jsonify, render_template, request, session
 from itsdangerous import Signer
@@ -1089,7 +1093,7 @@ def _format_request_data(data, hide_passwords=False):
     rv = {}
     for key, values in data:
         if hide_passwords and 'password' in key:
-            values = [v if not v else '<{} chars hidden>'.format(len(v)) for v in values]
+            values = [v if not v else f'<{len(v)} chars hidden>' for v in values]
         rv[key] = values if len(values) != 1 else values[0]
     return rv
 

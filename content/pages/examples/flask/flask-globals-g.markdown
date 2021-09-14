@@ -42,7 +42,7 @@ import datetime
 import json
 import logging
 import re
-from typing import Dict, List, Set
+from typing import Dict, List, Optional, Set, Tuple
 
 ~~from flask import g, session, url_for
 from flask_babel import lazy_gettext as _
@@ -186,12 +186,6 @@ from .views import (
 
         raise NotImplementedError
 
-    def add_permission_view_menu(self, permission_name, view_menu_name):
-        raise NotImplementedError
-
-    def del_permission_view_menu(self, permission_name, view_menu_name, cascade=True):
-        raise NotImplementedError
-
     def exist_permission_on_views(self, lst, item):
         raise NotImplementedError
 
@@ -202,6 +196,12 @@ from .views import (
         raise NotImplementedError
 
     def del_permission_role(self, role, perm_view):
+        raise NotImplementedError
+
+    def export_roles(self, path: Optional[str] = None) -> None:
+        raise NotImplementedError
+
+    def import_roles(self, path: str) -> None:
         raise NotImplementedError
 
     def load_user(self, pk):

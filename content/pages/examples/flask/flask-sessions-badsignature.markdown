@@ -18,67 +18,7 @@ and
 <a href="/flask-sessions-sessionmixin-examples.html">SessionMixin</a>
 are a couple of other callables within the `flask.sessions` package that also have code examples.
 
-## Example 1 from FlaskBB
-[FlaskBB](https://github.com/flaskbb/flaskbb)
-([project website](https://flaskbb.org/)) is a [Flask](/flask.html)-based
-forum web application. The web app allows users to chat in an open
-message board or send private messages in plain text or
-[Markdown](/markdown.html).
-
-FlaskBB is provided as open source
-[under this license](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
-
-[**FlaskBB / flaskbb / tokens / serializer.py**](https://github.com/flaskbb/flaskbb/blob/master/flaskbb/tokens/serializer.py)
-
-```python
-# serializer.py
-
-from datetime import timedelta
-
-~~from itsdangerous import (BadData, BadSignature, SignatureExpired,
-                          TimedJSONWebSignatureSerializer)
-
-from ..core import tokens
-
-
-_DEFAULT_EXPIRY = timedelta(hours=1)
-
-
-class FlaskBBTokenSerializer(tokens.TokenSerializer):
-
-    def __init__(self, secret_key, expiry=_DEFAULT_EXPIRY):
-        self._serializer = TimedJSONWebSignatureSerializer(
-            secret_key, int(expiry.total_seconds())
-        )
-
-    def dumps(self, token):
-        return self._serializer.dumps(
-            {
-                'id': token.user_id,
-                'op': token.operation,
-            }
-        )
-
-    def loads(self, raw_token):
-        try:
-            parsed = self._serializer.loads(raw_token)
-        except SignatureExpired:
-            raise tokens.TokenError.expired()
-~~        except BadSignature:  # pragma: no branch
-            raise tokens.TokenError.invalid()
-        except BadData:  # pragma: no cover
-            raise tokens.TokenError.bad()
-        else:
-            return tokens.Token(user_id=parsed['id'], operation=parsed['op'])
-
-
-
-## ... source file continues with no further BadSignature examples...
-
-```
-
-
-## Example 2 from flask-base
+## Example 1 from flask-base
 [flask-base](https://github.com/hack4impact/flask-base)
 ([project documentation](http://hack4impact.github.io/flask-base/))
 provides boilerplate code for new [Flask](/flask.html) web apps.
@@ -219,7 +159,7 @@ class Role(db.Model):
 ```
 
 
-## Example 3 from flask-bones
+## Example 2 from flask-bones
 [flask-bones](https://github.com/cburmeister/flask-bones)
 ([demo](http://flask-bones.herokuapp.com/))
 is large scale [Flask](/flask.html) example application built
@@ -319,7 +259,7 @@ def verify(token):
 ```
 
 
-## Example 4 from Flask-Security-Too
+## Example 3 from Flask-Security-Too
 [Flask-Security-Too](https://github.com/Flask-Middleware/flask-security/)
 ([PyPi page](https://pypi.org/project/Flask-Security-Too/) and
 [project documentation](https://flask-security-too.readthedocs.io/en/stable/))
@@ -338,9 +278,8 @@ The Flask-Security-Too project is provided as open source under the
 
 ```python
 # utils.py
-from typing import Dict, List
+import typing as t
 import warnings
-from datetime import timedelta
 from urllib.parse import parse_qsl, parse_qs, urlsplit, urlunsplit, urlencode
 import urllib.request
 import urllib.error
@@ -352,6 +291,7 @@ from flask import (
     flash,
     g,
     request,
+    render_template,
     session,
     url_for,
 )
@@ -364,19 +304,20 @@ from flask_principal import AnonymousIdentity, Identity, identity_changed, Need
 from flask_wtf import csrf
 from wtforms import ValidationError
 ~~from itsdangerous import BadSignature, SignatureExpired
+from werkzeug import __version__ as werkzeug_version
 from werkzeug.local import LocalProxy
 from werkzeug.datastructures import MultiDict
 
 from .quart_compat import best, get_quart_status
+from .proxies import _security, _datastore, _pwd_context, _hashing_context
 from .signals import user_authenticated
 
-_security = LocalProxy(lambda: current_app.extensions["security"])
+if t.TYPE_CHECKING:  # pragma: no cover
+    from flask import Flask, Response
+    from .datastore import User
 
-_datastore = LocalProxy(lambda: _security.datastore)
+SB = t.Union[str, bytes]
 
-_pwd_context = LocalProxy(lambda: _security.pwd_context)
-
-_hashing_context = LocalProxy(lambda: _security.hashing_context)
 
 localize_callback = LocalProxy(lambda: _security.i18n_domain.gettext)
 
@@ -389,21 +330,20 @@ def _(translate):
 
 
 
-
 ## ... source file abbreviated to get to BadSignature examples ...
 
-
-    if config_value("EMAIL_HTML"):
-        html = _security.render_template("%s/%s.html" % ctx, **context)
-
-    subject = localize_callback(subject)
 
     sender = _security.email_sender
     if isinstance(sender, LocalProxy):
         sender = sender._get_current_object()
 
+    if isinstance(sender, tuple) and len(sender) == 2:
+        sender = (str(sender[0]), str(sender[1]))
+    else:
+        sender = str(sender)
+
     _security._mail_util.send_mail(
-        template, subject, recipient, str(sender), body, html, context.get("user", None)
+        template, subject, recipient, sender, body, html, context.get("user", None)
     )
 
 
@@ -432,8 +372,10 @@ def get_token_status(token, serializer, max_age=None, return_data=False):
         return expired, invalid, user
 
 
-def check_and_get_token_status(token, serializer, within=None):
-    serializer = getattr(_security, serializer + "_serializer")
+def check_and_get_token_status(
+    token: str, serializer_name: str, within: datetime.timedelta
+) -> t.Tuple[bool, bool, t.Any]:
+    serializer = getattr(_security, serializer_name + "_serializer")
     max_age = within.total_seconds()
     data = None
     expired, invalid = False, False
@@ -449,7 +391,7 @@ def check_and_get_token_status(token, serializer, within=None):
     return expired, invalid, data
 
 
-def get_identity_attributes(app=None) -> List:
+def get_identity_attributes(app: t.Optional["Flask"] = None) -> t.List[str]:
     app = app or current_app
     iattrs = app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"]
     if iattrs:
@@ -457,7 +399,9 @@ def get_identity_attributes(app=None) -> List:
     return []
 
 
-def get_identity_attribute(attr, app=None) -> Dict:
+def get_identity_attribute(
+    attr: str, app: t.Optional["Flask"] = None
+) -> t.Dict[str, t.Any]:
     app = app or current_app
     iattrs = app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"]
     if iattrs:
@@ -466,8 +410,6 @@ def get_identity_attribute(attr, app=None) -> Dict:
         ]
         if details:
             return details[0]
-    return {}
-
 
 
 ## ... source file continues with no further BadSignature examples...

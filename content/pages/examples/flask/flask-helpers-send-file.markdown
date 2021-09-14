@@ -45,6 +45,7 @@ from flask import Blueprint, abort
 from flask import current_app as app
 ~~from flask import redirect, render_template, request, send_file, session, url_for
 from flask.helpers import safe_join
+from jinja2.exceptions import TemplateNotFound
 from sqlalchemy.exc import IntegrityError
 
 from CTFd.cache import cache
@@ -67,7 +68,6 @@ from CTFd.models import (
     db,
 )
 from CTFd.utils import config, get_config, set_config
-from CTFd.utils import user as current_user
 
 
 ## ... source file abbreviated to get to send_file examples ...

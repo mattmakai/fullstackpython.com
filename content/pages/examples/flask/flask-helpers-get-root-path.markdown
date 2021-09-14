@@ -37,6 +37,7 @@ import os
 import re
 import shutil
 import socket
+import subprocess
 import sys
 from operator import attrgetter
 from pathlib import Path
@@ -45,6 +46,8 @@ from smtplib import SMTP
 import click
 from click import wrap_text
 ~~from flask.helpers import get_root_path
+from packaging.specifiers import SpecifierSet
+from packaging.version import Version
 from pkg_resources import iter_entry_points
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import PathCompleter, WordCompleter
@@ -57,6 +60,7 @@ from sqlalchemy.pool import NullPool
 from terminaltables import AsciiTable
 from werkzeug.urls import url_parse
 
+import indico
 from indico.core.db.sqlalchemy.util.models import import_all_models
 from indico.util.console import cformat
 from indico.util.string import validate_email
@@ -66,9 +70,6 @@ def _echo(msg=''):
     click.echo(msg, err=True)
 
 
-def _warn(msg):
-    msg = wrap_text(msg)
-    click.echo(click.style(msg, fg='yellow'), err=True)
 
 
 ## ... source file abbreviated to get to get_root_path examples ...
@@ -129,14 +130,14 @@ def _prompt(message, default='', path=False, list_=None, required=True, validate
 ## ... source file abbreviated to get to get_root_path examples ...
 
 
+                'SMTP_USE_CELERY = False'
+            ]
 
-        if dev:
+        if not self.system_notices:
             config_data += [
                 '',
-                '# Development options',
-                'DB_LOG = True',
-                'DEBUG = True',
-                'SMTP_USE_CELERY = False'
+                '# Disable system notices',
+                'SYSTEM_NOTICES_URL = None'
             ]
 
         config = '\n'.join(x for x in config_data if x is not None)
@@ -173,11 +174,7 @@ def _prompt(message, default='', path=False, list_=None, required=True, validate
             _echo(cformat('Run %{green!}export INDICO_CONFIG={}%{reset} to use your config file')
                   .format(self.config_path))
 
-        if self.old_archive_dir:
-            _echo(cformat('Check %{green!}https://git.io/vHP6o%{reset} for a guide on how to '
-                          'import data from Indico v1.2'))
-        else:
-            _echo(cformat('You can now run %{green!}indico db prepare%{reset} to initialize your Indico database'))
+        _echo(cformat('You can now run %{green!}indico db prepare%{reset} to initialize your Indico database'))
 
 
 
