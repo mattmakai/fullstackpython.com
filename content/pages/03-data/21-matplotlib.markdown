@@ -21,10 +21,6 @@ toolkits.
   is an awesome getting started tutorial that breaks through the confusing
   beginner steps so you can quick start using the plotting library.
 
-* [Web Scraping With Python: Scrapy, SQL, Matplotlib To Gain Web Data Insights](http://www.scrapingauthority.com/python-scrapy-mysql-and-matplotlib-to-gain-web-data-insights/)
-  is a long and comprehensive tutorial that walks through obtaining, 
-  cleaning and visualizing data.
-
 * [Matplotlib Cheat Sheet: Plotting in Python](https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet)
   contains some handy snippets of code to perform common plotting operations
   in Matplotlib.

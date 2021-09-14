@@ -38,9 +38,6 @@ be able to structure your playbooks:
   configures macOS with various applications and developer tools such as
   [Docker](/docker.html), Homebrew and [Sublime Text](/sublime-text.html).
   
-* [ansible-nginx-haproxy-elasticsearch](https://github.com/gp187/ansible-nginx-haproxy-elasticsearch)
-  sets up a server with [Nginx](/nginx.html), HAProxy and ElasticSearch.
-
 
 ### Specific Ansible topics
 * [An Ansible2 Tutorial](https://serversforhackers.com/c/an-ansible2-tutorial)
@@ -62,10 +59,6 @@ be able to structure your playbooks:
   that arise from using Amazon Web Services for your infrastructure.
 
 * [DevOps from Scratch, Part 1: Vagrant & Ansible](https://www.kevinlondon.com/2016/09/19/devops-from-scratch-pt-1.html)
-
-* [Ansible: Post-Install Setup](https://valdhaus.co/writings/ansible-post-install/)
-
-* [How To Use Vault to Protect Sensitive Ansible Data on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-use-vault-to-protect-sensitive-ansible-data-on-ubuntu-16-04)
 
 * [How to use Ansible Variables and Vaults](https://www.expressvpn.com/blog/ansible-variables-vaults/)
 
