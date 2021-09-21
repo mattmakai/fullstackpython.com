@@ -21,7 +21,14 @@ easily [deploy](/deployment.html) Python applications.
   [MySQL](/mysql.html) to [PostgreSQL](/postgresql.html) if necessary 
   as well as how to properly handle your settings files.
 
-* Heroku's 
+* [How to deploy Django project to Heroku using Docker](https://www.accordbox.com/blog/deploy-django-project-heroku-using-docker/)
+  explains that although [Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
+  are the most common way to deploy to Heroku, packaing your app in a 
+  [Docker](/docker.html) container is also a viable approach. It walks through
+  the steps needed to deploy a [Django](/django.html) app in the remainder
+  of the article.
+
+* Heroku's
   [official Python documentation](https://devcenter.heroku.com/articles/getting-started-with-python) 
   is fantastic and walks through deploying WSGI applications in short order.
 
