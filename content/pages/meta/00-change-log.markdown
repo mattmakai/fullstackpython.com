@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2021
+### September
+* Clean up continues across the site to remove link rot and replace
+  out-of-date links with newer ones where necessary.
+
 ### August
 * New blog post on 
   [Application Performance Monitoring AWS Lambda Functions with Sentry](/blog/application-performance-monitoring-aws-lambda-functions-sentry.html).

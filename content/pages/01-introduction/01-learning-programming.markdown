@@ -140,11 +140,6 @@ give example paths you can think about taking as a beginner:
   including persistence, respecting others and considering ideas that are
   outside your comfort zone.
 
-* [Mastering programming](https://www.facebook.com/notes/kent-beck/mastering-programming/1184427814923414)
-  by [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) contains
-  patterns and observations for how experienced programmers he has worked
-  with in the past became great software developers.
-
 * [This Picture Will Change the Way You Learn to Code](https://dev.to/nextdotxyz/this-picture-will-change-the-way-you-learn-tocode-4kmh)
   covers a well done graphics of many up-to-date concepts and tools that
   developers use. The post reminds you that you will not and should not learn
