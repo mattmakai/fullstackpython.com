@@ -13,7 +13,16 @@ view commit-level changes via the
 [source repository's commit log](https://github.com/mattmakai/fullstackpython.com/commits/) 
 on GitHub.
 
+## 2022
+### February
+* Still on break, but updated the header and footer. Also made some website 
+  tweaks to make it faster.
+
 ## 2021
+### October
+* Taking a break for a few months to recharge and work on a different coding
+  side project that I'm excited about. Be back in a few months with some updates.
+
 ### September
 * Clean up continues across the site to remove link rot and replace
   out-of-date links with newer ones where necessary.
