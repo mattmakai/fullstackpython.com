@@ -44,8 +44,8 @@ applications through machine-to-machine communication.
   [EuroPython 2014](https://www.youtube.com/watch?v=9sUsLvG72_o) that 
   introduced the main features of the framework.
 
-* [Falcon](http://falconframework.org/) is a fast and lightweight framework
-  well suited to create RESTful APIs. 
+* [Falcon](https://falconframework.org/) is a fast and lightweight framework
+  well suited for creating RESTful APIs. 
 
 * [Hug](https://github.com/timothycrosley/hug) built on-top of Falcon and Python3 with an aim to make developing Python driven APIs as simple as possible, but no simpler. Hug leverages Python3 annotations to automatically validate and convert incoming and outgoing API parameters.
 
