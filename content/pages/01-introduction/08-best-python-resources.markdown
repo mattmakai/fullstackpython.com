@@ -147,6 +147,10 @@ topics.
   developers. The list is especially handy if you want to try building a
   Python project and need new third party services to kick around while
   experimenting.
+  
+* [Learn Python by Scaler](https://www.scaler.com/topics/python/), the resources 
+  are divided in modules which is easy to understand and learn. This Python 
+  Tutorial will guide you to learn Python easily from beginner to advanced level.
 
 
 ## Videos, screencasts and presentations
