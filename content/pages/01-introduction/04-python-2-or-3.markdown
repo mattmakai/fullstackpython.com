@@ -50,7 +50,7 @@ the community, many projects have sprung up to make the transition easier.
   is a dependency for many popular Python projects to make it easier to
   support both Python 2 and 3 at the same time.
 
-* [Python 3 Readiness](http://py3readiness.org/) is a visualization of
+* [Python Readiness](http://pyreadiness.org/) is a visualization of
   which most popular 360 libraries (by downloads) are ready to be
   used with Python 3.
 
