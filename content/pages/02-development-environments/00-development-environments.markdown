@@ -89,9 +89,8 @@ getting started and then require payment as you scale up your application.
 * [Cloud9](https://c9.io/) began as an independent company and is now owned 
   by Amazon as part of Amazon Web Services.
 
-* [code.xyz](https://code.xyz/) is an online text editor built by
-  [Stdlib](https://stdlib.com/) that can integrate with external 
-  [web APIs](/application-programming-interfaces.html).
+* [Autocode](https://www.fullstackpython.com/development-environments.html) is an online text editor
+  that can integrate with external [web APIs](/application-programming-interfaces.html).
 
 * [GitLab Web IDE](https://docs.gitlab.com/ee/user/project/web_ide/)
   is integrated into the GitLab web application for modifying your
