@@ -35,7 +35,7 @@ ease further development and deployment. This approach is called the
 
 
 ### Microservice resources
-* Martin Fowler's 
+* James Lewis's 
   [microservices](http://martinfowler.com/articles/microservices.html)
   article is one of the best in-depth explanations for what microservices are
   and why to consider them as an architectural pattern.
@@ -87,7 +87,7 @@ ease further development and deployment. This approach is called the
   contains a high-level perspective on why or why not use microservices
   as an architectural choice.
 
-* Zuul is open source proxy for combining multiple microservices into a 
+* [Zuul](https://github.com/Netflix/zuul) is an open source proxy for combining multiple microservices into a 
   unified API call. Check out this post on 
   [Using Netflix Zuul to Proxy your Microservices](https://blog.heroku.com/using_netflix_zuul_to_proxy_your_microservices)
   to learn more and get started using it.
