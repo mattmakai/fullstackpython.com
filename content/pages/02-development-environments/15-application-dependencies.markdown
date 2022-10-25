@@ -166,12 +166,6 @@ so far to get up to speed on building and releasing your own packages.
   is for developers who have created a code library they would like to
   share and make installable for other developers.
 
-* [How to Submit a Package to PyPI](https://blog.easyaspy.org/post/14/2019-05-05-how-to-submit-a-package-to-pypi)
-  presents the basic steps like signing up for a PyPI account and other
-  accounts that go along with the tutorial. It then walks through the
-  configuration code for setting up continuous integration and deploying
-  your package.
-
 
 ### Application dependency resources
 The following links provide advice on how to use Python packages as well
@@ -217,14 +211,14 @@ developers.
   bundling and running Python code.
 
 * [Python Application Dependency Management in 2018](https://hynek.me/articles/python-app-deps-2018/)
-  presents some critical analysis and critique oof the existing Python
+  presents some critical analysis and critique of the existing Python
   dependency management tools including newer ones such as pipenv and
   Poetry.
 
 * [Open source trust scaling](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/)
   is a good piece for the [Python community](/python-community.html) 
   (and other programming communities) that is based on the 
-  [left-pad NPM situation](https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)
+  [left-pad NPM situation](https://kodfabrik.com/journal/i-ve-just-liberated-my-modules)
   that broke many dependent packages in the Node.js community.
 
 * Major speed improvements were made in pip 7 over previous versions. Read 
