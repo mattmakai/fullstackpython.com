@@ -4,10 +4,15 @@ slug: Oracle
 sortorder: 0325
 toc: False
 sidebartitle: Oracle
-meta: Oracle Database is the market-leading database for mission-critical enterprise applications.
+meta: Oracle Database is an enterprise relational database management system.
 
 
-[Oracle](http://www.oracle.com/) Database is the market-leading database for mission-critical enterprise applications. It can run transaction processing, data warehousing, and multi-model database workloads such as machine learning, spatial, and graph. Recently, Oracle Database added support for JSON and blockchain use cases. The Oracle Database fully supports on-premises, cloud, and hybrid cloud deployments.
+[Oracle Database](http://www.oracle.com/) is an enterprise
+[relational database](/databases.html). It can run transaction processing, 
+data warehousing, and multi-model database workloads such as machine 
+learning, spatial, and graph analysis. Recent versions of Oracle Database 
+also added support for JSON and blockchain use cases, and the software
+can be run in on-premise, cloud or hybrid environments.
 
 <img src="/img/logos/oracle.jpg" width="100%" alt="Oracle logo." class="shot">
 

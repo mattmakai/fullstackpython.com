@@ -158,10 +158,6 @@ so far to get up to speed on building and releasing your own packages.
   provides a collection of resources to understand how to package and 
   distribute Python code libraries.
 
-* [Alice in Python projectland](https://veekaybee.github.io/2017/09/26/python-packaging/)
-  is an amazing post that takes the reader from simple Python script
-  into a complete Python package.
-
 * [How to Publish Your Package on PyPI](https://blog.jetbrains.com/pycharm/2017/05/how-to-publish-your-package-on-pypi/)
   is for developers who have created a code library they would like to
   share and make installable for other developers.

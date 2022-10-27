@@ -14,6 +14,10 @@ view commit-level changes via the
 on GitHub.
 
 ## 2022
+### March
+* I decided to go so minimal that I removed the logo to make the site load 
+  faster, and also got rid of some unncessary CSS on front page.
+
 ### February
 * Still on break, but updated the header and footer. Also made some website 
   tweaks to make it faster.
