@@ -57,7 +57,7 @@ architecture.
 To work with relational databases in Python you need to use a database 
 driver, which is also referred to as a database connector. The most common 
 driver library for working with PostgreSQL is 
-[psycopg2](http://initd.org/psycopg/). There is 
+[psycopg](https://www.psycopg.org/). There is 
 [a list of all drivers on the PostgreSQL wiki](https://wiki.postgresql.org/wiki/Python),
 including several libraries that are no longer maintained. If you're
 working with the 

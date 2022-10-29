@@ -14,6 +14,12 @@ view commit-level changes via the
 on GitHub.
 
 ## 2022
+### October
+* Starting to get back into updating this site again! Note that I'll probably 
+  spend most of my side project time on [Plushcap](https://www.plushcap.com/)
+  but I'm removing old resources and adding new good ones on here to keep the
+  site maintained.
+
 ### March
 * I decided to go so minimal that I removed the logo to make the site load 
   faster, and also got rid of some unncessary CSS on front page.

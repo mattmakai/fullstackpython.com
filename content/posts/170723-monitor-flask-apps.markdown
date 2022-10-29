@@ -165,7 +165,7 @@ The above [Jinja2](/jinja2.html) template is basic HTML without any
 [embedded template tags](http://jinja.pocoo.org/docs/latest/templates/). 
 The template creates a very plain page with a header description of
 "PUBG so good" and a GIF from this
-[excellent computer game](http://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/).
+[excellent computer game](https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/).
 
 Time to run and test our code. Change into the base directory of your
 project where `app.py` file is located. Execute `app.py` using the `python`

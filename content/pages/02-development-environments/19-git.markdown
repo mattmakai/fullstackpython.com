@@ -240,10 +240,6 @@ minimize merge conflicts.
   why at GitHub they do not use the git-flow model and provides an 
   alternative that solves some of the issues they found with git-flow.
   
-* [Git Workflows That Work](http://blog.endpoint.com/2014/05/git-workflows-that-work.html)
-  is a helpful post with diagrams to show how teams can create a Git workflow
-  that will help their development process.
-
 * [Comparing workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
   provides a slew of examples for how developers on a team can handle merge
   conflicts and other situations that commonly arise when using Git.

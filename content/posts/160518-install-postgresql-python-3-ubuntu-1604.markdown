@@ -12,7 +12,7 @@ headeralt: PostgreSQL and Ubuntu logos. Copyright their respective owners.
 [PostgreSQL](/postgresql.html) is a powerful open source 
 [relational database](/databases.html) frequently used to create, read,
 update and delete [Python web application](/web-frameworks.html) data.
-[Psycopg2](http://initd.org/psycopg/) is a PostgreSQL database 
+[Psycopg2](https://www.psycopg.org/) is a PostgreSQL database 
 driver that serves as a Python client for access to the PostgreSQL server. 
 This post explains how to install PostgreSQL on [Ubuntu 16.04](/ubuntu.html) 
 and run a few basic SQL queries within a Python program.
@@ -110,7 +110,7 @@ found in the
 
 ## Installing psycopg2
 Now that PostgreSQL is installed and we have a non-superuser account, we
-can install the [psycopg2](http://initd.org/psycopg/) package. Let's
+can install the [psycopg2](https://www.psycopg.org/) package. Let's
 figure out where our `python3` executable is located, create a virtualenv
 with `python3`, activate the virtualenv and then install the psycopg2 package
 with `pip`. Find your `python3` executable using the `which` command.

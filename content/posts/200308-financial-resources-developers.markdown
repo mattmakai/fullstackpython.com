@@ -77,7 +77,7 @@ macroeconomic data trends.
   is well-written, straightforward and accessible, particularly because
   it clearly targets its software developer audience.
 
-* [Don't Quit Your Day Job](https://dqydj.com/) uses a ton of metrics
+* [Don't Quit Your Day Job](https://dqydj.com) uses a ton of metrics
   and statistics to ground their articles on financial topics that
   are often relevant specifically to software developers. For example,
   the article on 

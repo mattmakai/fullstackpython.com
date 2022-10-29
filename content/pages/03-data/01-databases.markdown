@@ -100,7 +100,7 @@ Find out about Python applications with a MySQL backed on the dedicated
 To work with a relational database using Python, you need to use a code 
 library. The most common libraries for relational databases are:
 
-* [psycopg2](http://initd.org/psycopg/) 
+* [psycopg](https://www.psycopg.org/)
   ([source code](https://github.com/psycopg/psycopg2))
   for PostgreSQL.
 
@@ -263,7 +263,7 @@ speed on SQL if you have never previously used it.
 1. Install PostgreSQL on your server. Assuming you went with Ubuntu run 
    ``sudo apt-get install postgresql``.
 
-1. Make sure the [psycopg2](http://initd.org/psycopg/) library is in your
+1. Make sure the [psycopg](https://www.psycopg.org/) library is in your
    application's dependencies.
 
 1. Configure your web application to connect to the PostgreSQL instance.
