@@ -68,7 +68,7 @@ tailored to large development teams and specific project workflows. However,
 open source systems are now used for version control on the largest and most
 complicated software projects in existence. There's no reason why your project
 should use anything other than an open source version control system in
-today's Python development world. The two primary choices are:
+today's Python development world. The three primary choices are:
 
 * [Git](/git.html) is a free and open source distributed version
   control system.
@@ -100,16 +100,16 @@ control services are:
   [$7 per month](https://github.com/pricing).
 
 * [BitBucket](https://bitbucket.org/) is 
-  [Atlassian](https://www.atlassian.com/)'s software-as-a-service tool that 
+  [Atlassian](https://www.atlassian.com/)'s software-as-a-service tool 
   with a user interface, comparison tools and backup for Git projects. There 
   are many features in BitBucket focused on making it easier for groups of 
-  developers to work on projects together. BitBucket also has private 
+  developers to work on projects together. BitBucket also has free private 
   repositories for up to five users. Users pay for hosting private 
   repositories with more than five users.
 
 
 ## General source control resources
-* [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
+* [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](https://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
   is a comprehensive overview by Patrick McKenzie of why you need source 
   control.
 
@@ -118,7 +118,7 @@ control services are:
   part of an ongoing deployment guide written by the folks at 
   [Rainforest](https://www.rainforestqa.com/).
 
-* [A visual guide to version control](http://betterexplained.com/articles/a-visual-guide-to-version-control/) 
+* [A visual guide to version control](https://betterexplained.com/articles/a-visual-guide-to-version-control/) 
   is a detailed article with real-life examples for why version control is
   necessary in software development.
 
@@ -133,7 +133,7 @@ control services are:
   generations, of which CVS and SVN were part of the second generation
   while Git and Mercurial are third-generation version control systems.
 
-* [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
+* [About version control](https://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
 
 * [Why not Git?](https://sqlite.org/whynotgit.html) covers 
@@ -148,7 +148,7 @@ is set for an organization it is exceptionally difficult to change
 your approach. The following resources give more insight into the debate
 on how to structure your repositories.
 
-* [Monorepo, Manyrepo, Metarepo](http://notes.burke.libbey.me/metarepo/)
+* [Monorepo, Manyrepo, Metarepo](https://notes.burke.libbey.me/metarepo/)
   is an awesome guide to varying ways of structuring your source repositories
   that contain more than one project. The guide covers advantages and
   disadvantages of common approaches used in both small and large 
@@ -164,7 +164,7 @@ on how to structure your repositories.
   which is one of if not the largest monorepo for an organization in the
   world.
 
-* [Advantages of monorepos](http://danluu.com/monorepo/) goes into the
+* [Advantages of monorepos](https://danluu.com/monorepo/) goes into the
   advantages of using a monorepo and does not discuss the downsides but
   admits there are many so the decision is not clear-cut on using either
   strategy.
