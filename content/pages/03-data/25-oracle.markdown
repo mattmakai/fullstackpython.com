@@ -32,7 +32,7 @@ As data volumes rise exponentially, new data types and data models are required 
 *	[Graph](https://www.oracle.com/database/graph/)
 *	[Spatial](https://www.oracle.com/database/spatial/)
 *	[Time Series](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/time-series.html)
-*	Relational
+*	[Relational](https://www.oracle.com/database/what-is-a-relational-database/)
 
 With support for scale-out database clusters, sharded distributed systems, and disaster recovery with continuous application availability, there is no shortage of features to guarantee the Database continues to run uninterrupted 24/7.   
 
