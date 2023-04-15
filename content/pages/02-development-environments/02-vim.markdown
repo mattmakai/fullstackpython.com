@@ -108,10 +108,6 @@ you are unfamiliar with.
 * [Vim and Python](https://justin.abrah.ms/vim/vim_and_python.html) shows
   and explains many Python-specific .vimrc options.
 
-* [Vim as a Python IDE](http://liuchengxu.org/posts/use-vim-as-a-python-ide/)
-  shows a slew of plugins and configuration options for coding with Python
-  in Vim.
-
 * This
   [repository's folder with Vimrc files](https://github.com/amix/vimrc/tree/master/vimrcs)
   has example configurations that are well commented and easy to learn from.
