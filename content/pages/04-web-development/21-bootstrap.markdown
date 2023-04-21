@@ -35,6 +35,9 @@ customized with my own CSS that I likely will never upgrade to Bootstrap 4
 because there are no new features that I feel will be useful in my
 specific situation.
 
+In May 2021, Bootstrap 5 has been released. It has many improvements and
+additions compared to version 4.
+
 
 ### Bootstrap resources
 * [Getting Started with Bootstrap](https://realpython.com/blog/python/getting-started-with-bootstrap-3/)
@@ -68,3 +71,9 @@ specific situation.
   ([source code](https://github.com/react-bootstrap/react-bootstrap) replaces
   the existing Bootstrap JavaScript with React components that do not
   rely on jQuery.
+  
+* [Bootstrap-Flask](https://github.com/helloflask/bootstrap-flask) is a
+  collection of Jinja macros for Bootstrap 4 & 5 and [Flask](/flask.html). It
+  helps rendering Flask-related data and objects to Bootstrap markup HTML more
+  easily. Check the [demo](http://bootstrapflaskdemo5.nsupdate.info/) for the
+  versions of Bootstrap it supports.

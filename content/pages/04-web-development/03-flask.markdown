@@ -332,6 +332,12 @@ ways to structure your code.
   combines a Flask framework project structure with 
   [Webpack](https://webpack.js.org/), a module bundler frequently used
   in the JavaScript world.
+    
+* [Bootstrap-Flask](https://github.com/helloflask/bootstrap-flask) is a
+  collection of Jinja macros for [Bootstrap](/bootstrap-css.html) 4 & 5 and
+  Flask. It helps rendering Flask-related data and objects to Bootstrap markup
+  HTML more easily. Check the [demo](http://bootstrapflaskdemo5.nsupdate.info/)
+  for the versions of Bootstrap it supports.
 
 
 ## Open source code for learning Flask
