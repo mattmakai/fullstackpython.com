@@ -18,7 +18,7 @@ can be run in on-premise, cloud or hybrid environments.
 
 
 ## How does Oracle fit with Python?
-The Python community and Oracle have a long history. The excellent Python Database API-compliant "cx_Oracle" interface for Oracle Database was first created by the user community in 1998 and is now being enhanced and maintained by Oracle. The [cx_Oracle](https://oracle.github.io/python-cx_Oracle/) module also underpins the [Oracle Machine Learning for Python](https://www.youtube.com/watch?v=P861m__PEMQ) engine. Oracle's high-performance  GraalVM framework supports an implementation of Python called [GraalPython](https://github.com/oracle/graalpython).
+The Python community and Oracle have a long history. The excellent Python Database API-compliant "cx_Oracle" interface for Oracle Database was first created by the user community in 1998 and is now being enhanced and maintained by Oracle as python-oracledb. The [python-oracledb](https://oracle.github.io/python-cx_Oracle/samples/tutorial/Python-and-Oracle-Database-Scripting-for-the-Future.html) module also underpins the [Oracle Machine Learning for Python](https://www.youtube.com/watch?v=P861m__PEMQ) engine. Oracle's high-performance  GraalVM framework supports an implementation of Python called [GraalPython](https://github.com/oracle/graalpython).
 
 
 ## Why is Oracle Database a great choice?
@@ -32,7 +32,7 @@ As data volumes rise exponentially, new data types and data models are required 
 *	[Graph](https://www.oracle.com/database/graph/)
 *	[Spatial](https://www.oracle.com/database/spatial/)
 *	[Time Series](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/time-series.html)
-*	Relational
+*	[Relational](https://www.oracle.com/database/what-is-a-relational-database/)
 
 With support for scale-out database clusters, sharded distributed systems, and disaster recovery with continuous application availability, there is no shortage of features to guarantee the Database continues to run uninterrupted 24/7.   
 
@@ -40,16 +40,16 @@ Oracle makes its enterprise-class database readily available to developers with 
 
 
 ## Connecting to Oracle Database with Python
-As with any database, applications require a connector or driver to connect to the Oracle Database. The Python DB API-compliant [cx_Oracle](https://github.com/oracle/python-cx_Oracle) interface provides developers access to standard and advanced Oracle Database features, such as SQL execution and document storage APIs.  It also gives users access to network traffic encryption capabilities and Oracle's leading high availability features.
+As with any database, applications require a connector or driver to connect to the Oracle Database. The Python DB API-compliant [python-oracledb](https://oracle.github.io/python-oracledb/) interface provides developers access to standard and advanced Oracle Database features, such as SQL execution and document storage APIs.  It also gives users access to network traffic encryption capabilities and Oracle's leading high availability features.
 
-[Code examples](https://oracle.github.io/python-cx_Oracle/samples/tutorial/Python-and-Oracle-Database-Scripting-for-the-Future.html) and free workshops such as the introductory [Python and Oracle for Developers Workshop](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=766) and a full-stack development workshop using [Python with SQLAlchemy to Oracle Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=911&clear=180&session=16650643444916) are available.
+[Code examples](https://oracle.github.io/python-cx_Oracle/samples/tutorial/Python-and-Oracle-Database-Scripting-for-the-Future.html) and free workshops such as the introductory [Python and Oracle for Developers Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3482) and a full-stack development workshop using [Python with SQLAlchemy to Oracle Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=911&clear=180&session=16650643444916) are available.
 
-<img src="/img/visuals/cx-oracle.jpg" width="100%" alt="cx Oracle driver." class="technical-diagram" />
+<img src="/img/visuals/python-oracledb-arch.png" width="100%" alt="python oracledb driver." class="technical-diagram" />
 
 You can use many Python frameworks and [object-relational mappers (ORMs)](/object-relational-mappers-orms.html) with Oracle Database. ORMs abstract the tables and objects in a relational database to objects that Python developers can manipulate and operate on. [SQLAlchemy](/sqlalchemy.html) and Django are popular ORMs.  SQLAlchemy is used by Pandas, which is very popular with Oracle users.
 The table below shows the relationship between web framework, ORM, driver, and the Oracle Database.
 
-<img src="/img/visuals/oracle-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with Oracle and the cx Oracle connector." class="technical-diagram" />
+<img src="/img/visuals/oracle-orm-examples.png" width="100%" alt="Examples of how varying Python ORMs can work with Oracle and the python oracledb connector." class="technical-diagram" />
 
 Learn more about
 [Python ORMs on that dedicated topic page](/object-relational-mappers-orms.html).
@@ -96,9 +96,9 @@ If you are looking for a fast way to get started with Python and Oracle Database
 
 *	[Quick Start: Developing Python Applications for Oracle Database](https://www.oracle.com/database/technologies/appdev/python/quickstartpythononprem.html)
 
-*	[Quick Start: Developing Python Applications for Oracle Autonomous Database](https://www.oracle.com/database/technologies/appdev/python/quickstartpythononprem.html)
+*	[Quick Start: Developing Python Applications for Oracle Autonomous Database](https://www.oracle.com/database/technologies/appdev/python/quickstartpython.html)
 
-Once you have done one of these, then continue with the popular [Python and Oracle Database Tutorial: Scripting for the Future](https://oracle.github.io/python-cx_Oracle/samples/tutorial/Python-and-Oracle-Database-Scripting-for-the-Future.html) to dive deeper to master the Python cx_Oracle interface and see how to build great Oracle Database applications.
+Once you have done one of these, then continue with the popular [Python and Oracle Database Tutorial: The New Wave of Scripting](https://oracle.github.io/python-oracledb/samples/tutorial/Python-and-Oracle-Database-The-New-Wave-of-Scripting.html) to dive deeper to master the Python python-oracledb interface and see how to build great Oracle Database applications.
 
 
 ###Using Different Frameworks with Oracle
@@ -126,7 +126,7 @@ The following hands-on, free workshops provide step-by-step instructions and wal
 
 *	[Use Python with Oracle Database 19c](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=635&clear=180&session=3484600041895) is an Oracle LiveLabs workshop that shows how to write Python code to connect to and read data from an Oracle Database, including JSON data.
 
-*	[Python and Oracle for Developers](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=766&p210_type=2&session=3484600041895) is an Oracle LiveLabs workshop that explores the features of the Python cx_Oracle interface for Oracle Database, including efficient techniques for connection management and statement handling.
+*	[Python and Oracle for Developers](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3482) is an Oracle LiveLabs workshop that explores the features of the python-oracledb interface for Oracle Database, including efficient techniques for connection management and statement handling.
 
 *	[Full Stack Development using Python and deployment via OKE](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=911&clear=180&session=3484600041895) is an Oracle LiveLabs workshop that explores how to build and deploy a simple cloud-native application using the most common frameworks and the Oracle Cloud Infrastructure services.
 
