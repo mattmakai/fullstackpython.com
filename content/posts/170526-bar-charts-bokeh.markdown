@@ -337,9 +337,10 @@ files and the remaining two are the generated chart.
   <body>
     <h1>Bugs found over the past {{ bars_count }} days</h1>
     {{ the_div|safe }}
+    {{ the_script|safe }}
     <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
     <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.js"></script>
-    {{ the_script|safe }}
+   
   </body>
 </html>
 ```
