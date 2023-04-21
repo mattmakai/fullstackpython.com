@@ -199,6 +199,9 @@ the framework.
 * [Django Apps Checklist](https://devchecklists.com/django-apps-checklist/en/)
   gives some good practices rules for building reusable Django apps.
 
+* [Caching in Django](https://testdriven.io/blog/django-caching/)
+  provides an overview of Django's caching framework.
+
 
 ## Django migrations
 * Paul Hallett wrote a 
