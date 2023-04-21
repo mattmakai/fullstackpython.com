@@ -278,6 +278,10 @@ based on [WebSockets](/websockets.html).
   gives some example code to get up and running with 
   [Selenium](http://www.seleniumhq.org) browser-based tests.
 
+* [Automating Performance Testing in Django](https://testdriven.io/blog/django-performance-testing/)
+  looks at how to set up automated performance tests to uncover and prevent
+  inefficient database queries.
+
 
 ### Django with JavaScript MVC frameworks
 There are resources for JavaScript MVC frameworks such as
