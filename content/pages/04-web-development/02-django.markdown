@@ -109,6 +109,8 @@ resources for more advanced tutorials.
   just getting started with Django and web development, taking you from 
   total beginner to confident web developer with Django and Python.
 
+* [Django SASS/SCSS Tutorial Series](https://www.accordbox.com/blog/django-sass-scss-tutorial-series/)
+  includes two posts which teach you how to write SASS/SCSS in your Django project.
 
 ### Django videos
 Are you looking for Django videos in addition to articles? There is a special 
