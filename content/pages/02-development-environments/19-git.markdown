@@ -264,4 +264,6 @@ tutorials show how to get started using Git on GitHub.
 
 * [A Beginner’s Git and GitHub Tutorial](https://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html)
   shows how to perform your first commit and back it up on GitHub.
+  
+* [6 Best Practices to Manage Pull Request Creation and Feedback](https://doordash.engineering/2022/08/23/6-best-practices-to-manage-pull-request-creation-and-feedback/) gives great insight into GitHub collaboration.
 
