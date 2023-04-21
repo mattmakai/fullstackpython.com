@@ -154,6 +154,7 @@ for getting started.
 
 * [Developing a Single Page App with Flask and Vue.js](https://testdriven.io/developing-a-single-page-app-with-flask-and-vuejs) step-by-step walkthrough of how to set up a basic CRUD app with Vue and Flask.
 
+* [Create a Flask Web App with Python](https://pythonspot.com/flask-web-app-with-python/) step-by-step walkthrough to create a Flask app with templates and routes
 
 ### Intermediate to advanced Flask resources
 Once you move past the beginner tutorials and have created a few Flask
@@ -257,6 +258,9 @@ combined with the example real-world projects listed in the next section.
 
 * [Dynamic Secret Generation with Vault and Flask](https://testdriven.io/dynamic-secret-generation-with-vault-and-flask) looks at how to use Hashicorp's Vault and Consul to create dynamic Postgres credentials for a Flask web app.
 
+* [Flask docker tutorial](https://pythonprogramminglanguage.com/python-flask-docker/) setting up docker with flask
+
+* [Deploy Flask app on PythonAnywhere](https://pythonbasics.org/python-to-web/) teaches you how to setup Flask app on the web
 
 ### Open source Flask example projects
 Flask's lack of standard boilerplate via a commandline interface for
